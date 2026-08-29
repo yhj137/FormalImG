@@ -1,4 +1,4 @@
-# FormalImG
+# FormalImG: Evaluating Structural Compositional Generalization for T2I Models
 
 This repository contains the benchmark and evaluation code for the paper **FormalImG: Evaluating Structural Compositional Generalization for T2I Models**.
 
