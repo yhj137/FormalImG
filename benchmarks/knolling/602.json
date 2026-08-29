@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red hat, a black laptop, gray scissors, and a blue stapler. The red hat is positioned on the top side of the image and is located to the left of the black laptop. The laptop is visually larger than the hat. The gray scissors are positioned to the right of the laptop, and the blue stapler is located to the right of the scissors.",
+    "dsl": "(exists ?hat (exists ?laptop (exists ?scissors (exists ?stapler (and (Is ?hat 'hat') (Has ?hat 'red') (OnTopSide ?hat) (Is ?laptop 'laptop') (Has ?laptop 'black') (Is ?scissors 'scissors') (Has ?scissors 'gray') (Is ?stapler 'stapler') (Has ?stapler 'blue') (LeftOf ?hat ?laptop) (LargerThan ?laptop ?hat) (RightOf ?scissors ?laptop) (RightOf ?stapler ?scissors))))))",
+    "cnf": "(exists ?hat (exists ?laptop (exists ?scissors (exists ?stapler (and (Is ?hat 'hat') (Has ?hat 'red') (OnTopSide ?hat) (LeftOf ?hat ?laptop) (LargerThan ?laptop ?hat) (Has ?laptop 'black') (RightOf ?scissors ?laptop) (Is ?laptop 'laptop') (Has ?scissors 'gray') (RightOf ?stapler ?scissors) (Is ?scissors 'scissors') (Has ?stapler 'blue') (Is ?stapler 'stapler'))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "laptop",
+        "hat",
+        "stapler"
+    ]
+}

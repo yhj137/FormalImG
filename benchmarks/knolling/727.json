@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features an apple and a wallet. The wallet is located on the right side of the image, and the apple is aligned vertically with the wallet. For every mouse present in the scene, it is aligned horizontally with the apple. Furthermore, corresponding to each mouse, there is a carrot that is aligned vertically with the mouse and is visually larger than it.",
+    "dsl": "(exists ?apple (exists ?wallet (and (Is ?apple 'apple') (Is ?wallet 'wallet') (OnRightSide ?wallet) (AlignedVertically ?apple ?wallet) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?carrot (and (Is ?carrot 'carrot') (AlignedHorizontally ?mouse ?apple) (AlignedVertically ?carrot ?mouse) (LargerThan ?carrot ?mouse))))))))",
+    "cnf": "(exists ?apple (exists ?wallet (forall ?mouse (exists ?carrot (and (Is ?apple 'apple') (AlignedVertically ?apple ?wallet) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?mouse ?apple)) (OnRightSide ?wallet) (or (not (Is ?mouse 'mouse')) (Is ?carrot 'carrot')) (or (not (Is ?mouse 'mouse')) (AlignedVertically ?carrot ?mouse)) (Is ?wallet 'wallet') (or (not (Is ?mouse 'mouse')) (LargerThan ?carrot ?mouse)))))))",
+    "k": 4,
+    "object_classes": [
+        "carrot",
+        "wallet",
+        "apple",
+        "mouse"
+    ]
+}

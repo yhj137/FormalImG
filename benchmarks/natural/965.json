@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a boat with an elephant on it. To the right of the boat is a bed with a sliced pizza on it. All bananas are positioned to the left of the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bt (exists ?e (exists ?bd (and (Is ?bt 'boat') (Is ?e 'elephant') (On ?e ?bt) (Is ?bd 'bed') (RightOf ?bd ?bt) (forall ?ba (implies (Is ?ba 'banana') (LeftOf ?ba ?e))) (exists ?p (and (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?bd))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bt (exists ?e (exists ?bd (forall ?ba (exists ?p (and (Is ?bt 'boat') (On ?e ?bt) (RightOf ?bd ?bt) (Is ?e 'elephant') (or (not (Is ?ba 'banana')) (LeftOf ?ba ?e)) (Is ?bd 'bed') (On ?p ?bd) (HasState ?p 'sliced') (Is ?p 'pizza'))))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "bed",
+        "pizza",
+        "boat",
+        "banana"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a brick house with a horse next to it. A person stands beside the horse, next to a black monitor with headphones resting on it. A round basket containing a green bottle sits next to the monitor. Every butterfly in the scene is sitting on the horse.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?ho (exists ?p (exists ?m (exists ?ba (and (Is ?h 'house') (HasMaterial ?h 'brick') (Is ?ho 'horse') (NextTo ?ho ?h) (Is ?p 'person') (NextTo ?p ?ho) (Is ?m 'monitor') (HasColor ?m 'black') (NextTo ?m ?p) (Is ?ba 'basket') (HasShape ?ba 'round') (NextTo ?ba ?m) (forall ?bf (implies (Is ?bf 'butterfly') (On ?bf ?ho))) (exists ?bo (and (Is ?bo 'bottle') (HasColor ?bo 'green') (In ?bo ?ba))) (exists ?hp (and (Is ?hp 'headphones') (On ?hp ?m))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?ho (exists ?p (exists ?m (exists ?ba (forall ?bf (exists ?bo (exists ?hp (and (Is ?h 'house') (HasMaterial ?h 'brick') (NextTo ?ho ?h) (Is ?ho 'horse') (NextTo ?p ?ho) (or (not (Is ?bf 'butterfly')) (On ?bf ?ho)) (Is ?p 'person') (NextTo ?m ?p) (HasColor ?m 'black') (NextTo ?ba ?m) (Is ?m 'monitor') (On ?hp ?m) (HasShape ?ba 'round') (In ?bo ?ba) (Is ?hp 'headphones') (Is ?ba 'basket') (HasColor ?bo 'green') (Is ?bo 'bottle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "headphones",
+        "person",
+        "horse",
+        "bottle",
+        "monitor",
+        "butterfly",
+        "basket"
+    ]
+}

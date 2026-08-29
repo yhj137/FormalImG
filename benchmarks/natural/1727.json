@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child holding a toy car stands next to a wooden desk. An open laptop sits on the desk, with a round clock to its right. A lit lamp and a boat containing every fish are also on the desk. A closed umbrella stands beside the desk.",
+    "dsl": "(exists ?d (exists ?c (exists ?tc (exists ?l (exists ?b (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?c 'child') (NextTo ?c ?d) (Holding ?c ?tc) (Is ?tc 'toy car') (Is ?l 'laptop') (On ?l ?d) (HasState ?l 'open') (Is ?b 'boat') (On ?b ?d) (forall ?f (implies (Is ?f 'fish') (In ?f ?b))) (exists ?la (exists ?cl (exists ?u (and (Is ?la 'lamp') (On ?la ?d) (HasState ?la 'on') (Is ?cl 'clock') (On ?cl ?d) (RightOf ?cl ?l) (HasShape ?cl 'round') (Is ?u 'umbrella') (NextTo ?u ?d) (HasState ?u 'closed')))))))))))",
+    "cnf": "(exists ?d (exists ?c (exists ?tc (exists ?l (exists ?b (forall ?f (exists ?la (exists ?cl (exists ?u (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?c ?d) (On ?l ?d) (Is ?c 'child') (Holding ?c ?tc) (On ?b ?d) (Is ?l 'laptop') (HasState ?l 'open') (Is ?tc 'toy car') (On ?la ?d) (Is ?b 'boat') (or (not (Is ?f 'fish')) (In ?f ?b)) (RightOf ?cl ?l) (On ?cl ?d) (Is ?la 'lamp') (HasState ?la 'on') (HasShape ?cl 'round') (NextTo ?u ?d) (Is ?cl 'clock') (Is ?u 'umbrella') (HasState ?u 'closed')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "toy car",
+        "desk",
+        "laptop",
+        "fish",
+        "lamp",
+        "boat",
+        "clock",
+        "child"
+    ]
+}

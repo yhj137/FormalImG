@@ -1,0 +1,15 @@
+{
+    "prompt": "For every glove in the image, there is a pizza on the left side and a stapler vertically aligned below it. Additionally, there are scissors vertically aligned above the glove and to the right of the pizza, pliers to the right of the scissors, a bowl vertically aligned below the pliers, and a phone vertically aligned below the bowl.",
+    "dsl": "(exists ?pizza (exists ?stapler (forall ?glove (implies (Is ?glove 'glove') (exists ?scissors (exists ?pliers (exists ?bowl (exists ?phone (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (Is ?stapler 'stapler') (Above ?pizza ?stapler) (AlignedVertically ?pizza ?stapler) (Is ?scissors 'scissors') (Above ?scissors ?glove) (AlignedVertically ?scissors ?glove) (RightOf ?scissors ?pizza) (Is ?pliers 'pliers') (RightOf ?pliers ?scissors) (Is ?bowl 'bowl') (Above ?pliers ?bowl) (AlignedVertically ?pliers ?bowl) (Is ?phone 'phone') (Above ?bowl ?phone) (AlignedVertically ?bowl ?phone))))))))))",
+    "cnf": "(exists ?pizza (exists ?stapler (forall ?glove (exists ?scissors (exists ?pliers (exists ?bowl (exists ?phone (and (or (not (Is ?glove 'glove')) (Is ?pizza 'pizza')) (or (not (Is ?glove 'glove')) (OnLeftSide ?pizza)) (or (not (Is ?glove 'glove')) (Above ?pizza ?stapler)) (or (not (Is ?glove 'glove')) (Is ?stapler 'stapler')) (or (not (Is ?glove 'glove')) (AlignedVertically ?pizza ?stapler)) (or (not (Is ?glove 'glove')) (RightOf ?scissors ?pizza)) (or (not (Is ?glove 'glove')) (Is ?scissors 'scissors')) (or (not (Is ?glove 'glove')) (AlignedVertically ?scissors ?glove)) (or (not (Is ?glove 'glove')) (Is ?pliers 'pliers')) (or (not (Is ?glove 'glove')) (RightOf ?pliers ?scissors)) (or (not (Is ?glove 'glove')) (Above ?scissors ?glove)) (or (not (Is ?glove 'glove')) (Is ?bowl 'bowl')) (or (not (Is ?glove 'glove')) (Above ?pliers ?bowl)) (or (not (Is ?glove 'glove')) (AlignedVertically ?pliers ?bowl)) (or (not (Is ?glove 'glove')) (Is ?phone 'phone')) (or (not (Is ?glove 'glove')) (Above ?bowl ?phone)) (or (not (Is ?glove 'glove')) (AlignedVertically ?bowl ?phone))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "stapler",
+        "phone",
+        "pizza",
+        "scissors",
+        "bowl",
+        "glove"
+    ]
+}

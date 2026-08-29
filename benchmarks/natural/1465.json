@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a bus. For every book, there is a wardrobe next to the bus containing a jacket. To the left of the wardrobe stands a wooden desk holding the book, an open laptop, and a round bowl with a metal spoon inside.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bus') (forall ?bk (implies (Is ?bk 'book') (exists ?w (and (Is ?w 'wardrobe') (NextTo ?w ?b) (exists ?j (and (Is ?j 'jacket') (In ?j ?w) (exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (LeftOf ?d ?w) (On ?bk ?d) (exists ?l (and (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?d) (exists ?bo (and (Is ?bo 'bowl') (HasShape ?bo 'round') (On ?bo ?d) (exists ?s (and (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?bo))))))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?bk (exists ?w (exists ?j (exists ?d (exists ?l (exists ?bo (exists ?s (and (Is ?b 'bus') (or (not (Is ?bk 'book')) (NextTo ?w ?b)) (or (not (Is ?bk 'book')) (Is ?w 'wardrobe')) (or (not (Is ?bk 'book')) (Is ?j 'jacket')) (or (not (Is ?bk 'book')) (In ?j ?w)) (or (not (Is ?bk 'book')) (Is ?d 'desk')) (or (not (Is ?bk 'book')) (LeftOf ?d ?w)) (or (not (Is ?bk 'book')) (HasMaterial ?d 'wooden')) (or (not (Is ?bk 'book')) (On ?bk ?d)) (or (not (Is ?bk 'book')) (Is ?l 'laptop')) (or (not (Is ?bk 'book')) (On ?l ?d)) (or (not (Is ?bk 'book')) (HasState ?l 'open')) (or (not (Is ?bk 'book')) (Is ?bo 'bowl')) (or (not (Is ?bk 'book')) (On ?bo ?d)) (or (not (Is ?bk 'book')) (HasShape ?bo 'round')) (or (not (Is ?bk 'book')) (Is ?s 'spoon')) (or (not (Is ?bk 'book')) (In ?s ?bo)) (or (not (Is ?bk 'book')) (HasMaterial ?s 'metal'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "spoon",
+        "book",
+        "laptop",
+        "jacket",
+        "desk",
+        "bowl",
+        "bus",
+        "wardrobe"
+    ]
+}

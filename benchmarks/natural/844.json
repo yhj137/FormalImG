@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every boat has a backpack and a standing woman holding a metal knife on it, with a clock situated to the left of the boat.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'boat') (exists ?w (exists ?k (exists ?bp (exists ?c (and (Is ?w 'woman') (Is ?k 'knife') (Is ?bp 'backpack') (Is ?c 'clock') (HasState ?w 'standing') (On ?w ?b) (Holding ?w ?k) (HasMaterial ?k 'metal') (On ?bp ?b) (LeftOf ?c ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?w (exists ?k (exists ?bp (exists ?c (and (or (not (Is ?b 'boat')) (Is ?w 'woman')) (or (not (Is ?b 'boat')) (HasState ?w 'standing')) (or (not (Is ?b 'boat')) (Is ?k 'knife')) (or (not (Is ?b 'boat')) (On ?w ?b)) (or (not (Is ?b 'boat')) (Is ?c 'clock')) (or (not (Is ?b 'boat')) (Is ?bp 'backpack')) (or (not (Is ?b 'boat')) (Holding ?w ?k)) (or (not (Is ?b 'boat')) (LeftOf ?c ?b)) (or (not (Is ?b 'boat')) (On ?bp ?b)) (or (not (Is ?b 'boat')) (HasMaterial ?k 'metal')))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "backpack",
+        "woman",
+        "clock",
+        "boat"
+    ]
+}

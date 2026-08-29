@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden wardrobe containing a backpack, with a plant and a cat on top. Beside the wardrobe is a child holding a plate containing every fruit in the scene.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (exists ?bk (and (Is ?bk 'backpack') (In ?bk ?w))) (exists ?pl (and (Is ?pl 'plant') (On ?pl ?w))) (exists ?ch (and (Is ?ch 'child') (NextTo ?ch ?w) (exists ?pt (and (Is ?pt 'plate') (Holding ?ch ?pt) (forall ?f (implies (Is ?f 'fruit') (On ?f ?pt))) (exists ?ct (and (Is ?ct 'cat') (On ?ct ?w))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?bk (exists ?pl (exists ?ch (exists ?pt (forall ?f (exists ?ct (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?bk ?w) (On ?pl ?w) (Is ?bk 'backpack') (NextTo ?ch ?w) (Is ?pl 'plant') (On ?ct ?w) (Is ?ch 'child') (Holding ?ch ?pt) (Is ?ct 'cat') (Is ?pt 'plate') (or (not (Is ?f 'fruit')) (On ?f ?pt)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "cat",
+        "plant",
+        "backpack",
+        "wardrobe",
+        "fruit",
+        "child",
+        "plate"
+    ]
+}

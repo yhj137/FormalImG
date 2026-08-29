@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cyberpunk style. A house stands in the background, with a metal car to its left. Next to the house is a metal bench, on which a sitting cat holds a screwdriver. A table is positioned next to the bench, supporting a round bowl containing all the glasses. A dirty shirt lies next to the bowl.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?bn (exists ?ct (exists ?sd (exists ?t (exists ?b (and (Is ?h 'house') (Is ?c 'car') (HasMaterial ?c 'metal') (LeftOf ?c ?h) (Is ?bn 'bench') (HasMaterial ?bn 'metal') (NextTo ?bn ?h) (Is ?ct 'cat') (HasState ?ct 'sitting') (On ?ct ?bn) (Is ?sd 'screwdriver') (Holding ?ct ?sd) (Is ?t 'table') (NextTo ?t ?bn) (Is ?b 'bowl') (HasShape ?b 'round') (On ?b ?t) (forall ?g (implies (Is ?g 'glasses') (In ?g ?b))) (exists ?s (and (Is ?s 'shirt') (HasState ?s 'dirty') (NextTo ?s ?b))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?bn (exists ?ct (exists ?sd (exists ?t (exists ?b (forall ?g (exists ?s (and (Is ?h 'house') (LeftOf ?c ?h) (NextTo ?bn ?h) (HasMaterial ?c 'metal') (HasMaterial ?bn 'metal') (On ?ct ?bn) (Is ?c 'car') (Is ?bn 'bench') (NextTo ?t ?bn) (HasState ?ct 'sitting') (Holding ?ct ?sd) (Is ?t 'table') (On ?b ?t) (Is ?ct 'cat') (Is ?sd 'screwdriver') (HasShape ?b 'round') (or (not (Is ?g 'glasses')) (In ?g ?b)) (Is ?b 'bowl') (NextTo ?s ?b) (HasState ?s 'dirty') (Is ?s 'shirt'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "shirt",
+        "bench",
+        "glasses",
+        "table",
+        "car",
+        "bowl",
+        "cat",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "All headphones in the scene are turned on.",
+    "dsl": "(forall ?h (implies (Is ?h 'headphones') (HasState ?h 'on')))",
+    "cnf": "(forall ?h (or (not (Is ?h 'headphones')) (HasState ?h 'on')))",
+    "k": 1,
+    "object_classes": [
+        "headphones"
+    ]
+}

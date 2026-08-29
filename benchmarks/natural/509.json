@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a standing woman. Every banana is peeled and positioned to her right, while a person is located next to her on the left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'woman') (HasState ?w 'standing') (forall ?b (implies (Is ?b 'banana') (and (HasState ?b 'peeled') (RightOf ?b ?w)))) (exists ?p (and (Is ?p 'person') (NextTo ?p ?w) (LeftOf ?p ?w))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?b (exists ?p (and (Is ?w 'woman') (HasState ?w 'standing') (or (not (Is ?b 'banana')) (RightOf ?b ?w)) (NextTo ?p ?w) (or (not (Is ?b 'banana')) (HasState ?b 'peeled')) (LeftOf ?p ?w) (Is ?p 'person'))))))",
+    "k": 3,
+    "object_classes": [
+        "banana",
+        "person",
+        "woman"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting of a rusty pan.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'pan') (HasState ?p 'rusty'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'pan') (HasState ?p 'rusty'))))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

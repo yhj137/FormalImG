@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a drill positioned on the top side of the image, and this drill is larger than every book present in the scene.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (OnTopSide ?drill) (forall ?book (implies (Is ?book 'book') (LargerThan ?drill ?book)))))",
+    "cnf": "(exists ?drill (forall ?book (and (Is ?drill 'drill') (OnTopSide ?drill) (or (not (Is ?book 'book')) (LargerThan ?drill ?book)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "drill"
+    ]
+}

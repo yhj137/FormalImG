@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a round cake is on a bed, along with a black jacket, a screwdriver, and a hammer. Every key in the scene is also on the bed. An umbrella is to the right of the bed.",
+    "dsl": "(exists ?bed (and (Is ?bed 'bed') (forall ?k (implies (Is ?k 'key') (On ?k ?bed))) (exists ?w (and (Is ?w 'woman') (On ?w ?bed) (exists ?c (and (Is ?c 'cake') (HasShape ?c 'round') (Holding ?w ?c) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (On ?j ?bed) (exists ?u (and (Is ?u 'umbrella') (RightOf ?u ?bed) (exists ?s (and (Is ?s 'screwdriver') (On ?s ?bed) (exists ?h (and (Is ?h 'hammer') (On ?h ?bed)))))))))))))))",
+    "cnf": "(exists ?bed (forall ?k (exists ?w (exists ?c (exists ?j (exists ?u (exists ?s (exists ?h (and (Is ?bed 'bed') (or (not (Is ?k 'key')) (On ?k ?bed)) (On ?w ?bed) (On ?j ?bed) (Is ?w 'woman') (Holding ?w ?c) (RightOf ?u ?bed) (HasColor ?j 'black') (HasShape ?c 'round') (On ?s ?bed) (Is ?u 'umbrella') (Is ?j 'jacket') (Is ?c 'cake') (On ?h ?bed) (Is ?s 'screwdriver') (Is ?h 'hammer'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "bed",
+        "woman",
+        "cake",
+        "jacket",
+        "hammer",
+        "screwdriver",
+        "key"
+    ]
+}

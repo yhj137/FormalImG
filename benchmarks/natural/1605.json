@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A car is located to the left of a house. Inside the house, there is a sofa. A woman sits on the sofa, holding a sandwich. A cat is next to the woman. A wooden chair stands next to the sofa. A book lies on the chair, and a round orange is placed next to the book.",
+    "dsl": "(exists ?h (exists ?c (exists ?s (exists ?w (exists ?sd (exists ?k (exists ?ch (exists ?b (exists ?o (and (Is ?h 'house') (Is ?c 'car') (LeftOf ?c ?h) (Is ?s 'sofa') (In ?s ?h) (Is ?w 'woman') (On ?w ?s) (Is ?sd 'sandwich') (Holding ?w ?sd) (Is ?k 'cat') (NextTo ?k ?w) (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (NextTo ?ch ?s) (Is ?b 'book') (On ?b ?ch) (Is ?o 'orange') (HasShape ?o 'round') (NextTo ?o ?b)))))))))))",
+    "cnf": "(exists ?h (exists ?c (exists ?s (exists ?w (exists ?sd (exists ?k (exists ?ch (exists ?b (exists ?o (and (Is ?h 'house') (LeftOf ?c ?h) (In ?s ?h) (Is ?c 'car') (Is ?s 'sofa') (On ?w ?s) (NextTo ?ch ?s) (Is ?w 'woman') (Holding ?w ?sd) (HasMaterial ?ch 'wooden') (On ?b ?ch) (NextTo ?k ?w) (Is ?sd 'sandwich') (Is ?ch 'chair') (Is ?b 'book') (NextTo ?o ?b) (Is ?k 'cat') (HasShape ?o 'round') (Is ?o 'orange')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "sofa",
+        "book",
+        "chair",
+        "woman",
+        "orange",
+        "car",
+        "sandwich",
+        "cat"
+    ]
+}

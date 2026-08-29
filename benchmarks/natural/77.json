@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style image of a rectangular jacket.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?j (and (Is ?j 'jacket') (HasShape ?j 'rectangular'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?j (and (Is ?j 'jacket') (HasShape ?j 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "jacket"
+    ]
+}

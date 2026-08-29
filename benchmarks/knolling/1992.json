@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt, a handbag, a keyboard, and a book arranged in a vertical column on the left, with each item positioned below the previous one. To their right is a second vertical column containing a hammer, a drill, glasses, and a sock; each of these items is located to the right of its corresponding counterpart in the first column (hammer right of shirt, drill right of handbag, glasses right of keyboard, sock right of book). A glove is placed to the right of the sock. Additionally, for every carrot in the image, it is located below the glove, aligned vertically with it, and positioned on the right side of the scene.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?keyboard (exists ?book (exists ?hammer (exists ?drill (exists ?glasses (exists ?sock (exists ?glove (and (Is ?shirt 'shirt') (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?book 'book') (Is ?hammer 'hammer') (Is ?drill 'drill') (Is ?glasses 'glasses') (Is ?sock 'sock') (Is ?glove 'glove') (Below ?handbag ?shirt) (AlignedVertically ?handbag ?shirt) (Below ?keyboard ?handbag) (AlignedVertically ?keyboard ?handbag) (Below ?book ?keyboard) (AlignedVertically ?book ?keyboard) (RightOf ?hammer ?shirt) (Below ?drill ?hammer) (AlignedVertically ?drill ?hammer) (RightOf ?drill ?handbag) (Below ?glasses ?drill) (AlignedVertically ?glasses ?drill) (RightOf ?glasses ?keyboard) (Below ?sock ?glasses) (AlignedVertically ?sock ?glasses) (RightOf ?sock ?book) (RightOf ?glove ?sock) (forall ?carrot (implies (Is ?carrot 'carrot') (and (Below ?carrot ?glove) (AlignedVertically ?carrot ?glove) (OnRightSide ?carrot))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?keyboard (exists ?book (exists ?hammer (exists ?drill (exists ?glasses (exists ?sock (exists ?glove (forall ?carrot (and (Is ?shirt 'shirt') (Below ?handbag ?shirt) (AlignedVertically ?handbag ?shirt) (Is ?handbag 'handbag') (RightOf ?hammer ?shirt) (Below ?keyboard ?handbag) (Is ?hammer 'hammer') (Below ?drill ?hammer) (AlignedVertically ?keyboard ?handbag) (Is ?keyboard 'keyboard') (AlignedVertically ?drill ?hammer) (Is ?drill 'drill') (RightOf ?drill ?handbag) (Below ?book ?keyboard) (Below ?glasses ?drill) (AlignedVertically ?book ?keyboard) (Is ?book 'book') (AlignedVertically ?glasses ?drill) (Is ?glasses 'glasses') (RightOf ?glasses ?keyboard) (RightOf ?sock ?book) (Below ?sock ?glasses) (AlignedVertically ?sock ?glasses) (RightOf ?glove ?sock) (Is ?sock 'sock') (Is ?glove 'glove') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?glove)) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?carrot ?glove)) (or (not (Is ?carrot 'carrot')) (OnRightSide ?carrot)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "glasses",
+        "sock",
+        "keyboard",
+        "carrot",
+        "drill",
+        "hammer",
+        "handbag",
+        "glove",
+        "shirt"
+    ]
+}

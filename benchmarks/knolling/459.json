@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every remote located on the left side of the image, there is a glove positioned directly below it, and a donut positioned directly below the glove. These three objects are aligned vertically, and the donut is visually smaller than the glove.",
+    "dsl": "(forall ?remote (implies (and (Is ?remote 'remote') (OnLeftSide ?remote)) (exists ?glove (exists ?donut (and (Is ?glove 'glove') (Is ?donut 'donut') (Below ?glove ?remote) (Below ?donut ?glove) (AlignedVertically ?remote ?glove) (AlignedVertically ?glove ?donut) (SmallerThan ?donut ?glove))))))",
+    "cnf": "(forall ?remote (exists ?glove (exists ?donut (and (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (Is ?glove 'glove')) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (Below ?glove ?remote)) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (Is ?donut 'donut')) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (Below ?donut ?glove)) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (AlignedVertically ?remote ?glove)) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (AlignedVertically ?glove ?donut)) (or (not (Is ?remote 'remote')) (not (OnLeftSide ?remote)) (SmallerThan ?donut ?glove))))))",
+    "k": 3,
+    "object_classes": [
+        "remote",
+        "glove",
+        "donut"
+    ]
+}

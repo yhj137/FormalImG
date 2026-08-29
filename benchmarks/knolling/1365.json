@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is placed on the left side of the scene. To the right of the handbag, there are headphones; to the right of the headphones, there are glasses; and to the right of the glasses is a wallet, which is on the right side. A plate is positioned above the handbag. For every donut in the image, it is located above the wallet, and there is a sandwich to its left that is visually smaller than the plate.",
+    "dsl": "(exists ?handbag (exists ?headphones (exists ?glasses (exists ?wallet (exists ?plate (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?headphones 'headphones') (RightOf ?headphones ?handbag) (Is ?glasses 'glasses') (RightOf ?glasses ?headphones) (Is ?wallet 'wallet') (RightOf ?wallet ?glasses) (OnRightSide ?wallet) (Is ?plate 'plate') (Above ?plate ?handbag) (forall ?donut (implies (Is ?donut 'donut') (exists ?sandwich (and (Is ?sandwich 'sandwich') (Above ?donut ?wallet) (LeftOf ?sandwich ?donut) (SmallerThan ?sandwich ?plate)))))))))))",
+    "cnf": "(exists ?handbag (exists ?headphones (exists ?glasses (exists ?wallet (exists ?plate (forall ?donut (exists ?sandwich (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (RightOf ?headphones ?handbag) (Above ?plate ?handbag) (Is ?headphones 'headphones') (RightOf ?glasses ?headphones) (Is ?plate 'plate') (or (not (Is ?donut 'donut')) (SmallerThan ?sandwich ?plate)) (Is ?glasses 'glasses') (RightOf ?wallet ?glasses) (or (not (Is ?donut 'donut')) (LeftOf ?sandwich ?donut)) (Is ?wallet 'wallet') (OnRightSide ?wallet) (or (not (Is ?donut 'donut')) (Above ?donut ?wallet)) (or (not (Is ?donut 'donut')) (Is ?sandwich 'sandwich'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "sandwich",
+        "handbag",
+        "wallet",
+        "headphones",
+        "donut"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack positioned on the left side. Directly above the backpack is a white shirt; the two items are aligned vertically, and the backpack is larger than the shirt. For every pen located to the right of the shirt, there is a sequence of items arranged vertically above it: a lemon is directly above the pen, followed by a donut, a book, a glove, a shoe, a hammer, and a wrench at the very top. In this column, the book is larger than the donut, the lemon is vertically aligned with the pen, and the wrench is vertically aligned with the hammer.",
+    "dsl": "(exists ?backpack (exists ?shirt (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Is ?shirt 'shirt') (Has ?shirt 'white') (Above ?shirt ?backpack) (AlignedVertically ?shirt ?backpack) (LargerThan ?backpack ?shirt) (forall ?pen (implies (and (Is ?pen 'pen') (RightOf ?pen ?shirt)) (exists ?lemon (exists ?donut (exists ?book (exists ?glove (exists ?shoe (exists ?hammer (exists ?wrench (and (Is ?lemon 'lemon') (Is ?donut 'donut') (Is ?book 'book') (Is ?glove 'glove') (Is ?shoe 'shoe') (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Above ?lemon ?pen) (AlignedVertically ?lemon ?pen) (Above ?donut ?lemon) (Above ?book ?donut) (LargerThan ?book ?donut) (Above ?glove ?book) (Above ?shoe ?glove) (Above ?hammer ?shoe) (Above ?wrench ?hammer) (AlignedVertically ?wrench ?hammer))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shirt (forall ?pen (exists ?lemon (exists ?donut (exists ?book (exists ?glove (exists ?shoe (exists ?hammer (exists ?wrench (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Above ?shirt ?backpack) (AlignedVertically ?shirt ?backpack) (Has ?shirt 'white') (LargerThan ?backpack ?shirt) (Is ?shirt 'shirt') (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?lemon 'lemon')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?donut 'donut')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?lemon ?pen)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?book 'book')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?donut ?lemon)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?wrench 'wrench')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (AlignedVertically ?lemon ?pen)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?glove 'glove')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?book ?donut)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?wrench ?hammer)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Is ?shoe 'shoe')) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?glove ?book)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (LargerThan ?book ?donut)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?hammer ?shoe)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (AlignedVertically ?wrench ?hammer)) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?shirt)) (Above ?shoe ?glove)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "pen",
+        "wrench",
+        "lemon",
+        "hammer",
+        "backpack",
+        "shirt",
+        "glove",
+        "shoe",
+        "donut"
+    ]
+}

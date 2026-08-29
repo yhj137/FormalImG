@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue book present, there is a sequence of objects arranged in a vertical column beneath it. A white bottle is located below the book, followed by a black camera below the bottle. A gray watch is positioned below the camera, and a gray spoon sits below the watch. All five objects are aligned vertically. Visually, the book is larger than the camera, and the bottle is larger than the spoon.",
+    "dsl": "(forall ?book (implies (and (Is ?book 'book') (Has ?book 'blue')) (exists ?bottle (exists ?camera (exists ?watch (exists ?spoon (and (Is ?bottle 'bottle') (Has ?bottle 'white') (Is ?camera 'camera') (Has ?camera 'black') (Is ?watch 'watch') (Has ?watch 'gray') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Below ?bottle ?book) (Below ?camera ?bottle) (Below ?watch ?camera) (Below ?spoon ?watch) (AlignedVertically ?book ?bottle) (AlignedVertically ?bottle ?camera) (AlignedVertically ?camera ?watch) (AlignedVertically ?watch ?spoon) (LargerThan ?book ?camera) (LargerThan ?bottle ?spoon))))))))",
+    "cnf": "(forall ?book (exists ?bottle (exists ?camera (exists ?watch (exists ?spoon (and (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Is ?bottle 'bottle')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Has ?bottle 'white')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Below ?bottle ?book)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Is ?camera 'camera')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Below ?camera ?bottle)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Has ?spoon 'gray')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Has ?camera 'black')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (AlignedVertically ?book ?bottle)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Below ?watch ?camera)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Is ?spoon 'spoon')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Below ?spoon ?watch)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Is ?watch 'watch')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (AlignedVertically ?bottle ?camera)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (Has ?watch 'gray')) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (AlignedVertically ?camera ?watch)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (AlignedVertically ?watch ?spoon)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (LargerThan ?bottle ?spoon)) (or (not (Is ?book 'book')) (not (Has ?book 'blue')) (LargerThan ?book ?camera))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "watch",
+        "camera",
+        "bottle",
+        "spoon"
+    ]
+}

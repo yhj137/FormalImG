@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every bottle positioned on the top side of the layout, there is a game controller located to the right of it.",
+    "dsl": "(and (forall ?bottle (implies (and (Is ?bottle 'bottle') (OnTopSide ?bottle)) (exists ?controller (and (Is ?controller 'game_controller') (RightOf ?controller ?bottle))))))",
+    "cnf": "(forall ?bottle (exists ?controller (and (or (not (Is ?bottle 'bottle')) (not (OnTopSide ?bottle)) (Is ?controller 'game_controller')) (or (not (Is ?bottle 'bottle')) (not (OnTopSide ?bottle)) (RightOf ?controller ?bottle)))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "game_controller"
+    ]
+}

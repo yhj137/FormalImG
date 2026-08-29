@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes blue jeans and a white glove. For every spoon, there exists a black pan, a sandwich, and a calculator organized in a grid. The blue jeans are to the left of the black pan, and the black pan is to the left of the calculator. The white glove is to the left of the spoon, and the spoon is to the left of the sandwich. The blue jeans are aligned vertically with the white glove, the black pan is aligned vertically with the spoon, and the calculator is aligned vertically with the sandwich. Additionally, the black pan is larger than the spoon.",
+    "dsl": "(exists ?jeans (exists ?glove (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?glove 'glove') (Has ?glove 'white') (AlignedVertically ?jeans ?glove) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?pan (exists ?sandwich (exists ?calculator (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?sandwich 'sandwich') (Is ?calculator 'calculator') (LargerThan ?pan ?spoon) (LeftOf ?jeans ?pan) (LeftOf ?pan ?calculator) (LeftOf ?glove ?spoon) (LeftOf ?spoon ?sandwich) (AlignedVertically ?pan ?spoon) (AlignedVertically ?calculator ?sandwich))))))))))",
+    "cnf": "(exists ?jeans (exists ?glove (forall ?spoon (exists ?pan (exists ?sandwich (exists ?calculator (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (AlignedVertically ?jeans ?glove) (or (not (Is ?spoon 'spoon')) (LeftOf ?jeans ?pan)) (Has ?glove 'white') (or (not (Is ?spoon 'spoon')) (LeftOf ?glove ?spoon)) (or (not (Is ?spoon 'spoon')) (LargerThan ?pan ?spoon)) (or (not (Is ?spoon 'spoon')) (LeftOf ?pan ?calculator)) (Is ?glove 'glove') (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?sandwich)) (or (not (Is ?spoon 'spoon')) (Is ?calculator 'calculator')) (or (not (Is ?spoon 'spoon')) (Has ?pan 'black')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?pan ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?calculator ?sandwich)) (or (not (Is ?spoon 'spoon')) (Is ?sandwich 'sandwich')) (or (not (Is ?spoon 'spoon')) (Is ?pan 'pan')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "calculator",
+        "jeans",
+        "spoon",
+        "sandwich",
+        "glove"
+    ]
+}

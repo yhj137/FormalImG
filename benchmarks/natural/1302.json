@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A gray elephant wears a hat and glasses. Every car in the scene is positioned next to the elephant. A bottle stands next to the elephant, and beside the bottle is a cup containing an orange.",
+    "dsl": "(exists ?e (exists ?h (exists ?g (and (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?h 'hat') (On ?h ?e) (Is ?g 'glasses') (On ?g ?e) (forall ?c (implies (Is ?c 'car') (NextTo ?c ?e))) (exists ?b (exists ?cp (exists ?o (and (Is ?b 'bottle') (NextTo ?b ?e) (Is ?cp 'cup') (NextTo ?cp ?b) (Is ?o 'orange') (In ?o ?cp)))))))))",
+    "cnf": "(exists ?e (exists ?h (exists ?g (forall ?c (exists ?b (exists ?cp (exists ?o (and (Is ?e 'elephant') (HasColor ?e 'gray') (On ?h ?e) (On ?g ?e) (Is ?h 'hat') (or (not (Is ?c 'car')) (NextTo ?c ?e)) (Is ?g 'glasses') (NextTo ?b ?e) (Is ?b 'bottle') (NextTo ?cp ?b) (Is ?cp 'cup') (In ?o ?cp) (Is ?o 'orange')))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "bottle",
+        "glasses",
+        "orange",
+        "car",
+        "cup",
+        "hat"
+    ]
+}

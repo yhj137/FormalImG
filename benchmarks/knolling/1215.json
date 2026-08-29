@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the left side of the image. To the right of the suitcase is a backpack, and to the right of the backpack is a cutting board; these three items are aligned horizontally. The suitcase is visibly larger than the backpack. Below the suitcase is a hammer, below the backpack is a wrench, and below the cutting board is a book. Finally, a bowl is located to the right of the book.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?cutting_board (exists ?hammer (exists ?wrench (exists ?book (exists ?bowl (and (Is ?suitcase 'suitcase') (Is ?backpack 'backpack') (Is ?cutting_board 'cutting_board') (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?book 'book') (Is ?bowl 'bowl') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?backpack) (LeftOf ?backpack ?cutting_board) (AlignedHorizontally ?suitcase ?backpack) (AlignedHorizontally ?backpack ?cutting_board) (LargerThan ?suitcase ?backpack) (Below ?hammer ?suitcase) (Below ?wrench ?backpack) (Below ?book ?cutting_board) (LeftOf ?book ?bowl)))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?cutting_board (exists ?hammer (exists ?wrench (exists ?book (exists ?bowl (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?backpack) (AlignedHorizontally ?suitcase ?backpack) (Is ?backpack 'backpack') (LeftOf ?backpack ?cutting_board) (LargerThan ?suitcase ?backpack) (AlignedHorizontally ?backpack ?cutting_board) (Is ?cutting_board 'cutting_board') (Below ?hammer ?suitcase) (Below ?wrench ?backpack) (Below ?book ?cutting_board) (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?book 'book') (LeftOf ?book ?bowl) (Is ?bowl 'bowl')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "wrench",
+        "cutting_board",
+        "hammer",
+        "backpack",
+        "bowl",
+        "suitcase"
+    ]
+}

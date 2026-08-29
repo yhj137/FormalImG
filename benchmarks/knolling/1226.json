@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard located on the left side of the image, there is a structured arrangement of objects related to it: a monitor is placed to the right of the keyboard and is larger than it. A tie is positioned above the keyboard, while the keyboard itself is positioned above a sock. Furthermore, to the right of the monitor is a watch that is smaller than the monitor. A wrench is arranged above the monitor, and the monitor is arranged above a knife.",
+    "dsl": "(forall ?keyboard (implies (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard)) (exists ?monitor (exists ?tie (exists ?sock (exists ?watch (exists ?wrench (exists ?knife (and (Is ?monitor 'monitor') (Is ?tie 'tie') (Is ?sock 'sock') (Is ?watch 'watch') (Is ?wrench 'wrench') (Is ?knife 'knife') (RightOf ?monitor ?keyboard) (LargerThan ?monitor ?keyboard) (Above ?tie ?keyboard) (Above ?keyboard ?sock) (RightOf ?watch ?monitor) (SmallerThan ?watch ?monitor) (Above ?wrench ?monitor) (Above ?monitor ?knife))))))))))",
+    "cnf": "(forall ?keyboard (exists ?monitor (exists ?tie (exists ?sock (exists ?watch (exists ?wrench (exists ?knife (and (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?monitor 'monitor')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (RightOf ?monitor ?keyboard)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?tie 'tie')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (LargerThan ?monitor ?keyboard)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?knife 'knife')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?sock 'sock')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Above ?tie ?keyboard)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (RightOf ?watch ?monitor)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?wrench 'wrench')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Above ?monitor ?knife)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Is ?watch 'watch')) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Above ?keyboard ?sock)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (SmallerThan ?watch ?monitor)) (or (not (Is ?keyboard 'keyboard')) (not (OnLeftSide ?keyboard)) (Above ?wrench ?monitor))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "sock",
+        "keyboard",
+        "wrench",
+        "watch",
+        "knife",
+        "monitor"
+    ]
+}

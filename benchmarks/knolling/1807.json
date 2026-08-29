@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a shirt on the top side and a game controller on the bottom side. To the right of the shirt is a laptop, to the right of the laptop is a handbag, to the right of the handbag is a plate, and to the right of the plate is a book. Pliers are to the right of the game controller, a spoon is to the right of the pliers, a pen is to the right of the spoon, and a lighter is to the right of the pen. The shirt is vertically aligned above the game controller, the laptop is vertically aligned above the pliers, the handbag is vertically aligned above the spoon, the plate is vertically aligned above the pen, and the book is vertically aligned above the lighter.",
+    "dsl": "(exists ?shirt (exists ?laptop (exists ?handbag (exists ?plate (exists ?book (exists ?controller (exists ?pliers (exists ?spoon (exists ?pen (exists ?lighter (and (Is ?shirt 'shirt') (Is ?laptop 'laptop') (Is ?handbag 'handbag') (Is ?plate 'plate') (Is ?book 'book') (Is ?controller 'game_controller') (Is ?pliers 'pliers') (Is ?spoon 'spoon') (Is ?pen 'pen') (Is ?lighter 'lighter') (OnTopSide ?shirt) (OnBottomSide ?controller) (RightOf ?laptop ?shirt) (RightOf ?handbag ?laptop) (RightOf ?plate ?handbag) (RightOf ?book ?plate) (LeftOf ?controller ?pliers) (LeftOf ?pliers ?spoon) (LeftOf ?spoon ?pen) (LeftOf ?pen ?lighter) (Above ?shirt ?controller) (AlignedVertically ?shirt ?controller) (Above ?laptop ?pliers) (AlignedVertically ?laptop ?pliers) (Above ?handbag ?spoon) (AlignedVertically ?handbag ?spoon) (Above ?plate ?pen) (AlignedVertically ?plate ?pen) (Above ?book ?lighter) (AlignedVertically ?book ?lighter))))))))))))",
+    "cnf": "(exists ?shirt (exists ?laptop (exists ?handbag (exists ?plate (exists ?book (exists ?controller (exists ?pliers (exists ?spoon (exists ?pen (exists ?lighter (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (RightOf ?laptop ?shirt) (Above ?shirt ?controller) (Is ?laptop 'laptop') (RightOf ?handbag ?laptop) (AlignedVertically ?shirt ?controller) (LeftOf ?controller ?pliers) (Above ?laptop ?pliers) (Is ?handbag 'handbag') (RightOf ?plate ?handbag) (OnBottomSide ?controller) (Is ?pliers 'pliers') (LeftOf ?pliers ?spoon) (AlignedVertically ?laptop ?pliers) (Above ?handbag ?spoon) (Is ?plate 'plate') (RightOf ?book ?plate) (Is ?controller 'game_controller') (Is ?spoon 'spoon') (LeftOf ?spoon ?pen) (AlignedVertically ?handbag ?spoon) (Above ?plate ?pen) (Is ?book 'book') (Above ?book ?lighter) (Is ?pen 'pen') (LeftOf ?pen ?lighter) (AlignedVertically ?plate ?pen) (AlignedVertically ?book ?lighter) (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "book",
+        "plate",
+        "pliers",
+        "pen",
+        "game_controller",
+        "handbag",
+        "lighter",
+        "spoon",
+        "shirt"
+    ]
+}

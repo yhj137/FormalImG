@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue book, a white cup, and a yellow screwdriver arranged in a neat row. The white cup is positioned to the right of the blue book, and the yellow screwdriver is located to the right of the cup, with all three items aligned horizontally. Additionally, the blue book is visibly larger than the cup.",
+    "dsl": "(exists ?b (exists ?c (exists ?s (and (Is ?b 'book') (Has ?b 'blue') (Is ?c 'cup') (Has ?c 'white') (Is ?s 'screwdriver') (Has ?s 'yellow') (RightOf ?c ?b) (RightOf ?s ?c) (AlignedHorizontally ?b ?c) (AlignedHorizontally ?c ?s) (LargerThan ?b ?c)))))",
+    "cnf": "(exists ?b (exists ?c (exists ?s (and (Is ?b 'book') (Has ?b 'blue') (RightOf ?c ?b) (AlignedHorizontally ?b ?c) (Has ?c 'white') (RightOf ?s ?c) (LargerThan ?b ?c) (AlignedHorizontally ?c ?s) (Is ?c 'cup') (Has ?s 'yellow') (Is ?s 'screwdriver')))))",
+    "k": 3,
+    "object_classes": [
+        "screwdriver",
+        "book",
+        "cup"
+    ]
+}

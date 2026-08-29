@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a running bus with a car to its left. A flower sits on the car, and every butterfly is positioned to the left of the flower. A teddy bear on the bus holds a basket with a closed book on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?f (exists ?tb (exists ?bk (exists ?bo (and (Is ?b 'bus') (HasState ?b 'running') (Is ?c 'car') (LeftOf ?c ?b) (Is ?f 'flower') (On ?f ?c) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?f))) (Is ?tb 'teddy bear') (On ?tb ?b) (Is ?bk 'basket') (Holding ?tb ?bk) (Is ?bo 'book') (On ?bo ?bk) (HasState ?bo 'closed')))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?f (exists ?tb (exists ?bk (exists ?bo (forall ?bf (and (Is ?b 'bus') (HasState ?b 'running') (LeftOf ?c ?b) (On ?tb ?b) (Is ?c 'car') (On ?f ?c) (Is ?tb 'teddy bear') (Holding ?tb ?bk) (Is ?f 'flower') (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?f)) (Is ?bk 'basket') (On ?bo ?bk) (Is ?bo 'book') (HasState ?bo 'closed'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bus",
+        "book",
+        "basket",
+        "butterfly",
+        "car",
+        "teddy bear",
+        "flower"
+    ]
+}

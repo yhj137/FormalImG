@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a chair to the left of a table, with a bench positioned next to the table. A basket containing all the oranges sits on the table, and a red car is located next to the bench.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?bn (exists ?b (and (Is ?t 'table') (Is ?c 'chair') (LeftOf ?c ?t) (Is ?bn 'bench') (NextTo ?bn ?t) (Is ?b 'basket') (On ?b ?t) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?cr (and (Is ?cr 'car') (HasColor ?cr 'red') (NextTo ?cr ?bn)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?bn (exists ?b (forall ?o (exists ?cr (and (Is ?t 'table') (LeftOf ?c ?t) (NextTo ?bn ?t) (Is ?c 'chair') (On ?b ?t) (Is ?bn 'bench') (NextTo ?cr ?bn) (Is ?b 'basket') (or (not (Is ?o 'orange')) (In ?o ?b)) (HasColor ?cr 'red') (Is ?cr 'car')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "chair",
+        "basket",
+        "table",
+        "car",
+        "orange"
+    ]
+}

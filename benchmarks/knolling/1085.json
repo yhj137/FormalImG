@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the top side. For every sandwich located below the cutting board, there is a cup to its left, and a donut below the cup that is smaller than the cup. Additionally, a book is positioned below the sandwich and aligned vertically with it, while a remote is located on the right side of the image, with the book situated to its left.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (forall ?sand (implies (and (Is ?sand 'sandwich') (Below ?sand ?cb)) (exists ?cup (exists ?donut (exists ?book (exists ?remote (and (Is ?cup 'cup') (Is ?donut 'donut') (Is ?book 'book') (Is ?remote 'remote') (LeftOf ?cup ?sand) (Below ?donut ?cup) (SmallerThan ?donut ?cup) (Below ?book ?sand) (AlignedVertically ?sand ?book) (OnRightSide ?remote) (LeftOf ?book ?remote))))))))))",
+    "cnf": "(exists ?cb (forall ?sand (exists ?cup (exists ?donut (exists ?book (exists ?remote (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Is ?cup 'cup')) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Is ?donut 'donut')) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (LeftOf ?cup ?sand)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Is ?book 'book')) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Below ?donut ?cup)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Is ?remote 'remote')) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (Below ?book ?sand)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (SmallerThan ?donut ?cup)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (OnRightSide ?remote)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (AlignedVertically ?sand ?book)) (or (not (Is ?sand 'sandwich')) (not (Below ?sand ?cb)) (LeftOf ?book ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "cup",
+        "book",
+        "cutting_board",
+        "sandwich",
+        "donut",
+        "remote"
+    ]
+}

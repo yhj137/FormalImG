@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two organized rows of items. On the left side of the upper row, there is a black shoe. To the right of the shoe is a bottle, and to the right of the bottle is a mouse; these three items are aligned horizontally. In the row directly beneath, a knife is positioned such that the shoe is vertically above it. To the right of the knife is a spoon, which is positioned below the bottle, and to the right of the spoon is a red lighter, located below the mouse. The knife, spoon, and lighter are also aligned horizontally. Finally, the red lighter is visually smaller than the black shoe.",
+    "dsl": "(exists ?shoe (exists ?bottle (exists ?mouse (exists ?knife (exists ?spoon (exists ?lighter (and (Is ?shoe 'shoe') (Has ?shoe 'black') (OnLeftSide ?shoe) (Is ?bottle 'bottle') (Is ?mouse 'mouse') (Is ?knife 'knife') (Is ?spoon 'spoon') (Is ?lighter 'lighter') (Has ?lighter 'red') (RightOf ?bottle ?shoe) (RightOf ?mouse ?bottle) (AlignedHorizontally ?shoe ?bottle) (AlignedHorizontally ?bottle ?mouse) (Above ?shoe ?knife) (Above ?bottle ?spoon) (Above ?mouse ?lighter) (RightOf ?spoon ?knife) (RightOf ?lighter ?spoon) (AlignedHorizontally ?knife ?spoon) (AlignedHorizontally ?spoon ?lighter) (SmallerThan ?lighter ?shoe))))))))",
+    "cnf": "(exists ?shoe (exists ?bottle (exists ?mouse (exists ?knife (exists ?spoon (exists ?lighter (and (Is ?shoe 'shoe') (Has ?shoe 'black') (OnLeftSide ?shoe) (RightOf ?bottle ?shoe) (AlignedHorizontally ?shoe ?bottle) (Is ?bottle 'bottle') (RightOf ?mouse ?bottle) (Above ?shoe ?knife) (AlignedHorizontally ?bottle ?mouse) (Is ?mouse 'mouse') (SmallerThan ?lighter ?shoe) (Is ?knife 'knife') (RightOf ?spoon ?knife) (Above ?bottle ?spoon) (Above ?mouse ?lighter) (AlignedHorizontally ?spoon ?lighter) (AlignedHorizontally ?knife ?spoon) (RightOf ?lighter ?spoon) (Is ?spoon 'spoon') (Has ?lighter 'red') (Is ?lighter 'lighter'))))))))",
+    "k": 6,
+    "object_classes": [
+        "spoon",
+        "lighter",
+        "mouse",
+        "knife",
+        "bottle",
+        "shoe"
+    ]
+}

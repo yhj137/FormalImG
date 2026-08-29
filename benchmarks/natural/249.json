@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a pair of plastic headphones inside a metal bus.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?b (and (Is ?h 'headphones') (Is ?b 'bus') (HasMaterial ?h 'plastic') (HasMaterial ?b 'metal') (In ?h ?b)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?b (and (Is ?h 'headphones') (HasMaterial ?h 'plastic') (In ?h ?b) (HasMaterial ?b 'metal') (Is ?b 'bus')))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "bus"
+    ]
+}

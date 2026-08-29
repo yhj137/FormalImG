@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack positioned on the top side of the layout. For every hammer present in the scene, it is located below the backpack, and there is a camera positioned below that hammer. Furthermore, each camera is visually smaller than the hammer it is paired with.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?camera (and (Is ?camera 'camera') (Below ?hammer ?backpack) (Below ?camera ?hammer) (SmallerThan ?camera ?hammer)))))))",
+    "cnf": "(exists ?backpack (forall ?hammer (exists ?camera (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (or (not (Is ?hammer 'hammer')) (Below ?hammer ?backpack)) (or (not (Is ?hammer 'hammer')) (Is ?camera 'camera')) (or (not (Is ?hammer 'hammer')) (Below ?camera ?hammer)) (or (not (Is ?hammer 'hammer')) (SmallerThan ?camera ?hammer))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "backpack",
+        "camera"
+    ]
+}

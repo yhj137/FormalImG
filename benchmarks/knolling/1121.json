@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a laptop located on the left side, with a game controller aligned vertically to it. There is also a book positioned on the bottom side which is larger than the game controller. Consistently, for every pen in the arrangement, there is a knife and a sock where the pen is aligned vertically with the book, the pen is larger than the knife, and the sock is aligned vertically with the pen.",
+    "dsl": "(exists ?laptop (exists ?controller (exists ?book (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?controller 'game_controller') (AlignedVertically ?controller ?laptop) (Is ?book 'book') (OnBottomSide ?book) (LargerThan ?book ?controller) (forall ?pen (implies (Is ?pen 'pen') (exists ?knife (exists ?sock (and (Is ?knife 'knife') (Is ?sock 'sock') (AlignedVertically ?pen ?book) (LargerThan ?pen ?knife) (AlignedVertically ?sock ?pen))))))))))",
+    "cnf": "(exists ?laptop (exists ?controller (exists ?book (forall ?pen (exists ?knife (exists ?sock (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (AlignedVertically ?controller ?laptop) (Is ?controller 'game_controller') (LargerThan ?book ?controller) (OnBottomSide ?book) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?book)) (Is ?book 'book') (or (not (Is ?pen 'pen')) (Is ?sock 'sock')) (or (not (Is ?pen 'pen')) (LargerThan ?pen ?knife)) (or (not (Is ?pen 'pen')) (Is ?knife 'knife')) (or (not (Is ?pen 'pen')) (AlignedVertically ?sock ?pen)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "book",
+        "sock",
+        "pen",
+        "game_controller",
+        "knife"
+    ]
+}

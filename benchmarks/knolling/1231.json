@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every white shirt in the scene, there is a specific set of objects vertically aligned with it. Specifically, a red hat is aligned vertically with the shirt. A pair of glasses is aligned vertically with the hat, and the glasses are visually smaller than the hat. A black remote is aligned vertically with the glasses. A screwdriver is aligned vertically with the remote. A ruler is aligned vertically with the screwdriver; furthermore, the screwdriver is smaller than the ruler. Finally, a carrot is aligned vertically with the ruler.",
+    "dsl": "(forall ?shirt (implies (and (Is ?shirt 'shirt') (Has ?shirt 'white')) (exists ?hat (exists ?glasses (exists ?remote (exists ?screwdriver (exists ?ruler (exists ?carrot (and (Is ?hat 'hat') (Has ?hat 'red') (Is ?glasses 'glasses') (Is ?remote 'remote') (Has ?remote 'black') (Is ?screwdriver 'screwdriver') (Is ?ruler 'ruler') (Is ?carrot 'carrot') (AlignedVertically ?shirt ?hat) (AlignedVertically ?hat ?glasses) (AlignedVertically ?glasses ?remote) (AlignedVertically ?remote ?screwdriver) (AlignedVertically ?screwdriver ?ruler) (AlignedVertically ?ruler ?carrot) (SmallerThan ?glasses ?hat) (SmallerThan ?screwdriver ?ruler))))))))))",
+    "cnf": "(forall ?shirt (exists ?hat (exists ?glasses (exists ?remote (exists ?screwdriver (exists ?ruler (exists ?carrot (and (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?hat 'hat')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Has ?hat 'red')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?glasses 'glasses')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?shirt ?hat)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?remote 'remote')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?hat ?glasses)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?carrot 'carrot')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Has ?remote 'black')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?glasses ?remote)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (SmallerThan ?glasses ?hat)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?ruler 'ruler')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?ruler ?carrot)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?remote ?screwdriver)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (SmallerThan ?screwdriver ?ruler)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?screwdriver ?ruler))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "remote",
+        "carrot",
+        "screwdriver",
+        "hat",
+        "shirt"
+    ]
+}

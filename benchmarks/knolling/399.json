@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a suitcase positioned on the right side of the frame. For every apple present in the scene, it is located to the left of that suitcase.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (OnRightSide ?s) (forall ?a (implies (Is ?a 'apple') (LeftOf ?a ?s)))))",
+    "cnf": "(exists ?s (forall ?a (and (Is ?s 'suitcase') (OnRightSide ?s) (or (not (Is ?a 'apple')) (LeftOf ?a ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "apple"
+    ]
+}

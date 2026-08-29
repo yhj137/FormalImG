@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a blue hat, a black stapler, a white mouse, and a gray fork. The stapler is positioned below the hat, and they are aligned vertically. The mouse is to the right of the stapler, and the fork is to the right of the mouse, with the stapler, mouse, and fork aligned horizontally. Additionally, for every pair of scissors in the scene, it is red, located on the bottom side of the image, and positioned below the fork.",
+    "dsl": "(exists ?hat (exists ?stapler (exists ?mouse (exists ?fork (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?stapler 'stapler') (Has ?stapler 'black') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?fork 'fork') (Has ?fork 'gray') (Below ?stapler ?hat) (AlignedVertically ?hat ?stapler) (RightOf ?mouse ?stapler) (AlignedHorizontally ?stapler ?mouse) (RightOf ?fork ?mouse) (AlignedHorizontally ?mouse ?fork) (forall ?scissors (implies (Is ?scissors 'scissors') (and (Has ?scissors 'red') (OnBottomSide ?scissors) (Below ?scissors ?fork)))))))))",
+    "cnf": "(exists ?hat (exists ?stapler (exists ?mouse (exists ?fork (forall ?scissors (and (Is ?hat 'hat') (Has ?hat 'blue') (Below ?stapler ?hat) (AlignedVertically ?hat ?stapler) (Has ?stapler 'black') (RightOf ?mouse ?stapler) (Is ?stapler 'stapler') (AlignedHorizontally ?stapler ?mouse) (Has ?mouse 'white') (RightOf ?fork ?mouse) (Is ?mouse 'mouse') (AlignedHorizontally ?mouse ?fork) (Has ?fork 'gray') (or (not (Is ?scissors 'scissors')) (Below ?scissors ?fork)) (Is ?fork 'fork') (or (not (Is ?scissors 'scissors')) (OnBottomSide ?scissors)) (or (not (Is ?scissors 'scissors')) (Has ?scissors 'red'))))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "fork",
+        "hat",
+        "mouse",
+        "scissors"
+    ]
+}

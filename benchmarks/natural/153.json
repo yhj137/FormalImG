@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style image where all people are standing.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?p (implies (Is ?p 'person') (HasState ?p 'standing'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?p (or (not (Is ?p 'person')) (HasState ?p 'standing'))))",
+    "k": 1,
+    "object_classes": [
+        "person"
+    ]
+}

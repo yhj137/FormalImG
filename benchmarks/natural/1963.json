@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a man with a lion positioned next to him. To the right of the man is a bed with a child on it. To the left of the man stands a metal bookshelf with a monitor on top. Next to the bookshelf is a rock with a plant growing on it, and a butterfly hovers above the plant. The man is holding every bottle in the scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?man (and (Is ?man 'man') (exists ?lion (and (Is ?lion 'lion') (NextTo ?lion ?man))) (exists ?bed (and (Is ?bed 'bed') (RightOf ?bed ?man) (exists ?child (and (Is ?child 'child') (On ?child ?bed))))) (exists ?shelf (and (Is ?shelf 'bookshelf') (LeftOf ?shelf ?man) (HasMaterial ?shelf 'metal') (exists ?mon (and (Is ?mon 'monitor') (On ?mon ?shelf))) (exists ?rock (and (Is ?rock 'rock') (NextTo ?rock ?shelf) (forall ?bot (implies (Is ?bot 'bottle') (Holding ?man ?bot))) (exists ?plant (and (Is ?plant 'plant') (On ?plant ?rock) (exists ?bfly (and (Is ?bfly 'butterfly') (Above ?bfly ?plant))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?man (exists ?lion (exists ?bed (exists ?child (exists ?shelf (exists ?mon (exists ?rock (forall ?bot (exists ?plant (exists ?bfly (and (Is ?man 'man') (NextTo ?lion ?man) (RightOf ?bed ?man) (Is ?lion 'lion') (LeftOf ?shelf ?man) (Is ?bed 'bed') (On ?child ?bed) (or (not (Is ?bot 'bottle')) (Holding ?man ?bot)) (Is ?shelf 'bookshelf') (HasMaterial ?shelf 'metal') (Is ?child 'child') (On ?mon ?shelf) (NextTo ?rock ?shelf) (Is ?mon 'monitor') (Is ?rock 'rock') (On ?plant ?rock) (Is ?plant 'plant') (Above ?bfly ?plant) (Is ?bfly 'butterfly')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bottle",
+        "monitor",
+        "rock",
+        "man",
+        "plant",
+        "butterfly",
+        "bed",
+        "lion",
+        "bookshelf",
+        "child"
+    ]
+}

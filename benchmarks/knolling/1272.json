@@ -1,0 +1,15 @@
+{
+    "prompt": "Create a Knolling-style image. A black monitor is located on the top side of the scene. For any set of keys present, they are positioned vertically below the monitor. To the right of the keys is a pair of blue jeans, and to the right of the jeans is a white hat; these three objects are aligned horizontally. Additionally, a brown cutting board is located below the jeans. A knife is placed to the right of the cutting board, and a spoon is to the right of the knife, with these three forming another horizontally aligned row. The monitor is visually larger than the cutting board.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (forall ?keys (implies (Is ?keys 'keys') (exists ?jeans (exists ?hat (exists ?cutting_board (exists ?knife (exists ?spoon (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?hat 'hat') (Has ?hat 'white') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Is ?knife 'knife') (Is ?spoon 'spoon') (Below ?keys ?monitor) (RightOf ?jeans ?keys) (RightOf ?hat ?jeans) (AlignedHorizontally ?keys ?jeans) (AlignedHorizontally ?jeans ?hat) (Below ?cutting_board ?jeans) (RightOf ?knife ?cutting_board) (RightOf ?spoon ?knife) (AlignedHorizontally ?cutting_board ?knife) (AlignedHorizontally ?knife ?spoon) (LargerThan ?monitor ?cutting_board)))))))))))",
+    "cnf": "(exists ?monitor (forall ?keys (exists ?jeans (exists ?hat (exists ?cutting_board (exists ?knife (exists ?spoon (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (or (not (Is ?keys 'keys')) (Below ?keys ?monitor)) (or (not (Is ?keys 'keys')) (LargerThan ?monitor ?cutting_board)) (or (not (Is ?keys 'keys')) (Is ?spoon 'spoon')) (or (not (Is ?keys 'keys')) (RightOf ?jeans ?keys)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?knife ?spoon)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?cutting_board ?knife)) (or (not (Is ?keys 'keys')) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (RightOf ?spoon ?knife)) (or (not (Is ?keys 'keys')) (Has ?jeans 'blue')) (or (not (Is ?keys 'keys')) (RightOf ?hat ?jeans)) (or (not (Is ?keys 'keys')) (RightOf ?knife ?cutting_board)) (or (not (Is ?keys 'keys')) (Has ?cutting_board 'brown')) (or (not (Is ?keys 'keys')) (Is ?jeans 'jeans')) (or (not (Is ?keys 'keys')) (Is ?hat 'hat')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?keys ?jeans)) (or (not (Is ?keys 'keys')) (Has ?hat 'white')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?jeans ?hat)) (or (not (Is ?keys 'keys')) (Below ?cutting_board ?jeans)) (or (not (Is ?keys 'keys')) (Is ?cutting_board 'cutting_board'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keys",
+        "cutting_board",
+        "hat",
+        "jeans",
+        "knife",
+        "monitor",
+        "spoon"
+    ]
+}

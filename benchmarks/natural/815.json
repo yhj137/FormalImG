@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a rectangular refrigerator to the left of a wooden wardrobe. Inside the refrigerator is a round pan containing a fish, and a bird is to the left of the refrigerator.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (exists ?w (exists ?p (exists ?f (exists ?b (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (LeftOf ?r ?w) (Is ?p 'pan') (HasShape ?p 'round') (In ?p ?r) (Is ?f 'fish') (In ?f ?p) (Is ?b 'bird') (LeftOf ?b ?r))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (exists ?w (exists ?p (exists ?f (exists ?b (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (LeftOf ?r ?w) (In ?p ?r) (HasMaterial ?w 'wooden') (LeftOf ?b ?r) (HasShape ?p 'round') (In ?f ?p) (Is ?w 'wardrobe') (Is ?b 'bird') (Is ?p 'pan') (Is ?f 'fish'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fish",
+        "bird",
+        "refrigerator",
+        "pan",
+        "wardrobe"
+    ]
+}

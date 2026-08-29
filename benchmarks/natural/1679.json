@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a man standing next to a horse. All elephants are located to the left of the man. A bicycle is positioned to the right of the horse. The man holds a leather jacket and a plate with a peeled orange on it. A round clock is next to the bicycle, and a fluffy teddy bear is to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?v1 (exists ?v2 (and (Is ?v1 'man') (Is ?v2 'horse') (NextTo ?v1 ?v2) (forall ?v3 (implies (Is ?v3 'elephant') (LeftOf ?v3 ?v1))) (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (exists ?v8 (exists ?v9 (and (Is ?v4 'bicycle') (RightOf ?v4 ?v2) (Is ?v5 'jacket') (HasMaterial ?v5 'leather') (Holding ?v1 ?v5) (Is ?v6 'clock') (HasShape ?v6 'round') (NextTo ?v6 ?v4) (Is ?v7 'plate') (Holding ?v1 ?v7) (Is ?v8 'orange') (HasState ?v8 'peeled') (On ?v8 ?v7) (Is ?v9 'teddy bear') (HasMaterial ?v9 'fluffy') (RightOf ?v9 ?v4))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?v1 (exists ?v2 (forall ?v3 (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (exists ?v8 (exists ?v9 (and (Is ?v1 'man') (NextTo ?v1 ?v2) (or (not (Is ?v3 'elephant')) (LeftOf ?v3 ?v1)) (Is ?v2 'horse') (RightOf ?v4 ?v2) (Holding ?v1 ?v5) (Is ?v4 'bicycle') (NextTo ?v6 ?v4) (Holding ?v1 ?v7) (HasMaterial ?v5 'leather') (RightOf ?v9 ?v4) (HasShape ?v6 'round') (Is ?v7 'plate') (On ?v8 ?v7) (Is ?v5 'jacket') (HasMaterial ?v9 'fluffy') (Is ?v6 'clock') (HasState ?v8 'peeled') (Is ?v9 'teddy bear') (Is ?v8 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "man",
+        "teddy bear",
+        "horse",
+        "bicycle",
+        "clock",
+        "elephant",
+        "orange",
+        "plate"
+    ]
+}

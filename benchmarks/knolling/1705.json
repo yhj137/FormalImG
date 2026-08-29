@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the bottom side of the arrangement, there is a pair of jeans. A handbag is placed above the jeans, and a hat is positioned above the handbag. A book is aligned horizontally with the hat. For every wrench present, it is smaller than the jeans, and a hammer is located to its right. A camera is found on the right side of the image, aligned horizontally with the hammer. Directly below the camera is a wallet, and a cup is positioned to the left of the wallet. Additionally, the handbag is larger than the wallet.",
+    "dsl": "(exists ?jeans (exists ?handbag (exists ?hat (exists ?book (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Is ?handbag 'handbag') (Above ?handbag ?jeans) (Is ?hat 'hat') (Above ?hat ?handbag) (Is ?book 'book') (AlignedHorizontally ?book ?hat) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?hammer (exists ?camera (exists ?wallet (exists ?cup (and (Is ?hammer 'hammer') (Is ?camera 'camera') (Is ?wallet 'wallet') (Is ?cup 'cup') (SmallerThan ?wrench ?jeans) (RightOf ?hammer ?wrench) (AlignedHorizontally ?hammer ?camera) (OnRightSide ?camera) (Above ?camera ?wallet) (RightOf ?wallet ?cup) (LargerThan ?handbag ?wallet)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?handbag (exists ?hat (exists ?book (forall ?wrench (exists ?hammer (exists ?camera (exists ?wallet (exists ?cup (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Above ?handbag ?jeans) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?jeans)) (Is ?handbag 'handbag') (Above ?hat ?handbag) (or (not (Is ?wrench 'wrench')) (Is ?cup 'cup')) (or (not (Is ?wrench 'wrench')) (RightOf ?hammer ?wrench)) (or (not (Is ?wrench 'wrench')) (LargerThan ?handbag ?wallet)) (Is ?hat 'hat') (AlignedHorizontally ?book ?hat) (or (not (Is ?wrench 'wrench')) (Is ?wallet 'wallet')) (or (not (Is ?wrench 'wrench')) (RightOf ?wallet ?cup)) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?hammer ?camera)) (or (not (Is ?wrench 'wrench')) (Is ?hammer 'hammer')) (Is ?book 'book') (or (not (Is ?wrench 'wrench')) (Is ?camera 'camera')) (or (not (Is ?wrench 'wrench')) (Above ?camera ?wallet)) (or (not (Is ?wrench 'wrench')) (OnRightSide ?camera))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "wrench",
+        "cup",
+        "hammer",
+        "handbag",
+        "hat",
+        "jeans",
+        "wallet",
+        "camera"
+    ]
+}

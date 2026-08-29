@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular monitor is positioned to the left of every sandwich.",
+    "dsl": "(exists ?m (and (Is ?m 'monitor') (HasShape ?m 'rectangular') (forall ?s (implies (Is ?s 'sandwich') (LeftOf ?m ?s)))))",
+    "cnf": "(exists ?m (forall ?s (and (Is ?m 'monitor') (HasShape ?m 'rectangular') (or (not (Is ?s 'sandwich')) (LeftOf ?m ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "monitor"
+    ]
+}

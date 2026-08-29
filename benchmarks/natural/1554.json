@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A child wearing a plastic hat has a dog to the right. To the right of the dog is a plate with a peeled orange. All balls in the scene are positioned to the right of the plate, alongside a blue cup containing a toy car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (exists ?d (exists ?p (exists ?o (and (Is ?c 'child') (Is ?h 'hat') (HasMaterial ?h 'plastic') (On ?h ?c) (Is ?d 'dog') (RightOf ?d ?c) (Is ?p 'plate') (RightOf ?p ?d) (Is ?o 'orange') (HasState ?o 'peeled') (On ?o ?p) (forall ?b (implies (Is ?b 'ball') (RightOf ?b ?p))) (exists ?u (exists ?t (and (Is ?u 'cup') (HasColor ?u 'blue') (RightOf ?u ?p) (Is ?t 'toy car') (In ?t ?u)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (exists ?d (exists ?p (exists ?o (forall ?b (exists ?u (exists ?t (and (Is ?c 'child') (On ?h ?c) (RightOf ?d ?c) (HasMaterial ?h 'plastic') (Is ?d 'dog') (RightOf ?p ?d) (Is ?h 'hat') (Is ?p 'plate') (On ?o ?p) (or (not (Is ?b 'ball')) (RightOf ?b ?p)) (HasState ?o 'peeled') (RightOf ?u ?p) (Is ?o 'orange') (HasColor ?u 'blue') (In ?t ?u) (Is ?u 'cup') (Is ?t 'toy car')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "toy car",
+        "hat",
+        "ball",
+        "cup",
+        "dog",
+        "child",
+        "orange",
+        "plate"
+    ]
+}

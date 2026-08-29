@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a dirty pan.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (and (Is ?p 'pan') (HasState ?p 'dirty'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (and (Is ?p 'pan') (HasState ?p 'dirty'))))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

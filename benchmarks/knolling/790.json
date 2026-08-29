@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a laptop, a plate positioned on the right side, and a camera located on the bottom side. The laptop and the plate are aligned horizontally, while the camera is smaller than the laptop. Furthermore, every lighter in the scene is smaller than the camera and is aligned horizontally with it.",
+    "dsl": "(exists ?laptop (exists ?plate (exists ?camera (and (Is ?laptop 'laptop') (Is ?plate 'plate') (Is ?camera 'camera') (OnRightSide ?plate) (OnBottomSide ?camera) (AlignedHorizontally ?laptop ?plate) (SmallerThan ?camera ?laptop) (forall ?lighter (implies (Is ?lighter 'lighter') (and (SmallerThan ?lighter ?camera) (AlignedHorizontally ?lighter ?camera))))))))",
+    "cnf": "(exists ?laptop (exists ?plate (exists ?camera (forall ?lighter (and (Is ?laptop 'laptop') (AlignedHorizontally ?laptop ?plate) (SmallerThan ?camera ?laptop) (OnRightSide ?plate) (OnBottomSide ?camera) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?camera)) (Is ?plate 'plate') (Is ?camera 'camera') (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?camera)))))))",
+    "k": 4,
+    "object_classes": [
+        "laptop",
+        "lighter",
+        "plate",
+        "camera"
+    ]
+}

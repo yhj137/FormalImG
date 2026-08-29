@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands next to a horse, holding a black umbrella. Every monitor in the scene is rectangular and located next to the man.",
+    "dsl": "(exists ?m (exists ?h (exists ?u (and (Is ?m 'man') (Is ?h 'horse') (Is ?u 'umbrella') (HasState ?m 'standing') (NextTo ?m ?h) (HasColor ?u 'black') (Holding ?m ?u) (forall ?mon (implies (Is ?mon 'monitor') (and (HasShape ?mon 'rectangular') (NextTo ?mon ?m))))))))",
+    "cnf": "(exists ?m (exists ?h (exists ?u (forall ?mon (and (Is ?m 'man') (HasState ?m 'standing') (NextTo ?m ?h) (Holding ?m ?u) (Is ?h 'horse') (or (not (Is ?mon 'monitor')) (NextTo ?mon ?m)) (HasColor ?u 'black') (or (not (Is ?mon 'monitor')) (HasShape ?mon 'rectangular')) (Is ?u 'umbrella'))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "umbrella",
+        "man",
+        "monitor"
+    ]
+}

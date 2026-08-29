@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a key resting on an oval spoon.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?k (exists ?s (and (Is ?k 'key') (Is ?s 'spoon') (On ?k ?s) (HasShape ?s 'oval')))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?k (exists ?s (and (Is ?k 'key') (On ?k ?s) (Is ?s 'spoon') (HasShape ?s 'oval')))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "key"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the right side of the scene. To the left of the backpack is a handbag, which is also placed above a keyboard. For every pen in the image, it is located to the left of the keyboard. Associated with each pen, there is a wallet to its right, with the pen being smaller than the wallet. Additionally, a stapler is positioned above the wallet, and headphones are located to the right of the stapler.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?keyboard (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (Is ?handbag 'handbag') (LeftOf ?handbag ?backpack) (Is ?keyboard 'keyboard') (Above ?handbag ?keyboard) (forall ?pen (implies (Is ?pen 'pen') (exists ?wallet (exists ?stapler (exists ?headphones (and (Is ?wallet 'wallet') (Is ?stapler 'stapler') (Is ?headphones 'headphones') (LeftOf ?pen ?keyboard) (RightOf ?wallet ?pen) (SmallerThan ?pen ?wallet) (Above ?stapler ?wallet) (RightOf ?headphones ?stapler)))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?keyboard (forall ?pen (exists ?wallet (exists ?stapler (exists ?headphones (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (LeftOf ?handbag ?backpack) (Is ?handbag 'handbag') (Above ?handbag ?keyboard) (Is ?keyboard 'keyboard') (or (not (Is ?pen 'pen')) (LeftOf ?pen ?keyboard)) (or (not (Is ?pen 'pen')) (Is ?headphones 'headphones')) (or (not (Is ?pen 'pen')) (RightOf ?wallet ?pen)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (RightOf ?headphones ?stapler)) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?wallet)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (Above ?stapler ?wallet))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "pen",
+        "keyboard",
+        "handbag",
+        "backpack",
+        "wallet",
+        "headphones"
+    ]
+}

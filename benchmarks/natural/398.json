@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a gray elephant, with every basket positioned to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (and (Is ?e 'elephant') (HasColor ?e 'gray') (forall ?b (implies (Is ?b 'basket') (RightOf ?b ?e))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (forall ?b (and (Is ?e 'elephant') (HasColor ?e 'gray') (or (not (Is ?b 'basket')) (RightOf ?b ?e))))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "basket"
+    ]
+}

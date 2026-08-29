@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a bicycle next to a tree, with a wooden basket on the bicycle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?ba (and (Is ?t 'tree') (Is ?b 'bicycle') (Is ?ba 'basket') (NextTo ?b ?t) (On ?ba ?b) (HasMaterial ?ba 'wooden'))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?ba (and (Is ?t 'tree') (NextTo ?b ?t) (Is ?b 'bicycle') (On ?ba ?b) (Is ?ba 'basket') (HasMaterial ?ba 'wooden'))))))",
+    "k": 3,
+    "object_classes": [
+        "bicycle",
+        "basket",
+        "tree"
+    ]
+}

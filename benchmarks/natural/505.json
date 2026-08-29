@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a lion holding plastic headphones, with all oranges positioned to the left of the lion.",
+    "dsl": "(and (IsStyle 'photo') (exists ?l (and (Is ?l 'lion') (forall ?o (implies (Is ?o 'orange') (LeftOf ?o ?l))) (exists ?h (and (Is ?h 'headphones') (HasMaterial ?h 'plastic') (Holding ?l ?h))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?l (forall ?o (exists ?h (and (Is ?l 'lion') (or (not (Is ?o 'orange')) (LeftOf ?o ?l)) (Holding ?l ?h) (HasMaterial ?h 'plastic') (Is ?h 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "lion",
+        "orange",
+        "headphones"
+    ]
+}

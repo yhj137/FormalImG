@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image showing an organized collection of items. On the left side, there is a suitcase. To the right of the suitcase is a backpack, and the suitcase is larger than the backpack. A pizza is placed above the backpack, while a bottle is located below the backpack. Further to the right, a tie is positioned to the right of the pizza, and a glove is to the right of the bottle. A wallet sits to the right of the backpack. Below the wallet lies a watch, which is smaller than the wallet. Finally, every screwdriver in the scene is arranged below the tie.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?pizza (exists ?bottle (exists ?tie (exists ?glove (exists ?wallet (exists ?watch (and (Is ?suitcase 'suitcase') (Is ?backpack 'backpack') (Is ?pizza 'pizza') (Is ?bottle 'bottle') (Is ?tie 'tie') (Is ?glove 'glove') (Is ?wallet 'wallet') (Is ?watch 'watch') (OnLeftSide ?suitcase) (RightOf ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (Above ?pizza ?backpack) (Below ?bottle ?backpack) (RightOf ?tie ?pizza) (RightOf ?glove ?bottle) (RightOf ?wallet ?backpack) (Below ?watch ?wallet) (SmallerThan ?watch ?wallet) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (Below ?screwdriver ?tie))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?pizza (exists ?bottle (exists ?tie (exists ?glove (exists ?wallet (exists ?watch (forall ?screwdriver (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (Is ?backpack 'backpack') (Above ?pizza ?backpack) (Below ?bottle ?backpack) (Is ?pizza 'pizza') (RightOf ?tie ?pizza) (RightOf ?wallet ?backpack) (Is ?bottle 'bottle') (RightOf ?glove ?bottle) (Is ?tie 'tie') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?tie)) (Is ?wallet 'wallet') (Below ?watch ?wallet) (Is ?glove 'glove') (SmallerThan ?watch ?wallet) (Is ?watch 'watch')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "pizza",
+        "screwdriver",
+        "watch",
+        "backpack",
+        "wallet",
+        "bottle",
+        "suitcase",
+        "glove"
+    ]
+}

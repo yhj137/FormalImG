@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is located on the left side of the scene. A bowl is placed above the cutting board. To the right of the bowl is a cup. This cup is positioned above a set of keys. To the right of the keys is a mouse, and a pair of headphones is located above the mouse.",
+    "dsl": "(exists ?board (exists ?bowl (exists ?cup (exists ?keys (exists ?mouse (exists ?headphones (and (Is ?board 'cutting_board') (Is ?bowl 'bowl') (Is ?cup 'cup') (Is ?keys 'keys') (Is ?mouse 'mouse') (Is ?headphones 'headphones') (OnLeftSide ?board) (Above ?bowl ?board) (RightOf ?cup ?bowl) (Above ?cup ?keys) (RightOf ?mouse ?keys) (Above ?headphones ?mouse))))))))",
+    "cnf": "(exists ?board (exists ?bowl (exists ?cup (exists ?keys (exists ?mouse (exists ?headphones (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Above ?bowl ?board) (Is ?bowl 'bowl') (RightOf ?cup ?bowl) (Is ?cup 'cup') (Above ?cup ?keys) (Is ?keys 'keys') (RightOf ?mouse ?keys) (Is ?mouse 'mouse') (Above ?headphones ?mouse) (Is ?headphones 'headphones'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "cup",
+        "cutting_board",
+        "mouse",
+        "bowl",
+        "headphones"
+    ]
+}

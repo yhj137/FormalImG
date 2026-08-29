@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a camera, headphones, and a lighter. The camera is positioned on the left side of the image. The headphones are located above the camera, and the two are aligned vertically. The lighter is aligned horizontally with the headphones.",
+    "dsl": "(exists ?camera (exists ?headphones (exists ?lighter (and (Is ?camera 'camera') (Is ?headphones 'headphones') (Is ?lighter 'lighter') (OnLeftSide ?camera) (Above ?headphones ?camera) (AlignedVertically ?headphones ?camera) (AlignedHorizontally ?lighter ?headphones)))))",
+    "cnf": "(exists ?camera (exists ?headphones (exists ?lighter (and (Is ?camera 'camera') (OnLeftSide ?camera) (Above ?headphones ?camera) (AlignedVertically ?headphones ?camera) (Is ?headphones 'headphones') (AlignedHorizontally ?lighter ?headphones) (Is ?lighter 'lighter')))))",
+    "k": 3,
+    "object_classes": [
+        "lighter",
+        "headphones",
+        "camera"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pan and a carrot. The carrot is positioned on the right side of the image, and the pan is aligned vertically with the carrot.",
+    "dsl": "(exists ?pan (exists ?carrot (and (Is ?pan 'pan') (Is ?carrot 'carrot') (OnRightSide ?carrot) (AlignedVertically ?pan ?carrot))))",
+    "cnf": "(exists ?pan (exists ?carrot (and (Is ?pan 'pan') (AlignedVertically ?pan ?carrot) (OnRightSide ?carrot) (Is ?carrot 'carrot'))))",
+    "k": 2,
+    "object_classes": [
+        "pan",
+        "carrot"
+    ]
+}

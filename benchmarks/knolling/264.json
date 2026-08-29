@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a book and a stapler. The book is placed on the top side of the image, while the stapler is positioned to the right of the book.",
+    "dsl": "(exists ?book (exists ?stapler (and (Is ?book 'book') (Is ?stapler 'stapler') (OnTopSide ?book) (RightOf ?stapler ?book))))",
+    "cnf": "(exists ?book (exists ?stapler (and (Is ?book 'book') (OnTopSide ?book) (RightOf ?stapler ?book) (Is ?stapler 'stapler'))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "stapler"
+    ]
+}

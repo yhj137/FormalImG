@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the image, there is a hat aligned vertically with it, and the shoe is positioned on the left side of the scene.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?hat (and (Is ?hat 'hat') (OnLeftSide ?shoe) (AlignedVertically ?shoe ?hat))))))",
+    "cnf": "(forall ?shoe (exists ?hat (and (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?shoe)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?hat)))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "shoe"
+    ]
+}

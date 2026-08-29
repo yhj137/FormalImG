@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a metal wardrobe. A tree stands to the left of the wardrobe, and a horse is positioned to the left of the tree. A chair sits to the right of the wardrobe. Every fork in the scene is located to the left of the tree. Additionally, round headphones are placed to the right of the chair.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?t (exists ?h (exists ?c (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (Is ?t 'tree') (LeftOf ?t ?w) (Is ?h 'horse') (LeftOf ?h ?t) (Is ?c 'chair') (RightOf ?c ?w) (forall ?f (implies (Is ?f 'fork') (LeftOf ?f ?t))) (exists ?hp (and (Is ?hp 'headphones') (HasShape ?hp 'round') (RightOf ?hp ?c)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?t (exists ?h (exists ?c (forall ?f (exists ?hp (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (LeftOf ?t ?w) (RightOf ?c ?w) (Is ?t 'tree') (LeftOf ?h ?t) (Is ?c 'chair') (RightOf ?hp ?c) (or (not (Is ?f 'fork')) (LeftOf ?f ?t)) (Is ?h 'horse') (HasShape ?hp 'round') (Is ?hp 'headphones')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "fork",
+        "horse",
+        "chair",
+        "tree",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag positioned on the left side of the image. A keyboard is aligned vertically with the handbag, while a plate is aligned horizontally with the handbag. A donut aligns horizontally with the keyboard. The layout also follows a specific rule for tools: for every pen in the image, there is a pair of pliers aligned vertically with it. Additionally, the pliers are smaller than the pen, and the pen is aligned horizontally with the plate.",
+    "dsl": "(exists ?handbag (exists ?keyboard (exists ?plate (exists ?donut (and (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?plate 'plate') (Is ?donut 'donut') (OnLeftSide ?handbag) (AlignedVertically ?handbag ?keyboard) (AlignedHorizontally ?handbag ?plate) (AlignedHorizontally ?keyboard ?donut) (forall ?pen (implies (Is ?pen 'pen') (exists ?pliers (and (Is ?pliers 'pliers') (SmallerThan ?pliers ?pen) (AlignedVertically ?pliers ?pen) (AlignedHorizontally ?pen ?plate))))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (exists ?plate (exists ?donut (forall ?pen (exists ?pliers (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (AlignedVertically ?handbag ?keyboard) (AlignedHorizontally ?handbag ?plate) (Is ?keyboard 'keyboard') (AlignedHorizontally ?keyboard ?donut) (Is ?plate 'plate') (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?plate)) (Is ?donut 'donut') (or (not (Is ?pen 'pen')) (AlignedVertically ?pliers ?pen)) (or (not (Is ?pen 'pen')) (SmallerThan ?pliers ?pen)) (or (not (Is ?pen 'pen')) (Is ?pliers 'pliers')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "pliers",
+        "keyboard",
+        "pen",
+        "donut",
+        "handbag"
+    ]
+}

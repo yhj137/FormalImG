@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop in the scene, there is a stapler above it, a pair of scissors above the stapler, a black phone below it, and a game controller below the phone. The laptop is larger than the phone. Additionally, for each laptop, there is a blue bottle on the right side of the image that is larger than the game controller, a drill positioned below the bottle, and a shoe located on the bottom side.",
+    "dsl": "(forall ?laptop (implies (Is ?laptop 'laptop') (exists ?stapler (exists ?scissors (exists ?phone (exists ?controller (exists ?bottle (exists ?drill (exists ?shoe (and (Is ?stapler 'stapler') (Is ?scissors 'scissors') (Is ?phone 'phone') (Has ?phone 'black') (Is ?controller 'game_controller') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?drill 'drill') (Is ?shoe 'shoe') (Above ?stapler ?laptop) (Above ?scissors ?stapler) (Below ?phone ?laptop) (Below ?controller ?phone) (OnRightSide ?bottle) (Below ?drill ?bottle) (OnBottomSide ?shoe) (LargerThan ?laptop ?phone) (LargerThan ?bottle ?controller)))))))))))",
+    "cnf": "(forall ?laptop (exists ?stapler (exists ?scissors (exists ?phone (exists ?controller (exists ?bottle (exists ?drill (exists ?shoe (and (or (not (Is ?laptop 'laptop')) (Is ?stapler 'stapler')) (or (not (Is ?laptop 'laptop')) (Above ?stapler ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?scissors 'scissors')) (or (not (Is ?laptop 'laptop')) (Above ?scissors ?stapler)) (or (not (Is ?laptop 'laptop')) (Is ?shoe 'shoe')) (or (not (Is ?laptop 'laptop')) (Is ?phone 'phone')) (or (not (Is ?laptop 'laptop')) (Below ?phone ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?drill 'drill')) (or (not (Is ?laptop 'laptop')) (OnBottomSide ?shoe)) (or (not (Is ?laptop 'laptop')) (Has ?phone 'black')) (or (not (Is ?laptop 'laptop')) (Below ?controller ?phone)) (or (not (Is ?laptop 'laptop')) (Has ?bottle 'blue')) (or (not (Is ?laptop 'laptop')) (Below ?drill ?bottle)) (or (not (Is ?laptop 'laptop')) (LargerThan ?laptop ?phone)) (or (not (Is ?laptop 'laptop')) (Is ?controller 'game_controller')) (or (not (Is ?laptop 'laptop')) (OnRightSide ?bottle)) (or (not (Is ?laptop 'laptop')) (LargerThan ?bottle ?controller)) (or (not (Is ?laptop 'laptop')) (Is ?bottle 'bottle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "phone",
+        "game_controller",
+        "drill",
+        "bottle",
+        "scissors",
+        "shoe"
+    ]
+}

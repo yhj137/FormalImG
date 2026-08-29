@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a keyboard positioned on the top side. A blue tie is arranged below the keyboard, and a wallet is placed below the tie; these three objects form a vertical column. The keyboard is physically larger than the wallet. Glasses are located on the right side of the image and are aligned horizontally with the keyboard. A fork is aligned horizontally with the tie, and a red lighter is aligned horizontally with the wallet. The lighter is visually smaller than the wallet. Additionally, for every lemon in the arrangement, there is a screwdriver positioned above it, and this screwdriver is aligned vertically with the glasses.",
+    "dsl": "(exists ?kb (exists ?tie (exists ?wallet (exists ?glasses (exists ?fork (exists ?lighter (and (Is ?kb 'keyboard') (OnTopSide ?kb) (Is ?tie 'tie') (Has ?tie 'blue') (Is ?wallet 'wallet') (Is ?glasses 'glasses') (OnRightSide ?glasses) (Is ?fork 'fork') (Is ?lighter 'lighter') (Has ?lighter 'red') (Above ?kb ?tie) (Above ?tie ?wallet) (AlignedVertically ?kb ?tie) (AlignedVertically ?tie ?wallet) (LargerThan ?kb ?wallet) (AlignedHorizontally ?kb ?glasses) (AlignedHorizontally ?tie ?fork) (AlignedHorizontally ?wallet ?lighter) (SmallerThan ?lighter ?wallet) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?sd (and (Is ?sd 'screwdriver') (Above ?sd ?lemon) (AlignedVertically ?sd ?glasses))))))))))))",
+    "cnf": "(exists ?kb (exists ?tie (exists ?wallet (exists ?glasses (exists ?fork (exists ?lighter (forall ?lemon (exists ?sd (and (Is ?kb 'keyboard') (OnTopSide ?kb) (Above ?kb ?tie) (AlignedVertically ?kb ?tie) (Has ?tie 'blue') (Above ?tie ?wallet) (LargerThan ?kb ?wallet) (AlignedVertically ?tie ?wallet) (Is ?tie 'tie') (Is ?wallet 'wallet') (AlignedHorizontally ?kb ?glasses) (AlignedHorizontally ?wallet ?lighter) (AlignedHorizontally ?tie ?fork) (OnRightSide ?glasses) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?sd ?glasses)) (SmallerThan ?lighter ?wallet) (Has ?lighter 'red') (Is ?fork 'fork') (Is ?glasses 'glasses') (or (not (Is ?lemon 'lemon')) (Above ?sd ?lemon)) (Is ?lighter 'lighter') (or (not (Is ?lemon 'lemon')) (Is ?sd 'screwdriver')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "keyboard",
+        "lemon",
+        "screwdriver",
+        "fork",
+        "lighter",
+        "wallet"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black camera in the scene. Every phone in the image is white and positioned to the right of the camera. A shoe is aligned vertically with the camera. There is a sandwich smaller than the shoe, and a spoon is located to the right of the sandwich. Additionally, a pair of headphones is on the right side of the image, appearing larger than the camera.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (Has ?camera 'black') (forall ?phone (implies (Is ?phone 'phone') (and (Has ?phone 'white') (RightOf ?phone ?camera)))) (exists ?shoe (exists ?sandwich (exists ?spoon (exists ?headphones (and (Is ?shoe 'shoe') (Is ?sandwich 'sandwich') (Is ?spoon 'spoon') (Is ?headphones 'headphones') (AlignedVertically ?shoe ?camera) (SmallerThan ?sandwich ?shoe) (RightOf ?spoon ?sandwich) (LargerThan ?headphones ?camera) (OnRightSide ?headphones))))))))",
+    "cnf": "(exists ?camera (forall ?phone (exists ?shoe (exists ?sandwich (exists ?spoon (exists ?headphones (and (Is ?camera 'camera') (Has ?camera 'black') (or (not (Is ?phone 'phone')) (RightOf ?phone ?camera)) (AlignedVertically ?shoe ?camera) (or (not (Is ?phone 'phone')) (Has ?phone 'white')) (LargerThan ?headphones ?camera) (Is ?shoe 'shoe') (SmallerThan ?sandwich ?shoe) (Is ?headphones 'headphones') (OnRightSide ?headphones) (Is ?sandwich 'sandwich') (RightOf ?spoon ?sandwich) (Is ?spoon 'spoon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "camera",
+        "spoon",
+        "headphones",
+        "sandwich",
+        "shoe"
+    ]
+}

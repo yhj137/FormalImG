@@ -1,0 +1,9 @@
+{
+    "prompt": "This is an oil painting style image showing a rectangular rug.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "rug"
+    ]
+}

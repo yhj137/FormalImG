@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring an elephant standing next to a sofa, holding an apple. A round pizza with a knife stuck inside rests on the sofa, with a spoon positioned to its left. A pair of glasses lies next to the sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?a (exists ?p (exists ?k (exists ?sp (exists ?g (and (Is ?e 'elephant') (Is ?s 'sofa') (Is ?a 'apple') (Is ?p 'pizza') (Is ?k 'knife') (Is ?sp 'spoon') (Is ?g 'glasses') (NextTo ?e ?s) (Holding ?e ?a) (On ?p ?s) (HasShape ?p 'round') (In ?k ?p) (LeftOf ?sp ?p) (NextTo ?g ?s))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?a (exists ?p (exists ?k (exists ?sp (exists ?g (and (Is ?e 'elephant') (NextTo ?e ?s) (Holding ?e ?a) (Is ?s 'sofa') (On ?p ?s) (Is ?a 'apple') (NextTo ?g ?s) (Is ?p 'pizza') (HasShape ?p 'round') (Is ?g 'glasses') (In ?k ?p) (LeftOf ?sp ?p) (Is ?k 'knife') (Is ?sp 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "sofa",
+        "knife",
+        "pizza",
+        "apple",
+        "elephant",
+        "spoon"
+    ]
+}

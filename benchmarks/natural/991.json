@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a dog on a wooden bed holding a blue bowl with a sandwich inside. Every tree is situated to the right of the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?d (exists ?w (exists ?s (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?d 'dog') (On ?d ?b) (Is ?w 'bowl') (HasColor ?w 'blue') (Holding ?d ?w) (Is ?s 'sandwich') (In ?s ?w) (forall ?t (implies (Is ?t 'tree') (RightOf ?t ?b)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?d (exists ?w (exists ?s (forall ?t (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (On ?d ?b) (or (not (Is ?t 'tree')) (RightOf ?t ?b)) (Is ?d 'dog') (Holding ?d ?w) (HasColor ?w 'blue') (In ?s ?w) (Is ?w 'bowl') (Is ?s 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "sandwich",
+        "bed",
+        "tree",
+        "dog"
+    ]
+}

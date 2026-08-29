@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A man holding a black umbrella stands next to a desk. Headphones rest on the desk, with a keyboard to the left of the headphones. A table sits to the right of the man, and every bicycle in the scene is positioned next to the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?u (exists ?d (exists ?h (exists ?k (exists ?t (and (Is ?m 'man') (Is ?u 'umbrella') (Is ?d 'desk') (Is ?h 'headphones') (Is ?k 'keyboard') (Is ?t 'table') (HasColor ?u 'black') (Holding ?m ?u) (NextTo ?m ?d) (On ?h ?d) (LeftOf ?k ?h) (RightOf ?t ?m) (forall ?b (implies (Is ?b 'bicycle') (NextTo ?b ?t)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?u (exists ?d (exists ?h (exists ?k (exists ?t (forall ?b (and (Is ?m 'man') (Holding ?m ?u) (NextTo ?m ?d) (HasColor ?u 'black') (RightOf ?t ?m) (Is ?d 'desk') (On ?h ?d) (Is ?u 'umbrella') (Is ?t 'table') (or (not (Is ?b 'bicycle')) (NextTo ?b ?t)) (Is ?h 'headphones') (LeftOf ?k ?h) (Is ?k 'keyboard'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "headphones",
+        "man",
+        "desk",
+        "table",
+        "bicycle"
+    ]
+}

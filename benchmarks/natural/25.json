@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene featuring a person in purple.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'person') (HasColor ?p 'purple'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'person') (HasColor ?p 'purple'))))",
+    "k": 1,
+    "object_classes": [
+        "person"
+    ]
+}

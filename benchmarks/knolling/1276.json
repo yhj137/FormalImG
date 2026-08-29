@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a suitcase and a keyboard, where the suitcase is to the left of the keyboard. For every sock present, it is located below the suitcase and has a lighter to its right. Directly below the lighter is a white bowl. A calculator is positioned to the right of the bowl. A ruler is located to the right of the calculator; the ruler is aligned horizontally with the calculator and is situated on the bottom side of the image.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (and (Is ?suitcase 'suitcase') (Is ?keyboard 'keyboard') (LeftOf ?suitcase ?keyboard) (forall ?sock (implies (Is ?sock 'sock') (exists ?lighter (exists ?bowl (exists ?calculator (exists ?ruler (and (Is ?lighter 'lighter') (Is ?bowl 'bowl') (Is ?calculator 'calculator') (Is ?ruler 'ruler') (Has ?bowl 'white') (Below ?sock ?suitcase) (RightOf ?lighter ?sock) (Below ?bowl ?lighter) (RightOf ?calculator ?bowl) (RightOf ?ruler ?calculator) (AlignedHorizontally ?ruler ?calculator) (OnBottomSide ?ruler)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (forall ?sock (exists ?lighter (exists ?bowl (exists ?calculator (exists ?ruler (and (Is ?suitcase 'suitcase') (LeftOf ?suitcase ?keyboard) (or (not (Is ?sock 'sock')) (Below ?sock ?suitcase)) (Is ?keyboard 'keyboard') (or (not (Is ?sock 'sock')) (Has ?bowl 'white')) (or (not (Is ?sock 'sock')) (RightOf ?lighter ?sock)) (or (not (Is ?sock 'sock')) (Is ?ruler 'ruler')) (or (not (Is ?sock 'sock')) (Is ?bowl 'bowl')) (or (not (Is ?sock 'sock')) (Below ?bowl ?lighter)) (or (not (Is ?sock 'sock')) (Is ?lighter 'lighter')) (or (not (Is ?sock 'sock')) (Is ?calculator 'calculator')) (or (not (Is ?sock 'sock')) (RightOf ?ruler ?calculator)) (or (not (Is ?sock 'sock')) (RightOf ?calculator ?bowl)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?ruler ?calculator)) (or (not (Is ?sock 'sock')) (OnBottomSide ?ruler))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "sock",
+        "keyboard",
+        "lighter",
+        "calculator",
+        "bowl",
+        "suitcase"
+    ]
+}

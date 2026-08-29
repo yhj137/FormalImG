@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a blue suitcase, a white shirt, and blue jeans. The suitcase is positioned on the bottom side of the image and is larger than the shirt. The shirt and the jeans are aligned horizontally. Furthermore, for every white sock in the image, there is a black knife aligned horizontally with it, and the suitcase is larger than the sock.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?jeans (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?suitcase) (LargerThan ?suitcase ?shirt) (AlignedHorizontally ?shirt ?jeans) (forall ?sock (implies (and (Is ?sock 'sock') (Has ?sock 'white')) (exists ?knife (and (Is ?knife 'knife') (Has ?knife 'black') (AlignedHorizontally ?sock ?knife) (LargerThan ?suitcase ?sock)))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?jeans (forall ?sock (exists ?knife (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnBottomSide ?suitcase) (LargerThan ?suitcase ?shirt) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (LargerThan ?suitcase ?sock)) (Has ?shirt 'white') (AlignedHorizontally ?shirt ?jeans) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (AlignedHorizontally ?sock ?knife)) (Is ?shirt 'shirt') (Has ?jeans 'blue') (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Has ?knife 'black')) (Is ?jeans 'jeans') (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Is ?knife 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "jeans",
+        "knife",
+        "suitcase",
+        "shirt"
+    ]
+}

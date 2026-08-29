@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene showing a man holding a book next to an open wooden wardrobe. To the right of the man is a sitting dog, and next to the dog is a child holding a metal fork. A round cup sits beside the child. Additionally, every bus in the scene is positioned to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?w (exists ?d (exists ?c (exists ?bk (and (Is ?m 'man') (Is ?w 'wardrobe') (Is ?d 'dog') (Is ?c 'child') (Is ?bk 'book') (NextTo ?m ?w) (HasMaterial ?w 'wooden') (HasState ?w 'open') (Holding ?m ?bk) (RightOf ?d ?m) (HasState ?d 'sitting') (NextTo ?c ?d) (forall ?bs (implies (Is ?bs 'bus') (RightOf ?bs ?w))) (exists ?f (exists ?cp (and (Is ?f 'fork') (Is ?cp 'cup') (Holding ?c ?f) (HasMaterial ?f 'metal') (NextTo ?cp ?c) (HasShape ?cp 'round')))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?w (exists ?d (exists ?c (exists ?bk (forall ?bs (exists ?f (exists ?cp (and (Is ?m 'man') (NextTo ?m ?w) (Holding ?m ?bk) (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (RightOf ?d ?m) (Is ?bk 'book') (HasState ?w 'open') (Is ?d 'dog') (HasState ?d 'sitting') (or (not (Is ?bs 'bus')) (RightOf ?bs ?w)) (NextTo ?c ?d) (Is ?c 'child') (Holding ?c ?f) (NextTo ?cp ?c) (Is ?f 'fork') (HasMaterial ?f 'metal') (Is ?cp 'cup') (HasShape ?cp 'round')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "fork",
+        "book",
+        "man",
+        "dog",
+        "cup",
+        "bus",
+        "wardrobe"
+    ]
+}

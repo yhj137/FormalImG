@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round plate sits next to a child, and every fork is on the plate.",
+    "dsl": "(exists ?c (exists ?p (and (Is ?c 'child') (Is ?p 'plate') (HasShape ?p 'round') (NextTo ?p ?c) (forall ?f (implies (Is ?f 'fork') (On ?f ?p))))))",
+    "cnf": "(exists ?c (exists ?p (forall ?f (and (Is ?c 'child') (NextTo ?p ?c) (HasShape ?p 'round') (or (not (Is ?f 'fork')) (On ?f ?p)) (Is ?p 'plate')))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "plate",
+        "child"
+    ]
+}

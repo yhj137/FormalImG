@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a black keyboard. Every teddy bear in the scene is blue and rests on the keyboard.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?k (and (Is ?k 'keyboard') (HasColor ?k 'black') (forall ?t (implies (Is ?t 'teddy bear') (and (HasColor ?t 'blue') (On ?t ?k)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?k (forall ?t (and (Is ?k 'keyboard') (HasColor ?k 'black') (or (not (Is ?t 'teddy bear')) (On ?t ?k)) (or (not (Is ?t 'teddy bear')) (HasColor ?t 'blue'))))))",
+    "k": 2,
+    "object_classes": [
+        "keyboard",
+        "teddy bear"
+    ]
+}

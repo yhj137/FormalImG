@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is in the scene, and every screwdriver is yellow and positioned to his left.",
+    "dsl": "(exists ?m (and (Is ?m 'man') (forall ?s (implies (Is ?s 'screwdriver') (and (HasColor ?s 'yellow') (LeftOf ?s ?m))))))",
+    "cnf": "(exists ?m (forall ?s (and (Is ?m 'man') (or (not (Is ?s 'screwdriver')) (LeftOf ?s ?m)) (or (not (Is ?s 'screwdriver')) (HasColor ?s 'yellow')))))",
+    "k": 2,
+    "object_classes": [
+        "screwdriver",
+        "man"
+    ]
+}

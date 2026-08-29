@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every teddy bear rests on a bed, accompanied by an open laptop and a jacket containing a screwdriver. A horse stands next to the bed with a bird perched on its back.",
+    "dsl": "(forall ?tb (implies (Is ?tb 'teddy bear') (exists ?bed (exists ?j (exists ?s (exists ?l (exists ?h (exists ?bi (and (Is ?bed 'bed') (On ?tb ?bed) (Is ?j 'jacket') (On ?j ?bed) (Is ?s 'screwdriver') (In ?s ?j) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?bed) (Is ?h 'horse') (NextTo ?h ?bed) (Is ?bi 'bird') (On ?bi ?h))))))))))",
+    "cnf": "(forall ?tb (exists ?bed (exists ?j (exists ?s (exists ?l (exists ?h (exists ?bi (and (or (not (Is ?tb 'teddy bear')) (Is ?bed 'bed')) (or (not (Is ?tb 'teddy bear')) (On ?tb ?bed)) (or (not (Is ?tb 'teddy bear')) (Is ?j 'jacket')) (or (not (Is ?tb 'teddy bear')) (On ?j ?bed)) (or (not (Is ?tb 'teddy bear')) (Is ?s 'screwdriver')) (or (not (Is ?tb 'teddy bear')) (On ?l ?bed)) (or (not (Is ?tb 'teddy bear')) (In ?s ?j)) (or (not (Is ?tb 'teddy bear')) (HasState ?l 'open')) (or (not (Is ?tb 'teddy bear')) (Is ?h 'horse')) (or (not (Is ?tb 'teddy bear')) (NextTo ?h ?bed)) (or (not (Is ?tb 'teddy bear')) (Is ?l 'laptop')) (or (not (Is ?tb 'teddy bear')) (Is ?bi 'bird')) (or (not (Is ?tb 'teddy bear')) (On ?bi ?h))))))))))",
+    "k": 7,
+    "object_classes": [
+        "horse",
+        "bed",
+        "laptop",
+        "teddy bear",
+        "jacket",
+        "bird",
+        "screwdriver"
+    ]
+}

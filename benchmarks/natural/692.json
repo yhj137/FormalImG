@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a bus. Every horse is positioned next to the bus, and a person holding a metal pan stands next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (forall ?h (implies (Is ?h 'horse') (NextTo ?h ?b))) (exists ?p (exists ?pn (and (Is ?p 'person') (Is ?pn 'pan') (HasMaterial ?pn 'metal') (NextTo ?p ?b) (Holding ?p ?pn)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?h (exists ?p (exists ?pn (and (Is ?b 'bus') (or (not (Is ?h 'horse')) (NextTo ?h ?b)) (NextTo ?p ?b) (Is ?p 'person') (Holding ?p ?pn) (HasMaterial ?pn 'metal') (Is ?pn 'pan')))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "pan",
+        "bus",
+        "person"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a black keyboard positioned directly below it. Below the keyboard, there are white headphones. Underneath the headphones is a black camera, which is smaller than the keyboard. Below the camera, there is a red pan. A white plate is located below the pan and is smaller than the pan. Finally, a red apple is positioned below the plate and is smaller than the plate.",
+    "dsl": "(forall ?monitor (implies (Is ?monitor 'monitor') (exists ?keyboard (exists ?headphones (exists ?camera (exists ?pan (exists ?plate (exists ?apple (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?headphones 'headphones') (Has ?headphones 'white') (Is ?camera 'camera') (Has ?camera 'black') (Is ?pan 'pan') (Has ?pan 'red') (Is ?plate 'plate') (Has ?plate 'white') (Is ?apple 'apple') (Has ?apple 'red') (Above ?monitor ?keyboard) (Above ?keyboard ?headphones) (Above ?headphones ?camera) (Above ?camera ?pan) (Above ?pan ?plate) (Above ?plate ?apple) (SmallerThan ?camera ?keyboard) (SmallerThan ?plate ?pan) (SmallerThan ?apple ?plate))))))))))",
+    "cnf": "(forall ?monitor (exists ?keyboard (exists ?headphones (exists ?camera (exists ?pan (exists ?plate (exists ?apple (and (or (not (Is ?monitor 'monitor')) (Is ?keyboard 'keyboard')) (or (not (Is ?monitor 'monitor')) (Has ?keyboard 'black')) (or (not (Is ?monitor 'monitor')) (Is ?headphones 'headphones')) (or (not (Is ?monitor 'monitor')) (Above ?monitor ?keyboard)) (or (not (Is ?monitor 'monitor')) (Has ?headphones 'white')) (or (not (Is ?monitor 'monitor')) (Has ?apple 'red')) (or (not (Is ?monitor 'monitor')) (Above ?keyboard ?headphones)) (or (not (Is ?monitor 'monitor')) (Is ?camera 'camera')) (or (not (Is ?monitor 'monitor')) (Is ?apple 'apple')) (or (not (Is ?monitor 'monitor')) (Above ?plate ?apple)) (or (not (Is ?monitor 'monitor')) (Above ?headphones ?camera)) (or (not (Is ?monitor 'monitor')) (SmallerThan ?camera ?keyboard)) (or (not (Is ?monitor 'monitor')) (Has ?camera 'black')) (or (not (Is ?monitor 'monitor')) (Has ?plate 'white')) (or (not (Is ?monitor 'monitor')) (Above ?pan ?plate)) (or (not (Is ?monitor 'monitor')) (SmallerThan ?plate ?pan)) (or (not (Is ?monitor 'monitor')) (SmallerThan ?apple ?plate)) (or (not (Is ?monitor 'monitor')) (Above ?camera ?pan)) (or (not (Is ?monitor 'monitor')) (Is ?pan 'pan')) (or (not (Is ?monitor 'monitor')) (Is ?plate 'plate')) (or (not (Is ?monitor 'monitor')) (Has ?pan 'red'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "apple",
+        "keyboard",
+        "pan",
+        "camera",
+        "monitor",
+        "headphones"
+    ]
+}

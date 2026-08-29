@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the scene, there is a spoon located to its right, and each of those spoons is positioned on the right side of the image.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?spoon (and (Is ?spoon 'spoon') (RightOf ?spoon ?shoe) (OnRightSide ?spoon))))))",
+    "cnf": "(forall ?shoe (exists ?spoon (and (or (not (Is ?shoe 'shoe')) (Is ?spoon 'spoon')) (or (not (Is ?shoe 'shoe')) (RightOf ?spoon ?shoe)) (or (not (Is ?shoe 'shoe')) (OnRightSide ?spoon)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "shoe"
+    ]
+}

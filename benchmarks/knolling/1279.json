@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the left side of the scene, and a keyboard is placed below it. A shirt is aligned horizontally with the suitcase. A bowl is located below the shirt. A carrot, which is smaller than the bowl, is aligned horizontally with the bowl. Furthermore, for every calculator that is smaller than the suitcase, there is a mouse positioned below it.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?keyboard 'keyboard') (Below ?keyboard ?suitcase) (forall ?calc (implies (and (Is ?calc 'calculator') (SmallerThan ?calc ?suitcase)) (exists ?mouse (and (Is ?mouse 'mouse') (Below ?mouse ?calc))))) (exists ?shirt (exists ?bowl (exists ?carrot (and (Is ?shirt 'shirt') (AlignedHorizontally ?shirt ?suitcase) (Is ?bowl 'bowl') (Below ?bowl ?shirt) (Is ?carrot 'carrot') (SmallerThan ?carrot ?bowl) (AlignedHorizontally ?carrot ?bowl))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (forall ?calc (exists ?mouse (exists ?shirt (exists ?bowl (exists ?carrot (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?keyboard ?suitcase) (or (not (Is ?calc 'calculator')) (not (SmallerThan ?calc ?suitcase)) (Is ?mouse 'mouse')) (Is ?keyboard 'keyboard') (or (not (Is ?calc 'calculator')) (not (SmallerThan ?calc ?suitcase)) (Below ?mouse ?calc)) (AlignedHorizontally ?shirt ?suitcase) (Is ?shirt 'shirt') (Below ?bowl ?shirt) (Is ?bowl 'bowl') (SmallerThan ?carrot ?bowl) (AlignedHorizontally ?carrot ?bowl) (Is ?carrot 'carrot')))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "carrot",
+        "calculator",
+        "mouse",
+        "bowl",
+        "suitcase",
+        "shirt"
+    ]
+}

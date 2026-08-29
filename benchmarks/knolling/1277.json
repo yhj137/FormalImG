@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a cutting board positioned on the top side, with a carrot located directly below it. The arrangement follows a specific constraint: for every lighter in the image, there is a stapler, a wrench, a ruler, and a fork. Specifically, the lighter is positioned below the carrot, and the stapler is visually larger than the lighter. The stapler, wrench, and ruler are all located on the bottom side of the image and are aligned horizontally. Additionally, the fork is positioned below the cutting board.",
+    "dsl": "(exists ?board (exists ?carrot (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?stapler (exists ?wrench (exists ?ruler (exists ?fork (and (Is ?board 'cutting_board') (OnTopSide ?board) (Is ?carrot 'carrot') (Below ?carrot ?board) (Is ?stapler 'stapler') (OnBottomSide ?stapler) (Is ?wrench 'wrench') (OnBottomSide ?wrench) (Is ?ruler 'ruler') (OnBottomSide ?ruler) (Is ?fork 'fork') (Below ?fork ?board) (Below ?lighter ?carrot) (LargerThan ?stapler ?lighter) (AlignedHorizontally ?ruler ?stapler) (AlignedHorizontally ?stapler ?wrench))))))))))",
+    "cnf": "(exists ?board (exists ?carrot (forall ?lighter (exists ?stapler (exists ?wrench (exists ?ruler (exists ?fork (and (or (not (Is ?lighter 'lighter')) (Is ?board 'cutting_board')) (or (not (Is ?lighter 'lighter')) (OnTopSide ?board)) (or (not (Is ?lighter 'lighter')) (Below ?carrot ?board)) (or (not (Is ?lighter 'lighter')) (Is ?carrot 'carrot')) (or (not (Is ?lighter 'lighter')) (Below ?fork ?board)) (or (not (Is ?lighter 'lighter')) (Is ?stapler 'stapler')) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?carrot)) (or (not (Is ?lighter 'lighter')) (Is ?fork 'fork')) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?stapler)) (or (not (Is ?lighter 'lighter')) (LargerThan ?stapler ?lighter)) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?ruler)) (or (not (Is ?lighter 'lighter')) (Is ?wrench 'wrench')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?ruler ?stapler)) (or (not (Is ?lighter 'lighter')) (Is ?ruler 'ruler')) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?wrench)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?stapler ?wrench))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "stapler",
+        "wrench",
+        "carrot",
+        "cutting_board",
+        "fork",
+        "lighter"
+    ]
+}

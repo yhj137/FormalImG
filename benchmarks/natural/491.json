@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every fish is inside a round lamp, with a butterfly perched on the lamp next to the fish.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?f (implies (Is ?f 'fish') (exists ?l (exists ?b (and (Is ?l 'lamp') (Is ?b 'butterfly') (HasShape ?l 'round') (In ?f ?l) (On ?b ?l) (NextTo ?b ?f)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?f (exists ?l (exists ?b (and (or (not (Is ?f 'fish')) (Is ?l 'lamp')) (or (not (Is ?f 'fish')) (Is ?b 'butterfly')) (or (not (Is ?f 'fish')) (HasShape ?l 'round')) (or (not (Is ?f 'fish')) (On ?b ?l)) (or (not (Is ?f 'fish')) (In ?f ?l)) (or (not (Is ?f 'fish')) (NextTo ?b ?f)))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "fish",
+        "lamp"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single brown glove.",
+    "dsl": "(exists ?g (and (Is ?g 'glove') (Has ?g 'brown')))",
+    "cnf": "(exists ?g (and (Is ?g 'glove') (Has ?g 'brown')))",
+    "k": 1,
+    "object_classes": [
+        "glove"
+    ]
+}

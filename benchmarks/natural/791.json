@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A wooden table supports a bowl. Inside the bowl, there is a rusty key. All birds in the image are located next to the bowl.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?c (exists ?k (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?c 'bowl') (On ?c ?t) (Is ?k 'key') (HasState ?k 'rusty') (In ?k ?c) (forall ?b (implies (Is ?b 'bird') (NextTo ?b ?c))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?c (exists ?k (forall ?b (and (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?c ?t) (Is ?c 'bowl') (In ?k ?c) (or (not (Is ?b 'bird')) (NextTo ?b ?c)) (HasState ?k 'rusty') (Is ?k 'key')))))))",
+    "k": 4,
+    "object_classes": [
+        "key",
+        "bowl",
+        "bird",
+        "table"
+    ]
+}

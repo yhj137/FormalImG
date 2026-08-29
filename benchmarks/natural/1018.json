@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a banana stands next to a wooden desk. On the desk, a hat sits between a rock to its left and a metal fork to its right.",
+    "dsl": "(exists ?m (exists ?b (exists ?d (exists ?h (exists ?r (exists ?f (and (Is ?m 'man') (Is ?b 'banana') (Is ?d 'desk') (Is ?h 'hat') (Is ?r 'rock') (Is ?f 'fork') (Holding ?m ?b) (NextTo ?m ?d) (HasMaterial ?d 'wooden') (On ?h ?d) (On ?r ?d) (LeftOf ?r ?h) (On ?f ?d) (RightOf ?f ?h) (HasMaterial ?f 'metal'))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?d (exists ?h (exists ?r (exists ?f (and (Is ?m 'man') (Holding ?m ?b) (NextTo ?m ?d) (Is ?b 'banana') (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?h ?d) (On ?r ?d) (Is ?h 'hat') (LeftOf ?r ?h) (On ?f ?d) (Is ?r 'rock') (RightOf ?f ?h) (Is ?f 'fork') (HasMaterial ?f 'metal'))))))))",
+    "k": 6,
+    "object_classes": [
+        "fork",
+        "man",
+        "rock",
+        "desk",
+        "banana",
+        "hat"
+    ]
+}

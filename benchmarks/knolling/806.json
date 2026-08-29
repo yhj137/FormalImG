@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing red scissors, a yellow lemon, a blue lighter, a black watch, and a gray remote. The yellow lemon is located on the bottom side of the scene and is vertically aligned with the red scissors. The lemon is positioned to the left of the blue lighter. The lighter is vertically aligned with the black watch. Finally, the watch is located to the left of the gray remote, which is visually larger than the lighter.",
+    "dsl": "(exists ?s (exists ?l (exists ?li (exists ?w (exists ?r (and (Is ?s 'scissors') (Has ?s 'red') (Is ?l 'lemon') (Has ?l 'yellow') (Is ?li 'lighter') (Has ?li 'blue') (Is ?w 'watch') (Has ?w 'black') (Is ?r 'remote') (Has ?r 'gray') (OnBottomSide ?l) (AlignedVertically ?s ?l) (LeftOf ?l ?li) (AlignedVertically ?li ?w) (LeftOf ?w ?r) (LargerThan ?r ?li)))))))",
+    "cnf": "(exists ?s (exists ?l (exists ?li (exists ?w (exists ?r (and (Is ?s 'scissors') (Has ?s 'red') (AlignedVertically ?s ?l) (OnBottomSide ?l) (LeftOf ?l ?li) (Has ?l 'yellow') (Has ?li 'blue') (AlignedVertically ?li ?w) (Is ?l 'lemon') (Is ?li 'lighter') (LargerThan ?r ?li) (Has ?w 'black') (LeftOf ?w ?r) (Is ?w 'watch') (Has ?r 'gray') (Is ?r 'remote')))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "lemon",
+        "watch",
+        "lighter",
+        "scissors"
+    ]
+}

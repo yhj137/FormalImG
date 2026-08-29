@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a metal house next to a tree. To the left of the tree stands a man wearing a black shirt and a backpack containing a cake, holding a green fruit. To the right of the house, every car is flying.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?m (and (Is ?h 'house') (HasMaterial ?h 'metal') (Is ?t 'tree') (NextTo ?t ?h) (Is ?m 'man') (HasState ?m 'standing') (LeftOf ?m ?t) (forall ?car (implies (Is ?car 'car') (and (HasState ?car 'flying') (RightOf ?car ?h)))) (exists ?f (exists ?s (exists ?b (exists ?c (and (Is ?f 'fruit') (HasColor ?f 'green') (Holding ?m ?f) (Is ?s 'shirt') (HasColor ?s 'black') (On ?s ?m) (Is ?b 'backpack') (On ?b ?m) (Is ?c 'cake') (In ?c ?b)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?m (forall ?car (exists ?f (exists ?s (exists ?b (exists ?c (and (Is ?h 'house') (HasMaterial ?h 'metal') (NextTo ?t ?h) (or (not (Is ?car 'car')) (RightOf ?car ?h)) (Is ?t 'tree') (LeftOf ?m ?t) (or (not (Is ?car 'car')) (HasState ?car 'flying')) (HasState ?m 'standing') (Holding ?m ?f) (Is ?m 'man') (On ?s ?m) (HasColor ?f 'green') (On ?b ?m) (HasColor ?s 'black') (Is ?f 'fruit') (Is ?b 'backpack') (In ?c ?b) (Is ?s 'shirt') (Is ?c 'cake')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "fruit",
+        "shirt",
+        "backpack",
+        "tree",
+        "man",
+        "cake",
+        "car"
+    ]
+}

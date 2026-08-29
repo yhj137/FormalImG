@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person sits on a bed, holding a rusty screwdriver. Every ball in the scene is located on the bed, along with a fish, a rock, an orange, and a yellow banana. A black lamp is positioned to the right of the bed, and a toy car is to the right of the lamp.",
+    "dsl": "(exists ?bed (exists ?p (exists ?sd (and (Is ?bed 'bed') (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?bed) (Is ?sd 'screwdriver') (HasState ?sd 'rusty') (Holding ?p ?sd) (forall ?b (implies (Is ?b 'ball') (On ?b ?bed))) (exists ?l (exists ?f (exists ?r (exists ?o (exists ?tc (exists ?ban (and (Is ?l 'lamp') (HasColor ?l 'black') (RightOf ?l ?bed) (Is ?f 'fish') (On ?f ?bed) (Is ?r 'rock') (On ?r ?bed) (Is ?o 'orange') (On ?o ?bed) (Is ?tc 'toy car') (RightOf ?tc ?l) (Is ?ban 'banana') (HasColor ?ban 'yellow') (On ?ban ?bed))))))))))))",
+    "cnf": "(exists ?bed (exists ?p (exists ?sd (forall ?b (exists ?l (exists ?f (exists ?r (exists ?o (exists ?tc (exists ?ban (and (Is ?bed 'bed') (On ?p ?bed) (or (not (Is ?b 'ball')) (On ?b ?bed)) (HasState ?p 'sitting') (Holding ?p ?sd) (RightOf ?l ?bed) (Is ?p 'person') (HasState ?sd 'rusty') (On ?f ?bed) (HasColor ?l 'black') (RightOf ?tc ?l) (Is ?sd 'screwdriver') (On ?r ?bed) (Is ?f 'fish') (Is ?l 'lamp') (Is ?tc 'toy car') (On ?o ?bed) (Is ?r 'rock') (On ?ban ?bed) (Is ?o 'orange') (HasColor ?ban 'yellow') (Is ?ban 'banana'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "person",
+        "bed",
+        "orange",
+        "rock",
+        "toy car",
+        "lamp",
+        "ball",
+        "screwdriver",
+        "banana"
+    ]
+}

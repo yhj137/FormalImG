@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a dog holding a rectangular phone with a spoon on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (exists ?s (and (Is ?d 'dog') (Is ?p 'phone') (HasShape ?p 'rectangular') (Is ?s 'spoon') (Holding ?d ?p) (On ?s ?p))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (exists ?s (and (Is ?d 'dog') (Holding ?d ?p) (HasShape ?p 'rectangular') (On ?s ?p) (Is ?p 'phone') (Is ?s 'spoon'))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "phone",
+        "dog"
+    ]
+}

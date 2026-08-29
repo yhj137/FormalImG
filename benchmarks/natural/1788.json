@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A child is sitting on a chair while holding a round bowl. A shirt lies on the chair. To the right of the chair stands a bicycle. A basket is positioned on the bicycle, with a toy car resting on the basket. A broken clock sits to the right of the bicycle. All butterflies in the image are flying to the right of this clock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?ch (exists ?c (exists ?bo (exists ?s (exists ?bi (exists ?ba (exists ?tc (exists ?cl (and (Is ?ch 'chair') (Is ?c 'child') (Is ?bo 'bowl') (Is ?s 'shirt') (Is ?bi 'bicycle') (Is ?ba 'basket') (Is ?tc 'toy car') (Is ?cl 'clock') (HasState ?c 'sitting') (On ?c ?ch) (HasShape ?bo 'round') (Holding ?c ?bo) (On ?s ?ch) (RightOf ?bi ?ch) (On ?ba ?bi) (On ?tc ?ba) (RightOf ?cl ?bi) (HasState ?cl 'broken') (forall ?bu (implies (Is ?bu 'butterfly') (and (HasState ?bu 'flying') (RightOf ?bu ?cl))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?ch (exists ?c (exists ?bo (exists ?s (exists ?bi (exists ?ba (exists ?tc (exists ?cl (forall ?bu (and (Is ?ch 'chair') (On ?c ?ch) (On ?s ?ch) (HasState ?c 'sitting') (Holding ?c ?bo) (RightOf ?bi ?ch) (Is ?s 'shirt') (Is ?c 'child') (HasShape ?bo 'round') (Is ?bi 'bicycle') (On ?ba ?bi) (Is ?bo 'bowl') (RightOf ?cl ?bi) (Is ?ba 'basket') (On ?tc ?ba) (Is ?cl 'clock') (HasState ?cl 'broken') (Is ?tc 'toy car') (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?cl)) (or (not (Is ?bu 'butterfly')) (HasState ?bu 'flying')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "toy car",
+        "chair",
+        "butterfly",
+        "shirt",
+        "basket",
+        "bicycle",
+        "clock",
+        "child"
+    ]
+}

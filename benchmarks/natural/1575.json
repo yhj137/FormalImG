@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman sitting on a gray sofa placed on a blue rug. She is holding a turned-on phone. A round plate rests on the sofa, with every apple in the scene placed on it. To the left of the sofa is a hat with a banana inside.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?r (exists ?p (exists ?pl (exists ?h (and (Is ?w 'woman') (HasState ?w 'sitting') (Is ?s 'sofa') (HasColor ?s 'gray') (Is ?r 'rug') (HasColor ?r 'blue') (Is ?p 'phone') (HasState ?p 'on') (Is ?pl 'plate') (HasShape ?pl 'round') (Is ?h 'hat') (On ?w ?s) (On ?s ?r) (Holding ?w ?p) (On ?pl ?s) (LeftOf ?h ?s) (forall ?a (implies (Is ?a 'apple') (On ?a ?pl))) (exists ?b (and (Is ?b 'banana') (In ?b ?h)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?r (exists ?p (exists ?pl (exists ?h (forall ?a (exists ?b (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?s) (Holding ?w ?p) (HasColor ?s 'gray') (On ?s ?r) (HasState ?p 'on') (Is ?s 'sofa') (On ?pl ?s) (HasColor ?r 'blue') (Is ?p 'phone') (LeftOf ?h ?s) (HasShape ?pl 'round') (or (not (Is ?a 'apple')) (On ?a ?pl)) (Is ?r 'rug') (Is ?h 'hat') (In ?b ?h) (Is ?pl 'plate') (Is ?b 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "plate",
+        "rug",
+        "woman",
+        "apple",
+        "banana",
+        "hat"
+    ]
+}

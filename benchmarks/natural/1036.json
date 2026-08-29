@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every horse is located to the left of an elephant wearing headphones and holding a plastic umbrella. This elephant is positioned to the left of a lion holding a yellow banana.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?h (implies (Is ?h 'horse') (exists ?e (exists ?hp (exists ?u (exists ?l (exists ?b (and (Is ?e 'elephant') (Is ?hp 'headphones') (Is ?u 'umbrella') (Is ?l 'lion') (Is ?b 'banana') (LeftOf ?h ?e) (On ?hp ?e) (Holding ?e ?u) (HasMaterial ?u 'plastic') (LeftOf ?e ?l) (Holding ?l ?b) (HasColor ?b 'yellow'))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?h (exists ?e (exists ?hp (exists ?u (exists ?l (exists ?b (and (or (not (Is ?h 'horse')) (Is ?e 'elephant')) (or (not (Is ?h 'horse')) (LeftOf ?h ?e)) (or (not (Is ?h 'horse')) (Is ?hp 'headphones')) (or (not (Is ?h 'horse')) (On ?hp ?e)) (or (not (Is ?h 'horse')) (Is ?b 'banana')) (or (not (Is ?h 'horse')) (Is ?u 'umbrella')) (or (not (Is ?h 'horse')) (Holding ?e ?u)) (or (not (Is ?h 'horse')) (Is ?l 'lion')) (or (not (Is ?h 'horse')) (Holding ?l ?b)) (or (not (Is ?h 'horse')) (LeftOf ?e ?l)) (or (not (Is ?h 'horse')) (HasMaterial ?u 'plastic')) (or (not (Is ?h 'horse')) (HasColor ?b 'yellow'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "headphones",
+        "umbrella",
+        "horse",
+        "lion",
+        "banana"
+    ]
+}

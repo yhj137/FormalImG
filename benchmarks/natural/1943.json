@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a key stands next to a wardrobe containing shoes. A plant is positioned to the left of the wardrobe, with a round ball next to it. To the right of the man is a wooden table. All apples in the scene are red and placed on the table. A pizza also sits on the table, with a banana next to it.",
+    "dsl": "(exists ?m (exists ?k (exists ?w (exists ?s (exists ?p (exists ?t (and (Is ?m 'man') (Is ?k 'key') (Is ?w 'wardrobe') (Is ?s 'shoes') (Is ?p 'plant') (Is ?t 'table') (Holding ?m ?k) (NextTo ?m ?w) (In ?s ?w) (LeftOf ?p ?w) (RightOf ?t ?m) (HasMaterial ?t 'wooden') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (On ?a ?t)))) (exists ?pi (exists ?ba (exists ?bl (and (Is ?pi 'pizza') (Is ?ba 'banana') (Is ?bl 'ball') (On ?pi ?t) (NextTo ?ba ?pi) (NextTo ?bl ?p) (HasShape ?bl 'round'))))))))))))",
+    "cnf": "(exists ?m (exists ?k (exists ?w (exists ?s (exists ?p (exists ?t (forall ?a (exists ?pi (exists ?ba (exists ?bl (and (Is ?m 'man') (Holding ?m ?k) (NextTo ?m ?w) (Is ?k 'key') (RightOf ?t ?m) (Is ?w 'wardrobe') (In ?s ?w) (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?p ?w) (Is ?s 'shoes') (or (not (Is ?a 'apple')) (On ?a ?t)) (Is ?p 'plant') (NextTo ?bl ?p) (On ?pi ?t) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (Is ?bl 'ball') (HasShape ?bl 'round') (Is ?pi 'pizza') (NextTo ?ba ?pi) (Is ?ba 'banana'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "man",
+        "plant",
+        "ball",
+        "banana",
+        "shoes",
+        "pizza",
+        "wardrobe",
+        "table",
+        "apple"
+    ]
+}

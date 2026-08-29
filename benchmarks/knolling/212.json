@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a remote and a glove. The remote is located on the top side of the layout, and the glove is aligned vertically with it.",
+    "dsl": "(exists ?remote (exists ?glove (and (Is ?remote 'remote') (Is ?glove 'glove') (OnTopSide ?remote) (AlignedVertically ?remote ?glove))))",
+    "cnf": "(exists ?remote (exists ?glove (and (Is ?remote 'remote') (OnTopSide ?remote) (AlignedVertically ?remote ?glove) (Is ?glove 'glove'))))",
+    "k": 2,
+    "object_classes": [
+        "remote",
+        "glove"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a backpack on the left side, and a monitor on the left side is positioned below it. Every spoon is located on the right side, and for each spoon, there is a screwdriver below it, a drill below the screwdriver, a book below the drill, a mouse below the book, and a camera below the mouse. In terms of size comparison, the spoon is smaller than the backpack, and the monitor is larger than the mouse.",
+    "dsl": "(exists ?backpack (exists ?monitor (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Below ?monitor ?backpack) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?screwdriver (exists ?drill (exists ?book (exists ?mouse (exists ?camera (and (Is ?screwdriver 'screwdriver') (Is ?drill 'drill') (Is ?book 'book') (Is ?mouse 'mouse') (Is ?camera 'camera') (OnRightSide ?spoon) (Below ?screwdriver ?spoon) (Below ?drill ?screwdriver) (Below ?book ?drill) (Below ?mouse ?book) (Below ?camera ?mouse) (SmallerThan ?spoon ?backpack) (LargerThan ?monitor ?mouse))))))))))))",
+    "cnf": "(exists ?backpack (exists ?monitor (forall ?spoon (exists ?screwdriver (exists ?drill (exists ?book (exists ?mouse (exists ?camera (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Below ?monitor ?backpack) (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?backpack)) (OnLeftSide ?monitor) (or (not (Is ?spoon 'spoon')) (LargerThan ?monitor ?mouse)) (or (not (Is ?spoon 'spoon')) (Below ?camera ?mouse)) (Is ?monitor 'monitor') (or (not (Is ?spoon 'spoon')) (Below ?mouse ?book)) (or (not (Is ?spoon 'spoon')) (Is ?camera 'camera')) (or (not (Is ?spoon 'spoon')) (Below ?book ?drill)) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse')) (or (not (Is ?spoon 'spoon')) (OnRightSide ?spoon)) (or (not (Is ?spoon 'spoon')) (Below ?drill ?screwdriver)) (or (not (Is ?spoon 'spoon')) (Is ?book 'book')) (or (not (Is ?spoon 'spoon')) (Below ?screwdriver ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?drill 'drill')) (or (not (Is ?spoon 'spoon')) (Is ?screwdriver 'screwdriver')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "screwdriver",
+        "camera",
+        "drill",
+        "backpack",
+        "mouse",
+        "spoon",
+        "monitor"
+    ]
+}

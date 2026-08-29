@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board, there is a corresponding group of objects: an apple, a stapler, and a watch. The cutting board is larger than the apple and larger than the stapler. The watch is smaller than the stapler. The stapler is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?cb (implies (Is ?cb 'cutting_board') (exists ?apple (exists ?stapler (exists ?watch (and (Is ?apple 'apple') (Is ?stapler 'stapler') (Is ?watch 'watch') (LargerThan ?cb ?apple) (LargerThan ?cb ?stapler) (SmallerThan ?watch ?stapler) (OnBottomSide ?stapler))))))))",
+    "cnf": "(forall ?cb (exists ?apple (exists ?stapler (exists ?watch (and (or (not (Is ?cb 'cutting_board')) (Is ?apple 'apple')) (or (not (Is ?cb 'cutting_board')) (Is ?stapler 'stapler')) (or (not (Is ?cb 'cutting_board')) (LargerThan ?cb ?apple)) (or (not (Is ?cb 'cutting_board')) (Is ?watch 'watch')) (or (not (Is ?cb 'cutting_board')) (LargerThan ?cb ?stapler)) (or (not (Is ?cb 'cutting_board')) (SmallerThan ?watch ?stapler)) (or (not (Is ?cb 'cutting_board')) (OnBottomSide ?stapler)))))))",
+    "k": 4,
+    "object_classes": [
+        "cutting_board",
+        "watch",
+        "stapler",
+        "apple"
+    ]
+}

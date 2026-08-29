@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard positioned on the bottom side of the image. To the right of the keyboard lies a spoon, and to the right of the spoon lies a carrot. The keyboard is visually larger than the spoon, while the carrot is smaller than the keyboard.",
+    "dsl": "(exists ?keyboard (exists ?spoon (exists ?carrot (and (Is ?keyboard 'keyboard') (Is ?spoon 'spoon') (Is ?carrot 'carrot') (OnBottomSide ?keyboard) (RightOf ?spoon ?keyboard) (RightOf ?carrot ?spoon) (LargerThan ?keyboard ?spoon) (SmallerThan ?carrot ?keyboard)))))",
+    "cnf": "(exists ?keyboard (exists ?spoon (exists ?carrot (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (RightOf ?spoon ?keyboard) (LargerThan ?keyboard ?spoon) (Is ?spoon 'spoon') (RightOf ?carrot ?spoon) (SmallerThan ?carrot ?keyboard) (Is ?carrot 'carrot')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "carrot",
+        "keyboard"
+    ]
+}

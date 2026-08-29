@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where next to every plant stands a man holding a green bottle.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?p (implies (Is ?p 'plant') (exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'bottle') (HasColor ?b 'green') (NextTo ?m ?p) (Holding ?m ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?p (exists ?m (exists ?b (and (or (not (Is ?p 'plant')) (Is ?m 'man')) (or (not (Is ?p 'plant')) (Is ?b 'bottle')) (or (not (Is ?p 'plant')) (NextTo ?m ?p)) (or (not (Is ?p 'plant')) (HasColor ?b 'green')) (or (not (Is ?p 'plant')) (Holding ?m ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "bottle",
+        "plant"
+    ]
+}

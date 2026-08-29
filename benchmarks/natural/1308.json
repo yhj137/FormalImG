@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a blue house containing a clock. To the left of the house stands a tree, and every flower in the scene is located next to it. A child holding a red fruit stands beside the tree, while a bicycle is positioned to the right of the tree.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?t (and (Is ?h 'house') (HasColor ?h 'blue') (Is ?c 'clock') (In ?c ?h) (Is ?t 'tree') (LeftOf ?t ?h) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?t))) (exists ?p (exists ?fr (exists ?b (and (Is ?p 'child') (NextTo ?p ?t) (Is ?fr 'fruit') (HasColor ?fr 'red') (Holding ?p ?fr) (Is ?b 'bicycle') (RightOf ?b ?t))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?t (forall ?f (exists ?p (exists ?fr (exists ?b (and (Is ?h 'house') (HasColor ?h 'blue') (In ?c ?h) (LeftOf ?t ?h) (Is ?c 'clock') (Is ?t 'tree') (or (not (Is ?f 'flower')) (NextTo ?f ?t)) (NextTo ?p ?t) (RightOf ?b ?t) (Is ?p 'child') (Holding ?p ?fr) (Is ?b 'bicycle') (HasColor ?fr 'red') (Is ?fr 'fruit'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "tree",
+        "bicycle",
+        "house",
+        "clock",
+        "flower",
+        "child"
+    ]
+}

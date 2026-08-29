@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard, and directly above it is a red stapler. For every tie placed to the right of the stapler, there is a sandwich to its right, and there is also a plate below the keyboard, followed by a pizza to the right of the plate, a bottle to the right of the pizza, and a lighter to the right of the bottle, with the bottle being larger than the lighter.",
+    "dsl": "(exists ?keyboard (exists ?stapler (and (Is ?keyboard 'keyboard') (Is ?stapler 'stapler') (Has ?stapler 'red') (Above ?stapler ?keyboard) (forall ?tie (implies (and (Is ?tie 'tie') (RightOf ?tie ?stapler)) (exists ?sandwich (exists ?plate (exists ?pizza (exists ?bottle (exists ?lighter (and (Is ?sandwich 'sandwich') (Is ?plate 'plate') (Is ?pizza 'pizza') (Is ?bottle 'bottle') (Is ?lighter 'lighter') (RightOf ?sandwich ?tie) (Below ?plate ?keyboard) (RightOf ?pizza ?plate) (RightOf ?bottle ?pizza) (RightOf ?lighter ?bottle) (LargerThan ?bottle ?lighter))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?stapler (forall ?tie (exists ?sandwich (exists ?plate (exists ?pizza (exists ?bottle (exists ?lighter (and (Is ?keyboard 'keyboard') (Above ?stapler ?keyboard) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Below ?plate ?keyboard)) (Has ?stapler 'red') (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Is ?sandwich 'sandwich')) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (RightOf ?sandwich ?tie)) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (RightOf ?pizza ?plate)) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Is ?plate 'plate')) (Is ?stapler 'stapler') (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Is ?lighter 'lighter')) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (RightOf ?bottle ?pizza)) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Is ?pizza 'pizza')) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (Is ?bottle 'bottle')) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (RightOf ?lighter ?bottle)) (or (not (Is ?tie 'tie')) (not (RightOf ?tie ?stapler)) (LargerThan ?bottle ?lighter)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "tie",
+        "stapler",
+        "keyboard",
+        "pizza",
+        "lighter",
+        "bottle",
+        "sandwich"
+    ]
+}

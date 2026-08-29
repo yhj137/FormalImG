@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a tree with a bench to its right. Every bird is sitting in the tree. A rusty pan containing a fish sits on the bench, and to the right of the bench are shoes with a screwdriver inside.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (and (Is ?t 'tree') (Is ?b 'bench') (RightOf ?b ?t) (forall ?bi (implies (Is ?bi 'bird') (and (In ?bi ?t) (HasState ?bi 'sitting')))) (exists ?p (exists ?f (exists ?s (exists ?sd (and (Is ?p 'pan') (HasState ?p 'rusty') (On ?p ?b) (Is ?f 'fish') (In ?f ?p) (Is ?s 'shoes') (RightOf ?s ?b) (Is ?sd 'screwdriver') (In ?sd ?s))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (forall ?bi (exists ?p (exists ?f (exists ?s (exists ?sd (and (Is ?t 'tree') (RightOf ?b ?t) (or (not (Is ?bi 'bird')) (In ?bi ?t)) (Is ?b 'bench') (On ?p ?b) (or (not (Is ?bi 'bird')) (HasState ?bi 'sitting')) (RightOf ?s ?b) (HasState ?p 'rusty') (In ?f ?p) (Is ?s 'shoes') (In ?sd ?s) (Is ?p 'pan') (Is ?f 'fish') (Is ?sd 'screwdriver'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fish",
+        "bench",
+        "shoes",
+        "tree",
+        "bird",
+        "pan",
+        "screwdriver"
+    ]
+}

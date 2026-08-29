@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a brown teddy bear holding a plastic umbrella, with a sandwich resting on the bear. Every bottle is positioned to the right of the teddy bear.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?u (exists ?s (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (Is ?s 'sandwich') (Holding ?t ?u) (On ?s ?t) (forall ?b (implies (Is ?b 'bottle') (RightOf ?b ?t))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?u (exists ?s (forall ?b (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (Holding ?t ?u) (On ?s ?t) (HasMaterial ?u 'plastic') (or (not (Is ?b 'bottle')) (RightOf ?b ?t)) (Is ?s 'sandwich') (Is ?u 'umbrella')))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "teddy bear",
+        "sandwich"
+    ]
+}

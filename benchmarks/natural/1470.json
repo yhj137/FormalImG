@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A blooming plant has a bird perched on it. To the right of the plant sits a round bowl. All keys in the image are contained inside this bowl. To the left of the bowl is a toy car, while a phone is located to the right of the bowl. Additionally, a banana is on the phone, and a pizza is to the right of the phone.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?pl (exists ?bo (and (Is ?pl 'plant') (HasState ?pl 'blooming') (Is ?bo 'bowl') (HasShape ?bo 'round') (RightOf ?bo ?pl) (forall ?k (implies (Is ?k 'key') (In ?k ?bo))) (exists ?bi (exists ?ph (exists ?tc (exists ?ba (exists ?pi (and (Is ?bi 'bird') (On ?bi ?pl) (Is ?ph 'phone') (RightOf ?ph ?bo) (Is ?tc 'toy car') (LeftOf ?tc ?bo) (Is ?ba 'banana') (On ?ba ?ph) (Is ?pi 'pizza') (RightOf ?pi ?ph)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?pl (exists ?bo (forall ?k (exists ?bi (exists ?ph (exists ?tc (exists ?ba (exists ?pi (and (Is ?pl 'plant') (HasState ?pl 'blooming') (RightOf ?bo ?pl) (On ?bi ?pl) (HasShape ?bo 'round') (or (not (Is ?k 'key')) (In ?k ?bo)) (Is ?bi 'bird') (Is ?bo 'bowl') (RightOf ?ph ?bo) (LeftOf ?tc ?bo) (Is ?ph 'phone') (On ?ba ?ph) (Is ?tc 'toy car') (RightOf ?pi ?ph) (Is ?ba 'banana') (Is ?pi 'pizza')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "plant",
+        "pizza",
+        "bird",
+        "toy car",
+        "bowl",
+        "banana",
+        "key"
+    ]
+}

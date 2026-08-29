@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a brown horse holding a fluffy teddy bear. To the right of the horse stands a lion holding a metal pan, with every apple in the scene sitting on it. A fork is positioned to the left of the pan.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?tb (exists ?l (exists ?p (and (Is ?h 'horse') (HasColor ?h 'brown') (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (Holding ?h ?tb) (Is ?l 'lion') (RightOf ?l ?h) (Is ?p 'pan') (HasMaterial ?p 'metal') (Holding ?l ?p) (forall ?a (implies (Is ?a 'apple') (On ?a ?p))) (exists ?f (and (Is ?f 'fork') (LeftOf ?f ?p)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?tb (exists ?l (exists ?p (forall ?a (exists ?f (and (Is ?h 'horse') (HasColor ?h 'brown') (Holding ?h ?tb) (RightOf ?l ?h) (HasMaterial ?tb 'fluffy') (Is ?l 'lion') (Holding ?l ?p) (Is ?tb 'teddy bear') (HasMaterial ?p 'metal') (or (not (Is ?a 'apple')) (On ?a ?p)) (Is ?p 'pan') (LeftOf ?f ?p) (Is ?f 'fork')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "fork",
+        "teddy bear",
+        "horse",
+        "apple",
+        "lion"
+    ]
+}

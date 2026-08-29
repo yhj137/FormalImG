@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant is holding a teddy bear. To the right of the elephant is a chair, on which sit round glasses and a sleeping cat. To the left of the elephant are shoes with a bird inside. All apples in the scene are red and located to the left of the elephant.",
+    "dsl": "(exists ?e (exists ?c (exists ?tb (and (Is ?e 'elephant') (Is ?c 'chair') (Is ?tb 'teddy bear') (Holding ?e ?tb) (RightOf ?c ?e) (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (LeftOf ?a ?e)))) (exists ?g (exists ?ct (exists ?s (exists ?b (and (Is ?g 'glasses') (Is ?ct 'cat') (Is ?s 'shoes') (Is ?b 'bird') (HasShape ?g 'round') (On ?g ?c) (HasState ?ct 'sleeping') (On ?ct ?c) (LeftOf ?s ?e) (In ?b ?s))))))))))",
+    "cnf": "(exists ?e (exists ?c (exists ?tb (forall ?a (exists ?g (exists ?ct (exists ?s (exists ?b (and (Is ?e 'elephant') (Holding ?e ?tb) (RightOf ?c ?e) (Is ?tb 'teddy bear') (or (not (Is ?a 'apple')) (LeftOf ?a ?e)) (Is ?c 'chair') (On ?g ?c) (LeftOf ?s ?e) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (On ?ct ?c) (HasShape ?g 'round') (Is ?s 'shoes') (In ?b ?s) (HasState ?ct 'sleeping') (Is ?g 'glasses') (Is ?b 'bird') (Is ?ct 'cat'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "shoes",
+        "chair",
+        "glasses",
+        "teddy bear",
+        "bird",
+        "apple",
+        "cat"
+    ]
+}

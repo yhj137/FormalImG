@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden desk with a round plate on it. All spoons are inside the plate. A leather jacket is to the left of the plate, and a mirror is to the right of the jacket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?d) (forall ?s (implies (Is ?s 'spoon') (In ?s ?p))) (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (LeftOf ?j ?p) (exists ?m (and (Is ?m 'mirror') (RightOf ?m ?j)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (forall ?s (exists ?j (exists ?m (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?p ?d) (HasShape ?p 'round') (or (not (Is ?s 'spoon')) (In ?s ?p)) (Is ?p 'plate') (LeftOf ?j ?p) (HasMaterial ?j 'leather') (RightOf ?m ?j) (Is ?j 'jacket') (Is ?m 'mirror'))))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "plate",
+        "jacket",
+        "desk",
+        "mirror"
+    ]
+}

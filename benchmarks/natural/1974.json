@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style with a house in the background. To the left of the house is a man wearing glasses, holding a pizza with a knife on it. To the right of the man, a child is on a rock holding a round bowl. All flowers in the image are located to the left of the house, and a person is positioned to the right of the house.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?c (exists ?r (exists ?p (exists ?k (exists ?g (exists ?b (and (Is ?h 'house') (Is ?m 'man') (Is ?c 'child') (Is ?r 'rock') (Is ?p 'pizza') (Is ?k 'knife') (Is ?g 'glasses') (Is ?b 'bowl') (LeftOf ?m ?h) (RightOf ?c ?m) (On ?c ?r) (Holding ?m ?p) (On ?k ?p) (On ?g ?m) (Holding ?c ?b) (HasShape ?b 'round') (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?h))) (exists ?per (and (Is ?per 'person') (RightOf ?per ?h)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?c (exists ?r (exists ?p (exists ?k (exists ?g (exists ?b (forall ?f (exists ?per (and (Is ?h 'house') (LeftOf ?m ?h) (or (not (Is ?f 'flower')) (LeftOf ?f ?h)) (Is ?m 'man') (RightOf ?c ?m) (RightOf ?per ?h) (Holding ?m ?p) (Is ?c 'child') (On ?c ?r) (Is ?per 'person') (On ?g ?m) (Is ?p 'pizza') (On ?k ?p) (Holding ?c ?b) (Is ?r 'rock') (Is ?g 'glasses') (Is ?k 'knife') (Is ?b 'bowl') (HasShape ?b 'round')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "bowl",
+        "person",
+        "rock",
+        "man",
+        "knife",
+        "pizza",
+        "house",
+        "flower",
+        "child"
+    ]
+}

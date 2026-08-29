@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a cat inside a bed. Next to the bed is a wooden bench. On the bench, a phone sits next to plastic headphones, and a metal fork lies to the right of the headphones. A bicycle stands to the right of the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (exists ?be (exists ?p (exists ?h (exists ?f (exists ?bi (and (Is ?c 'cat') (Is ?b 'bed') (In ?c ?b) (Is ?be 'bench') (HasMaterial ?be 'wooden') (NextTo ?be ?b) (Is ?p 'phone') (On ?p ?be) (Is ?h 'headphones') (HasMaterial ?h 'plastic') (On ?h ?be) (NextTo ?p ?h) (Is ?f 'fork') (HasMaterial ?f 'metal') (On ?f ?be) (RightOf ?f ?h) (Is ?bi 'bicycle') (RightOf ?bi ?be))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (exists ?be (exists ?p (exists ?h (exists ?f (exists ?bi (and (Is ?c 'cat') (In ?c ?b) (Is ?b 'bed') (NextTo ?be ?b) (HasMaterial ?be 'wooden') (On ?p ?be) (Is ?be 'bench') (On ?h ?be) (Is ?p 'phone') (NextTo ?p ?h) (On ?f ?be) (HasMaterial ?h 'plastic') (RightOf ?f ?h) (RightOf ?bi ?be) (HasMaterial ?f 'metal') (Is ?h 'headphones') (Is ?bi 'bicycle') (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "fork",
+        "cat",
+        "headphones",
+        "phone",
+        "bed",
+        "bicycle"
+    ]
+}

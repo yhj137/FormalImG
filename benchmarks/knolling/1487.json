@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a gray laptop positioned on the top side of the frame. A black camera is positioned below the laptop. Every lighter in the image is blue and positioned below the camera. For each lighter, a knife is located to its right, while a calculator is positioned below the lighter. A hammer lies to the left of the calculator. Additionally, a red apple, which is smaller than the laptop, is placed below the knife, and a screwdriver is situated below the apple.",
+    "dsl": "(exists ?laptop (exists ?camera (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnTopSide ?laptop) (Is ?camera 'camera') (Has ?camera 'black') (Below ?camera ?laptop) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?knife (exists ?calculator (exists ?hammer (exists ?apple (exists ?screwdriver (and (Has ?lighter 'blue') (Is ?knife 'knife') (Is ?calculator 'calculator') (Is ?hammer 'hammer') (Is ?apple 'apple') (Has ?apple 'red') (Is ?screwdriver 'screwdriver') (Below ?lighter ?camera) (LeftOf ?lighter ?knife) (Below ?calculator ?lighter) (LeftOf ?hammer ?calculator) (Below ?apple ?knife) (Above ?apple ?screwdriver) (SmallerThan ?apple ?laptop))))))))))))",
+    "cnf": "(exists ?laptop (exists ?camera (forall ?lighter (exists ?knife (exists ?calculator (exists ?hammer (exists ?apple (exists ?screwdriver (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnTopSide ?laptop) (Below ?camera ?laptop) (or (not (Is ?lighter 'lighter')) (SmallerThan ?apple ?laptop)) (Has ?camera 'black') (or (not (Is ?lighter 'lighter')) (Below ?lighter ?camera)) (or (not (Is ?lighter 'lighter')) (Above ?apple ?screwdriver)) (Is ?camera 'camera') (or (not (Is ?lighter 'lighter')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?knife)) (or (not (Is ?lighter 'lighter')) (Below ?apple ?knife)) (or (not (Is ?lighter 'lighter')) (Has ?apple 'red')) (or (not (Is ?lighter 'lighter')) (Below ?calculator ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?knife 'knife')) (or (not (Is ?lighter 'lighter')) (LeftOf ?hammer ?calculator)) (or (not (Is ?lighter 'lighter')) (Is ?apple 'apple')) (or (not (Is ?lighter 'lighter')) (Is ?calculator 'calculator')) (or (not (Is ?lighter 'lighter')) (Has ?lighter 'blue')) (or (not (Is ?lighter 'lighter')) (Is ?hammer 'hammer')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "screwdriver",
+        "hammer",
+        "lighter",
+        "calculator",
+        "camera",
+        "knife"
+    ]
+}

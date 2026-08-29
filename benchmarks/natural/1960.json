@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A table sits on a rug, accompanied by a chair. On the table, there is a turned-on phone, a spoon, and every book in the scene. A tree stands next to the rug, and inside the tree, a cat holds a red ball. A car is positioned next to the tree.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?t (exists ?c (exists ?p (exists ?s (exists ?tr (exists ?ct (and (Is ?r 'rug') (Is ?t 'table') (Is ?c 'chair') (Is ?p 'phone') (Is ?s 'spoon') (Is ?tr 'tree') (Is ?ct 'cat') (On ?t ?r) (NextTo ?c ?t) (On ?p ?t) (HasState ?p 'on') (On ?s ?t) (NextTo ?tr ?r) (In ?ct ?tr) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?t))) (exists ?bl (and (Is ?bl 'ball') (HasColor ?bl 'red') (Holding ?ct ?bl))) (exists ?cr (and (Is ?cr 'car') (NextTo ?cr ?tr))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?t (exists ?c (exists ?p (exists ?s (exists ?tr (exists ?ct (forall ?bk (exists ?bl (exists ?cr (and (Is ?r 'rug') (On ?t ?r) (NextTo ?tr ?r) (Is ?t 'table') (NextTo ?c ?t) (Is ?tr 'tree') (In ?ct ?tr) (On ?p ?t) (Is ?c 'chair') (NextTo ?cr ?tr) (Is ?ct 'cat') (Holding ?ct ?bl) (On ?s ?t) (Is ?p 'phone') (HasState ?p 'on') (Is ?cr 'car') (HasColor ?bl 'red') (or (not (Is ?bk 'book')) (On ?bk ?t)) (Is ?s 'spoon') (Is ?bl 'ball')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "spoon",
+        "book",
+        "chair",
+        "tree",
+        "rug",
+        "table",
+        "car",
+        "ball",
+        "cat"
+    ]
+}

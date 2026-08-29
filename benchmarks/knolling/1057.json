@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pan positioned on the top side of the layout, there is a plate aligned horizontally with it. Positioned below the pan is a wrench, and below that wrench is a stapler. Similarly, below the plate lies a remote, and below the remote are scissors. Additionally, the stapler appears smaller than the pan.",
+    "dsl": "(forall ?pan (implies (and (Is ?pan 'pan') (OnTopSide ?pan)) (exists ?plate (exists ?wrench (exists ?stapler (exists ?remote (exists ?scissors (and (Is ?plate 'plate') (Is ?wrench 'wrench') (Is ?stapler 'stapler') (Is ?remote 'remote') (Is ?scissors 'scissors') (AlignedHorizontally ?pan ?plate) (Above ?pan ?wrench) (Above ?wrench ?stapler) (Above ?plate ?remote) (Above ?remote ?scissors) (SmallerThan ?stapler ?pan)))))))))",
+    "cnf": "(forall ?pan (exists ?plate (exists ?wrench (exists ?stapler (exists ?remote (exists ?scissors (and (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Is ?plate 'plate')) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (AlignedHorizontally ?pan ?plate)) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Is ?wrench 'wrench')) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Above ?plate ?remote)) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Is ?scissors 'scissors')) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Above ?pan ?wrench)) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Is ?stapler 'stapler')) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Above ?wrench ?stapler)) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Above ?remote ?scissors)) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (Is ?remote 'remote')) (or (not (Is ?pan 'pan')) (not (OnTopSide ?pan)) (SmallerThan ?stapler ?pan)))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "remote",
+        "stapler",
+        "wrench",
+        "pan",
+        "scissors"
+    ]
+}

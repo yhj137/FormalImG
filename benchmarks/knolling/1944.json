@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, a row of items is aligned horizontally from left to right: a pan, a hat, a plate, a bowl, a game controller, and a glove. The pan is notably larger than the hat. Below this arrangement, a specific rule applies to the fruit: for every apple in the image, it is positioned below the pan and is smaller than the pan. Associated with each apple, there is a donut to its right, a screwdriver located below the apple, and a lemon positioned to the right of the screwdriver. The donut is visually larger than the lemon.",
+    "dsl": "(exists ?pan (exists ?hat (exists ?plate (exists ?bowl (exists ?controller (exists ?glove (and (Is ?pan 'pan') (OnTopSide ?pan) (Is ?hat 'hat') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?controller 'game_controller') (Is ?glove 'glove') (RightOf ?hat ?pan) (RightOf ?plate ?hat) (RightOf ?bowl ?plate) (RightOf ?controller ?bowl) (RightOf ?glove ?controller) (AlignedHorizontally ?pan ?hat) (AlignedHorizontally ?hat ?plate) (AlignedHorizontally ?plate ?bowl) (AlignedHorizontally ?bowl ?controller) (AlignedHorizontally ?controller ?glove) (LargerThan ?pan ?hat) (forall ?apple (implies (Is ?apple 'apple') (exists ?donut (exists ?screwdriver (exists ?lemon (and (Is ?donut 'donut') (Is ?screwdriver 'screwdriver') (Is ?lemon 'lemon') (Below ?apple ?pan) (SmallerThan ?apple ?pan) (RightOf ?donut ?apple) (Below ?screwdriver ?apple) (RightOf ?lemon ?screwdriver) (LargerThan ?donut ?lemon))))))))))))))",
+    "cnf": "(exists ?pan (exists ?hat (exists ?plate (exists ?bowl (exists ?controller (exists ?glove (forall ?apple (exists ?donut (exists ?screwdriver (exists ?lemon (and (Is ?pan 'pan') (OnTopSide ?pan) (RightOf ?hat ?pan) (AlignedHorizontally ?pan ?hat) (Is ?hat 'hat') (RightOf ?plate ?hat) (LargerThan ?pan ?hat) (AlignedHorizontally ?hat ?plate) (Is ?plate 'plate') (RightOf ?bowl ?plate) (or (not (Is ?apple 'apple')) (Below ?apple ?pan)) (AlignedHorizontally ?plate ?bowl) (Is ?bowl 'bowl') (RightOf ?controller ?bowl) (or (not (Is ?apple 'apple')) (SmallerThan ?apple ?pan)) (or (not (Is ?apple 'apple')) (Is ?lemon 'lemon')) (AlignedHorizontally ?bowl ?controller) (Is ?controller 'game_controller') (RightOf ?glove ?controller) (or (not (Is ?apple 'apple')) (RightOf ?donut ?apple)) (or (not (Is ?apple 'apple')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?apple 'apple')) (RightOf ?lemon ?screwdriver)) (AlignedHorizontally ?controller ?glove) (Is ?glove 'glove') (or (not (Is ?apple 'apple')) (Is ?donut 'donut')) (or (not (Is ?apple 'apple')) (LargerThan ?donut ?lemon)) (or (not (Is ?apple 'apple')) (Below ?screwdriver ?apple)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "apple",
+        "lemon",
+        "screwdriver",
+        "game_controller",
+        "hat",
+        "pan",
+        "bowl",
+        "glove",
+        "donut"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every jacket in the scene is located on a rug. A round lamp is also on the rug, with a plant positioned to its right. A child holding a teddy bear is on the rug next to a man, while a tree stands to the left of the man.",
+    "dsl": "(exists ?r (and (Is ?r 'rug') (exists ?m (exists ?c (exists ?tb (exists ?t (and (Is ?m 'man') (Is ?c 'child') (Is ?tb 'teddy bear') (Is ?t 'tree') (NextTo ?m ?c) (On ?c ?r) (Holding ?c ?tb) (LeftOf ?t ?m) (forall ?j (implies (Is ?j 'jacket') (On ?j ?r))) (exists ?l (exists ?p (and (Is ?l 'lamp') (Is ?p 'plant') (On ?l ?r) (HasShape ?l 'round') (RightOf ?p ?l)))))))))))",
+    "cnf": "(exists ?r (exists ?m (exists ?c (exists ?tb (exists ?t (forall ?j (exists ?l (exists ?p (and (Is ?r 'rug') (On ?c ?r) (or (not (Is ?j 'jacket')) (On ?j ?r)) (NextTo ?m ?c) (Holding ?c ?tb) (On ?l ?r) (Is ?m 'man') (LeftOf ?t ?m) (Is ?c 'child') (Is ?tb 'teddy bear') (Is ?l 'lamp') (HasShape ?l 'round') (Is ?t 'tree') (RightOf ?p ?l) (Is ?p 'plant'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "tree",
+        "man",
+        "rug",
+        "teddy bear",
+        "jacket",
+        "plant",
+        "lamp"
+    ]
+}

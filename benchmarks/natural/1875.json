@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden desk is located next to a sofa. A round plate sits on the desk. All bananas in the scene are inside the plate. A metal spoon lies next to the plate. A pan containing a fish is also on the desk. A toy car rests on the sofa. A bicycle is positioned next to the sofa, and a plant stands next to the desk.",
+    "dsl": "(exists ?d (exists ?s (exists ?pl (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?s 'sofa') (NextTo ?s ?d) (Is ?pl 'plate') (HasShape ?pl 'round') (On ?pl ?d) (forall ?ba (implies (Is ?ba 'banana') (In ?ba ?pl))) (exists ?sp (exists ?pa (exists ?f (exists ?tc (exists ?bi (exists ?p (and (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (NextTo ?sp ?pl) (Is ?pa 'pan') (On ?pa ?d) (Is ?f 'fish') (In ?f ?pa) (Is ?tc 'toy car') (On ?tc ?s) (Is ?bi 'bicycle') (NextTo ?bi ?s) (Is ?p 'plant') (NextTo ?p ?d))))))))))))",
+    "cnf": "(exists ?d (exists ?s (exists ?pl (forall ?ba (exists ?sp (exists ?pa (exists ?f (exists ?tc (exists ?bi (exists ?p (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?s ?d) (On ?pl ?d) (Is ?s 'sofa') (On ?tc ?s) (On ?pa ?d) (HasShape ?pl 'round') (or (not (Is ?ba 'banana')) (In ?ba ?pl)) (NextTo ?bi ?s) (Is ?tc 'toy car') (NextTo ?p ?d) (Is ?pa 'pan') (In ?f ?pa) (Is ?pl 'plate') (NextTo ?sp ?pl) (Is ?bi 'bicycle') (Is ?p 'plant') (Is ?f 'fish') (HasMaterial ?sp 'metal') (Is ?sp 'spoon'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "sofa",
+        "toy car",
+        "plant",
+        "desk",
+        "fish",
+        "banana",
+        "spoon",
+        "bicycle",
+        "plate"
+    ]
+}

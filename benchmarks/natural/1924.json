@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden table sits in the center, holding a turned-on lamp and a basket with an apple inside. To the right of the table stands a bookshelf containing every book in the scene. To the left is a bench where a sleeping cat rests. A woman stands next to the table, holding a pair of glasses.",
+    "dsl": "(exists ?t (and (Is ?t 'table') (HasMaterial ?t 'wooden') (exists ?l (and (Is ?l 'lamp') (On ?l ?t) (HasState ?l 'on'))) (exists ?ba (and (Is ?ba 'basket') (On ?ba ?t) (exists ?a (and (Is ?a 'apple') (In ?a ?ba))))) (exists ?bs (and (Is ?bs 'bookshelf') (RightOf ?bs ?t) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bs))))) (exists ?be (and (Is ?be 'bench') (LeftOf ?be ?t) (exists ?c (and (Is ?c 'cat') (On ?c ?be) (HasState ?c 'sleeping'))))) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?t) (exists ?g (and (Is ?g 'glasses') (Holding ?w ?g)))))))",
+    "cnf": "(exists ?t (exists ?l (exists ?ba (exists ?a (exists ?bs (forall ?bk (exists ?be (exists ?c (exists ?w (exists ?g (and (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?l ?t) (On ?ba ?t) (Is ?l 'lamp') (HasState ?l 'on') (RightOf ?bs ?t) (Is ?ba 'basket') (In ?a ?ba) (LeftOf ?be ?t) (Is ?bs 'bookshelf') (or (not (Is ?bk 'book')) (On ?bk ?bs)) (Is ?a 'apple') (NextTo ?w ?t) (Is ?be 'bench') (On ?c ?be) (Is ?w 'woman') (Holding ?w ?g) (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?g 'glasses'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "woman",
+        "glasses",
+        "cat",
+        "lamp",
+        "book",
+        "basket",
+        "table",
+        "apple",
+        "bookshelf"
+    ]
+}

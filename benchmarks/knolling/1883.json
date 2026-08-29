@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is located on the left side of the scene. A shirt is positioned to the right of the laptop, and a shoe is to the right of the shirt. For every phone in the image, it is located to the right of the shoe, and the laptop is larger than the phone. Furthermore, the phone is to the left of a tie. Continuing the arrangement to the right of the tie, there is a book, followed by a pair of scissors to the right of the book. A calculator is to the right of the scissors, and a sandwich is to the right of the calculator. Finally, a lemon is located to the right of the sandwich and is positioned on the right side of the image.",
+    "dsl": "(exists ?laptop (exists ?shirt (exists ?shoe (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?shirt 'shirt') (RightOf ?shirt ?laptop) (Is ?shoe 'shoe') (RightOf ?shoe ?shirt) (forall ?phone (implies (Is ?phone 'phone') (exists ?tie (exists ?book (exists ?scissors (exists ?calculator (exists ?sandwich (exists ?lemon (and (Is ?tie 'tie') (Is ?book 'book') (Is ?scissors 'scissors') (Is ?calculator 'calculator') (Is ?sandwich 'sandwich') (Is ?lemon 'lemon') (RightOf ?phone ?shoe) (LargerThan ?laptop ?phone) (LeftOf ?phone ?tie) (RightOf ?book ?tie) (RightOf ?scissors ?book) (RightOf ?calculator ?scissors) (RightOf ?sandwich ?calculator) (RightOf ?lemon ?sandwich) (OnRightSide ?lemon))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?shirt (exists ?shoe (forall ?phone (exists ?tie (exists ?book (exists ?scissors (exists ?calculator (exists ?sandwich (exists ?lemon (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (RightOf ?shirt ?laptop) (or (not (Is ?phone 'phone')) (LargerThan ?laptop ?phone)) (Is ?shirt 'shirt') (RightOf ?shoe ?shirt) (or (not (Is ?phone 'phone')) (RightOf ?phone ?shoe)) (or (not (Is ?phone 'phone')) (LeftOf ?phone ?tie)) (Is ?shoe 'shoe') (or (not (Is ?phone 'phone')) (Is ?lemon 'lemon')) (or (not (Is ?phone 'phone')) (Is ?tie 'tie')) (or (not (Is ?phone 'phone')) (RightOf ?book ?tie)) (or (not (Is ?phone 'phone')) (Is ?sandwich 'sandwich')) (or (not (Is ?phone 'phone')) (RightOf ?lemon ?sandwich)) (or (not (Is ?phone 'phone')) (Is ?book 'book')) (or (not (Is ?phone 'phone')) (RightOf ?scissors ?book)) (or (not (Is ?phone 'phone')) (Is ?calculator 'calculator')) (or (not (Is ?phone 'phone')) (RightOf ?sandwich ?calculator)) (or (not (Is ?phone 'phone')) (OnRightSide ?lemon)) (or (not (Is ?phone 'phone')) (Is ?scissors 'scissors')) (or (not (Is ?phone 'phone')) (RightOf ?calculator ?scissors)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "book",
+        "tie",
+        "lemon",
+        "phone",
+        "calculator",
+        "scissors",
+        "sandwich",
+        "shoe",
+        "shirt"
+    ]
+}

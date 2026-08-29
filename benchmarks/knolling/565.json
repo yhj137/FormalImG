@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A fork is placed on the bottom side of the scene. Directly above the fork is a bowl, and they are aligned vertically. Furthermore, for every calculator in the scene, it is positioned above the bowl and is also vertically aligned with it.",
+    "dsl": "(exists ?fork (exists ?bowl (and (Is ?fork 'fork') (Is ?bowl 'bowl') (OnBottomSide ?fork) (Above ?bowl ?fork) (AlignedVertically ?bowl ?fork) (forall ?calc (implies (Is ?calc 'calculator') (and (Above ?calc ?bowl) (AlignedVertically ?calc ?bowl)))))))",
+    "cnf": "(exists ?fork (exists ?bowl (forall ?calc (and (Is ?fork 'fork') (OnBottomSide ?fork) (Above ?bowl ?fork) (AlignedVertically ?bowl ?fork) (Is ?bowl 'bowl') (or (not (Is ?calc 'calculator')) (Above ?calc ?bowl)) (or (not (Is ?calc 'calculator')) (AlignedVertically ?calc ?bowl))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "calculator",
+        "bowl"
+    ]
+}

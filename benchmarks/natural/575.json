@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a woman holding a round pan, where every cup is placed next to the pan.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?p (and (Is ?w 'woman') (Is ?p 'pan') (HasShape ?p 'round') (Holding ?w ?p) (forall ?c (implies (Is ?c 'cup') (NextTo ?c ?p)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?p (forall ?c (and (Is ?w 'woman') (Holding ?w ?p) (HasShape ?p 'round') (or (not (Is ?c 'cup')) (NextTo ?c ?p)) (Is ?p 'pan'))))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "cup",
+        "woman"
+    ]
+}

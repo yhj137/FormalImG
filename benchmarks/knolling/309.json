@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every spoon in the scene, there exists a cutting board that is larger than the spoon, and the spoon is positioned on the top side of the image.",
+    "dsl": "(forall ?spoon (implies (Is ?spoon 'spoon') (exists ?board (and (Is ?board 'cutting_board') (OnTopSide ?spoon) (LargerThan ?board ?spoon)))))",
+    "cnf": "(forall ?spoon (exists ?board (and (or (not (Is ?spoon 'spoon')) (Is ?board 'cutting_board')) (or (not (Is ?spoon 'spoon')) (OnTopSide ?spoon)) (or (not (Is ?spoon 'spoon')) (LargerThan ?board ?spoon)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "cutting_board"
+    ]
+}

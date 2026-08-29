@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the composition, there is a suitcase and a plate, with the plate situated to the left of the suitcase. For every pair of pliers found on the bottom side, there corresponds a wrench that is located below the plate and aligned horizontally with the pliers.",
+    "dsl": "(exists ?suitcase (exists ?plate (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?plate 'plate') (OnTopSide ?plate) (LeftOf ?plate ?suitcase) (forall ?pliers (implies (and (Is ?pliers 'pliers') (OnBottomSide ?pliers)) (exists ?wrench (and (Is ?wrench 'wrench') (Below ?wrench ?plate) (AlignedHorizontally ?wrench ?pliers))))))))",
+    "cnf": "(exists ?suitcase (exists ?plate (forall ?pliers (exists ?wrench (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LeftOf ?plate ?suitcase) (OnTopSide ?plate) (or (not (Is ?pliers 'pliers')) (not (OnBottomSide ?pliers)) (Below ?wrench ?plate)) (Is ?plate 'plate') (or (not (Is ?pliers 'pliers')) (not (OnBottomSide ?pliers)) (Is ?wrench 'wrench')) (or (not (Is ?pliers 'pliers')) (not (OnBottomSide ?pliers)) (AlignedHorizontally ?wrench ?pliers)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "plate",
+        "suitcase",
+        "pliers"
+    ]
+}

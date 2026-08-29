@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in three rows. The top section contains a gray suitcase, a monitor, and a black keyboard positioned on the top side of the image, where the suitcase is to the left of the monitor and the monitor is to the left of the keyboard. The middle row consists of blue jeans, a shoe, and a calculator aligned horizontally; the jeans are located below the suitcase, the shoe is below the monitor, and the calculator is below the keyboard. On the bottom side, a red apple is positioned below the jeans, a watch is below the shoe, and a spoon is below the calculator. Additionally, the watch is smaller than the monitor.",
+    "dsl": "(exists ?suitcase (exists ?monitor (exists ?keyboard (exists ?jeans (exists ?shoe (exists ?calculator (exists ?apple (exists ?watch (exists ?spoon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (OnTopSide ?suitcase) (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (OnTopSide ?keyboard) (LeftOf ?suitcase ?monitor) (LeftOf ?monitor ?keyboard) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?shoe 'shoe') (Is ?calculator 'calculator') (Below ?jeans ?suitcase) (Below ?shoe ?monitor) (Below ?calculator ?keyboard) (AlignedHorizontally ?jeans ?shoe) (AlignedHorizontally ?shoe ?calculator) (Is ?apple 'apple') (Has ?apple 'red') (Is ?watch 'watch') (Is ?spoon 'spoon') (OnBottomSide ?apple) (OnBottomSide ?watch) (OnBottomSide ?spoon) (Below ?apple ?jeans) (Below ?watch ?shoe) (Below ?spoon ?calculator) (SmallerThan ?watch ?monitor)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (exists ?keyboard (exists ?jeans (exists ?shoe (exists ?calculator (exists ?apple (exists ?watch (exists ?spoon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (OnTopSide ?suitcase) (LeftOf ?suitcase ?monitor) (Below ?jeans ?suitcase) (OnTopSide ?monitor) (LeftOf ?monitor ?keyboard) (Has ?jeans 'blue') (AlignedHorizontally ?jeans ?shoe) (Is ?monitor 'monitor') (Below ?shoe ?monitor) (OnTopSide ?keyboard) (Below ?calculator ?keyboard) (Is ?jeans 'jeans') (Below ?apple ?jeans) (AlignedHorizontally ?shoe ?calculator) (SmallerThan ?watch ?monitor) (Is ?shoe 'shoe') (Has ?keyboard 'black') (Is ?calculator 'calculator') (OnBottomSide ?apple) (Below ?watch ?shoe) (Below ?spoon ?calculator) (Is ?keyboard 'keyboard') (Has ?apple 'red') (OnBottomSide ?watch) (OnBottomSide ?spoon) (Is ?apple 'apple') (Is ?watch 'watch') (Is ?spoon 'spoon')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "watch",
+        "calculator",
+        "jeans",
+        "monitor",
+        "suitcase",
+        "shoe",
+        "spoon"
+    ]
+}

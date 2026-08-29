@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child holding a red screwdriver is in a bed. To the left of the bed is a mirror, with an elephant next to it. An orange lies on the bed, and a round ball is to the right of the orange. Every cat is next to the bed.",
+    "dsl": "(exists ?b (exists ?c (and (Is ?b 'bed') (Is ?c 'child') (In ?c ?b) (forall ?cat (implies (Is ?cat 'cat') (NextTo ?cat ?b))) (exists ?s (exists ?m (exists ?e (exists ?o (exists ?bl (and (Is ?s 'screwdriver') (HasColor ?s 'red') (Holding ?c ?s) (Is ?m 'mirror') (LeftOf ?m ?b) (Is ?e 'elephant') (NextTo ?e ?m) (Is ?o 'orange') (On ?o ?b) (Is ?bl 'ball') (HasShape ?bl 'round') (RightOf ?bl ?o))))))))))",
+    "cnf": "(exists ?b (exists ?c (forall ?cat (exists ?s (exists ?m (exists ?e (exists ?o (exists ?bl (and (Is ?b 'bed') (In ?c ?b) (or (not (Is ?cat 'cat')) (NextTo ?cat ?b)) (Is ?c 'child') (Holding ?c ?s) (LeftOf ?m ?b) (HasColor ?s 'red') (On ?o ?b) (Is ?m 'mirror') (NextTo ?e ?m) (Is ?s 'screwdriver') (Is ?o 'orange') (RightOf ?bl ?o) (Is ?e 'elephant') (HasShape ?bl 'round') (Is ?bl 'ball'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "cat",
+        "ball",
+        "screwdriver",
+        "bed",
+        "elephant",
+        "mirror",
+        "child",
+        "orange"
+    ]
+}

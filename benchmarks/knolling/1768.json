@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, a hat, a camera, keys, and a hammer are arranged in a vertical alignment. On the right side, a mouse, a wrench, and a bottle are also aligned vertically. The mouse is positioned to the right of the hat. Furthermore, for every remote in the image, it is positioned to the right of the hammer, and there is a lemon strictly smaller than the remote.",
+    "dsl": "(exists ?hat (exists ?camera (exists ?keys (exists ?hammer (exists ?mouse (exists ?wrench (exists ?bottle (and (Is ?hat 'hat') (OnLeftSide ?hat) (Is ?camera 'camera') (AlignedVertically ?hat ?camera) (Is ?keys 'keys') (AlignedVertically ?camera ?keys) (Is ?hammer 'hammer') (AlignedVertically ?keys ?hammer) (Is ?mouse 'mouse') (OnRightSide ?mouse) (RightOf ?mouse ?hat) (Is ?wrench 'wrench') (AlignedVertically ?mouse ?wrench) (Is ?bottle 'bottle') (AlignedVertically ?wrench ?bottle) (forall ?remote (implies (Is ?remote 'remote') (exists ?lemon (and (Is ?lemon 'lemon') (RightOf ?remote ?hammer) (SmallerThan ?lemon ?remote)))))))))))))",
+    "cnf": "(exists ?hat (exists ?camera (exists ?keys (exists ?hammer (exists ?mouse (exists ?wrench (exists ?bottle (forall ?remote (exists ?lemon (and (Is ?hat 'hat') (OnLeftSide ?hat) (AlignedVertically ?hat ?camera) (RightOf ?mouse ?hat) (Is ?camera 'camera') (AlignedVertically ?camera ?keys) (OnRightSide ?mouse) (AlignedVertically ?mouse ?wrench) (Is ?keys 'keys') (AlignedVertically ?keys ?hammer) (Is ?mouse 'mouse') (Is ?wrench 'wrench') (AlignedVertically ?wrench ?bottle) (Is ?hammer 'hammer') (or (not (Is ?remote 'remote')) (RightOf ?remote ?hammer)) (Is ?bottle 'bottle') (or (not (Is ?remote 'remote')) (Is ?lemon 'lemon')) (or (not (Is ?remote 'remote')) (SmallerThan ?lemon ?remote))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "remote",
+        "wrench",
+        "lemon",
+        "camera",
+        "hammer",
+        "hat",
+        "mouse",
+        "bottle"
+    ]
+}

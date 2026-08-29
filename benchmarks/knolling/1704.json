@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in two logical groups. The scene features a pair of jeans positioned on the left side. Directly below the jeans, there is a sequence of a cutting board, a keyboard, and a camera; these four items are vertically aligned. Additionally, for every tie in the image, it is located below the jeans, is smaller than the jeans, and has a vertical column of objects arranged beneath it: a sock, a lemon, a screwdriver, and a phone. The phone is located on the bottom side of the image.",
+    "dsl": "(exists ?jeans (exists ?cutting_board (exists ?keyboard (exists ?camera (and (Is ?jeans 'jeans') (Is ?cutting_board 'cutting_board') (Is ?keyboard 'keyboard') (Is ?camera 'camera') (OnLeftSide ?jeans) (Below ?cutting_board ?jeans) (AlignedVertically ?cutting_board ?jeans) (Below ?keyboard ?cutting_board) (AlignedVertically ?keyboard ?cutting_board) (Below ?camera ?keyboard) (AlignedVertically ?camera ?keyboard) (forall ?tie (implies (Is ?tie 'tie') (exists ?sock (exists ?lemon (exists ?screwdriver (exists ?phone (and (Is ?sock 'sock') (Is ?lemon 'lemon') (Is ?screwdriver 'screwdriver') (Is ?phone 'phone') (Below ?tie ?jeans) (LargerThan ?jeans ?tie) (Below ?sock ?tie) (AlignedVertically ?sock ?tie) (Below ?lemon ?sock) (AlignedVertically ?lemon ?sock) (Below ?screwdriver ?lemon) (AlignedVertically ?screwdriver ?lemon) (Below ?phone ?screwdriver) (AlignedVertically ?phone ?screwdriver) (OnBottomSide ?phone)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?cutting_board (exists ?keyboard (exists ?camera (forall ?tie (exists ?sock (exists ?lemon (exists ?screwdriver (exists ?phone (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Below ?cutting_board ?jeans) (AlignedVertically ?cutting_board ?jeans) (Is ?cutting_board 'cutting_board') (or (not (Is ?tie 'tie')) (Below ?tie ?jeans)) (Below ?keyboard ?cutting_board) (or (not (Is ?tie 'tie')) (LargerThan ?jeans ?tie)) (or (not (Is ?tie 'tie')) (Is ?phone 'phone')) (AlignedVertically ?keyboard ?cutting_board) (Is ?keyboard 'keyboard') (or (not (Is ?tie 'tie')) (Below ?sock ?tie)) (or (not (Is ?tie 'tie')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?tie 'tie')) (Below ?phone ?screwdriver)) (Below ?camera ?keyboard) (or (not (Is ?tie 'tie')) (AlignedVertically ?sock ?tie)) (or (not (Is ?tie 'tie')) (Is ?sock 'sock')) (or (not (Is ?tie 'tie')) (Is ?lemon 'lemon')) (or (not (Is ?tie 'tie')) (Below ?screwdriver ?lemon)) (or (not (Is ?tie 'tie')) (AlignedVertically ?screwdriver ?lemon)) (or (not (Is ?tie 'tie')) (AlignedVertically ?phone ?screwdriver)) (AlignedVertically ?camera ?keyboard) (Is ?camera 'camera') (or (not (Is ?tie 'tie')) (Below ?lemon ?sock)) (or (not (Is ?tie 'tie')) (AlignedVertically ?lemon ?sock)) (or (not (Is ?tie 'tie')) (OnBottomSide ?phone))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "sock",
+        "keyboard",
+        "lemon",
+        "phone",
+        "screwdriver",
+        "cutting_board",
+        "jeans",
+        "camera"
+    ]
+}

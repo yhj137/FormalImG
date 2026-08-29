@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard positioned in the top half of the layout. For every pair of scissors in the image, there is a fork placed above it and a shoe placed above the fork. Additionally, the scissors are visually smaller than the keyboard, and the shoe is located on the left side of the scene.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?fork (exists ?shoe (and (Is ?fork 'fork') (Is ?shoe 'shoe') (SmallerThan ?scissors ?keyboard) (Above ?fork ?scissors) (Above ?shoe ?fork) (OnLeftSide ?shoe))))))))",
+    "cnf": "(exists ?keyboard (forall ?scissors (exists ?fork (exists ?shoe (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (or (not (Is ?scissors 'scissors')) (SmallerThan ?scissors ?keyboard)) (or (not (Is ?scissors 'scissors')) (Is ?shoe 'shoe')) (or (not (Is ?scissors 'scissors')) (Above ?fork ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?fork 'fork')) (or (not (Is ?scissors 'scissors')) (Above ?shoe ?fork)) (or (not (Is ?scissors 'scissors')) (OnLeftSide ?shoe)))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "fork",
+        "shoe",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. Every lion has a bus to its right, with a ceramic plate resting on the bus.",
+    "dsl": "(and (IsStyle 'photo') (forall ?l (implies (Is ?l 'lion') (exists ?b (exists ?p (and (Is ?b 'bus') (Is ?p 'plate') (HasMaterial ?p 'ceramic') (RightOf ?b ?l) (LeftOf ?l ?b) (On ?p ?b)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?l (exists ?b (exists ?p (and (or (not (Is ?l 'lion')) (Is ?b 'bus')) (or (not (Is ?l 'lion')) (Is ?p 'plate')) (or (not (Is ?l 'lion')) (RightOf ?b ?l)) (or (not (Is ?l 'lion')) (HasMaterial ?p 'ceramic')) (or (not (Is ?l 'lion')) (LeftOf ?l ?b)) (or (not (Is ?l 'lion')) (On ?p ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "lion",
+        "bus",
+        "plate"
+    ]
+}

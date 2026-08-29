@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the image, positioned in the top-left area, there is a neatly arranged vertical column of objects descending below it. A tie is placed directly below the jeans, followed by a drill, headphones, a sandwich, a cup, a carrot, and a pair of glasses, ending with a sock located on the bottom side of the scene. All these items are aligned vertically with each other. Furthermore, the pair of jeans is larger than the tie, and the drill is larger than the glasses.",
+    "dsl": "(forall ?jeans (implies (Is ?jeans 'jeans') (exists ?tie (exists ?drill (exists ?headphones (exists ?sandwich (exists ?cup (exists ?carrot (exists ?glasses (exists ?sock (and (Is ?tie 'tie') (Is ?drill 'drill') (Is ?headphones 'headphones') (Is ?sandwich 'sandwich') (Is ?cup 'cup') (Is ?carrot 'carrot') (Is ?glasses 'glasses') (Is ?sock 'sock') (OnTopSide ?jeans) (OnLeftSide ?jeans) (OnBottomSide ?sock) (Below ?tie ?jeans) (Below ?drill ?tie) (Below ?headphones ?drill) (Below ?sandwich ?headphones) (Below ?cup ?sandwich) (Below ?carrot ?cup) (Below ?glasses ?carrot) (Below ?sock ?glasses) (AlignedVertically ?jeans ?tie) (AlignedVertically ?tie ?drill) (AlignedVertically ?drill ?headphones) (AlignedVertically ?headphones ?sandwich) (AlignedVertically ?sandwich ?cup) (AlignedVertically ?cup ?carrot) (AlignedVertically ?carrot ?glasses) (AlignedVertically ?glasses ?sock) (LargerThan ?jeans ?tie) (LargerThan ?drill ?glasses))))))))))))",
+    "cnf": "(forall ?jeans (exists ?tie (exists ?drill (exists ?headphones (exists ?sandwich (exists ?cup (exists ?carrot (exists ?glasses (exists ?sock (and (or (not (Is ?jeans 'jeans')) (Is ?tie 'tie')) (or (not (Is ?jeans 'jeans')) (Below ?tie ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?drill 'drill')) (or (not (Is ?jeans 'jeans')) (Below ?drill ?tie)) (or (not (Is ?jeans 'jeans')) (OnBottomSide ?sock)) (or (not (Is ?jeans 'jeans')) (Is ?headphones 'headphones')) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?jeans ?tie)) (or (not (Is ?jeans 'jeans')) (Below ?headphones ?drill)) (or (not (Is ?jeans 'jeans')) (OnLeftSide ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?sock 'sock')) (or (not (Is ?jeans 'jeans')) (Below ?sock ?glasses)) (or (not (Is ?jeans 'jeans')) (Is ?sandwich 'sandwich')) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?tie ?drill)) (or (not (Is ?jeans 'jeans')) (Below ?sandwich ?headphones)) (or (not (Is ?jeans 'jeans')) (OnTopSide ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?glasses 'glasses')) (or (not (Is ?jeans 'jeans')) (Below ?glasses ?carrot)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?carrot ?glasses)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?glasses ?sock)) (or (not (Is ?jeans 'jeans')) (Is ?cup 'cup')) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?tie)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?drill ?headphones)) (or (not (Is ?jeans 'jeans')) (Below ?cup ?sandwich)) (or (not (Is ?jeans 'jeans')) (Is ?carrot 'carrot')) (or (not (Is ?jeans 'jeans')) (Below ?carrot ?cup)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?cup ?carrot)) (or (not (Is ?jeans 'jeans')) (LargerThan ?drill ?glasses)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?headphones ?sandwich)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?sandwich ?cup))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "tie",
+        "cup",
+        "jeans",
+        "drill",
+        "carrot",
+        "glasses",
+        "sock",
+        "sandwich"
+    ]
+}

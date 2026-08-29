@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring three vertical arrangements. First, a shirt is positioned on the top side; below it is a tie, and below the tie is a shoe, with all three aligned vertically. Second, a laptop is located on the top side and is physically larger than the shirt. A phone is placed below the laptop, and a remote is below the phone; these items are vertically aligned, and the phone is smaller than the laptop. Third, on the right side of the image, a pan is positioned on the top side and is larger than the laptop. Below the pan are pliers, and below the pliers is a lighter. These tools are aligned vertically, and the lighter is smaller than the pliers.",
+    "dsl": "(exists ?shirt (exists ?tie (exists ?shoe (exists ?laptop (exists ?phone (exists ?remote (exists ?pan (exists ?pliers (exists ?lighter (and (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?shoe 'shoe') (Is ?laptop 'laptop') (Is ?phone 'phone') (Is ?remote 'remote') (Is ?pan 'pan') (Is ?pliers 'pliers') (Is ?lighter 'lighter') (OnTopSide ?shirt) (OnTopSide ?laptop) (OnTopSide ?pan) (OnRightSide ?pan) (OnRightSide ?pliers) (OnRightSide ?lighter) (Above ?shirt ?tie) (Below ?shoe ?tie) (AlignedVertically ?shirt ?tie) (AlignedVertically ?tie ?shoe) (Above ?laptop ?phone) (Below ?remote ?phone) (AlignedVertically ?laptop ?phone) (AlignedVertically ?phone ?remote) (Above ?pan ?pliers) (Below ?lighter ?pliers) (AlignedVertically ?pan ?pliers) (AlignedVertically ?pliers ?lighter) (LargerThan ?laptop ?shirt) (LargerThan ?pan ?laptop) (SmallerThan ?phone ?laptop) (SmallerThan ?lighter ?pliers)))))))))))",
+    "cnf": "(exists ?shirt (exists ?tie (exists ?shoe (exists ?laptop (exists ?phone (exists ?remote (exists ?pan (exists ?pliers (exists ?lighter (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Above ?shirt ?tie) (AlignedVertically ?shirt ?tie) (Is ?tie 'tie') (Below ?shoe ?tie) (LargerThan ?laptop ?shirt) (AlignedVertically ?tie ?shoe) (Is ?shoe 'shoe') (AlignedVertically ?laptop ?phone) (LargerThan ?pan ?laptop) (Above ?laptop ?phone) (Below ?remote ?phone) (AlignedVertically ?phone ?remote) (SmallerThan ?phone ?laptop) (AlignedVertically ?pan ?pliers) (OnTopSide ?laptop) (Is ?phone 'phone') (Is ?remote 'remote') (Above ?pan ?pliers) (Below ?lighter ?pliers) (AlignedVertically ?pliers ?lighter) (Is ?laptop 'laptop') (OnRightSide ?pan) (OnRightSide ?pliers) (OnRightSide ?lighter) (SmallerThan ?lighter ?pliers) (OnTopSide ?pan) (Is ?pliers 'pliers') (Is ?lighter 'lighter') (Is ?pan 'pan')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "lighter",
+        "shirt",
+        "pan",
+        "pliers",
+        "tie",
+        "phone",
+        "laptop",
+        "shoe",
+        "remote"
+    ]
+}

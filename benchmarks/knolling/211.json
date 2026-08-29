@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a handbag and a carrot. The handbag is placed on the right side of the frame, while the carrot is positioned to the left of the handbag.",
+    "dsl": "(exists ?h (exists ?c (and (Is ?h 'handbag') (Is ?c 'carrot') (OnRightSide ?h) (LeftOf ?c ?h))))",
+    "cnf": "(exists ?h (exists ?c (and (Is ?h 'handbag') (OnRightSide ?h) (LeftOf ?c ?h) (Is ?c 'carrot'))))",
+    "k": 2,
+    "object_classes": [
+        "handbag",
+        "carrot"
+    ]
+}

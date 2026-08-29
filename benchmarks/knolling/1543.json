@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop positioned on the left side. Vertically aligned with the laptop are a camera on the top side (above the laptop) and a hat on the bottom side (below the laptop). To the right of the laptop is a calculator, and to the right of the camera are pliers. Additionally, for every spoon in the image, it is located to the right of the calculator, with an apple aligned vertically above it and a sandwich aligned vertically below it.",
+    "dsl": "(exists ?laptop (exists ?camera (exists ?hat (exists ?calculator (exists ?pliers (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?camera 'camera') (OnTopSide ?camera) (Is ?hat 'hat') (OnBottomSide ?hat) (Is ?calculator 'calculator') (Is ?pliers 'pliers') (Above ?camera ?laptop) (Below ?hat ?laptop) (AlignedVertically ?camera ?laptop) (AlignedVertically ?hat ?laptop) (RightOf ?calculator ?laptop) (RightOf ?pliers ?camera) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?apple (exists ?sandwich (and (Is ?apple 'apple') (Is ?sandwich 'sandwich') (RightOf ?spoon ?calculator) (Above ?apple ?spoon) (Below ?sandwich ?spoon) (AlignedVertically ?apple ?spoon) (AlignedVertically ?spoon ?sandwich))))))))))))",
+    "cnf": "(exists ?laptop (exists ?camera (exists ?hat (exists ?calculator (exists ?pliers (forall ?spoon (exists ?apple (exists ?sandwich (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?camera ?laptop) (Below ?hat ?laptop) (OnTopSide ?camera) (AlignedVertically ?camera ?laptop) (OnBottomSide ?hat) (AlignedVertically ?hat ?laptop) (Is ?camera 'camera') (RightOf ?pliers ?camera) (Is ?hat 'hat') (RightOf ?calculator ?laptop) (Is ?pliers 'pliers') (Is ?calculator 'calculator') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?calculator)) (or (not (Is ?spoon 'spoon')) (Is ?sandwich 'sandwich')) (or (not (Is ?spoon 'spoon')) (Above ?apple ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?apple 'apple')) (or (not (Is ?spoon 'spoon')) (Below ?sandwich ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?apple ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?sandwich)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "apple",
+        "hat",
+        "calculator",
+        "camera",
+        "spoon",
+        "sandwich"
+    ]
+}

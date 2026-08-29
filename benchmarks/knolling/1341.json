@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the image, there is a horizontal row containing red headphones, a calculator, a black mouse, and a ruler, arranged from left to right. The composition also follows a specific rule: for every knife present in the scene, there is a green bowl and a stapler associated with it. Specifically, the green bowl is aligned vertically with the calculator, the stapler is aligned vertically with the mouse, and the knife is aligned vertically with the ruler. Additionally, the bowl, stapler, and knife form a horizontal line, with the bowl positioned to the left of the stapler and the stapler to the left of the knife.",
+    "dsl": "(exists ?headphones (exists ?calculator (exists ?mouse (exists ?ruler (and (Is ?headphones 'headphones') (Has ?headphones 'red') (OnTopSide ?headphones) (Is ?calculator 'calculator') (OnTopSide ?calculator) (Is ?mouse 'mouse') (Has ?mouse 'black') (OnTopSide ?mouse) (Is ?ruler 'ruler') (OnTopSide ?ruler) (LeftOf ?headphones ?calculator) (LeftOf ?calculator ?mouse) (LeftOf ?mouse ?ruler) (AlignedHorizontally ?headphones ?calculator) (AlignedHorizontally ?calculator ?mouse) (AlignedHorizontally ?mouse ?ruler) (forall ?knife (implies (Is ?knife 'knife') (exists ?bowl (exists ?stapler (and (Is ?bowl 'bowl') (Has ?bowl 'green') (Is ?stapler 'stapler') (AlignedVertically ?calculator ?bowl) (AlignedVertically ?mouse ?stapler) (AlignedVertically ?ruler ?knife) (AlignedHorizontally ?bowl ?stapler) (AlignedHorizontally ?stapler ?knife) (LeftOf ?bowl ?stapler) (LeftOf ?stapler ?knife)))))))))))",
+    "cnf": "(exists ?headphones (exists ?calculator (exists ?mouse (exists ?ruler (forall ?knife (exists ?bowl (exists ?stapler (and (Is ?headphones 'headphones') (Has ?headphones 'red') (OnTopSide ?headphones) (LeftOf ?headphones ?calculator) (AlignedHorizontally ?headphones ?calculator) (OnTopSide ?calculator) (LeftOf ?calculator ?mouse) (AlignedHorizontally ?calculator ?mouse) (Is ?calculator 'calculator') (OnTopSide ?mouse) (LeftOf ?mouse ?ruler) (or (not (Is ?knife 'knife')) (AlignedVertically ?calculator ?bowl)) (AlignedHorizontally ?mouse ?ruler) (Has ?mouse 'black') (OnTopSide ?ruler) (or (not (Is ?knife 'knife')) (Is ?stapler 'stapler')) (or (not (Is ?knife 'knife')) (AlignedVertically ?mouse ?stapler)) (or (not (Is ?knife 'knife')) (Has ?bowl 'green')) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?bowl ?stapler)) (or (not (Is ?knife 'knife')) (AlignedVertically ?ruler ?knife)) (Is ?mouse 'mouse') (Is ?ruler 'ruler') (or (not (Is ?knife 'knife')) (Is ?bowl 'bowl')) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?stapler ?knife)) (or (not (Is ?knife 'knife')) (LeftOf ?bowl ?stapler)) (or (not (Is ?knife 'knife')) (LeftOf ?stapler ?knife))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "stapler",
+        "calculator",
+        "mouse",
+        "knife",
+        "bowl",
+        "headphones"
+    ]
+}

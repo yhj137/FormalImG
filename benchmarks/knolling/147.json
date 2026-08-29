@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this layout, every wrench present must be positioned on the top side of the image.",
+    "dsl": "(forall ?w (implies (Is ?w 'wrench') (OnTopSide ?w)))",
+    "cnf": "(forall ?w (or (not (Is ?w 'wrench')) (OnTopSide ?w)))",
+    "k": 1,
+    "object_classes": [
+        "wrench"
+    ]
+}

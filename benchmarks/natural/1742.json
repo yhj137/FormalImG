@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene inside a bus where a man sits on a leather sofa, wearing headphones and holding a metal spoon. A rectangular monitor is also inside the bus. A sliced cake rests on the sofa next to a fish, and all cars in the scene are positioned next to the bus.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (exists ?m (and (Is ?m 'man') (HasState ?m 'sitting') (In ?m ?b) (exists ?s (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (In ?s ?b) (On ?m ?s) (exists ?mon (and (Is ?mon 'monitor') (HasShape ?mon 'rectangular') (In ?mon ?b) (exists ?h (and (Is ?h 'headphones') (On ?h ?m) (exists ?k (and (Is ?k 'cake') (HasState ?k 'sliced') (On ?k ?s) (forall ?c (implies (Is ?c 'car') (NextTo ?c ?b))) (exists ?sp (and (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (Holding ?m ?sp) (exists ?f (and (Is ?f 'fish') (NextTo ?f ?k))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?m (exists ?s (exists ?mon (exists ?h (exists ?k (forall ?c (exists ?sp (exists ?f (and (Is ?b 'bus') (In ?m ?b) (In ?s ?b) (HasState ?m 'sitting') (On ?m ?s) (In ?mon ?b) (HasMaterial ?s 'leather') (Is ?m 'man') (On ?h ?m) (On ?k ?s) (or (not (Is ?c 'car')) (NextTo ?c ?b)) (HasShape ?mon 'rectangular') (Is ?s 'sofa') (Holding ?m ?sp) (Is ?h 'headphones') (HasState ?k 'sliced') (NextTo ?f ?k) (Is ?mon 'monitor') (HasMaterial ?sp 'metal') (Is ?k 'cake') (Is ?f 'fish') (Is ?sp 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "monitor",
+        "sofa",
+        "headphones",
+        "man",
+        "fish",
+        "bus",
+        "cake",
+        "car",
+        "spoon"
+    ]
+}

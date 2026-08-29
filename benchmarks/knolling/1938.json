@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged set of items. On the left side, there is a blue suitcase, with a black pan positioned below it and a yellow drill below the pan; these three are aligned vertically. The suitcase is visually larger than a green bottle located to its right. On the bottom side, a red tie is placed to the right of the drill, and a black mouse is to the right of the tie, sharing a horizontal alignment. For every white plate found to the right of the pan, there is a pair of pliers to its right, with scissors located above the pliers and the pliers located above a watch. The scissors, pliers, and watch are aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?bottle (exists ?tie (exists ?mouse (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?pan 'pan') (Has ?pan 'black') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?bottle 'bottle') (Has ?bottle 'green') (Is ?tie 'tie') (Has ?tie 'red') (Is ?mouse 'mouse') (Has ?mouse 'black') (Above ?suitcase ?pan) (Above ?pan ?drill) (AlignedVertically ?suitcase ?pan) (AlignedVertically ?pan ?drill) (RightOf ?bottle ?suitcase) (LargerThan ?suitcase ?bottle) (OnBottomSide ?tie) (RightOf ?tie ?drill) (RightOf ?mouse ?tie) (AlignedHorizontally ?tie ?mouse) (forall ?plate (implies (and (Is ?plate 'plate') (Has ?plate 'white') (RightOf ?plate ?pan)) (exists ?pliers (exists ?scissors (exists ?watch (and (Is ?pliers 'pliers') (Is ?scissors 'scissors') (Is ?watch 'watch') (RightOf ?pliers ?plate) (Above ?scissors ?pliers) (Above ?pliers ?watch) (AlignedVertically ?scissors ?pliers) (AlignedVertically ?pliers ?watch))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?bottle (exists ?tie (exists ?mouse (forall ?plate (exists ?pliers (exists ?scissors (exists ?watch (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Above ?suitcase ?pan) (AlignedVertically ?suitcase ?pan) (Has ?pan 'black') (Above ?pan ?drill) (RightOf ?bottle ?suitcase) (AlignedVertically ?pan ?drill) (Is ?pan 'pan') (Has ?drill 'yellow') (LargerThan ?suitcase ?bottle) (Has ?bottle 'green') (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (Is ?pliers 'pliers')) (RightOf ?tie ?drill) (Is ?drill 'drill') (Is ?bottle 'bottle') (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (Is ?scissors 'scissors')) (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (RightOf ?pliers ?plate)) (OnBottomSide ?tie) (RightOf ?mouse ?tie) (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (Is ?watch 'watch')) (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (Above ?scissors ?pliers)) (Has ?tie 'red') (AlignedHorizontally ?tie ?mouse) (Has ?mouse 'black') (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (Above ?pliers ?watch)) (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (AlignedVertically ?scissors ?pliers)) (Is ?tie 'tie') (Is ?mouse 'mouse') (or (not (Is ?plate 'plate')) (not (Has ?plate 'white')) (not (RightOf ?plate ?pan)) (AlignedVertically ?pliers ?watch)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "watch",
+        "plate",
+        "mouse",
+        "pan",
+        "scissors",
+        "pliers",
+        "tie",
+        "drill",
+        "suitcase",
+        "bottle"
+    ]
+}

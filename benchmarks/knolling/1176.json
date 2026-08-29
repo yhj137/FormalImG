@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a row of items aligned horizontally along the bottom side of the image. Starting from the left, there is a ruler, followed by glasses to its right, then a cup to the right of the glasses, headphones to the right of the cup, and a remote to the right of the headphones. The remote is positioned on the right side of the image. Additionally, for every spoon in the image, it is located to the right of the remote and is horizontally aligned with it.",
+    "dsl": "(exists ?ruler (exists ?glasses (exists ?cup (exists ?headphones (exists ?remote (and (Is ?ruler 'ruler') (Is ?glasses 'glasses') (Is ?cup 'cup') (Is ?headphones 'headphones') (Is ?remote 'remote') (OnBottomSide ?ruler) (AlignedHorizontally ?ruler ?glasses) (AlignedHorizontally ?glasses ?cup) (AlignedHorizontally ?cup ?headphones) (AlignedHorizontally ?headphones ?remote) (RightOf ?glasses ?ruler) (RightOf ?cup ?glasses) (RightOf ?headphones ?cup) (RightOf ?remote ?headphones) (OnRightSide ?remote) (forall ?spoon (implies (Is ?spoon 'spoon') (and (RightOf ?spoon ?remote) (AlignedHorizontally ?spoon ?remote))))))))))",
+    "cnf": "(exists ?ruler (exists ?glasses (exists ?cup (exists ?headphones (exists ?remote (forall ?spoon (and (Is ?ruler 'ruler') (OnBottomSide ?ruler) (AlignedHorizontally ?ruler ?glasses) (RightOf ?glasses ?ruler) (Is ?glasses 'glasses') (AlignedHorizontally ?glasses ?cup) (RightOf ?cup ?glasses) (Is ?cup 'cup') (AlignedHorizontally ?cup ?headphones) (RightOf ?headphones ?cup) (Is ?headphones 'headphones') (AlignedHorizontally ?headphones ?remote) (RightOf ?remote ?headphones) (Is ?remote 'remote') (OnRightSide ?remote) (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?remote)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "remote",
+        "cup",
+        "spoon",
+        "headphones"
+    ]
+}

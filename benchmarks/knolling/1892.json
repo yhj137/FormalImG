@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A black pan is positioned on the top side. Below the pan and vertically aligned with it is a white keyboard. Below the keyboard and vertically aligned with it is a white bowl. A mouse is to the right of the keyboard. To the right of the pan is a pair of pliers. To the right of the bowl is a fork. On the right side, there is a watch that is smaller than the pan and to the right of the pliers. A phone is below and vertically aligned with the watch. Any sock in the image is red, positioned below and vertically aligned with the bowl, and has a blue pen to its right.",
+    "dsl": "(exists ?pan (exists ?keyboard (exists ?bowl (exists ?mouse (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (Below ?keyboard ?pan) (AlignedVertically ?keyboard ?pan) (Is ?bowl 'bowl') (Has ?bowl 'white') (Below ?bowl ?keyboard) (AlignedVertically ?bowl ?keyboard) (Is ?mouse 'mouse') (RightOf ?mouse ?keyboard) (forall ?sock (implies (Is ?sock 'sock') (exists ?pen (and (Is ?pen 'pen') (Has ?pen 'blue') (Has ?sock 'red') (RightOf ?pen ?sock) (Below ?sock ?bowl) (AlignedVertically ?sock ?bowl))))) (exists ?pliers (exists ?fork (exists ?watch (exists ?phone (and (Is ?pliers 'pliers') (RightOf ?pliers ?pan) (Is ?fork 'fork') (RightOf ?fork ?bowl) (Is ?watch 'watch') (OnRightSide ?watch) (RightOf ?watch ?pliers) (SmallerThan ?watch ?pan) (Is ?phone 'phone') (Below ?phone ?watch) (AlignedVertically ?watch ?phone)))))))))))",
+    "cnf": "(exists ?pan (exists ?keyboard (exists ?bowl (exists ?mouse (forall ?sock (exists ?pen (exists ?pliers (exists ?fork (exists ?watch (exists ?phone (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (Below ?keyboard ?pan) (AlignedVertically ?keyboard ?pan) (Has ?keyboard 'white') (RightOf ?pliers ?pan) (Below ?bowl ?keyboard) (Is ?keyboard 'keyboard') (SmallerThan ?watch ?pan) (Is ?pliers 'pliers') (RightOf ?watch ?pliers) (AlignedVertically ?bowl ?keyboard) (Has ?bowl 'white') (Below ?phone ?watch) (OnRightSide ?watch) (RightOf ?mouse ?keyboard) (or (not (Is ?sock 'sock')) (Below ?sock ?bowl)) (Is ?bowl 'bowl') (AlignedVertically ?watch ?phone) (Is ?phone 'phone') (Is ?watch 'watch') (Is ?mouse 'mouse') (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?bowl)) (or (not (Is ?sock 'sock')) (RightOf ?pen ?sock)) (RightOf ?fork ?bowl) (or (not (Is ?sock 'sock')) (Has ?sock 'red')) (or (not (Is ?sock 'sock')) (Has ?pen 'blue')) (Is ?fork 'fork') (or (not (Is ?sock 'sock')) (Is ?pen 'pen')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "keyboard",
+        "pen",
+        "phone",
+        "watch",
+        "fork",
+        "pan",
+        "mouse",
+        "bowl"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is holding a rusty screwdriver. Next to her, there is a jacket with a pair of glasses on it.",
+    "dsl": "(exists ?w (exists ?s (exists ?j (exists ?g (and (Is ?w 'woman') (Is ?s 'screwdriver') (Is ?j 'jacket') (Is ?g 'glasses') (Holding ?w ?s) (HasState ?s 'rusty') (NextTo ?j ?w) (On ?g ?j))))))",
+    "cnf": "(exists ?w (exists ?s (exists ?j (exists ?g (and (Is ?w 'woman') (Holding ?w ?s) (NextTo ?j ?w) (Is ?s 'screwdriver') (HasState ?s 'rusty') (Is ?j 'jacket') (On ?g ?j) (Is ?g 'glasses'))))))",
+    "k": 4,
+    "object_classes": [
+        "jacket",
+        "screwdriver",
+        "woman",
+        "glasses"
+    ]
+}

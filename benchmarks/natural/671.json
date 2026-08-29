@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where every shirt has headphones on it. Next to each shirt sits a full plastic bowl, with a hat to the left of the bowl.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?s (implies (Is ?s 'shirt') (exists ?hp (exists ?b (exists ?h (and (Is ?hp 'headphones') (Is ?b 'bowl') (Is ?h 'hat') (On ?hp ?s) (NextTo ?b ?s) (HasMaterial ?b 'plastic') (HasState ?b 'full') (LeftOf ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?s (exists ?hp (exists ?b (exists ?h (and (or (not (Is ?s 'shirt')) (Is ?hp 'headphones')) (or (not (Is ?s 'shirt')) (On ?hp ?s)) (or (not (Is ?s 'shirt')) (Is ?b 'bowl')) (or (not (Is ?s 'shirt')) (Is ?h 'hat')) (or (not (Is ?s 'shirt')) (NextTo ?b ?s)) (or (not (Is ?s 'shirt')) (LeftOf ?h ?b)) (or (not (Is ?s 'shirt')) (HasMaterial ?b 'plastic')) (or (not (Is ?s 'shirt')) (HasState ?b 'full'))))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "bowl",
+        "shirt",
+        "headphones"
+    ]
+}

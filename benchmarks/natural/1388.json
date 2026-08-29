@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A woman holding a peeled orange is to the left of a child who is holding a screwdriver and has a hat on. A car is positioned to the right of the child, and every butterfly in the scene is resting on the car.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?c (exists ?car (exists ?s (exists ?o (exists ?h (and (Is ?w 'woman') (Is ?c 'child') (Is ?car 'car') (Is ?s 'screwdriver') (Is ?o 'orange') (Is ?h 'hat') (LeftOf ?w ?c) (Holding ?w ?o) (HasState ?o 'peeled') (Holding ?c ?s) (On ?h ?c) (RightOf ?car ?c) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?car)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?c (exists ?car (exists ?s (exists ?o (exists ?h (forall ?b (and (Is ?w 'woman') (LeftOf ?w ?c) (Holding ?w ?o) (Is ?c 'child') (Holding ?c ?s) (Is ?o 'orange') (HasState ?o 'peeled') (On ?h ?c) (Is ?s 'screwdriver') (RightOf ?car ?c) (Is ?h 'hat') (Is ?car 'car') (or (not (Is ?b 'butterfly')) (On ?b ?car)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hat",
+        "screwdriver",
+        "butterfly",
+        "woman",
+        "child",
+        "orange",
+        "car"
+    ]
+}

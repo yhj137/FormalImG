@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular refrigerator. To the left of the refrigerator is a child holding a hammer, and a dog is located to the left of the child. Every clock in the scene is placed on the refrigerator.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?c (exists ?h (exists ?d (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (Is ?c 'child') (LeftOf ?c ?r) (Is ?h 'hammer') (Holding ?c ?h) (Is ?d 'dog') (LeftOf ?d ?c) (forall ?cl (implies (Is ?cl 'clock') (On ?cl ?r)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?c (exists ?h (exists ?d (forall ?cl (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (LeftOf ?c ?r) (or (not (Is ?cl 'clock')) (On ?cl ?r)) (Is ?c 'child') (Holding ?c ?h) (LeftOf ?d ?c) (Is ?h 'hammer') (Is ?d 'dog'))))))))",
+    "k": 5,
+    "object_classes": [
+        "hammer",
+        "refrigerator",
+        "clock",
+        "dog",
+        "child"
+    ]
+}

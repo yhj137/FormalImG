@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a blue hat positioned in the top-left section. Directly below the hat is a remote, and to the left of a ruler is that same remote. A screwdriver is placed above the ruler and is aligned horizontally with the hat. The arrangement includes a specific constraint: for every lighter in the image, it is positioned to the right of the screwdriver. Furthermore, associated with each lighter is a lemon located below it, a donut positioned to the right of the lemon, and a white sock placed below the donut. The donut is visually larger than the sock.",
+    "dsl": "(exists ?hat (exists ?remote (exists ?ruler (exists ?screwdriver (and (Is ?hat 'hat') (Has ?hat 'blue') (OnTopSide ?hat) (OnLeftSide ?hat) (Is ?remote 'remote') (Below ?remote ?hat) (Is ?ruler 'ruler') (LeftOf ?remote ?ruler) (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?ruler) (AlignedHorizontally ?hat ?screwdriver) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?lemon (exists ?donut (exists ?sock (and (Is ?lemon 'lemon') (Is ?donut 'donut') (Is ?sock 'sock') (Has ?sock 'white') (LeftOf ?screwdriver ?lighter) (Below ?lemon ?lighter) (LeftOf ?lemon ?donut) (Below ?sock ?donut) (LargerThan ?donut ?sock))))))))))))",
+    "cnf": "(exists ?hat (exists ?remote (exists ?ruler (exists ?screwdriver (forall ?lighter (exists ?lemon (exists ?donut (exists ?sock (and (Is ?hat 'hat') (Has ?hat 'blue') (OnTopSide ?hat) (OnLeftSide ?hat) (Below ?remote ?hat) (AlignedHorizontally ?hat ?screwdriver) (Is ?remote 'remote') (LeftOf ?remote ?ruler) (Above ?screwdriver ?ruler) (or (not (Is ?lighter 'lighter')) (LeftOf ?screwdriver ?lighter)) (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (or (not (Is ?lighter 'lighter')) (Has ?sock 'white')) (or (not (Is ?lighter 'lighter')) (Below ?lemon ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?sock 'sock')) (or (not (Is ?lighter 'lighter')) (Below ?sock ?donut)) (or (not (Is ?lighter 'lighter')) (Is ?lemon 'lemon')) (or (not (Is ?lighter 'lighter')) (LeftOf ?lemon ?donut)) (or (not (Is ?lighter 'lighter')) (Is ?donut 'donut')) (or (not (Is ?lighter 'lighter')) (LargerThan ?donut ?sock)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "sock",
+        "lemon",
+        "screwdriver",
+        "hat",
+        "lighter",
+        "donut"
+    ]
+}

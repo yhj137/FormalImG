@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene with a toy car to the left of a rectangular bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?b (and (Is ?t 'toy car') (Is ?b 'bench') (HasShape ?b 'rectangular') (LeftOf ?t ?b)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?b (and (Is ?t 'toy car') (LeftOf ?t ?b) (HasShape ?b 'rectangular') (Is ?b 'bench')))))",
+    "k": 2,
+    "object_classes": [
+        "bench",
+        "toy car"
+    ]
+}

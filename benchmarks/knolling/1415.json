@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two rows of objects neatly arranged. On the top side of the image, there is a blue hat, a pizza, an apple, and a donut positioned from left to right. On the bottom side, corresponding to the top row, there is a black glove, a watch, a wallet, and a phone, also arranged from left to right. Each item in the top row is vertically aligned with the item directly below it in the bottom row. Specifically, the hat is larger than the glove below it, and the apple is smaller than the pizza to its left.",
+    "dsl": "(exists ?hat (exists ?pizza (exists ?apple (exists ?donut (exists ?glove (exists ?watch (exists ?wallet (exists ?phone (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?pizza 'pizza') (Is ?apple 'apple') (Is ?donut 'donut') (Is ?glove 'glove') (Has ?glove 'black') (Is ?watch 'watch') (Is ?wallet 'wallet') (Is ?phone 'phone') (OnTopSide ?hat) (OnTopSide ?pizza) (OnTopSide ?apple) (OnTopSide ?donut) (OnBottomSide ?glove) (OnBottomSide ?watch) (OnBottomSide ?wallet) (OnBottomSide ?phone) (RightOf ?pizza ?hat) (RightOf ?apple ?pizza) (RightOf ?donut ?apple) (RightOf ?watch ?glove) (RightOf ?wallet ?watch) (RightOf ?phone ?wallet) (AlignedVertically ?hat ?glove) (AlignedVertically ?pizza ?watch) (AlignedVertically ?apple ?wallet) (AlignedVertically ?donut ?phone) (LargerThan ?hat ?glove) (SmallerThan ?apple ?pizza))))))))))",
+    "cnf": "(exists ?hat (exists ?pizza (exists ?apple (exists ?donut (exists ?glove (exists ?watch (exists ?wallet (exists ?phone (and (Is ?hat 'hat') (Has ?hat 'blue') (OnTopSide ?hat) (RightOf ?pizza ?hat) (AlignedVertically ?hat ?glove) (OnTopSide ?pizza) (RightOf ?apple ?pizza) (LargerThan ?hat ?glove) (RightOf ?watch ?glove) (Is ?pizza 'pizza') (AlignedVertically ?pizza ?watch) (OnTopSide ?apple) (RightOf ?donut ?apple) (OnBottomSide ?glove) (OnBottomSide ?watch) (RightOf ?wallet ?watch) (SmallerThan ?apple ?pizza) (Is ?apple 'apple') (AlignedVertically ?apple ?wallet) (OnTopSide ?donut) (AlignedVertically ?donut ?phone) (Has ?glove 'black') (Is ?watch 'watch') (OnBottomSide ?wallet) (RightOf ?phone ?wallet) (Is ?donut 'donut') (Is ?glove 'glove') (Is ?wallet 'wallet') (OnBottomSide ?phone) (Is ?phone 'phone'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "apple",
+        "phone",
+        "pizza",
+        "watch",
+        "hat",
+        "wallet",
+        "glove",
+        "donut"
+    ]
+}

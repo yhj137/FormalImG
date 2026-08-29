@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a bus next to a bicycle. A lion is positioned to the left of the bus. To the right of the bicycle is a person wearing glasses, holding a metal knife and a piece of fruit. A blue shirt is on the bicycle. All books in the scene are inside the bus, and a fork is next to the fruit.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bu (exists ?bi (exists ?l (exists ?p (exists ?k (exists ?fr (exists ?g (exists ?s (and (Is ?bu 'bus') (Is ?bi 'bicycle') (NextTo ?bu ?bi) (Is ?l 'lion') (LeftOf ?l ?bu) (Is ?p 'person') (RightOf ?p ?bi) (Is ?k 'knife') (HasMaterial ?k 'metal') (Holding ?p ?k) (Is ?fr 'fruit') (Holding ?p ?fr) (Is ?g 'glasses') (On ?g ?p) (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?bi) (forall ?bo (implies (Is ?bo 'book') (In ?bo ?bu))) (exists ?f (and (Is ?f 'fork') (NextTo ?f ?fr)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bu (exists ?bi (exists ?l (exists ?p (exists ?k (exists ?fr (exists ?g (exists ?s (forall ?bo (exists ?f (and (Is ?bu 'bus') (NextTo ?bu ?bi) (LeftOf ?l ?bu) (Is ?bi 'bicycle') (RightOf ?p ?bi) (or (not (Is ?bo 'book')) (In ?bo ?bu)) (Is ?l 'lion') (On ?s ?bi) (Is ?p 'person') (Holding ?p ?k) (HasColor ?s 'blue') (Holding ?p ?fr) (HasMaterial ?k 'metal') (Is ?s 'shirt') (On ?g ?p) (Is ?fr 'fruit') (NextTo ?f ?fr) (Is ?k 'knife') (Is ?g 'glasses') (Is ?f 'fork')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "fork",
+        "person",
+        "knife",
+        "bus",
+        "book",
+        "shirt",
+        "bicycle",
+        "lion",
+        "fruit"
+    ]
+}

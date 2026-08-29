@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cyberpunk style. Every bus is yellow, and to the left of each one is a child holding a dog. Next to the child is a desk with an open laptop, a screwdriver, a key, and a round plate with a sandwich on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bus') (exists ?c (exists ?d (exists ?dk (exists ?l (exists ?s (exists ?k (exists ?p (exists ?sw (and (HasColor ?b 'yellow') (Is ?c 'child') (LeftOf ?c ?b) (Is ?d 'dog') (Holding ?c ?d) (Is ?dk 'desk') (NextTo ?dk ?c) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?dk) (Is ?s 'screwdriver') (On ?s ?dk) (Is ?k 'key') (On ?k ?dk) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?dk) (Is ?sw 'sandwich') (On ?sw ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?c (exists ?d (exists ?dk (exists ?l (exists ?s (exists ?k (exists ?p (exists ?sw (and (or (not (Is ?b 'bus')) (HasColor ?b 'yellow')) (or (not (Is ?b 'bus')) (Is ?c 'child')) (or (not (Is ?b 'bus')) (LeftOf ?c ?b)) (or (not (Is ?b 'bus')) (Is ?d 'dog')) (or (not (Is ?b 'bus')) (Holding ?c ?d)) (or (not (Is ?b 'bus')) (Is ?dk 'desk')) (or (not (Is ?b 'bus')) (NextTo ?dk ?c)) (or (not (Is ?b 'bus')) (Is ?l 'laptop')) (or (not (Is ?b 'bus')) (On ?l ?dk)) (or (not (Is ?b 'bus')) (HasState ?l 'open')) (or (not (Is ?b 'bus')) (Is ?s 'screwdriver')) (or (not (Is ?b 'bus')) (On ?s ?dk)) (or (not (Is ?b 'bus')) (Is ?k 'key')) (or (not (Is ?b 'bus')) (On ?k ?dk)) (or (not (Is ?b 'bus')) (Is ?p 'plate')) (or (not (Is ?b 'bus')) (On ?p ?dk)) (or (not (Is ?b 'bus')) (HasShape ?p 'round')) (or (not (Is ?b 'bus')) (Is ?sw 'sandwich')) (or (not (Is ?b 'bus')) (On ?sw ?p)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bus",
+        "laptop",
+        "desk",
+        "sandwich",
+        "key",
+        "dog",
+        "screwdriver",
+        "plate",
+        "child"
+    ]
+}

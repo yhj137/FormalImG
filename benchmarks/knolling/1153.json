@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown cutting board is located to the left of a black pan. The pan is positioned to the left of a hammer, which is to the left of a gray calculator. Additionally, every plate is positioned to the right of the calculator and has a black camera located to its right.",
+    "dsl": "(exists ?board (exists ?pan (exists ?hammer (exists ?calc (and (Is ?board 'cutting_board') (Has ?board 'brown') (Is ?pan 'pan') (Has ?pan 'black') (Is ?hammer 'hammer') (Is ?calc 'calculator') (Has ?calc 'gray') (LeftOf ?board ?pan) (LeftOf ?pan ?hammer) (LeftOf ?hammer ?calc) (forall ?plate (implies (Is ?plate 'plate') (exists ?cam (and (Is ?cam 'camera') (Has ?cam 'black') (RightOf ?plate ?calc) (RightOf ?cam ?plate))))))))))",
+    "cnf": "(exists ?board (exists ?pan (exists ?hammer (exists ?calc (forall ?plate (exists ?cam (and (Is ?board 'cutting_board') (Has ?board 'brown') (LeftOf ?board ?pan) (Has ?pan 'black') (LeftOf ?pan ?hammer) (Is ?pan 'pan') (Is ?hammer 'hammer') (LeftOf ?hammer ?calc) (Has ?calc 'gray') (or (not (Is ?plate 'plate')) (RightOf ?plate ?calc)) (Is ?calc 'calculator') (or (not (Is ?plate 'plate')) (Has ?cam 'black')) (or (not (Is ?plate 'plate')) (RightOf ?cam ?plate)) (or (not (Is ?plate 'plate')) (Is ?cam 'camera')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "cutting_board",
+        "pan",
+        "hammer",
+        "calculator",
+        "camera"
+    ]
+}

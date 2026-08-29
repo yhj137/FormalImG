@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack positioned on the left side of the scene, there is a pair of jeans located directly below it. Extending to the right of the backpack is a horizontally aligned row of objects: a mouse is to the right of the backpack, a remote is to the right of the mouse, a pen is to the right of the remote, and a cup is to the right of the pen. The cup ends up on the right side of the image. Additionally, the backpack is larger than the mouse.",
+    "dsl": "(forall ?bp (implies (and (Is ?bp 'backpack') (OnLeftSide ?bp)) (exists ?jeans (exists ?mouse (exists ?remote (exists ?pen (exists ?cup (and (Is ?jeans 'jeans') (Is ?mouse 'mouse') (Is ?remote 'remote') (Is ?pen 'pen') (Is ?cup 'cup') (Below ?jeans ?bp) (RightOf ?mouse ?bp) (AlignedHorizontally ?bp ?mouse) (LargerThan ?bp ?mouse) (RightOf ?remote ?mouse) (AlignedHorizontally ?mouse ?remote) (RightOf ?pen ?remote) (AlignedHorizontally ?remote ?pen) (RightOf ?cup ?pen) (AlignedHorizontally ?pen ?cup) (OnRightSide ?cup)))))))))",
+    "cnf": "(forall ?bp (exists ?jeans (exists ?mouse (exists ?remote (exists ?pen (exists ?cup (and (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Is ?jeans 'jeans')) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Below ?jeans ?bp)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Is ?mouse 'mouse')) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Is ?cup 'cup')) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (RightOf ?mouse ?bp)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Is ?remote 'remote')) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (Is ?pen 'pen')) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (RightOf ?cup ?pen)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (AlignedHorizontally ?bp ?mouse)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (RightOf ?remote ?mouse)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (RightOf ?pen ?remote)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (AlignedHorizontally ?remote ?pen)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (AlignedHorizontally ?pen ?cup)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (LargerThan ?bp ?mouse)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (AlignedHorizontally ?mouse ?remote)) (or (not (Is ?bp 'backpack')) (not (OnLeftSide ?bp)) (OnRightSide ?cup)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "pen",
+        "cup",
+        "backpack",
+        "jeans",
+        "mouse"
+    ]
+}

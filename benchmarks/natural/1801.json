@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A child is sitting on a wooden chair next to a house. The child is holding a blue toy car. A butterfly is to the left of the child. Next to the chair is a backpack containing a key and a screwdriver. An apple is on the backpack, and a peeled banana is next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?ch (exists ?tc (exists ?bf (exists ?bp (exists ?k (exists ?sd (exists ?a (exists ?b (and (Is ?h 'house') (Is ?c 'child') (Is ?ch 'chair') (Is ?tc 'toy car') (Is ?bf 'butterfly') (Is ?bp 'backpack') (Is ?k 'key') (Is ?sd 'screwdriver') (Is ?a 'apple') (Is ?b 'banana') (NextTo ?c ?h) (On ?c ?ch) (HasMaterial ?ch 'wooden') (Holding ?c ?tc) (HasColor ?tc 'blue') (LeftOf ?bf ?c) (NextTo ?bp ?ch) (In ?k ?bp) (In ?sd ?bp) (On ?a ?bp) (NextTo ?b ?bp) (HasState ?b 'peeled')))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?ch (exists ?tc (exists ?bf (exists ?bp (exists ?k (exists ?sd (exists ?a (exists ?b (and (Is ?h 'house') (NextTo ?c ?h) (Is ?c 'child') (On ?c ?ch) (Holding ?c ?tc) (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (LeftOf ?bf ?c) (Is ?tc 'toy car') (HasColor ?tc 'blue') (NextTo ?bp ?ch) (Is ?bf 'butterfly') (Is ?bp 'backpack') (In ?k ?bp) (In ?sd ?bp) (Is ?k 'key') (On ?a ?bp) (Is ?sd 'screwdriver') (NextTo ?b ?bp) (Is ?a 'apple') (Is ?b 'banana') (HasState ?b 'peeled')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "toy car",
+        "backpack",
+        "screwdriver",
+        "banana",
+        "chair",
+        "butterfly",
+        "house",
+        "apple",
+        "child"
+    ]
+}

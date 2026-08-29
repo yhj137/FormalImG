@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. Positioned on the right side of the layout is a backpack. To the left of the backpack is a pair of jeans. Located above the backpack is a camera, and positioned above the camera is a calculator. The scene includes a specific arrangement for carrots: for every carrot, there is a pair of pliers above it, a wrench to the left of the pliers, and a ruler to the left of the wrench. Additionally, the pliers are aligned vertically with the jeans.",
+    "dsl": "(exists ?backpack (exists ?jeans (exists ?camera (exists ?calculator (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (Is ?jeans 'jeans') (LeftOf ?jeans ?backpack) (Is ?camera 'camera') (Above ?camera ?backpack) (Is ?calculator 'calculator') (Above ?calculator ?camera) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?pliers (exists ?wrench (exists ?ruler (and (Is ?pliers 'pliers') (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Above ?pliers ?carrot) (LeftOf ?wrench ?pliers) (LeftOf ?ruler ?wrench) (AlignedVertically ?pliers ?jeans))))))))))))",
+    "cnf": "(exists ?backpack (exists ?jeans (exists ?camera (exists ?calculator (forall ?carrot (exists ?pliers (exists ?wrench (exists ?ruler (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (LeftOf ?jeans ?backpack) (Above ?camera ?backpack) (Is ?jeans 'jeans') (or (not (Is ?carrot 'carrot')) (AlignedVertically ?pliers ?jeans)) (Is ?camera 'camera') (Above ?calculator ?camera) (or (not (Is ?carrot 'carrot')) (LeftOf ?ruler ?wrench)) (or (not (Is ?carrot 'carrot')) (LeftOf ?wrench ?pliers)) (Is ?calculator 'calculator') (or (not (Is ?carrot 'carrot')) (Is ?ruler 'ruler')) (or (not (Is ?carrot 'carrot')) (Above ?pliers ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?wrench 'wrench')) (or (not (Is ?carrot 'carrot')) (Is ?pliers 'pliers')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "pliers",
+        "wrench",
+        "carrot",
+        "backpack",
+        "jeans",
+        "calculator",
+        "camera"
+    ]
+}

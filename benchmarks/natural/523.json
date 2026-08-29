@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a running bus containing every ball. A turned-on monitor is positioned next to the bus on the right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasState ?b 'running') (forall ?x (implies (Is ?x 'ball') (In ?x ?b))) (exists ?m (and (Is ?m 'monitor') (HasState ?m 'on') (RightOf ?m ?b) (NextTo ?m ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?x (exists ?m (and (Is ?b 'bus') (HasState ?b 'running') (or (not (Is ?x 'ball')) (In ?x ?b)) (RightOf ?m ?b) (NextTo ?m ?b) (HasState ?m 'on') (Is ?m 'monitor'))))))",
+    "k": 3,
+    "object_classes": [
+        "bus",
+        "monitor",
+        "ball"
+    ]
+}

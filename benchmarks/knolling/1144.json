@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a drill, a ruler, a shoe, and a hat. The drill is located on the top side. The ruler is smaller than the drill, while the shoe is larger than the ruler, and the hat is larger than the shoe. Additionally, for every camera in the image, there is a lighter smaller than the camera, and the camera itself is smaller than the ruler.",
+    "dsl": "(exists ?drill (exists ?ruler (exists ?shoe (exists ?hat (and (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?shoe 'shoe') (Is ?hat 'hat') (OnTopSide ?drill) (SmallerThan ?ruler ?drill) (LargerThan ?shoe ?ruler) (LargerThan ?hat ?shoe) (forall ?camera (implies (Is ?camera 'camera') (exists ?lighter (and (Is ?lighter 'lighter') (SmallerThan ?lighter ?camera) (SmallerThan ?camera ?ruler))))))))))",
+    "cnf": "(exists ?drill (exists ?ruler (exists ?shoe (exists ?hat (forall ?camera (exists ?lighter (and (Is ?drill 'drill') (OnTopSide ?drill) (SmallerThan ?ruler ?drill) (Is ?ruler 'ruler') (LargerThan ?shoe ?ruler) (or (not (Is ?camera 'camera')) (SmallerThan ?camera ?ruler)) (Is ?shoe 'shoe') (LargerThan ?hat ?shoe) (or (not (Is ?camera 'camera')) (SmallerThan ?lighter ?camera)) (Is ?hat 'hat') (or (not (Is ?camera 'camera')) (Is ?lighter 'lighter')))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "drill",
+        "hat",
+        "lighter",
+        "camera",
+        "shoe"
+    ]
+}

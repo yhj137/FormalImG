@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo of a fluffy teddy bear holding a plant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?p (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (Is ?p 'plant') (Holding ?t ?p)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?p (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (Holding ?t ?p) (Is ?p 'plant')))))",
+    "k": 2,
+    "object_classes": [
+        "plant",
+        "teddy bear"
+    ]
+}

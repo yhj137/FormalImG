@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every person is seated on a wooden chair. To the left of the chair lies a keyboard with a white bowl on it, while a car is positioned to the right.",
+    "dsl": "(forall ?p (implies (Is ?p 'person') (exists ?c (exists ?k (exists ?b (exists ?v (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?p ?c) (Is ?k 'keyboard') (LeftOf ?k ?c) (Is ?b 'bowl') (HasColor ?b 'white') (On ?b ?k) (Is ?v 'car') (RightOf ?v ?c))))))))",
+    "cnf": "(forall ?p (exists ?c (exists ?k (exists ?b (exists ?v (and (or (not (Is ?p 'person')) (Is ?c 'chair')) (or (not (Is ?p 'person')) (HasMaterial ?c 'wooden')) (or (not (Is ?p 'person')) (On ?p ?c)) (or (not (Is ?p 'person')) (Is ?k 'keyboard')) (or (not (Is ?p 'person')) (LeftOf ?k ?c)) (or (not (Is ?p 'person')) (Is ?b 'bowl')) (or (not (Is ?p 'person')) (RightOf ?v ?c)) (or (not (Is ?p 'person')) (On ?b ?k)) (or (not (Is ?p 'person')) (HasColor ?b 'white')) (or (not (Is ?p 'person')) (Is ?v 'car'))))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "chair",
+        "car",
+        "bowl",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition centers on a black monitor. To the left of the monitor lies a pizza, while a red backpack is positioned to its right. The monitor is visually larger than the pizza. A donut is arranged to align vertically with the pizza, and a blue handbag aligns vertically with the backpack. Furthermore, a rule governs the scene: for every lighter present, it aligns vertically with the monitor and has a black pen located to its left.",
+    "dsl": "(exists ?monitor (exists ?pizza (exists ?backpack (exists ?donut (exists ?handbag (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?pizza 'pizza') (Is ?backpack 'backpack') (Has ?backpack 'red') (Is ?donut 'donut') (Is ?handbag 'handbag') (Has ?handbag 'blue') (LeftOf ?pizza ?monitor) (RightOf ?backpack ?monitor) (LargerThan ?monitor ?pizza) (AlignedVertically ?donut ?pizza) (AlignedVertically ?handbag ?backpack) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?pen (and (Is ?pen 'pen') (Has ?pen 'black') (AlignedVertically ?lighter ?monitor) (LeftOf ?pen ?lighter)))))))))))",
+    "cnf": "(exists ?monitor (exists ?pizza (exists ?backpack (exists ?donut (exists ?handbag (forall ?lighter (exists ?pen (and (Is ?monitor 'monitor') (Has ?monitor 'black') (LeftOf ?pizza ?monitor) (RightOf ?backpack ?monitor) (Is ?pizza 'pizza') (LargerThan ?monitor ?pizza) (Has ?backpack 'red') (AlignedVertically ?handbag ?backpack) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?monitor)) (AlignedVertically ?donut ?pizza) (Is ?backpack 'backpack') (Has ?handbag 'blue') (or (not (Is ?lighter 'lighter')) (Has ?pen 'black')) (or (not (Is ?lighter 'lighter')) (LeftOf ?pen ?lighter)) (Is ?donut 'donut') (Is ?handbag 'handbag') (or (not (Is ?lighter 'lighter')) (Is ?pen 'pen'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pen",
+        "pizza",
+        "handbag",
+        "backpack",
+        "lighter",
+        "monitor",
+        "donut"
+    ]
+}

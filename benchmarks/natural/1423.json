@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is set in a cyberpunk style. Every plant is located to the right of a gray refrigerator. To the left of the refrigerator lies a rug with a child on it holding a toy car. A plastic basket containing a round plate sits on the refrigerator, and a butterfly rests on the plant.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?pl (implies (Is ?pl 'plant') (exists ?r (exists ?rg (exists ?c (exists ?tc (exists ?b (exists ?p (exists ?bf (and (Is ?r 'refrigerator') (HasColor ?r 'gray') (RightOf ?pl ?r) (Is ?rg 'rug') (LeftOf ?rg ?r) (Is ?c 'child') (On ?c ?rg) (Is ?tc 'toy car') (Holding ?c ?tc) (Is ?b 'basket') (HasMaterial ?b 'plastic') (On ?b ?r) (Is ?p 'plate') (HasShape ?p 'round') (In ?p ?b) (Is ?bf 'butterfly') (On ?bf ?pl))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?pl (exists ?r (exists ?rg (exists ?c (exists ?tc (exists ?b (exists ?p (exists ?bf (and (or (not (Is ?pl 'plant')) (Is ?r 'refrigerator')) (or (not (Is ?pl 'plant')) (HasColor ?r 'gray')) (or (not (Is ?pl 'plant')) (RightOf ?pl ?r)) (or (not (Is ?pl 'plant')) (LeftOf ?rg ?r)) (or (not (Is ?pl 'plant')) (Is ?rg 'rug')) (or (not (Is ?pl 'plant')) (On ?b ?r)) (or (not (Is ?pl 'plant')) (Is ?c 'child')) (or (not (Is ?pl 'plant')) (On ?c ?rg)) (or (not (Is ?pl 'plant')) (HasMaterial ?b 'plastic')) (or (not (Is ?pl 'plant')) (Is ?p 'plate')) (or (not (Is ?pl 'plant')) (In ?p ?b)) (or (not (Is ?pl 'plant')) (Is ?tc 'toy car')) (or (not (Is ?pl 'plant')) (Holding ?c ?tc)) (or (not (Is ?pl 'plant')) (Is ?b 'basket')) (or (not (Is ?pl 'plant')) (HasShape ?p 'round')) (or (not (Is ?pl 'plant')) (Is ?bf 'butterfly')) (or (not (Is ?pl 'plant')) (On ?bf ?pl))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "basket",
+        "plant",
+        "toy car",
+        "butterfly",
+        "refrigerator",
+        "child",
+        "plate",
+        "rug"
+    ]
+}

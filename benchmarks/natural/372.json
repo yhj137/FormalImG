@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular bench with every mirror in the scene placed on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bench') (HasShape ?b 'rectangular') (forall ?m (implies (Is ?m 'mirror') (On ?m ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?m (and (Is ?b 'bench') (HasShape ?b 'rectangular') (or (not (Is ?m 'mirror')) (On ?m ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bench",
+        "mirror"
+    ]
+}

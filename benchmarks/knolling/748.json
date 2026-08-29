@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag positioned on the top side of the layout. Directly below the handbag is a pan, and the handbag is visually larger than the pan. Furthermore, for every cup present in the image, there is an apple located below it, with the pan being positioned above the cup.",
+    "dsl": "(exists ?handbag (exists ?pan (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?pan 'pan') (Above ?handbag ?pan) (LargerThan ?handbag ?pan) (forall ?cup (implies (Is ?cup 'cup') (exists ?apple (and (Is ?apple 'apple') (Above ?pan ?cup) (Above ?cup ?apple))))))))",
+    "cnf": "(exists ?handbag (exists ?pan (forall ?cup (exists ?apple (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Above ?handbag ?pan) (LargerThan ?handbag ?pan) (Is ?pan 'pan') (or (not (Is ?cup 'cup')) (Above ?pan ?cup)) (or (not (Is ?cup 'cup')) (Is ?apple 'apple')) (or (not (Is ?cup 'cup')) (Above ?cup ?apple)))))))",
+    "k": 4,
+    "object_classes": [
+        "pan",
+        "handbag",
+        "cup",
+        "apple"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a house, and to its right, a sleeping lion lies on a rug. To the right of the rug is a ball, followed by a boat. To the right of the boat, every orange in the scene is growing on a tree.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?r (exists ?l (exists ?ba (exists ?bt (and (Is ?h 'house') (Is ?r 'rug') (RightOf ?r ?h) (Is ?l 'lion') (On ?l ?r) (HasState ?l 'sleeping') (Is ?ba 'ball') (RightOf ?ba ?r) (Is ?bt 'boat') (RightOf ?bt ?ba) (forall ?o (implies (Is ?o 'orange') (exists ?t (and (Is ?t 'tree') (On ?o ?t) (RightOf ?t ?bt))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?r (exists ?l (exists ?ba (exists ?bt (forall ?o (exists ?t (and (Is ?h 'house') (RightOf ?r ?h) (Is ?r 'rug') (On ?l ?r) (RightOf ?ba ?r) (Is ?l 'lion') (HasState ?l 'sleeping') (Is ?ba 'ball') (RightOf ?bt ?ba) (Is ?bt 'boat') (or (not (Is ?o 'orange')) (RightOf ?t ?bt)) (or (not (Is ?o 'orange')) (On ?o ?t)) (or (not (Is ?o 'orange')) (Is ?t 'tree')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "lion",
+        "tree",
+        "rug",
+        "orange",
+        "ball",
+        "boat"
+    ]
+}

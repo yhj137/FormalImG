@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a broken table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasState ?t 'broken'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasState ?t 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "table"
+    ]
+}

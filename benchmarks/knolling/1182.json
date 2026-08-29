@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pan located on the right side. A bowl is aligned vertically with the pan. A donut is aligned horizontally with the bowl. A ruler is aligned vertically with the donut. A remote is aligned horizontally with the ruler. Finally, every pair of headphones in the scene is aligned vertically with the remote.",
+    "dsl": "(exists ?pan (exists ?bowl (exists ?donut (exists ?ruler (exists ?remote (and (Is ?pan 'pan') (OnRightSide ?pan) (Is ?bowl 'bowl') (AlignedVertically ?bowl ?pan) (Is ?donut 'donut') (AlignedHorizontally ?donut ?bowl) (Is ?ruler 'ruler') (AlignedVertically ?ruler ?donut) (Is ?remote 'remote') (AlignedHorizontally ?remote ?ruler) (forall ?h (implies (Is ?h 'headphones') (AlignedVertically ?h ?remote)))))))))",
+    "cnf": "(exists ?pan (exists ?bowl (exists ?donut (exists ?ruler (exists ?remote (forall ?h (and (Is ?pan 'pan') (OnRightSide ?pan) (AlignedVertically ?bowl ?pan) (Is ?bowl 'bowl') (AlignedHorizontally ?donut ?bowl) (Is ?donut 'donut') (AlignedVertically ?ruler ?donut) (Is ?ruler 'ruler') (AlignedHorizontally ?remote ?ruler) (Is ?remote 'remote') (or (not (Is ?h 'headphones')) (AlignedVertically ?h ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "pan",
+        "bowl",
+        "headphones",
+        "donut"
+    ]
+}

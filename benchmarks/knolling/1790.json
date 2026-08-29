@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a gray laptop. To the left of the laptop is a white bowl, and to the left of the bowl is a pair of glasses. To the right of the laptop is a pizza, followed by a bottle to its right; the pizza is visually larger than the bottle. Further to the right of the bottle is a brown wallet, which is located on the bottom side of the image and is smaller than the laptop. To the right of the wallet lies a white sock, and to the right of the sock is a spoon. Finally, for every fork in the image, it is located on the left side of the scene and positioned to the left of the glasses.",
+    "dsl": "(exists ?laptop (exists ?bowl (exists ?glasses (exists ?pizza (exists ?bottle (exists ?wallet (exists ?sock (exists ?spoon (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?glasses 'glasses') (Is ?pizza 'pizza') (Is ?bottle 'bottle') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?sock 'sock') (Has ?sock 'white') (Is ?spoon 'spoon') (LeftOf ?bowl ?laptop) (LeftOf ?glasses ?bowl) (RightOf ?pizza ?laptop) (RightOf ?bottle ?pizza) (LargerThan ?pizza ?bottle) (RightOf ?wallet ?bottle) (OnBottomSide ?wallet) (SmallerThan ?wallet ?laptop) (RightOf ?sock ?wallet) (RightOf ?spoon ?sock) (forall ?fork (implies (Is ?fork 'fork') (and (OnLeftSide ?fork) (LeftOf ?fork ?glasses)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?bowl (exists ?glasses (exists ?pizza (exists ?bottle (exists ?wallet (exists ?sock (exists ?spoon (forall ?fork (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (LeftOf ?bowl ?laptop) (RightOf ?pizza ?laptop) (Has ?bowl 'white') (LeftOf ?glasses ?bowl) (SmallerThan ?wallet ?laptop) (Is ?pizza 'pizza') (RightOf ?bottle ?pizza) (Is ?bowl 'bowl') (Is ?glasses 'glasses') (or (not (Is ?fork 'fork')) (LeftOf ?fork ?glasses)) (OnBottomSide ?wallet) (RightOf ?sock ?wallet) (LargerThan ?pizza ?bottle) (Is ?bottle 'bottle') (or (not (Is ?fork 'fork')) (OnLeftSide ?fork)) (RightOf ?wallet ?bottle) (Has ?sock 'white') (RightOf ?spoon ?sock) (Has ?wallet 'brown') (Is ?sock 'sock') (Is ?spoon 'spoon') (Is ?wallet 'wallet')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "sock",
+        "pizza",
+        "fork",
+        "wallet",
+        "bottle",
+        "bowl",
+        "spoon"
+    ]
+}

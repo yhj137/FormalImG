@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard. For every phone in the image, it is positioned directly below the keyboard. There is also a ruler that is visually smaller than the keyboard. Additionally, a hammer is located below the ruler and is positioned on the bottom side of the layout.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (forall ?phone (implies (Is ?phone 'phone') (Below ?phone ?keyboard))) (exists ?ruler (and (Is ?ruler 'ruler') (SmallerThan ?ruler ?keyboard) (exists ?hammer (and (Is ?hammer 'hammer') (Below ?hammer ?ruler) (OnBottomSide ?hammer)))))))",
+    "cnf": "(exists ?keyboard (forall ?phone (exists ?ruler (exists ?hammer (and (Is ?keyboard 'keyboard') (or (not (Is ?phone 'phone')) (Below ?phone ?keyboard)) (SmallerThan ?ruler ?keyboard) (Is ?ruler 'ruler') (Below ?hammer ?ruler) (Is ?hammer 'hammer') (OnBottomSide ?hammer))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "hammer",
+        "phone",
+        "keyboard"
+    ]
+}

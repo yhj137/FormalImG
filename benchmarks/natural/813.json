@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a yellow screwdriver positioned to the left of a gray laptop. A brown chair and a black phone are located next to the laptop, with a sandwich placed beside the phone.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (exists ?l (exists ?c (exists ?p (exists ?sa (and (Is ?s 'screwdriver') (HasColor ?s 'yellow') (Is ?l 'laptop') (HasColor ?l 'gray') (LeftOf ?s ?l) (Is ?c 'chair') (HasColor ?c 'brown') (NextTo ?c ?l) (Is ?p 'phone') (HasColor ?p 'black') (NextTo ?p ?l) (Is ?sa 'sandwich') (NextTo ?sa ?p))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (exists ?l (exists ?c (exists ?p (exists ?sa (and (Is ?s 'screwdriver') (HasColor ?s 'yellow') (LeftOf ?s ?l) (HasColor ?l 'gray') (NextTo ?c ?l) (Is ?l 'laptop') (NextTo ?p ?l) (HasColor ?c 'brown') (HasColor ?p 'black') (NextTo ?sa ?p) (Is ?c 'chair') (Is ?p 'phone') (Is ?sa 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "chair",
+        "laptop",
+        "sandwich",
+        "screwdriver"
+    ]
+}

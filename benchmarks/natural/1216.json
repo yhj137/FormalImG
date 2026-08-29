@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a purple tree with a bird and a cat on it. Next to the tree is a pair of leather shoes, upon which sits a red cup containing a metal spoon. A cake is placed next to the cup.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?b (exists ?c (exists ?s (exists ?cu (exists ?sp (exists ?ca (and (Is ?t 'tree') (HasColor ?t 'purple') (Is ?b 'bird') (On ?b ?t) (Is ?c 'cat') (On ?c ?t) (Is ?s 'shoes') (HasMaterial ?s 'leather') (NextTo ?s ?t) (Is ?cu 'cup') (HasColor ?cu 'red') (On ?cu ?s) (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (In ?sp ?cu) (Is ?ca 'cake') (NextTo ?ca ?cu))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?b (exists ?c (exists ?s (exists ?cu (exists ?sp (exists ?ca (and (Is ?t 'tree') (HasColor ?t 'purple') (On ?b ?t) (On ?c ?t) (Is ?b 'bird') (NextTo ?s ?t) (Is ?c 'cat') (HasMaterial ?s 'leather') (On ?cu ?s) (Is ?s 'shoes') (HasColor ?cu 'red') (In ?sp ?cu) (Is ?cu 'cup') (NextTo ?ca ?cu) (HasMaterial ?sp 'metal') (Is ?ca 'cake') (Is ?sp 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "cat",
+        "cake",
+        "shoes",
+        "cup",
+        "tree",
+        "bird",
+        "spoon"
+    ]
+}

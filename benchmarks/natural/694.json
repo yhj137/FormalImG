@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a brown teddy bear. Every shoe in the scene is located next to the teddy bear. A cake sits on the teddy bear, with a hammer resting on top of the cake.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?t))) (exists ?c (and (Is ?c 'cake') (On ?c ?t) (exists ?h (and (Is ?h 'hammer') (On ?h ?c))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?s (exists ?c (exists ?h (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (or (not (Is ?s 'shoes')) (NextTo ?s ?t)) (On ?c ?t) (Is ?c 'cake') (On ?h ?c) (Is ?h 'hammer')))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "shoes",
+        "hammer",
+        "cake"
+    ]
+}

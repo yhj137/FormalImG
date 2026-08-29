@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, it is located on the bottom side and positioned below a donut. The donut is visually smaller than the keyboard. Furthermore, a knife is arranged above the donut.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keyboard') (exists ?d (exists ?kn (and (Is ?d 'donut') (Is ?kn 'knife') (OnBottomSide ?k) (Below ?k ?d) (SmallerThan ?d ?k) (Above ?kn ?d)))))))",
+    "cnf": "(forall ?k (exists ?d (exists ?kn (and (or (not (Is ?k 'keyboard')) (Is ?d 'donut')) (or (not (Is ?k 'keyboard')) (Below ?k ?d)) (or (not (Is ?k 'keyboard')) (Is ?kn 'knife')) (or (not (Is ?k 'keyboard')) (SmallerThan ?d ?k)) (or (not (Is ?k 'keyboard')) (OnBottomSide ?k)) (or (not (Is ?k 'keyboard')) (Above ?kn ?d))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "donut",
+        "keyboard"
+    ]
+}

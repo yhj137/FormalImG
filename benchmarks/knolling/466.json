@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of blue jeans in the scene, there is a black camera and a pair of scissors located to its left. The camera and the scissors are aligned vertically with each other.",
+    "dsl": "(and (forall ?j (implies (and (Is ?j 'jeans') (Has ?j 'blue')) (exists ?c (exists ?s (and (Is ?c 'camera') (Has ?c 'black') (Is ?s 'scissors') (LeftOf ?c ?j) (LeftOf ?s ?j) (AlignedVertically ?c ?s)))))))",
+    "cnf": "(forall ?j (exists ?c (exists ?s (and (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Is ?c 'camera')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Has ?c 'black')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (LeftOf ?c ?j)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Is ?s 'scissors')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (AlignedVertically ?c ?s)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (LeftOf ?s ?j))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "jeans",
+        "camera"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a bottle, a pair of jeans, a drill, and headphones. The bottle is placed on the top side of the layout. The drill is aligned vertically with the jeans, and the headphones are smaller than the jeans. For every donut in the scene, there corresponds a specific arrangement consisting of a bowl, a carrot, a book, and a phone. The jeans and the bottle are located to the left of the donut. The bowl is positioned to the right of the donut, and the carrot is to the right of the bowl. The book is aligned vertically with the bowl and is larger than the phone, which is located on the right side of the image.",
+    "dsl": "(exists ?jeans (exists ?drill (exists ?headphones (exists ?bottle (and (Is ?jeans 'jeans') (Is ?drill 'drill') (Is ?headphones 'headphones') (Is ?bottle 'bottle') (OnTopSide ?bottle) (AlignedVertically ?drill ?jeans) (SmallerThan ?headphones ?jeans) (forall ?donut (implies (Is ?donut 'donut') (exists ?bowl (exists ?carrot (exists ?book (exists ?phone (and (Is ?bowl 'bowl') (Is ?carrot 'carrot') (Is ?book 'book') (Is ?phone 'phone') (LeftOf ?jeans ?donut) (LeftOf ?bottle ?donut) (RightOf ?bowl ?donut) (RightOf ?carrot ?bowl) (AlignedVertically ?book ?bowl) (LargerThan ?book ?phone) (OnRightSide ?phone)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?drill (exists ?headphones (exists ?bottle (forall ?donut (exists ?bowl (exists ?carrot (exists ?book (exists ?phone (and (Is ?jeans 'jeans') (AlignedVertically ?drill ?jeans) (SmallerThan ?headphones ?jeans) (Is ?drill 'drill') (or (not (Is ?donut 'donut')) (LeftOf ?jeans ?donut)) (Is ?headphones 'headphones') (or (not (Is ?donut 'donut')) (Is ?phone 'phone')) (or (not (Is ?donut 'donut')) (LeftOf ?bottle ?donut)) (or (not (Is ?donut 'donut')) (Is ?book 'book')) (or (not (Is ?donut 'donut')) (LargerThan ?book ?phone)) (OnTopSide ?bottle) (or (not (Is ?donut 'donut')) (RightOf ?bowl ?donut)) (or (not (Is ?donut 'donut')) (Is ?carrot 'carrot')) (or (not (Is ?donut 'donut')) (AlignedVertically ?book ?bowl)) (or (not (Is ?donut 'donut')) (OnRightSide ?phone)) (Is ?bottle 'bottle') (or (not (Is ?donut 'donut')) (RightOf ?carrot ?bowl)) (or (not (Is ?donut 'donut')) (Is ?bowl 'bowl'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "carrot",
+        "phone",
+        "drill",
+        "jeans",
+        "bottle",
+        "bowl",
+        "headphones",
+        "donut"
+    ]
+}

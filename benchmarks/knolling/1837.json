@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase positioned on the bottom side of the scene, there is a structured grid of items arranged relative to it. A drill is placed directly above the suitcase, a game controller is above the drill, and a book is above the game controller; these four items are vertically aligned. To the right of the suitcase is a calculator. Directly above the calculator is a remote, and above the remote is a phone; these three items are also vertically aligned. To the right of the calculator is a wallet. Directly above the wallet is a spoon, and above the spoon is a donut, forming a third vertically aligned column.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'suitcase') (OnBottomSide ?s)) (exists ?d (exists ?g (exists ?b (exists ?c (exists ?r (exists ?p (exists ?w (exists ?sp (exists ?do (and (Is ?d 'drill') (Is ?g 'game_controller') (Is ?b 'book') (Is ?c 'calculator') (Is ?r 'remote') (Is ?p 'phone') (Is ?w 'wallet') (Is ?sp 'spoon') (Is ?do 'donut') (Above ?d ?s) (AlignedVertically ?d ?s) (Above ?g ?d) (AlignedVertically ?g ?d) (Above ?b ?g) (AlignedVertically ?b ?g) (RightOf ?c ?s) (Above ?r ?c) (AlignedVertically ?r ?c) (Above ?p ?r) (AlignedVertically ?p ?r) (RightOf ?w ?c) (Above ?sp ?w) (AlignedVertically ?sp ?w) (Above ?do ?sp) (AlignedVertically ?do ?sp))))))))))))))",
+    "cnf": "(forall ?s (exists ?d (exists ?g (exists ?b (exists ?c (exists ?r (exists ?p (exists ?w (exists ?sp (exists ?do (and (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?d 'drill')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?d ?s)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?g 'game_controller')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?d ?s)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?do 'donut')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?b 'book')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?g ?d)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?sp 'spoon')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?do ?sp)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?c 'calculator')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?b ?g)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?g ?d)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?w 'wallet')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?sp ?w)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?sp ?w)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?do ?sp)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?r 'remote')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (RightOf ?c ?s)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?b ?g)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Is ?p 'phone')) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (RightOf ?w ?c)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?r ?c)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (Above ?p ?r)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?p ?r)) (or (not (Is ?s 'suitcase')) (not (OnBottomSide ?s)) (AlignedVertically ?r ?c)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "remote",
+        "phone",
+        "game_controller",
+        "drill",
+        "calculator",
+        "wallet",
+        "spoon",
+        "suitcase",
+        "donut"
+    ]
+}

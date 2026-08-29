@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round pan lies to the left of a shirt, which is next to a pair of round glasses. The glasses are adjacent to a phone located to the left of a laptop. Next to the laptop stands a lamp, and beside it is a cylindrical bottle containing a plant.",
+    "dsl": "(exists ?pan (exists ?shirt (exists ?glasses (exists ?phone (exists ?laptop (exists ?lamp (exists ?bottle (exists ?plant (and (Is ?pan 'pan') (HasShape ?pan 'round') (Is ?shirt 'shirt') (Is ?glasses 'glasses') (HasShape ?glasses 'round') (Is ?phone 'phone') (Is ?laptop 'laptop') (Is ?lamp 'lamp') (Is ?bottle 'bottle') (HasShape ?bottle 'cylindrical') (Is ?plant 'plant') (LeftOf ?pan ?shirt) (NextTo ?shirt ?glasses) (NextTo ?glasses ?phone) (LeftOf ?phone ?laptop) (NextTo ?laptop ?lamp) (NextTo ?lamp ?bottle) (In ?plant ?bottle))))))))))",
+    "cnf": "(exists ?pan (exists ?shirt (exists ?glasses (exists ?phone (exists ?laptop (exists ?lamp (exists ?bottle (exists ?plant (and (Is ?pan 'pan') (HasShape ?pan 'round') (LeftOf ?pan ?shirt) (Is ?shirt 'shirt') (NextTo ?shirt ?glasses) (HasShape ?glasses 'round') (NextTo ?glasses ?phone) (Is ?glasses 'glasses') (Is ?phone 'phone') (LeftOf ?phone ?laptop) (Is ?laptop 'laptop') (NextTo ?laptop ?lamp) (Is ?lamp 'lamp') (NextTo ?lamp ?bottle) (HasShape ?bottle 'cylindrical') (In ?plant ?bottle) (Is ?bottle 'bottle') (Is ?plant 'plant'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "bottle",
+        "glasses",
+        "laptop",
+        "plant",
+        "lamp",
+        "pan"
+    ]
+}

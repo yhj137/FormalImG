@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a purple house next to a tree. To the right of the tree is a bed with a sleeping dog on it. Every fish is positioned next to the house.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?b (exists ?d (and (Is ?h 'house') (HasColor ?h 'purple') (Is ?t 'tree') (NextTo ?t ?h) (Is ?b 'bed') (RightOf ?b ?t) (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?b) (forall ?f (implies (Is ?f 'fish') (NextTo ?f ?h)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?b (exists ?d (forall ?f (and (Is ?h 'house') (HasColor ?h 'purple') (NextTo ?t ?h) (or (not (Is ?f 'fish')) (NextTo ?f ?h)) (Is ?t 'tree') (RightOf ?b ?t) (Is ?b 'bed') (On ?d ?b) (HasState ?d 'sleeping') (Is ?d 'dog'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "fish",
+        "bed",
+        "tree",
+        "dog"
+    ]
+}

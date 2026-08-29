@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase, a pan, and a plate aligned horizontally, with the suitcase to the left of the pan and the pan to the left of the plate. Above the suitcase are headphones, above the pan is a tie, and above the plate is a calculator; these three are also aligned horizontally. To the right of the calculator are keys, which are visually smaller than the suitcase. Pliers are found on the right side of the image, to the right of and aligned horizontally with the plate. Furthermore, for every screwdriver present, there is a cup to its left, and the screwdriver is positioned above the pliers.",
+    "dsl": "(exists ?suit (exists ?pan (exists ?plate (exists ?hp (exists ?tie (exists ?calc (exists ?keys (exists ?pliers (and (Is ?suit 'suitcase') (Is ?pan 'pan') (Is ?plate 'plate') (Is ?hp 'headphones') (Is ?tie 'tie') (Is ?calc 'calculator') (Is ?keys 'keys') (Is ?pliers 'pliers') (LeftOf ?suit ?pan) (LeftOf ?pan ?plate) (AlignedHorizontally ?suit ?pan) (AlignedHorizontally ?pan ?plate) (Above ?hp ?suit) (Above ?tie ?pan) (Above ?calc ?plate) (AlignedHorizontally ?hp ?tie) (AlignedHorizontally ?tie ?calc) (LeftOf ?calc ?keys) (SmallerThan ?keys ?suit) (OnRightSide ?pliers) (LeftOf ?plate ?pliers) (AlignedHorizontally ?plate ?pliers) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?cup (and (Is ?cup 'cup') (LeftOf ?cup ?sd) (Above ?sd ?pliers))))))))))))))",
+    "cnf": "(exists ?suit (exists ?pan (exists ?plate (exists ?hp (exists ?tie (exists ?calc (exists ?keys (exists ?pliers (forall ?sd (exists ?cup (and (Is ?suit 'suitcase') (LeftOf ?suit ?pan) (AlignedHorizontally ?suit ?pan) (Is ?pan 'pan') (LeftOf ?pan ?plate) (Above ?hp ?suit) (AlignedHorizontally ?pan ?plate) (Is ?plate 'plate') (SmallerThan ?keys ?suit) (Is ?hp 'headphones') (AlignedHorizontally ?hp ?tie) (Above ?tie ?pan) (Above ?calc ?plate) (LeftOf ?calc ?keys) (AlignedHorizontally ?tie ?calc) (Is ?tie 'tie') (LeftOf ?plate ?pliers) (Is ?calc 'calculator') (Is ?keys 'keys') (AlignedHorizontally ?plate ?pliers) (OnRightSide ?pliers) (or (not (Is ?sd 'screwdriver')) (Above ?sd ?pliers)) (Is ?pliers 'pliers') (or (not (Is ?sd 'screwdriver')) (LeftOf ?cup ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?cup 'cup')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "plate",
+        "tie",
+        "pliers",
+        "screwdriver",
+        "cup",
+        "pan",
+        "calculator",
+        "headphones",
+        "suitcase"
+    ]
+}

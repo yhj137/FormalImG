@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red hat, a black remote, and gray pliers arranged in horizontal alignment. For every fork in the scene, the fork is aligned horizontally with the pliers, and there corresponds a lighter aligned horizontally with the fork, and an apple aligned horizontally with the lighter. Additionally, the lighter and the apple are both smaller than the hat.",
+    "dsl": "(exists ?hat (exists ?remote (exists ?pliers (and (Is ?hat 'hat') (Has ?hat 'red') (Is ?remote 'remote') (Has ?remote 'black') (Is ?pliers 'pliers') (Has ?pliers 'gray') (AlignedHorizontally ?hat ?remote) (AlignedHorizontally ?remote ?pliers) (forall ?fork (implies (Is ?fork 'fork') (exists ?lighter (exists ?apple (and (Is ?lighter 'lighter') (Is ?apple 'apple') (AlignedHorizontally ?pliers ?fork) (AlignedHorizontally ?fork ?lighter) (AlignedHorizontally ?lighter ?apple) (SmallerThan ?lighter ?hat) (SmallerThan ?apple ?hat))))))))))",
+    "cnf": "(exists ?hat (exists ?remote (exists ?pliers (forall ?fork (exists ?lighter (exists ?apple (and (Is ?hat 'hat') (Has ?hat 'red') (AlignedHorizontally ?hat ?remote) (or (not (Is ?fork 'fork')) (SmallerThan ?lighter ?hat)) (Has ?remote 'black') (AlignedHorizontally ?remote ?pliers) (or (not (Is ?fork 'fork')) (SmallerThan ?apple ?hat)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?lighter ?apple)) (Is ?remote 'remote') (Has ?pliers 'gray') (or (not (Is ?fork 'fork')) (AlignedHorizontally ?pliers ?fork)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?lighter)) (or (not (Is ?fork 'fork')) (Is ?apple 'apple')) (Is ?pliers 'pliers') (or (not (Is ?fork 'fork')) (Is ?lighter 'lighter')))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "apple",
+        "fork",
+        "hat",
+        "lighter"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden bookshelf, with every umbrella positioned to the left of the bookshelf.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (forall ?u (implies (Is ?u 'umbrella') (LeftOf ?u ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?u (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (or (not (Is ?u 'umbrella')) (LeftOf ?u ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "umbrella",
+        "bookshelf"
+    ]
+}

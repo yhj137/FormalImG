@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a man wearing round glasses and holding a screwdriver. To his right is a blooming plant, on which every bird in the scene is perched. A phone sits next to the plant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?g (exists ?pl (and (Is ?m 'man') (Is ?g 'glasses') (HasShape ?g 'round') (On ?g ?m) (Is ?pl 'plant') (HasState ?pl 'blooming') (RightOf ?pl ?m) (forall ?b (implies (Is ?b 'bird') (On ?b ?pl))) (exists ?s (exists ?p (and (Is ?s 'screwdriver') (Holding ?m ?s) (Is ?p 'phone') (NextTo ?p ?pl)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?g (exists ?pl (forall ?b (exists ?s (exists ?p (and (Is ?m 'man') (On ?g ?m) (RightOf ?pl ?m) (HasShape ?g 'round') (Holding ?m ?s) (HasState ?pl 'blooming') (or (not (Is ?b 'bird')) (On ?b ?pl)) (Is ?g 'glasses') (Is ?s 'screwdriver') (Is ?pl 'plant') (NextTo ?p ?pl) (Is ?p 'phone')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "man",
+        "plant",
+        "screwdriver",
+        "phone",
+        "bird"
+    ]
+}

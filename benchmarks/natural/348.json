@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a metal bus. Every book in the scene is made of paper and located inside the bus.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasMaterial ?b 'metal') (forall ?k (implies (Is ?k 'book') (and (HasMaterial ?k 'paper') (In ?k ?b)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?k (and (Is ?b 'bus') (HasMaterial ?b 'metal') (or (not (Is ?k 'book')) (In ?k ?b)) (or (not (Is ?k 'book')) (HasMaterial ?k 'paper'))))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "bus"
+    ]
+}

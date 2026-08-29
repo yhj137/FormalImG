@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The top side of the composition features a red backpack, a black pan, a blue book, and a yellow drill. The backpack is aligned horizontally with the pan. The backpack is larger than the book, and the pan is larger than the drill. Every wrench in the image is gray, located on the bottom side below the drill, and has an arrangement of associated items: a white lighter is placed above the wrench, a carrot is placed above the lighter, a black watch is aligned horizontally with the wrench, a bowl is aligned horizontally with the carrot, and a game controller, which is larger than the watch, is located above the watch.",
+    "dsl": "(exists ?backpack (exists ?pan (exists ?book (exists ?drill (and (Is ?backpack 'backpack') (Has ?backpack 'red') (OnTopSide ?backpack) (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (Is ?book 'book') (Has ?book 'blue') (OnTopSide ?book) (Is ?drill 'drill') (Has ?drill 'yellow') (OnTopSide ?drill) (AlignedHorizontally ?backpack ?pan) (LargerThan ?backpack ?book) (LargerThan ?pan ?drill) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?lighter (exists ?carrot (exists ?watch (exists ?bowl (exists ?game_controller (and (Has ?wrench 'gray') (OnBottomSide ?wrench) (Above ?drill ?wrench) (Is ?lighter 'lighter') (Has ?lighter 'white') (Is ?carrot 'carrot') (Is ?watch 'watch') (Has ?watch 'black') (Is ?bowl 'bowl') (Is ?game_controller 'game_controller') (Above ?lighter ?wrench) (Above ?carrot ?lighter) (AlignedHorizontally ?watch ?wrench) (AlignedHorizontally ?bowl ?carrot) (Above ?game_controller ?watch) (LargerThan ?game_controller ?watch))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (exists ?book (exists ?drill (forall ?wrench (exists ?lighter (exists ?carrot (exists ?watch (exists ?bowl (exists ?game_controller (and (Is ?backpack 'backpack') (Has ?backpack 'red') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?pan) (LargerThan ?backpack ?book) (OnTopSide ?pan) (LargerThan ?pan ?drill) (OnTopSide ?book) (Has ?pan 'black') (OnTopSide ?drill) (or (not (Is ?wrench 'wrench')) (Above ?drill ?wrench)) (Has ?book 'blue') (Is ?pan 'pan') (Has ?drill 'yellow') (or (not (Is ?wrench 'wrench')) (OnBottomSide ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?lighter 'lighter')) (Is ?book 'book') (Is ?drill 'drill') (or (not (Is ?wrench 'wrench')) (Has ?wrench 'gray')) (or (not (Is ?wrench 'wrench')) (Has ?lighter 'white')) (or (not (Is ?wrench 'wrench')) (Is ?carrot 'carrot')) (or (not (Is ?wrench 'wrench')) (Above ?lighter ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?watch 'watch')) (or (not (Is ?wrench 'wrench')) (Above ?carrot ?lighter)) (or (not (Is ?wrench 'wrench')) (Is ?game_controller 'game_controller')) (or (not (Is ?wrench 'wrench')) (Has ?watch 'black')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?watch ?wrench)) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?bowl ?carrot)) (or (not (Is ?wrench 'wrench')) (Is ?bowl 'bowl')) (or (not (Is ?wrench 'wrench')) (Above ?game_controller ?watch)) (or (not (Is ?wrench 'wrench')) (LargerThan ?game_controller ?watch)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "wrench",
+        "carrot",
+        "watch",
+        "game_controller",
+        "drill",
+        "pan",
+        "backpack",
+        "lighter",
+        "bowl"
+    ]
+}

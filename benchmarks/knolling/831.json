@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a handbag, and directly below it lies a calculator. The handbag is visually larger than the calculator. To the right of the handbag, located on the right side of the image, is a cutting board. Below the cutting board sits a pizza, which is smaller than the cutting board. Finally, a bottle is positioned below the pizza.",
+    "dsl": "(exists ?h (exists ?c (exists ?cb (exists ?p (exists ?b (and (Is ?h 'handbag') (Is ?c 'calculator') (Is ?cb 'cutting_board') (Is ?p 'pizza') (Is ?b 'bottle') (OnLeftSide ?h) (OnRightSide ?cb) (Below ?c ?h) (LeftOf ?h ?cb) (Below ?p ?cb) (Below ?b ?p) (LargerThan ?h ?c) (SmallerThan ?p ?cb)))))))",
+    "cnf": "(exists ?h (exists ?c (exists ?cb (exists ?p (exists ?b (and (Is ?h 'handbag') (OnLeftSide ?h) (Below ?c ?h) (LeftOf ?h ?cb) (Is ?c 'calculator') (LargerThan ?h ?c) (OnRightSide ?cb) (Below ?p ?cb) (Is ?cb 'cutting_board') (SmallerThan ?p ?cb) (Is ?p 'pizza') (Below ?b ?p) (Is ?b 'bottle')))))))",
+    "k": 5,
+    "object_classes": [
+        "pizza",
+        "cutting_board",
+        "handbag",
+        "calculator",
+        "bottle"
+    ]
+}

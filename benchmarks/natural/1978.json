@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene features a bird holding a flower while standing on a bookshelf. The bookshelf is positioned to the left of a wardrobe, which has a round clock on top. To the right of the wardrobe is a sofa, where a phone rests next to a hammer. All knives are located on the bookshelf, with a plant positioned to the right of each knife.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?f (exists ?bs (exists ?w (exists ?c (exists ?s (exists ?ph (exists ?h (and (Is ?b 'bird') (Is ?f 'flower') (Is ?bs 'bookshelf') (Is ?w 'wardrobe') (Is ?c 'clock') (Is ?s 'sofa') (Is ?ph 'phone') (Is ?h 'hammer') (Holding ?b ?f) (On ?b ?bs) (LeftOf ?bs ?w) (On ?c ?w) (HasShape ?c 'round') (RightOf ?s ?w) (On ?ph ?s) (NextTo ?h ?ph) (forall ?k (implies (Is ?k 'knife') (exists ?pl (and (Is ?pl 'plant') (On ?k ?bs) (RightOf ?pl ?k)))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?f (exists ?bs (exists ?w (exists ?c (exists ?s (exists ?ph (exists ?h (forall ?k (exists ?pl (and (Is ?b 'bird') (Holding ?b ?f) (On ?b ?bs) (Is ?f 'flower') (Is ?bs 'bookshelf') (LeftOf ?bs ?w) (or (not (Is ?k 'knife')) (On ?k ?bs)) (Is ?w 'wardrobe') (On ?c ?w) (or (not (Is ?k 'knife')) (Is ?pl 'plant')) (or (not (Is ?k 'knife')) (RightOf ?pl ?k)) (RightOf ?s ?w) (Is ?c 'clock') (HasShape ?c 'round') (Is ?s 'sofa') (On ?ph ?s) (Is ?ph 'phone') (NextTo ?h ?ph) (Is ?h 'hammer')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "knife",
+        "sofa",
+        "plant",
+        "flower",
+        "bird",
+        "hammer",
+        "clock",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

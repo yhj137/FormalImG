@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a purple house, with every rug next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (HasColor ?h 'purple') (forall ?r (implies (Is ?r 'rug') (NextTo ?r ?h))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?r (and (Is ?h 'house') (HasColor ?h 'purple') (or (not (Is ?r 'rug')) (NextTo ?r ?h))))))",
+    "k": 2,
+    "object_classes": [
+        "house",
+        "rug"
+    ]
+}

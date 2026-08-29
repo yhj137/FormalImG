@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red handbag, black headphones, a green apple, a blue pen, and a fork. The items are arranged in a descending vertical layout: the black headphones are positioned below the red handbag, the green apple is below the headphones, the blue pen is below the apple, and the fork is below the pen. The fork is specifically located on the bottom side of the image. Additionally, the handbag is visually larger than the headphones, and the apple is smaller than the handbag.",
+    "dsl": "(exists ?handbag (exists ?headphones (exists ?apple (exists ?pen (exists ?fork (and (Is ?handbag 'handbag') (Has ?handbag 'red') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?apple 'apple') (Has ?apple 'green') (Is ?pen 'pen') (Has ?pen 'blue') (Is ?fork 'fork') (Below ?headphones ?handbag) (Below ?apple ?headphones) (Below ?pen ?apple) (Below ?fork ?pen) (OnBottomSide ?fork) (LargerThan ?handbag ?headphones) (SmallerThan ?apple ?handbag)))))))",
+    "cnf": "(exists ?handbag (exists ?headphones (exists ?apple (exists ?pen (exists ?fork (and (Is ?handbag 'handbag') (Has ?handbag 'red') (Below ?headphones ?handbag) (LargerThan ?handbag ?headphones) (Has ?headphones 'black') (Below ?apple ?headphones) (SmallerThan ?apple ?handbag) (Is ?headphones 'headphones') (Has ?apple 'green') (Below ?pen ?apple) (Is ?apple 'apple') (Has ?pen 'blue') (Below ?fork ?pen) (Is ?pen 'pen') (Is ?fork 'fork') (OnBottomSide ?fork)))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "pen",
+        "fork",
+        "handbag",
+        "headphones"
+    ]
+}

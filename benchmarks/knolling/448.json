@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the composition, a bowl, a ruler, and a lemon are arranged in a neat column. The bowl is located above the ruler, and the ruler is located above the lemon, with all three objects aligned vertically.",
+    "dsl": "(exists ?b (exists ?r (exists ?l (and (Is ?b 'bowl') (Is ?r 'ruler') (Is ?l 'lemon') (OnLeftSide ?b) (OnLeftSide ?r) (OnLeftSide ?l) (Above ?b ?r) (Above ?r ?l) (AlignedVertically ?b ?r) (AlignedVertically ?r ?l)))))",
+    "cnf": "(exists ?b (exists ?r (exists ?l (and (Is ?b 'bowl') (OnLeftSide ?b) (Above ?b ?r) (AlignedVertically ?b ?r) (OnLeftSide ?r) (Above ?r ?l) (AlignedVertically ?r ?l) (Is ?r 'ruler') (OnLeftSide ?l) (Is ?l 'lemon')))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "bowl",
+        "lemon"
+    ]
+}

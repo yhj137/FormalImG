@@ -1,0 +1,10 @@
+{
+    "prompt": "A cartoon style image where a child is holding every key, all of which are metal.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'child') (forall ?k (implies (Is ?k 'key') (and (HasMaterial ?k 'metal') (Holding ?c ?k)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?k (and (Is ?c 'child') (or (not (Is ?k 'key')) (Holding ?c ?k)) (or (not (Is ?k 'key')) (HasMaterial ?k 'metal'))))))",
+    "k": 2,
+    "object_classes": [
+        "child",
+        "key"
+    ]
+}

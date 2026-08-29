@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene captures a photo style arrangement. For every tree present, there stands a brown bench to its right. Beside the bench is a bed with glasses on it. Resting on the bench is a round pan with a fish inside, alongside a pink cake. A knife lies to the right of the cake.",
+    "dsl": "(and (IsStyle 'photo') (forall ?t (implies (Is ?t 'tree') (exists ?b (exists ?bed (exists ?p (exists ?f (exists ?c (exists ?k (exists ?g (and (Is ?b 'bench') (HasColor ?b 'brown') (LeftOf ?t ?b) (Is ?bed 'bed') (NextTo ?bed ?b) (Is ?g 'glasses') (On ?g ?bed) (Is ?p 'pan') (HasShape ?p 'round') (On ?p ?b) (Is ?f 'fish') (In ?f ?p) (Is ?c 'cake') (HasColor ?c 'pink') (On ?c ?b) (Is ?k 'knife') (RightOf ?k ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?t (exists ?b (exists ?bed (exists ?p (exists ?f (exists ?c (exists ?k (exists ?g (and (or (not (Is ?t 'tree')) (Is ?b 'bench')) (or (not (Is ?t 'tree')) (HasColor ?b 'brown')) (or (not (Is ?t 'tree')) (LeftOf ?t ?b)) (or (not (Is ?t 'tree')) (NextTo ?bed ?b)) (or (not (Is ?t 'tree')) (Is ?bed 'bed')) (or (not (Is ?t 'tree')) (On ?p ?b)) (or (not (Is ?t 'tree')) (Is ?g 'glasses')) (or (not (Is ?t 'tree')) (On ?g ?bed)) (or (not (Is ?t 'tree')) (On ?c ?b)) (or (not (Is ?t 'tree')) (HasShape ?p 'round')) (or (not (Is ?t 'tree')) (Is ?f 'fish')) (or (not (Is ?t 'tree')) (In ?f ?p)) (or (not (Is ?t 'tree')) (Is ?p 'pan')) (or (not (Is ?t 'tree')) (HasColor ?c 'pink')) (or (not (Is ?t 'tree')) (Is ?k 'knife')) (or (not (Is ?t 'tree')) (RightOf ?k ?c)) (or (not (Is ?t 'tree')) (Is ?c 'cake'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "knife",
+        "glasses",
+        "bench",
+        "bed",
+        "tree",
+        "cake",
+        "pan",
+        "fish"
+    ]
+}

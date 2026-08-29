@@ -1,0 +1,9 @@
+{
+    "prompt": "This is an oil painting style image. All spoons in the scene are rusty.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?x (implies (Is ?x 'spoon') (HasState ?x 'rusty'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?x (or (not (Is ?x 'spoon')) (HasState ?x 'rusty'))))",
+    "k": 1,
+    "object_classes": [
+        "spoon"
+    ]
+}

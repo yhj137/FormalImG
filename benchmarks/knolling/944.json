@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a shirt, a tie, and a book. The shirt is located on the left side of the image. The tie is smaller than the shirt and is aligned vertically with it. The book is aligned horizontally with the shirt. For every spoon in the scene, there is a plate that is larger than the spoon. The spoon is aligned horizontally with the plate, and the plate is aligned vertically with the book.",
+    "dsl": "(exists ?shirt (exists ?tie (exists ?book (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?tie 'tie') (SmallerThan ?tie ?shirt) (AlignedVertically ?tie ?shirt) (Is ?book 'book') (AlignedHorizontally ?book ?shirt) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?plate (and (Is ?plate 'plate') (LargerThan ?plate ?spoon) (AlignedHorizontally ?spoon ?plate) (AlignedVertically ?plate ?book)))))))))",
+    "cnf": "(exists ?shirt (exists ?tie (exists ?book (forall ?spoon (exists ?plate (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (SmallerThan ?tie ?shirt) (AlignedVertically ?tie ?shirt) (Is ?tie 'tie') (AlignedHorizontally ?book ?shirt) (Is ?book 'book') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?plate ?book)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?plate)) (or (not (Is ?spoon 'spoon')) (LargerThan ?plate ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?plate 'plate'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "tie",
+        "plate",
+        "spoon",
+        "shirt"
+    ]
+}

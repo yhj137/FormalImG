@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a child holding a fabric backpack next to them. All balls are located to the left of the child.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'child') (forall ?b (implies (Is ?b 'ball') (LeftOf ?b ?c))) (exists ?bp (and (Is ?bp 'backpack') (HasMaterial ?bp 'fabric') (Holding ?c ?bp) (NextTo ?bp ?c))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?b (exists ?bp (and (Is ?c 'child') (or (not (Is ?b 'ball')) (LeftOf ?b ?c)) (Holding ?c ?bp) (NextTo ?bp ?c) (HasMaterial ?bp 'fabric') (Is ?bp 'backpack'))))))",
+    "k": 3,
+    "object_classes": [
+        "ball",
+        "backpack",
+        "child"
+    ]
+}

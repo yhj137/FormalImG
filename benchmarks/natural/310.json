@@ -1,0 +1,10 @@
+{
+    "prompt": "An oil painting where every woman is holding a fabric rug.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?w (implies (Is ?w 'woman') (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Holding ?w ?r))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?w (exists ?r (and (or (not (Is ?w 'woman')) (Is ?r 'rug')) (or (not (Is ?w 'woman')) (HasMaterial ?r 'fabric')) (or (not (Is ?w 'woman')) (Holding ?w ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "woman",
+        "rug"
+    ]
+}

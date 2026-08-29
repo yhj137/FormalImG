@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a red car, there is a gray clock and a woman holding black glasses.",
+    "dsl": "(exists ?c (exists ?w (exists ?g (exists ?k (and (Is ?c 'car') (HasColor ?c 'red') (Is ?w 'woman') (Is ?g 'glasses') (HasColor ?g 'black') (Is ?k 'clock') (HasColor ?k 'gray') (In ?w ?c) (Holding ?w ?g) (In ?k ?c))))))",
+    "cnf": "(exists ?c (exists ?w (exists ?g (exists ?k (and (Is ?c 'car') (HasColor ?c 'red') (In ?w ?c) (In ?k ?c) (Is ?w 'woman') (Holding ?w ?g) (HasColor ?k 'gray') (HasColor ?g 'black') (Is ?k 'clock') (Is ?g 'glasses'))))))",
+    "k": 4,
+    "object_classes": [
+        "clock",
+        "glasses",
+        "car",
+        "woman"
+    ]
+}

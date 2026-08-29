@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image organized into two horizontal rows. The top row contains a red apple, a black phone, and a yellow lemon, all aligned horizontally. The bottom row features a blue bottle, a gray mouse, and white keys, which are also aligned horizontally. The arrangement is structured vertically such that the blue bottle is located below the red apple, the gray mouse is positioned below the black phone, and the white keys are placed below the yellow lemon.",
+    "dsl": "(exists ?apple (exists ?phone (exists ?lemon (exists ?bottle (exists ?mouse (exists ?keys (and (Is ?apple 'apple') (Has ?apple 'red') (Is ?phone 'phone') (Has ?phone 'black') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?mouse 'mouse') (Has ?mouse 'gray') (Is ?keys 'keys') (Has ?keys 'white') (AlignedHorizontally ?apple ?phone) (AlignedHorizontally ?phone ?lemon) (AlignedHorizontally ?bottle ?mouse) (AlignedHorizontally ?mouse ?keys) (Below ?bottle ?apple) (Below ?mouse ?phone) (Below ?keys ?lemon))))))))",
+    "cnf": "(exists ?apple (exists ?phone (exists ?lemon (exists ?bottle (exists ?mouse (exists ?keys (and (Is ?apple 'apple') (Has ?apple 'red') (AlignedHorizontally ?apple ?phone) (Below ?bottle ?apple) (Has ?phone 'black') (AlignedHorizontally ?phone ?lemon) (AlignedHorizontally ?bottle ?mouse) (Is ?phone 'phone') (Below ?mouse ?phone) (Has ?lemon 'yellow') (Below ?keys ?lemon) (Has ?bottle 'blue') (Has ?mouse 'gray') (AlignedHorizontally ?mouse ?keys) (Is ?lemon 'lemon') (Is ?bottle 'bottle') (Is ?mouse 'mouse') (Has ?keys 'white') (Is ?keys 'keys'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "apple",
+        "lemon",
+        "phone",
+        "mouse",
+        "bottle"
+    ]
+}

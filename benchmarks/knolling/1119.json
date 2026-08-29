@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans and a hammer located on the top side, aligned horizontally, with the hammer being smaller than the jeans. A pizza is placed on the right side, positioned below the hammer. For every carrot in the image, it is located below the jeans, and there is an apple aligned horizontally with it. Additionally, a sock is positioned below the apple and is smaller than the pizza.",
+    "dsl": "(exists ?jeans (exists ?hammer (exists ?pizza (and (Is ?jeans 'jeans') (Is ?hammer 'hammer') (Is ?pizza 'pizza') (OnTopSide ?jeans) (OnTopSide ?hammer) (AlignedHorizontally ?jeans ?hammer) (SmallerThan ?hammer ?jeans) (OnRightSide ?pizza) (Below ?pizza ?hammer) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?apple (exists ?sock (and (Is ?apple 'apple') (Is ?sock 'sock') (Below ?carrot ?jeans) (AlignedHorizontally ?carrot ?apple) (Below ?sock ?apple) (SmallerThan ?sock ?pizza))))))))))",
+    "cnf": "(exists ?jeans (exists ?hammer (exists ?pizza (forall ?carrot (exists ?apple (exists ?sock (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (AlignedHorizontally ?jeans ?hammer) (SmallerThan ?hammer ?jeans) (OnTopSide ?hammer) (or (not (Is ?carrot 'carrot')) (Below ?carrot ?jeans)) (Below ?pizza ?hammer) (Is ?hammer 'hammer') (or (not (Is ?carrot 'carrot')) (Is ?sock 'sock')) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?carrot ?apple)) (OnRightSide ?pizza) (or (not (Is ?carrot 'carrot')) (SmallerThan ?sock ?pizza)) (or (not (Is ?carrot 'carrot')) (Is ?apple 'apple')) (or (not (Is ?carrot 'carrot')) (Below ?sock ?apple)) (Is ?pizza 'pizza'))))))))",
+    "k": 6,
+    "object_classes": [
+        "hammer",
+        "pizza",
+        "apple",
+        "carrot",
+        "jeans",
+        "sock"
+    ]
+}

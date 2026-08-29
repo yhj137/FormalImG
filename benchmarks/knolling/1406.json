@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a cutting board, a hat, a wallet, a lemon, a watch, an apple, a ruler, and a calculator. The cutting board is positioned on the top side. To the right of the cutting board is a hat, and to the right of the hat is a wallet; these three items are aligned horizontally. The hat is visually larger than the wallet. Situated below the hat is a lemon. Extending to the left of the lemon is a watch, followed by an apple to the left of the watch, a ruler to the left of the apple, and a calculator to the left of the ruler. Finally, the cutting board is located above the calculator and is larger than it.",
+    "dsl": "(exists ?board (exists ?hat (exists ?wallet (exists ?lemon (exists ?watch (exists ?apple (exists ?ruler (exists ?calc (and (Is ?board 'cutting_board') (Is ?hat 'hat') (Is ?wallet 'wallet') (Is ?lemon 'lemon') (Is ?watch 'watch') (Is ?apple 'apple') (Is ?ruler 'ruler') (Is ?calc 'calculator') (OnTopSide ?board) (RightOf ?hat ?board) (RightOf ?wallet ?hat) (AlignedHorizontally ?board ?hat) (AlignedHorizontally ?hat ?wallet) (LargerThan ?hat ?wallet) (Above ?hat ?lemon) (LeftOf ?watch ?lemon) (LeftOf ?apple ?watch) (LeftOf ?ruler ?apple) (LeftOf ?calc ?ruler) (Above ?board ?calc) (LargerThan ?board ?calc))))))))))",
+    "cnf": "(exists ?board (exists ?hat (exists ?wallet (exists ?lemon (exists ?watch (exists ?apple (exists ?ruler (exists ?calc (and (Is ?board 'cutting_board') (OnTopSide ?board) (RightOf ?hat ?board) (AlignedHorizontally ?board ?hat) (Is ?hat 'hat') (RightOf ?wallet ?hat) (Above ?board ?calc) (AlignedHorizontally ?hat ?wallet) (Is ?wallet 'wallet') (LargerThan ?board ?calc) (LeftOf ?calc ?ruler) (LargerThan ?hat ?wallet) (LeftOf ?ruler ?apple) (Is ?calc 'calculator') (Above ?hat ?lemon) (LeftOf ?apple ?watch) (Is ?ruler 'ruler') (Is ?lemon 'lemon') (LeftOf ?watch ?lemon) (Is ?apple 'apple') (Is ?watch 'watch'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "lemon",
+        "watch",
+        "cutting_board",
+        "hat",
+        "calculator",
+        "wallet"
+    ]
+}

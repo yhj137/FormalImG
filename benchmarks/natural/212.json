@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a yellow butterfly on a blue shirt.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (exists ?b (and (Is ?s 'shirt') (HasColor ?s 'blue') (Is ?b 'butterfly') (HasColor ?b 'yellow') (On ?b ?s)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (exists ?b (and (Is ?s 'shirt') (HasColor ?s 'blue') (On ?b ?s) (HasColor ?b 'yellow') (Is ?b 'butterfly')))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "shirt"
+    ]
+}

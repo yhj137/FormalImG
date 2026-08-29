@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man next to a child, who is beside a glass bottle. Next to the bottle is a pink cake with a fork inside, and every knife in the scene is positioned next to the bottle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?c (exists ?b (exists ?ck (exists ?f (and (Is ?m 'man') (Is ?c 'child') (NextTo ?m ?c) (Is ?b 'bottle') (HasMaterial ?b 'glass') (NextTo ?c ?b) (Is ?ck 'cake') (HasColor ?ck 'pink') (NextTo ?b ?ck) (Is ?f 'fork') (In ?f ?ck) (forall ?k (implies (Is ?k 'knife') (NextTo ?k ?b))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?c (exists ?b (exists ?ck (exists ?f (forall ?k (and (Is ?m 'man') (NextTo ?m ?c) (Is ?c 'child') (NextTo ?c ?b) (HasMaterial ?b 'glass') (NextTo ?b ?ck) (Is ?b 'bottle') (or (not (Is ?k 'knife')) (NextTo ?k ?b)) (HasColor ?ck 'pink') (In ?f ?ck) (Is ?ck 'cake') (Is ?f 'fork')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "child",
+        "fork",
+        "bottle",
+        "cake",
+        "man"
+    ]
+}

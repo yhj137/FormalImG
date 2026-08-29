@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a pan containing a plate, with a black monitor next to the pan.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?pl (exists ?m (and (Is ?w 'woman') (Is ?p 'pan') (Is ?pl 'plate') (Is ?m 'monitor') (Holding ?w ?p) (In ?pl ?p) (NextTo ?p ?m) (HasColor ?m 'black')))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?pl (exists ?m (and (Is ?w 'woman') (Holding ?w ?p) (Is ?p 'pan') (In ?pl ?p) (NextTo ?p ?m) (Is ?pl 'plate') (Is ?m 'monitor') (HasColor ?m 'black')))))))",
+    "k": 4,
+    "object_classes": [
+        "plate",
+        "pan",
+        "monitor",
+        "woman"
+    ]
+}

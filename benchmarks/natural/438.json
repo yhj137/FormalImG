@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman sitting on a bench, holding a broken mirror to her left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?m (and (Is ?w 'woman') (Is ?b 'bench') (Is ?m 'mirror') (HasState ?w 'sitting') (HasState ?m 'broken') (On ?w ?b) (Holding ?w ?m) (LeftOf ?m ?w))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?m (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?b) (Holding ?w ?m) (Is ?b 'bench') (LeftOf ?m ?w) (HasState ?m 'broken') (Is ?m 'mirror'))))))",
+    "k": 3,
+    "object_classes": [
+        "bench",
+        "mirror",
+        "woman"
+    ]
+}

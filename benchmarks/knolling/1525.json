@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene are blue jeans. To the right of the jeans is a black camera, and to the right of the camera is a white cup; these three objects are aligned horizontally. The jeans are visually larger than the camera. There is also a pair of pliers aligned vertically with the cup. For every pen present, there exists a wrench, a watch, and a stapler arranged in a horizontal row such that the pen is left of the wrench, the wrench is left of the watch, and the watch is left of the stapler. The stapler is positioned to the left of the pliers, and the watch is smaller than the jeans.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?cup (exists ?pliers (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (Is ?camera 'camera') (Has ?camera 'black') (Is ?cup 'cup') (Has ?cup 'white') (Is ?pliers 'pliers') (LeftOf ?jeans ?camera) (LeftOf ?camera ?cup) (AlignedHorizontally ?jeans ?camera) (AlignedHorizontally ?camera ?cup) (LargerThan ?jeans ?camera) (AlignedVertically ?pliers ?cup) (forall ?pen (implies (Is ?pen 'pen') (exists ?wrench (exists ?watch (exists ?stapler (and (Is ?wrench 'wrench') (Is ?watch 'watch') (Is ?stapler 'stapler') (LeftOf ?pen ?wrench) (LeftOf ?wrench ?watch) (LeftOf ?watch ?stapler) (AlignedHorizontally ?pen ?wrench) (AlignedHorizontally ?wrench ?watch) (AlignedHorizontally ?watch ?stapler) (LeftOf ?stapler ?pliers) (SmallerThan ?watch ?jeans))))))))))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?cup (exists ?pliers (forall ?pen (exists ?wrench (exists ?watch (exists ?stapler (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (LeftOf ?jeans ?camera) (AlignedHorizontally ?jeans ?camera) (Has ?camera 'black') (LeftOf ?camera ?cup) (LargerThan ?jeans ?camera) (AlignedHorizontally ?camera ?cup) (Is ?camera 'camera') (Has ?cup 'white') (or (not (Is ?pen 'pen')) (SmallerThan ?watch ?jeans)) (AlignedVertically ?pliers ?cup) (Is ?cup 'cup') (or (not (Is ?pen 'pen')) (LeftOf ?stapler ?pliers)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?watch ?stapler)) (Is ?pliers 'pliers') (or (not (Is ?pen 'pen')) (AlignedHorizontally ?wrench ?watch)) (or (not (Is ?pen 'pen')) (LeftOf ?watch ?stapler)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?wrench)) (or (not (Is ?pen 'pen')) (LeftOf ?wrench ?watch)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?wrench)) (or (not (Is ?pen 'pen')) (Is ?watch 'watch')) (or (not (Is ?pen 'pen')) (Is ?wrench 'wrench')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "stapler",
+        "pen",
+        "wrench",
+        "watch",
+        "cup",
+        "jeans",
+        "camera"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is holding a peeled orange. Next to the child is a fabric backpack, and every book in the scene is placed on the backpack.",
+    "dsl": "(exists ?c (exists ?bp (exists ?o (and (Is ?c 'child') (Is ?bp 'backpack') (HasMaterial ?bp 'fabric') (Is ?o 'orange') (HasState ?o 'peeled') (Holding ?c ?o) (NextTo ?c ?bp) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bp)))))))",
+    "cnf": "(exists ?c (exists ?bp (exists ?o (forall ?bk (and (Is ?c 'child') (Holding ?c ?o) (NextTo ?c ?bp) (HasState ?o 'peeled') (HasMaterial ?bp 'fabric') (or (not (Is ?bk 'book')) (On ?bk ?bp)) (Is ?o 'orange') (Is ?bp 'backpack'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "backpack",
+        "child",
+        "orange"
+    ]
+}

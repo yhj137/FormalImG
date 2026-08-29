@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden bed is positioned to the right of a refrigerator. A turned-on monitor and a round clock sit on the refrigerator. A child holding a metal fork stands next to the bed. An open backpack rests on the bed, containing an orange and all the flowers in the scene. A pair of shoes is located next to the bed.",
+    "dsl": "(exists ?bed (exists ?ref (exists ?mon (exists ?child (exists ?fork (exists ?bag (exists ?org (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?ref 'refrigerator') (RightOf ?bed ?ref) (Is ?mon 'monitor') (On ?mon ?ref) (HasState ?mon 'on') (Is ?child 'child') (NextTo ?child ?bed) (Is ?fork 'fork') (HasMaterial ?fork 'metal') (Holding ?child ?fork) (Is ?bag 'backpack') (On ?bag ?bed) (HasState ?bag 'open') (Is ?org 'orange') (In ?org ?bag) (forall ?flo (implies (Is ?flo 'flower') (In ?flo ?bag))) (exists ?clk (exists ?sh (and (Is ?clk 'clock') (HasShape ?clk 'round') (On ?clk ?ref) (Is ?sh 'shoes') (NextTo ?sh ?bed))))))))))))",
+    "cnf": "(exists ?bed (exists ?ref (exists ?mon (exists ?child (exists ?fork (exists ?bag (exists ?org (forall ?flo (exists ?clk (exists ?sh (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (RightOf ?bed ?ref) (NextTo ?child ?bed) (Is ?ref 'refrigerator') (On ?mon ?ref) (On ?bag ?bed) (Is ?child 'child') (Holding ?child ?fork) (On ?clk ?ref) (Is ?mon 'monitor') (HasState ?mon 'on') (NextTo ?sh ?bed) (Is ?bag 'backpack') (HasState ?bag 'open') (HasMaterial ?fork 'metal') (HasShape ?clk 'round') (Is ?sh 'shoes') (In ?org ?bag) (Is ?fork 'fork') (Is ?clk 'clock') (or (not (Is ?flo 'flower')) (In ?flo ?bag)) (Is ?org 'orange'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "child",
+        "fork",
+        "shoes",
+        "backpack",
+        "bed",
+        "monitor",
+        "orange",
+        "flower",
+        "refrigerator",
+        "clock"
+    ]
+}

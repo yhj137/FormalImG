@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing eight distinct items arranged in two parallel vertical columns. The first column includes a black pan, a brown handbag, a pizza, and a blue book, all of which are aligned vertically with each other. The second column features a white cup, a yellow glove, a red screwdriver, and gray scissors, which are also aligned vertically. Spatially, the black pan is located to the left of the white cup and is visually larger than it. The white cup is positioned on the right side of the image. The yellow glove is placed to the right of the brown handbag and is smaller than the handbag. The red screwdriver is located to the right of the pizza and is smaller than the pizza. Finally, the gray scissors are positioned to the right of the blue book.",
+    "dsl": "(exists ?pan (exists ?handbag (exists ?pizza (exists ?book (exists ?cup (exists ?glove (exists ?screwdriver (exists ?scissors (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?pizza 'pizza') (Is ?book 'book') (Has ?book 'blue') (Is ?cup 'cup') (Has ?cup 'white') (Is ?glove 'glove') (Has ?glove 'yellow') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?scissors 'scissors') (Has ?scissors 'gray') (AlignedVertically ?pan ?handbag) (AlignedVertically ?handbag ?pizza) (AlignedVertically ?pizza ?book) (AlignedVertically ?cup ?glove) (AlignedVertically ?glove ?screwdriver) (AlignedVertically ?screwdriver ?scissors) (LeftOf ?pan ?cup) (LargerThan ?pan ?cup) (OnRightSide ?cup) (RightOf ?glove ?handbag) (SmallerThan ?glove ?handbag) (RightOf ?screwdriver ?pizza) (SmallerThan ?screwdriver ?pizza) (RightOf ?scissors ?book))))))))))",
+    "cnf": "(exists ?pan (exists ?handbag (exists ?pizza (exists ?book (exists ?cup (exists ?glove (exists ?screwdriver (exists ?scissors (and (Is ?pan 'pan') (Has ?pan 'black') (AlignedVertically ?pan ?handbag) (LeftOf ?pan ?cup) (Has ?handbag 'brown') (AlignedVertically ?handbag ?pizza) (LargerThan ?pan ?cup) (AlignedVertically ?cup ?glove) (Is ?handbag 'handbag') (RightOf ?glove ?handbag) (Is ?pizza 'pizza') (AlignedVertically ?pizza ?book) (OnRightSide ?cup) (Has ?cup 'white') (Has ?glove 'yellow') (AlignedVertically ?glove ?screwdriver) (SmallerThan ?glove ?handbag) (RightOf ?screwdriver ?pizza) (Has ?book 'blue') (RightOf ?scissors ?book) (Is ?cup 'cup') (Is ?glove 'glove') (Has ?screwdriver 'red') (AlignedVertically ?screwdriver ?scissors) (SmallerThan ?screwdriver ?pizza) (Is ?book 'book') (Is ?screwdriver 'screwdriver') (Has ?scissors 'gray') (Is ?scissors 'scissors'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "pizza",
+        "cup",
+        "screwdriver",
+        "pan",
+        "handbag",
+        "scissors",
+        "glove"
+    ]
+}

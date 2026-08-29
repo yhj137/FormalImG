@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting where every man is smiling.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?m (implies (Is ?m 'man') (HasState ?m 'smiling'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?m (or (not (Is ?m 'man')) (HasState ?m 'smiling'))))",
+    "k": 1,
+    "object_classes": [
+        "man"
+    ]
+}

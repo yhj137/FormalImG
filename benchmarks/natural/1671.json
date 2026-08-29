@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a wooden bookshelf with a desk to its left. Every fruit in the scene is round and stored inside the bookshelf. To the right of the bookshelf is a white table with a black cat on it. An elephant is positioned to the left of the desk, while a metal bicycle is to the right of the table. A blue backpack containing a pair of round glasses rests on the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (exists ?d (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?d 'desk') (LeftOf ?d ?bs) (forall ?f (implies (Is ?f 'fruit') (and (In ?f ?bs) (HasShape ?f 'round')))) (exists ?t (exists ?e (exists ?c (exists ?b (exists ?bp (exists ?g (and (Is ?t 'table') (HasColor ?t 'white') (RightOf ?t ?bs) (Is ?e 'elephant') (LeftOf ?e ?d) (Is ?c 'cat') (HasColor ?c 'black') (On ?c ?t) (Is ?b 'bicycle') (HasMaterial ?b 'metal') (RightOf ?b ?t) (Is ?bp 'backpack') (HasColor ?bp 'blue') (On ?bp ?d) (Is ?g 'glasses') (HasShape ?g 'round') (In ?g ?bp))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (exists ?d (forall ?f (exists ?t (exists ?e (exists ?c (exists ?b (exists ?bp (exists ?g (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?d ?bs) (or (not (Is ?f 'fruit')) (In ?f ?bs)) (Is ?d 'desk') (LeftOf ?e ?d) (RightOf ?t ?bs) (or (not (Is ?f 'fruit')) (HasShape ?f 'round')) (On ?bp ?d) (Is ?e 'elephant') (HasColor ?t 'white') (On ?c ?t) (HasColor ?bp 'blue') (In ?g ?bp) (Is ?t 'table') (RightOf ?b ?t) (HasColor ?c 'black') (Is ?bp 'backpack') (HasShape ?g 'round') (HasMaterial ?b 'metal') (Is ?c 'cat') (Is ?g 'glasses') (Is ?b 'bicycle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "backpack",
+        "glasses",
+        "table",
+        "desk",
+        "bicycle",
+        "cat",
+        "bookshelf"
+    ]
+}

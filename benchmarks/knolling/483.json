@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the scene, it is positioned on the bottom side. There is a bowl located above the plate, and a sock located above the bowl. The plate, the bowl, and the sock are aligned vertically.",
+    "dsl": "(and (forall ?plate (implies (Is ?plate 'plate') (exists ?bowl (exists ?sock (and (Is ?bowl 'bowl') (Is ?sock 'sock') (OnBottomSide ?plate) (Above ?bowl ?plate) (Above ?sock ?bowl) (AlignedVertically ?plate ?bowl) (AlignedVertically ?bowl ?sock)))))))",
+    "cnf": "(forall ?plate (exists ?bowl (exists ?sock (and (or (not (Is ?plate 'plate')) (Is ?bowl 'bowl')) (or (not (Is ?plate 'plate')) (Is ?sock 'sock')) (or (not (Is ?plate 'plate')) (Above ?bowl ?plate)) (or (not (Is ?plate 'plate')) (OnBottomSide ?plate)) (or (not (Is ?plate 'plate')) (Above ?sock ?bowl)) (or (not (Is ?plate 'plate')) (AlignedVertically ?plate ?bowl)) (or (not (Is ?plate 'plate')) (AlignedVertically ?bowl ?sock))))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "plate",
+        "sock"
+    ]
+}

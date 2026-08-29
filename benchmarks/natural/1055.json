@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every horse has a shirt on it containing a key. Next to each horse stands a bicycle with a round apple and an umbrella on it.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?h (implies (Is ?h 'horse') (exists ?s (exists ?k (exists ?b (exists ?a (exists ?u (and (Is ?s 'shirt') (Is ?k 'key') (Is ?b 'bicycle') (Is ?a 'apple') (Is ?u 'umbrella') (On ?s ?h) (In ?k ?s) (NextTo ?b ?h) (HasShape ?a 'round') (On ?a ?b) (On ?u ?b))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?h (exists ?s (exists ?k (exists ?b (exists ?a (exists ?u (and (or (not (Is ?h 'horse')) (Is ?s 'shirt')) (or (not (Is ?h 'horse')) (Is ?k 'key')) (or (not (Is ?h 'horse')) (On ?s ?h)) (or (not (Is ?h 'horse')) (Is ?b 'bicycle')) (or (not (Is ?h 'horse')) (In ?k ?s)) (or (not (Is ?h 'horse')) (Is ?u 'umbrella')) (or (not (Is ?h 'horse')) (Is ?a 'apple')) (or (not (Is ?h 'horse')) (NextTo ?b ?h)) (or (not (Is ?h 'horse')) (On ?u ?b)) (or (not (Is ?h 'horse')) (HasShape ?a 'round')) (or (not (Is ?h 'horse')) (On ?a ?b))))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "horse",
+        "apple",
+        "key",
+        "shirt",
+        "bicycle"
+    ]
+}

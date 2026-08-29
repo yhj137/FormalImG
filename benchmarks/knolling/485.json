@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a mouse and a pen located below it. The mouse and the pen are aligned horizontally, and the mouse is specifically positioned on the bottom side of the image.",
+    "dsl": "(forall ?monitor (implies (Is ?monitor 'monitor') (exists ?mouse (exists ?pen (and (Is ?mouse 'mouse') (Is ?pen 'pen') (Below ?mouse ?monitor) (Below ?pen ?monitor) (AlignedHorizontally ?mouse ?pen) (OnBottomSide ?mouse))))))",
+    "cnf": "(forall ?monitor (exists ?mouse (exists ?pen (and (or (not (Is ?monitor 'monitor')) (Is ?mouse 'mouse')) (or (not (Is ?monitor 'monitor')) (Is ?pen 'pen')) (or (not (Is ?monitor 'monitor')) (Below ?mouse ?monitor)) (or (not (Is ?monitor 'monitor')) (Below ?pen ?monitor)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?mouse ?pen)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?mouse))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "pen",
+        "mouse"
+    ]
+}

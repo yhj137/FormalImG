@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that every drill appearing in the scene is positioned on the left side.",
+    "dsl": "(and (forall ?d (implies (Is ?d 'drill') (OnLeftSide ?d))))",
+    "cnf": "(forall ?d (or (not (Is ?d 'drill')) (OnLeftSide ?d)))",
+    "k": 1,
+    "object_classes": [
+        "drill"
+    ]
+}

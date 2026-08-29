@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a tree in the center. A gray elephant is located to the left of the tree, with a lion next to it. All apples in the scene are red and located on the tree. To the right of the tree stands a brown horse. Next to the horse are shoes with a plant inside, and a cake is next to the shoes.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?e (exists ?l (and (Is ?t 'tree') (Is ?e 'elephant') (HasColor ?e 'gray') (LeftOf ?e ?t) (Is ?l 'lion') (NextTo ?l ?e) (forall ?a (implies (Is ?a 'apple') (and (On ?a ?t) (HasColor ?a 'red')))) (exists ?h (exists ?s (exists ?p (exists ?c (and (Is ?h 'horse') (HasColor ?h 'brown') (RightOf ?h ?t) (Is ?s 'shoes') (NextTo ?s ?h) (Is ?p 'plant') (In ?p ?s) (Is ?c 'cake') (NextTo ?c ?s)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?e (exists ?l (forall ?a (exists ?h (exists ?s (exists ?p (exists ?c (and (Is ?t 'tree') (LeftOf ?e ?t) (or (not (Is ?a 'apple')) (On ?a ?t)) (HasColor ?e 'gray') (NextTo ?l ?e) (RightOf ?h ?t) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (Is ?e 'elephant') (Is ?l 'lion') (HasColor ?h 'brown') (NextTo ?s ?h) (Is ?h 'horse') (Is ?s 'shoes') (In ?p ?s) (NextTo ?c ?s) (Is ?p 'plant') (Is ?c 'cake')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plant",
+        "cake",
+        "shoes",
+        "horse",
+        "tree",
+        "apple",
+        "lion",
+        "elephant"
+    ]
+}

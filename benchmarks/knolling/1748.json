@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes jeans, a pan, an apple, a glove, keys, a lemon, a ruler, and a mouse. The jeans are positioned to the left of the pan, and they are aligned horizontally. The pan is located to the left of the apple. The glove and the keys are aligned vertically with the jeans. The lemon is aligned vertically with the apple. For every hat in the image, it is located to the left of the jeans. The ruler is on the right side of the image, with the lemon positioned to its left. The mouse is on the bottom side of the image and is aligned vertically with the keys.",
+    "dsl": "(exists ?jeans (exists ?pan (exists ?apple (exists ?glove (exists ?keys (exists ?lemon (and (Is ?jeans 'jeans') (Is ?pan 'pan') (Is ?apple 'apple') (Is ?glove 'glove') (Is ?keys 'keys') (Is ?lemon 'lemon') (LeftOf ?jeans ?pan) (AlignedHorizontally ?jeans ?pan) (LeftOf ?pan ?apple) (AlignedVertically ?jeans ?glove) (AlignedVertically ?glove ?keys) (AlignedVertically ?apple ?lemon) (forall ?hat (implies (Is ?hat 'hat') (LeftOf ?hat ?jeans))) (exists ?ruler (exists ?mouse (and (Is ?ruler 'ruler') (Is ?mouse 'mouse') (OnRightSide ?ruler) (LeftOf ?lemon ?ruler) (OnBottomSide ?mouse) (AlignedVertically ?keys ?mouse)))))))))))",
+    "cnf": "(exists ?jeans (exists ?pan (exists ?apple (exists ?glove (exists ?keys (exists ?lemon (forall ?hat (exists ?ruler (exists ?mouse (and (Is ?jeans 'jeans') (LeftOf ?jeans ?pan) (AlignedHorizontally ?jeans ?pan) (Is ?pan 'pan') (AlignedVertically ?jeans ?glove) (LeftOf ?pan ?apple) (or (not (Is ?hat 'hat')) (LeftOf ?hat ?jeans)) (Is ?glove 'glove') (AlignedVertically ?glove ?keys) (Is ?apple 'apple') (AlignedVertically ?apple ?lemon) (Is ?keys 'keys') (AlignedVertically ?keys ?mouse) (Is ?lemon 'lemon') (LeftOf ?lemon ?ruler) (OnBottomSide ?mouse) (OnRightSide ?ruler) (Is ?mouse 'mouse') (Is ?ruler 'ruler')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "apple",
+        "lemon",
+        "hat",
+        "pan",
+        "jeans",
+        "mouse",
+        "glove"
+    ]
+}

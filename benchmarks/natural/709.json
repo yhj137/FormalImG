@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a laptop. All cups in the scene are cylindrical and placed on the laptop. A man stands next to the laptop, holding a screwdriver.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (and (Is ?l 'laptop') (forall ?c (implies (Is ?c 'cup') (and (HasShape ?c 'cylindrical') (On ?c ?l)))) (exists ?m (and (Is ?m 'man') (NextTo ?m ?l) (exists ?s (and (Is ?s 'screwdriver') (Holding ?m ?s))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (forall ?c (exists ?m (exists ?s (and (Is ?l 'laptop') (or (not (Is ?c 'cup')) (On ?c ?l)) (NextTo ?m ?l) (or (not (Is ?c 'cup')) (HasShape ?c 'cylindrical')) (Is ?m 'man') (Holding ?m ?s) (Is ?s 'screwdriver')))))))",
+    "k": 4,
+    "object_classes": [
+        "screwdriver",
+        "laptop",
+        "cup",
+        "man"
+    ]
+}

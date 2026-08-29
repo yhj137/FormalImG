@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every backpack rests on a metal bed, with a fluffy rug located to the right of the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?bp (implies (Is ?bp 'backpack') (exists ?bd (exists ?r (and (Is ?bd 'bed') (HasMaterial ?bd 'metal') (Is ?r 'rug') (HasMaterial ?r 'fluffy') (On ?bp ?bd) (RightOf ?r ?bd) (LeftOf ?bd ?r)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?bp (exists ?bd (exists ?r (and (or (not (Is ?bp 'backpack')) (Is ?bd 'bed')) (or (not (Is ?bp 'backpack')) (HasMaterial ?bd 'metal')) (or (not (Is ?bp 'backpack')) (Is ?r 'rug')) (or (not (Is ?bp 'backpack')) (On ?bp ?bd)) (or (not (Is ?bp 'backpack')) (HasMaterial ?r 'fluffy')) (or (not (Is ?bp 'backpack')) (RightOf ?r ?bd)) (or (not (Is ?bp 'backpack')) (LeftOf ?bd ?r)))))))",
+    "k": 3,
+    "object_classes": [
+        "rug",
+        "backpack",
+        "bed"
+    ]
+}

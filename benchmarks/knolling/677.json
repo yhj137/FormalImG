@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza shown, there is a bottle to its right. Below the bottle is a pair of glasses, and to the right of the glasses is a handbag situated on the right side of the image.",
+    "dsl": "(forall ?p (implies (Is ?p 'pizza') (exists ?b (exists ?g (exists ?h (and (Is ?b 'bottle') (Is ?g 'glasses') (Is ?h 'handbag') (RightOf ?b ?p) (Below ?g ?b) (RightOf ?h ?g) (OnRightSide ?h)))))))",
+    "cnf": "(forall ?p (exists ?b (exists ?g (exists ?h (and (or (not (Is ?p 'pizza')) (Is ?b 'bottle')) (or (not (Is ?p 'pizza')) (Is ?g 'glasses')) (or (not (Is ?p 'pizza')) (RightOf ?b ?p)) (or (not (Is ?p 'pizza')) (Is ?h 'handbag')) (or (not (Is ?p 'pizza')) (Below ?g ?b)) (or (not (Is ?p 'pizza')) (RightOf ?h ?g)) (or (not (Is ?p 'pizza')) (OnRightSide ?h)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "glasses",
+        "handbag",
+        "pizza"
+    ]
+}

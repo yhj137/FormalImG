@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor, a cutting board, and a pizza. The monitor is positioned on the right side of the scene. The cutting board is aligned horizontally with the monitor, and the pizza is aligned horizontally with the cutting board. Additionally, the pizza is visually smaller than the cutting board.",
+    "dsl": "(exists ?monitor (exists ?cutting_board (exists ?pizza (and (Is ?monitor 'monitor') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (OnRightSide ?monitor) (AlignedHorizontally ?monitor ?cutting_board) (AlignedHorizontally ?cutting_board ?pizza) (SmallerThan ?pizza ?cutting_board)))))",
+    "cnf": "(exists ?monitor (exists ?cutting_board (exists ?pizza (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (AlignedHorizontally ?monitor ?cutting_board) (Is ?cutting_board 'cutting_board') (AlignedHorizontally ?cutting_board ?pizza) (SmallerThan ?pizza ?cutting_board) (Is ?pizza 'pizza')))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "cutting_board",
+        "pizza"
+    ]
+}

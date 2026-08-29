@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every mouse in the scene, it is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?m (implies (Is ?m 'mouse') (OnBottomSide ?m))))",
+    "cnf": "(forall ?m (or (not (Is ?m 'mouse')) (OnBottomSide ?m)))",
+    "k": 1,
+    "object_classes": [
+        "mouse"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene consists of a collection of wallets arranged neatly. Every wallet in the image is located on the top side of the layout.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'wallet') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'wallet')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "wallet"
+    ]
+}

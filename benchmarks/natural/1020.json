@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden bench with a book on it. To the right of the book are headphones, positioned to the left of a cup containing a fruit. A round ball sits to the right of the cup.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bn (exists ?bk (exists ?h (exists ?c (exists ?f (exists ?bl (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (Is ?bk 'book') (On ?bk ?bn) (Is ?h 'headphones') (RightOf ?h ?bk) (Is ?c 'cup') (LeftOf ?h ?c) (Is ?f 'fruit') (In ?f ?c) (Is ?bl 'ball') (HasShape ?bl 'round') (RightOf ?bl ?c)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bn (exists ?bk (exists ?h (exists ?c (exists ?f (exists ?bl (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (On ?bk ?bn) (Is ?bk 'book') (RightOf ?h ?bk) (Is ?h 'headphones') (LeftOf ?h ?c) (Is ?c 'cup') (In ?f ?c) (RightOf ?bl ?c) (Is ?f 'fruit') (HasShape ?bl 'round') (Is ?bl 'ball')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "fruit",
+        "bench",
+        "book",
+        "cup",
+        "ball"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this arrangement, for every glove present, it is positioned on the bottom side of the layout.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'glove') (OnBottomSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'glove')) (OnBottomSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "glove"
+    ]
+}

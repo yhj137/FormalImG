@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is depicted in a cartoon style. Every rug is inside a wooden boat, with a sleeping cat on the rug and a bottle next to the cat.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?r (implies (Is ?r 'rug') (exists ?b (exists ?c (exists ?bo (and (Is ?b 'boat') (Is ?c 'cat') (Is ?bo 'bottle') (HasMaterial ?b 'wooden') (In ?r ?b) (HasState ?c 'sleeping') (On ?c ?r) (NextTo ?bo ?c))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?r (exists ?b (exists ?c (exists ?bo (and (or (not (Is ?r 'rug')) (Is ?b 'boat')) (or (not (Is ?r 'rug')) (Is ?c 'cat')) (or (not (Is ?r 'rug')) (HasMaterial ?b 'wooden')) (or (not (Is ?r 'rug')) (Is ?bo 'bottle')) (or (not (Is ?r 'rug')) (HasState ?c 'sleeping')) (or (not (Is ?r 'rug')) (In ?r ?b)) (or (not (Is ?r 'rug')) (NextTo ?bo ?c)) (or (not (Is ?r 'rug')) (On ?c ?r))))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "boat",
+        "cat",
+        "rug"
+    ]
+}

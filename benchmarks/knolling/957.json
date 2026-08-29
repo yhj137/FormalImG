@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a blue lighter positioned on the top side of the image, a yellow lemon, and a calculator. The lighter is vertically aligned with the lemon, and the calculator is physically larger than the lemon. Furthermore, for every pair of glasses in the scene, there corresponds a pizza that is larger than the glasses, and the glasses are vertically aligned with the calculator.",
+    "dsl": "(exists ?lighter (exists ?lemon (exists ?calc (and (Is ?lighter 'lighter') (Has ?lighter 'blue') (OnTopSide ?lighter) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?calc 'calculator') (AlignedVertically ?lighter ?lemon) (LargerThan ?calc ?lemon) (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?pizza (and (Is ?pizza 'pizza') (LargerThan ?pizza ?glasses) (AlignedVertically ?glasses ?calc)))))))))",
+    "cnf": "(exists ?lighter (exists ?lemon (exists ?calc (forall ?glasses (exists ?pizza (and (Is ?lighter 'lighter') (Has ?lighter 'blue') (OnTopSide ?lighter) (AlignedVertically ?lighter ?lemon) (Has ?lemon 'yellow') (LargerThan ?calc ?lemon) (Is ?lemon 'lemon') (Is ?calc 'calculator') (or (not (Is ?glasses 'glasses')) (AlignedVertically ?glasses ?calc)) (or (not (Is ?glasses 'glasses')) (LargerThan ?pizza ?glasses)) (or (not (Is ?glasses 'glasses')) (Is ?pizza 'pizza'))))))))",
+    "k": 5,
+    "object_classes": [
+        "lighter",
+        "pizza",
+        "calculator",
+        "lemon",
+        "glasses"
+    ]
+}

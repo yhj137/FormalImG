@@ -1,0 +1,9 @@
+{
+    "prompt": "A smiling man in a pixel art style scene.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'man') (HasState ?m 'smiling'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'man') (HasState ?m 'smiling'))))",
+    "k": 1,
+    "object_classes": [
+        "man"
+    ]
+}

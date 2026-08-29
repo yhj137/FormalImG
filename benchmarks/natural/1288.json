@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting the interior of a bus, featuring a man holding a fork, a wardrobe with a shirt inside, and a round bowl containing every pizza.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'bowl') (HasShape ?b 'round') (forall ?p (implies (Is ?p 'pizza') (In ?p ?b))) (exists ?f (exists ?bus (exists ?w (exists ?s (and (Is ?f 'fork') (Is ?bus 'bus') (Is ?w 'wardrobe') (Is ?s 'shirt') (Holding ?m ?f) (In ?m ?bus) (In ?b ?bus) (In ?w ?bus) (In ?s ?w))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?b (forall ?p (exists ?f (exists ?bus (exists ?w (exists ?s (and (Is ?m 'man') (Holding ?m ?f) (In ?m ?bus) (Is ?f 'fork') (Is ?bus 'bus') (In ?b ?bus) (or (not (Is ?p 'pizza')) (In ?p ?b)) (In ?w ?bus) (HasShape ?b 'round') (Is ?w 'wardrobe') (In ?s ?w) (Is ?b 'bowl') (Is ?s 'shirt'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "fork",
+        "man",
+        "bus",
+        "pizza",
+        "wardrobe",
+        "shirt"
+    ]
+}

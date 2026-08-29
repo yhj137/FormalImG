@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A child sits on a bed, holding a dirty spoon. Every flower in the image is withered and resting on the bed, alongside a round cake. To the left of the bed is a blue backpack containing headphones, and a tree stands to the left of the backpack.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bed (exists ?child (and (Is ?bed 'bed') (Is ?child 'child') (HasState ?child 'sitting') (On ?child ?bed) (forall ?flower (implies (Is ?flower 'flower') (and (On ?flower ?bed) (HasState ?flower 'withered')))) (exists ?backpack (exists ?headphones (exists ?tree (exists ?cake (exists ?spoon (and (Is ?backpack 'backpack') (HasColor ?backpack 'blue') (LeftOf ?backpack ?bed) (Is ?headphones 'headphones') (In ?headphones ?backpack) (Is ?tree 'tree') (LeftOf ?tree ?backpack) (Is ?cake 'cake') (HasShape ?cake 'round') (On ?cake ?bed) (Is ?spoon 'spoon') (HasState ?spoon 'dirty') (Holding ?child ?spoon)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bed (exists ?child (forall ?flower (exists ?backpack (exists ?headphones (exists ?tree (exists ?cake (exists ?spoon (and (Is ?bed 'bed') (On ?child ?bed) (or (not (Is ?flower 'flower')) (On ?flower ?bed)) (HasState ?child 'sitting') (Holding ?child ?spoon) (LeftOf ?backpack ?bed) (or (not (Is ?flower 'flower')) (HasState ?flower 'withered')) (Is ?child 'child') (HasState ?spoon 'dirty') (On ?cake ?bed) (HasColor ?backpack 'blue') (In ?headphones ?backpack) (Is ?spoon 'spoon') (HasShape ?cake 'round') (Is ?backpack 'backpack') (LeftOf ?tree ?backpack) (Is ?headphones 'headphones') (Is ?cake 'cake') (Is ?tree 'tree')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "child",
+        "spoon",
+        "bed",
+        "backpack",
+        "tree",
+        "cake",
+        "flower"
+    ]
+}

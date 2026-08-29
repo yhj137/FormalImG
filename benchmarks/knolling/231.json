@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a shoe and a donut. The shoe is located in the top half of the image and is positioned above the donut.",
+    "dsl": "(exists ?shoe (exists ?donut (and (Is ?shoe 'shoe') (Is ?donut 'donut') (OnTopSide ?shoe) (Above ?shoe ?donut))))",
+    "cnf": "(exists ?shoe (exists ?donut (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (Above ?shoe ?donut) (Is ?donut 'donut'))))",
+    "k": 2,
+    "object_classes": [
+        "shoe",
+        "donut"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. A black jacket is next to a person, and a hammer is inside the jacket. A laptop is to the right of the person. All birds in the scene are to the right of the laptop. A red apple is next to the laptop, and a ball is next to the apple.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?j (exists ?h (exists ?l (and (Is ?p 'person') (Is ?j 'jacket') (HasColor ?j 'black') (NextTo ?j ?p) (Is ?h 'hammer') (In ?h ?j) (Is ?l 'laptop') (RightOf ?l ?p) (forall ?b (implies (Is ?b 'bird') (RightOf ?b ?l))) (exists ?a (exists ?ball (and (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?l) (Is ?ball 'ball') (NextTo ?ball ?a))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?j (exists ?h (exists ?l (forall ?b (exists ?a (exists ?ball (and (Is ?p 'person') (NextTo ?j ?p) (RightOf ?l ?p) (HasColor ?j 'black') (In ?h ?j) (Is ?l 'laptop') (or (not (Is ?b 'bird')) (RightOf ?b ?l)) (Is ?j 'jacket') (Is ?h 'hammer') (NextTo ?a ?l) (HasColor ?a 'red') (NextTo ?ball ?a) (Is ?a 'apple') (Is ?ball 'ball'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "jacket",
+        "person",
+        "laptop",
+        "ball",
+        "hammer",
+        "apple",
+        "bird"
+    ]
+}

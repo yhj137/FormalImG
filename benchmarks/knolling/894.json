@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a tie. For every spoon present in the image, there is a corresponding set of objects: a bowl, a pair of pliers, and a mouse. The bowl is positioned on the bottom side of the image. All these items\u2014the tie, the spoon, the bowl, the pliers, and the mouse\u2014are aligned vertically. Furthermore, the bowl is visually larger than the mouse.",
+    "dsl": "(exists ?tie (and (Is ?tie 'tie') (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bowl (exists ?pliers (exists ?mouse (and (Is ?bowl 'bowl') (Is ?pliers 'pliers') (Is ?mouse 'mouse') (OnBottomSide ?bowl) (AlignedVertically ?tie ?spoon) (AlignedVertically ?spoon ?bowl) (AlignedVertically ?bowl ?pliers) (AlignedVertically ?pliers ?mouse) (LargerThan ?bowl ?mouse)))))))))",
+    "cnf": "(exists ?tie (forall ?spoon (exists ?bowl (exists ?pliers (exists ?mouse (and (Is ?tie 'tie') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?tie ?spoon)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?bowl)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?bowl)) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse')) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?bowl ?pliers)) (or (not (Is ?spoon 'spoon')) (Is ?pliers 'pliers')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?pliers ?mouse)) (or (not (Is ?spoon 'spoon')) (LargerThan ?bowl ?mouse))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "mouse",
+        "spoon",
+        "bowl"
+    ]
+}

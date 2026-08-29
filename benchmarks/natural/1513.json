@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an open wardrobe containing shoes, inside which every toy car is placed. A fruit sits next to the wardrobe, with a knife to the left of the fruit. A car containing a keyboard is positioned next to the wardrobe, and a horse stands to the left of the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?k (exists ?f (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?s 'shoes') (In ?s ?w) (Is ?k 'knife') (Is ?f 'fruit') (LeftOf ?k ?f) (NextTo ?f ?w) (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?s))) (exists ?c (exists ?h (exists ?kb (and (Is ?c 'car') (NextTo ?c ?w) (Is ?h 'horse') (LeftOf ?h ?c) (Is ?kb 'keyboard') (In ?kb ?c)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?k (exists ?f (forall ?tc (exists ?c (exists ?h (exists ?kb (and (Is ?w 'wardrobe') (HasState ?w 'open') (In ?s ?w) (NextTo ?f ?w) (Is ?s 'shoes') (or (not (Is ?tc 'toy car')) (In ?tc ?s)) (NextTo ?c ?w) (LeftOf ?k ?f) (Is ?c 'car') (LeftOf ?h ?c) (Is ?k 'knife') (Is ?f 'fruit') (In ?kb ?c) (Is ?h 'horse') (Is ?kb 'keyboard')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "knife",
+        "horse",
+        "shoes",
+        "toy car",
+        "car",
+        "keyboard",
+        "wardrobe"
+    ]
+}

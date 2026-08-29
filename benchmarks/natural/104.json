@@ -1,0 +1,9 @@
+{
+    "prompt": "Every teddy bear in the scene is round.",
+    "dsl": "(forall ?t (implies (Is ?t 'teddy bear') (HasShape ?t 'round')))",
+    "cnf": "(forall ?t (or (not (Is ?t 'teddy bear')) (HasShape ?t 'round')))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

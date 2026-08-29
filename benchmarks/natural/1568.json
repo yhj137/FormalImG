@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular rug lies on the floor; on it are a laptop and a child holding a teddy bear. To the right of the rug sits a plastic basket containing a bottle. All shoes are located to the left of the rug, with a round ball next to each of them.",
+    "dsl": "(exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (exists ?c (and (Is ?c 'child') (On ?c ?r) (exists ?t (and (Is ?t 'teddy bear') (Holding ?c ?t) (exists ?l (and (Is ?l 'laptop') (On ?l ?r) (exists ?bk (and (Is ?bk 'basket') (HasMaterial ?bk 'plastic') (RightOf ?bk ?r) (exists ?bt (and (Is ?bt 'bottle') (In ?bt ?bk) (forall ?s (implies (Is ?s 'shoes') (and (LeftOf ?s ?r) (exists ?bl (and (Is ?bl 'ball') (HasShape ?bl 'round') (NextTo ?bl ?s))))))))))))))))))",
+    "cnf": "(exists ?r (exists ?c (exists ?t (exists ?l (exists ?bk (exists ?bt (forall ?s (exists ?bl (and (Is ?r 'rug') (HasShape ?r 'rectangular') (On ?c ?r) (On ?l ?r) (Is ?c 'child') (Holding ?c ?t) (RightOf ?bk ?r) (Is ?l 'laptop') (Is ?t 'teddy bear') (or (not (Is ?s 'shoes')) (LeftOf ?s ?r)) (HasMaterial ?bk 'plastic') (In ?bt ?bk) (or (not (Is ?s 'shoes')) (Is ?bl 'ball')) (Is ?bk 'basket') (Is ?bt 'bottle') (or (not (Is ?s 'shoes')) (HasShape ?bl 'round')) (or (not (Is ?s 'shoes')) (NextTo ?bl ?s)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "shoes",
+        "bottle",
+        "laptop",
+        "rug",
+        "teddy bear",
+        "ball",
+        "basket"
+    ]
+}

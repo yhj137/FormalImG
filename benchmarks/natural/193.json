@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo-style image where every pizza is plastic.",
+    "dsl": "(and (IsStyle 'photo') (forall ?p (implies (Is ?p 'pizza') (HasMaterial ?p 'plastic'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?p (or (not (Is ?p 'pizza')) (HasMaterial ?p 'plastic'))))",
+    "k": 1,
+    "object_classes": [
+        "pizza"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a plate positioned on the bottom side of the scene. For every spoon present in the image, it is located vertically above the plate.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnBottomSide ?plate) (forall ?spoon (implies (Is ?spoon 'spoon') (Above ?spoon ?plate)))))",
+    "cnf": "(exists ?plate (forall ?spoon (and (Is ?plate 'plate') (OnBottomSide ?plate) (or (not (Is ?spoon 'spoon')) (Above ?spoon ?plate)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "plate"
+    ]
+}

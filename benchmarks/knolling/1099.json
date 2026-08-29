@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the top side of the frame, with a sock placed to its left. For every remote present, it is located on the bottom side and aligned vertically with the jeans. Arranged around each remote are three items: a wallet located above the remote, a knife positioned to the left of the remote, and a cup which is aligned vertically with the knife. Additionally, the cup is larger than the wallet.",
+    "dsl": "(exists ?jeans (exists ?sock (and (Is ?jeans 'jeans') (Is ?sock 'sock') (OnTopSide ?jeans) (LeftOf ?sock ?jeans) (forall ?remote (implies (Is ?remote 'remote') (exists ?wallet (exists ?cup (exists ?knife (and (Is ?wallet 'wallet') (Is ?cup 'cup') (Is ?knife 'knife') (OnBottomSide ?remote) (AlignedVertically ?remote ?jeans) (Above ?wallet ?remote) (LeftOf ?knife ?remote) (AlignedVertically ?cup ?knife) (LargerThan ?cup ?wallet))))))))))",
+    "cnf": "(exists ?jeans (exists ?sock (forall ?remote (exists ?wallet (exists ?cup (exists ?knife (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (LeftOf ?sock ?jeans) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?jeans)) (Is ?sock 'sock') (or (not (Is ?remote 'remote')) (OnBottomSide ?remote)) (or (not (Is ?remote 'remote')) (Above ?wallet ?remote)) (or (not (Is ?remote 'remote')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (Is ?wallet 'wallet')) (or (not (Is ?remote 'remote')) (LargerThan ?cup ?wallet)) (or (not (Is ?remote 'remote')) (LeftOf ?knife ?remote)) (or (not (Is ?remote 'remote')) (Is ?cup 'cup')) (or (not (Is ?remote 'remote')) (AlignedVertically ?cup ?knife)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "sock",
+        "cup",
+        "jeans",
+        "wallet",
+        "knife"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a cutting board located on the bottom side, with a drill positioned above it. For every spoon in the image, it is smaller than the cutting board and placed above the drill. Continuing the vertical arrangement above the spoon, there is a knife, followed by a shoe above the knife, an apple above the shoe, and finally a mouse located above the apple.",
+    "dsl": "(exists ?cutting_board (exists ?drill (and (Is ?cutting_board 'cutting_board') (OnBottomSide ?cutting_board) (Is ?drill 'drill') (Above ?drill ?cutting_board) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (exists ?shoe (exists ?apple (exists ?mouse (and (Is ?knife 'knife') (Is ?shoe 'shoe') (Is ?apple 'apple') (Is ?mouse 'mouse') (SmallerThan ?spoon ?cutting_board) (Above ?spoon ?drill) (Above ?knife ?spoon) (Above ?shoe ?knife) (Above ?apple ?shoe) (Above ?mouse ?apple)))))))))))",
+    "cnf": "(exists ?cutting_board (exists ?drill (forall ?spoon (exists ?knife (exists ?shoe (exists ?apple (exists ?mouse (and (Is ?cutting_board 'cutting_board') (OnBottomSide ?cutting_board) (Above ?drill ?cutting_board) (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?cutting_board)) (Is ?drill 'drill') (or (not (Is ?spoon 'spoon')) (Above ?spoon ?drill)) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse')) (or (not (Is ?spoon 'spoon')) (Above ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?apple 'apple')) (or (not (Is ?spoon 'spoon')) (Above ?mouse ?apple)) (or (not (Is ?spoon 'spoon')) (Above ?shoe ?knife)) (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')) (or (not (Is ?spoon 'spoon')) (Is ?shoe 'shoe')) (or (not (Is ?spoon 'spoon')) (Above ?apple ?shoe))))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "cutting_board",
+        "drill",
+        "knife",
+        "mouse",
+        "spoon",
+        "shoe"
+    ]
+}

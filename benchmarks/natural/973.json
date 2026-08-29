@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round lamp stands to the left of a blue bed. A dog is inside the bed, and a hammer rests on top of it. Every cup in the scene is located next to the lamp.",
+    "dsl": "(exists ?b (exists ?l (exists ?d (exists ?h (and (Is ?b 'bed') (HasColor ?b 'blue') (Is ?l 'lamp') (HasShape ?l 'round') (LeftOf ?l ?b) (Is ?d 'dog') (In ?d ?b) (Is ?h 'hammer') (On ?h ?b) (forall ?c (implies (Is ?c 'cup') (NextTo ?c ?l))))))))",
+    "cnf": "(exists ?b (exists ?l (exists ?d (exists ?h (forall ?c (and (Is ?b 'bed') (HasColor ?b 'blue') (LeftOf ?l ?b) (In ?d ?b) (HasShape ?l 'round') (or (not (Is ?c 'cup')) (NextTo ?c ?l)) (On ?h ?b) (Is ?d 'dog') (Is ?l 'lamp') (Is ?h 'hammer')))))))",
+    "k": 5,
+    "object_classes": [
+        "lamp",
+        "hammer",
+        "bed",
+        "cup",
+        "dog"
+    ]
+}

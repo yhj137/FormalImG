@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate and a book, with the book located on the bottom side. For every screwdriver in the scene, it is positioned on the right side of the image and to the right of the plate. Furthermore, there is a cup to the right of the screwdriver, and a pair of glasses vertically aligned with the cup. The glasses are smaller than the book.",
+    "dsl": "(exists ?p (exists ?b (and (Is ?p 'plate') (Is ?b 'book') (OnBottomSide ?b) (forall ?s (implies (Is ?s 'screwdriver') (exists ?c (exists ?g (and (Is ?c 'cup') (Is ?g 'glasses') (OnRightSide ?s) (RightOf ?s ?p) (RightOf ?c ?s) (AlignedVertically ?c ?g) (SmallerThan ?g ?b)))))))))",
+    "cnf": "(exists ?p (exists ?b (forall ?s (exists ?c (exists ?g (and (Is ?p 'plate') (or (not (Is ?s 'screwdriver')) (RightOf ?s ?p)) (or (not (Is ?s 'screwdriver')) (OnRightSide ?s)) (or (not (Is ?s 'screwdriver')) (RightOf ?c ?s)) (or (not (Is ?s 'screwdriver')) (Is ?g 'glasses')) (or (not (Is ?s 'screwdriver')) (Is ?c 'cup')) (or (not (Is ?s 'screwdriver')) (AlignedVertically ?c ?g)) (or (not (Is ?s 'screwdriver')) (SmallerThan ?g ?b)) (OnBottomSide ?b) (Is ?b 'book')))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "glasses",
+        "plate",
+        "screwdriver",
+        "cup"
+    ]
+}

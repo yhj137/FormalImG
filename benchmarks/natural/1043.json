@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene where every butterfly is next to a house. A mirror is mounted on the house, and next to the mirror is a basket containing a round apple, with a hammer resting on the basket.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'butterfly') (exists ?h (exists ?m (exists ?bk (exists ?a (exists ?hm (and (Is ?h 'house') (Is ?m 'mirror') (Is ?bk 'basket') (Is ?a 'apple') (Is ?hm 'hammer') (NextTo ?b ?h) (On ?m ?h) (NextTo ?bk ?m) (In ?a ?bk) (HasShape ?a 'round') (On ?hm ?bk))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (exists ?h (exists ?m (exists ?bk (exists ?a (exists ?hm (and (or (not (Is ?b 'butterfly')) (Is ?h 'house')) (or (not (Is ?b 'butterfly')) (Is ?m 'mirror')) (or (not (Is ?b 'butterfly')) (NextTo ?b ?h)) (or (not (Is ?b 'butterfly')) (Is ?bk 'basket')) (or (not (Is ?b 'butterfly')) (On ?m ?h)) (or (not (Is ?b 'butterfly')) (Is ?hm 'hammer')) (or (not (Is ?b 'butterfly')) (Is ?a 'apple')) (or (not (Is ?b 'butterfly')) (NextTo ?bk ?m)) (or (not (Is ?b 'butterfly')) (On ?hm ?bk)) (or (not (Is ?b 'butterfly')) (In ?a ?bk)) (or (not (Is ?b 'butterfly')) (HasShape ?a 'round'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "hammer",
+        "butterfly",
+        "basket",
+        "mirror",
+        "house",
+        "apple"
+    ]
+}

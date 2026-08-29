@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene depicts a green tree on the left and a woman to its right. A rectangular monitor is positioned to her right, followed by a glass bottle. To the right of the bottle, every cup has a plastic bowl next to it. Each bowl contains a round ball, supports a phone, and has a black cat sitting to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?w (exists ?m (exists ?bt (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?w 'woman') (RightOf ?w ?t) (Is ?m 'monitor') (HasShape ?m 'rectangular') (RightOf ?m ?w) (Is ?bt 'bottle') (HasMaterial ?bt 'glass') (RightOf ?bt ?m) (forall ?c (implies (Is ?c 'cup') (and (RightOf ?c ?bt) (exists ?bo (exists ?ba (exists ?p (exists ?ca (and (Is ?bo 'bowl') (HasMaterial ?bo 'plastic') (RightOf ?bo ?c) (Is ?ba 'ball') (HasShape ?ba 'round') (In ?ba ?bo) (Is ?p 'phone') (On ?p ?bo) (Is ?ca 'cat') (HasColor ?ca 'black') (RightOf ?ca ?bo)))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?w (exists ?m (exists ?bt (forall ?c (exists ?bo (exists ?ba (exists ?p (exists ?ca (and (Is ?t 'tree') (HasColor ?t 'green') (RightOf ?w ?t) (Is ?w 'woman') (RightOf ?m ?w) (HasShape ?m 'rectangular') (RightOf ?bt ?m) (Is ?m 'monitor') (HasMaterial ?bt 'glass') (or (not (Is ?c 'cup')) (RightOf ?c ?bt)) (Is ?bt 'bottle') (or (not (Is ?c 'cup')) (Is ?bo 'bowl')) (or (not (Is ?c 'cup')) (HasMaterial ?bo 'plastic')) (or (not (Is ?c 'cup')) (RightOf ?bo ?c)) (or (not (Is ?c 'cup')) (Is ?ba 'ball')) (or (not (Is ?c 'cup')) (In ?ba ?bo)) (or (not (Is ?c 'cup')) (HasShape ?ba 'round')) (or (not (Is ?c 'cup')) (Is ?p 'phone')) (or (not (Is ?c 'cup')) (On ?p ?bo)) (or (not (Is ?c 'cup')) (Is ?ca 'cat')) (or (not (Is ?c 'cup')) (RightOf ?ca ?bo)) (or (not (Is ?c 'cup')) (HasColor ?ca 'black')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "phone",
+        "bottle",
+        "tree",
+        "woman",
+        "monitor",
+        "cup",
+        "ball",
+        "bowl",
+        "cat"
+    ]
+}

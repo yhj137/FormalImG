@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of an elephant holding a yellow banana. To the left of the elephant is a bookshelf with a sliced pizza and every key on it, while a sandwich is inside. To the right of the elephant sits a rock with round glasses resting on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?e (exists ?bs (and (Is ?e 'elephant') (Is ?bs 'bookshelf') (LeftOf ?bs ?e) (forall ?k (implies (Is ?k 'key') (On ?k ?bs))) (exists ?b (exists ?r (exists ?g (exists ?p (exists ?s (and (Is ?b 'banana') (HasColor ?b 'yellow') (Holding ?e ?b) (Is ?r 'rock') (RightOf ?r ?e) (Is ?g 'glasses') (HasShape ?g 'round') (On ?g ?r) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?bs) (Is ?s 'sandwich') (In ?s ?bs)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?e (exists ?bs (forall ?k (exists ?b (exists ?r (exists ?g (exists ?p (exists ?s (and (Is ?e 'elephant') (LeftOf ?bs ?e) (Holding ?e ?b) (Is ?bs 'bookshelf') (or (not (Is ?k 'key')) (On ?k ?bs)) (RightOf ?r ?e) (HasColor ?b 'yellow') (On ?p ?bs) (Is ?r 'rock') (On ?g ?r) (Is ?b 'banana') (In ?s ?bs) (HasState ?p 'sliced') (HasShape ?g 'round') (Is ?s 'sandwich') (Is ?p 'pizza') (Is ?g 'glasses')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "glasses",
+        "rock",
+        "sandwich",
+        "banana",
+        "pizza",
+        "bookshelf",
+        "elephant"
+    ]
+}

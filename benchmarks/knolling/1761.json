@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the scene is a suitcase. Directly above the suitcase is a pizza, and they are aligned vertically. To the left of the suitcase is a laptop, which has a bottle directly above it; these two are also aligned vertically. To the left of the laptop is a game controller, with a stapler positioned directly above it, aligned vertically. A phone is placed to the left of the stapler and is visually smaller than the laptop. Finally, for every watch in the image, it is located to the left of the game controller, and there is a screwdriver positioned above it.",
+    "dsl": "(exists ?suitcase (exists ?pizza (exists ?laptop (exists ?bottle (exists ?controller (exists ?stapler (exists ?phone (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?pizza 'pizza') (Above ?pizza ?suitcase) (AlignedVertically ?pizza ?suitcase) (Is ?laptop 'laptop') (LeftOf ?laptop ?suitcase) (Is ?bottle 'bottle') (Above ?bottle ?laptop) (AlignedVertically ?bottle ?laptop) (Is ?controller 'game_controller') (LeftOf ?controller ?laptop) (Is ?stapler 'stapler') (Above ?stapler ?controller) (AlignedVertically ?stapler ?controller) (Is ?phone 'phone') (LeftOf ?phone ?stapler) (SmallerThan ?phone ?laptop) (forall ?watch (implies (Is ?watch 'watch') (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (LeftOf ?watch ?controller) (Above ?screwdriver ?watch)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pizza (exists ?laptop (exists ?bottle (exists ?controller (exists ?stapler (exists ?phone (forall ?watch (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Above ?pizza ?suitcase) (AlignedVertically ?pizza ?suitcase) (Is ?pizza 'pizza') (LeftOf ?laptop ?suitcase) (Is ?laptop 'laptop') (Above ?bottle ?laptop) (AlignedVertically ?bottle ?laptop) (Is ?bottle 'bottle') (LeftOf ?controller ?laptop) (SmallerThan ?phone ?laptop) (Is ?controller 'game_controller') (Above ?stapler ?controller) (LeftOf ?phone ?stapler) (AlignedVertically ?stapler ?controller) (Is ?stapler 'stapler') (Is ?phone 'phone') (or (not (Is ?watch 'watch')) (LeftOf ?watch ?controller)) (or (not (Is ?watch 'watch')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?watch 'watch')) (Above ?screwdriver ?watch))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "phone",
+        "pizza",
+        "watch",
+        "screwdriver",
+        "game_controller",
+        "bottle",
+        "suitcase"
+    ]
+}

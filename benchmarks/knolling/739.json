@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features black headphones and a game controller; the headphones are larger than the game controller and are positioned above it. Additionally, for every wallet in the image, there is a cup located above the wallet, and the wallet is aligned horizontally with the game controller.",
+    "dsl": "(exists ?h (exists ?g (and (Is ?h 'headphones') (Has ?h 'black') (Is ?g 'game_controller') (LargerThan ?h ?g) (Above ?h ?g) (forall ?w (implies (Is ?w 'wallet') (exists ?c (and (Is ?c 'cup') (Above ?c ?w) (AlignedHorizontally ?w ?g))))))))",
+    "cnf": "(exists ?h (exists ?g (forall ?w (exists ?c (and (Is ?h 'headphones') (Has ?h 'black') (LargerThan ?h ?g) (Above ?h ?g) (Is ?g 'game_controller') (or (not (Is ?w 'wallet')) (AlignedHorizontally ?w ?g)) (or (not (Is ?w 'wallet')) (Above ?c ?w)) (or (not (Is ?w 'wallet')) (Is ?c 'cup')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "wallet",
+        "cup",
+        "game_controller"
+    ]
+}

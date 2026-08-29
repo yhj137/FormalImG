@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a yellow bus. A horse stands next to the bus, with a shirt on it, holding a bitten red apple. To the left of the bus is a plant, and every rock in the scene is positioned next to this plant. To the right of the bus lies a book with a metal fork on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?p (and (Is ?b 'bus') (HasColor ?b 'yellow') (Is ?h 'horse') (NextTo ?h ?b) (Is ?p 'plant') (LeftOf ?p ?b) (forall ?r (implies (Is ?r 'rock') (NextTo ?r ?p))) (exists ?bk (exists ?f (exists ?s (exists ?a (and (Is ?bk 'book') (RightOf ?bk ?b) (Is ?f 'fork') (HasMaterial ?f 'metal') (On ?f ?bk) (Is ?s 'shirt') (On ?s ?h) (Is ?a 'apple') (HasColor ?a 'red') (HasState ?a 'bitten') (Holding ?h ?a)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?p (forall ?r (exists ?bk (exists ?f (exists ?s (exists ?a (and (Is ?b 'bus') (HasColor ?b 'yellow') (NextTo ?h ?b) (LeftOf ?p ?b) (Is ?h 'horse') (On ?s ?h) (RightOf ?bk ?b) (Is ?p 'plant') (or (not (Is ?r 'rock')) (NextTo ?r ?p)) (Holding ?h ?a) (Is ?s 'shirt') (Is ?bk 'book') (On ?f ?bk) (HasState ?a 'bitten') (HasMaterial ?f 'metal') (HasColor ?a 'red') (Is ?f 'fork') (Is ?a 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "fork",
+        "horse",
+        "book",
+        "plant",
+        "rock",
+        "apple",
+        "bus"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every person is made of metal.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?p (implies (Is ?p 'person') (HasMaterial ?p 'metal'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?p (or (not (Is ?p 'person')) (HasMaterial ?p 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "person"
+    ]
+}

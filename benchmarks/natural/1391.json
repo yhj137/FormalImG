@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a tree standing next to a refrigerator. To the left of the tree, a child holds a key. A round plate with a pizza rests on the refrigerator, and every butterfly in the scene is located to the left of the tree.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?c (exists ?k (exists ?p (exists ?z (and (Is ?t 'tree') (Is ?r 'refrigerator') (NextTo ?t ?r) (Is ?c 'child') (LeftOf ?c ?t) (Is ?k 'key') (Holding ?c ?k) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?r) (Is ?z 'pizza') (On ?z ?p) (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?t)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?c (exists ?k (exists ?p (exists ?z (forall ?b (and (Is ?t 'tree') (NextTo ?t ?r) (LeftOf ?c ?t) (Is ?r 'refrigerator') (On ?p ?r) (or (not (Is ?b 'butterfly')) (LeftOf ?b ?t)) (Is ?c 'child') (Holding ?c ?k) (HasShape ?p 'round') (On ?z ?p) (Is ?k 'key') (Is ?p 'plate') (Is ?z 'pizza'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "butterfly",
+        "pizza",
+        "refrigerator",
+        "tree",
+        "child",
+        "plate"
+    ]
+}

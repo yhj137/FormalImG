@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a house with a metal bench next to it. A woman holding a jacket sits on the bench. A boat is located to the left of the house. Inside the house is a wardrobe containing a shirt. Every butterfly in the scene is positioned above the woman.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?be (exists ?w (exists ?bo (exists ?wd (and (Is ?h 'house') (Is ?be 'bench') (HasMaterial ?be 'metal') (Is ?w 'woman') (Is ?bo 'boat') (Is ?wd 'wardrobe') (NextTo ?be ?h) (On ?w ?be) (LeftOf ?bo ?h) (In ?wd ?h) (forall ?bu (implies (Is ?bu 'butterfly') (Above ?bu ?w))) (exists ?j (exists ?s (and (Is ?j 'jacket') (Is ?s 'shirt') (Holding ?w ?j) (In ?s ?wd)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?be (exists ?w (exists ?bo (exists ?wd (forall ?bu (exists ?j (exists ?s (and (Is ?h 'house') (NextTo ?be ?h) (LeftOf ?bo ?h) (HasMaterial ?be 'metal') (On ?w ?be) (In ?wd ?h) (Is ?bo 'boat') (Is ?be 'bench') (Is ?w 'woman') (or (not (Is ?bu 'butterfly')) (Above ?bu ?w)) (Is ?wd 'wardrobe') (In ?s ?wd) (Holding ?w ?j) (Is ?s 'shirt') (Is ?j 'jacket')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "shirt",
+        "bench",
+        "woman",
+        "jacket",
+        "butterfly",
+        "boat",
+        "wardrobe"
+    ]
+}

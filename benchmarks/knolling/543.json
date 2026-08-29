@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a handbag located on the right side of the scene. For every spoon in the image, there is a wallet positioned to the right of that spoon, and this wallet is also located to the left of the handbag.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?wallet (and (Is ?wallet 'wallet') (RightOf ?wallet ?spoon) (LeftOf ?wallet ?handbag)))))))",
+    "cnf": "(exists ?handbag (forall ?spoon (exists ?wallet (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (or (not (Is ?spoon 'spoon')) (LeftOf ?wallet ?handbag)) (or (not (Is ?spoon 'spoon')) (RightOf ?wallet ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?wallet 'wallet'))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "handbag",
+        "wallet"
+    ]
+}

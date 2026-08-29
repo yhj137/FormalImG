@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pan in the scene, the pan is located in the top half of the image. To the left of the pan, there is a pizza positioned on the left side of the image. Additionally, a plate is located to the right of the pan, and a phone is placed to the right of the plate.",
+    "dsl": "(and (forall ?pan (implies (Is ?pan 'pan') (exists ?pizza (exists ?plate (exists ?phone (and (Is ?pizza 'pizza') (Is ?plate 'plate') (Is ?phone 'phone') (OnTopSide ?pan) (OnLeftSide ?pizza) (LeftOf ?pizza ?pan) (RightOf ?plate ?pan) (RightOf ?phone ?plate))))))))",
+    "cnf": "(forall ?pan (exists ?pizza (exists ?plate (exists ?phone (and (or (not (Is ?pan 'pan')) (Is ?pizza 'pizza')) (or (not (Is ?pan 'pan')) (OnLeftSide ?pizza)) (or (not (Is ?pan 'pan')) (Is ?plate 'plate')) (or (not (Is ?pan 'pan')) (LeftOf ?pizza ?pan)) (or (not (Is ?pan 'pan')) (OnTopSide ?pan)) (or (not (Is ?pan 'pan')) (Is ?phone 'phone')) (or (not (Is ?pan 'pan')) (RightOf ?plate ?pan)) (or (not (Is ?pan 'pan')) (RightOf ?phone ?plate)))))))",
+    "k": 4,
+    "object_classes": [
+        "pan",
+        "plate",
+        "pizza",
+        "phone"
+    ]
+}

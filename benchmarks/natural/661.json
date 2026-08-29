@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every person holds a basket containing a sandwich, with a black monitor to their left.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?p (implies (Is ?p 'person') (exists ?b (exists ?s (exists ?m (and (Is ?b 'basket') (Is ?s 'sandwich') (Is ?m 'monitor') (HasColor ?m 'black') (Holding ?p ?b) (In ?s ?b) (LeftOf ?m ?p))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?p (exists ?b (exists ?s (exists ?m (and (or (not (Is ?p 'person')) (Is ?b 'basket')) (or (not (Is ?p 'person')) (Is ?s 'sandwich')) (or (not (Is ?p 'person')) (Holding ?p ?b)) (or (not (Is ?p 'person')) (Is ?m 'monitor')) (or (not (Is ?p 'person')) (In ?s ?b)) (or (not (Is ?p 'person')) (HasColor ?m 'black')) (or (not (Is ?p 'person')) (LeftOf ?m ?p))))))))",
+    "k": 4,
+    "object_classes": [
+        "basket",
+        "sandwich",
+        "person",
+        "monitor"
+    ]
+}

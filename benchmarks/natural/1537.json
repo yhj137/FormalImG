@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. A sitting man wearing glasses is positioned next to a wooden table on a red rug. A basket on the table contains every fork in the scene. To the left of the rug is a bus, and an elephant is next to the bus.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?g (exists ?t (exists ?r (exists ?b (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?g 'glasses') (On ?g ?m) (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?m ?t) (Is ?r 'rug') (HasColor ?r 'red') (On ?t ?r) (Is ?b 'basket') (On ?b ?t) (forall ?f (implies (Is ?f 'fork') (In ?f ?b))) (exists ?bu (exists ?el (and (Is ?bu 'bus') (LeftOf ?bu ?r) (Is ?el 'elephant') (NextTo ?el ?bu)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?g (exists ?t (exists ?r (exists ?b (forall ?f (exists ?bu (exists ?el (and (Is ?m 'man') (HasState ?m 'sitting') (On ?g ?m) (NextTo ?m ?t) (Is ?g 'glasses') (HasMaterial ?t 'wooden') (On ?t ?r) (Is ?t 'table') (On ?b ?t) (HasColor ?r 'red') (LeftOf ?bu ?r) (Is ?b 'basket') (or (not (Is ?f 'fork')) (In ?f ?b)) (Is ?r 'rug') (Is ?bu 'bus') (NextTo ?el ?bu) (Is ?el 'elephant')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "fork",
+        "glasses",
+        "man",
+        "rug",
+        "table",
+        "basket",
+        "bus"
+    ]
+}

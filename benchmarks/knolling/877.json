@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a plate located on the bottom side of the scene. For every lemon in the image, the plate is larger than the lemon, and the lemon is positioned to the right of the plate. A book is located to the right of the lemon, a stapler is to the right of the book, and a watch is to the right of the stapler.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnBottomSide ?plate) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?book (exists ?stapler (exists ?watch (and (Is ?book 'book') (Is ?stapler 'stapler') (Is ?watch 'watch') (LargerThan ?plate ?lemon) (RightOf ?lemon ?plate) (RightOf ?book ?lemon) (RightOf ?stapler ?book) (RightOf ?watch ?stapler)))))))))",
+    "cnf": "(exists ?plate (forall ?lemon (exists ?book (exists ?stapler (exists ?watch (and (Is ?plate 'plate') (OnBottomSide ?plate) (or (not (Is ?lemon 'lemon')) (LargerThan ?plate ?lemon)) (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?plate)) (or (not (Is ?lemon 'lemon')) (Is ?watch 'watch')) (or (not (Is ?lemon 'lemon')) (RightOf ?book ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?stapler 'stapler')) (or (not (Is ?lemon 'lemon')) (RightOf ?watch ?stapler)) (or (not (Is ?lemon 'lemon')) (RightOf ?stapler ?book)) (or (not (Is ?lemon 'lemon')) (Is ?book 'book'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "plate",
+        "stapler",
+        "lemon",
+        "watch"
+    ]
+}

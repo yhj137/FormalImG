@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A wooden boat is located to the left of a white refrigerator. A sofa is placed next to the refrigerator. To the right of the sofa stands a woman. Beside the woman is a pizza, and a cake is positioned to the right of the pizza. A blue bowl, which contains a fork, sits next to the cake.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?s (exists ?w (exists ?p (exists ?c (exists ?o (exists ?f (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (Is ?r 'refrigerator') (HasColor ?r 'white') (LeftOf ?b ?r) (Is ?s 'sofa') (NextTo ?s ?r) (Is ?w 'woman') (RightOf ?w ?s) (Is ?p 'pizza') (NextTo ?p ?w) (Is ?c 'cake') (RightOf ?c ?p) (Is ?o 'bowl') (HasColor ?o 'blue') (NextTo ?o ?c) (Is ?f 'fork') (In ?f ?o)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?s (exists ?w (exists ?p (exists ?c (exists ?o (exists ?f (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (LeftOf ?b ?r) (HasColor ?r 'white') (NextTo ?s ?r) (Is ?r 'refrigerator') (Is ?s 'sofa') (RightOf ?w ?s) (Is ?w 'woman') (NextTo ?p ?w) (Is ?p 'pizza') (RightOf ?c ?p) (Is ?c 'cake') (NextTo ?o ?c) (HasColor ?o 'blue') (In ?f ?o) (Is ?o 'bowl') (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "fork",
+        "sofa",
+        "cake",
+        "pizza",
+        "refrigerator",
+        "woman",
+        "boat"
+    ]
+}

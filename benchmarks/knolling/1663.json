@@ -1,0 +1,17 @@
+{
+    "prompt": "There exist two objects. For every remote in the scene, the first object is a monitor on the left and the second is a game controller to its right, aligned horizontally, with the remote positioned to the right of the game controller and aligned horizontally. Additionally, for each remote, there is a wallet above the monitor, a pair of glasses above the game controller, a shoe above the remote, a knife below the monitor, a fork below the game controller, and a sock below the remote.",
+    "dsl": "(exists ?monitor (exists ?controller (forall ?remote (implies (Is ?remote 'remote') (exists ?wallet (exists ?glasses (exists ?shoe (exists ?knife (exists ?fork (exists ?sock (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?controller 'game_controller') (Is ?wallet 'wallet') (Is ?glasses 'glasses') (Is ?shoe 'shoe') (Is ?knife 'knife') (Is ?fork 'fork') (Is ?sock 'sock') (RightOf ?controller ?monitor) (AlignedHorizontally ?controller ?monitor) (RightOf ?remote ?controller) (AlignedHorizontally ?remote ?controller) (Above ?wallet ?monitor) (Above ?glasses ?controller) (Above ?shoe ?remote) (Above ?monitor ?knife) (Above ?controller ?fork) (Above ?remote ?sock))))))))))))",
+    "cnf": "(exists ?monitor (exists ?controller (forall ?remote (exists ?wallet (exists ?glasses (exists ?shoe (exists ?knife (exists ?fork (exists ?sock (and (or (not (Is ?remote 'remote')) (Is ?monitor 'monitor')) (or (not (Is ?remote 'remote')) (OnLeftSide ?monitor)) (or (not (Is ?remote 'remote')) (RightOf ?controller ?monitor)) (or (not (Is ?remote 'remote')) (Is ?controller 'game_controller')) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?controller ?monitor)) (or (not (Is ?remote 'remote')) (Is ?sock 'sock')) (or (not (Is ?remote 'remote')) (Is ?wallet 'wallet')) (or (not (Is ?remote 'remote')) (Above ?wallet ?monitor)) (or (not (Is ?remote 'remote')) (RightOf ?remote ?controller)) (or (not (Is ?remote 'remote')) (Is ?fork 'fork')) (or (not (Is ?remote 'remote')) (Above ?remote ?sock)) (or (not (Is ?remote 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?remote 'remote')) (Above ?monitor ?knife)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?controller)) (or (not (Is ?remote 'remote')) (Above ?glasses ?controller)) (or (not (Is ?remote 'remote')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (Above ?controller ?fork)) (or (not (Is ?remote 'remote')) (Is ?shoe 'shoe')) (or (not (Is ?remote 'remote')) (Above ?shoe ?remote))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "sock",
+        "game_controller",
+        "fork",
+        "wallet",
+        "knife",
+        "monitor",
+        "shoe"
+    ]
+}

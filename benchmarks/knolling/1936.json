@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is located on the left side. A laptop is placed to the right of the monitor, and the monitor is larger than the laptop. A game controller is positioned above the laptop. On the bottom side, below the monitor, there is a pair of jeans. A drill is located to the right of the jeans and below the laptop. A bottle is to the right of the drill. For every remote, it is positioned to the right of the bottle. Below the remote is a wallet. The wallet is to the left of a pair of glasses. A mouse is located above the glasses and on the right side of the scene.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?drill (exists ?controller (exists ?bottle (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?laptop 'laptop') (RightOf ?laptop ?monitor) (LargerThan ?monitor ?laptop) (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Below ?jeans ?monitor) (Is ?drill 'drill') (RightOf ?drill ?jeans) (Below ?drill ?laptop) (Is ?controller 'game_controller') (Above ?controller ?laptop) (Is ?bottle 'bottle') (RightOf ?bottle ?drill) (forall ?remote (implies (Is ?remote 'remote') (exists ?wallet (exists ?glasses (exists ?mouse (and (Is ?wallet 'wallet') (Is ?glasses 'glasses') (Is ?mouse 'mouse') (RightOf ?remote ?bottle) (Below ?wallet ?remote) (LeftOf ?wallet ?glasses) (Above ?mouse ?glasses) (OnRightSide ?mouse))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?drill (exists ?controller (exists ?bottle (forall ?remote (exists ?wallet (exists ?glasses (exists ?mouse (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (RightOf ?laptop ?monitor) (LargerThan ?monitor ?laptop) (Is ?laptop 'laptop') (Below ?jeans ?monitor) (Below ?drill ?laptop) (OnBottomSide ?jeans) (RightOf ?drill ?jeans) (Above ?controller ?laptop) (RightOf ?bottle ?drill) (Is ?jeans 'jeans') (Is ?drill 'drill') (Is ?controller 'game_controller') (Is ?bottle 'bottle') (or (not (Is ?remote 'remote')) (RightOf ?remote ?bottle)) (or (not (Is ?remote 'remote')) (Is ?mouse 'mouse')) (or (not (Is ?remote 'remote')) (Below ?wallet ?remote)) (or (not (Is ?remote 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?remote 'remote')) (Above ?mouse ?glasses)) (or (not (Is ?remote 'remote')) (Is ?wallet 'wallet')) (or (not (Is ?remote 'remote')) (LeftOf ?wallet ?glasses)) (or (not (Is ?remote 'remote')) (OnRightSide ?mouse)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "remote",
+        "game_controller",
+        "drill",
+        "jeans",
+        "bottle",
+        "wallet",
+        "mouse",
+        "monitor"
+    ]
+}

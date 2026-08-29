@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. Every sofa features a hat containing glasses, a cup with a round apple inside, and a rectangular monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?s (implies (Is ?s 'sofa') (exists ?h (exists ?g (exists ?c (exists ?a (exists ?m (and (Is ?h 'hat') (Is ?g 'glasses') (Is ?c 'cup') (Is ?a 'apple') (Is ?m 'monitor') (HasShape ?a 'round') (HasShape ?m 'rectangular') (On ?h ?s) (In ?g ?h) (On ?c ?s) (In ?a ?c) (On ?m ?s))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?s (exists ?h (exists ?g (exists ?c (exists ?a (exists ?m (and (or (not (Is ?s 'sofa')) (Is ?h 'hat')) (or (not (Is ?s 'sofa')) (On ?h ?s)) (or (not (Is ?s 'sofa')) (Is ?g 'glasses')) (or (not (Is ?s 'sofa')) (In ?g ?h)) (or (not (Is ?s 'sofa')) (HasShape ?m 'rectangular')) (or (not (Is ?s 'sofa')) (Is ?c 'cup')) (or (not (Is ?s 'sofa')) (On ?c ?s)) (or (not (Is ?s 'sofa')) (HasShape ?a 'round')) (or (not (Is ?s 'sofa')) (Is ?m 'monitor')) (or (not (Is ?s 'sofa')) (On ?m ?s)) (or (not (Is ?s 'sofa')) (Is ?a 'apple')) (or (not (Is ?s 'sofa')) (In ?a ?c))))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "sofa",
+        "hat",
+        "cup",
+        "apple"
+    ]
+}

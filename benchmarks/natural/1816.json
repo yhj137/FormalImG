@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a man inside a boat, holding a leather jacket and a bowl containing an apple. A backpack containing a teddy bear is situated next to the man. A lion is located next to the boat, a metal desk stands next to the lion, and a bird is positioned next to the desk.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?j (exists ?bo (exists ?a (exists ?bp (exists ?tb (exists ?l (exists ?d (exists ?bi (and (Is ?m 'man') (Is ?b 'boat') (Is ?j 'jacket') (HasMaterial ?j 'leather') (Is ?bo 'bowl') (Is ?a 'apple') (Is ?bp 'backpack') (Is ?tb 'teddy bear') (Is ?l 'lion') (Is ?d 'desk') (HasMaterial ?d 'metal') (Is ?bi 'bird') (In ?m ?b) (Holding ?m ?j) (Holding ?m ?bo) (In ?a ?bo) (NextTo ?bp ?m) (In ?tb ?bp) (NextTo ?l ?b) (NextTo ?d ?l) (NextTo ?bi ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?j (exists ?bo (exists ?a (exists ?bp (exists ?tb (exists ?l (exists ?d (exists ?bi (and (Is ?m 'man') (In ?m ?b) (Holding ?m ?j) (Is ?b 'boat') (NextTo ?l ?b) (Holding ?m ?bo) (HasMaterial ?j 'leather') (Is ?l 'lion') (NextTo ?d ?l) (NextTo ?bp ?m) (Is ?bo 'bowl') (In ?a ?bo) (Is ?j 'jacket') (HasMaterial ?d 'metal') (NextTo ?bi ?d) (Is ?bp 'backpack') (In ?tb ?bp) (Is ?a 'apple') (Is ?d 'desk') (Is ?bi 'bird') (Is ?tb 'teddy bear')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bowl",
+        "backpack",
+        "man",
+        "teddy bear",
+        "jacket",
+        "bird",
+        "desk",
+        "lion",
+        "boat",
+        "apple"
+    ]
+}

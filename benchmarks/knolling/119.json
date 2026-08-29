@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every pair of scissors in the scene is red.",
+    "dsl": "(forall ?x (implies (Is ?x 'scissors') (Has ?x 'red')))",
+    "cnf": "(forall ?x (or (not (Is ?x 'scissors')) (Has ?x 'red')))",
+    "k": 1,
+    "object_classes": [
+        "scissors"
+    ]
+}

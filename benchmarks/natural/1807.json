@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Presented in an oil painting style, the scene depicts a woman wearing a hat and holding a pan. She is positioned next to a table. On the table sits an open book beside a clock, along with a bowl containing a fish. To the left of the woman, there is a house located next to a bus.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?h (exists ?p (exists ?t (exists ?bk (exists ?c (exists ?b (exists ?f (exists ?hs (exists ?bs (and (Is ?w 'woman') (Is ?h 'hat') (Is ?p 'pan') (Is ?t 'table') (Is ?bk 'book') (Is ?c 'clock') (Is ?b 'bowl') (Is ?f 'fish') (Is ?hs 'house') (Is ?bs 'bus') (On ?h ?w) (Holding ?w ?p) (NextTo ?w ?t) (On ?bk ?t) (HasState ?bk 'open') (NextTo ?bk ?c) (On ?b ?t) (In ?f ?b) (LeftOf ?hs ?w) (NextTo ?bs ?hs)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?h (exists ?p (exists ?t (exists ?bk (exists ?c (exists ?b (exists ?f (exists ?hs (exists ?bs (and (Is ?w 'woman') (On ?h ?w) (Holding ?w ?p) (Is ?h 'hat') (NextTo ?w ?t) (Is ?p 'pan') (LeftOf ?hs ?w) (Is ?t 'table') (On ?bk ?t) (Is ?hs 'house') (NextTo ?bs ?hs) (On ?b ?t) (Is ?bk 'book') (HasState ?bk 'open') (Is ?bs 'bus') (Is ?b 'bowl') (In ?f ?b) (NextTo ?bk ?c) (Is ?f 'fish') (Is ?c 'clock')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "fish",
+        "book",
+        "woman",
+        "table",
+        "pan",
+        "clock",
+        "bowl",
+        "bus",
+        "hat"
+    ]
+}

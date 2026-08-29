@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a desk with a basket, a mirror, and a red ball on it. A bowl containing a cup and a pan with a hammer inside also sit on the desk. All cars in the scene are positioned to the left of the desk.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?bk (exists ?m (exists ?bo (exists ?c (exists ?p (exists ?h (and (Is ?d 'desk') (Is ?bk 'basket') (On ?bk ?d) (Is ?m 'mirror') (On ?m ?d) (Is ?bo 'bowl') (On ?bo ?d) (Is ?c 'cup') (In ?c ?bo) (Is ?p 'pan') (On ?p ?d) (Is ?h 'hammer') (In ?h ?p) (forall ?car (implies (Is ?car 'car') (LeftOf ?car ?d))) (exists ?ba (and (Is ?ba 'ball') (HasColor ?ba 'red') (On ?ba ?d))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?bk (exists ?m (exists ?bo (exists ?c (exists ?p (exists ?h (forall ?car (exists ?ba (and (Is ?d 'desk') (On ?bk ?d) (On ?m ?d) (Is ?bk 'basket') (On ?bo ?d) (Is ?m 'mirror') (On ?p ?d) (Is ?bo 'bowl') (In ?c ?bo) (or (not (Is ?car 'car')) (LeftOf ?car ?d)) (Is ?p 'pan') (In ?h ?p) (Is ?c 'cup') (On ?ba ?d) (Is ?h 'hammer') (HasColor ?ba 'red') (Is ?ba 'ball'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "pan",
+        "desk",
+        "ball",
+        "hammer",
+        "basket",
+        "cup",
+        "mirror",
+        "car"
+    ]
+}

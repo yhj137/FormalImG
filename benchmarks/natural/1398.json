@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a plant on the left. To the right of the plant, a man holds an open umbrella containing a triangular sandwich. An elephant stands to the right of the man, followed by a lamp. All books in the scene are positioned to the left of the lamp.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (exists ?m (exists ?e (exists ?l (and (Is ?p 'plant') (Is ?m 'man') (Is ?e 'elephant') (Is ?l 'lamp') (LeftOf ?p ?m) (LeftOf ?m ?e) (LeftOf ?e ?l) (exists ?u (exists ?s (and (Is ?u 'umbrella') (Is ?s 'sandwich') (Holding ?m ?u) (HasState ?u 'open') (In ?s ?u) (HasShape ?s 'triangular')))) (forall ?b (implies (Is ?b 'book') (LeftOf ?b ?l)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (exists ?m (exists ?e (exists ?l (exists ?u (exists ?s (forall ?b (and (Is ?p 'plant') (LeftOf ?p ?m) (Is ?m 'man') (LeftOf ?m ?e) (Holding ?m ?u) (Is ?e 'elephant') (LeftOf ?e ?l) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?l 'lamp') (or (not (Is ?b 'book')) (LeftOf ?b ?l)) (In ?s ?u) (Is ?s 'sandwich') (HasShape ?s 'triangular'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "umbrella",
+        "book",
+        "man",
+        "plant",
+        "lamp",
+        "sandwich"
+    ]
+}

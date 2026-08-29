@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a bird on a sofa, holding a pair of glasses. Next to the sofa is a basket containing headphones. To the right of the sofa is a metal pan with a rusty screwdriver inside. Additionally, every bowl in the scene is located on the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?sofa (exists ?basket (exists ?bird (and (Is ?sofa 'sofa') (Is ?basket 'basket') (Is ?bird 'bird') (NextTo ?basket ?sofa) (On ?bird ?sofa) (forall ?bowl (implies (Is ?bowl 'bowl') (On ?bowl ?sofa))) (exists ?headphones (and (Is ?headphones 'headphones') (In ?headphones ?basket))) (exists ?glasses (and (Is ?glasses 'glasses') (Holding ?bird ?glasses))) (exists ?pan (exists ?screwdriver (and (Is ?pan 'pan') (Is ?screwdriver 'screwdriver') (RightOf ?pan ?sofa) (HasMaterial ?pan 'metal') (In ?screwdriver ?pan) (HasState ?screwdriver 'rusty')))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?sofa (exists ?basket (exists ?bird (forall ?bowl (exists ?headphones (exists ?glasses (exists ?pan (exists ?screwdriver (and (Is ?sofa 'sofa') (NextTo ?basket ?sofa) (On ?bird ?sofa) (Is ?basket 'basket') (In ?headphones ?basket) (or (not (Is ?bowl 'bowl')) (On ?bowl ?sofa)) (Is ?bird 'bird') (Holding ?bird ?glasses) (Is ?headphones 'headphones') (RightOf ?pan ?sofa) (Is ?glasses 'glasses') (Is ?pan 'pan') (HasMaterial ?pan 'metal') (In ?screwdriver ?pan) (Is ?screwdriver 'screwdriver') (HasState ?screwdriver 'rusty')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "glasses",
+        "sofa",
+        "pan",
+        "headphones",
+        "screwdriver",
+        "basket",
+        "bird"
+    ]
+}

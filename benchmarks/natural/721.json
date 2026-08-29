@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman holding a round pink umbrella. All houses are positioned to the right of the woman, and every house has a blue butterfly on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (and (Is ?w 'woman') (exists ?u (and (Is ?u 'umbrella') (HasColor ?u 'pink') (HasShape ?u 'round') (Holding ?w ?u) (forall ?h (implies (Is ?h 'house') (and (RightOf ?h ?w) (exists ?b (and (Is ?b 'butterfly') (HasColor ?b 'blue') (On ?b ?h)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?u (forall ?h (exists ?b (and (Is ?w 'woman') (Holding ?w ?u) (or (not (Is ?h 'house')) (RightOf ?h ?w)) (HasShape ?u 'round') (or (not (Is ?h 'house')) (Is ?b 'butterfly')) (HasColor ?u 'pink') (or (not (Is ?h 'house')) (HasColor ?b 'blue')) (Is ?u 'umbrella') (or (not (Is ?h 'house')) (On ?b ?h))))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "woman",
+        "butterfly"
+    ]
+}

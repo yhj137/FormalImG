@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a remote and a sock. The sock is placed on the right side of the composition, and the remote is visually larger than the sock.",
+    "dsl": "(exists ?r (exists ?s (and (Is ?r 'remote') (Is ?s 'sock') (OnRightSide ?s) (LargerThan ?r ?s))))",
+    "cnf": "(exists ?r (exists ?s (and (Is ?r 'remote') (LargerThan ?r ?s) (OnRightSide ?s) (Is ?s 'sock'))))",
+    "k": 2,
+    "object_classes": [
+        "remote",
+        "sock"
+    ]
+}

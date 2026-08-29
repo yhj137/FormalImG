@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every sock in the scene is located on the top side of the image.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'sock') (OnTopSide ?s))))",
+    "cnf": "(forall ?s (or (not (Is ?s 'sock')) (OnTopSide ?s)))",
+    "k": 1,
+    "object_classes": [
+        "sock"
+    ]
+}

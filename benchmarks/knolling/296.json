@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase present in the scene, there is a keyboard located below it, and the suitcase is positioned on the left side of the image.",
+    "dsl": "(forall ?s (implies (Is ?s 'suitcase') (exists ?k (and (Is ?k 'keyboard') (OnLeftSide ?s) (Below ?k ?s)))))",
+    "cnf": "(forall ?s (exists ?k (and (or (not (Is ?s 'suitcase')) (Is ?k 'keyboard')) (or (not (Is ?s 'suitcase')) (Below ?k ?s)) (or (not (Is ?s 'suitcase')) (OnLeftSide ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "keyboard"
+    ]
+}

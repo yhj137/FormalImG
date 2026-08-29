@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a drill located on the left side of the image. Arranged horizontally to the right of the drill is a pair of scissors, with a tie to the right of the scissors. Below the drill, there is a handbag, with a wallet to its right and a phone to the right of the wallet; this row is aligned horizontally, and the phone is visibly smaller than the handbag. Below the handbag sits a plate, with a bowl to its right and an apple to the right of the bowl; these items are also aligned horizontally, with the apple being smaller than the bowl. Finally, for every fork present in the scene, it is positioned to the left of the wallet.",
+    "dsl": "(exists ?drill (exists ?scissors (exists ?tie (exists ?handbag (exists ?wallet (exists ?phone (exists ?plate (exists ?bowl (exists ?apple (and (Is ?drill 'drill') (Is ?scissors 'scissors') (Is ?tie 'tie') (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?apple 'apple') (OnLeftSide ?drill) (LeftOf ?drill ?scissors) (LeftOf ?scissors ?tie) (AlignedHorizontally ?drill ?scissors) (AlignedHorizontally ?scissors ?tie) (Above ?drill ?handbag) (LeftOf ?handbag ?wallet) (LeftOf ?wallet ?phone) (AlignedHorizontally ?handbag ?wallet) (AlignedHorizontally ?wallet ?phone) (SmallerThan ?phone ?handbag) (Above ?handbag ?plate) (LeftOf ?plate ?bowl) (LeftOf ?bowl ?apple) (AlignedHorizontally ?plate ?bowl) (AlignedHorizontally ?bowl ?apple) (SmallerThan ?apple ?bowl) (forall ?fork (implies (Is ?fork 'fork') (LeftOf ?fork ?wallet)))))))))))))",
+    "cnf": "(exists ?drill (exists ?scissors (exists ?tie (exists ?handbag (exists ?wallet (exists ?phone (exists ?plate (exists ?bowl (exists ?apple (forall ?fork (and (Is ?drill 'drill') (OnLeftSide ?drill) (LeftOf ?drill ?scissors) (AlignedHorizontally ?drill ?scissors) (Is ?scissors 'scissors') (LeftOf ?scissors ?tie) (Above ?drill ?handbag) (AlignedHorizontally ?scissors ?tie) (Is ?tie 'tie') (Is ?handbag 'handbag') (LeftOf ?handbag ?wallet) (AlignedHorizontally ?handbag ?wallet) (Is ?wallet 'wallet') (LeftOf ?wallet ?phone) (SmallerThan ?phone ?handbag) (AlignedHorizontally ?wallet ?phone) (Is ?phone 'phone') (Above ?handbag ?plate) (or (not (Is ?fork 'fork')) (LeftOf ?fork ?wallet)) (Is ?plate 'plate') (LeftOf ?plate ?bowl) (AlignedHorizontally ?plate ?bowl) (Is ?bowl 'bowl') (LeftOf ?bowl ?apple) (AlignedHorizontally ?bowl ?apple) (Is ?apple 'apple') (SmallerThan ?apple ?bowl))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "plate",
+        "apple",
+        "phone",
+        "drill",
+        "handbag",
+        "fork",
+        "wallet",
+        "scissors",
+        "bowl"
+    ]
+}

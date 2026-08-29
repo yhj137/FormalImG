@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a brown cutting board. For every ruler found in the image, it is positioned to the right of the cutting board. Furthermore, for each ruler, there exists a blue lighter located above it, and the lighter and the ruler are aligned vertically.",
+    "dsl": "(exists ?board (and (Is ?board 'cutting_board') (Has ?board 'brown') (forall ?r (implies (Is ?r 'ruler') (exists ?l (and (Is ?l 'lighter') (Has ?l 'blue') (RightOf ?r ?board) (Above ?l ?r) (AlignedVertically ?l ?r)))))))",
+    "cnf": "(exists ?board (forall ?r (exists ?l (and (Is ?board 'cutting_board') (Has ?board 'brown') (or (not (Is ?r 'ruler')) (RightOf ?r ?board)) (or (not (Is ?r 'ruler')) (Has ?l 'blue')) (or (not (Is ?r 'ruler')) (Above ?l ?r)) (or (not (Is ?r 'ruler')) (Is ?l 'lighter')) (or (not (Is ?r 'ruler')) (AlignedVertically ?l ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "cutting_board",
+        "lighter"
+    ]
+}

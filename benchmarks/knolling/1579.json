@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the bottom side of the image. To the left of the shirt is a remote, and the two are aligned horizontally. A drill is located above the shirt. A camera is positioned to the left of the drill, aligned horizontally with the drill; the shirt is larger than the camera. A donut is located above the camera. The donut is to the left of a pen, and the pen is to the left of a knife. Additionally, for every glove in the image, it is located above the knife.",
+    "dsl": "(exists ?shirt (exists ?remote (exists ?drill (exists ?camera (exists ?donut (exists ?pen (exists ?knife (and (Is ?shirt 'shirt') (Is ?remote 'remote') (Is ?drill 'drill') (Is ?camera 'camera') (Is ?donut 'donut') (Is ?pen 'pen') (Is ?knife 'knife') (OnBottomSide ?shirt) (LeftOf ?remote ?shirt) (AlignedHorizontally ?remote ?shirt) (Above ?drill ?shirt) (LeftOf ?camera ?drill) (AlignedHorizontally ?camera ?drill) (LargerThan ?shirt ?camera) (Above ?donut ?camera) (LeftOf ?donut ?pen) (LeftOf ?pen ?knife) (forall ?glove (implies (Is ?glove 'glove') (Above ?glove ?knife)))))))))))",
+    "cnf": "(exists ?shirt (exists ?remote (exists ?drill (exists ?camera (exists ?donut (exists ?pen (exists ?knife (forall ?glove (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (LeftOf ?remote ?shirt) (AlignedHorizontally ?remote ?shirt) (Is ?remote 'remote') (Above ?drill ?shirt) (LargerThan ?shirt ?camera) (Is ?drill 'drill') (LeftOf ?camera ?drill) (AlignedHorizontally ?camera ?drill) (Above ?donut ?camera) (Is ?camera 'camera') (Is ?donut 'donut') (LeftOf ?donut ?pen) (Is ?pen 'pen') (LeftOf ?pen ?knife) (Is ?knife 'knife') (or (not (Is ?glove 'glove')) (Above ?glove ?knife)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "pen",
+        "camera",
+        "drill",
+        "shirt",
+        "knife",
+        "glove",
+        "donut"
+    ]
+}

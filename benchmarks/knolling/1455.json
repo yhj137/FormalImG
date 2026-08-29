@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A hat is located on the top side of the scene. For every sandwich present, it is positioned below the hat. To the left of the sandwich is a plate, and to the right of the sandwich is a tie; these three items are aligned horizontally. On the bottom side, a cup is positioned below the plate. To the right of the cup is an apple. To the right of the apple is a stapler, which is located directly below the tie, meaning the tie is above the stapler. A mouse is located to the right of the stapler and is positioned on the right side of the image. The cup, apple, stapler, and mouse are aligned horizontally.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (OnTopSide ?hat) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?plate (exists ?tie (exists ?cup (exists ?apple (exists ?stapler (exists ?mouse (and (Is ?plate 'plate') (Is ?tie 'tie') (Is ?cup 'cup') (Is ?apple 'apple') (Is ?stapler 'stapler') (Is ?mouse 'mouse') (Below ?sandwich ?hat) (LeftOf ?plate ?sandwich) (RightOf ?tie ?sandwich) (AlignedHorizontally ?plate ?sandwich) (AlignedHorizontally ?sandwich ?tie) (OnBottomSide ?cup) (Below ?cup ?plate) (RightOf ?apple ?cup) (RightOf ?stapler ?apple) (Above ?tie ?stapler) (RightOf ?mouse ?stapler) (OnRightSide ?mouse) (AlignedHorizontally ?cup ?apple) (AlignedHorizontally ?apple ?stapler) (AlignedHorizontally ?stapler ?mouse))))))))))))",
+    "cnf": "(exists ?hat (forall ?sandwich (exists ?plate (exists ?tie (exists ?cup (exists ?apple (exists ?stapler (exists ?mouse (and (Is ?hat 'hat') (OnTopSide ?hat) (or (not (Is ?sandwich 'sandwich')) (Below ?sandwich ?hat)) (or (not (Is ?sandwich 'sandwich')) (Is ?mouse 'mouse')) (or (not (Is ?sandwich 'sandwich')) (LeftOf ?plate ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?stapler 'stapler')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?mouse ?stapler)) (or (not (Is ?sandwich 'sandwich')) (Is ?plate 'plate')) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?plate ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (RightOf ?tie ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?apple 'apple')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?stapler ?apple)) (or (not (Is ?sandwich 'sandwich')) (Above ?tie ?stapler)) (or (not (Is ?sandwich 'sandwich')) (OnRightSide ?mouse)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?apple ?stapler)) (or (not (Is ?sandwich 'sandwich')) (Is ?tie 'tie')) (or (not (Is ?sandwich 'sandwich')) (Below ?cup ?plate)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?sandwich ?tie)) (or (not (Is ?sandwich 'sandwich')) (Is ?cup 'cup')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?apple ?cup)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?cup ?apple)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?stapler ?mouse)) (or (not (Is ?sandwich 'sandwich')) (OnBottomSide ?cup)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "tie",
+        "stapler",
+        "apple",
+        "cup",
+        "hat",
+        "mouse",
+        "sandwich"
+    ]
+}

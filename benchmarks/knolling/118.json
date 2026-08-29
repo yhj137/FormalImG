@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every knife in the composition is positioned on the right side of the scene.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'knife') (OnRightSide ?k))))",
+    "cnf": "(forall ?k (or (not (Is ?k 'knife')) (OnRightSide ?k)))",
+    "k": 1,
+    "object_classes": [
+        "knife"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is centered around a backpack. For every lemon in the scene, it is placed to the left of the backpack. To the right of the backpack is a shirt. Positioned to the right of the shirt is a cutting board. A sandwich, which is smaller than the cutting board, is located to the right of the cutting board. To the right of the sandwich is a phone. Finally, a pair of pliers is placed to the right of the phone and is located on the bottom side of the image.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (forall ?lemon (implies (Is ?lemon 'lemon') (LeftOf ?lemon ?backpack))) (exists ?shirt (exists ?cutting_board (exists ?sandwich (exists ?phone (exists ?pliers (and (Is ?shirt 'shirt') (Is ?cutting_board 'cutting_board') (Is ?sandwich 'sandwich') (Is ?phone 'phone') (Is ?pliers 'pliers') (RightOf ?shirt ?backpack) (RightOf ?cutting_board ?shirt) (RightOf ?sandwich ?cutting_board) (SmallerThan ?sandwich ?cutting_board) (RightOf ?phone ?sandwich) (RightOf ?pliers ?phone) (OnBottomSide ?pliers)))))))))",
+    "cnf": "(exists ?backpack (forall ?lemon (exists ?shirt (exists ?cutting_board (exists ?sandwich (exists ?phone (exists ?pliers (and (Is ?backpack 'backpack') (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?backpack)) (RightOf ?shirt ?backpack) (Is ?shirt 'shirt') (RightOf ?cutting_board ?shirt) (Is ?cutting_board 'cutting_board') (RightOf ?sandwich ?cutting_board) (SmallerThan ?sandwich ?cutting_board) (Is ?sandwich 'sandwich') (RightOf ?phone ?sandwich) (Is ?phone 'phone') (RightOf ?pliers ?phone) (Is ?pliers 'pliers') (OnBottomSide ?pliers)))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "lemon",
+        "phone",
+        "cutting_board",
+        "backpack",
+        "sandwich",
+        "shirt"
+    ]
+}

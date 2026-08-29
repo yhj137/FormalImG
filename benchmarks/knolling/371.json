@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a cutting board positioned on the right side of the scene. Additionally, for every drill present in the image, the drill is visually smaller than the cutting board.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (forall ?d (implies (Is ?d 'drill') (SmallerThan ?d ?cb)))))",
+    "cnf": "(exists ?cb (forall ?d (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (or (not (Is ?d 'drill')) (SmallerThan ?d ?cb)))))",
+    "k": 2,
+    "object_classes": [
+        "drill",
+        "cutting_board"
+    ]
+}

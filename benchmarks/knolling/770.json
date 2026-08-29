@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a handbag located on the right side of the layout. To the left of the handbag, there is a sandwich. A book is placed on the bottom side of the image and is positioned vertically below the sandwich. Additionally, for every screwdriver present in the scene, it is arranged above the sandwich.",
+    "dsl": "(exists ?h (exists ?s (exists ?b (and (Is ?h 'handbag') (Is ?s 'sandwich') (Is ?b 'book') (OnRightSide ?h) (LeftOf ?s ?h) (OnBottomSide ?b) (Below ?b ?s) (forall ?sd (implies (Is ?sd 'screwdriver') (Above ?sd ?s)))))))",
+    "cnf": "(exists ?h (exists ?s (exists ?b (forall ?sd (and (Is ?h 'handbag') (OnRightSide ?h) (LeftOf ?s ?h) (Is ?s 'sandwich') (Below ?b ?s) (or (not (Is ?sd 'screwdriver')) (Above ?sd ?s)) (OnBottomSide ?b) (Is ?b 'book'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "handbag",
+        "sandwich",
+        "screwdriver"
+    ]
+}

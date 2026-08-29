@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every phone is inside a yellow backpack.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?p (implies (Is ?p 'phone') (exists ?b (and (Is ?b 'backpack') (In ?p ?b) (HasColor ?b 'yellow'))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?p (exists ?b (and (or (not (Is ?p 'phone')) (Is ?b 'backpack')) (or (not (Is ?p 'phone')) (In ?p ?b)) (or (not (Is ?p 'phone')) (HasColor ?b 'yellow'))))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "phone"
+    ]
+}

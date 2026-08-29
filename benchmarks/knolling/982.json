@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged vertical column of objects. At the top side of the scene, there is a hat. Directly below the hat are black headphones, which are vertically aligned with the hat. Below the headphones lie a pair of blue jeans, which are also vertically aligned with the headphones and are visually larger than the hat. Further down, below the jeans, is a bowl, continuing the vertical alignment. Finally, for every ruler in the image, it is positioned below the bowl and is aligned vertically with it.",
+    "dsl": "(exists ?hat (exists ?hp (exists ?jeans (exists ?bowl (and (Is ?hat 'hat') (OnTopSide ?hat) (Is ?hp 'headphones') (Has ?hp 'black') (Below ?hp ?hat) (AlignedVertically ?hat ?hp) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?hp) (AlignedVertically ?hp ?jeans) (LargerThan ?jeans ?hat) (Is ?bowl 'bowl') (Below ?bowl ?jeans) (AlignedVertically ?jeans ?bowl) (forall ?r (implies (Is ?r 'ruler') (and (Below ?r ?bowl) (AlignedVertically ?bowl ?r)))))))))",
+    "cnf": "(exists ?hat (exists ?hp (exists ?jeans (exists ?bowl (forall ?r (and (Is ?hat 'hat') (OnTopSide ?hat) (Below ?hp ?hat) (AlignedVertically ?hat ?hp) (Has ?hp 'black') (LargerThan ?jeans ?hat) (Below ?jeans ?hp) (Is ?hp 'headphones') (AlignedVertically ?hp ?jeans) (Below ?bowl ?jeans) (Has ?jeans 'blue') (AlignedVertically ?jeans ?bowl) (Is ?bowl 'bowl') (Is ?jeans 'jeans') (or (not (Is ?r 'ruler')) (Below ?r ?bowl)) (or (not (Is ?r 'ruler')) (AlignedVertically ?bowl ?r))))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "hat",
+        "jeans",
+        "bowl",
+        "headphones"
+    ]
+}

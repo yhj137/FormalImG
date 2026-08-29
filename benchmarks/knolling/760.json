@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack located on the right side and a tie positioned on the top side. There is a sandwich that is visually smaller than the backpack, and this sandwich is aligned vertically with the tie. Additionally, for every spoon present in the image, it is aligned vertically with the backpack.",
+    "dsl": "(exists ?b (exists ?t (exists ?s (and (Is ?b 'backpack') (OnRightSide ?b) (Is ?t 'tie') (OnTopSide ?t) (Is ?s 'sandwich') (SmallerThan ?s ?b) (AlignedVertically ?t ?s) (forall ?sp (implies (Is ?sp 'spoon') (AlignedVertically ?sp ?b)))))))",
+    "cnf": "(exists ?b (exists ?t (exists ?s (forall ?sp (and (Is ?b 'backpack') (OnRightSide ?b) (SmallerThan ?s ?b) (or (not (Is ?sp 'spoon')) (AlignedVertically ?sp ?b)) (Is ?s 'sandwich') (AlignedVertically ?t ?s) (OnTopSide ?t) (Is ?t 'tie'))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "tie",
+        "backpack",
+        "sandwich"
+    ]
+}

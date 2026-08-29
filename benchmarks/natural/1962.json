@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo of a man holding a hammer next to a bookshelf. The bookshelf holds all the books in the scene, along with a pair of headphones, a key, and a round apple. A knife rests on the shelf to the right of the apple. A plant stands next to the bookshelf, with a closed umbrella beside it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?bs (exists ?hp (exists ?ky (exists ?a (exists ?k (and (Is ?m 'man') (Is ?h 'hammer') (Is ?bs 'bookshelf') (Is ?hp 'headphones') (Is ?ky 'key') (Is ?a 'apple') (Is ?k 'knife') (Holding ?m ?h) (NextTo ?m ?bs) (On ?hp ?bs) (On ?ky ?bs) (On ?a ?bs) (HasShape ?a 'round') (On ?k ?bs) (RightOf ?k ?a) (forall ?bk (implies (Is ?bk 'book') (In ?bk ?bs))) (exists ?pl (exists ?u (and (Is ?pl 'plant') (Is ?u 'umbrella') (NextTo ?pl ?bs) (NextTo ?u ?pl) (HasState ?u 'closed')))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?bs (exists ?hp (exists ?ky (exists ?a (exists ?k (forall ?bk (exists ?pl (exists ?u (and (Is ?m 'man') (Holding ?m ?h) (NextTo ?m ?bs) (Is ?h 'hammer') (Is ?bs 'bookshelf') (On ?hp ?bs) (On ?ky ?bs) (Is ?hp 'headphones') (On ?a ?bs) (Is ?ky 'key') (On ?k ?bs) (Is ?a 'apple') (HasShape ?a 'round') (or (not (Is ?bk 'book')) (In ?bk ?bs)) (Is ?k 'knife') (RightOf ?k ?a) (NextTo ?pl ?bs) (Is ?pl 'plant') (NextTo ?u ?pl) (Is ?u 'umbrella') (HasState ?u 'closed')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "knife",
+        "book",
+        "man",
+        "plant",
+        "hammer",
+        "apple",
+        "bookshelf",
+        "key"
+    ]
+}

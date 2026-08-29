@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack, a camera, a remote, carrots, and forks. The backpack is positioned on the left side of the image. To the right of the backpack is a camera, and to the right of the camera is a remote. For every carrot in the scene, it is located to the right of the remote, and there is a specific fork that is aligned vertically with the carrot and positioned on the bottom side.",
+    "dsl": "(exists ?backpack (exists ?camera (exists ?remote (and (Is ?backpack 'backpack') (Is ?camera 'camera') (Is ?remote 'remote') (OnLeftSide ?backpack) (RightOf ?camera ?backpack) (RightOf ?remote ?camera) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?fork (and (Is ?fork 'fork') (RightOf ?carrot ?remote) (AlignedVertically ?fork ?carrot) (OnBottomSide ?fork)))))))))",
+    "cnf": "(exists ?backpack (exists ?camera (exists ?remote (forall ?carrot (exists ?fork (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (RightOf ?camera ?backpack) (Is ?camera 'camera') (RightOf ?remote ?camera) (Is ?remote 'remote') (or (not (Is ?carrot 'carrot')) (RightOf ?carrot ?remote)) (or (not (Is ?carrot 'carrot')) (Is ?fork 'fork')) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?fork ?carrot)) (or (not (Is ?carrot 'carrot')) (OnBottomSide ?fork))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "carrot",
+        "fork",
+        "backpack",
+        "camera"
+    ]
+}

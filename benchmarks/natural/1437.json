@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. Next to every pair of shoes sits a backpack containing a screwdriver. A leather jacket lies on the backpack. To the right of the backpack stands a man holding a green bottle. A round pizza is located next to the man, with a knife beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?s (implies (Is ?s 'shoes') (exists ?bp (exists ?sd (exists ?j (exists ?m (exists ?bt (exists ?p (exists ?k (and (Is ?bp 'backpack') (Is ?sd 'screwdriver') (Is ?j 'jacket') (Is ?m 'man') (Is ?bt 'bottle') (Is ?p 'pizza') (Is ?k 'knife') (NextTo ?s ?bp) (In ?sd ?bp) (On ?j ?bp) (HasMaterial ?j 'leather') (RightOf ?m ?bp) (Holding ?m ?bt) (HasColor ?bt 'green') (NextTo ?p ?m) (HasShape ?p 'round') (NextTo ?k ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?s (exists ?bp (exists ?sd (exists ?j (exists ?m (exists ?bt (exists ?p (exists ?k (and (or (not (Is ?s 'shoes')) (Is ?bp 'backpack')) (or (not (Is ?s 'shoes')) (NextTo ?s ?bp)) (or (not (Is ?s 'shoes')) (Is ?sd 'screwdriver')) (or (not (Is ?s 'shoes')) (In ?sd ?bp)) (or (not (Is ?s 'shoes')) (Is ?k 'knife')) (or (not (Is ?s 'shoes')) (Is ?j 'jacket')) (or (not (Is ?s 'shoes')) (On ?j ?bp)) (or (not (Is ?s 'shoes')) (Is ?p 'pizza')) (or (not (Is ?s 'shoes')) (NextTo ?k ?p)) (or (not (Is ?s 'shoes')) (Is ?m 'man')) (or (not (Is ?s 'shoes')) (RightOf ?m ?bp)) (or (not (Is ?s 'shoes')) (HasMaterial ?j 'leather')) (or (not (Is ?s 'shoes')) (Is ?bt 'bottle')) (or (not (Is ?s 'shoes')) (NextTo ?p ?m)) (or (not (Is ?s 'shoes')) (HasShape ?p 'round')) (or (not (Is ?s 'shoes')) (Holding ?m ?bt)) (or (not (Is ?s 'shoes')) (HasColor ?bt 'green'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "man",
+        "bottle",
+        "pizza",
+        "jacket",
+        "backpack",
+        "shoes",
+        "knife",
+        "screwdriver"
+    ]
+}

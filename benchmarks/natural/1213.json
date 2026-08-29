@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is next to a red car with a backpack on it. To the right of the car is a black monitor with a metal key on top. A toy car is next to the monitor, and a plastic bottle is to the right of the toy car.",
+    "dsl": "(exists ?c (exists ?r (exists ?p (exists ?m (exists ?k (exists ?t (exists ?b (and (Is ?c 'child') (Is ?r 'car') (HasColor ?r 'red') (Is ?p 'backpack') (Is ?m 'monitor') (HasColor ?m 'black') (Is ?k 'key') (HasMaterial ?k 'metal') (Is ?t 'toy car') (Is ?b 'bottle') (HasMaterial ?b 'plastic') (NextTo ?c ?r) (On ?p ?r) (RightOf ?m ?r) (On ?k ?m) (NextTo ?t ?m) (RightOf ?b ?t)))))))))",
+    "cnf": "(exists ?c (exists ?r (exists ?p (exists ?m (exists ?k (exists ?t (exists ?b (and (Is ?c 'child') (NextTo ?c ?r) (HasColor ?r 'red') (On ?p ?r) (Is ?r 'car') (RightOf ?m ?r) (Is ?p 'backpack') (HasColor ?m 'black') (On ?k ?m) (Is ?m 'monitor') (NextTo ?t ?m) (HasMaterial ?k 'metal') (Is ?t 'toy car') (RightOf ?b ?t) (Is ?k 'key') (HasMaterial ?b 'plastic') (Is ?b 'bottle')))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "key",
+        "monitor",
+        "toy car",
+        "backpack",
+        "child",
+        "car"
+    ]
+}

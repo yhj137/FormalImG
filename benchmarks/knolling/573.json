@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a remote and a bottle. The bottle is located on the right side of the image and is visually larger than the remote. The remote is positioned to the left of the bottle. Additionally, for every pair of headphones in the scene, it is placed to the right of the remote.",
+    "dsl": "(exists ?remote (exists ?bottle (and (Is ?remote 'remote') (Is ?bottle 'bottle') (OnRightSide ?bottle) (LargerThan ?bottle ?remote) (LeftOf ?remote ?bottle) (forall ?headphones (implies (Is ?headphones 'headphones') (RightOf ?headphones ?remote))))))",
+    "cnf": "(exists ?remote (exists ?bottle (forall ?headphones (and (Is ?remote 'remote') (LargerThan ?bottle ?remote) (LeftOf ?remote ?bottle) (OnRightSide ?bottle) (or (not (Is ?headphones 'headphones')) (RightOf ?headphones ?remote)) (Is ?bottle 'bottle')))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "headphones",
+        "remote"
+    ]
+}

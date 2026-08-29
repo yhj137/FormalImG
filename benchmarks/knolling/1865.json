@@ -1,0 +1,18 @@
+{
+    "prompt": "There exist two objects. For every shoe in the image, these objects are a drill on the top side and a laptop vertically aligned below it. The shoe is positioned below and vertically aligned with the laptop. Associated with every shoe are: a sock to its right (aligned horizontally), a wrench to the right of the sock, and a lighter on the right side of the scene to the right of the wrench. Also associated with every shoe are: a bottle to the right of the drill, a cup to the right of the laptop, an apple to the right of the bottle, and scissors to the right of the cup. The bottle is larger than and above the cup, and the apple is above the scissors.",
+    "dsl": "(exists ?drill (exists ?laptop (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?sock (exists ?bottle (exists ?cup (exists ?apple (exists ?scissors (exists ?wrench (exists ?lighter (and (Is ?drill 'drill') (OnTopSide ?drill) (Is ?laptop 'laptop') (Above ?drill ?laptop) (AlignedVertically ?drill ?laptop) (Above ?laptop ?shoe) (AlignedVertically ?laptop ?shoe) (Is ?sock 'sock') (RightOf ?sock ?shoe) (AlignedHorizontally ?shoe ?sock) (Is ?bottle 'bottle') (RightOf ?bottle ?drill) (Is ?cup 'cup') (RightOf ?cup ?laptop) (Above ?bottle ?cup) (LargerThan ?bottle ?cup) (Is ?apple 'apple') (RightOf ?apple ?bottle) (Is ?scissors 'scissors') (RightOf ?scissors ?cup) (Above ?apple ?scissors) (Is ?wrench 'wrench') (RightOf ?wrench ?sock) (Is ?lighter 'lighter') (RightOf ?lighter ?wrench) (OnRightSide ?lighter)))))))))))))",
+    "cnf": "(exists ?drill (exists ?laptop (forall ?shoe (exists ?sock (exists ?bottle (exists ?cup (exists ?apple (exists ?scissors (exists ?wrench (exists ?lighter (and (or (not (Is ?shoe 'shoe')) (Is ?drill 'drill')) (or (not (Is ?shoe 'shoe')) (OnTopSide ?drill)) (or (not (Is ?shoe 'shoe')) (Is ?laptop 'laptop')) (or (not (Is ?shoe 'shoe')) (Above ?drill ?laptop)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?drill ?laptop)) (or (not (Is ?shoe 'shoe')) (Above ?laptop ?shoe)) (or (not (Is ?shoe 'shoe')) (RightOf ?bottle ?drill)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?laptop ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?bottle 'bottle')) (or (not (Is ?shoe 'shoe')) (Is ?cup 'cup')) (or (not (Is ?shoe 'shoe')) (Above ?bottle ?cup)) (or (not (Is ?shoe 'shoe')) (Is ?sock 'sock')) (or (not (Is ?shoe 'shoe')) (RightOf ?cup ?laptop)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?shoe ?sock)) (or (not (Is ?shoe 'shoe')) (LargerThan ?bottle ?cup)) (or (not (Is ?shoe 'shoe')) (RightOf ?sock ?shoe)) (or (not (Is ?shoe 'shoe')) (RightOf ?wrench ?sock)) (or (not (Is ?shoe 'shoe')) (Is ?apple 'apple')) (or (not (Is ?shoe 'shoe')) (RightOf ?apple ?bottle)) (or (not (Is ?shoe 'shoe')) (RightOf ?scissors ?cup)) (or (not (Is ?shoe 'shoe')) (Is ?wrench 'wrench')) (or (not (Is ?shoe 'shoe')) (Is ?lighter 'lighter')) (or (not (Is ?shoe 'shoe')) (RightOf ?lighter ?wrench)) (or (not (Is ?shoe 'shoe')) (Is ?scissors 'scissors')) (or (not (Is ?shoe 'shoe')) (Above ?apple ?scissors)) (or (not (Is ?shoe 'shoe')) (OnRightSide ?lighter)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "apple",
+        "wrench",
+        "cup",
+        "drill",
+        "lighter",
+        "bottle",
+        "shoe",
+        "scissors"
+    ]
+}

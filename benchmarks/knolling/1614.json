@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring nine items. A blue shirt is positioned on the top side and left side of the image. The shirt is to the left of a camera, and the camera is to the left of a bottle. The shirt is also larger than the camera and positioned above a black remote. The remote is to the left of a mouse, and the mouse is to the left of a red apple. Furthermore, the remote is above a pizza. The pizza is larger than the apple and sits to the left of a spoon, which is to the left of a ruler.",
+    "dsl": "(exists ?shirt (exists ?camera (exists ?bottle (exists ?remote (exists ?mouse (exists ?apple (exists ?pizza (exists ?spoon (exists ?ruler (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Is ?camera 'camera') (Is ?bottle 'bottle') (Is ?remote 'remote') (Has ?remote 'black') (Is ?mouse 'mouse') (Is ?apple 'apple') (Has ?apple 'red') (Is ?pizza 'pizza') (Is ?spoon 'spoon') (Is ?ruler 'ruler') (LeftOf ?shirt ?camera) (LeftOf ?camera ?bottle) (LargerThan ?shirt ?camera) (Above ?shirt ?remote) (LeftOf ?remote ?mouse) (LeftOf ?mouse ?apple) (Above ?remote ?pizza) (LeftOf ?pizza ?spoon) (LeftOf ?spoon ?ruler) (LargerThan ?pizza ?apple)))))))))))",
+    "cnf": "(exists ?shirt (exists ?camera (exists ?bottle (exists ?remote (exists ?mouse (exists ?apple (exists ?pizza (exists ?spoon (exists ?ruler (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (OnLeftSide ?shirt) (LeftOf ?shirt ?camera) (LargerThan ?shirt ?camera) (Is ?camera 'camera') (LeftOf ?camera ?bottle) (Above ?shirt ?remote) (Is ?bottle 'bottle') (Has ?remote 'black') (LeftOf ?remote ?mouse) (Is ?remote 'remote') (Above ?remote ?pizza) (Is ?mouse 'mouse') (LeftOf ?mouse ?apple) (Is ?pizza 'pizza') (LeftOf ?pizza ?spoon) (Has ?apple 'red') (LargerThan ?pizza ?apple) (Is ?spoon 'spoon') (LeftOf ?spoon ?ruler) (Is ?apple 'apple') (Is ?ruler 'ruler')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "apple",
+        "pizza",
+        "camera",
+        "mouse",
+        "bottle",
+        "shirt",
+        "spoon"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top-left side. A red drill is located to the right of the monitor; it is smaller than the monitor and they are aligned horizontally. For every wrench in the image, the wrench is located to the right of the drill, there is a calculator positioned directly below it, and there is also a pan placed below the monitor (with the monitor above the pan), a pizza located to the right of the pan, a carrot arranged below the pan, and a white watch positioned to the right of the carrot that is smaller than the pan.",
+    "dsl": "(exists ?monitor (exists ?drill (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?calculator (exists ?pan (exists ?pizza (exists ?carrot (exists ?watch (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (Is ?drill 'drill') (Has ?drill 'red') (LeftOf ?monitor ?drill) (AlignedHorizontally ?monitor ?drill) (SmallerThan ?drill ?monitor) (LeftOf ?drill ?wrench) (Is ?calculator 'calculator') (Below ?calculator ?wrench) (Is ?pan 'pan') (Below ?pan ?monitor) (Above ?monitor ?pan) (Is ?pizza 'pizza') (LeftOf ?pan ?pizza) (Is ?carrot 'carrot') (Below ?carrot ?pan) (Is ?watch 'watch') (Has ?watch 'white') (LeftOf ?carrot ?watch) (SmallerThan ?watch ?pan)))))))))))",
+    "cnf": "(exists ?monitor (exists ?drill (forall ?wrench (exists ?calculator (exists ?pan (exists ?pizza (exists ?carrot (exists ?watch (and (or (not (Is ?wrench 'wrench')) (Is ?monitor 'monitor')) (or (not (Is ?wrench 'wrench')) (OnTopSide ?monitor)) (or (not (Is ?wrench 'wrench')) (OnLeftSide ?monitor)) (or (not (Is ?wrench 'wrench')) (LeftOf ?monitor ?drill)) (or (not (Is ?wrench 'wrench')) (Is ?drill 'drill')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?monitor ?drill)) (or (not (Is ?wrench 'wrench')) (Has ?drill 'red')) (or (not (Is ?wrench 'wrench')) (SmallerThan ?drill ?monitor)) (or (not (Is ?wrench 'wrench')) (Below ?pan ?monitor)) (or (not (Is ?wrench 'wrench')) (LeftOf ?drill ?wrench)) (or (not (Is ?wrench 'wrench')) (Above ?monitor ?pan)) (or (not (Is ?wrench 'wrench')) (Is ?pan 'pan')) (or (not (Is ?wrench 'wrench')) (Is ?calculator 'calculator')) (or (not (Is ?wrench 'wrench')) (Is ?pizza 'pizza')) (or (not (Is ?wrench 'wrench')) (LeftOf ?pan ?pizza)) (or (not (Is ?wrench 'wrench')) (Below ?calculator ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?carrot 'carrot')) (or (not (Is ?wrench 'wrench')) (Below ?carrot ?pan)) (or (not (Is ?wrench 'wrench')) (Is ?watch 'watch')) (or (not (Is ?wrench 'wrench')) (SmallerThan ?watch ?pan)) (or (not (Is ?wrench 'wrench')) (LeftOf ?carrot ?watch)) (or (not (Is ?wrench 'wrench')) (Has ?watch 'white')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "wrench",
+        "carrot",
+        "pizza",
+        "watch",
+        "drill",
+        "pan",
+        "calculator",
+        "monitor"
+    ]
+}

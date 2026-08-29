@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A game controller is located on the left side of the image, and a cutting board is positioned below it.",
+    "dsl": "(exists ?gc (exists ?cb (and (Is ?gc 'game_controller') (Is ?cb 'cutting_board') (OnLeftSide ?gc) (Below ?cb ?gc))))",
+    "cnf": "(exists ?gc (exists ?cb (and (Is ?gc 'game_controller') (OnLeftSide ?gc) (Below ?cb ?gc) (Is ?cb 'cutting_board'))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "game_controller"
+    ]
+}

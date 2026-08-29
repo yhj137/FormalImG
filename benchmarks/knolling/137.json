@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every bowl in the image, it is positioned on the bottom side of the frame.",
+    "dsl": "(and (forall ?b (implies (Is ?b 'bowl') (OnBottomSide ?b))))",
+    "cnf": "(forall ?b (or (not (Is ?b 'bowl')) (OnBottomSide ?b)))",
+    "k": 1,
+    "object_classes": [
+        "bowl"
+    ]
+}

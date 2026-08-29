@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a backpack and a monitor. For every watch in the image, the following arrangement is present: the monitor is positioned to the right of the backpack; the watch is to the right of the monitor; there is a camera to the right of the watch, a wallet to the right of the camera, and glasses to the right of the wallet. Additionally, for each watch, a bottle, a lemon, and a fork are arranged on the bottom side of the image, where the lemon is to the right of the bottle and the fork is to the right of the lemon. The bottle aligns vertically with the backpack, the lemon with the monitor, and the fork with the watch. The monitor is larger than the watch, and the fork is smaller than the backpack.",
+    "dsl": "(exists ?backpack (exists ?monitor (forall ?watch (implies (Is ?watch 'watch') (exists ?camera (exists ?wallet (exists ?glasses (exists ?bottle (exists ?lemon (exists ?fork (and (Is ?backpack 'backpack') (Is ?monitor 'monitor') (Is ?camera 'camera') (Is ?wallet 'wallet') (Is ?glasses 'glasses') (Is ?bottle 'bottle') (Is ?lemon 'lemon') (Is ?fork 'fork') (RightOf ?monitor ?backpack) (RightOf ?watch ?monitor) (RightOf ?camera ?watch) (RightOf ?wallet ?camera) (RightOf ?glasses ?wallet) (OnBottomSide ?bottle) (OnBottomSide ?lemon) (OnBottomSide ?fork) (RightOf ?lemon ?bottle) (RightOf ?fork ?lemon) (AlignedVertically ?backpack ?bottle) (AlignedVertically ?monitor ?lemon) (AlignedVertically ?watch ?fork) (LargerThan ?monitor ?watch) (SmallerThan ?fork ?backpack))))))))))))",
+    "cnf": "(exists ?backpack (exists ?monitor (forall ?watch (exists ?camera (exists ?wallet (exists ?glasses (exists ?bottle (exists ?lemon (exists ?fork (and (or (not (Is ?watch 'watch')) (Is ?backpack 'backpack')) (or (not (Is ?watch 'watch')) (RightOf ?monitor ?backpack)) (or (not (Is ?watch 'watch')) (Is ?monitor 'monitor')) (or (not (Is ?watch 'watch')) (AlignedVertically ?backpack ?bottle)) (or (not (Is ?watch 'watch')) (Is ?fork 'fork')) (or (not (Is ?watch 'watch')) (RightOf ?watch ?monitor)) (or (not (Is ?watch 'watch')) (Is ?camera 'camera')) (or (not (Is ?watch 'watch')) (SmallerThan ?fork ?backpack)) (or (not (Is ?watch 'watch')) (RightOf ?fork ?lemon)) (or (not (Is ?watch 'watch')) (AlignedVertically ?monitor ?lemon)) (or (not (Is ?watch 'watch')) (RightOf ?lemon ?bottle)) (or (not (Is ?watch 'watch')) (Is ?lemon 'lemon')) (or (not (Is ?watch 'watch')) (OnBottomSide ?fork)) (or (not (Is ?watch 'watch')) (RightOf ?camera ?watch)) (or (not (Is ?watch 'watch')) (Is ?wallet 'wallet')) (or (not (Is ?watch 'watch')) (LargerThan ?monitor ?watch)) (or (not (Is ?watch 'watch')) (AlignedVertically ?watch ?fork)) (or (not (Is ?watch 'watch')) (OnBottomSide ?bottle)) (or (not (Is ?watch 'watch')) (OnBottomSide ?lemon)) (or (not (Is ?watch 'watch')) (Is ?bottle 'bottle')) (or (not (Is ?watch 'watch')) (RightOf ?wallet ?camera)) (or (not (Is ?watch 'watch')) (Is ?glasses 'glasses')) (or (not (Is ?watch 'watch')) (RightOf ?glasses ?wallet))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "lemon",
+        "watch",
+        "fork",
+        "backpack",
+        "wallet",
+        "bottle",
+        "camera",
+        "monitor"
+    ]
+}

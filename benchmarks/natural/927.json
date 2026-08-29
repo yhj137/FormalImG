@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a tree next to a refrigerator. The tree is holding a shirt, and every orange in the scene is on the tree. A round cake sits on top of the refrigerator.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?r (and (Is ?t 'tree') (Is ?r 'refrigerator') (NextTo ?t ?r) (forall ?o (implies (Is ?o 'orange') (On ?o ?t))) (exists ?c (and (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?r))) (exists ?s (and (Is ?s 'shirt') (Holding ?t ?s)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?r (forall ?o (exists ?c (exists ?s (and (Is ?t 'tree') (NextTo ?t ?r) (or (not (Is ?o 'orange')) (On ?o ?t)) (Is ?r 'refrigerator') (On ?c ?r) (Holding ?t ?s) (HasShape ?c 'round') (Is ?s 'shirt') (Is ?c 'cake'))))))))",
+    "k": 5,
+    "object_classes": [
+        "cake",
+        "refrigerator",
+        "shirt",
+        "tree",
+        "orange"
+    ]
+}

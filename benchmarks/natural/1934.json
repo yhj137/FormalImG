@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a man in bed holding a phone. A monitor is positioned to the right of the bed. Next to the monitor is a round ball, and a toy car is beside the ball. All butterflies are located above the bed. To the right of the toy car is a peeled banana, next to a wooden boat, which is beside a piece of fruit.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?bd (exists ?p (exists ?mn (exists ?bl (exists ?tc (and (Is ?m 'man') (Is ?bd 'bed') (In ?m ?bd) (Is ?p 'phone') (Holding ?m ?p) (Is ?mn 'monitor') (RightOf ?mn ?bd) (Is ?bl 'ball') (HasShape ?bl 'round') (NextTo ?bl ?mn) (Is ?tc 'toy car') (NextTo ?tc ?bl) (forall ?bf (implies (Is ?bf 'butterfly') (Above ?bf ?bd))) (exists ?bn (exists ?bt (exists ?fr (and (Is ?bn 'banana') (HasState ?bn 'peeled') (RightOf ?bn ?tc) (Is ?bt 'boat') (HasMaterial ?bt 'wooden') (NextTo ?bt ?bn) (Is ?fr 'fruit') (NextTo ?fr ?bt)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?bd (exists ?p (exists ?mn (exists ?bl (exists ?tc (forall ?bf (exists ?bn (exists ?bt (exists ?fr (and (Is ?m 'man') (In ?m ?bd) (Holding ?m ?p) (Is ?bd 'bed') (RightOf ?mn ?bd) (Is ?p 'phone') (or (not (Is ?bf 'butterfly')) (Above ?bf ?bd)) (Is ?mn 'monitor') (NextTo ?bl ?mn) (HasShape ?bl 'round') (NextTo ?tc ?bl) (Is ?bl 'ball') (Is ?tc 'toy car') (RightOf ?bn ?tc) (HasState ?bn 'peeled') (NextTo ?bt ?bn) (Is ?bn 'banana') (HasMaterial ?bt 'wooden') (NextTo ?fr ?bt) (Is ?bt 'boat') (Is ?fr 'fruit')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "monitor",
+        "toy car",
+        "man",
+        "ball",
+        "banana",
+        "butterfly",
+        "phone",
+        "bed",
+        "boat",
+        "fruit"
+    ]
+}

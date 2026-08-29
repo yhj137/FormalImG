@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every teddy bear is inside a metal basket on a round rug, with a person next to the basket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'teddy bear') (exists ?b (exists ?r (exists ?p (and (Is ?b 'basket') (HasMaterial ?b 'metal') (Is ?r 'rug') (HasShape ?r 'round') (Is ?p 'person') (In ?t ?b) (On ?b ?r) (NextTo ?p ?b))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (exists ?b (exists ?r (exists ?p (and (or (not (Is ?t 'teddy bear')) (Is ?b 'basket')) (or (not (Is ?t 'teddy bear')) (HasMaterial ?b 'metal')) (or (not (Is ?t 'teddy bear')) (In ?t ?b)) (or (not (Is ?t 'teddy bear')) (Is ?r 'rug')) (or (not (Is ?t 'teddy bear')) (On ?b ?r)) (or (not (Is ?t 'teddy bear')) (Is ?p 'person')) (or (not (Is ?t 'teddy bear')) (HasShape ?r 'round')) (or (not (Is ?t 'teddy bear')) (NextTo ?p ?b))))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "basket",
+        "person",
+        "rug"
+    ]
+}

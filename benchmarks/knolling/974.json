@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The bottom section of the image features a pair of blue jeans, a gray laptop, and a brown handbag; these three items are positioned on the bottom side and aligned horizontally. A red stapler is placed directly above the jeans. Furthermore, for every cup in the image, it appears as a white cup positioned above the laptop.",
+    "dsl": "(exists ?jeans (exists ?laptop (exists ?handbag (exists ?stapler (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnBottomSide ?laptop) (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (AlignedHorizontally ?jeans ?laptop) (AlignedHorizontally ?laptop ?handbag) (Is ?stapler 'stapler') (Has ?stapler 'red') (Above ?stapler ?jeans) (forall ?cup (implies (Is ?cup 'cup') (and (Has ?cup 'white') (Above ?cup ?laptop)))))))))",
+    "cnf": "(exists ?jeans (exists ?laptop (exists ?handbag (exists ?stapler (forall ?cup (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (AlignedHorizontally ?jeans ?laptop) (Above ?stapler ?jeans) (OnBottomSide ?laptop) (AlignedHorizontally ?laptop ?handbag) (Has ?stapler 'red') (Has ?laptop 'gray') (or (not (Is ?cup 'cup')) (Above ?cup ?laptop)) (OnBottomSide ?handbag) (Is ?stapler 'stapler') (Is ?laptop 'laptop') (or (not (Is ?cup 'cup')) (Has ?cup 'white')) (Has ?handbag 'brown') (Is ?handbag 'handbag')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "cup",
+        "handbag",
+        "jeans"
+    ]
+}

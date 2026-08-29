@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art scene where every mirror is oval.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?m (implies (Is ?m 'mirror') (HasShape ?m 'oval'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?m (or (not (Is ?m 'mirror')) (HasShape ?m 'oval'))))",
+    "k": 1,
+    "object_classes": [
+        "mirror"
+    ]
+}

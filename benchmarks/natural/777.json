@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a person next to a turned-on laptop, with a metal key beside the laptop. All flowers in the scene are positioned to the left of the person.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?l (exists ?k (and (Is ?p 'person') (Is ?l 'laptop') (HasState ?l 'on') (NextTo ?l ?p) (Is ?k 'key') (HasMaterial ?k 'metal') (NextTo ?k ?l) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?p))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?l (exists ?k (forall ?f (and (Is ?p 'person') (NextTo ?l ?p) (or (not (Is ?f 'flower')) (LeftOf ?f ?p)) (HasState ?l 'on') (NextTo ?k ?l) (Is ?l 'laptop') (HasMaterial ?k 'metal') (Is ?k 'key')))))))",
+    "k": 4,
+    "object_classes": [
+        "key",
+        "flower",
+        "laptop",
+        "person"
+    ]
+}

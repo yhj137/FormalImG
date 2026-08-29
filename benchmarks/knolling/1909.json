@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of items. On the left side of the image, there is a handbag. Directly above the handbag is a hat. To the right of the handbag is a cutting board, and above the cutting board is a game controller, which is smaller than the handbag. The layout follows a specific rule for every book in the scene: the book is positioned to the right of the cutting board. Surrounding the book are several associated items: a pair of glasses is located above the book, and a wallet is positioned above the glasses. The wallet is strictly smaller than the book. Additionally, a carrot is placed to the right of the book, a bowl is located above the carrot, and a cup is positioned to the right of the bowl.",
+    "dsl": "(exists ?handbag (exists ?hat (exists ?cutting_board (exists ?game_controller (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?hat 'hat') (Above ?hat ?handbag) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?handbag) (Is ?game_controller 'game_controller') (Above ?game_controller ?cutting_board) (SmallerThan ?game_controller ?handbag) (forall ?book (implies (Is ?book 'book') (exists ?glasses (exists ?wallet (exists ?carrot (exists ?bowl (exists ?cup (and (Is ?glasses 'glasses') (Is ?wallet 'wallet') (Is ?carrot 'carrot') (Is ?bowl 'bowl') (Is ?cup 'cup') (RightOf ?book ?cutting_board) (Above ?glasses ?book) (Above ?wallet ?glasses) (SmallerThan ?wallet ?book) (RightOf ?carrot ?book) (Above ?bowl ?carrot) (RightOf ?cup ?bowl))))))))))))))",
+    "cnf": "(exists ?handbag (exists ?hat (exists ?cutting_board (exists ?game_controller (forall ?book (exists ?glasses (exists ?wallet (exists ?carrot (exists ?bowl (exists ?cup (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Above ?hat ?handbag) (RightOf ?cutting_board ?handbag) (Is ?hat 'hat') (SmallerThan ?game_controller ?handbag) (Is ?cutting_board 'cutting_board') (Above ?game_controller ?cutting_board) (or (not (Is ?book 'book')) (RightOf ?book ?cutting_board)) (Is ?game_controller 'game_controller') (or (not (Is ?book 'book')) (Is ?cup 'cup')) (or (not (Is ?book 'book')) (Above ?glasses ?book)) (or (not (Is ?book 'book')) (Is ?bowl 'bowl')) (or (not (Is ?book 'book')) (RightOf ?cup ?bowl)) (or (not (Is ?book 'book')) (Above ?wallet ?glasses)) (or (not (Is ?book 'book')) (Is ?glasses 'glasses')) (or (not (Is ?book 'book')) (Is ?carrot 'carrot')) (or (not (Is ?book 'book')) (Above ?bowl ?carrot)) (or (not (Is ?book 'book')) (SmallerThan ?wallet ?book)) (or (not (Is ?book 'book')) (Is ?wallet 'wallet')) (or (not (Is ?book 'book')) (RightOf ?carrot ?book)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "glasses",
+        "carrot",
+        "cup",
+        "game_controller",
+        "cutting_board",
+        "hat",
+        "handbag",
+        "wallet",
+        "bowl"
+    ]
+}

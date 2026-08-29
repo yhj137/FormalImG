@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned in the top-left area of the scene. Every apple in the image is located below the drill and has a wrench to its left. Below the wrench is a hammer. Pliers, which are smaller than the hammer, are placed to the left of the hammer. A shoe is arranged to the right of the hammer. Below the shoe is a wallet. To the right of the wallet is a camera that is larger than the wallet. Finally, a cup is positioned above the camera on the right side of the scene.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (OnTopSide ?drill) (OnLeftSide ?drill) (forall ?apple (implies (Is ?apple 'apple') (exists ?wrench (exists ?hammer (exists ?pliers (exists ?shoe (exists ?wallet (exists ?camera (exists ?cup (and (Is ?wrench 'wrench') (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?shoe 'shoe') (Is ?wallet 'wallet') (Is ?camera 'camera') (Is ?cup 'cup') (Below ?apple ?drill) (LeftOf ?wrench ?apple) (Below ?hammer ?wrench) (LeftOf ?pliers ?hammer) (SmallerThan ?pliers ?hammer) (LeftOf ?hammer ?shoe) (Below ?wallet ?shoe) (LeftOf ?wallet ?camera) (LargerThan ?camera ?wallet) (Below ?camera ?cup) (OnRightSide ?cup)))))))))))))",
+    "cnf": "(exists ?drill (forall ?apple (exists ?wrench (exists ?hammer (exists ?pliers (exists ?shoe (exists ?wallet (exists ?camera (exists ?cup (and (Is ?drill 'drill') (OnTopSide ?drill) (OnLeftSide ?drill) (or (not (Is ?apple 'apple')) (Below ?apple ?drill)) (or (not (Is ?apple 'apple')) (Is ?cup 'cup')) (or (not (Is ?apple 'apple')) (LeftOf ?wrench ?apple)) (or (not (Is ?apple 'apple')) (Is ?camera 'camera')) (or (not (Is ?apple 'apple')) (Below ?camera ?cup)) (or (not (Is ?apple 'apple')) (Is ?wrench 'wrench')) (or (not (Is ?apple 'apple')) (Below ?hammer ?wrench)) (or (not (Is ?apple 'apple')) (Is ?wallet 'wallet')) (or (not (Is ?apple 'apple')) (LeftOf ?wallet ?camera)) (or (not (Is ?apple 'apple')) (LargerThan ?camera ?wallet)) (or (not (Is ?apple 'apple')) (OnRightSide ?cup)) (or (not (Is ?apple 'apple')) (Is ?hammer 'hammer')) (or (not (Is ?apple 'apple')) (LeftOf ?pliers ?hammer)) (or (not (Is ?apple 'apple')) (Is ?shoe 'shoe')) (or (not (Is ?apple 'apple')) (Below ?wallet ?shoe)) (or (not (Is ?apple 'apple')) (Is ?pliers 'pliers')) (or (not (Is ?apple 'apple')) (SmallerThan ?pliers ?hammer)) (or (not (Is ?apple 'apple')) (LeftOf ?hammer ?shoe))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "apple",
+        "wrench",
+        "cup",
+        "drill",
+        "hammer",
+        "wallet",
+        "camera",
+        "shoe"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a carrot and a pizza. The pizza is arranged directly below the carrot, and the pizza is specifically positioned on the right side of the layout.",
+    "dsl": "(exists ?carrot (exists ?pizza (and (Is ?carrot 'carrot') (Is ?pizza 'pizza') (Below ?pizza ?carrot) (OnRightSide ?pizza))))",
+    "cnf": "(exists ?carrot (exists ?pizza (and (Is ?carrot 'carrot') (Below ?pizza ?carrot) (Is ?pizza 'pizza') (OnRightSide ?pizza))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "pizza"
+    ]
+}

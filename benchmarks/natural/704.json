@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. There is a brown table. All benches in the scene are positioned to the left of this table. Additionally, there is a child to the right of the table holding a white dog.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (and (Is ?t 'table') (HasColor ?t 'brown') (forall ?b (implies (Is ?b 'bench') (LeftOf ?b ?t))) (exists ?c (exists ?d (and (Is ?c 'child') (Is ?d 'dog') (HasColor ?d 'white') (RightOf ?c ?t) (Holding ?c ?d)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (forall ?b (exists ?c (exists ?d (and (Is ?t 'table') (HasColor ?t 'brown') (or (not (Is ?b 'bench')) (LeftOf ?b ?t)) (RightOf ?c ?t) (Is ?c 'child') (Holding ?c ?d) (HasColor ?d 'white') (Is ?d 'dog')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "dog",
+        "child",
+        "table"
+    ]
+}

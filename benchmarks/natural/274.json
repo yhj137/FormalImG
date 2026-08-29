@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. Every wardrobe is open and has a boat to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?w (implies (Is ?w 'wardrobe') (exists ?b (and (Is ?b 'boat') (HasState ?w 'open') (RightOf ?b ?w))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?w (exists ?b (and (or (not (Is ?w 'wardrobe')) (Is ?b 'boat')) (or (not (Is ?w 'wardrobe')) (RightOf ?b ?w)) (or (not (Is ?w 'wardrobe')) (HasState ?w 'open'))))))",
+    "k": 2,
+    "object_classes": [
+        "wardrobe",
+        "boat"
+    ]
+}

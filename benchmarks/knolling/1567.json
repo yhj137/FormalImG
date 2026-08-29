@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black drill, a black camera, a blue stapler, and black glasses, all aligned horizontally. Red scissors and a yellow screwdriver are aligned vertically with the drill. Additionally, for every pizza in the image, there is a green apple that is smaller than the pizza, and this apple is aligned vertically with the glasses.",
+    "dsl": "(exists ?drill (exists ?camera (exists ?stapler (exists ?glasses (exists ?scissors (exists ?screwdriver (and (Is ?drill 'drill') (Has ?drill 'black') (Is ?camera 'camera') (Has ?camera 'black') (Is ?stapler 'stapler') (Has ?stapler 'blue') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (AlignedHorizontally ?drill ?camera) (AlignedHorizontally ?camera ?stapler) (AlignedHorizontally ?stapler ?glasses) (AlignedVertically ?drill ?scissors) (AlignedVertically ?scissors ?screwdriver) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?apple (and (Is ?apple 'apple') (Has ?apple 'green') (SmallerThan ?apple ?pizza) (AlignedVertically ?apple ?glasses))))))))))))",
+    "cnf": "(exists ?drill (exists ?camera (exists ?stapler (exists ?glasses (exists ?scissors (exists ?screwdriver (forall ?pizza (exists ?apple (and (Is ?drill 'drill') (Has ?drill 'black') (AlignedHorizontally ?drill ?camera) (AlignedVertically ?drill ?scissors) (Has ?camera 'black') (AlignedHorizontally ?camera ?stapler) (Has ?scissors 'red') (AlignedVertically ?scissors ?screwdriver) (Is ?camera 'camera') (Has ?stapler 'blue') (AlignedHorizontally ?stapler ?glasses) (Is ?scissors 'scissors') (Has ?screwdriver 'yellow') (Is ?stapler 'stapler') (Has ?glasses 'black') (or (not (Is ?pizza 'pizza')) (AlignedVertically ?apple ?glasses)) (Is ?screwdriver 'screwdriver') (Is ?glasses 'glasses') (or (not (Is ?pizza 'pizza')) (SmallerThan ?apple ?pizza)) (or (not (Is ?pizza 'pizza')) (Has ?apple 'green')) (or (not (Is ?pizza 'pizza')) (Is ?apple 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "apple",
+        "pizza",
+        "screwdriver",
+        "drill",
+        "camera",
+        "scissors"
+    ]
+}

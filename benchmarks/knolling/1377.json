@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag, a bottle, a drill, a pair of glasses, a spoon, and a fork. The handbag is located on the right side of the image and is larger than the drill. To the left of the handbag is a bottle, and to the left of the bottle is a drill. The glasses are aligned vertically with the drill. The spoon is aligned vertically with the bottle, and the fork is aligned vertically with the spoon. Additionally, for every lighter in the scene, it is positioned to the left of the glasses.",
+    "dsl": "(exists ?handbag (exists ?bottle (exists ?drill (exists ?glasses (exists ?spoon (exists ?fork (and (Is ?handbag 'handbag') (Is ?bottle 'bottle') (Is ?drill 'drill') (Is ?glasses 'glasses') (Is ?spoon 'spoon') (Is ?fork 'fork') (OnRightSide ?handbag) (LargerThan ?handbag ?drill) (LeftOf ?bottle ?handbag) (LeftOf ?drill ?bottle) (AlignedVertically ?glasses ?drill) (AlignedVertically ?spoon ?bottle) (AlignedVertically ?fork ?spoon) (forall ?lighter (implies (Is ?lighter 'lighter') (LeftOf ?lighter ?glasses))))))))))",
+    "cnf": "(exists ?handbag (exists ?bottle (exists ?drill (exists ?glasses (exists ?spoon (exists ?fork (forall ?lighter (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (LargerThan ?handbag ?drill) (LeftOf ?bottle ?handbag) (Is ?drill 'drill') (LeftOf ?drill ?bottle) (Is ?bottle 'bottle') (AlignedVertically ?spoon ?bottle) (AlignedVertically ?glasses ?drill) (Is ?spoon 'spoon') (AlignedVertically ?fork ?spoon) (Is ?glasses 'glasses') (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?glasses)) (Is ?fork 'fork')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "drill",
+        "handbag",
+        "lighter",
+        "fork",
+        "bottle",
+        "spoon"
+    ]
+}

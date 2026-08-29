@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the bottom side of the image. A monitor is located above the suitcase, and a pan is placed to the left of the monitor. For every cup in the scene, the following arrangement exists: the cup is positioned above the monitor, with a plate to its right and a bowl above it. Furthermore, a watch is located to the right of the bowl and above a pair of glasses. Finally, a glove is found to the right of the watch, positioned above a pair of pliers.",
+    "dsl": "(exists ?suitcase (exists ?monitor (exists ?pan (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?monitor 'monitor') (Above ?monitor ?suitcase) (Is ?pan 'pan') (LeftOf ?pan ?monitor) (forall ?cup (implies (Is ?cup 'cup') (exists ?plate (exists ?bowl (exists ?watch (exists ?glasses (exists ?glove (exists ?pliers (and (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?watch 'watch') (Is ?glasses 'glasses') (Is ?glove 'glove') (Is ?pliers 'pliers') (Above ?cup ?monitor) (RightOf ?plate ?cup) (Above ?bowl ?cup) (RightOf ?watch ?bowl) (Above ?watch ?glasses) (RightOf ?glove ?watch) (Above ?glove ?pliers))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (exists ?pan (forall ?cup (exists ?plate (exists ?bowl (exists ?watch (exists ?glasses (exists ?glove (exists ?pliers (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Above ?monitor ?suitcase) (Is ?monitor 'monitor') (LeftOf ?pan ?monitor) (or (not (Is ?cup 'cup')) (Above ?cup ?monitor)) (Is ?pan 'pan') (or (not (Is ?cup 'cup')) (Is ?pliers 'pliers')) (or (not (Is ?cup 'cup')) (RightOf ?plate ?cup)) (or (not (Is ?cup 'cup')) (Is ?glove 'glove')) (or (not (Is ?cup 'cup')) (Above ?glove ?pliers)) (or (not (Is ?cup 'cup')) (Is ?plate 'plate')) (or (not (Is ?cup 'cup')) (Above ?bowl ?cup)) (or (not (Is ?cup 'cup')) (Is ?glasses 'glasses')) (or (not (Is ?cup 'cup')) (RightOf ?glove ?watch)) (or (not (Is ?cup 'cup')) (Is ?bowl 'bowl')) (or (not (Is ?cup 'cup')) (RightOf ?watch ?bowl)) (or (not (Is ?cup 'cup')) (Is ?watch 'watch')) (or (not (Is ?cup 'cup')) (Above ?watch ?glasses)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "pliers",
+        "watch",
+        "cup",
+        "pan",
+        "monitor",
+        "bowl",
+        "suitcase",
+        "glove"
+    ]
+}

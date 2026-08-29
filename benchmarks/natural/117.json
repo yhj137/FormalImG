@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting scene where every plant is round.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?p (implies (Is ?p 'plant') (HasShape ?p 'round'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?p (or (not (Is ?p 'plant')) (HasShape ?p 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "plant"
+    ]
+}

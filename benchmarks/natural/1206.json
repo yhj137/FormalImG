@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A teddy bear holding a metal hammer sits on a basket containing a flower. A lion is located next to the basket, a lamp stands beside the lion, and a screwdriver is placed next to the lamp.",
+    "dsl": "(exists ?tb (exists ?b (exists ?f (exists ?h (exists ?li (exists ?la (exists ?sd (and (Is ?tb 'teddy bear') (Is ?b 'basket') (Is ?f 'flower') (Is ?h 'hammer') (Is ?li 'lion') (Is ?la 'lamp') (Is ?sd 'screwdriver') (On ?tb ?b) (In ?f ?b) (Holding ?tb ?h) (HasMaterial ?h 'metal') (NextTo ?li ?b) (NextTo ?la ?li) (NextTo ?sd ?la)))))))))",
+    "cnf": "(exists ?tb (exists ?b (exists ?f (exists ?h (exists ?li (exists ?la (exists ?sd (and (Is ?tb 'teddy bear') (On ?tb ?b) (Holding ?tb ?h) (Is ?b 'basket') (In ?f ?b) (Is ?h 'hammer') (HasMaterial ?h 'metal') (NextTo ?li ?b) (Is ?f 'flower') (Is ?li 'lion') (NextTo ?la ?li) (Is ?la 'lamp') (NextTo ?sd ?la) (Is ?sd 'screwdriver')))))))))",
+    "k": 7,
+    "object_classes": [
+        "lamp",
+        "screwdriver",
+        "hammer",
+        "teddy bear",
+        "basket",
+        "lion",
+        "flower"
+    ]
+}

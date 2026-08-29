@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a lion on a fabric rug holding a metal screwdriver. A hat containing a ball rests on the lion. To the right of the lion is a sleeping cat, with a red apple positioned to its right. Every bird in the scene is located above the lion. A cake with a butterfly on it sits on the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (exists ?l (and (Is ?l 'lion') (On ?l ?r) (exists ?s (and (Is ?s 'screwdriver') (HasMaterial ?s 'metal') (Holding ?l ?s))) (exists ?h (and (Is ?h 'hat') (On ?h ?l) (exists ?b (and (Is ?b 'ball') (In ?b ?h))))) (exists ?c (and (Is ?c 'cat') (HasState ?c 'sleeping') (RightOf ?c ?l) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (RightOf ?a ?c))))) (forall ?brd (implies (Is ?brd 'bird') (Above ?brd ?l))) (exists ?ck (and (Is ?ck 'cake') (On ?ck ?r) (exists ?bf (and (Is ?bf 'butterfly') (On ?bf ?ck))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?l (exists ?s (exists ?h (exists ?b (exists ?c (exists ?a (forall ?brd (exists ?ck (exists ?bf (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?l ?r) (On ?ck ?r) (Is ?l 'lion') (Holding ?l ?s) (Is ?ck 'cake') (On ?bf ?ck) (On ?h ?l) (HasMaterial ?s 'metal') (Is ?bf 'butterfly') (RightOf ?c ?l) (Is ?h 'hat') (In ?b ?h) (Is ?s 'screwdriver') (or (not (Is ?brd 'bird')) (Above ?brd ?l)) (HasState ?c 'sleeping') (RightOf ?a ?c) (Is ?b 'ball') (Is ?c 'cat') (HasColor ?a 'red') (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ball",
+        "cake",
+        "rug",
+        "bird",
+        "lion",
+        "butterfly",
+        "apple",
+        "cat",
+        "screwdriver",
+        "hat"
+    ]
+}

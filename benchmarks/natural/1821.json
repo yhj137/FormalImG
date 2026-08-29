@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. Every dog is sleeping inside a house. Sharing the house is a child holding a hammer, with a lit lamp positioned above them. A basket sits next to the dog, containing a sliced pizza, a closed bottle, and a broken toy car with a cup resting on it.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?d (implies (Is ?d 'dog') (exists ?h (exists ?c (exists ?ha (exists ?l (exists ?b (exists ?p (exists ?bo (exists ?tc (exists ?cu (and (HasState ?d 'sleeping') (Is ?h 'house') (In ?d ?h) (Is ?c 'child') (In ?c ?h) (Is ?ha 'hammer') (Holding ?c ?ha) (Is ?l 'lamp') (HasState ?l 'on') (Above ?l ?c) (Is ?b 'basket') (NextTo ?b ?d) (Is ?p 'pizza') (HasState ?p 'sliced') (In ?p ?b) (Is ?bo 'bottle') (HasState ?bo 'closed') (In ?bo ?b) (Is ?tc 'toy car') (HasState ?tc 'broken') (In ?tc ?b) (Is ?cu 'cup') (On ?cu ?tc))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?d (exists ?h (exists ?c (exists ?ha (exists ?l (exists ?b (exists ?p (exists ?bo (exists ?tc (exists ?cu (and (or (not (Is ?d 'dog')) (HasState ?d 'sleeping')) (or (not (Is ?d 'dog')) (Is ?h 'house')) (or (not (Is ?d 'dog')) (In ?d ?h)) (or (not (Is ?d 'dog')) (Is ?c 'child')) (or (not (Is ?d 'dog')) (In ?c ?h)) (or (not (Is ?d 'dog')) (Is ?ha 'hammer')) (or (not (Is ?d 'dog')) (Holding ?c ?ha)) (or (not (Is ?d 'dog')) (Is ?l 'lamp')) (or (not (Is ?d 'dog')) (Above ?l ?c)) (or (not (Is ?d 'dog')) (HasState ?l 'on')) (or (not (Is ?d 'dog')) (Is ?b 'basket')) (or (not (Is ?d 'dog')) (NextTo ?b ?d)) (or (not (Is ?d 'dog')) (Is ?p 'pizza')) (or (not (Is ?d 'dog')) (In ?p ?b)) (or (not (Is ?d 'dog')) (HasState ?p 'sliced')) (or (not (Is ?d 'dog')) (Is ?bo 'bottle')) (or (not (Is ?d 'dog')) (In ?bo ?b)) (or (not (Is ?d 'dog')) (HasState ?bo 'closed')) (or (not (Is ?d 'dog')) (Is ?tc 'toy car')) (or (not (Is ?d 'dog')) (In ?tc ?b)) (or (not (Is ?d 'dog')) (HasState ?tc 'broken')) (or (not (Is ?d 'dog')) (Is ?cu 'cup')) (or (not (Is ?d 'dog')) (On ?cu ?tc))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "lamp",
+        "hammer",
+        "bottle",
+        "basket",
+        "pizza",
+        "cup",
+        "toy car",
+        "dog",
+        "child"
+    ]
+}

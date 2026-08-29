@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden table with a plastic phone on it. A person stands to the right of the table, and every toy car is placed on the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?p (exists ?ph (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?p 'person') (RightOf ?p ?t) (Is ?ph 'phone') (HasMaterial ?ph 'plastic') (On ?ph ?t) (forall ?tc (implies (Is ?tc 'toy car') (On ?tc ?t))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?p (exists ?ph (forall ?tc (and (Is ?t 'table') (HasMaterial ?t 'wooden') (RightOf ?p ?t) (On ?ph ?t) (Is ?p 'person') (or (not (Is ?tc 'toy car')) (On ?tc ?t)) (HasMaterial ?ph 'plastic') (Is ?ph 'phone')))))))",
+    "k": 4,
+    "object_classes": [
+        "toy car",
+        "phone",
+        "person",
+        "table"
+    ]
+}

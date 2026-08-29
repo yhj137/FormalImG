@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. Every elephant is positioned to the left of a red bus. A sofa sits on top of the bus. Standing on the sofa is a horse holding a metal key. Also resting on the sofa are a plate with a fork on it, a green bottle, and a round ball.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?e (implies (Is ?e 'elephant') (exists ?bu (exists ?s (exists ?h (exists ?k (exists ?p (exists ?f (exists ?bo (exists ?ba (and (Is ?bu 'bus') (HasColor ?bu 'red') (LeftOf ?e ?bu) (Is ?s 'sofa') (On ?s ?bu) (Is ?h 'horse') (On ?h ?s) (Is ?k 'key') (HasMaterial ?k 'metal') (Holding ?h ?k) (Is ?p 'plate') (On ?p ?s) (Is ?f 'fork') (On ?f ?p) (Is ?bo 'bottle') (HasColor ?bo 'green') (On ?bo ?s) (Is ?ba 'ball') (HasShape ?ba 'round') (On ?ba ?s)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?e (exists ?bu (exists ?s (exists ?h (exists ?k (exists ?p (exists ?f (exists ?bo (exists ?ba (and (or (not (Is ?e 'elephant')) (Is ?bu 'bus')) (or (not (Is ?e 'elephant')) (HasColor ?bu 'red')) (or (not (Is ?e 'elephant')) (LeftOf ?e ?bu)) (or (not (Is ?e 'elephant')) (Is ?s 'sofa')) (or (not (Is ?e 'elephant')) (On ?s ?bu)) (or (not (Is ?e 'elephant')) (Is ?h 'horse')) (or (not (Is ?e 'elephant')) (On ?h ?s)) (or (not (Is ?e 'elephant')) (Is ?k 'key')) (or (not (Is ?e 'elephant')) (On ?p ?s)) (or (not (Is ?e 'elephant')) (Holding ?h ?k)) (or (not (Is ?e 'elephant')) (HasMaterial ?k 'metal')) (or (not (Is ?e 'elephant')) (Is ?p 'plate')) (or (not (Is ?e 'elephant')) (Is ?f 'fork')) (or (not (Is ?e 'elephant')) (On ?bo ?s)) (or (not (Is ?e 'elephant')) (On ?f ?p)) (or (not (Is ?e 'elephant')) (HasColor ?bo 'green')) (or (not (Is ?e 'elephant')) (Is ?ba 'ball')) (or (not (Is ?e 'elephant')) (On ?ba ?s)) (or (not (Is ?e 'elephant')) (Is ?bo 'bottle')) (or (not (Is ?e 'elephant')) (HasShape ?ba 'round')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bus",
+        "key",
+        "fork",
+        "bottle",
+        "ball",
+        "elephant",
+        "sofa",
+        "horse",
+        "plate"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of black headphones in the scene, there is a white cup positioned directly below it, aligned vertically. Furthermore, there is a carrot aligned horizontally with that cup.",
+    "dsl": "(and (forall ?h (implies (and (Is ?h 'headphones') (Has ?h 'black')) (exists ?c (exists ?v (and (Is ?c 'cup') (Has ?c 'white') (Is ?v 'carrot') (Below ?c ?h) (AlignedVertically ?h ?c) (AlignedHorizontally ?c ?v)))))))",
+    "cnf": "(forall ?h (exists ?c (exists ?v (and (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (Is ?c 'cup')) (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (Has ?c 'white')) (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (Below ?c ?h)) (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (Is ?v 'carrot')) (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (AlignedVertically ?h ?c)) (or (not (Is ?h 'headphones')) (not (Has ?h 'black')) (AlignedHorizontally ?c ?v))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "headphones",
+        "cup"
+    ]
+}

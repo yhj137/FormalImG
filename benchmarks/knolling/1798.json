@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the left side of the scene. To the right of the suitcase is a laptop, and further to the right is a monitor, which is located on the right side of the image and is larger than the laptop. A pair of headphones is aligned horizontally with the suitcase, and a game controller is placed to the left of the headphones. On the bottom side of the image, there is a shirt located to the left of the monitor. A phone, which is smaller than the laptop, is positioned to the right of the shirt, and a camera is to the right of the phone. Additionally, every ruler in the scene is aligned horizontally with the monitor and is smaller than the laptop.",
+    "dsl": "(exists ?s (exists ?l (exists ?m (exists ?h (exists ?g (exists ?sh (exists ?p (exists ?c (and (Is ?s 'suitcase') (OnLeftSide ?s) (Is ?l 'laptop') (RightOf ?l ?s) (Is ?m 'monitor') (OnRightSide ?m) (RightOf ?m ?l) (LargerThan ?m ?l) (Is ?h 'headphones') (AlignedHorizontally ?h ?s) (Is ?g 'game_controller') (LeftOf ?g ?h) (Is ?sh 'shirt') (OnBottomSide ?sh) (LeftOf ?sh ?m) (Is ?p 'phone') (RightOf ?p ?sh) (SmallerThan ?p ?l) (Is ?c 'camera') (RightOf ?c ?p) (forall ?r (implies (Is ?r 'ruler') (and (AlignedHorizontally ?r ?m) (SmallerThan ?r ?l)))))))))))))",
+    "cnf": "(exists ?s (exists ?l (exists ?m (exists ?h (exists ?g (exists ?sh (exists ?p (exists ?c (forall ?r (and (Is ?s 'suitcase') (OnLeftSide ?s) (RightOf ?l ?s) (AlignedHorizontally ?h ?s) (Is ?l 'laptop') (RightOf ?m ?l) (Is ?h 'headphones') (LeftOf ?g ?h) (LargerThan ?m ?l) (OnRightSide ?m) (Is ?g 'game_controller') (SmallerThan ?p ?l) (LeftOf ?sh ?m) (Is ?m 'monitor') (or (not (Is ?r 'ruler')) (SmallerThan ?r ?l)) (RightOf ?p ?sh) (RightOf ?c ?p) (or (not (Is ?r 'ruler')) (AlignedHorizontally ?r ?m)) (OnBottomSide ?sh) (Is ?p 'phone') (Is ?c 'camera') (Is ?sh 'shirt')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "phone",
+        "suitcase",
+        "game_controller",
+        "camera",
+        "monitor",
+        "headphones",
+        "shirt"
+    ]
+}

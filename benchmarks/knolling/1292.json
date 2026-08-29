@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a black hat, and a calculator is positioned below the hat. Every sock in the scene is white and is located to the left of the hat. For each sock, there is a pink donut below it, a pair of glasses below the donut, a gray wrench to the left of the donut, and a fork that is smaller than the wrench.",
+    "dsl": "(exists ?hat (exists ?calculator (and (Is ?hat 'hat') (Has ?hat 'black') (Is ?calculator 'calculator') (Below ?calculator ?hat) (forall ?sock (implies (Is ?sock 'sock') (exists ?donut (exists ?glasses (exists ?wrench (exists ?fork (and (Has ?sock 'white') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?glasses 'glasses') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?fork 'fork') (LeftOf ?sock ?hat) (Below ?donut ?sock) (Below ?glasses ?donut) (LeftOf ?wrench ?donut) (SmallerThan ?fork ?wrench)))))))))))",
+    "cnf": "(exists ?hat (exists ?calculator (forall ?sock (exists ?donut (exists ?glasses (exists ?wrench (exists ?fork (and (Is ?hat 'hat') (Has ?hat 'black') (Below ?calculator ?hat) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?hat)) (Is ?calculator 'calculator') (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (Below ?donut ?sock)) (or (not (Is ?sock 'sock')) (Has ?wrench 'gray')) (or (not (Is ?sock 'sock')) (SmallerThan ?fork ?wrench)) (or (not (Is ?sock 'sock')) (Below ?glasses ?donut)) (or (not (Is ?sock 'sock')) (Has ?donut 'pink')) (or (not (Is ?sock 'sock')) (Is ?wrench 'wrench')) (or (not (Is ?sock 'sock')) (LeftOf ?wrench ?donut)) (or (not (Is ?sock 'sock')) (Is ?glasses 'glasses')) (or (not (Is ?sock 'sock')) (Is ?donut 'donut')) (or (not (Is ?sock 'sock')) (Has ?sock 'white'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "wrench",
+        "fork",
+        "hat",
+        "calculator",
+        "donut"
+    ]
+}

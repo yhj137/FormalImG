@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a metal lamp. All fruits in the scene are red and located to the left of the lamp. A child stands next to the lamp holding a toy car, and a plastic cup with a key inside sits next to the child.",
+    "dsl": "(exists ?l (and (Is ?l 'lamp') (HasMaterial ?l 'metal') (forall ?f (implies (Is ?f 'fruit') (and (LeftOf ?f ?l) (HasColor ?f 'red')))) (exists ?c (exists ?tc (exists ?cup (exists ?k (and (Is ?c 'child') (Is ?tc 'toy car') (Is ?cup 'cup') (Is ?k 'key') (NextTo ?c ?l) (Holding ?c ?tc) (HasMaterial ?cup 'plastic') (NextTo ?cup ?c) (In ?k ?cup))))))))",
+    "cnf": "(exists ?l (forall ?f (exists ?c (exists ?tc (exists ?cup (exists ?k (and (Is ?l 'lamp') (HasMaterial ?l 'metal') (or (not (Is ?f 'fruit')) (LeftOf ?f ?l)) (NextTo ?c ?l) (or (not (Is ?f 'fruit')) (HasColor ?f 'red')) (Is ?c 'child') (Holding ?c ?tc) (NextTo ?cup ?c) (Is ?tc 'toy car') (HasMaterial ?cup 'plastic') (In ?k ?cup) (Is ?cup 'cup') (Is ?k 'key'))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "toy car",
+        "lamp",
+        "cup",
+        "fruit",
+        "child"
+    ]
+}

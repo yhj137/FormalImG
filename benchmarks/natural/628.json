@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a round clock on a bookshelf, with a plate to its left and headphones to its right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (exists ?h (and (Is ?b 'bookshelf') (Is ?c 'clock') (Is ?p 'plate') (Is ?h 'headphones') (HasShape ?c 'round') (On ?c ?b) (LeftOf ?p ?c) (RightOf ?h ?c)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (exists ?h (and (Is ?b 'bookshelf') (On ?c ?b) (HasShape ?c 'round') (LeftOf ?p ?c) (Is ?c 'clock') (RightOf ?h ?c) (Is ?p 'plate') (Is ?h 'headphones')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "clock",
+        "bookshelf",
+        "plate"
+    ]
+}

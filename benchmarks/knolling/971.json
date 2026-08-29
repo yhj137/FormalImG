@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a gray laptop, black headphones, a black remote, and red scissors. The gray laptop is positioned above the headphones. The remote is aligned horizontally with the headphones. The scissors are located below the remote. Additionally, for every sock in the image, it is aligned horizontally with the scissors and is smaller than the laptop.",
+    "dsl": "(exists ?laptop (exists ?headphones (exists ?remote (exists ?scissors (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?remote 'remote') (Has ?remote 'black') (Is ?scissors 'scissors') (Has ?scissors 'red') (Above ?laptop ?headphones) (AlignedHorizontally ?headphones ?remote) (Below ?scissors ?remote) (forall ?sock (implies (Is ?sock 'sock') (and (AlignedHorizontally ?sock ?scissors) (SmallerThan ?sock ?laptop)))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (exists ?remote (exists ?scissors (forall ?sock (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Above ?laptop ?headphones) (or (not (Is ?sock 'sock')) (SmallerThan ?sock ?laptop)) (Has ?headphones 'black') (AlignedHorizontally ?headphones ?remote) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?scissors)) (Is ?headphones 'headphones') (Has ?remote 'black') (Below ?scissors ?remote) (Is ?remote 'remote') (Has ?scissors 'red') (Is ?scissors 'scissors')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "sock",
+        "scissors",
+        "headphones"
+    ]
+}

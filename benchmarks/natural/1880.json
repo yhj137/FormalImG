@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A man stands to the right of a table, and a wardrobe is located to the right of the man. A monitor, a keyboard, and a lamp are on the table, with a round orange positioned to the right of the keyboard. Inside the wardrobe are a black umbrella and every screwdriver, while a metal lion sits on top of the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?t (exists ?m (and (Is ?w 'wardrobe') (Is ?t 'table') (Is ?m 'man') (RightOf ?m ?t) (RightOf ?w ?m) (forall ?sd (implies (Is ?sd 'screwdriver') (In ?sd ?w))) (exists ?u (exists ?l (exists ?mon (exists ?k (exists ?lmp (exists ?o (and (Is ?u 'umbrella') (HasColor ?u 'black') (In ?u ?w) (Is ?l 'lion') (HasMaterial ?l 'metal') (On ?l ?w) (Is ?mon 'monitor') (On ?mon ?t) (Is ?k 'keyboard') (On ?k ?t) (Is ?lmp 'lamp') (On ?lmp ?t) (Is ?o 'orange') (HasShape ?o 'round') (RightOf ?o ?k)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?t (exists ?m (forall ?sd (exists ?u (exists ?l (exists ?mon (exists ?k (exists ?lmp (exists ?o (and (Is ?w 'wardrobe') (RightOf ?w ?m) (or (not (Is ?sd 'screwdriver')) (In ?sd ?w)) (RightOf ?m ?t) (In ?u ?w) (Is ?t 'table') (On ?mon ?t) (Is ?m 'man') (On ?l ?w) (HasColor ?u 'black') (On ?k ?t) (Is ?mon 'monitor') (HasMaterial ?l 'metal') (Is ?u 'umbrella') (On ?lmp ?t) (Is ?k 'keyboard') (RightOf ?o ?k) (Is ?l 'lion') (Is ?lmp 'lamp') (HasShape ?o 'round') (Is ?o 'orange')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "monitor",
+        "man",
+        "lamp",
+        "screwdriver",
+        "wardrobe",
+        "table",
+        "lion",
+        "orange"
+    ]
+}

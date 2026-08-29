@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack and a monitor are aligned vertically on the right side, with the backpack occupying the top area. To the left of the backpack is a glove. A hammer is positioned to the left of the monitor, which is physically larger than the hammer. Finally, every watch present is placed to the left of the hammer and aligned vertically with the glove.",
+    "dsl": "(exists ?m (exists ?b (exists ?h (exists ?g (and (Is ?m 'monitor') (Is ?b 'backpack') (Is ?h 'hammer') (Is ?g 'glove') (OnRightSide ?m) (OnTopSide ?b) (AlignedVertically ?b ?m) (LeftOf ?h ?m) (LeftOf ?g ?b) (LargerThan ?m ?h) (forall ?w (implies (Is ?w 'watch') (and (LeftOf ?w ?h) (AlignedVertically ?w ?g)))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?h (exists ?g (forall ?w (and (Is ?m 'monitor') (OnRightSide ?m) (AlignedVertically ?b ?m) (LeftOf ?h ?m) (OnTopSide ?b) (LeftOf ?g ?b) (LargerThan ?m ?h) (Is ?h 'hammer') (Is ?b 'backpack') (Is ?g 'glove') (or (not (Is ?w 'watch')) (AlignedVertically ?w ?g)) (or (not (Is ?w 'watch')) (LeftOf ?w ?h))))))))",
+    "k": 5,
+    "object_classes": [
+        "watch",
+        "hammer",
+        "backpack",
+        "monitor",
+        "glove"
+    ]
+}

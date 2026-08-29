@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a sandwich with a clock to its left. To the right of the sandwich is a black phone with a key resting on it. A red apple is next to the clock, and a yellow banana is next to the apple. All fruits in the scene are positioned to the left of the clock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?c (and (Is ?s 'sandwich') (Is ?c 'clock') (LeftOf ?c ?s) (forall ?f (implies (Is ?f 'fruit') (LeftOf ?f ?c))) (exists ?p (exists ?k (exists ?a (exists ?b (and (Is ?p 'phone') (HasColor ?p 'black') (RightOf ?p ?s) (Is ?k 'key') (On ?k ?p) (Is ?a 'apple') (Is ?a 'fruit') (HasColor ?a 'red') (NextTo ?a ?c) (Is ?b 'banana') (Is ?b 'fruit') (HasColor ?b 'yellow') (NextTo ?b ?a))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?c (forall ?f (exists ?p (exists ?k (exists ?a (exists ?b (and (Is ?s 'sandwich') (LeftOf ?c ?s) (RightOf ?p ?s) (Is ?c 'clock') (or (not (Is ?f 'fruit')) (LeftOf ?f ?c)) (HasColor ?p 'black') (On ?k ?p) (NextTo ?a ?c) (Is ?p 'phone') (Is ?k 'key') (HasColor ?a 'red') (NextTo ?b ?a) (Is ?a 'fruit') (HasColor ?b 'yellow') (Is ?a 'apple') (Is ?b 'fruit') (Is ?b 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "sandwich",
+        "banana",
+        "phone",
+        "clock",
+        "apple",
+        "fruit"
+    ]
+}

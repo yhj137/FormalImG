@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A pan is positioned on the top side of the arrangement. For every screwdriver in the scene, it is located to the right of the pan, with a knife placed to the right of the screwdriver and a watch to the right of the knife. Additionally, for each screwdriver, there is a keyboard aligned vertically with the pan, a game controller aligned vertically with the screwdriver and located to the right of the keyboard, and a pair of scissors aligned vertically with the knife and located to the right of the game controller.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnTopSide ?pan) (forall ?scr (implies (Is ?scr 'screwdriver') (exists ?knife (exists ?watch (exists ?kb (exists ?gc (exists ?sci (and (Is ?knife 'knife') (Is ?watch 'watch') (Is ?kb 'keyboard') (Is ?gc 'game_controller') (Is ?sci 'scissors') (RightOf ?scr ?pan) (RightOf ?knife ?scr) (RightOf ?watch ?knife) (AlignedVertically ?kb ?pan) (AlignedVertically ?gc ?scr) (AlignedVertically ?sci ?knife) (RightOf ?gc ?kb) (RightOf ?sci ?gc)))))))))))",
+    "cnf": "(exists ?pan (forall ?scr (exists ?knife (exists ?watch (exists ?kb (exists ?gc (exists ?sci (and (Is ?pan 'pan') (OnTopSide ?pan) (or (not (Is ?scr 'screwdriver')) (RightOf ?scr ?pan)) (or (not (Is ?scr 'screwdriver')) (AlignedVertically ?kb ?pan)) (or (not (Is ?scr 'screwdriver')) (Is ?sci 'scissors')) (or (not (Is ?scr 'screwdriver')) (RightOf ?knife ?scr)) (or (not (Is ?scr 'screwdriver')) (RightOf ?watch ?knife)) (or (not (Is ?scr 'screwdriver')) (AlignedVertically ?gc ?scr)) (or (not (Is ?scr 'screwdriver')) (Is ?kb 'keyboard')) (or (not (Is ?scr 'screwdriver')) (RightOf ?gc ?kb)) (or (not (Is ?scr 'screwdriver')) (Is ?gc 'game_controller')) (or (not (Is ?scr 'screwdriver')) (AlignedVertically ?sci ?knife)) (or (not (Is ?scr 'screwdriver')) (Is ?knife 'knife')) (or (not (Is ?scr 'screwdriver')) (Is ?watch 'watch')) (or (not (Is ?scr 'screwdriver')) (RightOf ?sci ?gc))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "watch",
+        "screwdriver",
+        "game_controller",
+        "pan",
+        "knife",
+        "scissors"
+    ]
+}

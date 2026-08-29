@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-realistic scene inside a house features a woman holding a ball. A closed umbrella rests on a bed. To the right of the bed stands a desk, upon which a mirror, a pair of glasses, a cup, and all the books are placed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?w (exists ?d (and (Is ?h 'house') (Is ?w 'woman') (Is ?d 'desk') (In ?w ?h) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?d))) (exists ?bd (exists ?u (exists ?m (exists ?g (exists ?c (exists ?bl (and (Is ?bd 'bed') (Is ?u 'umbrella') (Is ?m 'mirror') (Is ?g 'glasses') (Is ?c 'cup') (Is ?bl 'ball') (In ?bd ?h) (RightOf ?d ?bd) (On ?u ?bd) (HasState ?u 'closed') (On ?m ?d) (On ?g ?d) (On ?c ?d) (Holding ?w ?bl)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?w (exists ?d (forall ?bk (exists ?bd (exists ?u (exists ?m (exists ?g (exists ?c (exists ?bl (and (Is ?h 'house') (In ?w ?h) (In ?bd ?h) (Is ?w 'woman') (Holding ?w ?bl) (Is ?bd 'bed') (RightOf ?d ?bd) (Is ?bl 'ball') (or (not (Is ?bk 'book')) (On ?bk ?d)) (On ?m ?d) (On ?u ?bd) (Is ?d 'desk') (On ?g ?d) (Is ?m 'mirror') (Is ?u 'umbrella') (HasState ?u 'closed') (On ?c ?d) (Is ?g 'glasses') (Is ?c 'cup')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "glasses",
+        "desk",
+        "ball",
+        "book",
+        "bed",
+        "cup",
+        "woman",
+        "mirror",
+        "house"
+    ]
+}

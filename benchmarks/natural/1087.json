@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a brown bookshelf holding a plate. All keys are located to the left of the plate, and a hammer is positioned to the right. A peeled banana and a red screwdriver also rest on the bookshelf.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (exists ?p (and (Is ?p 'plate') (On ?p ?b) (forall ?k (implies (Is ?k 'key') (LeftOf ?k ?p))) (exists ?h (and (Is ?h 'hammer') (RightOf ?h ?p) (exists ?bn (and (Is ?bn 'banana') (On ?bn ?b) (HasState ?bn 'peeled') (exists ?s (and (Is ?s 'screwdriver') (On ?s ?b) (HasColor ?s 'red'))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (forall ?k (exists ?h (exists ?bn (exists ?s (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (On ?p ?b) (On ?bn ?b) (Is ?p 'plate') (or (not (Is ?k 'key')) (LeftOf ?k ?p)) (On ?s ?b) (Is ?bn 'banana') (HasState ?bn 'peeled') (RightOf ?h ?p) (Is ?s 'screwdriver') (HasColor ?s 'red') (Is ?h 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "hammer",
+        "key",
+        "screwdriver",
+        "bookshelf",
+        "banana"
+    ]
+}

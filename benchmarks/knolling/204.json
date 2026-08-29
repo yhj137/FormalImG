@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a game controller and a pen. The game controller is located on the top side of the image, and the pen is aligned horizontally with the game controller.",
+    "dsl": "(exists ?gc (exists ?p (and (Is ?gc 'game_controller') (Is ?p 'pen') (OnTopSide ?gc) (AlignedHorizontally ?gc ?p))))",
+    "cnf": "(exists ?gc (exists ?p (and (Is ?gc 'game_controller') (OnTopSide ?gc) (AlignedHorizontally ?gc ?p) (Is ?p 'pen'))))",
+    "k": 2,
+    "object_classes": [
+        "pen",
+        "game_controller"
+    ]
+}

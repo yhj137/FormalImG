@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A tree is positioned to the left of a round table. Next to the table, a child holds a screwdriver. A turned-on monitor and a sandwich containing a fish sit on the table. Every flower in the scene is red and located on the tree.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?tr (exists ?c (and (Is ?t 'table') (HasShape ?t 'round') (Is ?tr 'tree') (LeftOf ?tr ?t) (Is ?c 'child') (NextTo ?c ?t) (forall ?f (implies (Is ?f 'flower') (and (On ?f ?tr) (HasColor ?f 'red')))) (exists ?sd (exists ?m (exists ?s (exists ?fi (and (Is ?sd 'screwdriver') (Holding ?c ?sd) (Is ?m 'monitor') (On ?m ?t) (HasState ?m 'on') (Is ?s 'sandwich') (On ?s ?t) (Is ?fi 'fish') (In ?fi ?s)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?tr (exists ?c (forall ?f (exists ?sd (exists ?m (exists ?s (exists ?fi (and (Is ?t 'table') (HasShape ?t 'round') (LeftOf ?tr ?t) (NextTo ?c ?t) (Is ?tr 'tree') (or (not (Is ?f 'flower')) (On ?f ?tr)) (On ?m ?t) (Is ?c 'child') (Holding ?c ?sd) (or (not (Is ?f 'flower')) (HasColor ?f 'red')) (On ?s ?t) (Is ?m 'monitor') (HasState ?m 'on') (Is ?sd 'screwdriver') (Is ?s 'sandwich') (In ?fi ?s) (Is ?fi 'fish')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fish",
+        "child",
+        "tree",
+        "monitor",
+        "table",
+        "flower",
+        "sandwich",
+        "screwdriver"
+    ]
+}

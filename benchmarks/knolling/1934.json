@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black suitcase. To the left of the suitcase is a brown shoe, and a white sock is placed above the shoe. A blue tie is located above the suitcase. To the right of the tie is a black watch, and they are aligned horizontally. A gray remote, which is smaller than the suitcase, is positioned below the suitcase. For every pen, it is on the right side of the image, and there is a red lighter above it. The watch is located to the left of the lighter. A green screwdriver is located to the left of the lighter, and a yellow lemon is to the left of the screwdriver. The pen is smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?sock (exists ?tie (exists ?watch (exists ?remote (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (Is ?shoe 'shoe') (Has ?shoe 'brown') (Is ?sock 'sock') (Has ?sock 'white') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?watch 'watch') (Has ?watch 'black') (Is ?remote 'remote') (Has ?remote 'gray') (LeftOf ?shoe ?suitcase) (Above ?sock ?shoe) (Above ?tie ?suitcase) (LeftOf ?tie ?watch) (AlignedHorizontally ?tie ?watch) (Above ?suitcase ?remote) (SmallerThan ?remote ?suitcase) (forall ?pen (implies (Is ?pen 'pen') (exists ?lighter (exists ?screwdriver (exists ?lemon (and (Is ?lighter 'lighter') (Has ?lighter 'red') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'green') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (OnRightSide ?pen) (SmallerThan ?pen ?suitcase) (Above ?lighter ?pen) (LeftOf ?watch ?lighter) (LeftOf ?screwdriver ?lighter) (LeftOf ?lemon ?screwdriver))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?sock (exists ?tie (exists ?watch (exists ?remote (forall ?pen (exists ?lighter (exists ?screwdriver (exists ?lemon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (LeftOf ?shoe ?suitcase) (Above ?tie ?suitcase) (Has ?shoe 'brown') (Above ?sock ?shoe) (Above ?suitcase ?remote) (Has ?tie 'blue') (LeftOf ?tie ?watch) (Is ?shoe 'shoe') (Has ?sock 'white') (SmallerThan ?remote ?suitcase) (Has ?remote 'gray') (Is ?tie 'tie') (AlignedHorizontally ?tie ?watch) (Has ?watch 'black') (Is ?sock 'sock') (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?suitcase)) (Is ?remote 'remote') (or (not (Is ?pen 'pen')) (LeftOf ?watch ?lighter)) (Is ?watch 'watch') (or (not (Is ?pen 'pen')) (OnRightSide ?pen)) (or (not (Is ?pen 'pen')) (Above ?lighter ?pen)) (or (not (Is ?pen 'pen')) (LeftOf ?screwdriver ?lighter)) (or (not (Is ?pen 'pen')) (Has ?lemon 'yellow')) (or (not (Is ?pen 'pen')) (Has ?lighter 'red')) (or (not (Is ?pen 'pen')) (LeftOf ?lemon ?screwdriver)) (or (not (Is ?pen 'pen')) (Has ?screwdriver 'green')) (or (not (Is ?pen 'pen')) (Is ?lemon 'lemon')) (or (not (Is ?pen 'pen')) (Is ?lighter 'lighter')) (or (not (Is ?pen 'pen')) (Is ?screwdriver 'screwdriver')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "remote",
+        "sock",
+        "pen",
+        "lemon",
+        "watch",
+        "screwdriver",
+        "lighter",
+        "suitcase",
+        "shoe"
+    ]
+}

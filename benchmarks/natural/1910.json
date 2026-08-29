@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden boat is positioned to the left of an elephant; inside the boat sits an open laptop with a keyboard next to it. The elephant holds a yellow banana and stands to the left of a red bus containing a sleeping lion. Every rock in the scene is located next to the bus. To the right of the bus is a leather sofa with a sliced pizza on it.",
+    "dsl": "(exists ?bt (exists ?e (exists ?bus (exists ?s (exists ?lap (and (Is ?bt 'boat') (HasMaterial ?bt 'wooden') (Is ?e 'elephant') (Is ?bus 'bus') (HasColor ?bus 'red') (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?lap 'laptop') (HasState ?lap 'open') (LeftOf ?bt ?e) (LeftOf ?e ?bus) (LeftOf ?bus ?s) (In ?lap ?bt) (forall ?r (implies (Is ?r 'rock') (NextTo ?r ?bus))) (exists ?kb (exists ?ba (exists ?l (exists ?p (and (Is ?kb 'keyboard') (NextTo ?kb ?lap) (Is ?ba 'banana') (HasColor ?ba 'yellow') (Holding ?e ?ba) (Is ?l 'lion') (HasState ?l 'sleeping') (In ?l ?bus) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?s))))))))))))",
+    "cnf": "(exists ?bt (exists ?e (exists ?bus (exists ?s (exists ?lap (forall ?r (exists ?kb (exists ?ba (exists ?l (exists ?p (and (Is ?bt 'boat') (HasMaterial ?bt 'wooden') (LeftOf ?bt ?e) (In ?lap ?bt) (Is ?e 'elephant') (LeftOf ?e ?bus) (HasState ?lap 'open') (NextTo ?kb ?lap) (Holding ?e ?ba) (HasColor ?bus 'red') (LeftOf ?bus ?s) (Is ?lap 'laptop') (Is ?kb 'keyboard') (HasColor ?ba 'yellow') (Is ?bus 'bus') (or (not (Is ?r 'rock')) (NextTo ?r ?bus)) (HasMaterial ?s 'leather') (On ?p ?s) (Is ?ba 'banana') (In ?l ?bus) (Is ?s 'sofa') (HasState ?p 'sliced') (HasState ?l 'sleeping') (Is ?p 'pizza') (Is ?l 'lion'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "rock",
+        "sofa",
+        "laptop",
+        "bus",
+        "banana",
+        "pizza",
+        "boat",
+        "lion",
+        "elephant"
+    ]
+}

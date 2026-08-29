@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing eight distinct items arranged in a neat grid structure. A black monitor, a white hat, blue jeans, and a red apple are all aligned horizontally. Corresponding to these, black glasses, a gray spoon, red pliers, and a sandwich are also aligned horizontally. Specific vertical alignments connect the objects: the monitor aligns with the glasses, the hat with the spoon, the jeans with the pliers, and the apple with the sandwich. Visually, the monitor is larger than the apple, and the jeans are larger than the glasses. Both the apple and the sandwich are positioned on the right side of the scene.",
+    "dsl": "(exists ?monitor (exists ?hat (exists ?jeans (exists ?apple (exists ?glasses (exists ?spoon (exists ?pliers (exists ?sandwich (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?hat 'hat') (Has ?hat 'white') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?apple 'apple') (Has ?apple 'red') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?sandwich 'sandwich') (AlignedHorizontally ?monitor ?hat) (AlignedHorizontally ?hat ?jeans) (AlignedHorizontally ?jeans ?apple) (AlignedHorizontally ?glasses ?spoon) (AlignedHorizontally ?spoon ?pliers) (AlignedHorizontally ?pliers ?sandwich) (AlignedVertically ?monitor ?glasses) (AlignedVertically ?hat ?spoon) (AlignedVertically ?jeans ?pliers) (AlignedVertically ?apple ?sandwich) (LargerThan ?monitor ?apple) (LargerThan ?jeans ?glasses) (OnRightSide ?apple) (OnRightSide ?sandwich))))))))))",
+    "cnf": "(exists ?monitor (exists ?hat (exists ?jeans (exists ?apple (exists ?glasses (exists ?spoon (exists ?pliers (exists ?sandwich (and (Is ?monitor 'monitor') (Has ?monitor 'black') (AlignedHorizontally ?monitor ?hat) (AlignedVertically ?monitor ?glasses) (Has ?hat 'white') (AlignedHorizontally ?hat ?jeans) (LargerThan ?monitor ?apple) (AlignedHorizontally ?glasses ?spoon) (LargerThan ?jeans ?glasses) (Is ?hat 'hat') (AlignedVertically ?hat ?spoon) (Has ?jeans 'blue') (AlignedHorizontally ?jeans ?apple) (AlignedVertically ?apple ?sandwich) (OnRightSide ?apple) (Has ?glasses 'black') (Has ?spoon 'gray') (AlignedHorizontally ?spoon ?pliers) (AlignedVertically ?jeans ?pliers) (Is ?jeans 'jeans') (Has ?apple 'red') (AlignedHorizontally ?pliers ?sandwich) (OnRightSide ?sandwich) (Is ?glasses 'glasses') (Is ?spoon 'spoon') (Has ?pliers 'red') (Is ?apple 'apple') (Is ?sandwich 'sandwich') (Is ?pliers 'pliers'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "spoon",
+        "pliers",
+        "apple",
+        "jeans",
+        "monitor",
+        "glasses",
+        "hat",
+        "sandwich"
+    ]
+}

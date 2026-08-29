@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the right side of the scene. For every donut in the image, there is a vertical column of objects arranged above it: a lemon is above the donut, a mouse is above the lemon, a camera is above the mouse, a hammer is above the camera, a pizza is above the hammer, a spoon is above the pizza, and a plate is above the spoon but below the shirt. The donut is located on the bottom side and is smaller than the plate. All items\u2014the shirt, plate, spoon, pizza, hammer, camera, mouse, lemon, and donut\u2014are aligned vertically.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (forall ?donut (implies (Is ?donut 'donut') (exists ?plate (exists ?mouse (exists ?lemon (exists ?camera (exists ?spoon (exists ?pizza (exists ?hammer (and (Is ?plate 'plate') (Is ?mouse 'mouse') (Is ?lemon 'lemon') (Is ?camera 'camera') (Is ?spoon 'spoon') (Is ?pizza 'pizza') (Is ?hammer 'hammer') (Below ?plate ?shirt) (Below ?spoon ?plate) (Below ?pizza ?spoon) (Below ?hammer ?pizza) (Below ?camera ?hammer) (Below ?mouse ?camera) (Below ?lemon ?mouse) (Below ?donut ?lemon) (AlignedVertically ?shirt ?plate) (AlignedVertically ?plate ?spoon) (AlignedVertically ?spoon ?pizza) (AlignedVertically ?pizza ?hammer) (AlignedVertically ?hammer ?camera) (AlignedVertically ?camera ?mouse) (AlignedVertically ?mouse ?lemon) (AlignedVertically ?lemon ?donut) (OnBottomSide ?donut) (SmallerThan ?donut ?plate)))))))))))))",
+    "cnf": "(exists ?shirt (forall ?donut (exists ?plate (exists ?mouse (exists ?lemon (exists ?camera (exists ?spoon (exists ?pizza (exists ?hammer (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (or (not (Is ?donut 'donut')) (Below ?plate ?shirt)) (or (not (Is ?donut 'donut')) (AlignedVertically ?shirt ?plate)) (or (not (Is ?donut 'donut')) (Is ?hammer 'hammer')) (or (not (Is ?donut 'donut')) (Below ?spoon ?plate)) (or (not (Is ?donut 'donut')) (Is ?plate 'plate')) (or (not (Is ?donut 'donut')) (Below ?donut ?lemon)) (or (not (Is ?donut 'donut')) (AlignedVertically ?plate ?spoon)) (or (not (Is ?donut 'donut')) (Is ?pizza 'pizza')) (or (not (Is ?donut 'donut')) (Below ?hammer ?pizza)) (or (not (Is ?donut 'donut')) (Below ?pizza ?spoon)) (or (not (Is ?donut 'donut')) (Is ?spoon 'spoon')) (or (not (Is ?donut 'donut')) (Is ?mouse 'mouse')) (or (not (Is ?donut 'donut')) (Below ?lemon ?mouse)) (or (not (Is ?donut 'donut')) (AlignedVertically ?mouse ?lemon)) (or (not (Is ?donut 'donut')) (AlignedVertically ?spoon ?pizza)) (or (not (Is ?donut 'donut')) (SmallerThan ?donut ?plate)) (or (not (Is ?donut 'donut')) (Below ?camera ?hammer)) (or (not (Is ?donut 'donut')) (Is ?camera 'camera')) (or (not (Is ?donut 'donut')) (Is ?lemon 'lemon')) (or (not (Is ?donut 'donut')) (Below ?mouse ?camera)) (or (not (Is ?donut 'donut')) (AlignedVertically ?camera ?mouse)) (or (not (Is ?donut 'donut')) (AlignedVertically ?lemon ?donut)) (or (not (Is ?donut 'donut')) (AlignedVertically ?pizza ?hammer)) (or (not (Is ?donut 'donut')) (OnBottomSide ?donut)) (or (not (Is ?donut 'donut')) (AlignedVertically ?hammer ?camera))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "lemon",
+        "pizza",
+        "camera",
+        "hammer",
+        "shirt",
+        "spoon",
+        "mouse",
+        "donut"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout is centered around a blue shirt at the top, with a white hat positioned directly below it; these two items are aligned vertically. To the left of the hat is a camera, and to the left of a calculator is the hat (placing the calculator on the right), forming a horizontally aligned middle row. For every screwdriver present, it is located below the camera and forms the start of a bottom row containing a stapler, a knife, and a set of keys. Specifically, the screwdriver is to the left of the stapler, the stapler is to the left of the knife, and the knife is to the left of the keys, all aligned horizontally. The keys are positioned on the bottom side of the image and are visually smaller than the shirt.",
+    "dsl": "(exists ?shirt (exists ?hat (exists ?camera (exists ?calculator (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?hat 'hat') (Has ?hat 'white') (Is ?camera 'camera') (Is ?calculator 'calculator') (Below ?hat ?shirt) (AlignedVertically ?hat ?shirt) (LeftOf ?camera ?hat) (AlignedHorizontally ?camera ?hat) (LeftOf ?hat ?calculator) (AlignedHorizontally ?hat ?calculator) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?stapler (exists ?knife (exists ?keys (and (Is ?stapler 'stapler') (Is ?knife 'knife') (Is ?keys 'keys') (Below ?screwdriver ?camera) (LeftOf ?screwdriver ?stapler) (LeftOf ?stapler ?knife) (LeftOf ?knife ?keys) (AlignedHorizontally ?screwdriver ?stapler) (AlignedHorizontally ?stapler ?knife) (AlignedHorizontally ?knife ?keys) (OnBottomSide ?keys) (SmallerThan ?keys ?shirt))))))))))))",
+    "cnf": "(exists ?shirt (exists ?hat (exists ?camera (exists ?calculator (forall ?screwdriver (exists ?stapler (exists ?knife (exists ?keys (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Below ?hat ?shirt) (AlignedVertically ?hat ?shirt) (Has ?hat 'white') (or (not (Is ?screwdriver 'screwdriver')) (SmallerThan ?keys ?shirt)) (LeftOf ?camera ?hat) (Is ?hat 'hat') (or (not (Is ?screwdriver 'screwdriver')) (OnBottomSide ?keys)) (AlignedHorizontally ?camera ?hat) (Is ?camera 'camera') (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?knife ?keys)) (LeftOf ?hat ?calculator) (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?camera)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?stapler ?knife)) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?knife ?keys)) (AlignedHorizontally ?hat ?calculator) (Is ?calculator 'calculator') (or (not (Is ?screwdriver 'screwdriver')) (Is ?keys 'keys')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?screwdriver ?stapler)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?screwdriver ?stapler)) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?stapler ?knife)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?knife 'knife')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?stapler 'stapler')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "shirt",
+        "calculator",
+        "knife",
+        "camera",
+        "stapler",
+        "screwdriver",
+        "hat"
+    ]
+}

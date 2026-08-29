@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a boat where a teddy bear holds a yellow umbrella. A green shirt rests next to the bear, and a round bowl containing a fork sits to its left. All fish are positioned to the right of the boat, while a bird flies above.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bt (exists ?tb (exists ?u (exists ?s (exists ?bl (and (Is ?bt 'boat') (Is ?tb 'teddy bear') (Is ?u 'umbrella') (Is ?s 'shirt') (Is ?bl 'bowl') (On ?tb ?bt) (Holding ?tb ?u) (HasColor ?u 'yellow') (NextTo ?s ?tb) (HasColor ?s 'green') (LeftOf ?bl ?tb) (HasShape ?bl 'round') (forall ?f (implies (Is ?f 'fish') (RightOf ?f ?bt))) (exists ?bd (exists ?fk (and (Is ?bd 'bird') (Is ?fk 'fork') (Above ?bd ?bt) (In ?fk ?bl)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bt (exists ?tb (exists ?u (exists ?s (exists ?bl (forall ?f (exists ?bd (exists ?fk (and (Is ?bt 'boat') (On ?tb ?bt) (or (not (Is ?f 'fish')) (RightOf ?f ?bt)) (Is ?tb 'teddy bear') (Holding ?tb ?u) (Above ?bd ?bt) (NextTo ?s ?tb) (Is ?u 'umbrella') (HasColor ?u 'yellow') (Is ?bd 'bird') (LeftOf ?bl ?tb) (Is ?s 'shirt') (HasColor ?s 'green') (Is ?bl 'bowl') (HasShape ?bl 'round') (In ?fk ?bl) (Is ?fk 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "bowl",
+        "fork",
+        "fish",
+        "teddy bear",
+        "shirt",
+        "boat",
+        "bird"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bus on the left. To the right of the bus is a sofa, and a rectangular rug lies next to the sofa. Positioned to the right of the rug is a metal hammer, with a hat next to it. A round pizza sits to the right of the hat, and a banana is next to the pizza.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?s (exists ?r (exists ?h (exists ?ha (exists ?p (exists ?ba (and (Is ?b 'bus') (Is ?s 'sofa') (RightOf ?s ?b) (Is ?r 'rug') (HasShape ?r 'rectangular') (NextTo ?r ?s) (Is ?h 'hammer') (HasMaterial ?h 'metal') (RightOf ?h ?r) (Is ?ha 'hat') (NextTo ?ha ?h) (Is ?p 'pizza') (HasShape ?p 'round') (RightOf ?p ?ha) (Is ?ba 'banana') (NextTo ?ba ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?s (exists ?r (exists ?h (exists ?ha (exists ?p (exists ?ba (and (Is ?b 'bus') (RightOf ?s ?b) (Is ?s 'sofa') (NextTo ?r ?s) (HasShape ?r 'rectangular') (RightOf ?h ?r) (Is ?r 'rug') (HasMaterial ?h 'metal') (NextTo ?ha ?h) (Is ?h 'hammer') (Is ?ha 'hat') (RightOf ?p ?ha) (HasShape ?p 'round') (NextTo ?ba ?p) (Is ?p 'pizza') (Is ?ba 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "rug",
+        "pizza",
+        "hammer",
+        "banana",
+        "bus",
+        "hat"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every lion has an open refrigerator containing a peeled orange to its left, and a sofa with a keyboard on it to its right.",
+    "dsl": "(forall ?l (implies (Is ?l 'lion') (exists ?r (exists ?s (exists ?o (exists ?k (and (Is ?r 'refrigerator') (Is ?s 'sofa') (Is ?o 'orange') (Is ?k 'keyboard') (LeftOf ?r ?l) (HasState ?r 'open') (In ?o ?r) (HasState ?o 'peeled') (RightOf ?s ?l) (On ?k ?s))))))))",
+    "cnf": "(forall ?l (exists ?r (exists ?s (exists ?o (exists ?k (and (or (not (Is ?l 'lion')) (Is ?r 'refrigerator')) (or (not (Is ?l 'lion')) (LeftOf ?r ?l)) (or (not (Is ?l 'lion')) (Is ?s 'sofa')) (or (not (Is ?l 'lion')) (HasState ?r 'open')) (or (not (Is ?l 'lion')) (Is ?k 'keyboard')) (or (not (Is ?l 'lion')) (Is ?o 'orange')) (or (not (Is ?l 'lion')) (RightOf ?s ?l)) (or (not (Is ?l 'lion')) (In ?o ?r)) (or (not (Is ?l 'lion')) (On ?k ?s)) (or (not (Is ?l 'lion')) (HasState ?o 'peeled'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "sofa",
+        "refrigerator",
+        "lion",
+        "orange"
+    ]
+}

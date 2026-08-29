@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a white refrigerator on the left, with a basket placed on top containing a cake and every orange in the scene. To the right of the refrigerator sits a wooden bench occupied by a sleeping lion. A cylindrical lamp stands next to the bench, and a pair of red shoes is located to the left of the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?b (exists ?li (exists ?l (exists ?s (exists ?bk (and (Is ?r 'refrigerator') (HasColor ?r 'white') (Is ?b 'bench') (HasMaterial ?b 'wooden') (RightOf ?b ?r) (Is ?li 'lion') (HasState ?li 'sleeping') (On ?li ?b) (Is ?l 'lamp') (HasShape ?l 'cylindrical') (NextTo ?l ?b) (Is ?s 'shoes') (HasColor ?s 'red') (LeftOf ?s ?b) (Is ?bk 'basket') (On ?bk ?r) (forall ?o (implies (Is ?o 'orange') (In ?o ?bk))) (exists ?c (and (Is ?c 'cake') (In ?c ?bk)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?b (exists ?li (exists ?l (exists ?s (exists ?bk (forall ?o (exists ?c (and (Is ?r 'refrigerator') (HasColor ?r 'white') (RightOf ?b ?r) (On ?bk ?r) (HasMaterial ?b 'wooden') (On ?li ?b) (Is ?bk 'basket') (or (not (Is ?o 'orange')) (In ?o ?bk)) (Is ?b 'bench') (NextTo ?l ?b) (HasState ?li 'sleeping') (In ?c ?bk) (LeftOf ?s ?b) (HasShape ?l 'cylindrical') (Is ?li 'lion') (Is ?c 'cake') (HasColor ?s 'red') (Is ?l 'lamp') (Is ?s 'shoes')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "shoes",
+        "cake",
+        "orange",
+        "lamp",
+        "refrigerator",
+        "lion",
+        "basket"
+    ]
+}

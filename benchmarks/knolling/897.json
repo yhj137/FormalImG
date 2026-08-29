@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a sandwich. For every spoon in the image, it is positioned above the sandwich and aligned vertically with it. Aligned horizontally with the spoon is a camera, which is visually larger than the spoon. A ruler is located above the camera and aligned vertically with it. Finally, a pair of scissors is aligned horizontally with the ruler.",
+    "dsl": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (forall ?spoon (implies (Is ?spoon 'spoon') (and (Above ?spoon ?sandwich) (AlignedVertically ?spoon ?sandwich) (exists ?camera (and (Is ?camera 'camera') (AlignedHorizontally ?camera ?spoon) (LargerThan ?camera ?spoon) (exists ?ruler (and (Is ?ruler 'ruler') (Above ?ruler ?camera) (AlignedVertically ?ruler ?camera) (exists ?scissors (and (Is ?scissors 'scissors') (AlignedHorizontally ?scissors ?ruler))))))))))))",
+    "cnf": "(exists ?sandwich (forall ?spoon (exists ?camera (exists ?ruler (exists ?scissors (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (or (not (Is ?spoon 'spoon')) (Above ?spoon ?sandwich)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?sandwich)) (or (not (Is ?spoon 'spoon')) (Is ?camera 'camera')) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?camera ?spoon)) (or (not (Is ?spoon 'spoon')) (LargerThan ?camera ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?ruler 'ruler')) (or (not (Is ?spoon 'spoon')) (Above ?ruler ?camera)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?ruler ?camera)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?scissors ?ruler))))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "camera",
+        "spoon",
+        "sandwich",
+        "scissors"
+    ]
+}

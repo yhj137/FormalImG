@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An open refrigerator stands next to a desk. A man stands to the left of the refrigerator, holding a sandwich. All headphones are inside the desk.",
+    "dsl": "(exists ?d (exists ?r (exists ?m (and (Is ?d 'desk') (Is ?r 'refrigerator') (Is ?m 'man') (NextTo ?r ?d) (HasState ?r 'open') (LeftOf ?m ?r) (forall ?h (implies (Is ?h 'headphones') (In ?h ?d))) (exists ?s (and (Is ?s 'sandwich') (Holding ?m ?s)))))))",
+    "cnf": "(exists ?d (exists ?r (exists ?m (forall ?h (exists ?s (and (Is ?d 'desk') (NextTo ?r ?d) (or (not (Is ?h 'headphones')) (In ?h ?d)) (Is ?r 'refrigerator') (HasState ?r 'open') (LeftOf ?m ?r) (Is ?m 'man') (Holding ?m ?s) (Is ?s 'sandwich')))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "man",
+        "desk",
+        "refrigerator",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene displays a tree with a bench and a bus located next to it. Every person is on the bus, while a child sits on the bench. Next to the child is a peeled banana, and a round clock rests on the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'tree') (exists ?be (and (Is ?be 'bench') (NextTo ?be ?t) (exists ?bu (and (Is ?bu 'bus') (NextTo ?bu ?t) (forall ?p (implies (Is ?p 'person') (On ?p ?bu))) (exists ?c (and (Is ?c 'child') (On ?c ?be) (HasState ?c 'sitting') (exists ?ba (and (Is ?ba 'banana') (NextTo ?ba ?c) (HasState ?ba 'peeled') (exists ?cl (and (Is ?cl 'clock') (On ?cl ?be) (HasShape ?cl 'round'))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?be (exists ?bu (forall ?p (exists ?c (exists ?ba (exists ?cl (and (Is ?t 'tree') (NextTo ?be ?t) (NextTo ?bu ?t) (Is ?be 'bench') (On ?c ?be) (Is ?bu 'bus') (or (not (Is ?p 'person')) (On ?p ?bu)) (On ?cl ?be) (Is ?c 'child') (HasState ?c 'sitting') (Is ?cl 'clock') (HasShape ?cl 'round') (NextTo ?ba ?c) (Is ?ba 'banana') (HasState ?ba 'peeled'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "person",
+        "bus",
+        "banana",
+        "tree",
+        "clock",
+        "child"
+    ]
+}

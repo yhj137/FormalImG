@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a rectangular refrigerator, with every keyboard positioned to its right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (forall ?k (implies (Is ?k 'keyboard') (RightOf ?k ?r))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (forall ?k (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (or (not (Is ?k 'keyboard')) (RightOf ?k ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "keyboard",
+        "refrigerator"
+    ]
+}

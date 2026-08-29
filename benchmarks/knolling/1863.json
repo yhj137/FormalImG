@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pizza and a red pan, with the pan positioned to the right of the pizza. For every fork in the image, there is a specific chain of items arranged relative to it: a plate is located below the fork and to the right of the pan. To the right of the plate is a pair of blue jeans. Below the jeans is a drill. To the right of the drill is a brown shoe. Below the shoe are headphones. To the right of the headphones is a wallet. Finally, a black phone is positioned below the wallet. The phone is located on the bottom side of the image and is smaller than the plate.",
+    "dsl": "(exists ?pan (exists ?pizza (forall ?fork (implies (Is ?fork 'fork') (exists ?plate (exists ?jeans (exists ?drill (exists ?shoe (exists ?headphones (exists ?wallet (exists ?phone (and (Is ?pan 'pan') (Has ?pan 'red') (Is ?pizza 'pizza') (RightOf ?pan ?pizza) (Is ?plate 'plate') (Below ?plate ?fork) (RightOf ?plate ?pan) (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?jeans ?plate) (Is ?drill 'drill') (Below ?drill ?jeans) (Is ?shoe 'shoe') (Has ?shoe 'brown') (RightOf ?shoe ?drill) (Is ?headphones 'headphones') (Below ?headphones ?shoe) (Is ?wallet 'wallet') (RightOf ?wallet ?headphones) (Is ?phone 'phone') (Has ?phone 'black') (Below ?phone ?wallet) (OnBottomSide ?phone) (SmallerThan ?phone ?plate)))))))))))))",
+    "cnf": "(exists ?pan (exists ?pizza (forall ?fork (exists ?plate (exists ?jeans (exists ?drill (exists ?shoe (exists ?headphones (exists ?wallet (exists ?phone (and (or (not (Is ?fork 'fork')) (Is ?pan 'pan')) (or (not (Is ?fork 'fork')) (Has ?pan 'red')) (or (not (Is ?fork 'fork')) (Is ?pizza 'pizza')) (or (not (Is ?fork 'fork')) (RightOf ?pan ?pizza)) (or (not (Is ?fork 'fork')) (Is ?plate 'plate')) (or (not (Is ?fork 'fork')) (RightOf ?plate ?pan)) (or (not (Is ?fork 'fork')) (Below ?plate ?fork)) (or (not (Is ?fork 'fork')) (Is ?jeans 'jeans')) (or (not (Is ?fork 'fork')) (RightOf ?jeans ?plate)) (or (not (Is ?fork 'fork')) (Has ?jeans 'blue')) (or (not (Is ?fork 'fork')) (Is ?drill 'drill')) (or (not (Is ?fork 'fork')) (SmallerThan ?phone ?plate)) (or (not (Is ?fork 'fork')) (Below ?drill ?jeans)) (or (not (Is ?fork 'fork')) (OnBottomSide ?phone)) (or (not (Is ?fork 'fork')) (Is ?shoe 'shoe')) (or (not (Is ?fork 'fork')) (RightOf ?shoe ?drill)) (or (not (Is ?fork 'fork')) (Below ?phone ?wallet)) (or (not (Is ?fork 'fork')) (Has ?shoe 'brown')) (or (not (Is ?fork 'fork')) (Is ?headphones 'headphones')) (or (not (Is ?fork 'fork')) (Below ?headphones ?shoe)) (or (not (Is ?fork 'fork')) (Has ?phone 'black')) (or (not (Is ?fork 'fork')) (RightOf ?wallet ?headphones)) (or (not (Is ?fork 'fork')) (Is ?wallet 'wallet')) (or (not (Is ?fork 'fork')) (Is ?phone 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "phone",
+        "pizza",
+        "fork",
+        "pan",
+        "drill",
+        "jeans",
+        "wallet",
+        "headphones",
+        "shoe"
+    ]
+}

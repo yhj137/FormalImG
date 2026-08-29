@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a wooden bench in the center. A woman sits on the bench, with a teddy bear to her left and a blue book containing a yellow flower to her right. A round bowl with a metal fork inside also sits on the bench. A lion stands to the left of the bench, while every apple in the scene is red and positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (RightOf ?a ?b)))) (exists ?w (exists ?l (exists ?bo (exists ?f (exists ?bk (exists ?tb (exists ?fl (and (Is ?w 'woman') (On ?w ?b) (Is ?l 'lion') (LeftOf ?l ?b) (Is ?bo 'bowl') (HasShape ?bo 'round') (On ?bo ?b) (Is ?f 'fork') (HasMaterial ?f 'metal') (In ?f ?bo) (Is ?bk 'book') (HasColor ?bk 'blue') (RightOf ?bk ?w) (Is ?tb 'teddy bear') (LeftOf ?tb ?w) (Is ?fl 'flower') (HasColor ?fl 'yellow') (In ?fl ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?a (exists ?w (exists ?l (exists ?bo (exists ?f (exists ?bk (exists ?tb (exists ?fl (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (or (not (Is ?a 'apple')) (RightOf ?a ?b)) (On ?w ?b) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (LeftOf ?l ?b) (Is ?w 'woman') (RightOf ?bk ?w) (On ?bo ?b) (Is ?l 'lion') (LeftOf ?tb ?w) (HasColor ?bk 'blue') (In ?fl ?bk) (HasShape ?bo 'round') (In ?f ?bo) (Is ?tb 'teddy bear') (Is ?bk 'book') (HasColor ?fl 'yellow') (Is ?bo 'bowl') (HasMaterial ?f 'metal') (Is ?fl 'flower') (Is ?f 'fork'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "bench",
+        "fork",
+        "book",
+        "woman",
+        "teddy bear",
+        "flower",
+        "lion",
+        "apple"
+    ]
+}

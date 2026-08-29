@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a sleeping cat resting on a sofa. A bowl containing a screwdriver sits to the left of the sofa, while a yellow lion holding a pan stands to its right. A bookshelf with a clock is placed next to the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (exists ?bo (exists ?sc (exists ?c (exists ?bs (exists ?cl (exists ?l (exists ?p (and (Is ?s 'sofa') (Is ?bo 'bowl') (LeftOf ?bo ?s) (Is ?sc 'screwdriver') (In ?sc ?bo) (Is ?c 'cat') (HasState ?c 'sleeping') (On ?c ?s) (Is ?bs 'bookshelf') (NextTo ?bs ?s) (Is ?cl 'clock') (On ?cl ?bs) (Is ?l 'lion') (HasColor ?l 'yellow') (RightOf ?l ?s) (Is ?p 'pan') (Holding ?l ?p)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (exists ?bo (exists ?sc (exists ?c (exists ?bs (exists ?cl (exists ?l (exists ?p (and (Is ?s 'sofa') (LeftOf ?bo ?s) (On ?c ?s) (Is ?bo 'bowl') (In ?sc ?bo) (NextTo ?bs ?s) (HasState ?c 'sleeping') (Is ?sc 'screwdriver') (RightOf ?l ?s) (Is ?bs 'bookshelf') (On ?cl ?bs) (Is ?c 'cat') (HasColor ?l 'yellow') (Holding ?l ?p) (Is ?cl 'clock') (Is ?l 'lion') (Is ?p 'pan')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "pan",
+        "sofa",
+        "cat",
+        "screwdriver",
+        "clock",
+        "lion",
+        "bookshelf"
+    ]
+}

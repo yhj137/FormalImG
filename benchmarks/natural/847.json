@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every lion is located to the right of a rock. A turned-on monitor sits on the rock, with a clock inside it and an orange resting on top of the monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?l (implies (Is ?l 'lion') (exists ?r (exists ?m (exists ?c (exists ?o (and (Is ?r 'rock') (Is ?m 'monitor') (Is ?c 'clock') (Is ?o 'orange') (RightOf ?l ?r) (On ?m ?r) (HasState ?m 'on') (In ?c ?m) (On ?o ?m)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?l (exists ?r (exists ?m (exists ?c (exists ?o (and (or (not (Is ?l 'lion')) (Is ?r 'rock')) (or (not (Is ?l 'lion')) (Is ?m 'monitor')) (or (not (Is ?l 'lion')) (RightOf ?l ?r)) (or (not (Is ?l 'lion')) (Is ?c 'clock')) (or (not (Is ?l 'lion')) (On ?m ?r)) (or (not (Is ?l 'lion')) (Is ?o 'orange')) (or (not (Is ?l 'lion')) (In ?c ?m)) (or (not (Is ?l 'lion')) (HasState ?m 'on')) (or (not (Is ?l 'lion')) (On ?o ?m)))))))))",
+    "k": 5,
+    "object_classes": [
+        "lion",
+        "monitor",
+        "rock",
+        "orange",
+        "clock"
+    ]
+}

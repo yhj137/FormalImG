@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a black refrigerator on the left, with every plant in the scene resting on top of it. To the right of the refrigerator stands a metal table supporting a backpack, inside of which is a pan containing a spoon. Further right sits a bench occupied by a lion holding a round basket with a toy car inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'refrigerator') (HasColor ?r 'black') (forall ?p (implies (Is ?p 'plant') (On ?p ?r))) (exists ?t (and (Is ?t 'table') (HasMaterial ?t 'metal') (LeftOf ?r ?t) (exists ?bp (and (Is ?bp 'backpack') (On ?bp ?t) (exists ?pan (and (Is ?pan 'pan') (In ?pan ?bp) (exists ?sp (and (Is ?sp 'spoon') (In ?sp ?pan))))))) (exists ?bn (and (Is ?bn 'bench') (LeftOf ?t ?bn) (exists ?l (and (Is ?l 'lion') (On ?l ?bn) (exists ?ba (and (Is ?ba 'basket') (HasShape ?ba 'round') (Holding ?l ?ba) (exists ?tc (and (Is ?tc 'toy car') (In ?tc ?ba))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (forall ?p (exists ?t (exists ?bp (exists ?pan (exists ?sp (exists ?bn (exists ?l (exists ?ba (exists ?tc (and (Is ?r 'refrigerator') (HasColor ?r 'black') (or (not (Is ?p 'plant')) (On ?p ?r)) (LeftOf ?r ?t) (HasMaterial ?t 'metal') (On ?bp ?t) (Is ?t 'table') (LeftOf ?t ?bn) (Is ?bp 'backpack') (In ?pan ?bp) (Is ?bn 'bench') (On ?l ?bn) (Is ?pan 'pan') (In ?sp ?pan) (Is ?l 'lion') (Holding ?l ?ba) (Is ?sp 'spoon') (HasShape ?ba 'round') (In ?tc ?ba) (Is ?ba 'basket') (Is ?tc 'toy car')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "pan",
+        "toy car",
+        "plant",
+        "backpack",
+        "refrigerator",
+        "basket",
+        "table",
+        "lion",
+        "spoon"
+    ]
+}

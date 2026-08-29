@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pink donut.",
+    "dsl": "(exists ?d (and (Is ?d 'donut') (Has ?d 'pink')))",
+    "cnf": "(exists ?d (and (Is ?d 'donut') (Has ?d 'pink')))",
+    "k": 1,
+    "object_classes": [
+        "donut"
+    ]
+}

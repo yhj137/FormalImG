@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where a bookshelf stands to the left of a bed. All books are placed on the bookshelf. A dog holding a pizza sits on the bed, along with an open laptop and a keyboard.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bed (exists ?bs (exists ?d (exists ?p (exists ?l (and (Is ?bed 'bed') (Is ?bs 'bookshelf') (LeftOf ?bs ?bed) (Is ?d 'dog') (On ?d ?bed) (Is ?p 'pizza') (Holding ?d ?p) (Is ?l 'laptop') (On ?l ?bed) (HasState ?l 'open') (forall ?b (implies (Is ?b 'book') (On ?b ?bs))) (exists ?k (and (Is ?k 'keyboard') (On ?k ?bed))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bed (exists ?bs (exists ?d (exists ?p (exists ?l (forall ?b (exists ?k (and (Is ?bed 'bed') (LeftOf ?bs ?bed) (On ?d ?bed) (Is ?bs 'bookshelf') (or (not (Is ?b 'book')) (On ?b ?bs)) (On ?l ?bed) (Is ?d 'dog') (Holding ?d ?p) (On ?k ?bed) (Is ?l 'laptop') (HasState ?l 'open') (Is ?p 'pizza') (Is ?k 'keyboard'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "laptop",
+        "book",
+        "pizza",
+        "bed",
+        "dog",
+        "bookshelf"
+    ]
+}

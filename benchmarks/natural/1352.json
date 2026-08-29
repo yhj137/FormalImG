@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An open refrigerator has a book on top and a bowl containing an apple inside. A boat sits to the right of the refrigerator. To the left of the refrigerator, every flower has a butterfly resting on it.",
+    "dsl": "(exists ?r (exists ?k (exists ?l (exists ?a (exists ?t (and (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?k 'book') (On ?k ?r) (Is ?l 'bowl') (In ?l ?r) (Is ?a 'apple') (In ?a ?l) (Is ?t 'boat') (RightOf ?t ?r) (forall ?f (implies (Is ?f 'flower') (and (LeftOf ?f ?r) (exists ?y (and (Is ?y 'butterfly') (On ?y ?f))))))))))))",
+    "cnf": "(exists ?r (exists ?k (exists ?l (exists ?a (exists ?t (forall ?f (exists ?y (and (Is ?r 'refrigerator') (HasState ?r 'open') (On ?k ?r) (In ?l ?r) (Is ?k 'book') (RightOf ?t ?r) (Is ?l 'bowl') (In ?a ?l) (or (not (Is ?f 'flower')) (LeftOf ?f ?r)) (Is ?t 'boat') (Is ?a 'apple') (or (not (Is ?f 'flower')) (Is ?y 'butterfly')) (or (not (Is ?f 'flower')) (On ?y ?f))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "book",
+        "butterfly",
+        "refrigerator",
+        "boat",
+        "apple",
+        "flower"
+    ]
+}

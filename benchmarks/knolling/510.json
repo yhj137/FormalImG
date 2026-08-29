@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A game controller is located on the left side of the scene. For every fork present in the image, it is aligned horizontally with the game controller. Furthermore, for each fork, there exists a watch that is also aligned horizontally with the fork and is visually smaller than the fork.",
+    "dsl": "(exists ?controller (and (Is ?controller 'game_controller') (OnLeftSide ?controller) (forall ?fork (implies (Is ?fork 'fork') (exists ?watch (and (Is ?watch 'watch') (AlignedHorizontally ?controller ?fork) (AlignedHorizontally ?fork ?watch) (SmallerThan ?watch ?fork)))))))",
+    "cnf": "(exists ?controller (forall ?fork (exists ?watch (and (Is ?controller 'game_controller') (OnLeftSide ?controller) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?controller ?fork)) (or (not (Is ?fork 'fork')) (Is ?watch 'watch')) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?watch)) (or (not (Is ?fork 'fork')) (SmallerThan ?watch ?fork))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "watch",
+        "game_controller"
+    ]
+}

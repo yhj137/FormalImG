@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. For every car in the scene, there is a man located to its left. The man is holding a toy car and is standing to the right of a table. On the table sit a lamp, a sandwich, and a round clock. Next to the sandwich, there is a fruit. To the left of the table is a plant, and there is a butterfly inside the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?c (implies (Is ?c 'car') (exists ?m (exists ?tc (exists ?t (exists ?p (exists ?b (exists ?l (exists ?cl (exists ?s (exists ?fr (and (Is ?m 'man') (Is ?tc 'toy car') (Is ?t 'table') (Is ?p 'plant') (Is ?b 'butterfly') (Is ?l 'lamp') (Is ?cl 'clock') (Is ?s 'sandwich') (Is ?fr 'fruit') (RightOf ?c ?m) (Holding ?m ?tc) (RightOf ?m ?t) (LeftOf ?p ?t) (In ?b ?p) (On ?l ?t) (On ?cl ?t) (HasShape ?cl 'round') (On ?s ?t) (NextTo ?fr ?s))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?c (exists ?m (exists ?tc (exists ?t (exists ?p (exists ?b (exists ?l (exists ?cl (exists ?s (exists ?fr (and (or (not (Is ?c 'car')) (Is ?m 'man')) (or (not (Is ?c 'car')) (RightOf ?c ?m)) (or (not (Is ?c 'car')) (Is ?tc 'toy car')) (or (not (Is ?c 'car')) (Holding ?m ?tc)) (or (not (Is ?c 'car')) (Is ?fr 'fruit')) (or (not (Is ?c 'car')) (Is ?t 'table')) (or (not (Is ?c 'car')) (RightOf ?m ?t)) (or (not (Is ?c 'car')) (Is ?s 'sandwich')) (or (not (Is ?c 'car')) (NextTo ?fr ?s)) (or (not (Is ?c 'car')) (Is ?p 'plant')) (or (not (Is ?c 'car')) (LeftOf ?p ?t)) (or (not (Is ?c 'car')) (Is ?cl 'clock')) (or (not (Is ?c 'car')) (On ?s ?t)) (or (not (Is ?c 'car')) (Is ?b 'butterfly')) (or (not (Is ?c 'car')) (In ?b ?p)) (or (not (Is ?c 'car')) (On ?l ?t)) (or (not (Is ?c 'car')) (Is ?l 'lamp')) (or (not (Is ?c 'car')) (On ?cl ?t)) (or (not (Is ?c 'car')) (HasShape ?cl 'round'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lamp",
+        "table",
+        "sandwich",
+        "man",
+        "plant",
+        "car",
+        "fruit",
+        "butterfly",
+        "clock",
+        "toy car"
+    ]
+}

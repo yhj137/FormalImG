@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bus next to a boat containing a smiling lion wearing a red hat and holding a hammer. To the left of the bus stands a dog holding a key, while a metal pan with a knife inside sits to the right. Every orange is also located to the right of the bus.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?bt (exists ?l (exists ?h (and (Is ?b 'bus') (Is ?bt 'boat') (NextTo ?bt ?b) (Is ?l 'lion') (In ?l ?bt) (HasState ?l 'smiling') (Is ?h 'hat') (On ?h ?l) (HasColor ?h 'red') (forall ?o (implies (Is ?o 'orange') (RightOf ?o ?b))) (exists ?p (exists ?k (exists ?hm (exists ?d (exists ?ky (and (Is ?p 'pan') (HasMaterial ?p 'metal') (RightOf ?p ?b) (Is ?k 'knife') (In ?k ?p) (Is ?hm 'hammer') (Holding ?l ?hm) (Is ?d 'dog') (LeftOf ?d ?b) (Is ?ky 'key') (Holding ?d ?ky)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?bt (exists ?l (exists ?h (forall ?o (exists ?p (exists ?k (exists ?hm (exists ?d (exists ?ky (and (Is ?b 'bus') (NextTo ?bt ?b) (or (not (Is ?o 'orange')) (RightOf ?o ?b)) (Is ?bt 'boat') (In ?l ?bt) (RightOf ?p ?b) (Is ?l 'lion') (HasState ?l 'smiling') (LeftOf ?d ?b) (HasMaterial ?p 'metal') (In ?k ?p) (On ?h ?l) (Is ?d 'dog') (Holding ?d ?ky) (Is ?p 'pan') (Is ?k 'knife') (Holding ?l ?hm) (Is ?h 'hat') (HasColor ?h 'red') (Is ?ky 'key') (Is ?hm 'hammer')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "pan",
+        "knife",
+        "bus",
+        "hat",
+        "hammer",
+        "boat",
+        "dog",
+        "lion",
+        "orange"
+    ]
+}

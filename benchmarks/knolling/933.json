@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white game controller located on the bottom side, with a sandwich positioned above it. For every spoon present in the arrangement, it is placed to the left of the sandwich. Furthermore, associated with each spoon, there is a red cup located above it and a blue sock positioned to the left of the cup.",
+    "dsl": "(exists ?gc (exists ?sw (and (Is ?gc 'game_controller') (Has ?gc 'white') (OnBottomSide ?gc) (Is ?sw 'sandwich') (Above ?sw ?gc) (forall ?sp (implies (Is ?sp 'spoon') (exists ?cup (exists ?sock (and (Is ?cup 'cup') (Has ?cup 'red') (Is ?sock 'sock') (Has ?sock 'blue') (LeftOf ?sp ?sw) (Above ?cup ?sp) (LeftOf ?sock ?cup)))))))))",
+    "cnf": "(exists ?gc (exists ?sw (forall ?sp (exists ?cup (exists ?sock (and (Is ?gc 'game_controller') (Has ?gc 'white') (OnBottomSide ?gc) (Above ?sw ?gc) (Is ?sw 'sandwich') (or (not (Is ?sp 'spoon')) (LeftOf ?sp ?sw)) (or (not (Is ?sp 'spoon')) (Has ?sock 'blue')) (or (not (Is ?sp 'spoon')) (Above ?cup ?sp)) (or (not (Is ?sp 'spoon')) (Is ?sock 'sock')) (or (not (Is ?sp 'spoon')) (LeftOf ?sock ?cup)) (or (not (Is ?sp 'spoon')) (Has ?cup 'red')) (or (not (Is ?sp 'spoon')) (Is ?cup 'cup'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "cup",
+        "game_controller",
+        "spoon",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a black remote.",
+    "dsl": "(exists ?r (and (Is ?r 'remote') (Has ?r 'black')))",
+    "cnf": "(exists ?r (and (Is ?r 'remote') (Has ?r 'black')))",
+    "k": 1,
+    "object_classes": [
+        "remote"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a black backpack, a white shirt, a keyboard, and a game controller arranged in a grid-like pattern. The white shirt is placed to the right of the backpack. The keyboard is positioned directly below the backpack, and the two are aligned vertically. The game controller is located to the right of the keyboard. For every set of keys in the image, there is a pair of glasses positioned above it. These glasses are also located to the right of the white shirt. Below the glasses is a stapler, which is vertically aligned with the glasses. A carrot is placed below the stapler. A hammer is positioned to the right of the stapler, and a wrench is located below the hammer. The wrench is found on the bottom side of the image. The backpack is visually larger than the glasses.",
+    "dsl": "(exists ?bp (exists ?shirt (exists ?kb (exists ?gc (and (Is ?bp 'backpack') (Has ?bp 'black') (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?kb 'keyboard') (Is ?gc 'game_controller') (RightOf ?shirt ?bp) (Below ?kb ?bp) (AlignedVertically ?bp ?kb) (RightOf ?gc ?kb) (forall ?k (implies (Is ?k 'keys') (exists ?gl (exists ?st (exists ?ca (exists ?hm (exists ?wr (and (Is ?gl 'glasses') (Is ?st 'stapler') (Is ?ca 'carrot') (Is ?hm 'hammer') (Is ?wr 'wrench') (Above ?gl ?k) (RightOf ?gl ?shirt) (Below ?st ?gl) (AlignedVertically ?gl ?st) (Below ?ca ?st) (RightOf ?hm ?st) (Below ?wr ?hm) (OnBottomSide ?wr) (LargerThan ?bp ?gl))))))))))))))",
+    "cnf": "(exists ?bp (exists ?shirt (exists ?kb (exists ?gc (forall ?k (exists ?gl (exists ?st (exists ?ca (exists ?hm (exists ?wr (and (Is ?bp 'backpack') (Has ?bp 'black') (RightOf ?shirt ?bp) (Below ?kb ?bp) (Has ?shirt 'white') (or (not (Is ?k 'keys')) (RightOf ?gl ?shirt)) (AlignedVertically ?bp ?kb) (Is ?kb 'keyboard') (Is ?shirt 'shirt') (or (not (Is ?k 'keys')) (Above ?gl ?k)) (or (not (Is ?k 'keys')) (Below ?st ?gl)) (or (not (Is ?k 'keys')) (LargerThan ?bp ?gl)) (RightOf ?gc ?kb) (or (not (Is ?k 'keys')) (Is ?wr 'wrench')) (or (not (Is ?k 'keys')) (Is ?gl 'glasses')) (or (not (Is ?k 'keys')) (AlignedVertically ?gl ?st)) (or (not (Is ?k 'keys')) (Is ?st 'stapler')) (or (not (Is ?k 'keys')) (OnBottomSide ?wr)) (Is ?gc 'game_controller') (or (not (Is ?k 'keys')) (Is ?hm 'hammer')) (or (not (Is ?k 'keys')) (Below ?wr ?hm)) (or (not (Is ?k 'keys')) (Below ?ca ?st)) (or (not (Is ?k 'keys')) (Is ?ca 'carrot')) (or (not (Is ?k 'keys')) (RightOf ?hm ?st)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "stapler",
+        "keyboard",
+        "wrench",
+        "carrot",
+        "game_controller",
+        "hammer",
+        "backpack",
+        "shirt"
+    ]
+}

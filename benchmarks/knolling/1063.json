@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase positioned on the bottom side of the scene. The layout follows a specific rule: for every stapler present, there is a keyboard to its right, a backpack to the right of the keyboard, a pair of glasses to the right of the backpack, and a fork to the right of the glasses. These five items\u2014stapler, keyboard, backpack, glasses, and fork\u2014are aligned horizontally in a row. Additionally, the suitcase is visually larger than the backpack.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (forall ?stapler (implies (Is ?stapler 'stapler') (exists ?keyboard (exists ?backpack (exists ?glasses (exists ?fork (and (Is ?keyboard 'keyboard') (Is ?backpack 'backpack') (Is ?glasses 'glasses') (Is ?fork 'fork') (LeftOf ?stapler ?keyboard) (LeftOf ?keyboard ?backpack) (LeftOf ?backpack ?glasses) (LeftOf ?glasses ?fork) (AlignedHorizontally ?stapler ?keyboard) (AlignedHorizontally ?keyboard ?backpack) (AlignedHorizontally ?backpack ?glasses) (AlignedHorizontally ?glasses ?fork) (LargerThan ?suitcase ?backpack))))))))))",
+    "cnf": "(exists ?suitcase (forall ?stapler (exists ?keyboard (exists ?backpack (exists ?glasses (exists ?fork (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (or (not (Is ?stapler 'stapler')) (LargerThan ?suitcase ?backpack)) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?glasses ?fork)) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?backpack ?glasses)) (or (not (Is ?stapler 'stapler')) (LeftOf ?glasses ?fork)) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?keyboard ?backpack)) (or (not (Is ?stapler 'stapler')) (LeftOf ?backpack ?glasses)) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?stapler ?keyboard)) (or (not (Is ?stapler 'stapler')) (Is ?fork 'fork')) (or (not (Is ?stapler 'stapler')) (LeftOf ?keyboard ?backpack)) (or (not (Is ?stapler 'stapler')) (Is ?glasses 'glasses')) (or (not (Is ?stapler 'stapler')) (LeftOf ?stapler ?keyboard)) (or (not (Is ?stapler 'stapler')) (Is ?backpack 'backpack')) (or (not (Is ?stapler 'stapler')) (Is ?keyboard 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "keyboard",
+        "fork",
+        "backpack",
+        "suitcase"
+    ]
+}

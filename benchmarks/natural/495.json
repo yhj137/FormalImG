@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every bicycle has a clock resting on it and a rusty knife placed next to it on the right.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'bicycle') (exists ?c (exists ?k (and (Is ?c 'clock') (Is ?k 'knife') (On ?c ?b) (HasState ?k 'rusty') (NextTo ?k ?b) (RightOf ?k ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?c (exists ?k (and (or (not (Is ?b 'bicycle')) (Is ?c 'clock')) (or (not (Is ?b 'bicycle')) (Is ?k 'knife')) (or (not (Is ?b 'bicycle')) (On ?c ?b)) (or (not (Is ?b 'bicycle')) (HasState ?k 'rusty')) (or (not (Is ?b 'bicycle')) (NextTo ?k ?b)) (or (not (Is ?b 'bicycle')) (RightOf ?k ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "bicycle",
+        "knife"
+    ]
+}

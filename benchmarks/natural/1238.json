@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every person sits on a wooden bench alongside a jacket with a flower inside. Each person holds an apple and a spoon, with a banana positioned next to the bench.",
+    "dsl": "(forall ?p (implies (Is ?p 'person') (exists ?b (exists ?j (exists ?f (exists ?a (exists ?sp (exists ?ba (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (On ?p ?b) (Is ?j 'jacket') (On ?j ?b) (Is ?f 'flower') (In ?f ?j) (Is ?a 'apple') (Holding ?p ?a) (Is ?sp 'spoon') (Holding ?p ?sp) (Is ?ba 'banana') (NextTo ?ba ?b))))))))))",
+    "cnf": "(forall ?p (exists ?b (exists ?j (exists ?f (exists ?a (exists ?sp (exists ?ba (and (or (not (Is ?p 'person')) (Is ?b 'bench')) (or (not (Is ?p 'person')) (HasMaterial ?b 'wooden')) (or (not (Is ?p 'person')) (On ?p ?b)) (or (not (Is ?p 'person')) (Is ?j 'jacket')) (or (not (Is ?p 'person')) (On ?j ?b)) (or (not (Is ?p 'person')) (Is ?f 'flower')) (or (not (Is ?p 'person')) (NextTo ?ba ?b)) (or (not (Is ?p 'person')) (In ?f ?j)) (or (not (Is ?p 'person')) (Is ?ba 'banana')) (or (not (Is ?p 'person')) (Is ?a 'apple')) (or (not (Is ?p 'person')) (Holding ?p ?sp)) (or (not (Is ?p 'person')) (Holding ?p ?a)) (or (not (Is ?p 'person')) (Is ?sp 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "person",
+        "banana",
+        "apple",
+        "flower",
+        "spoon"
+    ]
+}

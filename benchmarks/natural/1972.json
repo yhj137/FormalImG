@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A blue backpack containing a metal hammer sits on a wooden bed. An elephant holding a teddy bear stands next to the bed, with a red car to its left. A mirror is located to the left of the bed, beside a monitor. Every butterfly is perched on a plant to the right of the bed.",
+    "dsl": "(exists ?bed (exists ?backpack (exists ?hammer (exists ?elephant (exists ?teddy (exists ?car (exists ?mirror (exists ?monitor (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?backpack 'backpack') (HasColor ?backpack 'blue') (On ?backpack ?bed) (Is ?hammer 'hammer') (HasMaterial ?hammer 'metal') (In ?hammer ?backpack) (Is ?elephant 'elephant') (NextTo ?elephant ?bed) (Is ?teddy 'teddy bear') (Holding ?elephant ?teddy) (Is ?car 'car') (HasColor ?car 'red') (LeftOf ?car ?elephant) (Is ?mirror 'mirror') (LeftOf ?mirror ?bed) (Is ?monitor 'monitor') (NextTo ?monitor ?mirror) (forall ?butterfly (implies (Is ?butterfly 'butterfly') (exists ?plant (and (Is ?plant 'plant') (RightOf ?plant ?bed) (On ?butterfly ?plant))))))))))))))",
+    "cnf": "(exists ?bed (exists ?backpack (exists ?hammer (exists ?elephant (exists ?teddy (exists ?car (exists ?mirror (exists ?monitor (forall ?butterfly (exists ?plant (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (On ?backpack ?bed) (NextTo ?elephant ?bed) (HasColor ?backpack 'blue') (In ?hammer ?backpack) (LeftOf ?mirror ?bed) (Is ?elephant 'elephant') (Holding ?elephant ?teddy) (Is ?backpack 'backpack') (HasMaterial ?hammer 'metal') (or (not (Is ?butterfly 'butterfly')) (RightOf ?plant ?bed)) (Is ?mirror 'mirror') (NextTo ?monitor ?mirror) (LeftOf ?car ?elephant) (Is ?teddy 'teddy bear') (Is ?hammer 'hammer') (or (not (Is ?butterfly 'butterfly')) (Is ?plant 'plant')) (or (not (Is ?butterfly 'butterfly')) (On ?butterfly ?plant)) (Is ?monitor 'monitor') (HasColor ?car 'red') (Is ?car 'car'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "backpack",
+        "bed",
+        "plant",
+        "monitor",
+        "teddy bear",
+        "hammer",
+        "mirror",
+        "car",
+        "butterfly"
+    ]
+}

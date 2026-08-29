@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a tree on the left. To the right of the tree, a horse is holding a phone. Further right is a leather sofa. On the sofa rests a backpack containing a fabric shirt and a rectangular keyboard, alongside a round pan with a cup inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?h (exists ?p (exists ?s (exists ?b (exists ?sh (exists ?k (exists ?pa (exists ?c (and (Is ?t 'tree') (Is ?h 'horse') (Is ?p 'phone') (Is ?s 'sofa') (Is ?b 'backpack') (Is ?sh 'shirt') (Is ?k 'keyboard') (Is ?pa 'pan') (Is ?c 'cup') (RightOf ?h ?t) (Holding ?h ?p) (RightOf ?s ?h) (HasMaterial ?s 'leather') (On ?b ?s) (In ?sh ?b) (HasMaterial ?sh 'fabric') (In ?k ?b) (HasShape ?k 'rectangular') (On ?pa ?s) (HasShape ?pa 'round') (In ?c ?pa))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?h (exists ?p (exists ?s (exists ?b (exists ?sh (exists ?k (exists ?pa (exists ?c (and (Is ?t 'tree') (RightOf ?h ?t) (Is ?h 'horse') (Holding ?h ?p) (RightOf ?s ?h) (Is ?p 'phone') (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?b ?s) (On ?pa ?s) (Is ?b 'backpack') (In ?sh ?b) (Is ?pa 'pan') (HasShape ?pa 'round') (In ?k ?b) (Is ?sh 'shirt') (HasMaterial ?sh 'fabric') (In ?c ?pa) (Is ?k 'keyboard') (HasShape ?k 'rectangular') (Is ?c 'cup'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "sofa",
+        "horse",
+        "backpack",
+        "tree",
+        "pan",
+        "cup",
+        "keyboard"
+    ]
+}

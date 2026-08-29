@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black hammer positioned on the top side of the layout. Located directly below the hammer is a pair of scissors. The composition adheres to a specific constraint: for every lighter found in the image, there is a pair of blue glasses to its left, and these glasses are aligned horizontally with the scissors.",
+    "dsl": "(exists ?h (exists ?s (and (Is ?h 'hammer') (Has ?h 'black') (OnTopSide ?h) (Is ?s 'scissors') (Below ?s ?h) (forall ?l (implies (Is ?l 'lighter') (exists ?g (and (Is ?g 'glasses') (Has ?g 'blue') (LeftOf ?g ?l) (AlignedHorizontally ?g ?s))))))))",
+    "cnf": "(exists ?h (exists ?s (forall ?l (exists ?g (and (Is ?h 'hammer') (Has ?h 'black') (OnTopSide ?h) (Below ?s ?h) (Is ?s 'scissors') (or (not (Is ?l 'lighter')) (AlignedHorizontally ?g ?s)) (or (not (Is ?l 'lighter')) (LeftOf ?g ?l)) (or (not (Is ?l 'lighter')) (Has ?g 'blue')) (or (not (Is ?l 'lighter')) (Is ?g 'glasses')))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "hammer",
+        "lighter",
+        "glasses"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is placed on the top side of the scene. A shirt is arranged to the right of the backpack, and they are aligned horizontally. For every plate in the image, the following items are arranged relative to it: the plate is positioned to the right of the shirt; a knife is located to the left of the plate; and a brown wallet is placed to the right of the plate. A lighter, which is smaller than the wallet, is positioned to the left of the wallet. Additionally, a drill is located on the right side of the image and is larger than the plate, with a red screwdriver placed to the left of the drill.",
+    "dsl": "(exists ?backpack (exists ?shirt (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?shirt 'shirt') (RightOf ?shirt ?backpack) (AlignedHorizontally ?backpack ?shirt) (forall ?plate (implies (Is ?plate 'plate') (exists ?knife (exists ?wallet (exists ?lighter (exists ?drill (exists ?screwdriver (and (Is ?knife 'knife') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?lighter 'lighter') (Is ?drill 'drill') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (RightOf ?plate ?shirt) (LeftOf ?knife ?plate) (RightOf ?wallet ?plate) (LeftOf ?lighter ?wallet) (SmallerThan ?lighter ?wallet) (OnRightSide ?drill) (LargerThan ?drill ?plate) (LeftOf ?screwdriver ?drill))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shirt (forall ?plate (exists ?knife (exists ?wallet (exists ?lighter (exists ?drill (exists ?screwdriver (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?shirt ?backpack) (AlignedHorizontally ?backpack ?shirt) (Is ?shirt 'shirt') (or (not (Is ?plate 'plate')) (RightOf ?plate ?shirt)) (or (not (Is ?plate 'plate')) (Has ?screwdriver 'red')) (or (not (Is ?plate 'plate')) (LeftOf ?knife ?plate)) (or (not (Is ?plate 'plate')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?plate 'plate')) (LeftOf ?screwdriver ?drill)) (or (not (Is ?plate 'plate')) (RightOf ?wallet ?plate)) (or (not (Is ?plate 'plate')) (Is ?knife 'knife')) (or (not (Is ?plate 'plate')) (Is ?drill 'drill')) (or (not (Is ?plate 'plate')) (LargerThan ?drill ?plate)) (or (not (Is ?plate 'plate')) (LeftOf ?lighter ?wallet)) (or (not (Is ?plate 'plate')) (Has ?wallet 'brown')) (or (not (Is ?plate 'plate')) (Is ?wallet 'wallet')) (or (not (Is ?plate 'plate')) (Is ?lighter 'lighter')) (or (not (Is ?plate 'plate')) (OnRightSide ?drill)) (or (not (Is ?plate 'plate')) (SmallerThan ?lighter ?wallet)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "screwdriver",
+        "drill",
+        "backpack",
+        "wallet",
+        "lighter",
+        "knife",
+        "shirt"
+    ]
+}

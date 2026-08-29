@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase located on the bottom right side. A wallet, which is smaller than the suitcase, is positioned to the left of the suitcase. For every sock in the image, it is arranged above the wallet and has a watch to its right. Directly above the sock is a pair of pliers. The pliers are flanked by a fork to the left and a carrot to the right. Additionally, a sandwich is placed above the pliers, with a donut located to the right of the sandwich.",
+    "dsl": "(exists ?suitcase (exists ?wallet (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (OnRightSide ?suitcase) (Is ?wallet 'wallet') (LeftOf ?wallet ?suitcase) (SmallerThan ?wallet ?suitcase) (forall ?sock (implies (Is ?sock 'sock') (exists ?watch (exists ?pliers (exists ?fork (exists ?carrot (exists ?sandwich (exists ?donut (and (Is ?watch 'watch') (Is ?pliers 'pliers') (Is ?fork 'fork') (Is ?carrot 'carrot') (Is ?sandwich 'sandwich') (Is ?donut 'donut') (Above ?sock ?wallet) (RightOf ?watch ?sock) (Above ?pliers ?sock) (LeftOf ?fork ?pliers) (RightOf ?carrot ?pliers) (Above ?sandwich ?pliers) (RightOf ?donut ?sandwich)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?wallet (forall ?sock (exists ?watch (exists ?pliers (exists ?fork (exists ?carrot (exists ?sandwich (exists ?donut (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (OnRightSide ?suitcase) (LeftOf ?wallet ?suitcase) (SmallerThan ?wallet ?suitcase) (Is ?wallet 'wallet') (or (not (Is ?sock 'sock')) (Above ?sock ?wallet)) (or (not (Is ?sock 'sock')) (Is ?donut 'donut')) (or (not (Is ?sock 'sock')) (RightOf ?watch ?sock)) (or (not (Is ?sock 'sock')) (Is ?sandwich 'sandwich')) (or (not (Is ?sock 'sock')) (RightOf ?donut ?sandwich)) (or (not (Is ?sock 'sock')) (Above ?pliers ?sock)) (or (not (Is ?sock 'sock')) (Is ?watch 'watch')) (or (not (Is ?sock 'sock')) (Is ?carrot 'carrot')) (or (not (Is ?sock 'sock')) (Above ?sandwich ?pliers)) (or (not (Is ?sock 'sock')) (LeftOf ?fork ?pliers)) (or (not (Is ?sock 'sock')) (Is ?pliers 'pliers')) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (RightOf ?carrot ?pliers))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "carrot",
+        "suitcase",
+        "watch",
+        "fork",
+        "wallet",
+        "sandwich",
+        "donut"
+    ]
+}

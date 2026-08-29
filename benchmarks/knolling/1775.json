@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement of objects. The top row consists of a gray hammer, a black keyboard, and a brown cutting board, arranged from left to right and aligned horizontally. The bottom row, positioned on the bottom side of the image, contains a white shoe, a pink donut, and blue scissors, also arranged from left to right and aligned horizontally. A red stapler is positioned below the cutting board and above the scissors, maintaining vertical alignment with them. The layout includes a constraint: for every book in the scene, there is a calculator located to its right. Specifically, the book is positioned below the hammer and aligned vertically with it, while the calculator is positioned below the keyboard, aligned vertically with it, and to the left of the stapler. The book, calculator, and stapler form a middle row that is aligned horizontally.",
+    "dsl": "(exists ?h (exists ?k (exists ?cb (exists ?s (exists ?sh (exists ?d (exists ?sc (and (Is ?h 'hammer') (Has ?h 'gray') (Is ?k 'keyboard') (Has ?k 'black') (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?s 'stapler') (Has ?s 'red') (Is ?sh 'shoe') (Has ?sh 'white') (Is ?d 'donut') (Has ?d 'pink') (Is ?sc 'scissors') (Has ?sc 'blue') (RightOf ?k ?h) (RightOf ?cb ?k) (AlignedHorizontally ?h ?k) (AlignedHorizontally ?k ?cb) (Below ?s ?cb) (Below ?sc ?s) (AlignedVertically ?cb ?s) (AlignedVertically ?s ?sc) (OnBottomSide ?sh) (OnBottomSide ?d) (OnBottomSide ?sc) (RightOf ?d ?sh) (RightOf ?sc ?d) (AlignedHorizontally ?sh ?d) (AlignedHorizontally ?d ?sc) (forall ?b (implies (Is ?b 'book') (exists ?c (and (Is ?c 'calculator') (RightOf ?c ?b) (RightOf ?s ?c) (Below ?b ?h) (Below ?c ?k) (AlignedVertically ?b ?h) (AlignedVertically ?c ?k) (AlignedHorizontally ?b ?c) (AlignedHorizontally ?c ?s)))))))))))))",
+    "cnf": "(exists ?h (exists ?k (exists ?cb (exists ?s (exists ?sh (exists ?d (exists ?sc (forall ?b (exists ?c (and (Is ?h 'hammer') (Has ?h 'gray') (RightOf ?k ?h) (AlignedHorizontally ?h ?k) (Has ?k 'black') (RightOf ?cb ?k) (or (not (Is ?b 'book')) (Below ?b ?h)) (AlignedHorizontally ?k ?cb) (Is ?k 'keyboard') (Has ?cb 'brown') (or (not (Is ?b 'book')) (AlignedVertically ?b ?h)) (or (not (Is ?b 'book')) (RightOf ?s ?c)) (or (not (Is ?b 'book')) (Below ?c ?k)) (Below ?s ?cb) (Is ?cb 'cutting_board') (or (not (Is ?b 'book')) (AlignedVertically ?c ?k)) (AlignedVertically ?s ?sc) (or (not (Is ?b 'book')) (AlignedHorizontally ?c ?s)) (or (not (Is ?b 'book')) (RightOf ?c ?b)) (AlignedVertically ?cb ?s) (Has ?s 'red') (Below ?sc ?s) (or (not (Is ?b 'book')) (AlignedHorizontally ?b ?c)) (OnBottomSide ?sc) (or (not (Is ?b 'book')) (Is ?c 'calculator')) (Is ?s 'stapler') (Has ?sc 'blue') (RightOf ?sc ?d) (Is ?sc 'scissors') (RightOf ?d ?sh) (AlignedHorizontally ?sh ?d) (AlignedHorizontally ?d ?sc) (OnBottomSide ?sh) (OnBottomSide ?d) (Has ?sh 'white') (Has ?d 'pink') (Is ?sh 'shoe') (Is ?d 'donut')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "stapler",
+        "keyboard",
+        "hammer",
+        "cutting_board",
+        "calculator",
+        "scissors",
+        "shoe",
+        "donut"
+    ]
+}

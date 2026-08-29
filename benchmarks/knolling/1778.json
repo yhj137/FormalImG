@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is placed on the left side of the scene. Below the cutting board is a sandwich, and below the sandwich is an apple. A pan and a game controller are positioned on the bottom side. The apple, the pan, and the game controller are aligned horizontally. Glasses and scissors are aligned horizontally with the sandwich. For every wrench included in the composition, it is smaller than the cutting board and has a screwdriver located directly below it.",
+    "dsl": "(exists ?cb (exists ?sw (exists ?apple (exists ?pan (exists ?gc (exists ?gl (exists ?sci (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?sw 'sandwich') (Below ?sw ?cb) (Is ?apple 'apple') (Below ?apple ?sw) (Is ?pan 'pan') (OnBottomSide ?pan) (Is ?gc 'game_controller') (OnBottomSide ?gc) (Is ?gl 'glasses') (Is ?sci 'scissors') (AlignedHorizontally ?apple ?pan) (AlignedHorizontally ?pan ?gc) (AlignedHorizontally ?sw ?gl) (AlignedHorizontally ?gl ?sci) (forall ?w (implies (Is ?w 'wrench') (exists ?sd (and (Is ?sd 'screwdriver') (Below ?sd ?w) (SmallerThan ?w ?cb)))))))))))))",
+    "cnf": "(exists ?cb (exists ?sw (exists ?apple (exists ?pan (exists ?gc (exists ?gl (exists ?sci (forall ?w (exists ?sd (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Below ?sw ?cb) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?cb)) (Is ?sw 'sandwich') (Below ?apple ?sw) (or (not (Is ?w 'wrench')) (Below ?sd ?w)) (AlignedHorizontally ?sw ?gl) (Is ?apple 'apple') (AlignedHorizontally ?apple ?pan) (or (not (Is ?w 'wrench')) (Is ?sd 'screwdriver')) (Is ?gl 'glasses') (AlignedHorizontally ?gl ?sci) (OnBottomSide ?pan) (AlignedHorizontally ?pan ?gc) (Is ?sci 'scissors') (Is ?pan 'pan') (OnBottomSide ?gc) (Is ?gc 'game_controller')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "apple",
+        "wrench",
+        "screwdriver",
+        "game_controller",
+        "cutting_board",
+        "pan",
+        "scissors",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a game controller positioned above a handbag. For every pen in the scene, it is placed below the handbag. Additionally, there is a drill located below every pen, and a stapler located below the drill. The stapler is positioned on the right side of the image.",
+    "dsl": "(exists ?game_controller (exists ?handbag (and (Is ?game_controller 'game_controller') (Is ?handbag 'handbag') (Above ?game_controller ?handbag) (forall ?pen (implies (Is ?pen 'pen') (exists ?drill (exists ?stapler (and (Is ?drill 'drill') (Is ?stapler 'stapler') (Below ?pen ?handbag) (Below ?drill ?pen) (Below ?stapler ?drill) (OnRightSide ?stapler)))))))))",
+    "cnf": "(exists ?game_controller (exists ?handbag (forall ?pen (exists ?drill (exists ?stapler (and (Is ?game_controller 'game_controller') (Above ?game_controller ?handbag) (Is ?handbag 'handbag') (or (not (Is ?pen 'pen')) (Below ?pen ?handbag)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (Below ?drill ?pen)) (or (not (Is ?pen 'pen')) (Is ?drill 'drill')) (or (not (Is ?pen 'pen')) (Below ?stapler ?drill)) (or (not (Is ?pen 'pen')) (OnRightSide ?stapler))))))))",
+    "k": 5,
+    "object_classes": [
+        "pen",
+        "game_controller",
+        "drill",
+        "stapler",
+        "handbag"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring six objects arranged in a single neat row positioned on the top side of the scene. The layout centers around a monitor. To the right of the monitor is a game controller, and to the right of the game controller is a plate. To the left of the monitor is a hammer; to the left of the hammer is a knife; and to the left of the knife is a sock. All items are aligned horizontally with one another, and the monitor is visually larger than the game controller.",
+    "dsl": "(exists ?m (exists ?gc (exists ?p (exists ?h (exists ?k (exists ?s (and (Is ?m 'monitor') (Is ?gc 'game_controller') (Is ?p 'plate') (Is ?h 'hammer') (Is ?k 'knife') (Is ?s 'sock') (OnTopSide ?m) (RightOf ?gc ?m) (RightOf ?p ?gc) (LeftOf ?h ?m) (LeftOf ?k ?h) (LeftOf ?s ?k) (AlignedHorizontally ?m ?gc) (AlignedHorizontally ?gc ?p) (AlignedHorizontally ?h ?m) (AlignedHorizontally ?k ?h) (AlignedHorizontally ?s ?k) (LargerThan ?m ?gc))))))))",
+    "cnf": "(exists ?m (exists ?gc (exists ?p (exists ?h (exists ?k (exists ?s (and (Is ?m 'monitor') (OnTopSide ?m) (RightOf ?gc ?m) (LeftOf ?h ?m) (Is ?gc 'game_controller') (RightOf ?p ?gc) (AlignedHorizontally ?m ?gc) (Is ?h 'hammer') (LeftOf ?k ?h) (Is ?p 'plate') (AlignedHorizontally ?gc ?p) (AlignedHorizontally ?h ?m) (Is ?k 'knife') (LeftOf ?s ?k) (LargerThan ?m ?gc) (AlignedHorizontally ?k ?h) (Is ?s 'sock') (AlignedHorizontally ?s ?k))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "sock",
+        "game_controller",
+        "hammer",
+        "knife",
+        "monitor"
+    ]
+}

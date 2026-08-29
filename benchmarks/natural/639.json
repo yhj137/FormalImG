@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. An open laptop is placed on the left. To the right of the laptop, there is a cat holding a fish. A green bottle is located to the right of the cat.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?c (exists ?f (exists ?b (and (Is ?l 'laptop') (HasState ?l 'open') (Is ?c 'cat') (Is ?f 'fish') (Holding ?c ?f) (RightOf ?c ?l) (Is ?b 'bottle') (HasColor ?b 'green') (RightOf ?b ?c)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?c (exists ?f (exists ?b (and (Is ?l 'laptop') (HasState ?l 'open') (RightOf ?c ?l) (Holding ?c ?f) (RightOf ?b ?c) (Is ?c 'cat') (Is ?f 'fish') (HasColor ?b 'green') (Is ?b 'bottle')))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "fish",
+        "laptop",
+        "cat"
+    ]
+}

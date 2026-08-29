@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a keyboard resting on a bench. Every screwdriver is placed next to the keyboard, and a lit lamp also sits on the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (and (Is ?b 'bench') (Is ?k 'keyboard') (On ?k ?b) (forall ?s (implies (Is ?s 'screwdriver') (NextTo ?s ?k))) (exists ?l (and (Is ?l 'lamp') (HasState ?l 'on') (On ?l ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (forall ?s (exists ?l (and (Is ?b 'bench') (On ?k ?b) (On ?l ?b) (Is ?k 'keyboard') (or (not (Is ?s 'screwdriver')) (NextTo ?s ?k)) (HasState ?l 'on') (Is ?l 'lamp')))))))",
+    "k": 4,
+    "object_classes": [
+        "lamp",
+        "screwdriver",
+        "bench",
+        "keyboard"
+    ]
+}

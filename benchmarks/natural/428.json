@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman inside a bus holding an open laptop, with the woman positioned to the right of the laptop.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?l (and (Is ?w 'woman') (Is ?b 'bus') (Is ?l 'laptop') (In ?w ?b) (Holding ?w ?l) (HasState ?l 'open') (RightOf ?w ?l))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?l (and (Is ?w 'woman') (In ?w ?b) (Holding ?w ?l) (Is ?b 'bus') (RightOf ?w ?l) (Is ?l 'laptop') (HasState ?l 'open'))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "bus",
+        "woman"
+    ]
+}

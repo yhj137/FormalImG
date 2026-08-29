@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a person to the left of a tree. Next to the person is a cake, with a metal knife lying to its left and all forks positioned to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?p (exists ?c (exists ?k (and (Is ?t 'tree') (Is ?p 'person') (Is ?c 'cake') (Is ?k 'knife') (HasMaterial ?k 'metal') (LeftOf ?p ?t) (NextTo ?c ?p) (LeftOf ?k ?c) (forall ?f (implies (Is ?f 'fork') (RightOf ?f ?c)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?p (exists ?c (exists ?k (forall ?f (and (Is ?t 'tree') (LeftOf ?p ?t) (Is ?p 'person') (NextTo ?c ?p) (Is ?c 'cake') (LeftOf ?k ?c) (or (not (Is ?f 'fork')) (RightOf ?f ?c)) (HasMaterial ?k 'metal') (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "person",
+        "knife",
+        "cake",
+        "tree"
+    ]
+}

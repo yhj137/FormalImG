@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene inside a house. A dog wearing blue headphones sits on a chair, holding a round pizza. A plant is positioned to the left of the chair. All bottles are located next to the plant, with a key inside each one and a cat beside every bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?d (exists ?p (exists ?hp (exists ?pl (and (Is ?h 'house') (Is ?c 'chair') (In ?c ?h) (Is ?d 'dog') (HasState ?d 'sitting') (On ?d ?c) (Is ?p 'pizza') (HasShape ?p 'round') (Holding ?d ?p) (Is ?hp 'headphones') (HasColor ?hp 'blue') (On ?hp ?d) (Is ?pl 'plant') (LeftOf ?pl ?c) (forall ?b (implies (Is ?b 'bottle') (and (NextTo ?b ?pl) (exists ?k (exists ?cat (and (Is ?k 'key') (In ?k ?b) (Is ?cat 'cat') (NextTo ?cat ?b)))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?d (exists ?p (exists ?hp (exists ?pl (forall ?b (exists ?k (exists ?cat (and (Is ?h 'house') (In ?c ?h) (Is ?c 'chair') (On ?d ?c) (LeftOf ?pl ?c) (HasState ?d 'sitting') (Holding ?d ?p) (Is ?pl 'plant') (or (not (Is ?b 'bottle')) (NextTo ?b ?pl)) (Is ?d 'dog') (On ?hp ?d) (HasShape ?p 'round') (or (not (Is ?b 'bottle')) (Is ?k 'key')) (HasColor ?hp 'blue') (Is ?p 'pizza') (or (not (Is ?b 'bottle')) (In ?k ?b)) (Is ?hp 'headphones') (or (not (Is ?b 'bottle')) (Is ?cat 'cat')) (or (not (Is ?b 'bottle')) (NextTo ?cat ?b)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "headphones",
+        "bottle",
+        "chair",
+        "plant",
+        "pizza",
+        "cat",
+        "dog",
+        "key"
+    ]
+}

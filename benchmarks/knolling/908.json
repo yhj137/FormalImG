@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown handbag and a black hat are arranged on the top side of the surface, with the handbag positioned to the left of the hat. For every white glove in the layout, there is a gray spoon to its left and a red book to its right. Additionally, the red book is located to the left of the brown handbag.",
+    "dsl": "(exists ?handbag (exists ?hat (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Is ?hat 'hat') (Has ?hat 'black') (OnTopSide ?hat) (LeftOf ?handbag ?hat) (forall ?glove (implies (and (Is ?glove 'glove') (Has ?glove 'white')) (exists ?spoon (exists ?book (and (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?book 'book') (Has ?book 'red') (LeftOf ?spoon ?glove) (RightOf ?book ?glove) (LeftOf ?book ?handbag)))))))))",
+    "cnf": "(exists ?handbag (exists ?hat (forall ?glove (exists ?spoon (exists ?book (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (LeftOf ?handbag ?hat) (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (LeftOf ?book ?handbag)) (OnTopSide ?hat) (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (RightOf ?book ?glove)) (Has ?hat 'black') (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (LeftOf ?spoon ?glove)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (Has ?book 'red')) (Is ?hat 'hat') (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (Has ?spoon 'gray')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (Is ?book 'book')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'white')) (Is ?spoon 'spoon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "hat",
+        "handbag",
+        "spoon",
+        "glove"
+    ]
+}

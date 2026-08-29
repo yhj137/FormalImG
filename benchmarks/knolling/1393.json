@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is anchored by a vertical column containing a sandwich, a phone, and a laptop; the sandwich is above the phone, and the phone is above the laptop, with all three aligned vertically. To the right of the laptop is a drill, and to the right of the drill is a stapler. A glove is located on the bottom side of the scene, positioned such that the stapler is above the glove. Finally, for every lighter in the image, it is placed to the left of the sandwich.",
+    "dsl": "(exists ?laptop (exists ?phone (exists ?sandwich (exists ?drill (exists ?stapler (exists ?glove (and (Is ?laptop 'laptop') (Is ?phone 'phone') (Is ?sandwich 'sandwich') (Is ?drill 'drill') (Is ?stapler 'stapler') (Is ?glove 'glove') (Above ?sandwich ?phone) (Above ?phone ?laptop) (AlignedVertically ?sandwich ?phone) (AlignedVertically ?phone ?laptop) (RightOf ?drill ?laptop) (RightOf ?stapler ?drill) (OnBottomSide ?glove) (Above ?stapler ?glove) (forall ?lighter (implies (Is ?lighter 'lighter') (LeftOf ?lighter ?sandwich))))))))))",
+    "cnf": "(exists ?laptop (exists ?phone (exists ?sandwich (exists ?drill (exists ?stapler (exists ?glove (forall ?lighter (and (Is ?laptop 'laptop') (Above ?phone ?laptop) (AlignedVertically ?phone ?laptop) (Above ?sandwich ?phone) (AlignedVertically ?sandwich ?phone) (RightOf ?drill ?laptop) (Is ?phone 'phone') (Is ?sandwich 'sandwich') (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?sandwich)) (Is ?drill 'drill') (RightOf ?stapler ?drill) (Is ?stapler 'stapler') (Above ?stapler ?glove) (OnBottomSide ?glove) (Is ?glove 'glove')))))))))",
+    "k": 7,
+    "object_classes": [
+        "lighter",
+        "drill",
+        "stapler",
+        "glove",
+        "phone",
+        "sandwich",
+        "laptop"
+    ]
+}

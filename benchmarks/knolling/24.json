@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a lighter which is positioned on the top side of the frame.",
+    "dsl": "(exists ?lighter (and (Is ?lighter 'lighter') (OnTopSide ?lighter)))",
+    "cnf": "(exists ?lighter (and (Is ?lighter 'lighter') (OnTopSide ?lighter)))",
+    "k": 1,
+    "object_classes": [
+        "lighter"
+    ]
+}

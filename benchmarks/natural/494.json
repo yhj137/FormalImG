@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style image where every ball is held by a child located to the left of a plastic monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'ball') (exists ?c (exists ?m (and (Is ?c 'child') (Is ?m 'monitor') (HasMaterial ?m 'plastic') (Holding ?c ?b) (LeftOf ?c ?m)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?c (exists ?m (and (or (not (Is ?b 'ball')) (Is ?c 'child')) (or (not (Is ?b 'ball')) (Holding ?c ?b)) (or (not (Is ?b 'ball')) (Is ?m 'monitor')) (or (not (Is ?b 'ball')) (LeftOf ?c ?m)) (or (not (Is ?b 'ball')) (HasMaterial ?m 'plastic')))))))",
+    "k": 3,
+    "object_classes": [
+        "child",
+        "monitor",
+        "ball"
+    ]
+}

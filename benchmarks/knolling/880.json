@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the left side of the scene. For every set of keys located below the drill, there exist a pair of pliers, a screwdriver, and a knife arranged in a specific layout: the drill is to the left of the pliers, and the pliers are to the left of the screwdriver, with these three tools aligned horizontally. Additionally, the knife is placed below the screwdriver, and the drill is visually larger than the knife.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (OnLeftSide ?drill) (forall ?keys (implies (and (Is ?keys 'keys') (Below ?keys ?drill)) (exists ?pliers (exists ?screwdriver (exists ?knife (and (Is ?pliers 'pliers') (Is ?screwdriver 'screwdriver') (Is ?knife 'knife') (LeftOf ?drill ?pliers) (AlignedHorizontally ?drill ?pliers) (LeftOf ?pliers ?screwdriver) (AlignedHorizontally ?pliers ?screwdriver) (Below ?knife ?screwdriver) (LargerThan ?drill ?knife)))))))))",
+    "cnf": "(exists ?drill (forall ?keys (exists ?pliers (exists ?screwdriver (exists ?knife (and (Is ?drill 'drill') (OnLeftSide ?drill) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (Is ?pliers 'pliers')) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (LeftOf ?drill ?pliers)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (LeftOf ?pliers ?screwdriver)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (AlignedHorizontally ?drill ?pliers)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (Below ?knife ?screwdriver)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (AlignedHorizontally ?pliers ?screwdriver)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?drill)) (LargerThan ?drill ?knife))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "screwdriver",
+        "drill",
+        "knife"
+    ]
+}

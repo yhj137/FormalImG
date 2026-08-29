@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a book located on the top side, which is aligned horizontally with a wallet; the book is larger than the wallet. Positioned below the book is a hammer, which is larger than a screwdriver also present in the scene. Finally, for every fork in the image, it is aligned horizontally with the hammer.",
+    "dsl": "(exists ?b (exists ?w (exists ?h (exists ?s (and (Is ?b 'book') (Is ?w 'wallet') (Is ?h 'hammer') (Is ?s 'screwdriver') (OnTopSide ?b) (AlignedHorizontally ?b ?w) (LargerThan ?b ?w) (Above ?b ?h) (LargerThan ?h ?s) (forall ?f (implies (Is ?f 'fork') (AlignedHorizontally ?f ?h))))))))",
+    "cnf": "(exists ?b (exists ?w (exists ?h (exists ?s (forall ?f (and (Is ?b 'book') (OnTopSide ?b) (AlignedHorizontally ?b ?w) (LargerThan ?b ?w) (Is ?w 'wallet') (Above ?b ?h) (Is ?h 'hammer') (LargerThan ?h ?s) (or (not (Is ?f 'fork')) (AlignedHorizontally ?f ?h)) (Is ?s 'screwdriver')))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "screwdriver",
+        "fork",
+        "hammer",
+        "wallet"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase, a shoe, a book, and apples. A suitcase is positioned on the top side of the image. On the bottom side, there is a shoe and a book, with the book located to the right of the shoe. The shoe is visually smaller than the suitcase. Additionally, for every apple in the scene, it is smaller than the book.",
+    "dsl": "(exists ?s (exists ?sh (exists ?b (and (Is ?s 'suitcase') (Is ?sh 'shoe') (Is ?b 'book') (OnTopSide ?s) (OnBottomSide ?sh) (OnBottomSide ?b) (RightOf ?b ?sh) (SmallerThan ?sh ?s) (forall ?a (implies (Is ?a 'apple') (SmallerThan ?a ?b)))))))",
+    "cnf": "(exists ?s (exists ?sh (exists ?b (forall ?a (and (Is ?s 'suitcase') (OnTopSide ?s) (SmallerThan ?sh ?s) (RightOf ?b ?sh) (OnBottomSide ?sh) (OnBottomSide ?b) (or (not (Is ?a 'apple')) (SmallerThan ?a ?b)) (Is ?sh 'shoe') (Is ?b 'book'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "suitcase",
+        "shoe",
+        "apple"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a single laptop located in the top half of the image.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnTopSide ?laptop)))",
+    "cnf": "(exists ?laptop (and (Is ?laptop 'laptop') (OnTopSide ?laptop)))",
+    "k": 1,
+    "object_classes": [
+        "laptop"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every child is sitting inside a car.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?c (implies (Is ?c 'child') (exists ?v (and (Is ?v 'car') (In ?c ?v) (HasState ?c 'sitting'))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?c (exists ?v (and (or (not (Is ?c 'child')) (Is ?v 'car')) (or (not (Is ?c 'child')) (In ?c ?v)) (or (not (Is ?c 'child')) (HasState ?c 'sitting'))))))",
+    "k": 2,
+    "object_classes": [
+        "car",
+        "child"
+    ]
+}

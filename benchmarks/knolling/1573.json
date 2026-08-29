@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a black monitor positioned on the top side of the image. To the left of the monitor is a black camera; they are aligned horizontally. There is a white bowl aligned vertically with the monitor, and a pizza located to the left of the bowl. The pizza is visually smaller than the monitor. On the right side of the scene, there is a white phone. A blue bottle is placed to the left of the phone, and they are aligned horizontally. The bowl is also positioned to the left of the bottle. Furthermore, for every spoon in the arrangement, there is a knife lying to its left, and the spoon is aligned vertically with the bottle.",
+    "dsl": "(exists ?monitor (exists ?camera (exists ?bowl (exists ?pizza (exists ?phone (exists ?bottle (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?camera 'camera') (Has ?camera 'black') (LeftOf ?camera ?monitor) (AlignedHorizontally ?camera ?monitor) (Is ?bowl 'bowl') (Has ?bowl 'white') (AlignedVertically ?bowl ?monitor) (Is ?pizza 'pizza') (LeftOf ?pizza ?bowl) (SmallerThan ?pizza ?monitor) (Is ?phone 'phone') (Has ?phone 'white') (OnRightSide ?phone) (Is ?bottle 'bottle') (Has ?bottle 'blue') (LeftOf ?bottle ?phone) (AlignedHorizontally ?bottle ?phone) (LeftOf ?bowl ?bottle) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (and (Is ?knife 'knife') (LeftOf ?knife ?spoon) (AlignedVertically ?spoon ?bottle))))))))))))",
+    "cnf": "(exists ?monitor (exists ?camera (exists ?bowl (exists ?pizza (exists ?phone (exists ?bottle (forall ?spoon (exists ?knife (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (LeftOf ?camera ?monitor) (AlignedHorizontally ?camera ?monitor) (Has ?camera 'black') (AlignedVertically ?bowl ?monitor) (Is ?camera 'camera') (SmallerThan ?pizza ?monitor) (Has ?bowl 'white') (LeftOf ?pizza ?bowl) (Is ?bowl 'bowl') (LeftOf ?bowl ?bottle) (Is ?pizza 'pizza') (AlignedHorizontally ?bottle ?phone) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?bottle)) (LeftOf ?bottle ?phone) (or (not (Is ?spoon 'spoon')) (LeftOf ?knife ?spoon)) (OnRightSide ?phone) (Has ?bottle 'blue') (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')) (Has ?phone 'white') (Is ?bottle 'bottle') (Is ?phone 'phone'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "spoon",
+        "pizza",
+        "bowl",
+        "knife",
+        "camera",
+        "monitor",
+        "phone",
+        "bottle"
+    ]
+}

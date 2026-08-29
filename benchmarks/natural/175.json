@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art scene where every backpack is blue.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'backpack') (HasColor ?b 'blue'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (or (not (Is ?b 'backpack')) (HasColor ?b 'blue'))))",
+    "k": 1,
+    "object_classes": [
+        "backpack"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is positioned on the right side of the scene. For every ruler present in the image, there is a remote located above it. Additionally, the remote is vertically aligned with the ruler, and the ruler is visually smaller than the camera.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (OnRightSide ?camera) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?remote (and (Is ?remote 'remote') (Above ?remote ?ruler) (AlignedVertically ?remote ?ruler) (SmallerThan ?ruler ?camera)))))))",
+    "cnf": "(exists ?camera (forall ?ruler (exists ?remote (and (Is ?camera 'camera') (OnRightSide ?camera) (or (not (Is ?ruler 'ruler')) (SmallerThan ?ruler ?camera)) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?remote ?ruler)) (or (not (Is ?ruler 'ruler')) (Above ?remote ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?remote 'remote'))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "camera"
+    ]
+}

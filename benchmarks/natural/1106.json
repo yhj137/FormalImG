@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman sitting on a sofa and holding a red backpack. All glasses in the scene are on the woman. To the left of the sofa is a basket containing shoes.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?s (and (Is ?w 'woman') (Is ?s 'sofa') (On ?w ?s) (forall ?g (implies (Is ?g 'glasses') (On ?g ?w))) (exists ?b (exists ?sh (exists ?bp (and (Is ?b 'basket') (Is ?sh 'shoes') (Is ?bp 'backpack') (LeftOf ?b ?s) (In ?sh ?b) (Holding ?w ?bp) (HasColor ?bp 'red')))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (forall ?g (exists ?b (exists ?sh (exists ?bp (and (Is ?w 'woman') (On ?w ?s) (or (not (Is ?g 'glasses')) (On ?g ?w)) (Is ?s 'sofa') (LeftOf ?b ?s) (Holding ?w ?bp) (Is ?b 'basket') (In ?sh ?b) (Is ?bp 'backpack') (HasColor ?bp 'red') (Is ?sh 'shoes')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "shoes",
+        "backpack",
+        "glasses",
+        "woman",
+        "basket"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a drill, a game controller, and a carrot. The drill is located on the right side of the image. The game controller is aligned vertically with the drill, and the carrot is aligned horizontally with the game controller. Additionally, the drill is larger than the carrot.",
+    "dsl": "(exists ?drill (exists ?controller (exists ?carrot (and (Is ?drill 'drill') (Is ?controller 'game_controller') (Is ?carrot 'carrot') (OnRightSide ?drill) (AlignedVertically ?drill ?controller) (AlignedHorizontally ?carrot ?controller) (LargerThan ?drill ?carrot)))))",
+    "cnf": "(exists ?drill (exists ?controller (exists ?carrot (and (Is ?drill 'drill') (OnRightSide ?drill) (AlignedVertically ?drill ?controller) (LargerThan ?drill ?carrot) (Is ?controller 'game_controller') (AlignedHorizontally ?carrot ?controller) (Is ?carrot 'carrot')))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "carrot",
+        "game_controller"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene shows a woman standing next to a chair, with a sleeping dog beside it. All butterflies are located to the left of the woman. To the right of the dog sits a toy car containing an apple.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?d (and (Is ?w 'woman') (Is ?c 'chair') (Is ?d 'dog') (HasState ?w 'standing') (NextTo ?w ?c) (NextTo ?d ?c) (HasState ?d 'sleeping') (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?w))) (exists ?t (exists ?a (and (Is ?t 'toy car') (Is ?a 'apple') (RightOf ?t ?d) (In ?a ?t)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?d (forall ?b (exists ?t (exists ?a (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?c) (or (not (Is ?b 'butterfly')) (LeftOf ?b ?w)) (Is ?c 'chair') (NextTo ?d ?c) (Is ?d 'dog') (HasState ?d 'sleeping') (RightOf ?t ?d) (Is ?t 'toy car') (In ?a ?t) (Is ?a 'apple')))))))))",
+    "k": 6,
+    "object_classes": [
+        "chair",
+        "woman",
+        "toy car",
+        "butterfly",
+        "apple",
+        "dog"
+    ]
+}

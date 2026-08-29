@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every clock is broken.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'clock') (HasState ?c 'broken'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (or (not (Is ?c 'clock')) (HasState ?c 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "clock"
+    ]
+}

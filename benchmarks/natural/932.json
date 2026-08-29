@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a plant to the left of a bed, where every key is located next to the plant. To the right of the bed sits a backpack with a yellow banana next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (and (Is ?b 'bed') (Is ?p 'plant') (LeftOf ?p ?b) (forall ?k (implies (Is ?k 'key') (NextTo ?k ?p))) (exists ?bp (exists ?ba (and (Is ?bp 'backpack') (RightOf ?bp ?b) (Is ?ba 'banana') (HasColor ?ba 'yellow') (NextTo ?ba ?bp))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (forall ?k (exists ?bp (exists ?ba (and (Is ?b 'bed') (LeftOf ?p ?b) (RightOf ?bp ?b) (Is ?p 'plant') (or (not (Is ?k 'key')) (NextTo ?k ?p)) (Is ?bp 'backpack') (NextTo ?ba ?bp) (HasColor ?ba 'yellow') (Is ?ba 'banana'))))))))",
+    "k": 5,
+    "object_classes": [
+        "backpack",
+        "bed",
+        "plant",
+        "banana",
+        "key"
+    ]
+}

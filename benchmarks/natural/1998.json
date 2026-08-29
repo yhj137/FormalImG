@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A wardrobe containing a fluffy teddy bear is located to the left of a refrigerator, which has a fork inside. A lion holding a key stands next to the refrigerator. To the right of the refrigerator is a bench with a laptop on it. Next to the bench stands a horse, and every bird in the scene is perched on the horse.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?r (exists ?tb (exists ?f (exists ?l (exists ?k (exists ?bn (exists ?lp (exists ?h (and (Is ?w 'wardrobe') (Is ?r 'refrigerator') (LeftOf ?w ?r) (Is ?tb 'teddy bear') (In ?tb ?w) (HasMaterial ?tb 'fluffy') (Is ?f 'fork') (In ?f ?r) (Is ?l 'lion') (NextTo ?l ?r) (Is ?k 'key') (Holding ?l ?k) (Is ?bn 'bench') (LeftOf ?r ?bn) (Is ?lp 'laptop') (On ?lp ?bn) (Is ?h 'horse') (NextTo ?h ?bn) (forall ?b (implies (Is ?b 'bird') (On ?b ?h))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?r (exists ?tb (exists ?f (exists ?l (exists ?k (exists ?bn (exists ?lp (exists ?h (forall ?b (and (Is ?w 'wardrobe') (LeftOf ?w ?r) (In ?tb ?w) (Is ?r 'refrigerator') (In ?f ?r) (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (NextTo ?l ?r) (Is ?f 'fork') (LeftOf ?r ?bn) (Is ?l 'lion') (Holding ?l ?k) (Is ?bn 'bench') (On ?lp ?bn) (Is ?k 'key') (NextTo ?h ?bn) (Is ?lp 'laptop') (Is ?h 'horse') (or (not (Is ?b 'bird')) (On ?b ?h))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "key",
+        "fork",
+        "bird",
+        "laptop",
+        "teddy bear",
+        "refrigerator",
+        "wardrobe",
+        "horse",
+        "lion"
+    ]
+}

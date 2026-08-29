@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of pliers in the scene, there is a bowl vertically aligned with it, and the pliers are located on the bottom side of the image.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pliers') (exists ?b (and (Is ?b 'bowl') (OnBottomSide ?p) (AlignedVertically ?p ?b))))))",
+    "cnf": "(forall ?p (exists ?b (and (or (not (Is ?p 'pliers')) (Is ?b 'bowl')) (or (not (Is ?p 'pliers')) (OnBottomSide ?p)) (or (not (Is ?p 'pliers')) (AlignedVertically ?p ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "pliers"
+    ]
+}

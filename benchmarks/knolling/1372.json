@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor serves as the central piece. To the left of the monitor are black headphones, and to the left of the headphones is a black mouse. A pan is placed above the monitor, and a watch is placed above the pan. For every spoon present in the scene, there is a blue lighter to its left, and the spoon is located above the watch.",
+    "dsl": "(exists ?monitor (exists ?headphones (exists ?mouse (exists ?pan (exists ?watch (and (Is ?monitor 'monitor') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?pan 'pan') (Is ?watch 'watch') (LeftOf ?headphones ?monitor) (LeftOf ?mouse ?headphones) (Above ?pan ?monitor) (Above ?watch ?pan) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?lighter (and (Is ?lighter 'lighter') (Has ?lighter 'blue') (LeftOf ?lighter ?spoon) (Above ?spoon ?watch)))))))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (exists ?mouse (exists ?pan (exists ?watch (forall ?spoon (exists ?lighter (and (Is ?monitor 'monitor') (LeftOf ?headphones ?monitor) (Above ?pan ?monitor) (Has ?headphones 'black') (LeftOf ?mouse ?headphones) (Is ?pan 'pan') (Above ?watch ?pan) (Is ?headphones 'headphones') (Has ?mouse 'black') (Is ?watch 'watch') (or (not (Is ?spoon 'spoon')) (Above ?spoon ?watch)) (Is ?mouse 'mouse') (or (not (Is ?spoon 'spoon')) (LeftOf ?lighter ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?lighter 'blue')) (or (not (Is ?spoon 'spoon')) (Is ?lighter 'lighter'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "pan",
+        "lighter",
+        "mouse",
+        "monitor",
+        "headphones",
+        "spoon"
+    ]
+}

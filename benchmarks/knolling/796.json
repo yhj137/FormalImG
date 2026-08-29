@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a brown wallet, a watch, and gray scissors. The wallet is positioned on the left side. The watch is aligned vertically with the wallet, and the wallet is larger than the watch. The scissors are aligned vertically with the watch. Furthermore, any lemon in the scene is aligned vertically with the scissors.",
+    "dsl": "(exists ?wallet (exists ?watch (exists ?scissors (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?watch 'watch') (Is ?scissors 'scissors') (Has ?scissors 'gray') (OnLeftSide ?wallet) (AlignedVertically ?wallet ?watch) (LargerThan ?wallet ?watch) (AlignedVertically ?watch ?scissors) (forall ?lemon (implies (Is ?lemon 'lemon') (AlignedVertically ?lemon ?scissors)))))))",
+    "cnf": "(exists ?wallet (exists ?watch (exists ?scissors (forall ?lemon (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (OnLeftSide ?wallet) (AlignedVertically ?wallet ?watch) (LargerThan ?wallet ?watch) (Is ?watch 'watch') (AlignedVertically ?watch ?scissors) (Has ?scissors 'gray') (or (not (Is ?lemon 'lemon')) (AlignedVertically ?lemon ?scissors)) (Is ?scissors 'scissors'))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "lemon",
+        "wallet",
+        "watch"
+    ]
+}

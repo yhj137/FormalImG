@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring an open wooden bench containing a shirt. To the right of the bench is a woman wearing a round hat.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?s (exists ?w (exists ?h (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (HasState ?b 'open') (Is ?s 'shirt') (In ?s ?b) (Is ?w 'woman') (RightOf ?w ?b) (Is ?h 'hat') (HasShape ?h 'round') (On ?h ?w)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?s (exists ?w (exists ?h (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (HasState ?b 'open') (In ?s ?b) (RightOf ?w ?b) (Is ?s 'shirt') (Is ?w 'woman') (On ?h ?w) (HasShape ?h 'round') (Is ?h 'hat')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "hat",
+        "shirt",
+        "woman"
+    ]
+}

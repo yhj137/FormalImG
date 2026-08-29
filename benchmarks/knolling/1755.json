@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the left side of the frame. A blue tie is aligned vertically with the suitcase, while a game controller is aligned horizontally with the suitcase. A remote is aligned vertically with the game controller, and a mouse is aligned vertically with the remote; the game controller is larger than the mouse. On the bottom side, a plate is aligned horizontally with the tie. Additionally, for every pizza in the scene, it is aligned vertically with the plate, and there is a knife aligned horizontally with the pizza, along with a cup aligned vertically with that knife.",
+    "dsl": "(exists ?suitcase (exists ?tie (exists ?controller (exists ?remote (exists ?mouse (exists ?plate (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?tie 'tie') (Has ?tie 'blue') (AlignedVertically ?suitcase ?tie) (Is ?controller 'game_controller') (AlignedHorizontally ?suitcase ?controller) (Is ?remote 'remote') (AlignedVertically ?controller ?remote) (Is ?mouse 'mouse') (AlignedVertically ?remote ?mouse) (LargerThan ?controller ?mouse) (Is ?plate 'plate') (OnBottomSide ?plate) (AlignedHorizontally ?tie ?plate) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?knife (exists ?cup (and (Is ?knife 'knife') (Is ?cup 'cup') (AlignedVertically ?plate ?pizza) (AlignedHorizontally ?pizza ?knife) (AlignedVertically ?knife ?cup)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?tie (exists ?controller (exists ?remote (exists ?mouse (exists ?plate (forall ?pizza (exists ?knife (exists ?cup (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedVertically ?suitcase ?tie) (AlignedHorizontally ?suitcase ?controller) (Has ?tie 'blue') (AlignedHorizontally ?tie ?plate) (Is ?controller 'game_controller') (AlignedVertically ?controller ?remote) (Is ?tie 'tie') (OnBottomSide ?plate) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?plate ?pizza)) (LargerThan ?controller ?mouse) (Is ?remote 'remote') (AlignedVertically ?remote ?mouse) (Is ?plate 'plate') (or (not (Is ?pizza 'pizza')) (Is ?cup 'cup')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?knife)) (Is ?mouse 'mouse') (or (not (Is ?pizza 'pizza')) (Is ?knife 'knife')) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?knife ?cup))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "remote",
+        "plate",
+        "pizza",
+        "cup",
+        "game_controller",
+        "mouse",
+        "knife",
+        "suitcase"
+    ]
+}

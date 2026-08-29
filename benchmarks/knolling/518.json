@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A calculator is placed on the top side of the arrangement. For every fork in the scene, the calculator is located above it, and there is a pair of scissors positioned below the fork.",
+    "dsl": "(exists ?c (and (Is ?c 'calculator') (OnTopSide ?c) (forall ?f (implies (Is ?f 'fork') (exists ?s (and (Is ?s 'scissors') (Above ?c ?f) (Below ?s ?f)))))))",
+    "cnf": "(exists ?c (forall ?f (exists ?s (and (Is ?c 'calculator') (OnTopSide ?c) (or (not (Is ?f 'fork')) (Above ?c ?f)) (or (not (Is ?f 'fork')) (Is ?s 'scissors')) (or (not (Is ?f 'fork')) (Below ?s ?f))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "fork",
+        "calculator"
+    ]
+}

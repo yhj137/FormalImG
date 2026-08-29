@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue hat, a brown wallet, and gray scissors. The blue hat is positioned on the left side of the image. To the left of the brown wallet is the blue hat, and these two items are aligned horizontally. The brown wallet is aligned vertically with the gray scissors. Furthermore, for every fork in the image, it is located to the left of the scissors and aligned horizontally with them.",
+    "dsl": "(exists ?hat (exists ?wallet (exists ?scissors (and (Is ?hat 'hat') (Has ?hat 'blue') (OnLeftSide ?hat) (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?scissors 'scissors') (Has ?scissors 'gray') (LeftOf ?hat ?wallet) (AlignedHorizontally ?hat ?wallet) (AlignedVertically ?wallet ?scissors) (forall ?fork (implies (Is ?fork 'fork') (and (LeftOf ?fork ?scissors) (AlignedHorizontally ?fork ?scissors))))))))",
+    "cnf": "(exists ?hat (exists ?wallet (exists ?scissors (forall ?fork (and (Is ?hat 'hat') (Has ?hat 'blue') (OnLeftSide ?hat) (LeftOf ?hat ?wallet) (AlignedHorizontally ?hat ?wallet) (Has ?wallet 'brown') (AlignedVertically ?wallet ?scissors) (Is ?wallet 'wallet') (Has ?scissors 'gray') (or (not (Is ?fork 'fork')) (LeftOf ?fork ?scissors)) (Is ?scissors 'scissors') (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?scissors)))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "fork",
+        "hat",
+        "wallet"
+    ]
+}

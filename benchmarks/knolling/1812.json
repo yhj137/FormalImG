@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two vertical columns of items. On the left side of the scene, a laptop serves as the central anchor. Arranged vertically, there is a red hat above the laptop, a shoe below the laptop, a pizza below the shoe, and a black camera below the pizza. On the right side of the scene, there is a hammer positioned to the right of the laptop. Above the hammer is a ruler (which is to the right of the hat). Below the hammer is a glove (to the right of the shoe), followed by scissors (to the right of the pizza), and finally a blue lighter (to the right of the camera). The blue lighter is visually smaller than the laptop.",
+    "dsl": "(exists ?laptop (exists ?hat (exists ?shoe (exists ?pizza (exists ?camera (exists ?hammer (exists ?ruler (exists ?glove (exists ?scissors (exists ?lighter (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?hat 'hat') (Has ?hat 'red') (Above ?hat ?laptop) (Is ?shoe 'shoe') (Below ?shoe ?laptop) (Is ?pizza 'pizza') (Below ?pizza ?shoe) (Is ?camera 'camera') (Has ?camera 'black') (Below ?camera ?pizza) (Is ?hammer 'hammer') (OnRightSide ?hammer) (RightOf ?hammer ?laptop) (Is ?ruler 'ruler') (Above ?ruler ?hammer) (RightOf ?ruler ?hat) (Is ?glove 'glove') (Below ?glove ?hammer) (RightOf ?glove ?shoe) (Is ?scissors 'scissors') (Below ?scissors ?glove) (RightOf ?scissors ?pizza) (Is ?lighter 'lighter') (Has ?lighter 'blue') (Below ?lighter ?scissors) (RightOf ?lighter ?camera) (SmallerThan ?lighter ?laptop))))))))))))",
+    "cnf": "(exists ?laptop (exists ?hat (exists ?shoe (exists ?pizza (exists ?camera (exists ?hammer (exists ?ruler (exists ?glove (exists ?scissors (exists ?lighter (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?hat ?laptop) (Below ?shoe ?laptop) (Has ?hat 'red') (RightOf ?ruler ?hat) (RightOf ?hammer ?laptop) (Is ?shoe 'shoe') (Below ?pizza ?shoe) (Is ?hat 'hat') (Above ?ruler ?hammer) (SmallerThan ?lighter ?laptop) (OnRightSide ?hammer) (RightOf ?glove ?shoe) (Is ?pizza 'pizza') (Below ?camera ?pizza) (Below ?glove ?hammer) (Is ?ruler 'ruler') (RightOf ?lighter ?camera) (Is ?hammer 'hammer') (Below ?scissors ?glove) (RightOf ?scissors ?pizza) (Has ?camera 'black') (Is ?glove 'glove') (Below ?lighter ?scissors) (Is ?scissors 'scissors') (Is ?camera 'camera') (Has ?lighter 'blue') (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "pizza",
+        "hammer",
+        "hat",
+        "lighter",
+        "camera",
+        "scissors",
+        "glove",
+        "shoe"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo-style image featuring a leather sofa. A woman and a dog are on the sofa, along with a shirt containing a metal screwdriver. To the left of the sofa stands a cylindrical umbrella, and every hammer in the scene is also located to the left of the sofa. A monitor is positioned to the right of the sofa, with a keyboard placed to its left.",
+    "dsl": "(and (IsStyle 'photo') (exists ?sofa (exists ?woman (and (Is ?sofa 'sofa') (HasMaterial ?sofa 'leather') (Is ?woman 'woman') (On ?woman ?sofa) (forall ?hammer (implies (Is ?hammer 'hammer') (LeftOf ?hammer ?sofa))) (exists ?shirt (exists ?screwdriver (exists ?dog (exists ?umbrella (exists ?monitor (exists ?keyboard (and (Is ?shirt 'shirt') (On ?shirt ?sofa) (Is ?screwdriver 'screwdriver') (HasMaterial ?screwdriver 'metal') (In ?screwdriver ?shirt) (Is ?dog 'dog') (On ?dog ?sofa) (Is ?umbrella 'umbrella') (HasShape ?umbrella 'cylindrical') (LeftOf ?umbrella ?sofa) (Is ?monitor 'monitor') (RightOf ?monitor ?sofa) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?monitor))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?sofa (exists ?woman (forall ?hammer (exists ?shirt (exists ?screwdriver (exists ?dog (exists ?umbrella (exists ?monitor (exists ?keyboard (and (Is ?sofa 'sofa') (HasMaterial ?sofa 'leather') (On ?woman ?sofa) (or (not (Is ?hammer 'hammer')) (LeftOf ?hammer ?sofa)) (Is ?woman 'woman') (On ?shirt ?sofa) (On ?dog ?sofa) (Is ?shirt 'shirt') (In ?screwdriver ?shirt) (LeftOf ?umbrella ?sofa) (Is ?dog 'dog') (HasMaterial ?screwdriver 'metal') (RightOf ?monitor ?sofa) (HasShape ?umbrella 'cylindrical') (Is ?screwdriver 'screwdriver') (Is ?monitor 'monitor') (LeftOf ?keyboard ?monitor) (Is ?umbrella 'umbrella') (Is ?keyboard 'keyboard'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "monitor",
+        "sofa",
+        "screwdriver",
+        "hammer",
+        "shirt",
+        "woman",
+        "dog"
+    ]
+}

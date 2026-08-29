@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features items arranged neatly in rows. On the top side of the image, there is a monitor. To the right of the monitor is a pan, and to the right of the pan are blue jeans; these three objects are aligned horizontally. Below the monitor is a black keyboard. To the right of the keyboard is a bowl, and to the right of the bowl is a tie, with these items also aligned horizontally. On the bottom side, positioned below the keyboard, is a pink donut. To the right of the donut is a yellow lemon, and to the right of the lemon is a screwdriver, forming a horizontally aligned bottom row. Finally, for any pen in the image, it must be red and located to the right of the blue jeans.",
+    "dsl": "(exists ?monitor (exists ?pan (exists ?jeans (exists ?keyboard (exists ?bowl (exists ?tie (exists ?donut (exists ?lemon (exists ?screwdriver (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?pan 'pan') (RightOf ?pan ?monitor) (AlignedHorizontally ?monitor ?pan) (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?jeans ?pan) (AlignedHorizontally ?pan ?jeans) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Above ?monitor ?keyboard) (Is ?bowl 'bowl') (RightOf ?bowl ?keyboard) (AlignedHorizontally ?keyboard ?bowl) (Is ?tie 'tie') (RightOf ?tie ?bowl) (AlignedHorizontally ?bowl ?tie) (Is ?donut 'donut') (Has ?donut 'pink') (OnBottomSide ?donut) (Above ?keyboard ?donut) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (RightOf ?lemon ?donut) (AlignedHorizontally ?donut ?lemon) (Is ?screwdriver 'screwdriver') (RightOf ?screwdriver ?lemon) (AlignedHorizontally ?lemon ?screwdriver) (forall ?pen (implies (Is ?pen 'pen') (and (Has ?pen 'red') (RightOf ?pen ?jeans))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?pan (exists ?jeans (exists ?keyboard (exists ?bowl (exists ?tie (exists ?donut (exists ?lemon (exists ?screwdriver (forall ?pen (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (RightOf ?pan ?monitor) (AlignedHorizontally ?monitor ?pan) (Is ?pan 'pan') (Above ?monitor ?keyboard) (RightOf ?jeans ?pan) (Has ?keyboard 'black') (RightOf ?bowl ?keyboard) (AlignedHorizontally ?pan ?jeans) (Has ?jeans 'blue') (Is ?keyboard 'keyboard') (AlignedHorizontally ?keyboard ?bowl) (Is ?bowl 'bowl') (or (not (Is ?pen 'pen')) (RightOf ?pen ?jeans)) (Is ?jeans 'jeans') (Above ?keyboard ?donut) (RightOf ?tie ?bowl) (or (not (Is ?pen 'pen')) (Has ?pen 'red')) (OnBottomSide ?donut) (RightOf ?lemon ?donut) (AlignedHorizontally ?bowl ?tie) (Is ?tie 'tie') (Has ?donut 'pink') (AlignedHorizontally ?donut ?lemon) (Has ?lemon 'yellow') (Is ?donut 'donut') (RightOf ?screwdriver ?lemon) (Is ?lemon 'lemon') (AlignedHorizontally ?lemon ?screwdriver) (Is ?screwdriver 'screwdriver'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "pen",
+        "keyboard",
+        "lemon",
+        "screwdriver",
+        "pan",
+        "jeans",
+        "monitor",
+        "bowl",
+        "donut"
+    ]
+}

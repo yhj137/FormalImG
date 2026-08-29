@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A standing elephant holding a round basket is located to the left of a desk. A plant sits on the desk, and every key in the scene is also on the desk. A phone is positioned to the left of the plant.",
+    "dsl": "(exists ?e (exists ?b (exists ?d (exists ?pl (and (Is ?e 'elephant') (HasState ?e 'standing') (Is ?b 'basket') (HasShape ?b 'round') (Holding ?e ?b) (Is ?d 'desk') (LeftOf ?e ?d) (Is ?pl 'plant') (On ?pl ?d) (forall ?k (implies (Is ?k 'key') (On ?k ?d))) (exists ?ph (and (Is ?ph 'phone') (LeftOf ?ph ?pl))))))))",
+    "cnf": "(exists ?e (exists ?b (exists ?d (exists ?pl (forall ?k (exists ?ph (and (Is ?e 'elephant') (HasState ?e 'standing') (Holding ?e ?b) (LeftOf ?e ?d) (HasShape ?b 'round') (Is ?d 'desk') (On ?pl ?d) (Is ?b 'basket') (or (not (Is ?k 'key')) (On ?k ?d)) (Is ?pl 'plant') (LeftOf ?ph ?pl) (Is ?ph 'phone'))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "plant",
+        "desk",
+        "basket",
+        "key"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every bookshelf holds a black hammer, with a fork positioned to the left of the hammer and a yellow banana also placed on the shelf.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bookshelf') (exists ?h (exists ?f (exists ?ba (and (Is ?h 'hammer') (HasColor ?h 'black') (Is ?f 'fork') (Is ?ba 'banana') (HasColor ?ba 'yellow') (On ?h ?b) (LeftOf ?f ?h) (On ?ba ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?h (exists ?f (exists ?ba (and (or (not (Is ?b 'bookshelf')) (Is ?h 'hammer')) (or (not (Is ?b 'bookshelf')) (HasColor ?h 'black')) (or (not (Is ?b 'bookshelf')) (Is ?f 'fork')) (or (not (Is ?b 'bookshelf')) (On ?h ?b)) (or (not (Is ?b 'bookshelf')) (Is ?ba 'banana')) (or (not (Is ?b 'bookshelf')) (LeftOf ?f ?h)) (or (not (Is ?b 'bookshelf')) (HasColor ?ba 'yellow')) (or (not (Is ?b 'bookshelf')) (On ?ba ?b))))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "bookshelf",
+        "banana",
+        "hammer"
+    ]
+}

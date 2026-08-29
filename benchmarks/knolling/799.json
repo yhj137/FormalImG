@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image arranged neatly. The scene includes a white cup, a sandwich, and a pink donut. The sandwich is positioned below the cup, and the donut is positioned below the sandwich, with all three items aligned vertically. Additionally, for every hat in the image, there is a constraint that it must be blue and located to the left of the cup.",
+    "dsl": "(exists ?cup (exists ?sandwich (exists ?donut (and (Is ?cup 'cup') (Has ?cup 'white') (Is ?sandwich 'sandwich') (Is ?donut 'donut') (Has ?donut 'pink') (Below ?sandwich ?cup) (Below ?donut ?sandwich) (AlignedVertically ?cup ?sandwich) (AlignedVertically ?sandwich ?donut) (forall ?hat (implies (Is ?hat 'hat') (and (Has ?hat 'blue') (LeftOf ?hat ?cup))))))))",
+    "cnf": "(exists ?cup (exists ?sandwich (exists ?donut (forall ?hat (and (Is ?cup 'cup') (Has ?cup 'white') (Below ?sandwich ?cup) (AlignedVertically ?cup ?sandwich) (Is ?sandwich 'sandwich') (Below ?donut ?sandwich) (or (not (Is ?hat 'hat')) (LeftOf ?hat ?cup)) (AlignedVertically ?sandwich ?donut) (Has ?donut 'pink') (or (not (Is ?hat 'hat')) (Has ?hat 'blue')) (Is ?donut 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "sandwich",
+        "cup",
+        "donut"
+    ]
+}

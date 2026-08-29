@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene depicts a woman standing next to a wooden table. On the table sit a plate, a bowl, and a phone. A pair of headphones rests next to the phone, and glasses are located to the right of the plate. The woman is holding a fork, and every apple in the scene is inside the bowl.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?w (exists ?pl (exists ?bo (exists ?ph (exists ?hp (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?w 'woman') (NextTo ?w ?t) (Is ?pl 'plate') (On ?pl ?t) (Is ?bo 'bowl') (On ?bo ?t) (Is ?ph 'phone') (On ?ph ?t) (Is ?hp 'headphones') (NextTo ?hp ?ph) (forall ?a (implies (Is ?a 'apple') (In ?a ?bo))) (exists ?f (and (Is ?f 'fork') (Holding ?w ?f))) (exists ?g (and (Is ?g 'glasses') (RightOf ?g ?pl)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?w (exists ?pl (exists ?bo (exists ?ph (exists ?hp (forall ?a (exists ?f (exists ?g (and (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?w ?t) (On ?pl ?t) (Is ?w 'woman') (Holding ?w ?f) (On ?bo ?t) (Is ?pl 'plate') (RightOf ?g ?pl) (Is ?f 'fork') (On ?ph ?t) (Is ?bo 'bowl') (or (not (Is ?a 'apple')) (In ?a ?bo)) (Is ?g 'glasses') (Is ?ph 'phone') (NextTo ?hp ?ph) (Is ?hp 'headphones'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "fork",
+        "glasses",
+        "headphones",
+        "phone",
+        "woman",
+        "apple",
+        "table",
+        "plate"
+    ]
+}

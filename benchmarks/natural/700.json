@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a rectangular wardrobe. All plants are placed on the wardrobe. A woman holding a closed umbrella stands next to the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (forall ?p (implies (Is ?p 'plant') (On ?p ?w))) (exists ?wm (exists ?u (and (Is ?wm 'woman') (Is ?u 'umbrella') (HasState ?u 'closed') (NextTo ?wm ?w) (Holding ?wm ?u)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?p (exists ?wm (exists ?u (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (or (not (Is ?p 'plant')) (On ?p ?w)) (NextTo ?wm ?w) (Is ?wm 'woman') (Holding ?wm ?u) (HasState ?u 'closed') (Is ?u 'umbrella')))))))",
+    "k": 4,
+    "object_classes": [
+        "woman",
+        "umbrella",
+        "plant",
+        "wardrobe"
+    ]
+}

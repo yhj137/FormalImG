@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing four items. For every sock in the image, there exist scissors, a donut, and a sandwich, and the items are identified and arranged as follows: a pen is above and vertically aligned with a laptop; a game controller is on the left side and to the left of the laptop; headphones are to the right of the laptop; the donut is above the controller and horizontally aligned with the pen; the sandwich is on the right side, above the headphones, and horizontally aligned with the pen; the sock is on the bottom side, smaller than the laptop, and to the left of the scissors (horizontally aligned); and the scissors are vertically aligned with the laptop.",
+    "dsl": "(exists ?laptop (exists ?pen (exists ?controller (exists ?headphones (forall ?sock (implies (Is ?sock 'sock') (exists ?scissors (exists ?donut (exists ?sandwich (and (Is ?laptop 'laptop') (Is ?pen 'pen') (Is ?controller 'game_controller') (Is ?headphones 'headphones') (Is ?scissors 'scissors') (Is ?donut 'donut') (Is ?sandwich 'sandwich') (Above ?pen ?laptop) (LeftOf ?controller ?laptop) (OnLeftSide ?controller) (RightOf ?headphones ?laptop) (Above ?donut ?controller) (Above ?sandwich ?headphones) (OnRightSide ?sandwich) (AlignedHorizontally ?donut ?pen) (AlignedHorizontally ?pen ?sandwich) (OnBottomSide ?sock) (LeftOf ?sock ?scissors) (AlignedHorizontally ?sock ?scissors) (SmallerThan ?sock ?laptop) (AlignedVertically ?pen ?laptop) (AlignedVertically ?laptop ?scissors)))))))))))",
+    "cnf": "(exists ?laptop (exists ?pen (exists ?controller (exists ?headphones (forall ?sock (exists ?scissors (exists ?donut (exists ?sandwich (and (or (not (Is ?sock 'sock')) (Is ?laptop 'laptop')) (or (not (Is ?sock 'sock')) (Is ?pen 'pen')) (or (not (Is ?sock 'sock')) (Above ?pen ?laptop)) (or (not (Is ?sock 'sock')) (Is ?controller 'game_controller')) (or (not (Is ?sock 'sock')) (Is ?sandwich 'sandwich')) (or (not (Is ?sock 'sock')) (LeftOf ?controller ?laptop)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?donut ?pen)) (or (not (Is ?sock 'sock')) (Is ?headphones 'headphones')) (or (not (Is ?sock 'sock')) (Is ?donut 'donut')) (or (not (Is ?sock 'sock')) (Above ?sandwich ?headphones)) (or (not (Is ?sock 'sock')) (OnLeftSide ?controller)) (or (not (Is ?sock 'sock')) (RightOf ?headphones ?laptop)) (or (not (Is ?sock 'sock')) (OnRightSide ?sandwich)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?pen ?sandwich)) (or (not (Is ?sock 'sock')) (Above ?donut ?controller)) (or (not (Is ?sock 'sock')) (Is ?scissors 'scissors')) (or (not (Is ?sock 'sock')) (SmallerThan ?sock ?laptop)) (or (not (Is ?sock 'sock')) (OnBottomSide ?sock)) (or (not (Is ?sock 'sock')) (AlignedVertically ?pen ?laptop)) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?scissors)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?scissors)) (or (not (Is ?sock 'sock')) (AlignedVertically ?laptop ?scissors)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "pen",
+        "game_controller",
+        "scissors",
+        "headphones",
+        "sandwich",
+        "donut"
+    ]
+}

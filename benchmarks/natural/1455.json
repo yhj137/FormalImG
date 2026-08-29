@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a horse on a sofa, with a jacket to the left of the horse. To the right of the sofa stands a lamp, and a round clock is positioned to the left of the lamp. A book lies on the sofa with a phone resting on it, and every plate in the scene is also on the sofa.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (and (Is ?s 'sofa') (forall ?p (implies (Is ?p 'plate') (On ?p ?s))) (exists ?h (exists ?j (exists ?l (exists ?c (exists ?b (exists ?ph (and (Is ?h 'horse') (On ?h ?s) (Is ?j 'jacket') (LeftOf ?j ?h) (Is ?l 'lamp') (RightOf ?l ?s) (Is ?c 'clock') (HasShape ?c 'round') (LeftOf ?c ?l) (Is ?b 'book') (On ?b ?s) (Is ?ph 'phone') (On ?ph ?b)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (forall ?p (exists ?h (exists ?j (exists ?l (exists ?c (exists ?b (exists ?ph (and (Is ?s 'sofa') (or (not (Is ?p 'plate')) (On ?p ?s)) (On ?h ?s) (RightOf ?l ?s) (Is ?h 'horse') (LeftOf ?j ?h) (On ?b ?s) (Is ?l 'lamp') (LeftOf ?c ?l) (Is ?j 'jacket') (Is ?b 'book') (On ?ph ?b) (HasShape ?c 'round') (Is ?ph 'phone') (Is ?c 'clock')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "horse",
+        "book",
+        "plate",
+        "jacket",
+        "lamp",
+        "clock"
+    ]
+}

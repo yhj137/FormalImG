@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is positioned on the top side of the layout. Directly below the camera is a laptop, and below the laptop is a ruler, with all three objects aligned vertically. To the left of the camera sits an apple, and to the left of the ruler lies a spoon.",
+    "dsl": "(exists ?camera (exists ?laptop (exists ?ruler (exists ?apple (exists ?spoon (and (Is ?camera 'camera') (Is ?laptop 'laptop') (Is ?ruler 'ruler') (Is ?apple 'apple') (Is ?spoon 'spoon') (OnTopSide ?camera) (Below ?laptop ?camera) (Below ?ruler ?laptop) (AlignedVertically ?camera ?laptop) (AlignedVertically ?laptop ?ruler) (LeftOf ?apple ?camera) (LeftOf ?spoon ?ruler)))))))",
+    "cnf": "(exists ?camera (exists ?laptop (exists ?ruler (exists ?apple (exists ?spoon (and (Is ?camera 'camera') (OnTopSide ?camera) (Below ?laptop ?camera) (AlignedVertically ?camera ?laptop) (Is ?laptop 'laptop') (Below ?ruler ?laptop) (LeftOf ?apple ?camera) (AlignedVertically ?laptop ?ruler) (Is ?ruler 'ruler') (Is ?apple 'apple') (LeftOf ?spoon ?ruler) (Is ?spoon 'spoon')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "apple",
+        "camera",
+        "spoon"
+    ]
+}

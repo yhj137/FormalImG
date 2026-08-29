@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every car contains a key and has a man standing next to it. To the right of each car stands a refrigerator, on which sits a round plate holding a banana. Beside the refrigerator is a plant with a bird perched on it, and a butterfly is located to the right of the bird.",
+    "dsl": "(forall ?c (implies (Is ?c 'car') (exists ?k (exists ?m (exists ?r (exists ?p (exists ?ba (exists ?pl (exists ?bi (exists ?bf (and (Is ?k 'key') (In ?k ?c) (Is ?m 'man') (NextTo ?m ?c) (Is ?r 'refrigerator') (RightOf ?r ?c) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?r) (Is ?ba 'banana') (On ?ba ?p) (Is ?pl 'plant') (NextTo ?pl ?r) (Is ?bi 'bird') (On ?bi ?pl) (Is ?bf 'butterfly') (RightOf ?bf ?bi))))))))))))",
+    "cnf": "(forall ?c (exists ?k (exists ?m (exists ?r (exists ?p (exists ?ba (exists ?pl (exists ?bi (exists ?bf (and (or (not (Is ?c 'car')) (Is ?k 'key')) (or (not (Is ?c 'car')) (In ?k ?c)) (or (not (Is ?c 'car')) (Is ?m 'man')) (or (not (Is ?c 'car')) (NextTo ?m ?c)) (or (not (Is ?c 'car')) (Is ?r 'refrigerator')) (or (not (Is ?c 'car')) (RightOf ?r ?c)) (or (not (Is ?c 'car')) (Is ?p 'plate')) (or (not (Is ?c 'car')) (On ?p ?r)) (or (not (Is ?c 'car')) (HasShape ?p 'round')) (or (not (Is ?c 'car')) (Is ?ba 'banana')) (or (not (Is ?c 'car')) (NextTo ?pl ?r)) (or (not (Is ?c 'car')) (On ?ba ?p)) (or (not (Is ?c 'car')) (Is ?pl 'plant')) (or (not (Is ?c 'car')) (Is ?bi 'bird')) (or (not (Is ?c 'car')) (On ?bi ?pl)) (or (not (Is ?c 'car')) (Is ?bf 'butterfly')) (or (not (Is ?c 'car')) (RightOf ?bf ?bi))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "banana",
+        "man",
+        "key",
+        "car",
+        "refrigerator",
+        "bird",
+        "plate",
+        "butterfly",
+        "plant"
+    ]
+}

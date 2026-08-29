@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a red handbag, a pizza, a blue stapler, and a lighter, all positioned on the right side of the image and aligned vertically. The pizza is located below the handbag, the stapler is below the pizza, and the lighter is below the stapler. Furthermore, for every knife in the scene, it is vertically aligned with and below the lighter, and there is a set of keys positioned vertically aligned and below the knife itself.",
+    "dsl": "(exists ?handbag (exists ?pizza (exists ?stapler (exists ?lighter (and (Is ?handbag 'handbag') (Has ?handbag 'red') (Is ?pizza 'pizza') (Is ?stapler 'stapler') (Has ?stapler 'blue') (Is ?lighter 'lighter') (OnRightSide ?handbag) (OnRightSide ?pizza) (OnRightSide ?stapler) (OnRightSide ?lighter) (AlignedVertically ?handbag ?pizza) (AlignedVertically ?pizza ?stapler) (AlignedVertically ?stapler ?lighter) (Below ?pizza ?handbag) (Below ?stapler ?pizza) (Below ?lighter ?stapler) (forall ?knife (implies (Is ?knife 'knife') (exists ?keys (and (Is ?keys 'keys') (AlignedVertically ?lighter ?knife) (AlignedVertically ?knife ?keys) (Below ?knife ?lighter) (Below ?keys ?knife))))))))))",
+    "cnf": "(exists ?handbag (exists ?pizza (exists ?stapler (exists ?lighter (forall ?knife (exists ?keys (and (Is ?handbag 'handbag') (Has ?handbag 'red') (OnRightSide ?handbag) (AlignedVertically ?handbag ?pizza) (Below ?pizza ?handbag) (OnRightSide ?pizza) (AlignedVertically ?pizza ?stapler) (Below ?stapler ?pizza) (Is ?pizza 'pizza') (OnRightSide ?stapler) (AlignedVertically ?stapler ?lighter) (Below ?lighter ?stapler) (Has ?stapler 'blue') (OnRightSide ?lighter) (or (not (Is ?knife 'knife')) (AlignedVertically ?lighter ?knife)) (Is ?stapler 'stapler') (Is ?lighter 'lighter') (or (not (Is ?knife 'knife')) (Below ?knife ?lighter)) (or (not (Is ?knife 'knife')) (Is ?keys 'keys')) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?keys)) (or (not (Is ?knife 'knife')) (Below ?keys ?knife)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "stapler",
+        "pizza",
+        "handbag",
+        "lighter",
+        "knife"
+    ]
+}

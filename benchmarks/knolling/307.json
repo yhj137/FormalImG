@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat in the display, there is a pair of glasses positioned above it. Furthermore, every hat is located on the right side of the image.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'hat') (exists ?g (and (Is ?g 'glasses') (Above ?g ?h) (OnRightSide ?h))))))",
+    "cnf": "(forall ?h (exists ?g (and (or (not (Is ?h 'hat')) (Is ?g 'glasses')) (or (not (Is ?h 'hat')) (Above ?g ?h)) (or (not (Is ?h 'hat')) (OnRightSide ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "glasses",
+        "hat"
+    ]
+}

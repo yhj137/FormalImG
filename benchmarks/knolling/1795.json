@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black monitor and a black keyboard aligned vertically on the left. To the right of the monitor, there is a brown cutting board, which is aligned vertically with a gray knife. To the right of the cutting board, a blue shirt is placed, aligned vertically with a yellow handbag. Further to the right of the shirt is a gray fork, which is aligned vertically with a red lighter. The monitor, cutting board, shirt, and fork are aligned horizontally across the top. Additionally, any screwdriver in the scene is green, positioned to the right of the lighter, and aligned horizontally with it.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?board (exists ?knife (exists ?shirt (exists ?handbag (exists ?fork (exists ?lighter (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?board 'cutting_board') (Has ?board 'brown') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?handbag 'handbag') (Has ?handbag 'yellow') (Is ?fork 'fork') (Has ?fork 'gray') (Is ?lighter 'lighter') (Has ?lighter 'red') (AlignedVertically ?monitor ?keyboard) (RightOf ?board ?monitor) (AlignedHorizontally ?monitor ?board) (AlignedVertically ?board ?knife) (RightOf ?shirt ?board) (AlignedHorizontally ?board ?shirt) (AlignedVertically ?shirt ?handbag) (RightOf ?fork ?shirt) (AlignedHorizontally ?shirt ?fork) (AlignedVertically ?fork ?lighter) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (and (Has ?screwdriver 'green') (RightOf ?screwdriver ?lighter) (AlignedHorizontally ?screwdriver ?lighter)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?board (exists ?knife (exists ?shirt (exists ?handbag (exists ?fork (exists ?lighter (forall ?screwdriver (and (Is ?monitor 'monitor') (Has ?monitor 'black') (AlignedVertically ?monitor ?keyboard) (RightOf ?board ?monitor) (Has ?keyboard 'black') (AlignedHorizontally ?monitor ?board) (Has ?board 'brown') (Is ?keyboard 'keyboard') (AlignedVertically ?board ?knife) (Is ?board 'cutting_board') (RightOf ?shirt ?board) (Has ?knife 'gray') (AlignedHorizontally ?board ?shirt) (Has ?shirt 'blue') (Is ?knife 'knife') (AlignedVertically ?shirt ?handbag) (Is ?shirt 'shirt') (RightOf ?fork ?shirt) (Has ?handbag 'yellow') (AlignedHorizontally ?shirt ?fork) (Has ?fork 'gray') (Is ?handbag 'handbag') (AlignedVertically ?fork ?lighter) (Is ?fork 'fork') (Has ?lighter 'red') (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?screwdriver ?lighter)) (Is ?lighter 'lighter') (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?screwdriver ?lighter)) (or (not (Is ?screwdriver 'screwdriver')) (Has ?screwdriver 'green'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "screwdriver",
+        "cutting_board",
+        "handbag",
+        "fork",
+        "lighter",
+        "knife",
+        "monitor",
+        "shirt"
+    ]
+}

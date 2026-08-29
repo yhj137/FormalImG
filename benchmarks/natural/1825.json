@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. To the right of every tree stands a horse, with a person wearing headphones sitting on it. Beside the horse is an oval glass mirror next to a clock. Adjacent to the tree lies a round plate with a fork on it, and next to the plate sits a plastic keyboard with a metal key on top.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'tree') (exists ?h (exists ?p (exists ?hp (exists ?m (exists ?c (exists ?pl (exists ?f (exists ?kb (exists ?ky (and (Is ?h 'horse') (RightOf ?h ?t) (Is ?p 'person') (On ?p ?h) (Is ?hp 'headphones') (On ?hp ?p) (Is ?m 'mirror') (HasShape ?m 'oval') (HasMaterial ?m 'glass') (NextTo ?m ?h) (Is ?c 'clock') (NextTo ?c ?m) (Is ?pl 'plate') (HasShape ?pl 'round') (NextTo ?pl ?t) (Is ?f 'fork') (On ?f ?pl) (Is ?kb 'keyboard') (HasMaterial ?kb 'plastic') (NextTo ?kb ?pl) (Is ?ky 'key') (HasMaterial ?ky 'metal') (On ?ky ?kb))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (exists ?h (exists ?p (exists ?hp (exists ?m (exists ?c (exists ?pl (exists ?f (exists ?kb (exists ?ky (and (or (not (Is ?t 'tree')) (Is ?h 'horse')) (or (not (Is ?t 'tree')) (RightOf ?h ?t)) (or (not (Is ?t 'tree')) (Is ?p 'person')) (or (not (Is ?t 'tree')) (On ?p ?h)) (or (not (Is ?t 'tree')) (Is ?hp 'headphones')) (or (not (Is ?t 'tree')) (NextTo ?m ?h)) (or (not (Is ?t 'tree')) (On ?hp ?p)) (or (not (Is ?t 'tree')) (HasMaterial ?m 'glass')) (or (not (Is ?t 'tree')) (Is ?c 'clock')) (or (not (Is ?t 'tree')) (NextTo ?c ?m)) (or (not (Is ?t 'tree')) (Is ?m 'mirror')) (or (not (Is ?t 'tree')) (HasShape ?m 'oval')) (or (not (Is ?t 'tree')) (Is ?pl 'plate')) (or (not (Is ?t 'tree')) (HasShape ?pl 'round')) (or (not (Is ?t 'tree')) (NextTo ?pl ?t)) (or (not (Is ?t 'tree')) (Is ?f 'fork')) (or (not (Is ?t 'tree')) (On ?f ?pl)) (or (not (Is ?t 'tree')) (Is ?kb 'keyboard')) (or (not (Is ?t 'tree')) (NextTo ?kb ?pl)) (or (not (Is ?t 'tree')) (HasMaterial ?kb 'plastic')) (or (not (Is ?t 'tree')) (Is ?ky 'key')) (or (not (Is ?t 'tree')) (On ?ky ?kb)) (or (not (Is ?t 'tree')) (HasMaterial ?ky 'metal'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "person",
+        "fork",
+        "horse",
+        "plate",
+        "tree",
+        "mirror",
+        "clock",
+        "key",
+        "keyboard"
+    ]
+}

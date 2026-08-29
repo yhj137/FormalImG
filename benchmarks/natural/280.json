@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every cake is round and has a fish to its left.",
+    "dsl": "(forall ?c (implies (Is ?c 'cake') (exists ?f (and (Is ?f 'fish') (HasShape ?c 'round') (LeftOf ?f ?c)))))",
+    "cnf": "(forall ?c (exists ?f (and (or (not (Is ?c 'cake')) (Is ?f 'fish')) (or (not (Is ?c 'cake')) (LeftOf ?f ?c)) (or (not (Is ?c 'cake')) (HasShape ?c 'round')))))",
+    "k": 2,
+    "object_classes": [
+        "fish",
+        "cake"
+    ]
+}

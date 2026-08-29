@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rusty screwdriver is inside a backpack.",
+    "dsl": "(exists ?s (exists ?b (and (Is ?s 'screwdriver') (Is ?b 'backpack') (HasState ?s 'rusty') (In ?s ?b))))",
+    "cnf": "(exists ?s (exists ?b (and (Is ?s 'screwdriver') (HasState ?s 'rusty') (In ?s ?b) (Is ?b 'backpack'))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "screwdriver"
+    ]
+}

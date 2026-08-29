@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene with a rectangular rug. A desk is located to the right of the rug, while every butterfly is positioned to the left of the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (exists ?d (and (Is ?d 'desk') (RightOf ?d ?r))) (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?r))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?d (forall ?b (and (Is ?r 'rug') (HasShape ?r 'rectangular') (RightOf ?d ?r) (or (not (Is ?b 'butterfly')) (LeftOf ?b ?r)) (Is ?d 'desk'))))))",
+    "k": 3,
+    "object_classes": [
+        "desk",
+        "butterfly",
+        "rug"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor located on the top side. For every cup in the scene, the cup is positioned to the right of the monitor, and a lemon is positioned to the right of the cup. Additionally, for each cup, there is a laptop placed below the monitor that is larger than the cup, keys arranged to the right of the laptop, a lighter to the right of the keys, pliers located above the lighter, a hat aligned vertically with the pliers, and a pair of glasses on the right side that is smaller than the hat.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?cup (implies (Is ?cup 'cup') (exists ?lemon (exists ?laptop (exists ?keys (exists ?lighter (exists ?pliers (exists ?hat (exists ?glasses (and (Is ?lemon 'lemon') (Is ?laptop 'laptop') (Is ?keys 'keys') (Is ?lighter 'lighter') (Is ?pliers 'pliers') (Is ?hat 'hat') (Is ?glasses 'glasses') (RightOf ?cup ?monitor) (RightOf ?lemon ?cup) (Above ?monitor ?laptop) (LargerThan ?laptop ?cup) (RightOf ?keys ?laptop) (RightOf ?lighter ?keys) (Above ?pliers ?lighter) (AlignedVertically ?hat ?pliers) (SmallerThan ?glasses ?hat) (OnRightSide ?glasses)))))))))))))",
+    "cnf": "(exists ?monitor (forall ?cup (exists ?lemon (exists ?laptop (exists ?keys (exists ?lighter (exists ?pliers (exists ?hat (exists ?glasses (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?cup 'cup')) (RightOf ?cup ?monitor)) (or (not (Is ?cup 'cup')) (Above ?monitor ?laptop)) (or (not (Is ?cup 'cup')) (Is ?glasses 'glasses')) (or (not (Is ?cup 'cup')) (RightOf ?lemon ?cup)) (or (not (Is ?cup 'cup')) (LargerThan ?laptop ?cup)) (or (not (Is ?cup 'cup')) (Is ?laptop 'laptop')) (or (not (Is ?cup 'cup')) (Is ?hat 'hat')) (or (not (Is ?cup 'cup')) (SmallerThan ?glasses ?hat)) (or (not (Is ?cup 'cup')) (Is ?lemon 'lemon')) (or (not (Is ?cup 'cup')) (RightOf ?keys ?laptop)) (or (not (Is ?cup 'cup')) (Is ?keys 'keys')) (or (not (Is ?cup 'cup')) (Is ?pliers 'pliers')) (or (not (Is ?cup 'cup')) (AlignedVertically ?hat ?pliers)) (or (not (Is ?cup 'cup')) (OnRightSide ?glasses)) (or (not (Is ?cup 'cup')) (RightOf ?lighter ?keys)) (or (not (Is ?cup 'cup')) (Is ?lighter 'lighter')) (or (not (Is ?cup 'cup')) (Above ?pliers ?lighter))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "laptop",
+        "keys",
+        "pliers",
+        "lemon",
+        "cup",
+        "hat",
+        "lighter",
+        "monitor"
+    ]
+}

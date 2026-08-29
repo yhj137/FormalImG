@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized with a pair of jeans, a backpack, and a suitcase aligned horizontally in the upper section. The backpack is positioned to the right of the jeans, and the suitcase is to the right of the backpack. The suitcase is specifically located on the top side and right side of the image. Every sock in the scene is aligned vertically with the jeans, and for every sock, there is a sequence of items arranged horizontally to its right: a hammer, a book, a pizza, a knife, a carrot, and a lighter. The lighter is visually smaller than the suitcase.",
+    "dsl": "(exists ?jeans (exists ?backpack (exists ?suitcase (forall ?sock (implies (Is ?sock 'sock') (exists ?hammer (exists ?book (exists ?pizza (exists ?knife (exists ?carrot (exists ?lighter (and (Is ?jeans 'jeans') (Is ?backpack 'backpack') (Is ?suitcase 'suitcase') (Is ?hammer 'hammer') (Is ?book 'book') (Is ?pizza 'pizza') (Is ?knife 'knife') (Is ?carrot 'carrot') (Is ?lighter 'lighter') (OnTopSide ?suitcase) (OnRightSide ?suitcase) (RightOf ?backpack ?jeans) (RightOf ?suitcase ?backpack) (AlignedHorizontally ?jeans ?backpack) (AlignedHorizontally ?backpack ?suitcase) (AlignedVertically ?jeans ?sock) (RightOf ?hammer ?sock) (RightOf ?book ?hammer) (RightOf ?pizza ?book) (RightOf ?knife ?pizza) (RightOf ?carrot ?knife) (RightOf ?lighter ?carrot) (AlignedHorizontally ?sock ?hammer) (AlignedHorizontally ?hammer ?book) (AlignedHorizontally ?book ?pizza) (AlignedHorizontally ?pizza ?knife) (AlignedHorizontally ?knife ?carrot) (AlignedHorizontally ?carrot ?lighter) (SmallerThan ?lighter ?suitcase)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?backpack (exists ?suitcase (forall ?sock (exists ?hammer (exists ?book (exists ?pizza (exists ?knife (exists ?carrot (exists ?lighter (and (or (not (Is ?sock 'sock')) (Is ?jeans 'jeans')) (or (not (Is ?sock 'sock')) (RightOf ?backpack ?jeans)) (or (not (Is ?sock 'sock')) (Is ?backpack 'backpack')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?jeans ?backpack)) (or (not (Is ?sock 'sock')) (OnRightSide ?suitcase)) (or (not (Is ?sock 'sock')) (RightOf ?suitcase ?backpack)) (or (not (Is ?sock 'sock')) (Is ?suitcase 'suitcase')) (or (not (Is ?sock 'sock')) (AlignedVertically ?jeans ?sock)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?backpack ?suitcase)) (or (not (Is ?sock 'sock')) (OnTopSide ?suitcase)) (or (not (Is ?sock 'sock')) (Is ?hammer 'hammer')) (or (not (Is ?sock 'sock')) (RightOf ?hammer ?sock)) (or (not (Is ?sock 'sock')) (SmallerThan ?lighter ?suitcase)) (or (not (Is ?sock 'sock')) (Is ?lighter 'lighter')) (or (not (Is ?sock 'sock')) (Is ?book 'book')) (or (not (Is ?sock 'sock')) (RightOf ?book ?hammer)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?carrot ?lighter)) (or (not (Is ?sock 'sock')) (Is ?carrot 'carrot')) (or (not (Is ?sock 'sock')) (RightOf ?lighter ?carrot)) (or (not (Is ?sock 'sock')) (Is ?pizza 'pizza')) (or (not (Is ?sock 'sock')) (RightOf ?pizza ?book)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?hammer)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?knife ?carrot)) (or (not (Is ?sock 'sock')) (Is ?knife 'knife')) (or (not (Is ?sock 'sock')) (RightOf ?carrot ?knife)) (or (not (Is ?sock 'sock')) (RightOf ?knife ?pizza)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?hammer ?book)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?pizza ?knife)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?book ?pizza)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "sock",
+        "carrot",
+        "pizza",
+        "hammer",
+        "backpack",
+        "jeans",
+        "lighter",
+        "knife",
+        "suitcase"
+    ]
+}

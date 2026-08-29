@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a shoe. For every screwdriver in the scene, it is positioned below the shoe. A tie is located to the right of the screwdriver. Directly below the tie is a phone, and these two objects are aligned vertically. To the right of the phone is an apple, which is positioned on the right side of the image and is visually smaller than the shoe.",
+    "dsl": "(exists ?shoe (and (Is ?shoe 'shoe') (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?tie (exists ?phone (exists ?apple (and (Is ?tie 'tie') (Is ?phone 'phone') (Is ?apple 'apple') (Below ?sd ?shoe) (RightOf ?tie ?sd) (Below ?phone ?tie) (AlignedVertically ?tie ?phone) (RightOf ?apple ?phone) (OnRightSide ?apple) (SmallerThan ?apple ?shoe)))))))))",
+    "cnf": "(exists ?shoe (forall ?sd (exists ?tie (exists ?phone (exists ?apple (and (Is ?shoe 'shoe') (or (not (Is ?sd 'screwdriver')) (Below ?sd ?shoe)) (or (not (Is ?sd 'screwdriver')) (SmallerThan ?apple ?shoe)) (or (not (Is ?sd 'screwdriver')) (Is ?apple 'apple')) (or (not (Is ?sd 'screwdriver')) (RightOf ?tie ?sd)) (or (not (Is ?sd 'screwdriver')) (OnRightSide ?apple)) (or (not (Is ?sd 'screwdriver')) (Is ?phone 'phone')) (or (not (Is ?sd 'screwdriver')) (RightOf ?apple ?phone)) (or (not (Is ?sd 'screwdriver')) (Below ?phone ?tie)) (or (not (Is ?sd 'screwdriver')) (Is ?tie 'tie')) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?tie ?phone))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "apple",
+        "phone",
+        "screwdriver",
+        "shoe"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a bed to the left of a table. A cat is sleeping in the bed. On the table, a turned-on monitor sits next to a plate.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?t (exists ?c (exists ?m (exists ?p (and (Is ?b 'bed') (Is ?t 'table') (Is ?c 'cat') (Is ?m 'monitor') (Is ?p 'plate') (LeftOf ?b ?t) (In ?c ?b) (HasState ?c 'sleeping') (On ?m ?t) (HasState ?m 'on') (On ?p ?t) (NextTo ?p ?m))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?t (exists ?c (exists ?m (exists ?p (and (Is ?b 'bed') (LeftOf ?b ?t) (In ?c ?b) (Is ?t 'table') (On ?m ?t) (Is ?c 'cat') (HasState ?c 'sleeping') (On ?p ?t) (Is ?m 'monitor') (HasState ?m 'on') (Is ?p 'plate') (NextTo ?p ?m))))))))",
+    "k": 5,
+    "object_classes": [
+        "bed",
+        "plate",
+        "monitor",
+        "table",
+        "cat"
+    ]
+}

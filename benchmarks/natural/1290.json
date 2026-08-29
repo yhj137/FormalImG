@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a sofa with a sleeping dog and a fork resting on it. To the left of the sofa is a mirror with a bird perched on it. To the right of the sofa stands an open umbrella, and every bottle is located to the right of the umbrella.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (and (Is ?s 'sofa') (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (RightOf ?u ?s) (forall ?bo (implies (Is ?bo 'bottle') (RightOf ?bo ?u))))) (exists ?d (and (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?s))) (exists ?f (and (Is ?f 'fork') (On ?f ?s))) (exists ?m (and (Is ?m 'mirror') (LeftOf ?m ?s) (exists ?bi (and (Is ?bi 'bird') (On ?bi ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?u (forall ?bo (exists ?d (exists ?f (exists ?m (exists ?bi (and (Is ?s 'sofa') (RightOf ?u ?s) (On ?d ?s) (HasState ?u 'open') (or (not (Is ?bo 'bottle')) (RightOf ?bo ?u)) (On ?f ?s) (HasState ?d 'sleeping') (Is ?u 'umbrella') (LeftOf ?m ?s) (Is ?f 'fork') (Is ?d 'dog') (Is ?m 'mirror') (On ?bi ?m) (Is ?bi 'bird'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "fork",
+        "bottle",
+        "bird",
+        "mirror",
+        "dog"
+    ]
+}

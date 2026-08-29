@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the scene. Arranged to the left of the suitcase is a laptop, to the left of the laptop is a game controller, and to the left of the game controller is a pair of glasses. The layout follows a rule that for every remote control in the image, it is vertically aligned with the suitcase. Associated with the remote, there is a pizza to its left, and a knife located to the left of the pizza.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?controller (exists ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?laptop 'laptop') (LeftOf ?laptop ?suitcase) (Is ?controller 'game_controller') (LeftOf ?controller ?laptop) (Is ?glasses 'glasses') (LeftOf ?glasses ?controller) (forall ?remote (implies (Is ?remote 'remote') (exists ?pizza (exists ?knife (and (Is ?pizza 'pizza') (Is ?knife 'knife') (AlignedVertically ?remote ?suitcase) (LeftOf ?pizza ?remote) (LeftOf ?knife ?pizza)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?controller (exists ?glasses (forall ?remote (exists ?pizza (exists ?knife (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LeftOf ?laptop ?suitcase) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?suitcase)) (Is ?laptop 'laptop') (LeftOf ?controller ?laptop) (or (not (Is ?remote 'remote')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (LeftOf ?pizza ?remote)) (Is ?controller 'game_controller') (LeftOf ?glasses ?controller) (or (not (Is ?remote 'remote')) (Is ?pizza 'pizza')) (or (not (Is ?remote 'remote')) (LeftOf ?knife ?pizza)) (Is ?glasses 'glasses')))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "remote",
+        "pizza",
+        "game_controller",
+        "knife",
+        "suitcase"
+    ]
+}

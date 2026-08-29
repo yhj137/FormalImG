@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a collection of tools. In this arrangement, every wrench present is colored gray.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'wrench') (Has ?w 'gray'))))",
+    "cnf": "(forall ?w (or (not (Is ?w 'wrench')) (Has ?w 'gray')))",
+    "k": 1,
+    "object_classes": [
+        "wrench"
+    ]
+}

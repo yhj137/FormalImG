@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop situated on the top side of the scene, there exists a structured arrangement of six other items. A cup is positioned to the left of the laptop, and the laptop is positioned to the left of a drill, ensuring horizontal alignment among the three. Vertically below the laptop is a keyboard, and further below the keyboard is a shirt, with these three objects aligned vertically. Additionally, a watch is located to the left of the keyboard, and a tie is located to the left of the shirt, with each pair aligned horizontally.",
+    "dsl": "(and (forall ?laptop (implies (and (Is ?laptop 'laptop') (OnTopSide ?laptop)) (exists ?cup (exists ?drill (exists ?keyboard (exists ?watch (exists ?shirt (exists ?tie (and (Is ?cup 'cup') (Is ?drill 'drill') (Is ?keyboard 'keyboard') (Is ?watch 'watch') (Is ?shirt 'shirt') (Is ?tie 'tie') (LeftOf ?cup ?laptop) (AlignedHorizontally ?cup ?laptop) (LeftOf ?laptop ?drill) (AlignedHorizontally ?laptop ?drill) (Above ?laptop ?keyboard) (AlignedVertically ?laptop ?keyboard) (LeftOf ?watch ?keyboard) (AlignedHorizontally ?watch ?keyboard) (Above ?keyboard ?shirt) (AlignedVertically ?keyboard ?shirt) (LeftOf ?tie ?shirt) (AlignedHorizontally ?tie ?shirt)))))))))))",
+    "cnf": "(forall ?laptop (exists ?cup (exists ?drill (exists ?keyboard (exists ?watch (exists ?shirt (exists ?tie (and (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?cup 'cup')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?cup ?laptop)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?drill 'drill')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?cup ?laptop)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?tie 'tie')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?keyboard 'keyboard')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?laptop ?drill)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?shirt 'shirt')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?tie ?shirt)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?watch 'watch')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Above ?laptop ?keyboard)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?laptop ?drill)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Above ?keyboard ?shirt)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedVertically ?keyboard ?shirt)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?tie ?shirt)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?watch ?keyboard)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedVertically ?laptop ?keyboard)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?watch ?keyboard))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "keyboard",
+        "watch",
+        "cup",
+        "drill",
+        "shirt"
+    ]
+}

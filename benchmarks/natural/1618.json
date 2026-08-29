@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a woman on a wooden chair placed on a rug, holding a round red apple. To the right of the chair, an elephant holds a yellow banana. To the left of the chair, a cylindrical glass bottle containing a fish sits on the rug. A round blue ball lies on the rug to the right of the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?r (exists ?a (exists ?e (exists ?bn (exists ?bt (exists ?f (exists ?bl (and (Is ?w 'woman') (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?r 'rug') (Is ?a 'apple') (HasColor ?a 'red') (HasShape ?a 'round') (Is ?e 'elephant') (Is ?bn 'banana') (HasColor ?bn 'yellow') (Is ?bt 'bottle') (HasMaterial ?bt 'glass') (HasShape ?bt 'cylindrical') (Is ?f 'fish') (Is ?bl 'ball') (HasColor ?bl 'blue') (HasShape ?bl 'round') (On ?c ?r) (On ?w ?c) (Holding ?w ?a) (RightOf ?e ?c) (Holding ?e ?bn) (LeftOf ?bt ?c) (On ?bt ?r) (In ?f ?bt) (On ?bl ?r) (RightOf ?bl ?e))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?r (exists ?a (exists ?e (exists ?bn (exists ?bt (exists ?f (exists ?bl (and (Is ?w 'woman') (On ?w ?c) (Holding ?w ?a) (On ?c ?r) (RightOf ?e ?c) (HasShape ?a 'round') (HasMaterial ?c 'wooden') (Is ?r 'rug') (On ?bt ?r) (LeftOf ?bt ?c) (Is ?e 'elephant') (Holding ?e ?bn) (HasColor ?a 'red') (Is ?c 'chair') (On ?bl ?r) (In ?f ?bt) (HasShape ?bt 'cylindrical') (RightOf ?bl ?e) (HasColor ?bn 'yellow') (Is ?a 'apple') (HasShape ?bl 'round') (Is ?f 'fish') (HasMaterial ?bt 'glass') (Is ?bn 'banana') (HasColor ?bl 'blue') (Is ?bt 'bottle') (Is ?bl 'ball'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "woman",
+        "bottle",
+        "fish",
+        "ball",
+        "banana",
+        "chair",
+        "rug",
+        "apple",
+        "elephant"
+    ]
+}

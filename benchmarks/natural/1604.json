@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A rock with a pink flower on it sits to the left of a house. To the right of the house lies a rug with a sofa, on which sits a cat holding a red apple. Next to the cat is a phone, and a yellow banana lies to the right of the phone.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?r (exists ?f (exists ?rug (exists ?s (exists ?c (exists ?a (exists ?p (exists ?b (and (Is ?h 'house') (Is ?r 'rock') (LeftOf ?r ?h) (Is ?f 'flower') (HasColor ?f 'pink') (On ?f ?r) (Is ?rug 'rug') (RightOf ?rug ?h) (Is ?s 'sofa') (On ?s ?rug) (Is ?c 'cat') (On ?c ?s) (Is ?a 'apple') (HasColor ?a 'red') (Holding ?c ?a) (Is ?p 'phone') (NextTo ?p ?c) (Is ?b 'banana') (HasColor ?b 'yellow') (RightOf ?b ?p))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?r (exists ?f (exists ?rug (exists ?s (exists ?c (exists ?a (exists ?p (exists ?b (and (Is ?h 'house') (LeftOf ?r ?h) (RightOf ?rug ?h) (Is ?r 'rock') (On ?f ?r) (Is ?rug 'rug') (On ?s ?rug) (HasColor ?f 'pink') (Is ?s 'sofa') (On ?c ?s) (Is ?f 'flower') (Is ?c 'cat') (Holding ?c ?a) (NextTo ?p ?c) (HasColor ?a 'red') (Is ?p 'phone') (RightOf ?b ?p) (Is ?a 'apple') (HasColor ?b 'yellow') (Is ?b 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "phone",
+        "sofa",
+        "rug",
+        "rock",
+        "flower",
+        "apple",
+        "cat",
+        "banana"
+    ]
+}

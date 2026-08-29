@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate positioned on the bottom side. To the right of the plate is an apple, where the plate is physically larger than the apple. Continuing the arrangement to the right, there is a stapler located to the right of the apple, and a pair of pliers located to the right of the stapler. Finally, for any pen appearing in the scene, it is positioned to the right of the pliers.",
+    "dsl": "(exists ?plate (exists ?apple (exists ?stapler (exists ?pliers (and (Is ?plate 'plate') (Is ?apple 'apple') (Is ?stapler 'stapler') (Is ?pliers 'pliers') (OnBottomSide ?plate) (LargerThan ?plate ?apple) (RightOf ?apple ?plate) (RightOf ?stapler ?apple) (RightOf ?pliers ?stapler) (forall ?pen (implies (Is ?pen 'pen') (RightOf ?pen ?pliers))))))))",
+    "cnf": "(exists ?plate (exists ?apple (exists ?stapler (exists ?pliers (forall ?pen (and (Is ?plate 'plate') (OnBottomSide ?plate) (LargerThan ?plate ?apple) (RightOf ?apple ?plate) (Is ?apple 'apple') (RightOf ?stapler ?apple) (Is ?stapler 'stapler') (RightOf ?pliers ?stapler) (Is ?pliers 'pliers') (or (not (Is ?pen 'pen')) (RightOf ?pen ?pliers))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "pliers",
+        "stapler",
+        "apple",
+        "pen"
+    ]
+}

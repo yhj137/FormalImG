@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image featuring a woman holding a red flower. To her right is a man holding a blue backpack. To the right of the man is a round rock, upon which a cat and a square clock are sitting. All fruit in the scene is positioned to the right of the cat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?fl (exists ?m (exists ?bp (exists ?r (exists ?c (exists ?cl (and (Is ?w 'woman') (Is ?fl 'flower') (HasColor ?fl 'red') (Holding ?w ?fl) (Is ?m 'man') (Is ?bp 'backpack') (HasColor ?bp 'blue') (Holding ?m ?bp) (RightOf ?m ?w) (Is ?r 'rock') (HasShape ?r 'round') (RightOf ?r ?m) (Is ?c 'cat') (On ?c ?r) (Is ?cl 'clock') (HasShape ?cl 'square') (On ?cl ?r) (forall ?fr (implies (Is ?fr 'fruit') (RightOf ?fr ?c))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?fl (exists ?m (exists ?bp (exists ?r (exists ?c (exists ?cl (forall ?fr (and (Is ?w 'woman') (Holding ?w ?fl) (RightOf ?m ?w) (HasColor ?fl 'red') (Holding ?m ?bp) (RightOf ?r ?m) (Is ?fl 'flower') (Is ?m 'man') (HasColor ?bp 'blue') (HasShape ?r 'round') (On ?c ?r) (Is ?bp 'backpack') (Is ?r 'rock') (On ?cl ?r) (Is ?c 'cat') (or (not (Is ?fr 'fruit')) (RightOf ?fr ?c)) (HasShape ?cl 'square') (Is ?cl 'clock')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "backpack",
+        "man",
+        "woman",
+        "rock",
+        "flower",
+        "clock",
+        "cat"
+    ]
+}

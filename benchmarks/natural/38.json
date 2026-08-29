@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style image of a plastic monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'monitor') (HasMaterial ?m 'plastic'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'monitor') (HasMaterial ?m 'plastic'))))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

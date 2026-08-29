@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where, for every lamp, a sleeping cat lies to its left, with a hat containing a screwdriver positioned to the left of the cat. To the right of the lamp sits a dirty shirt, followed by a pan with a bitten apple inside.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?l (implies (Is ?l 'lamp') (exists ?c (exists ?h (exists ?sd (exists ?s (exists ?p (exists ?a (and (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?h 'hat') (Is ?sd 'screwdriver') (Is ?s 'shirt') (HasState ?s 'dirty') (Is ?p 'pan') (Is ?a 'apple') (HasState ?a 'bitten') (LeftOf ?h ?c) (In ?sd ?h) (LeftOf ?c ?l) (LeftOf ?l ?s) (LeftOf ?s ?p) (In ?a ?p)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?l (exists ?c (exists ?h (exists ?sd (exists ?s (exists ?p (exists ?a (and (or (not (Is ?l 'lamp')) (Is ?c 'cat')) (or (not (Is ?l 'lamp')) (HasState ?c 'sleeping')) (or (not (Is ?l 'lamp')) (Is ?h 'hat')) (or (not (Is ?l 'lamp')) (LeftOf ?h ?c)) (or (not (Is ?l 'lamp')) (Is ?sd 'screwdriver')) (or (not (Is ?l 'lamp')) (HasState ?a 'bitten')) (or (not (Is ?l 'lamp')) (In ?sd ?h)) (or (not (Is ?l 'lamp')) (LeftOf ?c ?l)) (or (not (Is ?l 'lamp')) (Is ?s 'shirt')) (or (not (Is ?l 'lamp')) (Is ?a 'apple')) (or (not (Is ?l 'lamp')) (In ?a ?p)) (or (not (Is ?l 'lamp')) (LeftOf ?l ?s)) (or (not (Is ?l 'lamp')) (HasState ?s 'dirty')) (or (not (Is ?l 'lamp')) (Is ?p 'pan')) (or (not (Is ?l 'lamp')) (LeftOf ?s ?p)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "lamp",
+        "pan",
+        "apple",
+        "cat",
+        "screwdriver",
+        "hat"
+    ]
+}

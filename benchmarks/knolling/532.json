@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A calculator is positioned on the bottom side of the scene. For every watch present, there is a screwdriver aligned horizontally with it, and the watch appears visually smaller than the calculator.",
+    "dsl": "(exists ?c (and (Is ?c 'calculator') (OnBottomSide ?c) (forall ?w (implies (Is ?w 'watch') (exists ?s (and (Is ?s 'screwdriver') (AlignedHorizontally ?s ?w) (SmallerThan ?w ?c)))))))",
+    "cnf": "(exists ?c (forall ?w (exists ?s (and (Is ?c 'calculator') (OnBottomSide ?c) (or (not (Is ?w 'watch')) (SmallerThan ?w ?c)) (or (not (Is ?w 'watch')) (AlignedHorizontally ?s ?w)) (or (not (Is ?w 'watch')) (Is ?s 'screwdriver'))))))",
+    "k": 3,
+    "object_classes": [
+        "calculator",
+        "watch",
+        "screwdriver"
+    ]
+}

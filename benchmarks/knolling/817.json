@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a keyboard, a ruler, a glove, a fork, and a spoon arranged in a vertical layout. The keyboard is positioned on the top side of the image. Directly below the keyboard is a ruler, and the ruler is smaller than the keyboard. A glove is located below the ruler but above the fork. Finally, a spoon is placed below the fork, and the spoon appears smaller than the fork.",
+    "dsl": "(exists ?keyboard (exists ?ruler (exists ?glove (exists ?fork (exists ?spoon (and (Is ?keyboard 'keyboard') (Is ?ruler 'ruler') (Is ?glove 'glove') (Is ?fork 'fork') (Is ?spoon 'spoon') (OnTopSide ?keyboard) (Above ?keyboard ?ruler) (SmallerThan ?ruler ?keyboard) (Below ?glove ?ruler) (Above ?glove ?fork) (Below ?spoon ?fork) (SmallerThan ?spoon ?fork)))))))",
+    "cnf": "(exists ?keyboard (exists ?ruler (exists ?glove (exists ?fork (exists ?spoon (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (Above ?keyboard ?ruler) (SmallerThan ?ruler ?keyboard) (Is ?ruler 'ruler') (Below ?glove ?ruler) (Is ?glove 'glove') (Above ?glove ?fork) (Is ?fork 'fork') (Below ?spoon ?fork) (SmallerThan ?spoon ?fork) (Is ?spoon 'spoon')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "fork",
+        "spoon",
+        "glove"
+    ]
+}

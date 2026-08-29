@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side and a backpack to its right, aligned horizontally. For every monitor in the scene, it is positioned below the suitcase, and there is a shirt to its right and a sandwich to the right of the shirt, with the monitor, shirt, and sandwich aligned horizontally. Furthermore, situated below the monitor is a pair of headphones. To the right of the headphones is a remote, to the right of the remote is a cup, and to the right of the cup is a drill. These four objects (headphones, remote, cup, drill) are aligned horizontally, with the drill located on the bottom side of the image.",
+    "dsl": "(exists ?suitcase (exists ?backpack (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?backpack 'backpack') (RightOf ?backpack ?suitcase) (AlignedHorizontally ?suitcase ?backpack) (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?shirt (exists ?sandwich (exists ?headphones (exists ?remote (exists ?cup (exists ?drill (and (Is ?shirt 'shirt') (Is ?sandwich 'sandwich') (Is ?headphones 'headphones') (Is ?remote 'remote') (Is ?cup 'cup') (Is ?drill 'drill') (Below ?monitor ?suitcase) (RightOf ?shirt ?monitor) (AlignedHorizontally ?monitor ?shirt) (RightOf ?sandwich ?shirt) (AlignedHorizontally ?shirt ?sandwich) (Below ?headphones ?monitor) (RightOf ?remote ?headphones) (AlignedHorizontally ?headphones ?remote) (RightOf ?cup ?remote) (AlignedHorizontally ?remote ?cup) (RightOf ?drill ?cup) (AlignedHorizontally ?cup ?drill) (OnBottomSide ?drill)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (forall ?monitor (exists ?shirt (exists ?sandwich (exists ?headphones (exists ?remote (exists ?cup (exists ?drill (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?backpack ?suitcase) (AlignedHorizontally ?suitcase ?backpack) (Is ?backpack 'backpack') (or (not (Is ?monitor 'monitor')) (Below ?monitor ?suitcase)) (or (not (Is ?monitor 'monitor')) (Is ?drill 'drill')) (or (not (Is ?monitor 'monitor')) (RightOf ?shirt ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?cup 'cup')) (or (not (Is ?monitor 'monitor')) (RightOf ?drill ?cup)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?monitor ?shirt)) (or (not (Is ?monitor 'monitor')) (Is ?shirt 'shirt')) (or (not (Is ?monitor 'monitor')) (Is ?remote 'remote')) (or (not (Is ?monitor 'monitor')) (RightOf ?cup ?remote)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?remote ?cup)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?cup ?drill)) (or (not (Is ?monitor 'monitor')) (RightOf ?sandwich ?shirt)) (or (not (Is ?monitor 'monitor')) (Is ?sandwich 'sandwich')) (or (not (Is ?monitor 'monitor')) (Is ?headphones 'headphones')) (or (not (Is ?monitor 'monitor')) (RightOf ?remote ?headphones)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?headphones ?remote)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?drill)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?shirt ?sandwich)) (or (not (Is ?monitor 'monitor')) (Below ?headphones ?monitor))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "cup",
+        "sandwich",
+        "drill",
+        "backpack",
+        "monitor",
+        "headphones",
+        "suitcase",
+        "shirt"
+    ]
+}

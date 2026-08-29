@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase, a laptop, headphones, jeans, and an apple. The suitcase is located on the top side of the layout. The laptop is placed to the right of the suitcase, and the headphones are positioned to the right of the laptop. The jeans are vertically aligned with the suitcase, and the apple is vertically aligned with the laptop. Additionally, the apple is located to the right of the jeans.",
+    "dsl": "(exists ?s (exists ?l (exists ?h (exists ?j (exists ?a (and (Is ?s 'suitcase') (Is ?l 'laptop') (Is ?h 'headphones') (Is ?j 'jeans') (Is ?a 'apple') (OnTopSide ?s) (RightOf ?l ?s) (RightOf ?h ?l) (AlignedVertically ?j ?s) (AlignedVertically ?a ?l) (RightOf ?a ?j)))))))",
+    "cnf": "(exists ?s (exists ?l (exists ?h (exists ?j (exists ?a (and (Is ?s 'suitcase') (OnTopSide ?s) (RightOf ?l ?s) (AlignedVertically ?j ?s) (Is ?l 'laptop') (RightOf ?h ?l) (Is ?j 'jeans') (RightOf ?a ?j) (AlignedVertically ?a ?l) (Is ?h 'headphones') (Is ?a 'apple')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "suitcase",
+        "jeans",
+        "headphones"
+    ]
+}

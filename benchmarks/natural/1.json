@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a round clock.",
+    "dsl": "(exists ?c (and (Is ?c 'clock') (HasShape ?c 'round')))",
+    "cnf": "(exists ?c (and (Is ?c 'clock') (HasShape ?c 'round')))",
+    "k": 1,
+    "object_classes": [
+        "clock"
+    ]
+}

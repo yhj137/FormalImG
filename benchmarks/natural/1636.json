@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is designed in a cartoon style. For every plant, there is a wooden bed positioned to its left with a brown horse on it, a rug with glasses next to the bed, and a person holding both a phone and an umbrella with a pizza to their right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?pl (implies (Is ?pl 'plant') (exists ?b (exists ?h (exists ?r (exists ?g (exists ?pe (exists ?ph (exists ?u (exists ?pi (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (RightOf ?pl ?b) (Is ?h 'horse') (HasColor ?h 'brown') (On ?h ?b) (Is ?r 'rug') (NextTo ?r ?b) (Is ?g 'glasses') (On ?g ?r) (Is ?pe 'person') (Is ?ph 'phone') (Holding ?pe ?ph) (Is ?u 'umbrella') (Holding ?pe ?u) (Is ?pi 'pizza') (RightOf ?pi ?pe)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?pl (exists ?b (exists ?h (exists ?r (exists ?g (exists ?pe (exists ?ph (exists ?u (exists ?pi (and (or (not (Is ?pl 'plant')) (Is ?b 'bed')) (or (not (Is ?pl 'plant')) (HasMaterial ?b 'wooden')) (or (not (Is ?pl 'plant')) (RightOf ?pl ?b)) (or (not (Is ?pl 'plant')) (On ?h ?b)) (or (not (Is ?pl 'plant')) (Is ?h 'horse')) (or (not (Is ?pl 'plant')) (NextTo ?r ?b)) (or (not (Is ?pl 'plant')) (HasColor ?h 'brown')) (or (not (Is ?pl 'plant')) (Is ?r 'rug')) (or (not (Is ?pl 'plant')) (Is ?g 'glasses')) (or (not (Is ?pl 'plant')) (On ?g ?r)) (or (not (Is ?pl 'plant')) (Is ?pe 'person')) (or (not (Is ?pl 'plant')) (Is ?ph 'phone')) (or (not (Is ?pl 'plant')) (Holding ?pe ?ph)) (or (not (Is ?pl 'plant')) (Is ?u 'umbrella')) (or (not (Is ?pl 'plant')) (Holding ?pe ?u)) (or (not (Is ?pl 'plant')) (Is ?pi 'pizza')) (or (not (Is ?pl 'plant')) (RightOf ?pi ?pe)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "horse",
+        "phone",
+        "glasses",
+        "bed",
+        "person",
+        "pizza",
+        "plant",
+        "rug"
+    ]
+}

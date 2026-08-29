@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene. Next to every tree sits a wooden table. A man holding a dirty shirt stands beside the table, and a pair of headphones rests on the surface. A blooming plant is also next to the table, with a rock lying beside the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?t (implies (Is ?t 'tree') (exists ?tb (exists ?m (exists ?s (exists ?h (exists ?p (exists ?r (and (Is ?tb 'table') (HasMaterial ?tb 'wooden') (NextTo ?t ?tb) (Is ?m 'man') (NextTo ?m ?tb) (Is ?s 'shirt') (HasState ?s 'dirty') (Holding ?m ?s) (Is ?h 'headphones') (On ?h ?tb) (Is ?p 'plant') (HasState ?p 'blooming') (NextTo ?p ?tb) (Is ?r 'rock') (NextTo ?r ?p)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?t (exists ?tb (exists ?m (exists ?s (exists ?h (exists ?p (exists ?r (and (or (not (Is ?t 'tree')) (Is ?tb 'table')) (or (not (Is ?t 'tree')) (HasMaterial ?tb 'wooden')) (or (not (Is ?t 'tree')) (NextTo ?t ?tb)) (or (not (Is ?t 'tree')) (NextTo ?m ?tb)) (or (not (Is ?t 'tree')) (Is ?m 'man')) (or (not (Is ?t 'tree')) (On ?h ?tb)) (or (not (Is ?t 'tree')) (Is ?s 'shirt')) (or (not (Is ?t 'tree')) (Holding ?m ?s)) (or (not (Is ?t 'tree')) (NextTo ?p ?tb)) (or (not (Is ?t 'tree')) (Is ?h 'headphones')) (or (not (Is ?t 'tree')) (Is ?p 'plant')) (or (not (Is ?t 'tree')) (HasState ?s 'dirty')) (or (not (Is ?t 'tree')) (HasState ?p 'blooming')) (or (not (Is ?t 'tree')) (Is ?r 'rock')) (or (not (Is ?t 'tree')) (NextTo ?r ?p)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "table",
+        "rock",
+        "man",
+        "tree",
+        "shirt",
+        "headphones",
+        "plant"
+    ]
+}

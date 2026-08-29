@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a man on a bicycle. A backpack containing a pizza is on the bicycle. The man holds a blue phone, and all butterflies are positioned to his left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?bi (exists ?bp (exists ?pi (and (Is ?m 'man') (Is ?bi 'bicycle') (Is ?bp 'backpack') (Is ?pi 'pizza') (On ?m ?bi) (On ?bp ?bi) (In ?pi ?bp) (forall ?bu (implies (Is ?bu 'butterfly') (LeftOf ?bu ?m))) (exists ?ph (and (Is ?ph 'phone') (HasColor ?ph 'blue') (Holding ?m ?ph)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?bi (exists ?bp (exists ?pi (forall ?bu (exists ?ph (and (Is ?m 'man') (On ?m ?bi) (or (not (Is ?bu 'butterfly')) (LeftOf ?bu ?m)) (Is ?bi 'bicycle') (On ?bp ?bi) (Holding ?m ?ph) (Is ?bp 'backpack') (In ?pi ?bp) (HasColor ?ph 'blue') (Is ?pi 'pizza') (Is ?ph 'phone')))))))))",
+    "k": 6,
+    "object_classes": [
+        "man",
+        "backpack",
+        "butterfly",
+        "pizza",
+        "phone",
+        "bicycle"
+    ]
+}

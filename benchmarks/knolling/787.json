@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a handbag, a calculator, and a shoe arranged in a vertical line, with the shoe positioned on the bottom side of the layout. Additionally, for every lemon present in the image, it is located to the left of the handbag.",
+    "dsl": "(exists ?handbag (exists ?calculator (exists ?shoe (and (Is ?handbag 'handbag') (Is ?calculator 'calculator') (Is ?shoe 'shoe') (AlignedVertically ?handbag ?calculator) (AlignedVertically ?calculator ?shoe) (OnBottomSide ?shoe) (forall ?lemon (implies (Is ?lemon 'lemon') (LeftOf ?lemon ?handbag)))))))",
+    "cnf": "(exists ?handbag (exists ?calculator (exists ?shoe (forall ?lemon (and (Is ?handbag 'handbag') (AlignedVertically ?handbag ?calculator) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?handbag)) (Is ?calculator 'calculator') (AlignedVertically ?calculator ?shoe) (Is ?shoe 'shoe') (OnBottomSide ?shoe))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "handbag",
+        "calculator",
+        "shoe"
+    ]
+}

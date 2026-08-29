@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a handbag positioned on the left side of the scene. For every lighter in the image, there corresponds a sandwich, a cutting board, and a game controller arranged in a horizontal line. Specifically, the lighter is aligned horizontally with the handbag, the sandwich is aligned horizontally with the lighter, the cutting board is aligned horizontally with the sandwich, and the game controller is aligned horizontally with the cutting board. Additionally, the cutting board is visually larger than the sandwich.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?sandwich (exists ?cutting_board (exists ?game_controller (and (Is ?sandwich 'sandwich') (Is ?cutting_board 'cutting_board') (Is ?game_controller 'game_controller') (AlignedHorizontally ?handbag ?lighter) (AlignedHorizontally ?lighter ?sandwich) (AlignedHorizontally ?sandwich ?cutting_board) (AlignedHorizontally ?cutting_board ?game_controller) (LargerThan ?cutting_board ?sandwich)))))))))",
+    "cnf": "(exists ?handbag (forall ?lighter (exists ?sandwich (exists ?cutting_board (exists ?game_controller (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?handbag ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?game_controller 'game_controller')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?sandwich)) (or (not (Is ?lighter 'lighter')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?cutting_board ?game_controller)) (or (not (Is ?lighter 'lighter')) (Is ?sandwich 'sandwich')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?sandwich ?cutting_board)) (or (not (Is ?lighter 'lighter')) (LargerThan ?cutting_board ?sandwich))))))))",
+    "k": 5,
+    "object_classes": [
+        "lighter",
+        "game_controller",
+        "cutting_board",
+        "sandwich",
+        "handbag"
+    ]
+}

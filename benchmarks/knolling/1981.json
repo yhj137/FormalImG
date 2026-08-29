@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a vertical column of objects starting with a hat on the top side. Directly below the hat are a shirt, a tie, a glove, a sock, a game controller, a pizza, and a sandwich, all aligned vertically. The shirt is larger than the tie, and the pizza is larger than the sandwich. Following this vertical arrangement, for every cup in the image, there is a spoon positioned below it. The cup is located below the sandwich, aligned vertically with it, and is strictly smaller than the pizza.",
+    "dsl": "(exists ?hat (exists ?shirt (exists ?tie (exists ?glove (exists ?sock (exists ?game_controller (exists ?pizza (exists ?sandwich (and (Is ?hat 'hat') (OnTopSide ?hat) (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?glove 'glove') (Is ?sock 'sock') (Is ?game_controller 'game_controller') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (Above ?hat ?shirt) (Above ?shirt ?tie) (Above ?tie ?glove) (Above ?glove ?sock) (Above ?sock ?game_controller) (Above ?game_controller ?pizza) (Above ?pizza ?sandwich) (LargerThan ?shirt ?tie) (LargerThan ?pizza ?sandwich) (AlignedVertically ?hat ?shirt) (AlignedVertically ?shirt ?tie) (AlignedVertically ?tie ?glove) (AlignedVertically ?glove ?sock) (AlignedVertically ?sock ?game_controller) (AlignedVertically ?game_controller ?pizza) (AlignedVertically ?pizza ?sandwich) (forall ?cup (implies (Is ?cup 'cup') (exists ?spoon (and (Is ?spoon 'spoon') (Below ?cup ?sandwich) (Below ?spoon ?cup) (AlignedVertically ?sandwich ?cup) (AlignedVertically ?cup ?spoon) (SmallerThan ?cup ?pizza))))))))))))))",
+    "cnf": "(exists ?hat (exists ?shirt (exists ?tie (exists ?glove (exists ?sock (exists ?game_controller (exists ?pizza (exists ?sandwich (forall ?cup (exists ?spoon (and (Is ?hat 'hat') (OnTopSide ?hat) (Above ?hat ?shirt) (AlignedVertically ?hat ?shirt) (Is ?shirt 'shirt') (Above ?shirt ?tie) (LargerThan ?shirt ?tie) (AlignedVertically ?shirt ?tie) (Is ?tie 'tie') (Above ?tie ?glove) (AlignedVertically ?tie ?glove) (Is ?glove 'glove') (Above ?glove ?sock) (AlignedVertically ?glove ?sock) (Is ?sock 'sock') (Above ?sock ?game_controller) (AlignedVertically ?sock ?game_controller) (Is ?game_controller 'game_controller') (Above ?game_controller ?pizza) (AlignedVertically ?game_controller ?pizza) (Is ?pizza 'pizza') (Above ?pizza ?sandwich) (LargerThan ?pizza ?sandwich) (AlignedVertically ?pizza ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?cup 'cup')) (SmallerThan ?cup ?pizza)) (or (not (Is ?cup 'cup')) (Below ?cup ?sandwich)) (or (not (Is ?cup 'cup')) (AlignedVertically ?cup ?spoon)) (or (not (Is ?cup 'cup')) (AlignedVertically ?sandwich ?cup)) (or (not (Is ?cup 'cup')) (Is ?spoon 'spoon')) (or (not (Is ?cup 'cup')) (Below ?spoon ?cup)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "sock",
+        "pizza",
+        "cup",
+        "game_controller",
+        "hat",
+        "spoon",
+        "sandwich",
+        "glove",
+        "shirt"
+    ]
+}

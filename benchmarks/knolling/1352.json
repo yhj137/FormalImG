@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag located on the right side. To the left of the handbag is a plate. A calculator is arranged above the plate, and a cup is arranged below the plate. To the left of the plate is a sandwich that is smaller than the plate. For every sock in the image, it is white, located to the left of the cup, and has a carrot positioned directly below it.",
+    "dsl": "(exists ?handbag (exists ?plate (exists ?calculator (exists ?cup (exists ?sandwich (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (Is ?plate 'plate') (LeftOf ?plate ?handbag) (Is ?calculator 'calculator') (Above ?calculator ?plate) (Is ?cup 'cup') (Below ?cup ?plate) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?plate) (SmallerThan ?sandwich ?plate) (forall ?sock (implies (Is ?sock 'sock') (exists ?carrot (and (Is ?carrot 'carrot') (Has ?sock 'white') (LeftOf ?sock ?cup) (Below ?carrot ?sock)))))))))))",
+    "cnf": "(exists ?handbag (exists ?plate (exists ?calculator (exists ?cup (exists ?sandwich (forall ?sock (exists ?carrot (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (LeftOf ?plate ?handbag) (Is ?plate 'plate') (Above ?calculator ?plate) (Below ?cup ?plate) (Is ?calculator 'calculator') (LeftOf ?sandwich ?plate) (Is ?cup 'cup') (or (not (Is ?sock 'sock')) (LeftOf ?sock ?cup)) (SmallerThan ?sandwich ?plate) (Is ?sandwich 'sandwich') (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (Below ?carrot ?sock)) (or (not (Is ?sock 'sock')) (Is ?carrot 'carrot'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "sock",
+        "carrot",
+        "cup",
+        "handbag",
+        "calculator",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every backpack is black.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'backpack') (HasColor ?b 'black'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (or (not (Is ?b 'backpack')) (HasColor ?b 'black'))))",
+    "k": 1,
+    "object_classes": [
+        "backpack"
+    ]
+}

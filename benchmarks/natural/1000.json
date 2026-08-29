@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bird holding a key to the left of a sliced cake with a spoon inside. A knife is next to the cake, which is positioned to the left of a blue ball.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?k (exists ?c (exists ?s (exists ?n (exists ?bl (and (Is ?b 'bird') (Is ?k 'key') (Is ?c 'cake') (Is ?s 'spoon') (Is ?n 'knife') (Is ?bl 'ball') (Holding ?b ?k) (LeftOf ?b ?c) (HasState ?c 'sliced') (In ?s ?c) (NextTo ?n ?c) (LeftOf ?c ?bl) (HasColor ?bl 'blue')))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?k (exists ?c (exists ?s (exists ?n (exists ?bl (and (Is ?b 'bird') (Holding ?b ?k) (LeftOf ?b ?c) (Is ?k 'key') (Is ?c 'cake') (HasState ?c 'sliced') (In ?s ?c) (NextTo ?n ?c) (Is ?s 'spoon') (LeftOf ?c ?bl) (Is ?n 'knife') (Is ?bl 'ball') (HasColor ?bl 'blue')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "spoon",
+        "cake",
+        "bird",
+        "ball",
+        "key"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is placed on the left side. The laptop is to the left of a plate, which is to the left of a pan. The pan is positioned to the left of a ruler, and the ruler is to the left of a wallet. Furthermore, for every game controller in the scene, it is located to the right of the wallet.",
+    "dsl": "(exists ?laptop (exists ?plate (exists ?pan (exists ?ruler (exists ?wallet (and (Is ?laptop 'laptop') (Is ?plate 'plate') (Is ?pan 'pan') (Is ?ruler 'ruler') (Is ?wallet 'wallet') (OnLeftSide ?laptop) (LeftOf ?laptop ?plate) (LeftOf ?plate ?pan) (LeftOf ?pan ?ruler) (LeftOf ?ruler ?wallet) (forall ?gc (implies (Is ?gc 'game_controller') (RightOf ?gc ?wallet)))))))))",
+    "cnf": "(exists ?laptop (exists ?plate (exists ?pan (exists ?ruler (exists ?wallet (forall ?gc (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (LeftOf ?laptop ?plate) (Is ?plate 'plate') (LeftOf ?plate ?pan) (Is ?pan 'pan') (LeftOf ?pan ?ruler) (Is ?ruler 'ruler') (LeftOf ?ruler ?wallet) (Is ?wallet 'wallet') (or (not (Is ?gc 'game_controller')) (RightOf ?gc ?wallet)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "plate",
+        "game_controller",
+        "pan",
+        "wallet"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is located on the left side of the scene. A pair of headphones is placed above the handbag. A camera is situated below the handbag, and a stapler is positioned below the camera. Furthermore, for every pen present in the scene, there is a knife located above it, and the pen is aligned horizontally with the handbag.",
+    "dsl": "(exists ?handbag (exists ?headphones (exists ?camera (exists ?stapler (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?headphones 'headphones') (Above ?headphones ?handbag) (Is ?camera 'camera') (Below ?camera ?handbag) (Is ?stapler 'stapler') (Below ?stapler ?camera) (forall ?pen (implies (Is ?pen 'pen') (exists ?knife (and (Is ?knife 'knife') (AlignedHorizontally ?pen ?handbag) (Above ?knife ?pen))))))))))",
+    "cnf": "(exists ?handbag (exists ?headphones (exists ?camera (exists ?stapler (forall ?pen (exists ?knife (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Above ?headphones ?handbag) (Below ?camera ?handbag) (Is ?headphones 'headphones') (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?handbag)) (Is ?camera 'camera') (Below ?stapler ?camera) (or (not (Is ?pen 'pen')) (Is ?knife 'knife')) (or (not (Is ?pen 'pen')) (Above ?knife ?pen)) (Is ?stapler 'stapler'))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "pen",
+        "handbag",
+        "camera",
+        "knife",
+        "headphones"
+    ]
+}

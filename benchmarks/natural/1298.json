@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A tree stands on the left, with a man to its right. All the bananas are inside the tree. To the right of the man is a round pizza, followed by a fork, a spoon, and a key.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?m (and (Is ?t 'tree') (Is ?m 'man') (RightOf ?m ?t) (forall ?b (implies (Is ?b 'banana') (In ?b ?t))) (exists ?p (exists ?f (exists ?s (exists ?k (and (Is ?p 'pizza') (HasShape ?p 'round') (Is ?f 'fork') (Is ?s 'spoon') (Is ?k 'key') (RightOf ?p ?m) (RightOf ?f ?p) (RightOf ?s ?f) (RightOf ?k ?s))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?m (forall ?b (exists ?p (exists ?f (exists ?s (exists ?k (and (Is ?t 'tree') (RightOf ?m ?t) (or (not (Is ?b 'banana')) (In ?b ?t)) (Is ?m 'man') (RightOf ?p ?m) (HasShape ?p 'round') (RightOf ?f ?p) (Is ?p 'pizza') (Is ?f 'fork') (RightOf ?s ?f) (Is ?s 'spoon') (RightOf ?k ?s) (Is ?k 'key'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "fork",
+        "man",
+        "banana",
+        "pizza",
+        "tree",
+        "spoon"
+    ]
+}

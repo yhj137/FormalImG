@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a black keyboard and a white phone. The phone is placed on the right side of the image, and the keyboard is aligned vertically with it. The layout adheres to a rule: for every donut, there is a corresponding brown wallet. Specifically, the donut is aligned horizontally with the keyboard, and the wallet is aligned vertically with the donut.",
+    "dsl": "(exists ?k (exists ?p (and (Is ?k 'keyboard') (Has ?k 'black') (Is ?p 'phone') (Has ?p 'white') (OnRightSide ?p) (AlignedVertically ?k ?p) (forall ?d (implies (Is ?d 'donut') (exists ?w (and (Is ?w 'wallet') (Has ?w 'brown') (AlignedHorizontally ?d ?k) (AlignedVertically ?d ?w))))))))",
+    "cnf": "(exists ?k (exists ?p (forall ?d (exists ?w (and (Is ?k 'keyboard') (Has ?k 'black') (AlignedVertically ?k ?p) (or (not (Is ?d 'donut')) (AlignedHorizontally ?d ?k)) (OnRightSide ?p) (or (not (Is ?d 'donut')) (Has ?w 'brown')) (or (not (Is ?d 'donut')) (AlignedVertically ?d ?w)) (Has ?p 'white') (or (not (Is ?d 'donut')) (Is ?w 'wallet')) (Is ?p 'phone'))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "wallet",
+        "donut",
+        "keyboard"
+    ]
+}

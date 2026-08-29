@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is a cartoon style illustration. A woman is holding a black phone. Next to the woman is a horse. To the left of the woman, there is a basket containing a red ball. A clock sits to the left of the basket. To the right of the horse is a rock with a blue hat on it. A pair of glasses is next to the hat, and a yellow butterfly is flying above the hat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?p (exists ?h (exists ?b (exists ?ball (exists ?c (exists ?r (exists ?hat (exists ?g (exists ?bf (and (Is ?w 'woman') (Is ?p 'phone') (HasColor ?p 'black') (Holding ?w ?p) (Is ?h 'horse') (NextTo ?h ?w) (Is ?b 'basket') (LeftOf ?b ?w) (Is ?ball 'ball') (HasColor ?ball 'red') (In ?ball ?b) (Is ?c 'clock') (LeftOf ?c ?b) (Is ?r 'rock') (RightOf ?r ?h) (Is ?hat 'hat') (HasColor ?hat 'blue') (On ?hat ?r) (Is ?g 'glasses') (NextTo ?g ?hat) (Is ?bf 'butterfly') (HasColor ?bf 'yellow') (Above ?bf ?hat)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?p (exists ?h (exists ?b (exists ?ball (exists ?c (exists ?r (exists ?hat (exists ?g (exists ?bf (and (Is ?w 'woman') (Holding ?w ?p) (NextTo ?h ?w) (HasColor ?p 'black') (LeftOf ?b ?w) (Is ?h 'horse') (RightOf ?r ?h) (Is ?p 'phone') (Is ?b 'basket') (In ?ball ?b) (Is ?r 'rock') (On ?hat ?r) (LeftOf ?c ?b) (HasColor ?ball 'red') (HasColor ?hat 'blue') (NextTo ?g ?hat) (Is ?c 'clock') (Is ?ball 'ball') (Is ?hat 'hat') (Above ?bf ?hat) (Is ?g 'glasses') (HasColor ?bf 'yellow') (Is ?bf 'butterfly')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "rock",
+        "ball",
+        "hat",
+        "butterfly",
+        "phone",
+        "basket",
+        "horse",
+        "woman",
+        "clock"
+    ]
+}

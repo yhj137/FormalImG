@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene with a red bicycle next to a basket containing a yellow key.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?bas (exists ?k (and (Is ?b 'bicycle') (HasColor ?b 'red') (Is ?bas 'basket') (NextTo ?bas ?b) (Is ?k 'key') (HasColor ?k 'yellow') (In ?k ?bas))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?bas (exists ?k (and (Is ?b 'bicycle') (HasColor ?b 'red') (NextTo ?bas ?b) (Is ?bas 'basket') (In ?k ?bas) (HasColor ?k 'yellow') (Is ?k 'key'))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "bicycle",
+        "key"
+    ]
+}

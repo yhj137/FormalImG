@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A black monitor, a glass mirror, and a metal knife rest on a refrigerator, with the mirror placed next to the monitor. A lion stands beside the refrigerator, holding a yellow banana. Every toy car is to the left of the refrigerator, while a boat with a bird perched on it sits to the right.",
+    "dsl": "(exists ?r (exists ?m (exists ?mi (exists ?k (exists ?l (exists ?b (and (Is ?r 'refrigerator') (Is ?m 'monitor') (HasColor ?m 'black') (Is ?mi 'mirror') (HasMaterial ?mi 'glass') (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?m ?r) (On ?mi ?r) (NextTo ?mi ?m) (On ?k ?r) (Is ?l 'lion') (NextTo ?l ?r) (Is ?b 'banana') (HasColor ?b 'yellow') (Holding ?l ?b) (forall ?tc (implies (Is ?tc 'toy car') (LeftOf ?tc ?r))) (exists ?bt (exists ?bi (and (Is ?bt 'boat') (RightOf ?bt ?r) (Is ?bi 'bird') (On ?bi ?bt)))))))))))",
+    "cnf": "(exists ?r (exists ?m (exists ?mi (exists ?k (exists ?l (exists ?b (forall ?tc (exists ?bt (exists ?bi (and (Is ?r 'refrigerator') (On ?m ?r) (On ?mi ?r) (HasColor ?m 'black') (NextTo ?mi ?m) (On ?k ?r) (HasMaterial ?mi 'glass') (Is ?m 'monitor') (NextTo ?l ?r) (HasMaterial ?k 'metal') (Is ?mi 'mirror') (or (not (Is ?tc 'toy car')) (LeftOf ?tc ?r)) (Is ?l 'lion') (Holding ?l ?b) (Is ?k 'knife') (RightOf ?bt ?r) (HasColor ?b 'yellow') (Is ?bt 'boat') (On ?bi ?bt) (Is ?b 'banana') (Is ?bi 'bird')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "monitor",
+        "toy car",
+        "bird",
+        "knife",
+        "banana",
+        "refrigerator",
+        "boat",
+        "mirror",
+        "lion"
+    ]
+}

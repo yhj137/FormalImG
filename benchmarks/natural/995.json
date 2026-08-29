@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a refrigerator with a fish inside. A wardrobe stands to the right of the refrigerator, and a man is positioned to the right of the wardrobe. Every flower in the scene is red and rests on the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?fi (exists ?w (exists ?m (and (Is ?r 'refrigerator') (Is ?fi 'fish') (Is ?w 'wardrobe') (Is ?m 'man') (In ?fi ?r) (RightOf ?w ?r) (RightOf ?m ?w) (forall ?fl (implies (Is ?fl 'flower') (and (HasColor ?fl 'red') (On ?fl ?w))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?fi (exists ?w (exists ?m (forall ?fl (and (Is ?r 'refrigerator') (In ?fi ?r) (RightOf ?w ?r) (Is ?fi 'fish') (Is ?w 'wardrobe') (RightOf ?m ?w) (or (not (Is ?fl 'flower')) (On ?fl ?w)) (Is ?m 'man') (or (not (Is ?fl 'flower')) (HasColor ?fl 'red')))))))))",
+    "k": 5,
+    "object_classes": [
+        "man",
+        "fish",
+        "refrigerator",
+        "wardrobe",
+        "flower"
+    ]
+}

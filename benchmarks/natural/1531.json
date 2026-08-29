@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a sofa. To the left of the sofa is a turned-on monitor. On the sofa sits a teddy bear holding a spoon and wearing a hat with a flower inside. A cat sits on the sofa to the right of the teddy bear, and all books are positioned to the right of the sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?m (exists ?tb (exists ?h (and (Is ?s 'sofa') (Is ?m 'monitor') (LeftOf ?m ?s) (HasState ?m 'on') (Is ?tb 'teddy bear') (On ?tb ?s) (Is ?h 'hat') (On ?h ?tb) (forall ?b (implies (Is ?b 'book') (RightOf ?b ?s))) (exists ?sp (exists ?c (exists ?f (and (Is ?sp 'spoon') (Holding ?tb ?sp) (Is ?c 'cat') (On ?c ?s) (RightOf ?c ?tb) (Is ?f 'flower') (In ?f ?h)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?m (exists ?tb (exists ?h (forall ?b (exists ?sp (exists ?c (exists ?f (and (Is ?s 'sofa') (LeftOf ?m ?s) (On ?tb ?s) (Is ?m 'monitor') (HasState ?m 'on') (or (not (Is ?b 'book')) (RightOf ?b ?s)) (Is ?tb 'teddy bear') (On ?h ?tb) (On ?c ?s) (Holding ?tb ?sp) (Is ?h 'hat') (In ?f ?h) (Is ?c 'cat') (RightOf ?c ?tb) (Is ?sp 'spoon') (Is ?f 'flower')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "sofa",
+        "cat",
+        "hat",
+        "book",
+        "teddy bear",
+        "flower",
+        "spoon"
+    ]
+}

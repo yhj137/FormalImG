@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a blooming tree. A rectangular bookshelf is located next to the tree. A teddy bear sits on the bookshelf, and a butterfly is on the teddy bear. To the right of the tree is a bus, and to the right of the bus is a person holding a hammer.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?bs (exists ?tb (exists ?bf (exists ?b (exists ?p (exists ?h (and (Is ?t 'tree') (HasState ?t 'blooming') (Is ?bs 'bookshelf') (HasShape ?bs 'rectangular') (NextTo ?bs ?t) (Is ?tb 'teddy bear') (On ?tb ?bs) (Is ?bf 'butterfly') (On ?bf ?tb) (Is ?b 'bus') (RightOf ?b ?t) (Is ?p 'person') (RightOf ?p ?b) (Is ?h 'hammer') (Holding ?p ?h))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?bs (exists ?tb (exists ?bf (exists ?b (exists ?p (exists ?h (and (Is ?t 'tree') (HasState ?t 'blooming') (NextTo ?bs ?t) (RightOf ?b ?t) (HasShape ?bs 'rectangular') (On ?tb ?bs) (Is ?b 'bus') (RightOf ?p ?b) (Is ?bs 'bookshelf') (Is ?tb 'teddy bear') (On ?bf ?tb) (Is ?p 'person') (Holding ?p ?h) (Is ?bf 'butterfly') (Is ?h 'hammer'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "bus",
+        "hammer",
+        "butterfly",
+        "teddy bear",
+        "tree",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting. Every umbrella is held by a woman. A cup is located to the right of each umbrella, and a round hat is positioned to the right of the cup.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?u (implies (Is ?u 'umbrella') (exists ?w (exists ?c (exists ?h (and (Is ?w 'woman') (Is ?c 'cup') (Is ?h 'hat') (Holding ?w ?u) (RightOf ?c ?u) (HasShape ?h 'round') (RightOf ?h ?c))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?u (exists ?w (exists ?c (exists ?h (and (or (not (Is ?u 'umbrella')) (Is ?w 'woman')) (or (not (Is ?u 'umbrella')) (Holding ?w ?u)) (or (not (Is ?u 'umbrella')) (Is ?c 'cup')) (or (not (Is ?u 'umbrella')) (Is ?h 'hat')) (or (not (Is ?u 'umbrella')) (RightOf ?c ?u)) (or (not (Is ?u 'umbrella')) (HasShape ?h 'round')) (or (not (Is ?u 'umbrella')) (RightOf ?h ?c))))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "umbrella",
+        "woman",
+        "cup"
+    ]
+}

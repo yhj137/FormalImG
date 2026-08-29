@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every lion is next to a wooden wardrobe. On the wardrobe sits a metal pan with a fish on it, and a bowl is next to the pan. A bird is to the left of the wardrobe.",
+    "dsl": "(forall ?l (implies (Is ?l 'lion') (exists ?w (exists ?p (exists ?f (exists ?b (exists ?bi (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?l ?w) (Is ?p 'pan') (HasMaterial ?p 'metal') (On ?p ?w) (Is ?f 'fish') (On ?f ?p) (Is ?b 'bowl') (NextTo ?b ?p) (Is ?bi 'bird') (LeftOf ?bi ?w)))))))))",
+    "cnf": "(forall ?l (exists ?w (exists ?p (exists ?f (exists ?b (exists ?bi (and (or (not (Is ?l 'lion')) (Is ?w 'wardrobe')) (or (not (Is ?l 'lion')) (HasMaterial ?w 'wooden')) (or (not (Is ?l 'lion')) (NextTo ?l ?w)) (or (not (Is ?l 'lion')) (On ?p ?w)) (or (not (Is ?l 'lion')) (Is ?p 'pan')) (or (not (Is ?l 'lion')) (LeftOf ?bi ?w)) (or (not (Is ?l 'lion')) (HasMaterial ?p 'metal')) (or (not (Is ?l 'lion')) (Is ?f 'fish')) (or (not (Is ?l 'lion')) (On ?f ?p)) (or (not (Is ?l 'lion')) (Is ?bi 'bird')) (or (not (Is ?l 'lion')) (Is ?b 'bowl')) (or (not (Is ?l 'lion')) (NextTo ?b ?p)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "lion",
+        "wardrobe",
+        "bird",
+        "pan",
+        "fish"
+    ]
+}

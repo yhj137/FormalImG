@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side. Every shoe in the image is located below the suitcase and has a hat, a bottle, and a handbag arranged to its right in a line, with all four objects aligned horizontally. Furthermore, below every shoe, there is a knife which starts a row containing a cup, a plate, and a monitor to its right, where these four objects are also aligned horizontally.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?hat (exists ?bottle (exists ?handbag (exists ?knife (exists ?cup (exists ?plate (exists ?monitor (and (Is ?hat 'hat') (Is ?bottle 'bottle') (Is ?handbag 'handbag') (Is ?knife 'knife') (Is ?cup 'cup') (Is ?plate 'plate') (Is ?monitor 'monitor') (Below ?shoe ?suitcase) (RightOf ?hat ?shoe) (RightOf ?bottle ?hat) (RightOf ?handbag ?bottle) (AlignedHorizontally ?shoe ?hat) (AlignedHorizontally ?hat ?bottle) (AlignedHorizontally ?bottle ?handbag) (Below ?knife ?shoe) (RightOf ?cup ?knife) (RightOf ?plate ?cup) (RightOf ?monitor ?plate) (AlignedHorizontally ?knife ?cup) (AlignedHorizontally ?cup ?plate) (AlignedHorizontally ?plate ?monitor)))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?shoe (exists ?hat (exists ?bottle (exists ?handbag (exists ?knife (exists ?cup (exists ?plate (exists ?monitor (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?suitcase)) (or (not (Is ?shoe 'shoe')) (Is ?monitor 'monitor')) (or (not (Is ?shoe 'shoe')) (RightOf ?hat ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?plate 'plate')) (or (not (Is ?shoe 'shoe')) (RightOf ?monitor ?plate)) (or (not (Is ?shoe 'shoe')) (RightOf ?bottle ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (Is ?cup 'cup')) (or (not (Is ?shoe 'shoe')) (RightOf ?plate ?cup)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?knife ?cup)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?cup ?plate)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?plate ?monitor)) (or (not (Is ?shoe 'shoe')) (RightOf ?handbag ?bottle)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?shoe ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?bottle 'bottle')) (or (not (Is ?shoe 'shoe')) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (RightOf ?cup ?knife)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?hat ?bottle)) (or (not (Is ?shoe 'shoe')) (Is ?handbag 'handbag')) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?bottle ?handbag)) (or (not (Is ?shoe 'shoe')) (Below ?knife ?shoe))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "cup",
+        "hat",
+        "handbag",
+        "bottle",
+        "knife",
+        "monitor",
+        "suitcase",
+        "shoe"
+    ]
+}

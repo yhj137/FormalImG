@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the left side of the image, and a cutting board is located to the right of the backpack. For every wrench in the scene, it is placed below the cutting board. Below the wrench, there is a camera. To the left of the camera lies a mouse. A ruler is positioned below the mouse, and a pen is aligned horizontally with the ruler. Finally, a donut is located below the pen, resting on the bottom side of the image.",
+    "dsl": "(exists ?backpack (exists ?cutting_board (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?backpack) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?camera (exists ?mouse (exists ?ruler (exists ?pen (exists ?donut (and (Is ?camera 'camera') (Is ?mouse 'mouse') (Is ?ruler 'ruler') (Is ?pen 'pen') (Is ?donut 'donut') (Below ?wrench ?cutting_board) (Below ?camera ?wrench) (LeftOf ?mouse ?camera) (Below ?ruler ?mouse) (AlignedHorizontally ?pen ?ruler) (Below ?donut ?pen) (OnBottomSide ?donut))))))))))))",
+    "cnf": "(exists ?backpack (exists ?cutting_board (forall ?wrench (exists ?camera (exists ?mouse (exists ?ruler (exists ?pen (exists ?donut (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (RightOf ?cutting_board ?backpack) (Is ?cutting_board 'cutting_board') (or (not (Is ?wrench 'wrench')) (Below ?wrench ?cutting_board)) (or (not (Is ?wrench 'wrench')) (Is ?donut 'donut')) (or (not (Is ?wrench 'wrench')) (Below ?camera ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?pen 'pen')) (or (not (Is ?wrench 'wrench')) (Below ?donut ?pen)) (or (not (Is ?wrench 'wrench')) (LeftOf ?mouse ?camera)) (or (not (Is ?wrench 'wrench')) (Is ?camera 'camera')) (or (not (Is ?wrench 'wrench')) (Is ?ruler 'ruler')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?pen ?ruler)) (or (not (Is ?wrench 'wrench')) (OnBottomSide ?donut)) (or (not (Is ?wrench 'wrench')) (Below ?ruler ?mouse)) (or (not (Is ?wrench 'wrench')) (Is ?mouse 'mouse')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "pen",
+        "wrench",
+        "cutting_board",
+        "backpack",
+        "camera",
+        "mouse",
+        "donut"
+    ]
+}

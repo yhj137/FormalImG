@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every laptop is inside a backpack, with a leather jacket positioned to the right of each backpack.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?l (implies (Is ?l 'laptop') (exists ?b (and (Is ?b 'backpack') (In ?l ?b) (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (RightOf ?j ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?l (exists ?b (exists ?j (and (or (not (Is ?l 'laptop')) (Is ?b 'backpack')) (or (not (Is ?l 'laptop')) (In ?l ?b)) (or (not (Is ?l 'laptop')) (RightOf ?j ?b)) (or (not (Is ?l 'laptop')) (Is ?j 'jacket')) (or (not (Is ?l 'laptop')) (HasMaterial ?j 'leather')))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "laptop",
+        "backpack"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a cutting board located on the left side of the image, positioned above a hammer; these two items are aligned vertically. A keyboard is placed to the right of the hammer. For every spoon in the scene, it is positioned to the left of the keyboard. On the right side of the image, a wallet is located to the right of the keyboard. A pair of glasses is positioned above the wallet, and a pen is positioned above the glasses. The pen and the glasses are aligned vertically.",
+    "dsl": "(exists ?cb (exists ?h (exists ?kb (exists ?w (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?h 'hammer') (Is ?kb 'keyboard') (Is ?w 'wallet') (OnRightSide ?w) (Above ?cb ?h) (AlignedVertically ?cb ?h) (LeftOf ?h ?kb) (RightOf ?w ?kb) (forall ?s (implies (Is ?s 'spoon') (LeftOf ?s ?kb))) (exists ?g (exists ?p (and (Is ?g 'glasses') (Is ?p 'pen') (Above ?g ?w) (Above ?p ?g) (AlignedVertically ?p ?g)))))))))",
+    "cnf": "(exists ?cb (exists ?h (exists ?kb (exists ?w (forall ?s (exists ?g (exists ?p (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Above ?cb ?h) (AlignedVertically ?cb ?h) (Is ?h 'hammer') (LeftOf ?h ?kb) (Is ?kb 'keyboard') (RightOf ?w ?kb) (or (not (Is ?s 'spoon')) (LeftOf ?s ?kb)) (OnRightSide ?w) (Above ?g ?w) (Is ?w 'wallet') (Is ?g 'glasses') (Above ?p ?g) (AlignedVertically ?p ?g) (Is ?p 'pen')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "keyboard",
+        "pen",
+        "cutting_board",
+        "hammer",
+        "wallet",
+        "spoon"
+    ]
+}

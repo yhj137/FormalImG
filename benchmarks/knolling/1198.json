@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A gray laptop is placed on the left side of the scene. Below the laptop, there is a pair of blue jeans. A red tie is located below the jeans, and a red apple is positioned below the tie. A yellow screwdriver is found below the apple. Finally, every donut in the scene is pink, placed below the screwdriver, and is smaller than the apple.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?tie (exists ?apple (exists ?screwdriver (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?laptop) (Is ?tie 'tie') (Has ?tie 'red') (Below ?tie ?jeans) (Is ?apple 'apple') (Has ?apple 'red') (Below ?apple ?tie) (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (Below ?screwdriver ?apple) (forall ?donut (implies (Is ?donut 'donut') (and (Has ?donut 'pink') (Below ?donut ?screwdriver) (SmallerThan ?donut ?apple))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?tie (exists ?apple (exists ?screwdriver (forall ?donut (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (Below ?jeans ?laptop) (Has ?jeans 'blue') (Below ?tie ?jeans) (Is ?jeans 'jeans') (Has ?tie 'red') (Below ?apple ?tie) (Is ?tie 'tie') (Has ?apple 'red') (Below ?screwdriver ?apple) (Is ?apple 'apple') (or (not (Is ?donut 'donut')) (SmallerThan ?donut ?apple)) (Has ?screwdriver 'yellow') (or (not (Is ?donut 'donut')) (Below ?donut ?screwdriver)) (Is ?screwdriver 'screwdriver') (or (not (Is ?donut 'donut')) (Has ?donut 'pink')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "apple",
+        "screwdriver",
+        "jeans",
+        "donut"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style image featuring a purple fruit.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?f (and (Is ?f 'fruit') (HasColor ?f 'purple'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?f (and (Is ?f 'fruit') (HasColor ?f 'purple'))))",
+    "k": 1,
+    "object_classes": [
+        "fruit"
+    ]
+}

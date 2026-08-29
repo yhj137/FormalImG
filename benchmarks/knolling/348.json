@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a bowl positioned on the bottom side of the layout. For every fork in the scene, it is smaller than the bowl.",
+    "dsl": "(exists ?b (and (Is ?b 'bowl') (OnBottomSide ?b) (forall ?f (implies (Is ?f 'fork') (SmallerThan ?f ?b)))))",
+    "cnf": "(exists ?b (forall ?f (and (Is ?b 'bowl') (OnBottomSide ?b) (or (not (Is ?f 'fork')) (SmallerThan ?f ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "fork"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the left side. To the right of the monitor is a backpack, and the monitor is larger than the backpack. A pan is placed to the right of the backpack. For every spoon in the image, there exists a pair of headphones to the right of the pan and a glove to the right of the headphones, with the spoon being smaller than the glove.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?pan (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?backpack 'backpack') (RightOf ?backpack ?monitor) (LargerThan ?monitor ?backpack) (Is ?pan 'pan') (RightOf ?pan ?backpack) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?headphones (exists ?glove (and (Is ?headphones 'headphones') (RightOf ?headphones ?pan) (Is ?glove 'glove') (RightOf ?glove ?headphones) (SmallerThan ?spoon ?glove))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?pan (forall ?spoon (exists ?headphones (exists ?glove (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (RightOf ?backpack ?monitor) (LargerThan ?monitor ?backpack) (Is ?backpack 'backpack') (RightOf ?pan ?backpack) (Is ?pan 'pan') (or (not (Is ?spoon 'spoon')) (RightOf ?headphones ?pan)) (or (not (Is ?spoon 'spoon')) (Is ?headphones 'headphones')) (or (not (Is ?spoon 'spoon')) (Is ?glove 'glove')) (or (not (Is ?spoon 'spoon')) (RightOf ?glove ?headphones)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?glove)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "backpack",
+        "monitor",
+        "headphones",
+        "glove",
+        "spoon"
+    ]
+}

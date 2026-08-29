@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a fluffy dog with an apple resting on it. Every butterfly is to the left of the dog.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?a (and (Is ?d 'dog') (HasMaterial ?d 'fluffy') (Is ?a 'apple') (On ?a ?d) (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?d)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?a (forall ?b (and (Is ?d 'dog') (HasMaterial ?d 'fluffy') (On ?a ?d) (or (not (Is ?b 'butterfly')) (LeftOf ?b ?d)) (Is ?a 'apple'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "apple",
+        "dog"
+    ]
+}

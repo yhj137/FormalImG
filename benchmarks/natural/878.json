@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a wooden bookshelf. Every plant in the scene is placed on the bookshelf. A gray elephant stands next to the bookshelf. A boat is located to the left of the elephant, and a pair of shoes is to the right of the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bs (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (forall ?p (implies (Is ?p 'plant') (On ?p ?bs))) (exists ?e (exists ?bt (exists ?s (and (Is ?e 'elephant') (HasColor ?e 'gray') (NextTo ?e ?bs) (Is ?bt 'boat') (LeftOf ?bt ?e) (Is ?s 'shoes') (RightOf ?s ?bs))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bs (forall ?p (exists ?e (exists ?bt (exists ?s (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (or (not (Is ?p 'plant')) (On ?p ?bs)) (NextTo ?e ?bs) (RightOf ?s ?bs) (HasColor ?e 'gray') (LeftOf ?bt ?e) (Is ?s 'shoes') (Is ?e 'elephant') (Is ?bt 'boat'))))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "shoes",
+        "plant",
+        "boat",
+        "bookshelf"
+    ]
+}

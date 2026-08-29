@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor. For every sock in the image, there is a cup to its left, a bottle to the left of the cup, a camera above the sock, and glasses above the camera. Additionally, for each sock, there is a pizza located to the right of the monitor and on the right side of the image, with a sandwich placed above it. The monitor is larger than the bottle.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (forall ?sock (implies (Is ?sock 'sock') (exists ?cup (exists ?bottle (exists ?camera (exists ?glasses (exists ?pizza (exists ?sandwich (and (Is ?cup 'cup') (Is ?bottle 'bottle') (Is ?camera 'camera') (Is ?glasses 'glasses') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (LeftOf ?sock ?monitor) (LeftOf ?cup ?sock) (LeftOf ?bottle ?cup) (Above ?camera ?sock) (Above ?glasses ?camera) (RightOf ?pizza ?monitor) (OnRightSide ?pizza) (Above ?sandwich ?pizza) (LargerThan ?monitor ?bottle))))))))))))",
+    "cnf": "(exists ?monitor (forall ?sock (exists ?cup (exists ?bottle (exists ?camera (exists ?glasses (exists ?pizza (exists ?sandwich (and (Is ?monitor 'monitor') (or (not (Is ?sock 'sock')) (LeftOf ?sock ?monitor)) (or (not (Is ?sock 'sock')) (RightOf ?pizza ?monitor)) (or (not (Is ?sock 'sock')) (Is ?sandwich 'sandwich')) (or (not (Is ?sock 'sock')) (LeftOf ?cup ?sock)) (or (not (Is ?sock 'sock')) (LargerThan ?monitor ?bottle)) (or (not (Is ?sock 'sock')) (Above ?glasses ?camera)) (or (not (Is ?sock 'sock')) (OnRightSide ?pizza)) (or (not (Is ?sock 'sock')) (Is ?pizza 'pizza')) (or (not (Is ?sock 'sock')) (Above ?sandwich ?pizza)) (or (not (Is ?sock 'sock')) (LeftOf ?bottle ?cup)) (or (not (Is ?sock 'sock')) (Is ?cup 'cup')) (or (not (Is ?sock 'sock')) (Above ?camera ?sock)) (or (not (Is ?sock 'sock')) (Is ?glasses 'glasses')) (or (not (Is ?sock 'sock')) (Is ?bottle 'bottle')) (or (not (Is ?sock 'sock')) (Is ?camera 'camera')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "pizza",
+        "cup",
+        "bottle",
+        "camera",
+        "monitor",
+        "sandwich"
+    ]
+}

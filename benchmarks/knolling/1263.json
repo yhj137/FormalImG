@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack positioned on the top-left side. For every glove in the scene, it is placed above the backpack. To the right of the backpack sits a camera, and the backpack is visually larger than the camera. A book is located below the backpack, and a sock is to the right of the book. A fork is positioned below the camera, with a knife to its right.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (OnLeftSide ?backpack) (forall ?glove (implies (Is ?glove 'glove') (Above ?glove ?backpack))) (exists ?camera (exists ?book (exists ?sock (exists ?fork (exists ?knife (and (Is ?camera 'camera') (Is ?book 'book') (Is ?sock 'sock') (Is ?fork 'fork') (Is ?knife 'knife') (LargerThan ?backpack ?camera) (RightOf ?camera ?backpack) (Below ?book ?backpack) (RightOf ?sock ?book) (Below ?fork ?camera) (RightOf ?knife ?fork)))))))))",
+    "cnf": "(exists ?backpack (forall ?glove (exists ?camera (exists ?book (exists ?sock (exists ?fork (exists ?knife (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (OnLeftSide ?backpack) (or (not (Is ?glove 'glove')) (Above ?glove ?backpack)) (LargerThan ?backpack ?camera) (RightOf ?camera ?backpack) (Is ?camera 'camera') (Below ?book ?backpack) (Below ?fork ?camera) (Is ?book 'book') (RightOf ?sock ?book) (Is ?fork 'fork') (RightOf ?knife ?fork) (Is ?sock 'sock') (Is ?knife 'knife')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "sock",
+        "fork",
+        "backpack",
+        "camera",
+        "knife",
+        "glove"
+    ]
+}

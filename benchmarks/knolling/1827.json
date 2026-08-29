@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the image, it is located on the left side of the scene and has a spoon situated below it. A sandwich is aligned horizontally with the plate, and a calculator is positioned below the sandwich. A pen is aligned horizontally with the sandwich, and a stapler is located below the pen. Furthermore, a pair of glasses is aligned horizontally with the pen and positioned above a pair of scissors. Finally, a shoe is aligned horizontally with the glasses on the right side of the image, while a glove is located below the shoe on the bottom side.",
+    "dsl": "(and (forall ?plate (implies (Is ?plate 'plate') (exists ?spoon (exists ?sandwich (exists ?calculator (exists ?pen (exists ?stapler (exists ?glasses (exists ?scissors (exists ?shoe (exists ?glove (and (Is ?spoon 'spoon') (Is ?sandwich 'sandwich') (Is ?calculator 'calculator') (Is ?pen 'pen') (Is ?stapler 'stapler') (Is ?glasses 'glasses') (Is ?scissors 'scissors') (Is ?shoe 'shoe') (Is ?glove 'glove') (OnLeftSide ?plate) (Below ?spoon ?plate) (AlignedHorizontally ?plate ?sandwich) (Above ?sandwich ?calculator) (AlignedHorizontally ?sandwich ?pen) (Below ?stapler ?pen) (AlignedHorizontally ?pen ?glasses) (Above ?glasses ?scissors) (AlignedHorizontally ?glasses ?shoe) (OnRightSide ?shoe) (Below ?glove ?shoe) (OnBottomSide ?glove))))))))))))))",
+    "cnf": "(forall ?plate (exists ?spoon (exists ?sandwich (exists ?calculator (exists ?pen (exists ?stapler (exists ?glasses (exists ?scissors (exists ?shoe (exists ?glove (and (or (not (Is ?plate 'plate')) (Is ?spoon 'spoon')) (or (not (Is ?plate 'plate')) (Below ?spoon ?plate)) (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich')) (or (not (Is ?plate 'plate')) (OnLeftSide ?plate)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?plate ?sandwich)) (or (not (Is ?plate 'plate')) (Is ?calculator 'calculator')) (or (not (Is ?plate 'plate')) (Is ?glove 'glove')) (or (not (Is ?plate 'plate')) (Above ?sandwich ?calculator)) (or (not (Is ?plate 'plate')) (Is ?pen 'pen')) (or (not (Is ?plate 'plate')) (Is ?shoe 'shoe')) (or (not (Is ?plate 'plate')) (Below ?glove ?shoe)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?sandwich ?pen)) (or (not (Is ?plate 'plate')) (Is ?stapler 'stapler')) (or (not (Is ?plate 'plate')) (Is ?scissors 'scissors')) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?glasses ?shoe)) (or (not (Is ?plate 'plate')) (OnRightSide ?shoe)) (or (not (Is ?plate 'plate')) (OnBottomSide ?glove)) (or (not (Is ?plate 'plate')) (Below ?stapler ?pen)) (or (not (Is ?plate 'plate')) (Is ?glasses 'glasses')) (or (not (Is ?plate 'plate')) (Above ?glasses ?scissors)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?pen ?glasses)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "plate",
+        "scissors",
+        "calculator",
+        "pen",
+        "stapler",
+        "glove",
+        "glasses",
+        "sandwich",
+        "shoe"
+    ]
+}

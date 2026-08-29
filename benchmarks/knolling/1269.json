@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a blue suitcase. For every white shirt in the image, it is positioned to the right of the suitcase. Continuing the arrangement to the right of the shirt is a black hammer, followed by a ruler to the right of the hammer, and glasses to the right of the ruler. Additionally, a red apple is aligned vertically with the hammer and is smaller than the suitcase, while a yellow lemon is aligned vertically with the ruler and is smaller than the hammer.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (forall ?shirt (implies (and (Is ?shirt 'shirt') (Has ?shirt 'white')) (exists ?hammer (exists ?ruler (exists ?glasses (exists ?apple (exists ?lemon (and (Is ?hammer 'hammer') (Has ?hammer 'black') (Is ?ruler 'ruler') (Is ?glasses 'glasses') (Is ?apple 'apple') (Has ?apple 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (RightOf ?shirt ?suitcase) (RightOf ?hammer ?shirt) (RightOf ?ruler ?hammer) (RightOf ?glasses ?ruler) (AlignedVertically ?apple ?hammer) (AlignedVertically ?lemon ?ruler) (SmallerThan ?apple ?suitcase) (SmallerThan ?lemon ?hammer)))))))))))",
+    "cnf": "(exists ?suitcase (forall ?shirt (exists ?hammer (exists ?ruler (exists ?glasses (exists ?apple (exists ?lemon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (RightOf ?shirt ?suitcase)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (SmallerThan ?apple ?suitcase)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Has ?lemon 'yellow')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (RightOf ?hammer ?shirt)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?lemon ?ruler)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (SmallerThan ?lemon ?hammer)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (AlignedVertically ?apple ?hammer)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?lemon 'lemon')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (RightOf ?ruler ?hammer)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Has ?hammer 'black')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (RightOf ?glasses ?ruler)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Has ?apple 'red')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?ruler 'ruler')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?hammer 'hammer')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?glasses 'glasses')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'white')) (Is ?apple 'apple'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "apple",
+        "lemon",
+        "hammer",
+        "suitcase",
+        "shirt"
+    ]
+}

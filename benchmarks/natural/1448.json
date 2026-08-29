@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a red bus. All the fish are to the left of the bus. A white refrigerator stands next to the bus, containing a cake with a knife beside it. To the right of the bus is an elephant, and to the right of the elephant sits a wooden bench with a leather jacket on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bus') (HasColor ?b 'red') (forall ?f (implies (Is ?f 'fish') (LeftOf ?f ?b))) (exists ?r (and (Is ?r 'refrigerator') (HasColor ?r 'white') (NextTo ?r ?b) (exists ?c (and (Is ?c 'cake') (In ?c ?r) (exists ?k (and (Is ?k 'knife') (NextTo ?k ?c))))))) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?b) (exists ?bn (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (RightOf ?bn ?e) (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (On ?j ?bn))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?f (exists ?r (exists ?c (exists ?k (exists ?e (exists ?bn (exists ?j (and (Is ?b 'bus') (HasColor ?b 'red') (or (not (Is ?f 'fish')) (LeftOf ?f ?b)) (NextTo ?r ?b) (RightOf ?e ?b) (HasColor ?r 'white') (In ?c ?r) (Is ?e 'elephant') (RightOf ?bn ?e) (Is ?r 'refrigerator') (Is ?c 'cake') (NextTo ?k ?c) (HasMaterial ?bn 'wooden') (On ?j ?bn) (Is ?k 'knife') (Is ?bn 'bench') (HasMaterial ?j 'leather') (Is ?j 'jacket')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "fish",
+        "knife",
+        "bench",
+        "cake",
+        "jacket",
+        "refrigerator",
+        "bus"
+    ]
+}

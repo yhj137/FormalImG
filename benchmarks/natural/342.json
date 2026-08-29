@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a rectangular desk with all the shoes placed on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (and (Is ?d 'desk') (HasShape ?d 'rectangular') (forall ?s (implies (Is ?s 'shoes') (On ?s ?d))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (forall ?s (and (Is ?d 'desk') (HasShape ?d 'rectangular') (or (not (Is ?s 'shoes')) (On ?s ?d))))))",
+    "k": 2,
+    "object_classes": [
+        "shoes",
+        "desk"
+    ]
+}

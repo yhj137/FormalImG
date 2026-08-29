@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a suitcase positioned on the left side of the scene. Directly above the suitcase is a cutting board, which is visually smaller than the suitcase. Above the cutting board is a pizza; these three items\u2014suitcase, cutting board, and pizza\u2014are aligned vertically. Furthermore, every tie in the image is located on the right side, is smaller than the pizza, and has a vertical column of items arranged directly below it. Specifically, a hammer is below the tie, a glove is below the hammer, a book is below the glove, a bowl is below the book, a sandwich is below the bowl, and a fork is below the sandwich, ending at the bottom side of the image. All items in this sequence are aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?cutting_board (exists ?pizza (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?cutting_board 'cutting_board') (Above ?cutting_board ?suitcase) (AlignedVertically ?cutting_board ?suitcase) (LargerThan ?suitcase ?cutting_board) (Is ?pizza 'pizza') (Above ?pizza ?cutting_board) (AlignedVertically ?pizza ?cutting_board) (forall ?tie (implies (Is ?tie 'tie') (exists ?hammer (exists ?glove (exists ?book (exists ?bowl (exists ?sandwich (exists ?fork (and (OnRightSide ?tie) (LargerThan ?pizza ?tie) (Is ?hammer 'hammer') (Below ?hammer ?tie) (AlignedVertically ?hammer ?tie) (Is ?glove 'glove') (Below ?glove ?hammer) (AlignedVertically ?glove ?hammer) (Is ?book 'book') (Below ?book ?glove) (AlignedVertically ?book ?glove) (Is ?bowl 'bowl') (Below ?bowl ?book) (AlignedVertically ?bowl ?book) (Is ?sandwich 'sandwich') (Below ?sandwich ?bowl) (AlignedVertically ?sandwich ?bowl) (Is ?fork 'fork') (Below ?fork ?sandwich) (AlignedVertically ?fork ?sandwich) (OnBottomSide ?fork))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?cutting_board (exists ?pizza (forall ?tie (exists ?hammer (exists ?glove (exists ?book (exists ?bowl (exists ?sandwich (exists ?fork (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?cutting_board ?suitcase) (AlignedVertically ?cutting_board ?suitcase) (Is ?cutting_board 'cutting_board') (LargerThan ?suitcase ?cutting_board) (Above ?pizza ?cutting_board) (AlignedVertically ?pizza ?cutting_board) (Is ?pizza 'pizza') (or (not (Is ?tie 'tie')) (LargerThan ?pizza ?tie)) (or (not (Is ?tie 'tie')) (OnRightSide ?tie)) (or (not (Is ?tie 'tie')) (Is ?hammer 'hammer')) (or (not (Is ?tie 'tie')) (Below ?hammer ?tie)) (or (not (Is ?tie 'tie')) (AlignedVertically ?hammer ?tie)) (or (not (Is ?tie 'tie')) (Is ?glove 'glove')) (or (not (Is ?tie 'tie')) (Below ?glove ?hammer)) (or (not (Is ?tie 'tie')) (AlignedVertically ?glove ?hammer)) (or (not (Is ?tie 'tie')) (Is ?book 'book')) (or (not (Is ?tie 'tie')) (Below ?book ?glove)) (or (not (Is ?tie 'tie')) (AlignedVertically ?book ?glove)) (or (not (Is ?tie 'tie')) (Is ?bowl 'bowl')) (or (not (Is ?tie 'tie')) (Below ?bowl ?book)) (or (not (Is ?tie 'tie')) (AlignedVertically ?bowl ?book)) (or (not (Is ?tie 'tie')) (Is ?sandwich 'sandwich')) (or (not (Is ?tie 'tie')) (Below ?sandwich ?bowl)) (or (not (Is ?tie 'tie')) (AlignedVertically ?sandwich ?bowl)) (or (not (Is ?tie 'tie')) (Is ?fork 'fork')) (or (not (Is ?tie 'tie')) (Below ?fork ?sandwich)) (or (not (Is ?tie 'tie')) (AlignedVertically ?fork ?sandwich)) (or (not (Is ?tie 'tie')) (OnBottomSide ?fork)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "tie",
+        "pizza",
+        "sandwich",
+        "cutting_board",
+        "hammer",
+        "fork",
+        "bowl",
+        "suitcase",
+        "glove"
+    ]
+}

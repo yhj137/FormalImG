@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman sits on a chair holding a phone, with shoes next to the chair. To the right of the chair is a lamp. A cylindrical bottle is next to the lamp, with a cup beside the bottle. All butterflies are to the left of the woman.",
+    "dsl": "(exists ?w (exists ?c (and (Is ?w 'woman') (Is ?c 'chair') (On ?w ?c) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?w))) (exists ?p (exists ?s (exists ?l (exists ?b (exists ?cup (and (Is ?p 'phone') (Is ?s 'shoes') (Is ?l 'lamp') (Is ?b 'bottle') (Is ?cup 'cup') (Holding ?w ?p) (NextTo ?s ?c) (RightOf ?l ?c) (NextTo ?b ?l) (HasShape ?b 'cylindrical') (NextTo ?cup ?b))))))))))",
+    "cnf": "(exists ?w (exists ?c (forall ?bf (exists ?p (exists ?s (exists ?l (exists ?b (exists ?cup (and (Is ?w 'woman') (On ?w ?c) (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?w)) (Is ?c 'chair') (NextTo ?s ?c) (Holding ?w ?p) (RightOf ?l ?c) (Is ?s 'shoes') (Is ?p 'phone') (Is ?l 'lamp') (NextTo ?b ?l) (Is ?b 'bottle') (HasShape ?b 'cylindrical') (NextTo ?cup ?b) (Is ?cup 'cup'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "lamp",
+        "shoes",
+        "chair",
+        "butterfly",
+        "phone",
+        "cup",
+        "woman"
+    ]
+}

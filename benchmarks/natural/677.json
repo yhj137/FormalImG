@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every monitor is turned on and has a red apple on top. To the left of each monitor is a boat containing a lion.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?m (implies (Is ?m 'monitor') (exists ?b (exists ?l (exists ?a (and (Is ?b 'boat') (Is ?l 'lion') (Is ?a 'apple') (HasState ?m 'on') (LeftOf ?b ?m) (In ?l ?b) (HasColor ?a 'red') (On ?a ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?m (exists ?b (exists ?l (exists ?a (and (or (not (Is ?m 'monitor')) (Is ?b 'boat')) (or (not (Is ?m 'monitor')) (LeftOf ?b ?m)) (or (not (Is ?m 'monitor')) (Is ?l 'lion')) (or (not (Is ?m 'monitor')) (In ?l ?b)) (or (not (Is ?m 'monitor')) (HasState ?m 'on')) (or (not (Is ?m 'monitor')) (Is ?a 'apple')) (or (not (Is ?m 'monitor')) (HasColor ?a 'red')) (or (not (Is ?m 'monitor')) (On ?a ?m))))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "lion",
+        "monitor",
+        "boat"
+    ]
+}

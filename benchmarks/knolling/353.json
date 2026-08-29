@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a bowl positioned on the left side of the image, and this specific bowl is located to the left of every apple in the scene.",
+    "dsl": "(exists ?bowl (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (forall ?apple (implies (Is ?apple 'apple') (LeftOf ?bowl ?apple)))))",
+    "cnf": "(exists ?bowl (forall ?apple (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (or (not (Is ?apple 'apple')) (LeftOf ?bowl ?apple)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "apple"
+    ]
+}

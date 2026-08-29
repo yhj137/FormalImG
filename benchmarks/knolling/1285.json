@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the scene. To the right of the suitcase is a camera. For every ruler in the image, it is placed to the right of the camera. Below the suitcase is a book. To the right of the book is a brown wallet, and below the book is a yellow lemon. To the left of the book is a pair of scissors.",
+    "dsl": "(exists ?suitcase (exists ?camera (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?camera 'camera') (RightOf ?camera ?suitcase) (forall ?ruler (implies (Is ?ruler 'ruler') (RightOf ?ruler ?camera))) (exists ?book (exists ?wallet (exists ?lemon (exists ?scissors (and (Is ?book 'book') (Above ?suitcase ?book) (Is ?wallet 'wallet') (Has ?wallet 'brown') (RightOf ?wallet ?book) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Above ?book ?lemon) (Is ?scissors 'scissors') (LeftOf ?scissors ?book)))))))))",
+    "cnf": "(exists ?suitcase (exists ?camera (forall ?ruler (exists ?book (exists ?wallet (exists ?lemon (exists ?scissors (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?camera ?suitcase) (Above ?suitcase ?book) (Is ?camera 'camera') (or (not (Is ?ruler 'ruler')) (RightOf ?ruler ?camera)) (Is ?book 'book') (RightOf ?wallet ?book) (Above ?book ?lemon) (Has ?wallet 'brown') (LeftOf ?scissors ?book) (Has ?lemon 'yellow') (Is ?wallet 'wallet') (Is ?scissors 'scissors') (Is ?lemon 'lemon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "book",
+        "lemon",
+        "wallet",
+        "camera",
+        "scissors",
+        "suitcase"
+    ]
+}

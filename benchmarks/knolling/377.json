@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the layout. Additionally, for every lemon in the scene, the suitcase is visually larger than the lemon.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (OnTopSide ?s) (forall ?l (implies (Is ?l 'lemon') (LargerThan ?s ?l)))))",
+    "cnf": "(exists ?s (forall ?l (and (Is ?s 'suitcase') (OnTopSide ?s) (or (not (Is ?l 'lemon')) (LargerThan ?s ?l)))))",
+    "k": 2,
+    "object_classes": [
+        "lemon",
+        "suitcase"
+    ]
+}

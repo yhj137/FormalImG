@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized set of objects. On the left side of the image, there is a shirt. Positioned below the shirt and located on the bottom side of the layout is a drill. To the right of the shirt is a plate, and to the right of the plate is a bowl; the shirt, plate, and bowl are aligned horizontally. Located above the plate is a bottle, while a watch is placed to the left of the bottle. A pair of pliers is found to the right of the drill. Finally, for any pair of scissors in the scene, it is positioned to the left of the drill.",
+    "dsl": "(exists ?shirt (forall ?scissors (exists ?drill (exists ?plate (exists ?bowl (exists ?pliers (exists ?bottle (exists ?watch (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?drill 'drill') (OnBottomSide ?drill) (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?pliers 'pliers') (Is ?bottle 'bottle') (Is ?watch 'watch') (Above ?shirt ?drill) (RightOf ?plate ?shirt) (AlignedHorizontally ?plate ?shirt) (RightOf ?bowl ?plate) (AlignedHorizontally ?bowl ?plate) (Above ?bottle ?plate) (LeftOf ?watch ?bottle) (RightOf ?pliers ?drill) (implies (Is ?scissors 'scissors') (LeftOf ?scissors ?drill)))))))))))",
+    "cnf": "(exists ?shirt (forall ?scissors (exists ?drill (exists ?plate (exists ?bowl (exists ?pliers (exists ?bottle (exists ?watch (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Above ?shirt ?drill) (RightOf ?plate ?shirt) (OnBottomSide ?drill) (RightOf ?pliers ?drill) (AlignedHorizontally ?plate ?shirt) (Is ?plate 'plate') (Is ?drill 'drill') (or (not (Is ?scissors 'scissors')) (LeftOf ?scissors ?drill)) (Is ?pliers 'pliers') (RightOf ?bowl ?plate) (AlignedHorizontally ?bowl ?plate) (Is ?bowl 'bowl') (Above ?bottle ?plate) (Is ?bottle 'bottle') (LeftOf ?watch ?bottle) (Is ?watch 'watch'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "watch",
+        "plate",
+        "shirt",
+        "bowl",
+        "scissors",
+        "pliers",
+        "drill",
+        "bottle"
+    ]
+}

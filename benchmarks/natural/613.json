@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child stands to the left of a tree, holding a round plate with a sliced fish on it.",
+    "dsl": "(exists ?c (exists ?t (exists ?p (exists ?f (and (Is ?c 'child') (Is ?t 'tree') (Is ?p 'plate') (Is ?f 'fish') (HasState ?c 'standing') (LeftOf ?c ?t) (Holding ?c ?p) (HasShape ?p 'round') (On ?f ?p) (HasState ?f 'sliced'))))))",
+    "cnf": "(exists ?c (exists ?t (exists ?p (exists ?f (and (Is ?c 'child') (HasState ?c 'standing') (LeftOf ?c ?t) (Holding ?c ?p) (Is ?t 'tree') (Is ?p 'plate') (HasShape ?p 'round') (On ?f ?p) (Is ?f 'fish') (HasState ?f 'sliced'))))))",
+    "k": 4,
+    "object_classes": [
+        "fish",
+        "plate",
+        "child",
+        "tree"
+    ]
+}

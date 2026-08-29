@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat positioned on the bottom side of the frame. For every plate present in the image, the hat is located below that plate.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (OnBottomSide ?hat) (forall ?plate (implies (Is ?plate 'plate') (Below ?hat ?plate)))))",
+    "cnf": "(exists ?hat (forall ?plate (and (Is ?hat 'hat') (OnBottomSide ?hat) (or (not (Is ?plate 'plate')) (Below ?hat ?plate)))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "plate"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a knife and a glove. The glove is positioned below the knife, and the glove is specifically located on the bottom side of the layout.",
+    "dsl": "(exists ?knife (exists ?glove (and (Is ?knife 'knife') (Is ?glove 'glove') (Below ?glove ?knife) (OnBottomSide ?glove))))",
+    "cnf": "(exists ?knife (exists ?glove (and (Is ?knife 'knife') (Below ?glove ?knife) (Is ?glove 'glove') (OnBottomSide ?glove))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "glove"
+    ]
+}

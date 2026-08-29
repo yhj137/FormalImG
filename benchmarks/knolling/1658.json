@@ -1,0 +1,17 @@
+{
+    "prompt": "For every set of keys in the image, there is a pan on the left side, a camera to the right of the pan, a bowl to the right of the camera, a drill below the camera, a wrench to the left of the drill, scissors vertically aligned with the bowl, a wallet on the right side, and a fork smaller than the pan to the right of the bowl. Additionally, the scissors are to the left of the wallet, and the keys are positioned below the wallet.",
+    "dsl": "(exists ?pan (forall ?keys (implies (Is ?keys 'keys') (exists ?camera (exists ?bowl (exists ?drill (exists ?wrench (exists ?scissors (exists ?wallet (exists ?fork (and (Is ?pan 'pan') (OnLeftSide ?pan) (Is ?camera 'camera') (RightOf ?camera ?pan) (Is ?bowl 'bowl') (RightOf ?bowl ?camera) (Is ?drill 'drill') (Below ?drill ?camera) (Is ?wrench 'wrench') (LeftOf ?wrench ?drill) (Is ?scissors 'scissors') (AlignedVertically ?scissors ?bowl) (Is ?wallet 'wallet') (OnRightSide ?wallet) (LeftOf ?scissors ?wallet) (Below ?keys ?wallet) (Is ?fork 'fork') (RightOf ?fork ?bowl) (SmallerThan ?fork ?pan))))))))))))",
+    "cnf": "(exists ?pan (forall ?keys (exists ?camera (exists ?bowl (exists ?drill (exists ?wrench (exists ?scissors (exists ?wallet (exists ?fork (and (or (not (Is ?keys 'keys')) (Is ?pan 'pan')) (or (not (Is ?keys 'keys')) (OnLeftSide ?pan)) (or (not (Is ?keys 'keys')) (Is ?camera 'camera')) (or (not (Is ?keys 'keys')) (RightOf ?camera ?pan)) (or (not (Is ?keys 'keys')) (Is ?bowl 'bowl')) (or (not (Is ?keys 'keys')) (SmallerThan ?fork ?pan)) (or (not (Is ?keys 'keys')) (RightOf ?bowl ?camera)) (or (not (Is ?keys 'keys')) (RightOf ?fork ?bowl)) (or (not (Is ?keys 'keys')) (Is ?drill 'drill')) (or (not (Is ?keys 'keys')) (Below ?drill ?camera)) (or (not (Is ?keys 'keys')) (AlignedVertically ?scissors ?bowl)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (Is ?wrench 'wrench')) (or (not (Is ?keys 'keys')) (LeftOf ?wrench ?drill)) (or (not (Is ?keys 'keys')) (Is ?scissors 'scissors')) (or (not (Is ?keys 'keys')) (Is ?wallet 'wallet')) (or (not (Is ?keys 'keys')) (LeftOf ?scissors ?wallet)) (or (not (Is ?keys 'keys')) (Below ?keys ?wallet)) (or (not (Is ?keys 'keys')) (OnRightSide ?wallet))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "wrench",
+        "drill",
+        "pan",
+        "fork",
+        "wallet",
+        "camera",
+        "scissors",
+        "bowl"
+    ]
+}

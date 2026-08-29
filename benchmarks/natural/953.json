@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a boat on a blue rug. A book sits next to the boat, and every butterfly rests on a flower beside the book.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (exists ?k (and (Is ?r 'rug') (HasColor ?r 'blue') (Is ?b 'boat') (Is ?k 'book') (On ?b ?r) (NextTo ?k ?b) (forall ?x (implies (Is ?x 'butterfly') (exists ?y (and (Is ?y 'flower') (On ?x ?y) (NextTo ?y ?k))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (exists ?k (forall ?x (exists ?y (and (Is ?r 'rug') (HasColor ?r 'blue') (On ?b ?r) (Is ?b 'boat') (NextTo ?k ?b) (Is ?k 'book') (or (not (Is ?x 'butterfly')) (NextTo ?y ?k)) (or (not (Is ?x 'butterfly')) (On ?x ?y)) (or (not (Is ?x 'butterfly')) (Is ?y 'flower')))))))))",
+    "k": 5,
+    "object_classes": [
+        "rug",
+        "book",
+        "butterfly",
+        "boat",
+        "flower"
+    ]
+}

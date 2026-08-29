@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white bowl positioned directly above a brown cutting board.",
+    "dsl": "(exists ?b (exists ?cb (and (Is ?b 'bowl') (Has ?b 'white') (Is ?cb 'cutting_board') (Has ?cb 'brown') (Above ?b ?cb))))",
+    "cnf": "(exists ?b (exists ?cb (and (Is ?b 'bowl') (Has ?b 'white') (Above ?b ?cb) (Has ?cb 'brown') (Is ?cb 'cutting_board'))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "bowl"
+    ]
+}

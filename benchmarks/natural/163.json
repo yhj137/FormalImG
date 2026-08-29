@@ -1,0 +1,9 @@
+{
+    "prompt": "All chairs in the scene are wooden.",
+    "dsl": "(forall ?c (implies (Is ?c 'chair') (HasMaterial ?c 'wooden')))",
+    "cnf": "(forall ?c (or (not (Is ?c 'chair')) (HasMaterial ?c 'wooden')))",
+    "k": 1,
+    "object_classes": [
+        "chair"
+    ]
+}

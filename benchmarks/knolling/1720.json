@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the left side. Directly below the cutting board is a book, which is visually smaller than the cutting board, and to the left of the book lies a calculator. On the right side of the image stands a bottle. Below the bottle, on the bottom side of the scene, are keys. The book is situated to the left of the keys. Additionally, every apple is positioned to the left of the bottle and has a lemon below it, a carrot to the left of the lemon, and a wrench aligned horizontally with the carrot. The wrench is larger than the carrot.",
+    "dsl": "(exists ?board (exists ?book (exists ?calc (exists ?bottle (exists ?keys (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Is ?book 'book') (Below ?book ?board) (LargerThan ?board ?book) (Is ?calc 'calculator') (LeftOf ?calc ?book) (Is ?bottle 'bottle') (OnRightSide ?bottle) (Is ?keys 'keys') (OnBottomSide ?keys) (Below ?keys ?bottle) (LeftOf ?book ?keys) (forall ?apple (implies (Is ?apple 'apple') (exists ?lemon (exists ?carrot (exists ?wrench (and (Is ?lemon 'lemon') (Is ?carrot 'carrot') (Is ?wrench 'wrench') (LeftOf ?apple ?bottle) (Below ?lemon ?apple) (LeftOf ?carrot ?lemon) (AlignedHorizontally ?carrot ?wrench) (LargerThan ?wrench ?carrot)))))))))))))",
+    "cnf": "(exists ?board (exists ?book (exists ?calc (exists ?bottle (exists ?keys (forall ?apple (exists ?lemon (exists ?carrot (exists ?wrench (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Below ?book ?board) (LargerThan ?board ?book) (Is ?book 'book') (LeftOf ?calc ?book) (LeftOf ?book ?keys) (Is ?calc 'calculator') (Below ?keys ?bottle) (OnRightSide ?bottle) (or (not (Is ?apple 'apple')) (LeftOf ?apple ?bottle)) (OnBottomSide ?keys) (Is ?bottle 'bottle') (or (not (Is ?apple 'apple')) (Is ?wrench 'wrench')) (or (not (Is ?apple 'apple')) (Below ?lemon ?apple)) (Is ?keys 'keys') (or (not (Is ?apple 'apple')) (Is ?carrot 'carrot')) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?carrot ?wrench)) (or (not (Is ?apple 'apple')) (Is ?lemon 'lemon')) (or (not (Is ?apple 'apple')) (LeftOf ?carrot ?lemon)) (or (not (Is ?apple 'apple')) (LargerThan ?wrench ?carrot))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keys",
+        "apple",
+        "wrench",
+        "lemon",
+        "carrot",
+        "cutting_board",
+        "calculator",
+        "bottle"
+    ]
+}

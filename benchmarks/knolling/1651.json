@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A pizza is located on the left side of the image. For every sock present in the scene, it is positioned to the right of the pizza. A book is arranged to the right of the sock, with a camera placed above the book. To the left of the camera lies a phone, and a calculator is located above the phone. A mouse is positioned to the right of the calculator, followed by scissors to the right of the mouse. Finally, a knife is placed above the scissors and is situated on the right side of the image. The pizza is visually larger than the camera.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (forall ?sock (implies (Is ?sock 'sock') (exists ?book (exists ?camera (exists ?phone (exists ?calculator (exists ?mouse (exists ?scissors (exists ?knife (and (Is ?book 'book') (Is ?camera 'camera') (Is ?phone 'phone') (Is ?calculator 'calculator') (Is ?mouse 'mouse') (Is ?scissors 'scissors') (Is ?knife 'knife') (RightOf ?sock ?pizza) (RightOf ?book ?sock) (Above ?camera ?book) (LeftOf ?phone ?camera) (Above ?calculator ?phone) (RightOf ?mouse ?calculator) (RightOf ?scissors ?mouse) (Above ?knife ?scissors) (OnRightSide ?knife) (LargerThan ?pizza ?camera)))))))))))))",
+    "cnf": "(exists ?pizza (forall ?sock (exists ?book (exists ?camera (exists ?phone (exists ?calculator (exists ?mouse (exists ?scissors (exists ?knife (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (or (not (Is ?sock 'sock')) (RightOf ?sock ?pizza)) (or (not (Is ?sock 'sock')) (LargerThan ?pizza ?camera)) (or (not (Is ?sock 'sock')) (Is ?knife 'knife')) (or (not (Is ?sock 'sock')) (RightOf ?book ?sock)) (or (not (Is ?sock 'sock')) (OnRightSide ?knife)) (or (not (Is ?sock 'sock')) (LeftOf ?phone ?camera)) (or (not (Is ?sock 'sock')) (Is ?scissors 'scissors')) (or (not (Is ?sock 'sock')) (Above ?knife ?scissors)) (or (not (Is ?sock 'sock')) (Above ?camera ?book)) (or (not (Is ?sock 'sock')) (Is ?book 'book')) (or (not (Is ?sock 'sock')) (Above ?calculator ?phone)) (or (not (Is ?sock 'sock')) (Is ?phone 'phone')) (or (not (Is ?sock 'sock')) (Is ?mouse 'mouse')) (or (not (Is ?sock 'sock')) (RightOf ?scissors ?mouse)) (or (not (Is ?sock 'sock')) (Is ?camera 'camera')) (or (not (Is ?sock 'sock')) (RightOf ?mouse ?calculator)) (or (not (Is ?sock 'sock')) (Is ?calculator 'calculator'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "sock",
+        "phone",
+        "pizza",
+        "camera",
+        "calculator",
+        "mouse",
+        "knife",
+        "scissors"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A hat is positioned on the top side of the scene.",
+    "dsl": "(exists ?h (and (Is ?h 'hat') (OnTopSide ?h)))",
+    "cnf": "(exists ?h (and (Is ?h 'hat') (OnTopSide ?h)))",
+    "k": 1,
+    "object_classes": [
+        "hat"
+    ]
+}

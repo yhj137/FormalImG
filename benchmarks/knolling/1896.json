@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the left side. Below the cutting board is a game controller, and to the right of the controller are headphones. A book is placed to the right of the cutting board. For every spoon in the image, it is located above the cutting board. To the right of the spoon is a mouse, which is smaller than the cutting board. Below the mouse is a watch, to the right of the watch is a tie, below the tie is a stapler, and to the right of the stapler is a screwdriver.",
+    "dsl": "(exists ?cb (exists ?gc (exists ?hp (exists ?bk (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?gc 'game_controller') (Below ?gc ?cb) (Is ?hp 'headphones') (RightOf ?hp ?gc) (Is ?bk 'book') (RightOf ?bk ?cb) (forall ?sp (implies (Is ?sp 'spoon') (exists ?ms (exists ?wt (exists ?ti (exists ?st (exists ?sd (and (Is ?ms 'mouse') (Is ?wt 'watch') (Is ?ti 'tie') (Is ?st 'stapler') (Is ?sd 'screwdriver') (Above ?sp ?cb) (RightOf ?ms ?sp) (Below ?wt ?ms) (RightOf ?ti ?wt) (Below ?st ?ti) (RightOf ?sd ?st) (SmallerThan ?ms ?cb))))))))))))))",
+    "cnf": "(exists ?cb (exists ?gc (exists ?hp (exists ?bk (forall ?sp (exists ?ms (exists ?wt (exists ?ti (exists ?st (exists ?sd (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Below ?gc ?cb) (RightOf ?bk ?cb) (Is ?gc 'game_controller') (RightOf ?hp ?gc) (or (not (Is ?sp 'spoon')) (Above ?sp ?cb)) (Is ?bk 'book') (Is ?hp 'headphones') (or (not (Is ?sp 'spoon')) (SmallerThan ?ms ?cb)) (or (not (Is ?sp 'spoon')) (Is ?sd 'screwdriver')) (or (not (Is ?sp 'spoon')) (RightOf ?ms ?sp)) (or (not (Is ?sp 'spoon')) (Below ?wt ?ms)) (or (not (Is ?sp 'spoon')) (RightOf ?sd ?st)) (or (not (Is ?sp 'spoon')) (Is ?st 'stapler')) (or (not (Is ?sp 'spoon')) (Is ?ms 'mouse')) (or (not (Is ?sp 'spoon')) (RightOf ?ti ?wt)) (or (not (Is ?sp 'spoon')) (Is ?wt 'watch')) (or (not (Is ?sp 'spoon')) (Below ?st ?ti)) (or (not (Is ?sp 'spoon')) (Is ?ti 'tie')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "watch",
+        "mouse",
+        "stapler",
+        "headphones",
+        "tie",
+        "game_controller",
+        "book",
+        "screwdriver",
+        "cutting_board"
+    ]
+}

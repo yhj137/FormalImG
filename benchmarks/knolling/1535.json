@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red hat, a black monitor, white keys, a blue bottle, and a black remote. The hat is located on the top side of the image and to the left of the monitor. The blue bottle is positioned on the right side, with the remote lying below it. For every carrot in the scene, there exists a brown cutting board and a gray laptop arranged such that the carrot is to the left of the cutting board, and the cutting board is below the laptop. The laptop is aligned vertically with the monitor and is located below it. Additionally, the keys are smaller than the laptop and are positioned to its left, while the laptop is to the left of the remote.",
+    "dsl": "(exists ?h (exists ?m (exists ?k (exists ?b (exists ?r (and (Is ?h 'hat') (Has ?h 'red') (OnTopSide ?h) (Is ?m 'monitor') (Has ?m 'black') (Is ?k 'keys') (Has ?k 'white') (Is ?b 'bottle') (Has ?b 'blue') (OnRightSide ?b) (Is ?r 'remote') (Has ?r 'black') (LeftOf ?h ?m) (Below ?r ?b) (forall ?c (implies (Is ?c 'carrot') (exists ?cb (exists ?l (and (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?l 'laptop') (Has ?l 'gray') (LeftOf ?c ?cb) (Below ?cb ?l) (Below ?l ?m) (AlignedVertically ?l ?m) (LeftOf ?k ?l) (SmallerThan ?k ?l) (LeftOf ?l ?r))))))))))))",
+    "cnf": "(exists ?h (exists ?m (exists ?k (exists ?b (exists ?r (forall ?c (exists ?cb (exists ?l (and (Is ?h 'hat') (Has ?h 'red') (OnTopSide ?h) (LeftOf ?h ?m) (Has ?m 'black') (or (not (Is ?c 'carrot')) (Below ?l ?m)) (Is ?m 'monitor') (or (not (Is ?c 'carrot')) (AlignedVertically ?l ?m)) (or (not (Is ?c 'carrot')) (Below ?cb ?l)) (or (not (Is ?c 'carrot')) (LeftOf ?k ?l)) (or (not (Is ?c 'carrot')) (LeftOf ?c ?cb)) (or (not (Is ?c 'carrot')) (Has ?l 'gray')) (Has ?k 'white') (or (not (Is ?c 'carrot')) (SmallerThan ?k ?l)) (or (not (Is ?c 'carrot')) (Has ?cb 'brown')) (or (not (Is ?c 'carrot')) (Is ?l 'laptop')) (Is ?k 'keys') (or (not (Is ?c 'carrot')) (LeftOf ?l ?r)) (or (not (Is ?c 'carrot')) (Is ?cb 'cutting_board')) (Below ?r ?b) (OnRightSide ?b) (Has ?r 'black') (Has ?b 'blue') (Is ?r 'remote') (Is ?b 'bottle'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "remote",
+        "carrot",
+        "cutting_board",
+        "hat",
+        "bottle",
+        "monitor"
+    ]
+}

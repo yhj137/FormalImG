@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a standing man positioned to the left of all the fish.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (and (Is ?m 'man') (HasState ?m 'standing') (forall ?f (implies (Is ?f 'fish') (LeftOf ?m ?f))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (forall ?f (and (Is ?m 'man') (HasState ?m 'standing') (or (not (Is ?f 'fish')) (LeftOf ?m ?f))))))",
+    "k": 2,
+    "object_classes": [
+        "man",
+        "fish"
+    ]
+}

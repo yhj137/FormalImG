@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, there is a brown suitcase and a handbag, with the suitcase positioned to the left of the handbag. Below the suitcase lies a keyboard, while headphones are placed below the handbag; the headphones are physically smaller than the keyboard. The layout includes a specific arrangement for tools and food: for every screwdriver, it is located below the keyboard and has a pair of glasses positioned directly below it. Additionally, for each screwdriver, a bowl is located to its right on the bottom side, and a pizza is placed directly below the bowl. The bowl is above the pizza, and the pizza is larger than the bowl.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?keyboard (exists ?headphones (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (Is ?handbag 'handbag') (OnTopSide ?handbag) (LeftOf ?suitcase ?handbag) (Is ?keyboard 'keyboard') (Below ?keyboard ?suitcase) (Is ?headphones 'headphones') (Below ?headphones ?handbag) (SmallerThan ?headphones ?keyboard) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?glasses (exists ?bowl (exists ?pizza (and (Below ?screwdriver ?keyboard) (Is ?glasses 'glasses') (Below ?glasses ?screwdriver) (Is ?bowl 'bowl') (OnBottomSide ?bowl) (LeftOf ?screwdriver ?bowl) (Is ?pizza 'pizza') (OnBottomSide ?pizza) (Above ?bowl ?pizza) (LargerThan ?pizza ?bowl))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?keyboard (exists ?headphones (forall ?screwdriver (exists ?glasses (exists ?bowl (exists ?pizza (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (LeftOf ?suitcase ?handbag) (Below ?keyboard ?suitcase) (OnTopSide ?handbag) (Below ?headphones ?handbag) (Is ?keyboard 'keyboard') (SmallerThan ?headphones ?keyboard) (Is ?handbag 'handbag') (Is ?headphones 'headphones') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?keyboard)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?glasses 'glasses')) (or (not (Is ?screwdriver 'screwdriver')) (Below ?glasses ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?bowl 'bowl')) (or (not (Is ?screwdriver 'screwdriver')) (OnBottomSide ?bowl)) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?screwdriver ?bowl)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?pizza 'pizza')) (or (not (Is ?screwdriver 'screwdriver')) (Above ?bowl ?pizza)) (or (not (Is ?screwdriver 'screwdriver')) (OnBottomSide ?pizza)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?pizza ?bowl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "keyboard",
+        "suitcase",
+        "screwdriver",
+        "pizza",
+        "handbag",
+        "bowl",
+        "headphones"
+    ]
+}

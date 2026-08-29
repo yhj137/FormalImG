@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every knife is held by a man on a house, with a cylindrical screwdriver also resting on the house.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?k (implies (Is ?k 'knife') (exists ?m (exists ?h (exists ?s (and (Is ?m 'man') (Is ?h 'house') (Is ?s 'screwdriver') (Holding ?m ?k) (On ?m ?h) (On ?s ?h) (HasShape ?s 'cylindrical'))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?k (exists ?m (exists ?h (exists ?s (and (or (not (Is ?k 'knife')) (Is ?m 'man')) (or (not (Is ?k 'knife')) (Is ?h 'house')) (or (not (Is ?k 'knife')) (Holding ?m ?k)) (or (not (Is ?k 'knife')) (Is ?s 'screwdriver')) (or (not (Is ?k 'knife')) (On ?m ?h)) (or (not (Is ?k 'knife')) (On ?s ?h)) (or (not (Is ?k 'knife')) (HasShape ?s 'cylindrical'))))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "screwdriver",
+        "knife",
+        "man"
+    ]
+}

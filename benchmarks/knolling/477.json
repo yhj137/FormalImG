@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard present in the scene, there is a red shoe positioned to its left and a white remote positioned to its right, with all three items aligned horizontally.",
+    "dsl": "(forall ?k (implies (Is ?k 'keyboard') (exists ?s (exists ?r (and (Is ?s 'shoe') (Has ?s 'red') (Is ?r 'remote') (Has ?r 'white') (LeftOf ?s ?k) (RightOf ?r ?k) (AlignedHorizontally ?s ?k) (AlignedHorizontally ?k ?r))))))",
+    "cnf": "(forall ?k (exists ?s (exists ?r (and (or (not (Is ?k 'keyboard')) (Is ?s 'shoe')) (or (not (Is ?k 'keyboard')) (Has ?s 'red')) (or (not (Is ?k 'keyboard')) (LeftOf ?s ?k)) (or (not (Is ?k 'keyboard')) (Is ?r 'remote')) (or (not (Is ?k 'keyboard')) (AlignedHorizontally ?s ?k)) (or (not (Is ?k 'keyboard')) (Has ?r 'white')) (or (not (Is ?k 'keyboard')) (RightOf ?r ?k)) (or (not (Is ?k 'keyboard')) (AlignedHorizontally ?k ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "remote",
+        "shoe",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains an apple positioned on the right side.",
+    "dsl": "(exists ?apple (and (Is ?apple 'apple') (OnRightSide ?apple)))",
+    "cnf": "(exists ?apple (and (Is ?apple 'apple') (OnRightSide ?apple)))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

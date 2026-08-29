@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every dog is sitting next to a red sofa while holding a keyboard. The sofa is positioned to the right of an open refrigerator containing a fish.",
+    "dsl": "(forall ?d (implies (Is ?d 'dog') (exists ?k (exists ?s (exists ?r (exists ?f (and (Is ?k 'keyboard') (Is ?s 'sofa') (Is ?r 'refrigerator') (Is ?f 'fish') (HasState ?d 'sitting') (Holding ?d ?k) (NextTo ?d ?s) (HasColor ?s 'red') (RightOf ?s ?r) (HasState ?r 'open') (In ?f ?r))))))))",
+    "cnf": "(forall ?d (exists ?k (exists ?s (exists ?r (exists ?f (and (or (not (Is ?d 'dog')) (Is ?k 'keyboard')) (or (not (Is ?d 'dog')) (Is ?s 'sofa')) (or (not (Is ?d 'dog')) (Holding ?d ?k)) (or (not (Is ?d 'dog')) (Is ?r 'refrigerator')) (or (not (Is ?d 'dog')) (NextTo ?d ?s)) (or (not (Is ?d 'dog')) (HasState ?d 'sitting')) (or (not (Is ?d 'dog')) (Is ?f 'fish')) (or (not (Is ?d 'dog')) (RightOf ?s ?r)) (or (not (Is ?d 'dog')) (HasColor ?s 'red')) (or (not (Is ?d 'dog')) (In ?f ?r)) (or (not (Is ?d 'dog')) (HasState ?r 'open'))))))))",
+    "k": 5,
+    "object_classes": [
+        "dog",
+        "refrigerator",
+        "fish",
+        "keyboard",
+        "sofa"
+    ]
+}

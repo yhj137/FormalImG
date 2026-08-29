@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a neat grid. The scene features a top row containing a drill, a calculator, and a mouse; the drill is on the top side of the image, the calculator is to the right of the drill, and the mouse is to the right of the calculator, all aligned horizontally. Below this row is a middle row with a pink donut, a sandwich, and a blue tie: the donut is directly below the drill, the sandwich is below the calculator, and the tie is below the mouse. The bottom row begins with a carrot located on the bottom side, positioned below the donut. Finally, for every cutting board present in the scene, there is a knife accompanying it; specifically, the cutting board is located to the right of the carrot and aligned horizontally with it, and the knife is positioned to the right of the cutting board, also aligned horizontally.",
+    "dsl": "(exists ?drill (exists ?calc (exists ?mouse (exists ?donut (exists ?sandwich (exists ?tie (exists ?carrot (and (Is ?drill 'drill') (OnTopSide ?drill) (Is ?calc 'calculator') (RightOf ?calc ?drill) (AlignedHorizontally ?calc ?drill) (Is ?mouse 'mouse') (RightOf ?mouse ?calc) (AlignedHorizontally ?mouse ?calc) (Is ?donut 'donut') (Has ?donut 'pink') (Above ?drill ?donut) (Is ?sandwich 'sandwich') (RightOf ?sandwich ?donut) (AlignedHorizontally ?sandwich ?donut) (Above ?calc ?sandwich) (Is ?tie 'tie') (Has ?tie 'blue') (RightOf ?tie ?sandwich) (AlignedHorizontally ?tie ?sandwich) (Above ?mouse ?tie) (Is ?carrot 'carrot') (OnBottomSide ?carrot) (Above ?donut ?carrot) (forall ?cb (implies (Is ?cb 'cutting_board') (exists ?k (and (Is ?k 'knife') (RightOf ?cb ?carrot) (AlignedHorizontally ?cb ?carrot) (RightOf ?k ?cb) (AlignedHorizontally ?k ?cb) (Above ?tie ?k)))))))))))))",
+    "cnf": "(exists ?drill (exists ?calc (exists ?mouse (exists ?donut (exists ?sandwich (exists ?tie (exists ?carrot (forall ?cb (exists ?k (and (Is ?drill 'drill') (OnTopSide ?drill) (RightOf ?calc ?drill) (AlignedHorizontally ?calc ?drill) (Is ?calc 'calculator') (Above ?drill ?donut) (RightOf ?mouse ?calc) (Has ?donut 'pink') (RightOf ?sandwich ?donut) (AlignedHorizontally ?mouse ?calc) (Is ?mouse 'mouse') (Is ?donut 'donut') (AlignedHorizontally ?sandwich ?donut) (Is ?sandwich 'sandwich') (Above ?calc ?sandwich) (Above ?mouse ?tie) (Above ?donut ?carrot) (RightOf ?tie ?sandwich) (AlignedHorizontally ?tie ?sandwich) (or (not (Is ?cb 'cutting_board')) (Above ?tie ?k)) (OnBottomSide ?carrot) (or (not (Is ?cb 'cutting_board')) (RightOf ?cb ?carrot)) (Has ?tie 'blue') (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?k ?cb)) (Is ?carrot 'carrot') (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?cb ?carrot)) (or (not (Is ?cb 'cutting_board')) (Is ?k 'knife')) (Is ?tie 'tie') (or (not (Is ?cb 'cutting_board')) (RightOf ?k ?cb))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "carrot",
+        "drill",
+        "cutting_board",
+        "calculator",
+        "mouse",
+        "knife",
+        "sandwich",
+        "donut"
+    ]
+}

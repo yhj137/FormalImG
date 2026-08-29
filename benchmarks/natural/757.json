@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is next to a wardrobe. All shirts are to the left of the woman. A cylindrical cup is on the wardrobe.",
+    "dsl": "(exists ?w (exists ?wa (and (Is ?w 'woman') (Is ?wa 'wardrobe') (NextTo ?w ?wa) (forall ?s (implies (Is ?s 'shirt') (LeftOf ?s ?w))) (exists ?c (and (Is ?c 'cup') (HasShape ?c 'cylindrical') (On ?c ?wa))))))",
+    "cnf": "(exists ?w (exists ?wa (forall ?s (exists ?c (and (Is ?w 'woman') (NextTo ?w ?wa) (or (not (Is ?s 'shirt')) (LeftOf ?s ?w)) (Is ?wa 'wardrobe') (On ?c ?wa) (HasShape ?c 'cylindrical') (Is ?c 'cup'))))))",
+    "k": 4,
+    "object_classes": [
+        "shirt",
+        "cup",
+        "woman",
+        "wardrobe"
+    ]
+}

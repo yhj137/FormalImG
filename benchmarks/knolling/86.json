@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image displays a handbag positioned on the bottom side of the layout.",
+    "dsl": "(exists ?h (and (Is ?h 'handbag') (OnBottomSide ?h)))",
+    "cnf": "(exists ?h (and (Is ?h 'handbag') (OnBottomSide ?h)))",
+    "k": 1,
+    "object_classes": [
+        "handbag"
+    ]
+}

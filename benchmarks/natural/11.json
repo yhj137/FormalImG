@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a blooming tree.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming'))))",
+    "k": 1,
+    "object_classes": [
+        "tree"
+    ]
+}

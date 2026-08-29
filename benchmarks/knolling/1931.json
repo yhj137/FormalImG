@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase on the left side. To the right of the suitcase, aligned horizontally, are a backpack, a handbag, a hammer, a bowl, and a cup. The suitcase is larger than the backpack, and the backpack is larger than the handbag. Additionally, for any lighter present in the image, there exists a sandwich, a watch, and a mouse. The lighter is positioned to the right of the cup and aligned horizontally with it. The sandwich is to the right of the lighter, the watch to the right of the sandwich, and the mouse to the right of the watch, all aligned horizontally. The sandwich is larger than the watch.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?handbag (exists ?hammer (exists ?bowl (exists ?cup (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?backpack 'backpack') (RightOf ?backpack ?suitcase) (AlignedHorizontally ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (Is ?handbag 'handbag') (RightOf ?handbag ?backpack) (AlignedHorizontally ?handbag ?backpack) (LargerThan ?backpack ?handbag) (Is ?hammer 'hammer') (RightOf ?hammer ?handbag) (AlignedHorizontally ?hammer ?handbag) (Is ?bowl 'bowl') (RightOf ?bowl ?hammer) (AlignedHorizontally ?bowl ?hammer) (Is ?cup 'cup') (RightOf ?cup ?bowl) (AlignedHorizontally ?cup ?bowl) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?sandwich (exists ?watch (exists ?mouse (and (Is ?sandwich 'sandwich') (Is ?watch 'watch') (Is ?mouse 'mouse') (RightOf ?lighter ?cup) (AlignedHorizontally ?lighter ?cup) (RightOf ?sandwich ?lighter) (AlignedHorizontally ?sandwich ?lighter) (RightOf ?watch ?sandwich) (AlignedHorizontally ?watch ?sandwich) (LargerThan ?sandwich ?watch) (RightOf ?mouse ?watch) (AlignedHorizontally ?mouse ?watch))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?handbag (exists ?hammer (exists ?bowl (exists ?cup (forall ?lighter (exists ?sandwich (exists ?watch (exists ?mouse (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?backpack ?suitcase) (AlignedHorizontally ?backpack ?suitcase) (Is ?backpack 'backpack') (LargerThan ?suitcase ?backpack) (RightOf ?handbag ?backpack) (AlignedHorizontally ?handbag ?backpack) (Is ?handbag 'handbag') (LargerThan ?backpack ?handbag) (RightOf ?hammer ?handbag) (AlignedHorizontally ?hammer ?handbag) (Is ?hammer 'hammer') (RightOf ?bowl ?hammer) (AlignedHorizontally ?bowl ?hammer) (Is ?bowl 'bowl') (RightOf ?cup ?bowl) (AlignedHorizontally ?cup ?bowl) (Is ?cup 'cup') (or (not (Is ?lighter 'lighter')) (RightOf ?lighter ?cup)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?cup)) (or (not (Is ?lighter 'lighter')) (Is ?mouse 'mouse')) (or (not (Is ?lighter 'lighter')) (RightOf ?sandwich ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?watch 'watch')) (or (not (Is ?lighter 'lighter')) (RightOf ?mouse ?watch)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?sandwich ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?sandwich 'sandwich')) (or (not (Is ?lighter 'lighter')) (RightOf ?watch ?sandwich)) (or (not (Is ?lighter 'lighter')) (LargerThan ?sandwich ?watch)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?mouse ?watch)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?watch ?sandwich)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "watch",
+        "cup",
+        "sandwich",
+        "hammer",
+        "handbag",
+        "backpack",
+        "lighter",
+        "mouse",
+        "bowl",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. For every fish present, there is a table underneath it. A round clock also sits on the table, while an umbrella is positioned to the right of the table. To the left of the table is a bed placed on a rug. A toy car is tucked inside the bed, and a phone lies on the rug.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?f (implies (Is ?f 'fish') (exists ?t (exists ?b (exists ?r (exists ?c (exists ?p (exists ?tc (exists ?u (and (Is ?t 'table') (Is ?b 'bed') (Is ?r 'rug') (Is ?c 'clock') (Is ?p 'phone') (Is ?tc 'toy car') (Is ?u 'umbrella') (On ?f ?t) (On ?c ?t) (HasShape ?c 'round') (RightOf ?u ?t) (LeftOf ?b ?t) (On ?b ?r) (In ?tc ?b) (On ?p ?r))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?f (exists ?t (exists ?b (exists ?r (exists ?c (exists ?p (exists ?tc (exists ?u (and (or (not (Is ?f 'fish')) (Is ?t 'table')) (or (not (Is ?f 'fish')) (On ?f ?t)) (or (not (Is ?f 'fish')) (Is ?b 'bed')) (or (not (Is ?f 'fish')) (On ?c ?t)) (or (not (Is ?f 'fish')) (Is ?u 'umbrella')) (or (not (Is ?f 'fish')) (Is ?r 'rug')) (or (not (Is ?f 'fish')) (LeftOf ?b ?t)) (or (not (Is ?f 'fish')) (RightOf ?u ?t)) (or (not (Is ?f 'fish')) (HasShape ?c 'round')) (or (not (Is ?f 'fish')) (Is ?c 'clock')) (or (not (Is ?f 'fish')) (Is ?tc 'toy car')) (or (not (Is ?f 'fish')) (On ?b ?r)) (or (not (Is ?f 'fish')) (Is ?p 'phone')) (or (not (Is ?f 'fish')) (In ?tc ?b)) (or (not (Is ?f 'fish')) (On ?p ?r))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fish",
+        "table",
+        "bed",
+        "toy car",
+        "clock",
+        "phone",
+        "umbrella",
+        "rug"
+    ]
+}

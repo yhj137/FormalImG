@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a refrigerator. Every bowl is round and positioned next to the refrigerator.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'refrigerator') (forall ?b (implies (Is ?b 'bowl') (and (HasShape ?b 'round') (NextTo ?b ?r)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (forall ?b (and (Is ?r 'refrigerator') (or (not (Is ?b 'bowl')) (NextTo ?b ?r)) (or (not (Is ?b 'bowl')) (HasShape ?b 'round'))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "refrigerator"
+    ]
+}

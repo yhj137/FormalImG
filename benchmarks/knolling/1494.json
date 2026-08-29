@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the left side and a suitcase on the right side, with the suitcase located to the right of the monitor. A shoe is arranged below the suitcase. Every pair of glasses in the scene is visually smaller than the monitor and located below it, and has a remote to its right, a stapler to the right of the remote, a lighter below the remote, and a lemon positioned on the bottom side of the image that is smaller than the suitcase.",
+    "dsl": "(exists ?monitor (exists ?suitcase (exists ?shoe (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (RightOf ?suitcase ?monitor) (Is ?shoe 'shoe') (Below ?shoe ?suitcase) (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?remote (exists ?stapler (exists ?lighter (exists ?lemon (and (Is ?remote 'remote') (Is ?stapler 'stapler') (Is ?lighter 'lighter') (Is ?lemon 'lemon') (Below ?glasses ?monitor) (SmallerThan ?glasses ?monitor) (RightOf ?remote ?glasses) (RightOf ?stapler ?remote) (Below ?lighter ?remote) (OnBottomSide ?lemon) (SmallerThan ?lemon ?suitcase))))))))))))",
+    "cnf": "(exists ?monitor (exists ?suitcase (exists ?shoe (forall ?glasses (exists ?remote (exists ?stapler (exists ?lighter (exists ?lemon (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (RightOf ?suitcase ?monitor) (or (not (Is ?glasses 'glasses')) (Below ?glasses ?monitor)) (OnRightSide ?suitcase) (Below ?shoe ?suitcase) (or (not (Is ?glasses 'glasses')) (SmallerThan ?glasses ?monitor)) (or (not (Is ?glasses 'glasses')) (Is ?lemon 'lemon')) (Is ?suitcase 'suitcase') (or (not (Is ?glasses 'glasses')) (SmallerThan ?lemon ?suitcase)) (Is ?shoe 'shoe') (or (not (Is ?glasses 'glasses')) (RightOf ?remote ?glasses)) (or (not (Is ?glasses 'glasses')) (Is ?lighter 'lighter')) (or (not (Is ?glasses 'glasses')) (OnBottomSide ?lemon)) (or (not (Is ?glasses 'glasses')) (RightOf ?stapler ?remote)) (or (not (Is ?glasses 'glasses')) (Is ?remote 'remote')) (or (not (Is ?glasses 'glasses')) (Is ?stapler 'stapler')) (or (not (Is ?glasses 'glasses')) (Below ?lighter ?remote)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "stapler",
+        "lemon",
+        "lighter",
+        "monitor",
+        "suitcase",
+        "shoe"
+    ]
+}

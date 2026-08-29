@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a black keyboard, a white sock, and a blue watch arranged in a row. The sock is located to the right of the keyboard, and the watch is to the right of the sock; these items are aligned horizontally. Additionally, for any donut in the scene, it is pink, located to the right of the watch while maintaining horizontal alignment, and is smaller than the keyboard.",
+    "dsl": "(exists ?k (exists ?s (exists ?w (and (Is ?k 'keyboard') (Has ?k 'black') (Is ?s 'sock') (Has ?s 'white') (Is ?w 'watch') (Has ?w 'blue') (RightOf ?s ?k) (RightOf ?w ?s) (AlignedHorizontally ?k ?s) (AlignedHorizontally ?s ?w) (forall ?d (implies (Is ?d 'donut') (and (Has ?d 'pink') (RightOf ?d ?w) (AlignedHorizontally ?w ?d) (SmallerThan ?d ?k))))))))",
+    "cnf": "(exists ?k (exists ?s (exists ?w (forall ?d (and (Is ?k 'keyboard') (Has ?k 'black') (RightOf ?s ?k) (AlignedHorizontally ?k ?s) (Has ?s 'white') (RightOf ?w ?s) (or (not (Is ?d 'donut')) (SmallerThan ?d ?k)) (AlignedHorizontally ?s ?w) (Is ?s 'sock') (Has ?w 'blue') (or (not (Is ?d 'donut')) (AlignedHorizontally ?w ?d)) (or (not (Is ?d 'donut')) (RightOf ?d ?w)) (Is ?w 'watch') (or (not (Is ?d 'donut')) (Has ?d 'pink')))))))",
+    "k": 4,
+    "object_classes": [
+        "watch",
+        "sock",
+        "donut",
+        "keyboard"
+    ]
+}

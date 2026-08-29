@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill in the scene, there is a sequence of objects arranged to its right: first a wrench, then a knife, and finally a lemon. The drill is yellow and is visually larger than the wrench. The lemon is also yellow but is smaller than the knife.",
+    "dsl": "(forall ?d (implies (Is ?d 'drill') (exists ?w (exists ?k (exists ?l (and (Is ?w 'wrench') (Is ?k 'knife') (Is ?l 'lemon') (Has ?d 'yellow') (Has ?l 'yellow') (RightOf ?w ?d) (RightOf ?k ?w) (RightOf ?l ?k) (LargerThan ?d ?w) (SmallerThan ?l ?k)))))))",
+    "cnf": "(forall ?d (exists ?w (exists ?k (exists ?l (and (or (not (Is ?d 'drill')) (Is ?w 'wrench')) (or (not (Is ?d 'drill')) (Is ?k 'knife')) (or (not (Is ?d 'drill')) (RightOf ?w ?d)) (or (not (Is ?d 'drill')) (Is ?l 'lemon')) (or (not (Is ?d 'drill')) (RightOf ?k ?w)) (or (not (Is ?d 'drill')) (Has ?l 'yellow')) (or (not (Is ?d 'drill')) (Has ?d 'yellow')) (or (not (Is ?d 'drill')) (RightOf ?l ?k)) (or (not (Is ?d 'drill')) (LargerThan ?d ?w)) (or (not (Is ?d 'drill')) (SmallerThan ?l ?k)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "drill",
+        "lemon",
+        "knife"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon-style scene featuring a wooden bed. To the left of the bed stands a bookshelf with a monitor, on which every pair of glasses in the scene is resting. A dog sits on the bed holding a metal hammer. Additionally, a round clock and a red lamp are placed on the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?bs (exists ?m (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?bs 'bookshelf') (LeftOf ?bs ?b) (Is ?m 'monitor') (On ?m ?bs) (forall ?g (implies (Is ?g 'glasses') (On ?g ?m))) (exists ?d (exists ?h (exists ?c (exists ?l (and (Is ?d 'dog') (On ?d ?b) (Is ?h 'hammer') (HasMaterial ?h 'metal') (Holding ?d ?h) (Is ?c 'clock') (HasShape ?c 'round') (On ?c ?bs) (Is ?l 'lamp') (HasColor ?l 'red') (On ?l ?bs)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?bs (exists ?m (forall ?g (exists ?d (exists ?h (exists ?c (exists ?l (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (LeftOf ?bs ?b) (On ?d ?b) (Is ?bs 'bookshelf') (On ?m ?bs) (Is ?d 'dog') (Holding ?d ?h) (On ?c ?bs) (Is ?m 'monitor') (or (not (Is ?g 'glasses')) (On ?g ?m)) (HasMaterial ?h 'metal') (On ?l ?bs) (HasShape ?c 'round') (Is ?h 'hammer') (HasColor ?l 'red') (Is ?c 'clock') (Is ?l 'lamp')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "lamp",
+        "hammer",
+        "bed",
+        "clock",
+        "dog",
+        "bookshelf"
+    ]
+}

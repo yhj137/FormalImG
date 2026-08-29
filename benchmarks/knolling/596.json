@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a blue stapler and a black remote in the scene, with the remote positioned to the right of the stapler. Additionally, for every bottle in the image, it is placed vertically below the stapler.",
+    "dsl": "(exists ?stapler (exists ?remote (and (Is ?stapler 'stapler') (Has ?stapler 'blue') (Is ?remote 'remote') (Has ?remote 'black') (RightOf ?remote ?stapler) (forall ?bottle (implies (Is ?bottle 'bottle') (Below ?bottle ?stapler))))))",
+    "cnf": "(exists ?stapler (exists ?remote (forall ?bottle (and (Is ?stapler 'stapler') (Has ?stapler 'blue') (RightOf ?remote ?stapler) (or (not (Is ?bottle 'bottle')) (Below ?bottle ?stapler)) (Has ?remote 'black') (Is ?remote 'remote')))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "remote",
+        "stapler"
+    ]
+}

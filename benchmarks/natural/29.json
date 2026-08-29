@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a fluffy dog in the scene.",
+    "dsl": "(exists ?d (and (Is ?d 'dog') (HasMaterial ?d 'fluffy')))",
+    "cnf": "(exists ?d (and (Is ?d 'dog') (HasMaterial ?d 'fluffy')))",
+    "k": 1,
+    "object_classes": [
+        "dog"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a suitcase located on the bottom side, which is visually larger than the cutting board positioned above it. For every set of keys present in the scene, there is a pair of glasses directly below them. These glasses are positioned above the cutting board and are aligned horizontally with a pair of headphones and a screwdriver.",
+    "dsl": "(exists ?suitcase (exists ?cutting_board (and (Is ?suitcase 'suitcase') (Is ?cutting_board 'cutting_board') (OnBottomSide ?suitcase) (LargerThan ?suitcase ?cutting_board) (Above ?cutting_board ?suitcase) (forall ?keys (implies (Is ?keys 'keys') (exists ?glasses (exists ?headphones (exists ?screwdriver (and (Is ?glasses 'glasses') (Is ?headphones 'headphones') (Is ?screwdriver 'screwdriver') (Above ?keys ?glasses) (Above ?glasses ?cutting_board) (AlignedHorizontally ?glasses ?headphones) (AlignedHorizontally ?headphones ?screwdriver))))))))))",
+    "cnf": "(exists ?suitcase (exists ?cutting_board (forall ?keys (exists ?glasses (exists ?headphones (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (LargerThan ?suitcase ?cutting_board) (Above ?cutting_board ?suitcase) (Is ?cutting_board 'cutting_board') (or (not (Is ?keys 'keys')) (Above ?glasses ?cutting_board)) (or (not (Is ?keys 'keys')) (Above ?keys ?glasses)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?glasses ?headphones)) (or (not (Is ?keys 'keys')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?keys 'keys')) (Is ?glasses 'glasses')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?headphones ?screwdriver)) (or (not (Is ?keys 'keys')) (Is ?headphones 'headphones')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "screwdriver",
+        "cutting_board",
+        "headphones",
+        "suitcase"
+    ]
+}

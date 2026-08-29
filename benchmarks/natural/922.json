@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is in a green tree. Every fish is next to the tree. A keyboard is also next to the tree, with a gray fork beside it.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (HasColor ?t 'green') (exists ?c (and (Is ?c 'child') (In ?c ?t))) (forall ?f (implies (Is ?f 'fish') (NextTo ?f ?t))) (exists ?k (and (Is ?k 'keyboard') (NextTo ?k ?t) (exists ?fo (and (Is ?fo 'fork') (HasColor ?fo 'gray') (NextTo ?fo ?k)))))))",
+    "cnf": "(exists ?t (exists ?c (forall ?f (exists ?k (exists ?fo (and (Is ?t 'tree') (HasColor ?t 'green') (In ?c ?t) (or (not (Is ?f 'fish')) (NextTo ?f ?t)) (Is ?c 'child') (NextTo ?k ?t) (Is ?k 'keyboard') (NextTo ?fo ?k) (HasColor ?fo 'gray') (Is ?fo 'fork')))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "fork",
+        "fish",
+        "tree",
+        "child"
+    ]
+}

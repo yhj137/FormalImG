@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe present in the layout, there is a fork positioned directly above it. Additionally, every shoe is located on the left side of the image.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'shoe') (exists ?f (and (Is ?f 'fork') (Above ?f ?s) (OnLeftSide ?s))))))",
+    "cnf": "(forall ?s (exists ?f (and (or (not (Is ?s 'shoe')) (Is ?f 'fork')) (or (not (Is ?s 'shoe')) (Above ?f ?s)) (or (not (Is ?s 'shoe')) (OnLeftSide ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "shoe"
+    ]
+}

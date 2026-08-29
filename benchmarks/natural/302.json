@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where a ceramic bowl rests on every sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?s (implies (Is ?s 'sofa') (exists ?b (and (Is ?b 'bowl') (HasMaterial ?b 'ceramic') (On ?b ?s))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?s (exists ?b (and (or (not (Is ?s 'sofa')) (Is ?b 'bowl')) (or (not (Is ?s 'sofa')) (HasMaterial ?b 'ceramic')) (or (not (Is ?s 'sofa')) (On ?b ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "sofa"
+    ]
+}

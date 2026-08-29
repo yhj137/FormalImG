@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor. For every yellow lemon present in the scene, it is positioned below the monitor. Additionally, for each of these lemons, there is a calculator located below it and a drill located above the monitor. The lemon is strictly smaller than the drill.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (forall ?lemon (implies (and (Is ?lemon 'lemon') (Has ?lemon 'yellow')) (exists ?calculator (exists ?drill (and (Is ?calculator 'calculator') (Is ?drill 'drill') (Below ?lemon ?monitor) (Below ?calculator ?lemon) (Above ?drill ?monitor) (SmallerThan ?lemon ?drill))))))))",
+    "cnf": "(exists ?monitor (forall ?lemon (exists ?calculator (exists ?drill (and (Is ?monitor 'monitor') (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (Below ?lemon ?monitor)) (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (Above ?drill ?monitor)) (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (Is ?drill 'drill')) (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (Below ?calculator ?lemon)) (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (SmallerThan ?lemon ?drill)) (or (not (Is ?lemon 'lemon')) (not (Has ?lemon 'yellow')) (Is ?calculator 'calculator')))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "lemon",
+        "calculator",
+        "drill"
+    ]
+}

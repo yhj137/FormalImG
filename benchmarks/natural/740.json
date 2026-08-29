@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a wooden house interior featuring an open refrigerator. Every pan is made of metal and stored inside the refrigerator, with a sleeping cat resting on top.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?r (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?r 'refrigerator') (HasState ?r 'open') (In ?r ?h) (forall ?p (implies (Is ?p 'pan') (and (HasMaterial ?p 'metal') (In ?p ?r)))) (exists ?c (and (Is ?c 'cat') (HasState ?c 'sleeping') (On ?c ?r)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?r (forall ?p (exists ?c (and (Is ?h 'house') (HasMaterial ?h 'wooden') (In ?r ?h) (HasState ?r 'open') (or (not (Is ?p 'pan')) (In ?p ?r)) (Is ?r 'refrigerator') (On ?c ?r) (or (not (Is ?p 'pan')) (HasMaterial ?p 'metal')) (HasState ?c 'sleeping') (Is ?c 'cat')))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "refrigerator",
+        "cat",
+        "pan"
+    ]
+}

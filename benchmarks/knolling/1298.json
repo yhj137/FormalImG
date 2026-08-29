@@ -1,0 +1,15 @@
+{
+    "prompt": "There exist two objects. For every lighter in the scene, these objects are a handbag and a cutting board, and there exists a laptop, a plate, a wallet, and a hat. In this layout, the laptop is on the right side, the cutting board is to the right of the handbag, the laptop is to the right of the cutting board, and these three items are aligned horizontally. Additionally, the plate is above the handbag, the wallet is above the cutting board, the hat is above the laptop, and the lighter is to the right of the wallet.",
+    "dsl": "(exists ?handbag (exists ?cutting_board (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?laptop (exists ?plate (exists ?wallet (exists ?hat (and (Is ?handbag 'handbag') (Is ?cutting_board 'cutting_board') (Is ?laptop 'laptop') (Is ?plate 'plate') (Is ?wallet 'wallet') (Is ?hat 'hat') (OnRightSide ?laptop) (RightOf ?cutting_board ?handbag) (RightOf ?laptop ?cutting_board) (AlignedHorizontally ?handbag ?cutting_board) (AlignedHorizontally ?cutting_board ?laptop) (Above ?plate ?handbag) (Above ?wallet ?cutting_board) (Above ?hat ?laptop) (RightOf ?lighter ?wallet))))))))))",
+    "cnf": "(exists ?handbag (exists ?cutting_board (forall ?lighter (exists ?laptop (exists ?plate (exists ?wallet (exists ?hat (and (or (not (Is ?lighter 'lighter')) (Is ?handbag 'handbag')) (or (not (Is ?lighter 'lighter')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?lighter 'lighter')) (RightOf ?cutting_board ?handbag)) (or (not (Is ?lighter 'lighter')) (Is ?laptop 'laptop')) (or (not (Is ?lighter 'lighter')) (OnRightSide ?laptop)) (or (not (Is ?lighter 'lighter')) (RightOf ?laptop ?cutting_board)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?handbag ?cutting_board)) (or (not (Is ?lighter 'lighter')) (Is ?plate 'plate')) (or (not (Is ?lighter 'lighter')) (Is ?hat 'hat')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?cutting_board ?laptop)) (or (not (Is ?lighter 'lighter')) (Above ?plate ?handbag)) (or (not (Is ?lighter 'lighter')) (Is ?wallet 'wallet')) (or (not (Is ?lighter 'lighter')) (Above ?hat ?laptop)) (or (not (Is ?lighter 'lighter')) (Above ?wallet ?cutting_board)) (or (not (Is ?lighter 'lighter')) (RightOf ?lighter ?wallet))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "cutting_board",
+        "handbag",
+        "lighter",
+        "hat",
+        "wallet"
+    ]
+}

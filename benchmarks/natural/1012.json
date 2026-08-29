@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wardrobe stands to the left of an open refrigerator, and a chair is next to the refrigerator. To the right of the chair lies a sleeping dog. A round apple rests to the left of the dog, with a knife next to it.",
+    "dsl": "(exists ?w (exists ?r (exists ?c (exists ?d (exists ?a (exists ?k (and (Is ?w 'wardrobe') (Is ?r 'refrigerator') (Is ?c 'chair') (Is ?d 'dog') (Is ?a 'apple') (Is ?k 'knife') (LeftOf ?w ?r) (HasState ?r 'open') (NextTo ?c ?r) (RightOf ?d ?c) (HasState ?d 'sleeping') (LeftOf ?a ?d) (HasShape ?a 'round') (NextTo ?k ?a))))))))",
+    "cnf": "(exists ?w (exists ?r (exists ?c (exists ?d (exists ?a (exists ?k (and (Is ?w 'wardrobe') (LeftOf ?w ?r) (Is ?r 'refrigerator') (HasState ?r 'open') (NextTo ?c ?r) (Is ?c 'chair') (RightOf ?d ?c) (Is ?d 'dog') (HasState ?d 'sleeping') (LeftOf ?a ?d) (Is ?a 'apple') (HasShape ?a 'round') (NextTo ?k ?a) (Is ?k 'knife'))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "chair",
+        "refrigerator",
+        "apple",
+        "dog",
+        "wardrobe"
+    ]
+}

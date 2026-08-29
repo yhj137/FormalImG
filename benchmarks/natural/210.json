@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style image featuring a man holding a square chair.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?c (and (Is ?m 'man') (Is ?c 'chair') (HasShape ?c 'square') (Holding ?m ?c)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?c (and (Is ?m 'man') (Holding ?m ?c) (HasShape ?c 'square') (Is ?c 'chair')))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "man"
+    ]
+}

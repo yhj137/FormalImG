@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack positioned on the left side. For every plate found in the image, there is a specific arrangement: the plate is located to the right of the backpack and aligned horizontally with it. Directly below the plate is a pan. To the right of the pan is a laptop, and located below the laptop is a ruler which is visually smaller than the laptop.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (forall ?plate (implies (Is ?plate 'plate') (exists ?pan (exists ?laptop (exists ?ruler (and (Is ?pan 'pan') (Is ?laptop 'laptop') (Is ?ruler 'ruler') (RightOf ?plate ?backpack) (AlignedHorizontally ?backpack ?plate) (Below ?pan ?plate) (RightOf ?laptop ?pan) (Below ?ruler ?laptop) (SmallerThan ?ruler ?laptop)))))))))",
+    "cnf": "(exists ?backpack (forall ?plate (exists ?pan (exists ?laptop (exists ?ruler (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (or (not (Is ?plate 'plate')) (RightOf ?plate ?backpack)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?backpack ?plate)) (or (not (Is ?plate 'plate')) (Is ?ruler 'ruler')) (or (not (Is ?plate 'plate')) (Below ?pan ?plate)) (or (not (Is ?plate 'plate')) (Is ?laptop 'laptop')) (or (not (Is ?plate 'plate')) (Below ?ruler ?laptop)) (or (not (Is ?plate 'plate')) (Is ?pan 'pan')) (or (not (Is ?plate 'plate')) (RightOf ?laptop ?pan)) (or (not (Is ?plate 'plate')) (SmallerThan ?ruler ?laptop))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "backpack",
+        "pan",
+        "ruler",
+        "laptop"
+    ]
+}

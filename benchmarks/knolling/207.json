@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a knife and a mouse. The knife is located in the top half of the image, while the mouse is positioned to the right of the knife.",
+    "dsl": "(exists ?knife (exists ?mouse (and (Is ?knife 'knife') (Is ?mouse 'mouse') (OnTopSide ?knife) (RightOf ?mouse ?knife))))",
+    "cnf": "(exists ?knife (exists ?mouse (and (Is ?knife 'knife') (OnTopSide ?knife) (RightOf ?mouse ?knife) (Is ?mouse 'mouse'))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "mouse"
+    ]
+}

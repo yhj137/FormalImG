@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man wearing a hat and holding a round orange.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?o (exists ?h (and (Is ?m 'man') (Is ?o 'orange') (Is ?h 'hat') (HasShape ?o 'round') (Holding ?m ?o) (On ?h ?m))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?o (exists ?h (and (Is ?m 'man') (Holding ?m ?o) (On ?h ?m) (HasShape ?o 'round') (Is ?h 'hat') (Is ?o 'orange'))))))",
+    "k": 3,
+    "object_classes": [
+        "orange",
+        "hat",
+        "man"
+    ]
+}

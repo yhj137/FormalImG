@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bowl rests on a metal pan, with a plant located next to the pan.",
+    "dsl": "(exists ?pn (exists ?b (exists ?p (and (Is ?pn 'pan') (HasMaterial ?pn 'metal') (Is ?b 'bowl') (Is ?p 'plant') (On ?b ?pn) (NextTo ?p ?pn)))))",
+    "cnf": "(exists ?pn (exists ?b (exists ?p (and (Is ?pn 'pan') (HasMaterial ?pn 'metal') (On ?b ?pn) (NextTo ?p ?pn) (Is ?b 'bowl') (Is ?p 'plant')))))",
+    "k": 3,
+    "object_classes": [
+        "plant",
+        "bowl",
+        "pan"
+    ]
+}

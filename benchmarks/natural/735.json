@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a man holding a black pan with a pizza inside. All spoons are made of metal and are located to the left of the pan.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?p (and (Is ?m 'man') (Is ?p 'pan') (HasColor ?p 'black') (Holding ?m ?p) (forall ?s (implies (Is ?s 'spoon') (and (HasMaterial ?s 'metal') (LeftOf ?s ?p)))) (exists ?z (and (Is ?z 'pizza') (In ?z ?p)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?p (forall ?s (exists ?z (and (Is ?m 'man') (Holding ?m ?p) (HasColor ?p 'black') (or (not (Is ?s 'spoon')) (LeftOf ?s ?p)) (Is ?p 'pan') (In ?z ?p) (or (not (Is ?s 'spoon')) (HasMaterial ?s 'metal')) (Is ?z 'pizza')))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "pizza",
+        "pan",
+        "man"
+    ]
+}

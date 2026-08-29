@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a white clock. A lamp is next to the woman, with a butterfly to the right of the lamp. A chair stands next to the woman, supporting a bowl that contains all the glasses. A red rug lies to the left of the chair.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?l (exists ?bf (exists ?ch (exists ?b (exists ?r (and (Is ?w 'woman') (Is ?c 'clock') (HasColor ?c 'white') (Holding ?w ?c) (Is ?l 'lamp') (NextTo ?l ?w) (Is ?bf 'butterfly') (RightOf ?bf ?l) (Is ?ch 'chair') (NextTo ?ch ?w) (Is ?b 'bowl') (On ?b ?ch) (forall ?g (implies (Is ?g 'glasses') (In ?g ?b))) (Is ?r 'rug') (HasColor ?r 'red') (LeftOf ?r ?ch))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?l (exists ?bf (exists ?ch (exists ?b (exists ?r (forall ?g (and (Is ?w 'woman') (Holding ?w ?c) (NextTo ?l ?w) (HasColor ?c 'white') (NextTo ?ch ?w) (Is ?l 'lamp') (RightOf ?bf ?l) (Is ?c 'clock') (Is ?ch 'chair') (On ?b ?ch) (Is ?bf 'butterfly') (LeftOf ?r ?ch) (Is ?b 'bowl') (or (not (Is ?g 'glasses')) (In ?g ?b)) (HasColor ?r 'red') (Is ?r 'rug')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "chair",
+        "glasses",
+        "woman",
+        "rug",
+        "lamp",
+        "clock",
+        "butterfly",
+        "bowl"
+    ]
+}

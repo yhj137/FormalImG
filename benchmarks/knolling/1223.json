@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image displaying a neat arrangement of seven items. A camera is located on the top side of the scene. To the left of a black watch is the camera, and to the left of a pair of glasses is the watch. Arranged vertically, the camera is above a carrot, the watch is above a pizza, and the glasses are above a pink donut. Finally, the pink donut is positioned to the left of a white glove.",
+    "dsl": "(exists ?camera (exists ?watch (exists ?glasses (exists ?carrot (exists ?pizza (exists ?donut (exists ?glove (and (Is ?camera 'camera') (Is ?watch 'watch') (Has ?watch 'black') (Is ?glasses 'glasses') (Is ?carrot 'carrot') (Is ?pizza 'pizza') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?glove 'glove') (Has ?glove 'white') (OnTopSide ?camera) (LeftOf ?camera ?watch) (LeftOf ?watch ?glasses) (Above ?camera ?carrot) (Above ?watch ?pizza) (Above ?glasses ?donut) (LeftOf ?donut ?glove)))))))))",
+    "cnf": "(exists ?camera (exists ?watch (exists ?glasses (exists ?carrot (exists ?pizza (exists ?donut (exists ?glove (and (Is ?camera 'camera') (OnTopSide ?camera) (LeftOf ?camera ?watch) (Above ?camera ?carrot) (Has ?watch 'black') (LeftOf ?watch ?glasses) (Is ?carrot 'carrot') (Is ?watch 'watch') (Above ?watch ?pizza) (Is ?glasses 'glasses') (Above ?glasses ?donut) (Is ?pizza 'pizza') (Has ?donut 'pink') (LeftOf ?donut ?glove) (Is ?donut 'donut') (Has ?glove 'white') (Is ?glove 'glove')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "pizza",
+        "watch",
+        "camera",
+        "glove",
+        "donut"
+    ]
+}

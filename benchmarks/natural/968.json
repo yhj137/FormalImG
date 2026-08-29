@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a wooden house containing a desk. A round pan sits on the desk next to a lamp, and all butterflies are positioned to the right of the lamp.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?d (exists ?p (exists ?l (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?d 'desk') (In ?d ?h) (Is ?p 'pan') (HasShape ?p 'round') (On ?p ?d) (Is ?l 'lamp') (NextTo ?l ?p) (forall ?b (implies (Is ?b 'butterfly') (RightOf ?b ?l)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?d (exists ?p (exists ?l (forall ?b (and (Is ?h 'house') (HasMaterial ?h 'wooden') (In ?d ?h) (Is ?d 'desk') (On ?p ?d) (HasShape ?p 'round') (NextTo ?l ?p) (Is ?p 'pan') (Is ?l 'lamp') (or (not (Is ?b 'butterfly')) (RightOf ?b ?l)))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "lamp",
+        "desk",
+        "pan",
+        "butterfly"
+    ]
+}

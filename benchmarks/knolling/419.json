@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a wallet, a pair of pliers, and a sock. The wallet is positioned on the bottom side of the layout. The pliers are placed vertically above the wallet, while the sock is aligned horizontally with the pliers. Consequently, the wallet is located below the sock.",
+    "dsl": "(exists ?wallet (exists ?pliers (exists ?sock (and (Is ?wallet 'wallet') (Is ?pliers 'pliers') (Is ?sock 'sock') (OnBottomSide ?wallet) (Above ?pliers ?wallet) (AlignedHorizontally ?pliers ?sock) (Below ?wallet ?sock)))))",
+    "cnf": "(exists ?wallet (exists ?pliers (exists ?sock (and (Is ?wallet 'wallet') (OnBottomSide ?wallet) (Above ?pliers ?wallet) (Below ?wallet ?sock) (Is ?pliers 'pliers') (AlignedHorizontally ?pliers ?sock) (Is ?sock 'sock')))))",
+    "k": 3,
+    "object_classes": [
+        "pliers",
+        "wallet",
+        "sock"
+    ]
+}

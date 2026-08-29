@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene features a cyberpunk style. Every elephant has a phone next to it and a metal pan to its right, with the phone positioned to the left of the pan.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?e (implies (Is ?e 'elephant') (exists ?ph (exists ?pn (and (Is ?ph 'phone') (Is ?pn 'pan') (HasMaterial ?pn 'metal') (NextTo ?ph ?e) (RightOf ?pn ?e) (LeftOf ?ph ?pn)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?e (exists ?ph (exists ?pn (and (or (not (Is ?e 'elephant')) (Is ?ph 'phone')) (or (not (Is ?e 'elephant')) (Is ?pn 'pan')) (or (not (Is ?e 'elephant')) (NextTo ?ph ?e)) (or (not (Is ?e 'elephant')) (HasMaterial ?pn 'metal')) (or (not (Is ?e 'elephant')) (RightOf ?pn ?e)) (or (not (Is ?e 'elephant')) (LeftOf ?ph ?pn)))))))",
+    "k": 3,
+    "object_classes": [
+        "phone",
+        "pan",
+        "elephant"
+    ]
+}

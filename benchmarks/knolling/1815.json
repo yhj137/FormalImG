@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side, with a backpack located directly below it; these two items are aligned vertically. To the right of the suitcase is a shoe, and directly below the shoe is a tie, which is also positioned to the right of the backpack. The shoe and tie are aligned vertically. Moving further right, a plate is located to the right of the shoe. Below the plate is a sandwich that is visibly smaller than the plate. To the right of the plate is a spoon, which is also smaller than the plate. Directly below the spoon lies a remote, maintaining vertical alignment with the spoon. Finally, on the right side of the image, a pair of scissors is located to the right of the remote. A screwdriver is positioned directly below the scissors on the bottom side of the scene, aligned vertically with the scissors.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?shoe (exists ?tie (exists ?plate (exists ?sandwich (exists ?spoon (exists ?remote (exists ?scissors (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?backpack 'backpack') (Below ?backpack ?suitcase) (AlignedVertically ?suitcase ?backpack) (Is ?shoe 'shoe') (RightOf ?shoe ?suitcase) (Is ?tie 'tie') (Below ?tie ?shoe) (RightOf ?tie ?backpack) (AlignedVertically ?shoe ?tie) (Is ?plate 'plate') (RightOf ?plate ?shoe) (Is ?sandwich 'sandwich') (Below ?sandwich ?plate) (SmallerThan ?sandwich ?plate) (Is ?spoon 'spoon') (RightOf ?spoon ?plate) (SmallerThan ?spoon ?plate) (Is ?remote 'remote') (Below ?remote ?spoon) (AlignedVertically ?spoon ?remote) (Is ?scissors 'scissors') (OnRightSide ?scissors) (RightOf ?scissors ?remote) (Is ?screwdriver 'screwdriver') (OnBottomSide ?screwdriver) (Below ?screwdriver ?scissors) (AlignedVertically ?scissors ?screwdriver))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?shoe (exists ?tie (exists ?plate (exists ?sandwich (exists ?spoon (exists ?remote (exists ?scissors (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?backpack ?suitcase) (AlignedVertically ?suitcase ?backpack) (Is ?backpack 'backpack') (RightOf ?shoe ?suitcase) (RightOf ?tie ?backpack) (Is ?shoe 'shoe') (Below ?tie ?shoe) (AlignedVertically ?shoe ?tie) (Is ?tie 'tie') (RightOf ?plate ?shoe) (Is ?plate 'plate') (Below ?sandwich ?plate) (SmallerThan ?sandwich ?plate) (Is ?sandwich 'sandwich') (RightOf ?spoon ?plate) (SmallerThan ?spoon ?plate) (Is ?spoon 'spoon') (Below ?remote ?spoon) (AlignedVertically ?spoon ?remote) (Is ?remote 'remote') (RightOf ?scissors ?remote) (OnRightSide ?scissors) (Below ?screwdriver ?scissors) (Is ?scissors 'scissors') (AlignedVertically ?scissors ?screwdriver) (OnBottomSide ?screwdriver) (Is ?screwdriver 'screwdriver'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "plate",
+        "remote",
+        "screwdriver",
+        "sandwich",
+        "backpack",
+        "spoon",
+        "suitcase",
+        "shoe",
+        "scissors"
+    ]
+}

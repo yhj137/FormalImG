@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a bowl positioned on the left side. To the right of the bowl is a plate, and they are aligned horizontally. Below the plate is a knife. To the left of the knife is a lemon, aligned horizontally with the knife. Below the lemon is a carrot. To the right of the carrot is a shoe, aligned horizontally with the carrot. For every pen in the image, it is located to the right of the shoe; furthermore, there is a lighter below the pen, a glove to the right of the lighter, and a wallet below the glove.",
+    "dsl": "(exists ?bowl (exists ?plate (exists ?knife (exists ?lemon (exists ?carrot (exists ?shoe (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (Is ?plate 'plate') (RightOf ?plate ?bowl) (AlignedHorizontally ?bowl ?plate) (Is ?knife 'knife') (Below ?knife ?plate) (Is ?lemon 'lemon') (LeftOf ?lemon ?knife) (AlignedHorizontally ?lemon ?knife) (Is ?carrot 'carrot') (Below ?carrot ?lemon) (Is ?shoe 'shoe') (RightOf ?shoe ?carrot) (AlignedHorizontally ?carrot ?shoe) (forall ?pen (implies (Is ?pen 'pen') (exists ?lighter (exists ?glove (exists ?wallet (and (Is ?lighter 'lighter') (Is ?glove 'glove') (Is ?wallet 'wallet') (RightOf ?pen ?shoe) (Below ?lighter ?pen) (RightOf ?glove ?lighter) (Below ?wallet ?glove))))))))))))))",
+    "cnf": "(exists ?bowl (exists ?plate (exists ?knife (exists ?lemon (exists ?carrot (exists ?shoe (forall ?pen (exists ?lighter (exists ?glove (exists ?wallet (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (RightOf ?plate ?bowl) (AlignedHorizontally ?bowl ?plate) (Is ?plate 'plate') (Below ?knife ?plate) (Is ?knife 'knife') (LeftOf ?lemon ?knife) (AlignedHorizontally ?lemon ?knife) (Is ?lemon 'lemon') (Below ?carrot ?lemon) (Is ?carrot 'carrot') (RightOf ?shoe ?carrot) (AlignedHorizontally ?carrot ?shoe) (Is ?shoe 'shoe') (or (not (Is ?pen 'pen')) (RightOf ?pen ?shoe)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (Below ?lighter ?pen)) (or (not (Is ?pen 'pen')) (Is ?glove 'glove')) (or (not (Is ?pen 'pen')) (Below ?wallet ?glove)) (or (not (Is ?pen 'pen')) (RightOf ?glove ?lighter)) (or (not (Is ?pen 'pen')) (Is ?lighter 'lighter')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "pen",
+        "lemon",
+        "carrot",
+        "lighter",
+        "wallet",
+        "knife",
+        "bowl",
+        "glove",
+        "shoe"
+    ]
+}

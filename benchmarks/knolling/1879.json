@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a suitcase, followed by a handbag to its right and a keyboard to the right of the handbag, all aligned horizontally. For every pen in the scene, there is a book to its right, and the pen is smaller than the book. To the right of the book, there is a camera, and to the right of the camera is a remote, all aligned horizontally. The book is placed above the suitcase. Finally, on the top side, a pair of pliers is located above the book, with a stapler to its right and a lemon to the right of the stapler, also aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?keyboard (forall ?pen (implies (Is ?pen 'pen') (exists ?book (exists ?camera (exists ?remote (exists ?pliers (exists ?stapler (exists ?lemon (and (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?book 'book') (Is ?camera 'camera') (Is ?remote 'remote') (Is ?pliers 'pliers') (Is ?stapler 'stapler') (Is ?lemon 'lemon') (OnLeftSide ?suitcase) (RightOf ?handbag ?suitcase) (RightOf ?keyboard ?handbag) (AlignedHorizontally ?suitcase ?handbag) (AlignedHorizontally ?handbag ?keyboard) (LeftOf ?pen ?book) (SmallerThan ?pen ?book) (Above ?book ?suitcase) (RightOf ?camera ?book) (RightOf ?remote ?camera) (AlignedHorizontally ?book ?camera) (AlignedHorizontally ?camera ?remote) (OnTopSide ?pliers) (Above ?pliers ?book) (RightOf ?stapler ?pliers) (RightOf ?lemon ?stapler) (AlignedHorizontally ?pliers ?stapler) (AlignedHorizontally ?stapler ?lemon)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?keyboard (forall ?pen (exists ?book (exists ?camera (exists ?remote (exists ?pliers (exists ?stapler (exists ?lemon (and (or (not (Is ?pen 'pen')) (Is ?suitcase 'suitcase')) (or (not (Is ?pen 'pen')) (Is ?handbag 'handbag')) (or (not (Is ?pen 'pen')) (OnLeftSide ?suitcase)) (or (not (Is ?pen 'pen')) (Is ?keyboard 'keyboard')) (or (not (Is ?pen 'pen')) (RightOf ?handbag ?suitcase)) (or (not (Is ?pen 'pen')) (Is ?lemon 'lemon')) (or (not (Is ?pen 'pen')) (Is ?book 'book')) (or (not (Is ?pen 'pen')) (RightOf ?keyboard ?handbag)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?suitcase ?handbag)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (RightOf ?lemon ?stapler)) (or (not (Is ?pen 'pen')) (Is ?camera 'camera')) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?book)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?handbag ?keyboard)) (or (not (Is ?pen 'pen')) (Above ?book ?suitcase)) (or (not (Is ?pen 'pen')) (Is ?pliers 'pliers')) (or (not (Is ?pen 'pen')) (RightOf ?stapler ?pliers)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pliers ?stapler)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?stapler ?lemon)) (or (not (Is ?pen 'pen')) (Is ?remote 'remote')) (or (not (Is ?pen 'pen')) (RightOf ?camera ?book)) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?book)) (or (not (Is ?pen 'pen')) (OnTopSide ?pliers)) (or (not (Is ?pen 'pen')) (Above ?pliers ?book)) (or (not (Is ?pen 'pen')) (RightOf ?remote ?camera)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?book ?camera)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?camera ?remote)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "remote",
+        "pliers",
+        "stapler",
+        "keyboard",
+        "pen",
+        "lemon",
+        "handbag",
+        "camera",
+        "suitcase"
+    ]
+}

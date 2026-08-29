@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman stands next to a bus, on its right, holding a paper plate for every pizza in the scene.",
+    "dsl": "(exists ?b (exists ?w (and (Is ?b 'bus') (Is ?w 'woman') (RightOf ?w ?b) (NextTo ?w ?b) (HasState ?w 'standing') (forall ?p (implies (Is ?p 'pizza') (exists ?pl (and (Is ?pl 'plate') (HasMaterial ?pl 'paper') (On ?p ?pl) (Holding ?w ?pl))))))))",
+    "cnf": "(exists ?b (exists ?w (forall ?p (exists ?pl (and (Is ?b 'bus') (RightOf ?w ?b) (NextTo ?w ?b) (Is ?w 'woman') (HasState ?w 'standing') (or (not (Is ?p 'pizza')) (Holding ?w ?pl)) (or (not (Is ?p 'pizza')) (On ?p ?pl)) (or (not (Is ?p 'pizza')) (HasMaterial ?pl 'paper')) (or (not (Is ?p 'pizza')) (Is ?pl 'plate')))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "bus",
+        "plate",
+        "woman"
+    ]
+}

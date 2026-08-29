@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard located on the bottom side. To the left of the keyboard is a phone, while to the right of the keyboard are pliers. A glove is placed to the right of the pliers. The phone, keyboard, pliers, and glove are aligned horizontally. Additionally, for every sock in the image, it is positioned to the left of the phone.",
+    "dsl": "(exists ?k (exists ?p (exists ?pl (exists ?g (and (Is ?k 'keyboard') (Is ?p 'phone') (Is ?pl 'pliers') (Is ?g 'glove') (OnBottomSide ?k) (LeftOf ?p ?k) (RightOf ?pl ?k) (RightOf ?g ?pl) (AlignedHorizontally ?p ?k) (AlignedHorizontally ?k ?pl) (AlignedHorizontally ?pl ?g) (forall ?s (implies (Is ?s 'sock') (LeftOf ?s ?p))))))))",
+    "cnf": "(exists ?k (exists ?p (exists ?pl (exists ?g (forall ?s (and (Is ?k 'keyboard') (OnBottomSide ?k) (LeftOf ?p ?k) (RightOf ?pl ?k) (Is ?p 'phone') (AlignedHorizontally ?p ?k) (Is ?pl 'pliers') (RightOf ?g ?pl) (AlignedHorizontally ?k ?pl) (or (not (Is ?s 'sock')) (LeftOf ?s ?p)) (Is ?g 'glove') (AlignedHorizontally ?pl ?g)))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "keyboard",
+        "phone",
+        "glove"
+    ]
+}

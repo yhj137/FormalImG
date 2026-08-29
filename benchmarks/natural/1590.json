@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a bed next to a desk. A lamp and a round cake sit on the desk. A bicycle stands to the right of the bed. A hat containing a teddy bear lies on the bed. All rocks are positioned to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bed (exists ?d (exists ?l (exists ?c (exists ?bike (exists ?h (exists ?tb (and (Is ?bed 'bed') (Is ?d 'desk') (NextTo ?d ?bed) (Is ?l 'lamp') (On ?l ?d) (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?d) (Is ?bike 'bicycle') (RightOf ?bike ?bed) (Is ?h 'hat') (On ?h ?bed) (Is ?tb 'teddy bear') (In ?tb ?h) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?bike))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bed (exists ?d (exists ?l (exists ?c (exists ?bike (exists ?h (exists ?tb (forall ?r (and (Is ?bed 'bed') (NextTo ?d ?bed) (RightOf ?bike ?bed) (Is ?d 'desk') (On ?l ?d) (On ?h ?bed) (Is ?bike 'bicycle') (or (not (Is ?r 'rock')) (RightOf ?r ?bike)) (On ?c ?d) (Is ?l 'lamp') (Is ?h 'hat') (In ?tb ?h) (HasShape ?c 'round') (Is ?tb 'teddy bear') (Is ?c 'cake')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "rock",
+        "desk",
+        "hat",
+        "lamp",
+        "cake",
+        "teddy bear",
+        "bed",
+        "bicycle"
+    ]
+}

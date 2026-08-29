@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene of a wooden basket containing every butterfly, with a child positioned to the left of the basket.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (forall ?f (implies (Is ?f 'butterfly') (In ?f ?b))) (exists ?c (and (Is ?c 'child') (LeftOf ?c ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?f (exists ?c (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (or (not (Is ?f 'butterfly')) (In ?f ?b)) (LeftOf ?c ?b) (Is ?c 'child'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "child",
+        "basket"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten objects arranged in vertical sequences. A gray laptop, a brown cutting board, and a brown handbag are positioned on the bottom side of the image. A black calculator is located above the laptop, a red lighter is above the calculator, and a yellow lemon is above the lighter. Above the cutting board is a pizza, with a white bowl above the pizza, and a fork placed above the bowl. A wrench is positioned above the handbag. In terms of size, the laptop is larger than the cutting board, the handbag is smaller than the cutting board, and the lemon is smaller than the bowl.",
+    "dsl": "(exists ?laptop (exists ?calculator (exists ?lighter (exists ?lemon (exists ?cutting_board (exists ?pizza (exists ?bowl (exists ?fork (exists ?handbag (exists ?wrench (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnBottomSide ?laptop) (Is ?calculator 'calculator') (Has ?calculator 'black') (Is ?lighter 'lighter') (Has ?lighter 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (OnBottomSide ?cutting_board) (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?fork 'fork') (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (Is ?wrench 'wrench') (Above ?calculator ?laptop) (Above ?lighter ?calculator) (Above ?lemon ?lighter) (Above ?pizza ?cutting_board) (Above ?bowl ?pizza) (Above ?fork ?bowl) (Above ?wrench ?handbag) (LargerThan ?laptop ?cutting_board) (SmallerThan ?handbag ?cutting_board) (SmallerThan ?lemon ?bowl))))))))))))",
+    "cnf": "(exists ?laptop (exists ?calculator (exists ?lighter (exists ?lemon (exists ?cutting_board (exists ?pizza (exists ?bowl (exists ?fork (exists ?handbag (exists ?wrench (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnBottomSide ?laptop) (Above ?calculator ?laptop) (LargerThan ?laptop ?cutting_board) (Has ?calculator 'black') (Above ?lighter ?calculator) (Above ?pizza ?cutting_board) (SmallerThan ?handbag ?cutting_board) (Is ?calculator 'calculator') (Has ?lighter 'red') (Above ?lemon ?lighter) (OnBottomSide ?cutting_board) (Is ?pizza 'pizza') (Above ?bowl ?pizza) (Above ?wrench ?handbag) (Is ?lighter 'lighter') (Has ?lemon 'yellow') (SmallerThan ?lemon ?bowl) (Has ?cutting_board 'brown') (Has ?bowl 'white') (Above ?fork ?bowl) (OnBottomSide ?handbag) (Is ?wrench 'wrench') (Is ?lemon 'lemon') (Is ?cutting_board 'cutting_board') (Is ?bowl 'bowl') (Is ?fork 'fork') (Has ?handbag 'brown') (Is ?handbag 'handbag'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lighter",
+        "pizza",
+        "bowl",
+        "fork",
+        "calculator",
+        "cutting_board",
+        "wrench",
+        "lemon",
+        "laptop",
+        "handbag"
+    ]
+}

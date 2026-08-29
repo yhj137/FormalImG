@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a boat to the left of a tree. A cat and a cylindrical bottle are on the boat. A red bird perches on the tree, and a butterfly rests on a round orange that is also on the tree.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?t (exists ?c (exists ?bo (exists ?bi (exists ?o (exists ?bu (and (Is ?b 'boat') (Is ?t 'tree') (Is ?c 'cat') (Is ?bo 'bottle') (HasShape ?bo 'cylindrical') (Is ?bi 'bird') (HasColor ?bi 'red') (Is ?o 'orange') (HasShape ?o 'round') (Is ?bu 'butterfly') (LeftOf ?b ?t) (On ?c ?b) (On ?bo ?b) (On ?bi ?t) (On ?o ?t) (On ?bu ?o))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?t (exists ?c (exists ?bo (exists ?bi (exists ?o (exists ?bu (and (Is ?b 'boat') (LeftOf ?b ?t) (On ?c ?b) (Is ?t 'tree') (On ?bi ?t) (On ?bo ?b) (Is ?c 'cat') (On ?o ?t) (HasColor ?bi 'red') (HasShape ?bo 'cylindrical') (HasShape ?o 'round') (On ?bu ?o) (Is ?bi 'bird') (Is ?bo 'bottle') (Is ?o 'orange') (Is ?bu 'butterfly'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "cat",
+        "butterfly",
+        "tree",
+        "bird",
+        "boat",
+        "orange"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a red carrot located to the left of a white sock. For every wrench in the scene, the white sock is positioned to its left. To the right of the wrench, there is a sequence of objects: a blue pair of pliers, which is followed to its right by a pink donut, then a yellow tie to the right of the donut, and finally a green drill to the right of the tie.",
+    "dsl": "(exists ?carrot (exists ?sock (and (Is ?carrot 'carrot') (Has ?carrot 'red') (Is ?sock 'sock') (Has ?sock 'white') (LeftOf ?carrot ?sock) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?pliers (exists ?donut (exists ?tie (exists ?drill (and (Is ?pliers 'pliers') (Has ?pliers 'blue') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?tie 'tie') (Has ?tie 'yellow') (Is ?drill 'drill') (Has ?drill 'green') (LeftOf ?sock ?wrench) (RightOf ?pliers ?wrench) (RightOf ?donut ?pliers) (RightOf ?tie ?donut) (RightOf ?drill ?tie)))))))))))",
+    "cnf": "(exists ?carrot (exists ?sock (forall ?wrench (exists ?pliers (exists ?donut (exists ?tie (exists ?drill (and (Is ?carrot 'carrot') (Has ?carrot 'red') (LeftOf ?carrot ?sock) (Has ?sock 'white') (or (not (Is ?wrench 'wrench')) (LeftOf ?sock ?wrench)) (Is ?sock 'sock') (or (not (Is ?wrench 'wrench')) (Has ?drill 'green')) (or (not (Is ?wrench 'wrench')) (RightOf ?pliers ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?drill 'drill')) (or (not (Is ?wrench 'wrench')) (RightOf ?drill ?tie)) (or (not (Is ?wrench 'wrench')) (Has ?pliers 'blue')) (or (not (Is ?wrench 'wrench')) (RightOf ?donut ?pliers)) (or (not (Is ?wrench 'wrench')) (Has ?tie 'yellow')) (or (not (Is ?wrench 'wrench')) (RightOf ?tie ?donut)) (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (or (not (Is ?wrench 'wrench')) (Is ?donut 'donut')) (or (not (Is ?wrench 'wrench')) (Has ?donut 'pink')) (or (not (Is ?wrench 'wrench')) (Is ?tie 'tie'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "sock",
+        "wrench",
+        "carrot",
+        "drill",
+        "donut"
+    ]
+}

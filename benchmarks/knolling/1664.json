@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement. A pan is positioned above a book. For every lemon, it is located below the book and has a sequence of objects arranged to its right: a spoon, a plate, and a set of keys, all aligned horizontally with the lemon. A sock is located below the keys. The sock is positioned to the right of a tie, and the tie is positioned to the right of headphones, forming a horizontal row. The headphones are situated on the bottom side of the image. Additionally, the pan is larger than the spoon.",
+    "dsl": "(exists ?pan (exists ?book (and (Is ?pan 'pan') (Is ?book 'book') (Above ?pan ?book) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?spoon (exists ?plate (exists ?keys (exists ?sock (exists ?tie (exists ?headphones (and (Is ?spoon 'spoon') (Is ?plate 'plate') (Is ?keys 'keys') (Is ?sock 'sock') (Is ?tie 'tie') (Is ?headphones 'headphones') (Below ?lemon ?book) (RightOf ?spoon ?lemon) (RightOf ?plate ?spoon) (RightOf ?keys ?plate) (AlignedHorizontally ?lemon ?spoon) (AlignedHorizontally ?spoon ?plate) (AlignedHorizontally ?plate ?keys) (Below ?sock ?keys) (RightOf ?sock ?tie) (RightOf ?tie ?headphones) (AlignedHorizontally ?sock ?tie) (AlignedHorizontally ?tie ?headphones) (OnBottomSide ?headphones) (LargerThan ?pan ?spoon)))))))))))))",
+    "cnf": "(exists ?pan (exists ?book (forall ?lemon (exists ?spoon (exists ?plate (exists ?keys (exists ?sock (exists ?tie (exists ?headphones (and (Is ?pan 'pan') (Above ?pan ?book) (or (not (Is ?lemon 'lemon')) (LargerThan ?pan ?spoon)) (Is ?book 'book') (or (not (Is ?lemon 'lemon')) (Below ?lemon ?book)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?spoon ?plate)) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?headphones)) (or (not (Is ?lemon 'lemon')) (Is ?headphones 'headphones')) (or (not (Is ?lemon 'lemon')) (RightOf ?spoon ?lemon)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?lemon ?spoon)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?plate ?keys)) (or (not (Is ?lemon 'lemon')) (RightOf ?keys ?plate)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?tie ?headphones)) (or (not (Is ?lemon 'lemon')) (Is ?tie 'tie')) (or (not (Is ?lemon 'lemon')) (RightOf ?tie ?headphones)) (or (not (Is ?lemon 'lemon')) (Is ?spoon 'spoon')) (or (not (Is ?lemon 'lemon')) (RightOf ?plate ?spoon)) (or (not (Is ?lemon 'lemon')) (Below ?sock ?keys)) (or (not (Is ?lemon 'lemon')) (Is ?keys 'keys')) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?sock ?tie)) (or (not (Is ?lemon 'lemon')) (Is ?sock 'sock')) (or (not (Is ?lemon 'lemon')) (RightOf ?sock ?tie)) (or (not (Is ?lemon 'lemon')) (Is ?plate 'plate'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keys",
+        "tie",
+        "plate",
+        "sock",
+        "lemon",
+        "pan",
+        "spoon",
+        "headphones"
+    ]
+}

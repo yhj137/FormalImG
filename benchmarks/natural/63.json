@@ -1,0 +1,9 @@
+{
+    "prompt": "A blue bowl in pixel art style.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bowl') (HasColor ?b 'blue'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bowl') (HasColor ?b 'blue'))))",
+    "k": 1,
+    "object_classes": [
+        "bowl"
+    ]
+}

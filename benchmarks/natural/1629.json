@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. Every toy car is positioned to the left of a chair. A bicycle is located to the right of the chair. A teddy bear sits on the chair, wearing black headphones and holding a flower. There is also a round plate with a sandwich and a knife on the chair.",
+    "dsl": "(and (IsStyle 'photo') (forall ?tc (implies (Is ?tc 'toy car') (exists ?c (and (Is ?c 'chair') (LeftOf ?tc ?c) (exists ?bi (and (Is ?bi 'bicycle') (RightOf ?bi ?c))) (exists ?tb (and (Is ?tb 'teddy bear') (HasState ?tb 'sitting') (On ?tb ?c) (exists ?h (and (Is ?h 'headphones') (HasColor ?h 'black') (On ?h ?tb))) (exists ?f (and (Is ?f 'flower') (Holding ?tb ?f))))) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?c) (exists ?s (and (Is ?s 'sandwich') (On ?s ?p))) (exists ?k (and (Is ?k 'knife') (On ?k ?p))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?tc (exists ?c (exists ?bi (exists ?tb (exists ?h (exists ?f (exists ?p (exists ?s (exists ?k (and (or (not (Is ?tc 'toy car')) (Is ?c 'chair')) (or (not (Is ?tc 'toy car')) (LeftOf ?tc ?c)) (or (not (Is ?tc 'toy car')) (RightOf ?bi ?c)) (or (not (Is ?tc 'toy car')) (Is ?bi 'bicycle')) (or (not (Is ?tc 'toy car')) (On ?tb ?c)) (or (not (Is ?tc 'toy car')) (Is ?tb 'teddy bear')) (or (not (Is ?tc 'toy car')) (On ?p ?c)) (or (not (Is ?tc 'toy car')) (HasState ?tb 'sitting')) (or (not (Is ?tc 'toy car')) (Is ?h 'headphones')) (or (not (Is ?tc 'toy car')) (On ?h ?tb)) (or (not (Is ?tc 'toy car')) (HasShape ?p 'round')) (or (not (Is ?tc 'toy car')) (Is ?s 'sandwich')) (or (not (Is ?tc 'toy car')) (On ?s ?p)) (or (not (Is ?tc 'toy car')) (HasColor ?h 'black')) (or (not (Is ?tc 'toy car')) (Is ?f 'flower')) (or (not (Is ?tc 'toy car')) (Holding ?tb ?f)) (or (not (Is ?tc 'toy car')) (Is ?p 'plate')) (or (not (Is ?tc 'toy car')) (Is ?k 'knife')) (or (not (Is ?tc 'toy car')) (On ?k ?p)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "teddy bear",
+        "knife",
+        "sandwich",
+        "flower",
+        "bicycle",
+        "plate",
+        "chair",
+        "headphones",
+        "toy car"
+    ]
+}

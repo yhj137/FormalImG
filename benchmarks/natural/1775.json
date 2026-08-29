@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a scene with a desk to the left of a tree and a bench next to the tree. A dog holding a yellow screwdriver sits on the bench. On the desk are an open laptop and a cake. Every flower is located inside the tree, with an orange next to each one.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?d (exists ?b (exists ?dog (exists ?s (exists ?l (exists ?c (and (Is ?t 'tree') (Is ?d 'desk') (Is ?b 'bench') (Is ?dog 'dog') (Is ?s 'screwdriver') (Is ?l 'laptop') (Is ?c 'cake') (LeftOf ?d ?t) (NextTo ?b ?t) (On ?dog ?b) (Holding ?dog ?s) (HasColor ?s 'yellow') (On ?l ?d) (HasState ?l 'open') (On ?c ?d) (forall ?f (implies (Is ?f 'flower') (and (In ?f ?t) (exists ?o (and (Is ?o 'orange') (NextTo ?o ?f)))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?d (exists ?b (exists ?dog (exists ?s (exists ?l (exists ?c (forall ?f (exists ?o (and (Is ?t 'tree') (LeftOf ?d ?t) (NextTo ?b ?t) (Is ?d 'desk') (On ?l ?d) (or (not (Is ?f 'flower')) (In ?f ?t)) (Is ?b 'bench') (On ?dog ?b) (On ?c ?d) (Is ?l 'laptop') (HasState ?l 'open') (or (not (Is ?f 'flower')) (Is ?o 'orange')) (Is ?dog 'dog') (Holding ?dog ?s) (Is ?c 'cake') (or (not (Is ?f 'flower')) (NextTo ?o ?f)) (Is ?s 'screwdriver') (HasColor ?s 'yellow'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "laptop",
+        "tree",
+        "cake",
+        "orange",
+        "flower",
+        "desk",
+        "screwdriver",
+        "dog"
+    ]
+}

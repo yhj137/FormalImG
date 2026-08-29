@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a wooden boat. All baskets are located to the right of the boat. A mirror is on the boat. Next to the mirror is a teddy bear, and a phone is next to the teddy bear. A dog holding a shirt is also on the boat.",
+    "dsl": "(exists ?bo (and (Is ?bo 'boat') (HasMaterial ?bo 'wooden') (forall ?ba (implies (Is ?ba 'basket') (RightOf ?ba ?bo))) (exists ?m (exists ?tb (exists ?p (exists ?d (exists ?s (and (Is ?m 'mirror') (Is ?tb 'teddy bear') (Is ?p 'phone') (Is ?d 'dog') (Is ?s 'shirt') (On ?m ?bo) (NextTo ?tb ?m) (NextTo ?p ?tb) (On ?d ?bo) (Holding ?d ?s)))))))))",
+    "cnf": "(exists ?bo (forall ?ba (exists ?m (exists ?tb (exists ?p (exists ?d (exists ?s (and (Is ?bo 'boat') (HasMaterial ?bo 'wooden') (or (not (Is ?ba 'basket')) (RightOf ?ba ?bo)) (On ?m ?bo) (On ?d ?bo) (Is ?m 'mirror') (NextTo ?tb ?m) (Is ?d 'dog') (Holding ?d ?s) (Is ?tb 'teddy bear') (NextTo ?p ?tb) (Is ?s 'shirt') (Is ?p 'phone')))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "teddy bear",
+        "basket",
+        "mirror",
+        "boat",
+        "dog"
+    ]
+}

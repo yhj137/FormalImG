@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt, a drill, a cup, and glasses. The shirt is located on the bottom side of the image. The cup is visually smaller than the shirt, and the drill is positioned below the cup. The glasses are located to the left of the drill. Additionally, for every spoon in the image, there is a set of keys to its left, and the spoon is positioned below the drill.",
+    "dsl": "(exists ?shirt (exists ?drill (exists ?cup (exists ?glasses (and (Is ?shirt 'shirt') (Is ?drill 'drill') (Is ?cup 'cup') (Is ?glasses 'glasses') (OnBottomSide ?shirt) (SmallerThan ?cup ?shirt) (Below ?drill ?cup) (LeftOf ?glasses ?drill) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?keys (and (Is ?keys 'keys') (LeftOf ?keys ?spoon) (Below ?spoon ?drill))))))))))",
+    "cnf": "(exists ?shirt (exists ?drill (exists ?cup (exists ?glasses (forall ?spoon (exists ?keys (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (SmallerThan ?cup ?shirt) (Is ?cup 'cup') (Below ?drill ?cup) (Is ?drill 'drill') (LeftOf ?glasses ?drill) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?drill)) (Is ?glasses 'glasses') (or (not (Is ?spoon 'spoon')) (LeftOf ?keys ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?keys 'keys')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "cup",
+        "drill",
+        "spoon",
+        "shirt"
+    ]
+}

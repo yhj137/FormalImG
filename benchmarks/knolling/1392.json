@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged horizontal row of items. A handbag is positioned on the left side of the image. To the right of the handbag is a drill, followed by a bowl to the right of the drill. An apple is placed to the right of the bowl, and the apple is visually smaller than the bowl. Continuing the row to the right of the apple is a mouse, and finally, a spoon is located to the right of the mouse. All these six objects\u2014handbag, drill, bowl, apple, mouse, and spoon\u2014are aligned horizontally. Additionally, for any sock present in the scene, it must be located to the left of the handbag.",
+    "dsl": "(exists ?handbag (exists ?drill (exists ?bowl (exists ?apple (exists ?mouse (exists ?spoon (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?drill 'drill') (RightOf ?drill ?handbag) (AlignedHorizontally ?handbag ?drill) (Is ?bowl 'bowl') (RightOf ?bowl ?drill) (AlignedHorizontally ?drill ?bowl) (Is ?apple 'apple') (RightOf ?apple ?bowl) (AlignedHorizontally ?bowl ?apple) (SmallerThan ?apple ?bowl) (Is ?mouse 'mouse') (RightOf ?mouse ?apple) (AlignedHorizontally ?apple ?mouse) (Is ?spoon 'spoon') (RightOf ?spoon ?mouse) (AlignedHorizontally ?mouse ?spoon) (forall ?sock (implies (Is ?sock 'sock') (LeftOf ?sock ?handbag))))))))))",
+    "cnf": "(exists ?handbag (exists ?drill (exists ?bowl (exists ?apple (exists ?mouse (exists ?spoon (forall ?sock (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (RightOf ?drill ?handbag) (AlignedHorizontally ?handbag ?drill) (Is ?drill 'drill') (or (not (Is ?sock 'sock')) (LeftOf ?sock ?handbag)) (RightOf ?bowl ?drill) (AlignedHorizontally ?drill ?bowl) (Is ?bowl 'bowl') (RightOf ?apple ?bowl) (AlignedHorizontally ?bowl ?apple) (Is ?apple 'apple') (SmallerThan ?apple ?bowl) (RightOf ?mouse ?apple) (AlignedHorizontally ?apple ?mouse) (Is ?mouse 'mouse') (RightOf ?spoon ?mouse) (AlignedHorizontally ?mouse ?spoon) (Is ?spoon 'spoon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "sock",
+        "drill",
+        "handbag",
+        "mouse",
+        "spoon",
+        "bowl"
+    ]
+}

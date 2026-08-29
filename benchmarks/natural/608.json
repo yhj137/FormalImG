@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A pair of headphones is placed on a basket. Next to the basket is a banana, and there is a round fruit located next to the banana.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?k (exists ?h (exists ?b (exists ?f (and (Is ?k 'basket') (Is ?h 'headphones') (Is ?b 'banana') (Is ?f 'fruit') (HasShape ?f 'round') (On ?h ?k) (NextTo ?b ?k) (NextTo ?f ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?k (exists ?h (exists ?b (exists ?f (and (Is ?k 'basket') (On ?h ?k) (NextTo ?b ?k) (Is ?h 'headphones') (Is ?b 'banana') (NextTo ?f ?b) (HasShape ?f 'round') (Is ?f 'fruit')))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "fruit",
+        "basket",
+        "headphones"
+    ]
+}

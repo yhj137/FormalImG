@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this arrangement, every pair of jeans is located on the left side of the image.",
+    "dsl": "(and (forall ?item (implies (Is ?item 'jeans') (OnLeftSide ?item))))",
+    "cnf": "(forall ?item (or (not (Is ?item 'jeans')) (OnLeftSide ?item)))",
+    "k": 1,
+    "object_classes": [
+        "jeans"
+    ]
+}

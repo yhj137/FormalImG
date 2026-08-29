@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. Every house has a teddy bear holding an umbrella to its left, and a wooden basket to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?h (implies (Is ?h 'house') (exists ?t (exists ?u (exists ?b (and (Is ?t 'teddy bear') (Is ?u 'umbrella') (Is ?b 'basket') (HasMaterial ?b 'wooden') (LeftOf ?t ?h) (Holding ?t ?u) (RightOf ?b ?h))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?h (exists ?t (exists ?u (exists ?b (and (or (not (Is ?h 'house')) (Is ?t 'teddy bear')) (or (not (Is ?h 'house')) (Is ?u 'umbrella')) (or (not (Is ?h 'house')) (LeftOf ?t ?h)) (or (not (Is ?h 'house')) (Is ?b 'basket')) (or (not (Is ?h 'house')) (Holding ?t ?u)) (or (not (Is ?h 'house')) (HasMaterial ?b 'wooden')) (or (not (Is ?h 'house')) (RightOf ?b ?h))))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "basket",
+        "house",
+        "umbrella"
+    ]
+}

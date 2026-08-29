@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. Every man is sitting with headphones on. To the left of each man is a woman wearing a hat and holding a wooden basket containing a toy car.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?m (implies (Is ?m 'man') (exists ?w (exists ?h (exists ?hp (exists ?b (exists ?tc (and (Is ?w 'woman') (Is ?h 'hat') (Is ?hp 'headphones') (Is ?b 'basket') (Is ?tc 'toy car') (HasState ?m 'sitting') (On ?hp ?m) (LeftOf ?w ?m) (On ?h ?w) (Holding ?w ?b) (HasMaterial ?b 'wooden') (In ?tc ?b))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?m (exists ?w (exists ?h (exists ?hp (exists ?b (exists ?tc (and (or (not (Is ?m 'man')) (Is ?w 'woman')) (or (not (Is ?m 'man')) (Is ?h 'hat')) (or (not (Is ?m 'man')) (LeftOf ?w ?m)) (or (not (Is ?m 'man')) (Is ?hp 'headphones')) (or (not (Is ?m 'man')) (On ?h ?w)) (or (not (Is ?m 'man')) (On ?hp ?m)) (or (not (Is ?m 'man')) (Is ?b 'basket')) (or (not (Is ?m 'man')) (Holding ?w ?b)) (or (not (Is ?m 'man')) (HasState ?m 'sitting')) (or (not (Is ?m 'man')) (Is ?tc 'toy car')) (or (not (Is ?m 'man')) (HasMaterial ?b 'wooden')) (or (not (Is ?m 'man')) (In ?tc ?b))))))))))",
+    "k": 6,
+    "object_classes": [
+        "basket",
+        "man",
+        "toy car",
+        "hat",
+        "headphones",
+        "woman"
+    ]
+}

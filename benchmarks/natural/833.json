@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands next to a wooden desk. He is holding a plastic toy car. There is a rectangular keyboard and a plant on the desk.",
+    "dsl": "(exists ?m (exists ?d (exists ?k (exists ?p (exists ?t (and (Is ?m 'man') (Is ?d 'desk') (Is ?k 'keyboard') (Is ?p 'plant') (Is ?t 'toy car') (HasMaterial ?d 'wooden') (HasShape ?k 'rectangular') (HasMaterial ?t 'plastic') (NextTo ?m ?d) (Holding ?m ?t) (On ?k ?d) (On ?p ?d)))))))",
+    "cnf": "(exists ?m (exists ?d (exists ?k (exists ?p (exists ?t (and (Is ?m 'man') (NextTo ?m ?d) (Holding ?m ?t) (HasMaterial ?d 'wooden') (On ?k ?d) (HasMaterial ?t 'plastic') (Is ?d 'desk') (On ?p ?d) (HasShape ?k 'rectangular') (Is ?t 'toy car') (Is ?p 'plant') (Is ?k 'keyboard')))))))",
+    "k": 5,
+    "object_classes": [
+        "plant",
+        "man",
+        "toy car",
+        "desk",
+        "keyboard"
+    ]
+}

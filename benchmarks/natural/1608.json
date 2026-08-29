@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene inside a house features a wardrobe with a hammer on top. To the right of the wardrobe lies a round rug. A child is on the rug, and to the right of the child is a lion with a hat. A pan containing an apple is also on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?w (exists ?hm (exists ?r (exists ?c (exists ?l (exists ?ht (exists ?p (exists ?a (and (Is ?h 'house') (Is ?w 'wardrobe') (In ?w ?h) (Is ?hm 'hammer') (On ?hm ?w) (Is ?r 'rug') (RightOf ?r ?w) (HasShape ?r 'round') (Is ?c 'child') (On ?c ?r) (Is ?l 'lion') (RightOf ?l ?c) (Is ?ht 'hat') (On ?ht ?l) (Is ?p 'pan') (On ?p ?r) (Is ?a 'apple') (In ?a ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?w (exists ?hm (exists ?r (exists ?c (exists ?l (exists ?ht (exists ?p (exists ?a (and (Is ?h 'house') (In ?w ?h) (Is ?w 'wardrobe') (On ?hm ?w) (RightOf ?r ?w) (Is ?hm 'hammer') (Is ?r 'rug') (HasShape ?r 'round') (On ?c ?r) (On ?p ?r) (Is ?c 'child') (RightOf ?l ?c) (Is ?p 'pan') (In ?a ?p) (Is ?l 'lion') (On ?ht ?l) (Is ?a 'apple') (Is ?ht 'hat'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "child",
+        "rug",
+        "hammer",
+        "pan",
+        "lion",
+        "apple",
+        "hat",
+        "wardrobe"
+    ]
+}

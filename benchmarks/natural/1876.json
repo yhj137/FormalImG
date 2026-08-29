@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene. A man wearing a hat and shoes stands to the left of a red car, holding a hammer. A cat and every screwdriver are inside the car. Glasses and a phone are on the car, and a lamp is to the right of the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?c (exists ?h (and (Is ?m 'man') (Is ?c 'car') (Is ?h 'hammer') (HasColor ?c 'red') (LeftOf ?m ?c) (Holding ?m ?h) (forall ?s (implies (Is ?s 'screwdriver') (In ?s ?c))) (exists ?p (exists ?l (exists ?sh (exists ?g (exists ?ct (exists ?ht (and (Is ?p 'phone') (Is ?l 'lamp') (Is ?sh 'shoes') (Is ?g 'glasses') (Is ?ct 'cat') (Is ?ht 'hat') (On ?p ?c) (RightOf ?l ?c) (On ?sh ?m) (On ?g ?c) (In ?ct ?c) (On ?ht ?m)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?c (exists ?h (forall ?s (exists ?p (exists ?l (exists ?sh (exists ?g (exists ?ct (exists ?ht (and (Is ?m 'man') (LeftOf ?m ?c) (Holding ?m ?h) (HasColor ?c 'red') (or (not (Is ?s 'screwdriver')) (In ?s ?c)) (On ?sh ?m) (Is ?h 'hammer') (Is ?c 'car') (On ?p ?c) (On ?ht ?m) (Is ?sh 'shoes') (RightOf ?l ?c) (Is ?p 'phone') (Is ?ht 'hat') (On ?g ?c) (Is ?l 'lamp') (In ?ct ?c) (Is ?g 'glasses') (Is ?ct 'cat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "shoes",
+        "glasses",
+        "man",
+        "hammer",
+        "car",
+        "lamp",
+        "cat",
+        "screwdriver",
+        "hat"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every fork is held by a child and positioned to the right of a round table. To the right of the child is an open backpack containing a key.",
+    "dsl": "(forall ?f (implies (Is ?f 'fork') (exists ?t (exists ?c (exists ?b (exists ?k (and (Is ?t 'table') (HasShape ?t 'round') (Is ?c 'child') (Is ?b 'backpack') (HasState ?b 'open') (Is ?k 'key') (RightOf ?f ?t) (Holding ?c ?f) (RightOf ?b ?c) (In ?k ?b))))))))",
+    "cnf": "(forall ?f (exists ?t (exists ?c (exists ?b (exists ?k (and (or (not (Is ?f 'fork')) (Is ?t 'table')) (or (not (Is ?f 'fork')) (HasShape ?t 'round')) (or (not (Is ?f 'fork')) (RightOf ?f ?t)) (or (not (Is ?f 'fork')) (Is ?c 'child')) (or (not (Is ?f 'fork')) (Is ?k 'key')) (or (not (Is ?f 'fork')) (Holding ?c ?f)) (or (not (Is ?f 'fork')) (Is ?b 'backpack')) (or (not (Is ?f 'fork')) (HasState ?b 'open')) (or (not (Is ?f 'fork')) (In ?k ?b)) (or (not (Is ?f 'fork')) (RightOf ?b ?c))))))))",
+    "k": 5,
+    "object_classes": [
+        "child",
+        "fork",
+        "backpack",
+        "table",
+        "key"
+    ]
+}

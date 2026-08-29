@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a lion holding a plate with a broken keyboard on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?p (exists ?k (and (Is ?l 'lion') (Is ?p 'plate') (Is ?k 'keyboard') (Holding ?l ?p) (On ?k ?p) (HasState ?k 'broken'))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?p (exists ?k (and (Is ?l 'lion') (Holding ?l ?p) (Is ?p 'plate') (On ?k ?p) (Is ?k 'keyboard') (HasState ?k 'broken'))))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "keyboard",
+        "lion"
+    ]
+}

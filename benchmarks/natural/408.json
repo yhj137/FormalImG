@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene with a wooden desk. A lamp is next to the desk, and a metal fork is to the right of the lamp.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?l (exists ?f (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?l 'lamp') (Is ?f 'fork') (HasMaterial ?f 'metal') (NextTo ?l ?d) (RightOf ?f ?l))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?l (exists ?f (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?l ?d) (Is ?l 'lamp') (RightOf ?f ?l) (HasMaterial ?f 'metal') (Is ?f 'fork'))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "lamp",
+        "desk"
+    ]
+}

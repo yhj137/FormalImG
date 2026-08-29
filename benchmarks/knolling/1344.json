@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a backpack on the left side. Extending from the backpack, a shirt, a bottle, and a sandwich are arranged in a sequence, all maintained in horizontal alignment. The scene also adheres to a specific rule: for every lighter present, there exists a calculator and a ruler aligned vertically with it. The lighter is visually smaller than the calculator. Furthermore, this vertical group connects to the main row, as the ruler is aligned vertically with the sandwich.",
+    "dsl": "(exists ?backpack (exists ?shirt (exists ?bottle (exists ?sandwich (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?shirt 'shirt') (Is ?bottle 'bottle') (Is ?sandwich 'sandwich') (AlignedHorizontally ?backpack ?shirt) (AlignedHorizontally ?shirt ?bottle) (AlignedHorizontally ?bottle ?sandwich) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?calculator (exists ?ruler (and (Is ?calculator 'calculator') (Is ?ruler 'ruler') (SmallerThan ?lighter ?calculator) (AlignedVertically ?lighter ?calculator) (AlignedVertically ?calculator ?ruler) (AlignedVertically ?ruler ?sandwich)))))))))))",
+    "cnf": "(exists ?backpack (exists ?shirt (exists ?bottle (exists ?sandwich (forall ?lighter (exists ?calculator (exists ?ruler (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (AlignedHorizontally ?backpack ?shirt) (Is ?shirt 'shirt') (AlignedHorizontally ?shirt ?bottle) (Is ?bottle 'bottle') (AlignedHorizontally ?bottle ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?lighter 'lighter')) (AlignedVertically ?ruler ?sandwich)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?calculator ?ruler)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?calculator)) (or (not (Is ?lighter 'lighter')) (Is ?ruler 'ruler')) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?calculator)) (or (not (Is ?lighter 'lighter')) (Is ?calculator 'calculator'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "backpack",
+        "lighter",
+        "calculator",
+        "bottle",
+        "sandwich",
+        "shirt"
+    ]
+}

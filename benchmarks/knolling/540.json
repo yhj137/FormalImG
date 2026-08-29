@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. An apple is placed on the bottom side of the arrangement. For every set of keys present, the apple is positioned vertically below them. Additionally, there is a cup located to the right of the keys, and the apple is situated to the left of the cup.",
+    "dsl": "(exists ?apple (and (Is ?apple 'apple') (OnBottomSide ?apple) (forall ?keys (implies (Is ?keys 'keys') (exists ?cup (and (Is ?cup 'cup') (Below ?apple ?keys) (RightOf ?cup ?keys) (LeftOf ?apple ?cup)))))))",
+    "cnf": "(exists ?apple (forall ?keys (exists ?cup (and (Is ?apple 'apple') (OnBottomSide ?apple) (or (not (Is ?keys 'keys')) (Below ?apple ?keys)) (or (not (Is ?keys 'keys')) (LeftOf ?apple ?cup)) (or (not (Is ?keys 'keys')) (Is ?cup 'cup')) (or (not (Is ?keys 'keys')) (RightOf ?cup ?keys))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "cup",
+        "apple"
+    ]
+}

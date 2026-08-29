@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a hat, a plate, and a screwdriver. The plate is positioned on the bottom side of the image. The hat is aligned vertically with the plate, and the screwdriver is aligned horizontally with the plate.",
+    "dsl": "(exists ?hat (exists ?plate (exists ?screwdriver (and (Is ?hat 'hat') (Is ?plate 'plate') (Is ?screwdriver 'screwdriver') (OnBottomSide ?plate) (AlignedVertically ?hat ?plate) (AlignedHorizontally ?plate ?screwdriver)))))",
+    "cnf": "(exists ?hat (exists ?plate (exists ?screwdriver (and (Is ?hat 'hat') (AlignedVertically ?hat ?plate) (OnBottomSide ?plate) (AlignedHorizontally ?plate ?screwdriver) (Is ?plate 'plate') (Is ?screwdriver 'screwdriver')))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "plate",
+        "screwdriver"
+    ]
+}

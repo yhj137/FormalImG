@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A calculator, a pan, a pair of pliers, and a game controller are arranged horizontally in a sequence from left to right. For every camera present in the scene, it is positioned below the game controller, and to its right are a pair of scissors, a pen, a hammer, and a blue book, arranged horizontally in a sequence from left to right. The blue book is positioned on the bottom right side of the image.",
+    "dsl": "(exists ?calculator (exists ?pan (exists ?pliers (exists ?game_controller (and (Is ?calculator 'calculator') (Is ?pan 'pan') (Is ?pliers 'pliers') (Is ?game_controller 'game_controller') (RightOf ?pan ?calculator) (RightOf ?pliers ?pan) (RightOf ?game_controller ?pliers) (AlignedHorizontally ?calculator ?pan) (AlignedHorizontally ?pan ?pliers) (AlignedHorizontally ?pliers ?game_controller) (forall ?camera (implies (Is ?camera 'camera') (exists ?scissors (exists ?pen (exists ?hammer (exists ?book (and (Is ?scissors 'scissors') (Is ?pen 'pen') (Is ?hammer 'hammer') (Is ?book 'book') (Above ?game_controller ?camera) (RightOf ?scissors ?camera) (RightOf ?pen ?scissors) (RightOf ?hammer ?pen) (RightOf ?book ?hammer) (AlignedHorizontally ?camera ?scissors) (AlignedHorizontally ?scissors ?pen) (AlignedHorizontally ?pen ?hammer) (AlignedHorizontally ?hammer ?book) (Has ?book 'blue') (OnBottomSide ?book) (OnRightSide ?book)))))))))))))",
+    "cnf": "(exists ?calculator (exists ?pan (exists ?pliers (exists ?game_controller (forall ?camera (exists ?scissors (exists ?pen (exists ?hammer (exists ?book (and (Is ?calculator 'calculator') (RightOf ?pan ?calculator) (AlignedHorizontally ?calculator ?pan) (Is ?pan 'pan') (RightOf ?pliers ?pan) (AlignedHorizontally ?pan ?pliers) (Is ?pliers 'pliers') (RightOf ?game_controller ?pliers) (AlignedHorizontally ?pliers ?game_controller) (Is ?game_controller 'game_controller') (or (not (Is ?camera 'camera')) (Above ?game_controller ?camera)) (or (not (Is ?camera 'camera')) (Is ?book 'book')) (or (not (Is ?camera 'camera')) (RightOf ?scissors ?camera)) (or (not (Is ?camera 'camera')) (Is ?hammer 'hammer')) (or (not (Is ?camera 'camera')) (RightOf ?book ?hammer)) (or (not (Is ?camera 'camera')) (Is ?scissors 'scissors')) (or (not (Is ?camera 'camera')) (RightOf ?pen ?scissors)) (or (not (Is ?camera 'camera')) (Is ?pen 'pen')) (or (not (Is ?camera 'camera')) (RightOf ?hammer ?pen)) (or (not (Is ?camera 'camera')) (AlignedHorizontally ?camera ?scissors)) (or (not (Is ?camera 'camera')) (AlignedHorizontally ?pen ?hammer)) (or (not (Is ?camera 'camera')) (AlignedHorizontally ?hammer ?book)) (or (not (Is ?camera 'camera')) (AlignedHorizontally ?scissors ?pen)) (or (not (Is ?camera 'camera')) (Has ?book 'blue')) (or (not (Is ?camera 'camera')) (OnBottomSide ?book)) (or (not (Is ?camera 'camera')) (OnRightSide ?book))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "pliers",
+        "pen",
+        "game_controller",
+        "hammer",
+        "pan",
+        "calculator",
+        "camera",
+        "scissors"
+    ]
+}

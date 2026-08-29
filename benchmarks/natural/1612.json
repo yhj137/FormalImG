@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A yellow bus is positioned to the left of a white refrigerator. There is a glass bottle on the refrigerator. To the right of the refrigerator is a green sofa. A child is on the sofa, holding a metal spoon. A round basket sits next to the sofa, and inside the basket is a red toy car. Additionally, a clock is located to the right of the sofa.",
+    "dsl": "(exists ?bus (exists ?fridge (exists ?bottle (exists ?sofa (exists ?child (exists ?spoon (exists ?basket (exists ?toy_car (exists ?clock (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (Is ?fridge 'refrigerator') (HasColor ?fridge 'white') (LeftOf ?bus ?fridge) (Is ?bottle 'bottle') (HasMaterial ?bottle 'glass') (On ?bottle ?fridge) (Is ?sofa 'sofa') (HasColor ?sofa 'green') (RightOf ?sofa ?fridge) (Is ?child 'child') (On ?child ?sofa) (Is ?spoon 'spoon') (HasMaterial ?spoon 'metal') (Holding ?child ?spoon) (Is ?basket 'basket') (HasShape ?basket 'round') (NextTo ?basket ?sofa) (Is ?toy_car 'toy car') (HasColor ?toy_car 'red') (In ?toy_car ?basket) (Is ?clock 'clock') (RightOf ?clock ?sofa)))))))))))",
+    "cnf": "(exists ?bus (exists ?fridge (exists ?bottle (exists ?sofa (exists ?child (exists ?spoon (exists ?basket (exists ?toy_car (exists ?clock (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (LeftOf ?bus ?fridge) (HasColor ?fridge 'white') (On ?bottle ?fridge) (Is ?fridge 'refrigerator') (RightOf ?sofa ?fridge) (HasMaterial ?bottle 'glass') (HasColor ?sofa 'green') (On ?child ?sofa) (Is ?bottle 'bottle') (Is ?sofa 'sofa') (NextTo ?basket ?sofa) (Is ?child 'child') (Holding ?child ?spoon) (RightOf ?clock ?sofa) (HasShape ?basket 'round') (In ?toy_car ?basket) (HasMaterial ?spoon 'metal') (Is ?clock 'clock') (Is ?basket 'basket') (HasColor ?toy_car 'red') (Is ?spoon 'spoon') (Is ?toy_car 'toy car')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "sofa",
+        "toy car",
+        "bus",
+        "refrigerator",
+        "basket",
+        "clock",
+        "child",
+        "spoon"
+    ]
+}

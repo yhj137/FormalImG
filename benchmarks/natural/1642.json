@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden table supports every cup, a pan with a knife inside, a cake, and a monitor positioned to the right of the cake. To the left of the table is a sofa with a butterfly resting on it, and a chair stands next to the table.",
+    "dsl": "(exists ?t (and (Is ?t 'table') (HasMaterial ?t 'wooden') (forall ?c (implies (Is ?c 'cup') (On ?c ?t))) (exists ?s (and (Is ?s 'sofa') (LeftOf ?s ?t) (exists ?ch (and (Is ?ch 'chair') (NextTo ?ch ?t) (exists ?m (and (Is ?m 'monitor') (On ?m ?t) (exists ?ck (and (Is ?ck 'cake') (On ?ck ?t) (RightOf ?m ?ck) (exists ?p (and (Is ?p 'pan') (On ?p ?t) (exists ?k (and (Is ?k 'knife') (In ?k ?p) (exists ?b (and (Is ?b 'butterfly') (On ?b ?s)))))))))))))))))",
+    "cnf": "(exists ?t (forall ?c (exists ?s (exists ?ch (exists ?m (exists ?ck (exists ?p (exists ?k (exists ?b (and (Is ?t 'table') (HasMaterial ?t 'wooden') (or (not (Is ?c 'cup')) (On ?c ?t)) (LeftOf ?s ?t) (NextTo ?ch ?t) (Is ?s 'sofa') (On ?b ?s) (On ?m ?t) (Is ?ch 'chair') (Is ?b 'butterfly') (On ?ck ?t) (Is ?m 'monitor') (RightOf ?m ?ck) (On ?p ?t) (Is ?ck 'cake') (Is ?p 'pan') (In ?k ?p) (Is ?k 'knife')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pan",
+        "monitor",
+        "sofa",
+        "knife",
+        "cake",
+        "chair",
+        "butterfly",
+        "cup",
+        "table"
+    ]
+}

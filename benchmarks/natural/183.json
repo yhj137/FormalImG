@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo style scene where every wardrobe is wooden.",
+    "dsl": "(and (IsStyle 'photo') (forall ?w (implies (Is ?w 'wardrobe') (HasMaterial ?w 'wooden'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?w (or (not (Is ?w 'wardrobe')) (HasMaterial ?w 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a drill and a ruler. The drill is positioned on the right side of the image. The drill is larger than the ruler, and they are aligned vertically. Additionally, for every watch in the image, it is aligned vertically with the ruler.",
+    "dsl": "(exists ?d (exists ?r (and (Is ?d 'drill') (Is ?r 'ruler') (OnRightSide ?d) (LargerThan ?d ?r) (AlignedVertically ?d ?r) (forall ?w (implies (Is ?w 'watch') (AlignedVertically ?w ?r))))))",
+    "cnf": "(exists ?d (exists ?r (forall ?w (and (Is ?d 'drill') (OnRightSide ?d) (LargerThan ?d ?r) (AlignedVertically ?d ?r) (Is ?r 'ruler') (or (not (Is ?w 'watch')) (AlignedVertically ?w ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "drill",
+        "watch"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rusty bus contains every mirror in the scene.",
+    "dsl": "(exists ?b (and (Is ?b 'bus') (HasState ?b 'rusty') (forall ?m (implies (Is ?m 'mirror') (In ?m ?b)))))",
+    "cnf": "(exists ?b (forall ?m (and (Is ?b 'bus') (HasState ?b 'rusty') (or (not (Is ?m 'mirror')) (In ?m ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "bus",
+        "mirror"
+    ]
+}

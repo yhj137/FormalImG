@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack on the top side. For every lighter in the image, it is located below the backpack, aligned horizontally with keys to its left and a screwdriver to its right. Furthermore, for each such lighter, there exists a shirt to the left of the backpack (smaller than the backpack), a shoe below the shirt with a white sock to its left, and a bowl on the bottom side to the right of the shoe with a carrot above it.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?keys (exists ?screwdriver (exists ?shirt (exists ?shoe (exists ?sock (exists ?bowl (exists ?carrot (and (Is ?keys 'keys') (Is ?screwdriver 'screwdriver') (Is ?shirt 'shirt') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?bowl 'bowl') (Is ?carrot 'carrot') (Below ?lighter ?backpack) (LeftOf ?keys ?lighter) (LeftOf ?lighter ?screwdriver) (AlignedHorizontally ?keys ?lighter) (AlignedHorizontally ?lighter ?screwdriver) (LeftOf ?shirt ?backpack) (LargerThan ?backpack ?shirt) (Below ?shoe ?shirt) (LeftOf ?sock ?shoe) (Has ?sock 'white') (LeftOf ?shoe ?bowl) (OnBottomSide ?bowl) (Above ?carrot ?bowl)))))))))))))",
+    "cnf": "(exists ?backpack (forall ?lighter (exists ?keys (exists ?screwdriver (exists ?shirt (exists ?shoe (exists ?sock (exists ?bowl (exists ?carrot (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?backpack)) (or (not (Is ?lighter 'lighter')) (LeftOf ?shirt ?backpack)) (or (not (Is ?lighter 'lighter')) (Is ?carrot 'carrot')) (or (not (Is ?lighter 'lighter')) (LeftOf ?keys ?lighter)) (or (not (Is ?lighter 'lighter')) (LargerThan ?backpack ?shirt)) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?screwdriver)) (or (not (Is ?lighter 'lighter')) (Is ?shirt 'shirt')) (or (not (Is ?lighter 'lighter')) (Is ?bowl 'bowl')) (or (not (Is ?lighter 'lighter')) (Above ?carrot ?bowl)) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?screwdriver)) (or (not (Is ?lighter 'lighter')) (Is ?keys 'keys')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?keys ?lighter)) (or (not (Is ?lighter 'lighter')) (Below ?shoe ?shirt)) (or (not (Is ?lighter 'lighter')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?lighter 'lighter')) (Is ?shoe 'shoe')) (or (not (Is ?lighter 'lighter')) (Is ?sock 'sock')) (or (not (Is ?lighter 'lighter')) (LeftOf ?shoe ?bowl)) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?bowl)) (or (not (Is ?lighter 'lighter')) (LeftOf ?sock ?shoe)) (or (not (Is ?lighter 'lighter')) (Has ?sock 'white'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "sock",
+        "carrot",
+        "screwdriver",
+        "backpack",
+        "lighter",
+        "bowl",
+        "shoe",
+        "shirt"
+    ]
+}

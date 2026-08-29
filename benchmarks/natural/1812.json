@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a brown wardrobe with a closed umbrella next to it. To the right of the wardrobe stands a chair. On the chair sits a laptop, and next to the laptop is a black keyboard with headphones resting on it. To the right of the chair is a book with a key on it, located next to a round cake topped with a fork.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?u (exists ?c (exists ?l (exists ?kb (exists ?h (exists ?b (exists ?k (exists ?ck (exists ?f (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (Is ?u 'umbrella') (HasState ?u 'closed') (NextTo ?u ?w) (Is ?c 'chair') (RightOf ?c ?w) (Is ?l 'laptop') (On ?l ?c) (Is ?kb 'keyboard') (HasColor ?kb 'black') (NextTo ?kb ?l) (Is ?h 'headphones') (On ?h ?kb) (Is ?b 'book') (RightOf ?b ?c) (Is ?k 'key') (On ?k ?b) (Is ?ck 'cake') (HasShape ?ck 'round') (NextTo ?ck ?b) (Is ?f 'fork') (On ?f ?ck)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?u (exists ?c (exists ?l (exists ?kb (exists ?h (exists ?b (exists ?k (exists ?ck (exists ?f (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (NextTo ?u ?w) (RightOf ?c ?w) (HasState ?u 'closed') (Is ?c 'chair') (On ?l ?c) (Is ?u 'umbrella') (RightOf ?b ?c) (Is ?l 'laptop') (NextTo ?kb ?l) (Is ?b 'book') (On ?k ?b) (HasColor ?kb 'black') (On ?h ?kb) (NextTo ?ck ?b) (Is ?k 'key') (Is ?kb 'keyboard') (Is ?h 'headphones') (HasShape ?ck 'round') (On ?f ?ck) (Is ?ck 'cake') (Is ?f 'fork')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "umbrella",
+        "fork",
+        "headphones",
+        "laptop",
+        "cake",
+        "book",
+        "chair",
+        "wardrobe"
+    ]
+}

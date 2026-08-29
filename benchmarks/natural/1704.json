@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a woman holding a screwdriver standing next to an open wardrobe containing a jacket. A monitor, a lamp, and a keyboard are placed on the wardrobe, along with every key in the scene. A pair of glasses rests on the keyboard.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?wd (exists ?j (exists ?sd (and (Is ?w 'woman') (Is ?wd 'wardrobe') (HasState ?wd 'open') (Is ?j 'jacket') (Is ?sd 'screwdriver') (NextTo ?w ?wd) (In ?j ?wd) (Holding ?w ?sd) (forall ?k (implies (Is ?k 'key') (On ?k ?wd))) (exists ?m (exists ?kb (exists ?g (exists ?l (and (Is ?m 'monitor') (Is ?kb 'keyboard') (Is ?g 'glasses') (Is ?l 'lamp') (On ?m ?wd) (On ?kb ?wd) (On ?g ?kb) (On ?l ?wd))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?wd (exists ?j (exists ?sd (forall ?k (exists ?m (exists ?kb (exists ?g (exists ?l (and (Is ?w 'woman') (NextTo ?w ?wd) (Holding ?w ?sd) (HasState ?wd 'open') (In ?j ?wd) (Is ?sd 'screwdriver') (Is ?wd 'wardrobe') (or (not (Is ?k 'key')) (On ?k ?wd)) (Is ?j 'jacket') (On ?m ?wd) (On ?kb ?wd) (Is ?m 'monitor') (On ?l ?wd) (Is ?kb 'keyboard') (On ?g ?kb) (Is ?l 'lamp') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "jacket",
+        "glasses",
+        "monitor",
+        "lamp",
+        "screwdriver",
+        "wardrobe",
+        "woman"
+    ]
+}

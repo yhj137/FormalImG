@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a child. Every spoon is made of metal and located to the right of the child.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (and (Is ?c 'child') (forall ?s (implies (Is ?s 'spoon') (and (HasMaterial ?s 'metal') (RightOf ?s ?c)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (forall ?s (and (Is ?c 'child') (or (not (Is ?s 'spoon')) (RightOf ?s ?c)) (or (not (Is ?s 'spoon')) (HasMaterial ?s 'metal'))))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "child"
+    ]
+}

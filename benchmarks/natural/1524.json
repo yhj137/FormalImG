@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A child holds a metal fork and wears a hat with a butterfly resting on it. A blue backpack sits next to the child. To the right of the child is a ceramic bowl with all the fruit on it, while a round ball is positioned to the left.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?bo (exists ?fo (exists ?h (and (Is ?c 'child') (Is ?bo 'bowl') (Is ?fo 'fork') (Is ?h 'hat') (Holding ?c ?fo) (RightOf ?bo ?c) (HasMaterial ?fo 'metal') (HasMaterial ?bo 'ceramic') (On ?h ?c) (forall ?f (implies (Is ?f 'fruit') (On ?f ?bo))) (exists ?bu (exists ?bp (exists ?ba (and (Is ?bu 'butterfly') (Is ?bp 'backpack') (Is ?ba 'ball') (On ?bu ?h) (NextTo ?bp ?c) (HasColor ?bp 'blue') (LeftOf ?ba ?c) (HasShape ?ba 'round')))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?bo (exists ?fo (exists ?h (forall ?f (exists ?bu (exists ?bp (exists ?ba (and (Is ?c 'child') (Holding ?c ?fo) (RightOf ?bo ?c) (Is ?fo 'fork') (HasMaterial ?fo 'metal') (On ?h ?c) (Is ?bo 'bowl') (HasMaterial ?bo 'ceramic') (NextTo ?bp ?c) (Is ?h 'hat') (On ?bu ?h) (or (not (Is ?f 'fruit')) (On ?f ?bo)) (LeftOf ?ba ?c) (Is ?bp 'backpack') (HasColor ?bp 'blue') (Is ?bu 'butterfly') (Is ?ba 'ball') (HasShape ?ba 'round')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "fork",
+        "hat",
+        "backpack",
+        "ball",
+        "butterfly",
+        "fruit",
+        "child"
+    ]
+}

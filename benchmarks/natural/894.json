@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a table. Every apple is red and rests on the table. A woman is positioned to the left of the table, and a bowl containing a rusty knife sits on the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (On ?a ?t)))) (exists ?w (and (Is ?w 'woman') (LeftOf ?w ?t))) (exists ?b (and (Is ?b 'bowl') (On ?b ?t) (exists ?k (and (Is ?k 'knife') (HasState ?k 'rusty') (In ?k ?b))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?a (exists ?w (exists ?b (exists ?k (and (Is ?t 'table') (or (not (Is ?a 'apple')) (On ?a ?t)) (LeftOf ?w ?t) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (On ?b ?t) (Is ?w 'woman') (Is ?b 'bowl') (In ?k ?b) (HasState ?k 'rusty') (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "knife",
+        "woman",
+        "apple",
+        "table"
+    ]
+}

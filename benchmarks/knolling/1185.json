@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image with items arranged in a neat vertical column. The scene features a gray calculator at the top, positioned above a black phone. Below the phone are white headphones, which are above a red glove. A set of blue keys is located at the very bottom, below the glove. These five objects are aligned vertically, and the phone is larger than the keys. Additionally, strictly ensure that for every pen in the image, it is green and located above the keys, sharing the same vertical alignment.",
+    "dsl": "(exists ?calculator (exists ?phone (exists ?headphones (exists ?glove (exists ?keys (and (Is ?calculator 'calculator') (Has ?calculator 'gray') (Is ?phone 'phone') (Has ?phone 'black') (Is ?headphones 'headphones') (Has ?headphones 'white') (Is ?glove 'glove') (Has ?glove 'red') (Is ?keys 'keys') (Has ?keys 'blue') (Above ?calculator ?phone) (Above ?phone ?headphones) (Above ?headphones ?glove) (Above ?glove ?keys) (AlignedVertically ?calculator ?phone) (AlignedVertically ?phone ?headphones) (AlignedVertically ?headphones ?glove) (AlignedVertically ?glove ?keys) (LargerThan ?phone ?keys) (forall ?pen (implies (Is ?pen 'pen') (and (Has ?pen 'green') (Above ?pen ?keys) (AlignedVertically ?pen ?keys))))))))))",
+    "cnf": "(exists ?calculator (exists ?phone (exists ?headphones (exists ?glove (exists ?keys (forall ?pen (and (Is ?calculator 'calculator') (Has ?calculator 'gray') (Above ?calculator ?phone) (AlignedVertically ?calculator ?phone) (Has ?phone 'black') (Above ?phone ?headphones) (AlignedVertically ?phone ?headphones) (Is ?phone 'phone') (Has ?headphones 'white') (Above ?headphones ?glove) (LargerThan ?phone ?keys) (AlignedVertically ?headphones ?glove) (Is ?headphones 'headphones') (Has ?glove 'red') (Above ?glove ?keys) (AlignedVertically ?glove ?keys) (or (not (Is ?pen 'pen')) (Above ?pen ?keys)) (Is ?glove 'glove') (Has ?keys 'blue') (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?keys)) (or (not (Is ?pen 'pen')) (Has ?pen 'green')) (Is ?keys 'keys'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "pen",
+        "phone",
+        "calculator",
+        "headphones",
+        "glove"
+    ]
+}

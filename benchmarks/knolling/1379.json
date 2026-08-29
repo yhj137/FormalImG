@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image containing a monitor, a backpack, a suitcase, a handbag, a calculator, and a wrench. The monitor is positioned on the left side. The backpack, suitcase, handbag, calculator, and wrench are all aligned horizontally with the monitor. In terms of size, the suitcase is larger than the backpack, and the backpack is larger than the handbag. Additionally, for every pair of glasses in the scene, it must be aligned horizontally with the calculator, and the calculator must be larger than the glasses.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?suitcase (exists ?handbag (exists ?calculator (exists ?wrench (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (Is ?calculator 'calculator') (Is ?wrench 'wrench') (OnLeftSide ?monitor) (AlignedHorizontally ?monitor ?backpack) (AlignedHorizontally ?backpack ?suitcase) (AlignedHorizontally ?suitcase ?handbag) (AlignedHorizontally ?handbag ?calculator) (AlignedHorizontally ?calculator ?wrench) (LargerThan ?suitcase ?backpack) (LargerThan ?backpack ?handbag) (forall ?glasses (implies (Is ?glasses 'glasses') (and (AlignedHorizontally ?glasses ?calculator) (LargerThan ?calculator ?glasses)))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?suitcase (exists ?handbag (exists ?calculator (exists ?wrench (forall ?glasses (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (AlignedHorizontally ?monitor ?backpack) (Is ?backpack 'backpack') (AlignedHorizontally ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (Is ?suitcase 'suitcase') (AlignedHorizontally ?suitcase ?handbag) (LargerThan ?backpack ?handbag) (Is ?handbag 'handbag') (AlignedHorizontally ?handbag ?calculator) (Is ?calculator 'calculator') (AlignedHorizontally ?calculator ?wrench) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?glasses ?calculator)) (Is ?wrench 'wrench') (or (not (Is ?glasses 'glasses')) (LargerThan ?calculator ?glasses))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "wrench",
+        "handbag",
+        "backpack",
+        "calculator",
+        "monitor",
+        "suitcase"
+    ]
+}

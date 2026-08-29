@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is located to the left of a wooden bookshelf. Every key in the scene is on the bookshelf. A fluffy teddy bear is also on the bookshelf, with a pizza next to it and a red fish beside the pizza.",
+    "dsl": "(exists ?b (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (forall ?k (implies (Is ?k 'key') (On ?k ?b))) (exists ?w (and (Is ?w 'woman') (LeftOf ?w ?b) (exists ?t (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (On ?t ?b) (exists ?p (and (Is ?p 'pizza') (NextTo ?p ?t) (exists ?f (and (Is ?f 'fish') (HasColor ?f 'red') (NextTo ?f ?p)))))))))))",
+    "cnf": "(exists ?b (forall ?k (exists ?w (exists ?t (exists ?p (exists ?f (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (or (not (Is ?k 'key')) (On ?k ?b)) (LeftOf ?w ?b) (On ?t ?b) (Is ?w 'woman') (HasMaterial ?t 'fluffy') (NextTo ?p ?t) (Is ?t 'teddy bear') (Is ?p 'pizza') (NextTo ?f ?p) (HasColor ?f 'red') (Is ?f 'fish'))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "fish",
+        "pizza",
+        "teddy bear",
+        "woman",
+        "bookshelf"
+    ]
+}

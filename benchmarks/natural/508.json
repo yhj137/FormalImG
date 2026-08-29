@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style image featuring a woman holding a metal laptop, with all umbrellas located to her left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'woman') (forall ?u (implies (Is ?u 'umbrella') (LeftOf ?u ?w))) (exists ?l (and (Is ?l 'laptop') (HasMaterial ?l 'metal') (Holding ?w ?l))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?u (exists ?l (and (Is ?w 'woman') (or (not (Is ?u 'umbrella')) (LeftOf ?u ?w)) (Holding ?w ?l) (HasMaterial ?l 'metal') (Is ?l 'laptop'))))))",
+    "k": 3,
+    "object_classes": [
+        "umbrella",
+        "laptop",
+        "woman"
+    ]
+}

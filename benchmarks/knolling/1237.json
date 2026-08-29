@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the image, it is positioned on the top side. A handbag is located to the right of the jeans, a wallet is to the right of the handbag, and a phone is to the right of the wallet. Additionally, the scene includes a stapler aligned vertically with the handbag, a pair of glasses aligned vertically with the wallet, and a lemon aligned vertically with the phone.",
+    "dsl": "(forall ?jeans (implies (Is ?jeans 'jeans') (exists ?handbag (exists ?wallet (exists ?phone (exists ?stapler (exists ?glasses (exists ?lemon (and (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?stapler 'stapler') (Is ?glasses 'glasses') (Is ?lemon 'lemon') (OnTopSide ?jeans) (RightOf ?handbag ?jeans) (RightOf ?wallet ?handbag) (RightOf ?phone ?wallet) (AlignedVertically ?stapler ?handbag) (AlignedVertically ?glasses ?wallet) (AlignedVertically ?lemon ?phone))))))))))",
+    "cnf": "(forall ?jeans (exists ?handbag (exists ?wallet (exists ?phone (exists ?stapler (exists ?glasses (exists ?lemon (and (or (not (Is ?jeans 'jeans')) (Is ?handbag 'handbag')) (or (not (Is ?jeans 'jeans')) (Is ?wallet 'wallet')) (or (not (Is ?jeans 'jeans')) (RightOf ?handbag ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?phone 'phone')) (or (not (Is ?jeans 'jeans')) (RightOf ?wallet ?handbag)) (or (not (Is ?jeans 'jeans')) (OnTopSide ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?stapler 'stapler')) (or (not (Is ?jeans 'jeans')) (RightOf ?phone ?wallet)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?stapler ?handbag)) (or (not (Is ?jeans 'jeans')) (Is ?lemon 'lemon')) (or (not (Is ?jeans 'jeans')) (Is ?glasses 'glasses')) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?glasses ?wallet)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?lemon ?phone))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "lemon",
+        "phone",
+        "handbag",
+        "wallet",
+        "jeans"
+    ]
+}

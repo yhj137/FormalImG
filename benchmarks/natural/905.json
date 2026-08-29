@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a hat placed on a backpack. Every screwdriver is located next to the backpack. To the right of the backpack sits a teddy bear, with a metal lamp next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?h (and (Is ?b 'backpack') (Is ?h 'hat') (On ?h ?b) (forall ?s (implies (Is ?s 'screwdriver') (NextTo ?s ?b))) (exists ?t (exists ?l (and (Is ?t 'teddy bear') (Is ?l 'lamp') (RightOf ?t ?b) (HasState ?t 'sitting') (HasMaterial ?l 'metal') (NextTo ?l ?t))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?h (forall ?s (exists ?t (exists ?l (and (Is ?b 'backpack') (On ?h ?b) (or (not (Is ?s 'screwdriver')) (NextTo ?s ?b)) (Is ?h 'hat') (RightOf ?t ?b) (Is ?t 'teddy bear') (HasState ?t 'sitting') (NextTo ?l ?t) (HasMaterial ?l 'metal') (Is ?l 'lamp'))))))))",
+    "k": 5,
+    "object_classes": [
+        "backpack",
+        "teddy bear",
+        "lamp",
+        "screwdriver",
+        "hat"
+    ]
+}

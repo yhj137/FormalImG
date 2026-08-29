@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a person next to a table. All bottles are cylindrical and placed on the table. A basket is on the table, with an apple and a key next to it. A cat is also on the table. To the right of the table is a lion, with a plant next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?p (and (Is ?t 'table') (Is ?p 'person') (NextTo ?p ?t) (forall ?b (implies (Is ?b 'bottle') (and (HasShape ?b 'cylindrical') (On ?b ?t)))) (exists ?bsk (exists ?a (exists ?k (exists ?l (exists ?pl (exists ?c (and (Is ?bsk 'basket') (Is ?a 'apple') (Is ?k 'key') (Is ?l 'lion') (Is ?pl 'plant') (Is ?c 'cat') (On ?bsk ?t) (NextTo ?a ?bsk) (NextTo ?k ?bsk) (RightOf ?l ?t) (NextTo ?pl ?l) (On ?c ?t))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?p (forall ?b (exists ?bsk (exists ?a (exists ?k (exists ?l (exists ?pl (exists ?c (and (Is ?t 'table') (NextTo ?p ?t) (or (not (Is ?b 'bottle')) (On ?b ?t)) (Is ?p 'person') (On ?bsk ?t) (or (not (Is ?b 'bottle')) (HasShape ?b 'cylindrical')) (RightOf ?l ?t) (Is ?bsk 'basket') (NextTo ?a ?bsk) (On ?c ?t) (Is ?l 'lion') (NextTo ?pl ?l) (NextTo ?k ?bsk) (Is ?a 'apple') (Is ?c 'cat') (Is ?pl 'plant') (Is ?k 'key'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "cat",
+        "person",
+        "bottle",
+        "plant",
+        "table",
+        "lion",
+        "basket",
+        "apple",
+        "key"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a pan. For every phone in the image, it is black and located to the left of the pan. To the right of the pan, there is a drill. To the right of the drill, there is a bottle. The pan is visually larger than the bottle.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (forall ?phone (implies (Is ?phone 'phone') (and (Has ?phone 'black') (LeftOf ?phone ?pan)))) (exists ?drill (and (Is ?drill 'drill') (RightOf ?drill ?pan) (exists ?bottle (and (Is ?bottle 'bottle') (RightOf ?bottle ?drill) (LargerThan ?pan ?bottle)))))))",
+    "cnf": "(exists ?pan (forall ?phone (exists ?drill (exists ?bottle (and (Is ?pan 'pan') (or (not (Is ?phone 'phone')) (LeftOf ?phone ?pan)) (RightOf ?drill ?pan) (or (not (Is ?phone 'phone')) (Has ?phone 'black')) (LargerThan ?pan ?bottle) (Is ?drill 'drill') (RightOf ?bottle ?drill) (Is ?bottle 'bottle'))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "drill",
+        "pan",
+        "phone"
+    ]
+}

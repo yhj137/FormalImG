@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard positioned on the left side. Below the keyboard, there is a book, a camera, and a remote arranged in a vertical column, where all four items are aligned vertically. To the right of the keyboard is a mouse, which is smaller than the keyboard. To the right of the book is a wrench, which is smaller than the book. To the right of the camera is a fork, which is smaller than the camera. To the right of the remote is a lighter, which is smaller than the remote. Finally, for every lemon in the image, it is located to the right of the lighter.",
+    "dsl": "(exists ?kb (exists ?bk (exists ?cam (exists ?rem (exists ?ms (exists ?wr (exists ?fk (exists ?lg (and (Is ?kb 'keyboard') (OnLeftSide ?kb) (Is ?bk 'book') (Below ?bk ?kb) (AlignedVertically ?bk ?kb) (Is ?cam 'camera') (Below ?cam ?bk) (AlignedVertically ?cam ?bk) (Is ?rem 'remote') (Below ?rem ?cam) (AlignedVertically ?rem ?cam) (Is ?ms 'mouse') (RightOf ?ms ?kb) (SmallerThan ?ms ?kb) (Is ?wr 'wrench') (RightOf ?wr ?bk) (SmallerThan ?wr ?bk) (Is ?fk 'fork') (RightOf ?fk ?cam) (SmallerThan ?fk ?cam) (Is ?lg 'lighter') (RightOf ?lg ?rem) (SmallerThan ?lg ?rem) (forall ?lem (implies (Is ?lem 'lemon') (RightOf ?lem ?lg))))))))))))",
+    "cnf": "(exists ?kb (exists ?bk (exists ?cam (exists ?rem (exists ?ms (exists ?wr (exists ?fk (exists ?lg (forall ?lem (and (Is ?kb 'keyboard') (OnLeftSide ?kb) (Below ?bk ?kb) (AlignedVertically ?bk ?kb) (Is ?bk 'book') (RightOf ?ms ?kb) (Below ?cam ?bk) (SmallerThan ?ms ?kb) (Is ?ms 'mouse') (AlignedVertically ?cam ?bk) (Is ?cam 'camera') (RightOf ?wr ?bk) (Below ?rem ?cam) (SmallerThan ?wr ?bk) (Is ?wr 'wrench') (AlignedVertically ?rem ?cam) (Is ?rem 'remote') (RightOf ?fk ?cam) (RightOf ?lg ?rem) (SmallerThan ?fk ?cam) (Is ?fk 'fork') (SmallerThan ?lg ?rem) (Is ?lg 'lighter') (or (not (Is ?lem 'lemon')) (RightOf ?lem ?lg))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "remote",
+        "keyboard",
+        "wrench",
+        "lemon",
+        "camera",
+        "fork",
+        "lighter",
+        "mouse"
+    ]
+}

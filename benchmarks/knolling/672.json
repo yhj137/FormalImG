@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone present in the scene, it is positioned on the top side of the image. Positioned to the left of the phone are keys, and to the right of the phone is a screwdriver. Furthermore, a bowl is located to the right of the screwdriver, and this bowl is visually larger than the phone.",
+    "dsl": "(and (forall ?phone (implies (Is ?phone 'phone') (exists ?keys (exists ?screwdriver (exists ?bowl (and (Is ?keys 'keys') (Is ?screwdriver 'screwdriver') (Is ?bowl 'bowl') (OnTopSide ?phone) (LeftOf ?keys ?phone) (RightOf ?screwdriver ?phone) (RightOf ?bowl ?screwdriver) (LargerThan ?bowl ?phone))))))))",
+    "cnf": "(forall ?phone (exists ?keys (exists ?screwdriver (exists ?bowl (and (or (not (Is ?phone 'phone')) (Is ?keys 'keys')) (or (not (Is ?phone 'phone')) (LeftOf ?keys ?phone)) (or (not (Is ?phone 'phone')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?phone 'phone')) (OnTopSide ?phone)) (or (not (Is ?phone 'phone')) (RightOf ?screwdriver ?phone)) (or (not (Is ?phone 'phone')) (Is ?bowl 'bowl')) (or (not (Is ?phone 'phone')) (RightOf ?bowl ?screwdriver)) (or (not (Is ?phone 'phone')) (LargerThan ?bowl ?phone)))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "keys",
+        "phone",
+        "screwdriver"
+    ]
+}

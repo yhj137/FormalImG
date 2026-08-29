@@ -1,0 +1,9 @@
+{
+    "prompt": "This is a cartoon style image featuring a wooden wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A pair of broken glasses in pixel art style.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?g (and (Is ?g 'glasses') (HasState ?g 'broken'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?g (and (Is ?g 'glasses') (HasState ?g 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

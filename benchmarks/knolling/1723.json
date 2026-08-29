@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a laptop located on the top side of the image, with a bowl positioned to its right. Below the laptop is a black pan, and to the right of the pan lies a pair of blue jeans. A handbag, which is larger than the bowl, is placed on the bottom side of the scene. For every fork present, it is positioned below the bowl. Furthermore, there is a lighter to the right of the fork, a pair of glasses below the lighter, and a wrench to the right of the glasses.",
+    "dsl": "(exists ?laptop (exists ?pan (exists ?jeans (exists ?handbag (exists ?bowl (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?pan 'pan') (Has ?pan 'black') (Below ?pan ?laptop) (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?jeans ?pan) (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Is ?bowl 'bowl') (RightOf ?bowl ?laptop) (LargerThan ?handbag ?bowl) (forall ?fork (implies (Is ?fork 'fork') (exists ?lighter (exists ?glasses (exists ?wrench (and (Is ?lighter 'lighter') (Is ?glasses 'glasses') (Is ?wrench 'wrench') (Below ?fork ?bowl) (RightOf ?lighter ?fork) (Above ?lighter ?glasses) (RightOf ?wrench ?glasses)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?pan (exists ?jeans (exists ?handbag (exists ?bowl (forall ?fork (exists ?lighter (exists ?glasses (exists ?wrench (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?pan ?laptop) (RightOf ?bowl ?laptop) (Has ?pan 'black') (RightOf ?jeans ?pan) (Is ?bowl 'bowl') (LargerThan ?handbag ?bowl) (Is ?pan 'pan') (Has ?jeans 'blue') (OnBottomSide ?handbag) (or (not (Is ?fork 'fork')) (Below ?fork ?bowl)) (Is ?jeans 'jeans') (Is ?handbag 'handbag') (or (not (Is ?fork 'fork')) (Is ?wrench 'wrench')) (or (not (Is ?fork 'fork')) (RightOf ?lighter ?fork)) (or (not (Is ?fork 'fork')) (Is ?glasses 'glasses')) (or (not (Is ?fork 'fork')) (RightOf ?wrench ?glasses)) (or (not (Is ?fork 'fork')) (Above ?lighter ?glasses)) (or (not (Is ?fork 'fork')) (Is ?lighter 'lighter'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "wrench",
+        "fork",
+        "pan",
+        "handbag",
+        "jeans",
+        "lighter",
+        "bowl"
+    ]
+}

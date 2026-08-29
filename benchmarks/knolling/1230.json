@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every handbag in the scene, there is a wallet located below it which is smaller than the handbag. A remote is positioned to the right of the wallet, and a mouse is located below the remote on the bottom side of the image. Furthermore, a knife is placed to the right of the handbag, a ruler is below the knife, and a bowl is to the right of the ruler, positioned on the right side of the scene.",
+    "dsl": "(forall ?handbag (implies (Is ?handbag 'handbag') (exists ?wallet (exists ?remote (exists ?mouse (exists ?knife (exists ?ruler (exists ?bowl (and (Is ?wallet 'wallet') (Is ?remote 'remote') (Is ?mouse 'mouse') (Is ?knife 'knife') (Is ?ruler 'ruler') (Is ?bowl 'bowl') (Below ?wallet ?handbag) (SmallerThan ?wallet ?handbag) (RightOf ?remote ?wallet) (Below ?mouse ?remote) (OnBottomSide ?mouse) (RightOf ?knife ?handbag) (Below ?ruler ?knife) (RightOf ?bowl ?ruler) (OnRightSide ?bowl))))))))))",
+    "cnf": "(forall ?handbag (exists ?wallet (exists ?remote (exists ?mouse (exists ?knife (exists ?ruler (exists ?bowl (and (or (not (Is ?handbag 'handbag')) (Is ?wallet 'wallet')) (or (not (Is ?handbag 'handbag')) (Below ?wallet ?handbag)) (or (not (Is ?handbag 'handbag')) (Is ?remote 'remote')) (or (not (Is ?handbag 'handbag')) (SmallerThan ?wallet ?handbag)) (or (not (Is ?handbag 'handbag')) (Is ?bowl 'bowl')) (or (not (Is ?handbag 'handbag')) (Is ?mouse 'mouse')) (or (not (Is ?handbag 'handbag')) (RightOf ?remote ?wallet)) (or (not (Is ?handbag 'handbag')) (Is ?ruler 'ruler')) (or (not (Is ?handbag 'handbag')) (RightOf ?bowl ?ruler)) (or (not (Is ?handbag 'handbag')) (Is ?knife 'knife')) (or (not (Is ?handbag 'handbag')) (Below ?mouse ?remote)) (or (not (Is ?handbag 'handbag')) (Below ?ruler ?knife)) (or (not (Is ?handbag 'handbag')) (OnRightSide ?bowl)) (or (not (Is ?handbag 'handbag')) (RightOf ?knife ?handbag)) (or (not (Is ?handbag 'handbag')) (OnBottomSide ?mouse))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "handbag",
+        "wallet",
+        "mouse",
+        "knife",
+        "bowl"
+    ]
+}

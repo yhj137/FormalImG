@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a lion. Every jacket in the scene is on the lion, and the lion is holding a round key to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (and (Is ?l 'lion') (forall ?j (implies (Is ?j 'jacket') (On ?j ?l))) (exists ?k (and (Is ?k 'key') (HasShape ?k 'round') (Holding ?l ?k) (LeftOf ?k ?l))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (forall ?j (exists ?k (and (Is ?l 'lion') (or (not (Is ?j 'jacket')) (On ?j ?l)) (Holding ?l ?k) (LeftOf ?k ?l) (HasShape ?k 'round') (Is ?k 'key'))))))",
+    "k": 3,
+    "object_classes": [
+        "key",
+        "jacket",
+        "lion"
+    ]
+}

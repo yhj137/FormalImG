@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene with a child holding a metal toy car to the right of an open leather backpack containing a laptop.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?t (exists ?b (exists ?l (and (Is ?c 'child') (Is ?t 'toy car') (Is ?b 'backpack') (Is ?l 'laptop') (HasMaterial ?t 'metal') (Holding ?c ?t) (HasMaterial ?b 'leather') (HasState ?b 'open') (RightOf ?c ?b) (In ?l ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?t (exists ?b (exists ?l (and (Is ?c 'child') (Holding ?c ?t) (RightOf ?c ?b) (HasMaterial ?t 'metal') (HasState ?b 'open') (In ?l ?b) (Is ?t 'toy car') (HasMaterial ?b 'leather') (Is ?l 'laptop') (Is ?b 'backpack')))))))",
+    "k": 4,
+    "object_classes": [
+        "backpack",
+        "toy car",
+        "laptop",
+        "child"
+    ]
+}

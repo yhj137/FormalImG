@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every wrench positioned on the right side of the scene, there is a spoon and a lighter. The spoon is aligned horizontally with the wrench. The lighter is located above the wrench, and the spoon is positioned below the lighter.",
+    "dsl": "(and (forall ?w (implies (and (Is ?w 'wrench') (OnRightSide ?w)) (exists ?s (exists ?l (and (Is ?s 'spoon') (Is ?l 'lighter') (AlignedHorizontally ?w ?s) (Above ?l ?w) (Below ?s ?l)))))))",
+    "cnf": "(forall ?w (exists ?s (exists ?l (and (or (not (Is ?w 'wrench')) (not (OnRightSide ?w)) (Is ?s 'spoon')) (or (not (Is ?w 'wrench')) (not (OnRightSide ?w)) (Is ?l 'lighter')) (or (not (Is ?w 'wrench')) (not (OnRightSide ?w)) (AlignedHorizontally ?w ?s)) (or (not (Is ?w 'wrench')) (not (OnRightSide ?w)) (Above ?l ?w)) (or (not (Is ?w 'wrench')) (not (OnRightSide ?w)) (Below ?s ?l))))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "lighter",
+        "spoon"
+    ]
+}

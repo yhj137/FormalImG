@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every bench has a round bowl next to it.",
+    "dsl": "(forall ?x (implies (Is ?x 'bench') (exists ?y (and (Is ?y 'bowl') (HasShape ?y 'round') (NextTo ?y ?x)))))",
+    "cnf": "(forall ?x (exists ?y (and (or (not (Is ?x 'bench')) (Is ?y 'bowl')) (or (not (Is ?x 'bench')) (HasShape ?y 'round')) (or (not (Is ?x 'bench')) (NextTo ?y ?x)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "bench"
+    ]
+}

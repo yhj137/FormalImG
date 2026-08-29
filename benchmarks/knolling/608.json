@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a hammer, a plate, a wallet, and a carrot. The hammer is situated on the top side of the layout. The plate is placed below the hammer. The wallet is positioned below the plate and is smaller than the plate. The carrot is arranged below the wallet.",
+    "dsl": "(exists ?hammer (exists ?plate (exists ?wallet (exists ?carrot (and (Is ?hammer 'hammer') (Is ?plate 'plate') (Is ?wallet 'wallet') (Is ?carrot 'carrot') (OnTopSide ?hammer) (Above ?hammer ?plate) (Below ?wallet ?plate) (SmallerThan ?wallet ?plate) (Below ?carrot ?wallet))))))",
+    "cnf": "(exists ?hammer (exists ?plate (exists ?wallet (exists ?carrot (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (Above ?hammer ?plate) (Is ?plate 'plate') (Below ?wallet ?plate) (SmallerThan ?wallet ?plate) (Is ?wallet 'wallet') (Below ?carrot ?wallet) (Is ?carrot 'carrot'))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "carrot",
+        "plate",
+        "wallet"
+    ]
+}

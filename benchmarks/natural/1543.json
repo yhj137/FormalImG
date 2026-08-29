@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene inside a house features a pizza with a fork on it. A sliced fish sits to the left of the pizza, while a yellow banana lies to the right. Every apple is red and positioned next to the banana. Glasses are located next to the fish, and a metal hammer sits to the right of the banana.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?f (exists ?fi (exists ?b (and (Is ?h 'house') (Is ?p 'pizza') (Is ?f 'fork') (Is ?fi 'fish') (Is ?b 'banana') (In ?p ?h) (On ?f ?p) (HasState ?fi 'sliced') (LeftOf ?fi ?p) (HasColor ?b 'yellow') (RightOf ?b ?p) (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (NextTo ?a ?b)))) (exists ?g (exists ?hm (and (Is ?g 'glasses') (Is ?hm 'hammer') (NextTo ?g ?fi) (HasMaterial ?hm 'metal') (RightOf ?hm ?b)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?f (exists ?fi (exists ?b (forall ?a (exists ?g (exists ?hm (and (Is ?h 'house') (In ?p ?h) (Is ?p 'pizza') (On ?f ?p) (LeftOf ?fi ?p) (Is ?f 'fork') (RightOf ?b ?p) (HasState ?fi 'sliced') (NextTo ?g ?fi) (HasColor ?b 'yellow') (or (not (Is ?a 'apple')) (NextTo ?a ?b)) (Is ?fi 'fish') (Is ?g 'glasses') (Is ?b 'banana') (RightOf ?hm ?b) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (HasMaterial ?hm 'metal') (Is ?hm 'hammer')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "fish",
+        "fork",
+        "glasses",
+        "pizza",
+        "hammer",
+        "apple",
+        "banana"
+    ]
+}

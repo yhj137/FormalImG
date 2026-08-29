@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt located on the top side of the image, there is a drill positioned to its right. Furthermore, dependent on this arrangement, there is a ruler located on the bottom side of the image which is smaller than the shirt, and a pair of scissors is placed to the left of the ruler.",
+    "dsl": "(forall ?shirt (implies (and (Is ?shirt 'shirt') (OnTopSide ?shirt)) (exists ?drill (exists ?ruler (exists ?scissors (and (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?scissors 'scissors') (RightOf ?drill ?shirt) (OnBottomSide ?ruler) (SmallerThan ?ruler ?shirt) (LeftOf ?scissors ?ruler)))))))",
+    "cnf": "(forall ?shirt (exists ?drill (exists ?ruler (exists ?scissors (and (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?drill 'drill')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?ruler 'ruler')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (RightOf ?drill ?shirt)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?scissors 'scissors')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (OnBottomSide ?ruler)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (LeftOf ?scissors ?ruler)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (SmallerThan ?ruler ?shirt)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "drill",
+        "scissors",
+        "shirt"
+    ]
+}

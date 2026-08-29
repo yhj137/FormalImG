@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every bird is perched on a rusty pan held by a person standing next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bird') (exists ?p (exists ?pn (and (Is ?p 'person') (Is ?pn 'pan') (HasState ?pn 'rusty') (Holding ?p ?pn) (NextTo ?p ?b) (On ?b ?pn)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?p (exists ?pn (and (or (not (Is ?b 'bird')) (Is ?p 'person')) (or (not (Is ?b 'bird')) (Holding ?p ?pn)) (or (not (Is ?b 'bird')) (Is ?pn 'pan')) (or (not (Is ?b 'bird')) (NextTo ?p ?b)) (or (not (Is ?b 'bird')) (HasState ?pn 'rusty')) (or (not (Is ?b 'bird')) (On ?b ?pn)))))))",
+    "k": 3,
+    "object_classes": [
+        "bird",
+        "pan",
+        "person"
+    ]
+}

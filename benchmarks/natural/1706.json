@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk style scene, a woman sits on a plastic chair holding a phone, with a metal refrigerator positioned next to the chair. Every flower in the scene is pink and placed on the refrigerator, alongside a monitor. A lamp sits next to the monitor, and a book lies beside the lamp. Inside the refrigerator, there is a fish.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?p (exists ?r (and (Is ?w 'woman') (Is ?c 'chair') (HasMaterial ?c 'plastic') (Is ?p 'phone') (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (On ?w ?c) (Holding ?w ?p) (NextTo ?r ?c) (forall ?fl (implies (Is ?fl 'flower') (and (HasColor ?fl 'pink') (On ?fl ?r)))) (exists ?m (exists ?l (exists ?f (exists ?b (and (Is ?m 'monitor') (Is ?l 'lamp') (Is ?f 'fish') (Is ?b 'book') (On ?m ?r) (NextTo ?l ?m) (In ?f ?r) (NextTo ?b ?l))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?p (exists ?r (forall ?fl (exists ?m (exists ?l (exists ?f (exists ?b (and (Is ?w 'woman') (On ?w ?c) (Holding ?w ?p) (HasMaterial ?c 'plastic') (NextTo ?r ?c) (Is ?p 'phone') (Is ?c 'chair') (HasMaterial ?r 'metal') (or (not (Is ?fl 'flower')) (On ?fl ?r)) (Is ?r 'refrigerator') (On ?m ?r) (or (not (Is ?fl 'flower')) (HasColor ?fl 'pink')) (In ?f ?r) (Is ?m 'monitor') (NextTo ?l ?m) (Is ?f 'fish') (Is ?l 'lamp') (NextTo ?b ?l) (Is ?b 'book'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "monitor",
+        "fish",
+        "lamp",
+        "chair",
+        "book",
+        "refrigerator",
+        "phone",
+        "woman",
+        "flower"
+    ]
+}

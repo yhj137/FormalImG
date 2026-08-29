@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop, a handbag, a shirt, a drill, a bottle, a glove, glasses, and a carrot, organized in a single horizontal row on the top side of the image. The laptop is positioned to the left of the handbag, which is to the left of the shirt, then the drill, bottle, glove, glasses, and carrot follow in sequence to the right; each adjacent pair is aligned horizontally. The laptop is larger than the handbag, and the glasses are smaller than the glove. Additionally, for every sock present in the scene, there is a fork to its left. The sock is smaller than the glove, the fork is smaller than the sock, and they are aligned horizontally.",
+    "dsl": "(exists ?laptop (exists ?handbag (exists ?shirt (exists ?drill (exists ?bottle (exists ?glove (exists ?glasses (exists ?carrot (and (Is ?laptop 'laptop') (Is ?handbag 'handbag') (Is ?shirt 'shirt') (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?glove 'glove') (Is ?glasses 'glasses') (Is ?carrot 'carrot') (OnTopSide ?laptop) (LeftOf ?laptop ?handbag) (LeftOf ?handbag ?shirt) (LeftOf ?shirt ?drill) (LeftOf ?drill ?bottle) (LeftOf ?bottle ?glove) (LeftOf ?glove ?glasses) (LeftOf ?glasses ?carrot) (AlignedHorizontally ?laptop ?handbag) (AlignedHorizontally ?handbag ?shirt) (AlignedHorizontally ?shirt ?drill) (AlignedHorizontally ?drill ?bottle) (AlignedHorizontally ?bottle ?glove) (AlignedHorizontally ?glove ?glasses) (AlignedHorizontally ?glasses ?carrot) (LargerThan ?laptop ?handbag) (SmallerThan ?glasses ?glove) (forall ?sock (implies (Is ?sock 'sock') (exists ?fork (and (Is ?fork 'fork') (LeftOf ?fork ?sock) (AlignedHorizontally ?fork ?sock) (SmallerThan ?sock ?glove) (SmallerThan ?fork ?sock))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (exists ?shirt (exists ?drill (exists ?bottle (exists ?glove (exists ?glasses (exists ?carrot (forall ?sock (exists ?fork (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (LeftOf ?laptop ?handbag) (AlignedHorizontally ?laptop ?handbag) (Is ?handbag 'handbag') (LeftOf ?handbag ?shirt) (LargerThan ?laptop ?handbag) (AlignedHorizontally ?handbag ?shirt) (Is ?shirt 'shirt') (LeftOf ?shirt ?drill) (AlignedHorizontally ?shirt ?drill) (Is ?drill 'drill') (LeftOf ?drill ?bottle) (AlignedHorizontally ?drill ?bottle) (Is ?bottle 'bottle') (LeftOf ?bottle ?glove) (AlignedHorizontally ?bottle ?glove) (Is ?glove 'glove') (LeftOf ?glove ?glasses) (AlignedHorizontally ?glove ?glasses) (Is ?glasses 'glasses') (LeftOf ?glasses ?carrot) (SmallerThan ?glasses ?glove) (AlignedHorizontally ?glasses ?carrot) (Is ?carrot 'carrot') (or (not (Is ?sock 'sock')) (SmallerThan ?sock ?glove)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?fork ?sock)) (or (not (Is ?sock 'sock')) (SmallerThan ?fork ?sock)) (or (not (Is ?sock 'sock')) (LeftOf ?fork ?sock)) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "sock",
+        "carrot",
+        "drill",
+        "handbag",
+        "fork",
+        "bottle",
+        "glove",
+        "shirt"
+    ]
+}

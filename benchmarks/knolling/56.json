@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hammer positioned on the left side.",
+    "dsl": "(exists ?hammer (and (Is ?hammer 'hammer') (OnLeftSide ?hammer)))",
+    "cnf": "(exists ?hammer (and (Is ?hammer 'hammer') (OnLeftSide ?hammer)))",
+    "k": 1,
+    "object_classes": [
+        "hammer"
+    ]
+}

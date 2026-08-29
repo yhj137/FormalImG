@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A red sock is located on the top side of the image. Positioned below the red sock are black headphones. A watch is placed to the left of the headphones. Furthermore, for every remote in the scene, it is located above the watch.",
+    "dsl": "(exists ?s (exists ?h (exists ?w (and (Is ?s 'sock') (Has ?s 'red') (OnTopSide ?s) (Is ?h 'headphones') (Has ?h 'black') (Below ?h ?s) (Is ?w 'watch') (LeftOf ?w ?h) (forall ?r (implies (Is ?r 'remote') (Above ?r ?w)))))))",
+    "cnf": "(exists ?s (exists ?h (exists ?w (forall ?r (and (Is ?s 'sock') (Has ?s 'red') (OnTopSide ?s) (Below ?h ?s) (Has ?h 'black') (LeftOf ?w ?h) (Is ?h 'headphones') (Is ?w 'watch') (or (not (Is ?r 'remote')) (Above ?r ?w)))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "watch",
+        "remote",
+        "sock"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For any laptop located on the right side of the image, there is a vertically aligned column of items that is also vertically aligned with the laptop, specifically containing a handbag, a phone, a calculator, a watch, a donut, and a spoon. In terms of size, the phone is smaller than the laptop, the watch is smaller than the phone, the calculator is smaller than the handbag, and the spoon is smaller than the donut.",
+    "dsl": "(forall ?laptop (implies (and (Is ?laptop 'laptop') (OnRightSide ?laptop)) (exists ?handbag (exists ?phone (exists ?calculator (exists ?watch (exists ?donut (exists ?spoon (and (Is ?handbag 'handbag') (Is ?phone 'phone') (Is ?calculator 'calculator') (Is ?watch 'watch') (Is ?donut 'donut') (Is ?spoon 'spoon') (AlignedVertically ?laptop ?handbag) (AlignedVertically ?handbag ?phone) (AlignedVertically ?phone ?calculator) (AlignedVertically ?calculator ?watch) (AlignedVertically ?watch ?donut) (AlignedVertically ?donut ?spoon) (SmallerThan ?phone ?laptop) (SmallerThan ?watch ?phone) (SmallerThan ?calculator ?handbag) (SmallerThan ?spoon ?donut))))))))))",
+    "cnf": "(forall ?laptop (exists ?handbag (exists ?phone (exists ?calculator (exists ?watch (exists ?donut (exists ?spoon (and (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?handbag 'handbag')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?laptop ?handbag)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?phone 'phone')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?handbag ?phone)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?spoon 'spoon')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?calculator 'calculator')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (SmallerThan ?calculator ?handbag)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?phone ?calculator)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?donut 'donut')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?donut ?spoon)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (Is ?watch 'watch')) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (SmallerThan ?watch ?phone)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (SmallerThan ?spoon ?donut)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?calculator ?watch)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (SmallerThan ?phone ?laptop)) (or (not (Is ?laptop 'laptop')) (not (OnRightSide ?laptop)) (AlignedVertically ?watch ?donut))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "phone",
+        "watch",
+        "handbag",
+        "calculator",
+        "spoon",
+        "donut"
+    ]
+}

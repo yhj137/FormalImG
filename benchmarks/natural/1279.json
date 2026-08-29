@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A horse stands to the left of an open, yellow umbrella containing a phone. All butterflies are flying above the horse. To the right of the umbrella sits a turned-on monitor with a sandwich on top, and a clock is placed to the right of the monitor.",
+    "dsl": "(exists ?h (exists ?u (and (Is ?h 'horse') (Is ?u 'umbrella') (HasState ?u 'open') (HasColor ?u 'yellow') (LeftOf ?h ?u) (forall ?b (implies (Is ?b 'butterfly') (Above ?b ?h))) (exists ?p (exists ?m (exists ?s (exists ?c (and (Is ?p 'phone') (Is ?m 'monitor') (HasState ?m 'on') (Is ?s 'sandwich') (Is ?c 'clock') (In ?p ?u) (RightOf ?m ?u) (On ?s ?m) (RightOf ?c ?m)))))))))",
+    "cnf": "(exists ?h (exists ?u (forall ?b (exists ?p (exists ?m (exists ?s (exists ?c (and (Is ?h 'horse') (LeftOf ?h ?u) (or (not (Is ?b 'butterfly')) (Above ?b ?h)) (HasColor ?u 'yellow') (In ?p ?u) (HasState ?u 'open') (RightOf ?m ?u) (Is ?p 'phone') (Is ?u 'umbrella') (HasState ?m 'on') (On ?s ?m) (Is ?m 'monitor') (RightOf ?c ?m) (Is ?s 'sandwich') (Is ?c 'clock')))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "monitor",
+        "sandwich",
+        "butterfly",
+        "phone",
+        "horse",
+        "clock"
+    ]
+}

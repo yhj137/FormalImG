@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a bench where a sitting teddy bear holds a fork. A round plate is next to the bear, and beside the plate is a bowl containing glasses. An open wardrobe stands next to the bench, containing all the headphones. A bookshelf stands next to the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?be (exists ?tb (exists ?f (exists ?p (exists ?bo (exists ?g (exists ?w (and (Is ?be 'bench') (Is ?tb 'teddy bear') (HasState ?tb 'sitting') (On ?tb ?be) (Is ?f 'fork') (Holding ?tb ?f) (Is ?p 'plate') (HasShape ?p 'round') (NextTo ?p ?tb) (Is ?bo 'bowl') (NextTo ?bo ?p) (Is ?g 'glasses') (In ?g ?bo) (Is ?w 'wardrobe') (HasState ?w 'open') (NextTo ?w ?be) (forall ?h (implies (Is ?h 'headphones') (In ?h ?w))) (exists ?bs (and (Is ?bs 'bookshelf') (NextTo ?bs ?w))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?be (exists ?tb (exists ?f (exists ?p (exists ?bo (exists ?g (exists ?w (forall ?h (exists ?bs (and (Is ?be 'bench') (On ?tb ?be) (NextTo ?w ?be) (HasState ?tb 'sitting') (Holding ?tb ?f) (HasState ?w 'open') (or (not (Is ?h 'headphones')) (In ?h ?w)) (Is ?tb 'teddy bear') (NextTo ?p ?tb) (Is ?f 'fork') (Is ?w 'wardrobe') (NextTo ?bs ?w) (HasShape ?p 'round') (NextTo ?bo ?p) (Is ?bs 'bookshelf') (Is ?p 'plate') (Is ?bo 'bowl') (In ?g ?bo) (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "bench",
+        "fork",
+        "plate",
+        "glasses",
+        "teddy bear",
+        "bowl",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

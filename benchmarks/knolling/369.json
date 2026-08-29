@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a stapler positioned on the top side of the layout. Additionally, for every pair of scissors in the scene, it is visually smaller than the stapler.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (forall ?scissors (implies (Is ?scissors 'scissors') (SmallerThan ?scissors ?stapler)))))",
+    "cnf": "(exists ?stapler (forall ?scissors (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (or (not (Is ?scissors 'scissors')) (SmallerThan ?scissors ?stapler)))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "stapler"
+    ]
+}

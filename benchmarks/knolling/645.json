@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every red stapler present in the scene, there is a sequence of three other objects: a gray knife, a black calculator, and a blue tie. The red stapler is positioned to the left of the gray knife, the gray knife is to the left of the black calculator, and the black calculator is to the left of the blue tie. Additionally, the gray knife is visually smaller than the blue tie.",
+    "dsl": "(forall ?s (implies (and (Is ?s 'stapler') (Has ?s 'red')) (exists ?k (exists ?c (exists ?t (and (Is ?k 'knife') (Has ?k 'gray') (Is ?c 'calculator') (Has ?c 'black') (Is ?t 'tie') (Has ?t 'blue') (LeftOf ?s ?k) (LeftOf ?k ?c) (LeftOf ?c ?t) (SmallerThan ?k ?t)))))))",
+    "cnf": "(forall ?s (exists ?k (exists ?c (exists ?t (and (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Is ?k 'knife')) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Has ?k 'gray')) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (LeftOf ?s ?k)) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Is ?c 'calculator')) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (LeftOf ?k ?c)) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Has ?t 'blue')) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Has ?c 'black')) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (SmallerThan ?k ?t)) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (LeftOf ?c ?t)) (or (not (Is ?s 'stapler')) (not (Has ?s 'red')) (Is ?t 'tie')))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "tie",
+        "calculator",
+        "stapler"
+    ]
+}

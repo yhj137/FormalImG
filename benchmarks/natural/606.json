@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. There is a shirt inside a boat. A round clock is positioned to the right of the boat, while a spoon is located to the left of the boat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?c (exists ?sp (and (Is ?b 'boat') (Is ?s 'shirt') (In ?s ?b) (Is ?c 'clock') (HasShape ?c 'round') (RightOf ?c ?b) (Is ?sp 'spoon') (LeftOf ?sp ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?c (exists ?sp (and (Is ?b 'boat') (In ?s ?b) (RightOf ?c ?b) (Is ?s 'shirt') (LeftOf ?sp ?b) (HasShape ?c 'round') (Is ?sp 'spoon') (Is ?c 'clock')))))))",
+    "k": 4,
+    "object_classes": [
+        "clock",
+        "spoon",
+        "shirt",
+        "boat"
+    ]
+}

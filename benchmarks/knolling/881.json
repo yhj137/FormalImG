@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the left side of the scene. For every sock in the image, there is a shirt located to its left, a remote aligned vertically with the shirt, and a pen located on the bottom side to the left of the suitcase. The sock is aligned vertically with the suitcase.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (forall ?sock (implies (Is ?sock 'sock') (exists ?shirt (exists ?remote (exists ?pen (and (Is ?shirt 'shirt') (Is ?remote 'remote') (Is ?pen 'pen') (LeftOf ?shirt ?sock) (AlignedVertically ?sock ?suitcase) (AlignedVertically ?remote ?shirt) (OnBottomSide ?pen) (LeftOf ?pen ?suitcase)))))))))",
+    "cnf": "(exists ?suitcase (forall ?sock (exists ?shirt (exists ?remote (exists ?pen (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?suitcase)) (or (not (Is ?sock 'sock')) (LeftOf ?pen ?suitcase)) (or (not (Is ?sock 'sock')) (LeftOf ?shirt ?sock)) (or (not (Is ?sock 'sock')) (AlignedVertically ?remote ?shirt)) (or (not (Is ?sock 'sock')) (OnBottomSide ?pen)) (or (not (Is ?sock 'sock')) (Is ?pen 'pen')) (or (not (Is ?sock 'sock')) (Is ?shirt 'shirt')) (or (not (Is ?sock 'sock')) (Is ?remote 'remote'))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "sock",
+        "pen",
+        "suitcase",
+        "shirt"
+    ]
+}

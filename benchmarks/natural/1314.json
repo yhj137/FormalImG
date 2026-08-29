@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene featuring a lion holding a leather backpack. A wooden clock stands next to the lion, and a hat is placed to the left of the clock. To the left of the lion is a plate. An apple sits to the left of the plate, and every orange in the scene is positioned next to the plate.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?c (exists ?p (and (Is ?l 'lion') (Is ?c 'clock') (HasMaterial ?c 'wooden') (NextTo ?c ?l) (Is ?p 'plate') (LeftOf ?p ?l) (forall ?o (implies (Is ?o 'orange') (NextTo ?o ?p))) (exists ?b (exists ?h (exists ?a (and (Is ?b 'backpack') (HasMaterial ?b 'leather') (Holding ?l ?b) (Is ?h 'hat') (LeftOf ?h ?c) (Is ?a 'apple') (LeftOf ?a ?p))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?c (exists ?p (forall ?o (exists ?b (exists ?h (exists ?a (and (Is ?l 'lion') (NextTo ?c ?l) (LeftOf ?p ?l) (HasMaterial ?c 'wooden') (LeftOf ?h ?c) (Holding ?l ?b) (Is ?p 'plate') (or (not (Is ?o 'orange')) (NextTo ?o ?p)) (Is ?c 'clock') (Is ?h 'hat') (HasMaterial ?b 'leather') (LeftOf ?a ?p) (Is ?b 'backpack') (Is ?a 'apple'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hat",
+        "backpack",
+        "clock",
+        "apple",
+        "lion",
+        "orange",
+        "plate"
+    ]
+}

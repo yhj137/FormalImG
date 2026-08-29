@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a bowl, an apple, and a donut, all positioned on the right side of the scene. These three objects are aligned vertically, with the bowl being larger than the apple, and the apple being larger than the donut. Furthermore, the arrangement includes a constraint regarding tools: for every lighter in the image, there is a fork. This lighter is vertically aligned with the donut, and the fork is vertically aligned with the lighter. Additionally, the fork is larger than the lighter.",
+    "dsl": "(exists ?bowl (exists ?apple (exists ?donut (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (Is ?apple 'apple') (OnRightSide ?apple) (Is ?donut 'donut') (OnRightSide ?donut) (AlignedVertically ?bowl ?apple) (AlignedVertically ?apple ?donut) (LargerThan ?bowl ?apple) (LargerThan ?apple ?donut) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?fork (and (Is ?fork 'fork') (AlignedVertically ?donut ?lighter) (AlignedVertically ?lighter ?fork) (LargerThan ?fork ?lighter)))))))))",
+    "cnf": "(exists ?bowl (exists ?apple (exists ?donut (forall ?lighter (exists ?fork (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (AlignedVertically ?bowl ?apple) (LargerThan ?bowl ?apple) (OnRightSide ?apple) (AlignedVertically ?apple ?donut) (LargerThan ?apple ?donut) (Is ?apple 'apple') (OnRightSide ?donut) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?donut ?lighter)) (Is ?donut 'donut') (or (not (Is ?lighter 'lighter')) (Is ?fork 'fork')) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?fork)) (or (not (Is ?lighter 'lighter')) (LargerThan ?fork ?lighter))))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "fork",
+        "lighter",
+        "bowl",
+        "donut"
+    ]
+}

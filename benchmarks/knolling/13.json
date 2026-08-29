@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a white game controller.",
+    "dsl": "(exists ?x (and (Is ?x 'game_controller') (Has ?x 'white')))",
+    "cnf": "(exists ?x (and (Is ?x 'game_controller') (Has ?x 'white')))",
+    "k": 1,
+    "object_classes": [
+        "game_controller"
+    ]
+}

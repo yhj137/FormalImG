@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the scene, there is a game controller located above it and a watch located to its right. Additionally, a tie is positioned above the watch, and a hammer is placed to the right of the watch, situated on the right side of the image.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'plate') (exists ?g (exists ?w (exists ?t (exists ?h (and (Is ?g 'game_controller') (Is ?w 'watch') (Is ?t 'tie') (Is ?h 'hammer') (Above ?g ?p) (RightOf ?w ?p) (Above ?t ?w) (RightOf ?h ?w) (OnRightSide ?h)))))))))",
+    "cnf": "(forall ?p (exists ?g (exists ?w (exists ?t (exists ?h (and (or (not (Is ?p 'plate')) (Is ?g 'game_controller')) (or (not (Is ?p 'plate')) (Above ?g ?p)) (or (not (Is ?p 'plate')) (Is ?w 'watch')) (or (not (Is ?p 'plate')) (Is ?h 'hammer')) (or (not (Is ?p 'plate')) (RightOf ?w ?p)) (or (not (Is ?p 'plate')) (Is ?t 'tie')) (or (not (Is ?p 'plate')) (RightOf ?h ?w)) (or (not (Is ?p 'plate')) (Above ?t ?w)) (or (not (Is ?p 'plate')) (OnRightSide ?h))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "plate",
+        "watch",
+        "game_controller",
+        "hammer"
+    ]
+}

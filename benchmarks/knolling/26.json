@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A single pen is arranged on the top side of the surface.",
+    "dsl": "(exists ?pen (and (Is ?pen 'pen') (OnTopSide ?pen)))",
+    "cnf": "(exists ?pen (and (Is ?pen 'pen') (OnTopSide ?pen)))",
+    "k": 1,
+    "object_classes": [
+        "pen"
+    ]
+}

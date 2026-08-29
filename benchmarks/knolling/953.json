@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop positioned on the top side of the layout. Directly below the laptop, located on the bottom side, is a handbag; these two objects are aligned vertically. To the left of the handbag sits a bottle, which is visually smaller than the handbag. Furthermore, for every remote in the scene, there is a tie located directly below it, and the tie is also positioned to the left of the bottle.",
+    "dsl": "(exists ?laptop (exists ?handbag (exists ?bottle (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Below ?handbag ?laptop) (AlignedVertically ?laptop ?handbag) (Is ?bottle 'bottle') (LeftOf ?bottle ?handbag) (SmallerThan ?bottle ?handbag) (forall ?remote (implies (Is ?remote 'remote') (exists ?tie (and (Is ?tie 'tie') (Below ?tie ?remote) (LeftOf ?tie ?bottle)))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (exists ?bottle (forall ?remote (exists ?tie (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?handbag ?laptop) (AlignedVertically ?laptop ?handbag) (OnBottomSide ?handbag) (LeftOf ?bottle ?handbag) (Is ?handbag 'handbag') (SmallerThan ?bottle ?handbag) (Is ?bottle 'bottle') (or (not (Is ?remote 'remote')) (LeftOf ?tie ?bottle)) (or (not (Is ?remote 'remote')) (Below ?tie ?remote)) (or (not (Is ?remote 'remote')) (Is ?tie 'tie'))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "tie",
+        "handbag",
+        "bottle"
+    ]
+}

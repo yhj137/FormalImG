@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the image, there is a pair of blue jeans located below it, and a pan positioned above it. The pan is strictly on the top side of the image. To the right of the pan, there are glasses which are aligned horizontally with the pan. To the right of the shirt is a stapler, also aligned horizontally with the shirt. A laptop is located to the right of the jeans and is situated on the right side of the image. Above the laptop is a camera, and above the camera is a phone. The phone is smaller than the laptop. Finally, a game controller is positioned to the right of the stapler and aligned horizontally with the camera.",
+    "dsl": "(and (forall ?shirt (implies (Is ?shirt 'shirt') (exists ?jeans (exists ?pan (exists ?glasses (exists ?stapler (exists ?laptop (exists ?camera (exists ?phone (exists ?game_controller (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?pan 'pan') (Is ?glasses 'glasses') (Is ?stapler 'stapler') (Is ?laptop 'laptop') (Is ?camera 'camera') (Is ?phone 'phone') (Is ?game_controller 'game_controller') (Below ?jeans ?shirt) (Above ?pan ?shirt) (OnTopSide ?pan) (RightOf ?glasses ?pan) (AlignedHorizontally ?glasses ?pan) (RightOf ?stapler ?shirt) (AlignedHorizontally ?stapler ?shirt) (RightOf ?laptop ?jeans) (OnRightSide ?laptop) (Above ?camera ?laptop) (Above ?phone ?camera) (SmallerThan ?phone ?laptop) (RightOf ?game_controller ?stapler) (AlignedHorizontally ?game_controller ?camera)))))))))))))",
+    "cnf": "(forall ?shirt (exists ?jeans (exists ?pan (exists ?glasses (exists ?stapler (exists ?laptop (exists ?camera (exists ?phone (exists ?game_controller (and (or (not (Is ?shirt 'shirt')) (Is ?jeans 'jeans')) (or (not (Is ?shirt 'shirt')) (Has ?jeans 'blue')) (or (not (Is ?shirt 'shirt')) (Below ?jeans ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?pan 'pan')) (or (not (Is ?shirt 'shirt')) (RightOf ?laptop ?jeans)) (or (not (Is ?shirt 'shirt')) (Is ?game_controller 'game_controller')) (or (not (Is ?shirt 'shirt')) (Above ?pan ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?glasses 'glasses')) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?stapler ?shirt)) (or (not (Is ?shirt 'shirt')) (OnRightSide ?laptop)) (or (not (Is ?shirt 'shirt')) (Is ?laptop 'laptop')) (or (not (Is ?shirt 'shirt')) (Is ?phone 'phone')) (or (not (Is ?shirt 'shirt')) (RightOf ?game_controller ?stapler)) (or (not (Is ?shirt 'shirt')) (OnTopSide ?pan)) (or (not (Is ?shirt 'shirt')) (Is ?stapler 'stapler')) (or (not (Is ?shirt 'shirt')) (RightOf ?glasses ?pan)) (or (not (Is ?shirt 'shirt')) (RightOf ?stapler ?shirt)) (or (not (Is ?shirt 'shirt')) (Above ?camera ?laptop)) (or (not (Is ?shirt 'shirt')) (Is ?camera 'camera')) (or (not (Is ?shirt 'shirt')) (Above ?phone ?camera)) (or (not (Is ?shirt 'shirt')) (SmallerThan ?phone ?laptop)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?game_controller ?camera)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?glasses ?pan))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "laptop",
+        "stapler",
+        "phone",
+        "game_controller",
+        "pan",
+        "jeans",
+        "camera",
+        "shirt"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a house containing every toy car, with a round umbrella next to the house.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'house') (forall ?t (implies (Is ?t 'toy car') (In ?t ?h))) (exists ?u (and (Is ?u 'umbrella') (HasShape ?u 'round') (NextTo ?u ?h))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (forall ?t (exists ?u (and (Is ?h 'house') (or (not (Is ?t 'toy car')) (In ?t ?h)) (NextTo ?u ?h) (HasShape ?u 'round') (Is ?u 'umbrella'))))))",
+    "k": 3,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "toy car"
+    ]
+}

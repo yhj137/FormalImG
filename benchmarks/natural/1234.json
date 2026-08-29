@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every rock is accompanied by a woman wearing a fabric hat and holding a sandwich. Next to the woman is a car containing a book, and a refrigerator stands beside the car.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?r (implies (Is ?r 'rock') (exists ?w (exists ?s (exists ?h (exists ?c (exists ?b (exists ?f (and (Is ?w 'woman') (Is ?s 'sandwich') (Is ?h 'hat') (Is ?c 'car') (Is ?b 'book') (Is ?f 'refrigerator') (NextTo ?w ?r) (Holding ?w ?s) (On ?h ?w) (HasMaterial ?h 'fabric') (NextTo ?c ?w) (In ?b ?c) (NextTo ?f ?c)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?r (exists ?w (exists ?s (exists ?h (exists ?c (exists ?b (exists ?f (and (or (not (Is ?r 'rock')) (Is ?w 'woman')) (or (not (Is ?r 'rock')) (NextTo ?w ?r)) (or (not (Is ?r 'rock')) (Is ?s 'sandwich')) (or (not (Is ?r 'rock')) (Holding ?w ?s)) (or (not (Is ?r 'rock')) (Is ?f 'refrigerator')) (or (not (Is ?r 'rock')) (Is ?h 'hat')) (or (not (Is ?r 'rock')) (On ?h ?w)) (or (not (Is ?r 'rock')) (Is ?b 'book')) (or (not (Is ?r 'rock')) (NextTo ?f ?c)) (or (not (Is ?r 'rock')) (Is ?c 'car')) (or (not (Is ?r 'rock')) (NextTo ?c ?w)) (or (not (Is ?r 'rock')) (HasMaterial ?h 'fabric')) (or (not (Is ?r 'rock')) (In ?b ?c)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "rock",
+        "sandwich",
+        "car",
+        "refrigerator",
+        "hat",
+        "woman"
+    ]
+}

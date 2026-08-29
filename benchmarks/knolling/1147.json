@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue shirt, a red pair of pliers, and a black lighter arranged in a horizontal line; the shirt is to the left of the pliers, and the pliers are to the left of the lighter. A pink donut is positioned above the shirt. Furthermore, for every fork in the scene, there is a spoon directly above it, and the spoon is larger than the lighter.",
+    "dsl": "(exists ?shirt (exists ?pliers (exists ?lighter (exists ?donut (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?lighter 'lighter') (Has ?lighter 'black') (Is ?donut 'donut') (Has ?donut 'pink') (LeftOf ?shirt ?pliers) (LeftOf ?pliers ?lighter) (AlignedHorizontally ?shirt ?pliers) (AlignedHorizontally ?pliers ?lighter) (Above ?donut ?shirt) (forall ?fork (implies (Is ?fork 'fork') (exists ?spoon (and (Is ?spoon 'spoon') (Above ?spoon ?fork) (LargerThan ?spoon ?lighter))))))))))",
+    "cnf": "(exists ?shirt (exists ?pliers (exists ?lighter (exists ?donut (forall ?fork (exists ?spoon (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (LeftOf ?shirt ?pliers) (AlignedHorizontally ?shirt ?pliers) (Has ?pliers 'red') (LeftOf ?pliers ?lighter) (Above ?donut ?shirt) (AlignedHorizontally ?pliers ?lighter) (Is ?pliers 'pliers') (Has ?lighter 'black') (Has ?donut 'pink') (or (not (Is ?fork 'fork')) (LargerThan ?spoon ?lighter)) (Is ?lighter 'lighter') (Is ?donut 'donut') (or (not (Is ?fork 'fork')) (Above ?spoon ?fork)) (or (not (Is ?fork 'fork')) (Is ?spoon 'spoon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pliers",
+        "fork",
+        "lighter",
+        "shirt",
+        "spoon",
+        "donut"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a yellow bus. Inside the bus, a man holds a green fish. A blue jacket is to the left of the man, and a pizza is to his right. A spoon is placed to the left of the pizza. A toy car and a clock are also inside the bus. All knives are positioned to the right of the pizza.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?m (exists ?f (exists ?j (exists ?p (exists ?s (exists ?tc (exists ?cl (and (Is ?b 'bus') (HasColor ?b 'yellow') (Is ?m 'man') (In ?m ?b) (Is ?f 'fish') (HasColor ?f 'green') (Holding ?m ?f) (Is ?j 'jacket') (HasColor ?j 'blue') (LeftOf ?j ?m) (Is ?p 'pizza') (RightOf ?p ?m) (Is ?s 'spoon') (LeftOf ?s ?p) (Is ?tc 'toy car') (In ?tc ?b) (Is ?cl 'clock') (In ?cl ?b) (forall ?k (implies (Is ?k 'knife') (RightOf ?k ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?m (exists ?f (exists ?j (exists ?p (exists ?s (exists ?tc (exists ?cl (forall ?k (and (Is ?b 'bus') (HasColor ?b 'yellow') (In ?m ?b) (In ?tc ?b) (Is ?m 'man') (Holding ?m ?f) (In ?cl ?b) (Is ?tc 'toy car') (LeftOf ?j ?m) (HasColor ?f 'green') (Is ?cl 'clock') (RightOf ?p ?m) (HasColor ?j 'blue') (Is ?f 'fish') (Is ?p 'pizza') (LeftOf ?s ?p) (Is ?j 'jacket') (or (not (Is ?k 'knife')) (RightOf ?k ?p)) (Is ?s 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "toy car",
+        "man",
+        "knife",
+        "fish",
+        "bus",
+        "pizza",
+        "clock",
+        "spoon"
+    ]
+}

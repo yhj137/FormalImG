@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is anchored by a pan located on the right side of the image. To the left of the pan is a knife, and to the left of the knife is a carrot. There is a second row of items arranged above the first: a pair of pliers is placed above the pan, a lighter is located above the knife, and a mouse is positioned above the carrot.",
+    "dsl": "(exists ?pan (exists ?knife (exists ?carrot (exists ?pliers (exists ?lighter (exists ?mouse (and (Is ?pan 'pan') (Is ?knife 'knife') (Is ?carrot 'carrot') (Is ?pliers 'pliers') (Is ?lighter 'lighter') (Is ?mouse 'mouse') (OnRightSide ?pan) (LeftOf ?knife ?pan) (LeftOf ?carrot ?knife) (Above ?pliers ?pan) (Above ?lighter ?knife) (Above ?mouse ?carrot))))))))",
+    "cnf": "(exists ?pan (exists ?knife (exists ?carrot (exists ?pliers (exists ?lighter (exists ?mouse (and (Is ?pan 'pan') (OnRightSide ?pan) (LeftOf ?knife ?pan) (Above ?pliers ?pan) (Is ?knife 'knife') (LeftOf ?carrot ?knife) (Is ?pliers 'pliers') (Above ?lighter ?knife) (Is ?carrot 'carrot') (Above ?mouse ?carrot) (Is ?lighter 'lighter') (Is ?mouse 'mouse'))))))))",
+    "k": 6,
+    "object_classes": [
+        "pliers",
+        "carrot",
+        "pan",
+        "lighter",
+        "mouse",
+        "knife"
+    ]
+}

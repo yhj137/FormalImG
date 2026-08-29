@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a black watch and a yellow pizza that are aligned horizontally.",
+    "dsl": "(exists ?watch (exists ?pizza (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?pizza 'pizza') (Has ?pizza 'yellow') (AlignedHorizontally ?watch ?pizza))))",
+    "cnf": "(exists ?watch (exists ?pizza (and (Is ?watch 'watch') (Has ?watch 'black') (AlignedHorizontally ?watch ?pizza) (Has ?pizza 'yellow') (Is ?pizza 'pizza'))))",
+    "k": 2,
+    "object_classes": [
+        "watch",
+        "pizza"
+    ]
+}

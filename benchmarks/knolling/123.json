@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza present in the scene, it must be located on the right side of the image.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pizza') (OnRightSide ?p))))",
+    "cnf": "(forall ?p (or (not (Is ?p 'pizza')) (OnRightSide ?p)))",
+    "k": 1,
+    "object_classes": [
+        "pizza"
+    ]
+}

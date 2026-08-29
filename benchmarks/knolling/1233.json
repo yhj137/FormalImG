@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop present, it is located on the right side of the image. Directly below the laptop is a tie, and directly below the tie is a hammer; these three items are aligned vertically. To the left of the laptop is a phone, to the left of the tie are glasses, and to the left of the hammer are keys, with each pair aligned horizontally. Furthermore, a sandwich is positioned to the left of the phone and is aligned horizontally with it.",
+    "dsl": "(and (forall ?laptop (implies (Is ?laptop 'laptop') (exists ?tie (exists ?hammer (exists ?phone (exists ?glasses (exists ?keys (exists ?sandwich (and (Is ?tie 'tie') (Is ?hammer 'hammer') (Is ?phone 'phone') (Is ?glasses 'glasses') (Is ?keys 'keys') (Is ?sandwich 'sandwich') (OnRightSide ?laptop) (Below ?tie ?laptop) (Below ?hammer ?tie) (AlignedVertically ?laptop ?tie) (AlignedVertically ?tie ?hammer) (RightOf ?laptop ?phone) (RightOf ?tie ?glasses) (RightOf ?hammer ?keys) (RightOf ?phone ?sandwich) (AlignedHorizontally ?laptop ?phone) (AlignedHorizontally ?tie ?glasses) (AlignedHorizontally ?hammer ?keys) (AlignedHorizontally ?phone ?sandwich)))))))))))",
+    "cnf": "(forall ?laptop (exists ?tie (exists ?hammer (exists ?phone (exists ?glasses (exists ?keys (exists ?sandwich (and (or (not (Is ?laptop 'laptop')) (Is ?tie 'tie')) (or (not (Is ?laptop 'laptop')) (Below ?tie ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?hammer 'hammer')) (or (not (Is ?laptop 'laptop')) (Below ?hammer ?tie)) (or (not (Is ?laptop 'laptop')) (OnRightSide ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?phone 'phone')) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?laptop ?tie)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?tie ?hammer)) (or (not (Is ?laptop 'laptop')) (Is ?sandwich 'sandwich')) (or (not (Is ?laptop 'laptop')) (Is ?glasses 'glasses')) (or (not (Is ?laptop 'laptop')) (RightOf ?laptop ?phone)) (or (not (Is ?laptop 'laptop')) (RightOf ?tie ?glasses)) (or (not (Is ?laptop 'laptop')) (RightOf ?hammer ?keys)) (or (not (Is ?laptop 'laptop')) (Is ?keys 'keys')) (or (not (Is ?laptop 'laptop')) (RightOf ?phone ?sandwich)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?tie ?glasses)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?hammer ?keys)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?laptop ?phone)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?phone ?sandwich))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "tie",
+        "keys",
+        "phone",
+        "hammer",
+        "sandwich"
+    ]
+}

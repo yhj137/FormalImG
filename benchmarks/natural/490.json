@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every horse has a bus to its left and a round orange to its right.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?h (implies (Is ?h 'horse') (exists ?b (exists ?o (and (Is ?b 'bus') (Is ?o 'orange') (HasShape ?o 'round') (LeftOf ?b ?h) (RightOf ?o ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?h (exists ?b (exists ?o (and (or (not (Is ?h 'horse')) (Is ?b 'bus')) (or (not (Is ?h 'horse')) (Is ?o 'orange')) (or (not (Is ?h 'horse')) (LeftOf ?b ?h)) (or (not (Is ?h 'horse')) (HasShape ?o 'round')) (or (not (Is ?h 'horse')) (RightOf ?o ?h)))))))",
+    "k": 3,
+    "object_classes": [
+        "orange",
+        "horse",
+        "bus"
+    ]
+}

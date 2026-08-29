@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo style image where all plates are white.",
+    "dsl": "(and (IsStyle 'photo') (forall ?p (implies (Is ?p 'plate') (HasColor ?p 'white'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?p (or (not (Is ?p 'plate')) (HasColor ?p 'white'))))",
+    "k": 1,
+    "object_classes": [
+        "plate"
+    ]
+}

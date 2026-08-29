@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a laptop positioned on the left side of the image. Directly below the laptop are headphones, and below the headphones is a pizza; these three items are aligned vertically. To the right of the laptop is a hammer. Below the hammer is a screwdriver, below the screwdriver are pliers, and below the pliers is a carrot, forming a second vertical column aligned with the hammer. Visually, the laptop is larger than the headphones, and the pizza is larger than the carrot.",
+    "dsl": "(exists ?laptop (exists ?headphones (exists ?pizza (exists ?hammer (exists ?screwdriver (exists ?pliers (exists ?carrot (and (Is ?laptop 'laptop') (Is ?headphones 'headphones') (Is ?pizza 'pizza') (Is ?hammer 'hammer') (Is ?screwdriver 'screwdriver') (Is ?pliers 'pliers') (Is ?carrot 'carrot') (OnLeftSide ?laptop) (Above ?laptop ?headphones) (Above ?headphones ?pizza) (AlignedVertically ?laptop ?headphones) (AlignedVertically ?headphones ?pizza) (LeftOf ?laptop ?hammer) (Above ?hammer ?screwdriver) (Above ?screwdriver ?pliers) (Above ?pliers ?carrot) (AlignedVertically ?hammer ?screwdriver) (AlignedVertically ?screwdriver ?pliers) (AlignedVertically ?pliers ?carrot) (LargerThan ?laptop ?headphones) (LargerThan ?pizza ?carrot)))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (exists ?pizza (exists ?hammer (exists ?screwdriver (exists ?pliers (exists ?carrot (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?laptop ?headphones) (AlignedVertically ?laptop ?headphones) (Is ?headphones 'headphones') (Above ?headphones ?pizza) (LeftOf ?laptop ?hammer) (AlignedVertically ?headphones ?pizza) (Is ?pizza 'pizza') (LargerThan ?laptop ?headphones) (Is ?hammer 'hammer') (Above ?hammer ?screwdriver) (LargerThan ?pizza ?carrot) (AlignedVertically ?hammer ?screwdriver) (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?pliers) (AlignedVertically ?pliers ?carrot) (AlignedVertically ?screwdriver ?pliers) (Is ?pliers 'pliers') (Above ?pliers ?carrot) (Is ?carrot 'carrot')))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "carrot",
+        "pizza",
+        "screwdriver",
+        "hammer",
+        "headphones"
+    ]
+}

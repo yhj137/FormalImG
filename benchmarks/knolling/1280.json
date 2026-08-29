@@ -1,0 +1,15 @@
+{
+    "prompt": "For every carrot in the scene, it is located on the top side and positioned above a cutting board, which is above a book. Additionally, for each carrot, there are pliers to the right of the cutting board, glasses (smaller than the book) to the right of the book, a calculator below the glasses, and a wallet on the bottom side to the right of the calculator.",
+    "dsl": "(exists ?cb (exists ?bk (forall ?car (implies (Is ?car 'carrot') (exists ?pl (exists ?gl (exists ?cal (exists ?wal (and (Is ?cb 'cutting_board') (Is ?bk 'book') (Is ?pl 'pliers') (Is ?gl 'glasses') (Is ?cal 'calculator') (Is ?wal 'wallet') (OnTopSide ?car) (Above ?car ?cb) (Above ?cb ?bk) (RightOf ?pl ?cb) (RightOf ?gl ?bk) (SmallerThan ?gl ?bk) (Above ?gl ?cal) (RightOf ?wal ?cal) (OnBottomSide ?wal))))))))))",
+    "cnf": "(exists ?cb (exists ?bk (forall ?car (exists ?pl (exists ?gl (exists ?cal (exists ?wal (and (or (not (Is ?car 'carrot')) (Is ?cb 'cutting_board')) (or (not (Is ?car 'carrot')) (Is ?bk 'book')) (or (not (Is ?car 'carrot')) (Above ?car ?cb)) (or (not (Is ?car 'carrot')) (Is ?pl 'pliers')) (or (not (Is ?car 'carrot')) (Above ?cb ?bk)) (or (not (Is ?car 'carrot')) (OnTopSide ?car)) (or (not (Is ?car 'carrot')) (Is ?gl 'glasses')) (or (not (Is ?car 'carrot')) (RightOf ?pl ?cb)) (or (not (Is ?car 'carrot')) (RightOf ?gl ?bk)) (or (not (Is ?car 'carrot')) (Is ?wal 'wallet')) (or (not (Is ?car 'carrot')) (Is ?cal 'calculator')) (or (not (Is ?car 'carrot')) (SmallerThan ?gl ?bk)) (or (not (Is ?car 'carrot')) (RightOf ?wal ?cal)) (or (not (Is ?car 'carrot')) (Above ?gl ?cal)) (or (not (Is ?car 'carrot')) (OnBottomSide ?wal))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "glasses",
+        "pliers",
+        "carrot",
+        "cutting_board",
+        "calculator",
+        "wallet"
+    ]
+}

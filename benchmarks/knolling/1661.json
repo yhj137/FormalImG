@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase located on the top-left side, with a monitor positioned directly below it. For every cup in the image, it is placed to the right of the suitcase. To the right of the cup, there is a hammer. Vertically aligned with the hammer are a stapler above it and a laptop below it. To the right of the stapler is a lighter, which is smaller than the stapler. Finally, a watch is located above the lighter, and a carrot is positioned below the lighter.",
+    "dsl": "(exists ?suitcase (exists ?monitor (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (OnTopSide ?suitcase) (Is ?monitor 'monitor') (Below ?monitor ?suitcase) (forall ?cup (implies (Is ?cup 'cup') (exists ?hammer (exists ?stapler (exists ?laptop (exists ?lighter (exists ?watch (exists ?carrot (and (Is ?hammer 'hammer') (Is ?stapler 'stapler') (Is ?laptop 'laptop') (Is ?lighter 'lighter') (Is ?watch 'watch') (Is ?carrot 'carrot') (RightOf ?cup ?suitcase) (RightOf ?hammer ?cup) (Above ?stapler ?hammer) (Below ?laptop ?hammer) (RightOf ?lighter ?stapler) (SmallerThan ?lighter ?stapler) (Above ?watch ?lighter) (Below ?carrot ?lighter)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (forall ?cup (exists ?hammer (exists ?stapler (exists ?laptop (exists ?lighter (exists ?watch (exists ?carrot (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (OnTopSide ?suitcase) (Below ?monitor ?suitcase) (or (not (Is ?cup 'cup')) (RightOf ?cup ?suitcase)) (Is ?monitor 'monitor') (or (not (Is ?cup 'cup')) (Is ?carrot 'carrot')) (or (not (Is ?cup 'cup')) (RightOf ?hammer ?cup)) (or (not (Is ?cup 'cup')) (Is ?watch 'watch')) (or (not (Is ?cup 'cup')) (Below ?carrot ?lighter)) (or (not (Is ?cup 'cup')) (Above ?stapler ?hammer)) (or (not (Is ?cup 'cup')) (Is ?hammer 'hammer')) (or (not (Is ?cup 'cup')) (Is ?lighter 'lighter')) (or (not (Is ?cup 'cup')) (Above ?watch ?lighter)) (or (not (Is ?cup 'cup')) (Below ?laptop ?hammer)) (or (not (Is ?cup 'cup')) (Is ?stapler 'stapler')) (or (not (Is ?cup 'cup')) (RightOf ?lighter ?stapler)) (or (not (Is ?cup 'cup')) (Is ?laptop 'laptop')) (or (not (Is ?cup 'cup')) (SmallerThan ?lighter ?stapler))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "carrot",
+        "watch",
+        "cup",
+        "hammer",
+        "lighter",
+        "monitor",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A pizza is positioned on the bottom side of the arrangement. For every remote present in the scene, there is a drill on the right side aligned horizontally with it, and an apple aligned vertically with the remote. Additionally, the pizza is visually larger than the apple.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (forall ?remote (implies (Is ?remote 'remote') (exists ?drill (exists ?apple (and (Is ?drill 'drill') (Is ?apple 'apple') (OnRightSide ?drill) (AlignedHorizontally ?remote ?drill) (AlignedVertically ?remote ?apple) (LargerThan ?pizza ?apple))))))))",
+    "cnf": "(exists ?pizza (forall ?remote (exists ?drill (exists ?apple (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (or (not (Is ?remote 'remote')) (LargerThan ?pizza ?apple)) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?apple)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?drill)) (or (not (Is ?remote 'remote')) (Is ?apple 'apple')) (or (not (Is ?remote 'remote')) (OnRightSide ?drill)) (or (not (Is ?remote 'remote')) (Is ?drill 'drill')))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "remote",
+        "pizza",
+        "apple"
+    ]
+}

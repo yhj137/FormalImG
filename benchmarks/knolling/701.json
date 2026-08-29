@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pizza located on the top side of the layout. For every sandwich present in the image, it is aligned vertically with the pizza. Additionally, for each sandwich, there is a cup that is vertically aligned with the sandwich, and a screwdriver that is smaller than the cup.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?cup (exists ?screwdriver (and (Is ?cup 'cup') (Is ?screwdriver 'screwdriver') (AlignedVertically ?sandwich ?pizza) (AlignedVertically ?cup ?sandwich) (SmallerThan ?screwdriver ?cup))))))))",
+    "cnf": "(exists ?pizza (forall ?sandwich (exists ?cup (exists ?screwdriver (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?sandwich ?pizza)) (or (not (Is ?sandwich 'sandwich')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?cup ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?cup 'cup')) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?screwdriver ?cup)))))))",
+    "k": 4,
+    "object_classes": [
+        "cup",
+        "sandwich",
+        "pizza",
+        "screwdriver"
+    ]
+}

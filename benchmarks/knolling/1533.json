@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side, with a monitor below it and a keyboard on the bottom side below the monitor; the monitor is larger than the keyboard. A plate is located on the left side, and the suitcase is larger than the plate. For every lemon present, it is smaller than the plate and is accompanied by a spoon, a bottle, and a ruler: the spoon is below the plate, the bottle is larger than the spoon, and the ruler is below the bottle and smaller than the bottle.",
+    "dsl": "(exists ?suitcase (exists ?monitor (exists ?keyboard (exists ?plate (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Is ?plate 'plate') (OnLeftSide ?plate) (Below ?monitor ?suitcase) (Below ?keyboard ?monitor) (LargerThan ?monitor ?keyboard) (LargerThan ?suitcase ?plate) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?spoon (exists ?bottle (exists ?ruler (and (Is ?spoon 'spoon') (Is ?bottle 'bottle') (Is ?ruler 'ruler') (SmallerThan ?lemon ?plate) (Below ?spoon ?plate) (LargerThan ?bottle ?spoon) (Below ?ruler ?bottle) (SmallerThan ?ruler ?bottle))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (exists ?keyboard (exists ?plate (forall ?lemon (exists ?spoon (exists ?bottle (exists ?ruler (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Below ?monitor ?suitcase) (LargerThan ?suitcase ?plate) (Is ?monitor 'monitor') (Below ?keyboard ?monitor) (OnLeftSide ?plate) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?plate)) (LargerThan ?monitor ?keyboard) (OnBottomSide ?keyboard) (Is ?plate 'plate') (or (not (Is ?lemon 'lemon')) (Below ?spoon ?plate)) (or (not (Is ?lemon 'lemon')) (Is ?ruler 'ruler')) (Is ?keyboard 'keyboard') (or (not (Is ?lemon 'lemon')) (Is ?spoon 'spoon')) (or (not (Is ?lemon 'lemon')) (LargerThan ?bottle ?spoon)) (or (not (Is ?lemon 'lemon')) (Is ?bottle 'bottle')) (or (not (Is ?lemon 'lemon')) (Below ?ruler ?bottle)) (or (not (Is ?lemon 'lemon')) (SmallerThan ?ruler ?bottle)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "keyboard",
+        "lemon",
+        "bottle",
+        "monitor",
+        "suitcase",
+        "spoon"
+    ]
+}

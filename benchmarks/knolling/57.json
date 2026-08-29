@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A single carrot is neatly positioned on the bottom side of the composition.",
+    "dsl": "(exists ?carrot (and (Is ?carrot 'carrot') (OnBottomSide ?carrot)))",
+    "cnf": "(exists ?carrot (and (Is ?carrot 'carrot') (OnBottomSide ?carrot)))",
+    "k": 1,
+    "object_classes": [
+        "carrot"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the left side. Directly below the cutting board are headphones. There is also a cup in the scene that is smaller than the cutting board. Additionally, for every wrench present, it is positioned below the headphones, and there is a donut located below said wrench; the donut is smaller than the cup.",
+    "dsl": "(exists ?board (exists ?headphones (exists ?cup (and (Is ?board 'cutting_board') (Is ?headphones 'headphones') (Is ?cup 'cup') (OnLeftSide ?board) (Below ?headphones ?board) (LargerThan ?board ?cup) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?donut (and (Is ?donut 'donut') (Below ?wrench ?headphones) (Below ?donut ?wrench) (SmallerThan ?donut ?cup)))))))))",
+    "cnf": "(exists ?board (exists ?headphones (exists ?cup (forall ?wrench (exists ?donut (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Below ?headphones ?board) (LargerThan ?board ?cup) (Is ?headphones 'headphones') (or (not (Is ?wrench 'wrench')) (Below ?wrench ?headphones)) (Is ?cup 'cup') (or (not (Is ?wrench 'wrench')) (SmallerThan ?donut ?cup)) (or (not (Is ?wrench 'wrench')) (Is ?donut 'donut')) (or (not (Is ?wrench 'wrench')) (Below ?donut ?wrench))))))))",
+    "k": 5,
+    "object_classes": [
+        "wrench",
+        "cup",
+        "cutting_board",
+        "headphones",
+        "donut"
+    ]
+}

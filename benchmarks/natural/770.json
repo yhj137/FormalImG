@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a closed refrigerator. A round clock sits on top of the refrigerator to the left of an apple. All shirts in the scene are located to the left of the refrigerator.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?c (exists ?a (and (Is ?r 'refrigerator') (HasState ?r 'closed') (Is ?c 'clock') (HasShape ?c 'round') (Is ?a 'apple') (On ?c ?r) (On ?a ?r) (LeftOf ?c ?a) (forall ?s (implies (Is ?s 'shirt') (LeftOf ?s ?r))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?c (exists ?a (forall ?s (and (Is ?r 'refrigerator') (HasState ?r 'closed') (On ?c ?r) (On ?a ?r) (HasShape ?c 'round') (LeftOf ?c ?a) (or (not (Is ?s 'shirt')) (LeftOf ?s ?r)) (Is ?a 'apple') (Is ?c 'clock')))))))",
+    "k": 4,
+    "object_classes": [
+        "clock",
+        "apple",
+        "refrigerator",
+        "shirt"
+    ]
+}

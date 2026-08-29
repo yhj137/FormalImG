@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A metal table stands with a person to its left and a sitting lion to its right. A glass ball containing a bird rests on the table, along with a bitten apple. A rectangular phone lies next to the apple. All flowers in the scene float above the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?p (exists ?l (exists ?ba (exists ?bi (and (Is ?t 'table') (HasMaterial ?t 'metal') (Is ?p 'person') (LeftOf ?p ?t) (Is ?l 'lion') (HasState ?l 'sitting') (RightOf ?l ?t) (Is ?ba 'ball') (HasMaterial ?ba 'glass') (On ?ba ?t) (Is ?bi 'bird') (In ?bi ?ba) (forall ?f (implies (Is ?f 'flower') (Above ?f ?t))) (exists ?a (exists ?ph (and (Is ?a 'apple') (HasState ?a 'bitten') (On ?a ?t) (Is ?ph 'phone') (HasShape ?ph 'rectangular') (NextTo ?ph ?a)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?p (exists ?l (exists ?ba (exists ?bi (forall ?f (exists ?a (exists ?ph (and (Is ?t 'table') (HasMaterial ?t 'metal') (LeftOf ?p ?t) (RightOf ?l ?t) (Is ?p 'person') (On ?ba ?t) (HasState ?l 'sitting') (or (not (Is ?f 'flower')) (Above ?f ?t)) (HasMaterial ?ba 'glass') (In ?bi ?ba) (Is ?l 'lion') (On ?a ?t) (Is ?ba 'ball') (Is ?bi 'bird') (HasState ?a 'bitten') (NextTo ?ph ?a) (Is ?a 'apple') (HasShape ?ph 'rectangular') (Is ?ph 'phone')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "person",
+        "lion",
+        "table",
+        "flower",
+        "bird",
+        "ball",
+        "apple"
+    ]
+}

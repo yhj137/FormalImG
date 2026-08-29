@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is sitting on a leather sofa and holding a keyboard. A horse is standing next to the sofa. The sofa is placed on a rectangular rug. A sleeping cat and a round plate are also on the rug. A plastic cup sits on the plate, and a phone is inside the cup.",
+    "dsl": "(exists ?w (exists ?s (exists ?k (exists ?h (exists ?r (exists ?c (exists ?pl (exists ?cu (exists ?ph (and (Is ?w 'woman') (Is ?s 'sofa') (Is ?k 'keyboard') (Is ?h 'horse') (Is ?r 'rug') (Is ?c 'cat') (Is ?pl 'plate') (Is ?cu 'cup') (Is ?ph 'phone') (HasState ?w 'sitting') (HasMaterial ?s 'leather') (On ?w ?s) (Holding ?w ?k) (HasState ?h 'standing') (NextTo ?h ?s) (HasShape ?r 'rectangular') (On ?s ?r) (HasState ?c 'sleeping') (On ?c ?r) (HasShape ?pl 'round') (On ?pl ?r) (HasMaterial ?cu 'plastic') (On ?cu ?pl) (In ?ph ?cu)))))))))))",
+    "cnf": "(exists ?w (exists ?s (exists ?k (exists ?h (exists ?r (exists ?c (exists ?pl (exists ?cu (exists ?ph (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?s) (Holding ?w ?k) (HasMaterial ?s 'leather') (NextTo ?h ?s) (Is ?k 'keyboard') (Is ?s 'sofa') (On ?s ?r) (HasState ?h 'standing') (HasShape ?r 'rectangular') (On ?c ?r) (Is ?h 'horse') (Is ?r 'rug') (On ?pl ?r) (HasState ?c 'sleeping') (HasShape ?pl 'round') (On ?cu ?pl) (Is ?c 'cat') (Is ?pl 'plate') (HasMaterial ?cu 'plastic') (In ?ph ?cu) (Is ?cu 'cup') (Is ?ph 'phone')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "woman",
+        "sofa",
+        "cat",
+        "phone",
+        "horse",
+        "cup",
+        "rug",
+        "plate"
+    ]
+}

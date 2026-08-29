@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every set of keys positioned on the left side of the composition, there is a fork placed directly below it.",
+    "dsl": "(and (forall ?k (implies (and (Is ?k 'keys') (OnLeftSide ?k)) (exists ?f (and (Is ?f 'fork') (Below ?f ?k))))))",
+    "cnf": "(forall ?k (exists ?f (and (or (not (Is ?k 'keys')) (not (OnLeftSide ?k)) (Is ?f 'fork')) (or (not (Is ?k 'keys')) (not (OnLeftSide ?k)) (Below ?f ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "keys"
+    ]
+}

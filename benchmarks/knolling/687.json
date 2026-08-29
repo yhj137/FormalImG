@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A hat is positioned on the top side of the layout. For every knife found in the image, there is a specific stapler and a plate arranged such that the hat is vertically above the knife, the knife is horizontally aligned with the stapler, and the stapler is situated above the plate.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (OnTopSide ?hat) (forall ?knife (implies (Is ?knife 'knife') (exists ?stapler (exists ?plate (and (Is ?stapler 'stapler') (Is ?plate 'plate') (Above ?hat ?knife) (AlignedHorizontally ?knife ?stapler) (Above ?stapler ?plate))))))))",
+    "cnf": "(exists ?hat (forall ?knife (exists ?stapler (exists ?plate (and (Is ?hat 'hat') (OnTopSide ?hat) (or (not (Is ?knife 'knife')) (Above ?hat ?knife)) (or (not (Is ?knife 'knife')) (Is ?plate 'plate')) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?knife ?stapler)) (or (not (Is ?knife 'knife')) (Is ?stapler 'stapler')) (or (not (Is ?knife 'knife')) (Above ?stapler ?plate)))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "hat",
+        "plate",
+        "stapler"
+    ]
+}

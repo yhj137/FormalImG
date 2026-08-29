@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is located on the right side of the image. For every remote found in the scene, it is positioned to the left of the backpack, and a wrench is located to the left of the remote. The wrench is placed above a pair of jeans. The jeans are aligned vertically with a game controller, and a pair of scissors is positioned above the game controller.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (forall ?remote (implies (Is ?remote 'remote') (exists ?wrench (exists ?jeans (exists ?controller (exists ?scissors (and (Is ?wrench 'wrench') (Is ?jeans 'jeans') (Is ?controller 'game_controller') (Is ?scissors 'scissors') (LeftOf ?remote ?backpack) (LeftOf ?wrench ?remote) (Above ?wrench ?jeans) (AlignedVertically ?jeans ?controller) (Above ?scissors ?controller))))))))))",
+    "cnf": "(exists ?backpack (forall ?remote (exists ?wrench (exists ?jeans (exists ?controller (exists ?scissors (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (or (not (Is ?remote 'remote')) (LeftOf ?remote ?backpack)) (or (not (Is ?remote 'remote')) (Is ?scissors 'scissors')) (or (not (Is ?remote 'remote')) (LeftOf ?wrench ?remote)) (or (not (Is ?remote 'remote')) (Is ?controller 'game_controller')) (or (not (Is ?remote 'remote')) (Above ?scissors ?controller)) (or (not (Is ?remote 'remote')) (Is ?wrench 'wrench')) (or (not (Is ?remote 'remote')) (Above ?wrench ?jeans)) (or (not (Is ?remote 'remote')) (Is ?jeans 'jeans')) (or (not (Is ?remote 'remote')) (AlignedVertically ?jeans ?controller)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "wrench",
+        "game_controller",
+        "backpack",
+        "jeans",
+        "scissors"
+    ]
+}

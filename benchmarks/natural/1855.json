@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This oil painting depicts a bench. All shoes are placed next to the bench. A man holding a hammer stands next to the bench. To the right of the bench is a brown wardrobe containing a laptop and a pair of headphones. A green bottle sits on the bench, with a round hat to its right and a knife to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bn (and (Is ?bn 'bench') (forall ?sh (implies (Is ?sh 'shoes') (NextTo ?sh ?bn))) (exists ?mn (exists ?wd (exists ?lp (exists ?hp (exists ?hm (exists ?bt (exists ?ht (exists ?kn (and (Is ?mn 'man') (Is ?wd 'wardrobe') (Is ?lp 'laptop') (Is ?hp 'headphones') (Is ?hm 'hammer') (Is ?bt 'bottle') (Is ?ht 'hat') (Is ?kn 'knife') (NextTo ?mn ?bn) (Holding ?mn ?hm) (RightOf ?wd ?bn) (HasColor ?wd 'brown') (In ?lp ?wd) (In ?hp ?wd) (On ?bt ?bn) (HasColor ?bt 'green') (RightOf ?ht ?bt) (HasShape ?ht 'round') (LeftOf ?kn ?bt)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bn (forall ?sh (exists ?mn (exists ?wd (exists ?lp (exists ?hp (exists ?hm (exists ?bt (exists ?ht (exists ?kn (and (Is ?bn 'bench') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?bn)) (NextTo ?mn ?bn) (RightOf ?wd ?bn) (Is ?mn 'man') (Holding ?mn ?hm) (On ?bt ?bn) (Is ?wd 'wardrobe') (HasColor ?wd 'brown') (Is ?hm 'hammer') (Is ?bt 'bottle') (HasColor ?bt 'green') (In ?lp ?wd) (RightOf ?ht ?bt) (In ?hp ?wd) (Is ?lp 'laptop') (LeftOf ?kn ?bt) (Is ?ht 'hat') (HasShape ?ht 'round') (Is ?hp 'headphones') (Is ?kn 'knife')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "knife",
+        "bench",
+        "shoes",
+        "bottle",
+        "laptop",
+        "man",
+        "hammer",
+        "hat",
+        "wardrobe"
+    ]
+}

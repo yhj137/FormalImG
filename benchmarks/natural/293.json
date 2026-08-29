@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every jacket is wet and inside a basket.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?j (implies (Is ?j 'jacket') (exists ?b (and (Is ?b 'basket') (HasState ?j 'wet') (In ?j ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?j (exists ?b (and (or (not (Is ?j 'jacket')) (Is ?b 'basket')) (or (not (Is ?j 'jacket')) (HasState ?j 'wet')) (or (not (Is ?j 'jacket')) (In ?j ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "basket"
+    ]
+}

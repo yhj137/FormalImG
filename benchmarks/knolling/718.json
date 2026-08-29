@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the right side. For every lemon present, there is a pair of scissors located below it, and a bottle located below the scissors. The bottle is positioned on the bottom side of the image. Additionally, the lemon is visually smaller than the cutting board.",
+    "dsl": "(exists ?board (and (Is ?board 'cutting_board') (OnRightSide ?board) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?scissors (exists ?bottle (and (Is ?scissors 'scissors') (Is ?bottle 'bottle') (SmallerThan ?lemon ?board) (Below ?scissors ?lemon) (Below ?bottle ?scissors) (OnBottomSide ?bottle))))))))",
+    "cnf": "(exists ?board (forall ?lemon (exists ?scissors (exists ?bottle (and (Is ?board 'cutting_board') (OnRightSide ?board) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?board)) (or (not (Is ?lemon 'lemon')) (Is ?bottle 'bottle')) (or (not (Is ?lemon 'lemon')) (Below ?scissors ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?scissors 'scissors')) (or (not (Is ?lemon 'lemon')) (Below ?bottle ?scissors)) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?bottle)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "cutting_board",
+        "lemon",
+        "scissors"
+    ]
+}

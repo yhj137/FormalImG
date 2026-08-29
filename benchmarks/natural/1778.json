@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a person sitting on a bench. To the left of the bench is a plant with a yellow key inside, and an oval mirror stands next to the plant. To the right of the person is a plate holding a fork and every orange in the scene. A phone also rests on the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?p (exists ?pl (exists ?k (exists ?m (exists ?plate (exists ?f (and (Is ?b 'bench') (Is ?p 'person') (On ?p ?b) (HasState ?p 'sitting') (Is ?pl 'plant') (LeftOf ?pl ?b) (Is ?k 'key') (HasColor ?k 'yellow') (In ?k ?pl) (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?m ?pl) (Is ?plate 'plate') (RightOf ?plate ?p) (Is ?f 'fork') (On ?f ?plate) (forall ?o (implies (Is ?o 'orange') (On ?o ?plate))) (exists ?ph (and (Is ?ph 'phone') (On ?ph ?b))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?p (exists ?pl (exists ?k (exists ?m (exists ?plate (exists ?f (forall ?o (exists ?ph (and (Is ?b 'bench') (On ?p ?b) (LeftOf ?pl ?b) (Is ?p 'person') (HasState ?p 'sitting') (On ?ph ?b) (Is ?pl 'plant') (In ?k ?pl) (RightOf ?plate ?p) (Is ?ph 'phone') (NextTo ?m ?pl) (HasColor ?k 'yellow') (Is ?plate 'plate') (On ?f ?plate) (HasShape ?m 'oval') (Is ?k 'key') (or (not (Is ?o 'orange')) (On ?o ?plate)) (Is ?f 'fork') (Is ?m 'mirror'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "phone",
+        "bench",
+        "person",
+        "fork",
+        "plate",
+        "plant",
+        "orange",
+        "mirror",
+        "key"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a metal bicycle. Every orange is round and placed to the right of the bicycle. A hat containing a cup sits next to the bicycle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bicycle') (HasMaterial ?b 'metal') (forall ?o (implies (Is ?o 'orange') (and (HasShape ?o 'round') (RightOf ?o ?b)))) (exists ?h (exists ?c (and (Is ?h 'hat') (Is ?c 'cup') (NextTo ?h ?b) (In ?c ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?o (exists ?h (exists ?c (and (Is ?b 'bicycle') (HasMaterial ?b 'metal') (or (not (Is ?o 'orange')) (RightOf ?o ?b)) (NextTo ?h ?b) (or (not (Is ?o 'orange')) (HasShape ?o 'round')) (Is ?h 'hat') (In ?c ?h) (Is ?c 'cup')))))))",
+    "k": 4,
+    "object_classes": [
+        "bicycle",
+        "hat",
+        "cup",
+        "orange"
+    ]
+}

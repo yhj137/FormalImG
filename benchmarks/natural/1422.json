@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A closed refrigerator stands next to a green rug. On the rug, a teddy bear is holding a book. To the right of the teddy bear, there is a toy car located next to a fork. To the left of the teddy bear sits a basket with shoes inside.",
+    "dsl": "(exists ?ref (exists ?r (exists ?tb (exists ?bk (exists ?tc (exists ?f (exists ?bs (exists ?s (and (Is ?ref 'refrigerator') (HasState ?ref 'closed') (Is ?r 'rug') (HasColor ?r 'green') (NextTo ?r ?ref) (Is ?tb 'teddy bear') (On ?tb ?r) (Is ?bk 'book') (Holding ?tb ?bk) (Is ?tc 'toy car') (RightOf ?tc ?tb) (Is ?f 'fork') (NextTo ?f ?tc) (Is ?bs 'basket') (LeftOf ?bs ?tb) (Is ?s 'shoes') (In ?s ?bs))))))))))",
+    "cnf": "(exists ?ref (exists ?r (exists ?tb (exists ?bk (exists ?tc (exists ?f (exists ?bs (exists ?s (and (Is ?ref 'refrigerator') (HasState ?ref 'closed') (NextTo ?r ?ref) (HasColor ?r 'green') (On ?tb ?r) (Is ?r 'rug') (Is ?tb 'teddy bear') (Holding ?tb ?bk) (RightOf ?tc ?tb) (Is ?bk 'book') (LeftOf ?bs ?tb) (Is ?tc 'toy car') (NextTo ?f ?tc) (Is ?bs 'basket') (In ?s ?bs) (Is ?f 'fork') (Is ?s 'shoes'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "book",
+        "shoes",
+        "rug",
+        "teddy bear",
+        "toy car",
+        "refrigerator",
+        "basket"
+    ]
+}

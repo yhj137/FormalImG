@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A child is on a chair, holding a red ball. A table is next to the chair. All books are placed on the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (exists ?ch (exists ?t (and (Is ?c 'child') (Is ?b 'ball') (Is ?ch 'chair') (Is ?t 'table') (On ?c ?ch) (Holding ?c ?b) (HasColor ?b 'red') (NextTo ?t ?ch) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?t)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (exists ?ch (exists ?t (forall ?bk (and (Is ?c 'child') (On ?c ?ch) (Holding ?c ?b) (Is ?ch 'chair') (NextTo ?t ?ch) (Is ?b 'ball') (HasColor ?b 'red') (Is ?t 'table') (or (not (Is ?bk 'book')) (On ?bk ?t)))))))))",
+    "k": 5,
+    "object_classes": [
+        "ball",
+        "book",
+        "chair",
+        "table",
+        "child"
+    ]
+}

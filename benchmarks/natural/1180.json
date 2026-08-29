@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A horse is to the left of a tree located next to a house. To the right of the house is a bookshelf, with a rectangular monitor next to it. Every cup in the scene is positioned to the right of the monitor.",
+    "dsl": "(exists ?hr (exists ?t (exists ?h (exists ?bs (exists ?m (and (Is ?hr 'horse') (Is ?t 'tree') (Is ?h 'house') (Is ?bs 'bookshelf') (Is ?m 'monitor') (HasShape ?m 'rectangular') (LeftOf ?hr ?t) (NextTo ?t ?h) (RightOf ?bs ?h) (NextTo ?m ?bs) (forall ?c (implies (Is ?c 'cup') (RightOf ?c ?m)))))))))",
+    "cnf": "(exists ?hr (exists ?t (exists ?h (exists ?bs (exists ?m (forall ?c (and (Is ?hr 'horse') (LeftOf ?hr ?t) (Is ?t 'tree') (NextTo ?t ?h) (Is ?h 'house') (RightOf ?bs ?h) (Is ?bs 'bookshelf') (NextTo ?m ?bs) (HasShape ?m 'rectangular') (or (not (Is ?c 'cup')) (RightOf ?c ?m)) (Is ?m 'monitor'))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "horse",
+        "cup",
+        "tree",
+        "house",
+        "bookshelf"
+    ]
+}

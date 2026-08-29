@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. On every bench sits a backpack containing a black phone. A pair of glasses rests on the bench to the left of the backpack. A cake, a fish, and a piece of fruit are also on the bench, with the fruit positioned to the left of the cake.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bench') (exists ?bp (exists ?p (exists ?g (exists ?c (exists ?fr (exists ?fi (and (Is ?bp 'backpack') (On ?bp ?b) (Is ?p 'phone') (HasColor ?p 'black') (In ?p ?bp) (Is ?g 'glasses') (On ?g ?b) (LeftOf ?g ?bp) (Is ?c 'cake') (On ?c ?b) (Is ?fr 'fruit') (On ?fr ?b) (LeftOf ?fr ?c) (Is ?fi 'fish') (On ?fi ?b)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?bp (exists ?p (exists ?g (exists ?c (exists ?fr (exists ?fi (and (or (not (Is ?b 'bench')) (Is ?bp 'backpack')) (or (not (Is ?b 'bench')) (On ?bp ?b)) (or (not (Is ?b 'bench')) (Is ?p 'phone')) (or (not (Is ?b 'bench')) (In ?p ?bp)) (or (not (Is ?b 'bench')) (HasColor ?p 'black')) (or (not (Is ?b 'bench')) (Is ?g 'glasses')) (or (not (Is ?b 'bench')) (LeftOf ?g ?bp)) (or (not (Is ?b 'bench')) (On ?g ?b)) (or (not (Is ?b 'bench')) (Is ?c 'cake')) (or (not (Is ?b 'bench')) (On ?c ?b)) (or (not (Is ?b 'bench')) (Is ?fr 'fruit')) (or (not (Is ?b 'bench')) (LeftOf ?fr ?c)) (or (not (Is ?b 'bench')) (On ?fr ?b)) (or (not (Is ?b 'bench')) (Is ?fi 'fish')) (or (not (Is ?b 'bench')) (On ?fi ?b)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fish",
+        "cake",
+        "glasses",
+        "backpack",
+        "fruit",
+        "phone",
+        "bench"
+    ]
+}

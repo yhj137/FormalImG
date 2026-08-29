@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo-style scene where every bookshelf is brown.",
+    "dsl": "(and (IsStyle 'photo') (forall ?x (implies (Is ?x 'bookshelf') (HasColor ?x 'brown'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?x (or (not (Is ?x 'bookshelf')) (HasColor ?x 'brown'))))",
+    "k": 1,
+    "object_classes": [
+        "bookshelf"
+    ]
+}

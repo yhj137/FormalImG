@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman inside a red bus holds a pair of glasses. All shoes in the scene are made of leather and are on the woman.",
+    "dsl": "(exists ?w (and (Is ?w 'woman') (forall ?s (implies (Is ?s 'shoes') (and (HasMaterial ?s 'leather') (On ?s ?w)))) (exists ?b (and (Is ?b 'bus') (HasColor ?b 'red') (In ?w ?b))) (exists ?g (and (Is ?g 'glasses') (Holding ?w ?g)))))",
+    "cnf": "(exists ?w (forall ?s (exists ?b (exists ?g (and (Is ?w 'woman') (or (not (Is ?s 'shoes')) (On ?s ?w)) (In ?w ?b) (or (not (Is ?s 'shoes')) (HasMaterial ?s 'leather')) (Holding ?w ?g) (HasColor ?b 'red') (Is ?g 'glasses') (Is ?b 'bus'))))))",
+    "k": 4,
+    "object_classes": [
+        "shoes",
+        "glasses",
+        "bus",
+        "woman"
+    ]
+}

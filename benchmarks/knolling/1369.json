@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image containing a pair of jeans, a keyboard, a shoe, a bowl, and a lighter. These items are arranged in a neat vertical alignment. The jeans are positioned on the bottom side of the image, while the shoe is located on the right side. The keyboard is visually larger than the lighter. Additionally, for every knife in the scene, there is a cup that is vertically aligned with the jeans and is larger than the knife.",
+    "dsl": "(exists ?jeans (exists ?keyboard (exists ?shoe (exists ?bowl (exists ?lighter (and (Is ?jeans 'jeans') (Is ?keyboard 'keyboard') (Is ?shoe 'shoe') (Is ?bowl 'bowl') (Is ?lighter 'lighter') (OnBottomSide ?jeans) (OnRightSide ?shoe) (AlignedVertically ?jeans ?keyboard) (AlignedVertically ?keyboard ?shoe) (AlignedVertically ?shoe ?bowl) (AlignedVertically ?bowl ?lighter) (LargerThan ?keyboard ?lighter) (forall ?knife (implies (Is ?knife 'knife') (exists ?cup (and (Is ?cup 'cup') (AlignedVertically ?cup ?jeans) (LargerThan ?cup ?knife)))))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (exists ?shoe (exists ?bowl (exists ?lighter (forall ?knife (exists ?cup (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (AlignedVertically ?jeans ?keyboard) (or (not (Is ?knife 'knife')) (AlignedVertically ?cup ?jeans)) (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?shoe) (or (not (Is ?knife 'knife')) (Is ?cup 'cup')) (or (not (Is ?knife 'knife')) (LargerThan ?cup ?knife)) (LargerThan ?keyboard ?lighter) (OnRightSide ?shoe) (AlignedVertically ?shoe ?bowl) (AlignedVertically ?bowl ?lighter) (Is ?shoe 'shoe') (Is ?bowl 'bowl') (Is ?lighter 'lighter')))))))))",
+    "k": 7,
+    "object_classes": [
+        "lighter",
+        "bowl",
+        "knife",
+        "keyboard",
+        "cup",
+        "jeans",
+        "shoe"
+    ]
+}

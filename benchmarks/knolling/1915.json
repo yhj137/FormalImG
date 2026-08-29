@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a sequence of objects arranged horizontally from right to left. Starting on the right, there is a black monitor. To the left of the monitor is a brown cutting board, which is smaller than the monitor. To the left of the cutting board is a red drill, which is larger than the black camera located to its left. A gray wrench is positioned to the left of the camera. The layout follows a specific rule: for every black remote present, it must be located to the left of the wrench. Additionally, stemming from the remote's position to the left, there is a pair of black glasses, followed by a pink donut to the left of the glasses, a gray spoon to the left of the donut, and a blue pen to the left of the spoon. The pen is smaller than the spoon.",
+    "dsl": "(exists ?mon (exists ?cb (exists ?dr (exists ?cam (exists ?wr (and (Is ?mon 'monitor') (Has ?mon 'black') (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?dr 'drill') (Has ?dr 'red') (Is ?cam 'camera') (Has ?cam 'black') (Is ?wr 'wrench') (Has ?wr 'gray') (LeftOf ?cb ?mon) (SmallerThan ?cb ?mon) (LeftOf ?dr ?cb) (LargerThan ?dr ?cam) (LeftOf ?cam ?dr) (LeftOf ?wr ?cam) (forall ?rem (implies (and (Is ?rem 'remote') (Has ?rem 'black')) (exists ?gl (exists ?do (exists ?sp (exists ?pe (and (Is ?gl 'glasses') (Has ?gl 'black') (Is ?do 'donut') (Has ?do 'pink') (Is ?sp 'spoon') (Has ?sp 'gray') (Is ?pe 'pen') (Has ?pe 'blue') (LeftOf ?rem ?wr) (LeftOf ?gl ?rem) (LeftOf ?do ?gl) (LeftOf ?sp ?do) (LeftOf ?pe ?sp) (SmallerThan ?pe ?sp))))))))))))))",
+    "cnf": "(exists ?mon (exists ?cb (exists ?dr (exists ?cam (exists ?wr (forall ?rem (exists ?gl (exists ?do (exists ?sp (exists ?pe (and (Is ?mon 'monitor') (Has ?mon 'black') (LeftOf ?cb ?mon) (SmallerThan ?cb ?mon) (Has ?cb 'brown') (LeftOf ?dr ?cb) (Is ?cb 'cutting_board') (Has ?dr 'red') (LargerThan ?dr ?cam) (Is ?dr 'drill') (LeftOf ?cam ?dr) (Has ?cam 'black') (LeftOf ?wr ?cam) (Is ?cam 'camera') (Has ?wr 'gray') (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (LeftOf ?rem ?wr)) (Is ?wr 'wrench') (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Has ?pe 'blue')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (LeftOf ?gl ?rem)) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Is ?pe 'pen')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (LeftOf ?pe ?sp)) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (LeftOf ?do ?gl)) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Has ?gl 'black')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Has ?sp 'gray')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (LeftOf ?sp ?do)) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (SmallerThan ?pe ?sp)) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Has ?do 'pink')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Is ?gl 'glasses')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Is ?do 'donut')) (or (not (Is ?rem 'remote')) (not (Has ?rem 'black')) (Is ?sp 'spoon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "pen",
+        "wrench",
+        "cutting_board",
+        "drill",
+        "camera",
+        "monitor",
+        "donut",
+        "spoon"
+    ]
+}

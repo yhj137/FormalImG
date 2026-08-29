@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a neat 3x3 grid layout. The top row features a shoe on the top side of the image, with a glove to its right, and a phone to the right of the glove. On the far left, below the shoe, there is a hat, and below the hat is a suitcase; these three items are aligned vertically. The suitcase is positioned on the bottom side and is physically larger than the hat. In the center column, below the glove, there is a sock, and below the sock is a sandwich; these are also aligned vertically, with the sandwich resting on the bottom side. The right column consists of the phone, a remote below it, and a screwdriver below the remote. These three are aligned vertically and situated on the right side of the image. The screwdriver is on the bottom side and is smaller than the remote.",
+    "dsl": "(exists ?shoe (exists ?glove (exists ?phone (exists ?hat (exists ?suitcase (exists ?sock (exists ?sandwich (exists ?remote (exists ?screwdriver (and (Is ?shoe 'shoe') (Is ?glove 'glove') (Is ?phone 'phone') (Is ?hat 'hat') (Is ?suitcase 'suitcase') (Is ?sock 'sock') (Is ?sandwich 'sandwich') (Is ?remote 'remote') (Is ?screwdriver 'screwdriver') (OnTopSide ?shoe) (RightOf ?glove ?shoe) (RightOf ?phone ?glove) (Above ?shoe ?hat) (Above ?hat ?suitcase) (AlignedVertically ?shoe ?hat) (AlignedVertically ?hat ?suitcase) (OnBottomSide ?suitcase) (LargerThan ?suitcase ?hat) (Above ?glove ?sock) (Above ?sock ?sandwich) (AlignedVertically ?glove ?sock) (AlignedVertically ?sock ?sandwich) (OnBottomSide ?sandwich) (OnRightSide ?phone) (OnRightSide ?remote) (OnRightSide ?screwdriver) (Above ?phone ?remote) (Above ?remote ?screwdriver) (AlignedVertically ?phone ?remote) (AlignedVertically ?remote ?screwdriver) (OnBottomSide ?screwdriver) (SmallerThan ?screwdriver ?remote)))))))))))",
+    "cnf": "(exists ?shoe (exists ?glove (exists ?phone (exists ?hat (exists ?suitcase (exists ?sock (exists ?sandwich (exists ?remote (exists ?screwdriver (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (RightOf ?glove ?shoe) (Above ?shoe ?hat) (Is ?glove 'glove') (RightOf ?phone ?glove) (AlignedVertically ?shoe ?hat) (Is ?hat 'hat') (Above ?hat ?suitcase) (Above ?glove ?sock) (Is ?phone 'phone') (OnRightSide ?phone) (AlignedVertically ?hat ?suitcase) (Is ?suitcase 'suitcase') (AlignedVertically ?glove ?sock) (Is ?sock 'sock') (Above ?sock ?sandwich) (Above ?phone ?remote) (LargerThan ?suitcase ?hat) (OnBottomSide ?suitcase) (AlignedVertically ?sock ?sandwich) (Is ?sandwich 'sandwich') (AlignedVertically ?phone ?remote) (OnRightSide ?remote) (Above ?remote ?screwdriver) (OnBottomSide ?sandwich) (AlignedVertically ?remote ?screwdriver) (Is ?remote 'remote') (OnRightSide ?screwdriver) (SmallerThan ?screwdriver ?remote) (OnBottomSide ?screwdriver) (Is ?screwdriver 'screwdriver')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "sock",
+        "phone",
+        "screwdriver",
+        "sandwich",
+        "hat",
+        "suitcase",
+        "glove",
+        "shoe"
+    ]
+}

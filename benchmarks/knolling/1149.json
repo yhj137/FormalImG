@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a vertical column of items located on the right side of the image. At the top of this column is a pan. Directly below the pan is a bowl, followed by a tie below the bowl, and a pen below the tie. All these objects are aligned vertically, and the pan is visually larger than the bowl. Additionally, for every watch present in the scene, it is located below the pen, and there is a shoe positioned below the watch. The watch and shoe continue the vertical alignment of the column, and the shoe is larger than the watch.",
+    "dsl": "(exists ?pan (exists ?bowl (exists ?tie (exists ?pen (and (Is ?pan 'pan') (Is ?bowl 'bowl') (Is ?tie 'tie') (Is ?pen 'pen') (OnRightSide ?pan) (Below ?bowl ?pan) (Below ?tie ?bowl) (Below ?pen ?tie) (AlignedVertically ?pan ?bowl) (AlignedVertically ?bowl ?tie) (AlignedVertically ?tie ?pen) (LargerThan ?pan ?bowl) (forall ?watch (implies (Is ?watch 'watch') (exists ?shoe (and (Is ?shoe 'shoe') (Below ?watch ?pen) (Below ?shoe ?watch) (AlignedVertically ?pen ?watch) (AlignedVertically ?watch ?shoe) (LargerThan ?shoe ?watch))))))))))",
+    "cnf": "(exists ?pan (exists ?bowl (exists ?tie (exists ?pen (forall ?watch (exists ?shoe (and (Is ?pan 'pan') (OnRightSide ?pan) (Below ?bowl ?pan) (AlignedVertically ?pan ?bowl) (Is ?bowl 'bowl') (Below ?tie ?bowl) (LargerThan ?pan ?bowl) (AlignedVertically ?bowl ?tie) (Is ?tie 'tie') (Below ?pen ?tie) (AlignedVertically ?tie ?pen) (Is ?pen 'pen') (or (not (Is ?watch 'watch')) (Below ?watch ?pen)) (or (not (Is ?watch 'watch')) (AlignedVertically ?pen ?watch)) (or (not (Is ?watch 'watch')) (Is ?shoe 'shoe')) (or (not (Is ?watch 'watch')) (Below ?shoe ?watch)) (or (not (Is ?watch 'watch')) (AlignedVertically ?watch ?shoe)) (or (not (Is ?watch 'watch')) (LargerThan ?shoe ?watch)))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "pen",
+        "watch",
+        "pan",
+        "bowl",
+        "shoe"
+    ]
+}

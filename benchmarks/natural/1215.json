@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A wooden bench is located to the right of a sofa. A metal hammer rests on the sofa next to a screwdriver. A basket sits on the bench, with a cylindrical bottle positioned next to it. Additionally, a round rock is on the ground next to the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?b (exists ?h (exists ?sd (exists ?bsk (exists ?bot (exists ?r (and (Is ?s 'sofa') (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Is ?sd 'screwdriver') (Is ?bsk 'basket') (Is ?bot 'bottle') (HasShape ?bot 'cylindrical') (Is ?r 'rock') (HasShape ?r 'round') (RightOf ?b ?s) (On ?h ?s) (NextTo ?h ?sd) (On ?bsk ?b) (NextTo ?bsk ?bot) (NextTo ?r ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?b (exists ?h (exists ?sd (exists ?bsk (exists ?bot (exists ?r (and (Is ?s 'sofa') (RightOf ?b ?s) (On ?h ?s) (HasMaterial ?b 'wooden') (On ?bsk ?b) (HasMaterial ?h 'metal') (NextTo ?h ?sd) (Is ?b 'bench') (NextTo ?r ?b) (Is ?bsk 'basket') (NextTo ?bsk ?bot) (Is ?h 'hammer') (Is ?sd 'screwdriver') (HasShape ?r 'round') (HasShape ?bot 'cylindrical') (Is ?r 'rock') (Is ?bot 'bottle'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "bench",
+        "bottle",
+        "rock",
+        "hammer",
+        "basket",
+        "screwdriver"
+    ]
+}

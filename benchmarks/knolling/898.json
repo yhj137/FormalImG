@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the top side of the layout. For every tie in the scene, it is placed below the monitor, and there is a bowl located below the tie which is smaller than the monitor. Additionally, for every tie, there is a backpack and a laptop on the right side of the image, where the backpack is positioned below the monitor and above the laptop, and the backpack is larger than the laptop.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?tie (implies (Is ?tie 'tie') (exists ?bowl (exists ?backpack (exists ?laptop (and (Is ?bowl 'bowl') (Is ?backpack 'backpack') (Is ?laptop 'laptop') (Below ?tie ?monitor) (Below ?bowl ?tie) (SmallerThan ?bowl ?monitor) (OnRightSide ?backpack) (Below ?backpack ?monitor) (OnRightSide ?laptop) (Above ?backpack ?laptop) (LargerThan ?backpack ?laptop)))))))))",
+    "cnf": "(exists ?monitor (forall ?tie (exists ?bowl (exists ?backpack (exists ?laptop (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?tie 'tie')) (Below ?tie ?monitor)) (or (not (Is ?tie 'tie')) (SmallerThan ?bowl ?monitor)) (or (not (Is ?tie 'tie')) (Is ?laptop 'laptop')) (or (not (Is ?tie 'tie')) (Below ?bowl ?tie)) (or (not (Is ?tie 'tie')) (Below ?backpack ?monitor)) (or (not (Is ?tie 'tie')) (OnRightSide ?backpack)) (or (not (Is ?tie 'tie')) (Is ?backpack 'backpack')) (or (not (Is ?tie 'tie')) (OnRightSide ?laptop)) (or (not (Is ?tie 'tie')) (Is ?bowl 'bowl')) (or (not (Is ?tie 'tie')) (Above ?backpack ?laptop)) (or (not (Is ?tie 'tie')) (LargerThan ?backpack ?laptop))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "backpack",
+        "monitor",
+        "bowl"
+    ]
+}

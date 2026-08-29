@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicting a blue bus to the left of a round lamp. Beside the lamp is a bicycle, with a man next to it. Every fish in the scene is inside the bus.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?l (exists ?bi (exists ?m (and (Is ?b 'bus') (HasColor ?b 'blue') (Is ?l 'lamp') (HasShape ?l 'round') (LeftOf ?b ?l) (Is ?bi 'bicycle') (NextTo ?bi ?l) (Is ?m 'man') (NextTo ?m ?bi) (forall ?f (implies (Is ?f 'fish') (In ?f ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?l (exists ?bi (exists ?m (forall ?f (and (Is ?b 'bus') (HasColor ?b 'blue') (LeftOf ?b ?l) (or (not (Is ?f 'fish')) (In ?f ?b)) (HasShape ?l 'round') (NextTo ?bi ?l) (Is ?l 'lamp') (Is ?bi 'bicycle') (NextTo ?m ?bi) (Is ?m 'man'))))))))",
+    "k": 5,
+    "object_classes": [
+        "man",
+        "fish",
+        "bus",
+        "lamp",
+        "bicycle"
+    ]
+}

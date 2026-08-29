@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. Inside a bus, there is a man with a hat and headphones on. The man is holding a round plate with a metal spoon on it. There is also a person inside the bus holding an open book that has a flower inside it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?m (exists ?h (exists ?hp (exists ?p (exists ?s (exists ?per (exists ?bk (exists ?f (and (Is ?b 'bus') (Is ?m 'man') (In ?m ?b) (Is ?h 'hat') (On ?h ?m) (Is ?hp 'headphones') (On ?hp ?m) (Is ?p 'plate') (HasShape ?p 'round') (Holding ?m ?p) (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?s ?p) (Is ?per 'person') (In ?per ?b) (Is ?bk 'book') (HasState ?bk 'open') (Holding ?per ?bk) (Is ?f 'flower') (In ?f ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?m (exists ?h (exists ?hp (exists ?p (exists ?s (exists ?per (exists ?bk (exists ?f (and (Is ?b 'bus') (In ?m ?b) (In ?per ?b) (Is ?m 'man') (On ?h ?m) (Is ?per 'person') (Holding ?per ?bk) (On ?hp ?m) (Is ?h 'hat') (HasState ?bk 'open') (In ?f ?bk) (Holding ?m ?p) (Is ?hp 'headphones') (Is ?bk 'book') (Is ?f 'flower') (HasShape ?p 'round') (On ?s ?p) (Is ?p 'plate') (HasMaterial ?s 'metal') (Is ?s 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "person",
+        "headphones",
+        "man",
+        "hat",
+        "bus",
+        "book",
+        "spoon",
+        "flower",
+        "plate"
+    ]
+}

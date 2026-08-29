@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This photo-style scene features a bus with a mirror on it. A man stands next to the bus, holding an open umbrella and a key. Inside the bus is a round pizza, with a fork next to it, a knife to its right, and a clock to its left. Additionally, every fruit in the scene is located inside the bus.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (exists ?m (and (Is ?m 'mirror') (On ?m ?b))) (exists ?man (and (Is ?man 'man') (NextTo ?man ?b) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?man ?u))) (exists ?k (and (Is ?k 'key') (Holding ?man ?k))))) (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (In ?p ?b) (exists ?f (and (Is ?f 'fork') (NextTo ?f ?p))) (exists ?kn (and (Is ?kn 'knife') (RightOf ?kn ?p))) (exists ?c (and (Is ?c 'clock') (LeftOf ?c ?p))))) (forall ?fr (implies (Is ?fr 'fruit') (In ?fr ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?m (exists ?man (exists ?u (exists ?k (exists ?p (exists ?f (exists ?kn (exists ?c (forall ?fr (and (Is ?b 'bus') (On ?m ?b) (NextTo ?man ?b) (Is ?m 'mirror') (In ?p ?b) (Is ?man 'man') (Holding ?man ?u) (or (not (Is ?fr 'fruit')) (In ?fr ?b)) (HasShape ?p 'round') (NextTo ?f ?p) (Holding ?man ?k) (HasState ?u 'open') (Is ?p 'pizza') (RightOf ?kn ?p) (Is ?f 'fork') (Is ?k 'key') (Is ?u 'umbrella') (LeftOf ?c ?p) (Is ?kn 'knife') (Is ?c 'clock')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bus",
+        "fork",
+        "key",
+        "knife",
+        "pizza",
+        "mirror",
+        "clock",
+        "fruit",
+        "man",
+        "umbrella"
+    ]
+}

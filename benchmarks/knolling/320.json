@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every sandwich present in the scene, there is a sock positioned to its right, and that sock is located on the right side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'sandwich') (exists ?y (and (Is ?y 'sock') (RightOf ?y ?x) (OnRightSide ?y))))))",
+    "cnf": "(forall ?x (exists ?y (and (or (not (Is ?x 'sandwich')) (Is ?y 'sock')) (or (not (Is ?x 'sandwich')) (RightOf ?y ?x)) (or (not (Is ?x 'sandwich')) (OnRightSide ?y)))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "sock"
+    ]
+}

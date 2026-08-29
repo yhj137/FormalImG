@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical column of items aligned vertically: keys are located on the top side, a carrot is below the keys, a stapler is below the carrot, and a wrench is below the stapler on the bottom side. Logic dictates that for every bowl in the scene, there is a cup to its left, and that bowl is positioned to the left of the stapler. Additionally, a book is placed below the cup, and they are aligned vertically.",
+    "dsl": "(exists ?keys (exists ?carrot (exists ?stapler (exists ?wrench (and (Is ?keys 'keys') (Is ?carrot 'carrot') (Is ?stapler 'stapler') (Is ?wrench 'wrench') (OnTopSide ?keys) (OnBottomSide ?wrench) (Below ?carrot ?keys) (Below ?stapler ?carrot) (Below ?wrench ?stapler) (AlignedVertically ?keys ?carrot) (AlignedVertically ?carrot ?stapler) (AlignedVertically ?stapler ?wrench) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?cup (exists ?book (and (Is ?cup 'cup') (Is ?book 'book') (LeftOf ?bowl ?stapler) (LeftOf ?cup ?bowl) (Below ?book ?cup) (AlignedVertically ?cup ?book)))))))))))",
+    "cnf": "(exists ?keys (exists ?carrot (exists ?stapler (exists ?wrench (forall ?bowl (exists ?cup (exists ?book (and (Is ?keys 'keys') (OnTopSide ?keys) (Below ?carrot ?keys) (AlignedVertically ?keys ?carrot) (Is ?carrot 'carrot') (Below ?stapler ?carrot) (AlignedVertically ?carrot ?stapler) (Is ?stapler 'stapler') (Below ?wrench ?stapler) (AlignedVertically ?stapler ?wrench) (OnBottomSide ?wrench) (or (not (Is ?bowl 'bowl')) (LeftOf ?bowl ?stapler)) (Is ?wrench 'wrench') (or (not (Is ?bowl 'bowl')) (Is ?book 'book')) (or (not (Is ?bowl 'bowl')) (LeftOf ?cup ?bowl)) (or (not (Is ?bowl 'bowl')) (Is ?cup 'cup')) (or (not (Is ?bowl 'bowl')) (Below ?book ?cup)) (or (not (Is ?bowl 'bowl')) (AlignedVertically ?cup ?book))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "keys",
+        "stapler",
+        "wrench",
+        "carrot",
+        "cup",
+        "bowl"
+    ]
+}

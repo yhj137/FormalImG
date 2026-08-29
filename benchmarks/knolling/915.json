@@ -1,0 +1,13 @@
+{
+    "prompt": "For every sock, it is white, and there is a pair of glasses below it and a game controller to the left of the glasses. The game controller is on the left side of the image. Additionally, there is a blue suitcase positioned above a red book, and the glasses are smaller than the book.",
+    "dsl": "(exists ?suitcase (exists ?book (forall ?sock (implies (Is ?sock 'sock') (exists ?glasses (exists ?controller (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?book 'book') (Has ?book 'red') (Has ?sock 'white') (Is ?glasses 'glasses') (Is ?controller 'game_controller') (Above ?suitcase ?book) (Below ?glasses ?sock) (LeftOf ?controller ?glasses) (OnLeftSide ?controller) (SmallerThan ?glasses ?book))))))))",
+    "cnf": "(exists ?suitcase (exists ?book (forall ?sock (exists ?glasses (exists ?controller (and (or (not (Is ?sock 'sock')) (Is ?suitcase 'suitcase')) (or (not (Is ?sock 'sock')) (Has ?suitcase 'blue')) (or (not (Is ?sock 'sock')) (Is ?book 'book')) (or (not (Is ?sock 'sock')) (Above ?suitcase ?book)) (or (not (Is ?sock 'sock')) (Has ?book 'red')) (or (not (Is ?sock 'sock')) (Is ?controller 'game_controller')) (or (not (Is ?sock 'sock')) (Below ?glasses ?sock)) (or (not (Is ?sock 'sock')) (SmallerThan ?glasses ?book)) (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (Is ?glasses 'glasses')) (or (not (Is ?sock 'sock')) (LeftOf ?controller ?glasses)) (or (not (Is ?sock 'sock')) (OnLeftSide ?controller))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "glasses",
+        "sock",
+        "game_controller",
+        "suitcase"
+    ]
+}

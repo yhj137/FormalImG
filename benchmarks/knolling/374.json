@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image containing a black camera. Every pair of red pliers in the image is located to the right of this camera.",
+    "dsl": "(exists ?c (and (Is ?c 'camera') (Has ?c 'black') (forall ?p (implies (and (Is ?p 'pliers') (Has ?p 'red')) (RightOf ?p ?c)))))",
+    "cnf": "(exists ?c (forall ?p (and (Is ?c 'camera') (Has ?c 'black') (or (not (Is ?p 'pliers')) (not (Has ?p 'red')) (RightOf ?p ?c)))))",
+    "k": 2,
+    "object_classes": [
+        "pliers",
+        "camera"
+    ]
+}

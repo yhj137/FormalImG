@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. Every butterfly rests on a gray elephant, which also has a cat sitting on it. This elephant is positioned next to a square monitor. A pair of shoes is placed on the monitor, and inside the shoes lies a toy car.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'butterfly') (exists ?e (exists ?c (exists ?m (exists ?s (exists ?t (and (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?c 'cat') (Is ?m 'monitor') (HasShape ?m 'square') (Is ?s 'shoes') (Is ?t 'toy car') (On ?b ?e) (On ?c ?e) (NextTo ?e ?m) (On ?s ?m) (In ?t ?s))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?e (exists ?c (exists ?m (exists ?s (exists ?t (and (or (not (Is ?b 'butterfly')) (Is ?e 'elephant')) (or (not (Is ?b 'butterfly')) (HasColor ?e 'gray')) (or (not (Is ?b 'butterfly')) (On ?b ?e)) (or (not (Is ?b 'butterfly')) (Is ?c 'cat')) (or (not (Is ?b 'butterfly')) (On ?c ?e)) (or (not (Is ?b 'butterfly')) (Is ?t 'toy car')) (or (not (Is ?b 'butterfly')) (Is ?m 'monitor')) (or (not (Is ?b 'butterfly')) (NextTo ?e ?m)) (or (not (Is ?b 'butterfly')) (Is ?s 'shoes')) (or (not (Is ?b 'butterfly')) (In ?t ?s)) (or (not (Is ?b 'butterfly')) (HasShape ?m 'square')) (or (not (Is ?b 'butterfly')) (On ?s ?m))))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "shoes",
+        "monitor",
+        "toy car",
+        "butterfly",
+        "cat"
+    ]
+}

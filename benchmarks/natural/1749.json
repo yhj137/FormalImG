@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a child sitting on a bed with glasses on. To the left of the bed is a wooden chair with a round lamp and every bowl in the scene placed on it. To the right of the bed is a plant. Next to the bed sits a backpack containing a sandwich.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?chair (exists ?lamp (exists ?plant (exists ?pack (and (Is ?bed 'bed') (Is ?child 'child') (HasState ?child 'sitting') (On ?child ?bed) (Is ?chair 'chair') (HasMaterial ?chair 'wooden') (LeftOf ?chair ?bed) (Is ?lamp 'lamp') (HasShape ?lamp 'round') (On ?lamp ?chair) (Is ?plant 'plant') (RightOf ?plant ?bed) (Is ?pack 'backpack') (NextTo ?pack ?bed) (forall ?bowl (implies (Is ?bowl 'bowl') (On ?bowl ?chair))) (exists ?sand (and (Is ?sand 'sandwich') (In ?sand ?pack))) (exists ?glass (and (Is ?glass 'glasses') (On ?glass ?child)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?chair (exists ?lamp (exists ?plant (exists ?pack (forall ?bowl (exists ?sand (exists ?glass (and (Is ?bed 'bed') (On ?child ?bed) (LeftOf ?chair ?bed) (HasState ?child 'sitting') (On ?glass ?child) (RightOf ?plant ?bed) (HasMaterial ?chair 'wooden') (On ?lamp ?chair) (Is ?child 'child') (Is ?glass 'glasses') (NextTo ?pack ?bed) (Is ?plant 'plant') (Is ?chair 'chair') (or (not (Is ?bowl 'bowl')) (On ?bowl ?chair)) (HasShape ?lamp 'round') (Is ?pack 'backpack') (In ?sand ?pack) (Is ?lamp 'lamp') (Is ?sand 'sandwich'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "child",
+        "bed",
+        "chair",
+        "glasses",
+        "plant",
+        "backpack",
+        "lamp",
+        "sandwich",
+        "bowl"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a blue cup with a knife inside sitting on a bookshelf. A chair stands next to the bookshelf, with a bench to the left of the chair. Every tree is to the left of the bench, and a red car is positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?k (exists ?ch (exists ?be (and (Is ?b 'bookshelf') (Is ?c 'cup') (HasColor ?c 'blue') (On ?c ?b) (Is ?k 'knife') (In ?k ?c) (Is ?ch 'chair') (NextTo ?ch ?b) (Is ?be 'bench') (LeftOf ?be ?ch) (forall ?t (implies (Is ?t 'tree') (LeftOf ?t ?be))) (exists ?ca (and (Is ?ca 'car') (HasColor ?ca 'red') (RightOf ?ca ?be))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?k (exists ?ch (exists ?be (forall ?t (exists ?ca (and (Is ?b 'bookshelf') (On ?c ?b) (NextTo ?ch ?b) (HasColor ?c 'blue') (In ?k ?c) (Is ?ch 'chair') (LeftOf ?be ?ch) (Is ?c 'cup') (Is ?k 'knife') (Is ?be 'bench') (or (not (Is ?t 'tree')) (LeftOf ?t ?be)) (RightOf ?ca ?be) (HasColor ?ca 'red') (Is ?ca 'car'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "knife",
+        "chair",
+        "cup",
+        "tree",
+        "bookshelf",
+        "car"
+    ]
+}

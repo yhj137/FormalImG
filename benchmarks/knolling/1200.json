@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a white keyboard. A brown cutting_board is positioned below the keyboard. A blue bottle is below the cutting_board. A black camera is below the bottle. A gray wrench is below the camera. A yellow ruler is below the wrench. A black watch is below the ruler. The keyboard is larger than the watch, and the cutting_board is larger than the camera.",
+    "dsl": "(exists ?keyboard (exists ?cutting_board (exists ?bottle (exists ?camera (exists ?wrench (exists ?ruler (exists ?watch (and (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?ruler 'ruler') (Has ?ruler 'yellow') (Is ?watch 'watch') (Has ?watch 'black') (Below ?cutting_board ?keyboard) (Below ?bottle ?cutting_board) (Below ?camera ?bottle) (Below ?wrench ?camera) (Below ?ruler ?wrench) (Below ?watch ?ruler) (LargerThan ?keyboard ?watch) (LargerThan ?cutting_board ?camera)))))))))",
+    "cnf": "(exists ?keyboard (exists ?cutting_board (exists ?bottle (exists ?camera (exists ?wrench (exists ?ruler (exists ?watch (and (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (Below ?cutting_board ?keyboard) (LargerThan ?keyboard ?watch) (Has ?cutting_board 'brown') (Below ?bottle ?cutting_board) (Below ?watch ?ruler) (Is ?cutting_board 'cutting_board') (LargerThan ?cutting_board ?camera) (Has ?bottle 'blue') (Below ?camera ?bottle) (Below ?ruler ?wrench) (Has ?watch 'black') (Below ?wrench ?camera) (Is ?bottle 'bottle') (Has ?camera 'black') (Has ?ruler 'yellow') (Is ?watch 'watch') (Has ?wrench 'gray') (Is ?camera 'camera') (Is ?ruler 'ruler') (Is ?wrench 'wrench')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "wrench",
+        "watch",
+        "cutting_board",
+        "camera",
+        "bottle"
+    ]
+}

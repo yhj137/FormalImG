@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a single yellow screwdriver.",
+    "dsl": "(exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow')))",
+    "cnf": "(exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "screwdriver"
+    ]
+}

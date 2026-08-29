@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical column of objects arranged on the right side of the scene. The column consists of headphones, a handbag, a hammer, a shoe, a ruler, a mouse, and a lemon, organized from top to bottom. All seven items are strictly aligned vertically. In terms of size comparison, the lemon is smaller than the mouse, the mouse is smaller than the shoe, and the ruler is smaller than the hammer.",
+    "dsl": "(exists ?headphones (exists ?handbag (exists ?hammer (exists ?shoe (exists ?ruler (exists ?mouse (exists ?lemon (and (Is ?headphones 'headphones') (Is ?handbag 'handbag') (Is ?hammer 'hammer') (Is ?shoe 'shoe') (Is ?ruler 'ruler') (Is ?mouse 'mouse') (Is ?lemon 'lemon') (OnRightSide ?headphones) (OnRightSide ?handbag) (OnRightSide ?hammer) (OnRightSide ?shoe) (OnRightSide ?ruler) (OnRightSide ?mouse) (OnRightSide ?lemon) (Above ?headphones ?handbag) (Above ?handbag ?hammer) (Above ?hammer ?shoe) (Above ?shoe ?ruler) (Above ?ruler ?mouse) (Above ?mouse ?lemon) (AlignedVertically ?headphones ?handbag) (AlignedVertically ?handbag ?hammer) (AlignedVertically ?hammer ?shoe) (AlignedVertically ?shoe ?ruler) (AlignedVertically ?ruler ?mouse) (AlignedVertically ?mouse ?lemon) (SmallerThan ?lemon ?mouse) (SmallerThan ?mouse ?shoe) (SmallerThan ?ruler ?hammer)))))))))",
+    "cnf": "(exists ?headphones (exists ?handbag (exists ?hammer (exists ?shoe (exists ?ruler (exists ?mouse (exists ?lemon (and (Is ?headphones 'headphones') (OnRightSide ?headphones) (Above ?headphones ?handbag) (AlignedVertically ?headphones ?handbag) (OnRightSide ?handbag) (Above ?handbag ?hammer) (AlignedVertically ?handbag ?hammer) (Is ?handbag 'handbag') (OnRightSide ?hammer) (Above ?hammer ?shoe) (AlignedVertically ?hammer ?shoe) (Is ?hammer 'hammer') (OnRightSide ?shoe) (Above ?shoe ?ruler) (SmallerThan ?ruler ?hammer) (AlignedVertically ?shoe ?ruler) (Is ?shoe 'shoe') (OnRightSide ?ruler) (Above ?ruler ?mouse) (AlignedVertically ?ruler ?mouse) (SmallerThan ?mouse ?shoe) (Is ?ruler 'ruler') (OnRightSide ?mouse) (Above ?mouse ?lemon) (AlignedVertically ?mouse ?lemon) (SmallerThan ?lemon ?mouse) (Is ?mouse 'mouse') (OnRightSide ?lemon) (Is ?lemon 'lemon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "hammer",
+        "handbag",
+        "mouse",
+        "headphones",
+        "shoe"
+    ]
+}

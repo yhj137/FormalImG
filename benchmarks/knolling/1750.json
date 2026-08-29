@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue shirt is positioned on the left side of the scene. A bottle is located above the shirt. The shirt is to the left of a cutting board, and they are aligned horizontally. The cutting board is positioned above a keyboard. The keyboard is to the left of a calculator and is visually larger than the calculator. A remote is located on the bottom side, with the keyboard positioned above it. Additionally, for every wrench in the arrangement, there is a spoon to its left and the wrench is to the left of a carrot; the wrench is also aligned vertically with the remote.",
+    "dsl": "(exists ?shirt (exists ?bottle (exists ?cutting_board (exists ?keyboard (exists ?calculator (exists ?remote (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (Is ?bottle 'bottle') (Above ?bottle ?shirt) (Is ?cutting_board 'cutting_board') (LeftOf ?shirt ?cutting_board) (AlignedHorizontally ?shirt ?cutting_board) (Is ?keyboard 'keyboard') (Above ?cutting_board ?keyboard) (Is ?calculator 'calculator') (LeftOf ?keyboard ?calculator) (LargerThan ?keyboard ?calculator) (Is ?remote 'remote') (OnBottomSide ?remote) (Above ?keyboard ?remote) (forall ?w (implies (Is ?w 'wrench') (exists ?s (exists ?c (and (Is ?s 'spoon') (Is ?c 'carrot') (LeftOf ?s ?w) (LeftOf ?w ?c) (AlignedVertically ?w ?remote)))))))))))))",
+    "cnf": "(exists ?shirt (exists ?bottle (exists ?cutting_board (exists ?keyboard (exists ?calculator (exists ?remote (forall ?w (exists ?s (exists ?c (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (Above ?bottle ?shirt) (LeftOf ?shirt ?cutting_board) (Is ?bottle 'bottle') (AlignedHorizontally ?shirt ?cutting_board) (Is ?cutting_board 'cutting_board') (Above ?cutting_board ?keyboard) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?calculator) (LargerThan ?keyboard ?calculator) (Is ?calculator 'calculator') (Above ?keyboard ?remote) (OnBottomSide ?remote) (or (not (Is ?w 'wrench')) (AlignedVertically ?w ?remote)) (Is ?remote 'remote') (or (not (Is ?w 'wrench')) (LeftOf ?w ?c)) (or (not (Is ?w 'wrench')) (LeftOf ?s ?w)) (or (not (Is ?w 'wrench')) (Is ?c 'carrot')) (or (not (Is ?w 'wrench')) (Is ?s 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "wrench",
+        "carrot",
+        "cutting_board",
+        "calculator",
+        "bottle",
+        "shirt",
+        "spoon"
+    ]
+}

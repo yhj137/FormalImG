@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every sofa is broken.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?s (implies (Is ?s 'sofa') (HasState ?s 'broken'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?s (or (not (Is ?s 'sofa')) (HasState ?s 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "sofa"
+    ]
+}

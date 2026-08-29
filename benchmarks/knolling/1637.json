@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack located on the left side of the scene, there is a hat positioned directly below it. To the right of the backpack are headphones, which are also situated to the left of a pan. A phone is arranged below the headphones, and the backpack is physically larger than the phone. Below the phone lies a ruler. A bowl is placed below the pan, while an apple, which is smaller than the bowl, rests to the right of the bowl. Finally, a sandwich is located on the bottom side of the image, positioned to the right of the ruler.",
+    "dsl": "(forall ?backpack (implies (and (Is ?backpack 'backpack') (OnLeftSide ?backpack)) (exists ?hat (exists ?headphones (exists ?phone (exists ?ruler (exists ?pan (exists ?bowl (exists ?apple (exists ?sandwich (and (Is ?hat 'hat') (Is ?headphones 'headphones') (Is ?phone 'phone') (Is ?ruler 'ruler') (Is ?pan 'pan') (Is ?bowl 'bowl') (Is ?apple 'apple') (Is ?sandwich 'sandwich') (Below ?hat ?backpack) (RightOf ?headphones ?backpack) (LeftOf ?headphones ?pan) (Below ?phone ?headphones) (LargerThan ?backpack ?phone) (Below ?ruler ?phone) (Below ?bowl ?pan) (SmallerThan ?apple ?bowl) (RightOf ?apple ?bowl) (RightOf ?sandwich ?ruler) (OnBottomSide ?sandwich))))))))))))",
+    "cnf": "(forall ?backpack (exists ?hat (exists ?headphones (exists ?phone (exists ?ruler (exists ?pan (exists ?bowl (exists ?apple (exists ?sandwich (and (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?hat 'hat')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?headphones 'headphones')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Below ?hat ?backpack)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?phone 'phone')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (RightOf ?headphones ?backpack)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?sandwich 'sandwich')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?ruler 'ruler')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Below ?phone ?headphones)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (LeftOf ?headphones ?pan)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?apple 'apple')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (RightOf ?sandwich ?ruler)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?pan 'pan')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Below ?ruler ?phone)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (LargerThan ?backpack ?phone)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Below ?bowl ?pan)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (Is ?bowl 'bowl')) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (SmallerThan ?apple ?bowl)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (RightOf ?apple ?bowl)) (or (not (Is ?backpack 'backpack')) (not (OnLeftSide ?backpack)) (OnBottomSide ?sandwich))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "phone",
+        "hat",
+        "backpack",
+        "pan",
+        "bowl",
+        "headphones",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement consists of a hammer, a pair of pliers, and a glove. The hammer is positioned on the top side of the image. The pliers are aligned vertically with the hammer, and the glove is aligned horizontally with the pliers.",
+    "dsl": "(exists ?hammer (exists ?pliers (exists ?glove (and (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?glove 'glove') (OnTopSide ?hammer) (AlignedVertically ?hammer ?pliers) (AlignedHorizontally ?pliers ?glove)))))",
+    "cnf": "(exists ?hammer (exists ?pliers (exists ?glove (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (AlignedVertically ?hammer ?pliers) (Is ?pliers 'pliers') (AlignedHorizontally ?pliers ?glove) (Is ?glove 'glove')))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "pliers",
+        "glove"
+    ]
+}

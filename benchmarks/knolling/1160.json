@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue suitcase positioned on the right side. A green bottle is placed to the left of the suitcase, and a black watch is located to the left of the bottle. Keys are aligned vertically with the watch. Additionally, for every fork in the image, it is aligned horizontally with the keys and has a gray wrench located to its right.",
+    "dsl": "(exists ?suitcase (exists ?bottle (exists ?watch (exists ?keys (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnRightSide ?suitcase) (Is ?bottle 'bottle') (Has ?bottle 'green') (LeftOf ?bottle ?suitcase) (Is ?watch 'watch') (Has ?watch 'black') (LeftOf ?watch ?bottle) (Is ?keys 'keys') (AlignedVertically ?keys ?watch) (forall ?fork (implies (Is ?fork 'fork') (exists ?wrench (and (Is ?wrench 'wrench') (Has ?wrench 'gray') (RightOf ?wrench ?fork) (AlignedHorizontally ?fork ?keys))))))))))",
+    "cnf": "(exists ?suitcase (exists ?bottle (exists ?watch (exists ?keys (forall ?fork (exists ?wrench (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnRightSide ?suitcase) (LeftOf ?bottle ?suitcase) (Has ?bottle 'green') (LeftOf ?watch ?bottle) (Is ?bottle 'bottle') (Has ?watch 'black') (AlignedVertically ?keys ?watch) (Is ?watch 'watch') (Is ?keys 'keys') (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?keys)) (or (not (Is ?fork 'fork')) (RightOf ?wrench ?fork)) (or (not (Is ?fork 'fork')) (Has ?wrench 'gray')) (or (not (Is ?fork 'fork')) (Is ?wrench 'wrench')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "wrench",
+        "watch",
+        "fork",
+        "bottle",
+        "suitcase"
+    ]
+}

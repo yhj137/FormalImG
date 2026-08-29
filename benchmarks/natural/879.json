@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring a tree where all the apples are located. A fabric rug lies next to the tree, with a book resting on it and a sandwich positioned to the left of the book.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (forall ?a (implies (Is ?a 'apple') (On ?a ?t))) (exists ?r (exists ?b (exists ?s (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (NextTo ?r ?t) (Is ?b 'book') (On ?b ?r) (Is ?s 'sandwich') (LeftOf ?s ?b))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?a (exists ?r (exists ?b (exists ?s (and (Is ?t 'tree') (or (not (Is ?a 'apple')) (On ?a ?t)) (NextTo ?r ?t) (HasMaterial ?r 'fabric') (On ?b ?r) (Is ?r 'rug') (Is ?b 'book') (LeftOf ?s ?b) (Is ?s 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "tree",
+        "sandwich",
+        "book",
+        "rug",
+        "apple"
+    ]
+}

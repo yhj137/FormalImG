@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a sandwich positioned on the top side. Below the sandwich is a remote located on the left side. There is also a phone aligned horizontally with the remote, where the remote is visually larger than the phone. Furthermore, for every watch in the image, it is aligned horizontally with the sandwich.",
+    "dsl": "(exists ?sandwich (exists ?remote (exists ?phone (and (Is ?sandwich 'sandwich') (OnTopSide ?sandwich) (Is ?remote 'remote') (OnLeftSide ?remote) (Is ?phone 'phone') (Above ?sandwich ?remote) (LargerThan ?remote ?phone) (AlignedHorizontally ?remote ?phone) (forall ?watch (implies (Is ?watch 'watch') (AlignedHorizontally ?watch ?sandwich)))))))",
+    "cnf": "(exists ?sandwich (exists ?remote (exists ?phone (forall ?watch (and (Is ?sandwich 'sandwich') (OnTopSide ?sandwich) (Above ?sandwich ?remote) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?watch ?sandwich)) (OnLeftSide ?remote) (LargerThan ?remote ?phone) (Is ?remote 'remote') (AlignedHorizontally ?remote ?phone) (Is ?phone 'phone'))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "watch",
+        "remote",
+        "phone"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every carrot present in the scene, there is a black pen aligned horizontally with it.",
+    "dsl": "(and (forall ?c (implies (Is ?c 'carrot') (exists ?p (and (Is ?p 'pen') (Has ?p 'black') (AlignedHorizontally ?c ?p))))))",
+    "cnf": "(forall ?c (exists ?p (and (or (not (Is ?c 'carrot')) (Is ?p 'pen')) (or (not (Is ?c 'carrot')) (Has ?p 'black')) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?c ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "pen"
+    ]
+}

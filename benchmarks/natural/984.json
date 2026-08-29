@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A jacket lies on a bookshelf. A bird stands on the bookshelf, holding a rusty knife. All bananas are cylindrical and contained inside the jacket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?j (exists ?bd (exists ?k (and (Is ?bs 'bookshelf') (Is ?j 'jacket') (Is ?bd 'bird') (Is ?k 'knife') (On ?j ?bs) (HasState ?j 'lying') (On ?bd ?bs) (HasState ?bd 'standing') (Holding ?bd ?k) (HasState ?k 'rusty') (forall ?ba (implies (Is ?ba 'banana') (and (HasShape ?ba 'cylindrical') (In ?ba ?j))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?j (exists ?bd (exists ?k (forall ?ba (and (Is ?bs 'bookshelf') (On ?j ?bs) (On ?bd ?bs) (Is ?j 'jacket') (HasState ?j 'lying') (Is ?bd 'bird') (HasState ?bd 'standing') (or (not (Is ?ba 'banana')) (In ?ba ?j)) (Holding ?bd ?k) (or (not (Is ?ba 'banana')) (HasShape ?ba 'cylindrical')) (Is ?k 'knife') (HasState ?k 'rusty'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "jacket",
+        "bird",
+        "bookshelf",
+        "banana"
+    ]
+}

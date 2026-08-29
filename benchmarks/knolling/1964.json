@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the left side of the image. Arranged in a horizontal line to the right of the suitcase and aligned with it, in the order from left to right, are a pair of jeans, a glove, and a cup. A pair of headphones is placed above the suitcase, and a sock is placed below it, with all three aligned vertically. Similarly, a pair of scissors is located above the jeans, and a pair of glasses is below the jeans, forming another vertically aligned column. Furthermore, for every spoon in the scene, there is a bowl aligned horizontally to its right; the spoon is situated on the bottom side of the image, directly below the cup and aligned vertically with it.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?glove (exists ?cup (exists ?headphones (exists ?scissors (exists ?sock (exists ?glasses (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?jeans 'jeans') (Is ?glove 'glove') (Is ?cup 'cup') (Is ?headphones 'headphones') (Is ?scissors 'scissors') (Is ?sock 'sock') (Is ?glasses 'glasses') (RightOf ?jeans ?suitcase) (AlignedHorizontally ?suitcase ?jeans) (RightOf ?glove ?jeans) (AlignedHorizontally ?jeans ?glove) (RightOf ?cup ?glove) (AlignedHorizontally ?glove ?cup) (Above ?headphones ?suitcase) (AlignedVertically ?headphones ?suitcase) (Above ?scissors ?jeans) (AlignedVertically ?scissors ?jeans) (Below ?sock ?suitcase) (AlignedVertically ?suitcase ?sock) (Below ?glasses ?jeans) (AlignedVertically ?jeans ?glasses) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bowl (and (Is ?bowl 'bowl') (OnBottomSide ?spoon) (Below ?spoon ?cup) (AlignedVertically ?cup ?spoon) (RightOf ?bowl ?spoon) (AlignedHorizontally ?spoon ?bowl))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?glove (exists ?cup (exists ?headphones (exists ?scissors (exists ?sock (exists ?glasses (forall ?spoon (exists ?bowl (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?jeans ?suitcase) (AlignedHorizontally ?suitcase ?jeans) (Is ?jeans 'jeans') (Above ?headphones ?suitcase) (RightOf ?glove ?jeans) (AlignedVertically ?headphones ?suitcase) (Is ?headphones 'headphones') (AlignedHorizontally ?jeans ?glove) (Is ?glove 'glove') (Below ?sock ?suitcase) (Above ?scissors ?jeans) (RightOf ?cup ?glove) (AlignedVertically ?suitcase ?sock) (Is ?sock 'sock') (AlignedVertically ?scissors ?jeans) (Is ?scissors 'scissors') (AlignedHorizontally ?glove ?cup) (Is ?cup 'cup') (Below ?glasses ?jeans) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?cup)) (AlignedVertically ?jeans ?glasses) (Is ?glasses 'glasses') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?cup ?spoon)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?spoon)) (or (not (Is ?spoon 'spoon')) (RightOf ?bowl ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?bowl)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "suitcase",
+        "cup",
+        "jeans",
+        "scissors",
+        "bowl",
+        "headphones",
+        "glove",
+        "spoon"
+    ]
+}

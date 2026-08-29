@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a laptop, a book, a tie, a watch, and a cup. The book is placed below the laptop, while the cup is located below the book and positioned on the bottom side of the image. To the left of the book is a tie, and the watch is placed to the left of the tie. Additionally, for every carrot in the scene, it is located to the left of the laptop, and there is a lemon strictly above it which is smaller than the carrot.",
+    "dsl": "(exists ?laptop (exists ?book (exists ?tie (exists ?watch (exists ?cup (and (Is ?laptop 'laptop') (Is ?book 'book') (Is ?tie 'tie') (Is ?watch 'watch') (Is ?cup 'cup') (Below ?book ?laptop) (LeftOf ?tie ?book) (LeftOf ?watch ?tie) (Below ?cup ?book) (OnBottomSide ?cup) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?lemon (and (Is ?lemon 'lemon') (SmallerThan ?lemon ?carrot) (Above ?lemon ?carrot) (LeftOf ?carrot ?laptop)))))))))))",
+    "cnf": "(exists ?laptop (exists ?book (exists ?tie (exists ?watch (exists ?cup (forall ?carrot (exists ?lemon (and (Is ?laptop 'laptop') (Below ?book ?laptop) (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?laptop)) (Is ?book 'book') (LeftOf ?tie ?book) (or (not (Is ?carrot 'carrot')) (Above ?lemon ?carrot)) (Below ?cup ?book) (Is ?tie 'tie') (LeftOf ?watch ?tie) (or (not (Is ?carrot 'carrot')) (SmallerThan ?lemon ?carrot)) (Is ?cup 'cup') (OnBottomSide ?cup) (Is ?watch 'watch') (or (not (Is ?carrot 'carrot')) (Is ?lemon 'lemon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "laptop",
+        "tie",
+        "lemon",
+        "carrot",
+        "watch",
+        "cup"
+    ]
+}

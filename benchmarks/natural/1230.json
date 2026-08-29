@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene where every butterfly has a fabric hat to its right. To the right of the hat is a woman holding a ceramic bowl containing an orange. A book lies to the right of the woman, and a clock is situated to the left of the book.",
+    "dsl": "(and (IsStyle 'photo') (forall ?bf (implies (Is ?bf 'butterfly') (exists ?h (and (Is ?h 'hat') (HasMaterial ?h 'fabric') (RightOf ?h ?bf) (exists ?w (and (Is ?w 'woman') (RightOf ?w ?h) (exists ?b (and (Is ?b 'bowl') (HasMaterial ?b 'ceramic') (Holding ?w ?b) (exists ?o (and (Is ?o 'orange') (In ?o ?b))) (exists ?bk (and (Is ?bk 'book') (RightOf ?bk ?w) (exists ?c (and (Is ?c 'clock') (LeftOf ?c ?bk))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?bf (exists ?h (exists ?w (exists ?b (exists ?o (exists ?bk (exists ?c (and (or (not (Is ?bf 'butterfly')) (Is ?h 'hat')) (or (not (Is ?bf 'butterfly')) (HasMaterial ?h 'fabric')) (or (not (Is ?bf 'butterfly')) (RightOf ?h ?bf)) (or (not (Is ?bf 'butterfly')) (Is ?w 'woman')) (or (not (Is ?bf 'butterfly')) (RightOf ?w ?h)) (or (not (Is ?bf 'butterfly')) (Is ?b 'bowl')) (or (not (Is ?bf 'butterfly')) (Holding ?w ?b)) (or (not (Is ?bf 'butterfly')) (HasMaterial ?b 'ceramic')) (or (not (Is ?bf 'butterfly')) (Is ?o 'orange')) (or (not (Is ?bf 'butterfly')) (RightOf ?bk ?w)) (or (not (Is ?bf 'butterfly')) (In ?o ?b)) (or (not (Is ?bf 'butterfly')) (Is ?bk 'book')) (or (not (Is ?bf 'butterfly')) (Is ?c 'clock')) (or (not (Is ?bf 'butterfly')) (LeftOf ?c ?bk)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "book",
+        "hat",
+        "butterfly",
+        "clock",
+        "woman",
+        "orange"
+    ]
+}

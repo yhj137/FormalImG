@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image containing a carrot and a game controller. The carrot is positioned on the top side of the image, and it is located to the left of the game controller.",
+    "dsl": "(exists ?c (exists ?gc (and (Is ?c 'carrot') (Is ?gc 'game_controller') (OnTopSide ?c) (LeftOf ?c ?gc))))",
+    "cnf": "(exists ?c (exists ?gc (and (Is ?c 'carrot') (OnTopSide ?c) (LeftOf ?c ?gc) (Is ?gc 'game_controller'))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "game_controller"
+    ]
+}

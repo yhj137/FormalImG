@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a phone located in the top area and on the right side of the scene. Directly below the phone is a watch, and directly below the watch is a ruler; these three items form a vertical line. Additionally, for every knife in the image, it is smaller in size than the ruler.",
+    "dsl": "(exists ?phone (exists ?watch (exists ?ruler (and (Is ?phone 'phone') (Is ?watch 'watch') (Is ?ruler 'ruler') (OnTopSide ?phone) (OnRightSide ?phone) (Below ?watch ?phone) (AlignedVertically ?watch ?phone) (Below ?ruler ?watch) (AlignedVertically ?ruler ?watch) (forall ?knife (implies (Is ?knife 'knife') (SmallerThan ?knife ?ruler)))))))",
+    "cnf": "(exists ?phone (exists ?watch (exists ?ruler (forall ?knife (and (Is ?phone 'phone') (OnTopSide ?phone) (OnRightSide ?phone) (Below ?watch ?phone) (AlignedVertically ?watch ?phone) (Is ?watch 'watch') (Below ?ruler ?watch) (AlignedVertically ?ruler ?watch) (Is ?ruler 'ruler') (or (not (Is ?knife 'knife')) (SmallerThan ?knife ?ruler)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "phone",
+        "watch",
+        "knife"
+    ]
+}

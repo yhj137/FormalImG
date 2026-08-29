@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every pan is round. Next to each pan stands a man holding a hammer, and a knife rests on the pan.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?p (implies (Is ?p 'pan') (exists ?m (exists ?h (exists ?k (and (Is ?m 'man') (Is ?h 'hammer') (Is ?k 'knife') (HasShape ?p 'round') (NextTo ?m ?p) (Holding ?m ?h) (On ?k ?p))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?p (exists ?m (exists ?h (exists ?k (and (or (not (Is ?p 'pan')) (Is ?m 'man')) (or (not (Is ?p 'pan')) (Is ?h 'hammer')) (or (not (Is ?p 'pan')) (NextTo ?m ?p)) (or (not (Is ?p 'pan')) (Is ?k 'knife')) (or (not (Is ?p 'pan')) (Holding ?m ?h)) (or (not (Is ?p 'pan')) (HasShape ?p 'round')) (or (not (Is ?p 'pan')) (On ?k ?p))))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "pan",
+        "knife",
+        "hammer"
+    ]
+}

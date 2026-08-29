@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A bed sits on a rectangular rug, with a teddy bear and a cat resting on the bed. A round ball also lies on the rug. To the right of the bed is a sofa, where all glasses in the scene are located. A backpack containing a cylindrical bottle is also on the sofa, and a phone is positioned to the right of the backpack.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?rug (exists ?bed (exists ?sofa (exists ?teddy (and (Is ?rug 'rug') (HasShape ?rug 'rectangular') (Is ?bed 'bed') (On ?bed ?rug) (Is ?sofa 'sofa') (RightOf ?sofa ?bed) (Is ?teddy 'teddy bear') (On ?teddy ?bed) (forall ?glasses (implies (Is ?glasses 'glasses') (On ?glasses ?sofa))) (exists ?backpack (exists ?bottle (exists ?phone (exists ?cat (exists ?ball (and (Is ?backpack 'backpack') (On ?backpack ?sofa) (Is ?bottle 'bottle') (In ?bottle ?backpack) (HasShape ?bottle 'cylindrical') (Is ?phone 'phone') (RightOf ?phone ?backpack) (Is ?cat 'cat') (On ?cat ?bed) (Is ?ball 'ball') (On ?ball ?rug) (HasShape ?ball 'round')))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?rug (exists ?bed (exists ?sofa (exists ?teddy (forall ?glasses (exists ?backpack (exists ?bottle (exists ?phone (exists ?cat (exists ?ball (and (Is ?rug 'rug') (HasShape ?rug 'rectangular') (On ?bed ?rug) (On ?ball ?rug) (Is ?bed 'bed') (RightOf ?sofa ?bed) (Is ?ball 'ball') (HasShape ?ball 'round') (On ?teddy ?bed) (Is ?sofa 'sofa') (or (not (Is ?glasses 'glasses')) (On ?glasses ?sofa)) (On ?cat ?bed) (Is ?teddy 'teddy bear') (On ?backpack ?sofa) (Is ?cat 'cat') (Is ?backpack 'backpack') (In ?bottle ?backpack) (RightOf ?phone ?backpack) (Is ?bottle 'bottle') (HasShape ?bottle 'cylindrical') (Is ?phone 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "bottle",
+        "bed",
+        "glasses",
+        "backpack",
+        "rug",
+        "teddy bear",
+        "ball",
+        "cat"
+    ]
+}

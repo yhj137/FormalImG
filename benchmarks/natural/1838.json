@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a bookshelf where every flower is placed. A metal pan containing sliced fruit sits on the bookshelf, alongside a sleeping cat with a butterfly resting on it. A fabric shirt is inside the bookshelf. Standing next to the bookshelf is a child wearing headphones and holding a round ball.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (and (Is ?bs 'bookshelf') (forall ?fl (implies (Is ?fl 'flower') (On ?fl ?bs))) (exists ?p (exists ?fr (exists ?c (exists ?ball (exists ?hp (exists ?s (exists ?cat (exists ?bf (and (Is ?p 'pan') (HasMaterial ?p 'metal') (On ?p ?bs) (Is ?fr 'fruit') (HasState ?fr 'sliced') (In ?fr ?p) (Is ?c 'child') (HasState ?c 'standing') (NextTo ?c ?bs) (Is ?ball 'ball') (HasShape ?ball 'round') (Holding ?c ?ball) (Is ?hp 'headphones') (On ?hp ?c) (Is ?s 'shirt') (HasMaterial ?s 'fabric') (In ?s ?bs) (Is ?cat 'cat') (HasState ?cat 'sleeping') (On ?cat ?bs) (Is ?bf 'butterfly') (On ?bf ?cat)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (forall ?fl (exists ?p (exists ?fr (exists ?c (exists ?ball (exists ?hp (exists ?s (exists ?cat (exists ?bf (and (Is ?bs 'bookshelf') (or (not (Is ?fl 'flower')) (On ?fl ?bs)) (On ?p ?bs) (NextTo ?c ?bs) (HasMaterial ?p 'metal') (In ?fr ?p) (In ?s ?bs) (HasState ?c 'standing') (Holding ?c ?ball) (Is ?p 'pan') (HasState ?fr 'sliced') (On ?cat ?bs) (HasMaterial ?s 'fabric') (Is ?c 'child') (On ?hp ?c) (HasShape ?ball 'round') (Is ?fr 'fruit') (HasState ?cat 'sleeping') (On ?bf ?cat) (Is ?s 'shirt') (Is ?hp 'headphones') (Is ?ball 'ball') (Is ?cat 'cat') (Is ?bf 'butterfly')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "fruit",
+        "shirt",
+        "child",
+        "flower",
+        "pan",
+        "ball",
+        "butterfly",
+        "cat",
+        "bookshelf"
+    ]
+}

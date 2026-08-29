@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the scene, it is positioned on the left side. To the right of the shoe is a pizza, and to the right of the pizza is a hat; these three objects are aligned horizontally. Additionally, there is a wallet aligned vertically with the shoe. A spoon is located to the right of the wallet (meaning the wallet is to the left of the spoon) and is aligned vertically with the pizza.",
+    "dsl": "(forall ?shoe (implies (Is ?shoe 'shoe') (exists ?pizza (exists ?hat (exists ?wallet (exists ?spoon (and (Is ?pizza 'pizza') (Is ?hat 'hat') (Is ?wallet 'wallet') (Is ?spoon 'spoon') (OnLeftSide ?shoe) (RightOf ?pizza ?shoe) (AlignedHorizontally ?shoe ?pizza) (RightOf ?hat ?pizza) (AlignedHorizontally ?pizza ?hat) (AlignedVertically ?shoe ?wallet) (LeftOf ?wallet ?spoon) (AlignedVertically ?pizza ?spoon))))))))",
+    "cnf": "(forall ?shoe (exists ?pizza (exists ?hat (exists ?wallet (exists ?spoon (and (or (not (Is ?shoe 'shoe')) (Is ?pizza 'pizza')) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (RightOf ?pizza ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?wallet 'wallet')) (or (not (Is ?shoe 'shoe')) (RightOf ?hat ?pizza)) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?shoe)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?shoe ?pizza)) (or (not (Is ?shoe 'shoe')) (Is ?spoon 'spoon')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?wallet)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?pizza ?hat)) (or (not (Is ?shoe 'shoe')) (LeftOf ?wallet ?spoon)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?pizza ?spoon))))))))",
+    "k": 5,
+    "object_classes": [
+        "pizza",
+        "hat",
+        "wallet",
+        "spoon",
+        "shoe"
+    ]
+}

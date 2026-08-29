@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring six objects arranged in a structured grid layout. The scene contains a black camera, a gray spoon, a white mouse, a pair of black glasses, a green bottle, and a yellow lemon. In the arrangement, the gray spoon is placed to the right of the black camera, while the white mouse is positioned to the right of the spoon. Below the camera are the black glasses. The green bottle is located below the spoon and to the right of the glasses. Finally, the yellow lemon is situated below the white mouse and to the right of the bottle.",
+    "dsl": "(exists ?camera (exists ?spoon (exists ?mouse (exists ?glasses (exists ?bottle (exists ?lemon (and (Is ?camera 'camera') (Has ?camera 'black') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?bottle 'bottle') (Has ?bottle 'green') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (RightOf ?spoon ?camera) (LeftOf ?spoon ?mouse) (Below ?glasses ?camera) (Below ?bottle ?spoon) (RightOf ?bottle ?glasses) (Below ?lemon ?mouse) (LeftOf ?bottle ?lemon))))))))",
+    "cnf": "(exists ?camera (exists ?spoon (exists ?mouse (exists ?glasses (exists ?bottle (exists ?lemon (and (Is ?camera 'camera') (Has ?camera 'black') (RightOf ?spoon ?camera) (Below ?glasses ?camera) (Has ?spoon 'gray') (LeftOf ?spoon ?mouse) (Has ?glasses 'black') (RightOf ?bottle ?glasses) (Is ?spoon 'spoon') (Below ?bottle ?spoon) (Has ?mouse 'white') (Below ?lemon ?mouse) (Is ?glasses 'glasses') (LeftOf ?bottle ?lemon) (Has ?bottle 'green') (Is ?mouse 'mouse') (Has ?lemon 'yellow') (Is ?bottle 'bottle') (Is ?lemon 'lemon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "lemon",
+        "camera",
+        "bottle",
+        "mouse",
+        "spoon"
+    ]
+}

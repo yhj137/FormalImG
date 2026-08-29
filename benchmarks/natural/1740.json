@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man standing on a rug holding a pan. To the left of the man is a refrigerator with a round clock above it, and a laptop sits to his right. Every tree in the scene is positioned next to the refrigerator, with a fruit and a shirt on each one.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?r (exists ?ref (exists ?p (exists ?l (exists ?c (and (Is ?m 'man') (Is ?r 'rug') (Is ?ref 'refrigerator') (Is ?p 'pan') (Is ?l 'laptop') (Is ?c 'clock') (On ?m ?r) (Holding ?m ?p) (LeftOf ?ref ?m) (RightOf ?l ?m) (Above ?c ?ref) (HasShape ?c 'round') (forall ?t (implies (Is ?t 'tree') (and (NextTo ?t ?ref) (exists ?fr (exists ?s (and (Is ?fr 'fruit') (Is ?s 'shirt') (On ?fr ?t) (On ?s ?t)))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?r (exists ?ref (exists ?p (exists ?l (exists ?c (forall ?t (exists ?fr (exists ?s (and (Is ?m 'man') (On ?m ?r) (Holding ?m ?p) (Is ?r 'rug') (LeftOf ?ref ?m) (Is ?p 'pan') (RightOf ?l ?m) (Is ?ref 'refrigerator') (Above ?c ?ref) (Is ?l 'laptop') (or (not (Is ?t 'tree')) (NextTo ?t ?ref)) (Is ?c 'clock') (HasShape ?c 'round') (or (not (Is ?t 'tree')) (Is ?fr 'fruit')) (or (not (Is ?t 'tree')) (Is ?s 'shirt')) (or (not (Is ?t 'tree')) (On ?fr ?t)) (or (not (Is ?t 'tree')) (On ?s ?t)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "shirt",
+        "laptop",
+        "tree",
+        "rug",
+        "man",
+        "refrigerator",
+        "pan",
+        "clock"
+    ]
+}

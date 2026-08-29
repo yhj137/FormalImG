@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene depicts a laptop to the left of a monitor. All keys are made of metal and are located to the left of the laptop. A child holding a plastic screwdriver is positioned to the left of the monitor, and a cake sits to the left of the child.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?l (and (Is ?m 'monitor') (Is ?l 'laptop') (LeftOf ?l ?m) (forall ?k (implies (Is ?k 'key') (and (HasMaterial ?k 'metal') (LeftOf ?k ?l)))) (exists ?c (exists ?s (exists ?ck (and (Is ?c 'child') (Is ?s 'screwdriver') (Is ?ck 'cake') (Holding ?c ?s) (HasMaterial ?s 'plastic') (LeftOf ?c ?m) (LeftOf ?ck ?c)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?l (forall ?k (exists ?c (exists ?s (exists ?ck (and (Is ?m 'monitor') (LeftOf ?l ?m) (LeftOf ?c ?m) (Is ?l 'laptop') (or (not (Is ?k 'key')) (LeftOf ?k ?l)) (Holding ?c ?s) (LeftOf ?ck ?c) (or (not (Is ?k 'key')) (HasMaterial ?k 'metal')) (Is ?c 'child') (Is ?s 'screwdriver') (HasMaterial ?s 'plastic') (Is ?ck 'cake')))))))))",
+    "k": 6,
+    "object_classes": [
+        "child",
+        "laptop",
+        "cake",
+        "monitor",
+        "screwdriver",
+        "key"
+    ]
+}

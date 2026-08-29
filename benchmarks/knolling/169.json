@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this layout, strictly enforce that every bottle is positioned on the top side of the scene.",
+    "dsl": "(forall ?x (implies (Is ?x 'bottle') (OnTopSide ?x)))",
+    "cnf": "(forall ?x (or (not (Is ?x 'bottle')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a plate located on the left side of the scene. For every donut in the image, there is a hammer that is aligned horizontally with it. Additionally, the plate is visually larger than the donut.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnLeftSide ?plate) (forall ?donut (implies (Is ?donut 'donut') (exists ?hammer (and (Is ?hammer 'hammer') (LargerThan ?plate ?donut) (AlignedHorizontally ?donut ?hammer)))))))",
+    "cnf": "(exists ?plate (forall ?donut (exists ?hammer (and (Is ?plate 'plate') (OnLeftSide ?plate) (or (not (Is ?donut 'donut')) (LargerThan ?plate ?donut)) (or (not (Is ?donut 'donut')) (Is ?hammer 'hammer')) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?donut ?hammer))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "plate",
+        "donut"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The top side of the scene features a pizza and a camera, where the camera is positioned to the right of the pizza. On the bottom side, for every sock present, the following arrangement exists: the sock is white, with a screwdriver to its left, a fork to its right, a bowl below it, and a calculator above it. Additionally, a ruler is located to the left of the calculator, and a pair of scissors is to the right of the calculator. The bowl is larger than the calculator, and the calculator is positioned directly below the pizza to link the groups.",
+    "dsl": "(exists ?pizza (exists ?camera (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (Is ?camera 'camera') (OnTopSide ?camera) (RightOf ?camera ?pizza) (forall ?sock (implies (Is ?sock 'sock') (exists ?screwdriver (exists ?fork (exists ?bowl (exists ?calc (exists ?ruler (exists ?scissors (and (Is ?screwdriver 'screwdriver') (Is ?fork 'fork') (Is ?bowl 'bowl') (Is ?calc 'calculator') (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Has ?sock 'white') (OnBottomSide ?sock) (LeftOf ?screwdriver ?sock) (RightOf ?fork ?sock) (Below ?bowl ?sock) (Above ?calc ?sock) (LargerThan ?bowl ?calc) (LeftOf ?ruler ?calc) (RightOf ?scissors ?calc) (Below ?calc ?pizza)))))))))))))",
+    "cnf": "(exists ?pizza (exists ?camera (forall ?sock (exists ?screwdriver (exists ?fork (exists ?bowl (exists ?calc (exists ?ruler (exists ?scissors (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (RightOf ?camera ?pizza) (or (not (Is ?sock 'sock')) (Below ?calc ?pizza)) (OnTopSide ?camera) (or (not (Is ?sock 'sock')) (RightOf ?scissors ?calc)) (Is ?camera 'camera') (or (not (Is ?sock 'sock')) (LeftOf ?ruler ?calc)) (or (not (Is ?sock 'sock')) (Is ?scissors 'scissors')) (or (not (Is ?sock 'sock')) (LargerThan ?bowl ?calc)) (or (not (Is ?sock 'sock')) (Is ?ruler 'ruler')) (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (Above ?calc ?sock)) (or (not (Is ?sock 'sock')) (Below ?bowl ?sock)) (or (not (Is ?sock 'sock')) (Is ?calc 'calculator')) (or (not (Is ?sock 'sock')) (OnBottomSide ?sock)) (or (not (Is ?sock 'sock')) (RightOf ?fork ?sock)) (or (not (Is ?sock 'sock')) (Is ?bowl 'bowl')) (or (not (Is ?sock 'sock')) (LeftOf ?screwdriver ?sock)) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (Is ?screwdriver 'screwdriver'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "sock",
+        "pizza",
+        "screwdriver",
+        "fork",
+        "calculator",
+        "camera",
+        "scissors",
+        "bowl"
+    ]
+}

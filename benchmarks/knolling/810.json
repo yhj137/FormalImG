@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image with a neatly organized vertical column of objects positioned on the left side of the scene. The arrangement begins at the top with a pair of blue jeans, which is placed above a red tie. The tie is positioned above a yellow drill. Continuing downwards, a hammer is located below the drill, and a pair of scissors is found below the hammer. All five items are strictly aligned vertically. Additionally, the blue jeans are visually larger than the tie, and the drill appears larger than the scissors.",
+    "dsl": "(exists ?jeans (exists ?tie (exists ?drill (exists ?hammer (exists ?scissors (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?tie 'tie') (Has ?tie 'red') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?hammer 'hammer') (Is ?scissors 'scissors') (OnLeftSide ?jeans) (Above ?jeans ?tie) (Above ?tie ?drill) (Below ?hammer ?drill) (Below ?scissors ?hammer) (AlignedVertically ?jeans ?tie) (AlignedVertically ?tie ?drill) (AlignedVertically ?drill ?hammer) (AlignedVertically ?hammer ?scissors) (LargerThan ?jeans ?tie) (LargerThan ?drill ?scissors)))))))",
+    "cnf": "(exists ?jeans (exists ?tie (exists ?drill (exists ?hammer (exists ?scissors (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (Above ?jeans ?tie) (AlignedVertically ?jeans ?tie) (Has ?tie 'red') (Above ?tie ?drill) (LargerThan ?jeans ?tie) (AlignedVertically ?tie ?drill) (Is ?tie 'tie') (Has ?drill 'yellow') (Below ?hammer ?drill) (AlignedVertically ?drill ?hammer) (Is ?drill 'drill') (Is ?hammer 'hammer') (Below ?scissors ?hammer) (LargerThan ?drill ?scissors) (AlignedVertically ?hammer ?scissors) (Is ?scissors 'scissors')))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "drill",
+        "hammer",
+        "jeans",
+        "scissors"
+    ]
+}

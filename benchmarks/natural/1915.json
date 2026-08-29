@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a metal bicycle. To its right is a wooden bed occupied by a woman in a blue shirt, with a fluffy teddy bear beside her. A keyboard also sits on the bed next to an orange, with a sandwich placed to the right of the orange. A round rock is next to the bicycle, and all birds in the scene are positioned to the left of the bicycle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bi (and (Is ?bi 'bicycle') (HasMaterial ?bi 'metal') (exists ?be (and (Is ?be 'bed') (HasMaterial ?be 'wooden') (RightOf ?be ?bi) (exists ?wo (and (Is ?wo 'woman') (On ?wo ?be) (exists ?sh (and (Is ?sh 'shirt') (HasColor ?sh 'blue') (On ?sh ?wo) (exists ?te (and (Is ?te 'teddy bear') (HasMaterial ?te 'fluffy') (NextTo ?te ?wo) (and (forall ?br (implies (Is ?br 'bird') (LeftOf ?br ?bi))) (exists ?ro (and (Is ?ro 'rock') (HasShape ?ro 'round') (NextTo ?ro ?bi) (exists ?ke (and (Is ?ke 'keyboard') (On ?ke ?be) (exists ?or (and (Is ?or 'orange') (NextTo ?or ?ke) (exists ?sa (and (Is ?sa 'sandwich') (RightOf ?sa ?or)))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bi (exists ?be (exists ?wo (exists ?sh (exists ?te (forall ?br (exists ?ro (exists ?ke (exists ?or (exists ?sa (and (Is ?bi 'bicycle') (HasMaterial ?bi 'metal') (RightOf ?be ?bi) (or (not (Is ?br 'bird')) (LeftOf ?br ?bi)) (HasMaterial ?be 'wooden') (On ?wo ?be) (NextTo ?ro ?bi) (Is ?be 'bed') (On ?ke ?be) (Is ?wo 'woman') (On ?sh ?wo) (HasShape ?ro 'round') (Is ?ke 'keyboard') (NextTo ?or ?ke) (NextTo ?te ?wo) (HasColor ?sh 'blue') (Is ?ro 'rock') (Is ?or 'orange') (RightOf ?sa ?or) (HasMaterial ?te 'fluffy') (Is ?sh 'shirt') (Is ?sa 'sandwich') (Is ?te 'teddy bear')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "rock",
+        "sandwich",
+        "teddy bear",
+        "bed",
+        "shirt",
+        "woman",
+        "bicycle",
+        "bird",
+        "orange"
+    ]
+}

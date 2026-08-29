@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a sofa to the left of a bench, with a keyboard resting on the sofa. A bicycle stands to the right of the bench. Every jacket in the scene is draped on the bench, and a round basket containing a phone rests on the bicycle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?be (exists ?bi (and (Is ?s 'sofa') (Is ?be 'bench') (Is ?bi 'bicycle') (LeftOf ?s ?be) (RightOf ?bi ?be) (forall ?j (implies (Is ?j 'jacket') (On ?j ?be))) (exists ?ba (exists ?p (exists ?k (and (Is ?ba 'basket') (Is ?p 'phone') (Is ?k 'keyboard') (HasShape ?ba 'round') (On ?ba ?bi) (In ?p ?ba) (On ?k ?s))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?be (exists ?bi (forall ?j (exists ?ba (exists ?p (exists ?k (and (Is ?s 'sofa') (LeftOf ?s ?be) (On ?k ?s) (Is ?be 'bench') (RightOf ?bi ?be) (Is ?k 'keyboard') (or (not (Is ?j 'jacket')) (On ?j ?be)) (Is ?bi 'bicycle') (On ?ba ?bi) (HasShape ?ba 'round') (In ?p ?ba) (Is ?ba 'basket') (Is ?p 'phone'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "bench",
+        "jacket",
+        "bicycle",
+        "basket",
+        "keyboard"
+    ]
+}

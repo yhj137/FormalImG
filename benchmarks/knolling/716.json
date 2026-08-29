@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is placed on the right side of the layout. For every hammer present, there exists a pair of headphones and keys. The hammer aligns vertically with the monitor, the monitor appears larger than the headphones, and the headphones align vertically with the keys.",
+    "dsl": "(exists ?mon (and (Is ?mon 'monitor') (OnRightSide ?mon) (forall ?h (implies (Is ?h 'hammer') (exists ?hp (exists ?k (and (Is ?hp 'headphones') (Is ?k 'keys') (AlignedVertically ?h ?mon) (LargerThan ?mon ?hp) (AlignedVertically ?hp ?k))))))))",
+    "cnf": "(exists ?mon (forall ?h (exists ?hp (exists ?k (and (Is ?mon 'monitor') (OnRightSide ?mon) (or (not (Is ?h 'hammer')) (AlignedVertically ?h ?mon)) (or (not (Is ?h 'hammer')) (LargerThan ?mon ?hp)) (or (not (Is ?h 'hammer')) (Is ?k 'keys')) (or (not (Is ?h 'hammer')) (Is ?hp 'headphones')) (or (not (Is ?h 'hammer')) (AlignedVertically ?hp ?k)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "hammer",
+        "keys",
+        "headphones"
+    ]
+}

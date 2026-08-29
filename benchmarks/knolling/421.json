@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack, a plate, and a hammer arranged vertically. The backpack is located on the right side of the image. The plate is positioned vertically below the backpack, and the hammer is placed below the plate. Additionally, the backpack is visually larger than the plate.",
+    "dsl": "(exists ?backpack (exists ?plate (exists ?hammer (and (Is ?backpack 'backpack') (Is ?plate 'plate') (Is ?hammer 'hammer') (OnRightSide ?backpack) (Below ?plate ?backpack) (Below ?hammer ?plate) (LargerThan ?backpack ?plate)))))",
+    "cnf": "(exists ?backpack (exists ?plate (exists ?hammer (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (Below ?plate ?backpack) (LargerThan ?backpack ?plate) (Is ?plate 'plate') (Below ?hammer ?plate) (Is ?hammer 'hammer')))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "hammer",
+        "backpack"
+    ]
+}

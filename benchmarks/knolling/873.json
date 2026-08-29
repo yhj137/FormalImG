@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a camera positioned on the top side. For every pen in the image, there is a screwdriver to its left, a glove to its right, and a spoon positioned to the right of the glove. The screwdriver, pen, glove, and spoon are arranged in a row and aligned horizontally. Additionally, the camera is physically larger than the pen.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (OnTopSide ?camera) (forall ?pen (implies (Is ?pen 'pen') (exists ?screwdriver (exists ?glove (exists ?spoon (and (Is ?screwdriver 'screwdriver') (Is ?glove 'glove') (Is ?spoon 'spoon') (LargerThan ?camera ?pen) (LeftOf ?screwdriver ?pen) (RightOf ?glove ?pen) (RightOf ?spoon ?glove) (AlignedHorizontally ?screwdriver ?pen) (AlignedHorizontally ?pen ?glove) (AlignedHorizontally ?glove ?spoon)))))))))",
+    "cnf": "(exists ?camera (forall ?pen (exists ?screwdriver (exists ?glove (exists ?spoon (and (Is ?camera 'camera') (OnTopSide ?camera) (or (not (Is ?pen 'pen')) (LargerThan ?camera ?pen)) (or (not (Is ?pen 'pen')) (Is ?spoon 'spoon')) (or (not (Is ?pen 'pen')) (LeftOf ?screwdriver ?pen)) (or (not (Is ?pen 'pen')) (Is ?glove 'glove')) (or (not (Is ?pen 'pen')) (RightOf ?spoon ?glove)) (or (not (Is ?pen 'pen')) (RightOf ?glove ?pen)) (or (not (Is ?pen 'pen')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?screwdriver ?pen)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?glove)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?glove ?spoon))))))))",
+    "k": 5,
+    "object_classes": [
+        "pen",
+        "screwdriver",
+        "camera",
+        "spoon",
+        "glove"
+    ]
+}

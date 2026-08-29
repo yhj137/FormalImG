@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack, a bottle, a cup, a tie, a sock, a glove, and a pair of glasses. The backpack acts as the anchor on the right side of the image. To the left of the backpack is a bottle, and directly below the bottle is a cup, with the two objects aligned vertically. Further to the left of the bottle is a tie. Below the tie is a sock, and below the sock is a glove, creating a vertical column where the tie is above the sock and the sock is above the glove; these three are aligned vertically. Additionally, a pair of glasses is positioned above the tie, aligned vertically with it, and the glasses are visually smaller than the cup.",
+    "dsl": "(exists ?backpack (exists ?bottle (exists ?cup (exists ?tie (exists ?sock (exists ?glove (exists ?glasses (and (Is ?backpack 'backpack') (Is ?bottle 'bottle') (Is ?cup 'cup') (Is ?tie 'tie') (Is ?sock 'sock') (Is ?glove 'glove') (Is ?glasses 'glasses') (OnRightSide ?backpack) (LeftOf ?bottle ?backpack) (Above ?bottle ?cup) (AlignedVertically ?bottle ?cup) (LeftOf ?tie ?bottle) (Above ?tie ?sock) (AlignedVertically ?tie ?sock) (Above ?sock ?glove) (AlignedVertically ?sock ?glove) (Above ?glasses ?tie) (AlignedVertically ?glasses ?tie) (SmallerThan ?glasses ?cup)))))))))",
+    "cnf": "(exists ?backpack (exists ?bottle (exists ?cup (exists ?tie (exists ?sock (exists ?glove (exists ?glasses (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (LeftOf ?bottle ?backpack) (Is ?bottle 'bottle') (Above ?bottle ?cup) (AlignedVertically ?bottle ?cup) (Is ?cup 'cup') (LeftOf ?tie ?bottle) (SmallerThan ?glasses ?cup) (Is ?tie 'tie') (Above ?tie ?sock) (AlignedVertically ?glasses ?tie) (AlignedVertically ?tie ?sock) (Is ?sock 'sock') (Above ?glasses ?tie) (Above ?sock ?glove) (Is ?glasses 'glasses') (AlignedVertically ?sock ?glove) (Is ?glove 'glove')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "sock",
+        "cup",
+        "backpack",
+        "bottle",
+        "glove"
+    ]
+}

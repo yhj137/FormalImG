@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a wooden bookshelf. Next to the bookshelf, a child is holding a dirty spoon. All balls are located to the right of the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bs (exists ?c (exists ?s (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?c 'child') (Is ?s 'spoon') (HasState ?s 'dirty') (NextTo ?c ?bs) (Holding ?c ?s) (forall ?b (implies (Is ?b 'ball') (RightOf ?b ?bs))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bs (exists ?c (exists ?s (forall ?b (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (NextTo ?c ?bs) (or (not (Is ?b 'ball')) (RightOf ?b ?bs)) (Is ?c 'child') (Holding ?c ?s) (HasState ?s 'dirty') (Is ?s 'spoon')))))))",
+    "k": 4,
+    "object_classes": [
+        "child",
+        "spoon",
+        "bookshelf",
+        "ball"
+    ]
+}

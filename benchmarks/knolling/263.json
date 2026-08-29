@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a watch and a remote. The watch is positioned on the left side of the image, and the remote is aligned vertically with the watch.",
+    "dsl": "(exists ?watch (exists ?remote (and (Is ?watch 'watch') (Is ?remote 'remote') (OnLeftSide ?watch) (AlignedVertically ?watch ?remote))))",
+    "cnf": "(exists ?watch (exists ?remote (and (Is ?watch 'watch') (OnLeftSide ?watch) (AlignedVertically ?watch ?remote) (Is ?remote 'remote'))))",
+    "k": 2,
+    "object_classes": [
+        "remote",
+        "watch"
+    ]
+}

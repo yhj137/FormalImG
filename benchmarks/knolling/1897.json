@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement of items. On the left side of the scene, there is a suitcase. Directly below the suitcase is a shoe, and below the shoe is a pan, with all three aligned vertically. To the right of the suitcase sits a keyboard. The layout follows a rule: for every fork present, it is positioned to the right of the keyboard, and there is a mouse located directly below it. Below the mouse is a wallet, maintaining vertical alignment. To the right of the wallet are glasses. Above the glasses is an apple, and above the apple is a lemon, forming a vertical column on the right.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?pan (exists ?keyboard (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?shoe 'shoe') (Below ?shoe ?suitcase) (AlignedVertically ?shoe ?suitcase) (Is ?pan 'pan') (Below ?pan ?shoe) (AlignedVertically ?pan ?shoe) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?suitcase) (forall ?fork (implies (Is ?fork 'fork') (exists ?mouse (exists ?wallet (exists ?glasses (exists ?apple (exists ?lemon (and (RightOf ?fork ?keyboard) (Is ?mouse 'mouse') (Below ?mouse ?fork) (AlignedVertically ?mouse ?fork) (Is ?wallet 'wallet') (Below ?wallet ?mouse) (AlignedVertically ?wallet ?mouse) (Is ?glasses 'glasses') (RightOf ?glasses ?wallet) (Is ?apple 'apple') (Above ?apple ?glasses) (AlignedVertically ?apple ?glasses) (Is ?lemon 'lemon') (Above ?lemon ?apple) (AlignedVertically ?lemon ?apple))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?pan (exists ?keyboard (forall ?fork (exists ?mouse (exists ?wallet (exists ?glasses (exists ?apple (exists ?lemon (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?shoe ?suitcase) (AlignedVertically ?shoe ?suitcase) (Is ?shoe 'shoe') (RightOf ?keyboard ?suitcase) (Below ?pan ?shoe) (Is ?keyboard 'keyboard') (or (not (Is ?fork 'fork')) (RightOf ?fork ?keyboard)) (AlignedVertically ?pan ?shoe) (Is ?pan 'pan') (or (not (Is ?fork 'fork')) (Is ?mouse 'mouse')) (or (not (Is ?fork 'fork')) (Below ?mouse ?fork)) (or (not (Is ?fork 'fork')) (AlignedVertically ?mouse ?fork)) (or (not (Is ?fork 'fork')) (Is ?wallet 'wallet')) (or (not (Is ?fork 'fork')) (Below ?wallet ?mouse)) (or (not (Is ?fork 'fork')) (AlignedVertically ?wallet ?mouse)) (or (not (Is ?fork 'fork')) (Is ?glasses 'glasses')) (or (not (Is ?fork 'fork')) (RightOf ?glasses ?wallet)) (or (not (Is ?fork 'fork')) (Is ?apple 'apple')) (or (not (Is ?fork 'fork')) (Above ?apple ?glasses)) (or (not (Is ?fork 'fork')) (AlignedVertically ?apple ?glasses)) (or (not (Is ?fork 'fork')) (Is ?lemon 'lemon')) (or (not (Is ?fork 'fork')) (Above ?lemon ?apple)) (or (not (Is ?fork 'fork')) (AlignedVertically ?lemon ?apple)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "apple",
+        "keyboard",
+        "lemon",
+        "fork",
+        "pan",
+        "wallet",
+        "mouse",
+        "suitcase",
+        "shoe"
+    ]
+}

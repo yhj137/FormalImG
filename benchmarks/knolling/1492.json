@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pair of jeans on the left side of the image, with a hammer aligned vertically with the jeans. A bottle is positioned to the right of the jeans. The arrangement follows a rule: for every pair of scissors in the scene, there is a knife located to its left, and the bottle is located to the left of that knife. To the right of the scissors is a camera, which is positioned on the right side of the image. A watch is aligned vertically with the camera. Finally, a pair of glasses is located on the bottom side and is visually smaller than the camera.",
+    "dsl": "(exists ?jeans (exists ?hammer (exists ?bottle (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?knife (exists ?camera (exists ?watch (exists ?glasses (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?hammer 'hammer') (AlignedVertically ?jeans ?hammer) (Is ?bottle 'bottle') (LeftOf ?jeans ?bottle) (Is ?knife 'knife') (LeftOf ?bottle ?knife) (LeftOf ?knife ?scissors) (Is ?camera 'camera') (OnRightSide ?camera) (LeftOf ?scissors ?camera) (Is ?watch 'watch') (AlignedVertically ?camera ?watch) (Is ?glasses 'glasses') (OnBottomSide ?glasses) (SmallerThan ?glasses ?camera)))))))))))",
+    "cnf": "(exists ?jeans (exists ?hammer (exists ?bottle (forall ?scissors (exists ?knife (exists ?camera (exists ?watch (exists ?glasses (and (or (not (Is ?scissors 'scissors')) (Is ?jeans 'jeans')) (or (not (Is ?scissors 'scissors')) (OnLeftSide ?jeans)) (or (not (Is ?scissors 'scissors')) (Is ?hammer 'hammer')) (or (not (Is ?scissors 'scissors')) (AlignedVertically ?jeans ?hammer)) (or (not (Is ?scissors 'scissors')) (Is ?bottle 'bottle')) (or (not (Is ?scissors 'scissors')) (LeftOf ?jeans ?bottle)) (or (not (Is ?scissors 'scissors')) (Is ?knife 'knife')) (or (not (Is ?scissors 'scissors')) (LeftOf ?bottle ?knife)) (or (not (Is ?scissors 'scissors')) (LeftOf ?knife ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?camera 'camera')) (or (not (Is ?scissors 'scissors')) (OnRightSide ?camera)) (or (not (Is ?scissors 'scissors')) (LeftOf ?scissors ?camera)) (or (not (Is ?scissors 'scissors')) (Is ?watch 'watch')) (or (not (Is ?scissors 'scissors')) (AlignedVertically ?camera ?watch)) (or (not (Is ?scissors 'scissors')) (Is ?glasses 'glasses')) (or (not (Is ?scissors 'scissors')) (SmallerThan ?glasses ?camera)) (or (not (Is ?scissors 'scissors')) (OnBottomSide ?glasses)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "watch",
+        "hammer",
+        "scissors",
+        "knife",
+        "jeans",
+        "camera",
+        "glasses",
+        "bottle"
+    ]
+}

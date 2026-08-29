@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing the interior of a house with a green sofa. A child sits on the sofa holding a red toy car, with a blue bottle next to the sofa. Every cup is also on the sofa, each positioned next to a plate.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?s (exists ?k (exists ?tc (exists ?b (and (Is ?h 'house') (Is ?s 'sofa') (HasColor ?s 'green') (In ?s ?h) (Is ?k 'child') (On ?k ?s) (Is ?tc 'toy car') (HasColor ?tc 'red') (Holding ?k ?tc) (Is ?b 'bottle') (HasColor ?b 'blue') (NextTo ?b ?s) (forall ?c (implies (Is ?c 'cup') (and (On ?c ?s) (exists ?p (and (Is ?p 'plate') (NextTo ?p ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?s (exists ?k (exists ?tc (exists ?b (forall ?c (exists ?p (and (Is ?h 'house') (In ?s ?h) (HasColor ?s 'green') (On ?k ?s) (Is ?s 'sofa') (NextTo ?b ?s) (Is ?k 'child') (Holding ?k ?tc) (or (not (Is ?c 'cup')) (On ?c ?s)) (HasColor ?b 'blue') (HasColor ?tc 'red') (or (not (Is ?c 'cup')) (Is ?p 'plate')) (Is ?b 'bottle') (Is ?tc 'toy car') (or (not (Is ?c 'cup')) (NextTo ?p ?c)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "sofa",
+        "child",
+        "bottle",
+        "plate",
+        "toy car",
+        "cup"
+    ]
+}

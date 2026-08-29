@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image containing a suitcase, a wallet, a phone, a book, a hammer, and a glove. The suitcase is positioned on the bottom side of the image. The wallet and the phone are aligned horizontally with the suitcase, with the suitcase being physically larger than the wallet. The book is aligned vertically with the suitcase and is also larger than the wallet. Furthermore, the hammer is aligned horizontally with the book, and the glove is aligned vertically with the hammer.",
+    "dsl": "(exists ?suitcase (exists ?wallet (exists ?phone (exists ?book (exists ?hammer (exists ?glove (and (Is ?suitcase 'suitcase') (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?book 'book') (Is ?hammer 'hammer') (Is ?glove 'glove') (OnBottomSide ?suitcase) (AlignedHorizontally ?suitcase ?wallet) (AlignedHorizontally ?wallet ?phone) (LargerThan ?suitcase ?wallet) (AlignedVertically ?suitcase ?book) (LargerThan ?book ?wallet) (AlignedHorizontally ?book ?hammer) (AlignedVertically ?hammer ?glove))))))))",
+    "cnf": "(exists ?suitcase (exists ?wallet (exists ?phone (exists ?book (exists ?hammer (exists ?glove (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (AlignedHorizontally ?suitcase ?wallet) (LargerThan ?suitcase ?wallet) (Is ?wallet 'wallet') (AlignedHorizontally ?wallet ?phone) (AlignedVertically ?suitcase ?book) (LargerThan ?book ?wallet) (Is ?phone 'phone') (Is ?book 'book') (AlignedHorizontally ?book ?hammer) (Is ?hammer 'hammer') (AlignedVertically ?hammer ?glove) (Is ?glove 'glove'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "phone",
+        "hammer",
+        "wallet",
+        "suitcase",
+        "glove"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene consists of a tie, a sandwich, a watch, keys, and a wallet arranged in a vertical layout. The tie is positioned on the top side of the frame. The tie is above the sandwich, which in turn is above the watch. The watch is placed on the left side of the layout. The keys are located below the watch, and the wallet is positioned below the keys.",
+    "dsl": "(exists ?tie (exists ?sandwich (exists ?watch (exists ?keys (exists ?wallet (and (Is ?tie 'tie') (Is ?sandwich 'sandwich') (Is ?watch 'watch') (Is ?keys 'keys') (Is ?wallet 'wallet') (OnTopSide ?tie) (Above ?tie ?sandwich) (Above ?sandwich ?watch) (OnLeftSide ?watch) (Below ?keys ?watch) (Below ?wallet ?keys)))))))",
+    "cnf": "(exists ?tie (exists ?sandwich (exists ?watch (exists ?keys (exists ?wallet (and (Is ?tie 'tie') (OnTopSide ?tie) (Above ?tie ?sandwich) (Is ?sandwich 'sandwich') (Above ?sandwich ?watch) (Is ?watch 'watch') (OnLeftSide ?watch) (Below ?keys ?watch) (Is ?keys 'keys') (Below ?wallet ?keys) (Is ?wallet 'wallet')))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "tie",
+        "watch",
+        "wallet",
+        "sandwich"
+    ]
+}

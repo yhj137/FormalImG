@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a cutting board positioned on the bottom side of the frame, with a phone located to its right. Furthermore, any scissors present in the composition are smaller than the cutting board.",
+    "dsl": "(exists ?board (exists ?phone (and (Is ?board 'cutting_board') (Is ?phone 'phone') (OnBottomSide ?board) (RightOf ?phone ?board) (forall ?s (implies (Is ?s 'scissors') (SmallerThan ?s ?board))))))",
+    "cnf": "(exists ?board (exists ?phone (forall ?s (and (Is ?board 'cutting_board') (OnBottomSide ?board) (RightOf ?phone ?board) (or (not (Is ?s 'scissors')) (SmallerThan ?s ?board)) (Is ?phone 'phone')))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "cutting_board",
+        "phone"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a drill located on the top side.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (OnTopSide ?drill)))",
+    "cnf": "(exists ?drill (and (Is ?drill 'drill') (OnTopSide ?drill)))",
+    "k": 1,
+    "object_classes": [
+        "drill"
+    ]
+}

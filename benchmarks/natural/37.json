@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image of a round plant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (and (Is ?p 'plant') (HasShape ?p 'round'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (and (Is ?p 'plant') (HasShape ?p 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "plant"
+    ]
+}

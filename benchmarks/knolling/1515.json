@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a brown handbag located on the top side of the image. Directly below the handbag are blue jeans, and a red tie is positioned to the left of the jeans. A black keyboard is situated on the right side, placed below the jeans. For every donut in the scene, it is pink and positioned to the left of the keyboard. Additionally, for each donut, there is a red apple to its left, a set of gray keys below the apple, and a white game controller below the keys. The game controller is smaller than the handbag.",
+    "dsl": "(exists ?handbag (exists ?jeans (exists ?tie (exists ?keyboard (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?handbag) (Is ?tie 'tie') (Has ?tie 'red') (LeftOf ?tie ?jeans) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (OnRightSide ?keyboard) (Below ?keyboard ?jeans) (forall ?donut (implies (Is ?donut 'donut') (exists ?apple (exists ?keys (exists ?gc (and (Has ?donut 'pink') (Is ?apple 'apple') (Has ?apple 'red') (Is ?keys 'keys') (Has ?keys 'gray') (Is ?gc 'game_controller') (Has ?gc 'white') (LeftOf ?donut ?keyboard) (LeftOf ?apple ?donut) (Below ?keys ?apple) (Below ?gc ?keys) (SmallerThan ?gc ?handbag))))))))))))",
+    "cnf": "(exists ?handbag (exists ?jeans (exists ?tie (exists ?keyboard (forall ?donut (exists ?apple (exists ?keys (exists ?gc (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Below ?jeans ?handbag) (or (not (Is ?donut 'donut')) (SmallerThan ?gc ?handbag)) (Has ?jeans 'blue') (LeftOf ?tie ?jeans) (or (not (Is ?donut 'donut')) (Below ?gc ?keys)) (Is ?jeans 'jeans') (Below ?keyboard ?jeans) (Has ?tie 'red') (or (not (Is ?donut 'donut')) (Below ?keys ?apple)) (or (not (Is ?donut 'donut')) (Has ?gc 'white')) (OnRightSide ?keyboard) (or (not (Is ?donut 'donut')) (LeftOf ?donut ?keyboard)) (Is ?tie 'tie') (or (not (Is ?donut 'donut')) (LeftOf ?apple ?donut)) (or (not (Is ?donut 'donut')) (Has ?keys 'gray')) (or (not (Is ?donut 'donut')) (Is ?gc 'game_controller')) (Has ?keyboard 'black') (or (not (Is ?donut 'donut')) (Has ?apple 'red')) (or (not (Is ?donut 'donut')) (Is ?keys 'keys')) (Is ?keyboard 'keyboard') (or (not (Is ?donut 'donut')) (Is ?apple 'apple')) (or (not (Is ?donut 'donut')) (Has ?donut 'pink')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "tie",
+        "apple",
+        "keyboard",
+        "game_controller",
+        "handbag",
+        "jeans",
+        "donut"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features an open jacket containing every fruit. A bitten sandwich is positioned next to the jacket on the right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?j (and (Is ?j 'jacket') (HasState ?j 'open') (forall ?f (implies (Is ?f 'fruit') (In ?f ?j))) (exists ?s (and (Is ?s 'sandwich') (HasState ?s 'bitten') (NextTo ?s ?j) (RightOf ?s ?j))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?j (forall ?f (exists ?s (and (Is ?j 'jacket') (HasState ?j 'open') (or (not (Is ?f 'fruit')) (In ?f ?j)) (NextTo ?s ?j) (RightOf ?s ?j) (HasState ?s 'bitten') (Is ?s 'sandwich'))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "sandwich",
+        "fruit"
+    ]
+}

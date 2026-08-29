@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a house containing every plant. A gray rock is located to the left of the house, with a red jacket situated to the left of the rock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?r (and (Is ?h 'house') (Is ?r 'rock') (HasColor ?r 'gray') (LeftOf ?r ?h) (forall ?p (implies (Is ?p 'plant') (In ?p ?h))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'red') (LeftOf ?j ?r)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?r (forall ?p (exists ?j (and (Is ?h 'house') (LeftOf ?r ?h) (or (not (Is ?p 'plant')) (In ?p ?h)) (HasColor ?r 'gray') (LeftOf ?j ?r) (Is ?r 'rock') (HasColor ?j 'red') (Is ?j 'jacket')))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "rock",
+        "jacket",
+        "plant"
+    ]
+}

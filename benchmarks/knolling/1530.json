@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a hat, and a game controller is placed below it. To the right of the hat is a plate. Located below the plate is a sandwich, which is smaller than the plate. For every book in the arrangement, it is positioned to the right of the plate, and an apple is placed below it. Below the apple are keys. Finally, a watch is located to the right of the keys and is positioned on the bottom side of the image.",
+    "dsl": "(exists ?hat (exists ?controller (exists ?plate (exists ?sandwich (and (Is ?hat 'hat') (Is ?controller 'game_controller') (Is ?plate 'plate') (Is ?sandwich 'sandwich') (OnLeftSide ?hat) (Below ?controller ?hat) (LeftOf ?hat ?plate) (Below ?sandwich ?plate) (SmallerThan ?sandwich ?plate) (forall ?book (implies (Is ?book 'book') (exists ?apple (exists ?keys (exists ?watch (and (Is ?apple 'apple') (Is ?keys 'keys') (Is ?watch 'watch') (LeftOf ?plate ?book) (Below ?apple ?book) (Below ?keys ?apple) (LeftOf ?keys ?watch) (OnBottomSide ?watch))))))))))))",
+    "cnf": "(exists ?hat (exists ?controller (exists ?plate (exists ?sandwich (forall ?book (exists ?apple (exists ?keys (exists ?watch (and (Is ?hat 'hat') (OnLeftSide ?hat) (Below ?controller ?hat) (LeftOf ?hat ?plate) (Is ?controller 'game_controller') (Is ?plate 'plate') (Below ?sandwich ?plate) (SmallerThan ?sandwich ?plate) (Is ?sandwich 'sandwich') (or (not (Is ?book 'book')) (LeftOf ?plate ?book)) (or (not (Is ?book 'book')) (Is ?watch 'watch')) (or (not (Is ?book 'book')) (Below ?apple ?book)) (or (not (Is ?book 'book')) (Is ?keys 'keys')) (or (not (Is ?book 'book')) (LeftOf ?keys ?watch)) (or (not (Is ?book 'book')) (Below ?keys ?apple)) (or (not (Is ?book 'book')) (Is ?apple 'apple')) (or (not (Is ?book 'book')) (OnBottomSide ?watch)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "keys",
+        "plate",
+        "apple",
+        "watch",
+        "game_controller",
+        "hat",
+        "sandwich"
+    ]
+}

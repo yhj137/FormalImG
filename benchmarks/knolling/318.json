@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every screwdriver present in the scene, there is a white bowl corresponding to it that is visually larger than the screwdriver.",
+    "dsl": "(and (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?bowl (and (Is ?bowl 'bowl') (Has ?bowl 'white') (LargerThan ?bowl ?screwdriver))))))",
+    "cnf": "(forall ?screwdriver (exists ?bowl (and (or (not (Is ?screwdriver 'screwdriver')) (Is ?bowl 'bowl')) (or (not (Is ?screwdriver 'screwdriver')) (Has ?bowl 'white')) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?bowl ?screwdriver)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every woman stands next to an elephant. Beside the elephant is a rectangular mirror, and next to the mirror lies a keyboard with headphones resting on it. A plastic plate with a peeled banana inside and a screwdriver on it sits next to the keyboard.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?w (implies (Is ?w 'woman') (exists ?e (exists ?m (exists ?k (exists ?h (exists ?p (exists ?b (exists ?s (and (Is ?e 'elephant') (Is ?m 'mirror') (Is ?k 'keyboard') (Is ?h 'headphones') (Is ?p 'plate') (Is ?b 'banana') (Is ?s 'screwdriver') (NextTo ?e ?w) (NextTo ?m ?e) (HasShape ?m 'rectangular') (NextTo ?k ?m) (On ?h ?k) (NextTo ?p ?k) (HasMaterial ?p 'plastic') (In ?b ?p) (HasState ?b 'peeled') (On ?s ?p))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?w (exists ?e (exists ?m (exists ?k (exists ?h (exists ?p (exists ?b (exists ?s (and (or (not (Is ?w 'woman')) (Is ?e 'elephant')) (or (not (Is ?w 'woman')) (Is ?m 'mirror')) (or (not (Is ?w 'woman')) (NextTo ?e ?w)) (or (not (Is ?w 'woman')) (Is ?k 'keyboard')) (or (not (Is ?w 'woman')) (NextTo ?m ?e)) (or (not (Is ?w 'woman')) (Is ?s 'screwdriver')) (or (not (Is ?w 'woman')) (Is ?h 'headphones')) (or (not (Is ?w 'woman')) (NextTo ?k ?m)) (or (not (Is ?w 'woman')) (HasShape ?m 'rectangular')) (or (not (Is ?w 'woman')) (Is ?b 'banana')) (or (not (Is ?w 'woman')) (On ?s ?p)) (or (not (Is ?w 'woman')) (Is ?p 'plate')) (or (not (Is ?w 'woman')) (On ?h ?k)) (or (not (Is ?w 'woman')) (In ?b ?p)) (or (not (Is ?w 'woman')) (HasState ?b 'peeled')) (or (not (Is ?w 'woman')) (NextTo ?p ?k)) (or (not (Is ?w 'woman')) (HasMaterial ?p 'plastic'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "banana",
+        "mirror",
+        "screwdriver",
+        "elephant",
+        "plate",
+        "keyboard",
+        "headphones",
+        "woman"
+    ]
+}

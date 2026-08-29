@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where inside every car is a woman holding metal glasses. An open book is next to the woman, and a peeled orange is next to the book.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?c (implies (Is ?c 'car') (exists ?w (exists ?g (exists ?b (exists ?o (and (Is ?w 'woman') (In ?w ?c) (Is ?g 'glasses') (HasMaterial ?g 'metal') (Holding ?w ?g) (Is ?b 'book') (HasState ?b 'open') (NextTo ?b ?w) (Is ?o 'orange') (HasState ?o 'peeled') (NextTo ?o ?b)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?c (exists ?w (exists ?g (exists ?b (exists ?o (and (or (not (Is ?c 'car')) (Is ?w 'woman')) (or (not (Is ?c 'car')) (In ?w ?c)) (or (not (Is ?c 'car')) (Holding ?w ?g)) (or (not (Is ?c 'car')) (Is ?g 'glasses')) (or (not (Is ?c 'car')) (NextTo ?b ?w)) (or (not (Is ?c 'car')) (HasMaterial ?g 'metal')) (or (not (Is ?c 'car')) (Is ?b 'book')) (or (not (Is ?c 'car')) (HasState ?b 'open')) (or (not (Is ?c 'car')) (Is ?o 'orange')) (or (not (Is ?c 'car')) (NextTo ?o ?b)) (or (not (Is ?c 'car')) (HasState ?o 'peeled')))))))))",
+    "k": 5,
+    "object_classes": [
+        "woman",
+        "glasses",
+        "car",
+        "orange",
+        "book"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a sandwich and a white cup. The sandwich is positioned above the cup. Furthermore, for every pizza included in the arrangement, it is visually smaller than the sandwich.",
+    "dsl": "(exists ?sandwich (exists ?cup (and (Is ?sandwich 'sandwich') (Is ?cup 'cup') (Has ?cup 'white') (Above ?sandwich ?cup) (forall ?pizza (implies (Is ?pizza 'pizza') (SmallerThan ?pizza ?sandwich))))))",
+    "cnf": "(exists ?sandwich (exists ?cup (forall ?pizza (and (Is ?sandwich 'sandwich') (Above ?sandwich ?cup) (or (not (Is ?pizza 'pizza')) (SmallerThan ?pizza ?sandwich)) (Has ?cup 'white') (Is ?cup 'cup')))))",
+    "k": 3,
+    "object_classes": [
+        "sandwich",
+        "pizza",
+        "cup"
+    ]
+}

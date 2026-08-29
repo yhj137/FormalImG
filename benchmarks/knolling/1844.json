@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is located on the left side of the scene. Every backpack is positioned to the right of the jeans. For each backpack, there is a pair of headphones located below the jeans, and a mouse smaller than the headphones is to the right of the headphones. A knife is positioned below the backpack. To the right of the knife is a cup, and to the right of the cup is a bottle that is larger than the cup. The bottle is positioned below a calculator. To the right of the calculator is a hat, and a plate larger than the hat is placed below the hat.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (forall ?backpack (implies (Is ?backpack 'backpack') (exists ?headphones (exists ?mouse (exists ?knife (exists ?cup (exists ?bottle (exists ?calculator (exists ?hat (exists ?plate (and (Is ?headphones 'headphones') (Is ?mouse 'mouse') (Is ?knife 'knife') (Is ?cup 'cup') (Is ?bottle 'bottle') (Is ?calculator 'calculator') (Is ?hat 'hat') (Is ?plate 'plate') (LeftOf ?jeans ?backpack) (Below ?headphones ?jeans) (RightOf ?mouse ?headphones) (SmallerThan ?mouse ?headphones) (Below ?knife ?backpack) (RightOf ?cup ?knife) (RightOf ?bottle ?cup) (LargerThan ?bottle ?cup) (Below ?bottle ?calculator) (RightOf ?hat ?calculator) (Below ?plate ?hat) (LargerThan ?plate ?hat))))))))))))))",
+    "cnf": "(exists ?jeans (forall ?backpack (exists ?headphones (exists ?mouse (exists ?knife (exists ?cup (exists ?bottle (exists ?calculator (exists ?hat (exists ?plate (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (or (not (Is ?backpack 'backpack')) (LeftOf ?jeans ?backpack)) (or (not (Is ?backpack 'backpack')) (Below ?headphones ?jeans)) (or (not (Is ?backpack 'backpack')) (Is ?plate 'plate')) (or (not (Is ?backpack 'backpack')) (Is ?headphones 'headphones')) (or (not (Is ?backpack 'backpack')) (RightOf ?mouse ?headphones)) (or (not (Is ?backpack 'backpack')) (Is ?hat 'hat')) (or (not (Is ?backpack 'backpack')) (Below ?plate ?hat)) (or (not (Is ?backpack 'backpack')) (Is ?mouse 'mouse')) (or (not (Is ?backpack 'backpack')) (SmallerThan ?mouse ?headphones)) (or (not (Is ?backpack 'backpack')) (Is ?calculator 'calculator')) (or (not (Is ?backpack 'backpack')) (RightOf ?hat ?calculator)) (or (not (Is ?backpack 'backpack')) (LargerThan ?plate ?hat)) (or (not (Is ?backpack 'backpack')) (Is ?knife 'knife')) (or (not (Is ?backpack 'backpack')) (Below ?knife ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?bottle 'bottle')) (or (not (Is ?backpack 'backpack')) (Below ?bottle ?calculator)) (or (not (Is ?backpack 'backpack')) (Is ?cup 'cup')) (or (not (Is ?backpack 'backpack')) (RightOf ?cup ?knife)) (or (not (Is ?backpack 'backpack')) (RightOf ?bottle ?cup)) (or (not (Is ?backpack 'backpack')) (LargerThan ?bottle ?cup)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "cup",
+        "hat",
+        "backpack",
+        "jeans",
+        "calculator",
+        "bottle",
+        "mouse",
+        "knife",
+        "headphones"
+    ]
+}

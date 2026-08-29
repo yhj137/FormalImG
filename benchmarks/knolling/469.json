@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of white headphones present, there is a black keyboard and a red hammer. The headphones are aligned horizontally with the keyboard, and the keyboard is aligned horizontally with the hammer. Furthermore, the hammer is visually smaller than the keyboard.",
+    "dsl": "(and (forall ?hp (implies (and (Is ?hp 'headphones') (Has ?hp 'white')) (exists ?kb (exists ?hm (and (Is ?kb 'keyboard') (Has ?kb 'black') (Is ?hm 'hammer') (Has ?hm 'red') (AlignedHorizontally ?hp ?kb) (AlignedHorizontally ?kb ?hm) (SmallerThan ?hm ?kb)))))))",
+    "cnf": "(forall ?hp (exists ?kb (exists ?hm (and (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (Is ?kb 'keyboard')) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (Has ?kb 'black')) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (AlignedHorizontally ?hp ?kb)) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (Is ?hm 'hammer')) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (AlignedHorizontally ?kb ?hm)) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (Has ?hm 'red')) (or (not (Is ?hp 'headphones')) (not (Has ?hp 'white')) (SmallerThan ?hm ?kb))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "headphones",
+        "keyboard"
+    ]
+}

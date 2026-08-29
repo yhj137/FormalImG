@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a leather jacket with a cat on it, where every plant is located to the right of the jacket.",
+    "dsl": "(and (IsStyle 'photo') (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?j))) (exists ?c (and (Is ?c 'cat') (On ?c ?j))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?j (forall ?p (exists ?c (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (or (not (Is ?p 'plant')) (RightOf ?p ?j)) (On ?c ?j) (Is ?c 'cat'))))))",
+    "k": 3,
+    "object_classes": [
+        "plant",
+        "jacket",
+        "cat"
+    ]
+}

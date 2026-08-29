@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is holding a pan containing a metal fork. To the left of the woman is a round mirror, and to her right is a bowl containing every orange in the scene. There is also an apple next to the bowl, a leather jacket to the right of the bowl, and a plant to the left of the mirror.",
+    "dsl": "(exists ?w (exists ?p (exists ?f (exists ?b (exists ?m (and (Is ?w 'woman') (Is ?p 'pan') (Is ?f 'fork') (Is ?b 'bowl') (Is ?m 'mirror') (Holding ?w ?p) (In ?f ?p) (HasMaterial ?f 'metal') (LeftOf ?m ?w) (HasShape ?m 'round') (RightOf ?b ?w) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?a (exists ?j (exists ?pl (and (Is ?a 'apple') (Is ?j 'jacket') (Is ?pl 'plant') (NextTo ?a ?b) (RightOf ?j ?b) (HasMaterial ?j 'leather') (LeftOf ?pl ?m)))))))))))",
+    "cnf": "(exists ?w (exists ?p (exists ?f (exists ?b (exists ?m (forall ?o (exists ?a (exists ?j (exists ?pl (and (Is ?w 'woman') (Holding ?w ?p) (LeftOf ?m ?w) (Is ?p 'pan') (In ?f ?p) (RightOf ?b ?w) (Is ?m 'mirror') (HasShape ?m 'round') (Is ?f 'fork') (HasMaterial ?f 'metal') (Is ?b 'bowl') (or (not (Is ?o 'orange')) (In ?o ?b)) (LeftOf ?pl ?m) (NextTo ?a ?b) (Is ?pl 'plant') (RightOf ?j ?b) (Is ?a 'apple') (Is ?j 'jacket') (HasMaterial ?j 'leather')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "bowl",
+        "pan",
+        "fork",
+        "plant",
+        "woman",
+        "mirror",
+        "apple",
+        "orange"
+    ]
+}

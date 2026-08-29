@@ -1,0 +1,14 @@
+{
+    "prompt": "For every watch present in the image, there is a camera positioned on the top and left side and a phone aligned horizontally with the camera. Additionally, for each watch, there is a game controller, a wallet, and a fork, where the camera is above the game controller, the game controller is larger than the phone, the wallet is smaller than the game controller and aligned horizontally with the fork, and the watch is positioned above the fork.",
+    "dsl": "(exists ?camera (exists ?phone (forall ?watch (implies (Is ?watch 'watch') (exists ?controller (exists ?wallet (exists ?fork (and (Is ?camera 'camera') (OnTopSide ?camera) (OnLeftSide ?camera) (Is ?phone 'phone') (AlignedHorizontally ?camera ?phone) (Is ?controller 'game_controller') (Above ?camera ?controller) (LargerThan ?controller ?phone) (Is ?wallet 'wallet') (SmallerThan ?wallet ?controller) (Is ?fork 'fork') (AlignedHorizontally ?wallet ?fork) (Above ?watch ?fork)))))))))",
+    "cnf": "(exists ?camera (exists ?phone (forall ?watch (exists ?controller (exists ?wallet (exists ?fork (and (or (not (Is ?watch 'watch')) (Is ?camera 'camera')) (or (not (Is ?watch 'watch')) (OnTopSide ?camera)) (or (not (Is ?watch 'watch')) (OnLeftSide ?camera)) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?camera ?phone)) (or (not (Is ?watch 'watch')) (Is ?phone 'phone')) (or (not (Is ?watch 'watch')) (Above ?camera ?controller)) (or (not (Is ?watch 'watch')) (Is ?controller 'game_controller')) (or (not (Is ?watch 'watch')) (LargerThan ?controller ?phone)) (or (not (Is ?watch 'watch')) (Is ?wallet 'wallet')) (or (not (Is ?watch 'watch')) (SmallerThan ?wallet ?controller)) (or (not (Is ?watch 'watch')) (Is ?fork 'fork')) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?wallet ?fork)) (or (not (Is ?watch 'watch')) (Above ?watch ?fork)))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "watch",
+        "game_controller",
+        "fork",
+        "wallet",
+        "camera"
+    ]
+}

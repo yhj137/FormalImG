@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A phone is positioned on the top side of the layout. For every bottle present in the scene, there is a calculator that is smaller than the bottle. The calculator is positioned to the left of the bottle, and the bottle is positioned to the left of the phone; furthermore, the calculator, bottle, and phone are aligned horizontally.",
+    "dsl": "(exists ?phone (and (Is ?phone 'phone') (OnTopSide ?phone) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?calc (and (Is ?calc 'calculator') (SmallerThan ?calc ?bottle) (LeftOf ?calc ?bottle) (LeftOf ?bottle ?phone) (AlignedHorizontally ?calc ?bottle) (AlignedHorizontally ?bottle ?phone)))))))",
+    "cnf": "(exists ?phone (forall ?bottle (exists ?calc (and (Is ?phone 'phone') (OnTopSide ?phone) (or (not (Is ?bottle 'bottle')) (LeftOf ?bottle ?phone)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?bottle ?phone)) (or (not (Is ?bottle 'bottle')) (LeftOf ?calc ?bottle)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?calc ?bottle)) (or (not (Is ?bottle 'bottle')) (SmallerThan ?calc ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?calc 'calculator'))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "phone",
+        "calculator"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting where every butterfly is flying.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'butterfly') (HasState ?b 'flying'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (or (not (Is ?b 'butterfly')) (HasState ?b 'flying'))))",
+    "k": 1,
+    "object_classes": [
+        "butterfly"
+    ]
+}

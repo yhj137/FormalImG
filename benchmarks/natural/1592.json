@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman sits on a chair holding a bottle. To the right of the chair is an oval mirror, with a plant next to it. Beside the plant sits a cup containing a rock. Every ball in the scene is round and located to the right of the plant.",
+    "dsl": "(exists ?w (exists ?c (exists ?bt (exists ?m (exists ?p (exists ?cp (exists ?r (and (Is ?w 'woman') (Is ?c 'chair') (Is ?bt 'bottle') (Is ?m 'mirror') (Is ?p 'plant') (Is ?cp 'cup') (Is ?r 'rock') (On ?w ?c) (Holding ?w ?bt) (RightOf ?m ?c) (HasShape ?m 'oval') (NextTo ?p ?m) (NextTo ?cp ?p) (In ?r ?cp) (forall ?bl (implies (Is ?bl 'ball') (and (HasShape ?bl 'round') (RightOf ?bl ?p))))))))))))",
+    "cnf": "(exists ?w (exists ?c (exists ?bt (exists ?m (exists ?p (exists ?cp (exists ?r (forall ?bl (and (Is ?w 'woman') (On ?w ?c) (Holding ?w ?bt) (Is ?c 'chair') (RightOf ?m ?c) (Is ?bt 'bottle') (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?p ?m) (Is ?p 'plant') (NextTo ?cp ?p) (or (not (Is ?bl 'ball')) (RightOf ?bl ?p)) (Is ?cp 'cup') (In ?r ?cp) (or (not (Is ?bl 'ball')) (HasShape ?bl 'round')) (Is ?r 'rock'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "rock",
+        "plant",
+        "ball",
+        "chair",
+        "cup",
+        "woman",
+        "mirror"
+    ]
+}

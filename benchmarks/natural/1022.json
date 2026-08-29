@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art image of a child holding a flower. A backpack and a bicycle are next to the child. A round rug lies next to the bicycle, with a round ball on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?f (exists ?bp (exists ?bi (exists ?r (exists ?ba (and (Is ?c 'child') (Is ?f 'flower') (Is ?bp 'backpack') (Is ?bi 'bicycle') (Is ?r 'rug') (Is ?ba 'ball') (Holding ?c ?f) (NextTo ?bp ?c) (NextTo ?bi ?c) (NextTo ?r ?bi) (On ?ba ?r) (HasShape ?r 'round') (HasShape ?ba 'round')))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?f (exists ?bp (exists ?bi (exists ?r (exists ?ba (and (Is ?c 'child') (Holding ?c ?f) (NextTo ?bp ?c) (Is ?f 'flower') (NextTo ?bi ?c) (Is ?bp 'backpack') (Is ?bi 'bicycle') (NextTo ?r ?bi) (Is ?r 'rug') (On ?ba ?r) (HasShape ?r 'round') (Is ?ba 'ball') (HasShape ?ba 'round')))))))))",
+    "k": 6,
+    "object_classes": [
+        "ball",
+        "backpack",
+        "rug",
+        "bicycle",
+        "flower",
+        "child"
+    ]
+}

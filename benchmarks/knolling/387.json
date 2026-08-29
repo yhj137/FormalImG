@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pizza positioned on the top side of the scene. Furthermore, for every phone present in the image, that pizza is located vertically above the phone.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (forall ?phone (implies (Is ?phone 'phone') (Above ?pizza ?phone)))))",
+    "cnf": "(exists ?pizza (forall ?phone (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (or (not (Is ?phone 'phone')) (Above ?pizza ?phone)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "pizza"
+    ]
+}

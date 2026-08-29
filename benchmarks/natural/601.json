@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a man holding a bowl inside an open refrigerator, with a mirror sitting on top of it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?r (exists ?b (exists ?mir (and (Is ?m 'man') (Is ?r 'refrigerator') (Is ?b 'bowl') (Is ?mir 'mirror') (HasState ?r 'open') (Holding ?m ?b) (In ?b ?r) (On ?mir ?r)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?r (exists ?b (exists ?mir (and (Is ?m 'man') (Holding ?m ?b) (Is ?b 'bowl') (In ?b ?r) (HasState ?r 'open') (On ?mir ?r) (Is ?r 'refrigerator') (Is ?mir 'mirror')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "bowl",
+        "refrigerator",
+        "mirror"
+    ]
+}

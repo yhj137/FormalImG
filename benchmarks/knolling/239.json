@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a wallet located on the left side of the image, with an apple positioned directly below the wallet.",
+    "dsl": "(exists ?wallet (exists ?apple (and (Is ?wallet 'wallet') (Is ?apple 'apple') (OnLeftSide ?wallet) (Below ?apple ?wallet))))",
+    "cnf": "(exists ?wallet (exists ?apple (and (Is ?wallet 'wallet') (OnLeftSide ?wallet) (Below ?apple ?wallet) (Is ?apple 'apple'))))",
+    "k": 2,
+    "object_classes": [
+        "wallet",
+        "apple"
+    ]
+}

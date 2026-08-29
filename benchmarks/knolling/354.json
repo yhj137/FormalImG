@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a phone situated on the top side of the layout. Every pair of pliers in the scene is placed to the left of this phone.",
+    "dsl": "(exists ?phone (and (Is ?phone 'phone') (OnTopSide ?phone) (forall ?pliers (implies (Is ?pliers 'pliers') (LeftOf ?pliers ?phone)))))",
+    "cnf": "(exists ?phone (forall ?pliers (and (Is ?phone 'phone') (OnTopSide ?phone) (or (not (Is ?pliers 'pliers')) (LeftOf ?pliers ?phone)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "pliers"
+    ]
+}

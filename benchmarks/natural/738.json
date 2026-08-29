@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a red car containing a teddy bear that is holding every spoon. A sleeping cat is located to the left of the car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?t (and (Is ?c 'car') (HasColor ?c 'red') (Is ?t 'teddy bear') (In ?t ?c) (forall ?s (implies (Is ?s 'spoon') (Holding ?t ?s))) (exists ?k (and (Is ?k 'cat') (HasState ?k 'sleeping') (LeftOf ?k ?c)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?t (forall ?s (exists ?k (and (Is ?c 'car') (HasColor ?c 'red') (In ?t ?c) (LeftOf ?k ?c) (Is ?t 'teddy bear') (or (not (Is ?s 'spoon')) (Holding ?t ?s)) (HasState ?k 'sleeping') (Is ?k 'cat')))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "spoon",
+        "cat",
+        "car"
+    ]
+}

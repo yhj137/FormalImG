@@ -1,0 +1,13 @@
+{
+    "prompt": "For every shirt, it is located on the top side and has a keyboard situated below it. The shirt is larger than the keyboard. Below the keyboard is a remote, below the remote is a spoon, and the spoon is positioned above a donut.",
+    "dsl": "(and (forall ?shirt (implies (Is ?shirt 'shirt') (exists ?keyboard (exists ?remote (exists ?spoon (exists ?donut (and (Is ?keyboard 'keyboard') (Is ?remote 'remote') (Is ?spoon 'spoon') (Is ?donut 'donut') (OnTopSide ?shirt) (LargerThan ?shirt ?keyboard) (Below ?keyboard ?shirt) (Below ?remote ?keyboard) (Below ?spoon ?remote) (Above ?spoon ?donut)))))))))",
+    "cnf": "(forall ?shirt (exists ?keyboard (exists ?remote (exists ?spoon (exists ?donut (and (or (not (Is ?shirt 'shirt')) (Is ?keyboard 'keyboard')) (or (not (Is ?shirt 'shirt')) (Is ?remote 'remote')) (or (not (Is ?shirt 'shirt')) (LargerThan ?shirt ?keyboard)) (or (not (Is ?shirt 'shirt')) (Is ?spoon 'spoon')) (or (not (Is ?shirt 'shirt')) (Below ?remote ?keyboard)) (or (not (Is ?shirt 'shirt')) (OnTopSide ?shirt)) (or (not (Is ?shirt 'shirt')) (Below ?keyboard ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?donut 'donut')) (or (not (Is ?shirt 'shirt')) (Below ?spoon ?remote)) (or (not (Is ?shirt 'shirt')) (Above ?spoon ?donut))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "shirt",
+        "spoon",
+        "donut"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A white table holds black headphones and a clock that is turned on. A bed is located to the right of the table, and every phone in the scene is also positioned to the right of the table.",
+    "dsl": "(exists ?t (and (Is ?t 'table') (HasColor ?t 'white') (forall ?p (implies (Is ?p 'phone') (RightOf ?p ?t))) (exists ?h (and (Is ?h 'headphones') (HasColor ?h 'black') (On ?h ?t))) (exists ?c (and (Is ?c 'clock') (HasState ?c 'on') (On ?c ?t))) (exists ?b (and (Is ?b 'bed') (RightOf ?b ?t)))))",
+    "cnf": "(exists ?t (forall ?p (exists ?h (exists ?c (exists ?b (and (Is ?t 'table') (HasColor ?t 'white') (or (not (Is ?p 'phone')) (RightOf ?p ?t)) (On ?h ?t) (On ?c ?t) (HasColor ?h 'black') (RightOf ?b ?t) (HasState ?c 'on') (Is ?h 'headphones') (Is ?b 'bed') (Is ?c 'clock')))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "bed",
+        "table",
+        "clock"
+    ]
+}

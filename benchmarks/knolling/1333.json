@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a blue backpack, a black monitor, a pizza, and a brown suitcase. The blue backpack is located above the pizza and to the left of the black monitor. The monitor is positioned above the brown suitcase, and the suitcase is to the right of the pizza. Additionally, for every red lighter present, it is placed to the right of the suitcase, with a white mouse positioned above the lighter and a pair of blue jeans located to the right of the mouse.",
+    "dsl": "(exists ?backpack (exists ?monitor (exists ?pizza (exists ?suitcase (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?pizza 'pizza') (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Above ?backpack ?pizza) (LeftOf ?backpack ?monitor) (Above ?monitor ?suitcase) (RightOf ?suitcase ?pizza) (forall ?lighter (implies (and (Is ?lighter 'lighter') (Has ?lighter 'red')) (exists ?mouse (exists ?jeans (and (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?lighter ?suitcase) (Above ?mouse ?lighter) (RightOf ?jeans ?mouse)))))))))))",
+    "cnf": "(exists ?backpack (exists ?monitor (exists ?pizza (exists ?suitcase (forall ?lighter (exists ?mouse (exists ?jeans (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Above ?backpack ?pizza) (LeftOf ?backpack ?monitor) (Is ?pizza 'pizza') (RightOf ?suitcase ?pizza) (Has ?monitor 'black') (Above ?monitor ?suitcase) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (RightOf ?lighter ?suitcase)) (Is ?monitor 'monitor') (Has ?suitcase 'brown') (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (Has ?jeans 'blue')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (Above ?mouse ?lighter)) (Is ?suitcase 'suitcase') (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (Is ?jeans 'jeans')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (RightOf ?jeans ?mouse)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (Has ?mouse 'white')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (Is ?mouse 'mouse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pizza",
+        "backpack",
+        "lighter",
+        "jeans",
+        "mouse",
+        "monitor",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person sits on a chair next to a closed refrigerator, wearing headphones and holding a phone, with a turned-on laptop on their lap. A lamp, a key, and a bottle containing a flower rest on the refrigerator.",
+    "dsl": "(exists ?p (exists ?c (exists ?r (exists ?hp (exists ?ph (exists ?l (exists ?la (exists ?k (exists ?b (exists ?f (and (Is ?p 'person') (HasState ?p 'sitting') (Is ?c 'chair') (On ?p ?c) (Is ?r 'refrigerator') (HasState ?r 'closed') (NextTo ?c ?r) (Is ?hp 'headphones') (On ?hp ?p) (Is ?ph 'phone') (Holding ?p ?ph) (Is ?l 'laptop') (HasState ?l 'on') (On ?l ?p) (Is ?la 'lamp') (On ?la ?r) (Is ?k 'key') (On ?k ?r) (Is ?b 'bottle') (On ?b ?r) (Is ?f 'flower') (In ?f ?b))))))))))))",
+    "cnf": "(exists ?p (exists ?c (exists ?r (exists ?hp (exists ?ph (exists ?l (exists ?la (exists ?k (exists ?b (exists ?f (and (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?c) (On ?hp ?p) (Is ?c 'chair') (NextTo ?c ?r) (Holding ?p ?ph) (Is ?hp 'headphones') (HasState ?r 'closed') (On ?la ?r) (On ?l ?p) (Is ?ph 'phone') (Is ?r 'refrigerator') (On ?k ?r) (Is ?la 'lamp') (HasState ?l 'on') (On ?b ?r) (Is ?k 'key') (Is ?l 'laptop') (Is ?b 'bottle') (In ?f ?b) (Is ?f 'flower'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bottle",
+        "key",
+        "person",
+        "headphones",
+        "laptop",
+        "lamp",
+        "chair",
+        "refrigerator",
+        "phone",
+        "flower"
+    ]
+}

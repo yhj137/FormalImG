@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is depicted in a pixel art style. It features a wooden house with a bed inside. A child is sitting on the bed, holding a sandwich. A metal fork lies next to the sandwich, and a pair of black glasses is also on the bed. A dog is sleeping to the right of the bed. All elephants in the scene are located to the left of the house. Additionally, there is a blue bird perched on the house.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?bed (exists ?c (exists ?s (exists ?f (exists ?g (exists ?d (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?bed 'bed') (In ?bed ?h) (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?bed) (Is ?s 'sandwich') (Holding ?c ?s) (Is ?f 'fork') (HasMaterial ?f 'metal') (NextTo ?f ?s) (Is ?g 'glasses') (HasColor ?g 'black') (On ?g ?bed) (Is ?d 'dog') (HasState ?d 'sleeping') (RightOf ?d ?bed) (forall ?e (implies (Is ?e 'elephant') (LeftOf ?e ?h))) (exists ?b (and (Is ?b 'bird') (HasColor ?b 'blue') (On ?b ?h))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?bed (exists ?c (exists ?s (exists ?f (exists ?g (exists ?d (forall ?e (exists ?b (and (Is ?h 'house') (HasMaterial ?h 'wooden') (In ?bed ?h) (or (not (Is ?e 'elephant')) (LeftOf ?e ?h)) (Is ?bed 'bed') (On ?c ?bed) (On ?b ?h) (On ?g ?bed) (HasState ?c 'sitting') (Holding ?c ?s) (HasColor ?b 'blue') (RightOf ?d ?bed) (HasColor ?g 'black') (Is ?c 'child') (Is ?s 'sandwich') (NextTo ?f ?s) (Is ?b 'bird') (HasState ?d 'sleeping') (Is ?g 'glasses') (HasMaterial ?f 'metal') (Is ?d 'dog') (Is ?f 'fork'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "fork",
+        "sandwich",
+        "bed",
+        "elephant",
+        "house",
+        "dog",
+        "bird",
+        "child"
+    ]
+}

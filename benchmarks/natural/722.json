@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden wardrobe containing a laptop. A bird is positioned to the left of the laptop, and every banana is located to the left of the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (exists ?l (and (Is ?l 'laptop') (In ?l ?w) (forall ?b (implies (Is ?b 'banana') (LeftOf ?b ?w))) (exists ?bi (and (Is ?bi 'bird') (LeftOf ?bi ?l))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?l (forall ?b (exists ?bi (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?l ?w) (or (not (Is ?b 'banana')) (LeftOf ?b ?w)) (Is ?l 'laptop') (LeftOf ?bi ?l) (Is ?bi 'bird')))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "bird",
+        "laptop",
+        "wardrobe"
+    ]
+}

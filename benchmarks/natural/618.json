@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene of a house containing a table. A turned-on lamp sits on the table next to an empty black pan.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?t (exists ?l (exists ?p (and (Is ?h 'house') (Is ?t 'table') (In ?t ?h) (Is ?l 'lamp') (HasState ?l 'on') (On ?l ?t) (Is ?p 'pan') (HasColor ?p 'black') (HasState ?p 'empty') (On ?p ?t) (NextTo ?p ?l)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?t (exists ?l (exists ?p (and (Is ?h 'house') (In ?t ?h) (Is ?t 'table') (On ?l ?t) (On ?p ?t) (HasState ?l 'on') (NextTo ?p ?l) (HasState ?p 'empty') (Is ?l 'lamp') (HasColor ?p 'black') (Is ?p 'pan')))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "table",
+        "lamp",
+        "pan"
+    ]
+}

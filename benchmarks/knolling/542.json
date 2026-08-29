@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans. For every green bottle present in the layout, there is a red tie positioned vertically below it. Visually, the tie is smaller than the bottle, while the pair of jeans is larger than the bottle.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (forall ?bottle (implies (and (Is ?bottle 'bottle') (Has ?bottle 'green')) (exists ?tie (and (Is ?tie 'tie') (Has ?tie 'red') (Below ?tie ?bottle) (SmallerThan ?tie ?bottle) (LargerThan ?jeans ?bottle)))))))",
+    "cnf": "(exists ?jeans (forall ?bottle (exists ?tie (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (or (not (Is ?bottle 'bottle')) (not (Has ?bottle 'green')) (LargerThan ?jeans ?bottle)) (or (not (Is ?bottle 'bottle')) (not (Has ?bottle 'green')) (SmallerThan ?tie ?bottle)) (or (not (Is ?bottle 'bottle')) (not (Has ?bottle 'green')) (Below ?tie ?bottle)) (or (not (Is ?bottle 'bottle')) (not (Has ?bottle 'green')) (Has ?tie 'red')) (or (not (Is ?bottle 'bottle')) (not (Has ?bottle 'green')) (Is ?tie 'tie'))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "tie",
+        "jeans"
+    ]
+}

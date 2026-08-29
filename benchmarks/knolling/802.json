@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue bottle, a calculator, a yellow glove, a fork, and a knife. The objects are arranged in a horizontal sequence where the bottle is located to the left of the calculator, the calculator is to the left of the glove, the glove is to the left of the fork, and the fork is to the left of the knife. The blue bottle is positioned on the bottom side of the image and is visually larger than the calculator.",
+    "dsl": "(exists ?b (exists ?c (exists ?g (exists ?f (exists ?k (and (Is ?b 'bottle') (Has ?b 'blue') (Is ?c 'calculator') (Is ?g 'glove') (Has ?g 'yellow') (Is ?f 'fork') (Is ?k 'knife') (OnBottomSide ?b) (LeftOf ?b ?c) (LeftOf ?c ?g) (LeftOf ?g ?f) (LeftOf ?f ?k) (LargerThan ?b ?c)))))))",
+    "cnf": "(exists ?b (exists ?c (exists ?g (exists ?f (exists ?k (and (Is ?b 'bottle') (Has ?b 'blue') (OnBottomSide ?b) (LeftOf ?b ?c) (LargerThan ?b ?c) (Is ?c 'calculator') (LeftOf ?c ?g) (Has ?g 'yellow') (LeftOf ?g ?f) (Is ?g 'glove') (Is ?f 'fork') (LeftOf ?f ?k) (Is ?k 'knife')))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "calculator",
+        "knife",
+        "bottle",
+        "glove"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A person wearing a fabric shirt stands next to a bicycle with a basket. All sandwiches in the scene are triangular and contained inside the basket. To the left of the person is a plastic umbrella, and to the right of the bicycle is a teddy bear wearing headphones.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?bi (exists ?ba (and (Is ?p 'person') (Is ?bi 'bicycle') (Is ?ba 'basket') (NextTo ?bi ?p) (On ?ba ?bi) (forall ?s (implies (Is ?s 'sandwich') (and (HasShape ?s 'triangular') (In ?s ?ba)))) (exists ?u (exists ?tb (exists ?hp (exists ?sh (and (Is ?u 'umbrella') (Is ?tb 'teddy bear') (Is ?hp 'headphones') (Is ?sh 'shirt') (HasMaterial ?u 'plastic') (LeftOf ?u ?p) (RightOf ?tb ?bi) (On ?hp ?tb) (HasMaterial ?sh 'fabric') (On ?sh ?p)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?bi (exists ?ba (forall ?s (exists ?u (exists ?tb (exists ?hp (exists ?sh (and (Is ?p 'person') (NextTo ?bi ?p) (LeftOf ?u ?p) (Is ?bi 'bicycle') (On ?ba ?bi) (On ?sh ?p) (HasMaterial ?u 'plastic') (RightOf ?tb ?bi) (Is ?ba 'basket') (or (not (Is ?s 'sandwich')) (In ?s ?ba)) (HasMaterial ?sh 'fabric') (Is ?u 'umbrella') (Is ?tb 'teddy bear') (On ?hp ?tb) (or (not (Is ?s 'sandwich')) (HasShape ?s 'triangular')) (Is ?sh 'shirt') (Is ?hp 'headphones')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "shirt",
+        "umbrella",
+        "person",
+        "teddy bear",
+        "bicycle",
+        "sandwich",
+        "basket"
+    ]
+}

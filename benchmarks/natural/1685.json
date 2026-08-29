@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a leather sofa with a lamp to its left. All keyboards are located to the right of the lamp. A round mirror hangs above the sofa, and an elephant stands next to the sofa holding a backpack. On the sofa sits a plate with a bowl on top, containing a knife.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?e (exists ?l (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?e 'elephant') (NextTo ?e ?s) (Is ?l 'lamp') (LeftOf ?l ?s) (forall ?k (implies (Is ?k 'keyboard') (RightOf ?k ?l))) (exists ?m (exists ?bp (exists ?p (exists ?b (exists ?n (and (Is ?m 'mirror') (HasShape ?m 'round') (Above ?m ?s) (Is ?bp 'backpack') (Holding ?e ?bp) (Is ?p 'plate') (On ?p ?s) (Is ?b 'bowl') (On ?b ?p) (Is ?n 'knife') (In ?n ?b))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?e (exists ?l (forall ?k (exists ?m (exists ?bp (exists ?p (exists ?b (exists ?n (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (NextTo ?e ?s) (LeftOf ?l ?s) (Is ?e 'elephant') (Holding ?e ?bp) (Above ?m ?s) (Is ?l 'lamp') (or (not (Is ?k 'keyboard')) (RightOf ?k ?l)) (Is ?bp 'backpack') (On ?p ?s) (HasShape ?m 'round') (Is ?p 'plate') (On ?b ?p) (Is ?m 'mirror') (Is ?b 'bowl') (In ?n ?b) (Is ?n 'knife'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "bowl",
+        "sofa",
+        "knife",
+        "backpack",
+        "lamp",
+        "mirror",
+        "elephant",
+        "plate"
+    ]
+}

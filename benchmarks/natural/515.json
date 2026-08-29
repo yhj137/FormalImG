@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a broken car. Every hammer inside the car has a dog to its right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (and (Is ?c 'car') (HasState ?c 'broken') (forall ?h (implies (and (Is ?h 'hammer') (In ?h ?c)) (exists ?d (and (Is ?d 'dog') (RightOf ?d ?h))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (forall ?h (exists ?d (and (Is ?c 'car') (HasState ?c 'broken') (or (not (Is ?h 'hammer')) (not (In ?h ?c)) (Is ?d 'dog')) (or (not (Is ?h 'hammer')) (not (In ?h ?c)) (RightOf ?d ?h)))))))",
+    "k": 3,
+    "object_classes": [
+        "dog",
+        "car",
+        "hammer"
+    ]
+}

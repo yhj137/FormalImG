@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a wooden wardrobe. A clock and a key are sitting on top of the wardrobe, while a pizza is placed inside it. To the left of the wardrobe stands a man holding a hammer. A red bicycle is located to the left of the man. Additionally, all apples in the image are contained inside the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?k (exists ?p (exists ?m (exists ?h (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?c 'clock') (On ?c ?w) (Is ?k 'key') (On ?k ?w) (Is ?p 'pizza') (In ?p ?w) (Is ?m 'man') (LeftOf ?m ?w) (Is ?h 'hammer') (Holding ?m ?h) (Is ?b 'bicycle') (HasColor ?b 'red') (LeftOf ?b ?m) (forall ?a (implies (Is ?a 'apple') (In ?a ?w))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?k (exists ?p (exists ?m (exists ?h (exists ?b (forall ?a (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (On ?c ?w) (On ?k ?w) (Is ?c 'clock') (In ?p ?w) (Is ?k 'key') (LeftOf ?m ?w) (Is ?p 'pizza') (or (not (Is ?a 'apple')) (In ?a ?w)) (Is ?m 'man') (Holding ?m ?h) (LeftOf ?b ?m) (Is ?h 'hammer') (HasColor ?b 'red') (Is ?b 'bicycle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "man",
+        "hammer",
+        "pizza",
+        "wardrobe",
+        "bicycle",
+        "clock",
+        "apple"
+    ]
+}

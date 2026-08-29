@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. Inside a bus, there is a plastic monitor. All glasses in the scene are lying on the monitor. A backpack sits next to the monitor, containing a fork, a laptop, a pair of headphones, and a glass bottle. A bird is perched on the backpack, holding a metal spoon.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bus (exists ?mon (and (Is ?bus 'bus') (Is ?mon 'monitor') (HasMaterial ?mon 'plastic') (In ?mon ?bus) (forall ?gl (implies (Is ?gl 'glasses') (On ?gl ?mon))) (exists ?bp (exists ?bird (exists ?sp (exists ?fk (exists ?lap (exists ?hp (exists ?bt (and (Is ?bp 'backpack') (Is ?bird 'bird') (Is ?sp 'spoon') (Is ?fk 'fork') (Is ?lap 'laptop') (Is ?hp 'headphones') (Is ?bt 'bottle') (NextTo ?bp ?mon) (On ?bird ?bp) (Holding ?bird ?sp) (HasMaterial ?sp 'metal') (In ?fk ?bp) (In ?lap ?bp) (In ?hp ?bp) (In ?bt ?bp) (HasMaterial ?bt 'glass')))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bus (exists ?mon (forall ?gl (exists ?bp (exists ?bird (exists ?sp (exists ?fk (exists ?lap (exists ?hp (exists ?bt (and (Is ?bus 'bus') (In ?mon ?bus) (HasMaterial ?mon 'plastic') (or (not (Is ?gl 'glasses')) (On ?gl ?mon)) (Is ?mon 'monitor') (NextTo ?bp ?mon) (Is ?bp 'backpack') (On ?bird ?bp) (In ?fk ?bp) (Is ?bird 'bird') (Holding ?bird ?sp) (In ?lap ?bp) (Is ?fk 'fork') (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (In ?hp ?bp) (Is ?lap 'laptop') (In ?bt ?bp) (Is ?hp 'headphones') (Is ?bt 'bottle') (HasMaterial ?bt 'glass')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "fork",
+        "spoon",
+        "bottle",
+        "backpack",
+        "glasses",
+        "laptop",
+        "monitor",
+        "bird",
+        "bus"
+    ]
+}

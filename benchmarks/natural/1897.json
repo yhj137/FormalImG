@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a bench located to the left of a bus. To the right of the bench stands a wooden table holding a pair of glasses and a cup filled with every flower. A cat holding a spoon sits on the bench, which also supports a jacket with a hat to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?be (exists ?t (exists ?c (and (Is ?b 'bus') (Is ?be 'bench') (LeftOf ?be ?b) (Is ?t 'table') (HasMaterial ?t 'wooden') (RightOf ?t ?be) (Is ?c 'cup') (On ?c ?t) (forall ?f (implies (Is ?f 'flower') (In ?f ?c))) (exists ?ca (exists ?s (exists ?j (exists ?h (exists ?g (and (Is ?ca 'cat') (On ?ca ?be) (Is ?s 'spoon') (Holding ?ca ?s) (Is ?j 'jacket') (On ?j ?be) (Is ?h 'hat') (LeftOf ?h ?j) (Is ?g 'glasses') (On ?g ?t)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?be (exists ?t (exists ?c (forall ?f (exists ?ca (exists ?s (exists ?j (exists ?h (exists ?g (and (Is ?b 'bus') (LeftOf ?be ?b) (Is ?be 'bench') (RightOf ?t ?be) (On ?ca ?be) (HasMaterial ?t 'wooden') (On ?c ?t) (On ?j ?be) (Is ?ca 'cat') (Holding ?ca ?s) (Is ?t 'table') (On ?g ?t) (Is ?c 'cup') (or (not (Is ?f 'flower')) (In ?f ?c)) (Is ?j 'jacket') (LeftOf ?h ?j) (Is ?s 'spoon') (Is ?g 'glasses') (Is ?h 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "spoon",
+        "glasses",
+        "jacket",
+        "table",
+        "flower",
+        "cup",
+        "cat",
+        "bus",
+        "hat"
+    ]
+}

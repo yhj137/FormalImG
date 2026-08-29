@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a neat vertical arrangement on the right side of the image containing an apple, a sandwich, a spoon, and a set of keys. The apple is positioned at the top. The sandwich is located below the apple but above the spoon. The keys are placed below the spoon. All four objects are aligned vertically.",
+    "dsl": "(exists ?apple (exists ?sandwich (exists ?spoon (exists ?keys (and (Is ?apple 'apple') (Is ?sandwich 'sandwich') (Is ?spoon 'spoon') (Is ?keys 'keys') (OnRightSide ?apple) (Below ?sandwich ?apple) (Above ?sandwich ?spoon) (Below ?keys ?spoon) (AlignedVertically ?apple ?sandwich) (AlignedVertically ?sandwich ?spoon) (AlignedVertically ?spoon ?keys))))))",
+    "cnf": "(exists ?apple (exists ?sandwich (exists ?spoon (exists ?keys (and (Is ?apple 'apple') (OnRightSide ?apple) (Below ?sandwich ?apple) (AlignedVertically ?apple ?sandwich) (Is ?sandwich 'sandwich') (Above ?sandwich ?spoon) (AlignedVertically ?sandwich ?spoon) (Is ?spoon 'spoon') (Below ?keys ?spoon) (AlignedVertically ?spoon ?keys) (Is ?keys 'keys'))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "keys",
+        "sandwich",
+        "apple"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A book is positioned on the top side of the layout. To the left of the book lies a pair of pliers. To the right of the book is a phone, and to the right of the phone are glasses.",
+    "dsl": "(exists ?book (exists ?pliers (exists ?phone (exists ?glasses (and (Is ?book 'book') (Is ?pliers 'pliers') (Is ?phone 'phone') (Is ?glasses 'glasses') (OnTopSide ?book) (LeftOf ?pliers ?book) (RightOf ?phone ?book) (RightOf ?glasses ?phone))))))",
+    "cnf": "(exists ?book (exists ?pliers (exists ?phone (exists ?glasses (and (Is ?book 'book') (OnTopSide ?book) (LeftOf ?pliers ?book) (RightOf ?phone ?book) (Is ?pliers 'pliers') (Is ?phone 'phone') (RightOf ?glasses ?phone) (Is ?glasses 'glasses'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "phone",
+        "pliers",
+        "glasses"
+    ]
+}

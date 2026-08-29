@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a sleeping lion, with every cake in the scene located next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?l (and (Is ?l 'lion') (HasState ?l 'sleeping') (forall ?c (implies (Is ?c 'cake') (NextTo ?c ?l))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?l (forall ?c (and (Is ?l 'lion') (HasState ?l 'sleeping') (or (not (Is ?c 'cake')) (NextTo ?c ?l))))))",
+    "k": 2,
+    "object_classes": [
+        "cake",
+        "lion"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller, a sandwich, and a wallet positioned in the top half of the image, arranged from left to right. A bowl, a ruler, and a pen are aligned vertically with the game controller, the sandwich, and the wallet, respectively. A watch is placed on the right side of the image, to the right of the pen. Additionally, for every shoe present, there are keys to its right and an apple to the right of the keys, with the apple being positioned to the left of the bowl.",
+    "dsl": "(exists ?gc (exists ?sw (exists ?wl (exists ?bw (exists ?rl (exists ?pn (exists ?wt (and (Is ?gc 'game_controller') (OnTopSide ?gc) (Is ?sw 'sandwich') (OnTopSide ?sw) (RightOf ?sw ?gc) (Is ?wl 'wallet') (OnTopSide ?wl) (RightOf ?wl ?sw) (Is ?bw 'bowl') (AlignedVertically ?bw ?gc) (Is ?rl 'ruler') (AlignedVertically ?rl ?sw) (RightOf ?rl ?bw) (Is ?pn 'pen') (AlignedVertically ?pn ?wl) (RightOf ?pn ?rl) (Is ?wt 'watch') (OnRightSide ?wt) (RightOf ?wt ?pn) (forall ?sh (implies (Is ?sh 'shoe') (exists ?ky (exists ?ap (and (Is ?ky 'keys') (Is ?ap 'apple') (RightOf ?ky ?sh) (RightOf ?ap ?ky) (LeftOf ?ap ?bw))))))))))))))",
+    "cnf": "(exists ?gc (exists ?sw (exists ?wl (exists ?bw (exists ?rl (exists ?pn (exists ?wt (forall ?sh (exists ?ky (exists ?ap (and (Is ?gc 'game_controller') (OnTopSide ?gc) (RightOf ?sw ?gc) (AlignedVertically ?bw ?gc) (OnTopSide ?sw) (RightOf ?wl ?sw) (Is ?bw 'bowl') (RightOf ?rl ?bw) (Is ?sw 'sandwich') (AlignedVertically ?rl ?sw) (OnTopSide ?wl) (AlignedVertically ?pn ?wl) (or (not (Is ?sh 'shoe')) (LeftOf ?ap ?bw)) (RightOf ?pn ?rl) (Is ?rl 'ruler') (Is ?wl 'wallet') (Is ?pn 'pen') (or (not (Is ?sh 'shoe')) (RightOf ?ap ?ky)) (RightOf ?wt ?pn) (or (not (Is ?sh 'shoe')) (RightOf ?ky ?sh)) (or (not (Is ?sh 'shoe')) (Is ?ap 'apple')) (OnRightSide ?wt) (or (not (Is ?sh 'shoe')) (Is ?ky 'keys')) (Is ?wt 'watch'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "watch",
+        "keys",
+        "bowl",
+        "wallet",
+        "apple",
+        "ruler",
+        "pen",
+        "game_controller",
+        "sandwich",
+        "shoe"
+    ]
+}

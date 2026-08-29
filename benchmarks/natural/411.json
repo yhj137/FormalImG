@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden bench with a pizza and a fruit on it, where the fruit is positioned to the right of the pizza.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?p (exists ?f (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?p 'pizza') (Is ?f 'fruit') (On ?p ?b) (On ?f ?b) (RightOf ?f ?p))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (exists ?f (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (On ?p ?b) (On ?f ?b) (Is ?p 'pizza') (RightOf ?f ?p) (Is ?f 'fruit'))))))",
+    "k": 3,
+    "object_classes": [
+        "pizza",
+        "fruit",
+        "bench"
+    ]
+}

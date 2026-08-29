@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the bottom side of the scene, a row of objects is arranged horizontally from left to right: a set of keys, a calculator, a pair of glasses, headphones, a game controller, and a carrot. Additionally, the scene follows a specific rule: for every bowl present, there is a cup to its left and a knife to the left of the cup, with these three items also aligned horizontally. Finally, the game controller is visually larger than any bowl in the image.",
+    "dsl": "(exists ?keys (exists ?calc (exists ?glasses (exists ?hp (exists ?gc (exists ?carrot (and (Is ?keys 'keys') (Is ?calc 'calculator') (Is ?glasses 'glasses') (Is ?hp 'headphones') (Is ?gc 'game_controller') (Is ?carrot 'carrot') (OnBottomSide ?gc) (LeftOf ?keys ?calc) (LeftOf ?calc ?glasses) (LeftOf ?glasses ?hp) (LeftOf ?hp ?gc) (LeftOf ?gc ?carrot) (AlignedHorizontally ?keys ?calc) (AlignedHorizontally ?calc ?glasses) (AlignedHorizontally ?glasses ?hp) (AlignedHorizontally ?hp ?gc) (AlignedHorizontally ?gc ?carrot) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?cup (exists ?knife (and (Is ?cup 'cup') (Is ?knife 'knife') (LeftOf ?knife ?cup) (LeftOf ?cup ?bowl) (AlignedHorizontally ?knife ?cup) (AlignedHorizontally ?cup ?bowl) (LargerThan ?gc ?bowl)))))))))))))",
+    "cnf": "(exists ?keys (exists ?calc (exists ?glasses (exists ?hp (exists ?gc (exists ?carrot (forall ?bowl (exists ?cup (exists ?knife (and (Is ?keys 'keys') (LeftOf ?keys ?calc) (AlignedHorizontally ?keys ?calc) (Is ?calc 'calculator') (LeftOf ?calc ?glasses) (AlignedHorizontally ?calc ?glasses) (Is ?glasses 'glasses') (LeftOf ?glasses ?hp) (AlignedHorizontally ?glasses ?hp) (Is ?hp 'headphones') (LeftOf ?hp ?gc) (AlignedHorizontally ?hp ?gc) (OnBottomSide ?gc) (LeftOf ?gc ?carrot) (AlignedHorizontally ?gc ?carrot) (Is ?gc 'game_controller') (Is ?carrot 'carrot') (or (not (Is ?bowl 'bowl')) (LargerThan ?gc ?bowl)) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?cup ?bowl)) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?knife ?cup)) (or (not (Is ?bowl 'bowl')) (LeftOf ?cup ?bowl)) (or (not (Is ?bowl 'bowl')) (LeftOf ?knife ?cup)) (or (not (Is ?bowl 'bowl')) (Is ?cup 'cup')) (or (not (Is ?bowl 'bowl')) (Is ?knife 'knife'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "carrot",
+        "cup",
+        "game_controller",
+        "calculator",
+        "knife",
+        "bowl",
+        "headphones"
+    ]
+}

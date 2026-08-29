@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Presented in an oil painting style, the scene shows a tree to the left of a woman. The woman is holding a metal spoon and stands next to a wooden table. A round pizza and a fish are placed on the table. To the right of the table stands a desk with an oval mirror on top of it. Inside the desk, there is a toy car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?w (exists ?s (exists ?tb (exists ?p (exists ?f (exists ?d (exists ?m (exists ?tc (and (Is ?t 'tree') (Is ?w 'woman') (Is ?s 'spoon') (Is ?tb 'table') (Is ?p 'pizza') (Is ?f 'fish') (Is ?d 'desk') (Is ?m 'mirror') (Is ?tc 'toy car') (LeftOf ?t ?w) (Holding ?w ?s) (HasMaterial ?s 'metal') (NextTo ?w ?tb) (HasMaterial ?tb 'wooden') (On ?p ?tb) (HasShape ?p 'round') (On ?f ?tb) (LeftOf ?tb ?d) (On ?m ?d) (HasShape ?m 'oval') (In ?tc ?d))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?w (exists ?s (exists ?tb (exists ?p (exists ?f (exists ?d (exists ?m (exists ?tc (and (Is ?t 'tree') (LeftOf ?t ?w) (Is ?w 'woman') (Holding ?w ?s) (NextTo ?w ?tb) (Is ?s 'spoon') (HasMaterial ?s 'metal') (Is ?tb 'table') (HasMaterial ?tb 'wooden') (On ?p ?tb) (On ?f ?tb) (Is ?p 'pizza') (HasShape ?p 'round') (LeftOf ?tb ?d) (Is ?f 'fish') (Is ?d 'desk') (On ?m ?d) (In ?tc ?d) (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?tc 'toy car'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tree",
+        "toy car",
+        "fish",
+        "desk",
+        "pizza",
+        "woman",
+        "mirror",
+        "table",
+        "spoon"
+    ]
+}

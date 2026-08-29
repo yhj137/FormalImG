@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene showing a rug. A round basket containing every apple sits on the rug. A man holding a keyboard is on the rug next to a woman holding a backpack. A lion is also on the rug, with a jacket to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?b (exists ?m (and (Is ?r 'rug') (Is ?b 'basket') (HasShape ?b 'round') (On ?b ?r) (Is ?m 'man') (On ?m ?r) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?w (exists ?l (exists ?j (exists ?k (exists ?bp (and (Is ?w 'woman') (Is ?l 'lion') (Is ?j 'jacket') (Is ?k 'keyboard') (Is ?bp 'backpack') (NextTo ?w ?m) (Holding ?w ?bp) (On ?l ?r) (RightOf ?j ?l) (Holding ?m ?k))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?b (exists ?m (forall ?a (exists ?w (exists ?l (exists ?j (exists ?k (exists ?bp (and (Is ?r 'rug') (On ?b ?r) (On ?m ?r) (HasShape ?b 'round') (or (not (Is ?a 'apple')) (In ?a ?b)) (On ?l ?r) (Is ?m 'man') (NextTo ?w ?m) (Is ?b 'basket') (Is ?l 'lion') (RightOf ?j ?l) (Holding ?m ?k) (Is ?w 'woman') (Holding ?w ?bp) (Is ?j 'jacket') (Is ?k 'keyboard') (Is ?bp 'backpack'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "woman",
+        "keyboard",
+        "jacket",
+        "man",
+        "backpack",
+        "basket",
+        "rug",
+        "apple",
+        "lion"
+    ]
+}

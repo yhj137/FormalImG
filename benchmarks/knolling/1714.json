@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat row of items. A wallet is positioned on the bottom side of the image. The wallet is to the left of a set of keys, the keys are to the left of a pair of glasses, and the glasses are to the left of a stapler. Following this arrangement, for every wrench in the scene, it is positioned to the right of the stapler and is larger than a screwdriver. Located to the right of that wrench is the screwdriver, to the right of the screwdriver is a pair of pliers, to the right of the pliers is a fork, and finally, to the right of the fork is a lemon.",
+    "dsl": "(exists ?wallet (exists ?keys (exists ?glasses (exists ?stapler (and (Is ?wallet 'wallet') (Is ?keys 'keys') (Is ?glasses 'glasses') (Is ?stapler 'stapler') (OnBottomSide ?wallet) (LeftOf ?wallet ?keys) (LeftOf ?keys ?glasses) (LeftOf ?glasses ?stapler) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?screwdriver (exists ?pliers (exists ?fork (exists ?lemon (and (Is ?screwdriver 'screwdriver') (Is ?pliers 'pliers') (Is ?fork 'fork') (Is ?lemon 'lemon') (RightOf ?wrench ?stapler) (LargerThan ?wrench ?screwdriver) (RightOf ?screwdriver ?wrench) (RightOf ?pliers ?screwdriver) (RightOf ?fork ?pliers) (RightOf ?lemon ?fork)))))))))))))",
+    "cnf": "(exists ?wallet (exists ?keys (exists ?glasses (exists ?stapler (forall ?wrench (exists ?screwdriver (exists ?pliers (exists ?fork (exists ?lemon (and (Is ?wallet 'wallet') (OnBottomSide ?wallet) (LeftOf ?wallet ?keys) (Is ?keys 'keys') (LeftOf ?keys ?glasses) (Is ?glasses 'glasses') (LeftOf ?glasses ?stapler) (Is ?stapler 'stapler') (or (not (Is ?wrench 'wrench')) (RightOf ?wrench ?stapler)) (or (not (Is ?wrench 'wrench')) (Is ?lemon 'lemon')) (or (not (Is ?wrench 'wrench')) (LargerThan ?wrench ?screwdriver)) (or (not (Is ?wrench 'wrench')) (Is ?fork 'fork')) (or (not (Is ?wrench 'wrench')) (RightOf ?lemon ?fork)) (or (not (Is ?wrench 'wrench')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?wrench 'wrench')) (RightOf ?screwdriver ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (or (not (Is ?wrench 'wrench')) (RightOf ?fork ?pliers)) (or (not (Is ?wrench 'wrench')) (RightOf ?pliers ?screwdriver))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "pliers",
+        "stapler",
+        "wrench",
+        "lemon",
+        "screwdriver",
+        "fork",
+        "wallet"
+    ]
+}

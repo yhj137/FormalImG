@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a table. A blue backpack is placed next to the table, with a ball to its left. On the table sits a broken clock beside a hammer, along with a sandwich. To the right of the sandwich are all the bananas and a bowl containing a withered flower, with a cup placed next to the bowl.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'table') (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'blue') (NextTo ?bp ?t) (exists ?cl (and (Is ?cl 'clock') (HasState ?cl 'broken') (On ?cl ?t) (exists ?h (and (Is ?h 'hammer') (NextTo ?h ?cl) (exists ?bl (and (Is ?bl 'ball') (LeftOf ?bl ?bp) (exists ?s (and (Is ?s 'sandwich') (On ?s ?t) (forall ?bn (implies (Is ?bn 'banana') (RightOf ?bn ?s))) (exists ?bo (and (Is ?bo 'bowl') (RightOf ?bo ?s) (exists ?f (and (Is ?f 'flower') (HasState ?f 'withered') (In ?f ?bo) (exists ?cp (and (Is ?cp 'cup') (NextTo ?cp ?bo))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?bp (exists ?cl (exists ?h (exists ?bl (exists ?s (forall ?bn (exists ?bo (exists ?f (exists ?cp (and (Is ?t 'table') (NextTo ?bp ?t) (On ?cl ?t) (HasColor ?bp 'blue') (LeftOf ?bl ?bp) (On ?s ?t) (HasState ?cl 'broken') (NextTo ?h ?cl) (Is ?bp 'backpack') (Is ?bl 'ball') (Is ?s 'sandwich') (or (not (Is ?bn 'banana')) (RightOf ?bn ?s)) (Is ?cl 'clock') (Is ?h 'hammer') (RightOf ?bo ?s) (Is ?bo 'bowl') (In ?f ?bo) (NextTo ?cp ?bo) (HasState ?f 'withered') (Is ?cp 'cup') (Is ?f 'flower')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bowl",
+        "sandwich",
+        "ball",
+        "backpack",
+        "banana",
+        "hammer",
+        "cup",
+        "table",
+        "clock",
+        "flower"
+    ]
+}

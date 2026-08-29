@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized horizontally. On the left side, there is a book, a hat, and a plate. The hat is positioned to the right of the book, and the plate is to the right of the hat. The book is physically larger than the hat. On the right side, there is a sequence of items: a cup, glasses, keys, a lighter, and a lemon. The cup is located to the right of the plate, the glasses are to the right of the cup, the keys are to the right of the glasses, the lighter is to the right of the keys, and the lemon is to the right of the lighter. The lemon is smaller than the plate. Additionally, a pen is placed on the bottom side of the image and is smaller than the plate. Finally, for any phone present in the scene, it is located to the right of the pen and is smaller than the book.",
+    "dsl": "(exists ?book (exists ?hat (exists ?plate (exists ?cup (exists ?glasses (exists ?keys (exists ?lighter (exists ?lemon (exists ?pen (and (Is ?book 'book') (Is ?hat 'hat') (Is ?plate 'plate') (Is ?cup 'cup') (Is ?glasses 'glasses') (Is ?keys 'keys') (Is ?lighter 'lighter') (Is ?lemon 'lemon') (Is ?pen 'pen') (OnLeftSide ?book) (OnLeftSide ?hat) (OnLeftSide ?plate) (OnRightSide ?cup) (OnRightSide ?glasses) (OnRightSide ?keys) (OnRightSide ?lighter) (OnRightSide ?lemon) (OnBottomSide ?pen) (RightOf ?hat ?book) (RightOf ?plate ?hat) (RightOf ?cup ?plate) (RightOf ?glasses ?cup) (RightOf ?keys ?glasses) (RightOf ?lighter ?keys) (RightOf ?lemon ?lighter) (LargerThan ?book ?hat) (SmallerThan ?lemon ?plate) (LargerThan ?plate ?pen) (forall ?phone (implies (Is ?phone 'phone') (and (RightOf ?phone ?pen) (SmallerThan ?phone ?book))))))))))))))",
+    "cnf": "(exists ?book (exists ?hat (exists ?plate (exists ?cup (exists ?glasses (exists ?keys (exists ?lighter (exists ?lemon (exists ?pen (forall ?phone (and (Is ?book 'book') (OnLeftSide ?book) (RightOf ?hat ?book) (LargerThan ?book ?hat) (OnLeftSide ?hat) (RightOf ?plate ?hat) (or (not (Is ?phone 'phone')) (SmallerThan ?phone ?book)) (Is ?hat 'hat') (OnLeftSide ?plate) (RightOf ?cup ?plate) (or (not (Is ?phone 'phone')) (RightOf ?phone ?pen)) (Is ?plate 'plate') (SmallerThan ?lemon ?plate) (OnRightSide ?cup) (RightOf ?glasses ?cup) (LargerThan ?plate ?pen) (RightOf ?lemon ?lighter) (Is ?cup 'cup') (OnRightSide ?glasses) (RightOf ?keys ?glasses) (OnBottomSide ?pen) (RightOf ?lighter ?keys) (OnRightSide ?lemon) (Is ?glasses 'glasses') (OnRightSide ?keys) (Is ?pen 'pen') (OnRightSide ?lighter) (Is ?lemon 'lemon') (Is ?keys 'keys') (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "glasses",
+        "plate",
+        "keys",
+        "pen",
+        "lemon",
+        "phone",
+        "cup",
+        "hat",
+        "lighter"
+    ]
+}

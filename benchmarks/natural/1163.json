@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene. A leather sofa sits inside a car. To the right of the sofa stands an elephant holding a jacket. Every clock is square and floats above the sofa, and a rug lies to the right of the elephant.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?s (exists ?e (exists ?j (and (Is ?c 'car') (Is ?s 'sofa') (HasMaterial ?s 'leather') (In ?s ?c) (Is ?e 'elephant') (RightOf ?e ?s) (Is ?j 'jacket') (Holding ?e ?j) (forall ?cl (implies (Is ?cl 'clock') (and (HasShape ?cl 'square') (Above ?cl ?s)))) (exists ?r (and (Is ?r 'rug') (RightOf ?r ?e)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?s (exists ?e (exists ?j (forall ?cl (exists ?r (and (Is ?c 'car') (In ?s ?c) (HasMaterial ?s 'leather') (RightOf ?e ?s) (Is ?s 'sofa') (or (not (Is ?cl 'clock')) (Above ?cl ?s)) (Is ?e 'elephant') (Holding ?e ?j) (or (not (Is ?cl 'clock')) (HasShape ?cl 'square')) (RightOf ?r ?e) (Is ?j 'jacket') (Is ?r 'rug')))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "sofa",
+        "rug",
+        "elephant",
+        "clock",
+        "car"
+    ]
+}

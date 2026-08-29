@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a laptop located on the top side of the frame, with a shirt positioned directly below it. On the right side of the image, there is a handbag that is smaller than the laptop. A camera is placed below the handbag. The composition includes a specific constraint: for every pen in the image, there is a drill situated below it. This drill is also positioned below the camera to maintain the vertical flow. Further down, a sandwich is located below the drill on the bottom side of the scene, and a game controller is placed below the sandwich.",
+    "dsl": "(exists ?laptop (exists ?shirt (exists ?handbag (exists ?camera (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?shirt 'shirt') (Below ?shirt ?laptop) (Is ?handbag 'handbag') (OnRightSide ?handbag) (SmallerThan ?handbag ?laptop) (Is ?camera 'camera') (Below ?camera ?handbag) (forall ?pen (implies (Is ?pen 'pen') (exists ?drill (exists ?sandwich (exists ?game_controller (and (Is ?drill 'drill') (Is ?sandwich 'sandwich') (Is ?game_controller 'game_controller') (Above ?pen ?drill) (Below ?drill ?camera) (Below ?sandwich ?drill) (OnBottomSide ?sandwich) (Below ?game_controller ?sandwich))))))))))))",
+    "cnf": "(exists ?laptop (exists ?shirt (exists ?handbag (exists ?camera (forall ?pen (exists ?drill (exists ?sandwich (exists ?game_controller (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?shirt ?laptop) (SmallerThan ?handbag ?laptop) (Is ?shirt 'shirt') (OnRightSide ?handbag) (Below ?camera ?handbag) (Is ?handbag 'handbag') (Is ?camera 'camera') (or (not (Is ?pen 'pen')) (Below ?drill ?camera)) (or (not (Is ?pen 'pen')) (Above ?pen ?drill)) (or (not (Is ?pen 'pen')) (Below ?sandwich ?drill)) (or (not (Is ?pen 'pen')) (Is ?game_controller 'game_controller')) (or (not (Is ?pen 'pen')) (Is ?drill 'drill')) (or (not (Is ?pen 'pen')) (OnBottomSide ?sandwich)) (or (not (Is ?pen 'pen')) (Is ?sandwich 'sandwich')) (or (not (Is ?pen 'pen')) (Below ?game_controller ?sandwich)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "pen",
+        "game_controller",
+        "drill",
+        "handbag",
+        "camera",
+        "sandwich",
+        "shirt"
+    ]
+}

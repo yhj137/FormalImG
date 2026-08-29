@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a yellow bus containing a wooden wardrobe and a metal bookshelf. Every cat in the scene is on the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (HasColor ?b 'yellow') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?w ?b) (forall ?c (implies (Is ?c 'cat') (On ?c ?w))))) (exists ?bs (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'metal') (In ?bs ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?w (forall ?c (exists ?bs (and (Is ?b 'bus') (HasColor ?b 'yellow') (In ?w ?b) (In ?bs ?b) (HasMaterial ?w 'wooden') (or (not (Is ?c 'cat')) (On ?c ?w)) (HasMaterial ?bs 'metal') (Is ?w 'wardrobe') (Is ?bs 'bookshelf')))))))",
+    "k": 4,
+    "object_classes": [
+        "bus",
+        "bookshelf",
+        "wardrobe",
+        "cat"
+    ]
+}

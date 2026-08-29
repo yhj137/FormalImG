@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a round plate. To his left is a backpack containing a book, with a pair of plastic glasses resting on the book.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?p (exists ?bp (exists ?b (exists ?g (and (Is ?m 'man') (Is ?p 'plate') (Is ?bp 'backpack') (Is ?b 'book') (Is ?g 'glasses') (HasShape ?p 'round') (HasMaterial ?g 'plastic') (Holding ?m ?p) (LeftOf ?bp ?m) (In ?b ?bp) (On ?g ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?p (exists ?bp (exists ?b (exists ?g (and (Is ?m 'man') (Holding ?m ?p) (LeftOf ?bp ?m) (HasShape ?p 'round') (Is ?bp 'backpack') (In ?b ?bp) (Is ?p 'plate') (Is ?b 'book') (On ?g ?b) (HasMaterial ?g 'plastic') (Is ?g 'glasses'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "backpack",
+        "plate",
+        "glasses",
+        "man"
+    ]
+}

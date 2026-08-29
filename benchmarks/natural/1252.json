@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo depicting a bus, with every car in the scene positioned to its left. An elephant stands next to the bus, beside a table. On the table rests a pan containing a round red apple, and a black jacket lies next to the table.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (forall ?c (implies (Is ?c 'car') (LeftOf ?c ?b))) (exists ?e (and (Is ?e 'elephant') (NextTo ?e ?b) (exists ?t (and (Is ?t 'table') (NextTo ?t ?e) (exists ?p (and (Is ?p 'pan') (On ?p ?t) (exists ?a (and (Is ?a 'apple') (In ?a ?p) (HasColor ?a 'red') (HasShape ?a 'round'))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (NextTo ?j ?t))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?c (exists ?e (exists ?t (exists ?p (exists ?a (exists ?j (and (Is ?b 'bus') (or (not (Is ?c 'car')) (LeftOf ?c ?b)) (NextTo ?e ?b) (Is ?e 'elephant') (NextTo ?t ?e) (Is ?t 'table') (On ?p ?t) (NextTo ?j ?t) (Is ?p 'pan') (In ?a ?p) (HasColor ?j 'black') (Is ?a 'apple') (HasColor ?a 'red') (Is ?j 'jacket') (HasShape ?a 'round'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "jacket",
+        "pan",
+        "bus",
+        "elephant",
+        "table",
+        "apple",
+        "car"
+    ]
+}

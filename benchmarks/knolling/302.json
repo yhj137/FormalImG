@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every ruler in the composition, there is a wallet aligned vertically with it, and that wallet is positioned on the right side of the image.",
+    "dsl": "(and (forall ?r (implies (Is ?r 'ruler') (exists ?w (and (Is ?w 'wallet') (AlignedVertically ?r ?w) (OnRightSide ?w))))))",
+    "cnf": "(forall ?r (exists ?w (and (or (not (Is ?r 'ruler')) (Is ?w 'wallet')) (or (not (Is ?r 'ruler')) (AlignedVertically ?r ?w)) (or (not (Is ?r 'ruler')) (OnRightSide ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "wallet"
+    ]
+}

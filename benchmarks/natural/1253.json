@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a refrigerator, with every shoe positioned to its left. Inside the refrigerator, a metal pan contains a banana, and a key sits to the left of the pan. The refrigerator stands to the left of a lion, and a ball is also located to the left of the lion.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'refrigerator') (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?r))) (exists ?p (exists ?b (exists ?k (exists ?l (exists ?bl (and (Is ?p 'pan') (HasMaterial ?p 'metal') (In ?p ?r) (Is ?b 'banana') (In ?b ?p) (Is ?k 'key') (In ?k ?r) (LeftOf ?k ?p) (Is ?l 'lion') (LeftOf ?r ?l) (Is ?bl 'ball') (LeftOf ?bl ?l))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (forall ?s (exists ?p (exists ?b (exists ?k (exists ?l (exists ?bl (and (Is ?r 'refrigerator') (or (not (Is ?s 'shoes')) (LeftOf ?s ?r)) (In ?p ?r) (In ?k ?r) (HasMaterial ?p 'metal') (In ?b ?p) (LeftOf ?r ?l) (Is ?k 'key') (LeftOf ?k ?p) (Is ?p 'pan') (Is ?b 'banana') (Is ?l 'lion') (LeftOf ?bl ?l) (Is ?bl 'ball'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "pan",
+        "ball",
+        "banana",
+        "shoes",
+        "refrigerator",
+        "lion"
+    ]
+}

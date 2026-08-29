@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a shirt located on the bottom side. For every tie present, it is aligned vertically with the shirt, and there is a sock positioned to the left of the tie that is aligned horizontally with it.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (forall ?tie (implies (Is ?tie 'tie') (exists ?sock (and (Is ?sock 'sock') (AlignedVertically ?tie ?shirt) (LeftOf ?sock ?tie) (AlignedHorizontally ?sock ?tie)))))))",
+    "cnf": "(exists ?shirt (forall ?tie (exists ?sock (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (or (not (Is ?tie 'tie')) (AlignedVertically ?tie ?shirt)) (or (not (Is ?tie 'tie')) (Is ?sock 'sock')) (or (not (Is ?tie 'tie')) (LeftOf ?sock ?tie)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?sock ?tie))))))",
+    "k": 3,
+    "object_classes": [
+        "tie",
+        "sock",
+        "shirt"
+    ]
+}

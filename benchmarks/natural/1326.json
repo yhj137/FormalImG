@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a car positioned to the left of an open refrigerator. Beside the refrigerator is a table holding a triangular sandwich and every piece of fruit in the scene. Next to the table, a dog is holding shoes.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?r (exists ?t (exists ?s (and (Is ?c 'car') (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?t 'table') (Is ?s 'sandwich') (HasShape ?s 'triangular') (LeftOf ?c ?r) (NextTo ?t ?r) (On ?s ?t) (forall ?f (implies (Is ?f 'fruit') (On ?f ?t))) (exists ?d (exists ?sh (and (Is ?d 'dog') (Is ?sh 'shoes') (NextTo ?d ?t) (Holding ?d ?sh))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?r (exists ?t (exists ?s (forall ?f (exists ?d (exists ?sh (and (Is ?c 'car') (LeftOf ?c ?r) (HasState ?r 'open') (NextTo ?t ?r) (Is ?r 'refrigerator') (Is ?t 'table') (On ?s ?t) (or (not (Is ?f 'fruit')) (On ?f ?t)) (HasShape ?s 'triangular') (NextTo ?d ?t) (Is ?s 'sandwich') (Is ?d 'dog') (Holding ?d ?sh) (Is ?sh 'shoes'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sandwich",
+        "shoes",
+        "refrigerator",
+        "table",
+        "dog",
+        "fruit",
+        "car"
+    ]
+}

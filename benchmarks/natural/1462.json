@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an elephant holding a book while standing on a fabric rug. Every apple in the scene is green and located next to the elephant. A wooden wardrobe stands next to the rug, with a bottle resting on top and a boat adjacent to it. A keyboard is also lying on the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (and (Is ?e 'elephant') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'green') (NextTo ?a ?e)))) (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?e ?r) (exists ?bk (and (Is ?bk 'book') (Holding ?e ?bk) (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?w ?r) (exists ?bt (and (Is ?bt 'bottle') (On ?bt ?w) (exists ?bo (and (Is ?bo 'boat') (NextTo ?bo ?w) (exists ?k (and (Is ?k 'keyboard') (On ?k ?r))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (forall ?a (exists ?r (exists ?bk (exists ?w (exists ?bt (exists ?bo (exists ?k (and (Is ?e 'elephant') (or (not (Is ?a 'apple')) (NextTo ?a ?e)) (On ?e ?r) (or (not (Is ?a 'apple')) (HasColor ?a 'green')) (Holding ?e ?bk) (HasMaterial ?r 'fabric') (NextTo ?w ?r) (Is ?bk 'book') (Is ?r 'rug') (On ?k ?r) (HasMaterial ?w 'wooden') (On ?bt ?w) (Is ?k 'keyboard') (Is ?w 'wardrobe') (NextTo ?bo ?w) (Is ?bt 'bottle') (Is ?bo 'boat')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "bottle",
+        "book",
+        "wardrobe",
+        "rug",
+        "boat",
+        "apple",
+        "elephant"
+    ]
+}

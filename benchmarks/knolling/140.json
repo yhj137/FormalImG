@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this arrangement, every shirt present in the scene is positioned on the left side of the image.",
+    "dsl": "(forall ?shirt (implies (Is ?shirt 'shirt') (OnLeftSide ?shirt)))",
+    "cnf": "(forall ?shirt (or (not (Is ?shirt 'shirt')) (OnLeftSide ?shirt)))",
+    "k": 1,
+    "object_classes": [
+        "shirt"
+    ]
+}

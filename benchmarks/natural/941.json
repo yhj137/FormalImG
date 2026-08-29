@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a house with an elephant next to it. A metal car is positioned to the right of the house. Every bottle is located next to the car, with an umbrella to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?e (exists ?c (and (Is ?h 'house') (Is ?e 'elephant') (NextTo ?e ?h) (Is ?c 'car') (HasMaterial ?c 'metal') (RightOf ?c ?h) (forall ?b (implies (Is ?b 'bottle') (exists ?u (and (NextTo ?b ?c) (Is ?u 'umbrella') (RightOf ?u ?b))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?e (exists ?c (forall ?b (exists ?u (and (Is ?h 'house') (NextTo ?e ?h) (RightOf ?c ?h) (Is ?e 'elephant') (HasMaterial ?c 'metal') (or (not (Is ?b 'bottle')) (NextTo ?b ?c)) (Is ?c 'car') (or (not (Is ?b 'bottle')) (Is ?u 'umbrella')) (or (not (Is ?b 'bottle')) (RightOf ?u ?b)))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "elephant",
+        "umbrella",
+        "bottle",
+        "car"
+    ]
+}

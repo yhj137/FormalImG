@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man wearing round glasses holding every pan.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (and (Is ?m 'man') (forall ?p (implies (Is ?p 'pan') (Holding ?m ?p))) (exists ?g (and (Is ?g 'glasses') (HasShape ?g 'round') (On ?g ?m))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (forall ?p (exists ?g (and (Is ?m 'man') (or (not (Is ?p 'pan')) (Holding ?m ?p)) (On ?g ?m) (HasShape ?g 'round') (Is ?g 'glasses'))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "pan",
+        "glasses"
+    ]
+}

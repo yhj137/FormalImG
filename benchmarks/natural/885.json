@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring an elephant. Every cat is positioned next to the elephant. Beside the elephant is a round pan containing a yellow screwdriver, with a flower resting on top.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (and (Is ?e 'elephant') (forall ?c (implies (Is ?c 'cat') (NextTo ?c ?e))) (exists ?p (exists ?s (exists ?f (and (Is ?p 'pan') (HasShape ?p 'round') (Is ?s 'screwdriver') (HasColor ?s 'yellow') (Is ?f 'flower') (NextTo ?p ?e) (In ?s ?p) (On ?f ?p))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (forall ?c (exists ?p (exists ?s (exists ?f (and (Is ?e 'elephant') (or (not (Is ?c 'cat')) (NextTo ?c ?e)) (NextTo ?p ?e) (HasShape ?p 'round') (In ?s ?p) (Is ?p 'pan') (On ?f ?p) (HasColor ?s 'yellow') (Is ?f 'flower') (Is ?s 'screwdriver'))))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "flower",
+        "pan",
+        "cat",
+        "screwdriver"
+    ]
+}

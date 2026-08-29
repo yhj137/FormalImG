@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. All cats are on a round basket, and inside the basket, a flower lies to the left of each cat.",
+    "dsl": "(exists ?b (and (Is ?b 'basket') (HasShape ?b 'round') (forall ?c (implies (Is ?c 'cat') (and (On ?c ?b) (exists ?f (and (Is ?f 'flower') (In ?f ?b) (LeftOf ?f ?c))))))))",
+    "cnf": "(exists ?b (forall ?c (exists ?f (and (Is ?b 'basket') (HasShape ?b 'round') (or (not (Is ?c 'cat')) (On ?c ?b)) (or (not (Is ?c 'cat')) (In ?f ?b)) (or (not (Is ?c 'cat')) (Is ?f 'flower')) (or (not (Is ?c 'cat')) (LeftOf ?f ?c))))))",
+    "k": 3,
+    "object_classes": [
+        "flower",
+        "basket",
+        "cat"
+    ]
+}

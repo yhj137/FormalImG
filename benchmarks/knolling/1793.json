@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown suitcase, a monitor, a cutting board, and a book, where the suitcase is to the left of the monitor, the monitor is to the left of the cutting board, and the cutting board is to the left of the book. There is a black glove on the top side of the image. The glove is to the left of a remote, the remote is to the left of a hammer, and the hammer is to the left of a stapler. The glove is smaller than the suitcase. For every cup in the image, it is white, located to the right of the book, and is smaller than the monitor.",
+    "dsl": "(exists ?suitcase (exists ?monitor (exists ?cutting_board (exists ?book (exists ?glove (exists ?remote (exists ?hammer (exists ?stapler (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?monitor 'monitor') (Is ?cutting_board 'cutting_board') (Is ?book 'book') (Is ?glove 'glove') (Has ?glove 'black') (Is ?remote 'remote') (Is ?hammer 'hammer') (Is ?stapler 'stapler') (LeftOf ?suitcase ?monitor) (LeftOf ?monitor ?cutting_board) (LeftOf ?cutting_board ?book) (OnTopSide ?glove) (LeftOf ?glove ?remote) (LeftOf ?remote ?hammer) (LeftOf ?hammer ?stapler) (SmallerThan ?glove ?suitcase) (forall ?cup (implies (Is ?cup 'cup') (and (Has ?cup 'white') (RightOf ?cup ?book) (SmallerThan ?cup ?monitor)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (exists ?cutting_board (exists ?book (exists ?glove (exists ?remote (exists ?hammer (exists ?stapler (forall ?cup (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (LeftOf ?suitcase ?monitor) (SmallerThan ?glove ?suitcase) (Is ?monitor 'monitor') (LeftOf ?monitor ?cutting_board) (LeftOf ?glove ?remote) (or (not (Is ?cup 'cup')) (SmallerThan ?cup ?monitor)) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?book) (OnTopSide ?glove) (Is ?remote 'remote') (LeftOf ?remote ?hammer) (or (not (Is ?cup 'cup')) (RightOf ?cup ?book)) (Is ?book 'book') (Has ?glove 'black') (Is ?hammer 'hammer') (LeftOf ?hammer ?stapler) (or (not (Is ?cup 'cup')) (Has ?cup 'white')) (Is ?glove 'glove') (Is ?stapler 'stapler')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "remote",
+        "stapler",
+        "cup",
+        "cutting_board",
+        "hammer",
+        "monitor",
+        "suitcase",
+        "glove"
+    ]
+}

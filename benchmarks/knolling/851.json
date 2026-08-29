@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the image, there is a specific set of items arranged around it: a screwdriver is placed above the plate and resides in the top side of the frame, while a sock is positioned below the plate. A remote is located to the right of the plate, and a calculator is placed to the right of the remote. Furthermore, the plate is visually larger than the calculator.",
+    "dsl": "(and (forall ?plate (implies (Is ?plate 'plate') (exists ?screwdriver (exists ?sock (exists ?remote (exists ?calculator (and (Is ?screwdriver 'screwdriver') (Is ?sock 'sock') (Is ?remote 'remote') (Is ?calculator 'calculator') (Above ?screwdriver ?plate) (OnTopSide ?screwdriver) (Below ?sock ?plate) (RightOf ?remote ?plate) (RightOf ?calculator ?remote) (LargerThan ?plate ?calculator)))))))))",
+    "cnf": "(forall ?plate (exists ?screwdriver (exists ?sock (exists ?remote (exists ?calculator (and (or (not (Is ?plate 'plate')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?plate 'plate')) (Is ?sock 'sock')) (or (not (Is ?plate 'plate')) (Above ?screwdriver ?plate)) (or (not (Is ?plate 'plate')) (Is ?remote 'remote')) (or (not (Is ?plate 'plate')) (Below ?sock ?plate)) (or (not (Is ?plate 'plate')) (Is ?calculator 'calculator')) (or (not (Is ?plate 'plate')) (OnTopSide ?screwdriver)) (or (not (Is ?plate 'plate')) (RightOf ?remote ?plate)) (or (not (Is ?plate 'plate')) (RightOf ?calculator ?remote)) (or (not (Is ?plate 'plate')) (LargerThan ?plate ?calculator))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "plate",
+        "sock",
+        "screwdriver",
+        "calculator"
+    ]
+}

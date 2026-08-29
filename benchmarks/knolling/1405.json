@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a large suitcase positioned on the bottom side of the layout. Directly above the suitcase is a handbag, and the suitcase is visually larger than the handbag. Above the handbag is a pan. To the right of the pan, there is a donut, and further to the right of the donut is a lemon; these three items (pan, donut, lemon) are aligned horizontally. Below the donut, there are scissors. To the right of the scissors is a pen, and to the right of the pen is a lighter. The scissors, pen, and lighter are also aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?pan (exists ?donut (exists ?lemon (exists ?scissors (exists ?pen (exists ?lighter (and (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (Is ?pan 'pan') (Is ?donut 'donut') (Is ?lemon 'lemon') (Is ?scissors 'scissors') (Is ?pen 'pen') (Is ?lighter 'lighter') (OnBottomSide ?suitcase) (Above ?handbag ?suitcase) (LargerThan ?suitcase ?handbag) (Above ?pan ?handbag) (RightOf ?donut ?pan) (RightOf ?lemon ?donut) (AlignedHorizontally ?pan ?donut) (AlignedHorizontally ?donut ?lemon) (Below ?scissors ?donut) (RightOf ?pen ?scissors) (RightOf ?lighter ?pen) (AlignedHorizontally ?scissors ?pen) (AlignedHorizontally ?pen ?lighter))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?pan (exists ?donut (exists ?lemon (exists ?scissors (exists ?pen (exists ?lighter (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Above ?handbag ?suitcase) (LargerThan ?suitcase ?handbag) (Is ?handbag 'handbag') (Above ?pan ?handbag) (Is ?pan 'pan') (RightOf ?donut ?pan) (AlignedHorizontally ?pan ?donut) (Is ?donut 'donut') (RightOf ?lemon ?donut) (AlignedHorizontally ?donut ?lemon) (Is ?lemon 'lemon') (Below ?scissors ?donut) (Is ?scissors 'scissors') (RightOf ?pen ?scissors) (AlignedHorizontally ?scissors ?pen) (Is ?pen 'pen') (RightOf ?lighter ?pen) (AlignedHorizontally ?pen ?lighter) (Is ?lighter 'lighter'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "lighter",
+        "pan",
+        "scissors",
+        "pen",
+        "suitcase",
+        "lemon",
+        "donut",
+        "handbag"
+    ]
+}

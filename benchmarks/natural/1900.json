@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a screwdriver stands on a red rug, where a wardrobe is also placed. To the left of the wardrobe, every car is positioned next to a blue bicycle with a hat on it. A lamp hangs above each car, and inside each car, there is a keyboard and a key.",
+    "dsl": "(exists ?m (exists ?r (exists ?w (exists ?s (and (Is ?m 'man') (Is ?r 'rug') (HasColor ?r 'red') (Is ?w 'wardrobe') (Is ?s 'screwdriver') (On ?m ?r) (On ?w ?r) (Holding ?m ?s) (forall ?c (implies (Is ?c 'car') (exists ?b (exists ?h (exists ?l (exists ?kb (exists ?k (and (Is ?b 'bicycle') (HasColor ?b 'blue') (Is ?h 'hat') (Is ?l 'lamp') (Is ?kb 'keyboard') (Is ?k 'key') (LeftOf ?c ?w) (NextTo ?b ?c) (On ?h ?b) (Above ?l ?c) (In ?kb ?c) (In ?k ?c))))))))))))))",
+    "cnf": "(exists ?m (exists ?r (exists ?w (exists ?s (forall ?c (exists ?b (exists ?h (exists ?l (exists ?kb (exists ?k (and (Is ?m 'man') (On ?m ?r) (Holding ?m ?s) (HasColor ?r 'red') (On ?w ?r) (Is ?s 'screwdriver') (Is ?r 'rug') (Is ?w 'wardrobe') (or (not (Is ?c 'car')) (LeftOf ?c ?w)) (or (not (Is ?c 'car')) (Is ?k 'key')) (or (not (Is ?c 'car')) (NextTo ?b ?c)) (or (not (Is ?c 'car')) (Is ?kb 'keyboard')) (or (not (Is ?c 'car')) (In ?k ?c)) (or (not (Is ?c 'car')) (HasColor ?b 'blue')) (or (not (Is ?c 'car')) (On ?h ?b)) (or (not (Is ?c 'car')) (Is ?l 'lamp')) (or (not (Is ?c 'car')) (In ?kb ?c)) (or (not (Is ?c 'car')) (Is ?b 'bicycle')) (or (not (Is ?c 'car')) (Is ?h 'hat')) (or (not (Is ?c 'car')) (Above ?l ?c)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "hat",
+        "rug",
+        "man",
+        "lamp",
+        "car",
+        "bicycle",
+        "keyboard",
+        "screwdriver",
+        "key",
+        "wardrobe"
+    ]
+}

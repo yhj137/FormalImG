@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a central vertical alignment containing a pair of glasses, a sandwich, and a mouse, positioned from top to bottom in that order. To the left of the glasses lies a hammer. To the right of the glasses is a pair of scissors, which is specifically positioned on the right side of the image.",
+    "dsl": "(exists ?hammer (exists ?glasses (exists ?scissors (exists ?sandwich (exists ?mouse (and (Is ?hammer 'hammer') (Is ?glasses 'glasses') (Is ?scissors 'scissors') (Is ?sandwich 'sandwich') (Is ?mouse 'mouse') (AlignedVertically ?glasses ?sandwich) (AlignedVertically ?sandwich ?mouse) (Above ?glasses ?sandwich) (Above ?sandwich ?mouse) (LeftOf ?hammer ?glasses) (RightOf ?scissors ?glasses) (OnRightSide ?scissors)))))))",
+    "cnf": "(exists ?hammer (exists ?glasses (exists ?scissors (exists ?sandwich (exists ?mouse (and (Is ?hammer 'hammer') (LeftOf ?hammer ?glasses) (Above ?glasses ?sandwich) (RightOf ?scissors ?glasses) (AlignedVertically ?glasses ?sandwich) (AlignedVertically ?sandwich ?mouse) (Above ?sandwich ?mouse) (Is ?scissors 'scissors') (OnRightSide ?scissors) (Is ?glasses 'glasses') (Is ?sandwich 'sandwich') (Is ?mouse 'mouse')))))))",
+    "k": 5,
+    "object_classes": [
+        "hammer",
+        "mouse",
+        "scissors",
+        "glasses",
+        "sandwich"
+    ]
+}

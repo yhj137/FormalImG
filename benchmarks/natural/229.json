@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene showing a red umbrella with a child to its right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?u (exists ?c (and (Is ?u 'umbrella') (HasColor ?u 'red') (Is ?c 'child') (RightOf ?c ?u)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?u (exists ?c (and (Is ?u 'umbrella') (HasColor ?u 'red') (RightOf ?c ?u) (Is ?c 'child')))))",
+    "k": 2,
+    "object_classes": [
+        "umbrella",
+        "child"
+    ]
+}

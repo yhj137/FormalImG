@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side. A glove, a wrench, and a mouse are arranged in a row such that the glove is to the left of the wrench, and the wrench is to the left of the mouse. The mouse is visually smaller than the suitcase. For every pizza located on the right side of the image, the mouse is positioned to its left. Additionally, relative to the pizza, there is an apple located on the top side that is aligned vertically with the pizza, and there is a lighter smaller than the pizza which is aligned vertically with a pen.",
+    "dsl": "(exists ?suitcase (exists ?glove (exists ?wrench (exists ?mouse (and (Is ?suitcase 'suitcase') (Is ?glove 'glove') (Is ?wrench 'wrench') (Is ?mouse 'mouse') (OnLeftSide ?suitcase) (LeftOf ?glove ?wrench) (LeftOf ?wrench ?mouse) (SmallerThan ?mouse ?suitcase) (forall ?pizza (implies (and (Is ?pizza 'pizza') (OnRightSide ?pizza)) (exists ?apple (exists ?lighter (exists ?pen (and (Is ?apple 'apple') (Is ?lighter 'lighter') (Is ?pen 'pen') (LeftOf ?mouse ?pizza) (OnTopSide ?apple) (AlignedVertically ?apple ?pizza) (SmallerThan ?lighter ?pizza) (AlignedVertically ?lighter ?pen))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?glove (exists ?wrench (exists ?mouse (forall ?pizza (exists ?apple (exists ?lighter (exists ?pen (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (SmallerThan ?mouse ?suitcase) (LeftOf ?wrench ?mouse) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (LeftOf ?mouse ?pizza)) (LeftOf ?glove ?wrench) (Is ?mouse 'mouse') (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (Is ?pen 'pen')) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (OnTopSide ?apple)) (Is ?glove 'glove') (Is ?wrench 'wrench') (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (Is ?lighter 'lighter')) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (AlignedVertically ?lighter ?pen)) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (AlignedVertically ?apple ?pizza)) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (Is ?apple 'apple')) (or (not (Is ?pizza 'pizza')) (not (OnRightSide ?pizza)) (SmallerThan ?lighter ?pizza)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "apple",
+        "pen",
+        "wrench",
+        "pizza",
+        "lighter",
+        "mouse",
+        "suitcase",
+        "glove"
+    ]
+}

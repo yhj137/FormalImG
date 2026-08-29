@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a boat containing a round mirror, with a horse to its right. A plate with a sandwich and a cake sits on the boat, next to a metal knife. Every fish in the scene is inside the boat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?h (exists ?m (exists ?p (exists ?s (exists ?c (exists ?k (and (Is ?b 'boat') (Is ?h 'horse') (RightOf ?h ?b) (Is ?m 'mirror') (HasShape ?m 'round') (In ?m ?b) (Is ?p 'plate') (On ?p ?b) (Is ?s 'sandwich') (On ?s ?p) (Is ?c 'cake') (On ?c ?p) (Is ?k 'knife') (HasMaterial ?k 'metal') (NextTo ?k ?p) (forall ?f (implies (Is ?f 'fish') (In ?f ?b))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?h (exists ?m (exists ?p (exists ?s (exists ?c (exists ?k (forall ?f (and (Is ?b 'boat') (RightOf ?h ?b) (In ?m ?b) (Is ?h 'horse') (On ?p ?b) (HasShape ?m 'round') (or (not (Is ?f 'fish')) (In ?f ?b)) (Is ?p 'plate') (On ?s ?p) (Is ?m 'mirror') (On ?c ?p) (Is ?s 'sandwich') (NextTo ?k ?p) (Is ?c 'cake') (HasMaterial ?k 'metal') (Is ?k 'knife')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sandwich",
+        "knife",
+        "fish",
+        "cake",
+        "horse",
+        "boat",
+        "mirror",
+        "plate"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a glove and a cutting board associated with it. The monitor is positioned on the left side of the image. The glove is aligned horizontally with the monitor, and the cutting board is aligned horizontally with the glove. Visually, the glove is smaller than the monitor.",
+    "dsl": "(and (forall ?m (implies (Is ?m 'monitor') (exists ?g (exists ?c (and (Is ?g 'glove') (Is ?c 'cutting_board') (OnLeftSide ?m) (AlignedHorizontally ?m ?g) (AlignedHorizontally ?g ?c) (SmallerThan ?g ?m)))))))",
+    "cnf": "(forall ?m (exists ?g (exists ?c (and (or (not (Is ?m 'monitor')) (Is ?g 'glove')) (or (not (Is ?m 'monitor')) (AlignedHorizontally ?m ?g)) (or (not (Is ?m 'monitor')) (Is ?c 'cutting_board')) (or (not (Is ?m 'monitor')) (AlignedHorizontally ?g ?c)) (or (not (Is ?m 'monitor')) (OnLeftSide ?m)) (or (not (Is ?m 'monitor')) (SmallerThan ?g ?m))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "cutting_board",
+        "glove"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a handbag located on the top side of the scene, which is visually larger than a sandwich. Additionally, for every fork present, it is smaller than the sandwich.",
+    "dsl": "(exists ?handbag (exists ?sandwich (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?sandwich 'sandwich') (LargerThan ?handbag ?sandwich) (forall ?fork (implies (Is ?fork 'fork') (SmallerThan ?fork ?sandwich))))))",
+    "cnf": "(exists ?handbag (exists ?sandwich (forall ?fork (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (LargerThan ?handbag ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?fork 'fork')) (SmallerThan ?fork ?sandwich))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "handbag",
+        "sandwich"
+    ]
+}

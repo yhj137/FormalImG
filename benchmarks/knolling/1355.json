@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black pan positioned on the top side of the layout. There is a pizza that is visually larger than the pan, and a blue hat is aligned vertically with the pizza. A pair of headphones, which is smaller than the hat, is also aligned vertically with the hat. A red pen is included in the scene and is smaller than the headphones. Finally, for every keyboard present, there is a corresponding carrot; this carrot is aligned vertically with the pan and is smaller than the pan, while the keyboard is larger than the carrot.",
+    "dsl": "(exists ?pan (exists ?pizza (exists ?hat (exists ?headphones (exists ?pen (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (Is ?pizza 'pizza') (LargerThan ?pizza ?pan) (Is ?hat 'hat') (Has ?hat 'blue') (AlignedVertically ?hat ?pizza) (Is ?headphones 'headphones') (SmallerThan ?headphones ?hat) (AlignedVertically ?headphones ?hat) (Is ?pen 'pen') (Has ?pen 'red') (SmallerThan ?pen ?headphones) (forall ?keyboard (implies (Is ?keyboard 'keyboard') (exists ?carrot (and (Is ?carrot 'carrot') (AlignedVertically ?carrot ?pan) (SmallerThan ?carrot ?pan) (LargerThan ?keyboard ?carrot)))))))))))",
+    "cnf": "(exists ?pan (exists ?pizza (exists ?hat (exists ?headphones (exists ?pen (forall ?keyboard (exists ?carrot (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (LargerThan ?pizza ?pan) (or (not (Is ?keyboard 'keyboard')) (AlignedVertically ?carrot ?pan)) (Is ?pizza 'pizza') (AlignedVertically ?hat ?pizza) (or (not (Is ?keyboard 'keyboard')) (SmallerThan ?carrot ?pan)) (or (not (Is ?keyboard 'keyboard')) (Is ?carrot 'carrot')) (Has ?hat 'blue') (SmallerThan ?headphones ?hat) (or (not (Is ?keyboard 'keyboard')) (LargerThan ?keyboard ?carrot)) (Is ?hat 'hat') (AlignedVertically ?headphones ?hat) (Is ?headphones 'headphones') (SmallerThan ?pen ?headphones) (Has ?pen 'red') (Is ?pen 'pen')))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "pen",
+        "carrot",
+        "pizza",
+        "hat",
+        "pan",
+        "headphones"
+    ]
+}

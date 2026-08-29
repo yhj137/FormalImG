@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a drill, a spoon, and a knife. The drill is located on the bottom side of the image and appears larger than the spoon. The objects are arranged in a row where the drill is to the left of the spoon, and the spoon is to the left of the knife, with all three items aligned horizontally.",
+    "dsl": "(exists ?drill (exists ?spoon (exists ?knife (and (Is ?drill 'drill') (Is ?spoon 'spoon') (Is ?knife 'knife') (OnBottomSide ?drill) (LargerThan ?drill ?spoon) (LeftOf ?drill ?spoon) (LeftOf ?spoon ?knife) (AlignedHorizontally ?drill ?spoon) (AlignedHorizontally ?spoon ?knife)))))",
+    "cnf": "(exists ?drill (exists ?spoon (exists ?knife (and (Is ?drill 'drill') (OnBottomSide ?drill) (LargerThan ?drill ?spoon) (LeftOf ?drill ?spoon) (Is ?spoon 'spoon') (AlignedHorizontally ?drill ?spoon) (LeftOf ?spoon ?knife) (AlignedHorizontally ?spoon ?knife) (Is ?knife 'knife')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "drill",
+        "knife"
+    ]
+}

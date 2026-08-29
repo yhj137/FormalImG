@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a cutting board on the top side. For every sock in the image, there exists a tie, a sandwich, a bowl, a cup, a backpack, a laptop, and a ruler. The tie is positioned above the sock and below the cutting board. The sandwich is aligned horizontally with the cutting board, the bowl is aligned horizontally with the sandwich, and the cup is aligned horizontally with the bowl. The backpack is on the bottom side, below the sandwich, and aligned horizontally with the laptop. The laptop is below the bowl and aligned horizontally with the ruler. The ruler is below the cup.",
+    "dsl": "(exists ?cutting_board (and (Is ?cutting_board 'cutting_board') (OnTopSide ?cutting_board) (forall ?sock (implies (Is ?sock 'sock') (exists ?tie (exists ?sandwich (exists ?bowl (exists ?cup (exists ?backpack (exists ?laptop (exists ?ruler (and (Is ?tie 'tie') (Is ?sandwich 'sandwich') (Is ?bowl 'bowl') (Is ?cup 'cup') (Is ?backpack 'backpack') (Is ?laptop 'laptop') (Is ?ruler 'ruler') (Above ?tie ?sock) (Below ?tie ?cutting_board) (AlignedHorizontally ?cutting_board ?sandwich) (AlignedHorizontally ?sandwich ?bowl) (AlignedHorizontally ?bowl ?cup) (OnBottomSide ?backpack) (Below ?backpack ?sandwich) (AlignedHorizontally ?backpack ?laptop) (Below ?laptop ?bowl) (AlignedHorizontally ?laptop ?ruler) (Below ?ruler ?cup)))))))))))))",
+    "cnf": "(exists ?cutting_board (forall ?sock (exists ?tie (exists ?sandwich (exists ?bowl (exists ?cup (exists ?backpack (exists ?laptop (exists ?ruler (and (Is ?cutting_board 'cutting_board') (OnTopSide ?cutting_board) (or (not (Is ?sock 'sock')) (Below ?tie ?cutting_board)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?cutting_board ?sandwich)) (or (not (Is ?sock 'sock')) (Above ?tie ?sock)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sandwich ?bowl)) (or (not (Is ?sock 'sock')) (Is ?sandwich 'sandwich')) (or (not (Is ?sock 'sock')) (Is ?tie 'tie')) (or (not (Is ?sock 'sock')) (Is ?ruler 'ruler')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?bowl ?cup)) (or (not (Is ?sock 'sock')) (Below ?backpack ?sandwich)) (or (not (Is ?sock 'sock')) (Is ?bowl 'bowl')) (or (not (Is ?sock 'sock')) (Is ?laptop 'laptop')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?laptop ?ruler)) (or (not (Is ?sock 'sock')) (OnBottomSide ?backpack)) (or (not (Is ?sock 'sock')) (Below ?laptop ?bowl)) (or (not (Is ?sock 'sock')) (Is ?cup 'cup')) (or (not (Is ?sock 'sock')) (Below ?ruler ?cup)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?backpack ?laptop)) (or (not (Is ?sock 'sock')) (Is ?backpack 'backpack'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "backpack",
+        "bowl",
+        "ruler",
+        "tie",
+        "cup",
+        "cutting_board",
+        "sock",
+        "sandwich",
+        "laptop"
+    ]
+}

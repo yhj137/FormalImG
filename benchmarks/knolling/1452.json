@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a brown suitcase located on the top left side of the scene. For every lemon in the image, it is yellow and positioned below the suitcase. Arranged in a horizontal line to the right of the lemon are a white game controller, a blue hat, and a gray laptop. Additionally, a red drill is located below the lemon. To the right of the drill, there is a black shoe, followed by a set of white keys, and these three items are also aligned horizontally.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?gc (exists ?hat (exists ?laptop (exists ?drill (exists ?shoe (exists ?keys (and (Has ?lemon 'yellow') (Is ?gc 'game_controller') (Has ?gc 'white') (Is ?hat 'hat') (Has ?hat 'blue') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?drill 'drill') (Has ?drill 'red') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?keys 'keys') (Has ?keys 'white') (Below ?lemon ?suitcase) (RightOf ?gc ?lemon) (AlignedHorizontally ?gc ?lemon) (RightOf ?hat ?gc) (AlignedHorizontally ?hat ?gc) (RightOf ?laptop ?hat) (AlignedHorizontally ?laptop ?hat) (Below ?drill ?lemon) (RightOf ?shoe ?drill) (AlignedHorizontally ?shoe ?drill) (RightOf ?keys ?shoe) (AlignedHorizontally ?keys ?shoe))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?lemon (exists ?gc (exists ?hat (exists ?laptop (exists ?drill (exists ?shoe (exists ?keys (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (or (not (Is ?lemon 'lemon')) (Below ?lemon ?suitcase)) (or (not (Is ?lemon 'lemon')) (Has ?keys 'white')) (or (not (Is ?lemon 'lemon')) (RightOf ?gc ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?keys 'keys')) (or (not (Is ?lemon 'lemon')) (RightOf ?keys ?shoe)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?gc ?lemon)) (or (not (Is ?lemon 'lemon')) (Has ?gc 'white')) (or (not (Is ?lemon 'lemon')) (Has ?shoe 'black')) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?shoe ?drill)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?keys ?shoe)) (or (not (Is ?lemon 'lemon')) (RightOf ?hat ?gc)) (or (not (Is ?lemon 'lemon')) (Is ?gc 'game_controller')) (or (not (Is ?lemon 'lemon')) (Is ?hat 'hat')) (or (not (Is ?lemon 'lemon')) (Is ?shoe 'shoe')) (or (not (Is ?lemon 'lemon')) (RightOf ?shoe ?drill)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?hat ?gc)) (or (not (Is ?lemon 'lemon')) (Has ?hat 'blue')) (or (not (Is ?lemon 'lemon')) (Has ?lemon 'yellow')) (or (not (Is ?lemon 'lemon')) (Has ?drill 'red')) (or (not (Is ?lemon 'lemon')) (Below ?drill ?lemon)) (or (not (Is ?lemon 'lemon')) (RightOf ?laptop ?hat)) (or (not (Is ?lemon 'lemon')) (Is ?laptop 'laptop')) (or (not (Is ?lemon 'lemon')) (Is ?drill 'drill')) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?laptop ?hat)) (or (not (Is ?lemon 'lemon')) (Has ?laptop 'gray')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "lemon",
+        "game_controller",
+        "drill",
+        "hat",
+        "suitcase",
+        "shoe"
+    ]
+}

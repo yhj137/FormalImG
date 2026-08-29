@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A tree stands next to a fabric rug. A fluffy teddy bear and an umbrella sit on the rug, with a pair of glasses resting on the teddy bear. All apples in the scene are in the tree.",
+    "dsl": "(exists ?t (exists ?r (exists ?tb (exists ?u (exists ?g (and (Is ?t 'tree') (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (Is ?u 'umbrella') (Is ?g 'glasses') (NextTo ?t ?r) (On ?tb ?r) (On ?u ?r) (On ?g ?tb) (forall ?a (implies (Is ?a 'apple') (In ?a ?t)))))))))",
+    "cnf": "(exists ?t (exists ?r (exists ?tb (exists ?u (exists ?g (forall ?a (and (Is ?t 'tree') (NextTo ?t ?r) (or (not (Is ?a 'apple')) (In ?a ?t)) (HasMaterial ?r 'fabric') (On ?tb ?r) (Is ?r 'rug') (On ?u ?r) (HasMaterial ?tb 'fluffy') (On ?g ?tb) (Is ?u 'umbrella') (Is ?tb 'teddy bear') (Is ?g 'glasses'))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "glasses",
+        "tree",
+        "teddy bear",
+        "rug",
+        "apple"
+    ]
+}

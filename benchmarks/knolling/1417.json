@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a gray suitcase, a black pan, a white laptop, a red book, a brown handbag, a black phone, a yellow lemon, and black glasses. Structurally, the black pan is positioned to the right of the gray suitcase and lies on the right side of the image. The white laptop is arranged directly below the suitcase and is vertically aligned with it. To the right of the laptop is the red book, which is also situated below the pan and aligned vertically with it. The brown handbag is placed below the laptop, maintaining vertical alignment with the laptop. The black phone is located to the right of the handbag and below the red book. The yellow lemon is placed below the phone and is visually smaller than the pan. Finally, the black glasses are located on the top side of the scene, positioned to the right of the pan, and are smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?pan (exists ?laptop (exists ?book (exists ?handbag (exists ?phone (exists ?lemon (exists ?glasses (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (Is ?pan 'pan') (Has ?pan 'black') (OnRightSide ?pan) (Is ?laptop 'laptop') (Has ?laptop 'white') (Is ?book 'book') (Has ?book 'red') (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?phone 'phone') (Has ?phone 'black') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?glasses 'glasses') (Has ?glasses 'black') (OnTopSide ?glasses) (RightOf ?pan ?suitcase) (Below ?laptop ?suitcase) (AlignedVertically ?laptop ?suitcase) (RightOf ?book ?laptop) (Below ?book ?pan) (AlignedVertically ?book ?pan) (Below ?handbag ?laptop) (AlignedVertically ?handbag ?laptop) (RightOf ?phone ?handbag) (Below ?phone ?book) (Below ?lemon ?phone) (SmallerThan ?lemon ?pan) (RightOf ?glasses ?pan) (SmallerThan ?glasses ?suitcase))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pan (exists ?laptop (exists ?book (exists ?handbag (exists ?phone (exists ?lemon (exists ?glasses (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (RightOf ?pan ?suitcase) (Below ?laptop ?suitcase) (OnRightSide ?pan) (Below ?book ?pan) (AlignedVertically ?laptop ?suitcase) (Has ?laptop 'white') (Has ?pan 'black') (AlignedVertically ?book ?pan) (RightOf ?book ?laptop) (SmallerThan ?glasses ?suitcase) (Is ?laptop 'laptop') (Is ?pan 'pan') (SmallerThan ?lemon ?pan) (Below ?phone ?book) (Below ?handbag ?laptop) (Has ?book 'red') (RightOf ?glasses ?pan) (Below ?lemon ?phone) (RightOf ?phone ?handbag) (AlignedVertically ?handbag ?laptop) (Has ?handbag 'brown') (Is ?book 'book') (OnTopSide ?glasses) (Has ?lemon 'yellow') (Has ?phone 'black') (Is ?handbag 'handbag') (Has ?glasses 'black') (Is ?lemon 'lemon') (Is ?phone 'phone') (Is ?glasses 'glasses'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "laptop",
+        "glasses",
+        "lemon",
+        "phone",
+        "pan",
+        "handbag",
+        "suitcase"
+    ]
+}

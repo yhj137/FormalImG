@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is holding a round plate with every apple in the scene on it. To the right of the man is a bicycle with a jacket on it, and a phone is inside the jacket.",
+    "dsl": "(exists ?m (exists ?pl (exists ?b (exists ?j (exists ?ph (and (Is ?m 'man') (Is ?pl 'plate') (HasShape ?pl 'round') (Holding ?m ?pl) (forall ?a (implies (Is ?a 'apple') (On ?a ?pl))) (Is ?b 'bicycle') (RightOf ?b ?m) (Is ?j 'jacket') (On ?j ?b) (Is ?ph 'phone') (In ?ph ?j)))))))",
+    "cnf": "(exists ?m (exists ?pl (exists ?b (exists ?j (exists ?ph (forall ?a (and (Is ?m 'man') (Holding ?m ?pl) (RightOf ?b ?m) (HasShape ?pl 'round') (or (not (Is ?a 'apple')) (On ?a ?pl)) (Is ?b 'bicycle') (On ?j ?b) (Is ?pl 'plate') (Is ?j 'jacket') (In ?ph ?j) (Is ?ph 'phone'))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "man",
+        "phone",
+        "bicycle",
+        "apple",
+        "plate"
+    ]
+}

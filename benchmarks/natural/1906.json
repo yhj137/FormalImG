@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a dog on a bench holding a teddy bear inside a shirt. A table stands next to the bench, supporting a hammer with a screwdriver to its right, and a sandwich containing a cylindrical banana. All rocks are positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?b (exists ?tb (exists ?sh (and (Is ?d 'dog') (Is ?b 'bench') (Is ?tb 'teddy bear') (Is ?sh 'shirt') (On ?d ?b) (Holding ?d ?tb) (In ?tb ?sh) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?b))) (exists ?t (exists ?h (exists ?sd (exists ?sw (exists ?bn (and (Is ?t 'table') (Is ?h 'hammer') (Is ?sd 'screwdriver') (Is ?sw 'sandwich') (Is ?bn 'banana') (NextTo ?t ?b) (On ?h ?t) (RightOf ?sd ?h) (On ?sw ?t) (In ?bn ?sw) (HasShape ?bn 'cylindrical')))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?b (exists ?tb (exists ?sh (forall ?r (exists ?t (exists ?h (exists ?sd (exists ?sw (exists ?bn (and (Is ?d 'dog') (On ?d ?b) (Holding ?d ?tb) (Is ?b 'bench') (or (not (Is ?r 'rock')) (RightOf ?r ?b)) (Is ?tb 'teddy bear') (In ?tb ?sh) (NextTo ?t ?b) (Is ?sh 'shirt') (Is ?t 'table') (On ?h ?t) (On ?sw ?t) (Is ?h 'hammer') (RightOf ?sd ?h) (Is ?sw 'sandwich') (In ?bn ?sw) (Is ?sd 'screwdriver') (Is ?bn 'banana') (HasShape ?bn 'cylindrical')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "bench",
+        "teddy bear",
+        "rock",
+        "table",
+        "hammer",
+        "sandwich",
+        "screwdriver",
+        "dog",
+        "banana"
+    ]
+}

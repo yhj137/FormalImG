@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a tree next to a house. A sleeping lion lies next to the tree. A brown boat is also next to the tree. A child holding a fork is on the boat, along with a monitor that is turned off. Every knife is positioned next to the fork.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?l (exists ?b (exists ?c (exists ?m (exists ?f (and (Is ?h 'house') (Is ?t 'tree') (NextTo ?t ?h) (Is ?l 'lion') (NextTo ?l ?t) (HasState ?l 'sleeping') (Is ?b 'boat') (NextTo ?b ?t) (HasColor ?b 'brown') (Is ?c 'child') (On ?c ?b) (Is ?m 'monitor') (On ?m ?b) (HasState ?m 'off') (Is ?f 'fork') (Holding ?c ?f) (forall ?k (implies (Is ?k 'knife') (NextTo ?k ?f))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?l (exists ?b (exists ?c (exists ?m (exists ?f (forall ?k (and (Is ?h 'house') (NextTo ?t ?h) (Is ?t 'tree') (NextTo ?l ?t) (NextTo ?b ?t) (Is ?l 'lion') (HasState ?l 'sleeping') (Is ?b 'boat') (HasColor ?b 'brown') (On ?c ?b) (On ?m ?b) (Is ?c 'child') (Holding ?c ?f) (Is ?m 'monitor') (HasState ?m 'off') (Is ?f 'fork') (or (not (Is ?k 'knife')) (NextTo ?k ?f))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "knife",
+        "child",
+        "fork",
+        "tree",
+        "monitor",
+        "lion",
+        "boat"
+    ]
+}

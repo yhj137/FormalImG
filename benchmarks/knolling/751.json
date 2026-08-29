@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a backpack positioned on the left side of the image. A pan is located below the backpack. For every ruler that appears to the right of the pan, there is a lemon situated below that ruler, and the lemon is located on the bottom side of the image.",
+    "dsl": "(exists ?backpack (exists ?pan (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?pan 'pan') (Below ?pan ?backpack) (forall ?ruler (implies (and (Is ?ruler 'ruler') (RightOf ?ruler ?pan)) (exists ?lemon (and (Is ?lemon 'lemon') (Below ?lemon ?ruler) (OnBottomSide ?lemon))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (forall ?ruler (exists ?lemon (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Below ?pan ?backpack) (Is ?pan 'pan') (or (not (Is ?ruler 'ruler')) (not (RightOf ?ruler ?pan)) (Is ?lemon 'lemon')) (or (not (Is ?ruler 'ruler')) (not (RightOf ?ruler ?pan)) (Below ?lemon ?ruler)) (or (not (Is ?ruler 'ruler')) (not (RightOf ?ruler ?pan)) (OnBottomSide ?lemon)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "pan",
+        "backpack"
+    ]
+}

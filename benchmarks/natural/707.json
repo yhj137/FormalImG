@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style image. A person is holding an orange with a key resting on it. Every rock in the scene is round and located next to the person.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'person') (forall ?r (implies (Is ?r 'rock') (and (HasShape ?r 'round') (NextTo ?r ?p)))) (exists ?o (exists ?k (and (Is ?o 'orange') (Is ?k 'key') (Holding ?p ?o) (On ?k ?o)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (forall ?r (exists ?o (exists ?k (and (Is ?p 'person') (or (not (Is ?r 'rock')) (NextTo ?r ?p)) (Holding ?p ?o) (or (not (Is ?r 'rock')) (HasShape ?r 'round')) (Is ?o 'orange') (On ?k ?o) (Is ?k 'key')))))))",
+    "k": 4,
+    "object_classes": [
+        "key",
+        "person",
+        "orange",
+        "rock"
+    ]
+}

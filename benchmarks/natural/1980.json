@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden desk supports a monitor and a pan containing a cake. A blue hat sits to the left of the pan, while a sleeping cat rests to the right of the desk. To the left of the desk stands a bicycle, and a bus is positioned to the left of the bicycle. Every ball in the scene is located on the bus, with a boat positioned to the right of each one.",
+    "dsl": "(exists ?d (exists ?m (exists ?p (exists ?ck (exists ?h (exists ?c (exists ?bi (exists ?bu (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?m 'monitor') (On ?m ?d) (Is ?p 'pan') (On ?p ?d) (Is ?ck 'cake') (In ?ck ?p) (Is ?h 'hat') (HasColor ?h 'blue') (LeftOf ?h ?p) (Is ?c 'cat') (HasState ?c 'sleeping') (RightOf ?c ?d) (Is ?bi 'bicycle') (LeftOf ?bi ?d) (Is ?bu 'bus') (LeftOf ?bu ?bi) (forall ?ba (implies (Is ?ba 'ball') (exists ?bo (and (Is ?bo 'boat') (On ?ba ?bu) (RightOf ?bo ?ba))))))))))))))",
+    "cnf": "(exists ?d (exists ?m (exists ?p (exists ?ck (exists ?h (exists ?c (exists ?bi (exists ?bu (forall ?ba (exists ?bo (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?m ?d) (On ?p ?d) (Is ?m 'monitor') (RightOf ?c ?d) (Is ?p 'pan') (In ?ck ?p) (LeftOf ?bi ?d) (HasState ?c 'sleeping') (LeftOf ?h ?p) (Is ?ck 'cake') (Is ?bi 'bicycle') (LeftOf ?bu ?bi) (Is ?c 'cat') (HasColor ?h 'blue') (Is ?bu 'bus') (or (not (Is ?ba 'ball')) (On ?ba ?bu)) (Is ?h 'hat') (or (not (Is ?ba 'ball')) (Is ?bo 'boat')) (or (not (Is ?ba 'ball')) (RightOf ?bo ?ba)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "monitor",
+        "cat",
+        "desk",
+        "bus",
+        "ball",
+        "cake",
+        "hat",
+        "boat",
+        "bicycle"
+    ]
+}

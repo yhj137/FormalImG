@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two organized columns of items. On the left side, there is a blue backpack. A bottle is positioned above the backpack, and a shoe is placed below it; these three items are aligned vertically, with the backpack being visually larger than the shoe. On the right side, there is a bowl. A stapler is located above the bowl, and a pair of pliers is below the bowl, also forming a vertical alignment. The backpack is situated to the left of the bowl. In the space between the columns, a lighter is placed to the left of the stapler, and keys are placed to the left of the pliers. Furthermore, every donut in the scene is located to the left of the stapler.",
+    "dsl": "(exists ?backpack (exists ?shoe (exists ?bottle (exists ?bowl (exists ?stapler (exists ?pliers (exists ?lighter (exists ?keys (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Is ?shoe 'shoe') (Below ?shoe ?backpack) (AlignedVertically ?shoe ?backpack) (LargerThan ?backpack ?shoe) (Is ?bottle 'bottle') (Above ?bottle ?backpack) (AlignedVertically ?bottle ?backpack) (Is ?bowl 'bowl') (OnRightSide ?bowl) (LeftOf ?backpack ?bowl) (Is ?stapler 'stapler') (Above ?stapler ?bowl) (AlignedVertically ?stapler ?bowl) (Is ?pliers 'pliers') (Below ?pliers ?bowl) (AlignedVertically ?pliers ?bowl) (Is ?lighter 'lighter') (LeftOf ?lighter ?stapler) (Is ?keys 'keys') (LeftOf ?keys ?pliers) (forall ?donut (implies (Is ?donut 'donut') (LeftOf ?donut ?stapler))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shoe (exists ?bottle (exists ?bowl (exists ?stapler (exists ?pliers (exists ?lighter (exists ?keys (forall ?donut (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Below ?shoe ?backpack) (AlignedVertically ?shoe ?backpack) (Is ?shoe 'shoe') (LargerThan ?backpack ?shoe) (Above ?bottle ?backpack) (AlignedVertically ?bottle ?backpack) (Is ?bottle 'bottle') (LeftOf ?backpack ?bowl) (OnRightSide ?bowl) (Above ?stapler ?bowl) (Is ?bowl 'bowl') (AlignedVertically ?stapler ?bowl) (Is ?stapler 'stapler') (Below ?pliers ?bowl) (LeftOf ?lighter ?stapler) (AlignedVertically ?pliers ?bowl) (Is ?pliers 'pliers') (or (not (Is ?donut 'donut')) (LeftOf ?donut ?stapler)) (Is ?lighter 'lighter') (LeftOf ?keys ?pliers) (Is ?keys 'keys')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "stapler",
+        "backpack",
+        "lighter",
+        "bottle",
+        "bowl",
+        "shoe",
+        "donut"
+    ]
+}

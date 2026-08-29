@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman to the left of a desk, holding a black jacket. A blue hat and a mirror are on the desk, along with a plate with an orange on it, positioned next to the hat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?d (exists ?j (exists ?h (exists ?m (exists ?p (exists ?o (and (Is ?w 'woman') (Is ?d 'desk') (Is ?j 'jacket') (Is ?h 'hat') (Is ?m 'mirror') (Is ?p 'plate') (Is ?o 'orange') (LeftOf ?w ?d) (Holding ?w ?j) (HasColor ?j 'black') (On ?h ?d) (HasColor ?h 'blue') (On ?m ?d) (On ?p ?d) (NextTo ?p ?h) (On ?o ?p))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?d (exists ?j (exists ?h (exists ?m (exists ?p (exists ?o (and (Is ?w 'woman') (LeftOf ?w ?d) (Holding ?w ?j) (Is ?d 'desk') (On ?h ?d) (Is ?j 'jacket') (HasColor ?j 'black') (On ?m ?d) (Is ?h 'hat') (HasColor ?h 'blue') (On ?p ?d) (Is ?m 'mirror') (NextTo ?p ?h) (Is ?p 'plate') (On ?o ?p) (Is ?o 'orange'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "woman",
+        "orange",
+        "jacket",
+        "desk",
+        "mirror",
+        "hat"
+    ]
+}

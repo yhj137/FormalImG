@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every refrigerator contains a fluffy teddy bear.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?r (implies (Is ?r 'refrigerator') (exists ?t (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (In ?t ?r))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?r (exists ?t (and (or (not (Is ?r 'refrigerator')) (Is ?t 'teddy bear')) (or (not (Is ?r 'refrigerator')) (HasMaterial ?t 'fluffy')) (or (not (Is ?r 'refrigerator')) (In ?t ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "teddy bear",
+        "refrigerator"
+    ]
+}

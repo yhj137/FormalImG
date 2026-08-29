@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a sandwich. Located to the right of the sandwich is a fork, and to the right of the fork is a laptop. A phone is positioned to the right of the laptop. The layout follows a specific rule: for every glove in the image, there is a game controller to its right, and this game controller is aligned vertically with the phone. Finally, a pair of headphones is located to the right of the game controller and is positioned on the right side of the image.",
+    "dsl": "(exists ?sandwich (exists ?fork (exists ?laptop (exists ?phone (and (Is ?sandwich 'sandwich') (Is ?fork 'fork') (Is ?laptop 'laptop') (Is ?phone 'phone') (OnLeftSide ?sandwich) (RightOf ?fork ?sandwich) (RightOf ?laptop ?fork) (RightOf ?phone ?laptop) (forall ?glove (implies (Is ?glove 'glove') (exists ?controller (exists ?headphones (and (Is ?controller 'game_controller') (Is ?headphones 'headphones') (RightOf ?controller ?glove) (AlignedVertically ?controller ?phone) (RightOf ?headphones ?controller) (OnRightSide ?headphones)))))))))))",
+    "cnf": "(exists ?sandwich (exists ?fork (exists ?laptop (exists ?phone (forall ?glove (exists ?controller (exists ?headphones (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (RightOf ?fork ?sandwich) (Is ?fork 'fork') (RightOf ?laptop ?fork) (Is ?laptop 'laptop') (RightOf ?phone ?laptop) (Is ?phone 'phone') (or (not (Is ?glove 'glove')) (AlignedVertically ?controller ?phone)) (or (not (Is ?glove 'glove')) (RightOf ?controller ?glove)) (or (not (Is ?glove 'glove')) (RightOf ?headphones ?controller)) (or (not (Is ?glove 'glove')) (Is ?headphones 'headphones')) (or (not (Is ?glove 'glove')) (Is ?controller 'game_controller')) (or (not (Is ?glove 'glove')) (OnRightSide ?headphones))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "game_controller",
+        "glove",
+        "fork",
+        "phone",
+        "sandwich",
+        "laptop"
+    ]
+}

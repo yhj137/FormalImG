@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. To the left of a tree lies a broken keyboard with a screwdriver resting on it. Next to the tree is a car, upon which sits a black jacket topped with a hat. To the right of the car, there is a round, rusty pan containing a green bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?k (exists ?s (exists ?c (exists ?j (exists ?h (exists ?p (exists ?b (and (Is ?t 'tree') (Is ?k 'keyboard') (Is ?s 'screwdriver') (Is ?c 'car') (Is ?j 'jacket') (Is ?h 'hat') (Is ?p 'pan') (Is ?b 'bottle') (LeftOf ?k ?t) (HasState ?k 'broken') (On ?s ?k) (NextTo ?c ?t) (On ?j ?c) (HasColor ?j 'black') (On ?h ?j) (RightOf ?p ?c) (HasShape ?p 'round') (HasState ?p 'rusty') (In ?b ?p) (HasColor ?b 'green')))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?k (exists ?s (exists ?c (exists ?j (exists ?h (exists ?p (exists ?b (and (Is ?t 'tree') (LeftOf ?k ?t) (NextTo ?c ?t) (Is ?k 'keyboard') (HasState ?k 'broken') (Is ?c 'car') (On ?j ?c) (On ?s ?k) (RightOf ?p ?c) (Is ?j 'jacket') (HasColor ?j 'black') (Is ?s 'screwdriver') (Is ?p 'pan') (HasShape ?p 'round') (On ?h ?j) (HasState ?p 'rusty') (Is ?h 'hat') (In ?b ?p) (Is ?b 'bottle') (HasColor ?b 'green')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "bottle",
+        "jacket",
+        "pan",
+        "hat",
+        "screwdriver",
+        "tree",
+        "car"
+    ]
+}

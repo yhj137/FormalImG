@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every spoon in the scene, there is a wallet aligned vertically with it, and the wallet is positioned on the right side of the image.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'spoon') (exists ?w (and (Is ?w 'wallet') (OnRightSide ?w) (AlignedVertically ?s ?w))))))",
+    "cnf": "(forall ?s (exists ?w (and (or (not (Is ?s 'spoon')) (Is ?w 'wallet')) (or (not (Is ?s 'spoon')) (OnRightSide ?w)) (or (not (Is ?s 'spoon')) (AlignedVertically ?s ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "wallet"
+    ]
+}

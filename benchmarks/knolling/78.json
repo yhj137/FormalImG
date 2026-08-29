@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of glasses is located on the bottom side of the scene.",
+    "dsl": "(exists ?glasses (and (Is ?glasses 'glasses') (OnBottomSide ?glasses)))",
+    "cnf": "(exists ?glasses (and (Is ?glasses 'glasses') (OnBottomSide ?glasses)))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

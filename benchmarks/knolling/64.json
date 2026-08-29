@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A sandwich is neatly positioned on the bottom side of the layout.",
+    "dsl": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich)))",
+    "cnf": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich)))",
+    "k": 1,
+    "object_classes": [
+        "sandwich"
+    ]
+}

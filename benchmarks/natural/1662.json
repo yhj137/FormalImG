@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene features a wooden wardrobe with a bench to its right. Every hat in the scene is positioned next to the wardrobe. A blue backpack sits to the left of the bench, and a child is also next to the bench. To the left of the wardrobe lies a round pan, with a metal spoon placed beside it. A bowl sits to the right of the bench, with a yellow banana next to the bowl.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?wardrobe (exists ?bench (and (Is ?wardrobe 'wardrobe') (HasMaterial ?wardrobe 'wooden') (Is ?bench 'bench') (RightOf ?bench ?wardrobe) (forall ?hat (implies (Is ?hat 'hat') (NextTo ?hat ?wardrobe))) (exists ?backpack (exists ?child (exists ?pan (exists ?spoon (exists ?bowl (exists ?banana (and (Is ?backpack 'backpack') (HasColor ?backpack 'blue') (LeftOf ?backpack ?bench) (Is ?child 'child') (NextTo ?child ?bench) (Is ?pan 'pan') (HasShape ?pan 'round') (LeftOf ?pan ?wardrobe) (Is ?spoon 'spoon') (HasMaterial ?spoon 'metal') (NextTo ?spoon ?pan) (Is ?bowl 'bowl') (RightOf ?bowl ?bench) (Is ?banana 'banana') (HasColor ?banana 'yellow') (NextTo ?banana ?bowl))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?wardrobe (exists ?bench (forall ?hat (exists ?backpack (exists ?child (exists ?pan (exists ?spoon (exists ?bowl (exists ?banana (and (Is ?wardrobe 'wardrobe') (HasMaterial ?wardrobe 'wooden') (RightOf ?bench ?wardrobe) (or (not (Is ?hat 'hat')) (NextTo ?hat ?wardrobe)) (Is ?bench 'bench') (LeftOf ?backpack ?bench) (LeftOf ?pan ?wardrobe) (NextTo ?child ?bench) (HasColor ?backpack 'blue') (HasShape ?pan 'round') (NextTo ?spoon ?pan) (RightOf ?bowl ?bench) (Is ?child 'child') (Is ?backpack 'backpack') (Is ?pan 'pan') (HasMaterial ?spoon 'metal') (Is ?bowl 'bowl') (NextTo ?banana ?bowl) (Is ?spoon 'spoon') (HasColor ?banana 'yellow') (Is ?banana 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "pan",
+        "bowl",
+        "hat",
+        "backpack",
+        "banana",
+        "wardrobe",
+        "child",
+        "spoon"
+    ]
+}

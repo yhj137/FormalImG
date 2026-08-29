@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hat, a pair of headphones, a keyboard, and a calculator arranged in a vertical line on the right side of the image. The hat is above the headphones, the headphones are above the keyboard, and the keyboard is above the calculator; these four items are aligned vertically. Additionally, for every fork present in the scene, it is positioned to the right of the calculator, and there is a book located vertically below that fork.",
+    "dsl": "(exists ?hat (exists ?headphones (exists ?keyboard (exists ?calculator (and (Is ?hat 'hat') (Is ?headphones 'headphones') (Is ?keyboard 'keyboard') (Is ?calculator 'calculator') (OnRightSide ?hat) (AlignedVertically ?hat ?headphones) (AlignedVertically ?headphones ?keyboard) (AlignedVertically ?keyboard ?calculator) (Above ?hat ?headphones) (Above ?headphones ?keyboard) (Above ?keyboard ?calculator) (forall ?fork (implies (Is ?fork 'fork') (exists ?book (and (Is ?book 'book') (RightOf ?fork ?calculator) (Below ?book ?fork))))))))))",
+    "cnf": "(exists ?hat (exists ?headphones (exists ?keyboard (exists ?calculator (forall ?fork (exists ?book (and (Is ?hat 'hat') (OnRightSide ?hat) (AlignedVertically ?hat ?headphones) (Above ?hat ?headphones) (Is ?headphones 'headphones') (AlignedVertically ?headphones ?keyboard) (Above ?headphones ?keyboard) (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?calculator) (Above ?keyboard ?calculator) (Is ?calculator 'calculator') (or (not (Is ?fork 'fork')) (RightOf ?fork ?calculator)) (or (not (Is ?fork 'fork')) (Is ?book 'book')) (or (not (Is ?fork 'fork')) (Below ?book ?fork)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "keyboard",
+        "fork",
+        "hat",
+        "calculator",
+        "headphones"
+    ]
+}

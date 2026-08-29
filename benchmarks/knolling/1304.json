@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is arranged with a monitor positioned on the top side. To the left of the monitor sits a pair of jeans, and a tie is placed above the jeans. For every remote present in the layout, the remote is smaller than the monitor. To the left of each remote is a watch which is smaller than the remote itself. Furthermore, a fork is positioned above the watch, and a ruler is placed above the fork.",
+    "dsl": "(exists ?monitor (exists ?jeans (exists ?tie (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?jeans 'jeans') (LeftOf ?jeans ?monitor) (Is ?tie 'tie') (Above ?tie ?jeans) (forall ?remote (implies (Is ?remote 'remote') (exists ?watch (exists ?fork (exists ?ruler (and (Is ?watch 'watch') (Is ?fork 'fork') (Is ?ruler 'ruler') (SmallerThan ?remote ?monitor) (LeftOf ?watch ?remote) (SmallerThan ?watch ?remote) (Above ?fork ?watch) (Above ?ruler ?fork)))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (exists ?tie (forall ?remote (exists ?watch (exists ?fork (exists ?ruler (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?jeans ?monitor) (or (not (Is ?remote 'remote')) (SmallerThan ?remote ?monitor)) (Is ?jeans 'jeans') (Above ?tie ?jeans) (or (not (Is ?remote 'remote')) (Is ?ruler 'ruler')) (or (not (Is ?remote 'remote')) (LeftOf ?watch ?remote)) (Is ?tie 'tie') (or (not (Is ?remote 'remote')) (Is ?fork 'fork')) (or (not (Is ?remote 'remote')) (Above ?ruler ?fork)) (or (not (Is ?remote 'remote')) (Is ?watch 'watch')) (or (not (Is ?remote 'remote')) (SmallerThan ?watch ?remote)) (or (not (Is ?remote 'remote')) (Above ?fork ?watch))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "tie",
+        "remote",
+        "watch",
+        "fork",
+        "jeans",
+        "monitor"
+    ]
+}

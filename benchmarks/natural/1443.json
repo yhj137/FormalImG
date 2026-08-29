@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every plant has a basket containing a ball to its right. To the right of the basket stands a child holding an open umbrella next to a bicycle. To the right of the bicycle is a plate with a cake on it.",
+    "dsl": "(and (IsStyle 'photo') (forall ?p (implies (Is ?p 'plant') (exists ?bk (exists ?bl (exists ?c (exists ?u (exists ?bi (exists ?pl (exists ?ck (and (Is ?bk 'basket') (Is ?bl 'ball') (Is ?c 'child') (Is ?u 'umbrella') (Is ?bi 'bicycle') (Is ?pl 'plate') (Is ?ck 'cake') (LeftOf ?p ?bk) (In ?bl ?bk) (LeftOf ?bk ?c) (Holding ?c ?u) (HasState ?u 'open') (NextTo ?c ?bi) (RightOf ?pl ?bi) (On ?ck ?pl))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?p (exists ?bk (exists ?bl (exists ?c (exists ?u (exists ?bi (exists ?pl (exists ?ck (and (or (not (Is ?p 'plant')) (Is ?bk 'basket')) (or (not (Is ?p 'plant')) (LeftOf ?p ?bk)) (or (not (Is ?p 'plant')) (Is ?bl 'ball')) (or (not (Is ?p 'plant')) (In ?bl ?bk)) (or (not (Is ?p 'plant')) (Is ?ck 'cake')) (or (not (Is ?p 'plant')) (Is ?c 'child')) (or (not (Is ?p 'plant')) (LeftOf ?bk ?c)) (or (not (Is ?p 'plant')) (Is ?pl 'plate')) (or (not (Is ?p 'plant')) (On ?ck ?pl)) (or (not (Is ?p 'plant')) (Is ?u 'umbrella')) (or (not (Is ?p 'plant')) (Holding ?c ?u)) (or (not (Is ?p 'plant')) (Is ?bi 'bicycle')) (or (not (Is ?p 'plant')) (RightOf ?pl ?bi)) (or (not (Is ?p 'plant')) (HasState ?u 'open')) (or (not (Is ?p 'plant')) (NextTo ?c ?bi))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "basket",
+        "umbrella",
+        "cake",
+        "ball",
+        "plate",
+        "bicycle",
+        "child",
+        "plant"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue backpack is located on the top side of the scene. The backpack is positioned above a hat, the hat is above a drill, and the drill is above a stapler. The drill is visually larger than the stapler. A hammer is found on the right side, positioned so that the stapler is above it. For every plate in the image, the hammer is positioned above it. Furthermore, associated with each plate is a mouse, a red screwdriver, and a tie. The arrangement dictates that the plate is above the mouse, the mouse is above the screwdriver, and the screwdriver is above the tie. Additionally, the plate is larger than the mouse, and the tie is smaller than the plate.",
+    "dsl": "(exists ?backpack (exists ?hat (exists ?drill (exists ?stapler (exists ?hammer (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnTopSide ?backpack) (Is ?hat 'hat') (Is ?drill 'drill') (Is ?stapler 'stapler') (Is ?hammer 'hammer') (OnRightSide ?hammer) (Above ?backpack ?hat) (Above ?hat ?drill) (Above ?drill ?stapler) (LargerThan ?drill ?stapler) (Above ?stapler ?hammer) (forall ?plate (implies (Is ?plate 'plate') (exists ?mouse (exists ?screwdriver (exists ?tie (and (Is ?mouse 'mouse') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?tie 'tie') (Above ?hammer ?plate) (Above ?plate ?mouse) (LargerThan ?plate ?mouse) (Above ?mouse ?screwdriver) (Above ?screwdriver ?tie) (SmallerThan ?tie ?plate)))))))))))))",
+    "cnf": "(exists ?backpack (exists ?hat (exists ?drill (exists ?stapler (exists ?hammer (forall ?plate (exists ?mouse (exists ?screwdriver (exists ?tie (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnTopSide ?backpack) (Above ?backpack ?hat) (Is ?hat 'hat') (Above ?hat ?drill) (Is ?drill 'drill') (Above ?drill ?stapler) (LargerThan ?drill ?stapler) (Is ?stapler 'stapler') (Above ?stapler ?hammer) (OnRightSide ?hammer) (or (not (Is ?plate 'plate')) (Above ?hammer ?plate)) (Is ?hammer 'hammer') (or (not (Is ?plate 'plate')) (Is ?tie 'tie')) (or (not (Is ?plate 'plate')) (Above ?plate ?mouse)) (or (not (Is ?plate 'plate')) (Has ?screwdriver 'red')) (or (not (Is ?plate 'plate')) (Above ?screwdriver ?tie)) (or (not (Is ?plate 'plate')) (LargerThan ?plate ?mouse)) (or (not (Is ?plate 'plate')) (Is ?mouse 'mouse')) (or (not (Is ?plate 'plate')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?plate 'plate')) (Above ?mouse ?screwdriver)) (or (not (Is ?plate 'plate')) (SmallerThan ?tie ?plate))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "tie",
+        "stapler",
+        "screwdriver",
+        "drill",
+        "hat",
+        "backpack",
+        "hammer",
+        "mouse"
+    ]
+}

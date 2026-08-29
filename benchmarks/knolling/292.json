@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every set of keys in the scene, there is a pen positioned to its left. Furthermore, the pen is located on the left side of the image.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keys') (exists ?p (and (Is ?p 'pen') (LeftOf ?p ?k) (OnLeftSide ?p))))))",
+    "cnf": "(forall ?k (exists ?p (and (or (not (Is ?k 'keys')) (Is ?p 'pen')) (or (not (Is ?k 'keys')) (LeftOf ?p ?k)) (or (not (Is ?k 'keys')) (OnLeftSide ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "pen"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every set of gray keys present, there corresponds a blue bottle to its right and a gray knife to the right of the bottle. A white mouse is positioned below the keys, aligned vertically with them, and lies on the bottom side of the image. To the right of the mouse, there is a pair of red scissors.",
+    "dsl": "(and (forall ?keys (implies (and (Is ?keys 'keys') (Has ?keys 'gray')) (exists ?bottle (exists ?knife (exists ?mouse (exists ?scissors (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?scissors 'scissors') (Has ?scissors 'red') (RightOf ?bottle ?keys) (RightOf ?knife ?bottle) (Below ?mouse ?keys) (AlignedVertically ?keys ?mouse) (OnBottomSide ?mouse) (RightOf ?scissors ?mouse)))))))))",
+    "cnf": "(forall ?keys (exists ?bottle (exists ?knife (exists ?mouse (exists ?scissors (and (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Is ?bottle 'bottle')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Has ?bottle 'blue')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (RightOf ?bottle ?keys)) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (RightOf ?knife ?bottle)) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Has ?scissors 'red')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Has ?knife 'gray')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Below ?mouse ?keys)) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Is ?scissors 'scissors')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (RightOf ?scissors ?mouse)) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Is ?mouse 'mouse')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (AlignedVertically ?keys ?mouse)) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (Has ?mouse 'white')) (or (not (Is ?keys 'keys')) (not (Has ?keys 'gray')) (OnBottomSide ?mouse))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "knife",
+        "mouse",
+        "bottle",
+        "scissors"
+    ]
+}

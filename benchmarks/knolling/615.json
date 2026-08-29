@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a calculator, a cup, a stapler, and a bottle. The calculator is positioned on the bottom side of the image. The objects are arranged horizontally such that the calculator is to the left of the cup, the cup is to the left of the stapler, and the stapler is to the left of the bottle. The bottle is located on the right side of the image. Additionally, the stapler is visually smaller than the bottle.",
+    "dsl": "(exists ?calc (exists ?cup (exists ?stapler (exists ?bottle (and (Is ?calc 'calculator') (Is ?cup 'cup') (Is ?stapler 'stapler') (Is ?bottle 'bottle') (OnBottomSide ?calc) (LeftOf ?calc ?cup) (LeftOf ?cup ?stapler) (LeftOf ?stapler ?bottle) (OnRightSide ?bottle) (SmallerThan ?stapler ?bottle))))))",
+    "cnf": "(exists ?calc (exists ?cup (exists ?stapler (exists ?bottle (and (Is ?calc 'calculator') (OnBottomSide ?calc) (LeftOf ?calc ?cup) (Is ?cup 'cup') (LeftOf ?cup ?stapler) (Is ?stapler 'stapler') (LeftOf ?stapler ?bottle) (SmallerThan ?stapler ?bottle) (Is ?bottle 'bottle') (OnRightSide ?bottle))))))",
+    "k": 4,
+    "object_classes": [
+        "stapler",
+        "calculator",
+        "cup",
+        "bottle"
+    ]
+}

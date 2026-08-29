@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a keyboard positioned on the top side of the frame. For every carrot in the image, it is located to the left of that keyboard.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (OnTopSide ?k) (forall ?c (implies (Is ?c 'carrot') (LeftOf ?c ?k)))))",
+    "cnf": "(exists ?k (forall ?c (and (Is ?k 'keyboard') (OnTopSide ?k) (or (not (Is ?c 'carrot')) (LeftOf ?c ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "keyboard"
+    ]
+}

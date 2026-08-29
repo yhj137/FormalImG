@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image. To the right of every tree is a person next to a rectangular bed. A child holding a yellow banana is on the bed, and a hammer is next to the bed.",
+    "dsl": "(and (IsStyle 'photo') (forall ?t (implies (Is ?t 'tree') (exists ?p (exists ?b (exists ?c (exists ?ba (exists ?h (and (Is ?p 'person') (Is ?b 'bed') (Is ?c 'child') (Is ?ba 'banana') (Is ?h 'hammer') (RightOf ?p ?t) (NextTo ?p ?b) (HasShape ?b 'rectangular') (On ?c ?b) (Holding ?c ?ba) (HasColor ?ba 'yellow') (NextTo ?h ?b))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?t (exists ?p (exists ?b (exists ?c (exists ?ba (exists ?h (and (or (not (Is ?t 'tree')) (Is ?p 'person')) (or (not (Is ?t 'tree')) (RightOf ?p ?t)) (or (not (Is ?t 'tree')) (Is ?b 'bed')) (or (not (Is ?t 'tree')) (NextTo ?p ?b)) (or (not (Is ?t 'tree')) (Is ?h 'hammer')) (or (not (Is ?t 'tree')) (Is ?c 'child')) (or (not (Is ?t 'tree')) (HasShape ?b 'rectangular')) (or (not (Is ?t 'tree')) (Is ?ba 'banana')) (or (not (Is ?t 'tree')) (NextTo ?h ?b)) (or (not (Is ?t 'tree')) (On ?c ?b)) (or (not (Is ?t 'tree')) (Holding ?c ?ba)) (or (not (Is ?t 'tree')) (HasColor ?ba 'yellow'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "banana",
+        "bed",
+        "hammer",
+        "tree",
+        "person",
+        "child"
+    ]
+}

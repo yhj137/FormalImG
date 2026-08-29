@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a bicycle with a basket containing a cake, with a purple plant to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?k (exists ?c (exists ?p (and (Is ?b 'bicycle') (Is ?k 'basket') (Is ?c 'cake') (Is ?p 'plant') (On ?k ?b) (In ?c ?k) (RightOf ?p ?b) (HasColor ?p 'purple')))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?k (exists ?c (exists ?p (and (Is ?b 'bicycle') (On ?k ?b) (RightOf ?p ?b) (Is ?k 'basket') (In ?c ?k) (Is ?p 'plant') (HasColor ?p 'purple') (Is ?c 'cake')))))))",
+    "k": 4,
+    "object_classes": [
+        "basket",
+        "cake",
+        "bicycle",
+        "plant"
+    ]
+}

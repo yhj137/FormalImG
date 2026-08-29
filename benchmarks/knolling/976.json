@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the left side of the scene. The cutting board is located to the left of a plate, and these two items are aligned horizontally. A camera is placed below the cutting board. A pair of scissors is found on the bottom side of the image, with the camera positioned to the left of the scissors. Finally, for every apple in the scene, it is placed below the plate.",
+    "dsl": "(exists ?cb (exists ?pl (exists ?cam (exists ?sc (and (Is ?cb 'cutting_board') (Is ?pl 'plate') (Is ?cam 'camera') (Is ?sc 'scissors') (OnLeftSide ?cb) (LeftOf ?cb ?pl) (AlignedHorizontally ?cb ?pl) (Below ?cam ?cb) (OnBottomSide ?sc) (LeftOf ?cam ?sc) (forall ?app (implies (Is ?app 'apple') (Below ?app ?pl))))))))",
+    "cnf": "(exists ?cb (exists ?pl (exists ?cam (exists ?sc (forall ?app (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (LeftOf ?cb ?pl) (AlignedHorizontally ?cb ?pl) (Is ?pl 'plate') (Below ?cam ?cb) (or (not (Is ?app 'apple')) (Below ?app ?pl)) (Is ?cam 'camera') (LeftOf ?cam ?sc) (OnBottomSide ?sc) (Is ?sc 'scissors')))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "apple",
+        "cutting_board",
+        "camera",
+        "scissors"
+    ]
+}

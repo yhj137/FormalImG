@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A wardrobe contains every book, and a man stands next to it. Round glasses rest on the wardrobe, with a boat to the left and a cup to the right. A blue butterfly flutters above a basket placed next to the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'wardrobe') (forall ?bk (implies (Is ?bk 'book') (In ?bk ?w))) (exists ?m (and (Is ?m 'man') (NextTo ?m ?w))) (exists ?g (exists ?bt (exists ?c (and (Is ?g 'glasses') (HasShape ?g 'round') (Is ?bt 'boat') (Is ?c 'cup') (On ?g ?w) (LeftOf ?bt ?g) (RightOf ?c ?g))))) (exists ?bs (exists ?bf (and (Is ?bs 'basket') (Is ?bf 'butterfly') (NextTo ?bs ?w) (HasColor ?bf 'blue') (Above ?bf ?bs)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (forall ?bk (exists ?m (exists ?g (exists ?bt (exists ?c (exists ?bs (exists ?bf (and (Is ?w 'wardrobe') (or (not (Is ?bk 'book')) (In ?bk ?w)) (NextTo ?m ?w) (On ?g ?w) (Is ?m 'man') (NextTo ?bs ?w) (HasShape ?g 'round') (LeftOf ?bt ?g) (Is ?bs 'basket') (Above ?bf ?bs) (Is ?g 'glasses') (RightOf ?c ?g) (Is ?bt 'boat') (HasColor ?bf 'blue') (Is ?c 'cup') (Is ?bf 'butterfly')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "man",
+        "book",
+        "butterfly",
+        "wardrobe",
+        "basket",
+        "boat",
+        "cup"
+    ]
+}

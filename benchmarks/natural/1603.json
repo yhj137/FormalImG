@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting depicting a scene with a rug. A chair is placed on the rug, and to its left is a basket containing a keyboard. Next to the basket stands a plant, where a butterfly is sitting. A lion is also on the rug, holding a round ball, while a horse stands next to the lion.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?bs (exists ?kb (exists ?p (exists ?bf (exists ?l (exists ?b (exists ?h (and (Is ?r 'rug') (Is ?c 'chair') (Is ?bs 'basket') (Is ?kb 'keyboard') (Is ?p 'plant') (Is ?bf 'butterfly') (Is ?l 'lion') (Is ?b 'ball') (Is ?h 'horse') (On ?c ?r) (LeftOf ?bs ?c) (In ?kb ?bs) (NextTo ?p ?bs) (On ?bf ?p) (HasState ?bf 'sitting') (On ?l ?r) (Holding ?l ?b) (HasShape ?b 'round') (NextTo ?h ?l) (HasState ?h 'standing'))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?bs (exists ?kb (exists ?p (exists ?bf (exists ?l (exists ?b (exists ?h (and (Is ?r 'rug') (On ?c ?r) (On ?l ?r) (Is ?c 'chair') (LeftOf ?bs ?c) (Is ?l 'lion') (Holding ?l ?b) (Is ?bs 'basket') (In ?kb ?bs) (NextTo ?h ?l) (Is ?b 'ball') (HasShape ?b 'round') (NextTo ?p ?bs) (Is ?kb 'keyboard') (Is ?h 'horse') (HasState ?h 'standing') (Is ?p 'plant') (On ?bf ?p) (Is ?bf 'butterfly') (HasState ?bf 'sitting'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "plant",
+        "ball",
+        "chair",
+        "butterfly",
+        "basket",
+        "horse",
+        "rug",
+        "lion"
+    ]
+}

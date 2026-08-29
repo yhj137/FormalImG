@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a red umbrella stands next to a gray elephant. Beside the elephant is a round basket containing a teddy bear, with shoes placed next to it. All butterflies in the scene are located to the left of the elephant.",
+    "dsl": "(exists ?w (exists ?u (exists ?e (exists ?b (exists ?t (and (Is ?w 'woman') (Is ?u 'umbrella') (Is ?e 'elephant') (Is ?b 'basket') (Is ?t 'teddy bear') (Holding ?w ?u) (HasColor ?u 'red') (NextTo ?e ?w) (HasColor ?e 'gray') (NextTo ?b ?e) (HasShape ?b 'round') (In ?t ?b) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?e))) (exists ?s (and (Is ?s 'shoes') (NextTo ?s ?b)))))))))",
+    "cnf": "(exists ?w (exists ?u (exists ?e (exists ?b (exists ?t (forall ?bf (exists ?s (and (Is ?w 'woman') (Holding ?w ?u) (NextTo ?e ?w) (Is ?u 'umbrella') (HasColor ?u 'red') (Is ?e 'elephant') (HasColor ?e 'gray') (NextTo ?b ?e) (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?e)) (Is ?b 'basket') (HasShape ?b 'round') (In ?t ?b) (NextTo ?s ?b) (Is ?t 'teddy bear') (Is ?s 'shoes')))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "umbrella",
+        "shoes",
+        "woman",
+        "teddy bear",
+        "butterfly",
+        "basket"
+    ]
+}

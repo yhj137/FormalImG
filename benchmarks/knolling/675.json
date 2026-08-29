@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard located on the left side of the image, there is a vertical column of items arranged below it: a mouse is positioned below the keyboard, a bottle is below the mouse, and a wallet is below the bottle. All four objects\u2014keyboard, mouse, bottle, and wallet\u2014are aligned vertically.",
+    "dsl": "(forall ?k (implies (and (Is ?k 'keyboard') (OnLeftSide ?k)) (exists ?m (exists ?b (exists ?w (and (Is ?m 'mouse') (Is ?b 'bottle') (Is ?w 'wallet') (Below ?m ?k) (Below ?b ?m) (Below ?w ?b) (AlignedVertically ?k ?m) (AlignedVertically ?m ?b) (AlignedVertically ?b ?w)))))))",
+    "cnf": "(forall ?k (exists ?m (exists ?b (exists ?w (and (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?m 'mouse')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?b 'bottle')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Below ?m ?k)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?w 'wallet')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Below ?b ?m)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Below ?w ?b)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedVertically ?k ?m)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedVertically ?m ?b)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedVertically ?b ?w)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "mouse",
+        "wallet",
+        "keyboard"
+    ]
+}

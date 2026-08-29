@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, there corresponds a hat, a screwdriver, and an apple. The backpack is positioned on the top side of the image, and the screwdriver is located on the left side. All four objects\u2014the backpack, hat, screwdriver, and apple\u2014are aligned horizontally. Additionally, the apple is visually smaller than the hat.",
+    "dsl": "(forall ?backpack (implies (Is ?backpack 'backpack') (exists ?hat (exists ?screwdriver (exists ?apple (and (Is ?hat 'hat') (Is ?screwdriver 'screwdriver') (Is ?apple 'apple') (OnTopSide ?backpack) (OnLeftSide ?screwdriver) (AlignedHorizontally ?backpack ?hat) (AlignedHorizontally ?hat ?screwdriver) (AlignedHorizontally ?screwdriver ?apple) (SmallerThan ?apple ?hat)))))))",
+    "cnf": "(forall ?backpack (exists ?hat (exists ?screwdriver (exists ?apple (and (or (not (Is ?backpack 'backpack')) (Is ?hat 'hat')) (or (not (Is ?backpack 'backpack')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?backpack ?hat)) (or (not (Is ?backpack 'backpack')) (Is ?apple 'apple')) (or (not (Is ?backpack 'backpack')) (OnLeftSide ?screwdriver)) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?hat ?screwdriver)) (or (not (Is ?backpack 'backpack')) (OnTopSide ?backpack)) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?screwdriver ?apple)) (or (not (Is ?backpack 'backpack')) (SmallerThan ?apple ?hat)))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "backpack",
+        "screwdriver",
+        "apple"
+    ]
+}

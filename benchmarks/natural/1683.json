@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring an open wardrobe. A mirror and a sandwich sit on the wardrobe, while a red hat and all the bananas are inside it. To the left of the wardrobe, a man holds a hammer, with a bicycle positioned to his left. A blue car is located to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?h (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?m 'mirror') (On ?m ?w) (Is ?h 'hat') (HasColor ?h 'red') (In ?h ?w) (forall ?b (implies (Is ?b 'banana') (In ?b ?w))) (exists ?s (exists ?p (exists ?hm (exists ?bi (exists ?c (and (Is ?s 'sandwich') (On ?s ?w) (Is ?p 'man') (LeftOf ?p ?w) (Is ?hm 'hammer') (Holding ?p ?hm) (Is ?bi 'bicycle') (LeftOf ?bi ?p) (Is ?c 'car') (RightOf ?c ?w) (HasColor ?c 'blue'))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?h (forall ?b (exists ?s (exists ?p (exists ?hm (exists ?bi (exists ?c (and (Is ?w 'wardrobe') (HasState ?w 'open') (On ?m ?w) (In ?h ?w) (Is ?m 'mirror') (or (not (Is ?b 'banana')) (In ?b ?w)) (HasColor ?h 'red') (On ?s ?w) (Is ?h 'hat') (LeftOf ?p ?w) (Is ?s 'sandwich') (RightOf ?c ?w) (Is ?p 'man') (Holding ?p ?hm) (Is ?c 'car') (HasColor ?c 'blue') (LeftOf ?bi ?p) (Is ?hm 'hammer') (Is ?bi 'bicycle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "man",
+        "hammer",
+        "mirror",
+        "sandwich",
+        "car",
+        "bicycle",
+        "banana",
+        "hat",
+        "wardrobe"
+    ]
+}

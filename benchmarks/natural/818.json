@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a tree. To the left of the tree are shoes, and an oval mirror is positioned to the left of the shoes. To the right of the tree is a ceramic plate with a knife on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?s (exists ?m (exists ?p (exists ?k (and (Is ?t 'tree') (Is ?s 'shoes') (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?p 'plate') (HasMaterial ?p 'ceramic') (Is ?k 'knife') (LeftOf ?s ?t) (LeftOf ?m ?s) (RightOf ?p ?t) (On ?k ?p))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?s (exists ?m (exists ?p (exists ?k (and (Is ?t 'tree') (LeftOf ?s ?t) (RightOf ?p ?t) (Is ?s 'shoes') (LeftOf ?m ?s) (HasMaterial ?p 'ceramic') (On ?k ?p) (HasShape ?m 'oval') (Is ?p 'plate') (Is ?k 'knife') (Is ?m 'mirror'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "shoes",
+        "plate",
+        "tree",
+        "mirror"
+    ]
+}

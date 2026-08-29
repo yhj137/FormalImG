@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertically aligned collection of objects positioned on the left side of the image, consisting of a keyboard, a shoe, a hammer, a cup, a mouse, and a fork. The keyboard is physically larger than the mouse, the shoe is larger than the cup, and the hammer is larger than the fork. Additionally, the fork is specifically located on the bottom side of the image.",
+    "dsl": "(exists ?keyboard (exists ?shoe (exists ?hammer (exists ?cup (exists ?mouse (exists ?fork (and (Is ?keyboard 'keyboard') (Is ?shoe 'shoe') (Is ?hammer 'hammer') (Is ?cup 'cup') (Is ?mouse 'mouse') (Is ?fork 'fork') (OnLeftSide ?keyboard) (OnLeftSide ?shoe) (OnLeftSide ?hammer) (OnLeftSide ?cup) (OnLeftSide ?mouse) (OnLeftSide ?fork) (OnBottomSide ?fork) (AlignedVertically ?keyboard ?shoe) (AlignedVertically ?shoe ?hammer) (AlignedVertically ?hammer ?cup) (AlignedVertically ?cup ?mouse) (AlignedVertically ?mouse ?fork) (LargerThan ?keyboard ?mouse) (LargerThan ?shoe ?cup) (LargerThan ?hammer ?fork))))))))",
+    "cnf": "(exists ?keyboard (exists ?shoe (exists ?hammer (exists ?cup (exists ?mouse (exists ?fork (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (AlignedVertically ?keyboard ?shoe) (LargerThan ?keyboard ?mouse) (OnLeftSide ?shoe) (AlignedVertically ?shoe ?hammer) (AlignedVertically ?mouse ?fork) (Is ?shoe 'shoe') (LargerThan ?shoe ?cup) (OnLeftSide ?hammer) (AlignedVertically ?hammer ?cup) (AlignedVertically ?cup ?mouse) (OnBottomSide ?fork) (LargerThan ?hammer ?fork) (Is ?hammer 'hammer') (OnLeftSide ?cup) (OnLeftSide ?mouse) (OnLeftSide ?fork) (Is ?cup 'cup') (Is ?mouse 'mouse') (Is ?fork 'fork'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "cup",
+        "hammer",
+        "fork",
+        "mouse",
+        "shoe"
+    ]
+}

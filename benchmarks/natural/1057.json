@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. For every lion, there is a cat situated next to it. To the right of the cat stands a mirror with a butterfly on it. Located next to the mirror is an open backpack, and inside the backpack is a knife.",
+    "dsl": "(forall ?l (implies (Is ?l 'lion') (exists ?c (exists ?m (exists ?b (exists ?bp (exists ?k (and (Is ?c 'cat') (Is ?m 'mirror') (Is ?b 'butterfly') (Is ?bp 'backpack') (Is ?k 'knife') (NextTo ?c ?l) (RightOf ?m ?c) (On ?b ?m) (NextTo ?bp ?m) (HasState ?bp 'open') (In ?k ?bp)))))))))",
+    "cnf": "(forall ?l (exists ?c (exists ?m (exists ?b (exists ?bp (exists ?k (and (or (not (Is ?l 'lion')) (Is ?c 'cat')) (or (not (Is ?l 'lion')) (NextTo ?c ?l)) (or (not (Is ?l 'lion')) (Is ?m 'mirror')) (or (not (Is ?l 'lion')) (RightOf ?m ?c)) (or (not (Is ?l 'lion')) (Is ?k 'knife')) (or (not (Is ?l 'lion')) (Is ?b 'butterfly')) (or (not (Is ?l 'lion')) (On ?b ?m)) (or (not (Is ?l 'lion')) (Is ?bp 'backpack')) (or (not (Is ?l 'lion')) (In ?k ?bp)) (or (not (Is ?l 'lion')) (NextTo ?bp ?m)) (or (not (Is ?l 'lion')) (HasState ?bp 'open')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "lion",
+        "mirror",
+        "butterfly",
+        "cat",
+        "backpack"
+    ]
+}

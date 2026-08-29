@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A woman is on a rug, and all shoes are located next to the rug. To the left of the woman is a bench with a black laptop on it. To her right is a desk, where a cylindrical cup containing an orange rests. A car is positioned next to the desk, and a rock is located next to the car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?r (and (Is ?w 'woman') (Is ?r 'rug') (On ?w ?r) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?r))) (exists ?b (exists ?l (exists ?d (exists ?c (exists ?o (exists ?car (exists ?rk (and (Is ?b 'bench') (LeftOf ?b ?w) (Is ?l 'laptop') (On ?l ?b) (HasColor ?l 'black') (Is ?d 'desk') (RightOf ?d ?w) (Is ?c 'cup') (On ?c ?d) (HasShape ?c 'cylindrical') (Is ?o 'orange') (In ?o ?c) (Is ?car 'car') (NextTo ?car ?d) (Is ?rk 'rock') (NextTo ?rk ?car)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?r (forall ?s (exists ?b (exists ?l (exists ?d (exists ?c (exists ?o (exists ?car (exists ?rk (and (Is ?w 'woman') (On ?w ?r) (LeftOf ?b ?w) (Is ?r 'rug') (or (not (Is ?s 'shoes')) (NextTo ?s ?r)) (RightOf ?d ?w) (Is ?b 'bench') (On ?l ?b) (Is ?d 'desk') (On ?c ?d) (Is ?l 'laptop') (HasColor ?l 'black') (NextTo ?car ?d) (Is ?c 'cup') (HasShape ?c 'cylindrical') (Is ?car 'car') (NextTo ?rk ?car) (In ?o ?c) (Is ?rk 'rock') (Is ?o 'orange')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "woman",
+        "rock",
+        "desk",
+        "laptop",
+        "shoes",
+        "cup",
+        "rug",
+        "car",
+        "orange"
+    ]
+}

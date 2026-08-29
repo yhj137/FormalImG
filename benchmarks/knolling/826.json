@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal arrangement. Starting from the left, there is a pair of blue jeans. To the right of the jeans is a red backpack, and these two are aligned horizontally. Continuing to the right, there is a white plate, followed by a gray spoon to the right of the plate. A yellow lemon is positioned to the right of the spoon, placing it on the right side of the image. The backpack is visually larger than the lemon.",
+    "dsl": "(exists ?jeans (exists ?backpack (exists ?plate (exists ?spoon (exists ?lemon (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?backpack 'backpack') (Has ?backpack 'red') (Is ?plate 'plate') (Has ?plate 'white') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (RightOf ?backpack ?jeans) (AlignedHorizontally ?jeans ?backpack) (RightOf ?plate ?backpack) (RightOf ?spoon ?plate) (RightOf ?lemon ?spoon) (OnRightSide ?lemon) (LargerThan ?backpack ?lemon)))))))",
+    "cnf": "(exists ?jeans (exists ?backpack (exists ?plate (exists ?spoon (exists ?lemon (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?backpack ?jeans) (AlignedHorizontally ?jeans ?backpack) (Has ?backpack 'red') (RightOf ?plate ?backpack) (Is ?backpack 'backpack') (LargerThan ?backpack ?lemon) (Has ?plate 'white') (RightOf ?spoon ?plate) (OnRightSide ?lemon) (Is ?plate 'plate') (Has ?spoon 'gray') (RightOf ?lemon ?spoon) (Is ?spoon 'spoon') (Has ?lemon 'yellow') (Is ?lemon 'lemon')))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "plate",
+        "backpack",
+        "jeans",
+        "lemon"
+    ]
+}

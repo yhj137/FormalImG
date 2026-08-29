@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A sliced pizza sits on a table. Next to the pizza is a toy car. To the right of the table, there is a jacket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?t (exists ?tc (exists ?j (and (Is ?p 'pizza') (HasState ?p 'sliced') (Is ?t 'table') (On ?p ?t) (Is ?tc 'toy car') (NextTo ?tc ?p) (Is ?j 'jacket') (RightOf ?j ?t)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?t (exists ?tc (exists ?j (and (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?t) (NextTo ?tc ?p) (Is ?t 'table') (RightOf ?j ?t) (Is ?tc 'toy car') (Is ?j 'jacket')))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "jacket",
+        "table",
+        "toy car"
+    ]
+}

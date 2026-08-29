@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a bowl, a mouse, and a pen. These three objects are arranged in a vertical alignment. The bowl is visibly larger than the mouse, and the mouse is larger than the pen. Additionally, the pen is positioned on the bottom side of the image.",
+    "dsl": "(exists ?bowl (exists ?mouse (exists ?pen (and (Is ?bowl 'bowl') (Is ?mouse 'mouse') (Is ?pen 'pen') (AlignedVertically ?bowl ?mouse) (AlignedVertically ?mouse ?pen) (LargerThan ?bowl ?mouse) (LargerThan ?mouse ?pen) (OnBottomSide ?pen)))))",
+    "cnf": "(exists ?bowl (exists ?mouse (exists ?pen (and (Is ?bowl 'bowl') (AlignedVertically ?bowl ?mouse) (LargerThan ?bowl ?mouse) (Is ?mouse 'mouse') (AlignedVertically ?mouse ?pen) (LargerThan ?mouse ?pen) (Is ?pen 'pen') (OnBottomSide ?pen)))))",
+    "k": 3,
+    "object_classes": [
+        "pen",
+        "bowl",
+        "mouse"
+    ]
+}

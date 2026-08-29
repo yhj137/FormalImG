@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a vertical arrangement of a yellow drill, a black monitor, and a gray backpack, positioned from top to bottom. On the right side, for every bottle, there is a corresponding vertical sequence of items arranged beneath it: a white cup, a white phone, pliers, a fork, and a green lighter. These items are aligned vertically with the bottle. Furthermore, the monitor is larger than the phone, and the lighter is smaller than the backpack.",
+    "dsl": "(exists ?drill (exists ?monitor (exists ?backpack (and (Is ?drill 'drill') (Has ?drill 'yellow') (OnLeftSide ?drill) (Is ?monitor 'monitor') (Has ?monitor 'black') (OnLeftSide ?monitor) (Is ?backpack 'backpack') (Has ?backpack 'gray') (OnLeftSide ?backpack) (Above ?drill ?monitor) (Above ?monitor ?backpack) (AlignedVertically ?drill ?monitor) (AlignedVertically ?monitor ?backpack) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?cup (exists ?phone (exists ?pliers (exists ?fork (exists ?lighter (and (OnRightSide ?bottle) (Is ?cup 'cup') (Has ?cup 'white') (Is ?phone 'phone') (Has ?phone 'white') (Is ?pliers 'pliers') (Is ?fork 'fork') (Is ?lighter 'lighter') (Has ?lighter 'green') (Above ?bottle ?cup) (Above ?cup ?phone) (Above ?phone ?pliers) (Above ?pliers ?fork) (Above ?fork ?lighter) (AlignedVertically ?bottle ?cup) (AlignedVertically ?cup ?phone) (AlignedVertically ?phone ?pliers) (AlignedVertically ?pliers ?fork) (AlignedVertically ?fork ?lighter) (LargerThan ?monitor ?phone) (SmallerThan ?lighter ?backpack)))))))))))))",
+    "cnf": "(exists ?drill (exists ?monitor (exists ?backpack (forall ?bottle (exists ?cup (exists ?phone (exists ?pliers (exists ?fork (exists ?lighter (and (Is ?drill 'drill') (Has ?drill 'yellow') (OnLeftSide ?drill) (Above ?drill ?monitor) (AlignedVertically ?drill ?monitor) (OnLeftSide ?monitor) (Above ?monitor ?backpack) (AlignedVertically ?monitor ?backpack) (Has ?monitor 'black') (OnLeftSide ?backpack) (or (not (Is ?bottle 'bottle')) (LargerThan ?monitor ?phone)) (or (not (Is ?bottle 'bottle')) (SmallerThan ?lighter ?backpack)) (Is ?monitor 'monitor') (Has ?backpack 'gray') (or (not (Is ?bottle 'bottle')) (AlignedVertically ?fork ?lighter)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?phone ?pliers)) (Is ?backpack 'backpack') (or (not (Is ?bottle 'bottle')) (AlignedVertically ?pliers ?fork)) (or (not (Is ?bottle 'bottle')) (Above ?fork ?lighter)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?cup ?phone)) (or (not (Is ?bottle 'bottle')) (Above ?pliers ?fork)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?bottle ?cup)) (or (not (Is ?bottle 'bottle')) (Has ?lighter 'green')) (or (not (Is ?bottle 'bottle')) (Above ?phone ?pliers)) (or (not (Is ?bottle 'bottle')) (Is ?fork 'fork')) (or (not (Is ?bottle 'bottle')) (Above ?cup ?phone)) (or (not (Is ?bottle 'bottle')) (Is ?lighter 'lighter')) (or (not (Is ?bottle 'bottle')) (Above ?bottle ?cup)) (or (not (Is ?bottle 'bottle')) (Is ?pliers 'pliers')) (or (not (Is ?bottle 'bottle')) (Has ?phone 'white')) (or (not (Is ?bottle 'bottle')) (Has ?cup 'white')) (or (not (Is ?bottle 'bottle')) (Is ?phone 'phone')) (or (not (Is ?bottle 'bottle')) (Is ?cup 'cup')) (or (not (Is ?bottle 'bottle')) (OnRightSide ?bottle))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "phone",
+        "cup",
+        "drill",
+        "fork",
+        "backpack",
+        "lighter",
+        "bottle",
+        "monitor"
+    ]
+}

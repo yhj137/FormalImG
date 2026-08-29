@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style and features a wooden table inside a house. A turned-on lamp sits on the table, accompanied by a hammer and headphones. Every banana is positioned to the left of the lamp.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?l (exists ?hm (exists ?hp (and (Is ?h 'house') (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?l 'lamp') (HasState ?l 'on') (Is ?hm 'hammer') (Is ?hp 'headphones') (In ?t ?h) (On ?l ?t) (On ?hm ?t) (On ?hp ?t) (forall ?b (implies (Is ?b 'banana') (LeftOf ?b ?l))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?l (exists ?hm (exists ?hp (forall ?b (and (Is ?h 'house') (In ?t ?h) (HasMaterial ?t 'wooden') (On ?l ?t) (Is ?t 'table') (On ?hm ?t) (HasState ?l 'on') (or (not (Is ?b 'banana')) (LeftOf ?b ?l)) (On ?hp ?t) (Is ?hm 'hammer') (Is ?l 'lamp') (Is ?hp 'headphones')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "headphones",
+        "table",
+        "lamp",
+        "hammer",
+        "banana"
+    ]
+}

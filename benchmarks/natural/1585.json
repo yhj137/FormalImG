@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman holding a basket containing all the oranges. A horse stands to the left of the woman. The woman is positioned to the left of a wooden wardrobe with a bowl inside. The wardrobe is located to the left of a boat containing a ball.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?bk (exists ?h (exists ?wd (exists ?bw (exists ?bt (exists ?bl (and (Is ?w 'woman') (Is ?bk 'basket') (Is ?h 'horse') (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (Is ?bw 'bowl') (Is ?bt 'boat') (Is ?bl 'ball') (Holding ?w ?bk) (forall ?o (implies (Is ?o 'orange') (In ?o ?bk))) (LeftOf ?h ?w) (LeftOf ?w ?wd) (In ?bw ?wd) (LeftOf ?wd ?bt) (In ?bl ?bt))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?bk (exists ?h (exists ?wd (exists ?bw (exists ?bt (exists ?bl (forall ?o (and (Is ?w 'woman') (Holding ?w ?bk) (LeftOf ?h ?w) (Is ?bk 'basket') (or (not (Is ?o 'orange')) (In ?o ?bk)) (LeftOf ?w ?wd) (Is ?h 'horse') (HasMaterial ?wd 'wooden') (In ?bw ?wd) (Is ?wd 'wardrobe') (LeftOf ?wd ?bt) (Is ?bw 'bowl') (Is ?bt 'boat') (In ?bl ?bt) (Is ?bl 'ball')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "horse",
+        "woman",
+        "orange",
+        "boat",
+        "ball",
+        "basket",
+        "wardrobe"
+    ]
+}

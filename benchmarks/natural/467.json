@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every woman is standing, wearing a shirt, with a spoon to her left.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?w (implies (Is ?w 'woman') (exists ?s (exists ?p (and (Is ?s 'shirt') (Is ?p 'spoon') (HasState ?w 'standing') (On ?s ?w) (LeftOf ?p ?w)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?w (exists ?s (exists ?p (and (or (not (Is ?w 'woman')) (Is ?s 'shirt')) (or (not (Is ?w 'woman')) (Is ?p 'spoon')) (or (not (Is ?w 'woman')) (On ?s ?w)) (or (not (Is ?w 'woman')) (HasState ?w 'standing')) (or (not (Is ?w 'woman')) (LeftOf ?p ?w)))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "shirt",
+        "woman"
+    ]
+}

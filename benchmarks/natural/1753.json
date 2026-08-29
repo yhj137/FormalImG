@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene depicting a child sitting on a bed, holding a black hammer. A green plant stands to the left of the bed next to a broken toy car, while a round lamp sits to the right beside a knife. A hat containing all the fruits rests on the bed.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (exists ?l (exists ?h (exists ?ht (and (Is ?b 'bed') (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?b) (Is ?p 'plant') (HasColor ?p 'green') (LeftOf ?p ?b) (Is ?l 'lamp') (HasShape ?l 'round') (RightOf ?l ?b) (Is ?h 'hammer') (HasColor ?h 'black') (Holding ?c ?h) (Is ?ht 'hat') (On ?ht ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?ht))) (exists ?k (exists ?t (and (Is ?k 'knife') (NextTo ?k ?l) (Is ?t 'toy car') (HasState ?t 'broken') (NextTo ?t ?p))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (exists ?l (exists ?h (exists ?ht (forall ?f (exists ?k (exists ?t (and (Is ?b 'bed') (On ?c ?b) (LeftOf ?p ?b) (HasState ?c 'sitting') (Holding ?c ?h) (RightOf ?l ?b) (HasColor ?p 'green') (NextTo ?t ?p) (Is ?c 'child') (HasColor ?h 'black') (On ?ht ?b) (HasShape ?l 'round') (NextTo ?k ?l) (Is ?p 'plant') (HasState ?t 'broken') (Is ?h 'hammer') (Is ?ht 'hat') (or (not (Is ?f 'fruit')) (In ?f ?ht)) (Is ?l 'lamp') (Is ?k 'knife') (Is ?t 'toy car'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "knife",
+        "child",
+        "bed",
+        "plant",
+        "toy car",
+        "hammer",
+        "lamp",
+        "hat"
+    ]
+}

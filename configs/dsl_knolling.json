@@ -1,0 +1,124 @@
+{
+  "vocabulary": {
+    "object_classes": [
+      "laptop", "mouse", "keyboard", "monitor", "phone",
+      "headphones", "camera", "game_controller", "remote",
+      "book", "pen", "scissors", "stapler", 
+      "ruler", "calculator",
+      "glasses", "watch", "wallet", "keys", "lighter", 
+      "backpack", "handbag", "suitcase",
+      "shoe", "hat",
+      "shirt", "jeans", "glove", "sock", "tie",
+      "hammer", "screwdriver", "wrench", "pliers", "drill",
+      "bottle", "cup", "fork", "knife", "spoon", 
+      "plate", "bowl", "pan", "cutting_board",
+      "apple", "lemon", "donut", "sandwich", "pizza", "carrot"
+    ],
+    "attribute_values": {
+      "colors": [
+        "red", "green", "blue", "yellow", "black", "white", "brown", "pink", "gray"
+      ]
+    }
+  },
+  "predicates": {
+    "unary_attributes": [
+      {
+        "name": "Is",
+        "args": ["variable", "object_class"],
+        "template": "(Is {obj} '{class_name}')",
+        "description": "Checks if {obj} belongs to the category {class_name}"
+      },
+      {
+        "name": "Has",
+        "args": ["variable", "attribute"],
+        "template": "(Has {obj} '{attribute_value}')",
+        "description": "Checks if {obj} has the property {attribute_value}"
+      }
+    ],
+    "unary_position_absolute": [
+      {
+        "name": "OnLeftSide",
+        "args": ["variable"],
+        "template": "(OnLeftSide {obj})",
+        "description": "{obj}'s center is in the left half of the image (center_x < width/2)"
+      },
+      {
+        "name": "OnRightSide",
+        "args": ["variable"],
+        "template": "(OnRightSide {obj})",
+        "description": "{obj}'s center is in the right half of the image (center_x > width/2)"
+      },
+      {
+        "name": "OnTopSide",
+        "args": ["variable"],
+        "template": "(OnTopSide {obj})",
+        "description": "{obj}'s center is in the top half of the image (center_y < height/2)"
+      },
+      {
+        "name": "OnBottomSide",
+        "args": ["variable"],
+        "template": "(OnBottomSide {obj})",
+        "description": "{obj}'s center is in the bottom half of the image (center_y > height/2)"
+      }
+    ],
+    "binary_position_relative": [
+      {
+        "name": "LeftOf",
+        "args": ["variable", "variable"],
+        "template": "(LeftOf {A} {B})",
+        "description": "Object {A}'s center is to the left of Object {B}'s center (A.center_x < B.center_x)"
+      },
+      {
+        "name": "RightOf",
+        "args": ["variable", "variable"],
+        "template": "(RightOf {A} {B})",
+        "description": "Object {A}'s center is to the right of Object {B}'s center (A.center_x > B.center_x)"
+      },
+      {
+        "name": "Above",
+        "args": ["variable", "variable"],
+        "template": "(Above {A} {B})",
+        "description": "Object {A}'s center is vertically above Object {B}'s center (A.center_y < B.center_y)"
+      },
+      {
+        "name": "Below",
+        "args": ["variable", "variable"],
+        "template": "(Below {A} {B})",
+        "description": "Object {A}'s center is vertically below Object {B}'s center (A.center_y > B.center_y)"
+      }
+    ],
+    "binary_alignment": [
+      {
+        "name": "AlignedHorizontally",
+        "args": ["variable", "variable"],
+        "template": "(AlignedHorizontally {A} {B})",
+        "description": "Object {A} and Object {B} share roughly the same center Y coordinate"
+      },
+      {
+        "name": "AlignedVertically",
+        "args": ["variable", "variable"],
+        "template": "(AlignedVertically {A} {B})",
+        "description": "Object {A} and Object {B} share roughly the same center X coordinate"
+      }
+    ],
+    "binary_comparison": [
+       {
+        "name": "LargerThan",
+        "args": ["variable", "variable"],
+        "template": "(LargerThan {A} {B})",
+        "description": "Object {A} has a larger bounding box area than Object {B}"
+      },
+      {
+        "name": "SmallerThan",
+        "args": ["variable", "variable"],
+        "template": "(SmallerThan {A} {B})",
+        "description": "Object {A} has a smaller bounding box area than Object {B}"
+      }
+    ]
+  },
+  "operators": {
+    "logical_connectives": ["and", "or", "implies"],
+    "quantifiers": ["exists", "forall"],
+    "negation": ["not"]
+  }
+}

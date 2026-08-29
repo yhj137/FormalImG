@@ -1,0 +1,130 @@
+{
+  "vocabulary": {
+    "object_classes": [
+      "person", "man", "woman", "child",
+      "cat", "dog", "bird", "horse", "fish", "elephant", "lion", "butterfly",
+      "table", "chair", "sofa", "bed", "bookshelf", "desk", "lamp", "wardrobe", "rug", "mirror", "plant", "clock",
+      "book", "cup", "laptop", "plate", "bottle", "key", "fork", "knife", "spoon", "bowl", "pan", "refrigerator",
+      "apple", "banana", "orange", "cake", "pizza", "sandwich",
+      "car", "bicycle", "bus", "boat",
+      "tree", "flower", "rock", "house", "bench", "basket",
+      "fruit",
+      "hat", "shirt", "shoes", "jacket", "glasses", "backpack",
+      "phone", "keyboard", "monitor", "headphones",
+      "hammer", "screwdriver",
+      "umbrella", "ball", "toy car", "teddy bear"
+    ],
+    "attribute_values": {
+      "colors": [
+        "red", "green", "blue", "yellow", "black", "white", "brown", "orange", "pink", "purple", "gray"
+      ],
+      "materials": [
+        "wooden", "metal", "glass", "plastic", "fluffy", "fabric", "ceramic", "leather", "paper", "stone", "brick"
+      ],
+      "shapes": [
+        "round", "square", "cylindrical", "rectangular", "triangular", "oval"
+      ],
+      "states": [
+        "open", "closed",
+        "on", "off",
+        "standing", "sitting", "lying", "kneeling",
+        "running", "jumping", "flying", "swimming", "sleeping",
+        "smiling", "crying",
+        "broken", "rusty", "dirty", "wet", "burning", "melting",
+        "sliced", "peeled", "bitten",
+        "empty", "full",
+        "blooming", "withered"
+      ]
+    },
+    "scene_properties": {
+      "styles": [
+        "photo", "oil painting", "cartoon", "cyberpunk", "pixel art"
+      ]
+    }
+  },
+  "predicates": {
+    "unary": [
+      {
+        "name": "Is",
+        "args": ["variable", "object_class"],
+        "template": "(Is {} '{}')",
+        "description": "Checks if {variable} belongs to the category {object_class}"
+      },
+      {
+        "name": "HasColor",
+        "args": ["variable", "attribute_value"],
+        "template": "(HasColor {} '{}')",
+        "description": "Checks if {variable} has the color {attribute_value}"
+      },
+      {
+        "name": "HasMaterial",
+        "args": ["variable", "attribute_value"],
+        "template": "(HasMaterial {} '{}')",
+        "description": "Checks if {variable} is made of the material {attribute_value}"
+      },
+      {
+        "name": "HasShape",
+        "args": ["variable", "attribute_value"],
+        "template": "(HasShape {} '{}')",
+        "description": "Checks if {variable} has the shape {attribute_value}"
+      },
+      {
+        "name": "HasState",
+        "args": ["variable", "attribute_value"],
+        "template": "(HasState {} '{}')",
+        "description": "Checks if {variable} is in the state {attribute_value}"
+      }
+    ],
+    "binary": [
+      {
+        "name": "LeftOf",
+        "args": ["variable", "variable"],
+        "template": "(LeftOf {} {})",
+        "description": "Checks if the first object is to the left of the second object"
+      },
+      {
+        "name": "RightOf",
+        "args": ["variable", "variable"],
+        "template": "(RightOf {} {})",
+        "description": "Checks if the first object is to the right of the second object"
+      },
+      {
+        "name": "On",
+        "args": ["variable", "variable"],
+        "template": "(On {} {})",
+        "description": "Checks if the first object is on top of and supported by the second object"
+      },
+      {
+        "name": "In",
+        "args": ["variable", "variable"],
+        "template": "(In {} {})",
+        "description": "Checks if the first object is inside or contained within the second object"
+      },
+      {
+        "name": "Holding",
+        "args": ["variable", "variable"],
+        "template": "(Holding {} {})",
+        "description": "Checks if the first object (e.g., a person) is holding the second object"
+      },
+      {
+        "name": "NextTo",
+        "args": ["variable", "variable"],
+        "template": "(NextTo {} {})",
+        "description": "Checks if the first object is adjacent to the second object"
+      }
+    ],
+    "scene": [
+      {
+        "name": "IsStyle",
+        "args": ["style"],
+        "template": "(IsStyle '{}')",
+        "description": "Checks if the overall style of the scene is {style}"
+      }
+    ]
+  },
+  "operators": {
+    "logical_connectives": ["and", "or", "implies"],
+    "quantifiers": ["exists", "forall"],
+    "negation": ["not"]
+  }
+}

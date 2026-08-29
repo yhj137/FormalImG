@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features an open refrigerator containing a sliced pizza, a spoon, a toy car, and every plate. A turned-on laptop sits on the refrigerator with a butterfly resting on it. A cat holding a screwdriver is next to the refrigerator, while a bus is positioned to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (forall ?pl (implies (Is ?pl 'plate') (In ?pl ?r))) (exists ?pi (exists ?s (exists ?tc (exists ?l (exists ?b (exists ?c (exists ?sc (exists ?bus (and (Is ?pi 'pizza') (HasState ?pi 'sliced') (In ?pi ?r) (Is ?s 'spoon') (In ?s ?r) (Is ?tc 'toy car') (In ?tc ?r) (Is ?l 'laptop') (HasState ?l 'on') (On ?l ?r) (Is ?b 'butterfly') (On ?b ?l) (Is ?c 'cat') (NextTo ?c ?r) (Is ?sc 'screwdriver') (Holding ?c ?sc) (Is ?bus 'bus') (LeftOf ?bus ?r)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (forall ?pl (exists ?pi (exists ?s (exists ?tc (exists ?l (exists ?b (exists ?c (exists ?sc (exists ?bus (and (Is ?r 'refrigerator') (HasState ?r 'open') (or (not (Is ?pl 'plate')) (In ?pl ?r)) (In ?pi ?r) (In ?s ?r) (HasState ?pi 'sliced') (In ?tc ?r) (Is ?s 'spoon') (Is ?pi 'pizza') (On ?l ?r) (Is ?tc 'toy car') (NextTo ?c ?r) (HasState ?l 'on') (On ?b ?l) (LeftOf ?bus ?r) (Is ?c 'cat') (Holding ?c ?sc) (Is ?l 'laptop') (Is ?b 'butterfly') (Is ?bus 'bus') (Is ?sc 'screwdriver')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "toy car",
+        "cat",
+        "laptop",
+        "bus",
+        "screwdriver",
+        "pizza",
+        "butterfly",
+        "refrigerator",
+        "plate",
+        "spoon"
+    ]
+}

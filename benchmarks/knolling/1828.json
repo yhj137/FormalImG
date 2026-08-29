@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the scene, there is an organized arrangement of nine other objects. A white sock is placed to the left of the shoe, and a blue tie is positioned to the left of the sock. Black headphones are located on the left side of the image and are aligned vertically with the tie. A hammer is aligned vertically with the sock, while a pair of pliers is located to the left of the hammer. A cutting board is positioned to the left of the pliers; it is aligned vertically with a bowl and is visually larger than the bowl. Finally, a knife is placed to the left of the bowl, and a yellow lemon, located on the bottom side of the image, is aligned vertically with the knife.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?sock (exists ?tie (exists ?headphones (exists ?hammer (exists ?pliers (exists ?cutting_board (exists ?bowl (exists ?knife (exists ?lemon (and (Is ?sock 'sock') (Has ?sock 'white') (LeftOf ?sock ?shoe) (Is ?tie 'tie') (Has ?tie 'blue') (LeftOf ?tie ?sock) (Is ?headphones 'headphones') (Has ?headphones 'black') (OnLeftSide ?headphones) (AlignedVertically ?headphones ?tie) (Is ?hammer 'hammer') (AlignedVertically ?hammer ?sock) (Is ?pliers 'pliers') (LeftOf ?pliers ?hammer) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?pliers) (Is ?bowl 'bowl') (AlignedVertically ?cutting_board ?bowl) (LargerThan ?cutting_board ?bowl) (Is ?knife 'knife') (LeftOf ?knife ?bowl) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (OnBottomSide ?lemon) (AlignedVertically ?lemon ?knife))))))))))))))",
+    "cnf": "(forall ?shoe (exists ?sock (exists ?tie (exists ?headphones (exists ?hammer (exists ?pliers (exists ?cutting_board (exists ?bowl (exists ?knife (exists ?lemon (and (or (not (Is ?shoe 'shoe')) (Is ?sock 'sock')) (or (not (Is ?shoe 'shoe')) (Has ?sock 'white')) (or (not (Is ?shoe 'shoe')) (LeftOf ?sock ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?tie 'tie')) (or (not (Is ?shoe 'shoe')) (LeftOf ?tie ?sock)) (or (not (Is ?shoe 'shoe')) (Has ?tie 'blue')) (or (not (Is ?shoe 'shoe')) (Is ?headphones 'headphones')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?hammer ?sock)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?headphones ?tie)) (or (not (Is ?shoe 'shoe')) (Has ?headphones 'black')) (or (not (Is ?shoe 'shoe')) (Is ?hammer 'hammer')) (or (not (Is ?shoe 'shoe')) (Is ?pliers 'pliers')) (or (not (Is ?shoe 'shoe')) (LeftOf ?pliers ?hammer)) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?headphones)) (or (not (Is ?shoe 'shoe')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?shoe 'shoe')) (LeftOf ?cutting_board ?pliers)) (or (not (Is ?shoe 'shoe')) (Is ?bowl 'bowl')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?cutting_board ?bowl)) (or (not (Is ?shoe 'shoe')) (LargerThan ?cutting_board ?bowl)) (or (not (Is ?shoe 'shoe')) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (LeftOf ?knife ?bowl)) (or (not (Is ?shoe 'shoe')) (Is ?lemon 'lemon')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?lemon ?knife)) (or (not (Is ?shoe 'shoe')) (Has ?lemon 'yellow')) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?lemon)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "sock",
+        "lemon",
+        "hammer",
+        "cutting_board",
+        "knife",
+        "bowl",
+        "headphones",
+        "shoe"
+    ]
+}

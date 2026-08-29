@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a wrench, which is positioned on the right side.",
+    "dsl": "(exists ?w (and (Is ?w 'wrench') (OnRightSide ?w)))",
+    "cnf": "(exists ?w (and (Is ?w 'wrench') (OnRightSide ?w)))",
+    "k": 1,
+    "object_classes": [
+        "wrench"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of scissors is located on the top side of the image, and a tie is placed below the scissors.",
+    "dsl": "(exists ?scissors (exists ?tie (and (Is ?scissors 'scissors') (Is ?tie 'tie') (OnTopSide ?scissors) (Below ?tie ?scissors))))",
+    "cnf": "(exists ?scissors (exists ?tie (and (Is ?scissors 'scissors') (OnTopSide ?scissors) (Below ?tie ?scissors) (Is ?tie 'tie'))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "tie"
+    ]
+}

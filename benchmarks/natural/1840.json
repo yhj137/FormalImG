@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden bookshelf stands on the left, holding a cake and all the bottles in the scene. To the right of the bookshelf is a sofa where a man sits holding a knife. A pan containing a sliced pizza also rests on the sofa. Further to the right is a car, with an elephant located to its right.",
+    "dsl": "(exists ?b (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (forall ?bt (implies (Is ?bt 'bottle') (On ?bt ?b))) (exists ?s (and (Is ?s 'sofa') (LeftOf ?b ?s) (exists ?m (and (Is ?m 'man') (On ?m ?s) (HasState ?m 'sitting') (exists ?k (and (Is ?k 'knife') (Holding ?m ?k) (exists ?p (and (Is ?p 'pan') (On ?p ?s) (exists ?pz (and (Is ?pz 'pizza') (In ?pz ?p) (HasState ?pz 'sliced') (exists ?c (and (Is ?c 'cake') (On ?c ?b) (exists ?car (and (Is ?car 'car') (LeftOf ?s ?car) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?car)))))))))))))))))))",
+    "cnf": "(exists ?b (forall ?bt (exists ?s (exists ?m (exists ?k (exists ?p (exists ?pz (exists ?c (exists ?car (exists ?e (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (or (not (Is ?bt 'bottle')) (On ?bt ?b)) (LeftOf ?b ?s) (On ?c ?b) (Is ?s 'sofa') (On ?m ?s) (Is ?c 'cake') (On ?p ?s) (Is ?m 'man') (HasState ?m 'sitting') (LeftOf ?s ?car) (Is ?p 'pan') (In ?pz ?p) (Holding ?m ?k) (Is ?car 'car') (RightOf ?e ?car) (Is ?pz 'pizza') (HasState ?pz 'sliced') (Is ?k 'knife') (Is ?e 'elephant'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bottle",
+        "pan",
+        "sofa",
+        "man",
+        "knife",
+        "cake",
+        "pizza",
+        "elephant",
+        "bookshelf",
+        "car"
+    ]
+}

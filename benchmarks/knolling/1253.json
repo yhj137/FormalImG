@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a keyboard. For every pair of scissors in the image, it is located below the keyboard and has a specific arrangement of items: a pair of pliers is positioned to the right of the scissors, and a phone is to the right of the pliers. A shoe is located below the scissors and is aligned vertically with them. To the right of the shoe is a knife, and to the right of the knife are glasses, which are located on the right side of the image. The shoe is visually larger than the phone.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?pliers (exists ?phone (exists ?shoe (exists ?knife (exists ?glasses (and (Is ?pliers 'pliers') (Is ?phone 'phone') (Is ?shoe 'shoe') (Is ?knife 'knife') (Is ?glasses 'glasses') (Below ?scissors ?keyboard) (RightOf ?pliers ?scissors) (RightOf ?phone ?pliers) (Below ?shoe ?scissors) (AlignedVertically ?scissors ?shoe) (RightOf ?knife ?shoe) (RightOf ?glasses ?knife) (OnRightSide ?glasses) (LargerThan ?shoe ?phone)))))))))))",
+    "cnf": "(exists ?keyboard (forall ?scissors (exists ?pliers (exists ?phone (exists ?shoe (exists ?knife (exists ?glasses (and (Is ?keyboard 'keyboard') (or (not (Is ?scissors 'scissors')) (Below ?scissors ?keyboard)) (or (not (Is ?scissors 'scissors')) (Is ?glasses 'glasses')) (or (not (Is ?scissors 'scissors')) (RightOf ?pliers ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?knife 'knife')) (or (not (Is ?scissors 'scissors')) (RightOf ?glasses ?knife)) (or (not (Is ?scissors 'scissors')) (Is ?pliers 'pliers')) (or (not (Is ?scissors 'scissors')) (RightOf ?phone ?pliers)) (or (not (Is ?scissors 'scissors')) (Is ?shoe 'shoe')) (or (not (Is ?scissors 'scissors')) (RightOf ?knife ?shoe)) (or (not (Is ?scissors 'scissors')) (OnRightSide ?glasses)) (or (not (Is ?scissors 'scissors')) (Is ?phone 'phone')) (or (not (Is ?scissors 'scissors')) (Below ?shoe ?scissors)) (or (not (Is ?scissors 'scissors')) (LargerThan ?shoe ?phone)) (or (not (Is ?scissors 'scissors')) (AlignedVertically ?scissors ?shoe))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "pliers",
+        "keyboard",
+        "phone",
+        "knife",
+        "scissors",
+        "shoe"
+    ]
+}

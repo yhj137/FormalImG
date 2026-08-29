@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden desk where every book in the scene is located. A cat sits on the desk holding a sandwich. To the right of the desk stands a refrigerator with a red apple on top. Next to the refrigerator is a table, with a wardrobe to the right of the table and a bench next to the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (forall ?b (implies (Is ?b 'book') (On ?b ?d))) (exists ?c (exists ?s (exists ?r (exists ?a (exists ?t (exists ?w (exists ?be (and (Is ?c 'cat') (On ?c ?d) (Is ?s 'sandwich') (Holding ?c ?s) (Is ?r 'refrigerator') (RightOf ?r ?d) (Is ?a 'apple') (HasColor ?a 'red') (On ?a ?r) (Is ?t 'table') (NextTo ?t ?r) (Is ?w 'wardrobe') (RightOf ?w ?t) (Is ?be 'bench') (NextTo ?be ?w))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (forall ?b (exists ?c (exists ?s (exists ?r (exists ?a (exists ?t (exists ?w (exists ?be (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (or (not (Is ?b 'book')) (On ?b ?d)) (On ?c ?d) (RightOf ?r ?d) (Is ?c 'cat') (Holding ?c ?s) (Is ?r 'refrigerator') (On ?a ?r) (Is ?s 'sandwich') (NextTo ?t ?r) (HasColor ?a 'red') (Is ?t 'table') (RightOf ?w ?t) (Is ?a 'apple') (Is ?w 'wardrobe') (NextTo ?be ?w) (Is ?be 'bench'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "cat",
+        "sandwich",
+        "desk",
+        "book",
+        "refrigerator",
+        "wardrobe",
+        "table",
+        "apple"
+    ]
+}

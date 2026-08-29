@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a white plate, a black game controller, and a yellow lemon arranged in a vertical line. The game controller is located below the plate, and the lemon is located below the game controller, with all three objects aligned vertically. Furthermore, the lemon is visually smaller than the plate.",
+    "dsl": "(exists ?plate (exists ?controller (exists ?lemon (and (Is ?plate 'plate') (Has ?plate 'white') (Is ?controller 'game_controller') (Has ?controller 'black') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Below ?controller ?plate) (Below ?lemon ?controller) (AlignedVertically ?plate ?controller) (AlignedVertically ?controller ?lemon) (SmallerThan ?lemon ?plate)))))",
+    "cnf": "(exists ?plate (exists ?controller (exists ?lemon (and (Is ?plate 'plate') (Has ?plate 'white') (Below ?controller ?plate) (AlignedVertically ?plate ?controller) (Has ?controller 'black') (Below ?lemon ?controller) (SmallerThan ?lemon ?plate) (AlignedVertically ?controller ?lemon) (Is ?controller 'game_controller') (Has ?lemon 'yellow') (Is ?lemon 'lemon')))))",
+    "k": 3,
+    "object_classes": [
+        "lemon",
+        "plate",
+        "game_controller"
+    ]
+}

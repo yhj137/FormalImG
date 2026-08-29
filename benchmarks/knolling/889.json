@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue shirt, a brown handbag, a cup, a shoe, and keys. The brown handbag is positioned on the right side of the image, and the blue shirt is located to the left of the handbag. For every key present in the scene, it is positioned to the left of the shirt. Arranged in a vertical column with the handbag are the cup and the shoe: the cup is placed above the handbag, and the handbag is placed above the shoe. The cup, handbag, and shoe are all aligned vertically.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (forall ?k (implies (Is ?k 'keys') (LeftOf ?k ?shirt))) (exists ?bag (and (Is ?bag 'handbag') (Has ?bag 'brown') (OnRightSide ?bag) (LeftOf ?shirt ?bag) (exists ?cup (and (Is ?cup 'cup') (Above ?cup ?bag) (AlignedVertically ?cup ?bag) (exists ?shoe (and (Is ?shoe 'shoe') (Above ?bag ?shoe) (AlignedVertically ?bag ?shoe)))))))))",
+    "cnf": "(exists ?shirt (forall ?k (exists ?bag (exists ?cup (exists ?shoe (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (or (not (Is ?k 'keys')) (LeftOf ?k ?shirt)) (LeftOf ?shirt ?bag) (OnRightSide ?bag) (Above ?cup ?bag) (Has ?bag 'brown') (AlignedVertically ?cup ?bag) (Is ?cup 'cup') (Is ?bag 'handbag') (Above ?bag ?shoe) (AlignedVertically ?bag ?shoe) (Is ?shoe 'shoe')))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "cup",
+        "handbag",
+        "shoe",
+        "shirt"
+    ]
+}

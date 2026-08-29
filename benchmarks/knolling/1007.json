@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans, a book, a ruler, an apple, a calculator, and a fork. The jeans are positioned on the top side of the image, above the apple, which is located on the bottom side. The book is placed above the calculator, and the ruler is placed above the fork. The apple, calculator, and fork are aligned horizontally in the bottom row. Additionally, the apple is visually smaller than the jeans, and the calculator is smaller than the book.",
+    "dsl": "(exists ?j (exists ?b (exists ?r (exists ?a (exists ?c (exists ?f (and (Is ?j 'jeans') (Is ?b 'book') (Is ?r 'ruler') (Is ?a 'apple') (Is ?c 'calculator') (Is ?f 'fork') (OnTopSide ?j) (OnBottomSide ?a) (Above ?j ?a) (Above ?b ?c) (Above ?r ?f) (AlignedHorizontally ?a ?c) (AlignedHorizontally ?c ?f) (SmallerThan ?a ?j) (SmallerThan ?c ?b))))))))",
+    "cnf": "(exists ?j (exists ?b (exists ?r (exists ?a (exists ?c (exists ?f (and (Is ?j 'jeans') (OnTopSide ?j) (Above ?j ?a) (SmallerThan ?a ?j) (OnBottomSide ?a) (AlignedHorizontally ?a ?c) (Is ?a 'apple') (Above ?b ?c) (AlignedHorizontally ?c ?f) (Is ?b 'book') (SmallerThan ?c ?b) (Is ?c 'calculator') (Above ?r ?f) (Is ?r 'ruler') (Is ?f 'fork'))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "book",
+        "apple",
+        "fork",
+        "calculator",
+        "jeans"
+    ]
+}

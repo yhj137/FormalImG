@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a gray suitcase, a brown cutting board, and a black wallet. The suitcase is located on the bottom side of the image and is positioned vertically below the cutting board. The wallet is to the right of the suitcase. For every lighter in the scene, there is a red tie to its right, and the lighter is also positioned vertically below the cutting board.",
+    "dsl": "(exists ?suitcase (exists ?cutting_board (exists ?wallet (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (OnBottomSide ?suitcase) (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Is ?wallet 'wallet') (Has ?wallet 'black') (Below ?suitcase ?cutting_board) (RightOf ?wallet ?suitcase) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?tie (and (Is ?tie 'tie') (Has ?tie 'red') (RightOf ?tie ?lighter) (Below ?lighter ?cutting_board)))))))))",
+    "cnf": "(exists ?suitcase (exists ?cutting_board (exists ?wallet (forall ?lighter (exists ?tie (and (Is ?suitcase 'suitcase') (Has ?suitcase 'gray') (OnBottomSide ?suitcase) (Below ?suitcase ?cutting_board) (RightOf ?wallet ?suitcase) (Has ?cutting_board 'brown') (or (not (Is ?lighter 'lighter')) (Below ?lighter ?cutting_board)) (Has ?wallet 'black') (Is ?cutting_board 'cutting_board') (or (not (Is ?lighter 'lighter')) (RightOf ?tie ?lighter)) (Is ?wallet 'wallet') (or (not (Is ?lighter 'lighter')) (Has ?tie 'red')) (or (not (Is ?lighter 'lighter')) (Is ?tie 'tie'))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "cutting_board",
+        "lighter",
+        "wallet",
+        "suitcase"
+    ]
+}

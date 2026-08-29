@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting where every teddy bear is round.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?t (implies (Is ?t 'teddy bear') (HasShape ?t 'round'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?t (or (not (Is ?t 'teddy bear')) (HasShape ?t 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

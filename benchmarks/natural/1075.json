@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a jacket containing a rectangular phone and a teddy bear holding a screwdriver. A horse is located to the left of the teddy bear, and every cup in the scene is also positioned to the bear's left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'teddy bear') (forall ?c (implies (Is ?c 'cup') (LeftOf ?c ?t))) (exists ?j (exists ?p (exists ?s (exists ?h (and (Is ?j 'jacket') (Is ?p 'phone') (Is ?s 'screwdriver') (Is ?h 'horse') (In ?t ?j) (In ?p ?j) (HasShape ?p 'rectangular') (Holding ?t ?s) (LeftOf ?h ?t)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (forall ?c (exists ?j (exists ?p (exists ?s (exists ?h (and (Is ?t 'teddy bear') (or (not (Is ?c 'cup')) (LeftOf ?c ?t)) (In ?t ?j) (Holding ?t ?s) (Is ?j 'jacket') (In ?p ?j) (LeftOf ?h ?t) (Is ?s 'screwdriver') (Is ?p 'phone') (HasShape ?p 'rectangular') (Is ?h 'horse')))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "horse",
+        "teddy bear",
+        "jacket",
+        "cup",
+        "screwdriver"
+    ]
+}

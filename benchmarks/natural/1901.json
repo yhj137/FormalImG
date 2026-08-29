@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene featuring a stone house containing a bed. A pair of headphones rests on the bed, and a sleeping cat is positioned to the left of the bed. All flowers in the scene are round and located to the right of the house. Additionally, a rock sits to the right of the house with a metal knife on it, and a lion stands to the right of the rock. To the left of the house, there is a plant with a bird perched on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?b (exists ?hp (exists ?c (and (Is ?h 'house') (HasMaterial ?h 'stone') (Is ?b 'bed') (In ?b ?h) (Is ?hp 'headphones') (On ?hp ?b) (Is ?c 'cat') (HasState ?c 'sleeping') (LeftOf ?c ?b) (forall ?f (implies (Is ?f 'flower') (and (HasShape ?f 'round') (RightOf ?f ?h)))) (exists ?r (exists ?l (exists ?p (exists ?br (exists ?k (and (Is ?r 'rock') (RightOf ?r ?h) (Is ?l 'lion') (RightOf ?l ?r) (Is ?p 'plant') (LeftOf ?p ?h) (Is ?br 'bird') (On ?br ?p) (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?r)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?b (exists ?hp (exists ?c (forall ?f (exists ?r (exists ?l (exists ?p (exists ?br (exists ?k (and (Is ?h 'house') (HasMaterial ?h 'stone') (In ?b ?h) (or (not (Is ?f 'flower')) (RightOf ?f ?h)) (Is ?b 'bed') (On ?hp ?b) (RightOf ?r ?h) (or (not (Is ?f 'flower')) (HasShape ?f 'round')) (LeftOf ?c ?b) (Is ?hp 'headphones') (LeftOf ?p ?h) (Is ?r 'rock') (RightOf ?l ?r) (HasState ?c 'sleeping') (Is ?p 'plant') (On ?br ?p) (On ?k ?r) (Is ?l 'lion') (Is ?c 'cat') (Is ?br 'bird') (HasMaterial ?k 'metal') (Is ?k 'knife')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "rock",
+        "cat",
+        "headphones",
+        "bird",
+        "plant",
+        "knife",
+        "bed",
+        "house",
+        "lion",
+        "flower"
+    ]
+}

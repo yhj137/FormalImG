@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image with a structured layout. The scene features a laptop positioned on the top side and left side of the frame. To the right of the laptop is a mouse, and the two are aligned horizontally. A book is placed below the laptop and is smaller than it. Every pen in the image is located to the right of the book, and for each pen, there is a stapler situated below it. Additionally, for every pen, there is a shirt located below the book with a glove positioned to its right and aligned horizontally, and a donut placed above the mouse that is smaller than the mouse.",
+    "dsl": "(exists ?laptop (exists ?mouse (exists ?book (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (OnLeftSide ?laptop) (Is ?mouse 'mouse') (RightOf ?mouse ?laptop) (AlignedHorizontally ?laptop ?mouse) (Is ?book 'book') (Below ?book ?laptop) (SmallerThan ?book ?laptop) (forall ?pen (implies (Is ?pen 'pen') (exists ?stapler (exists ?shirt (exists ?glove (exists ?donut (and (Is ?stapler 'stapler') (RightOf ?pen ?book) (Below ?stapler ?pen) (Is ?shirt 'shirt') (Below ?shirt ?book) (Is ?glove 'glove') (RightOf ?glove ?shirt) (AlignedHorizontally ?shirt ?glove) (Is ?donut 'donut') (Above ?donut ?mouse) (SmallerThan ?donut ?mouse))))))))))))",
+    "cnf": "(exists ?laptop (exists ?mouse (exists ?book (forall ?pen (exists ?stapler (exists ?shirt (exists ?glove (exists ?donut (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (OnLeftSide ?laptop) (RightOf ?mouse ?laptop) (AlignedHorizontally ?laptop ?mouse) (Is ?mouse 'mouse') (Below ?book ?laptop) (or (not (Is ?pen 'pen')) (Above ?donut ?mouse)) (SmallerThan ?book ?laptop) (Is ?book 'book') (or (not (Is ?pen 'pen')) (SmallerThan ?donut ?mouse)) (or (not (Is ?pen 'pen')) (Is ?donut 'donut')) (or (not (Is ?pen 'pen')) (RightOf ?pen ?book)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?shirt ?glove)) (or (not (Is ?pen 'pen')) (Below ?shirt ?book)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (Below ?stapler ?pen)) (or (not (Is ?pen 'pen')) (RightOf ?glove ?shirt)) (or (not (Is ?pen 'pen')) (Is ?shirt 'shirt')) (or (not (Is ?pen 'pen')) (Is ?glove 'glove')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "book",
+        "stapler",
+        "pen",
+        "shirt",
+        "mouse",
+        "glove",
+        "donut"
+    ]
+}

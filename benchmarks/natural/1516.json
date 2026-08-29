@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a wooden desk with a monitor on it. A person is located to the left of the desk, and a plant is positioned to the right of the monitor. All fruit in the image are located to the left of the plant. Additionally, a round ball, a black phone, and a toy car are placed on the desk.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?m (exists ?p (exists ?pl (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?m 'monitor') (On ?m ?d) (Is ?p 'person') (LeftOf ?p ?d) (Is ?pl 'plant') (RightOf ?pl ?m) (forall ?f (implies (Is ?f 'fruit') (LeftOf ?f ?pl))) (exists ?b (exists ?ph (exists ?tc (and (Is ?b 'ball') (HasShape ?b 'round') (On ?b ?d) (Is ?ph 'phone') (HasColor ?ph 'black') (On ?ph ?d) (Is ?tc 'toy car') (On ?tc ?d)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?m (exists ?p (exists ?pl (forall ?f (exists ?b (exists ?ph (exists ?tc (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?m ?d) (LeftOf ?p ?d) (Is ?m 'monitor') (RightOf ?pl ?m) (On ?b ?d) (Is ?p 'person') (Is ?pl 'plant') (or (not (Is ?f 'fruit')) (LeftOf ?f ?pl)) (On ?ph ?d) (HasShape ?b 'round') (On ?tc ?d) (HasColor ?ph 'black') (Is ?b 'ball') (Is ?tc 'toy car') (Is ?ph 'phone')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "person",
+        "toy car",
+        "plant",
+        "desk",
+        "ball",
+        "phone",
+        "fruit"
+    ]
+}

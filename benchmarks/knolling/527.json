@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a stapler positioned on the left side. The arrangement follows a specific pattern: for every game controller in the image, it is placed to the right of the stapler and aligned horizontally with it. Additionally, there is a lighter located to the right of each game controller, maintaining the same horizontal alignment.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (forall ?controller (implies (Is ?controller 'game_controller') (exists ?lighter (and (Is ?lighter 'lighter') (RightOf ?controller ?stapler) (AlignedHorizontally ?stapler ?controller) (RightOf ?lighter ?controller) (AlignedHorizontally ?controller ?lighter)))))))",
+    "cnf": "(exists ?stapler (forall ?controller (exists ?lighter (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (or (not (Is ?controller 'game_controller')) (RightOf ?controller ?stapler)) (or (not (Is ?controller 'game_controller')) (AlignedHorizontally ?stapler ?controller)) (or (not (Is ?controller 'game_controller')) (Is ?lighter 'lighter')) (or (not (Is ?controller 'game_controller')) (RightOf ?lighter ?controller)) (or (not (Is ?controller 'game_controller')) (AlignedHorizontally ?controller ?lighter))))))",
+    "k": 3,
+    "object_classes": [
+        "lighter",
+        "stapler",
+        "game_controller"
+    ]
+}

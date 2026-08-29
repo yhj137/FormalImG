@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person holding a plastic cup stands to the left of a rectangular desk containing a cake, while a bicycle is positioned to the right of the desk.",
+    "dsl": "(exists ?p (exists ?c (exists ?d (exists ?k (exists ?b (and (Is ?p 'person') (Is ?c 'cup') (HasMaterial ?c 'plastic') (Holding ?p ?c) (Is ?d 'desk') (HasShape ?d 'rectangular') (LeftOf ?p ?d) (Is ?k 'cake') (In ?k ?d) (Is ?b 'bicycle') (RightOf ?b ?d)))))))",
+    "cnf": "(exists ?p (exists ?c (exists ?d (exists ?k (exists ?b (and (Is ?p 'person') (Holding ?p ?c) (LeftOf ?p ?d) (HasMaterial ?c 'plastic') (HasShape ?d 'rectangular') (In ?k ?d) (Is ?c 'cup') (Is ?d 'desk') (RightOf ?b ?d) (Is ?k 'cake') (Is ?b 'bicycle')))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "cake",
+        "desk",
+        "cup",
+        "bicycle"
+    ]
+}

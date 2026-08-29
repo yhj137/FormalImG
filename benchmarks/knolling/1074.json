@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt located on the right side. For every glove in the image, there is a corresponding arrangement consisting of a book, a lemon, a bowl, and glasses. The glove is aligned horizontally with the shirt, and the book is aligned horizontally with the glove. The lemon is placed above the book, and the book is placed above the bowl, with the lemon and the bowl being vertically aligned. The glasses are positioned above the shirt, aligned vertically with it, and are visibly smaller than the shirt.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (forall ?glove (implies (Is ?glove 'glove') (exists ?book (exists ?lemon (exists ?bowl (exists ?glasses (and (Is ?book 'book') (Is ?lemon 'lemon') (Is ?bowl 'bowl') (Is ?glasses 'glasses') (AlignedHorizontally ?glove ?shirt) (AlignedHorizontally ?book ?glove) (Above ?lemon ?book) (Above ?book ?bowl) (AlignedVertically ?lemon ?bowl) (Above ?glasses ?shirt) (AlignedVertically ?glasses ?shirt) (SmallerThan ?glasses ?shirt))))))))))",
+    "cnf": "(exists ?shirt (forall ?glove (exists ?book (exists ?lemon (exists ?bowl (exists ?glasses (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?glove ?shirt)) (or (not (Is ?glove 'glove')) (Above ?glasses ?shirt)) (or (not (Is ?glove 'glove')) (Is ?glasses 'glasses')) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?book ?glove)) (or (not (Is ?glove 'glove')) (AlignedVertically ?glasses ?shirt)) (or (not (Is ?glove 'glove')) (AlignedVertically ?lemon ?bowl)) (or (not (Is ?glove 'glove')) (Is ?bowl 'bowl')) (or (not (Is ?glove 'glove')) (Above ?lemon ?book)) (or (not (Is ?glove 'glove')) (Is ?book 'book')) (or (not (Is ?glove 'glove')) (SmallerThan ?glasses ?shirt)) (or (not (Is ?glove 'glove')) (Above ?book ?bowl)) (or (not (Is ?glove 'glove')) (Is ?lemon 'lemon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "glasses",
+        "lemon",
+        "bowl",
+        "glove",
+        "shirt"
+    ]
+}

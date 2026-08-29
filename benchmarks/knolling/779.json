@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A shoe is positioned on the left side of the scene, and a pair of pliers is located vertically below the shoe. On the right side of the image, there is a wrench that is visually smaller than the shoe. Additionally, for every fork present in the arrangement, it is smaller than the pliers.",
+    "dsl": "(exists ?s (exists ?p (exists ?w (and (Is ?s 'shoe') (OnLeftSide ?s) (Is ?p 'pliers') (Below ?p ?s) (Is ?w 'wrench') (OnRightSide ?w) (SmallerThan ?w ?s) (forall ?f (implies (Is ?f 'fork') (SmallerThan ?f ?p)))))))",
+    "cnf": "(exists ?s (exists ?p (exists ?w (forall ?f (and (Is ?s 'shoe') (OnLeftSide ?s) (Below ?p ?s) (SmallerThan ?w ?s) (Is ?p 'pliers') (or (not (Is ?f 'fork')) (SmallerThan ?f ?p)) (OnRightSide ?w) (Is ?w 'wrench'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "fork",
+        "pliers",
+        "shoe"
+    ]
+}

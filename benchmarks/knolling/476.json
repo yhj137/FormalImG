@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every watch in the scene, there is a pizza located above it, and a blue hat located above the pizza. These three objects are aligned vertically, and the pizza is visually larger than the watch.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'watch') (exists ?p (exists ?h (and (Is ?p 'pizza') (Is ?h 'hat') (Has ?h 'blue') (Above ?p ?w) (Above ?h ?p) (AlignedVertically ?w ?p) (AlignedVertically ?p ?h) (LargerThan ?p ?w)))))))",
+    "cnf": "(forall ?w (exists ?p (exists ?h (and (or (not (Is ?w 'watch')) (Is ?p 'pizza')) (or (not (Is ?w 'watch')) (Is ?h 'hat')) (or (not (Is ?w 'watch')) (Above ?p ?w)) (or (not (Is ?w 'watch')) (Has ?h 'blue')) (or (not (Is ?w 'watch')) (Above ?h ?p)) (or (not (Is ?w 'watch')) (AlignedVertically ?w ?p)) (or (not (Is ?w 'watch')) (AlignedVertically ?p ?h)) (or (not (Is ?w 'watch')) (LargerThan ?p ?w))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "watch",
+        "pizza"
+    ]
+}

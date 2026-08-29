@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style image featuring a pair of metal glasses.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?g (and (Is ?g 'glasses') (HasMaterial ?g 'metal'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?g (and (Is ?g 'glasses') (HasMaterial ?g 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

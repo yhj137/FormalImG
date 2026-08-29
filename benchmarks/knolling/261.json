@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image containing a handbag and a remote. The remote is visually smaller than the handbag and is placed on the bottom side of the composition.",
+    "dsl": "(exists ?handbag (exists ?remote (and (Is ?handbag 'handbag') (Is ?remote 'remote') (SmallerThan ?remote ?handbag) (OnBottomSide ?remote))))",
+    "cnf": "(exists ?handbag (exists ?remote (and (Is ?handbag 'handbag') (SmallerThan ?remote ?handbag) (Is ?remote 'remote') (OnBottomSide ?remote))))",
+    "k": 2,
+    "object_classes": [
+        "handbag",
+        "remote"
+    ]
+}

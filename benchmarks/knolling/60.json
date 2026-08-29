@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a single keyboard positioned on the bottom side of the scene.",
+    "dsl": "(exists ?obj (and (Is ?obj 'keyboard') (OnBottomSide ?obj)))",
+    "cnf": "(exists ?obj (and (Is ?obj 'keyboard') (OnBottomSide ?obj)))",
+    "k": 1,
+    "object_classes": [
+        "keyboard"
+    ]
+}

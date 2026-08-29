@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal arrangement of five items. From left to right, there is a black monitor, a pair of white headphones, a blue hat, a sandwich, and a red lighter. Each object is positioned to the left of the next, and all are aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?headphones (exists ?hat (exists ?sandwich (exists ?lighter (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?headphones 'headphones') (Has ?headphones 'white') (Is ?hat 'hat') (Has ?hat 'blue') (Is ?sandwich 'sandwich') (Is ?lighter 'lighter') (Has ?lighter 'red') (LeftOf ?monitor ?headphones) (LeftOf ?headphones ?hat) (LeftOf ?hat ?sandwich) (LeftOf ?sandwich ?lighter) (AlignedHorizontally ?monitor ?headphones) (AlignedHorizontally ?headphones ?hat) (AlignedHorizontally ?hat ?sandwich) (AlignedHorizontally ?sandwich ?lighter)))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (exists ?hat (exists ?sandwich (exists ?lighter (and (Is ?monitor 'monitor') (Has ?monitor 'black') (LeftOf ?monitor ?headphones) (AlignedHorizontally ?monitor ?headphones) (Has ?headphones 'white') (LeftOf ?headphones ?hat) (AlignedHorizontally ?headphones ?hat) (Is ?headphones 'headphones') (Has ?hat 'blue') (LeftOf ?hat ?sandwich) (AlignedHorizontally ?hat ?sandwich) (Is ?hat 'hat') (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?lighter) (AlignedHorizontally ?sandwich ?lighter) (Has ?lighter 'red') (Is ?lighter 'lighter')))))))",
+    "k": 5,
+    "object_classes": [
+        "sandwich",
+        "hat",
+        "lighter",
+        "monitor",
+        "headphones"
+    ]
+}

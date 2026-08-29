@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every watch in the image is black.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'watch') (Has ?w 'black'))))",
+    "cnf": "(forall ?w (or (not (Is ?w 'watch')) (Has ?w 'black')))",
+    "k": 1,
+    "object_classes": [
+        "watch"
+    ]
+}

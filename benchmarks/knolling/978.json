@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a white plate. A gray spoon is located on the top side of the image and is positioned above the plate. To the right of the plate, there is a pair of blue scissors, and a black phone is arranged above the scissors. For every donut in the scene, it is pink and placed to the left of the plate.",
+    "dsl": "(exists ?plate (exists ?spoon (exists ?scissors (exists ?phone (and (Is ?plate 'plate') (Has ?plate 'white') (Is ?spoon 'spoon') (Has ?spoon 'gray') (OnTopSide ?spoon) (Above ?spoon ?plate) (Is ?scissors 'scissors') (Has ?scissors 'blue') (RightOf ?scissors ?plate) (Is ?phone 'phone') (Has ?phone 'black') (Above ?phone ?scissors) (forall ?donut (implies (Is ?donut 'donut') (and (Has ?donut 'pink') (LeftOf ?donut ?plate)))))))))",
+    "cnf": "(exists ?plate (exists ?spoon (exists ?scissors (exists ?phone (forall ?donut (and (Is ?plate 'plate') (Has ?plate 'white') (Above ?spoon ?plate) (RightOf ?scissors ?plate) (OnTopSide ?spoon) (or (not (Is ?donut 'donut')) (LeftOf ?donut ?plate)) (Has ?scissors 'blue') (Above ?phone ?scissors) (Has ?spoon 'gray') (or (not (Is ?donut 'donut')) (Has ?donut 'pink')) (Is ?scissors 'scissors') (Has ?phone 'black') (Is ?spoon 'spoon') (Is ?phone 'phone')))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "phone",
+        "scissors",
+        "donut",
+        "spoon"
+    ]
+}

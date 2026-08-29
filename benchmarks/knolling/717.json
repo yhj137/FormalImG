@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a sandwich positioned on the left side. For every knife present in the image, which is located on the right side, there is a spoon and a pen arranged in a line next to it. Specifically, the sandwich is to the left of the knife, the knife is to the left of the spoon, and the spoon is to the left of the pen. The knife, spoon, and pen are aligned horizontally, and the pen is smaller than the spoon.",
+    "dsl": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (forall ?knife (implies (Is ?knife 'knife') (exists ?spoon (exists ?pen (and (Is ?spoon 'spoon') (Is ?pen 'pen') (OnRightSide ?knife) (LeftOf ?sandwich ?knife) (LeftOf ?knife ?spoon) (LeftOf ?spoon ?pen) (AlignedHorizontally ?knife ?spoon) (AlignedHorizontally ?spoon ?pen) (SmallerThan ?pen ?spoon))))))))",
+    "cnf": "(exists ?sandwich (forall ?knife (exists ?spoon (exists ?pen (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (or (not (Is ?knife 'knife')) (LeftOf ?sandwich ?knife)) (or (not (Is ?knife 'knife')) (OnRightSide ?knife)) (or (not (Is ?knife 'knife')) (LeftOf ?knife ?spoon)) (or (not (Is ?knife 'knife')) (Is ?pen 'pen')) (or (not (Is ?knife 'knife')) (Is ?spoon 'spoon')) (or (not (Is ?knife 'knife')) (LeftOf ?spoon ?pen)) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?knife ?spoon)) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?spoon ?pen)) (or (not (Is ?knife 'knife')) (SmallerThan ?pen ?spoon)))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "sandwich",
+        "spoon",
+        "pen"
+    ]
+}

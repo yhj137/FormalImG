@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a child to the left of a horse and a triangular sandwich to the right of the horse.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?h (exists ?s (and (Is ?c 'child') (Is ?h 'horse') (Is ?s 'sandwich') (HasShape ?s 'triangular') (LeftOf ?c ?h) (RightOf ?s ?h))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?h (exists ?s (and (Is ?c 'child') (LeftOf ?c ?h) (Is ?h 'horse') (RightOf ?s ?h) (HasShape ?s 'triangular') (Is ?s 'sandwich'))))))",
+    "k": 3,
+    "object_classes": [
+        "horse",
+        "child",
+        "sandwich"
+    ]
+}

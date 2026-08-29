@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a red rug with a standing bicycle and a fork on it. A blue bird perches on the bicycle. To the right of the bicycle stands a bookshelf. A closed laptop rests on the bookshelf next to a pair of headphones. Inside the bookshelf is a mirror, with a phone to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?bi (exists ?br (exists ?bs (exists ?l (exists ?h (exists ?m (exists ?p (exists ?f (and (Is ?r 'rug') (HasColor ?r 'red') (Is ?bi 'bicycle') (HasState ?bi 'standing') (On ?bi ?r) (Is ?br 'bird') (HasColor ?br 'blue') (On ?br ?bi) (Is ?bs 'bookshelf') (RightOf ?bs ?bi) (Is ?l 'laptop') (HasState ?l 'closed') (On ?l ?bs) (Is ?h 'headphones') (NextTo ?h ?l) (Is ?m 'mirror') (In ?m ?bs) (Is ?p 'phone') (LeftOf ?p ?m) (Is ?f 'fork') (On ?f ?r))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?bi (exists ?br (exists ?bs (exists ?l (exists ?h (exists ?m (exists ?p (exists ?f (and (Is ?r 'rug') (HasColor ?r 'red') (On ?bi ?r) (On ?f ?r) (HasState ?bi 'standing') (On ?br ?bi) (Is ?f 'fork') (Is ?bi 'bicycle') (RightOf ?bs ?bi) (HasColor ?br 'blue') (Is ?bs 'bookshelf') (On ?l ?bs) (Is ?br 'bird') (In ?m ?bs) (HasState ?l 'closed') (NextTo ?h ?l) (Is ?m 'mirror') (LeftOf ?p ?m) (Is ?l 'laptop') (Is ?h 'headphones') (Is ?p 'phone'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "fork",
+        "laptop",
+        "rug",
+        "bird",
+        "bicycle",
+        "mirror",
+        "bookshelf"
+    ]
+}

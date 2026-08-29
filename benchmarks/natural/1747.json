@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a lion wearing a backpack containing a metal hammer. A plant stands next to the lion, and all flowers in the scene are located within it. To the right of the plant is a keyboard with a plastic clock on top, and next to the keyboard sits a round pizza topped with a yellow banana.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (exists ?bp (exists ?hm (exists ?pl (exists ?kb (exists ?ck (and (Is ?l 'lion') (Is ?bp 'backpack') (On ?bp ?l) (Is ?hm 'hammer') (In ?hm ?bp) (HasMaterial ?hm 'metal') (Is ?pl 'plant') (NextTo ?pl ?l) (Is ?kb 'keyboard') (RightOf ?kb ?pl) (Is ?ck 'clock') (On ?ck ?kb) (HasMaterial ?ck 'plastic') (forall ?fl (implies (Is ?fl 'flower') (In ?fl ?pl))) (exists ?pz (exists ?bn (and (Is ?pz 'pizza') (NextTo ?pz ?kb) (HasShape ?pz 'round') (Is ?bn 'banana') (On ?bn ?pz) (HasColor ?bn 'yellow'))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (exists ?bp (exists ?hm (exists ?pl (exists ?kb (exists ?ck (forall ?fl (exists ?pz (exists ?bn (and (Is ?l 'lion') (On ?bp ?l) (NextTo ?pl ?l) (Is ?bp 'backpack') (In ?hm ?bp) (Is ?pl 'plant') (RightOf ?kb ?pl) (Is ?hm 'hammer') (HasMaterial ?hm 'metal') (or (not (Is ?fl 'flower')) (In ?fl ?pl)) (Is ?kb 'keyboard') (On ?ck ?kb) (NextTo ?pz ?kb) (Is ?ck 'clock') (HasMaterial ?ck 'plastic') (Is ?pz 'pizza') (HasShape ?pz 'round') (On ?bn ?pz) (Is ?bn 'banana') (HasColor ?bn 'yellow'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "plant",
+        "backpack",
+        "banana",
+        "hammer",
+        "pizza",
+        "clock",
+        "lion",
+        "flower"
+    ]
+}

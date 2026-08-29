@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack present in the scene, there is a phone located to its left and a spoon located to the left of the phone. The spoon is positioned on the top side of the image, and the backpack is visually larger than the phone.",
+    "dsl": "(forall ?backpack (implies (Is ?backpack 'backpack') (exists ?phone (exists ?spoon (and (Is ?phone 'phone') (Is ?spoon 'spoon') (LeftOf ?phone ?backpack) (LeftOf ?spoon ?phone) (OnTopSide ?spoon) (LargerThan ?backpack ?phone))))))",
+    "cnf": "(forall ?backpack (exists ?phone (exists ?spoon (and (or (not (Is ?backpack 'backpack')) (Is ?phone 'phone')) (or (not (Is ?backpack 'backpack')) (Is ?spoon 'spoon')) (or (not (Is ?backpack 'backpack')) (LeftOf ?phone ?backpack)) (or (not (Is ?backpack 'backpack')) (LeftOf ?spoon ?phone)) (or (not (Is ?backpack 'backpack')) (OnTopSide ?spoon)) (or (not (Is ?backpack 'backpack')) (LargerThan ?backpack ?phone))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "backpack",
+        "phone"
+    ]
+}

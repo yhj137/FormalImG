@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every screwdriver sits on an open refrigerator containing a hammer.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?s (implies (Is ?s 'screwdriver') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (On ?s ?r) (exists ?h (and (Is ?h 'hammer') (In ?h ?r))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?s (exists ?r (exists ?h (and (or (not (Is ?s 'screwdriver')) (Is ?r 'refrigerator')) (or (not (Is ?s 'screwdriver')) (HasState ?r 'open')) (or (not (Is ?s 'screwdriver')) (On ?s ?r)) (or (not (Is ?s 'screwdriver')) (Is ?h 'hammer')) (or (not (Is ?s 'screwdriver')) (In ?h ?r)))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "screwdriver",
+        "refrigerator"
+    ]
+}

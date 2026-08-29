@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a person holding a ceramic plate with a fish inside, with a butterfly to the left of the person.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (exists ?pl (exists ?f (exists ?b (and (Is ?p 'person') (Is ?pl 'plate') (HasMaterial ?pl 'ceramic') (Is ?f 'fish') (Is ?b 'butterfly') (Holding ?p ?pl) (In ?f ?pl) (LeftOf ?b ?p)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?pl (exists ?f (exists ?b (and (Is ?p 'person') (Holding ?p ?pl) (LeftOf ?b ?p) (HasMaterial ?pl 'ceramic') (In ?f ?pl) (Is ?b 'butterfly') (Is ?pl 'plate') (Is ?f 'fish')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "fish",
+        "plate",
+        "person"
+    ]
+}

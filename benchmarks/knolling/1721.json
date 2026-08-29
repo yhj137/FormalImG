@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans, a drill, a bottle, a book, and a sandwich arranged in a line from left to right. The drill is to the right of the jeans, the bottle is to the right of the drill, the book is to the right of the bottle, and the sandwich is to the right of the book. Visually, the jeans are larger than the drill, and the sandwich is smaller than the book. The scene also adheres to a rule for spoons: every spoon is positioned to the right of the sandwich and is followed by a fork to its right, keys to the right of the fork, and a sock to the right of the keys. Finally, the sock is located on the right side of the image.",
+    "dsl": "(exists ?jeans (exists ?drill (exists ?bottle (exists ?book (exists ?sandwich (and (Is ?jeans 'jeans') (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?book 'book') (Is ?sandwich 'sandwich') (RightOf ?drill ?jeans) (RightOf ?bottle ?drill) (RightOf ?book ?bottle) (RightOf ?sandwich ?book) (LargerThan ?jeans ?drill) (SmallerThan ?sandwich ?book) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?fork (exists ?keys (exists ?sock (and (Is ?fork 'fork') (Is ?keys 'keys') (Is ?sock 'sock') (RightOf ?spoon ?sandwich) (RightOf ?fork ?spoon) (RightOf ?keys ?fork) (RightOf ?sock ?keys) (OnRightSide ?sock)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?drill (exists ?bottle (exists ?book (exists ?sandwich (forall ?spoon (exists ?fork (exists ?keys (exists ?sock (and (Is ?jeans 'jeans') (RightOf ?drill ?jeans) (LargerThan ?jeans ?drill) (Is ?drill 'drill') (RightOf ?bottle ?drill) (Is ?bottle 'bottle') (RightOf ?book ?bottle) (Is ?book 'book') (RightOf ?sandwich ?book) (SmallerThan ?sandwich ?book) (Is ?sandwich 'sandwich') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?sandwich)) (or (not (Is ?spoon 'spoon')) (Is ?sock 'sock')) (or (not (Is ?spoon 'spoon')) (RightOf ?fork ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?keys 'keys')) (or (not (Is ?spoon 'spoon')) (RightOf ?sock ?keys)) (or (not (Is ?spoon 'spoon')) (RightOf ?keys ?fork)) (or (not (Is ?spoon 'spoon')) (Is ?fork 'fork')) (or (not (Is ?spoon 'spoon')) (OnRightSide ?sock))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keys",
+        "sock",
+        "drill",
+        "fork",
+        "jeans",
+        "bottle",
+        "sandwich",
+        "spoon"
+    ]
+}

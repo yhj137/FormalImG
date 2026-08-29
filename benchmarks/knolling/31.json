@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A single suitcase is positioned on the left side of the frame.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase)))",
+    "cnf": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase)))",
+    "k": 1,
+    "object_classes": [
+        "suitcase"
+    ]
+}

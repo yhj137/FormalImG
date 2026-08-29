@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A woman is holding a sliced pizza while standing next to a bicycle. A butterfly is resting on the bicycle. The bicycle is positioned next to a bed. There is a shirt and a clock lying on the bed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?bi (exists ?bu (exists ?b (exists ?s (exists ?c (and (Is ?w 'woman') (Is ?p 'pizza') (Is ?bi 'bicycle') (Is ?bu 'butterfly') (Is ?b 'bed') (Is ?s 'shirt') (Is ?c 'clock') (HasState ?p 'sliced') (Holding ?w ?p) (NextTo ?w ?bi) (On ?bu ?bi) (NextTo ?bi ?b) (On ?s ?b) (On ?c ?b))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?bi (exists ?bu (exists ?b (exists ?s (exists ?c (and (Is ?w 'woman') (Holding ?w ?p) (NextTo ?w ?bi) (HasState ?p 'sliced') (Is ?bi 'bicycle') (On ?bu ?bi) (Is ?p 'pizza') (NextTo ?bi ?b) (Is ?bu 'butterfly') (Is ?b 'bed') (On ?s ?b) (On ?c ?b) (Is ?s 'shirt') (Is ?c 'clock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "butterfly",
+        "pizza",
+        "bed",
+        "shirt",
+        "woman",
+        "bicycle",
+        "clock"
+    ]
+}

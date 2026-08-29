@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bookshelf. To the right of the bookshelf stands a closed wardrobe, followed by a red car. A clock sits next to the bookshelf, with a gray spoon beside it. A blooming flower is located next to the car, and every butterfly in the scene is positioned to the right of the flower.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?w (exists ?c (exists ?cl (exists ?s (exists ?f (and (Is ?b 'bookshelf') (Is ?w 'wardrobe') (HasState ?w 'closed') (Is ?c 'car') (HasColor ?c 'red') (Is ?cl 'clock') (Is ?s 'spoon') (HasColor ?s 'gray') (Is ?f 'flower') (HasState ?f 'blooming') (RightOf ?w ?b) (RightOf ?c ?w) (NextTo ?cl ?b) (NextTo ?s ?cl) (NextTo ?f ?c) (forall ?bu (implies (Is ?bu 'butterfly') (RightOf ?bu ?f)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?w (exists ?c (exists ?cl (exists ?s (exists ?f (forall ?bu (and (Is ?b 'bookshelf') (RightOf ?w ?b) (NextTo ?cl ?b) (HasState ?w 'closed') (RightOf ?c ?w) (Is ?cl 'clock') (NextTo ?s ?cl) (Is ?w 'wardrobe') (HasColor ?c 'red') (NextTo ?f ?c) (HasColor ?s 'gray') (Is ?c 'car') (HasState ?f 'blooming') (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?f)) (Is ?s 'spoon') (Is ?f 'flower'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "flower",
+        "car",
+        "clock",
+        "butterfly",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

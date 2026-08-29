@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The upper section of the arrangement features a black monitor, a brown handbag, and a yellow drill. The monitor is visually larger than the handbag, which is in turn larger than the drill. A white shoe is also present, which is smaller than the drill. In terms of vertical arrangement, the monitor is positioned above a blue cup, the handbag is above a black wallet, and the shoe is above a white sock. The drill is located above a gray wrench, and the wrench is positioned above a set of keys. The keys are smaller than the wrench, and the sock is smaller than the shoe. The cup, wallet, keys, and sock are all located on the bottom side of the image. Finally, for every donut in the scene, it is pink, located on the bottom side, and is smaller than the monitor.",
+    "dsl": "(exists ?monitor (exists ?handbag (exists ?drill (exists ?shoe (exists ?wrench (exists ?cup (exists ?wallet (exists ?keys (exists ?sock (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Is ?drill 'drill') (Has ?drill 'yellow') (OnTopSide ?drill) (Is ?shoe 'shoe') (Has ?shoe 'white') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?cup 'cup') (Has ?cup 'blue') (OnBottomSide ?cup) (Is ?wallet 'wallet') (Has ?wallet 'black') (OnBottomSide ?wallet) (Is ?keys 'keys') (OnBottomSide ?keys) (Is ?sock 'sock') (Has ?sock 'white') (OnBottomSide ?sock) (Above ?monitor ?cup) (Above ?handbag ?wallet) (Above ?drill ?wrench) (Above ?wrench ?keys) (Above ?shoe ?sock) (LargerThan ?monitor ?handbag) (LargerThan ?handbag ?drill) (LargerThan ?drill ?shoe) (SmallerThan ?sock ?shoe) (SmallerThan ?keys ?wrench) (forall ?donut (implies (Is ?donut 'donut') (and (Has ?donut 'pink') (OnBottomSide ?donut) (SmallerThan ?donut ?monitor))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?handbag (exists ?drill (exists ?shoe (exists ?wrench (exists ?cup (exists ?wallet (exists ?keys (exists ?sock (forall ?donut (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Above ?monitor ?cup) (LargerThan ?monitor ?handbag) (OnBottomSide ?cup) (or (not (Is ?donut 'donut')) (SmallerThan ?donut ?monitor)) (Above ?handbag ?wallet) (LargerThan ?handbag ?drill) (Has ?cup 'blue') (or (not (Is ?donut 'donut')) (OnBottomSide ?donut)) (OnTopSide ?handbag) (OnBottomSide ?wallet) (Above ?drill ?wrench) (LargerThan ?drill ?shoe) (Is ?cup 'cup') (or (not (Is ?donut 'donut')) (Has ?donut 'pink')) (Has ?handbag 'brown') (Has ?wallet 'black') (OnTopSide ?drill) (Has ?wrench 'gray') (Above ?wrench ?keys) (Above ?shoe ?sock) (SmallerThan ?sock ?shoe) (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Has ?drill 'yellow') (Is ?wrench 'wrench') (SmallerThan ?keys ?wrench) (OnBottomSide ?keys) (Has ?shoe 'white') (OnBottomSide ?sock) (Is ?drill 'drill') (Is ?keys 'keys') (Is ?shoe 'shoe') (Has ?sock 'white') (Is ?sock 'sock'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "sock",
+        "wrench",
+        "cup",
+        "drill",
+        "handbag",
+        "wallet",
+        "monitor",
+        "shoe",
+        "donut"
+    ]
+}

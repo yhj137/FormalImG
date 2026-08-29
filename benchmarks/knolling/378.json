@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a cup located on the right side of the image. Additionally, for every carrot present in the scene, the cup is positioned to the right of that carrot.",
+    "dsl": "(exists ?c (and (Is ?c 'cup') (OnRightSide ?c) (forall ?r (implies (Is ?r 'carrot') (RightOf ?c ?r)))))",
+    "cnf": "(exists ?c (forall ?r (and (Is ?c 'cup') (OnRightSide ?c) (or (not (Is ?r 'carrot')) (RightOf ?c ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "cup"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board in the scene, there is a pair of scissors positioned directly below it on the bottom side of the image. To the right of the cutting board, a set of keys, a carrot, and a wrench are arranged in a sequence, maintaining horizontal alignment with the cutting board.",
+    "dsl": "(forall ?cb (implies (Is ?cb 'cutting_board') (exists ?scissors (exists ?keys (exists ?carrot (exists ?wrench (and (Is ?scissors 'scissors') (Is ?keys 'keys') (Is ?carrot 'carrot') (Is ?wrench 'wrench') (Below ?scissors ?cb) (OnBottomSide ?scissors) (RightOf ?keys ?cb) (RightOf ?carrot ?keys) (RightOf ?wrench ?carrot) (AlignedHorizontally ?cb ?keys) (AlignedHorizontally ?keys ?carrot) (AlignedHorizontally ?carrot ?wrench))))))))",
+    "cnf": "(forall ?cb (exists ?scissors (exists ?keys (exists ?carrot (exists ?wrench (and (or (not (Is ?cb 'cutting_board')) (Is ?scissors 'scissors')) (or (not (Is ?cb 'cutting_board')) (Is ?keys 'keys')) (or (not (Is ?cb 'cutting_board')) (Below ?scissors ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?carrot 'carrot')) (or (not (Is ?cb 'cutting_board')) (RightOf ?keys ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?wrench 'wrench')) (or (not (Is ?cb 'cutting_board')) (OnBottomSide ?scissors)) (or (not (Is ?cb 'cutting_board')) (RightOf ?carrot ?keys)) (or (not (Is ?cb 'cutting_board')) (RightOf ?wrench ?carrot)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?cb ?keys)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?keys ?carrot)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?carrot ?wrench))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "wrench",
+        "carrot",
+        "cutting_board",
+        "scissors"
+    ]
+}

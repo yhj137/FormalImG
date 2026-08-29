@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a handbag, a wallet, a remote, pliers, a carrot, and a lemon. The handbag is positioned above the wallet, and the wallet is visually smaller than the handbag. To the right of the wallet lies a remote. Directly above the remote is a pair of pliers. To the right of the pliers is a carrot, which is located on the right side of the image. Finally, a lemon is placed below the carrot and is situated on the bottom side of the layout.",
+    "dsl": "(exists ?handbag (exists ?wallet (exists ?remote (exists ?pliers (exists ?carrot (exists ?lemon (and (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?remote 'remote') (Is ?pliers 'pliers') (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Above ?handbag ?wallet) (SmallerThan ?wallet ?handbag) (RightOf ?remote ?wallet) (Above ?pliers ?remote) (RightOf ?carrot ?pliers) (OnRightSide ?carrot) (Below ?lemon ?carrot) (OnBottomSide ?lemon))))))))",
+    "cnf": "(exists ?handbag (exists ?wallet (exists ?remote (exists ?pliers (exists ?carrot (exists ?lemon (and (Is ?handbag 'handbag') (Above ?handbag ?wallet) (SmallerThan ?wallet ?handbag) (Is ?wallet 'wallet') (RightOf ?remote ?wallet) (Is ?remote 'remote') (Above ?pliers ?remote) (Is ?pliers 'pliers') (RightOf ?carrot ?pliers) (Is ?carrot 'carrot') (OnRightSide ?carrot) (Below ?lemon ?carrot) (Is ?lemon 'lemon') (OnBottomSide ?lemon))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "lemon",
+        "carrot",
+        "handbag",
+        "wallet"
+    ]
+}

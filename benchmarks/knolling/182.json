@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every handbag found in the scene, it is located on the top side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'handbag') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'handbag')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "handbag"
+    ]
+}

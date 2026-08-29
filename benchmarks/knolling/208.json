@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a lemon and a hammer. The lemon is positioned above the hammer, and the hammer is situated on the bottom side of the image.",
+    "dsl": "(exists ?lemon (exists ?hammer (and (Is ?lemon 'lemon') (Is ?hammer 'hammer') (Above ?lemon ?hammer) (OnBottomSide ?hammer))))",
+    "cnf": "(exists ?lemon (exists ?hammer (and (Is ?lemon 'lemon') (Above ?lemon ?hammer) (Is ?hammer 'hammer') (OnBottomSide ?hammer))))",
+    "k": 2,
+    "object_classes": [
+        "lemon",
+        "hammer"
+    ]
+}

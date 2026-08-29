@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A gray knife is positioned next to a white clock.",
+    "dsl": "(exists ?k (exists ?c (and (Is ?k 'knife') (HasColor ?k 'gray') (Is ?c 'clock') (HasColor ?c 'white') (NextTo ?k ?c))))",
+    "cnf": "(exists ?k (exists ?c (and (Is ?k 'knife') (HasColor ?k 'gray') (NextTo ?k ?c) (HasColor ?c 'white') (Is ?c 'clock'))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "clock"
+    ]
+}

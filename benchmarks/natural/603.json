@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a child holding a round fruit and a jacket with a book inside.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?j (exists ?b (exists ?f (and (Is ?c 'child') (Is ?j 'jacket') (Is ?b 'book') (Is ?f 'fruit') (Holding ?c ?j) (In ?b ?j) (Holding ?c ?f) (HasShape ?f 'round')))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?j (exists ?b (exists ?f (and (Is ?c 'child') (Holding ?c ?j) (Holding ?c ?f) (Is ?j 'jacket') (In ?b ?j) (Is ?f 'fruit') (HasShape ?f 'round') (Is ?b 'book')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "jacket",
+        "fruit",
+        "child"
+    ]
+}

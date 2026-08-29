@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene features a cyberpunk style. A teddy bear sits inside a bed. To the left of the bed is a lamp that is turned on. All balls are located to the right of the bed. A pair of headphones is positioned to the left of the teddy bear. A metal key lies to the right of the lamp, and a flower is situated to the right of the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?bear (and (Is ?bed 'bed') (Is ?bear 'teddy bear') (In ?bear ?bed) (forall ?ball (implies (Is ?ball 'ball') (RightOf ?ball ?bed))) (exists ?lamp (exists ?hp (exists ?key (exists ?flower (and (Is ?lamp 'lamp') (HasState ?lamp 'on') (LeftOf ?lamp ?bed) (Is ?hp 'headphones') (LeftOf ?hp ?bear) (Is ?key 'key') (HasMaterial ?key 'metal') (RightOf ?key ?lamp) (Is ?flower 'flower') (RightOf ?flower ?bed))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?bear (forall ?ball (exists ?lamp (exists ?hp (exists ?key (exists ?flower (and (Is ?bed 'bed') (In ?bear ?bed) (or (not (Is ?ball 'ball')) (RightOf ?ball ?bed)) (Is ?bear 'teddy bear') (LeftOf ?hp ?bear) (LeftOf ?lamp ?bed) (Is ?hp 'headphones') (RightOf ?flower ?bed) (HasState ?lamp 'on') (RightOf ?key ?lamp) (Is ?flower 'flower') (Is ?lamp 'lamp') (HasMaterial ?key 'metal') (Is ?key 'key'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "headphones",
+        "ball",
+        "lamp",
+        "teddy bear",
+        "bed",
+        "flower"
+    ]
+}

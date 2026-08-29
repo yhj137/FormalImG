@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image of a child next to a brown teddy bear. The teddy bear is to the left of an elephant. Next to the elephant is a metal pan with a plate inside, and a keyboard is next to the pan.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?tb (exists ?e (exists ?p (exists ?pl (exists ?k (and (Is ?c 'child') (Is ?tb 'teddy bear') (HasColor ?tb 'brown') (Is ?e 'elephant') (Is ?p 'pan') (HasMaterial ?p 'metal') (Is ?pl 'plate') (Is ?k 'keyboard') (NextTo ?c ?tb) (LeftOf ?tb ?e) (NextTo ?e ?p) (In ?pl ?p) (NextTo ?k ?p)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?tb (exists ?e (exists ?p (exists ?pl (exists ?k (and (Is ?c 'child') (NextTo ?c ?tb) (HasColor ?tb 'brown') (LeftOf ?tb ?e) (Is ?tb 'teddy bear') (Is ?e 'elephant') (NextTo ?e ?p) (HasMaterial ?p 'metal') (In ?pl ?p) (Is ?p 'pan') (NextTo ?k ?p) (Is ?pl 'plate') (Is ?k 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "child",
+        "plate",
+        "teddy bear",
+        "pan",
+        "keyboard"
+    ]
+}

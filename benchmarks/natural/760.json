@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene of a wooden wardrobe standing next to a red sofa. A metal spoon is to the left of the sofa, and all teddy bears are to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?sp (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?s 'sofa') (HasColor ?s 'red') (NextTo ?w ?s) (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (LeftOf ?sp ?s) (forall ?t (implies (Is ?t 'teddy bear') (RightOf ?t ?w))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?sp (forall ?t (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?w ?s) (or (not (Is ?t 'teddy bear')) (RightOf ?t ?w)) (HasColor ?s 'red') (LeftOf ?sp ?s) (Is ?s 'sofa') (HasMaterial ?sp 'metal') (Is ?sp 'spoon')))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "spoon",
+        "sofa",
+        "wardrobe"
+    ]
+}

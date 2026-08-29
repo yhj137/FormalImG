@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene showing a child holding a red apple next to a wooden bed. A bookshelf containing a metal knife and a spoon is positioned beside the bed. All birds in the scene are located above the bookshelf. A closed refrigerator stands next to the bookshelf, followed by a blue car and a wooden bench.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?a (exists ?b (exists ?bs (exists ?k (and (Is ?c 'child') (Is ?a 'apple') (Is ?b 'bed') (Is ?bs 'bookshelf') (Is ?k 'knife') (Holding ?c ?a) (HasColor ?a 'red') (NextTo ?c ?b) (HasMaterial ?b 'wooden') (NextTo ?bs ?b) (In ?k ?bs) (HasMaterial ?k 'metal') (forall ?bird (implies (Is ?bird 'bird') (Above ?bird ?bs))) (exists ?s (exists ?r (exists ?car (exists ?bench (and (Is ?s 'spoon') (Is ?r 'refrigerator') (Is ?car 'car') (Is ?bench 'bench') (In ?s ?bs) (NextTo ?r ?bs) (HasState ?r 'closed') (NextTo ?car ?r) (HasColor ?car 'blue') (NextTo ?bench ?car) (HasMaterial ?bench 'wooden')))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?a (exists ?b (exists ?bs (exists ?k (forall ?bird (exists ?s (exists ?r (exists ?car (exists ?bench (and (Is ?c 'child') (Holding ?c ?a) (NextTo ?c ?b) (Is ?a 'apple') (HasColor ?a 'red') (Is ?b 'bed') (HasMaterial ?b 'wooden') (NextTo ?bs ?b) (Is ?bs 'bookshelf') (In ?k ?bs) (or (not (Is ?bird 'bird')) (Above ?bird ?bs)) (Is ?k 'knife') (HasMaterial ?k 'metal') (In ?s ?bs) (NextTo ?r ?bs) (Is ?s 'spoon') (Is ?r 'refrigerator') (HasState ?r 'closed') (NextTo ?car ?r) (Is ?car 'car') (HasColor ?car 'blue') (NextTo ?bench ?car) (Is ?bench 'bench') (HasMaterial ?bench 'wooden')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "knife",
+        "child",
+        "bench",
+        "spoon",
+        "bed",
+        "bird",
+        "refrigerator",
+        "car",
+        "apple",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every elephant has a dirty pan to its left and a pair of glasses to its right.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?e (implies (Is ?e 'elephant') (exists ?p (exists ?g (and (Is ?p 'pan') (HasState ?p 'dirty') (LeftOf ?p ?e) (Is ?g 'glasses') (RightOf ?g ?e)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?e (exists ?p (exists ?g (and (or (not (Is ?e 'elephant')) (Is ?p 'pan')) (or (not (Is ?e 'elephant')) (HasState ?p 'dirty')) (or (not (Is ?e 'elephant')) (LeftOf ?p ?e)) (or (not (Is ?e 'elephant')) (Is ?g 'glasses')) (or (not (Is ?e 'elephant')) (RightOf ?g ?e)))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "glasses",
+        "pan"
+    ]
+}

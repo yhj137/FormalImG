@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, there is a monitor that is larger than the pizza located to its right. Below the monitor is a blue book, and below the book are keys positioned on the bottom side; the monitor, book, and keys are aligned vertically. To the right of the book is a bottle, and to the right of the bottle is a mouse. Furthermore, for every watch in the image, it is placed to the right of the keys. Corresponding to the watch, there is a pair of scissors to its right, and a glove is located above the scissors.",
+    "dsl": "(exists ?monitor (exists ?pizza (exists ?book (exists ?bottle (exists ?mouse (exists ?keys (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?pizza 'pizza') (RightOf ?pizza ?monitor) (LargerThan ?monitor ?pizza) (Is ?book 'book') (Has ?book 'blue') (Above ?monitor ?book) (AlignedVertically ?monitor ?book) (Is ?bottle 'bottle') (RightOf ?bottle ?book) (Is ?mouse 'mouse') (RightOf ?mouse ?bottle) (Is ?keys 'keys') (OnBottomSide ?keys) (Above ?book ?keys) (AlignedVertically ?book ?keys) (forall ?watch (implies (Is ?watch 'watch') (exists ?scissors (exists ?glove (and (Is ?scissors 'scissors') (Is ?glove 'glove') (RightOf ?watch ?keys) (RightOf ?scissors ?watch) (Above ?glove ?scissors)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?pizza (exists ?book (exists ?bottle (exists ?mouse (exists ?keys (forall ?watch (exists ?scissors (exists ?glove (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (RightOf ?pizza ?monitor) (LargerThan ?monitor ?pizza) (Is ?pizza 'pizza') (Above ?monitor ?book) (AlignedVertically ?monitor ?book) (Has ?book 'blue') (RightOf ?bottle ?book) (Is ?book 'book') (Above ?book ?keys) (Is ?bottle 'bottle') (RightOf ?mouse ?bottle) (AlignedVertically ?book ?keys) (OnBottomSide ?keys) (Is ?mouse 'mouse') (or (not (Is ?watch 'watch')) (RightOf ?watch ?keys)) (Is ?keys 'keys') (or (not (Is ?watch 'watch')) (Is ?glove 'glove')) (or (not (Is ?watch 'watch')) (RightOf ?scissors ?watch)) (or (not (Is ?watch 'watch')) (Is ?scissors 'scissors')) (or (not (Is ?watch 'watch')) (Above ?glove ?scissors))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keys",
+        "pizza",
+        "watch",
+        "bottle",
+        "mouse",
+        "monitor",
+        "glove",
+        "scissors"
+    ]
+}

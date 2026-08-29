@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every person is inside a green boat, with a laptop resting on the boat next to them.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?p (implies (Is ?p 'person') (exists ?b (exists ?l (and (Is ?b 'boat') (HasColor ?b 'green') (Is ?l 'laptop') (In ?p ?b) (On ?l ?b) (NextTo ?l ?p)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?p (exists ?b (exists ?l (and (or (not (Is ?p 'person')) (Is ?b 'boat')) (or (not (Is ?p 'person')) (HasColor ?b 'green')) (or (not (Is ?p 'person')) (Is ?l 'laptop')) (or (not (Is ?p 'person')) (In ?p ?b)) (or (not (Is ?p 'person')) (On ?l ?b)) (or (not (Is ?p 'person')) (NextTo ?l ?p)))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "boat",
+        "person"
+    ]
+}

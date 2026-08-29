@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a handbag on the left side. To the right of the handbag is a wallet, and to the right of the wallet are keys; these three items are aligned horizontally. On the top side of the image, there is a bowl, which is visually smaller than the handbag. A lemon is positioned to the right of the bowl, and a mouse is to the right of the lemon, with all three aligned horizontally. On the bottom side, a ruler is present, which is also smaller than the handbag, and a lighter is located to the right of the ruler, aligned horizontally. Finally, for any screwdriver in the scene, it is located to the right of the keys and aligned horizontally with them, and there is a wrench positioned such that the screwdriver is to the left of the wrench.",
+    "dsl": "(exists ?hb (exists ?wa (exists ?k (exists ?bo (exists ?le (exists ?mo (exists ?ru (exists ?li (and (Is ?hb 'handbag') (OnLeftSide ?hb) (Is ?wa 'wallet') (RightOf ?wa ?hb) (AlignedHorizontally ?hb ?wa) (Is ?k 'keys') (RightOf ?k ?wa) (AlignedHorizontally ?wa ?k) (Is ?bo 'bowl') (OnTopSide ?bo) (LargerThan ?hb ?bo) (Is ?le 'lemon') (RightOf ?le ?bo) (AlignedHorizontally ?bo ?le) (Is ?mo 'mouse') (RightOf ?mo ?le) (AlignedHorizontally ?le ?mo) (Is ?ru 'ruler') (OnBottomSide ?ru) (LargerThan ?hb ?ru) (Is ?li 'lighter') (RightOf ?li ?ru) (AlignedHorizontally ?ru ?li) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?wr (and (Is ?wr 'wrench') (RightOf ?sd ?k) (LeftOf ?sd ?wr) (AlignedHorizontally ?k ?sd))))))))))))))",
+    "cnf": "(exists ?hb (exists ?wa (exists ?k (exists ?bo (exists ?le (exists ?mo (exists ?ru (exists ?li (forall ?sd (exists ?wr (and (Is ?hb 'handbag') (OnLeftSide ?hb) (RightOf ?wa ?hb) (AlignedHorizontally ?hb ?wa) (Is ?wa 'wallet') (LargerThan ?hb ?bo) (RightOf ?k ?wa) (LargerThan ?hb ?ru) (OnTopSide ?bo) (RightOf ?le ?bo) (AlignedHorizontally ?wa ?k) (Is ?k 'keys') (OnBottomSide ?ru) (RightOf ?li ?ru) (Is ?bo 'bowl') (AlignedHorizontally ?bo ?le) (Is ?le 'lemon') (or (not (Is ?sd 'screwdriver')) (RightOf ?sd ?k)) (Is ?ru 'ruler') (AlignedHorizontally ?ru ?li) (Is ?li 'lighter') (RightOf ?mo ?le) (or (not (Is ?sd 'screwdriver')) (AlignedHorizontally ?k ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?wr 'wrench')) (or (not (Is ?sd 'screwdriver')) (LeftOf ?sd ?wr)) (AlignedHorizontally ?le ?mo) (Is ?mo 'mouse'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "wrench",
+        "lemon",
+        "screwdriver",
+        "handbag",
+        "lighter",
+        "wallet",
+        "mouse",
+        "bowl"
+    ]
+}

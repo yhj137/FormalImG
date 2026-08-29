@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image displaying a neatly organized grid of items. The top section features a white laptop, a blue shirt, and a red handbag aligned horizontally. A middle section contains a drill, a game controller, and a book, which are also aligned horizontally. The layout follows a vertical column structure: the drill is aligned vertically with the laptop and is visually smaller than it; the game controller is vertically aligned with the shirt; and the book is vertically aligned with the handbag. Furthermore, for every wrench in the scene, it is vertically aligned with the book, is smaller than the book, and forms a horizontal alignment with a pair of scissors and a stapler.",
+    "dsl": "(exists ?laptop (exists ?shirt (exists ?handbag (exists ?drill (exists ?controller (exists ?book (and (Is ?laptop 'laptop') (Has ?laptop 'white') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?handbag 'handbag') (Has ?handbag 'red') (Is ?drill 'drill') (SmallerThan ?drill ?laptop) (Is ?controller 'game_controller') (Is ?book 'book') (AlignedHorizontally ?laptop ?shirt) (AlignedHorizontally ?shirt ?handbag) (AlignedHorizontally ?drill ?controller) (AlignedHorizontally ?controller ?book) (AlignedVertically ?laptop ?drill) (AlignedVertically ?shirt ?controller) (AlignedVertically ?handbag ?book) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?scissors (exists ?stapler (and (Is ?scissors 'scissors') (Is ?stapler 'stapler') (AlignedVertically ?book ?wrench) (SmallerThan ?wrench ?book) (AlignedHorizontally ?wrench ?scissors) (AlignedHorizontally ?scissors ?stapler)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?shirt (exists ?handbag (exists ?drill (exists ?controller (exists ?book (forall ?wrench (exists ?scissors (exists ?stapler (and (Is ?laptop 'laptop') (Has ?laptop 'white') (SmallerThan ?drill ?laptop) (AlignedHorizontally ?laptop ?shirt) (Is ?drill 'drill') (AlignedHorizontally ?drill ?controller) (AlignedVertically ?laptop ?drill) (Has ?shirt 'blue') (AlignedHorizontally ?shirt ?handbag) (Is ?controller 'game_controller') (AlignedHorizontally ?controller ?book) (Is ?shirt 'shirt') (AlignedVertically ?shirt ?controller) (Has ?handbag 'red') (AlignedVertically ?handbag ?book) (Is ?book 'book') (Is ?handbag 'handbag') (or (not (Is ?wrench 'wrench')) (AlignedVertically ?book ?wrench)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?book)) (or (not (Is ?wrench 'wrench')) (Is ?stapler 'stapler')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?wrench ?scissors)) (or (not (Is ?wrench 'wrench')) (Is ?scissors 'scissors')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?scissors ?stapler))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "book",
+        "stapler",
+        "wrench",
+        "game_controller",
+        "drill",
+        "handbag",
+        "scissors",
+        "shirt"
+    ]
+}

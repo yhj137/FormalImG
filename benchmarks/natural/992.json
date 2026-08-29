@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is presented in a pixel art style. All fruits are located to the left of a basket. To the right of the basket stands a horse, with a rectangular phone to its left and a lamp to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?h (exists ?p (exists ?l (and (Is ?b 'basket') (Is ?h 'horse') (Is ?p 'phone') (HasShape ?p 'rectangular') (Is ?l 'lamp') (forall ?f (implies (Is ?f 'fruit') (LeftOf ?f ?b))) (RightOf ?h ?b) (LeftOf ?p ?h) (RightOf ?l ?h)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?h (exists ?p (exists ?l (forall ?f (and (Is ?b 'basket') (or (not (Is ?f 'fruit')) (LeftOf ?f ?b)) (RightOf ?h ?b) (Is ?h 'horse') (LeftOf ?p ?h) (RightOf ?l ?h) (HasShape ?p 'rectangular') (Is ?l 'lamp') (Is ?p 'phone'))))))))",
+    "k": 5,
+    "object_classes": [
+        "lamp",
+        "phone",
+        "basket",
+        "horse",
+        "fruit"
+    ]
+}

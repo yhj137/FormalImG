@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. An open laptop sits on a desk. Next to the desk is an open wardrobe, which has a spoon inside it. A person is standing next to the desk, and a horse is located next to the person. Additionally, every bottle in the image is placed on the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?l (exists ?w (exists ?s (exists ?p (exists ?h (and (Is ?d 'desk') (Is ?l 'laptop') (Is ?w 'wardrobe') (Is ?s 'spoon') (Is ?p 'person') (Is ?h 'horse') (On ?l ?d) (HasState ?l 'open') (NextTo ?w ?d) (HasState ?w 'open') (In ?s ?w) (NextTo ?p ?d) (HasState ?p 'standing') (NextTo ?h ?p) (forall ?b (implies (Is ?b 'bottle') (On ?b ?d)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?l (exists ?w (exists ?s (exists ?p (exists ?h (forall ?b (and (Is ?d 'desk') (On ?l ?d) (NextTo ?w ?d) (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?p ?d) (Is ?w 'wardrobe') (HasState ?w 'open') (or (not (Is ?b 'bottle')) (On ?b ?d)) (Is ?p 'person') (HasState ?p 'standing') (In ?s ?w) (NextTo ?h ?p) (Is ?s 'spoon') (Is ?h 'horse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "person",
+        "desk",
+        "laptop",
+        "wardrobe",
+        "horse",
+        "spoon"
+    ]
+}

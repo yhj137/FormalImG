@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene showing a wooden desk with a basket on top. Every orange is contained inside the basket. A black phone is placed to the right of the basket, and a child stands next to the desk.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?b (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?b 'basket') (On ?b ?d) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?p (and (Is ?p 'phone') (HasColor ?p 'black') (RightOf ?p ?b))) (exists ?c (and (Is ?c 'child') (NextTo ?c ?d)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?b (forall ?o (exists ?p (exists ?c (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?b ?d) (NextTo ?c ?d) (Is ?b 'basket') (or (not (Is ?o 'orange')) (In ?o ?b)) (Is ?c 'child') (RightOf ?p ?b) (HasColor ?p 'black') (Is ?p 'phone'))))))))",
+    "k": 5,
+    "object_classes": [
+        "desk",
+        "phone",
+        "basket",
+        "child",
+        "orange"
+    ]
+}

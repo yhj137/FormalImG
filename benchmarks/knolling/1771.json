@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the right side. To the left of the suitcase is a shirt, and to the left of the shirt is a laptop. The suitcase is visually larger than the laptop. Further to the left of the laptop is a keyboard. Located on the top side of the image is a plate, which is vertically aligned with the suitcase. An apple, which is smaller than the plate, is placed to the left of the plate, and a phone is to the left of the apple. Furthermore, for every shoe in the arrangement, there is a pair of pliers located to its left, with the pliers being vertically aligned with the keyboard.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?laptop (exists ?keyboard (exists ?plate (exists ?apple (exists ?phone (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?shirt 'shirt') (LeftOf ?shirt ?suitcase) (Is ?laptop 'laptop') (LeftOf ?laptop ?shirt) (LargerThan ?suitcase ?laptop) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?laptop) (Is ?plate 'plate') (OnTopSide ?plate) (AlignedVertically ?plate ?suitcase) (Is ?apple 'apple') (LeftOf ?apple ?plate) (SmallerThan ?apple ?plate) (Is ?phone 'phone') (LeftOf ?phone ?apple) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?pliers (and (Is ?pliers 'pliers') (LeftOf ?pliers ?shoe) (AlignedVertically ?pliers ?keyboard)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?laptop (exists ?keyboard (exists ?plate (exists ?apple (exists ?phone (forall ?shoe (exists ?pliers (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?shirt ?suitcase) (LargerThan ?suitcase ?laptop) (Is ?shirt 'shirt') (LeftOf ?laptop ?shirt) (AlignedVertically ?plate ?suitcase) (LeftOf ?keyboard ?laptop) (Is ?laptop 'laptop') (OnTopSide ?plate) (LeftOf ?apple ?plate) (Is ?keyboard 'keyboard') (or (not (Is ?shoe 'shoe')) (AlignedVertically ?pliers ?keyboard)) (Is ?plate 'plate') (SmallerThan ?apple ?plate) (Is ?apple 'apple') (or (not (Is ?shoe 'shoe')) (LeftOf ?pliers ?shoe)) (LeftOf ?phone ?apple) (or (not (Is ?shoe 'shoe')) (Is ?pliers 'pliers')) (Is ?phone 'phone')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "pliers",
+        "apple",
+        "keyboard",
+        "phone",
+        "suitcase",
+        "shoe",
+        "shirt"
+    ]
+}

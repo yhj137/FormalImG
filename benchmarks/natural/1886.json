@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden chair with a dog resting on it. A book also lies on the chair, with a clock placed next to it. A plant stands next to the chair, and beside the plant is a basket containing an apple. Every toy car in the scene is located to the left of the plant. A pizza topped with a metal fork sits next to the dog.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?d (exists ?p (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?d 'dog') (On ?d ?c) (Is ?p 'plant') (NextTo ?p ?c) (forall ?tc (implies (Is ?tc 'toy car') (LeftOf ?tc ?p))) (exists ?b (exists ?a (exists ?pi (exists ?f (exists ?bk (exists ?cl (and (Is ?b 'basket') (NextTo ?b ?p) (Is ?a 'apple') (In ?a ?b) (Is ?pi 'pizza') (NextTo ?pi ?d) (Is ?f 'fork') (HasMaterial ?f 'metal') (On ?f ?pi) (Is ?bk 'book') (On ?bk ?c) (Is ?cl 'clock') (NextTo ?cl ?bk)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?d (exists ?p (forall ?tc (exists ?b (exists ?a (exists ?pi (exists ?f (exists ?bk (exists ?cl (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?d ?c) (NextTo ?p ?c) (Is ?d 'dog') (NextTo ?pi ?d) (On ?bk ?c) (Is ?p 'plant') (or (not (Is ?tc 'toy car')) (LeftOf ?tc ?p)) (Is ?pi 'pizza') (On ?f ?pi) (Is ?bk 'book') (NextTo ?cl ?bk) (NextTo ?b ?p) (HasMaterial ?f 'metal') (Is ?cl 'clock') (Is ?b 'basket') (In ?a ?b) (Is ?f 'fork') (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fork",
+        "book",
+        "chair",
+        "plant",
+        "pizza",
+        "toy car",
+        "clock",
+        "basket",
+        "apple",
+        "dog"
+    ]
+}

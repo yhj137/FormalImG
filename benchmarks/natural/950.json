@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features an open backpack containing a brown teddy bear. A keyboard sits next to the backpack, and a pair of glasses rests on the keyboard. All plates are positioned to the right of the backpack.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'backpack') (HasState ?b 'open') (exists ?k (and (Is ?k 'keyboard') (NextTo ?k ?b) (exists ?g (and (Is ?g 'glasses') (On ?g ?k) (forall ?p (implies (Is ?p 'plate') (RightOf ?p ?b))) (exists ?t (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (In ?t ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?k (exists ?g (forall ?p (exists ?t (and (Is ?b 'backpack') (HasState ?b 'open') (NextTo ?k ?b) (or (not (Is ?p 'plate')) (RightOf ?p ?b)) (Is ?k 'keyboard') (On ?g ?k) (In ?t ?b) (Is ?g 'glasses') (HasColor ?t 'brown') (Is ?t 'teddy bear'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "backpack",
+        "teddy bear",
+        "plate"
+    ]
+}

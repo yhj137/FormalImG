@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a green bottle. The layout follows a specific rule: for every brown wallet in the scene, there is a black phone located directly below it. Additionally, the green bottle is visually larger than the phone.",
+    "dsl": "(exists ?bottle (and (Is ?bottle 'bottle') (Has ?bottle 'green') (forall ?wallet (implies (and (Is ?wallet 'wallet') (Has ?wallet 'brown')) (exists ?phone (and (Is ?phone 'phone') (Has ?phone 'black') (Below ?phone ?wallet) (LargerThan ?bottle ?phone)))))))",
+    "cnf": "(exists ?bottle (forall ?wallet (exists ?phone (and (Is ?bottle 'bottle') (Has ?bottle 'green') (or (not (Is ?wallet 'wallet')) (not (Has ?wallet 'brown')) (LargerThan ?bottle ?phone)) (or (not (Is ?wallet 'wallet')) (not (Has ?wallet 'brown')) (Below ?phone ?wallet)) (or (not (Is ?wallet 'wallet')) (not (Has ?wallet 'brown')) (Has ?phone 'black')) (or (not (Is ?wallet 'wallet')) (not (Has ?wallet 'brown')) (Is ?phone 'phone'))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "phone",
+        "wallet"
+    ]
+}

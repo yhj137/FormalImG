@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a purple lion holding a knife. To the right of the lion is a mirror with a pan on top, and to the right of the pan is a plate with a banana. Every butterfly in the scene is positioned above the lion.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?k (exists ?m (exists ?p (exists ?pl (exists ?ba (and (Is ?l 'lion') (HasColor ?l 'purple') (Is ?k 'knife') (Holding ?l ?k) (Is ?m 'mirror') (RightOf ?m ?l) (Is ?p 'pan') (On ?p ?m) (Is ?pl 'plate') (RightOf ?pl ?p) (Is ?ba 'banana') (On ?ba ?pl) (forall ?bu (implies (Is ?bu 'butterfly') (Above ?bu ?l)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?k (exists ?m (exists ?p (exists ?pl (exists ?ba (forall ?bu (and (Is ?l 'lion') (HasColor ?l 'purple') (Holding ?l ?k) (RightOf ?m ?l) (Is ?k 'knife') (or (not (Is ?bu 'butterfly')) (Above ?bu ?l)) (Is ?m 'mirror') (On ?p ?m) (Is ?p 'pan') (RightOf ?pl ?p) (Is ?pl 'plate') (On ?ba ?pl) (Is ?ba 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "knife",
+        "plate",
+        "mirror",
+        "pan",
+        "lion",
+        "butterfly",
+        "banana"
+    ]
+}

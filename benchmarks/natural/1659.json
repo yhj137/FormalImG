@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man sitting on a bench, holding an open umbrella. Glasses are to his left. A ball is to the left of the bench, and shoes are underneath it. A fish is in a plate on the bench. All books are positioned to the right of the man.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (and (Is ?m 'man') (HasState ?m 'sitting') (forall ?bk (implies (Is ?bk 'book') (RightOf ?bk ?m))) (exists ?bn (exists ?u (exists ?g (exists ?bl (exists ?s (exists ?f (exists ?p (and (Is ?bn 'bench') (Is ?u 'umbrella') (Is ?g 'glasses') (Is ?bl 'ball') (Is ?s 'shoes') (Is ?f 'fish') (Is ?p 'plate') (On ?m ?bn) (Holding ?m ?u) (HasState ?u 'open') (LeftOf ?g ?m) (LeftOf ?bl ?bn) (Below ?s ?bn) (In ?f ?p) (On ?p ?bn))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (forall ?bk (exists ?bn (exists ?u (exists ?g (exists ?bl (exists ?s (exists ?f (exists ?p (and (Is ?m 'man') (HasState ?m 'sitting') (or (not (Is ?bk 'book')) (RightOf ?bk ?m)) (On ?m ?bn) (Holding ?m ?u) (Is ?bn 'bench') (LeftOf ?bl ?bn) (LeftOf ?g ?m) (Is ?u 'umbrella') (HasState ?u 'open') (Below ?s ?bn) (Is ?bl 'ball') (Is ?g 'glasses') (On ?p ?bn) (Is ?s 'shoes') (In ?f ?p) (Is ?f 'fish') (Is ?p 'plate'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "bench",
+        "book",
+        "shoes",
+        "glasses",
+        "plate",
+        "man",
+        "ball"
+    ]
+}

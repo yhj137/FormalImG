@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a lion holding a pair of glasses. Next to the lion is a wooden basket with a red shirt on it, and every sandwich is located to the left of the basket.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (exists ?b (exists ?s (exists ?g (and (Is ?l 'lion') (Is ?b 'basket') (HasMaterial ?b 'wooden') (NextTo ?b ?l) (Is ?s 'shirt') (HasColor ?s 'red') (On ?s ?b) (Is ?g 'glasses') (Holding ?l ?g) (forall ?sand (implies (Is ?sand 'sandwich') (LeftOf ?sand ?b)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (exists ?b (exists ?s (exists ?g (forall ?sand (and (Is ?l 'lion') (NextTo ?b ?l) (Holding ?l ?g) (HasMaterial ?b 'wooden') (On ?s ?b) (Is ?g 'glasses') (Is ?b 'basket') (or (not (Is ?sand 'sandwich')) (LeftOf ?sand ?b)) (HasColor ?s 'red') (Is ?s 'shirt'))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "sandwich",
+        "shirt",
+        "basket",
+        "lion"
+    ]
+}

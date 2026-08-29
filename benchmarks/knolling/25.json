@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a single watch positioned on the top side of the scene.",
+    "dsl": "(exists ?w (and (Is ?w 'watch') (OnTopSide ?w)))",
+    "cnf": "(exists ?w (and (Is ?w 'watch') (OnTopSide ?w)))",
+    "k": 1,
+    "object_classes": [
+        "watch"
+    ]
+}

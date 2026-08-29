@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pair of black headphones and a brown wallet, with the wallet positioned to the left of the headphones. Every donut in the image is pink and is located below the wallet. A fork is placed to the left of each donut. A pizza is positioned below each donut, where the donut is smaller than the pizza. Further down, a hammer is located below the pizza, and a screwdriver is placed below the hammer. The screwdriver is specifically positioned on the right side of the image.",
+    "dsl": "(exists ?hp (exists ?w (and (Is ?hp 'headphones') (Has ?hp 'black') (Is ?w 'wallet') (Has ?w 'brown') (LeftOf ?w ?hp) (forall ?d (implies (Is ?d 'donut') (exists ?f (exists ?p (exists ?h (exists ?sd (and (Is ?f 'fork') (Is ?p 'pizza') (Is ?h 'hammer') (Is ?sd 'screwdriver') (Has ?d 'pink') (Below ?d ?w) (LeftOf ?f ?d) (Below ?p ?d) (SmallerThan ?d ?p) (Below ?h ?p) (Below ?sd ?h) (OnRightSide ?sd)))))))))))",
+    "cnf": "(exists ?hp (exists ?w (forall ?d (exists ?f (exists ?p (exists ?h (exists ?sd (and (Is ?hp 'headphones') (Has ?hp 'black') (LeftOf ?w ?hp) (Has ?w 'brown') (or (not (Is ?d 'donut')) (Below ?d ?w)) (Is ?w 'wallet') (or (not (Is ?d 'donut')) (Has ?d 'pink')) (or (not (Is ?d 'donut')) (LeftOf ?f ?d)) (or (not (Is ?d 'donut')) (Is ?sd 'screwdriver')) (or (not (Is ?d 'donut')) (Is ?f 'fork')) (or (not (Is ?d 'donut')) (Below ?p ?d)) (or (not (Is ?d 'donut')) (Is ?h 'hammer')) (or (not (Is ?d 'donut')) (Below ?sd ?h)) (or (not (Is ?d 'donut')) (Is ?p 'pizza')) (or (not (Is ?d 'donut')) (SmallerThan ?d ?p)) (or (not (Is ?d 'donut')) (Below ?h ?p)) (or (not (Is ?d 'donut')) (OnRightSide ?sd))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hammer",
+        "pizza",
+        "headphones",
+        "wallet",
+        "screwdriver",
+        "fork",
+        "donut"
+    ]
+}

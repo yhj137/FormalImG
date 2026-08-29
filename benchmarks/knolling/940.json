@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller, a blue shirt, and a black shoe. The game controller is placed above the shirt, and the shoe is placed below the shirt. Furthermore, for every screwdriver in the scene, it is located below the shoe, and there is a pink donut positioned below the screwdriver.",
+    "dsl": "(exists ?shirt (exists ?shoe (exists ?gc (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?gc 'game_controller') (Above ?gc ?shirt) (Below ?shoe ?shirt) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?donut (and (Is ?donut 'donut') (Has ?donut 'pink') (Below ?sd ?shoe) (Below ?donut ?sd)))))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (exists ?gc (forall ?sd (exists ?donut (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Above ?gc ?shirt) (Below ?shoe ?shirt) (Is ?gc 'game_controller') (Has ?shoe 'black') (or (not (Is ?sd 'screwdriver')) (Below ?sd ?shoe)) (Is ?shoe 'shoe') (or (not (Is ?sd 'screwdriver')) (Has ?donut 'pink')) (or (not (Is ?sd 'screwdriver')) (Below ?donut ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?donut 'donut'))))))))",
+    "k": 5,
+    "object_classes": [
+        "shirt",
+        "game_controller",
+        "screwdriver",
+        "shoe",
+        "donut"
+    ]
+}

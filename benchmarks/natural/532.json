@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a green bookshelf. Every plant in the scene is inside the bookshelf and is being held by a woman.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bookshelf') (HasColor ?b 'green') (forall ?p (implies (Is ?p 'plant') (and (In ?p ?b) (exists ?w (and (Is ?w 'woman') (Holding ?w ?p)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?p (exists ?w (and (Is ?b 'bookshelf') (HasColor ?b 'green') (or (not (Is ?p 'plant')) (In ?p ?b)) (or (not (Is ?p 'plant')) (Is ?w 'woman')) (or (not (Is ?p 'plant')) (Holding ?w ?p)))))))",
+    "k": 3,
+    "object_classes": [
+        "plant",
+        "bookshelf",
+        "woman"
+    ]
+}

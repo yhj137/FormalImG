@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cartoon style. Every teddy bear has a blue boat containing a metal spoon to its left and a lion on a bookshelf to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?t (implies (Is ?t 'teddy bear') (exists ?l (exists ?b (exists ?s (exists ?k (and (Is ?l 'lion') (RightOf ?l ?t) (Is ?b 'boat') (HasColor ?b 'blue') (LeftOf ?b ?t) (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?b) (Is ?k 'bookshelf') (On ?l ?k)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?t (exists ?l (exists ?b (exists ?s (exists ?k (and (or (not (Is ?t 'teddy bear')) (Is ?l 'lion')) (or (not (Is ?t 'teddy bear')) (RightOf ?l ?t)) (or (not (Is ?t 'teddy bear')) (Is ?b 'boat')) (or (not (Is ?t 'teddy bear')) (On ?l ?k)) (or (not (Is ?t 'teddy bear')) (HasColor ?b 'blue')) (or (not (Is ?t 'teddy bear')) (Is ?k 'bookshelf')) (or (not (Is ?t 'teddy bear')) (LeftOf ?b ?t)) (or (not (Is ?t 'teddy bear')) (In ?s ?b)) (or (not (Is ?t 'teddy bear')) (Is ?s 'spoon')) (or (not (Is ?t 'teddy bear')) (HasMaterial ?s 'metal')))))))))",
+    "k": 5,
+    "object_classes": [
+        "teddy bear",
+        "boat",
+        "lion",
+        "bookshelf",
+        "spoon"
+    ]
+}

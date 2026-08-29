@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a blue shirt, a cutting board, a drill, a game controller, and a book arranged neatly. The drill is placed above the shirt. To the right of the drill is the cutting board, and to the right of the cutting board is the game controller, which is visually smaller than the cutting board. The book is located below the game controller, and the shirt is larger than the book. Additionally, for every knife in the scene, there is a brown wallet, a pair of pliers, and a glove arranged with it: the knife is positioned to the right of the book, the brown wallet is below the knife, the pliers are larger than the wallet and placed above the glove, and the glove is situated on the bottom side of the image.",
+    "dsl": "(exists ?shirt (exists ?board (exists ?drill (exists ?controller (exists ?book (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?board 'cutting_board') (Is ?drill 'drill') (Is ?controller 'game_controller') (Is ?book 'book') (Above ?drill ?shirt) (RightOf ?board ?drill) (RightOf ?controller ?board) (Below ?book ?controller) (LargerThan ?shirt ?book) (SmallerThan ?controller ?board) (forall ?knife (implies (Is ?knife 'knife') (exists ?wallet (exists ?pliers (exists ?glove (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?pliers 'pliers') (Is ?glove 'glove') (RightOf ?knife ?book) (Below ?wallet ?knife) (LargerThan ?pliers ?wallet) (Above ?pliers ?glove) (OnBottomSide ?glove)))))))))))))",
+    "cnf": "(exists ?shirt (exists ?board (exists ?drill (exists ?controller (exists ?book (forall ?knife (exists ?wallet (exists ?pliers (exists ?glove (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Above ?drill ?shirt) (LargerThan ?shirt ?book) (Is ?drill 'drill') (RightOf ?board ?drill) (Below ?book ?controller) (or (not (Is ?knife 'knife')) (RightOf ?knife ?book)) (Is ?board 'cutting_board') (RightOf ?controller ?board) (SmallerThan ?controller ?board) (Is ?book 'book') (or (not (Is ?knife 'knife')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (Below ?wallet ?knife)) (Is ?controller 'game_controller') (or (not (Is ?knife 'knife')) (Is ?pliers 'pliers')) (or (not (Is ?knife 'knife')) (Above ?pliers ?glove)) (or (not (Is ?knife 'knife')) (Has ?wallet 'brown')) (or (not (Is ?knife 'knife')) (LargerThan ?pliers ?wallet)) (or (not (Is ?knife 'knife')) (OnBottomSide ?glove)) (or (not (Is ?knife 'knife')) (Is ?wallet 'wallet'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "pliers",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "wallet",
+        "knife",
+        "glove",
+        "shirt"
+    ]
+}

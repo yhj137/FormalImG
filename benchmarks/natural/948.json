@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a child sitting to the right of a sofa, holding a fork. Shoes are placed next to the sofa. All fruits in the scene are round and rest on the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (exists ?c (exists ?k (and (Is ?s 'sofa') (Is ?c 'child') (Is ?k 'fork') (RightOf ?c ?s) (HasState ?c 'sitting') (Holding ?c ?k) (forall ?f (implies (Is ?f 'fruit') (and (On ?f ?s) (HasShape ?f 'round')))) (exists ?sh (and (Is ?sh 'shoes') (NextTo ?sh ?s))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (exists ?c (exists ?k (forall ?f (exists ?sh (and (Is ?s 'sofa') (RightOf ?c ?s) (or (not (Is ?f 'fruit')) (On ?f ?s)) (Is ?c 'child') (HasState ?c 'sitting') (NextTo ?sh ?s) (or (not (Is ?f 'fruit')) (HasShape ?f 'round')) (Holding ?c ?k) (Is ?sh 'shoes') (Is ?k 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fruit",
+        "sofa",
+        "child",
+        "fork",
+        "shoes"
+    ]
+}

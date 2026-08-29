@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a red rug. A basket is placed next to the rug, containing every key in the scene. A hammer is located to the right of the basket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rug') (HasColor ?r 'red') (exists ?b (and (Is ?b 'basket') (NextTo ?b ?r) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?h (and (Is ?h 'hammer') (RightOf ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (forall ?k (exists ?h (and (Is ?r 'rug') (HasColor ?r 'red') (NextTo ?b ?r) (Is ?b 'basket') (or (not (Is ?k 'key')) (In ?k ?b)) (RightOf ?h ?b) (Is ?h 'hammer')))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "key",
+        "basket",
+        "rug"
+    ]
+}

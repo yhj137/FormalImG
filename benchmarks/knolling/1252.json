@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is positioned on the left side of the scene. For every pen found in the image, it is located on the right side and aligned horizontally with the keyboard. Arranged vertically with the pen are a ruler placed above it, a camera above the ruler, a wallet below the pen, and a cup below the wallet. Additionally, for each pen, there is a plate located below the keyboard and aligned vertically with it.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (forall ?pen (implies (Is ?pen 'pen') (exists ?ruler (exists ?camera (exists ?wallet (exists ?cup (exists ?plate (and (Is ?ruler 'ruler') (Is ?camera 'camera') (Is ?wallet 'wallet') (Is ?cup 'cup') (Is ?plate 'plate') (OnRightSide ?pen) (AlignedHorizontally ?keyboard ?pen) (Above ?ruler ?pen) (AlignedVertically ?ruler ?pen) (Above ?camera ?ruler) (AlignedVertically ?camera ?ruler) (Below ?wallet ?pen) (AlignedVertically ?wallet ?pen) (Below ?cup ?wallet) (AlignedVertically ?cup ?wallet) (Below ?plate ?keyboard) (AlignedVertically ?plate ?keyboard)))))))))))",
+    "cnf": "(exists ?keyboard (forall ?pen (exists ?ruler (exists ?camera (exists ?wallet (exists ?cup (exists ?plate (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?keyboard ?pen)) (or (not (Is ?pen 'pen')) (Below ?plate ?keyboard)) (or (not (Is ?pen 'pen')) (OnRightSide ?pen)) (or (not (Is ?pen 'pen')) (Above ?ruler ?pen)) (or (not (Is ?pen 'pen')) (AlignedVertically ?plate ?keyboard)) (or (not (Is ?pen 'pen')) (AlignedVertically ?cup ?wallet)) (or (not (Is ?pen 'pen')) (Is ?plate 'plate')) (or (not (Is ?pen 'pen')) (Is ?ruler 'ruler')) (or (not (Is ?pen 'pen')) (AlignedVertically ?ruler ?pen)) (or (not (Is ?pen 'pen')) (Below ?cup ?wallet)) (or (not (Is ?pen 'pen')) (Is ?cup 'cup')) (or (not (Is ?pen 'pen')) (Is ?camera 'camera')) (or (not (Is ?pen 'pen')) (Above ?camera ?ruler)) (or (not (Is ?pen 'pen')) (AlignedVertically ?wallet ?pen)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (AlignedVertically ?camera ?ruler)) (or (not (Is ?pen 'pen')) (Below ?wallet ?pen))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "pen",
+        "keyboard",
+        "cup",
+        "wallet",
+        "camera"
+    ]
+}

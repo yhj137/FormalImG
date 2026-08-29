@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden bench with glasses on it and all shoes located below. To the right of the bench, an elephant holds a bowl containing a fork, next to a standing horse.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (forall ?s (implies (Is ?s 'shoes') (Below ?s ?b))) (exists ?g (and (Is ?g 'glasses') (On ?g ?b) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?b) (exists ?bo (and (Is ?bo 'bowl') (Holding ?e ?bo) (exists ?f (and (Is ?f 'fork') (In ?f ?bo))) (exists ?h (and (Is ?h 'horse') (HasState ?h 'standing') (NextTo ?h ?e))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?s (exists ?g (exists ?e (exists ?bo (exists ?f (exists ?h (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (or (not (Is ?s 'shoes')) (Below ?s ?b)) (On ?g ?b) (RightOf ?e ?b) (Is ?g 'glasses') (Is ?e 'elephant') (Holding ?e ?bo) (NextTo ?h ?e) (Is ?bo 'bowl') (In ?f ?bo) (HasState ?h 'standing') (Is ?f 'fork') (Is ?h 'horse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "bench",
+        "fork",
+        "horse",
+        "shoes",
+        "glasses",
+        "bowl"
+    ]
+}

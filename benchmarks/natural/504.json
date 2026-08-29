@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a bed with a person sleeping in it, and every hammer is lying on the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bed') (forall ?h (implies (Is ?h 'hammer') (On ?h ?b))) (exists ?p (and (Is ?p 'person') (HasState ?p 'sleeping') (In ?p ?b))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?h (exists ?p (and (Is ?b 'bed') (or (not (Is ?h 'hammer')) (On ?h ?b)) (In ?p ?b) (HasState ?p 'sleeping') (Is ?p 'person'))))))",
+    "k": 3,
+    "object_classes": [
+        "bed",
+        "person",
+        "hammer"
+    ]
+}

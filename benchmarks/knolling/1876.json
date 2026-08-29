@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a monitor, a backpack positioned below and vertically aligned with the monitor, and jeans positioned below and vertically aligned with the backpack. For every sock in the image, it is located below and vertically aligned with the jeans, and there exists a remote aligned horizontally with the monitor, a cup aligned horizontally with the remote (which is smaller than the monitor), a screwdriver aligned horizontally with the backpack (which is smaller than the backpack), pliers aligned horizontally with the screwdriver, a fork aligned horizontally with the jeans, and a knife aligned horizontally with the fork.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?jeans (forall ?sock (implies (Is ?sock 'sock') (exists ?remote (exists ?cup (exists ?screwdriver (exists ?pliers (exists ?fork (exists ?knife (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?backpack 'backpack') (Below ?backpack ?monitor) (AlignedVertically ?backpack ?monitor) (Is ?jeans 'jeans') (Below ?jeans ?backpack) (AlignedVertically ?jeans ?backpack) (Below ?sock ?jeans) (AlignedVertically ?sock ?jeans) (Is ?remote 'remote') (AlignedHorizontally ?monitor ?remote) (Is ?cup 'cup') (AlignedHorizontally ?remote ?cup) (SmallerThan ?cup ?monitor) (Is ?screwdriver 'screwdriver') (AlignedHorizontally ?backpack ?screwdriver) (SmallerThan ?screwdriver ?backpack) (Is ?pliers 'pliers') (AlignedHorizontally ?screwdriver ?pliers) (Is ?fork 'fork') (AlignedHorizontally ?jeans ?fork) (Is ?knife 'knife') (AlignedHorizontally ?fork ?knife)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?jeans (forall ?sock (exists ?remote (exists ?cup (exists ?screwdriver (exists ?pliers (exists ?fork (exists ?knife (and (or (not (Is ?sock 'sock')) (Is ?monitor 'monitor')) (or (not (Is ?sock 'sock')) (OnLeftSide ?monitor)) (or (not (Is ?sock 'sock')) (Below ?backpack ?monitor)) (or (not (Is ?sock 'sock')) (Is ?backpack 'backpack')) (or (not (Is ?sock 'sock')) (AlignedVertically ?backpack ?monitor)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?monitor ?remote)) (or (not (Is ?sock 'sock')) (Is ?jeans 'jeans')) (or (not (Is ?sock 'sock')) (Below ?jeans ?backpack)) (or (not (Is ?sock 'sock')) (SmallerThan ?cup ?monitor)) (or (not (Is ?sock 'sock')) (Is ?remote 'remote')) (or (not (Is ?sock 'sock')) (Is ?cup 'cup')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?remote ?cup)) (or (not (Is ?sock 'sock')) (AlignedVertically ?jeans ?backpack)) (or (not (Is ?sock 'sock')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?jeans)) (or (not (Is ?sock 'sock')) (Below ?sock ?jeans)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?backpack ?screwdriver)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?jeans ?fork)) (or (not (Is ?sock 'sock')) (SmallerThan ?screwdriver ?backpack)) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (Is ?knife 'knife')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?fork ?knife)) (or (not (Is ?sock 'sock')) (Is ?pliers 'pliers')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?screwdriver ?pliers)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "backpack",
+        "knife",
+        "pliers",
+        "cup",
+        "jeans",
+        "monitor",
+        "screwdriver",
+        "fork",
+        "sock",
+        "remote"
+    ]
+}

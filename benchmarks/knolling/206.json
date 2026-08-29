@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pair of blue jeans and a black watch. The black watch is smaller than the blue jeans.",
+    "dsl": "(exists ?jeans (exists ?watch (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?watch 'watch') (Has ?watch 'black') (SmallerThan ?watch ?jeans))))",
+    "cnf": "(exists ?jeans (exists ?watch (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (SmallerThan ?watch ?jeans) (Has ?watch 'black') (Is ?watch 'watch'))))",
+    "k": 2,
+    "object_classes": [
+        "jeans",
+        "watch"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten items arranged in two parallel horizontal rows. The top row features a handbag on the top left side and a screwdriver on the top right side. Positioned between these anchors and aligned horizontally with them are a pair of headphones, a book, and a hammer. In the row underneath, a sandwich is located directly below the handbag, and a spoon is positioned directly below the screwdriver. Filling the space between the sandwich and the spoon, and aligned horizontally with them, are a donut, a cup, and a fork. Visually, the handbag is larger than the sandwich, and the spoon is smaller than the screwdriver.",
+    "dsl": "(exists ?handbag (exists ?screwdriver (exists ?headphones (exists ?book (exists ?hammer (exists ?sandwich (exists ?spoon (exists ?donut (exists ?cup (exists ?fork (and (Is ?handbag 'handbag') (Is ?screwdriver 'screwdriver') (Is ?headphones 'headphones') (Is ?book 'book') (Is ?hammer 'hammer') (Is ?sandwich 'sandwich') (Is ?spoon 'spoon') (Is ?donut 'donut') (Is ?cup 'cup') (Is ?fork 'fork') (OnTopSide ?handbag) (OnLeftSide ?handbag) (OnTopSide ?screwdriver) (OnRightSide ?screwdriver) (AlignedHorizontally ?handbag ?headphones) (AlignedHorizontally ?headphones ?book) (AlignedHorizontally ?book ?hammer) (AlignedHorizontally ?hammer ?screwdriver) (Below ?sandwich ?handbag) (Below ?spoon ?screwdriver) (AlignedHorizontally ?sandwich ?donut) (AlignedHorizontally ?donut ?cup) (AlignedHorizontally ?cup ?fork) (AlignedHorizontally ?fork ?spoon) (LargerThan ?handbag ?sandwich) (SmallerThan ?spoon ?screwdriver))))))))))))",
+    "cnf": "(exists ?handbag (exists ?screwdriver (exists ?headphones (exists ?book (exists ?hammer (exists ?sandwich (exists ?spoon (exists ?donut (exists ?cup (exists ?fork (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (OnLeftSide ?handbag) (AlignedHorizontally ?handbag ?headphones) (Below ?sandwich ?handbag) (Is ?headphones 'headphones') (AlignedHorizontally ?headphones ?book) (LargerThan ?handbag ?sandwich) (Is ?sandwich 'sandwich') (AlignedHorizontally ?sandwich ?donut) (Is ?book 'book') (AlignedHorizontally ?book ?hammer) (Is ?donut 'donut') (AlignedHorizontally ?donut ?cup) (Is ?hammer 'hammer') (AlignedHorizontally ?hammer ?screwdriver) (Is ?cup 'cup') (AlignedHorizontally ?cup ?fork) (OnRightSide ?screwdriver) (Below ?spoon ?screwdriver) (Is ?fork 'fork') (AlignedHorizontally ?fork ?spoon) (OnTopSide ?screwdriver) (SmallerThan ?spoon ?screwdriver) (Is ?spoon 'spoon') (Is ?screwdriver 'screwdriver'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "cup",
+        "screwdriver",
+        "hammer",
+        "handbag",
+        "fork",
+        "spoon",
+        "headphones",
+        "sandwich",
+        "donut"
+    ]
+}

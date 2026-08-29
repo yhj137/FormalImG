@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a red house, inside which a child holds round headphones. Every elephant is positioned to the left of the child, with a brown chair placed to the right of each elephant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (HasColor ?h 'red') (exists ?c (and (Is ?c 'child') (In ?c ?h) (exists ?hp (and (Is ?hp 'headphones') (HasShape ?hp 'round') (Holding ?c ?hp) (forall ?e (implies (Is ?e 'elephant') (and (LeftOf ?e ?c) (exists ?ch (and (Is ?ch 'chair') (HasColor ?ch 'brown') (RightOf ?ch ?e)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?c (exists ?hp (forall ?e (exists ?ch (and (Is ?h 'house') (HasColor ?h 'red') (In ?c ?h) (Is ?c 'child') (Holding ?c ?hp) (or (not (Is ?e 'elephant')) (LeftOf ?e ?c)) (HasShape ?hp 'round') (or (not (Is ?e 'elephant')) (Is ?ch 'chair')) (Is ?hp 'headphones') (or (not (Is ?e 'elephant')) (HasColor ?ch 'brown')) (or (not (Is ?e 'elephant')) (RightOf ?ch ?e)))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "elephant",
+        "headphones",
+        "child",
+        "chair"
+    ]
+}

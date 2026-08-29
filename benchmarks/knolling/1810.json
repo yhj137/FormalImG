@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten objects arranged in two parallel rows. The layout is anchored by a suitcase located on the left side and bottom side of the image. To the right of the suitcase, arranged in a horizontal line, are a drill, a pan, a cutting board, and a pizza. Directly above this bottom row is a top row of corresponding items: a stapler is positioned above the suitcase on the top side of the image, a spoon is above the drill, a donut is above the pan, a pair of glasses is above the cutting board, and a pen is above the pizza. Visually, the stapler is smaller than the suitcase, the donut is smaller than the pan, and the pen is smaller than the pizza.",
+    "dsl": "(exists ?suitcase (exists ?drill (exists ?pan (exists ?cutting_board (exists ?pizza (exists ?stapler (exists ?spoon (exists ?donut (exists ?glasses (exists ?pen (and (Is ?suitcase 'suitcase') (Is ?drill 'drill') (Is ?pan 'pan') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Is ?stapler 'stapler') (Is ?spoon 'spoon') (Is ?donut 'donut') (Is ?glasses 'glasses') (Is ?pen 'pen') (OnLeftSide ?suitcase) (OnBottomSide ?suitcase) (OnTopSide ?stapler) (LeftOf ?suitcase ?drill) (LeftOf ?drill ?pan) (LeftOf ?pan ?cutting_board) (LeftOf ?cutting_board ?pizza) (AlignedHorizontally ?suitcase ?drill) (AlignedHorizontally ?drill ?pan) (AlignedHorizontally ?pan ?cutting_board) (AlignedHorizontally ?cutting_board ?pizza) (Above ?stapler ?suitcase) (Above ?spoon ?drill) (Above ?donut ?pan) (Above ?glasses ?cutting_board) (Above ?pen ?pizza) (SmallerThan ?stapler ?suitcase) (SmallerThan ?donut ?pan) (SmallerThan ?pen ?pizza))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?drill (exists ?pan (exists ?cutting_board (exists ?pizza (exists ?stapler (exists ?spoon (exists ?donut (exists ?glasses (exists ?pen (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (OnBottomSide ?suitcase) (LeftOf ?suitcase ?drill) (AlignedHorizontally ?suitcase ?drill) (Is ?drill 'drill') (LeftOf ?drill ?pan) (Above ?stapler ?suitcase) (AlignedHorizontally ?drill ?pan) (Is ?pan 'pan') (LeftOf ?pan ?cutting_board) (SmallerThan ?stapler ?suitcase) (OnTopSide ?stapler) (Above ?spoon ?drill) (AlignedHorizontally ?pan ?cutting_board) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?pizza) (Is ?stapler 'stapler') (Is ?spoon 'spoon') (Above ?donut ?pan) (AlignedHorizontally ?cutting_board ?pizza) (Is ?pizza 'pizza') (SmallerThan ?donut ?pan) (Is ?donut 'donut') (Above ?glasses ?cutting_board) (Above ?pen ?pizza) (Is ?glasses 'glasses') (SmallerThan ?pen ?pizza) (Is ?pen 'pen'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "pen",
+        "pizza",
+        "cutting_board",
+        "drill",
+        "pan",
+        "spoon",
+        "suitcase",
+        "donut"
+    ]
+}

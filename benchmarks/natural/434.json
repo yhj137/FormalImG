@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal horse holding a pair of shoes. The horse is to the left of the shoes, which contain a fish.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?f (and (Is ?h 'horse') (HasMaterial ?h 'metal') (Is ?s 'shoes') (Is ?f 'fish') (Holding ?h ?s) (LeftOf ?h ?s) (In ?f ?s))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?f (and (Is ?h 'horse') (HasMaterial ?h 'metal') (Holding ?h ?s) (LeftOf ?h ?s) (Is ?s 'shoes') (In ?f ?s) (Is ?f 'fish'))))))",
+    "k": 3,
+    "object_classes": [
+        "fish",
+        "horse",
+        "shoes"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is located on the top side of the scene. Directly below the laptop is a drill positioned on the bottom side, and the laptop is visually larger than the drill. The layout also includes kitchen items organized in a pattern: for every carrot, there is a knife to its left and aligned horizontally with it. Furthermore, a bowl is located below the carrot, and a cup is to the left of the bowl, aligned horizontally with the bowl. The carrot is also positioned below the laptop.",
+    "dsl": "(exists ?laptop (exists ?drill (and (Is ?laptop 'laptop') (Is ?drill 'drill') (OnTopSide ?laptop) (OnBottomSide ?drill) (Below ?drill ?laptop) (LargerThan ?laptop ?drill) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?knife (exists ?bowl (exists ?cup (and (Is ?knife 'knife') (Is ?bowl 'bowl') (Is ?cup 'cup') (Below ?carrot ?laptop) (LeftOf ?knife ?carrot) (AlignedHorizontally ?knife ?carrot) (Below ?bowl ?carrot) (LeftOf ?cup ?bowl) (AlignedHorizontally ?cup ?bowl))))))))))",
+    "cnf": "(exists ?laptop (exists ?drill (forall ?carrot (exists ?knife (exists ?bowl (exists ?cup (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?drill ?laptop) (LargerThan ?laptop ?drill) (OnBottomSide ?drill) (or (not (Is ?carrot 'carrot')) (Below ?carrot ?laptop)) (Is ?drill 'drill') (or (not (Is ?carrot 'carrot')) (Is ?cup 'cup')) (or (not (Is ?carrot 'carrot')) (LeftOf ?knife ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?bowl 'bowl')) (or (not (Is ?carrot 'carrot')) (LeftOf ?cup ?bowl)) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?knife ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?knife 'knife')) (or (not (Is ?carrot 'carrot')) (Below ?bowl ?carrot)) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?cup ?bowl)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "carrot",
+        "cup",
+        "drill",
+        "knife",
+        "bowl"
+    ]
+}

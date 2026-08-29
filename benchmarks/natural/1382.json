@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Inside a house, there is a wooden table. A metal pan containing a toy car and a bird holding a screwdriver are on the table. Additionally, all books in the scene are placed on the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?p (exists ?tc (exists ?bi (exists ?s (and (Is ?h 'house') (Is ?t 'table') (HasMaterial ?t 'wooden') (In ?t ?h) (Is ?p 'pan') (HasMaterial ?p 'metal') (On ?p ?t) (Is ?tc 'toy car') (In ?tc ?p) (Is ?bi 'bird') (On ?bi ?t) (Is ?s 'screwdriver') (Holding ?bi ?s) (forall ?b (implies (Is ?b 'book') (On ?b ?t)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?t (exists ?p (exists ?tc (exists ?bi (exists ?s (forall ?b (and (Is ?h 'house') (In ?t ?h) (HasMaterial ?t 'wooden') (On ?p ?t) (Is ?t 'table') (On ?bi ?t) (HasMaterial ?p 'metal') (In ?tc ?p) (or (not (Is ?b 'book')) (On ?b ?t)) (Is ?bi 'bird') (Holding ?bi ?s) (Is ?p 'pan') (Is ?tc 'toy car') (Is ?s 'screwdriver'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bird",
+        "house",
+        "table",
+        "book",
+        "toy car",
+        "screwdriver",
+        "pan"
+    ]
+}

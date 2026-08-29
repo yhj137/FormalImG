@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a tie positioned on the left side. Positioned below the tie is a mouse, and the tie is visually larger than the mouse. Furthermore, for every lighter in the image, it is located above the tie and is smaller than the mouse.",
+    "dsl": "(exists ?tie (exists ?mouse (and (Is ?tie 'tie') (Is ?mouse 'mouse') (OnLeftSide ?tie) (Above ?tie ?mouse) (LargerThan ?tie ?mouse) (forall ?lighter (implies (Is ?lighter 'lighter') (and (Above ?lighter ?tie) (SmallerThan ?lighter ?mouse)))))))",
+    "cnf": "(exists ?tie (exists ?mouse (forall ?lighter (and (Is ?tie 'tie') (OnLeftSide ?tie) (Above ?tie ?mouse) (LargerThan ?tie ?mouse) (Is ?mouse 'mouse') (or (not (Is ?lighter 'lighter')) (Above ?lighter ?tie)) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?mouse))))))",
+    "k": 3,
+    "object_classes": [
+        "lighter",
+        "tie",
+        "mouse"
+    ]
+}

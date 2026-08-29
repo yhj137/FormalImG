@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the right side of the layout. To the left of the suitcase is a pair of jeans, which is aligned horizontally with it. A phone is positioned above the jeans and aligned vertically with them. For every carrot in the scene, it is placed to the left of the phone; furthermore, a donut is located above the carrot, aligned vertically with it, and a pair of glasses is positioned to the left of the donut.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?phone (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?jeans 'jeans') (LeftOf ?jeans ?suitcase) (AlignedHorizontally ?jeans ?suitcase) (Is ?phone 'phone') (Above ?phone ?jeans) (AlignedVertically ?phone ?jeans) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?donut (exists ?glasses (and (Is ?donut 'donut') (Is ?glasses 'glasses') (LeftOf ?carrot ?phone) (Above ?donut ?carrot) (AlignedVertically ?donut ?carrot) (LeftOf ?glasses ?donut))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?phone (forall ?carrot (exists ?donut (exists ?glasses (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?jeans ?suitcase) (AlignedHorizontally ?jeans ?suitcase) (Is ?jeans 'jeans') (Above ?phone ?jeans) (AlignedVertically ?phone ?jeans) (Is ?phone 'phone') (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?phone)) (or (not (Is ?carrot 'carrot')) (Is ?glasses 'glasses')) (or (not (Is ?carrot 'carrot')) (Above ?donut ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?donut 'donut')) (or (not (Is ?carrot 'carrot')) (LeftOf ?glasses ?donut)) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?donut ?carrot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "phone",
+        "jeans",
+        "suitcase",
+        "donut"
+    ]
+}

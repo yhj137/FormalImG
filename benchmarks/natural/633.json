@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. To the right of a tree stands a table. A hat is located next to the table, and inside the hat lies a yellow key.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?tbl (exists ?h (exists ?k (and (Is ?t 'tree') (Is ?tbl 'table') (Is ?h 'hat') (Is ?k 'key') (RightOf ?tbl ?t) (NextTo ?h ?tbl) (In ?k ?h) (HasColor ?k 'yellow')))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?tbl (exists ?h (exists ?k (and (Is ?t 'tree') (RightOf ?tbl ?t) (Is ?tbl 'table') (NextTo ?h ?tbl) (Is ?h 'hat') (In ?k ?h) (Is ?k 'key') (HasColor ?k 'yellow')))))))",
+    "k": 4,
+    "object_classes": [
+        "key",
+        "hat",
+        "table",
+        "tree"
+    ]
+}

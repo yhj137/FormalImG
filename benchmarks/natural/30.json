@@ -1,0 +1,9 @@
+{
+    "prompt": "A rectangular fork in a cartoon style.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?f (and (Is ?f 'fork') (HasShape ?f 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?f (and (Is ?f 'fork') (HasShape ?f 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "fork"
+    ]
+}

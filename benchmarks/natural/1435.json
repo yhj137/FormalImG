@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. To the left of every tree sits a fluffy teddy bear wearing headphones and holding a flower. A lit lamp is next to the tree, which is positioned to the left of a basket containing a banana and an orange-colored orange.",
+    "dsl": "(and (IsStyle 'photo') (forall ?t (implies (Is ?t 'tree') (exists ?tb (exists ?h (exists ?f (exists ?l (exists ?bk (exists ?bn (exists ?o (and (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (LeftOf ?tb ?t) (Is ?h 'headphones') (On ?h ?tb) (Is ?f 'flower') (Holding ?tb ?f) (Is ?l 'lamp') (HasState ?l 'on') (NextTo ?l ?t) (Is ?bk 'basket') (LeftOf ?t ?bk) (Is ?bn 'banana') (In ?bn ?bk) (Is ?o 'orange') (HasColor ?o 'orange') (In ?o ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?t (exists ?tb (exists ?h (exists ?f (exists ?l (exists ?bk (exists ?bn (exists ?o (and (or (not (Is ?t 'tree')) (Is ?tb 'teddy bear')) (or (not (Is ?t 'tree')) (HasMaterial ?tb 'fluffy')) (or (not (Is ?t 'tree')) (LeftOf ?tb ?t)) (or (not (Is ?t 'tree')) (On ?h ?tb)) (or (not (Is ?t 'tree')) (Is ?h 'headphones')) (or (not (Is ?t 'tree')) (Holding ?tb ?f)) (or (not (Is ?t 'tree')) (Is ?f 'flower')) (or (not (Is ?t 'tree')) (Is ?l 'lamp')) (or (not (Is ?t 'tree')) (HasState ?l 'on')) (or (not (Is ?t 'tree')) (NextTo ?l ?t)) (or (not (Is ?t 'tree')) (Is ?bk 'basket')) (or (not (Is ?t 'tree')) (LeftOf ?t ?bk)) (or (not (Is ?t 'tree')) (Is ?bn 'banana')) (or (not (Is ?t 'tree')) (In ?bn ?bk)) (or (not (Is ?t 'tree')) (Is ?o 'orange')) (or (not (Is ?t 'tree')) (In ?o ?bk)) (or (not (Is ?t 'tree')) (HasColor ?o 'orange'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "teddy bear",
+        "basket",
+        "flower",
+        "banana",
+        "tree",
+        "orange",
+        "headphones",
+        "lamp"
+    ]
+}

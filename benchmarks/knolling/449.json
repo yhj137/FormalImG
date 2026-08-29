@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing keys, a phone, and a donut. The keys are positioned on the left side of the image. The phone is located to the right of the keys, and the donut is located to the right of the phone. Additionally, the phone is visually larger than the keys.",
+    "dsl": "(exists ?keys (exists ?phone (exists ?donut (and (Is ?keys 'keys') (Is ?phone 'phone') (Is ?donut 'donut') (OnLeftSide ?keys) (LeftOf ?keys ?phone) (LeftOf ?phone ?donut) (LargerThan ?phone ?keys)))))",
+    "cnf": "(exists ?keys (exists ?phone (exists ?donut (and (Is ?keys 'keys') (OnLeftSide ?keys) (LeftOf ?keys ?phone) (LargerThan ?phone ?keys) (Is ?phone 'phone') (LeftOf ?phone ?donut) (Is ?donut 'donut')))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "phone",
+        "donut"
+    ]
+}

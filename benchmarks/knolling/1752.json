@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized around a central laptop, with a red stapler located on the top side directly above it, and a black wallet positioned directly below it; these three items are vertically aligned. To the left of the laptop is a brown cutting board, and beneath the cutting board is a pair of scissors, which is smaller than the board. To the right of the laptop are headphones, situated on the right side of the image. The cutting board, laptop, and headphones are aligned horizontally. Additionally, the layout includes a specific arrangement for headwear: every hat in the scene is yellow, positioned on the top side and aligned vertically with the headphones, with a pair of glasses located below the hat and vertically aligned with it, and a lighter located below the glasses and vertically aligned with them.",
+    "dsl": "(exists ?stapler (exists ?laptop (exists ?wallet (exists ?cb (exists ?scissors (exists ?headphones (and (Is ?stapler 'stapler') (Has ?stapler 'red') (OnTopSide ?stapler) (Is ?laptop 'laptop') (Is ?wallet 'wallet') (Has ?wallet 'black') (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?scissors 'scissors') (SmallerThan ?scissors ?cb) (Is ?headphones 'headphones') (OnRightSide ?headphones) (LeftOf ?cb ?laptop) (LeftOf ?laptop ?headphones) (AlignedHorizontally ?cb ?laptop) (AlignedHorizontally ?laptop ?headphones) (Below ?laptop ?stapler) (Below ?wallet ?laptop) (AlignedVertically ?stapler ?laptop) (AlignedVertically ?laptop ?wallet) (Below ?scissors ?cb) (forall ?hat (implies (Is ?hat 'hat') (exists ?glasses (exists ?lighter (and (Is ?glasses 'glasses') (Is ?lighter 'lighter') (Has ?hat 'yellow') (OnTopSide ?hat) (AlignedVertically ?hat ?headphones) (Below ?glasses ?hat) (AlignedVertically ?hat ?glasses) (Below ?lighter ?glasses) (AlignedVertically ?glasses ?lighter)))))))))))))",
+    "cnf": "(exists ?stapler (exists ?laptop (exists ?wallet (exists ?cb (exists ?scissors (exists ?headphones (forall ?hat (exists ?glasses (exists ?lighter (and (Is ?stapler 'stapler') (Has ?stapler 'red') (OnTopSide ?stapler) (Below ?laptop ?stapler) (AlignedVertically ?stapler ?laptop) (AlignedHorizontally ?laptop ?headphones) (Below ?wallet ?laptop) (AlignedVertically ?laptop ?wallet) (AlignedHorizontally ?cb ?laptop) (LeftOf ?laptop ?headphones) (or (not (Is ?hat 'hat')) (AlignedVertically ?hat ?headphones)) (Has ?wallet 'black') (LeftOf ?cb ?laptop) (Below ?scissors ?cb) (OnRightSide ?headphones) (or (not (Is ?hat 'hat')) (OnTopSide ?hat)) (or (not (Is ?hat 'hat')) (Below ?glasses ?hat)) (Is ?wallet 'wallet') (Is ?laptop 'laptop') (SmallerThan ?scissors ?cb) (Is ?headphones 'headphones') (or (not (Is ?hat 'hat')) (Has ?hat 'yellow')) (or (not (Is ?hat 'hat')) (AlignedVertically ?hat ?glasses)) (or (not (Is ?hat 'hat')) (Is ?glasses 'glasses')) (Has ?cb 'brown') (Is ?scissors 'scissors') (or (not (Is ?hat 'hat')) (Is ?lighter 'lighter')) (or (not (Is ?hat 'hat')) (Below ?lighter ?glasses)) (Is ?cb 'cutting_board') (or (not (Is ?hat 'hat')) (AlignedVertically ?glasses ?lighter))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "stapler",
+        "cutting_board",
+        "hat",
+        "lighter",
+        "wallet",
+        "scissors",
+        "headphones"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a red hat, a blue tie, and a gray wrench. The red hat is placed above the blue tie, while the gray wrench is positioned below the blue tie. Furthermore, the red hat is larger than the gray wrench.",
+    "dsl": "(exists ?h (exists ?t (exists ?w (and (Is ?h 'hat') (Has ?h 'red') (Is ?t 'tie') (Has ?t 'blue') (Is ?w 'wrench') (Has ?w 'gray') (Above ?h ?t) (Below ?w ?t) (LargerThan ?h ?w)))))",
+    "cnf": "(exists ?h (exists ?t (exists ?w (and (Is ?h 'hat') (Has ?h 'red') (Above ?h ?t) (LargerThan ?h ?w) (Has ?t 'blue') (Below ?w ?t) (Is ?t 'tie') (Has ?w 'gray') (Is ?w 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "hat",
+        "tie"
+    ]
+}

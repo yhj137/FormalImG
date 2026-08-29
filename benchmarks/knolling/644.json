@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard located on the left side of the scene, there is a stapler positioned above it. A camera is aligned horizontally with the stapler, and a pair of scissors is placed above the camera. Furthermore, the scissors are visually smaller than the keyboard.",
+    "dsl": "(forall ?k (implies (and (Is ?k 'keyboard') (OnLeftSide ?k)) (exists ?s (exists ?c (exists ?sci (and (Is ?s 'stapler') (Is ?c 'camera') (Is ?sci 'scissors') (Above ?s ?k) (AlignedHorizontally ?c ?s) (Above ?sci ?c) (SmallerThan ?sci ?k)))))))",
+    "cnf": "(forall ?k (exists ?s (exists ?c (exists ?sci (and (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?s 'stapler')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Above ?s ?k)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?c 'camera')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedHorizontally ?c ?s)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?sci 'scissors')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Above ?sci ?c)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (SmallerThan ?sci ?k)))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "stapler",
+        "camera",
+        "keyboard"
+    ]
+}

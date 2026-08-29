@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a house. Every hammer is placed on the house, with a wooden bowl situated next to and to the left of each hammer.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (forall ?m (implies (Is ?m 'hammer') (exists ?b (and (Is ?b 'bowl') (HasMaterial ?b 'wooden') (On ?m ?h) (NextTo ?b ?m) (LeftOf ?b ?m))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (forall ?m (exists ?b (and (Is ?h 'house') (or (not (Is ?m 'hammer')) (On ?m ?h)) (or (not (Is ?m 'hammer')) (HasMaterial ?b 'wooden')) (or (not (Is ?m 'hammer')) (NextTo ?b ?m)) (or (not (Is ?m 'hammer')) (Is ?b 'bowl')) (or (not (Is ?m 'hammer')) (LeftOf ?b ?m)))))))",
+    "k": 3,
+    "object_classes": [
+        "house",
+        "bowl",
+        "hammer"
+    ]
+}

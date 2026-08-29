@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. There is a black wardrobe, and a bed is positioned to the left of it. All shoes in the scene are placed inside the wardrobe. Next to the wardrobe, a woman is holding a hammer. There is also a metal basket on the bed which contains an orange. A round cake is located to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?b (and (Is ?w 'wardrobe') (HasColor ?w 'black') (Is ?b 'bed') (LeftOf ?b ?w) (forall ?s (implies (Is ?s 'shoes') (In ?s ?w))) (exists ?p (exists ?h (exists ?bk (exists ?o (exists ?c (and (Is ?p 'woman') (NextTo ?p ?w) (Is ?h 'hammer') (Holding ?p ?h) (Is ?bk 'basket') (HasMaterial ?bk 'metal') (On ?bk ?b) (Is ?o 'orange') (In ?o ?bk) (Is ?c 'cake') (HasShape ?c 'round') (RightOf ?c ?w)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?b (forall ?s (exists ?p (exists ?h (exists ?bk (exists ?o (exists ?c (and (Is ?w 'wardrobe') (HasColor ?w 'black') (LeftOf ?b ?w) (or (not (Is ?s 'shoes')) (In ?s ?w)) (Is ?b 'bed') (On ?bk ?b) (NextTo ?p ?w) (HasMaterial ?bk 'metal') (In ?o ?bk) (RightOf ?c ?w) (Is ?p 'woman') (Holding ?p ?h) (Is ?bk 'basket') (Is ?o 'orange') (HasShape ?c 'round') (Is ?h 'hammer') (Is ?c 'cake')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shoes",
+        "bed",
+        "woman",
+        "cake",
+        "orange",
+        "hammer",
+        "basket",
+        "wardrobe"
+    ]
+}

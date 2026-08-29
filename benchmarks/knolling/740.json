@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A bowl is located on the right side of the scene, and a screwdriver is aligned vertically with the bowl. For every apple in the image, it is aligned horizontally with the bowl, and there is a lighter which is aligned vertically with the apple and is smaller than the apple.",
+    "dsl": "(exists ?bowl (exists ?screwdriver (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (Is ?screwdriver 'screwdriver') (AlignedVertically ?screwdriver ?bowl) (forall ?apple (implies (Is ?apple 'apple') (exists ?lighter (and (Is ?lighter 'lighter') (AlignedHorizontally ?apple ?bowl) (AlignedVertically ?lighter ?apple) (SmallerThan ?lighter ?apple))))))))",
+    "cnf": "(exists ?bowl (exists ?screwdriver (forall ?apple (exists ?lighter (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (AlignedVertically ?screwdriver ?bowl) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?apple ?bowl)) (Is ?screwdriver 'screwdriver') (or (not (Is ?apple 'apple')) (Is ?lighter 'lighter')) (or (not (Is ?apple 'apple')) (AlignedVertically ?lighter ?apple)) (or (not (Is ?apple 'apple')) (SmallerThan ?lighter ?apple)))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "lighter",
+        "screwdriver",
+        "apple"
+    ]
+}

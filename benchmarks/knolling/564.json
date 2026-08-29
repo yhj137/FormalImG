@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a monitor and a keyboard. The monitor is positioned on the right side of the image. The keyboard is located to the left of the monitor, and the monitor is visually larger than the keyboard. Additionally, for every lemon in the image, it is aligned vertically with the keyboard.",
+    "dsl": "(exists ?m (exists ?k (and (Is ?m 'monitor') (Is ?k 'keyboard') (OnRightSide ?m) (LeftOf ?k ?m) (LargerThan ?m ?k) (forall ?l (implies (Is ?l 'lemon') (AlignedVertically ?l ?k))))))",
+    "cnf": "(exists ?m (exists ?k (forall ?l (and (Is ?m 'monitor') (OnRightSide ?m) (LeftOf ?k ?m) (LargerThan ?m ?k) (Is ?k 'keyboard') (or (not (Is ?l 'lemon')) (AlignedVertically ?l ?k))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "lemon",
+        "keyboard"
+    ]
+}

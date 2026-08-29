@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a red pizza, a green bottle, a white cup, and a spoon. The pizza is placed on the right side of the scene. The spoon is smaller than the pizza and is positioned above the green bottle, which in turn is above the white cup. Additionally, for every lemon present in the scene, it is positioned above the spoon.",
+    "dsl": "(exists ?p (exists ?b (exists ?c (exists ?s (and (Is ?p 'pizza') (Has ?p 'red') (OnRightSide ?p) (Is ?b 'bottle') (Has ?b 'green') (Is ?c 'cup') (Has ?c 'white') (Is ?s 'spoon') (SmallerThan ?s ?p) (Above ?s ?b) (Above ?b ?c) (forall ?l (implies (Is ?l 'lemon') (Above ?l ?s))))))))",
+    "cnf": "(exists ?p (exists ?b (exists ?c (exists ?s (forall ?l (and (Is ?p 'pizza') (Has ?p 'red') (OnRightSide ?p) (SmallerThan ?s ?p) (Is ?s 'spoon') (Above ?s ?b) (Has ?b 'green') (Above ?b ?c) (or (not (Is ?l 'lemon')) (Above ?l ?s)) (Is ?b 'bottle') (Has ?c 'white') (Is ?c 'cup')))))))",
+    "k": 5,
+    "object_classes": [
+        "lemon",
+        "pizza",
+        "cup",
+        "bottle",
+        "spoon"
+    ]
+}

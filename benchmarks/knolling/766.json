@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a watch positioned on the left side. Located above the watch is a stapler, and located above the stapler is a pen. Additionally, for every spoon in the image, it is aligned horizontally with the pen.",
+    "dsl": "(exists ?w (exists ?st (exists ?p (and (Is ?w 'watch') (OnLeftSide ?w) (Is ?st 'stapler') (Above ?st ?w) (Is ?p 'pen') (Above ?p ?st) (forall ?sp (implies (Is ?sp 'spoon') (AlignedHorizontally ?sp ?p)))))))",
+    "cnf": "(exists ?w (exists ?st (exists ?p (forall ?sp (and (Is ?w 'watch') (OnLeftSide ?w) (Above ?st ?w) (Is ?st 'stapler') (Above ?p ?st) (Is ?p 'pen') (or (not (Is ?sp 'spoon')) (AlignedHorizontally ?sp ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "watch",
+        "stapler",
+        "pen"
+    ]
+}

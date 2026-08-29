@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a wrench, a stapler, a calculator, and a lemon arranged in a neat row. The wrench is placed on the left side of the image. The stapler is positioned to the right of the wrench, and the calculator is located to the right of the stapler. Finally, the calculator is situated to the left of the lemon.",
+    "dsl": "(exists ?w (exists ?s (exists ?c (exists ?l (and (Is ?w 'wrench') (Is ?s 'stapler') (Is ?c 'calculator') (Is ?l 'lemon') (OnLeftSide ?w) (RightOf ?s ?w) (RightOf ?c ?s) (LeftOf ?c ?l))))))",
+    "cnf": "(exists ?w (exists ?s (exists ?c (exists ?l (and (Is ?w 'wrench') (OnLeftSide ?w) (RightOf ?s ?w) (Is ?s 'stapler') (RightOf ?c ?s) (Is ?c 'calculator') (LeftOf ?c ?l) (Is ?l 'lemon'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "lemon",
+        "calculator",
+        "stapler"
+    ]
+}

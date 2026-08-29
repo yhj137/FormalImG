@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every boat is blue.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'boat') (HasColor ?x 'blue'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'boat')) (HasColor ?x 'blue'))))",
+    "k": 1,
+    "object_classes": [
+        "boat"
+    ]
+}

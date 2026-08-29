@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a brown teddy bear on the left. To the right of the bear is a bowl containing a phone, followed by a red jacket, and an open umbrella.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?b (exists ?p (exists ?j (exists ?u (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (Is ?b 'bowl') (Is ?p 'phone') (In ?p ?b) (RightOf ?b ?t) (Is ?j 'jacket') (HasColor ?j 'red') (RightOf ?j ?b) (Is ?u 'umbrella') (HasState ?u 'open') (RightOf ?u ?j))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?b (exists ?p (exists ?j (exists ?u (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (RightOf ?b ?t) (In ?p ?b) (RightOf ?j ?b) (Is ?b 'bowl') (Is ?p 'phone') (HasColor ?j 'red') (RightOf ?u ?j) (Is ?j 'jacket') (HasState ?u 'open') (Is ?u 'umbrella'))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "umbrella",
+        "teddy bear",
+        "jacket",
+        "bowl"
+    ]
+}

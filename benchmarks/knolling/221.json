@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a yellow pizza and a red apple. The red apple is visually smaller than the yellow pizza.",
+    "dsl": "(exists ?pizza (exists ?apple (and (Is ?pizza 'pizza') (Has ?pizza 'yellow') (Is ?apple 'apple') (Has ?apple 'red') (SmallerThan ?apple ?pizza))))",
+    "cnf": "(exists ?pizza (exists ?apple (and (Is ?pizza 'pizza') (Has ?pizza 'yellow') (SmallerThan ?apple ?pizza) (Has ?apple 'red') (Is ?apple 'apple'))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "apple"
+    ]
+}

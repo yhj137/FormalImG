@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an open umbrella containing every flower.",
+    "dsl": "(and (IsStyle 'photo') (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (forall ?f (implies (Is ?f 'flower') (In ?f ?u))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?u (forall ?f (and (Is ?u 'umbrella') (HasState ?u 'open') (or (not (Is ?f 'flower')) (In ?f ?u))))))",
+    "k": 2,
+    "object_classes": [
+        "umbrella",
+        "flower"
+    ]
+}

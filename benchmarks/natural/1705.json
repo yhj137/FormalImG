@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a scene inside a house features a person on a bed. An open laptop sits on the bed to the person's left, while a round cup containing every flower in the scene is positioned to the right of the laptop. To the right of the bed, a pan holds a peeled banana, with a fork placed to the left of the pan.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?b (exists ?per (exists ?c (and (Is ?h 'house') (Is ?b 'bed') (In ?b ?h) (Is ?per 'person') (On ?per ?b) (Is ?c 'cup') (HasShape ?c 'round') (forall ?fl (implies (Is ?fl 'flower') (In ?fl ?c))) (exists ?l (exists ?p (exists ?ba (exists ?fo (and (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?b) (LeftOf ?l ?per) (RightOf ?c ?l) (Is ?p 'pan') (RightOf ?p ?b) (Is ?ba 'banana') (HasState ?ba 'peeled') (In ?ba ?p) (Is ?fo 'fork') (LeftOf ?fo ?p))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?b (exists ?per (exists ?c (forall ?fl (exists ?l (exists ?p (exists ?ba (exists ?fo (and (Is ?h 'house') (In ?b ?h) (Is ?b 'bed') (On ?per ?b) (On ?l ?b) (Is ?per 'person') (LeftOf ?l ?per) (RightOf ?p ?b) (HasState ?l 'open') (RightOf ?c ?l) (Is ?p 'pan') (In ?ba ?p) (Is ?l 'laptop') (or (not (Is ?fl 'flower')) (In ?fl ?c)) (LeftOf ?fo ?p) (HasState ?ba 'peeled') (HasShape ?c 'round') (Is ?fo 'fork') (Is ?ba 'banana') (Is ?c 'cup'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pan",
+        "fork",
+        "person",
+        "laptop",
+        "banana",
+        "bed",
+        "cup",
+        "house",
+        "flower"
+    ]
+}

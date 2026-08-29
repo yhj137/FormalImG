@@ -1,0 +1,16 @@
+{
+    "prompt": "There is a blue shirt on the bottom side. For every carrot in the image, there exists a cutting board above the shirt and vertically aligned with it, a pizza above the cutting board, a pan to the left of the cutting board, a pair of pliers below the pan, a calculator to the right of the cutting board, and a phone above the calculator and vertically aligned with it, such that the carrot is positioned above the pan.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnBottomSide ?shirt) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?board (exists ?pizza (exists ?pan (exists ?pliers (exists ?calc (exists ?phone (and (Is ?board 'cutting_board') (Is ?pizza 'pizza') (Is ?pan 'pan') (Is ?pliers 'pliers') (Is ?calc 'calculator') (Is ?phone 'phone') (Above ?board ?shirt) (AlignedVertically ?board ?shirt) (Above ?pizza ?board) (LeftOf ?pan ?board) (Above ?carrot ?pan) (Below ?pliers ?pan) (LeftOf ?board ?calc) (Above ?phone ?calc) (AlignedVertically ?phone ?calc))))))))))))",
+    "cnf": "(exists ?shirt (forall ?carrot (exists ?board (exists ?pizza (exists ?pan (exists ?pliers (exists ?calc (exists ?phone (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnBottomSide ?shirt) (or (not (Is ?carrot 'carrot')) (Above ?board ?shirt)) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?board ?shirt)) (or (not (Is ?carrot 'carrot')) (Is ?phone 'phone')) (or (not (Is ?carrot 'carrot')) (Is ?board 'cutting_board')) (or (not (Is ?carrot 'carrot')) (Above ?pizza ?board)) (or (not (Is ?carrot 'carrot')) (Is ?calc 'calculator')) (or (not (Is ?carrot 'carrot')) (Above ?phone ?calc)) (or (not (Is ?carrot 'carrot')) (Is ?pizza 'pizza')) (or (not (Is ?carrot 'carrot')) (LeftOf ?pan ?board)) (or (not (Is ?carrot 'carrot')) (Is ?pliers 'pliers')) (or (not (Is ?carrot 'carrot')) (LeftOf ?board ?calc)) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?phone ?calc)) (or (not (Is ?carrot 'carrot')) (Is ?pan 'pan')) (or (not (Is ?carrot 'carrot')) (Above ?carrot ?pan)) (or (not (Is ?carrot 'carrot')) (Below ?pliers ?pan)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "carrot",
+        "phone",
+        "pizza",
+        "cutting_board",
+        "pan",
+        "calculator",
+        "shirt"
+    ]
+}

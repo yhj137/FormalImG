@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a bus that contains every monitor. To the left of the bus, a teddy bear holds an umbrella. Inside the bus, there is a laptop with a pair of headphones next to it. To the right of the laptop is a round plate with a banana on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bus') (forall ?m (implies (Is ?m 'monitor') (In ?m ?b))) (exists ?t (exists ?u (exists ?l (exists ?h (exists ?p (exists ?ba (and (Is ?t 'teddy bear') (Is ?u 'umbrella') (Is ?l 'laptop') (Is ?h 'headphones') (Is ?p 'plate') (Is ?ba 'banana') (LeftOf ?t ?b) (Holding ?t ?u) (In ?l ?b) (NextTo ?h ?l) (RightOf ?p ?l) (HasShape ?p 'round') (On ?ba ?p)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?m (exists ?t (exists ?u (exists ?l (exists ?h (exists ?p (exists ?ba (and (Is ?b 'bus') (or (not (Is ?m 'monitor')) (In ?m ?b)) (LeftOf ?t ?b) (In ?l ?b) (Is ?t 'teddy bear') (Holding ?t ?u) (Is ?l 'laptop') (NextTo ?h ?l) (Is ?u 'umbrella') (RightOf ?p ?l) (Is ?h 'headphones') (Is ?p 'plate') (HasShape ?p 'round') (On ?ba ?p) (Is ?ba 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "monitor",
+        "headphones",
+        "bus",
+        "laptop",
+        "banana",
+        "teddy bear",
+        "plate"
+    ]
+}

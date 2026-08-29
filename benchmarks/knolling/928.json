@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray pan positioned on the bottom side and a blue book located to the right of the pan. For every pair of red scissors in the image, there is a pair of glasses to its right and a black camera to the right of the glasses, such that they are aligned horizontally. Additionally, the scissors are placed above the pan, and the camera is smaller than the book.",
+    "dsl": "(exists ?pan (exists ?book (and (Is ?pan 'pan') (Has ?pan 'gray') (OnBottomSide ?pan) (Is ?book 'book') (Has ?book 'blue') (RightOf ?book ?pan) (forall ?scissors (implies (and (Is ?scissors 'scissors') (Has ?scissors 'red')) (exists ?glasses (exists ?camera (and (Is ?glasses 'glasses') (Is ?camera 'camera') (Has ?camera 'black') (Above ?scissors ?pan) (RightOf ?glasses ?scissors) (RightOf ?camera ?glasses) (AlignedHorizontally ?scissors ?glasses) (AlignedHorizontally ?glasses ?camera) (SmallerThan ?camera ?book)))))))))",
+    "cnf": "(exists ?pan (exists ?book (forall ?scissors (exists ?glasses (exists ?camera (and (Is ?pan 'pan') (Has ?pan 'gray') (OnBottomSide ?pan) (RightOf ?book ?pan) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (Above ?scissors ?pan)) (Has ?book 'blue') (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (SmallerThan ?camera ?book)) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (Has ?camera 'black')) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (RightOf ?glasses ?scissors)) (Is ?book 'book') (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (AlignedHorizontally ?glasses ?camera)) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (Is ?camera 'camera')) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (RightOf ?camera ?glasses)) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (Is ?glasses 'glasses')) (or (not (Is ?scissors 'scissors')) (not (Has ?scissors 'red')) (AlignedHorizontally ?scissors ?glasses))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "glasses",
+        "pan",
+        "camera",
+        "scissors"
+    ]
+}

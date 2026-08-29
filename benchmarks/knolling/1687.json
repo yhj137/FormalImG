@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of glasses on the top side, with a bottle positioned to the left of the glasses. A hat, which is smaller than the bottle, is located on the left side. For every shirt in the image, it is aligned horizontally with the hat. Positioned relative to the shirt, there is a spoon to its left, a calculator to the left of the spoon, and a watch that is smaller than the calculator. Furthermore, a mouse is located on the right side, and a carrot is positioned to the left of the mouse and aligned horizontally with the shirt.",
+    "dsl": "(exists ?glasses (exists ?bottle (exists ?hat (and (Is ?glasses 'glasses') (OnTopSide ?glasses) (Is ?bottle 'bottle') (LeftOf ?bottle ?glasses) (Is ?hat 'hat') (OnLeftSide ?hat) (SmallerThan ?hat ?bottle) (forall ?shirt (implies (Is ?shirt 'shirt') (exists ?spoon (exists ?calculator (exists ?watch (exists ?mouse (exists ?carrot (and (Is ?spoon 'spoon') (Is ?calculator 'calculator') (Is ?watch 'watch') (Is ?mouse 'mouse') (Is ?carrot 'carrot') (AlignedHorizontally ?shirt ?hat) (LeftOf ?spoon ?shirt) (LeftOf ?calculator ?spoon) (SmallerThan ?watch ?calculator) (OnRightSide ?mouse) (LeftOf ?carrot ?mouse) (AlignedHorizontally ?carrot ?shirt)))))))))))))",
+    "cnf": "(exists ?glasses (exists ?bottle (exists ?hat (forall ?shirt (exists ?spoon (exists ?calculator (exists ?watch (exists ?mouse (exists ?carrot (and (Is ?glasses 'glasses') (OnTopSide ?glasses) (LeftOf ?bottle ?glasses) (Is ?bottle 'bottle') (SmallerThan ?hat ?bottle) (OnLeftSide ?hat) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?shirt ?hat)) (Is ?hat 'hat') (or (not (Is ?shirt 'shirt')) (Is ?carrot 'carrot')) (or (not (Is ?shirt 'shirt')) (LeftOf ?spoon ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?mouse 'mouse')) (or (not (Is ?shirt 'shirt')) (LeftOf ?carrot ?mouse)) (or (not (Is ?shirt 'shirt')) (Is ?spoon 'spoon')) (or (not (Is ?shirt 'shirt')) (LeftOf ?calculator ?spoon)) (or (not (Is ?shirt 'shirt')) (Is ?watch 'watch')) (or (not (Is ?shirt 'shirt')) (OnRightSide ?mouse)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?carrot ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?calculator 'calculator')) (or (not (Is ?shirt 'shirt')) (SmallerThan ?watch ?calculator))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "watch",
+        "hat",
+        "calculator",
+        "mouse",
+        "bottle",
+        "shirt",
+        "spoon"
+    ]
+}

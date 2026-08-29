@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a neat arrangement where every pan is blue.",
+    "dsl": "(forall ?x (implies (Is ?x 'pan') (Has ?x 'blue')))",
+    "cnf": "(forall ?x (or (not (Is ?x 'pan')) (Has ?x 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

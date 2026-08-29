@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A black keyboard is positioned on the bottom side of the scene. To the left of the keyboard lies a white game controller, and to the left of that is a gray calculator. A pair of red scissors is arranged above the calculator. A black remote is placed above the game controller, and it is visually smaller than the keyboard. Above the keyboard sits a pair of blue headphones. A white shirt is located above the headphones, and a brown hat is positioned to the left of the shirt, appearing on the left side of the image.",
+    "dsl": "(exists ?keyboard (exists ?game_controller (exists ?calculator (exists ?scissors (exists ?remote (exists ?headphones (exists ?shirt (exists ?hat (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (Is ?calculator 'calculator') (Has ?calculator 'gray') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?remote 'remote') (Has ?remote 'black') (Is ?headphones 'headphones') (Has ?headphones 'blue') (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?hat 'hat') (Has ?hat 'brown') (OnBottomSide ?keyboard) (LeftOf ?game_controller ?keyboard) (LeftOf ?calculator ?game_controller) (Above ?scissors ?calculator) (Above ?remote ?game_controller) (SmallerThan ?remote ?keyboard) (Above ?headphones ?keyboard) (Above ?shirt ?headphones) (LeftOf ?hat ?shirt) (OnLeftSide ?hat))))))))))",
+    "cnf": "(exists ?keyboard (exists ?game_controller (exists ?calculator (exists ?scissors (exists ?remote (exists ?headphones (exists ?shirt (exists ?hat (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (OnBottomSide ?keyboard) (LeftOf ?game_controller ?keyboard) (SmallerThan ?remote ?keyboard) (Has ?game_controller 'white') (LeftOf ?calculator ?game_controller) (Above ?headphones ?keyboard) (Above ?remote ?game_controller) (Is ?game_controller 'game_controller') (Has ?calculator 'gray') (Above ?scissors ?calculator) (Has ?headphones 'blue') (Above ?shirt ?headphones) (Has ?remote 'black') (Is ?calculator 'calculator') (Has ?scissors 'red') (Is ?headphones 'headphones') (Has ?shirt 'white') (LeftOf ?hat ?shirt) (Is ?remote 'remote') (Is ?scissors 'scissors') (Is ?shirt 'shirt') (Has ?hat 'brown') (OnLeftSide ?hat) (Is ?hat 'hat'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "game_controller",
+        "hat",
+        "calculator",
+        "scissors",
+        "headphones",
+        "shirt"
+    ]
+}

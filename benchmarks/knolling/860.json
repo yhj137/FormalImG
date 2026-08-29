@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill positioned on the right side of the scene, there is a wrench located below it, and a glove located below the wrench. To the left of the drill is a sandwich, and to the left of the sandwich is an apple. The sandwich is visually larger than the apple.",
+    "dsl": "(and (forall ?drill (implies (and (Is ?drill 'drill') (OnRightSide ?drill)) (exists ?wrench (exists ?glove (exists ?sandwich (exists ?apple (and (Is ?wrench 'wrench') (Is ?glove 'glove') (Is ?sandwich 'sandwich') (Is ?apple 'apple') (Below ?wrench ?drill) (Below ?glove ?wrench) (LeftOf ?sandwich ?drill) (LeftOf ?apple ?sandwich) (LargerThan ?sandwich ?apple)))))))))",
+    "cnf": "(forall ?drill (exists ?wrench (exists ?glove (exists ?sandwich (exists ?apple (and (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Is ?wrench 'wrench')) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Is ?glove 'glove')) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Below ?wrench ?drill)) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Is ?sandwich 'sandwich')) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Below ?glove ?wrench)) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (Is ?apple 'apple')) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (LeftOf ?sandwich ?drill)) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (LeftOf ?apple ?sandwich)) (or (not (Is ?drill 'drill')) (not (OnRightSide ?drill)) (LargerThan ?sandwich ?apple))))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "wrench",
+        "drill",
+        "sandwich",
+        "glove"
+    ]
+}

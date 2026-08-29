@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a yellow drill, a blue tie, and black glasses. The blue tie is positioned to the right of the yellow drill, while the black glasses are located directly below the tie. Additionally, the drill is placed to the left of the glasses.",
+    "dsl": "(exists ?drill (exists ?tie (exists ?glasses (and (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?glasses 'glasses') (Has ?glasses 'black') (RightOf ?tie ?drill) (Below ?glasses ?tie) (LeftOf ?drill ?glasses)))))",
+    "cnf": "(exists ?drill (exists ?tie (exists ?glasses (and (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?tie ?drill) (LeftOf ?drill ?glasses) (Has ?tie 'blue') (Below ?glasses ?tie) (Is ?tie 'tie') (Has ?glasses 'black') (Is ?glasses 'glasses')))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "tie",
+        "glasses"
+    ]
+}

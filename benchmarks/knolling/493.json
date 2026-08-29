@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board present, there is a lemon and a mouse associated with it. The lemon is found on the left side of the image, located to the left of the cutting board and aligned horizontally with it. The mouse is positioned to the left of the cutting board and aligned vertically with the lemon.",
+    "dsl": "(forall ?board (implies (Is ?board 'cutting_board') (exists ?lemon (exists ?mouse (and (Is ?lemon 'lemon') (Is ?mouse 'mouse') (OnLeftSide ?lemon) (LeftOf ?lemon ?board) (AlignedHorizontally ?lemon ?board) (LeftOf ?mouse ?board) (AlignedVertically ?mouse ?lemon))))))",
+    "cnf": "(forall ?board (exists ?lemon (exists ?mouse (and (or (not (Is ?board 'cutting_board')) (Is ?lemon 'lemon')) (or (not (Is ?board 'cutting_board')) (Is ?mouse 'mouse')) (or (not (Is ?board 'cutting_board')) (OnLeftSide ?lemon)) (or (not (Is ?board 'cutting_board')) (LeftOf ?mouse ?board)) (or (not (Is ?board 'cutting_board')) (LeftOf ?lemon ?board)) (or (not (Is ?board 'cutting_board')) (AlignedHorizontally ?lemon ?board)) (or (not (Is ?board 'cutting_board')) (AlignedVertically ?mouse ?lemon))))))",
+    "k": 3,
+    "object_classes": [
+        "cutting_board",
+        "lemon",
+        "mouse"
+    ]
+}

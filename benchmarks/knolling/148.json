@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every bottle in the arrangement is positioned on the left side of the scene.",
+    "dsl": "(and (forall ?b (implies (Is ?b 'bottle') (OnLeftSide ?b))))",
+    "cnf": "(forall ?b (or (not (Is ?b 'bottle')) (OnLeftSide ?b)))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

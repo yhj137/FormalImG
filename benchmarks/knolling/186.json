@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. In this arrangement, strictly every spoon is located on the top side of the image.",
+    "dsl": "(and (forall ?spoon (implies (Is ?spoon 'spoon') (OnTopSide ?spoon))))",
+    "cnf": "(forall ?spoon (or (not (Is ?spoon 'spoon')) (OnTopSide ?spoon)))",
+    "k": 1,
+    "object_classes": [
+        "spoon"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a monitor on the top left side and a laptop located to the right of the monitor. A pair of jeans is positioned below the monitor, while a tie is placed to the right of the jeans. On the bottom side of the image, there is a stapler located below the jeans, with a bottle situated to the left of the stapler. Additionally, for any pen found to the right of the tie, there is a pair of pliers located above the pen, and the pliers are visually smaller than the stapler.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?tie (exists ?stapler (exists ?bottle (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (Is ?laptop 'laptop') (RightOf ?laptop ?monitor) (Is ?jeans 'jeans') (Below ?jeans ?monitor) (Is ?tie 'tie') (RightOf ?tie ?jeans) (Is ?stapler 'stapler') (OnBottomSide ?stapler) (Below ?stapler ?jeans) (Is ?bottle 'bottle') (LeftOf ?bottle ?stapler) (forall ?pen (implies (and (Is ?pen 'pen') (RightOf ?pen ?tie)) (exists ?pliers (and (Is ?pliers 'pliers') (Above ?pliers ?pen) (SmallerThan ?pliers ?stapler))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?tie (exists ?stapler (exists ?bottle (forall ?pen (exists ?pliers (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (RightOf ?laptop ?monitor) (Below ?jeans ?monitor) (Is ?laptop 'laptop') (Is ?jeans 'jeans') (RightOf ?tie ?jeans) (Below ?stapler ?jeans) (Is ?tie 'tie') (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?tie)) (Is ?pliers 'pliers')) (OnBottomSide ?stapler) (LeftOf ?bottle ?stapler) (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?tie)) (Above ?pliers ?pen)) (Is ?stapler 'stapler') (or (not (Is ?pen 'pen')) (not (RightOf ?pen ?tie)) (SmallerThan ?pliers ?stapler)) (Is ?bottle 'bottle'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "tie",
+        "pen",
+        "jeans",
+        "monitor",
+        "stapler",
+        "bottle",
+        "laptop"
+    ]
+}

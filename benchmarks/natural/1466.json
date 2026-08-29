@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting featuring a person holding a plastic umbrella and a backpack containing a keyboard. All birds in the scene are located to the left of the person. A child stands next to the person, holding a cake with a banana on top.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'person') (forall ?bi (implies (Is ?bi 'bird') (LeftOf ?bi ?p))) (exists ?u (exists ?bp (exists ?k (exists ?ch (exists ?ca (exists ?ba (and (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (Is ?bp 'backpack') (Is ?k 'keyboard') (Is ?ch 'child') (Is ?ca 'cake') (Is ?ba 'banana') (Holding ?p ?u) (Holding ?p ?bp) (In ?k ?bp) (NextTo ?ch ?p) (Holding ?ch ?ca) (On ?ba ?ca)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (forall ?bi (exists ?u (exists ?bp (exists ?k (exists ?ch (exists ?ca (exists ?ba (and (Is ?p 'person') (or (not (Is ?bi 'bird')) (LeftOf ?bi ?p)) (Holding ?p ?u) (Holding ?p ?bp) (HasMaterial ?u 'plastic') (NextTo ?ch ?p) (Is ?bp 'backpack') (In ?k ?bp) (Is ?u 'umbrella') (Is ?ch 'child') (Holding ?ch ?ca) (Is ?k 'keyboard') (Is ?ca 'cake') (On ?ba ?ca) (Is ?ba 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "child",
+        "person",
+        "backpack",
+        "cake",
+        "bird",
+        "banana",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized with a black monitor, a blue shirt, and a red pizza located on the top side of the image. The monitor is positioned to the left of the shirt, and the shirt is to the left of the pizza, with all three objects aligned horizontally. For every remote in the image, there exists a green lighter, a yellow lemon, and white headphones arranged in a row with it. Specifically, the shirt is placed above the remote. The remote is to the left of the lighter, the lighter is to the left of the lemon, and the lemon is to the left of the headphones. These four items are also aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?shirt (exists ?pizza (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (Is ?pizza 'pizza') (Has ?pizza 'red') (OnTopSide ?pizza) (LeftOf ?monitor ?shirt) (LeftOf ?shirt ?pizza) (AlignedHorizontally ?monitor ?shirt) (AlignedHorizontally ?shirt ?pizza) (forall ?remote (implies (Is ?remote 'remote') (exists ?lighter (exists ?lemon (exists ?headphones (and (Is ?lighter 'lighter') (Has ?lighter 'green') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?headphones 'headphones') (Has ?headphones 'white') (Above ?shirt ?remote) (LeftOf ?remote ?lighter) (LeftOf ?lighter ?lemon) (LeftOf ?lemon ?headphones) (AlignedHorizontally ?remote ?lighter) (AlignedHorizontally ?lighter ?lemon) (AlignedHorizontally ?lemon ?headphones)))))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (exists ?pizza (forall ?remote (exists ?lighter (exists ?lemon (exists ?headphones (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (LeftOf ?monitor ?shirt) (AlignedHorizontally ?monitor ?shirt) (OnTopSide ?shirt) (LeftOf ?shirt ?pizza) (AlignedHorizontally ?shirt ?pizza) (Has ?shirt 'blue') (OnTopSide ?pizza) (or (not (Is ?remote 'remote')) (Above ?shirt ?remote)) (Is ?shirt 'shirt') (Has ?pizza 'red') (or (not (Is ?remote 'remote')) (Has ?headphones 'white')) (or (not (Is ?remote 'remote')) (LeftOf ?remote ?lighter)) (Is ?pizza 'pizza') (or (not (Is ?remote 'remote')) (Is ?headphones 'headphones')) (or (not (Is ?remote 'remote')) (LeftOf ?lemon ?headphones)) (or (not (Is ?remote 'remote')) (Has ?lighter 'green')) (or (not (Is ?remote 'remote')) (LeftOf ?lighter ?lemon)) (or (not (Is ?remote 'remote')) (Has ?lemon 'yellow')) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?lighter)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?lighter ?lemon)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?lemon ?headphones)) (or (not (Is ?remote 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?remote 'remote')) (Is ?lemon 'lemon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "lemon",
+        "pizza",
+        "lighter",
+        "monitor",
+        "headphones",
+        "shirt"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image layout. A suitcase is positioned on the left side of the image. Directly below the suitcase is a pan, and below the pan is a drill; these three items are aligned vertically, and the suitcase is larger than the pan. A book is located on the bottom side of the image and is aligned horizontally with the drill. A bottle is positioned above the book and aligns horizontally with the pan. A bowl is aligned horizontally with the bottle, with the bottle being larger than the bowl. Furthermore, for every screwdriver in the scene, there is a sock positioned below it, and the screwdriver aligns vertically with the bottle.",
+    "dsl": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?book (exists ?bottle (exists ?bowl (and (Is ?suitcase 'suitcase') (Is ?pan 'pan') (Is ?drill 'drill') (Is ?book 'book') (Is ?bottle 'bottle') (Is ?bowl 'bowl') (OnLeftSide ?suitcase) (Above ?suitcase ?pan) (Above ?pan ?drill) (AlignedVertically ?suitcase ?pan) (AlignedVertically ?pan ?drill) (LargerThan ?suitcase ?pan) (OnBottomSide ?book) (AlignedHorizontally ?drill ?book) (Above ?bottle ?book) (AlignedHorizontally ?pan ?bottle) (AlignedHorizontally ?bottle ?bowl) (LargerThan ?bottle ?bowl) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?sock (and (Is ?sock 'sock') (Above ?screwdriver ?sock) (AlignedVertically ?screwdriver ?bottle))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?book (exists ?bottle (exists ?bowl (forall ?screwdriver (exists ?sock (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?suitcase ?pan) (AlignedVertically ?suitcase ?pan) (Is ?pan 'pan') (Above ?pan ?drill) (LargerThan ?suitcase ?pan) (AlignedVertically ?pan ?drill) (Is ?drill 'drill') (AlignedHorizontally ?pan ?bottle) (AlignedHorizontally ?drill ?book) (Above ?bottle ?book) (AlignedHorizontally ?bottle ?bowl) (OnBottomSide ?book) (Is ?bottle 'bottle') (LargerThan ?bottle ?bowl) (Is ?bowl 'bowl') (Is ?book 'book') (or (not (Is ?screwdriver 'screwdriver')) (AlignedVertically ?screwdriver ?bottle)) (or (not (Is ?screwdriver 'screwdriver')) (Above ?screwdriver ?sock)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?sock 'sock')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "sock",
+        "screwdriver",
+        "drill",
+        "pan",
+        "bottle",
+        "bowl",
+        "suitcase"
+    ]
+}

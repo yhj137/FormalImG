@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a pink teddy bear. Every sandwich is located to the right of the teddy bear. A clock is next to the teddy bear, and a mirror is to the left of the clock. A plastic bowl is placed next to the mirror.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (and (Is ?t 'teddy bear') (HasColor ?t 'pink') (forall ?s (implies (Is ?s 'sandwich') (RightOf ?s ?t))) (exists ?c (exists ?m (exists ?b (and (Is ?c 'clock') (NextTo ?c ?t) (Is ?m 'mirror') (LeftOf ?m ?c) (Is ?b 'bowl') (HasMaterial ?b 'plastic') (NextTo ?b ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (forall ?s (exists ?c (exists ?m (exists ?b (and (Is ?t 'teddy bear') (HasColor ?t 'pink') (or (not (Is ?s 'sandwich')) (RightOf ?s ?t)) (NextTo ?c ?t) (Is ?c 'clock') (LeftOf ?m ?c) (Is ?m 'mirror') (NextTo ?b ?m) (HasMaterial ?b 'plastic') (Is ?b 'bowl'))))))))",
+    "k": 5,
+    "object_classes": [
+        "teddy bear",
+        "mirror",
+        "clock",
+        "sandwich",
+        "bowl"
+    ]
+}

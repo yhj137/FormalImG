@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring an open jacket with an empty bottle inside. All the fruit in the scene are positioned to the left of the jacket.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?j (and (Is ?j 'jacket') (HasState ?j 'open') (forall ?f (implies (Is ?f 'fruit') (LeftOf ?f ?j))) (exists ?b (and (Is ?b 'bottle') (HasState ?b 'empty') (In ?b ?j))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?j (forall ?f (exists ?b (and (Is ?j 'jacket') (HasState ?j 'open') (or (not (Is ?f 'fruit')) (LeftOf ?f ?j)) (In ?b ?j) (HasState ?b 'empty') (Is ?b 'bottle'))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "bottle",
+        "fruit"
+    ]
+}

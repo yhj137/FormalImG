@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every knife is located to the right of a spoon. This spoon is placed next to a rectangular refrigerator, with an oval mirror to its left and a bus to its right. A lion stands next to the bus, with a cat beside it.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?k (implies (Is ?k 'knife') (exists ?s (exists ?r (exists ?m (exists ?b (exists ?l (exists ?c (and (Is ?s 'spoon') (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?b 'bus') (Is ?l 'lion') (Is ?c 'cat') (RightOf ?k ?s) (NextTo ?s ?r) (LeftOf ?m ?r) (RightOf ?b ?r) (NextTo ?l ?b) (NextTo ?c ?l)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?k (exists ?s (exists ?r (exists ?m (exists ?b (exists ?l (exists ?c (and (or (not (Is ?k 'knife')) (Is ?s 'spoon')) (or (not (Is ?k 'knife')) (Is ?r 'refrigerator')) (or (not (Is ?k 'knife')) (RightOf ?k ?s)) (or (not (Is ?k 'knife')) (HasShape ?r 'rectangular')) (or (not (Is ?k 'knife')) (Is ?c 'cat')) (or (not (Is ?k 'knife')) (NextTo ?s ?r)) (or (not (Is ?k 'knife')) (Is ?m 'mirror')) (or (not (Is ?k 'knife')) (Is ?l 'lion')) (or (not (Is ?k 'knife')) (NextTo ?c ?l)) (or (not (Is ?k 'knife')) (LeftOf ?m ?r)) (or (not (Is ?k 'knife')) (HasShape ?m 'oval')) (or (not (Is ?k 'knife')) (Is ?b 'bus')) (or (not (Is ?k 'knife')) (NextTo ?l ?b)) (or (not (Is ?k 'knife')) (RightOf ?b ?r)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lion",
+        "spoon",
+        "bus",
+        "mirror",
+        "refrigerator",
+        "knife",
+        "cat"
+    ]
+}

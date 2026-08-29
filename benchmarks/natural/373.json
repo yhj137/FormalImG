@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a white house. All horses in the image are brown and are inside the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (and (Is ?h 'house') (HasColor ?h 'white') (forall ?x (implies (Is ?x 'horse') (and (HasColor ?x 'brown') (In ?x ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (forall ?x (and (Is ?h 'house') (HasColor ?h 'white') (or (not (Is ?x 'horse')) (In ?x ?h)) (or (not (Is ?x 'horse')) (HasColor ?x 'brown'))))))",
+    "k": 2,
+    "object_classes": [
+        "house",
+        "horse"
+    ]
+}

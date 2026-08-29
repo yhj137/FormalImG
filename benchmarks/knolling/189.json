@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every apple in the image is red.",
+    "dsl": "(forall ?x (implies (Is ?x 'apple') (Has ?x 'red')))",
+    "cnf": "(forall ?x (or (not (Is ?x 'apple')) (Has ?x 'red')))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

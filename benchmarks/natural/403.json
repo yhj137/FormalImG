@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a boat positioned to the left of a dirty sofa, with a toy car next to the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?s (exists ?c (and (Is ?b 'boat') (Is ?s 'sofa') (Is ?c 'toy car') (LeftOf ?b ?s) (HasState ?s 'dirty') (NextTo ?c ?s))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?s (exists ?c (and (Is ?b 'boat') (LeftOf ?b ?s) (Is ?s 'sofa') (HasState ?s 'dirty') (NextTo ?c ?s) (Is ?c 'toy car'))))))",
+    "k": 3,
+    "object_classes": [
+        "toy car",
+        "sofa",
+        "boat"
+    ]
+}

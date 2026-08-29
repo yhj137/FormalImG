@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement. A laptop is positioned on the top side of the image and is visually larger than a remote. Below the laptop, items are organized into a grid structure. A remote, a ruler, and pliers are in the first row below the laptop and are aligned horizontally. Below them, keys, a pen, and a screwdriver form a second row, aligned horizontally. In the third row, scissors and a spoon are aligned horizontally. Vertical alignment is strictly maintained: the remote is above the keys, which are above the scissors; the ruler is above the pen, which is above the spoon; and the pliers are above the screwdriver. Furthermore, for any drill in the scene, it is located below the screwdriver, aligned vertically with it, and aligned horizontally with the scissors and spoon.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (exists ?remote (and (Is ?remote 'remote') (exists ?ruler (and (Is ?ruler 'ruler') (exists ?pliers (and (Is ?pliers 'pliers') (exists ?keys (and (Is ?keys 'keys') (exists ?pen (and (Is ?pen 'pen') (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (exists ?scissors (and (Is ?scissors 'scissors') (exists ?spoon (and (Is ?spoon 'spoon') (OnTopSide ?laptop) (LargerThan ?laptop ?remote) (Below ?remote ?laptop) (Below ?ruler ?laptop) (Below ?pliers ?laptop) (AlignedHorizontally ?remote ?ruler) (AlignedHorizontally ?ruler ?pliers) (Below ?keys ?remote) (Below ?pen ?ruler) (Below ?screwdriver ?pliers) (AlignedVertically ?remote ?keys) (AlignedVertically ?ruler ?pen) (AlignedVertically ?pliers ?screwdriver) (AlignedHorizontally ?keys ?pen) (AlignedHorizontally ?pen ?screwdriver) (Below ?scissors ?keys) (Below ?spoon ?pen) (AlignedVertically ?keys ?scissors) (AlignedVertically ?pen ?spoon) (AlignedHorizontally ?scissors ?spoon) (forall ?drill (implies (Is ?drill 'drill') (and (Below ?drill ?screwdriver) (AlignedVertically ?drill ?screwdriver) (AlignedHorizontally ?drill ?spoon))))))))))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?remote (exists ?ruler (exists ?pliers (exists ?keys (exists ?pen (exists ?screwdriver (exists ?scissors (exists ?spoon (forall ?drill (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (LargerThan ?laptop ?remote) (Below ?remote ?laptop) (Is ?remote 'remote') (Below ?ruler ?laptop) (AlignedHorizontally ?remote ?ruler) (Below ?pliers ?laptop) (Is ?ruler 'ruler') (Below ?keys ?remote) (AlignedHorizontally ?ruler ?pliers) (Is ?pliers 'pliers') (AlignedVertically ?remote ?keys) (Is ?keys 'keys') (Below ?pen ?ruler) (Below ?screwdriver ?pliers) (AlignedHorizontally ?keys ?pen) (AlignedVertically ?ruler ?pen) (Is ?pen 'pen') (AlignedVertically ?pliers ?screwdriver) (Is ?screwdriver 'screwdriver') (Below ?scissors ?keys) (AlignedHorizontally ?pen ?screwdriver) (AlignedVertically ?keys ?scissors) (Is ?scissors 'scissors') (Below ?spoon ?pen) (or (not (Is ?drill 'drill')) (Below ?drill ?screwdriver)) (AlignedHorizontally ?scissors ?spoon) (AlignedVertically ?pen ?spoon) (Is ?spoon 'spoon') (or (not (Is ?drill 'drill')) (AlignedVertically ?drill ?screwdriver)) (or (not (Is ?drill 'drill')) (AlignedHorizontally ?drill ?spoon)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "screwdriver",
+        "laptop",
+        "remote",
+        "ruler",
+        "pliers",
+        "scissors",
+        "drill",
+        "spoon",
+        "pen",
+        "keys"
+    ]
+}

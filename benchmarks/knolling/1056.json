@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the scene, a specific horizontal chain of items is arranged around it: a pair of glasses is located to the left of the shoe, and a carrot is located to the left of the glasses, with the carrot being positioned on the bottom side of the image. To the right of the shoe is a stapler, to the right of the stapler are pliers, and to the right of the pliers is an apple, which is positioned on the right side of the image.",
+    "dsl": "(forall ?shoe (implies (Is ?shoe 'shoe') (exists ?glasses (exists ?carrot (exists ?stapler (exists ?pliers (exists ?apple (and (Is ?glasses 'glasses') (Is ?carrot 'carrot') (Is ?stapler 'stapler') (Is ?pliers 'pliers') (Is ?apple 'apple') (OnBottomSide ?carrot) (LeftOf ?glasses ?shoe) (LeftOf ?carrot ?glasses) (RightOf ?stapler ?shoe) (RightOf ?pliers ?stapler) (RightOf ?apple ?pliers) (OnRightSide ?apple)))))))))",
+    "cnf": "(forall ?shoe (exists ?glasses (exists ?carrot (exists ?stapler (exists ?pliers (exists ?apple (and (or (not (Is ?shoe 'shoe')) (Is ?glasses 'glasses')) (or (not (Is ?shoe 'shoe')) (Is ?carrot 'carrot')) (or (not (Is ?shoe 'shoe')) (LeftOf ?glasses ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?stapler 'stapler')) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?carrot)) (or (not (Is ?shoe 'shoe')) (LeftOf ?carrot ?glasses)) (or (not (Is ?shoe 'shoe')) (Is ?pliers 'pliers')) (or (not (Is ?shoe 'shoe')) (RightOf ?stapler ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?apple 'apple')) (or (not (Is ?shoe 'shoe')) (RightOf ?pliers ?stapler)) (or (not (Is ?shoe 'shoe')) (RightOf ?apple ?pliers)) (or (not (Is ?shoe 'shoe')) (OnRightSide ?apple)))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "pliers",
+        "stapler",
+        "apple",
+        "carrot",
+        "shoe"
+    ]
+}

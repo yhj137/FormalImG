@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition begins with a pair of jeans on the left side. To the right of the jeans is a laptop, and to the right of the laptop is a hammer. Pliers are positioned to the right of the hammer, followed by keys to the right of the pliers. The keys are smaller than the laptop. Additionally, for every carrot in the scene, it is located to the right of the keys and is smaller than the pliers, and there is a donut positioned to the right of the carrot on the right side of the image.",
+    "dsl": "(exists ?jeans (exists ?laptop (exists ?hammer (exists ?pliers (exists ?keys (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?laptop 'laptop') (RightOf ?laptop ?jeans) (Is ?hammer 'hammer') (RightOf ?hammer ?laptop) (Is ?pliers 'pliers') (RightOf ?pliers ?hammer) (Is ?keys 'keys') (RightOf ?keys ?pliers) (SmallerThan ?keys ?laptop) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?donut (and (Is ?donut 'donut') (RightOf ?carrot ?keys) (SmallerThan ?carrot ?pliers) (RightOf ?donut ?carrot) (OnRightSide ?donut)))))))))))",
+    "cnf": "(exists ?jeans (exists ?laptop (exists ?hammer (exists ?pliers (exists ?keys (forall ?carrot (exists ?donut (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (RightOf ?laptop ?jeans) (Is ?laptop 'laptop') (RightOf ?hammer ?laptop) (SmallerThan ?keys ?laptop) (Is ?hammer 'hammer') (RightOf ?pliers ?hammer) (RightOf ?keys ?pliers) (or (not (Is ?carrot 'carrot')) (RightOf ?carrot ?keys)) (Is ?pliers 'pliers') (or (not (Is ?carrot 'carrot')) (SmallerThan ?carrot ?pliers)) (Is ?keys 'keys') (or (not (Is ?carrot 'carrot')) (Is ?donut 'donut')) (or (not (Is ?carrot 'carrot')) (RightOf ?donut ?carrot)) (or (not (Is ?carrot 'carrot')) (OnRightSide ?donut))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "pliers",
+        "carrot",
+        "hammer",
+        "jeans",
+        "donut"
+    ]
+}

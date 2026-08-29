@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a table with an elephant standing next to it, holding a basket. To the left of the table, every book has a blue phone resting on top.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?e (exists ?ba (and (Is ?t 'table') (Is ?e 'elephant') (NextTo ?e ?t) (Is ?ba 'basket') (Holding ?e ?ba) (forall ?bk (implies (Is ?bk 'book') (exists ?p (and (Is ?p 'phone') (HasColor ?p 'blue') (LeftOf ?bk ?t) (On ?p ?bk))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?e (exists ?ba (forall ?bk (exists ?p (and (Is ?t 'table') (NextTo ?e ?t) (or (not (Is ?bk 'book')) (LeftOf ?bk ?t)) (Is ?e 'elephant') (Holding ?e ?ba) (or (not (Is ?bk 'book')) (HasColor ?p 'blue')) (or (not (Is ?bk 'book')) (On ?p ?bk)) (Is ?ba 'basket') (or (not (Is ?bk 'book')) (Is ?p 'phone')))))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "book",
+        "table",
+        "basket"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a brown dog, with a hammer to its left and black headphones next to it on the right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?h (exists ?hp (and (Is ?d 'dog') (HasColor ?d 'brown') (Is ?h 'hammer') (Is ?hp 'headphones') (HasColor ?hp 'black') (LeftOf ?h ?d) (RightOf ?hp ?d) (NextTo ?hp ?d))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?h (exists ?hp (and (Is ?d 'dog') (HasColor ?d 'brown') (LeftOf ?h ?d) (RightOf ?hp ?d) (Is ?h 'hammer') (NextTo ?hp ?d) (HasColor ?hp 'black') (Is ?hp 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "dog",
+        "hammer"
+    ]
+}

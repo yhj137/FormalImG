@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bus contains an open wardrobe with a shirt inside. Every lamp in the scene is positioned next to the wardrobe. A bicycle is located to the left of the bus, and a horse stands to the right. A child sits on the horse, holding an open umbrella and wearing a round hat.",
+    "dsl": "(exists ?b (exists ?w (exists ?s (and (Is ?b 'bus') (Is ?w 'wardrobe') (Is ?s 'shirt') (In ?w ?b) (HasState ?w 'open') (In ?s ?w) (forall ?l (implies (Is ?l 'lamp') (NextTo ?l ?w))) (exists ?bi (exists ?h (exists ?c (exists ?u (exists ?hat (and (Is ?bi 'bicycle') (Is ?h 'horse') (Is ?c 'child') (Is ?u 'umbrella') (Is ?hat 'hat') (LeftOf ?bi ?b) (RightOf ?h ?b) (On ?c ?h) (Holding ?c ?u) (HasState ?u 'open') (On ?hat ?c) (HasShape ?hat 'round')))))))))))",
+    "cnf": "(exists ?b (exists ?w (exists ?s (forall ?l (exists ?bi (exists ?h (exists ?c (exists ?u (exists ?hat (and (Is ?b 'bus') (In ?w ?b) (LeftOf ?bi ?b) (Is ?w 'wardrobe') (HasState ?w 'open') (RightOf ?h ?b) (Is ?bi 'bicycle') (In ?s ?w) (Is ?h 'horse') (On ?c ?h) (or (not (Is ?l 'lamp')) (NextTo ?l ?w)) (Is ?s 'shirt') (Is ?c 'child') (Holding ?c ?u) (On ?hat ?c) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?hat 'hat') (HasShape ?hat 'round')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "bus",
+        "lamp",
+        "hat",
+        "wardrobe",
+        "horse",
+        "shirt",
+        "bicycle",
+        "child"
+    ]
+}

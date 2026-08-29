@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side. To the right of the suitcase is a shirt, and these two items are aligned horizontally. Below the shirt is a pair of jeans, and directly below the jeans is a book. To the left of the book, there is a pair of glasses that is smaller than the book. Furthermore, for every cup located on the bottom side of the image, there is a bottle to its left, and each cup is positioned below the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?jeans (exists ?book (exists ?glasses (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?shirt 'shirt') (Is ?jeans 'jeans') (Is ?book 'book') (Is ?glasses 'glasses') (LeftOf ?suitcase ?shirt) (AlignedHorizontally ?suitcase ?shirt) (Below ?jeans ?shirt) (Below ?book ?jeans) (LeftOf ?glasses ?book) (SmallerThan ?glasses ?book) (forall ?c (implies (and (Is ?c 'cup') (OnBottomSide ?c)) (exists ?b (and (Is ?b 'bottle') (LeftOf ?b ?c) (Below ?c ?suitcase)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?jeans (exists ?book (exists ?glasses (forall ?c (exists ?b (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?shirt) (AlignedHorizontally ?suitcase ?shirt) (Is ?shirt 'shirt') (or (not (Is ?c 'cup')) (not (OnBottomSide ?c)) (Below ?c ?suitcase)) (Below ?jeans ?shirt) (or (not (Is ?c 'cup')) (not (OnBottomSide ?c)) (LeftOf ?b ?c)) (Is ?jeans 'jeans') (Below ?book ?jeans) (or (not (Is ?c 'cup')) (not (OnBottomSide ?c)) (Is ?b 'bottle')) (Is ?book 'book') (LeftOf ?glasses ?book) (SmallerThan ?glasses ?book) (Is ?glasses 'glasses')))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "cup",
+        "jeans",
+        "suitcase",
+        "book",
+        "glasses",
+        "bottle"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a sleeping man on a wooden bed. To the left of the bed is a rug with a backpack on it, and shoes are next to the backpack. A round plate rests on the bed, and a bird is to the right of the man. Every book is inside a basket next to the bed, with a piece of fruit on top of it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?man (exists ?bed (exists ?rug (exists ?backpack (exists ?shoes (exists ?plate (exists ?bird (and (Is ?man 'man') (HasState ?man 'sleeping') (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (On ?man ?bed) (Is ?rug 'rug') (LeftOf ?rug ?bed) (Is ?backpack 'backpack') (On ?backpack ?rug) (Is ?shoes 'shoes') (NextTo ?shoes ?backpack) (Is ?plate 'plate') (HasShape ?plate 'round') (On ?plate ?bed) (Is ?bird 'bird') (RightOf ?bird ?man) (forall ?book (implies (Is ?book 'book') (exists ?fruit (exists ?basket (and (Is ?fruit 'fruit') (Is ?basket 'basket') (On ?fruit ?book) (In ?book ?basket) (NextTo ?basket ?bed)))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?man (exists ?bed (exists ?rug (exists ?backpack (exists ?shoes (exists ?plate (exists ?bird (forall ?book (exists ?fruit (exists ?basket (and (Is ?man 'man') (HasState ?man 'sleeping') (On ?man ?bed) (RightOf ?bird ?man) (HasMaterial ?bed 'wooden') (LeftOf ?rug ?bed) (Is ?bird 'bird') (Is ?bed 'bed') (On ?plate ?bed) (Is ?rug 'rug') (On ?backpack ?rug) (or (not (Is ?book 'book')) (NextTo ?basket ?bed)) (HasShape ?plate 'round') (Is ?backpack 'backpack') (NextTo ?shoes ?backpack) (or (not (Is ?book 'book')) (In ?book ?basket)) (Is ?plate 'plate') (Is ?shoes 'shoes') (or (not (Is ?book 'book')) (On ?fruit ?book)) (or (not (Is ?book 'book')) (Is ?basket 'basket')) (or (not (Is ?book 'book')) (Is ?fruit 'fruit'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "man",
+        "backpack",
+        "shoes",
+        "book",
+        "bed",
+        "basket",
+        "rug",
+        "bird",
+        "fruit",
+        "plate"
+    ]
+}

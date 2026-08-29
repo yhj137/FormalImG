@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every horse is located to the left of a rock. A person with a shirt is on the horse, while a monitor with a round ball on top rests on the rock.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?h (implies (Is ?h 'horse') (exists ?r (exists ?p (exists ?s (exists ?m (exists ?b (and (Is ?r 'rock') (LeftOf ?h ?r) (Is ?p 'person') (On ?p ?h) (Is ?s 'shirt') (On ?s ?p) (Is ?m 'monitor') (On ?m ?r) (Is ?b 'ball') (HasShape ?b 'round') (On ?b ?m))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?h (exists ?r (exists ?p (exists ?s (exists ?m (exists ?b (and (or (not (Is ?h 'horse')) (Is ?r 'rock')) (or (not (Is ?h 'horse')) (LeftOf ?h ?r)) (or (not (Is ?h 'horse')) (Is ?p 'person')) (or (not (Is ?h 'horse')) (On ?m ?r)) (or (not (Is ?h 'horse')) (On ?p ?h)) (or (not (Is ?h 'horse')) (Is ?m 'monitor')) (or (not (Is ?h 'horse')) (Is ?b 'ball')) (or (not (Is ?h 'horse')) (On ?b ?m)) (or (not (Is ?h 'horse')) (Is ?s 'shirt')) (or (not (Is ?h 'horse')) (On ?s ?p)) (or (not (Is ?h 'horse')) (HasShape ?b 'round'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "person",
+        "rock",
+        "ball",
+        "horse",
+        "shirt"
+    ]
+}

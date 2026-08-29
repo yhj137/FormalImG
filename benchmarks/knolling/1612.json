@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged 3x3 grid of objects. The top row begins with a blue shirt positioned on the top-left side. To the right of the shirt is a cutting board, and to the right of that is a pizza; these three items are aligned horizontally. Below the shirt, starting the middle row, is a ruler. To the right of the ruler lies a knife, followed by a screwdriver to its right, with this row also aligned horizontally. The bottom row starts with a pair of black glasses located below the ruler. To the right of the glasses is a mouse, and to the right of the mouse is a carrot, all aligned horizontally. Visually, the cutting board is larger than the knife, and the mouse is smaller than the pizza.",
+    "dsl": "(exists ?shirt (exists ?cutting_board (exists ?pizza (exists ?ruler (exists ?knife (exists ?screwdriver (exists ?glasses (exists ?mouse (exists ?carrot (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Is ?ruler 'ruler') (Is ?knife 'knife') (Is ?screwdriver 'screwdriver') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?mouse 'mouse') (Is ?carrot 'carrot') (OnTopSide ?shirt) (OnLeftSide ?shirt) (RightOf ?cutting_board ?shirt) (RightOf ?pizza ?cutting_board) (AlignedHorizontally ?shirt ?cutting_board) (AlignedHorizontally ?cutting_board ?pizza) (Above ?shirt ?ruler) (RightOf ?knife ?ruler) (RightOf ?screwdriver ?knife) (AlignedHorizontally ?ruler ?knife) (AlignedHorizontally ?knife ?screwdriver) (Above ?ruler ?glasses) (RightOf ?mouse ?glasses) (RightOf ?carrot ?mouse) (AlignedHorizontally ?glasses ?mouse) (AlignedHorizontally ?mouse ?carrot) (LargerThan ?cutting_board ?knife) (SmallerThan ?mouse ?pizza)))))))))))",
+    "cnf": "(exists ?shirt (exists ?cutting_board (exists ?pizza (exists ?ruler (exists ?knife (exists ?screwdriver (exists ?glasses (exists ?mouse (exists ?carrot (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (OnLeftSide ?shirt) (RightOf ?cutting_board ?shirt) (AlignedHorizontally ?shirt ?cutting_board) (Is ?cutting_board 'cutting_board') (RightOf ?pizza ?cutting_board) (Above ?shirt ?ruler) (AlignedHorizontally ?cutting_board ?pizza) (Is ?pizza 'pizza') (Is ?ruler 'ruler') (RightOf ?knife ?ruler) (LargerThan ?cutting_board ?knife) (SmallerThan ?mouse ?pizza) (AlignedHorizontally ?ruler ?knife) (Is ?knife 'knife') (RightOf ?screwdriver ?knife) (AlignedHorizontally ?knife ?screwdriver) (AlignedHorizontally ?mouse ?carrot) (Above ?ruler ?glasses) (Is ?screwdriver 'screwdriver') (AlignedHorizontally ?glasses ?mouse) (RightOf ?carrot ?mouse) (Has ?glasses 'black') (RightOf ?mouse ?glasses) (Is ?carrot 'carrot') (Is ?glasses 'glasses') (Is ?mouse 'mouse')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "mouse",
+        "pizza",
+        "shirt",
+        "knife",
+        "ruler",
+        "carrot",
+        "screwdriver",
+        "cutting_board",
+        "glasses"
+    ]
+}

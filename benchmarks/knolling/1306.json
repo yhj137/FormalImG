@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop, with a black keyboard positioned below it and a black mouse to the right of the keyboard. The mouse is visually smaller than the keyboard. Every cup in the image is white, positioned to the right of the laptop, and has a brown wallet below it, red pliers above it, and a glove to the right of the pliers. The wallet is visibly smaller than the laptop.",
+    "dsl": "(exists ?laptop (exists ?keyboard (exists ?mouse (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Below ?keyboard ?laptop) (Is ?mouse 'mouse') (Has ?mouse 'black') (RightOf ?mouse ?keyboard) (SmallerThan ?mouse ?keyboard) (forall ?cup (implies (Is ?cup 'cup') (exists ?wallet (exists ?pliers (exists ?glove (and (Has ?cup 'white') (RightOf ?cup ?laptop) (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?glove 'glove') (Below ?wallet ?cup) (Above ?pliers ?cup) (RightOf ?glove ?pliers) (SmallerThan ?wallet ?laptop)))))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (exists ?mouse (forall ?cup (exists ?wallet (exists ?pliers (exists ?glove (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Below ?keyboard ?laptop) (or (not (Is ?cup 'cup')) (RightOf ?cup ?laptop)) (Has ?keyboard 'black') (RightOf ?mouse ?keyboard) (or (not (Is ?cup 'cup')) (SmallerThan ?wallet ?laptop)) (or (not (Is ?cup 'cup')) (Has ?cup 'white')) (or (not (Is ?cup 'cup')) (Is ?wallet 'wallet')) (Is ?keyboard 'keyboard') (SmallerThan ?mouse ?keyboard) (Has ?mouse 'black') (or (not (Is ?cup 'cup')) (RightOf ?glove ?pliers)) (or (not (Is ?cup 'cup')) (Below ?wallet ?cup)) (or (not (Is ?cup 'cup')) (Has ?wallet 'brown')) (Is ?mouse 'mouse') (or (not (Is ?cup 'cup')) (Above ?pliers ?cup)) (or (not (Is ?cup 'cup')) (Is ?glove 'glove')) (or (not (Is ?cup 'cup')) (Is ?pliers 'pliers')) (or (not (Is ?cup 'cup')) (Has ?pliers 'red'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "keyboard",
+        "cup",
+        "wallet",
+        "mouse",
+        "glove"
+    ]
+}

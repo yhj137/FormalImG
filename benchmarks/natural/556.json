@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman stands next to a desk. She is holding every bowl in the scene, all of which are empty and resting on the desk.",
+    "dsl": "(exists ?w (exists ?d (and (Is ?w 'woman') (HasState ?w 'standing') (Is ?d 'desk') (NextTo ?w ?d) (forall ?b (implies (Is ?b 'bowl') (and (HasState ?b 'empty') (On ?b ?d) (Holding ?w ?b)))))))",
+    "cnf": "(exists ?w (exists ?d (forall ?b (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?d) (or (not (Is ?b 'bowl')) (Holding ?w ?b)) (Is ?d 'desk') (or (not (Is ?b 'bowl')) (On ?b ?d)) (or (not (Is ?b 'bowl')) (HasState ?b 'empty'))))))",
+    "k": 3,
+    "object_classes": [
+        "desk",
+        "bowl",
+        "woman"
+    ]
+}

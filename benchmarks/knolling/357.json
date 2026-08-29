@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sandwich positioned on the right side of the image. Additionally, for every fork in the scene, the sandwich is located above that fork.",
+    "dsl": "(exists ?s (and (Is ?s 'sandwich') (OnRightSide ?s) (forall ?f (implies (Is ?f 'fork') (Above ?s ?f)))))",
+    "cnf": "(exists ?s (forall ?f (and (Is ?s 'sandwich') (OnRightSide ?s) (or (not (Is ?f 'fork')) (Above ?s ?f)))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a bookshelf where every key is located. An orange also rests on the shelf, with a yellow banana lying next to it. A screwdriver is placed to the right of the banana. A rock sits next to the bookshelf, and a bicycle stands to the right of the bookshelf.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bs (and (Is ?bs 'bookshelf') (forall ?k (implies (Is ?k 'key') (On ?k ?bs))) (exists ?o (exists ?ba (exists ?sd (exists ?r (exists ?bi (and (Is ?o 'orange') (On ?o ?bs) (Is ?ba 'banana') (HasColor ?ba 'yellow') (NextTo ?ba ?o) (Is ?sd 'screwdriver') (RightOf ?sd ?ba) (Is ?r 'rock') (NextTo ?r ?bs) (Is ?bi 'bicycle') (RightOf ?bi ?bs))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bs (forall ?k (exists ?o (exists ?ba (exists ?sd (exists ?r (exists ?bi (and (Is ?bs 'bookshelf') (or (not (Is ?k 'key')) (On ?k ?bs)) (On ?o ?bs) (NextTo ?r ?bs) (Is ?o 'orange') (NextTo ?ba ?o) (RightOf ?bi ?bs) (Is ?r 'rock') (HasColor ?ba 'yellow') (RightOf ?sd ?ba) (Is ?bi 'bicycle') (Is ?ba 'banana') (Is ?sd 'screwdriver'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "screwdriver",
+        "orange",
+        "rock",
+        "bicycle",
+        "banana",
+        "bookshelf",
+        "key"
+    ]
+}

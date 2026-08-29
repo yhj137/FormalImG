@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is located on the left side of the layout. For every sock in the scene, it is positioned to the right of the jeans. Arranged in relation to the sock, there is a glove directly above it, a wallet to the right of the glove, a game controller above the wallet, and a keyboard to the right of the game controller.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (forall ?sock (implies (Is ?sock 'sock') (exists ?glove (exists ?wallet (exists ?controller (exists ?keyboard (and (Is ?glove 'glove') (Is ?wallet 'wallet') (Is ?controller 'game_controller') (Is ?keyboard 'keyboard') (RightOf ?sock ?jeans) (Above ?glove ?sock) (RightOf ?wallet ?glove) (Above ?controller ?wallet) (RightOf ?keyboard ?controller))))))))))",
+    "cnf": "(exists ?jeans (forall ?sock (exists ?glove (exists ?wallet (exists ?controller (exists ?keyboard (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (or (not (Is ?sock 'sock')) (RightOf ?sock ?jeans)) (or (not (Is ?sock 'sock')) (Is ?keyboard 'keyboard')) (or (not (Is ?sock 'sock')) (Above ?glove ?sock)) (or (not (Is ?sock 'sock')) (Is ?controller 'game_controller')) (or (not (Is ?sock 'sock')) (RightOf ?keyboard ?controller)) (or (not (Is ?sock 'sock')) (RightOf ?wallet ?glove)) (or (not (Is ?sock 'sock')) (Is ?glove 'glove')) (or (not (Is ?sock 'sock')) (Is ?wallet 'wallet')) (or (not (Is ?sock 'sock')) (Above ?controller ?wallet)))))))))",
+    "k": 6,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "game_controller",
+        "jeans",
+        "wallet",
+        "glove"
+    ]
+}

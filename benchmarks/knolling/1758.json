@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a backpack positioned on the left side of the image. A pair of black glasses is placed directly above the backpack, while a laptop is situated below the backpack; notably, the backpack is physically larger than the laptop. To the immediate left of a pair of headphones is the laptop, and the headphones themselves are positioned to the left of a cutting board. Below this cutting board lies a bowl. The arrangement follows a specific rule for socks: for every sock in the scene, it is located below the bowl, accompanied by a lemon to its left and a blue tie positioned directly below it.",
+    "dsl": "(exists ?backpack (exists ?glasses (exists ?laptop (exists ?headphones (exists ?cutting_board (exists ?bowl (and (Is ?backpack 'backpack') (Is ?glasses 'glasses') (Is ?laptop 'laptop') (Is ?headphones 'headphones') (Is ?cutting_board 'cutting_board') (Is ?bowl 'bowl') (OnLeftSide ?backpack) (Above ?glasses ?backpack) (Has ?glasses 'black') (Below ?laptop ?backpack) (LargerThan ?backpack ?laptop) (LeftOf ?laptop ?headphones) (LeftOf ?headphones ?cutting_board) (Below ?bowl ?cutting_board) (forall ?sock (implies (Is ?sock 'sock') (exists ?lemon (exists ?tie (and (Is ?lemon 'lemon') (Is ?tie 'tie') (Below ?sock ?bowl) (LeftOf ?lemon ?sock) (Below ?tie ?sock) (Has ?tie 'blue')))))))))))))",
+    "cnf": "(exists ?backpack (exists ?glasses (exists ?laptop (exists ?headphones (exists ?cutting_board (exists ?bowl (forall ?sock (exists ?lemon (exists ?tie (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Above ?glasses ?backpack) (Below ?laptop ?backpack) (Is ?glasses 'glasses') (Has ?glasses 'black') (LargerThan ?backpack ?laptop) (Is ?laptop 'laptop') (LeftOf ?laptop ?headphones) (Is ?headphones 'headphones') (LeftOf ?headphones ?cutting_board) (Is ?cutting_board 'cutting_board') (Below ?bowl ?cutting_board) (Is ?bowl 'bowl') (or (not (Is ?sock 'sock')) (Below ?sock ?bowl)) (or (not (Is ?sock 'sock')) (Is ?tie 'tie')) (or (not (Is ?sock 'sock')) (LeftOf ?lemon ?sock)) (or (not (Is ?sock 'sock')) (Is ?lemon 'lemon')) (or (not (Is ?sock 'sock')) (Below ?tie ?sock)) (or (not (Is ?sock 'sock')) (Has ?tie 'blue'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "laptop",
+        "tie",
+        "sock",
+        "lemon",
+        "cutting_board",
+        "backpack",
+        "bowl",
+        "headphones"
+    ]
+}

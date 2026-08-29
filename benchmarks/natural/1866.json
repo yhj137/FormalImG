@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. A man sits on a bench, holding a round pan containing a sliced fish. A blue backpack containing oval glasses is placed next to the bench. To the right of the bench stands a tree, next to which is a horse with a teddy bear on it. All rocks in the scene are situated to the left of the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?b 'bench') (On ?m ?b) (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?b))) (exists ?t (exists ?h (exists ?tb (exists ?p (exists ?f (exists ?bp (exists ?g (and (Is ?t 'tree') (RightOf ?t ?b) (Is ?h 'horse') (NextTo ?h ?t) (Is ?tb 'teddy bear') (On ?tb ?h) (Is ?p 'pan') (HasShape ?p 'round') (Holding ?m ?p) (Is ?f 'fish') (HasState ?f 'sliced') (In ?f ?p) (Is ?bp 'backpack') (HasColor ?bp 'blue') (NextTo ?bp ?b) (Is ?g 'glasses') (HasShape ?g 'oval') (In ?g ?bp)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (forall ?r (exists ?t (exists ?h (exists ?tb (exists ?p (exists ?f (exists ?bp (exists ?g (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?b) (Holding ?m ?p) (Is ?b 'bench') (or (not (Is ?r 'rock')) (LeftOf ?r ?b)) (HasShape ?p 'round') (In ?f ?p) (RightOf ?t ?b) (Is ?p 'pan') (HasState ?f 'sliced') (NextTo ?bp ?b) (Is ?t 'tree') (NextTo ?h ?t) (Is ?f 'fish') (HasColor ?bp 'blue') (In ?g ?bp) (Is ?h 'horse') (On ?tb ?h) (Is ?bp 'backpack') (HasShape ?g 'oval') (Is ?tb 'teddy bear') (Is ?g 'glasses')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "pan",
+        "glasses",
+        "rock",
+        "man",
+        "fish",
+        "backpack",
+        "teddy bear",
+        "horse",
+        "tree"
+    ]
+}

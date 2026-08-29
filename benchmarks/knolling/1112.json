@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a phone positioned on the top side and a carrot located on the left side. For every pizza present in the image, it is situated below the phone. Associated with the pizza, there is a camera located directly below it. A watch is also present, which is smaller than the camera. Finally, a pair of scissors is positioned below the watch and is aligned vertically with the carrot.",
+    "dsl": "(exists ?phone (exists ?carrot (and (Is ?phone 'phone') (OnTopSide ?phone) (Is ?carrot 'carrot') (OnLeftSide ?carrot) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?camera (exists ?watch (exists ?scissors (and (Is ?camera 'camera') (Is ?watch 'watch') (Is ?scissors 'scissors') (Below ?pizza ?phone) (Below ?camera ?pizza) (SmallerThan ?watch ?camera) (Below ?scissors ?watch) (AlignedVertically ?scissors ?carrot))))))))))",
+    "cnf": "(exists ?phone (exists ?carrot (forall ?pizza (exists ?camera (exists ?watch (exists ?scissors (and (Is ?phone 'phone') (OnTopSide ?phone) (or (not (Is ?pizza 'pizza')) (Below ?pizza ?phone)) (or (not (Is ?pizza 'pizza')) (Is ?scissors 'scissors')) (or (not (Is ?pizza 'pizza')) (Below ?camera ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?watch 'watch')) (or (not (Is ?pizza 'pizza')) (Below ?scissors ?watch)) (or (not (Is ?pizza 'pizza')) (SmallerThan ?watch ?camera)) (or (not (Is ?pizza 'pizza')) (Is ?camera 'camera')) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?scissors ?carrot)) (OnLeftSide ?carrot) (Is ?carrot 'carrot'))))))))",
+    "k": 6,
+    "object_classes": [
+        "carrot",
+        "phone",
+        "pizza",
+        "watch",
+        "camera",
+        "scissors"
+    ]
+}

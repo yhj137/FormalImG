@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a handbag positioned on the top side of the scene. To the left of the handbag is a spoon, and to the right is a screwdriver. Every plate in the image is located on the bottom side, and for each plate, there is a sandwich positioned above it and a bowl positioned to its right. The handbag is also placed above the sandwich.",
+    "dsl": "(exists ?handbag (exists ?screwdriver (exists ?spoon (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?screwdriver 'screwdriver') (RightOf ?screwdriver ?handbag) (Is ?spoon 'spoon') (LeftOf ?spoon ?handbag) (forall ?plate (implies (Is ?plate 'plate') (exists ?sandwich (exists ?bowl (and (Is ?sandwich 'sandwich') (Is ?bowl 'bowl') (OnBottomSide ?plate) (Above ?sandwich ?plate) (RightOf ?bowl ?plate) (Above ?handbag ?sandwich))))))))))",
+    "cnf": "(exists ?handbag (exists ?screwdriver (exists ?spoon (forall ?plate (exists ?sandwich (exists ?bowl (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (RightOf ?screwdriver ?handbag) (LeftOf ?spoon ?handbag) (Is ?screwdriver 'screwdriver') (or (not (Is ?plate 'plate')) (Above ?handbag ?sandwich)) (Is ?spoon 'spoon') (or (not (Is ?plate 'plate')) (RightOf ?bowl ?plate)) (or (not (Is ?plate 'plate')) (Above ?sandwich ?plate)) (or (not (Is ?plate 'plate')) (Is ?bowl 'bowl')) (or (not (Is ?plate 'plate')) (OnBottomSide ?plate)) (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "screwdriver",
+        "handbag",
+        "spoon",
+        "bowl",
+        "sandwich"
+    ]
+}

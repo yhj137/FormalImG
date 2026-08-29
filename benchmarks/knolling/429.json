@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a white cup, a pair of red scissors, and black headphones. The red scissors are positioned to the right of the white cup, and the black headphones are placed to the right of the scissors. All three items are aligned horizontally across the image. Additionally, the scissors are visually smaller than the headphones.",
+    "dsl": "(exists ?c (exists ?s (exists ?h (and (Is ?c 'cup') (Has ?c 'white') (Is ?s 'scissors') (Has ?s 'red') (Is ?h 'headphones') (Has ?h 'black') (RightOf ?s ?c) (RightOf ?h ?s) (AlignedHorizontally ?c ?s) (AlignedHorizontally ?s ?h) (SmallerThan ?s ?h)))))",
+    "cnf": "(exists ?c (exists ?s (exists ?h (and (Is ?c 'cup') (Has ?c 'white') (RightOf ?s ?c) (AlignedHorizontally ?c ?s) (Has ?s 'red') (RightOf ?h ?s) (AlignedHorizontally ?s ?h) (Is ?s 'scissors') (Has ?h 'black') (SmallerThan ?s ?h) (Is ?h 'headphones')))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "headphones",
+        "cup"
+    ]
+}

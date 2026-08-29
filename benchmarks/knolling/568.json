@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a calculator located on the top side of the image. An apple is positioned directly below the calculator, and the two are aligned vertically. Additionally, for every carrot in the scene, it is placed below the apple, aligned vertically with it, and appears visually larger than the apple.",
+    "dsl": "(exists ?calc (exists ?apple (and (Is ?calc 'calculator') (OnTopSide ?calc) (Is ?apple 'apple') (Below ?apple ?calc) (AlignedVertically ?calc ?apple) (forall ?carrot (implies (Is ?carrot 'carrot') (and (Below ?carrot ?apple) (AlignedVertically ?apple ?carrot) (LargerThan ?carrot ?apple)))))))",
+    "cnf": "(exists ?calc (exists ?apple (forall ?carrot (and (Is ?calc 'calculator') (OnTopSide ?calc) (Below ?apple ?calc) (AlignedVertically ?calc ?apple) (Is ?apple 'apple') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?apple)) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?apple ?carrot)) (or (not (Is ?carrot 'carrot')) (LargerThan ?carrot ?apple))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "calculator",
+        "apple"
+    ]
+}

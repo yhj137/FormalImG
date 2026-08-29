@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo of a child on a wooden bed holding a plant. Every orange is inside a plastic bottle on the bed, and next to each bottle, a spoon rests on a book.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?bd (exists ?pl (and (Is ?c 'child') (Is ?bd 'bed') (HasMaterial ?bd 'wooden') (Is ?pl 'plant') (On ?c ?bd) (Holding ?c ?pl) (forall ?o (implies (Is ?o 'orange') (exists ?bt (exists ?s (exists ?bk (and (Is ?bt 'bottle') (HasMaterial ?bt 'plastic') (Is ?s 'spoon') (Is ?bk 'book') (In ?o ?bt) (On ?bt ?bd) (NextTo ?s ?bt) (On ?s ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?bd (exists ?pl (forall ?o (exists ?bt (exists ?s (exists ?bk (and (Is ?c 'child') (On ?c ?bd) (Holding ?c ?pl) (HasMaterial ?bd 'wooden') (or (not (Is ?o 'orange')) (On ?bt ?bd)) (Is ?pl 'plant') (Is ?bd 'bed') (or (not (Is ?o 'orange')) (In ?o ?bt)) (or (not (Is ?o 'orange')) (NextTo ?s ?bt)) (or (not (Is ?o 'orange')) (HasMaterial ?bt 'plastic')) (or (not (Is ?o 'orange')) (Is ?bk 'book')) (or (not (Is ?o 'orange')) (On ?s ?bk)) (or (not (Is ?o 'orange')) (Is ?s 'spoon')) (or (not (Is ?o 'orange')) (Is ?bt 'bottle')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "child",
+        "spoon",
+        "book",
+        "bed",
+        "bottle",
+        "plant",
+        "orange"
+    ]
+}

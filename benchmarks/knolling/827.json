@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a drill, a bottle, pliers, scissors, and a spoon. The drill is located on the top side of the image and is larger than the scissors. To the right of the drill is the bottle. The pliers are positioned below the drill. The scissors are to the right of the pliers, and the spoon is to the right of the scissors. The spoon is situated on the right side of the image and is smaller than the bottle.",
+    "dsl": "(exists ?d (exists ?b (exists ?p (exists ?sc (exists ?s (and (Is ?d 'drill') (Is ?b 'bottle') (Is ?p 'pliers') (Is ?sc 'scissors') (Is ?s 'spoon') (OnTopSide ?d) (LargerThan ?d ?sc) (RightOf ?b ?d) (Above ?d ?p) (RightOf ?sc ?p) (RightOf ?s ?sc) (OnRightSide ?s) (SmallerThan ?s ?b)))))))",
+    "cnf": "(exists ?d (exists ?b (exists ?p (exists ?sc (exists ?s (and (Is ?d 'drill') (OnTopSide ?d) (LargerThan ?d ?sc) (RightOf ?b ?d) (Is ?sc 'scissors') (RightOf ?sc ?p) (Above ?d ?p) (Is ?b 'bottle') (SmallerThan ?s ?b) (RightOf ?s ?sc) (Is ?p 'pliers') (OnRightSide ?s) (Is ?s 'spoon')))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "drill",
+        "bottle",
+        "scissors",
+        "spoon"
+    ]
+}

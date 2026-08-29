@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every sandwich in the scene, it is positioned on the left side of the image. Directly below the sandwich is a pair of scissors, and below the scissors is a spoon. The sandwich is visually larger than the scissors, while the spoon is smaller than the scissors.",
+    "dsl": "(and (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?scissors (exists ?spoon (and (Is ?scissors 'scissors') (Is ?spoon 'spoon') (OnLeftSide ?sandwich) (Below ?scissors ?sandwich) (Below ?spoon ?scissors) (LargerThan ?sandwich ?scissors) (SmallerThan ?spoon ?scissors)))))))",
+    "cnf": "(forall ?sandwich (exists ?scissors (exists ?spoon (and (or (not (Is ?sandwich 'sandwich')) (Is ?scissors 'scissors')) (or (not (Is ?sandwich 'sandwich')) (Is ?spoon 'spoon')) (or (not (Is ?sandwich 'sandwich')) (Below ?scissors ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (OnLeftSide ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Below ?spoon ?scissors)) (or (not (Is ?sandwich 'sandwich')) (LargerThan ?sandwich ?scissors)) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?spoon ?scissors))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "sandwich",
+        "spoon"
+    ]
+}

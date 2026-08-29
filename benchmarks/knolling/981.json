@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a black monitor, a brown wallet, a calculator, and a red book. The wallet is placed to the right of the monitor, while the monitor is positioned above the calculator. The book is located to the right of the calculator. Regarding size, the monitor is visibly larger than the book, and the calculator is smaller than the book. Additionally, for every wrench found in the scene, it is positioned directly above the wallet.",
+    "dsl": "(exists ?m (exists ?wa (exists ?c (exists ?b (and (Is ?m 'monitor') (Has ?m 'black') (Is ?wa 'wallet') (Has ?wa 'brown') (Is ?c 'calculator') (Is ?b 'book') (Has ?b 'red') (RightOf ?wa ?m) (Above ?m ?c) (RightOf ?b ?c) (LargerThan ?m ?b) (SmallerThan ?c ?b) (forall ?w (implies (Is ?w 'wrench') (Above ?w ?wa))))))))",
+    "cnf": "(exists ?m (exists ?wa (exists ?c (exists ?b (forall ?w (and (Is ?m 'monitor') (Has ?m 'black') (RightOf ?wa ?m) (Above ?m ?c) (Has ?wa 'brown') (or (not (Is ?w 'wrench')) (Above ?w ?wa)) (LargerThan ?m ?b) (Is ?c 'calculator') (RightOf ?b ?c) (Is ?wa 'wallet') (SmallerThan ?c ?b) (Has ?b 'red') (Is ?b 'book')))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "wrench",
+        "calculator",
+        "wallet",
+        "monitor"
+    ]
+}

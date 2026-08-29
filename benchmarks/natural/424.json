@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a bird perched on top of a brown dog, with a white cup placed next to the dog on its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?b (exists ?c (and (Is ?d 'dog') (HasColor ?d 'brown') (Is ?b 'bird') (Is ?c 'cup') (HasColor ?c 'white') (On ?b ?d) (LeftOf ?c ?d) (NextTo ?c ?d))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?b (exists ?c (and (Is ?d 'dog') (HasColor ?d 'brown') (On ?b ?d) (LeftOf ?c ?d) (Is ?b 'bird') (NextTo ?c ?d) (HasColor ?c 'white') (Is ?c 'cup'))))))",
+    "k": 3,
+    "object_classes": [
+        "bird",
+        "dog",
+        "cup"
+    ]
+}

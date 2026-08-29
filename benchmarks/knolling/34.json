@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard which is positioned on the right side of the image.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnRightSide ?keyboard)))",
+    "cnf": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnRightSide ?keyboard)))",
+    "k": 1,
+    "object_classes": [
+        "keyboard"
+    ]
+}

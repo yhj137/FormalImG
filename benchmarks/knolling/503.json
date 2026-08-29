@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag located on the left side. For every knife present in the image, it is positioned to the right of the handbag, and there exists a sandwich that is visually larger than the knife.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (forall ?knife (implies (Is ?knife 'knife') (and (RightOf ?knife ?handbag) (exists ?sandwich (and (Is ?sandwich 'sandwich') (LargerThan ?sandwich ?knife))))))))",
+    "cnf": "(exists ?handbag (forall ?knife (exists ?sandwich (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (or (not (Is ?knife 'knife')) (RightOf ?knife ?handbag)) (or (not (Is ?knife 'knife')) (Is ?sandwich 'sandwich')) (or (not (Is ?knife 'knife')) (LargerThan ?sandwich ?knife))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "handbag",
+        "sandwich"
+    ]
+}

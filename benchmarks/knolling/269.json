@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor present in the layout, there exists a brown suitcase positioned directly below it.",
+    "dsl": "(and (forall ?m (implies (Is ?m 'monitor') (exists ?s (and (Is ?s 'suitcase') (Has ?s 'brown') (Below ?s ?m))))))",
+    "cnf": "(forall ?m (exists ?s (and (or (not (Is ?m 'monitor')) (Is ?s 'suitcase')) (or (not (Is ?m 'monitor')) (Has ?s 'brown')) (or (not (Is ?m 'monitor')) (Below ?s ?m)))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "suitcase"
+    ]
+}

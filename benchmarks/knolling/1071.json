@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a gray backpack located on the top side of the image. For every sock present in the scene, there is a vertical column of items arranged below it starting from the backpack: the sock is positioned below the backpack, a pink donut is below the sock, a white calculator is below the donut, a black laptop is below the calculator, and a brown wallet is below the laptop. Additionally, the laptop is visually larger than the calculator.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (Has ?backpack 'gray') (OnTopSide ?backpack) (forall ?sock (implies (Is ?sock 'sock') (exists ?donut (exists ?calculator (exists ?laptop (exists ?wallet (and (Is ?donut 'donut') (Has ?donut 'pink') (Is ?calculator 'calculator') (Has ?calculator 'white') (Is ?laptop 'laptop') (Has ?laptop 'black') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Below ?sock ?backpack) (Below ?donut ?sock) (Below ?calculator ?donut) (Below ?laptop ?calculator) (Below ?wallet ?laptop) (LargerThan ?laptop ?calculator))))))))))",
+    "cnf": "(exists ?backpack (forall ?sock (exists ?donut (exists ?calculator (exists ?laptop (exists ?wallet (and (Is ?backpack 'backpack') (Has ?backpack 'gray') (OnTopSide ?backpack) (or (not (Is ?sock 'sock')) (Below ?sock ?backpack)) (or (not (Is ?sock 'sock')) (Has ?wallet 'brown')) (or (not (Is ?sock 'sock')) (Below ?donut ?sock)) (or (not (Is ?sock 'sock')) (Is ?wallet 'wallet')) (or (not (Is ?sock 'sock')) (Below ?wallet ?laptop)) (or (not (Is ?sock 'sock')) (Has ?donut 'pink')) (or (not (Is ?sock 'sock')) (Below ?calculator ?donut)) (or (not (Is ?sock 'sock')) (Has ?laptop 'black')) (or (not (Is ?sock 'sock')) (Below ?laptop ?calculator)) (or (not (Is ?sock 'sock')) (LargerThan ?laptop ?calculator)) (or (not (Is ?sock 'sock')) (Is ?donut 'donut')) (or (not (Is ?sock 'sock')) (Is ?calculator 'calculator')) (or (not (Is ?sock 'sock')) (Has ?calculator 'white')) (or (not (Is ?sock 'sock')) (Is ?laptop 'laptop')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "backpack",
+        "wallet",
+        "calculator",
+        "donut"
+    ]
+}

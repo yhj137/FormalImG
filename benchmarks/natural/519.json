@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a sitting woman holding every screwdriver in the scene, with a black monitor resting on her next to each one.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'woman') (HasState ?w 'sitting') (forall ?s (implies (Is ?s 'screwdriver') (exists ?m (and (Is ?m 'monitor') (HasColor ?m 'black') (On ?m ?w) (Holding ?w ?s) (NextTo ?s ?m))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (forall ?s (exists ?m (and (Is ?w 'woman') (HasState ?w 'sitting') (or (not (Is ?s 'screwdriver')) (On ?m ?w)) (or (not (Is ?s 'screwdriver')) (Holding ?w ?s)) (or (not (Is ?s 'screwdriver')) (HasColor ?m 'black')) (or (not (Is ?s 'screwdriver')) (NextTo ?s ?m)) (or (not (Is ?s 'screwdriver')) (Is ?m 'monitor')))))))",
+    "k": 3,
+    "object_classes": [
+        "screwdriver",
+        "woman",
+        "monitor"
+    ]
+}

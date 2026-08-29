@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black keyboard in the scene, there is a white shoe that is visually smaller than the keyboard.",
+    "dsl": "(and (forall ?k (implies (and (Is ?k 'keyboard') (Has ?k 'black')) (exists ?s (and (Is ?s 'shoe') (Has ?s 'white') (SmallerThan ?s ?k))))))",
+    "cnf": "(forall ?k (exists ?s (and (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (Is ?s 'shoe')) (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (Has ?s 'white')) (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (SmallerThan ?s ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "shoe",
+        "keyboard"
+    ]
+}

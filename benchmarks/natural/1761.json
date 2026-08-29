@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. An open refrigerator is positioned to the left of a child, who is holding headphones. A plastic knife rests on top of the refrigerator. All bottles visible are green and are stored inside the refrigerator. To the right of the refrigerator lies a fabric rug. A dog, a keyboard, and a rock are all situated on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?d (exists ?r (exists ?h (exists ?k (exists ?rock (and (Is ?c 'child') (Is ?f 'refrigerator') (Is ?d 'dog') (Is ?r 'rug') (Is ?h 'headphones') (Is ?k 'keyboard') (Is ?rock 'rock') (HasState ?f 'open') (LeftOf ?f ?c) (RightOf ?r ?f) (HasMaterial ?r 'fabric') (On ?d ?r) (Holding ?c ?h) (On ?k ?r) (On ?rock ?r) (forall ?b (implies (Is ?b 'bottle') (and (In ?b ?f) (HasColor ?b 'green')))) (exists ?kn (and (Is ?kn 'knife') (HasMaterial ?kn 'plastic') (On ?kn ?f))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?d (exists ?r (exists ?h (exists ?k (exists ?rock (forall ?b (exists ?kn (and (Is ?c 'child') (LeftOf ?f ?c) (Holding ?c ?h) (HasState ?f 'open') (RightOf ?r ?f) (Is ?h 'headphones') (Is ?f 'refrigerator') (or (not (Is ?b 'bottle')) (In ?b ?f)) (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?kn ?f) (or (not (Is ?b 'bottle')) (HasColor ?b 'green')) (On ?d ?r) (HasMaterial ?kn 'plastic') (Is ?d 'dog') (On ?k ?r) (Is ?kn 'knife') (On ?rock ?r) (Is ?k 'keyboard') (Is ?rock 'rock'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "keyboard",
+        "rock",
+        "headphones",
+        "knife",
+        "refrigerator",
+        "rug",
+        "dog",
+        "child"
+    ]
+}

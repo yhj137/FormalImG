@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a boat with a cylindrical cup to its right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (and (Is ?b 'boat') (Is ?c 'cup') (HasShape ?c 'cylindrical') (RightOf ?c ?b)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (and (Is ?b 'boat') (RightOf ?c ?b) (HasShape ?c 'cylindrical') (Is ?c 'cup')))))",
+    "k": 2,
+    "object_classes": [
+        "cup",
+        "boat"
+    ]
+}

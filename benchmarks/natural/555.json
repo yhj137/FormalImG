@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a red bus next to a rock, with every man positioned to the left of the bus.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (and (Is ?b 'bus') (HasColor ?b 'red') (Is ?r 'rock') (NextTo ?b ?r) (forall ?m (implies (Is ?m 'man') (LeftOf ?m ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (forall ?m (and (Is ?b 'bus') (HasColor ?b 'red') (NextTo ?b ?r) (or (not (Is ?m 'man')) (LeftOf ?m ?b)) (Is ?r 'rock'))))))",
+    "k": 3,
+    "object_classes": [
+        "rock",
+        "bus",
+        "man"
+    ]
+}

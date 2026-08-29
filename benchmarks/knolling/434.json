@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pan, a calculator, and a camera. The pan is located on the bottom side of the image. The pan is positioned to the left of the camera, and these two objects are aligned horizontally. Furthermore, the pan is placed vertically below the calculator.",
+    "dsl": "(exists ?pan (exists ?calculator (exists ?camera (and (Is ?pan 'pan') (Is ?calculator 'calculator') (Is ?camera 'camera') (OnBottomSide ?pan) (LeftOf ?pan ?camera) (AlignedHorizontally ?pan ?camera) (Below ?pan ?calculator)))))",
+    "cnf": "(exists ?pan (exists ?calculator (exists ?camera (and (Is ?pan 'pan') (OnBottomSide ?pan) (LeftOf ?pan ?camera) (AlignedHorizontally ?pan ?camera) (Is ?camera 'camera') (Below ?pan ?calculator) (Is ?calculator 'calculator')))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "calculator",
+        "camera"
+    ]
+}

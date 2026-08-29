@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard and a game controller. The keyboard is located on the top side of the image. The keyboard is positioned above the game controller, and they are aligned vertically. For every pair of scissors in the image, there is a calculator and a pair of headphones associated with it. Specifically, the game controller is above the scissors, the scissors are above the calculator, and the calculator is above the headphones. The scissors, calculator, and headphones are all aligned vertically with the game controller. Additionally, the calculator is smaller than the keyboard, and the headphones are located on the right side of the image.",
+    "dsl": "(exists ?k (exists ?g (and (Is ?k 'keyboard') (Is ?g 'game_controller') (OnTopSide ?k) (Above ?k ?g) (AlignedVertically ?k ?g) (forall ?s (implies (Is ?s 'scissors') (exists ?c (exists ?h (and (Is ?c 'calculator') (Is ?h 'headphones') (Above ?g ?s) (Above ?s ?c) (Above ?c ?h) (AlignedVertically ?g ?s) (AlignedVertically ?s ?c) (AlignedVertically ?c ?h) (SmallerThan ?c ?k) (OnRightSide ?h)))))))))",
+    "cnf": "(exists ?k (exists ?g (forall ?s (exists ?c (exists ?h (and (Is ?k 'keyboard') (OnTopSide ?k) (Above ?k ?g) (AlignedVertically ?k ?g) (Is ?g 'game_controller') (or (not (Is ?s 'scissors')) (SmallerThan ?c ?k)) (or (not (Is ?s 'scissors')) (Above ?g ?s)) (or (not (Is ?s 'scissors')) (AlignedVertically ?c ?h)) (or (not (Is ?s 'scissors')) (OnRightSide ?h)) (or (not (Is ?s 'scissors')) (AlignedVertically ?g ?s)) (or (not (Is ?s 'scissors')) (Is ?h 'headphones')) (or (not (Is ?s 'scissors')) (Above ?s ?c)) (or (not (Is ?s 'scissors')) (AlignedVertically ?s ?c)) (or (not (Is ?s 'scissors')) (Above ?c ?h)) (or (not (Is ?s 'scissors')) (Is ?c 'calculator'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "game_controller",
+        "calculator",
+        "scissors",
+        "headphones"
+    ]
+}

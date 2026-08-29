@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single camera positioned on the bottom side of the layout.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (OnBottomSide ?camera)))",
+    "cnf": "(exists ?camera (and (Is ?camera 'camera') (OnBottomSide ?camera)))",
+    "k": 1,
+    "object_classes": [
+        "camera"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the scene, there is a corresponding stapler. The shirt is visually larger than the stapler, and the stapler is located on the top side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'shirt') (exists ?y (and (Is ?y 'stapler') (LargerThan ?x ?y) (OnTopSide ?y))))))",
+    "cnf": "(forall ?x (exists ?y (and (or (not (Is ?x 'shirt')) (Is ?y 'stapler')) (or (not (Is ?x 'shirt')) (LargerThan ?x ?y)) (or (not (Is ?x 'shirt')) (OnTopSide ?y)))))",
+    "k": 2,
+    "object_classes": [
+        "stapler",
+        "shirt"
+    ]
+}

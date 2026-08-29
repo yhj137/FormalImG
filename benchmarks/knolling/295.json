@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every remote present in the scene, there is a corresponding mouse. The remote is positioned on the top side of the image, and the mouse is visually smaller than the remote.",
+    "dsl": "(and (forall ?r (implies (Is ?r 'remote') (exists ?m (and (Is ?m 'mouse') (OnTopSide ?r) (SmallerThan ?m ?r))))))",
+    "cnf": "(forall ?r (exists ?m (and (or (not (Is ?r 'remote')) (Is ?m 'mouse')) (or (not (Is ?r 'remote')) (OnTopSide ?r)) (or (not (Is ?r 'remote')) (SmallerThan ?m ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "remote",
+        "mouse"
+    ]
+}

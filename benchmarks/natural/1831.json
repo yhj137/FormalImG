@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. All cars in the scene are black. To the left of each car is a chair with a child sitting on it. The child is wearing red shoes and holding a teddy bear and a sandwich. A cake is positioned next to the sandwich. To the left of the chair is a monitor, with a keyboard next to the monitor and a phone next to the keyboard.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'car') (exists ?child (exists ?chair (exists ?monitor (exists ?keyboard (exists ?phone (exists ?teddy (exists ?sandwich (exists ?cake (exists ?shoes (and (HasColor ?c 'black') (Is ?child 'child') (Is ?chair 'chair') (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (Is ?phone 'phone') (Is ?teddy 'teddy bear') (Is ?sandwich 'sandwich') (Is ?cake 'cake') (Is ?shoes 'shoes') (RightOf ?c ?chair) (On ?child ?chair) (HasState ?child 'sitting') (On ?shoes ?child) (HasColor ?shoes 'red') (Holding ?child ?teddy) (Holding ?child ?sandwich) (NextTo ?cake ?sandwich) (LeftOf ?monitor ?chair) (NextTo ?keyboard ?monitor) (NextTo ?phone ?keyboard))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?child (exists ?chair (exists ?monitor (exists ?keyboard (exists ?phone (exists ?teddy (exists ?sandwich (exists ?cake (exists ?shoes (and (or (not (Is ?c 'car')) (HasColor ?c 'black')) (or (not (Is ?c 'car')) (Is ?child 'child')) (or (not (Is ?c 'car')) (Is ?chair 'chair')) (or (not (Is ?c 'car')) (On ?child ?chair)) (or (not (Is ?c 'car')) (Is ?monitor 'monitor')) (or (not (Is ?c 'car')) (RightOf ?c ?chair)) (or (not (Is ?c 'car')) (HasState ?child 'sitting')) (or (not (Is ?c 'car')) (LeftOf ?monitor ?chair)) (or (not (Is ?c 'car')) (Is ?keyboard 'keyboard')) (or (not (Is ?c 'car')) (Is ?shoes 'shoes')) (or (not (Is ?c 'car')) (On ?shoes ?child)) (or (not (Is ?c 'car')) (NextTo ?cake ?sandwich)) (or (not (Is ?c 'car')) (NextTo ?keyboard ?monitor)) (or (not (Is ?c 'car')) (Is ?phone 'phone')) (or (not (Is ?c 'car')) (Is ?cake 'cake')) (or (not (Is ?c 'car')) (HasColor ?shoes 'red')) (or (not (Is ?c 'car')) (Holding ?child ?teddy)) (or (not (Is ?c 'car')) (Holding ?child ?sandwich)) (or (not (Is ?c 'car')) (NextTo ?phone ?keyboard)) (or (not (Is ?c 'car')) (Is ?teddy 'teddy bear')) (or (not (Is ?c 'car')) (Is ?sandwich 'sandwich'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "monitor",
+        "sandwich",
+        "cake",
+        "shoes",
+        "chair",
+        "teddy bear",
+        "phone",
+        "child",
+        "car"
+    ]
+}

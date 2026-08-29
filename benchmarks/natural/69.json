@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene with an empty basket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'basket') (HasState ?b 'empty'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'basket') (HasState ?b 'empty'))))",
+    "k": 1,
+    "object_classes": [
+        "basket"
+    ]
+}

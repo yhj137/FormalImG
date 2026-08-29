@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden table with a bookshelf next to it. To the left of the table is a chair with an open jacket resting on it. All keys are placed on the bookshelf. A toy car sits on the table, and a child stands next to the table holding a fork.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?b (exists ?c (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?b 'bookshelf') (NextTo ?b ?t) (Is ?c 'chair') (LeftOf ?c ?t) (forall ?k (implies (Is ?k 'key') (On ?k ?b))) (exists ?j (exists ?tc (exists ?p (exists ?f (and (Is ?j 'jacket') (HasState ?j 'open') (On ?j ?c) (Is ?tc 'toy car') (On ?tc ?t) (Is ?p 'child') (NextTo ?p ?t) (Is ?f 'fork') (Holding ?p ?f)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?b (exists ?c (forall ?k (exists ?j (exists ?tc (exists ?p (exists ?f (and (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?b ?t) (LeftOf ?c ?t) (Is ?b 'bookshelf') (or (not (Is ?k 'key')) (On ?k ?b)) (On ?tc ?t) (Is ?c 'chair') (On ?j ?c) (NextTo ?p ?t) (Is ?tc 'toy car') (HasState ?j 'open') (Is ?p 'child') (Holding ?p ?f) (Is ?j 'jacket') (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "fork",
+        "chair",
+        "jacket",
+        "table",
+        "toy car",
+        "bookshelf",
+        "key"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hammer located on the right side of the image. A knife is placed to the left of the hammer, and the hammer is visibly larger than the knife. Furthermore, for every pair of glasses in the scene, there exists a remote that is smaller than the glasses and is positioned to the left of the knife.",
+    "dsl": "(exists ?hammer (exists ?knife (and (Is ?hammer 'hammer') (OnRightSide ?hammer) (Is ?knife 'knife') (LeftOf ?knife ?hammer) (LargerThan ?hammer ?knife) (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?remote (and (Is ?remote 'remote') (SmallerThan ?remote ?glasses) (LeftOf ?remote ?knife))))))))",
+    "cnf": "(exists ?hammer (exists ?knife (forall ?glasses (exists ?remote (and (Is ?hammer 'hammer') (OnRightSide ?hammer) (LeftOf ?knife ?hammer) (LargerThan ?hammer ?knife) (Is ?knife 'knife') (or (not (Is ?glasses 'glasses')) (LeftOf ?remote ?knife)) (or (not (Is ?glasses 'glasses')) (SmallerThan ?remote ?glasses)) (or (not (Is ?glasses 'glasses')) (Is ?remote 'remote')))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "hammer",
+        "remote",
+        "glasses"
+    ]
+}

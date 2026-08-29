@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop, a game controller, and a ruler. The laptop is positioned on the right side of the image. The game controller is placed above the laptop, and the ruler is located above the game controller. Additionally, the game controller is visibly smaller than the laptop.",
+    "dsl": "(exists ?l (exists ?gc (exists ?r (and (Is ?l 'laptop') (Is ?gc 'game_controller') (Is ?r 'ruler') (OnRightSide ?l) (Above ?gc ?l) (Above ?r ?gc) (SmallerThan ?gc ?l)))))",
+    "cnf": "(exists ?l (exists ?gc (exists ?r (and (Is ?l 'laptop') (OnRightSide ?l) (Above ?gc ?l) (SmallerThan ?gc ?l) (Is ?gc 'game_controller') (Above ?r ?gc) (Is ?r 'ruler')))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "game_controller"
+    ]
+}

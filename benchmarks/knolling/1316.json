@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pair of blue jeans, a red tie, and a bottle. The tie is positioned to the right of the jeans, and the bottle is to the right of the tie, with the jeans being visually larger than the tie. For every cup in the image, it is aligned vertically with the bottle and has a carrot to its right. To the right of the carrot is a yellow lemon, and to the right of the lemon is a white sock. The lemon is smaller than the cup.",
+    "dsl": "(exists ?jeans (exists ?tie (exists ?bottle (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?tie 'tie') (Has ?tie 'red') (Is ?bottle 'bottle') (RightOf ?tie ?jeans) (RightOf ?bottle ?tie) (LargerThan ?jeans ?tie) (forall ?cup (implies (Is ?cup 'cup') (exists ?carrot (exists ?lemon (exists ?sock (and (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?sock 'sock') (Has ?sock 'white') (AlignedVertically ?cup ?bottle) (RightOf ?carrot ?cup) (RightOf ?lemon ?carrot) (RightOf ?sock ?lemon) (SmallerThan ?lemon ?cup)))))))))))",
+    "cnf": "(exists ?jeans (exists ?tie (exists ?bottle (forall ?cup (exists ?carrot (exists ?lemon (exists ?sock (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?tie ?jeans) (LargerThan ?jeans ?tie) (Has ?tie 'red') (RightOf ?bottle ?tie) (Is ?tie 'tie') (Is ?bottle 'bottle') (or (not (Is ?cup 'cup')) (AlignedVertically ?cup ?bottle)) (or (not (Is ?cup 'cup')) (Has ?sock 'white')) (or (not (Is ?cup 'cup')) (RightOf ?carrot ?cup)) (or (not (Is ?cup 'cup')) (Is ?sock 'sock')) (or (not (Is ?cup 'cup')) (RightOf ?sock ?lemon)) (or (not (Is ?cup 'cup')) (Is ?carrot 'carrot')) (or (not (Is ?cup 'cup')) (RightOf ?lemon ?carrot)) (or (not (Is ?cup 'cup')) (Has ?lemon 'yellow')) (or (not (Is ?cup 'cup')) (SmallerThan ?lemon ?cup)) (or (not (Is ?cup 'cup')) (Is ?lemon 'lemon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "sock",
+        "lemon",
+        "carrot",
+        "cup",
+        "jeans",
+        "bottle"
+    ]
+}

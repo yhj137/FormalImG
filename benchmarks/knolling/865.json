@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black camera present in the scene, there is a white sock aligned horizontally to its left. A gray keyboard is positioned directly below the camera. To the left of the keyboard, there is a red watch that is visibly smaller than the keyboard. Finally, a pair of glasses is arranged below the watch.",
+    "dsl": "(and (forall ?camera (implies (and (Is ?camera 'camera') (Has ?camera 'black')) (exists ?sock (exists ?keyboard (exists ?watch (exists ?glasses (and (Is ?sock 'sock') (Has ?sock 'white') (Is ?keyboard 'keyboard') (Has ?keyboard 'gray') (Is ?watch 'watch') (Has ?watch 'red') (Is ?glasses 'glasses') (LeftOf ?sock ?camera) (AlignedHorizontally ?sock ?camera) (Below ?keyboard ?camera) (LeftOf ?watch ?keyboard) (SmallerThan ?watch ?keyboard) (Below ?glasses ?watch)))))))))",
+    "cnf": "(forall ?camera (exists ?sock (exists ?keyboard (exists ?watch (exists ?glasses (and (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?sock 'sock')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?sock 'white')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (LeftOf ?sock ?camera)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?keyboard 'keyboard')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (AlignedHorizontally ?sock ?camera)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?glasses 'glasses')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?keyboard 'gray')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Below ?keyboard ?camera)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?watch 'red')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Below ?glasses ?watch)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?watch 'watch')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (LeftOf ?watch ?keyboard)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (SmallerThan ?watch ?keyboard))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "keyboard",
+        "watch",
+        "camera"
+    ]
+}

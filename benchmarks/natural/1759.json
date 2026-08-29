@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a wooden bench with a sleeping dog on it. To the left of the bench is a lion, and to the right is a desk. An open laptop sits on the desk, and a hammer is inside the desk. Every apple is positioned to the right of the laptop. Additionally, a key is located to the left of the laptop, and a piece of fruit is next to the dog.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bench (exists ?dog (exists ?lion (exists ?desk (exists ?laptop (exists ?hammer (and (Is ?bench 'bench') (HasMaterial ?bench 'wooden') (Is ?dog 'dog') (HasState ?dog 'sleeping') (On ?dog ?bench) (Is ?lion 'lion') (LeftOf ?lion ?bench) (Is ?desk 'desk') (RightOf ?desk ?bench) (Is ?laptop 'laptop') (HasState ?laptop 'open') (On ?laptop ?desk) (Is ?hammer 'hammer') (In ?hammer ?desk) (forall ?apple (implies (Is ?apple 'apple') (RightOf ?apple ?laptop))) (exists ?key (exists ?fruit (and (Is ?key 'key') (LeftOf ?key ?laptop) (Is ?fruit 'fruit') (NextTo ?fruit ?dog))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bench (exists ?dog (exists ?lion (exists ?desk (exists ?laptop (exists ?hammer (forall ?apple (exists ?key (exists ?fruit (and (Is ?bench 'bench') (HasMaterial ?bench 'wooden') (On ?dog ?bench) (LeftOf ?lion ?bench) (HasState ?dog 'sleeping') (NextTo ?fruit ?dog) (RightOf ?desk ?bench) (Is ?lion 'lion') (Is ?dog 'dog') (Is ?fruit 'fruit') (Is ?desk 'desk') (On ?laptop ?desk) (In ?hammer ?desk) (HasState ?laptop 'open') (or (not (Is ?apple 'apple')) (RightOf ?apple ?laptop)) (Is ?hammer 'hammer') (Is ?laptop 'laptop') (LeftOf ?key ?laptop) (Is ?key 'key'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "key",
+        "desk",
+        "laptop",
+        "hammer",
+        "apple",
+        "dog",
+        "lion",
+        "fruit"
+    ]
+}

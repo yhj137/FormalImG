@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is placed on the top side of the frame. A gray wrench is positioned to the right of the drill. Additionally, for every white sock in the image, there is a stapler located to its left, and the sock appears smaller than the drill.",
+    "dsl": "(exists ?drill (exists ?wrench (and (Is ?drill 'drill') (OnTopSide ?drill) (Is ?wrench 'wrench') (Has ?wrench 'gray') (LeftOf ?drill ?wrench) (forall ?sock (implies (and (Is ?sock 'sock') (Has ?sock 'white')) (exists ?stapler (and (Is ?stapler 'stapler') (LeftOf ?stapler ?sock) (SmallerThan ?sock ?drill))))))))",
+    "cnf": "(exists ?drill (exists ?wrench (forall ?sock (exists ?stapler (and (Is ?drill 'drill') (OnTopSide ?drill) (LeftOf ?drill ?wrench) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (SmallerThan ?sock ?drill)) (Has ?wrench 'gray') (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (LeftOf ?stapler ?sock)) (Is ?wrench 'wrench') (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Is ?stapler 'stapler')))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "drill",
+        "stapler",
+        "sock"
+    ]
+}

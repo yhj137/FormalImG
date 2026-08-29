@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image organized in a neat 2x2 arrangement. The scene includes a shoe, an apple, a spoon, and headphones. In the upper section (top side), there is a shoe and an apple, with the apple positioned to the right of the shoe. In the lower section (bottom side), there is a spoon and headphones. The spoon is placed directly below the shoe and to the left of the headphones, while the headphones are located below the apple.",
+    "dsl": "(exists ?shoe (exists ?apple (exists ?spoon (exists ?headphones (and (Is ?shoe 'shoe') (Is ?apple 'apple') (Is ?spoon 'spoon') (Is ?headphones 'headphones') (OnTopSide ?shoe) (OnTopSide ?apple) (OnBottomSide ?spoon) (OnBottomSide ?headphones) (RightOf ?apple ?shoe) (Below ?spoon ?shoe) (LeftOf ?spoon ?headphones) (Below ?headphones ?apple))))))",
+    "cnf": "(exists ?shoe (exists ?apple (exists ?spoon (exists ?headphones (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (RightOf ?apple ?shoe) (Below ?spoon ?shoe) (OnTopSide ?apple) (Below ?headphones ?apple) (OnBottomSide ?spoon) (LeftOf ?spoon ?headphones) (Is ?apple 'apple') (Is ?spoon 'spoon') (OnBottomSide ?headphones) (Is ?headphones 'headphones'))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "headphones",
+        "shoe",
+        "apple"
+    ]
+}

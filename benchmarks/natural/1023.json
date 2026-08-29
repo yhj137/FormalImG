@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pair of glasses rests on a wooden chair. To the right of the chair is a horse holding a red ball. Positioned to the right of the horse is a mirror, and a pair of leather shoes lies to the right of the mirror.",
+    "dsl": "(exists ?c (exists ?g (exists ?h (exists ?b (exists ?m (exists ?s (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?g 'glasses') (On ?g ?c) (Is ?h 'horse') (RightOf ?h ?c) (Is ?b 'ball') (HasColor ?b 'red') (Holding ?h ?b) (Is ?m 'mirror') (RightOf ?m ?h) (Is ?s 'shoes') (HasMaterial ?s 'leather') (RightOf ?s ?m))))))))",
+    "cnf": "(exists ?c (exists ?g (exists ?h (exists ?b (exists ?m (exists ?s (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?g ?c) (RightOf ?h ?c) (Is ?g 'glasses') (Is ?h 'horse') (Holding ?h ?b) (RightOf ?m ?h) (HasColor ?b 'red') (Is ?m 'mirror') (RightOf ?s ?m) (Is ?b 'ball') (HasMaterial ?s 'leather') (Is ?s 'shoes'))))))))",
+    "k": 6,
+    "object_classes": [
+        "horse",
+        "shoes",
+        "chair",
+        "glasses",
+        "mirror",
+        "ball"
+    ]
+}

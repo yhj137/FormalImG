@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every red bowl contains a blue ball.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?x (implies (and (Is ?x 'bowl') (HasColor ?x 'red')) (exists ?y (and (Is ?y 'ball') (HasColor ?y 'blue') (In ?y ?x))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?x (exists ?y (and (or (not (Is ?x 'bowl')) (not (HasColor ?x 'red')) (Is ?y 'ball')) (or (not (Is ?x 'bowl')) (not (HasColor ?x 'red')) (HasColor ?y 'blue')) (or (not (Is ?x 'bowl')) (not (HasColor ?x 'red')) (In ?y ?x))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "ball"
+    ]
+}

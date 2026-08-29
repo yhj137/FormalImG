@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a shoe located on the right side of the image. A keyboard is positioned to the left of the shoe, and a mouse is to the left of the keyboard. The keyboard is visually larger than the mouse. For every phone in the scene, it is placed to the left of the mouse, with a calculator to the left of the phone, and a remote to the left of the calculator.",
+    "dsl": "(exists ?shoe (exists ?keyboard (exists ?mouse (and (Is ?shoe 'shoe') (OnRightSide ?shoe) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?shoe) (Is ?mouse 'mouse') (LeftOf ?mouse ?keyboard) (LargerThan ?keyboard ?mouse) (forall ?phone (implies (Is ?phone 'phone') (exists ?calculator (exists ?remote (and (Is ?calculator 'calculator') (Is ?remote 'remote') (LeftOf ?phone ?mouse) (LeftOf ?calculator ?phone) (LeftOf ?remote ?calculator))))))))))",
+    "cnf": "(exists ?shoe (exists ?keyboard (exists ?mouse (forall ?phone (exists ?calculator (exists ?remote (and (Is ?shoe 'shoe') (OnRightSide ?shoe) (LeftOf ?keyboard ?shoe) (Is ?keyboard 'keyboard') (LeftOf ?mouse ?keyboard) (LargerThan ?keyboard ?mouse) (Is ?mouse 'mouse') (or (not (Is ?phone 'phone')) (LeftOf ?phone ?mouse)) (or (not (Is ?phone 'phone')) (Is ?remote 'remote')) (or (not (Is ?phone 'phone')) (LeftOf ?calculator ?phone)) (or (not (Is ?phone 'phone')) (Is ?calculator 'calculator')) (or (not (Is ?phone 'phone')) (LeftOf ?remote ?calculator)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "phone",
+        "calculator",
+        "mouse",
+        "shoe"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board in the scene, a specific vertical and horizontal arrangement of items is present. Directly above the cutting board is a knife, and they are aligned vertically. Below the cutting board is a pizza, followed by a plate below the pizza, and finally a pair of blue jeans located on the bottom side of the image; all these items form a vertical line. The jeans are larger than the plate. Additionally, several items are arranged in rows: a red apple is aligned horizontally with the cutting board, a screwdriver is aligned horizontally with the pizza, a glove is aligned horizontally with the plate, and a black remote is aligned horizontally with the jeans.",
+    "dsl": "(forall ?cb (implies (Is ?cb 'cutting_board') (exists ?kn (exists ?pz (exists ?pl (exists ?jn (exists ?ap (exists ?sd (exists ?gl (exists ?rm (and (Is ?kn 'knife') (Is ?pz 'pizza') (Is ?pl 'plate') (Is ?jn 'jeans') (Has ?jn 'blue') (Is ?ap 'apple') (Has ?ap 'red') (Is ?sd 'screwdriver') (Is ?gl 'glove') (Is ?rm 'remote') (Has ?rm 'black') (Above ?kn ?cb) (AlignedVertically ?kn ?cb) (Below ?pz ?cb) (AlignedVertically ?pz ?cb) (Below ?pl ?pz) (AlignedVertically ?pl ?pz) (Below ?jn ?pl) (AlignedVertically ?jn ?pl) (OnBottomSide ?jn) (LargerThan ?jn ?pl) (AlignedHorizontally ?ap ?cb) (AlignedHorizontally ?sd ?pz) (AlignedHorizontally ?gl ?pl) (AlignedHorizontally ?rm ?jn))))))))))))",
+    "cnf": "(forall ?cb (exists ?kn (exists ?pz (exists ?pl (exists ?jn (exists ?ap (exists ?sd (exists ?gl (exists ?rm (and (or (not (Is ?cb 'cutting_board')) (Is ?kn 'knife')) (or (not (Is ?cb 'cutting_board')) (Above ?kn ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?pz 'pizza')) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?kn ?cb)) (or (not (Is ?cb 'cutting_board')) (Has ?rm 'black')) (or (not (Is ?cb 'cutting_board')) (Is ?pl 'plate')) (or (not (Is ?cb 'cutting_board')) (Below ?pz ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?rm 'remote')) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?rm ?jn)) (or (not (Is ?cb 'cutting_board')) (Is ?jn 'jeans')) (or (not (Is ?cb 'cutting_board')) (Below ?pl ?pz)) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?pz ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?gl 'glove')) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?gl ?pl)) (or (not (Is ?cb 'cutting_board')) (LargerThan ?jn ?pl)) (or (not (Is ?cb 'cutting_board')) (Has ?jn 'blue')) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?pl ?pz)) (or (not (Is ?cb 'cutting_board')) (Is ?sd 'screwdriver')) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?sd ?pz)) (or (not (Is ?cb 'cutting_board')) (OnBottomSide ?jn)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?ap ?cb)) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?jn ?pl)) (or (not (Is ?cb 'cutting_board')) (Is ?ap 'apple')) (or (not (Is ?cb 'cutting_board')) (Below ?jn ?pl)) (or (not (Is ?cb 'cutting_board')) (Has ?ap 'red'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "remote",
+        "apple",
+        "pizza",
+        "screwdriver",
+        "cutting_board",
+        "jeans",
+        "knife",
+        "glove"
+    ]
+}

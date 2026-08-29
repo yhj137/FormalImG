@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the bottom side of the layout, there is a camera and a calculator, with the calculator positioned to the right of the camera. A pizza is placed above the camera. Furthermore, for every fork in the scene, it is located to the right of the pizza, and there is a donut situated above the fork on the top side of the image.",
+    "dsl": "(exists ?cam (exists ?calc (exists ?p (and (Is ?cam 'camera') (OnBottomSide ?cam) (Is ?calc 'calculator') (OnBottomSide ?calc) (RightOf ?calc ?cam) (Is ?p 'pizza') (Above ?p ?cam) (forall ?f (implies (Is ?f 'fork') (exists ?d (and (Is ?d 'donut') (OnTopSide ?d) (RightOf ?f ?p) (Above ?d ?f)))))))))",
+    "cnf": "(exists ?cam (exists ?calc (exists ?p (forall ?f (exists ?d (and (Is ?cam 'camera') (OnBottomSide ?cam) (RightOf ?calc ?cam) (Above ?p ?cam) (OnBottomSide ?calc) (Is ?p 'pizza') (or (not (Is ?f 'fork')) (RightOf ?f ?p)) (Is ?calc 'calculator') (or (not (Is ?f 'fork')) (OnTopSide ?d)) (or (not (Is ?f 'fork')) (Above ?d ?f)) (or (not (Is ?f 'fork')) (Is ?d 'donut'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pizza",
+        "fork",
+        "calculator",
+        "camera",
+        "donut"
+    ]
+}

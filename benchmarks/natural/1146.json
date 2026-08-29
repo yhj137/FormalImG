@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a man in a blue shirt holding a basket that contains all the flowers. A child holding a bitten sandwich stands next to him.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?b (exists ?c (and (Is ?m 'man') (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?m) (Is ?b 'basket') (Holding ?m ?b) (Is ?c 'child') (NextTo ?c ?m) (forall ?f (implies (Is ?f 'flower') (In ?f ?b))) (exists ?sw (and (Is ?sw 'sandwich') (HasState ?sw 'bitten') (Holding ?c ?sw)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?b (exists ?c (forall ?f (exists ?sw (and (Is ?m 'man') (On ?s ?m) (Holding ?m ?b) (HasColor ?s 'blue') (NextTo ?c ?m) (Is ?b 'basket') (or (not (Is ?f 'flower')) (In ?f ?b)) (Is ?s 'shirt') (Is ?c 'child') (Holding ?c ?sw) (HasState ?sw 'bitten') (Is ?sw 'sandwich')))))))))",
+    "k": 6,
+    "object_classes": [
+        "man",
+        "sandwich",
+        "shirt",
+        "basket",
+        "flower",
+        "child"
+    ]
+}

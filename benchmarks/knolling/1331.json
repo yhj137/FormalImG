@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase located on the right side. A keyboard is placed to the left of the suitcase. A shoe is positioned above the suitcase. A wallet is located above the keyboard and is visually smaller than the keyboard. Furthermore, for every plate in the image, it is positioned to the left of the shoe, has a bowl directly above it, and a tie to its left.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (exists ?shoe (exists ?wallet (and (Is ?suitcase 'suitcase') (Is ?keyboard 'keyboard') (Is ?shoe 'shoe') (Is ?wallet 'wallet') (OnRightSide ?suitcase) (LeftOf ?keyboard ?suitcase) (Above ?shoe ?suitcase) (Above ?wallet ?keyboard) (SmallerThan ?wallet ?keyboard) (forall ?plate (implies (Is ?plate 'plate') (exists ?bowl (exists ?tie (and (Is ?bowl 'bowl') (Is ?tie 'tie') (LeftOf ?plate ?shoe) (Above ?bowl ?plate) (LeftOf ?tie ?plate)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (exists ?shoe (exists ?wallet (forall ?plate (exists ?bowl (exists ?tie (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?keyboard ?suitcase) (Above ?shoe ?suitcase) (Is ?keyboard 'keyboard') (Above ?wallet ?keyboard) (Is ?shoe 'shoe') (or (not (Is ?plate 'plate')) (LeftOf ?plate ?shoe)) (SmallerThan ?wallet ?keyboard) (Is ?wallet 'wallet') (or (not (Is ?plate 'plate')) (Is ?tie 'tie')) (or (not (Is ?plate 'plate')) (Above ?bowl ?plate)) (or (not (Is ?plate 'plate')) (Is ?bowl 'bowl')) (or (not (Is ?plate 'plate')) (LeftOf ?tie ?plate))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "tie",
+        "keyboard",
+        "wallet",
+        "bowl",
+        "suitcase",
+        "shoe"
+    ]
+}

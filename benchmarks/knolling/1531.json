@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene starts with a bottle on the left side. To the right of the bottle is a knife, to the right of the knife is a spoon, and to the right of the spoon is a calculator; these four objects are aligned horizontally. For every mouse in the image, the calculator is positioned above it. Relative to the mouse, there are glasses to its left. The glasses are above a set of keys, which are located on the bottom side of the image. Finally, a watch is placed to the right of the keys and is smaller than the calculator.",
+    "dsl": "(exists ?bottle (exists ?knife (exists ?spoon (exists ?calculator (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (Is ?knife 'knife') (RightOf ?knife ?bottle) (AlignedHorizontally ?knife ?bottle) (Is ?spoon 'spoon') (RightOf ?spoon ?knife) (AlignedHorizontally ?spoon ?knife) (Is ?calculator 'calculator') (RightOf ?calculator ?spoon) (AlignedHorizontally ?calculator ?spoon) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?glasses (exists ?keys (exists ?watch (and (Is ?glasses 'glasses') (Is ?keys 'keys') (Is ?watch 'watch') (Above ?calculator ?mouse) (LeftOf ?glasses ?mouse) (Above ?glasses ?keys) (OnBottomSide ?keys) (RightOf ?watch ?keys) (SmallerThan ?watch ?calculator))))))))))))",
+    "cnf": "(exists ?bottle (exists ?knife (exists ?spoon (exists ?calculator (forall ?mouse (exists ?glasses (exists ?keys (exists ?watch (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (RightOf ?knife ?bottle) (AlignedHorizontally ?knife ?bottle) (Is ?knife 'knife') (RightOf ?spoon ?knife) (AlignedHorizontally ?spoon ?knife) (Is ?spoon 'spoon') (RightOf ?calculator ?spoon) (AlignedHorizontally ?calculator ?spoon) (Is ?calculator 'calculator') (or (not (Is ?mouse 'mouse')) (Above ?calculator ?mouse)) (or (not (Is ?mouse 'mouse')) (SmallerThan ?watch ?calculator)) (or (not (Is ?mouse 'mouse')) (Is ?watch 'watch')) (or (not (Is ?mouse 'mouse')) (LeftOf ?glasses ?mouse)) (or (not (Is ?mouse 'mouse')) (RightOf ?watch ?keys)) (or (not (Is ?mouse 'mouse')) (Is ?keys 'keys')) (or (not (Is ?mouse 'mouse')) (Above ?glasses ?keys)) (or (not (Is ?mouse 'mouse')) (Is ?glasses 'glasses')) (or (not (Is ?mouse 'mouse')) (OnBottomSide ?keys)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "watch",
+        "calculator",
+        "knife",
+        "mouse",
+        "bottle",
+        "spoon"
+    ]
+}

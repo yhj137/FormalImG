@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal ball, with all headphones positioned to the right of the ball.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'ball') (HasMaterial ?b 'metal') (forall ?h (implies (Is ?h 'headphones') (RightOf ?h ?b))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?h (and (Is ?b 'ball') (HasMaterial ?b 'metal') (or (not (Is ?h 'headphones')) (RightOf ?h ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "ball",
+        "headphones"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pair of scissors located on the top side of the image, with a knife positioned to its right. Additionally, for every pair of glasses in the scene, the knife is placed above the glasses, and the glasses are smaller than the scissors.",
+    "dsl": "(exists ?scissors (exists ?knife (and (Is ?scissors 'scissors') (OnTopSide ?scissors) (Is ?knife 'knife') (RightOf ?knife ?scissors) (forall ?glasses (implies (Is ?glasses 'glasses') (and (Above ?knife ?glasses) (SmallerThan ?glasses ?scissors)))))))",
+    "cnf": "(exists ?scissors (exists ?knife (forall ?glasses (and (Is ?scissors 'scissors') (OnTopSide ?scissors) (RightOf ?knife ?scissors) (or (not (Is ?glasses 'glasses')) (SmallerThan ?glasses ?scissors)) (Is ?knife 'knife') (or (not (Is ?glasses 'glasses')) (Above ?knife ?glasses))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "glasses",
+        "knife"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is located on the top side of the scene. For every pen in the image, it is visually smaller than the monitor. A laptop is positioned below the monitor. To the left of the laptop is a yellow drill, and to the right is a keyboard. Below the drill lies a hammer, while below the hammer is a fork. Below the laptop are red scissors, which have a carrot to their left and a yellow lemon to their right.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?pen (implies (Is ?pen 'pen') (SmallerThan ?pen ?monitor))) (exists ?laptop (exists ?drill (exists ?keyboard (exists ?hammer (exists ?scissors (exists ?carrot (exists ?lemon (exists ?fork (and (Is ?laptop 'laptop') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?keyboard 'keyboard') (Is ?hammer 'hammer') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?fork 'fork') (Below ?laptop ?monitor) (LeftOf ?drill ?laptop) (RightOf ?keyboard ?laptop) (Below ?hammer ?drill) (Below ?scissors ?laptop) (LeftOf ?carrot ?scissors) (RightOf ?lemon ?scissors) (Below ?fork ?hammer))))))))))))",
+    "cnf": "(exists ?monitor (forall ?pen (exists ?laptop (exists ?drill (exists ?keyboard (exists ?hammer (exists ?scissors (exists ?carrot (exists ?lemon (exists ?fork (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?monitor)) (Below ?laptop ?monitor) (Is ?laptop 'laptop') (LeftOf ?drill ?laptop) (RightOf ?keyboard ?laptop) (Has ?drill 'yellow') (Below ?hammer ?drill) (Below ?scissors ?laptop) (Is ?keyboard 'keyboard') (Is ?drill 'drill') (Is ?hammer 'hammer') (Below ?fork ?hammer) (Has ?scissors 'red') (LeftOf ?carrot ?scissors) (Is ?fork 'fork') (Is ?scissors 'scissors') (RightOf ?lemon ?scissors) (Is ?carrot 'carrot') (Has ?lemon 'yellow') (Is ?lemon 'lemon'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "keyboard",
+        "pen",
+        "lemon",
+        "carrot",
+        "drill",
+        "hammer",
+        "fork",
+        "monitor",
+        "scissors"
+    ]
+}

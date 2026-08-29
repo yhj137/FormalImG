@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a suitcase. A blue shirt is arranged above the suitcase, while a cutting board is placed below it. A spoon is located below the cutting board. On the right side of the image, there is a bottle, with a ruler positioned above it and a phone positioned below it. A mouse is located below the phone, falling within the bottom side of the image. The phone is smaller than the suitcase. Additionally, for every sock in the arrangement, there is a red glove located below it, and that glove is smaller than the cutting board.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?board (exists ?bottle (exists ?phone (exists ?mouse (exists ?ruler (exists ?spoon (and (Is ?suitcase 'suitcase') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?board 'cutting_board') (Is ?bottle 'bottle') (Is ?phone 'phone') (Is ?mouse 'mouse') (Is ?ruler 'ruler') (Is ?spoon 'spoon') (Above ?shirt ?suitcase) (Below ?board ?suitcase) (Below ?spoon ?board) (OnRightSide ?bottle) (Above ?ruler ?bottle) (Below ?phone ?bottle) (Below ?mouse ?phone) (OnBottomSide ?mouse) (SmallerThan ?phone ?suitcase) (forall ?sock (implies (Is ?sock 'sock') (exists ?glove (and (Is ?glove 'glove') (Has ?glove 'red') (Below ?glove ?sock) (SmallerThan ?glove ?board))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?board (exists ?bottle (exists ?phone (exists ?mouse (exists ?ruler (exists ?spoon (forall ?sock (exists ?glove (and (Is ?suitcase 'suitcase') (Above ?shirt ?suitcase) (Below ?board ?suitcase) (Has ?shirt 'blue') (SmallerThan ?phone ?suitcase) (Is ?board 'cutting_board') (Below ?spoon ?board) (Is ?shirt 'shirt') (Below ?mouse ?phone) (or (not (Is ?sock 'sock')) (SmallerThan ?glove ?board)) (Is ?spoon 'spoon') (Below ?phone ?bottle) (Is ?mouse 'mouse') (OnBottomSide ?mouse) (or (not (Is ?sock 'sock')) (Below ?glove ?sock)) (Above ?ruler ?bottle) (Is ?phone 'phone') (or (not (Is ?sock 'sock')) (Has ?glove 'red')) (OnRightSide ?bottle) (Is ?ruler 'ruler') (or (not (Is ?sock 'sock')) (Is ?glove 'glove')) (Is ?bottle 'bottle'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "sock",
+        "phone",
+        "cutting_board",
+        "bottle",
+        "mouse",
+        "spoon",
+        "suitcase",
+        "glove",
+        "shirt"
+    ]
+}

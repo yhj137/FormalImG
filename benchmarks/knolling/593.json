@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is positioned on the left side of the scene. There is a calculator located to the right of the laptop. Furthermore, for every knife in the image, it is positioned below the calculator and aligned vertically with it.",
+    "dsl": "(exists ?laptop (exists ?calculator (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?calculator 'calculator') (RightOf ?calculator ?laptop) (forall ?knife (implies (Is ?knife 'knife') (and (Below ?knife ?calculator) (AlignedVertically ?knife ?calculator)))))))",
+    "cnf": "(exists ?laptop (exists ?calculator (forall ?knife (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (RightOf ?calculator ?laptop) (Is ?calculator 'calculator') (or (not (Is ?knife 'knife')) (Below ?knife ?calculator)) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?calculator))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "laptop",
+        "calculator"
+    ]
+}

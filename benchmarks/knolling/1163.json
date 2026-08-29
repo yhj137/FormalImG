@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is located on the top side of the scene, positioned above a keyboard. A mouse, which is smaller than the keyboard, lies to the right of the keyboard. To the right of the laptop is a bowl, situated on the right side of the image. Additionally, for every pen in the scene, it is placed below the bowl, and there is a hammer located to the right of the pen.",
+    "dsl": "(exists ?laptop (exists ?keyboard (exists ?mouse (exists ?bowl (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?keyboard 'keyboard') (Above ?laptop ?keyboard) (Is ?mouse 'mouse') (RightOf ?mouse ?keyboard) (SmallerThan ?mouse ?keyboard) (Is ?bowl 'bowl') (RightOf ?bowl ?laptop) (OnRightSide ?bowl) (forall ?pen (implies (Is ?pen 'pen') (exists ?hammer (and (Is ?hammer 'hammer') (Below ?pen ?bowl) (RightOf ?hammer ?pen))))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (exists ?mouse (exists ?bowl (forall ?pen (exists ?hammer (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Above ?laptop ?keyboard) (RightOf ?bowl ?laptop) (Is ?keyboard 'keyboard') (RightOf ?mouse ?keyboard) (Is ?bowl 'bowl') (OnRightSide ?bowl) (SmallerThan ?mouse ?keyboard) (Is ?mouse 'mouse') (or (not (Is ?pen 'pen')) (Below ?pen ?bowl)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (RightOf ?hammer ?pen)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "pen",
+        "keyboard",
+        "hammer",
+        "mouse",
+        "bowl"
+    ]
+}

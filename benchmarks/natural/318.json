@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing every butterfly inside a round basket.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'butterfly') (exists ?k (and (Is ?k 'basket') (HasShape ?k 'round') (In ?b ?k))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?k (and (or (not (Is ?b 'butterfly')) (Is ?k 'basket')) (or (not (Is ?b 'butterfly')) (HasShape ?k 'round')) (or (not (Is ?b 'butterfly')) (In ?b ?k))))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "basket"
+    ]
+}

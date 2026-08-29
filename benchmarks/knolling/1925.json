@@ -1,0 +1,18 @@
+{
+    "prompt": "There exist five objects in the scene. For every donut present, these objects are identified as a shirt, a tie, a keyboard, a cutting board, and a pizza. Additionally, for each donut, there is a corresponding group consisting of a carrot, a sandwich, a glove, and a phone. Under these conditions, the shirt is positioned above the keyboard, the keyboard is to the left of the cutting board, and the cutting board is larger than the phone. The phone, glove, sandwich, and carrot are located on the bottom side and aligned horizontally in that order from left to right, with the carrot positioned to the left of the donut. The shirt, keyboard, and phone are vertically aligned, with the keyboard positioned above the phone.",
+    "dsl": "(exists ?shirt (exists ?tie (exists ?keyboard (exists ?cutting_board (exists ?pizza (forall ?donut (implies (Is ?donut 'donut') (exists ?carrot (exists ?sandwich (exists ?glove (exists ?phone (and (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?keyboard 'keyboard') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Is ?carrot 'carrot') (Is ?sandwich 'sandwich') (Is ?glove 'glove') (Is ?phone 'phone') (Above ?shirt ?keyboard) (Above ?keyboard ?phone) (LeftOf ?keyboard ?cutting_board) (LargerThan ?cutting_board ?phone) (LeftOf ?carrot ?donut) (OnBottomSide ?phone) (OnBottomSide ?glove) (OnBottomSide ?sandwich) (OnBottomSide ?carrot) (AlignedHorizontally ?phone ?glove) (AlignedHorizontally ?glove ?sandwich) (AlignedHorizontally ?sandwich ?carrot) (AlignedVertically ?shirt ?keyboard) (AlignedVertically ?keyboard ?phone) (LeftOf ?phone ?glove) (LeftOf ?glove ?sandwich) (LeftOf ?sandwich ?carrot)))))))))))))",
+    "cnf": "(exists ?shirt (exists ?tie (exists ?keyboard (exists ?cutting_board (exists ?pizza (forall ?donut (exists ?carrot (exists ?sandwich (exists ?glove (exists ?phone (and (or (not (Is ?donut 'donut')) (Is ?shirt 'shirt')) (or (not (Is ?donut 'donut')) (Above ?shirt ?keyboard)) (or (not (Is ?donut 'donut')) (Is ?tie 'tie')) (or (not (Is ?donut 'donut')) (AlignedVertically ?shirt ?keyboard)) (or (not (Is ?donut 'donut')) (Is ?phone 'phone')) (or (not (Is ?donut 'donut')) (Above ?keyboard ?phone)) (or (not (Is ?donut 'donut')) (Is ?keyboard 'keyboard')) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?sandwich ?carrot)) (or (not (Is ?donut 'donut')) (AlignedVertically ?keyboard ?phone)) (or (not (Is ?donut 'donut')) (LeftOf ?keyboard ?cutting_board)) (or (not (Is ?donut 'donut')) (Is ?glove 'glove')) (or (not (Is ?donut 'donut')) (LargerThan ?cutting_board ?phone)) (or (not (Is ?donut 'donut')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?glove ?sandwich)) (or (not (Is ?donut 'donut')) (OnBottomSide ?carrot)) (or (not (Is ?donut 'donut')) (LeftOf ?sandwich ?carrot)) (or (not (Is ?donut 'donut')) (LeftOf ?glove ?sandwich)) (or (not (Is ?donut 'donut')) (LeftOf ?phone ?glove)) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?phone ?glove)) (or (not (Is ?donut 'donut')) (Is ?sandwich 'sandwich')) (or (not (Is ?donut 'donut')) (OnBottomSide ?glove)) (or (not (Is ?donut 'donut')) (LeftOf ?carrot ?donut)) (or (not (Is ?donut 'donut')) (OnBottomSide ?phone)) (or (not (Is ?donut 'donut')) (Is ?pizza 'pizza')) (or (not (Is ?donut 'donut')) (OnBottomSide ?sandwich)) (or (not (Is ?donut 'donut')) (Is ?carrot 'carrot')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pizza",
+        "shirt",
+        "keyboard",
+        "tie",
+        "carrot",
+        "glove",
+        "cutting_board",
+        "phone",
+        "sandwich",
+        "donut"
+    ]
+}

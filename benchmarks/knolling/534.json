@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue book. For every red apple present in the scene, it is positioned below the book. Furthermore, corresponding to each apple, there is a white bowl located below that apple which is visually larger than the apple.",
+    "dsl": "(exists ?book (and (Is ?book 'book') (Has ?book 'blue') (forall ?apple (implies (and (Is ?apple 'apple') (Has ?apple 'red')) (exists ?bowl (and (Is ?bowl 'bowl') (Has ?bowl 'white') (Below ?apple ?book) (Below ?bowl ?apple) (LargerThan ?bowl ?apple)))))))",
+    "cnf": "(exists ?book (forall ?apple (exists ?bowl (and (Is ?book 'book') (Has ?book 'blue') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Below ?apple ?book)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Has ?bowl 'white')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Below ?bowl ?apple)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?bowl 'bowl')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (LargerThan ?bowl ?apple))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "bowl",
+        "apple"
+    ]
+}

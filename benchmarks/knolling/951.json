@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a brown handbag located on the bottom side. A blue book and a watch are also present; the handbag, book, and watch are aligned horizontally, with the watch being smaller than the book. Additionally, for every sock in the display, there is a pink donut such that the donut is smaller than the sock, and the sock is aligned horizontally with the book.",
+    "dsl": "(exists ?handbag (exists ?book (exists ?watch (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (Is ?book 'book') (Has ?book 'blue') (Is ?watch 'watch') (AlignedHorizontally ?handbag ?book) (AlignedHorizontally ?book ?watch) (SmallerThan ?watch ?book) (forall ?sock (implies (Is ?sock 'sock') (exists ?donut (and (Is ?donut 'donut') (Has ?donut 'pink') (SmallerThan ?donut ?sock) (AlignedHorizontally ?sock ?book)))))))))",
+    "cnf": "(exists ?handbag (exists ?book (exists ?watch (forall ?sock (exists ?donut (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (AlignedHorizontally ?handbag ?book) (Has ?book 'blue') (AlignedHorizontally ?book ?watch) (Is ?book 'book') (SmallerThan ?watch ?book) (Is ?watch 'watch') (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?book)) (or (not (Is ?sock 'sock')) (SmallerThan ?donut ?sock)) (or (not (Is ?sock 'sock')) (Has ?donut 'pink')) (or (not (Is ?sock 'sock')) (Is ?donut 'donut'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "sock",
+        "watch",
+        "handbag",
+        "donut"
+    ]
+}

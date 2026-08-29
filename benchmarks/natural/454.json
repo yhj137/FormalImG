@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every screwdriver is on a blue car, next to a pan inside the car.",
+    "dsl": "(forall ?s (implies (Is ?s 'screwdriver') (exists ?c (exists ?p (and (Is ?c 'car') (HasColor ?c 'blue') (Is ?p 'pan') (In ?p ?c) (On ?s ?c) (NextTo ?s ?p))))))",
+    "cnf": "(forall ?s (exists ?c (exists ?p (and (or (not (Is ?s 'screwdriver')) (Is ?c 'car')) (or (not (Is ?s 'screwdriver')) (HasColor ?c 'blue')) (or (not (Is ?s 'screwdriver')) (In ?p ?c)) (or (not (Is ?s 'screwdriver')) (Is ?p 'pan')) (or (not (Is ?s 'screwdriver')) (On ?s ?c)) (or (not (Is ?s 'screwdriver')) (NextTo ?s ?p))))))",
+    "k": 3,
+    "object_classes": [
+        "screwdriver",
+        "pan",
+        "car"
+    ]
+}

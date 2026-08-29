@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of every rock, a child holds a metal key next to the rock.",
+    "dsl": "(forall ?r (implies (Is ?r 'rock') (exists ?k (exists ?c (and (Is ?k 'key') (HasMaterial ?k 'metal') (Is ?c 'child') (NextTo ?k ?r) (Holding ?c ?k) (LeftOf ?c ?r))))))",
+    "cnf": "(forall ?r (exists ?k (exists ?c (and (or (not (Is ?r 'rock')) (Is ?k 'key')) (or (not (Is ?r 'rock')) (HasMaterial ?k 'metal')) (or (not (Is ?r 'rock')) (NextTo ?k ?r)) (or (not (Is ?r 'rock')) (Is ?c 'child')) (or (not (Is ?r 'rock')) (Holding ?c ?k)) (or (not (Is ?r 'rock')) (LeftOf ?c ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "rock",
+        "child",
+        "key"
+    ]
+}

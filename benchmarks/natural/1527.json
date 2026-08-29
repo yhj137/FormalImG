@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is sitting on a wooden chair and holding a black laptop. A backpack is placed next to the chair, and every book in the scene is contained within that backpack. To the left of the chair stands a plant. To the right of the laptop, there is a round cup with a fork inside it.",
+    "dsl": "(exists ?p (exists ?c (exists ?l (exists ?bp (and (Is ?p 'person') (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?l 'laptop') (HasColor ?l 'black') (Is ?bp 'backpack') (On ?p ?c) (Holding ?p ?l) (NextTo ?bp ?c) (forall ?b (implies (Is ?b 'book') (In ?b ?bp))) (exists ?pl (exists ?cp (exists ?f (and (Is ?pl 'plant') (LeftOf ?pl ?c) (Is ?cp 'cup') (HasShape ?cp 'round') (RightOf ?cp ?l) (Is ?f 'fork') (In ?f ?cp))))))))))",
+    "cnf": "(exists ?p (exists ?c (exists ?l (exists ?bp (forall ?b (exists ?pl (exists ?cp (exists ?f (and (Is ?p 'person') (On ?p ?c) (Holding ?p ?l) (HasMaterial ?c 'wooden') (NextTo ?bp ?c) (HasColor ?l 'black') (RightOf ?cp ?l) (Is ?c 'chair') (LeftOf ?pl ?c) (Is ?bp 'backpack') (or (not (Is ?b 'book')) (In ?b ?bp)) (Is ?l 'laptop') (HasShape ?cp 'round') (In ?f ?cp) (Is ?pl 'plant') (Is ?cp 'cup') (Is ?f 'fork'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "person",
+        "plant",
+        "laptop",
+        "backpack",
+        "book",
+        "chair",
+        "cup"
+    ]
+}

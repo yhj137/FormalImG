@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the right side of the image. To the left of the suitcase is a laptop, and they are aligned horizontally. For every book in the scene, it is positioned below the suitcase and aligned vertically with it. To the left of the book, there is a plate which is horizontally aligned with the book; the laptop is visually larger than this plate. A pizza is placed to the left of the plate. Below the plate and aligned vertically with it, a knife, a tie, and a stapler are arranged in a vertical column, appearing in that order from top to bottom.",
+    "dsl": "(exists ?s (exists ?l (and (Is ?s 'suitcase') (OnRightSide ?s) (Is ?l 'laptop') (LeftOf ?l ?s) (AlignedHorizontally ?l ?s) (forall ?b (implies (Is ?b 'book') (exists ?p (exists ?z (exists ?k (exists ?t (exists ?st (and (Is ?p 'plate') (Below ?b ?s) (AlignedVertically ?b ?s) (LeftOf ?p ?b) (AlignedHorizontally ?p ?b) (LargerThan ?l ?p) (Is ?z 'pizza') (LeftOf ?z ?p) (Is ?k 'knife') (Below ?k ?p) (AlignedVertically ?k ?p) (Is ?t 'tie') (Below ?t ?k) (AlignedVertically ?t ?k) (Is ?st 'stapler') (Below ?st ?t) (AlignedVertically ?st ?t))))))))))))",
+    "cnf": "(exists ?s (exists ?l (forall ?b (exists ?p (exists ?z (exists ?k (exists ?t (exists ?st (and (Is ?s 'suitcase') (OnRightSide ?s) (LeftOf ?l ?s) (AlignedHorizontally ?l ?s) (Is ?l 'laptop') (or (not (Is ?b 'book')) (Below ?b ?s)) (or (not (Is ?b 'book')) (LargerThan ?l ?p)) (or (not (Is ?b 'book')) (AlignedVertically ?b ?s)) (or (not (Is ?b 'book')) (Is ?p 'plate')) (or (not (Is ?b 'book')) (AlignedHorizontally ?p ?b)) (or (not (Is ?b 'book')) (LeftOf ?z ?p)) (or (not (Is ?b 'book')) (Is ?z 'pizza')) (or (not (Is ?b 'book')) (LeftOf ?p ?b)) (or (not (Is ?b 'book')) (Below ?k ?p)) (or (not (Is ?b 'book')) (Is ?k 'knife')) (or (not (Is ?b 'book')) (AlignedVertically ?k ?p)) (or (not (Is ?b 'book')) (Is ?t 'tie')) (or (not (Is ?b 'book')) (Below ?t ?k)) (or (not (Is ?b 'book')) (AlignedVertically ?t ?k)) (or (not (Is ?b 'book')) (Is ?st 'stapler')) (or (not (Is ?b 'book')) (Below ?st ?t)) (or (not (Is ?b 'book')) (AlignedVertically ?st ?t)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "laptop",
+        "plate",
+        "tie",
+        "stapler",
+        "pizza",
+        "knife",
+        "suitcase"
+    ]
+}

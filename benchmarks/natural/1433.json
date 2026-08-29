@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every lamp in the scene sits on a rectangular refrigerator. A plastic bottle is to the left of the lamp, while a round plate is to the right. A metal hammer rests on the plate. A fabric shirt also lies on the refrigerator. To the right of the refrigerator is a bus, and an elephant stands to the right of the bus.",
+    "dsl": "(forall ?l (implies (Is ?l 'lamp') (exists ?r (exists ?bt (exists ?p (exists ?h (exists ?s (exists ?b (exists ?e (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (Is ?bt 'bottle') (HasMaterial ?bt 'plastic') (Is ?p 'plate') (HasShape ?p 'round') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Is ?s 'shirt') (HasMaterial ?s 'fabric') (Is ?b 'bus') (Is ?e 'elephant') (On ?l ?r) (LeftOf ?bt ?l) (RightOf ?p ?l) (On ?h ?p) (On ?s ?r) (RightOf ?b ?r) (RightOf ?e ?b)))))))))))",
+    "cnf": "(forall ?l (exists ?r (exists ?bt (exists ?p (exists ?h (exists ?s (exists ?b (exists ?e (and (or (not (Is ?l 'lamp')) (Is ?r 'refrigerator')) (or (not (Is ?l 'lamp')) (HasShape ?r 'rectangular')) (or (not (Is ?l 'lamp')) (Is ?bt 'bottle')) (or (not (Is ?l 'lamp')) (On ?l ?r)) (or (not (Is ?l 'lamp')) (HasMaterial ?bt 'plastic')) (or (not (Is ?l 'lamp')) (Is ?e 'elephant')) (or (not (Is ?l 'lamp')) (LeftOf ?bt ?l)) (or (not (Is ?l 'lamp')) (On ?s ?r)) (or (not (Is ?l 'lamp')) (Is ?p 'plate')) (or (not (Is ?l 'lamp')) (Is ?b 'bus')) (or (not (Is ?l 'lamp')) (RightOf ?e ?b)) (or (not (Is ?l 'lamp')) (RightOf ?p ?l)) (or (not (Is ?l 'lamp')) (On ?h ?p)) (or (not (Is ?l 'lamp')) (RightOf ?b ?r)) (or (not (Is ?l 'lamp')) (HasMaterial ?s 'fabric')) (or (not (Is ?l 'lamp')) (HasShape ?p 'round')) (or (not (Is ?l 'lamp')) (HasMaterial ?h 'metal')) (or (not (Is ?l 'lamp')) (Is ?s 'shirt')) (or (not (Is ?l 'lamp')) (Is ?h 'hammer')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "bus",
+        "hammer",
+        "refrigerator",
+        "elephant",
+        "shirt",
+        "plate",
+        "lamp"
+    ]
+}

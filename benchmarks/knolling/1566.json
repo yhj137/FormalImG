@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown handbag is located on the right side of the image. To the left of the handbag is a black wallet. A black watch is positioned below the wallet, and a blue pen is positioned below the watch; the wallet, watch, and pen are all aligned vertically. To the left of the wallet is a sandwich, which is located on the top side of the scene. A gray fork is placed directly below the sandwich and aligned vertically with it. Finally, for every cup in the image, it is located to the left of the fork, and there is a yellow lemon positioned below the cup.",
+    "dsl": "(exists ?handbag (exists ?wallet (exists ?watch (exists ?pen (exists ?sandwich (exists ?fork (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (Is ?wallet 'wallet') (Has ?wallet 'black') (LeftOf ?wallet ?handbag) (Is ?watch 'watch') (Has ?watch 'black') (Below ?watch ?wallet) (AlignedVertically ?watch ?wallet) (Is ?pen 'pen') (Has ?pen 'blue') (Below ?pen ?watch) (AlignedVertically ?pen ?watch) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?wallet) (OnTopSide ?sandwich) (Is ?fork 'fork') (Has ?fork 'gray') (Below ?fork ?sandwich) (AlignedVertically ?fork ?sandwich) (forall ?cup (implies (Is ?cup 'cup') (exists ?lemon (and (Is ?lemon 'lemon') (Has ?lemon 'yellow') (LeftOf ?cup ?fork) (Below ?lemon ?cup))))))))))))",
+    "cnf": "(exists ?handbag (exists ?wallet (exists ?watch (exists ?pen (exists ?sandwich (exists ?fork (forall ?cup (exists ?lemon (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (LeftOf ?wallet ?handbag) (Has ?wallet 'black') (Below ?watch ?wallet) (Is ?wallet 'wallet') (AlignedVertically ?watch ?wallet) (Has ?watch 'black') (LeftOf ?sandwich ?wallet) (Below ?pen ?watch) (Is ?watch 'watch') (Is ?sandwich 'sandwich') (OnTopSide ?sandwich) (AlignedVertically ?pen ?watch) (Has ?pen 'blue') (Below ?fork ?sandwich) (Is ?pen 'pen') (AlignedVertically ?fork ?sandwich) (Has ?fork 'gray') (or (not (Is ?cup 'cup')) (LeftOf ?cup ?fork)) (Is ?fork 'fork') (or (not (Is ?cup 'cup')) (Has ?lemon 'yellow')) (or (not (Is ?cup 'cup')) (Below ?lemon ?cup)) (or (not (Is ?cup 'cup')) (Is ?lemon 'lemon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pen",
+        "lemon",
+        "watch",
+        "cup",
+        "fork",
+        "handbag",
+        "wallet",
+        "sandwich"
+    ]
+}

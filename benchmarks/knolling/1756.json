@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement. On the left side, there is a keyboard. To the right of the keyboard are headphones, and further to the right, on the right side of the image, is a hat. The hat is visually larger than the wallet. Positioned above the keyboard is the wallet. To the right of the wallet are glasses, which are also above the headphones. To the right of the glasses is a donut, located above the hat. The layout follows a specific rule: for every pair of scissors, there is a stapler to its right, and a lighter to the right of the stapler. Furthermore, the stapler is positioned above the glasses, and the lighter is placed in the top side of the scene.",
+    "dsl": "(exists ?keyboard (exists ?headphones (exists ?hat (exists ?wallet (exists ?glasses (exists ?donut (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Is ?headphones 'headphones') (RightOf ?headphones ?keyboard) (Is ?hat 'hat') (RightOf ?hat ?headphones) (OnRightSide ?hat) (LargerThan ?hat ?wallet) (Is ?wallet 'wallet') (Above ?wallet ?keyboard) (Is ?glasses 'glasses') (RightOf ?glasses ?wallet) (Above ?glasses ?headphones) (Is ?donut 'donut') (RightOf ?donut ?glasses) (Above ?donut ?hat) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?stapler (exists ?lighter (and (Is ?stapler 'stapler') (Is ?lighter 'lighter') (RightOf ?stapler ?scissors) (RightOf ?lighter ?stapler) (Above ?stapler ?glasses) (OnTopSide ?lighter)))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?headphones (exists ?hat (exists ?wallet (exists ?glasses (exists ?donut (forall ?scissors (exists ?stapler (exists ?lighter (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (RightOf ?headphones ?keyboard) (Above ?wallet ?keyboard) (Is ?headphones 'headphones') (RightOf ?hat ?headphones) (Is ?wallet 'wallet') (RightOf ?glasses ?wallet) (Above ?glasses ?headphones) (Is ?hat 'hat') (OnRightSide ?hat) (LargerThan ?hat ?wallet) (Is ?glasses 'glasses') (RightOf ?donut ?glasses) (Above ?donut ?hat) (or (not (Is ?scissors 'scissors')) (Above ?stapler ?glasses)) (Is ?donut 'donut') (or (not (Is ?scissors 'scissors')) (RightOf ?lighter ?stapler)) (or (not (Is ?scissors 'scissors')) (OnTopSide ?lighter)) (or (not (Is ?scissors 'scissors')) (RightOf ?stapler ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?lighter 'lighter')) (or (not (Is ?scissors 'scissors')) (Is ?stapler 'stapler'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "keyboard",
+        "hat",
+        "lighter",
+        "wallet",
+        "scissors",
+        "headphones",
+        "donut"
+    ]
+}

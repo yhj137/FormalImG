@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene depicts a boat containing a man holding a knife. To the right of the man is a round pizza, and to his left is a screwdriver. Also inside the boat is a basket containing all the fruit, and a monitor with a keyboard to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?k (exists ?ba (exists ?mo (and (Is ?m 'man') (Is ?b 'boat') (Is ?k 'knife') (Is ?ba 'basket') (Is ?mo 'monitor') (In ?m ?b) (Holding ?m ?k) (In ?ba ?b) (In ?mo ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?ba))) (exists ?p (exists ?s (exists ?kb (and (Is ?p 'pizza') (Is ?s 'screwdriver') (Is ?kb 'keyboard') (HasShape ?p 'round') (RightOf ?p ?m) (LeftOf ?s ?m) (RightOf ?kb ?mo))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?k (exists ?ba (exists ?mo (forall ?f (exists ?p (exists ?s (exists ?kb (and (Is ?m 'man') (In ?m ?b) (Holding ?m ?k) (Is ?b 'boat') (In ?ba ?b) (RightOf ?p ?m) (Is ?k 'knife') (In ?mo ?b) (Is ?ba 'basket') (or (not (Is ?f 'fruit')) (In ?f ?ba)) (LeftOf ?s ?m) (HasShape ?p 'round') (Is ?mo 'monitor') (RightOf ?kb ?mo) (Is ?s 'screwdriver') (Is ?p 'pizza') (Is ?kb 'keyboard'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "knife",
+        "man",
+        "monitor",
+        "pizza",
+        "basket",
+        "boat",
+        "screwdriver",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden chair. Every toy car is located to the left of the chair, along with a pan containing a sandwich.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (forall ?tc (implies (Is ?tc 'toy car') (LeftOf ?tc ?c))) (exists ?p (and (Is ?p 'pan') (LeftOf ?p ?c) (exists ?s (and (Is ?s 'sandwich') (In ?s ?p))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (forall ?tc (exists ?p (exists ?s (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (or (not (Is ?tc 'toy car')) (LeftOf ?tc ?c)) (LeftOf ?p ?c) (Is ?p 'pan') (In ?s ?p) (Is ?s 'sandwich')))))))",
+    "k": 4,
+    "object_classes": [
+        "toy car",
+        "chair",
+        "pan",
+        "sandwich"
+    ]
+}

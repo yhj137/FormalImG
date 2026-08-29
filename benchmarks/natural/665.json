@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every apple rests on a plant, and a man holding a yellow banana is to the left of the plant.",
+    "dsl": "(and (IsStyle 'photo') (forall ?a (implies (Is ?a 'apple') (exists ?p (exists ?m (exists ?b (and (Is ?p 'plant') (Is ?m 'man') (Is ?b 'banana') (On ?a ?p) (LeftOf ?m ?p) (Holding ?m ?b) (HasColor ?b 'yellow'))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?a (exists ?p (exists ?m (exists ?b (and (or (not (Is ?a 'apple')) (Is ?p 'plant')) (or (not (Is ?a 'apple')) (Is ?m 'man')) (or (not (Is ?a 'apple')) (On ?a ?p)) (or (not (Is ?a 'apple')) (Is ?b 'banana')) (or (not (Is ?a 'apple')) (LeftOf ?m ?p)) (or (not (Is ?a 'apple')) (Holding ?m ?b)) (or (not (Is ?a 'apple')) (HasColor ?b 'yellow'))))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "apple",
+        "plant",
+        "man"
+    ]
+}

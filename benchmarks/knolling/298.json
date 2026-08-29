@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every ruler in the scene, there corresponds a yellow lemon that is visually smaller than the ruler.",
+    "dsl": "(and (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?lemon (and (Is ?lemon 'lemon') (Has ?lemon 'yellow') (SmallerThan ?lemon ?ruler))))))",
+    "cnf": "(forall ?ruler (exists ?lemon (and (or (not (Is ?ruler 'ruler')) (Is ?lemon 'lemon')) (or (not (Is ?ruler 'ruler')) (Has ?lemon 'yellow')) (or (not (Is ?ruler 'ruler')) (SmallerThan ?lemon ?ruler)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "lemon"
+    ]
+}

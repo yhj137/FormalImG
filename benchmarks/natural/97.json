@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a smiling person.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (and (Is ?p 'person') (HasState ?p 'smiling'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (and (Is ?p 'person') (HasState ?p 'smiling'))))",
+    "k": 1,
+    "object_classes": [
+        "person"
+    ]
+}

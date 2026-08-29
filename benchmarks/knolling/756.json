@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a cup located on the top side and a phone on the right side, with the cup positioned above the phone. Additionally, for every donut in the scene, there is a bowl such that the donut is above the bowl, and the bowl is aligned horizontally with the cup.",
+    "dsl": "(exists ?cup (exists ?phone (and (Is ?cup 'cup') (OnTopSide ?cup) (Is ?phone 'phone') (OnRightSide ?phone) (Above ?cup ?phone) (forall ?donut (implies (Is ?donut 'donut') (exists ?bowl (and (Is ?bowl 'bowl') (Above ?donut ?bowl) (AlignedHorizontally ?bowl ?cup))))))))",
+    "cnf": "(exists ?cup (exists ?phone (forall ?donut (exists ?bowl (and (Is ?cup 'cup') (OnTopSide ?cup) (Above ?cup ?phone) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?bowl ?cup)) (OnRightSide ?phone) (or (not (Is ?donut 'donut')) (Above ?donut ?bowl)) (Is ?phone 'phone') (or (not (Is ?donut 'donut')) (Is ?bowl 'bowl')))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "phone",
+        "cup",
+        "donut"
+    ]
+}

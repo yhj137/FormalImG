@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon scene where every bottle has a sliced fruit placed on it.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'bottle') (exists ?f (and (Is ?f 'fruit') (HasState ?f 'sliced') (On ?f ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (exists ?f (and (or (not (Is ?b 'bottle')) (Is ?f 'fruit')) (or (not (Is ?b 'bottle')) (HasState ?f 'sliced')) (or (not (Is ?b 'bottle')) (On ?f ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "fruit"
+    ]
+}

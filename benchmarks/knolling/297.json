@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. In this arrangement, for every lighter present, it is positioned on the top side of the frame, and there is a mouse located to its right.",
+    "dsl": "(and (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?mouse (and (Is ?mouse 'mouse') (OnTopSide ?lighter) (RightOf ?mouse ?lighter))))))",
+    "cnf": "(forall ?lighter (exists ?mouse (and (or (not (Is ?lighter 'lighter')) (Is ?mouse 'mouse')) (or (not (Is ?lighter 'lighter')) (RightOf ?mouse ?lighter)) (or (not (Is ?lighter 'lighter')) (OnTopSide ?lighter)))))",
+    "k": 2,
+    "object_classes": [
+        "lighter",
+        "mouse"
+    ]
+}

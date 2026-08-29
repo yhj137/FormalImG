@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. There is a yellow bus containing an open refrigerator. All cups in the scene are resting on the refrigerator. A woman stands next to the refrigerator, holding a green plant. Inside the refrigerator is a cake, with a key positioned next to it. A round basket sits on top of the refrigerator, and inside the basket is a knife. To the right of the refrigerator, there is a backpack.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasColor ?b 'yellow') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (In ?r ?b) (forall ?c (implies (Is ?c 'cup') (On ?c ?r))) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?r) (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green') (Holding ?w ?p))))) (exists ?ck (and (Is ?ck 'cake') (In ?ck ?r) (exists ?ky (and (Is ?ky 'key') (NextTo ?ky ?ck))))) (exists ?bk (and (Is ?bk 'basket') (HasShape ?bk 'round') (On ?bk ?r) (exists ?kn (and (Is ?kn 'knife') (In ?kn ?bk))))) (exists ?bp (and (Is ?bp 'backpack') (RightOf ?bp ?r))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?r (forall ?c (exists ?w (exists ?p (exists ?ck (exists ?ky (exists ?bk (exists ?kn (exists ?bp (and (Is ?b 'bus') (HasColor ?b 'yellow') (In ?r ?b) (HasState ?r 'open') (or (not (Is ?c 'cup')) (On ?c ?r)) (Is ?r 'refrigerator') (NextTo ?w ?r) (In ?ck ?r) (Is ?w 'woman') (Holding ?w ?p) (On ?bk ?r) (Is ?ck 'cake') (NextTo ?ky ?ck) (HasColor ?p 'green') (RightOf ?bp ?r) (HasShape ?bk 'round') (In ?kn ?bk) (Is ?ky 'key') (Is ?p 'plant') (Is ?bp 'backpack') (Is ?bk 'basket') (Is ?kn 'knife')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "knife",
+        "backpack",
+        "cake",
+        "woman",
+        "plant",
+        "refrigerator",
+        "cup",
+        "basket",
+        "bus",
+        "key"
+    ]
+}

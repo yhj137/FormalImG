@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a purple boat with a toy car next to it. Every ball is sitting on the boat to the right of the toy car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (and (Is ?b 'boat') (HasColor ?b 'purple') (Is ?t 'toy car') (NextTo ?t ?b) (forall ?x (implies (Is ?x 'ball') (and (On ?x ?b) (RightOf ?x ?t))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (forall ?x (and (Is ?b 'boat') (HasColor ?b 'purple') (NextTo ?t ?b) (or (not (Is ?x 'ball')) (On ?x ?b)) (Is ?t 'toy car') (or (not (Is ?x 'ball')) (RightOf ?x ?t)))))))",
+    "k": 3,
+    "object_classes": [
+        "ball",
+        "toy car",
+        "boat"
+    ]
+}

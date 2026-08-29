@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a plastic umbrella containing every ball. To the right of the umbrella is a mirror, with glasses positioned to its left. A glass bottle containing a fork stands to the right of the mirror, and shoes are placed to the right of the bottle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?u (and (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (forall ?b (implies (Is ?b 'ball') (In ?b ?u))) (exists ?m (and (Is ?m 'mirror') (RightOf ?m ?u) (exists ?g (and (Is ?g 'glasses') (LeftOf ?g ?m) (exists ?bot (and (Is ?bot 'bottle') (HasMaterial ?bot 'glass') (RightOf ?bot ?m) (exists ?f (and (Is ?f 'fork') (In ?f ?bot) (exists ?s (and (Is ?s 'shoes') (RightOf ?s ?bot))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?u (forall ?b (exists ?m (exists ?g (exists ?bot (exists ?f (exists ?s (and (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (or (not (Is ?b 'ball')) (In ?b ?u)) (RightOf ?m ?u) (Is ?m 'mirror') (LeftOf ?g ?m) (RightOf ?bot ?m) (Is ?g 'glasses') (HasMaterial ?bot 'glass') (In ?f ?bot) (Is ?bot 'bottle') (RightOf ?s ?bot) (Is ?f 'fork') (Is ?s 'shoes'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "glasses",
+        "fork",
+        "ball",
+        "shoes",
+        "mirror"
+    ]
+}

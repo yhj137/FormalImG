@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting of a round rock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rock') (HasShape ?r 'round'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rock') (HasShape ?r 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "rock"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a gray lion in the center. To the right of the lion sits a rectangular monitor with a round cake placed on top. To the left is an umbrella containing a hammer. Every butterfly in the scene rests on the lion.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?m (and (Is ?l 'lion') (HasColor ?l 'gray') (Is ?m 'monitor') (HasShape ?m 'rectangular') (RightOf ?m ?l) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?l))) (exists ?u (exists ?h (exists ?c (and (Is ?u 'umbrella') (Is ?h 'hammer') (Is ?c 'cake') (LeftOf ?u ?l) (In ?h ?u) (HasShape ?c 'round') (On ?c ?m)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?m (forall ?b (exists ?u (exists ?h (exists ?c (and (Is ?l 'lion') (HasColor ?l 'gray') (RightOf ?m ?l) (or (not (Is ?b 'butterfly')) (On ?b ?l)) (HasShape ?m 'rectangular') (On ?c ?m) (LeftOf ?u ?l) (Is ?m 'monitor') (HasShape ?c 'round') (Is ?u 'umbrella') (In ?h ?u) (Is ?c 'cake') (Is ?h 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "monitor",
+        "cake",
+        "hammer",
+        "butterfly",
+        "lion"
+    ]
+}

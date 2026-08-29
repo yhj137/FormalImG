@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. A red rug lies on the ground, and a boat is positioned to its right. A brown teddy bear holding a phone sits on the rug, along with shoes and a bowl. A bottle is inside the boat, and every rock in the scene is located to the left of the boat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?rug (exists ?bt (exists ?tb (exists ?ph (exists ?sh (and (Is ?rug 'rug') (HasColor ?rug 'red') (Is ?bt 'boat') (RightOf ?bt ?rug) (Is ?tb 'teddy bear') (HasColor ?tb 'brown') (On ?tb ?rug) (Is ?ph 'phone') (Holding ?tb ?ph) (Is ?sh 'shoes') (On ?sh ?rug) (forall ?ro (implies (Is ?ro 'rock') (LeftOf ?ro ?bt))) (exists ?bo (exists ?bl (and (Is ?bo 'bottle') (In ?bo ?bt) (Is ?bl 'bowl') (On ?bl ?rug)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?rug (exists ?bt (exists ?tb (exists ?ph (exists ?sh (forall ?ro (exists ?bo (exists ?bl (and (Is ?rug 'rug') (HasColor ?rug 'red') (RightOf ?bt ?rug) (On ?tb ?rug) (Is ?bt 'boat') (or (not (Is ?ro 'rock')) (LeftOf ?ro ?bt)) (On ?sh ?rug) (HasColor ?tb 'brown') (Holding ?tb ?ph) (In ?bo ?bt) (On ?bl ?rug) (Is ?sh 'shoes') (Is ?tb 'teddy bear') (Is ?ph 'phone') (Is ?bo 'bottle') (Is ?bl 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "bowl",
+        "rock",
+        "rug",
+        "shoes",
+        "teddy bear",
+        "phone",
+        "boat"
+    ]
+}

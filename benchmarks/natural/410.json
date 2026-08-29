@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a green tree with a white shirt inside, and a red umbrella to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?s (exists ?u (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?s 'shirt') (HasColor ?s 'white') (In ?s ?t) (Is ?u 'umbrella') (HasColor ?u 'red') (RightOf ?u ?t))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?s (exists ?u (and (Is ?t 'tree') (HasColor ?t 'green') (In ?s ?t) (RightOf ?u ?t) (HasColor ?s 'white') (HasColor ?u 'red') (Is ?s 'shirt') (Is ?u 'umbrella'))))))",
+    "k": 3,
+    "object_classes": [
+        "umbrella",
+        "shirt",
+        "tree"
+    ]
+}

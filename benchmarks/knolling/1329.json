@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a hammer and a fork on the left side, aligned vertically. A sandwich and a bowl form another vertically aligned pair to the right of the hammer. On the right side of the image, every lighter is positioned to the right of the sandwich and is vertically aligned with a ruler and a pair of scissors.",
+    "dsl": "(exists ?hammer (exists ?fork (exists ?sandwich (exists ?bowl (and (Is ?hammer 'hammer') (Is ?fork 'fork') (Is ?sandwich 'sandwich') (Is ?bowl 'bowl') (OnLeftSide ?hammer) (OnLeftSide ?fork) (AlignedVertically ?hammer ?fork) (AlignedVertically ?sandwich ?bowl) (LeftOf ?hammer ?sandwich) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?ruler (exists ?scissors (and (Is ?ruler 'ruler') (Is ?scissors 'scissors') (OnRightSide ?lighter) (LeftOf ?sandwich ?lighter) (AlignedVertically ?lighter ?ruler) (AlignedVertically ?ruler ?scissors)))))))))))",
+    "cnf": "(exists ?hammer (exists ?fork (exists ?sandwich (exists ?bowl (forall ?lighter (exists ?ruler (exists ?scissors (and (Is ?hammer 'hammer') (OnLeftSide ?hammer) (AlignedVertically ?hammer ?fork) (LeftOf ?hammer ?sandwich) (OnLeftSide ?fork) (AlignedVertically ?sandwich ?bowl) (or (not (Is ?lighter 'lighter')) (LeftOf ?sandwich ?lighter)) (Is ?fork 'fork') (Is ?sandwich 'sandwich') (Is ?bowl 'bowl') (or (not (Is ?lighter 'lighter')) (OnRightSide ?lighter)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?ruler)) (or (not (Is ?lighter 'lighter')) (Is ?scissors 'scissors')) (or (not (Is ?lighter 'lighter')) (Is ?ruler 'ruler')) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?ruler ?scissors))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "hammer",
+        "fork",
+        "lighter",
+        "scissors",
+        "bowl",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image where every donut in the composition is placed on the top side of the image.",
+    "dsl": "(forall ?d (implies (Is ?d 'donut') (OnTopSide ?d)))",
+    "cnf": "(forall ?d (or (not (Is ?d 'donut')) (OnTopSide ?d)))",
+    "k": 1,
+    "object_classes": [
+        "donut"
+    ]
+}

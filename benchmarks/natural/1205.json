@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a bird holding a red fruit in a tree. Next to the tree stands a bicycle with a teddy bear on it holding a round pan, and a rock lies next to the bicycle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?f (exists ?bi (exists ?tb (exists ?p (exists ?r (and (Is ?t 'tree') (Is ?b 'bird') (In ?b ?t) (Is ?f 'fruit') (HasColor ?f 'red') (Holding ?b ?f) (Is ?bi 'bicycle') (NextTo ?bi ?t) (Is ?tb 'teddy bear') (On ?tb ?bi) (Is ?p 'pan') (HasShape ?p 'round') (Holding ?tb ?p) (Is ?r 'rock') (NextTo ?r ?bi))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?f (exists ?bi (exists ?tb (exists ?p (exists ?r (and (Is ?t 'tree') (In ?b ?t) (NextTo ?bi ?t) (Is ?b 'bird') (Holding ?b ?f) (Is ?bi 'bicycle') (On ?tb ?bi) (HasColor ?f 'red') (NextTo ?r ?bi) (Is ?tb 'teddy bear') (Holding ?tb ?p) (Is ?f 'fruit') (Is ?r 'rock') (HasShape ?p 'round') (Is ?p 'pan'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "tree",
+        "teddy bear",
+        "rock",
+        "bird",
+        "bicycle",
+        "pan"
+    ]
+}

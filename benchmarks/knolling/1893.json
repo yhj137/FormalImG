@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a drill, a keyboard, a blue bottle, and a shoe. The drill is positioned to the left of the keyboard, while the bottle is to its right. The shoe is located below the drill, and they are aligned vertically. Every sock in the image is white, and it is placed below the keyboard and to the right of the shoe, aligned vertically with the keyboard. Associated with the sock are several other items: a lemon is to the right of the sock, below the bottle, and vertically aligned with it; keys are to the right of the lemon; a screwdriver is below the shoe and aligned vertically with it; a pair of pliers is to the right of the screwdriver, below the sock, and aligned vertically with it; and a fork is to the right of the pliers, below the lemon, and aligned vertically with it. The keyboard is visually larger than the keys.",
+    "dsl": "(exists ?drill (exists ?keyboard (exists ?bottle (exists ?shoe (and (Is ?drill 'drill') (Is ?keyboard 'keyboard') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?shoe 'shoe') (LeftOf ?drill ?keyboard) (RightOf ?bottle ?keyboard) (Below ?shoe ?drill) (AlignedVertically ?drill ?shoe) (forall ?sock (implies (Is ?sock 'sock') (exists ?lemon (exists ?keys (exists ?sd (exists ?pliers (exists ?fork (and (Has ?sock 'white') (Is ?lemon 'lemon') (Is ?keys 'keys') (Is ?sd 'screwdriver') (Is ?pliers 'pliers') (Is ?fork 'fork') (RightOf ?sock ?shoe) (Below ?sock ?keyboard) (AlignedVertically ?keyboard ?sock) (RightOf ?lemon ?sock) (Below ?lemon ?bottle) (AlignedVertically ?bottle ?lemon) (RightOf ?keys ?lemon) (Below ?sd ?shoe) (AlignedVertically ?shoe ?sd) (RightOf ?pliers ?sd) (Below ?pliers ?sock) (AlignedVertically ?sock ?pliers) (RightOf ?fork ?pliers) (Below ?fork ?lemon) (AlignedVertically ?lemon ?fork) (LargerThan ?keyboard ?keys))))))))))))))",
+    "cnf": "(exists ?drill (exists ?keyboard (exists ?bottle (exists ?shoe (forall ?sock (exists ?lemon (exists ?keys (exists ?sd (exists ?pliers (exists ?fork (and (Is ?drill 'drill') (LeftOf ?drill ?keyboard) (Below ?shoe ?drill) (Is ?keyboard 'keyboard') (RightOf ?bottle ?keyboard) (AlignedVertically ?drill ?shoe) (Is ?shoe 'shoe') (or (not (Is ?sock 'sock')) (Below ?sock ?keyboard)) (Has ?bottle 'blue') (or (not (Is ?sock 'sock')) (Below ?lemon ?bottle)) (or (not (Is ?sock 'sock')) (RightOf ?sock ?shoe)) (or (not (Is ?sock 'sock')) (AlignedVertically ?keyboard ?sock)) (Is ?bottle 'bottle') (or (not (Is ?sock 'sock')) (AlignedVertically ?bottle ?lemon)) (or (not (Is ?sock 'sock')) (RightOf ?lemon ?sock)) (or (not (Is ?sock 'sock')) (Below ?sd ?shoe)) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (LargerThan ?keyboard ?keys)) (or (not (Is ?sock 'sock')) (RightOf ?keys ?lemon)) (or (not (Is ?sock 'sock')) (Is ?lemon 'lemon')) (or (not (Is ?sock 'sock')) (AlignedVertically ?shoe ?sd)) (or (not (Is ?sock 'sock')) (Is ?sd 'screwdriver')) (or (not (Is ?sock 'sock')) (Is ?pliers 'pliers')) (or (not (Is ?sock 'sock')) (RightOf ?fork ?pliers)) (or (not (Is ?sock 'sock')) (AlignedVertically ?lemon ?fork)) (or (not (Is ?sock 'sock')) (Below ?fork ?lemon)) (or (not (Is ?sock 'sock')) (Is ?keys 'keys')) (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (RightOf ?pliers ?sd)) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?pliers)) (or (not (Is ?sock 'sock')) (Below ?pliers ?sock)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "sock",
+        "keyboard",
+        "lemon",
+        "screwdriver",
+        "drill",
+        "fork",
+        "bottle",
+        "shoe"
+    ]
+}

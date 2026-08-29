@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is set inside a house. A child holds an open book. A chair is positioned next to the child, and a cat is next to the chair. Every shoe is located next to the chair and contains a fork.",
+    "dsl": "(exists ?h (and (Is ?h 'house') (exists ?p (and (Is ?p 'child') (In ?p ?h) (exists ?c (and (Is ?c 'chair') (NextTo ?c ?p) (exists ?b (and (Is ?b 'book') (Holding ?p ?b) (HasState ?b 'open') (exists ?k (and (Is ?k 'cat') (NextTo ?k ?c) (forall ?s (implies (Is ?s 'shoes') (and (NextTo ?s ?c) (exists ?f (and (Is ?f 'fork') (In ?f ?s))))))))))))))))",
+    "cnf": "(exists ?h (exists ?p (exists ?c (exists ?b (exists ?k (forall ?s (exists ?f (and (Is ?h 'house') (In ?p ?h) (Is ?p 'child') (NextTo ?c ?p) (Holding ?p ?b) (Is ?c 'chair') (NextTo ?k ?c) (Is ?b 'book') (HasState ?b 'open') (or (not (Is ?s 'shoes')) (NextTo ?s ?c)) (Is ?k 'cat') (or (not (Is ?s 'shoes')) (Is ?f 'fork')) (or (not (Is ?s 'shoes')) (In ?f ?s))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "child",
+        "fork",
+        "shoes",
+        "book",
+        "chair",
+        "cat"
+    ]
+}

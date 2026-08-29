@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is positioned on the bottom side of the arrangement. Placed vertically above the handbag is a shirt. To the left of the shirt is a bottle. A sandwich is located below the bottle, while a stapler is placed above the bottle.",
+    "dsl": "(exists ?handbag (exists ?shirt (exists ?bottle (exists ?sandwich (exists ?stapler (and (Is ?handbag 'handbag') (Is ?shirt 'shirt') (Is ?bottle 'bottle') (Is ?sandwich 'sandwich') (Is ?stapler 'stapler') (OnBottomSide ?handbag) (Above ?shirt ?handbag) (LeftOf ?bottle ?shirt) (Below ?sandwich ?bottle) (Above ?stapler ?bottle)))))))",
+    "cnf": "(exists ?handbag (exists ?shirt (exists ?bottle (exists ?sandwich (exists ?stapler (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Above ?shirt ?handbag) (Is ?shirt 'shirt') (LeftOf ?bottle ?shirt) (Is ?bottle 'bottle') (Below ?sandwich ?bottle) (Above ?stapler ?bottle) (Is ?sandwich 'sandwich') (Is ?stapler 'stapler')))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "handbag",
+        "bottle",
+        "sandwich",
+        "shirt"
+    ]
+}

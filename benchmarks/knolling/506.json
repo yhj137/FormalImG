@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat located on the left side of the scene. For every watch in the image, there is a pan such that the pan is larger than the watch. Additionally, the watch is smaller than the hat and is aligned vertically with the hat.",
+    "dsl": "(exists ?h (and (Is ?h 'hat') (OnLeftSide ?h) (forall ?w (implies (Is ?w 'watch') (exists ?p (and (Is ?p 'pan') (LargerThan ?p ?w) (SmallerThan ?w ?h) (AlignedVertically ?w ?h)))))))",
+    "cnf": "(exists ?h (forall ?w (exists ?p (and (Is ?h 'hat') (OnLeftSide ?h) (or (not (Is ?w 'watch')) (SmallerThan ?w ?h)) (or (not (Is ?w 'watch')) (AlignedVertically ?w ?h)) (or (not (Is ?w 'watch')) (LargerThan ?p ?w)) (or (not (Is ?w 'watch')) (Is ?p 'pan'))))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "hat",
+        "watch"
+    ]
+}

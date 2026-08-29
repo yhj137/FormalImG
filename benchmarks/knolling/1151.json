@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white plate positioned on the left side of the image. A red hat is aligned vertically with the plate. There is also a black camera that is visually smaller than the hat, and a black keyboard that is larger than the camera. Additionally, a constraint applies to any calculator present: for every calculator, there is a brown handbag located to its right, and this handbag is aligned vertically with the keyboard.",
+    "dsl": "(exists ?plate (exists ?hat (exists ?camera (exists ?keyboard (and (Is ?plate 'plate') (Has ?plate 'white') (OnLeftSide ?plate) (Is ?hat 'hat') (Has ?hat 'red') (AlignedVertically ?hat ?plate) (Is ?camera 'camera') (Has ?camera 'black') (SmallerThan ?camera ?hat) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (LargerThan ?keyboard ?camera) (forall ?calc (implies (Is ?calc 'calculator') (exists ?handbag (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (LeftOf ?calc ?handbag) (AlignedVertically ?handbag ?keyboard))))))))))",
+    "cnf": "(exists ?plate (exists ?hat (exists ?camera (exists ?keyboard (forall ?calc (exists ?handbag (and (Is ?plate 'plate') (Has ?plate 'white') (OnLeftSide ?plate) (AlignedVertically ?hat ?plate) (Has ?hat 'red') (SmallerThan ?camera ?hat) (Is ?hat 'hat') (Has ?camera 'black') (LargerThan ?keyboard ?camera) (Is ?camera 'camera') (Has ?keyboard 'black') (or (not (Is ?calc 'calculator')) (AlignedVertically ?handbag ?keyboard)) (Is ?keyboard 'keyboard') (or (not (Is ?calc 'calculator')) (LeftOf ?calc ?handbag)) (or (not (Is ?calc 'calculator')) (Has ?handbag 'brown')) (or (not (Is ?calc 'calculator')) (Is ?handbag 'handbag')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "keyboard",
+        "hat",
+        "calculator",
+        "handbag",
+        "camera"
+    ]
+}

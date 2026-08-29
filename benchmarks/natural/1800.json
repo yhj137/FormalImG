@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman wearing a leather jacket and glasses, holding a pan with a metal spoon inside. To the right of the woman is a dog holding a fluffy teddy bear, and to the left of the woman is a ceramic bowl containing an orange and a key.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?j (exists ?g (exists ?p (exists ?s (exists ?d (exists ?t (exists ?b (exists ?o (exists ?k (and (Is ?w 'woman') (Is ?j 'jacket') (HasMaterial ?j 'leather') (On ?j ?w) (Is ?g 'glasses') (On ?g ?w) (Is ?p 'pan') (Holding ?w ?p) (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?p) (Is ?d 'dog') (RightOf ?d ?w) (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (Holding ?d ?t) (Is ?b 'bowl') (HasMaterial ?b 'ceramic') (LeftOf ?b ?w) (Is ?o 'orange') (In ?o ?b) (Is ?k 'key') (In ?k ?b)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?j (exists ?g (exists ?p (exists ?s (exists ?d (exists ?t (exists ?b (exists ?o (exists ?k (and (Is ?w 'woman') (On ?j ?w) (On ?g ?w) (HasMaterial ?j 'leather') (Holding ?w ?p) (Is ?g 'glasses') (Is ?j 'jacket') (RightOf ?d ?w) (Is ?p 'pan') (In ?s ?p) (LeftOf ?b ?w) (Is ?d 'dog') (Holding ?d ?t) (HasMaterial ?s 'metal') (HasMaterial ?b 'ceramic') (In ?o ?b) (HasMaterial ?t 'fluffy') (Is ?s 'spoon') (Is ?b 'bowl') (In ?k ?b) (Is ?o 'orange') (Is ?t 'teddy bear') (Is ?k 'key')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "glasses",
+        "woman",
+        "orange",
+        "jacket",
+        "teddy bear",
+        "pan",
+        "bowl",
+        "dog",
+        "key"
+    ]
+}

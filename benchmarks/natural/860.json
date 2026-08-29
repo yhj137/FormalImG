@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every elephant holds a pan containing a bird. Each elephant is on a wooden bed that also supports a round plate.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?e (implies (Is ?e 'elephant') (exists ?p (exists ?bi (exists ?be (exists ?pl (and (Is ?p 'pan') (Is ?bi 'bird') (Is ?be 'bed') (Is ?pl 'plate') (Holding ?e ?p) (In ?bi ?p) (On ?e ?be) (On ?pl ?be) (HasMaterial ?be 'wooden') (HasShape ?pl 'round')))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?e (exists ?p (exists ?bi (exists ?be (exists ?pl (and (or (not (Is ?e 'elephant')) (Is ?p 'pan')) (or (not (Is ?e 'elephant')) (Is ?bi 'bird')) (or (not (Is ?e 'elephant')) (Holding ?e ?p)) (or (not (Is ?e 'elephant')) (Is ?be 'bed')) (or (not (Is ?e 'elephant')) (In ?bi ?p)) (or (not (Is ?e 'elephant')) (Is ?pl 'plate')) (or (not (Is ?e 'elephant')) (On ?e ?be)) (or (not (Is ?e 'elephant')) (On ?pl ?be)) (or (not (Is ?e 'elephant')) (HasMaterial ?be 'wooden')) (or (not (Is ?e 'elephant')) (HasShape ?pl 'round')))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "bed",
+        "bird",
+        "elephant",
+        "plate"
+    ]
+}

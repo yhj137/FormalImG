@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A cylindrical bottle is positioned to the left of a wooden boat. To the right of the boat is a metal bicycle. A plant is located to the right of the bicycle, with a flower to its left and a jacket to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?bo (exists ?bi (exists ?p (exists ?f (exists ?j (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (Is ?bo 'boat') (HasMaterial ?bo 'wooden') (LeftOf ?b ?bo) (Is ?bi 'bicycle') (HasMaterial ?bi 'metal') (RightOf ?bi ?bo) (Is ?p 'plant') (RightOf ?p ?bi) (Is ?f 'flower') (LeftOf ?f ?p) (Is ?j 'jacket') (RightOf ?j ?p)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?bo (exists ?bi (exists ?p (exists ?f (exists ?j (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (LeftOf ?b ?bo) (HasMaterial ?bo 'wooden') (RightOf ?bi ?bo) (Is ?bo 'boat') (HasMaterial ?bi 'metal') (RightOf ?p ?bi) (Is ?bi 'bicycle') (Is ?p 'plant') (LeftOf ?f ?p) (RightOf ?j ?p) (Is ?f 'flower') (Is ?j 'jacket')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "plant",
+        "jacket",
+        "flower",
+        "bicycle",
+        "boat"
+    ]
+}

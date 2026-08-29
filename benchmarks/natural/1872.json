@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon-style scene. A child holding a toy car sits on a sofa, alongside an open laptop and a bowl containing all the oranges. A monitor is positioned to the left of the laptop. A lit lamp and a boat are located next to the sofa, while a closed umbrella stands to the sofa's left.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?sofa (exists ?bowl (and (Is ?sofa 'sofa') (Is ?bowl 'bowl') (On ?bowl ?sofa) (forall ?orange (implies (Is ?orange 'orange') (In ?orange ?bowl))) (exists ?child (exists ?toycar (exists ?laptop (exists ?monitor (exists ?lamp (exists ?boat (exists ?umbrella (and (Is ?child 'child') (Is ?toycar 'toy car') (Is ?laptop 'laptop') (Is ?monitor 'monitor') (Is ?lamp 'lamp') (Is ?boat 'boat') (Is ?umbrella 'umbrella') (On ?child ?sofa) (Holding ?child ?toycar) (On ?laptop ?sofa) (HasState ?laptop 'open') (LeftOf ?monitor ?laptop) (NextTo ?lamp ?sofa) (HasState ?lamp 'on') (NextTo ?boat ?sofa) (LeftOf ?umbrella ?sofa) (HasState ?umbrella 'closed')))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?sofa (exists ?bowl (forall ?orange (exists ?child (exists ?toycar (exists ?laptop (exists ?monitor (exists ?lamp (exists ?boat (exists ?umbrella (and (Is ?sofa 'sofa') (On ?bowl ?sofa) (On ?child ?sofa) (Is ?bowl 'bowl') (or (not (Is ?orange 'orange')) (In ?orange ?bowl)) (On ?laptop ?sofa) (Is ?child 'child') (Holding ?child ?toycar) (NextTo ?lamp ?sofa) (Is ?laptop 'laptop') (HasState ?laptop 'open') (Is ?toycar 'toy car') (NextTo ?boat ?sofa) (Is ?lamp 'lamp') (HasState ?lamp 'on') (LeftOf ?monitor ?laptop) (LeftOf ?umbrella ?sofa) (Is ?boat 'boat') (Is ?monitor 'monitor') (Is ?umbrella 'umbrella') (HasState ?umbrella 'closed')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "child",
+        "laptop",
+        "monitor",
+        "orange",
+        "toy car",
+        "lamp",
+        "boat",
+        "bowl"
+    ]
+}

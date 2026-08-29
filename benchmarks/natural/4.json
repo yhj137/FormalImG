@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image of a broken ball.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'ball') (HasState ?b 'broken'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'ball') (HasState ?b 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "ball"
+    ]
+}

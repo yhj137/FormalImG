@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a pair of jeans, a pair of scissors, and a lemon. The jeans are visually larger than the scissors. The scissors are positioned below the jeans, and the lemon is located below the scissors. Furthermore, the lemon is placed on the bottom side of the layout.",
+    "dsl": "(exists ?jeans (exists ?scissors (exists ?lemon (and (Is ?jeans 'jeans') (Is ?scissors 'scissors') (Is ?lemon 'lemon') (LargerThan ?jeans ?scissors) (Below ?scissors ?jeans) (Below ?lemon ?scissors) (OnBottomSide ?lemon)))))",
+    "cnf": "(exists ?jeans (exists ?scissors (exists ?lemon (and (Is ?jeans 'jeans') (LargerThan ?jeans ?scissors) (Below ?scissors ?jeans) (Is ?scissors 'scissors') (Below ?lemon ?scissors) (Is ?lemon 'lemon') (OnBottomSide ?lemon)))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "lemon",
+        "jeans"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A man and a child are sitting on a bench, with the child positioned to the right of the man. The man is holding an umbrella, and the child is holding a rectangular phone. To the right of the bench stands a lamp. A pan containing a round orange sits on the bench, alongside a plate with a cake on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?c (exists ?l (exists ?u (exists ?ph (exists ?pa (exists ?o (exists ?pl (exists ?ck (and (Is ?b 'bench') (Is ?m 'man') (Is ?c 'child') (Is ?l 'lamp') (Is ?u 'umbrella') (Is ?ph 'phone') (Is ?pa 'pan') (Is ?o 'orange') (Is ?pl 'plate') (Is ?ck 'cake') (On ?m ?b) (On ?c ?b) (RightOf ?c ?m) (RightOf ?l ?b) (Holding ?m ?u) (Holding ?c ?ph) (HasShape ?ph 'rectangular') (On ?pa ?b) (In ?o ?pa) (HasShape ?o 'round') (On ?pl ?b) (On ?ck ?pl)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?c (exists ?l (exists ?u (exists ?ph (exists ?pa (exists ?o (exists ?pl (exists ?ck (and (Is ?b 'bench') (On ?m ?b) (On ?c ?b) (Is ?m 'man') (RightOf ?c ?m) (RightOf ?l ?b) (Is ?c 'child') (Holding ?m ?u) (Holding ?c ?ph) (On ?pa ?b) (Is ?l 'lamp') (Is ?u 'umbrella') (Is ?ph 'phone') (HasShape ?ph 'rectangular') (On ?pl ?b) (Is ?pa 'pan') (In ?o ?pa) (Is ?pl 'plate') (On ?ck ?pl) (Is ?o 'orange') (HasShape ?o 'round') (Is ?ck 'cake')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "phone",
+        "bench",
+        "child",
+        "plate",
+        "man",
+        "cake",
+        "orange",
+        "lamp",
+        "pan"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor, a hat, and a watch positioned on the top side of the image. The monitor is located to the left of the hat, and the hat is to the left of the watch. For every ruler present in the scene, there is a corresponding row containing a wallet, a sandwich, and a pizza. Specifically, the ruler is aligned vertically with the monitor. The wallet is positioned to the left of the sandwich and aligned vertically with the hat, while the ruler is to the left of the wallet. Furthermore, the sandwich is aligned vertically with the watch and is located to the left of the pizza.",
+    "dsl": "(exists ?monitor (exists ?hat (exists ?watch (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?hat 'hat') (OnTopSide ?hat) (Is ?watch 'watch') (OnTopSide ?watch) (LeftOf ?monitor ?hat) (LeftOf ?hat ?watch) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?wallet (exists ?sandwich (exists ?pizza (and (Is ?wallet 'wallet') (Is ?sandwich 'sandwich') (Is ?pizza 'pizza') (AlignedVertically ?ruler ?monitor) (AlignedVertically ?wallet ?hat) (AlignedVertically ?sandwich ?watch) (LeftOf ?ruler ?wallet) (LeftOf ?wallet ?sandwich) (LeftOf ?sandwich ?pizza)))))))))))",
+    "cnf": "(exists ?monitor (exists ?hat (exists ?watch (forall ?ruler (exists ?wallet (exists ?sandwich (exists ?pizza (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?monitor ?hat) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?ruler ?monitor)) (OnTopSide ?hat) (LeftOf ?hat ?watch) (or (not (Is ?ruler 'ruler')) (Is ?pizza 'pizza')) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?wallet ?hat)) (Is ?hat 'hat') (OnTopSide ?watch) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?sandwich ?watch)) (or (not (Is ?ruler 'ruler')) (Is ?sandwich 'sandwich')) (or (not (Is ?ruler 'ruler')) (LeftOf ?sandwich ?pizza)) (or (not (Is ?ruler 'ruler')) (Is ?wallet 'wallet')) (or (not (Is ?ruler 'ruler')) (LeftOf ?ruler ?wallet)) (Is ?watch 'watch') (or (not (Is ?ruler 'ruler')) (LeftOf ?wallet ?sandwich))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "pizza",
+        "wallet",
+        "ruler",
+        "monitor",
+        "hat",
+        "sandwich"
+    ]
+}

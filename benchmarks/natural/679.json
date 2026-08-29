@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every lamp is turned on and sits on a desk alongside a white bowl, while a bicycle stands to the left of the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?l (implies (Is ?l 'lamp') (exists ?d (exists ?b (exists ?c (and (Is ?d 'desk') (Is ?b 'bowl') (Is ?c 'bicycle') (HasState ?l 'on') (On ?l ?d) (HasColor ?b 'white') (On ?b ?d) (LeftOf ?c ?d))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?l (exists ?d (exists ?b (exists ?c (and (or (not (Is ?l 'lamp')) (Is ?d 'desk')) (or (not (Is ?l 'lamp')) (Is ?b 'bowl')) (or (not (Is ?l 'lamp')) (On ?l ?d)) (or (not (Is ?l 'lamp')) (Is ?c 'bicycle')) (or (not (Is ?l 'lamp')) (HasColor ?b 'white')) (or (not (Is ?l 'lamp')) (HasState ?l 'on')) (or (not (Is ?l 'lamp')) (On ?b ?d)) (or (not (Is ?l 'lamp')) (LeftOf ?c ?d))))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "lamp",
+        "desk",
+        "bicycle"
+    ]
+}

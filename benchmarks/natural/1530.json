@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A round, sliced cake rests on a wooden bench. To the right of the bench is a car with a teddy bear inside. To the left of the bench is a plant; all flowers in the scene are blooming and located on this plant. Further to the left of the plant lies a rock with a wet fish on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?c (exists ?t (exists ?p (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?c 'car') (RightOf ?c ?b) (Is ?t 'teddy bear') (In ?t ?c) (Is ?p 'plant') (LeftOf ?p ?b) (forall ?f (implies (Is ?f 'flower') (and (HasState ?f 'blooming') (On ?f ?p)))) (exists ?k (exists ?r (exists ?fi (and (Is ?k 'cake') (HasShape ?k 'round') (HasState ?k 'sliced') (On ?k ?b) (Is ?r 'rock') (LeftOf ?r ?p) (Is ?fi 'fish') (HasState ?fi 'wet') (On ?fi ?r)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?c (exists ?t (exists ?p (forall ?f (exists ?k (exists ?r (exists ?fi (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (RightOf ?c ?b) (LeftOf ?p ?b) (Is ?c 'car') (In ?t ?c) (On ?k ?b) (Is ?p 'plant') (or (not (Is ?f 'flower')) (On ?f ?p)) (Is ?t 'teddy bear') (HasState ?k 'sliced') (LeftOf ?r ?p) (or (not (Is ?f 'flower')) (HasState ?f 'blooming')) (HasShape ?k 'round') (Is ?r 'rock') (On ?fi ?r) (Is ?k 'cake') (HasState ?fi 'wet') (Is ?fi 'fish')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "rock",
+        "plant",
+        "fish",
+        "cake",
+        "teddy bear",
+        "flower",
+        "car"
+    ]
+}

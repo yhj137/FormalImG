@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring an elephant holding a round basket containing a red fish. A wooden wardrobe stands to the left of the elephant, with a dog and a hammer resting on top. A cat is located to the left of the wardrobe, and every lion is positioned to the right of the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?e (exists ?b (exists ?f (exists ?w (and (Is ?e 'elephant') (Is ?b 'basket') (Is ?f 'fish') (Is ?w 'wardrobe') (HasShape ?b 'round') (HasColor ?f 'red') (HasMaterial ?w 'wooden') (Holding ?e ?b) (In ?f ?b) (LeftOf ?w ?e) (forall ?l (implies (Is ?l 'lion') (RightOf ?l ?e))) (exists ?d (exists ?h (exists ?c (and (Is ?d 'dog') (Is ?h 'hammer') (Is ?c 'cat') (On ?d ?w) (On ?h ?w) (LeftOf ?c ?w)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?e (exists ?b (exists ?f (exists ?w (forall ?l (exists ?d (exists ?h (exists ?c (and (Is ?e 'elephant') (Holding ?e ?b) (LeftOf ?w ?e) (HasShape ?b 'round') (In ?f ?b) (or (not (Is ?l 'lion')) (RightOf ?l ?e)) (HasMaterial ?w 'wooden') (On ?d ?w) (Is ?b 'basket') (HasColor ?f 'red') (Is ?w 'wardrobe') (On ?h ?w) (Is ?d 'dog') (Is ?f 'fish') (LeftOf ?c ?w) (Is ?h 'hammer') (Is ?c 'cat')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "fish",
+        "hammer",
+        "lion",
+        "basket",
+        "cat",
+        "dog",
+        "wardrobe"
+    ]
+}

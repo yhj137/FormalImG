@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is located on the bottom side of the image, positioned to the left of a wallet which is found on the right side. Furthermore, for every cup in the scene, there exists a phone such that the cup is aligned vertically with the jeans and the phone is visually smaller than the wallet.",
+    "dsl": "(exists ?jeans (exists ?wallet (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Is ?wallet 'wallet') (OnRightSide ?wallet) (LeftOf ?jeans ?wallet) (forall ?cup (implies (Is ?cup 'cup') (exists ?phone (and (Is ?phone 'phone') (AlignedVertically ?cup ?jeans) (SmallerThan ?phone ?wallet))))))))",
+    "cnf": "(exists ?jeans (exists ?wallet (forall ?cup (exists ?phone (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (LeftOf ?jeans ?wallet) (or (not (Is ?cup 'cup')) (AlignedVertically ?cup ?jeans)) (OnRightSide ?wallet) (or (not (Is ?cup 'cup')) (SmallerThan ?phone ?wallet)) (or (not (Is ?cup 'cup')) (Is ?phone 'phone')) (Is ?wallet 'wallet'))))))",
+    "k": 4,
+    "object_classes": [
+        "wallet",
+        "phone",
+        "jeans",
+        "cup"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a shirt, a drill, and a wallet. The layout features the drill positioned below the shirt, and the wallet positioned below the drill. The wallet is located on the bottom side of the image, and the shirt is visibly larger than the wallet.",
+    "dsl": "(exists ?s (exists ?d (exists ?w (and (Is ?s 'shirt') (Is ?d 'drill') (Is ?w 'wallet') (Below ?d ?s) (Below ?w ?d) (OnBottomSide ?w) (LargerThan ?s ?w)))))",
+    "cnf": "(exists ?s (exists ?d (exists ?w (and (Is ?s 'shirt') (Below ?d ?s) (LargerThan ?s ?w) (Is ?d 'drill') (Below ?w ?d) (OnBottomSide ?w) (Is ?w 'wallet')))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "wallet",
+        "shirt"
+    ]
+}

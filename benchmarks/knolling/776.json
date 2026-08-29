@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a pan located on the left side of the image. To the right of the pan is a laptop, and to the right of the laptop is a plate. Furthermore, for every watch in the scene, it is positioned on the top side of the image and is aligned vertically with the laptop.",
+    "dsl": "(exists ?pan (exists ?laptop (exists ?plate (and (Is ?pan 'pan') (Is ?laptop 'laptop') (Is ?plate 'plate') (OnLeftSide ?pan) (RightOf ?laptop ?pan) (RightOf ?plate ?laptop) (forall ?w (implies (Is ?w 'watch') (and (OnTopSide ?w) (AlignedVertically ?w ?laptop))))))))",
+    "cnf": "(exists ?pan (exists ?laptop (exists ?plate (forall ?w (and (Is ?pan 'pan') (OnLeftSide ?pan) (RightOf ?laptop ?pan) (Is ?laptop 'laptop') (RightOf ?plate ?laptop) (or (not (Is ?w 'watch')) (AlignedVertically ?w ?laptop)) (Is ?plate 'plate') (or (not (Is ?w 'watch')) (OnTopSide ?w)))))))",
+    "k": 4,
+    "object_classes": [
+        "laptop",
+        "pan",
+        "plate",
+        "watch"
+    ]
+}

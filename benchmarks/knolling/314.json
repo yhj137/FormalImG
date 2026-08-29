@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop in the scene, there is a knife that is smaller than the laptop and is located on the right side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'laptop') (exists ?y (and (Is ?y 'knife') (SmallerThan ?y ?x) (OnRightSide ?y))))))",
+    "cnf": "(forall ?x (exists ?y (and (or (not (Is ?x 'laptop')) (Is ?y 'knife')) (or (not (Is ?x 'laptop')) (SmallerThan ?y ?x)) (or (not (Is ?x 'laptop')) (OnRightSide ?y)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "laptop"
+    ]
+}

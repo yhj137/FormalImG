@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a cylindrical bottle containing a flower.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?f (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (Is ?f 'flower') (In ?f ?b)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?f (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (In ?f ?b) (Is ?f 'flower')))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "flower"
+    ]
+}

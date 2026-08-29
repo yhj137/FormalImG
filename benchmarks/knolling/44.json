@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pan located on the left side of the image.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnLeftSide ?pan)))",
+    "cnf": "(exists ?pan (and (Is ?pan 'pan') (OnLeftSide ?pan)))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

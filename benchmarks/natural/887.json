@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of an open wardrobe containing a black clock and all the shoes. To the left of the wardrobe is a basket with a knife inside.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'wardrobe') (HasState ?w 'open') (forall ?s (implies (Is ?s 'shoes') (In ?s ?w))) (exists ?b (exists ?k (exists ?c (and (Is ?b 'basket') (LeftOf ?b ?w) (Is ?k 'knife') (In ?k ?b) (Is ?c 'clock') (HasColor ?c 'black') (In ?c ?w))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?s (exists ?b (exists ?k (exists ?c (and (Is ?w 'wardrobe') (HasState ?w 'open') (or (not (Is ?s 'shoes')) (In ?s ?w)) (LeftOf ?b ?w) (In ?c ?w) (Is ?b 'basket') (In ?k ?b) (HasColor ?c 'black') (Is ?k 'knife') (Is ?c 'clock'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "shoes",
+        "clock",
+        "basket",
+        "wardrobe"
+    ]
+}

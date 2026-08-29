@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack, a brown handbag, a sandwich, and a calculator. The backpack is positioned above the handbag. The sandwich is located to the left of the backpack, while the calculator is located to the left of the handbag. Furthermore, for every wallet in the image, it is placed below the sandwich and is physically smaller than the calculator.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?sandwich (exists ?calculator (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?sandwich 'sandwich') (Is ?calculator 'calculator') (Above ?backpack ?handbag) (LeftOf ?sandwich ?backpack) (LeftOf ?calculator ?handbag) (forall ?wallet (implies (Is ?wallet 'wallet') (and (Below ?wallet ?sandwich) (SmallerThan ?wallet ?calculator)))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?sandwich (exists ?calculator (forall ?wallet (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Above ?backpack ?handbag) (LeftOf ?sandwich ?backpack) (Has ?handbag 'brown') (LeftOf ?calculator ?handbag) (Is ?sandwich 'sandwich') (or (not (Is ?wallet 'wallet')) (Below ?wallet ?sandwich)) (Is ?handbag 'handbag') (Is ?calculator 'calculator') (or (not (Is ?wallet 'wallet')) (SmallerThan ?wallet ?calculator))))))))",
+    "k": 5,
+    "object_classes": [
+        "handbag",
+        "backpack",
+        "wallet",
+        "calculator",
+        "sandwich"
+    ]
+}

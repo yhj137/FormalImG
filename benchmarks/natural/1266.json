@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a horse with a cup next to it. Every car in the scene is located to the right of the horse. The horse is holding a round basket filled with a screwdriver, a book, and a black phone.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'horse') (forall ?c (implies (Is ?c 'car') (RightOf ?c ?h))) (exists ?cp (and (Is ?cp 'cup') (NextTo ?cp ?h))) (exists ?b (and (Is ?b 'basket') (HasShape ?b 'round') (Holding ?h ?b) (exists ?s (and (Is ?s 'screwdriver') (In ?s ?b))) (exists ?bk (and (Is ?bk 'book') (In ?bk ?b))) (exists ?p (and (Is ?p 'phone') (HasColor ?p 'black') (In ?p ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?c (exists ?cp (exists ?b (exists ?s (exists ?bk (exists ?p (and (Is ?h 'horse') (or (not (Is ?c 'car')) (RightOf ?c ?h)) (NextTo ?cp ?h) (Holding ?h ?b) (Is ?cp 'cup') (HasShape ?b 'round') (In ?s ?b) (Is ?b 'basket') (In ?bk ?b) (Is ?s 'screwdriver') (In ?p ?b) (Is ?bk 'book') (HasColor ?p 'black') (Is ?p 'phone'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "horse",
+        "book",
+        "car",
+        "cup",
+        "basket",
+        "screwdriver"
+    ]
+}

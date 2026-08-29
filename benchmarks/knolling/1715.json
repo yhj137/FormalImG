@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase with a laptop to its left and a hat to its right; these three are aligned horizontally. Above the suitcase is a wallet, which is aligned vertically with it. For every set of keys present, the wallet is positioned above them. A screwdriver is to the left of the keys, and a ruler is to the right of the keys; these three are aligned horizontally. Furthermore, the keys are above a plate located on the bottom side of the image, and they are aligned vertically. A spoon is placed to the right of the plate, and they are aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?hat (exists ?wallet (and (Is ?suitcase 'suitcase') (Is ?laptop 'laptop') (Is ?hat 'hat') (Is ?wallet 'wallet') (LeftOf ?laptop ?suitcase) (RightOf ?hat ?suitcase) (AlignedHorizontally ?laptop ?suitcase) (AlignedHorizontally ?suitcase ?hat) (Above ?wallet ?suitcase) (AlignedVertically ?wallet ?suitcase) (forall ?keys (implies (Is ?keys 'keys') (exists ?screwdriver (exists ?ruler (exists ?plate (exists ?spoon (and (Is ?screwdriver 'screwdriver') (Is ?ruler 'ruler') (Is ?plate 'plate') (Is ?spoon 'spoon') (Above ?wallet ?keys) (LeftOf ?screwdriver ?keys) (RightOf ?ruler ?keys) (AlignedHorizontally ?screwdriver ?keys) (AlignedHorizontally ?keys ?ruler) (Above ?keys ?plate) (AlignedVertically ?keys ?plate) (OnBottomSide ?plate) (RightOf ?spoon ?plate) (AlignedHorizontally ?plate ?spoon)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?hat (exists ?wallet (forall ?keys (exists ?screwdriver (exists ?ruler (exists ?plate (exists ?spoon (and (Is ?suitcase 'suitcase') (LeftOf ?laptop ?suitcase) (RightOf ?hat ?suitcase) (Is ?laptop 'laptop') (AlignedHorizontally ?laptop ?suitcase) (Is ?hat 'hat') (AlignedHorizontally ?suitcase ?hat) (Above ?wallet ?suitcase) (AlignedVertically ?wallet ?suitcase) (Is ?wallet 'wallet') (or (not (Is ?keys 'keys')) (Above ?wallet ?keys)) (or (not (Is ?keys 'keys')) (Is ?spoon 'spoon')) (or (not (Is ?keys 'keys')) (LeftOf ?screwdriver ?keys)) (or (not (Is ?keys 'keys')) (Is ?plate 'plate')) (or (not (Is ?keys 'keys')) (RightOf ?spoon ?plate)) (or (not (Is ?keys 'keys')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?screwdriver ?keys)) (or (not (Is ?keys 'keys')) (RightOf ?ruler ?keys)) (or (not (Is ?keys 'keys')) (Is ?ruler 'ruler')) (or (not (Is ?keys 'keys')) (Above ?keys ?plate)) (or (not (Is ?keys 'keys')) (OnBottomSide ?plate)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?plate ?spoon)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?keys ?ruler)) (or (not (Is ?keys 'keys')) (AlignedVertically ?keys ?plate))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "keys",
+        "plate",
+        "screwdriver",
+        "hat",
+        "wallet",
+        "spoon",
+        "suitcase"
+    ]
+}

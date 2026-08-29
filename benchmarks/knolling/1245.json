@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. Every sandwich is positioned on the top side of the frame and has a set of associated objects: a pan, a shoe, a ruler, a stapler, a pair of glasses, and a lemon. The pan is situated on the right side and is visually larger than the sandwich. The other objects follow a descending size order: the shoe is smaller than the pan, the ruler is smaller than the shoe, the stapler is smaller than the ruler, the glasses are smaller than the stapler, and the lemon is smaller than the glasses. Additionally, the lemon is also located on the top side of the image.",
+    "dsl": "(forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?pan (exists ?shoe (exists ?ruler (exists ?stapler (exists ?glasses (exists ?lemon (and (Is ?pan 'pan') (Is ?shoe 'shoe') (Is ?ruler 'ruler') (Is ?stapler 'stapler') (Is ?glasses 'glasses') (Is ?lemon 'lemon') (OnTopSide ?sandwich) (LargerThan ?pan ?sandwich) (OnRightSide ?pan) (SmallerThan ?shoe ?pan) (SmallerThan ?ruler ?shoe) (SmallerThan ?stapler ?ruler) (SmallerThan ?glasses ?stapler) (SmallerThan ?lemon ?glasses) (OnTopSide ?lemon))))))))))",
+    "cnf": "(forall ?sandwich (exists ?pan (exists ?shoe (exists ?ruler (exists ?stapler (exists ?glasses (exists ?lemon (and (or (not (Is ?sandwich 'sandwich')) (Is ?pan 'pan')) (or (not (Is ?sandwich 'sandwich')) (Is ?shoe 'shoe')) (or (not (Is ?sandwich 'sandwich')) (LargerThan ?pan ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?ruler 'ruler')) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?shoe ?pan)) (or (not (Is ?sandwich 'sandwich')) (OnTopSide ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (OnRightSide ?pan)) (or (not (Is ?sandwich 'sandwich')) (Is ?stapler 'stapler')) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?ruler ?shoe)) (or (not (Is ?sandwich 'sandwich')) (Is ?lemon 'lemon')) (or (not (Is ?sandwich 'sandwich')) (Is ?glasses 'glasses')) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?stapler ?ruler)) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?lemon ?glasses)) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?glasses ?stapler)) (or (not (Is ?sandwich 'sandwich')) (OnTopSide ?lemon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "stapler",
+        "lemon",
+        "pan",
+        "sandwich",
+        "shoe"
+    ]
+}

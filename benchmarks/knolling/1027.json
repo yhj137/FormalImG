@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the top side of the layout. Directly below the monitor is a keyboard, and the two are vertically aligned. To the right of the keyboard is a remote that is smaller than the keyboard. Below the keyboard sits a white glove. Further down, below the glove, is a pair of blue jeans, which aligns vertically with the glove. A cutting board is placed to the right of the jeans.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?remote (exists ?glove (exists ?jeans (exists ?cutting_board (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?keyboard 'keyboard') (Below ?keyboard ?monitor) (AlignedVertically ?monitor ?keyboard) (Is ?remote 'remote') (RightOf ?remote ?keyboard) (SmallerThan ?remote ?keyboard) (Is ?glove 'glove') (Has ?glove 'white') (Below ?glove ?keyboard) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?glove) (AlignedVertically ?glove ?jeans) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?jeans))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?remote (exists ?glove (exists ?jeans (exists ?cutting_board (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Below ?keyboard ?monitor) (AlignedVertically ?monitor ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?remote ?keyboard) (SmallerThan ?remote ?keyboard) (Is ?remote 'remote') (Below ?glove ?keyboard) (Has ?glove 'white') (Below ?jeans ?glove) (Is ?glove 'glove') (AlignedVertically ?glove ?jeans) (Has ?jeans 'blue') (RightOf ?cutting_board ?jeans) (Is ?jeans 'jeans') (Is ?cutting_board 'cutting_board'))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "cutting_board",
+        "jeans",
+        "monitor",
+        "glove"
+    ]
+}

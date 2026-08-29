@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that every pan in the scene is located on the top side of the image.",
+    "dsl": "(and (forall ?pan (implies (Is ?pan 'pan') (OnTopSide ?pan))))",
+    "cnf": "(forall ?pan (or (not (Is ?pan 'pan')) (OnTopSide ?pan)))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate located on the right side of the image, there is a screwdriver positioned to its left. Additionally, a mouse and a pair of headphones are vertically aligned with the screwdriver, forming a column to the left of the plate.",
+    "dsl": "(and (forall ?p (implies (and (Is ?p 'plate') (OnRightSide ?p)) (exists ?s (exists ?m (exists ?h (and (Is ?s 'screwdriver') (Is ?m 'mouse') (Is ?h 'headphones') (LeftOf ?s ?p) (AlignedVertically ?s ?m) (AlignedVertically ?m ?h))))))))",
+    "cnf": "(forall ?p (exists ?s (exists ?m (exists ?h (and (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (Is ?s 'screwdriver')) (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (LeftOf ?s ?p)) (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (Is ?m 'mouse')) (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (AlignedVertically ?s ?m)) (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (Is ?h 'headphones')) (or (not (Is ?p 'plate')) (not (OnRightSide ?p)) (AlignedVertically ?m ?h)))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "plate",
+        "screwdriver",
+        "mouse"
+    ]
+}

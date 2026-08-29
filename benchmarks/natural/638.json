@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a hammer, with a basket to his left and dirty shoes to his right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?b (exists ?s (and (Is ?m 'man') (Is ?h 'hammer') (Is ?b 'basket') (Is ?s 'shoes') (Holding ?m ?h) (LeftOf ?b ?m) (RightOf ?s ?m) (HasState ?s 'dirty')))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?b (exists ?s (and (Is ?m 'man') (Holding ?m ?h) (LeftOf ?b ?m) (Is ?h 'hammer') (RightOf ?s ?m) (Is ?b 'basket') (Is ?s 'shoes') (HasState ?s 'dirty')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "basket",
+        "shoes",
+        "hammer"
+    ]
+}

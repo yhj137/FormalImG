@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized arrangement of items. On the left side of the scene sits a keyboard, while a sandwich is positioned on the right side, aligned horizontally with the keyboard. Above the keyboard lies a pair of glasses, flanked by headphones to the left and scissors to the right; the keyboard is visually larger than the glasses. A glove is placed on the bottom side of the image, located directly below the keyboard (meaning the keyboard is above the glove). An apple is positioned above the sandwich. Additionally, for every knife in the arrangement, it is placed to the right of the apple, and there is a spoon located to the right of that knife.",
+    "dsl": "(exists ?keyboard (exists ?sandwich (exists ?glasses (exists ?headphones (exists ?scissors (exists ?glove (exists ?apple (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Is ?sandwich 'sandwich') (OnRightSide ?sandwich) (AlignedHorizontally ?keyboard ?sandwich) (Is ?glasses 'glasses') (Above ?glasses ?keyboard) (LargerThan ?keyboard ?glasses) (Is ?headphones 'headphones') (LeftOf ?headphones ?glasses) (Is ?scissors 'scissors') (RightOf ?scissors ?glasses) (Is ?glove 'glove') (OnBottomSide ?glove) (Above ?keyboard ?glove) (Is ?apple 'apple') (Above ?apple ?sandwich) (forall ?knife (implies (Is ?knife 'knife') (exists ?spoon (and (Is ?spoon 'spoon') (RightOf ?knife ?apple) (RightOf ?spoon ?knife)))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?sandwich (exists ?glasses (exists ?headphones (exists ?scissors (exists ?glove (exists ?apple (forall ?knife (exists ?spoon (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (AlignedHorizontally ?keyboard ?sandwich) (Above ?glasses ?keyboard) (OnRightSide ?sandwich) (Above ?apple ?sandwich) (LargerThan ?keyboard ?glasses) (Is ?glasses 'glasses') (Is ?sandwich 'sandwich') (Is ?apple 'apple') (or (not (Is ?knife 'knife')) (RightOf ?knife ?apple)) (Above ?keyboard ?glove) (LeftOf ?headphones ?glasses) (or (not (Is ?knife 'knife')) (Is ?spoon 'spoon')) (or (not (Is ?knife 'knife')) (RightOf ?spoon ?knife)) (OnBottomSide ?glove) (RightOf ?scissors ?glasses) (Is ?headphones 'headphones') (Is ?glove 'glove') (Is ?scissors 'scissors')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "scissors",
+        "knife",
+        "apple",
+        "keyboard",
+        "headphones",
+        "glove",
+        "glasses",
+        "sandwich"
+    ]
+}

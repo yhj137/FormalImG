@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden wardrobe. Every fruit in the scene is round and located inside the wardrobe. To the right of the wardrobe is a bed, where a black cat is holding a toy car. A monitor sits next to the bed, while a plant and a bicycle stand next to the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (forall ?f (implies (Is ?f 'fruit') (and (HasShape ?f 'round') (In ?f ?w)))) (exists ?b (and (Is ?b 'bed') (RightOf ?b ?w) (exists ?c (and (Is ?c 'cat') (HasColor ?c 'black') (On ?c ?b) (exists ?tc (and (Is ?tc 'toy car') (Holding ?c ?tc))))) (exists ?m (and (Is ?m 'monitor') (NextTo ?m ?b))))) (exists ?p (and (Is ?p 'plant') (NextTo ?p ?w))) (exists ?bi (and (Is ?bi 'bicycle') (NextTo ?bi ?w))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (forall ?f (exists ?b (exists ?c (exists ?tc (exists ?m (exists ?p (exists ?bi (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (or (not (Is ?f 'fruit')) (In ?f ?w)) (RightOf ?b ?w) (or (not (Is ?f 'fruit')) (HasShape ?f 'round')) (NextTo ?p ?w) (Is ?b 'bed') (On ?c ?b) (NextTo ?bi ?w) (Is ?p 'plant') (NextTo ?m ?b) (HasColor ?c 'black') (Holding ?c ?tc) (Is ?bi 'bicycle') (Is ?m 'monitor') (Is ?c 'cat') (Is ?tc 'toy car')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "toy car",
+        "cat",
+        "plant",
+        "bed",
+        "wardrobe",
+        "bicycle",
+        "fruit"
+    ]
+}

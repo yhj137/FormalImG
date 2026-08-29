@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a lion on a rock holding a teddy bear. The rock is to the left of a toy car containing a red flower. Every apple in the scene is placed on the rock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?r (exists ?t (exists ?c (exists ?f (and (Is ?l 'lion') (Is ?r 'rock') (Is ?t 'teddy bear') (Is ?c 'toy car') (Is ?f 'flower') (HasColor ?f 'red') (On ?l ?r) (Holding ?l ?t) (LeftOf ?r ?c) (In ?f ?c) (forall ?a (implies (Is ?a 'apple') (On ?a ?r))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?r (exists ?t (exists ?c (exists ?f (forall ?a (and (Is ?l 'lion') (On ?l ?r) (Holding ?l ?t) (Is ?r 'rock') (LeftOf ?r ?c) (Is ?t 'teddy bear') (or (not (Is ?a 'apple')) (On ?a ?r)) (Is ?c 'toy car') (In ?f ?c) (HasColor ?f 'red') (Is ?f 'flower')))))))))",
+    "k": 6,
+    "object_classes": [
+        "teddy bear",
+        "rock",
+        "toy car",
+        "flower",
+        "lion",
+        "apple"
+    ]
+}

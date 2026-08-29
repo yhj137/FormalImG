@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. To the left of a bookshelf stands a child holding a phone. A hammer rests on the bookshelf with a peeled orange next to it, and a flower is also placed on the shelf. Every cake in the scene sits on the bookshelf with a fork next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bookshelf') (exists ?c (exists ?p (and (Is ?c 'child') (Is ?p 'phone') (LeftOf ?c ?b) (Holding ?c ?p)))) (exists ?h (exists ?o (and (Is ?h 'hammer') (Is ?o 'orange') (HasState ?o 'peeled') (On ?h ?b) (NextTo ?o ?h)))) (exists ?f (and (Is ?f 'flower') (On ?f ?b))) (forall ?ck (implies (Is ?ck 'cake') (and (On ?ck ?b) (exists ?fk (and (Is ?fk 'fork') (NextTo ?fk ?ck)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (exists ?h (exists ?o (exists ?f (forall ?ck (exists ?fk (and (Is ?b 'bookshelf') (LeftOf ?c ?b) (On ?h ?b) (Is ?c 'child') (Holding ?c ?p) (On ?f ?b) (Is ?h 'hammer') (NextTo ?o ?h) (Is ?p 'phone') (or (not (Is ?ck 'cake')) (On ?ck ?b)) (Is ?f 'flower') (HasState ?o 'peeled') (or (not (Is ?ck 'cake')) (Is ?fk 'fork')) (Is ?o 'orange') (or (not (Is ?ck 'cake')) (NextTo ?fk ?ck))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "cake",
+        "hammer",
+        "flower",
+        "phone",
+        "bookshelf",
+        "child",
+        "orange"
+    ]
+}

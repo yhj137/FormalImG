@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans on the left side. A black pan is positioned to the right of the jeans, and a white keyboard is to the right of the pan; these three items are aligned horizontally. For every apple in the image, the apple is red and is aligned vertically with the pan. To the left of the apple is a white hat, and the apple itself is located to the left of a pair of black headphones; the hat, apple, and headphones are aligned horizontally. Additionally, a spoon is located on the top side, aligned vertically with the apple, and is visually smaller than the pan. Finally, a pink donut is also aligned vertically with the apple and is smaller than the pan.",
+    "dsl": "(exists ?jeans (exists ?pan (exists ?keyboard (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (Is ?pan 'pan') (Has ?pan 'black') (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (LeftOf ?jeans ?pan) (LeftOf ?pan ?keyboard) (AlignedHorizontally ?jeans ?pan) (AlignedHorizontally ?pan ?keyboard) (forall ?apple (implies (Is ?apple 'apple') (exists ?hat (exists ?headphones (exists ?spoon (exists ?donut (and (Has ?apple 'red') (AlignedVertically ?apple ?pan) (Is ?hat 'hat') (Has ?hat 'white') (LeftOf ?hat ?apple) (AlignedHorizontally ?hat ?apple) (Is ?headphones 'headphones') (Has ?headphones 'black') (LeftOf ?apple ?headphones) (AlignedHorizontally ?apple ?headphones) (Is ?spoon 'spoon') (OnTopSide ?spoon) (AlignedVertically ?spoon ?apple) (SmallerThan ?spoon ?pan) (Is ?donut 'donut') (Has ?donut 'pink') (AlignedVertically ?donut ?apple) (SmallerThan ?donut ?pan))))))))))))",
+    "cnf": "(exists ?jeans (exists ?pan (exists ?keyboard (forall ?apple (exists ?hat (exists ?headphones (exists ?spoon (exists ?donut (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (LeftOf ?jeans ?pan) (AlignedHorizontally ?jeans ?pan) (Has ?pan 'black') (LeftOf ?pan ?keyboard) (AlignedHorizontally ?pan ?keyboard) (Is ?pan 'pan') (Has ?keyboard 'white') (or (not (Is ?apple 'apple')) (AlignedVertically ?apple ?pan)) (Is ?keyboard 'keyboard') (or (not (Is ?apple 'apple')) (SmallerThan ?spoon ?pan)) (or (not (Is ?apple 'apple')) (Has ?apple 'red')) (or (not (Is ?apple 'apple')) (Is ?hat 'hat')) (or (not (Is ?apple 'apple')) (SmallerThan ?donut ?pan)) (or (not (Is ?apple 'apple')) (AlignedVertically ?spoon ?apple)) (or (not (Is ?apple 'apple')) (Is ?donut 'donut')) (or (not (Is ?apple 'apple')) (Has ?hat 'white')) (or (not (Is ?apple 'apple')) (AlignedVertically ?donut ?apple)) (or (not (Is ?apple 'apple')) (OnTopSide ?spoon)) (or (not (Is ?apple 'apple')) (Has ?donut 'pink')) (or (not (Is ?apple 'apple')) (LeftOf ?hat ?apple)) (or (not (Is ?apple 'apple')) (Is ?spoon 'spoon')) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?hat ?apple)) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?apple ?headphones)) (or (not (Is ?apple 'apple')) (Is ?headphones 'headphones')) (or (not (Is ?apple 'apple')) (LeftOf ?apple ?headphones)) (or (not (Is ?apple 'apple')) (Has ?headphones 'black')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "hat",
+        "pan",
+        "jeans",
+        "spoon",
+        "headphones",
+        "donut"
+    ]
+}

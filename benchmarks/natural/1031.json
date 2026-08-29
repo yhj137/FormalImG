@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. Next to every bus is a desk, and beside the desk is a round table with a shirt on it. A child holding a cup is next to the table.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bus') (exists ?d (exists ?t (exists ?s (exists ?c (exists ?u (and (Is ?d 'desk') (NextTo ?d ?b) (Is ?t 'table') (HasShape ?t 'round') (NextTo ?t ?d) (Is ?s 'shirt') (On ?s ?t) (Is ?c 'child') (NextTo ?c ?t) (Is ?u 'cup') (Holding ?c ?u))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?d (exists ?t (exists ?s (exists ?c (exists ?u (and (or (not (Is ?b 'bus')) (Is ?d 'desk')) (or (not (Is ?b 'bus')) (NextTo ?d ?b)) (or (not (Is ?b 'bus')) (NextTo ?t ?d)) (or (not (Is ?b 'bus')) (Is ?t 'table')) (or (not (Is ?b 'bus')) (HasShape ?t 'round')) (or (not (Is ?b 'bus')) (Is ?s 'shirt')) (or (not (Is ?b 'bus')) (On ?s ?t)) (or (not (Is ?b 'bus')) (Is ?c 'child')) (or (not (Is ?b 'bus')) (NextTo ?c ?t)) (or (not (Is ?b 'bus')) (Is ?u 'cup')) (or (not (Is ?b 'bus')) (Holding ?c ?u))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bus",
+        "table",
+        "desk",
+        "cup",
+        "shirt",
+        "child"
+    ]
+}

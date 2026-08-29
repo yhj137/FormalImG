@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a handbag, a glove, and a lemon arranged vertically. The glove is positioned below the handbag, and the lemon is located below the glove. Consequently, the lemon resides on the bottom side of the image and is visually smaller than the handbag.",
+    "dsl": "(exists ?handbag (exists ?glove (exists ?lemon (and (Is ?handbag 'handbag') (Is ?glove 'glove') (Is ?lemon 'lemon') (Below ?glove ?handbag) (Below ?lemon ?glove) (OnBottomSide ?lemon) (SmallerThan ?lemon ?handbag)))))",
+    "cnf": "(exists ?handbag (exists ?glove (exists ?lemon (and (Is ?handbag 'handbag') (Below ?glove ?handbag) (SmallerThan ?lemon ?handbag) (Is ?glove 'glove') (Below ?lemon ?glove) (OnBottomSide ?lemon) (Is ?lemon 'lemon')))))",
+    "k": 3,
+    "object_classes": [
+        "lemon",
+        "handbag",
+        "glove"
+    ]
+}

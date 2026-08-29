@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. Every car is made of plastic and has an orange fish on it. Each car is positioned to the left of a metal phone, which has a pair of headphones to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'car') (exists ?f (exists ?p (exists ?h (and (Is ?f 'fish') (Is ?p 'phone') (Is ?h 'headphones') (HasMaterial ?c 'plastic') (HasColor ?f 'orange') (HasMaterial ?p 'metal') (On ?f ?c) (LeftOf ?c ?p) (RightOf ?h ?p))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?f (exists ?p (exists ?h (and (or (not (Is ?c 'car')) (Is ?f 'fish')) (or (not (Is ?c 'car')) (HasColor ?f 'orange')) (or (not (Is ?c 'car')) (Is ?p 'phone')) (or (not (Is ?c 'car')) (On ?f ?c)) (or (not (Is ?c 'car')) (HasMaterial ?c 'plastic')) (or (not (Is ?c 'car')) (HasMaterial ?p 'metal')) (or (not (Is ?c 'car')) (Is ?h 'headphones')) (or (not (Is ?c 'car')) (LeftOf ?c ?p)) (or (not (Is ?c 'car')) (RightOf ?h ?p))))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "car",
+        "headphones",
+        "fish"
+    ]
+}

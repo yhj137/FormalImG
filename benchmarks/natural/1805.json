@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. The scene features a wooden table located next to a white refrigerator. A green plant sits on top of the refrigerator. On the table, there is a black laptop and a metal pan, with a round red apple resting on the pan. A woman is standing next to the table holding a blue shirt. Additionally, a person is standing next to the woman, and a tree is visible next to the person.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?r (exists ?pl (exists ?l (exists ?pn (exists ?a (exists ?w (exists ?s (exists ?p (exists ?tr (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?r 'refrigerator') (HasColor ?r 'white') (Is ?pl 'plant') (HasColor ?pl 'green') (Is ?l 'laptop') (HasColor ?l 'black') (Is ?pn 'pan') (HasMaterial ?pn 'metal') (Is ?a 'apple') (HasColor ?a 'red') (HasShape ?a 'round') (Is ?w 'woman') (Is ?s 'shirt') (HasColor ?s 'blue') (Is ?p 'person') (Is ?tr 'tree') (NextTo ?r ?t) (On ?pl ?r) (On ?l ?t) (On ?pn ?t) (On ?a ?pn) (NextTo ?w ?t) (Holding ?w ?s) (NextTo ?p ?w) (NextTo ?tr ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?r (exists ?pl (exists ?l (exists ?pn (exists ?a (exists ?w (exists ?s (exists ?p (exists ?tr (and (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?r ?t) (On ?l ?t) (HasColor ?r 'white') (On ?pl ?r) (On ?pn ?t) (HasColor ?l 'black') (Is ?r 'refrigerator') (HasColor ?pl 'green') (NextTo ?w ?t) (HasMaterial ?pn 'metal') (On ?a ?pn) (Is ?l 'laptop') (Is ?pl 'plant') (Is ?w 'woman') (Holding ?w ?s) (Is ?pn 'pan') (HasShape ?a 'round') (NextTo ?p ?w) (HasColor ?s 'blue') (HasColor ?a 'red') (Is ?p 'person') (NextTo ?tr ?p) (Is ?s 'shirt') (Is ?a 'apple') (Is ?tr 'tree')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "person",
+        "laptop",
+        "tree",
+        "plant",
+        "woman",
+        "table",
+        "refrigerator",
+        "pan",
+        "apple"
+    ]
+}

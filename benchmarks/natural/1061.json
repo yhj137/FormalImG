@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a house where every plant is situated next to it. Inside the house stands a wooden wardrobe. A rusty key rests on the wardrobe, with a hammer lying to the left of the key. An orange is positioned to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (forall ?p (implies (Is ?p 'plant') (NextTo ?p ?h))) (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?w ?h) (exists ?k (and (Is ?k 'key') (HasState ?k 'rusty') (On ?k ?w) (exists ?hm (and (Is ?hm 'hammer') (LeftOf ?hm ?k))))) (exists ?o (and (Is ?o 'orange') (RightOf ?o ?w))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (forall ?p (exists ?w (exists ?k (exists ?hm (exists ?o (and (Is ?h 'house') (or (not (Is ?p 'plant')) (NextTo ?p ?h)) (In ?w ?h) (HasMaterial ?w 'wooden') (On ?k ?w) (Is ?w 'wardrobe') (RightOf ?o ?w) (HasState ?k 'rusty') (LeftOf ?hm ?k) (Is ?o 'orange') (Is ?k 'key') (Is ?hm 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "plant",
+        "hammer",
+        "wardrobe",
+        "house",
+        "orange"
+    ]
+}

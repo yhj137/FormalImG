@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is holding an umbrella and a key while standing next to a rectangular refrigerator. The refrigerator is located to the left of a bed. Next to the bed is a bookshelf. A basket containing fruit is placed next to the bookshelf, and a round rock is positioned to the left of the basket. Finally, all books in the scene are located on the bookshelf.",
+    "dsl": "(exists ?w (exists ?u (exists ?k (exists ?ref (exists ?bed (exists ?shelf (exists ?bask (exists ?fr (exists ?rk (and (Is ?w 'woman') (Is ?u 'umbrella') (Is ?k 'key') (Is ?ref 'refrigerator') (Is ?bed 'bed') (Is ?shelf 'bookshelf') (Is ?bask 'basket') (Is ?fr 'fruit') (Is ?rk 'rock') (HasShape ?ref 'rectangular') (HasShape ?rk 'round') (Holding ?w ?u) (Holding ?w ?k) (NextTo ?w ?ref) (LeftOf ?ref ?bed) (NextTo ?bed ?shelf) (NextTo ?shelf ?bask) (In ?fr ?bask) (LeftOf ?rk ?bask) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?shelf)))))))))))))",
+    "cnf": "(exists ?w (exists ?u (exists ?k (exists ?ref (exists ?bed (exists ?shelf (exists ?bask (exists ?fr (exists ?rk (forall ?bk (and (Is ?w 'woman') (Holding ?w ?u) (Holding ?w ?k) (Is ?u 'umbrella') (NextTo ?w ?ref) (Is ?k 'key') (HasShape ?ref 'rectangular') (LeftOf ?ref ?bed) (Is ?ref 'refrigerator') (Is ?bed 'bed') (NextTo ?bed ?shelf) (Is ?shelf 'bookshelf') (NextTo ?shelf ?bask) (or (not (Is ?bk 'book')) (On ?bk ?shelf)) (Is ?bask 'basket') (In ?fr ?bask) (LeftOf ?rk ?bask) (Is ?fr 'fruit') (HasShape ?rk 'round') (Is ?rk 'rock'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "umbrella",
+        "rock",
+        "fruit",
+        "book",
+        "refrigerator",
+        "bed",
+        "basket",
+        "woman",
+        "bookshelf"
+    ]
+}

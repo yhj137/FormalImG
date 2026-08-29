@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a game controller, a glove, a hat, and a calculator arranged in a row. The glove is positioned to the right of the game controller, the hat is to the right of the glove, and the calculator is to the right of the hat. All four objects are aligned horizontally, with the calculator situated on the right side of the image. Furthermore, for every phone in the scene, there is a bottle located to its right, and the phone is aligned horizontally with the game controller.",
+    "dsl": "(exists ?gc (exists ?gl (exists ?h (exists ?c (and (Is ?gc 'game_controller') (Is ?gl 'glove') (Is ?h 'hat') (Is ?c 'calculator') (RightOf ?gl ?gc) (RightOf ?h ?gl) (RightOf ?c ?h) (AlignedHorizontally ?gc ?gl) (AlignedHorizontally ?gl ?h) (AlignedHorizontally ?h ?c) (OnRightSide ?c) (forall ?p (implies (Is ?p 'phone') (exists ?b (and (Is ?b 'bottle') (RightOf ?b ?p) (AlignedHorizontally ?p ?gc))))))))))",
+    "cnf": "(exists ?gc (exists ?gl (exists ?h (exists ?c (forall ?p (exists ?b (and (Is ?gc 'game_controller') (RightOf ?gl ?gc) (AlignedHorizontally ?gc ?gl) (Is ?gl 'glove') (RightOf ?h ?gl) (or (not (Is ?p 'phone')) (AlignedHorizontally ?p ?gc)) (AlignedHorizontally ?gl ?h) (Is ?h 'hat') (RightOf ?c ?h) (or (not (Is ?p 'phone')) (RightOf ?b ?p)) (AlignedHorizontally ?h ?c) (Is ?c 'calculator') (or (not (Is ?p 'phone')) (Is ?b 'bottle')) (OnRightSide ?c))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "game_controller",
+        "hat",
+        "calculator",
+        "bottle",
+        "glove"
+    ]
+}

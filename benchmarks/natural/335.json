@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a wooden bed, with all plants positioned to its left.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?p (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (or (not (Is ?p 'plant')) (LeftOf ?p ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bed",
+        "plant"
+    ]
+}

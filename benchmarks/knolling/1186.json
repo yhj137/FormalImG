@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A plate is positioned on the top side of the image. To the left of the plate is a spoon, and to the left of the spoon is a remote. An apple is placed below the plate and is aligned vertically with it. A wallet is located below the spoon and aligned vertically with the spoon. Finally, for every calculator present in the scene, it is positioned below the remote and aligned vertically with the remote.",
+    "dsl": "(exists ?plate (exists ?spoon (exists ?remote (exists ?apple (exists ?wallet (and (Is ?plate 'plate') (OnTopSide ?plate) (Is ?spoon 'spoon') (Is ?remote 'remote') (Is ?apple 'apple') (Is ?wallet 'wallet') (LeftOf ?spoon ?plate) (LeftOf ?remote ?spoon) (Below ?apple ?plate) (AlignedVertically ?apple ?plate) (Below ?wallet ?spoon) (AlignedVertically ?wallet ?spoon) (forall ?calc (implies (Is ?calc 'calculator') (and (Below ?calc ?remote) (AlignedVertically ?calc ?remote))))))))))",
+    "cnf": "(exists ?plate (exists ?spoon (exists ?remote (exists ?apple (exists ?wallet (forall ?calc (and (Is ?plate 'plate') (OnTopSide ?plate) (LeftOf ?spoon ?plate) (Below ?apple ?plate) (Is ?spoon 'spoon') (LeftOf ?remote ?spoon) (AlignedVertically ?apple ?plate) (Is ?apple 'apple') (Below ?wallet ?spoon) (Is ?remote 'remote') (or (not (Is ?calc 'calculator')) (Below ?calc ?remote)) (AlignedVertically ?wallet ?spoon) (Is ?wallet 'wallet') (or (not (Is ?calc 'calculator')) (AlignedVertically ?calc ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "remote",
+        "apple",
+        "calculator",
+        "wallet",
+        "spoon"
+    ]
+}

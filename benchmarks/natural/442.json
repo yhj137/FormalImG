@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a standing elephant holding a rock, with a rusty car next to it on the right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?r (exists ?c (and (Is ?e 'elephant') (Is ?r 'rock') (Is ?c 'car') (HasState ?e 'standing') (HasState ?c 'rusty') (Holding ?e ?r) (NextTo ?c ?e) (RightOf ?c ?e))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?r (exists ?c (and (Is ?e 'elephant') (HasState ?e 'standing') (Holding ?e ?r) (NextTo ?c ?e) (Is ?r 'rock') (RightOf ?c ?e) (HasState ?c 'rusty') (Is ?c 'car'))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "rock",
+        "car"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicts a child holding a pan. Every apple in the scene is sliced and contained inside the pan. A keyboard is located to the right of the child.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?p (and (Is ?c 'child') (Is ?p 'pan') (Holding ?c ?p) (forall ?a (implies (Is ?a 'apple') (and (In ?a ?p) (HasState ?a 'sliced')))) (exists ?k (and (Is ?k 'keyboard') (RightOf ?k ?c)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?p (forall ?a (exists ?k (and (Is ?c 'child') (Holding ?c ?p) (RightOf ?k ?c) (Is ?p 'pan') (or (not (Is ?a 'apple')) (In ?a ?p)) (Is ?k 'keyboard') (or (not (Is ?a 'apple')) (HasState ?a 'sliced'))))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "child",
+        "pan"
+    ]
+}

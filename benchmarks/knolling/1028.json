@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a vertical column of objects arranged on the left side of the scene. At the bottom of this column is a laptop. A cutting board is placed directly above the laptop. Above the cutting board is a plate, and a bowl is positioned above the plate. The bowl is visibly smaller than the plate. Above the bowl are headphones, and a remote is located above the headphones at the top of the arrangement. Additionally, the remote is smaller than the laptop.",
+    "dsl": "(exists ?laptop (exists ?cutting_board (exists ?plate (exists ?bowl (exists ?headphones (exists ?remote (and (Is ?laptop 'laptop') (Is ?cutting_board 'cutting_board') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?headphones 'headphones') (Is ?remote 'remote') (OnLeftSide ?laptop) (Above ?cutting_board ?laptop) (Above ?plate ?cutting_board) (Above ?bowl ?plate) (Above ?headphones ?bowl) (Above ?remote ?headphones) (SmallerThan ?bowl ?plate) (SmallerThan ?remote ?laptop))))))))",
+    "cnf": "(exists ?laptop (exists ?cutting_board (exists ?plate (exists ?bowl (exists ?headphones (exists ?remote (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?cutting_board ?laptop) (SmallerThan ?remote ?laptop) (Is ?cutting_board 'cutting_board') (Above ?plate ?cutting_board) (Above ?remote ?headphones) (Is ?plate 'plate') (Above ?bowl ?plate) (Above ?headphones ?bowl) (Is ?remote 'remote') (SmallerThan ?bowl ?plate) (Is ?bowl 'bowl') (Is ?headphones 'headphones'))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "remote",
+        "cutting_board",
+        "bowl",
+        "headphones"
+    ]
+}

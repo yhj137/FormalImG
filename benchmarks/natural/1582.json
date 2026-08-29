@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a bed to the left of a refrigerator. A jacket lies on the bed, alongside all glasses. A woman holding a bottle stands next to the refrigerator, which contains a round plate with a fish.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?r (exists ?w (exists ?b (exists ?p (exists ?f (exists ?j (and (Is ?bed 'bed') (Is ?r 'refrigerator') (Is ?w 'woman') (Is ?b 'bottle') (Is ?p 'plate') (HasShape ?p 'round') (Is ?f 'fish') (Is ?j 'jacket') (LeftOf ?bed ?r) (On ?j ?bed) (NextTo ?w ?r) (Holding ?w ?b) (In ?p ?r) (On ?f ?p) (forall ?g (implies (Is ?g 'glasses') (On ?g ?bed))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?r (exists ?w (exists ?b (exists ?p (exists ?f (exists ?j (forall ?g (and (Is ?bed 'bed') (LeftOf ?bed ?r) (On ?j ?bed) (Is ?r 'refrigerator') (NextTo ?w ?r) (or (not (Is ?g 'glasses')) (On ?g ?bed)) (Is ?j 'jacket') (In ?p ?r) (Is ?w 'woman') (Holding ?w ?b) (HasShape ?p 'round') (On ?f ?p) (Is ?b 'bottle') (Is ?p 'plate') (Is ?f 'fish')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "glasses",
+        "fish",
+        "refrigerator",
+        "bed",
+        "woman",
+        "plate"
+    ]
+}

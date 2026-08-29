@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image displaying nine items arranged in a precise 3x3 grid layout. The top row consists of a pan, a hammer, and a camera, positioned from left to right and aligned horizontally, with the camera located on the right side of the image. The middle row features a suitcase, a phone, and a wallet, also aligned horizontally; the suitcase is to the left of the phone, and the phone is to the left of the wallet. Visually, the suitcase is larger than the wallet. The bottom row contains a sock, a fork, and a knife, arranged from left to right and aligned horizontally. To maintain the grid structure, vertical alignment is enforced across the columns: the pan is directly above the suitcase, which is above the sock; the hammer is above the phone, which is above the fork; and the camera is above the wallet, which is above the knife.",
+    "dsl": "(exists ?pan (exists ?hammer (exists ?camera (exists ?suitcase (exists ?phone (exists ?wallet (exists ?sock (exists ?fork (exists ?knife (and (Is ?pan 'pan') (Is ?hammer 'hammer') (Is ?camera 'camera') (Is ?suitcase 'suitcase') (Is ?phone 'phone') (Is ?wallet 'wallet') (Is ?sock 'sock') (Is ?fork 'fork') (Is ?knife 'knife') (LeftOf ?pan ?hammer) (LeftOf ?hammer ?camera) (AlignedHorizontally ?pan ?hammer) (AlignedHorizontally ?hammer ?camera) (LeftOf ?suitcase ?phone) (LeftOf ?phone ?wallet) (AlignedHorizontally ?suitcase ?phone) (AlignedHorizontally ?phone ?wallet) (LeftOf ?sock ?fork) (LeftOf ?fork ?knife) (AlignedHorizontally ?sock ?fork) (AlignedHorizontally ?fork ?knife) (Above ?pan ?suitcase) (Above ?suitcase ?sock) (AlignedVertically ?pan ?suitcase) (AlignedVertically ?suitcase ?sock) (Above ?hammer ?phone) (Above ?phone ?fork) (AlignedVertically ?hammer ?phone) (AlignedVertically ?phone ?fork) (Above ?camera ?wallet) (Above ?wallet ?knife) (AlignedVertically ?camera ?wallet) (AlignedVertically ?wallet ?knife) (OnRightSide ?camera) (LargerThan ?suitcase ?wallet)))))))))))",
+    "cnf": "(exists ?pan (exists ?hammer (exists ?camera (exists ?suitcase (exists ?phone (exists ?wallet (exists ?sock (exists ?fork (exists ?knife (and (Is ?pan 'pan') (LeftOf ?pan ?hammer) (AlignedHorizontally ?pan ?hammer) (Is ?hammer 'hammer') (LeftOf ?hammer ?camera) (Above ?pan ?suitcase) (AlignedHorizontally ?hammer ?camera) (Is ?camera 'camera') (AlignedVertically ?pan ?suitcase) (AlignedHorizontally ?suitcase ?phone) (Above ?suitcase ?sock) (Above ?hammer ?phone) (Above ?camera ?wallet) (AlignedVertically ?suitcase ?sock) (LeftOf ?suitcase ?phone) (LeftOf ?phone ?wallet) (AlignedHorizontally ?phone ?wallet) (AlignedHorizontally ?sock ?fork) (AlignedVertically ?hammer ?phone) (Above ?phone ?fork) (AlignedVertically ?camera ?wallet) (Above ?wallet ?knife) (LargerThan ?suitcase ?wallet) (Is ?suitcase 'suitcase') (Is ?phone 'phone') (Is ?wallet 'wallet') (LeftOf ?sock ?fork) (LeftOf ?fork ?knife) (AlignedHorizontally ?fork ?knife) (AlignedVertically ?phone ?fork) (OnRightSide ?camera) (AlignedVertically ?wallet ?knife) (Is ?sock 'sock') (Is ?fork 'fork') (Is ?knife 'knife')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sock",
+        "phone",
+        "hammer",
+        "pan",
+        "fork",
+        "wallet",
+        "camera",
+        "knife",
+        "suitcase"
+    ]
+}

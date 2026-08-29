@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style image of a child holding a bowl containing a bitten sandwich.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?s (and (Is ?c 'child') (Is ?b 'bowl') (Is ?s 'sandwich') (HasState ?s 'bitten') (Holding ?c ?b) (In ?s ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?s (and (Is ?c 'child') (Holding ?c ?b) (Is ?b 'bowl') (In ?s ?b) (HasState ?s 'bitten') (Is ?s 'sandwich'))))))",
+    "k": 3,
+    "object_classes": [
+        "sandwich",
+        "bowl",
+        "child"
+    ]
+}

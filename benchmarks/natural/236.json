@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a round clock to the left of a cake.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?cl (exists ?ca (and (Is ?cl 'clock') (HasShape ?cl 'round') (Is ?ca 'cake') (LeftOf ?cl ?ca)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?cl (exists ?ca (and (Is ?cl 'clock') (HasShape ?cl 'round') (LeftOf ?cl ?ca) (Is ?ca 'cake')))))",
+    "k": 2,
+    "object_classes": [
+        "cake",
+        "clock"
+    ]
+}

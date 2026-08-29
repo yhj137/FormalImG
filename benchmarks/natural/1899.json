@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicting a man sitting on a bench, holding a bowl with a fork inside. A brown dog is to the left of the bench, and a jacket lies next to the man. To the right of the bench is a basket containing all the oranges. A laptop rests on the bench, and a clock is positioned above.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?be (exists ?ba (exists ?bo (and (Is ?m 'man') (Is ?be 'bench') (Is ?ba 'basket') (Is ?bo 'bowl') (On ?m ?be) (RightOf ?ba ?be) (Holding ?m ?bo) (forall ?o (implies (Is ?o 'orange') (In ?o ?ba))) (exists ?f (exists ?d (exists ?j (exists ?l (exists ?c (and (Is ?f 'fork') (Is ?d 'dog') (Is ?j 'jacket') (Is ?l 'laptop') (Is ?c 'clock') (In ?f ?bo) (LeftOf ?d ?be) (HasColor ?d 'brown') (NextTo ?j ?m) (On ?l ?be) (Above ?c ?be)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?be (exists ?ba (exists ?bo (forall ?o (exists ?f (exists ?d (exists ?j (exists ?l (exists ?c (and (Is ?m 'man') (On ?m ?be) (Holding ?m ?bo) (Is ?be 'bench') (RightOf ?ba ?be) (NextTo ?j ?m) (Is ?bo 'bowl') (In ?f ?bo) (LeftOf ?d ?be) (Is ?ba 'basket') (or (not (Is ?o 'orange')) (In ?o ?ba)) (Is ?j 'jacket') (Is ?f 'fork') (On ?l ?be) (Is ?d 'dog') (HasColor ?d 'brown') (Above ?c ?be) (Is ?l 'laptop') (Is ?c 'clock')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "bowl",
+        "fork",
+        "man",
+        "laptop",
+        "basket",
+        "clock",
+        "dog",
+        "orange"
+    ]
+}

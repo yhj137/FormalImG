@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. A man stands next to a table, holding a red flower. All butterflies in the scene are positioned to the right of this flower. On the table, there is a pan containing a blue fish, and a fork lies next to the pan. A gray laptop also sits on the table, with a pair of glasses located to its left. Additionally, a clock rests on the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?m (exists ?fl (exists ?p (exists ?f (exists ?k (exists ?l (exists ?g (exists ?c (and (Is ?t 'table') (Is ?m 'man') (NextTo ?m ?t) (Is ?fl 'flower') (HasColor ?fl 'red') (Holding ?m ?fl) (forall ?b (implies (Is ?b 'butterfly') (RightOf ?b ?fl))) (Is ?p 'pan') (On ?p ?t) (Is ?f 'fish') (HasColor ?f 'blue') (In ?f ?p) (Is ?k 'fork') (NextTo ?k ?p) (Is ?l 'laptop') (HasColor ?l 'gray') (On ?l ?t) (Is ?g 'glasses') (LeftOf ?g ?l) (Is ?c 'clock') (On ?c ?t))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?m (exists ?fl (exists ?p (exists ?f (exists ?k (exists ?l (exists ?g (exists ?c (forall ?b (and (Is ?t 'table') (NextTo ?m ?t) (On ?p ?t) (Is ?m 'man') (Holding ?m ?fl) (On ?l ?t) (Is ?p 'pan') (In ?f ?p) (HasColor ?fl 'red') (or (not (Is ?b 'butterfly')) (RightOf ?b ?fl)) (On ?c ?t) (HasColor ?l 'gray') (LeftOf ?g ?l) (NextTo ?k ?p) (HasColor ?f 'blue') (Is ?fl 'flower') (Is ?c 'clock') (Is ?l 'laptop') (Is ?g 'glasses') (Is ?k 'fork') (Is ?f 'fish')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "fork",
+        "laptop",
+        "glasses",
+        "man",
+        "table",
+        "flower",
+        "pan",
+        "clock",
+        "butterfly"
+    ]
+}

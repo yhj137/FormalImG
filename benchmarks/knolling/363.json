@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a book located on the top side of the layout. Additionally, for every watch present in the scene, it is visually smaller than that book.",
+    "dsl": "(exists ?b (and (Is ?b 'book') (OnTopSide ?b) (forall ?w (implies (Is ?w 'watch') (SmallerThan ?w ?b)))))",
+    "cnf": "(exists ?b (forall ?w (and (Is ?b 'book') (OnTopSide ?b) (or (not (Is ?w 'watch')) (SmallerThan ?w ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "watch"
+    ]
+}

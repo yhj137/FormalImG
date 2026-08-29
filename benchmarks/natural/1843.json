@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts a house, with every boat positioned to its right. To the left of the house, a woman holds a cylindrical bottle next to a black bicycle. A metal tree stands beside the house, along with a bookshelf holding a laptop and a round clock. A gray refrigerator is located next to the bookshelf.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (forall ?bt (implies (Is ?bt 'boat') (RightOf ?bt ?h))) (exists ?w (and (Is ?w 'woman') (LeftOf ?w ?h) (exists ?bo (and (Is ?bo 'bottle') (HasShape ?bo 'cylindrical') (Holding ?w ?bo))) (exists ?bi (and (Is ?bi 'bicycle') (HasColor ?bi 'black') (NextTo ?bi ?w))))) (exists ?t (and (Is ?t 'tree') (HasMaterial ?t 'metal') (NextTo ?t ?h))) (exists ?bs (and (Is ?bs 'bookshelf') (NextTo ?bs ?h) (exists ?la (and (Is ?la 'laptop') (On ?la ?bs))) (exists ?cl (and (Is ?cl 'clock') (HasShape ?cl 'round') (On ?cl ?bs))) (exists ?r (and (Is ?r 'refrigerator') (HasColor ?r 'gray') (NextTo ?r ?bs))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?bt (exists ?w (exists ?bo (exists ?bi (exists ?t (exists ?bs (exists ?la (exists ?cl (exists ?r (and (Is ?h 'house') (or (not (Is ?bt 'boat')) (RightOf ?bt ?h)) (LeftOf ?w ?h) (NextTo ?t ?h) (Is ?w 'woman') (Holding ?w ?bo) (NextTo ?bs ?h) (HasMaterial ?t 'metal') (NextTo ?bi ?w) (HasShape ?bo 'cylindrical') (Is ?bs 'bookshelf') (On ?la ?bs) (Is ?t 'tree') (HasColor ?bi 'black') (Is ?bo 'bottle') (On ?cl ?bs) (Is ?la 'laptop') (Is ?bi 'bicycle') (NextTo ?r ?bs) (HasShape ?cl 'round') (HasColor ?r 'gray') (Is ?cl 'clock') (Is ?r 'refrigerator')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bottle",
+        "boat",
+        "laptop",
+        "tree",
+        "refrigerator",
+        "bookshelf",
+        "house",
+        "bicycle",
+        "clock",
+        "woman"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a man holding a metal pan with a cake on it, located to the left of an open wardrobe. A bird sits on the wardrobe, while a book is inside. A woman holding a cup stands next to the wardrobe, alongside a toy car. Every flower is round and positioned to the left of the toy car.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?p (exists ?ck (exists ?wd (exists ?b (exists ?bk (exists ?w (exists ?c (exists ?tc (and (Is ?m 'man') (Is ?p 'pan') (HasMaterial ?p 'metal') (Is ?ck 'cake') (Is ?wd 'wardrobe') (HasState ?wd 'open') (Is ?b 'bird') (Is ?bk 'book') (Is ?w 'woman') (Is ?c 'cup') (Is ?tc 'toy car') (Holding ?m ?p) (On ?ck ?p) (LeftOf ?m ?wd) (On ?b ?wd) (In ?bk ?wd) (NextTo ?w ?wd) (Holding ?w ?c) (NextTo ?tc ?wd) (forall ?f (implies (Is ?f 'flower') (and (HasShape ?f 'round') (LeftOf ?f ?tc)))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?p (exists ?ck (exists ?wd (exists ?b (exists ?bk (exists ?w (exists ?c (exists ?tc (forall ?f (and (Is ?m 'man') (Holding ?m ?p) (LeftOf ?m ?wd) (HasMaterial ?p 'metal') (On ?ck ?p) (HasState ?wd 'open') (On ?b ?wd) (Is ?p 'pan') (Is ?ck 'cake') (Is ?wd 'wardrobe') (In ?bk ?wd) (Is ?b 'bird') (NextTo ?w ?wd) (Is ?bk 'book') (NextTo ?tc ?wd) (Is ?w 'woman') (Holding ?w ?c) (Is ?tc 'toy car') (or (not (Is ?f 'flower')) (LeftOf ?f ?tc)) (Is ?c 'cup') (or (not (Is ?f 'flower')) (HasShape ?f 'round'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "toy car",
+        "man",
+        "cake",
+        "book",
+        "wardrobe",
+        "cup",
+        "woman",
+        "bird",
+        "flower"
+    ]
+}

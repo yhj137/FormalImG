@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting an open laptop located to the left of a red toy car. Next to the toy car is a sandwich, positioned to the right of a pair of shoes. The shoes are next to a banana, which is to the left of a shirt. A bird is adjacent to the shirt, and every butterfly in the scene is located to the right of this bird. Additionally, the bird is positioned above an oval mirror that is next to a key.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?v1 (exists ?v2 (exists ?v3 (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (and (Is ?v1 'laptop') (HasState ?v1 'open') (Is ?v2 'toy car') (HasColor ?v2 'red') (LeftOf ?v1 ?v2) (Is ?v3 'sandwich') (NextTo ?v2 ?v3) (Is ?v4 'shoes') (RightOf ?v3 ?v4) (Is ?v5 'banana') (NextTo ?v4 ?v5) (Is ?v6 'shirt') (LeftOf ?v5 ?v6) (Is ?v7 'bird') (NextTo ?v6 ?v7) (forall ?v8 (implies (Is ?v8 'butterfly') (RightOf ?v8 ?v7))) (exists ?v9 (exists ?v10 (and (Is ?v9 'mirror') (HasShape ?v9 'oval') (Above ?v7 ?v9) (Is ?v10 'key') (NextTo ?v9 ?v10)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?v1 (exists ?v2 (exists ?v3 (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (forall ?v8 (exists ?v9 (exists ?v10 (and (Is ?v1 'laptop') (HasState ?v1 'open') (LeftOf ?v1 ?v2) (HasColor ?v2 'red') (NextTo ?v2 ?v3) (Is ?v2 'toy car') (Is ?v3 'sandwich') (RightOf ?v3 ?v4) (Is ?v4 'shoes') (NextTo ?v4 ?v5) (Is ?v5 'banana') (LeftOf ?v5 ?v6) (Is ?v6 'shirt') (NextTo ?v6 ?v7) (Is ?v7 'bird') (or (not (Is ?v8 'butterfly')) (RightOf ?v8 ?v7)) (Above ?v7 ?v9) (HasShape ?v9 'oval') (NextTo ?v9 ?v10) (Is ?v9 'mirror') (Is ?v10 'key')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "shoes",
+        "laptop",
+        "toy car",
+        "bird",
+        "mirror",
+        "sandwich",
+        "key",
+        "butterfly",
+        "banana"
+    ]
+}

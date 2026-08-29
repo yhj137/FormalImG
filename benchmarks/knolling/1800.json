@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten objects arranged in two precisely aligned horizontal rows. The top row, positioned on the top side of the image, begins with a monitor on the left side, followed sequentially to the right by a laptop, a pizza, a cutting board, and a drill; these items are aligned horizontally. The bottom row, located on the bottom side, consists of a watch, a tie, a fork, a plate, and a pan, arranged from left to right. The layout is vertically structured such that the watch is directly below the monitor, the tie is below the laptop, the fork is below the pizza, the plate is below the cutting board, and the pan is below the drill. In terms of size comparisons, the monitor is larger than the watch, the laptop is larger than the tie, and the pan is larger than the fork.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?pizza (exists ?cutting_board (exists ?drill (exists ?watch (exists ?tie (exists ?fork (exists ?plate (exists ?pan (and (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?pizza 'pizza') (Is ?cutting_board 'cutting_board') (Is ?drill 'drill') (Is ?watch 'watch') (Is ?tie 'tie') (Is ?fork 'fork') (Is ?plate 'plate') (Is ?pan 'pan') (OnTopSide ?monitor) (OnLeftSide ?monitor) (OnBottomSide ?watch) (LeftOf ?monitor ?laptop) (LeftOf ?laptop ?pizza) (LeftOf ?pizza ?cutting_board) (LeftOf ?cutting_board ?drill) (AlignedHorizontally ?monitor ?laptop) (AlignedHorizontally ?laptop ?pizza) (AlignedHorizontally ?pizza ?cutting_board) (AlignedHorizontally ?cutting_board ?drill) (LeftOf ?watch ?tie) (LeftOf ?tie ?fork) (LeftOf ?fork ?plate) (LeftOf ?plate ?pan) (AlignedHorizontally ?watch ?tie) (AlignedHorizontally ?tie ?fork) (AlignedHorizontally ?fork ?plate) (AlignedHorizontally ?plate ?pan) (Below ?watch ?monitor) (Below ?tie ?laptop) (Below ?fork ?pizza) (Below ?plate ?cutting_board) (Below ?pan ?drill) (LargerThan ?monitor ?watch) (LargerThan ?laptop ?tie) (LargerThan ?pan ?fork))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?pizza (exists ?cutting_board (exists ?drill (exists ?watch (exists ?tie (exists ?fork (exists ?plate (exists ?pan (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (LeftOf ?monitor ?laptop) (AlignedHorizontally ?monitor ?laptop) (Is ?laptop 'laptop') (LeftOf ?laptop ?pizza) (Below ?watch ?monitor) (AlignedHorizontally ?laptop ?pizza) (Is ?pizza 'pizza') (LeftOf ?pizza ?cutting_board) (LargerThan ?monitor ?watch) (AlignedHorizontally ?watch ?tie) (Below ?tie ?laptop) (AlignedHorizontally ?pizza ?cutting_board) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?drill) (LeftOf ?watch ?tie) (LeftOf ?tie ?fork) (AlignedHorizontally ?tie ?fork) (LargerThan ?laptop ?tie) (Below ?fork ?pizza) (AlignedHorizontally ?cutting_board ?drill) (Is ?drill 'drill') (OnBottomSide ?watch) (Is ?tie 'tie') (Is ?fork 'fork') (LeftOf ?fork ?plate) (AlignedHorizontally ?fork ?plate) (LargerThan ?pan ?fork) (Below ?plate ?cutting_board) (Below ?pan ?drill) (Is ?watch 'watch') (Is ?plate 'plate') (LeftOf ?plate ?pan) (AlignedHorizontally ?plate ?pan) (Is ?pan 'pan'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "plate",
+        "pizza",
+        "watch",
+        "cutting_board",
+        "drill",
+        "fork",
+        "pan",
+        "monitor"
+    ]
+}

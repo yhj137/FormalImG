@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a yellow lion sleeping in a bed. A desk is located to the right of the bed, while all rocks are positioned to the left of the bed. To the right of the desk sits a turned-on lamp.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?li (exists ?d (and (Is ?b 'bed') (Is ?li 'lion') (HasColor ?li 'yellow') (HasState ?li 'sleeping') (In ?li ?b) (Is ?d 'desk') (RightOf ?d ?b) (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?b))) (exists ?l (and (Is ?l 'lamp') (HasState ?l 'on') (RightOf ?l ?d))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?li (exists ?d (forall ?r (exists ?l (and (Is ?b 'bed') (In ?li ?b) (RightOf ?d ?b) (HasState ?li 'sleeping') (or (not (Is ?r 'rock')) (LeftOf ?r ?b)) (Is ?d 'desk') (RightOf ?l ?d) (HasColor ?li 'yellow') (HasState ?l 'on') (Is ?li 'lion') (Is ?l 'lamp'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bed",
+        "rock",
+        "lamp",
+        "desk",
+        "lion"
+    ]
+}

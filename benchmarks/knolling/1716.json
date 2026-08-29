@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two parallel vertical columns. On the left side of the image, there is a pair of jeans at the top, followed by a keyboard, a book, and a wallet arranged downwards; these four items are all aligned vertically and positioned on the left. The scene follows a rule: for every pen present, it is located to the right of the jeans and heads a second column. Specifically, below the pen are a hammer, a screwdriver, a wrench, and a carrot, ordered from top to bottom, with all these items aligned vertically with the pen.",
+    "dsl": "(exists ?jeans (exists ?keyboard (exists ?book (exists ?wallet (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Below ?keyboard ?jeans) (AlignedVertically ?keyboard ?jeans) (Is ?book 'book') (OnLeftSide ?book) (Below ?book ?keyboard) (AlignedVertically ?book ?keyboard) (Is ?wallet 'wallet') (OnLeftSide ?wallet) (Below ?wallet ?book) (AlignedVertically ?wallet ?book) (forall ?pen (implies (Is ?pen 'pen') (exists ?hammer (exists ?screwdriver (exists ?wrench (exists ?carrot (and (Is ?hammer 'hammer') (Is ?screwdriver 'screwdriver') (Is ?wrench 'wrench') (Is ?carrot 'carrot') (RightOf ?pen ?jeans) (Below ?hammer ?pen) (AlignedVertically ?hammer ?pen) (Below ?screwdriver ?hammer) (AlignedVertically ?screwdriver ?hammer) (Below ?wrench ?screwdriver) (AlignedVertically ?wrench ?screwdriver) (Below ?carrot ?wrench) (AlignedVertically ?carrot ?wrench)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (exists ?book (exists ?wallet (forall ?pen (exists ?hammer (exists ?screwdriver (exists ?wrench (exists ?carrot (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Below ?keyboard ?jeans) (AlignedVertically ?keyboard ?jeans) (OnLeftSide ?keyboard) (or (not (Is ?pen 'pen')) (RightOf ?pen ?jeans)) (Below ?book ?keyboard) (Is ?keyboard 'keyboard') (or (not (Is ?pen 'pen')) (Is ?carrot 'carrot')) (or (not (Is ?pen 'pen')) (Below ?hammer ?pen)) (AlignedVertically ?book ?keyboard) (OnLeftSide ?book) (or (not (Is ?pen 'pen')) (Is ?wrench 'wrench')) (or (not (Is ?pen 'pen')) (Below ?carrot ?wrench)) (or (not (Is ?pen 'pen')) (AlignedVertically ?hammer ?pen)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (Below ?wallet ?book) (Is ?book 'book') (or (not (Is ?pen 'pen')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pen 'pen')) (Below ?wrench ?screwdriver)) (or (not (Is ?pen 'pen')) (AlignedVertically ?wrench ?screwdriver)) (or (not (Is ?pen 'pen')) (AlignedVertically ?carrot ?wrench)) (or (not (Is ?pen 'pen')) (Below ?screwdriver ?hammer)) (AlignedVertically ?wallet ?book) (OnLeftSide ?wallet) (or (not (Is ?pen 'pen')) (AlignedVertically ?screwdriver ?hammer)) (Is ?wallet 'wallet')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keyboard",
+        "wrench",
+        "pen",
+        "carrot",
+        "screwdriver",
+        "hammer",
+        "jeans",
+        "wallet"
+    ]
+}

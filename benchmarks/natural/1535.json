@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a lion holding a yellow flower. A bicycle is next to the lion, and to the left of the bicycle is an oval mirror. Beside the mirror is a pan containing every hammer. Next to the pan sits a toy car with an orange on top.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (exists ?f (exists ?b (exists ?m (exists ?p (and (Is ?l 'lion') (Is ?f 'flower') (HasColor ?f 'yellow') (Is ?b 'bicycle') (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?p 'pan') (Holding ?l ?f) (NextTo ?b ?l) (LeftOf ?m ?b) (NextTo ?p ?m) (forall ?h (implies (Is ?h 'hammer') (In ?h ?p))) (exists ?t (exists ?o (and (Is ?t 'toy car') (Is ?o 'orange') (NextTo ?t ?p) (On ?o ?t)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?f (exists ?b (exists ?m (exists ?p (forall ?h (exists ?t (exists ?o (and (Is ?l 'lion') (Holding ?l ?f) (NextTo ?b ?l) (HasColor ?f 'yellow') (Is ?b 'bicycle') (LeftOf ?m ?b) (Is ?f 'flower') (HasShape ?m 'oval') (NextTo ?p ?m) (Is ?m 'mirror') (Is ?p 'pan') (or (not (Is ?h 'hammer')) (In ?h ?p)) (NextTo ?t ?p) (Is ?t 'toy car') (On ?o ?t) (Is ?o 'orange')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "lion",
+        "orange",
+        "flower",
+        "hammer",
+        "pan",
+        "bicycle",
+        "mirror",
+        "toy car"
+    ]
+}

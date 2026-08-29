@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A woman is holding a red bowl. To the right of the woman is a white car. There is a black laptop inside the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?c (exists ?l (and (Is ?w 'woman') (Is ?b 'bowl') (Is ?c 'car') (Is ?l 'laptop') (HasColor ?b 'red') (Holding ?w ?b) (HasColor ?c 'white') (RightOf ?c ?w) (HasColor ?l 'black') (In ?l ?c)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?c (exists ?l (and (Is ?w 'woman') (Holding ?w ?b) (RightOf ?c ?w) (HasColor ?b 'red') (HasColor ?c 'white') (In ?l ?c) (Is ?b 'bowl') (Is ?c 'car') (HasColor ?l 'black') (Is ?l 'laptop')))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "laptop",
+        "car",
+        "woman"
+    ]
+}

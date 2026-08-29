@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every fish is inside an open desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (and (Is ?d 'desk') (HasState ?d 'open') (forall ?f (implies (Is ?f 'fish') (In ?f ?d))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (forall ?f (and (Is ?d 'desk') (HasState ?d 'open') (or (not (Is ?f 'fish')) (In ?f ?d))))))",
+    "k": 2,
+    "object_classes": [
+        "fish",
+        "desk"
+    ]
+}

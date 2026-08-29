@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every cat is sleeping to the left of a rug.",
+    "dsl": "(forall ?c (implies (Is ?c 'cat') (exists ?r (and (Is ?r 'rug') (HasState ?c 'sleeping') (LeftOf ?c ?r)))))",
+    "cnf": "(forall ?c (exists ?r (and (or (not (Is ?c 'cat')) (Is ?r 'rug')) (or (not (Is ?c 'cat')) (LeftOf ?c ?r)) (or (not (Is ?c 'cat')) (HasState ?c 'sleeping')))))",
+    "k": 2,
+    "object_classes": [
+        "cat",
+        "rug"
+    ]
+}

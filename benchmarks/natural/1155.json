@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a tree to the left of a bench. A person holding a knife sits on the bench alongside a brown basket. All balls are located to the right of the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?bn (exists ?p (exists ?k (and (Is ?t 'tree') (Is ?bn 'bench') (LeftOf ?t ?bn) (Is ?p 'person') (On ?p ?bn) (Is ?k 'knife') (Holding ?p ?k) (forall ?bl (implies (Is ?bl 'ball') (RightOf ?bl ?bn))) (exists ?bs (and (Is ?bs 'basket') (HasColor ?bs 'brown') (On ?bs ?bn)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?bn (exists ?p (exists ?k (forall ?bl (exists ?bs (and (Is ?t 'tree') (LeftOf ?t ?bn) (Is ?bn 'bench') (On ?p ?bn) (or (not (Is ?bl 'ball')) (RightOf ?bl ?bn)) (Is ?p 'person') (Holding ?p ?k) (On ?bs ?bn) (Is ?k 'knife') (HasColor ?bs 'brown') (Is ?bs 'basket')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "bench",
+        "person",
+        "tree",
+        "ball",
+        "basket"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There exist two objects. For every monitor in the scene, the first object is a drill positioned on the top left side, and the second is a sandwich directly below the drill and vertically aligned. Additionally, for each monitor, there is a game controller directly below it and vertically aligned, a screwdriver to its right, and a pizza to the right of the game controller. Furthermore, for every monitor, there is an apple located on the bottom side below the sandwich, a donut to the right of the apple and horizontally aligned, and a fork to the right of the donut. The pizza is larger than the donut, and the monitor is to the right of the drill.",
+    "dsl": "(exists ?drill (exists ?sandwich (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?gc (exists ?pizza (exists ?apple (exists ?donut (exists ?screwdriver (exists ?fork (and (Is ?drill 'drill') (OnTopSide ?drill) (OnLeftSide ?drill) (Is ?sandwich 'sandwich') (Below ?sandwich ?drill) (AlignedVertically ?drill ?sandwich) (Is ?gc 'game_controller') (Below ?gc ?monitor) (AlignedVertically ?monitor ?gc) (Is ?screwdriver 'screwdriver') (RightOf ?screwdriver ?monitor) (Is ?pizza 'pizza') (RightOf ?pizza ?gc) (LargerThan ?pizza ?donut) (Is ?apple 'apple') (OnBottomSide ?apple) (Below ?apple ?sandwich) (Is ?donut 'donut') (RightOf ?donut ?apple) (AlignedHorizontally ?apple ?donut) (Is ?fork 'fork') (RightOf ?fork ?donut) (RightOf ?monitor ?drill))))))))))))",
+    "cnf": "(exists ?drill (exists ?sandwich (forall ?monitor (exists ?gc (exists ?pizza (exists ?apple (exists ?donut (exists ?screwdriver (exists ?fork (and (or (not (Is ?monitor 'monitor')) (Is ?drill 'drill')) (or (not (Is ?monitor 'monitor')) (OnTopSide ?drill)) (or (not (Is ?monitor 'monitor')) (OnLeftSide ?drill)) (or (not (Is ?monitor 'monitor')) (Is ?sandwich 'sandwich')) (or (not (Is ?monitor 'monitor')) (Below ?sandwich ?drill)) (or (not (Is ?monitor 'monitor')) (AlignedVertically ?drill ?sandwich)) (or (not (Is ?monitor 'monitor')) (Is ?gc 'game_controller')) (or (not (Is ?monitor 'monitor')) (RightOf ?monitor ?drill)) (or (not (Is ?monitor 'monitor')) (Below ?apple ?sandwich)) (or (not (Is ?monitor 'monitor')) (Below ?gc ?monitor)) (or (not (Is ?monitor 'monitor')) (RightOf ?fork ?donut)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?apple)) (or (not (Is ?monitor 'monitor')) (Is ?donut 'donut')) (or (not (Is ?monitor 'monitor')) (RightOf ?donut ?apple)) (or (not (Is ?monitor 'monitor')) (AlignedVertically ?monitor ?gc)) (or (not (Is ?monitor 'monitor')) (Is ?fork 'fork')) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?apple ?donut)) (or (not (Is ?monitor 'monitor')) (Is ?apple 'apple')) (or (not (Is ?monitor 'monitor')) (LargerThan ?pizza ?donut)) (or (not (Is ?monitor 'monitor')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?monitor 'monitor')) (RightOf ?pizza ?gc)) (or (not (Is ?monitor 'monitor')) (RightOf ?screwdriver ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?pizza 'pizza'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "apple",
+        "pizza",
+        "screwdriver",
+        "game_controller",
+        "drill",
+        "fork",
+        "monitor",
+        "sandwich",
+        "donut"
+    ]
+}

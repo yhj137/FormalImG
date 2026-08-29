@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A bottle is located on the right side of the layout. For every tie present, it is positioned to the left of the bottle, and there is a corresponding remote located to the left of the tie that is smaller than the tie.",
+    "dsl": "(exists ?bottle (and (Is ?bottle 'bottle') (OnRightSide ?bottle) (forall ?tie (implies (Is ?tie 'tie') (exists ?remote (and (Is ?remote 'remote') (LeftOf ?tie ?bottle) (LeftOf ?remote ?tie) (SmallerThan ?remote ?tie)))))))",
+    "cnf": "(exists ?bottle (forall ?tie (exists ?remote (and (Is ?bottle 'bottle') (OnRightSide ?bottle) (or (not (Is ?tie 'tie')) (LeftOf ?tie ?bottle)) (or (not (Is ?tie 'tie')) (Is ?remote 'remote')) (or (not (Is ?tie 'tie')) (LeftOf ?remote ?tie)) (or (not (Is ?tie 'tie')) (SmallerThan ?remote ?tie))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "tie",
+        "remote"
+    ]
+}

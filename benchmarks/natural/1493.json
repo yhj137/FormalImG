@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a central wooden table with a broken mirror to its left and a chair to its right. All glasses are placed on the table, and a knife sits next to it. Further right of the chair stands a horse, next to a red toy car containing a key.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?m (exists ?c (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?m 'mirror') (HasState ?m 'broken') (LeftOf ?m ?t) (Is ?c 'chair') (RightOf ?c ?t) (forall ?g (implies (Is ?g 'glasses') (On ?g ?t))) (exists ?n (exists ?h (exists ?tc (exists ?k (and (Is ?n 'knife') (NextTo ?n ?t) (Is ?h 'horse') (HasState ?h 'standing') (RightOf ?h ?c) (Is ?tc 'toy car') (HasColor ?tc 'red') (NextTo ?tc ?h) (Is ?k 'key') (In ?k ?tc)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?m (exists ?c (forall ?g (exists ?n (exists ?h (exists ?tc (exists ?k (and (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?m ?t) (RightOf ?c ?t) (HasState ?m 'broken') (or (not (Is ?g 'glasses')) (On ?g ?t)) (Is ?c 'chair') (RightOf ?h ?c) (Is ?m 'mirror') (NextTo ?n ?t) (HasState ?h 'standing') (NextTo ?tc ?h) (Is ?n 'knife') (Is ?h 'horse') (HasColor ?tc 'red') (In ?k ?tc) (Is ?tc 'toy car') (Is ?k 'key')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "glasses",
+        "toy car",
+        "knife",
+        "chair",
+        "horse",
+        "table",
+        "mirror"
+    ]
+}

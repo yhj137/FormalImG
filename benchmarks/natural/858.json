@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every lion is accompanied by a fluffy rug and a wooden boat. A turned-on lamp sits next to the rug, with a plant to the right of the lamp.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?l (implies (Is ?l 'lion') (exists ?r (exists ?b (exists ?lm (exists ?p (and (Is ?r 'rug') (HasMaterial ?r 'fluffy') (Is ?b 'boat') (HasMaterial ?b 'wooden') (Is ?lm 'lamp') (HasState ?lm 'on') (Is ?p 'plant') (NextTo ?l ?r) (NextTo ?l ?b) (NextTo ?lm ?r) (RightOf ?p ?lm)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?l (exists ?r (exists ?b (exists ?lm (exists ?p (and (or (not (Is ?l 'lion')) (Is ?r 'rug')) (or (not (Is ?l 'lion')) (HasMaterial ?r 'fluffy')) (or (not (Is ?l 'lion')) (Is ?b 'boat')) (or (not (Is ?l 'lion')) (NextTo ?l ?r)) (or (not (Is ?l 'lion')) (HasMaterial ?b 'wooden')) (or (not (Is ?l 'lion')) (Is ?p 'plant')) (or (not (Is ?l 'lion')) (NextTo ?l ?b)) (or (not (Is ?l 'lion')) (NextTo ?lm ?r)) (or (not (Is ?l 'lion')) (Is ?lm 'lamp')) (or (not (Is ?l 'lion')) (HasState ?lm 'on')) (or (not (Is ?l 'lion')) (RightOf ?p ?lm)))))))))",
+    "k": 5,
+    "object_classes": [
+        "boat",
+        "lion",
+        "plant",
+        "lamp",
+        "rug"
+    ]
+}

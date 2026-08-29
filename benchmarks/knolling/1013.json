@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is arranged in two horizontal rows. The top row contains a book, a calculator, and headphones, positioned such that the calculator is to the right of the book and the headphones are to the right of the calculator. The bottom row consists of an apple, keys, and pliers, with the keys to the right of the apple and the pliers to the right of the keys. Each item in the top row is vertically aligned with the corresponding item in the bottom row: the book with the apple, the calculator with the keys, and the headphones with the pliers. Additionally, the book is larger than the calculator.",
+    "dsl": "(exists ?book (exists ?calc (exists ?hp (exists ?apple (exists ?keys (exists ?pliers (and (Is ?book 'book') (Is ?calc 'calculator') (Is ?hp 'headphones') (Is ?apple 'apple') (Is ?keys 'keys') (Is ?pliers 'pliers') (OnTopSide ?book) (OnTopSide ?calc) (OnTopSide ?hp) (OnBottomSide ?apple) (OnBottomSide ?keys) (OnBottomSide ?pliers) (RightOf ?calc ?book) (RightOf ?hp ?calc) (RightOf ?keys ?apple) (RightOf ?pliers ?keys) (AlignedVertically ?book ?apple) (AlignedVertically ?calc ?keys) (AlignedVertically ?hp ?pliers) (LargerThan ?book ?calc))))))))",
+    "cnf": "(exists ?book (exists ?calc (exists ?hp (exists ?apple (exists ?keys (exists ?pliers (and (Is ?book 'book') (OnTopSide ?book) (RightOf ?calc ?book) (AlignedVertically ?book ?apple) (OnTopSide ?calc) (RightOf ?hp ?calc) (LargerThan ?book ?calc) (RightOf ?keys ?apple) (Is ?calc 'calculator') (AlignedVertically ?calc ?keys) (OnTopSide ?hp) (AlignedVertically ?hp ?pliers) (OnBottomSide ?apple) (OnBottomSide ?keys) (RightOf ?pliers ?keys) (Is ?hp 'headphones') (Is ?apple 'apple') (Is ?keys 'keys') (OnBottomSide ?pliers) (Is ?pliers 'pliers'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "keys",
+        "pliers",
+        "apple",
+        "calculator",
+        "headphones"
+    ]
+}

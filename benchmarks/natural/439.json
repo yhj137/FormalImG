@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden basket containing a sandwich, with a cat on the basket to the right of the sandwich.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?c (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (Is ?s 'sandwich') (In ?s ?b) (Is ?c 'cat') (On ?c ?b) (RightOf ?c ?s))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?c (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (In ?s ?b) (On ?c ?b) (Is ?s 'sandwich') (RightOf ?c ?s) (Is ?c 'cat'))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "cat",
+        "sandwich"
+    ]
+}

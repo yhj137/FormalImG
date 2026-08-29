@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a yellow pizza, a red drill, and a pink donut. The red drill is positioned to the left of the yellow pizza, while the pink donut is aligned vertically with the drill. The pizza is visually larger than the drill. Additionally, for every remote control in the image, it is black and is aligned vertically with the pizza.",
+    "dsl": "(exists ?pizza (exists ?drill (exists ?donut (and (Is ?pizza 'pizza') (Has ?pizza 'yellow') (Is ?drill 'drill') (Has ?drill 'red') (Is ?donut 'donut') (Has ?donut 'pink') (LeftOf ?drill ?pizza) (AlignedVertically ?donut ?drill) (LargerThan ?pizza ?drill) (forall ?remote (implies (Is ?remote 'remote') (and (Has ?remote 'black') (AlignedVertically ?remote ?pizza))))))))",
+    "cnf": "(exists ?pizza (exists ?drill (exists ?donut (forall ?remote (and (Is ?pizza 'pizza') (Has ?pizza 'yellow') (LeftOf ?drill ?pizza) (LargerThan ?pizza ?drill) (Has ?drill 'red') (AlignedVertically ?donut ?drill) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?pizza)) (Is ?drill 'drill') (Has ?donut 'pink') (or (not (Is ?remote 'remote')) (Has ?remote 'black')) (Is ?donut 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "remote",
+        "pizza",
+        "donut"
+    ]
+}

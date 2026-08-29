@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every hammer is rectangular.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?h (implies (Is ?h 'hammer') (HasShape ?h 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?h (or (not (Is ?h 'hammer')) (HasShape ?h 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "hammer"
+    ]
+}

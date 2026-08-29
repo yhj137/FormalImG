@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. Every hat in the scene rests on a bench, and to its left is a woman also on the bench, holding an open umbrella.",
+    "dsl": "(and (IsStyle 'photo') (forall ?h (implies (Is ?h 'hat') (exists ?w (exists ?b (exists ?u (and (Is ?w 'woman') (Is ?b 'bench') (Is ?u 'umbrella') (HasState ?u 'open') (On ?w ?b) (Holding ?w ?u) (LeftOf ?w ?h) (On ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?h (exists ?w (exists ?b (exists ?u (and (or (not (Is ?h 'hat')) (Is ?w 'woman')) (or (not (Is ?h 'hat')) (Is ?b 'bench')) (or (not (Is ?h 'hat')) (On ?w ?b)) (or (not (Is ?h 'hat')) (Is ?u 'umbrella')) (or (not (Is ?h 'hat')) (HasState ?u 'open')) (or (not (Is ?h 'hat')) (Holding ?w ?u)) (or (not (Is ?h 'hat')) (On ?h ?b)) (or (not (Is ?h 'hat')) (LeftOf ?w ?h))))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "hat",
+        "umbrella",
+        "woman"
+    ]
+}

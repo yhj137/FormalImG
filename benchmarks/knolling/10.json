@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a glove which is positioned on the top side of the layout.",
+    "dsl": "(exists ?g (and (Is ?g 'glove') (OnTopSide ?g)))",
+    "cnf": "(exists ?g (and (Is ?g 'glove') (OnTopSide ?g)))",
+    "k": 1,
+    "object_classes": [
+        "glove"
+    ]
+}

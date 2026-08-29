@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every backpack contains a turned-off monitor.",
+    "dsl": "(forall ?b (implies (Is ?b 'backpack') (exists ?m (and (Is ?m 'monitor') (In ?m ?b) (HasState ?m 'off')))))",
+    "cnf": "(forall ?b (exists ?m (and (or (not (Is ?b 'backpack')) (Is ?m 'monitor')) (or (not (Is ?b 'backpack')) (In ?m ?b)) (or (not (Is ?b 'backpack')) (HasState ?m 'off')))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "monitor"
+    ]
+}

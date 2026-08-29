@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board in the scene, there is a book located to its right. The cutting board is visually larger than the book, and the book is positioned on the right side of the image. Arranged in a column directly below the cutting board are a drill, a wrench, and a tie, in that order. Correspondingly, below the book is a vertical arrangement of a hammer, a ruler, and a fork. The book and the hammer are aligned vertically. The drill is to the left of the hammer, the wrench is to the left of the ruler, and the tie is to the left of the fork. The fork is located on the bottom side of the scene.",
+    "dsl": "(and (forall ?cb (implies (Is ?cb 'cutting_board') (exists ?book (exists ?drill (exists ?hammer (exists ?wrench (exists ?ruler (exists ?tie (exists ?fork (and (Is ?book 'book') (Is ?drill 'drill') (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Is ?tie 'tie') (Is ?fork 'fork') (LeftOf ?cb ?book) (LeftOf ?drill ?hammer) (LeftOf ?wrench ?ruler) (LeftOf ?tie ?fork) (Above ?cb ?drill) (Above ?drill ?wrench) (Above ?wrench ?tie) (Above ?book ?hammer) (Above ?hammer ?ruler) (Above ?ruler ?fork) (AlignedVertically ?cb ?drill) (AlignedVertically ?book ?hammer) (LargerThan ?cb ?book) (OnRightSide ?book) (OnBottomSide ?fork))))))))))))",
+    "cnf": "(forall ?cb (exists ?book (exists ?drill (exists ?hammer (exists ?wrench (exists ?ruler (exists ?tie (exists ?fork (and (or (not (Is ?cb 'cutting_board')) (Is ?book 'book')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?cb ?book)) (or (not (Is ?cb 'cutting_board')) (Is ?drill 'drill')) (or (not (Is ?cb 'cutting_board')) (Above ?book ?hammer)) (or (not (Is ?cb 'cutting_board')) (Is ?fork 'fork')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?drill ?hammer)) (or (not (Is ?cb 'cutting_board')) (Is ?hammer 'hammer')) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?book ?hammer)) (or (not (Is ?cb 'cutting_board')) (Above ?wrench ?tie)) (or (not (Is ?cb 'cutting_board')) (Above ?hammer ?ruler)) (or (not (Is ?cb 'cutting_board')) (Is ?tie 'tie')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?tie ?fork)) (or (not (Is ?cb 'cutting_board')) (LeftOf ?wrench ?ruler)) (or (not (Is ?cb 'cutting_board')) (Above ?cb ?drill)) (or (not (Is ?cb 'cutting_board')) (Is ?wrench 'wrench')) (or (not (Is ?cb 'cutting_board')) (LargerThan ?cb ?book)) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?cb ?drill)) (or (not (Is ?cb 'cutting_board')) (Above ?drill ?wrench)) (or (not (Is ?cb 'cutting_board')) (Above ?ruler ?fork)) (or (not (Is ?cb 'cutting_board')) (Is ?ruler 'ruler')) (or (not (Is ?cb 'cutting_board')) (OnRightSide ?book)) (or (not (Is ?cb 'cutting_board')) (OnBottomSide ?fork)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "tie",
+        "wrench",
+        "cutting_board",
+        "hammer",
+        "fork",
+        "drill"
+    ]
+}

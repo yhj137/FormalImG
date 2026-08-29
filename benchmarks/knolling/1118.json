@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the scene, there is a pair of pliers. To the left of the pliers is a mouse, and directly below the mouse is a glove. For every watch in the image, it is positioned to the left of the glove. Additionally, each watch has a bottle below it, and to the right of the bottle is a lighter, which is located on the bottom side of the image.",
+    "dsl": "(exists ?pliers (exists ?mouse (exists ?glove (and (Is ?pliers 'pliers') (OnRightSide ?pliers) (Is ?mouse 'mouse') (LeftOf ?mouse ?pliers) (Is ?glove 'glove') (Below ?glove ?mouse) (forall ?watch (implies (Is ?watch 'watch') (exists ?bottle (exists ?lighter (and (Is ?bottle 'bottle') (Is ?lighter 'lighter') (LeftOf ?watch ?glove) (Below ?bottle ?watch) (RightOf ?lighter ?bottle) (OnBottomSide ?lighter))))))))))",
+    "cnf": "(exists ?pliers (exists ?mouse (exists ?glove (forall ?watch (exists ?bottle (exists ?lighter (and (Is ?pliers 'pliers') (OnRightSide ?pliers) (LeftOf ?mouse ?pliers) (Is ?mouse 'mouse') (Below ?glove ?mouse) (Is ?glove 'glove') (or (not (Is ?watch 'watch')) (LeftOf ?watch ?glove)) (or (not (Is ?watch 'watch')) (Is ?lighter 'lighter')) (or (not (Is ?watch 'watch')) (Below ?bottle ?watch)) (or (not (Is ?watch 'watch')) (Is ?bottle 'bottle')) (or (not (Is ?watch 'watch')) (RightOf ?lighter ?bottle)) (or (not (Is ?watch 'watch')) (OnBottomSide ?lighter)))))))))",
+    "k": 6,
+    "object_classes": [
+        "lighter",
+        "watch",
+        "mouse",
+        "pliers",
+        "glove",
+        "bottle"
+    ]
+}

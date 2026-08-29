@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a refrigerator containing a round fruit. To the right of the refrigerator stands a person holding an umbrella, while a plate rests to the left. A rug lies next to the refrigerator with shoes beside it. Every boat in the scene is located to the left of the plate.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?ref (exists ?p (exists ?u (exists ?f (exists ?pl (exists ?r (exists ?s (and (Is ?ref 'refrigerator') (Is ?p 'person') (Is ?u 'umbrella') (Is ?f 'fruit') (Is ?pl 'plate') (Is ?r 'rug') (Is ?s 'shoes') (RightOf ?p ?ref) (Holding ?p ?u) (In ?f ?ref) (HasShape ?f 'round') (LeftOf ?pl ?ref) (NextTo ?r ?ref) (NextTo ?s ?r) (forall ?b (implies (Is ?b 'boat') (LeftOf ?b ?pl))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?ref (exists ?p (exists ?u (exists ?f (exists ?pl (exists ?r (exists ?s (forall ?b (and (Is ?ref 'refrigerator') (RightOf ?p ?ref) (In ?f ?ref) (Is ?p 'person') (Holding ?p ?u) (LeftOf ?pl ?ref) (Is ?f 'fruit') (HasShape ?f 'round') (Is ?u 'umbrella') (NextTo ?r ?ref) (Is ?pl 'plate') (or (not (Is ?b 'boat')) (LeftOf ?b ?pl)) (Is ?r 'rug') (NextTo ?s ?r) (Is ?s 'shoes')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "umbrella",
+        "person",
+        "shoes",
+        "plate",
+        "rug",
+        "refrigerator",
+        "boat"
+    ]
+}

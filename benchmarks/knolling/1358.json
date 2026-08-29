@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pan and a plate on the left side, where the pan is positioned above the plate and is larger than it. On the right side, there are glasses and keys, with the glasses situated above the keys. A fork is aligned horizontally with the pan and the glasses. Furthermore, for every bowl in the scene, there is a drill located above it, and the bowl is aligned horizontally with the plate.",
+    "dsl": "(exists ?pan (exists ?plate (exists ?fork (exists ?glasses (exists ?keys (and (Is ?pan 'pan') (OnLeftSide ?pan) (Is ?plate 'plate') (OnLeftSide ?plate) (Is ?fork 'fork') (Is ?glasses 'glasses') (OnRightSide ?glasses) (Is ?keys 'keys') (OnRightSide ?keys) (Above ?pan ?plate) (LargerThan ?pan ?plate) (AlignedHorizontally ?pan ?fork) (AlignedHorizontally ?fork ?glasses) (Above ?glasses ?keys) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?drill (and (Is ?drill 'drill') (Above ?drill ?bowl) (AlignedHorizontally ?plate ?bowl)))))))))))",
+    "cnf": "(exists ?pan (exists ?plate (exists ?fork (exists ?glasses (exists ?keys (forall ?bowl (exists ?drill (and (Is ?pan 'pan') (OnLeftSide ?pan) (Above ?pan ?plate) (LargerThan ?pan ?plate) (OnLeftSide ?plate) (AlignedHorizontally ?pan ?fork) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?plate ?bowl)) (Is ?plate 'plate') (Is ?fork 'fork') (AlignedHorizontally ?fork ?glasses) (or (not (Is ?bowl 'bowl')) (Above ?drill ?bowl)) (OnRightSide ?glasses) (Above ?glasses ?keys) (or (not (Is ?bowl 'bowl')) (Is ?drill 'drill')) (Is ?glasses 'glasses') (OnRightSide ?keys) (Is ?keys 'keys')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "plate",
+        "drill",
+        "pan",
+        "fork",
+        "bowl"
+    ]
+}

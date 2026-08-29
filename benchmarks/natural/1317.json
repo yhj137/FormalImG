@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. A lion holding a red hat stands to the right of a refrigerator. To the right of the lion is a wooden wardrobe containing all the spoons. A bird and a clock are located to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?l (exists ?w (and (Is ?r 'refrigerator') (Is ?l 'lion') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (RightOf ?l ?r) (RightOf ?w ?l) (forall ?s (implies (Is ?s 'spoon') (In ?s ?w))) (exists ?h (and (Is ?h 'hat') (HasColor ?h 'red') (Holding ?l ?h))) (exists ?b (and (Is ?b 'bird') (RightOf ?b ?w))) (exists ?c (and (Is ?c 'clock') (RightOf ?c ?w))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?l (exists ?w (forall ?s (exists ?h (exists ?b (exists ?c (and (Is ?r 'refrigerator') (RightOf ?l ?r) (Is ?l 'lion') (RightOf ?w ?l) (Holding ?l ?h) (HasMaterial ?w 'wooden') (or (not (Is ?s 'spoon')) (In ?s ?w)) (HasColor ?h 'red') (Is ?w 'wardrobe') (RightOf ?b ?w) (Is ?h 'hat') (RightOf ?c ?w) (Is ?b 'bird') (Is ?c 'clock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "bird",
+        "refrigerator",
+        "clock",
+        "lion",
+        "hat",
+        "wardrobe"
+    ]
+}

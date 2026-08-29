@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every child is made of wood.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'child') (HasMaterial ?c 'wooden'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (or (not (Is ?c 'child')) (HasMaterial ?c 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "child"
+    ]
+}

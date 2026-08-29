@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate situated on the top side of the scene, there exist a mouse, a sock, a lighter, and a screwdriver arranged with specific constraints. The plate is visually larger than the mouse, while the sock is smaller than the plate. The mouse is larger than the lighter. Furthermore, the screwdriver is located on the bottom side of the image and is larger than the lighter.",
+    "dsl": "(forall ?p (implies (and (Is ?p 'plate') (OnTopSide ?p)) (exists ?m (exists ?s (exists ?l (exists ?sd (and (Is ?m 'mouse') (Is ?s 'sock') (Is ?l 'lighter') (Is ?sd 'screwdriver') (LargerThan ?p ?m) (SmallerThan ?s ?p) (LargerThan ?m ?l) (LargerThan ?sd ?l) (OnBottomSide ?sd))))))))",
+    "cnf": "(forall ?p (exists ?m (exists ?s (exists ?l (exists ?sd (and (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?m 'mouse')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?s 'sock')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (LargerThan ?p ?m)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?l 'lighter')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (SmallerThan ?s ?p)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?sd 'screwdriver')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (LargerThan ?m ?l)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (LargerThan ?sd ?l)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (OnBottomSide ?sd))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "sock",
+        "screwdriver",
+        "lighter",
+        "mouse"
+    ]
+}

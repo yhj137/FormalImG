@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a fabric rug with a wooden chair and a plastic keyboard on it. A bird perches on the chair, next to which sits a basket. Every orange in the scene is inside the basket, positioned next to a glass cup.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?c (exists ?k (exists ?b (exists ?ba (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?c ?r) (Is ?k 'keyboard') (HasMaterial ?k 'plastic') (On ?k ?r) (Is ?b 'bird') (On ?b ?c) (Is ?ba 'basket') (NextTo ?ba ?c) (forall ?o (implies (Is ?o 'orange') (exists ?cu (and (Is ?cu 'cup') (HasMaterial ?cu 'glass') (In ?o ?ba) (NextTo ?cu ?o))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?c (exists ?k (exists ?b (exists ?ba (forall ?o (exists ?cu (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?c ?r) (On ?k ?r) (HasMaterial ?c 'wooden') (On ?b ?c) (HasMaterial ?k 'plastic') (Is ?c 'chair') (NextTo ?ba ?c) (Is ?b 'bird') (Is ?k 'keyboard') (Is ?ba 'basket') (or (not (Is ?o 'orange')) (In ?o ?ba)) (or (not (Is ?o 'orange')) (HasMaterial ?cu 'glass')) (or (not (Is ?o 'orange')) (NextTo ?cu ?o)) (or (not (Is ?o 'orange')) (Is ?cu 'cup')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "chair",
+        "basket",
+        "cup",
+        "rug",
+        "bird",
+        "orange"
+    ]
+}

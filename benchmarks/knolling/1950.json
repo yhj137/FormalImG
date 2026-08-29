@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a shirt positioned on the top side. To the left of the shirt are headphones, and to the left of the headphones is a plate, with a pizza located above the plate. To the right of the shirt is a tie, followed by a watch to the right of the tie, and keys to the right of the watch. The shirt is visually larger than the tie. For any pan in the scene, it is positioned to the right of the keys, with a lighter to its right and a donut above it. The lighter is smaller than the pan and located on the right side of the image. The pizza is larger than the donut.",
+    "dsl": "(exists ?shirt (exists ?headphones (exists ?plate (exists ?pizza (exists ?tie (exists ?watch (exists ?keys (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?headphones 'headphones') (LeftOf ?headphones ?shirt) (Is ?plate 'plate') (LeftOf ?plate ?headphones) (Is ?pizza 'pizza') (Above ?pizza ?plate) (Is ?tie 'tie') (RightOf ?tie ?shirt) (LargerThan ?shirt ?tie) (Is ?watch 'watch') (RightOf ?watch ?tie) (Is ?keys 'keys') (RightOf ?keys ?watch) (forall ?pan (implies (Is ?pan 'pan') (exists ?lighter (exists ?donut (and (Is ?lighter 'lighter') (Is ?donut 'donut') (LeftOf ?keys ?pan) (RightOf ?lighter ?pan) (OnRightSide ?lighter) (Above ?donut ?pan) (SmallerThan ?lighter ?pan) (LargerThan ?pizza ?donut))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?headphones (exists ?plate (exists ?pizza (exists ?tie (exists ?watch (exists ?keys (forall ?pan (exists ?lighter (exists ?donut (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LeftOf ?headphones ?shirt) (RightOf ?tie ?shirt) (Is ?headphones 'headphones') (LeftOf ?plate ?headphones) (LargerThan ?shirt ?tie) (Is ?tie 'tie') (Is ?plate 'plate') (Above ?pizza ?plate) (RightOf ?watch ?tie) (Is ?pizza 'pizza') (or (not (Is ?pan 'pan')) (LargerThan ?pizza ?donut)) (Is ?watch 'watch') (RightOf ?keys ?watch) (or (not (Is ?pan 'pan')) (SmallerThan ?lighter ?pan)) (or (not (Is ?pan 'pan')) (Above ?donut ?pan)) (Is ?keys 'keys') (or (not (Is ?pan 'pan')) (LeftOf ?keys ?pan)) (or (not (Is ?pan 'pan')) (OnRightSide ?lighter)) (or (not (Is ?pan 'pan')) (Is ?donut 'donut')) (or (not (Is ?pan 'pan')) (RightOf ?lighter ?pan)) (or (not (Is ?pan 'pan')) (Is ?lighter 'lighter')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "plate",
+        "tie",
+        "pizza",
+        "watch",
+        "donut",
+        "pan",
+        "lighter",
+        "headphones",
+        "shirt"
+    ]
+}

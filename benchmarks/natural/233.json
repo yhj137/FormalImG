@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red apple next to a refrigerator.",
+    "dsl": "(and (IsStyle 'photo') (exists ?a (exists ?r (and (Is ?a 'apple') (Is ?r 'refrigerator') (HasColor ?a 'red') (NextTo ?a ?r)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?a (exists ?r (and (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?r) (Is ?r 'refrigerator')))))",
+    "k": 2,
+    "object_classes": [
+        "apple",
+        "refrigerator"
+    ]
+}

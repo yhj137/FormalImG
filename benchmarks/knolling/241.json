@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a phone and a donut. The phone is located on the left side of the image and is positioned above the donut.",
+    "dsl": "(exists ?phone (exists ?donut (and (Is ?phone 'phone') (Is ?donut 'donut') (OnLeftSide ?phone) (Above ?phone ?donut))))",
+    "cnf": "(exists ?phone (exists ?donut (and (Is ?phone 'phone') (OnLeftSide ?phone) (Above ?phone ?donut) (Is ?donut 'donut'))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "donut"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All shoes are located on the top side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'shoe') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'shoe')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "shoe"
+    ]
+}

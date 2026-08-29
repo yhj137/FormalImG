@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicts a child standing next to a woman. To the right of the woman is a fabric sofa with a laptop and a red shirt on it. A round ball lies to the right of the sofa. Next to the sofa stands a metal refrigerator containing all the fruit, with a cat positioned beside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?c (exists ?s (exists ?r (and (Is ?w 'woman') (Is ?c 'child') (NextTo ?c ?w) (Is ?s 'sofa') (HasMaterial ?s 'fabric') (RightOf ?s ?w) (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (NextTo ?r ?s) (forall ?f (implies (Is ?f 'fruit') (In ?f ?r))) (exists ?cat (exists ?l (exists ?sh (exists ?b (and (Is ?cat 'cat') (NextTo ?cat ?r) (Is ?l 'laptop') (On ?l ?s) (Is ?sh 'shirt') (HasColor ?sh 'red') (On ?sh ?s) (Is ?b 'ball') (HasShape ?b 'round') (RightOf ?b ?s))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?c (exists ?s (exists ?r (forall ?f (exists ?cat (exists ?l (exists ?sh (exists ?b (and (Is ?w 'woman') (NextTo ?c ?w) (RightOf ?s ?w) (Is ?c 'child') (HasMaterial ?s 'fabric') (NextTo ?r ?s) (Is ?s 'sofa') (On ?l ?s) (HasMaterial ?r 'metal') (or (not (Is ?f 'fruit')) (In ?f ?r)) (On ?sh ?s) (Is ?l 'laptop') (Is ?r 'refrigerator') (NextTo ?cat ?r) (RightOf ?b ?s) (HasColor ?sh 'red') (Is ?cat 'cat') (HasShape ?b 'round') (Is ?sh 'shirt') (Is ?b 'ball'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "cat",
+        "laptop",
+        "ball",
+        "refrigerator",
+        "shirt",
+        "woman",
+        "fruit",
+        "child"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a gray monitor and a blue hat, which are aligned horizontally. For every pair of scissors in the image, there exists a white sock and a gray fork. The scissors are vertically aligned with the monitor, the sock is vertically aligned with the hat, and the fork is horizontally aligned with the scissors.",
+    "dsl": "(exists ?m (exists ?h (and (Is ?m 'monitor') (Has ?m 'gray') (Is ?h 'hat') (Has ?h 'blue') (AlignedHorizontally ?m ?h) (forall ?sc (implies (Is ?sc 'scissors') (exists ?so (exists ?f (and (Is ?so 'sock') (Has ?so 'white') (Is ?f 'fork') (Has ?f 'gray') (AlignedVertically ?sc ?m) (AlignedVertically ?so ?h) (AlignedHorizontally ?sc ?f)))))))))",
+    "cnf": "(exists ?m (exists ?h (forall ?sc (exists ?so (exists ?f (and (Is ?m 'monitor') (Has ?m 'gray') (AlignedHorizontally ?m ?h) (or (not (Is ?sc 'scissors')) (AlignedVertically ?sc ?m)) (Has ?h 'blue') (or (not (Is ?sc 'scissors')) (AlignedVertically ?so ?h)) (or (not (Is ?sc 'scissors')) (Has ?f 'gray')) (Is ?h 'hat') (or (not (Is ?sc 'scissors')) (AlignedHorizontally ?sc ?f)) (or (not (Is ?sc 'scissors')) (Has ?so 'white')) (or (not (Is ?sc 'scissors')) (Is ?f 'fork')) (or (not (Is ?sc 'scissors')) (Is ?so 'sock'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "fork",
+        "hat",
+        "monitor",
+        "scissors"
+    ]
+}

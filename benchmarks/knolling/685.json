@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of blue jeans is positioned on the top side of the layout. For every white shoe in the scene, there is a pair of glasses and a lighter located above the shoe, where the lighter is strictly smaller than the jeans.",
+    "dsl": "(exists ?j (and (Is ?j 'jeans') (Has ?j 'blue') (OnTopSide ?j) (forall ?s (implies (and (Is ?s 'shoe') (Has ?s 'white')) (exists ?g (exists ?l (and (Is ?g 'glasses') (Is ?l 'lighter') (Above ?g ?s) (Above ?l ?s) (SmallerThan ?l ?j))))))))",
+    "cnf": "(exists ?j (forall ?s (exists ?g (exists ?l (and (Is ?j 'jeans') (Has ?j 'blue') (OnTopSide ?j) (or (not (Is ?s 'shoe')) (not (Has ?s 'white')) (SmallerThan ?l ?j)) (or (not (Is ?s 'shoe')) (not (Has ?s 'white')) (Above ?l ?s)) (or (not (Is ?s 'shoe')) (not (Has ?s 'white')) (Above ?g ?s)) (or (not (Is ?s 'shoe')) (not (Has ?s 'white')) (Is ?l 'lighter')) (or (not (Is ?s 'shoe')) (not (Has ?s 'white')) (Is ?g 'glasses')))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "lighter",
+        "jeans",
+        "shoe"
+    ]
+}

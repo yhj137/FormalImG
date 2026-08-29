@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This photo depicts a living area with a leather sofa. A jacket lies to the left of the sofa, and a wooden bookshelf stands to its right. A child sits on the sofa holding a red toy car, with an open laptop beside them. All shoes in the room are stored inside the bookshelf, and a bowl rests on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (exists ?b (exists ?c (exists ?tc (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (RightOf ?b ?s) (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?s) (Is ?tc 'toy car') (HasColor ?tc 'red') (Holding ?c ?tc) (forall ?sh (implies (Is ?sh 'shoes') (In ?sh ?b))) (exists ?j (exists ?l (exists ?bo (and (Is ?j 'jacket') (LeftOf ?j ?s) (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?l ?c) (Is ?bo 'bowl') (On ?bo ?b)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (exists ?b (exists ?c (exists ?tc (forall ?sh (exists ?j (exists ?l (exists ?bo (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (RightOf ?b ?s) (On ?c ?s) (HasMaterial ?b 'wooden') (or (not (Is ?sh 'shoes')) (In ?sh ?b)) (LeftOf ?j ?s) (HasState ?c 'sitting') (Holding ?c ?tc) (Is ?b 'bookshelf') (On ?bo ?b) (Is ?j 'jacket') (Is ?c 'child') (NextTo ?l ?c) (HasColor ?tc 'red') (Is ?bo 'bowl') (HasState ?l 'open') (Is ?tc 'toy car') (Is ?l 'laptop')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "child",
+        "shoes",
+        "laptop",
+        "jacket",
+        "toy car",
+        "bowl",
+        "bookshelf"
+    ]
+}

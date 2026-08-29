@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black pan, red pliers, white headphones, and a blue bowl. These items are arranged in a neat horizontal row. Specifically, the red pliers are positioned to the right of the black pan, the white headphones are to the right of the pliers, and the blue bowl is to the right of the headphones. All four objects are aligned horizontally with each other.",
+    "dsl": "(exists ?pan (exists ?pliers (exists ?headphones (exists ?bowl (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?headphones 'headphones') (Has ?headphones 'white') (Is ?bowl 'bowl') (Has ?bowl 'blue') (RightOf ?pliers ?pan) (RightOf ?headphones ?pliers) (RightOf ?bowl ?headphones) (AlignedHorizontally ?pan ?pliers) (AlignedHorizontally ?pliers ?headphones) (AlignedHorizontally ?headphones ?bowl))))))",
+    "cnf": "(exists ?pan (exists ?pliers (exists ?headphones (exists ?bowl (and (Is ?pan 'pan') (Has ?pan 'black') (RightOf ?pliers ?pan) (AlignedHorizontally ?pan ?pliers) (Has ?pliers 'red') (RightOf ?headphones ?pliers) (AlignedHorizontally ?pliers ?headphones) (Is ?pliers 'pliers') (Has ?headphones 'white') (RightOf ?bowl ?headphones) (AlignedHorizontally ?headphones ?bowl) (Is ?headphones 'headphones') (Has ?bowl 'blue') (Is ?bowl 'bowl'))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "pan",
+        "headphones",
+        "pliers"
+    ]
+}

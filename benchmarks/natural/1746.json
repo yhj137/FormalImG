@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A child stands next to a desk while holding a round pizza. There is a clock on the desk. To the left of the desk is a dog. A boat is located to the left of the dog, and a cat is inside the boat. A bus is positioned to the right of the desk. Every car in the scene is located to the right of the bus.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?ch (exists ?p (exists ?cl (exists ?dog (exists ?bus (and (Is ?d 'desk') (Is ?ch 'child') (NextTo ?ch ?d) (Is ?p 'pizza') (HasShape ?p 'round') (Holding ?ch ?p) (Is ?cl 'clock') (On ?cl ?d) (Is ?dog 'dog') (LeftOf ?dog ?d) (Is ?bus 'bus') (RightOf ?bus ?d) (forall ?car (implies (Is ?car 'car') (RightOf ?car ?bus))) (exists ?bt (exists ?cat (and (Is ?bt 'boat') (LeftOf ?bt ?dog) (Is ?cat 'cat') (In ?cat ?bt))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?ch (exists ?p (exists ?cl (exists ?dog (exists ?bus (forall ?car (exists ?bt (exists ?cat (and (Is ?d 'desk') (NextTo ?ch ?d) (On ?cl ?d) (Is ?ch 'child') (Holding ?ch ?p) (LeftOf ?dog ?d) (Is ?cl 'clock') (HasShape ?p 'round') (RightOf ?bus ?d) (Is ?dog 'dog') (LeftOf ?bt ?dog) (Is ?p 'pizza') (Is ?bus 'bus') (or (not (Is ?car 'car')) (RightOf ?car ?bus)) (Is ?bt 'boat') (In ?cat ?bt) (Is ?cat 'cat'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "child",
+        "bus",
+        "pizza",
+        "desk",
+        "car",
+        "clock",
+        "boat",
+        "cat",
+        "dog"
+    ]
+}

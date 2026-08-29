@@ -1,0 +1,10 @@
+{
+    "prompt": "A child is holding every cup, all of which are empty.",
+    "dsl": "(exists ?k (and (Is ?k 'child') (forall ?c (implies (Is ?c 'cup') (and (Holding ?k ?c) (HasState ?c 'empty'))))))",
+    "cnf": "(exists ?k (forall ?c (and (Is ?k 'child') (or (not (Is ?c 'cup')) (Holding ?k ?c)) (or (not (Is ?c 'cup')) (HasState ?c 'empty')))))",
+    "k": 2,
+    "object_classes": [
+        "child",
+        "cup"
+    ]
+}

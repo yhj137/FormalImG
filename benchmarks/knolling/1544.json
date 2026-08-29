@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a shirt positioned on the top side. To the right of the shirt is a sock; the shirt is to the left of the sock and they are aligned horizontally. Arranged in a column below the shirt are a bowl, an apple, and a wrench: the bowl is below the shirt, the apple is below the bowl, and the wrench is below the apple. Additionally, for every pen in the image, there correspond a pair of scissors and a stapler. The pen is located below the sock and is vertically aligned with it. The scissors are positioned below the pen and reside on the bottom side of the image. The stapler is located to the left of the scissors and is larger than the scissors.",
+    "dsl": "(exists ?shirt (exists ?sock (exists ?bowl (exists ?apple (exists ?wrench (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?sock 'sock') (LeftOf ?shirt ?sock) (AlignedHorizontally ?shirt ?sock) (Is ?bowl 'bowl') (Below ?bowl ?shirt) (Is ?apple 'apple') (Below ?apple ?bowl) (Is ?wrench 'wrench') (Below ?wrench ?apple) (forall ?pen (implies (Is ?pen 'pen') (exists ?scissors (exists ?stapler (and (Is ?scissors 'scissors') (Is ?stapler 'stapler') (Below ?pen ?sock) (AlignedVertically ?pen ?sock) (Below ?scissors ?pen) (OnBottomSide ?scissors) (LeftOf ?stapler ?scissors) (LargerThan ?stapler ?scissors))))))))))))",
+    "cnf": "(exists ?shirt (exists ?sock (exists ?bowl (exists ?apple (exists ?wrench (forall ?pen (exists ?scissors (exists ?stapler (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LeftOf ?shirt ?sock) (AlignedHorizontally ?shirt ?sock) (Is ?sock 'sock') (Below ?bowl ?shirt) (or (not (Is ?pen 'pen')) (Below ?pen ?sock)) (Is ?bowl 'bowl') (Below ?apple ?bowl) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?sock)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (Is ?apple 'apple') (Below ?wrench ?apple) (or (not (Is ?pen 'pen')) (Below ?scissors ?pen)) (or (not (Is ?pen 'pen')) (Is ?scissors 'scissors')) (or (not (Is ?pen 'pen')) (LeftOf ?stapler ?scissors)) (Is ?wrench 'wrench') (or (not (Is ?pen 'pen')) (OnBottomSide ?scissors)) (or (not (Is ?pen 'pen')) (LargerThan ?stapler ?scissors)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "stapler",
+        "sock",
+        "pen",
+        "apple",
+        "wrench",
+        "scissors",
+        "bowl",
+        "shirt"
+    ]
+}

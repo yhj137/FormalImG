@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every dog holds a brown basket to its left containing glasses.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?d (implies (Is ?d 'dog') (exists ?b (exists ?g (and (Is ?b 'basket') (HasColor ?b 'brown') (Is ?g 'glasses') (LeftOf ?b ?d) (Holding ?d ?b) (In ?g ?b)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?d (exists ?b (exists ?g (and (or (not (Is ?d 'dog')) (Is ?b 'basket')) (or (not (Is ?d 'dog')) (HasColor ?b 'brown')) (or (not (Is ?d 'dog')) (LeftOf ?b ?d)) (or (not (Is ?d 'dog')) (Is ?g 'glasses')) (or (not (Is ?d 'dog')) (Holding ?d ?b)) (or (not (Is ?d 'dog')) (In ?g ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "dog",
+        "glasses",
+        "basket"
+    ]
+}

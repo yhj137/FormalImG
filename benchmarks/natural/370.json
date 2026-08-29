@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round plate contains every flower.",
+    "dsl": "(exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (forall ?f (implies (Is ?f 'flower') (In ?f ?p)))))",
+    "cnf": "(exists ?p (forall ?f (and (Is ?p 'plate') (HasShape ?p 'round') (or (not (Is ?f 'flower')) (In ?f ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "flower",
+        "plate"
+    ]
+}

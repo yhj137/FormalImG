@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. To the right of every bus, a man rides a bicycle with a monitor placed on it, upon which sits a teddy bear. To the right of the man stands a woman wearing shoes, holding a pan containing a round ball.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?bus (implies (Is ?bus 'bus') (exists ?man (exists ?bike (exists ?mon (exists ?bear (exists ?woman (exists ?shoes (exists ?pan (exists ?ball (and (Is ?man 'man') (RightOf ?man ?bus) (Is ?bike 'bicycle') (On ?man ?bike) (Is ?mon 'monitor') (On ?mon ?bike) (Is ?bear 'teddy bear') (On ?bear ?mon) (Is ?woman 'woman') (RightOf ?woman ?man) (Is ?shoes 'shoes') (On ?shoes ?woman) (Is ?pan 'pan') (Holding ?woman ?pan) (Is ?ball 'ball') (In ?ball ?pan) (HasShape ?ball 'round')))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?bus (exists ?man (exists ?bike (exists ?mon (exists ?bear (exists ?woman (exists ?shoes (exists ?pan (exists ?ball (and (or (not (Is ?bus 'bus')) (Is ?man 'man')) (or (not (Is ?bus 'bus')) (RightOf ?man ?bus)) (or (not (Is ?bus 'bus')) (On ?man ?bike)) (or (not (Is ?bus 'bus')) (Is ?bike 'bicycle')) (or (not (Is ?bus 'bus')) (RightOf ?woman ?man)) (or (not (Is ?bus 'bus')) (Is ?mon 'monitor')) (or (not (Is ?bus 'bus')) (On ?mon ?bike)) (or (not (Is ?bus 'bus')) (Is ?woman 'woman')) (or (not (Is ?bus 'bus')) (Is ?shoes 'shoes')) (or (not (Is ?bus 'bus')) (On ?shoes ?woman)) (or (not (Is ?bus 'bus')) (Is ?bear 'teddy bear')) (or (not (Is ?bus 'bus')) (On ?bear ?mon)) (or (not (Is ?bus 'bus')) (Is ?pan 'pan')) (or (not (Is ?bus 'bus')) (Holding ?woman ?pan)) (or (not (Is ?bus 'bus')) (Is ?ball 'ball')) (or (not (Is ?bus 'bus')) (In ?ball ?pan)) (or (not (Is ?bus 'bus')) (HasShape ?ball 'round')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bus",
+        "ball",
+        "monitor",
+        "bicycle",
+        "woman",
+        "shoes",
+        "man",
+        "teddy bear",
+        "pan"
+    ]
+}

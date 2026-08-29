@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a pan containing a fish is positioned to the left of a round rock, with a flower next to the rock.",
+    "dsl": "(exists ?w (exists ?p (exists ?f (exists ?r (exists ?fl (and (Is ?w 'woman') (Is ?p 'pan') (Is ?f 'fish') (Is ?r 'rock') (Is ?fl 'flower') (Holding ?w ?p) (In ?f ?p) (HasShape ?r 'round') (LeftOf ?w ?r) (NextTo ?fl ?r)))))))",
+    "cnf": "(exists ?w (exists ?p (exists ?f (exists ?r (exists ?fl (and (Is ?w 'woman') (Holding ?w ?p) (LeftOf ?w ?r) (Is ?p 'pan') (In ?f ?p) (HasShape ?r 'round') (NextTo ?fl ?r) (Is ?f 'fish') (Is ?r 'rock') (Is ?fl 'flower')))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "rock",
+        "fish",
+        "woman",
+        "flower"
+    ]
+}

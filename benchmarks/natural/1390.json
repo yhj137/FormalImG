@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. To the left of a bed lies a rug. All shoes present in the scene are on this rug. A round pizza sits on the bed. To the right of the pizza is a green bottle, and to the left of the pizza is a hat. There is also a banana next to the hat.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?p (exists ?bo (exists ?h (exists ?ba (and (Is ?b 'bed') (Is ?r 'rug') (LeftOf ?r ?b) (forall ?s (implies (Is ?s 'shoes') (On ?s ?r))) (Is ?p 'pizza') (On ?p ?b) (HasShape ?p 'round') (Is ?bo 'bottle') (RightOf ?bo ?p) (HasColor ?bo 'green') (Is ?h 'hat') (LeftOf ?h ?p) (Is ?ba 'banana') (NextTo ?ba ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?p (exists ?bo (exists ?h (exists ?ba (forall ?s (and (Is ?b 'bed') (LeftOf ?r ?b) (On ?p ?b) (Is ?r 'rug') (or (not (Is ?s 'shoes')) (On ?s ?r)) (Is ?p 'pizza') (HasShape ?p 'round') (RightOf ?bo ?p) (LeftOf ?h ?p) (Is ?bo 'bottle') (HasColor ?bo 'green') (Is ?h 'hat') (NextTo ?ba ?h) (Is ?ba 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "banana",
+        "bottle",
+        "bed",
+        "hat",
+        "pizza",
+        "shoes",
+        "rug"
+    ]
+}

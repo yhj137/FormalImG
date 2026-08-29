@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hammer located on the bottom side of the scene. Furthermore, this hammer is positioned to the left of every set of keys found in the image.",
+    "dsl": "(exists ?h (and (Is ?h 'hammer') (OnBottomSide ?h) (forall ?k (implies (Is ?k 'keys') (LeftOf ?h ?k)))))",
+    "cnf": "(exists ?h (forall ?k (and (Is ?h 'hammer') (OnBottomSide ?h) (or (not (Is ?k 'keys')) (LeftOf ?h ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "hammer",
+        "keys"
+    ]
+}

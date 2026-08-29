@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a round clock to the left of a yellow lamp. The lamp is to the left of a man holding a black umbrella. To the right of the man is a wooden bed with a child in it holding a plate. To the right of the bed, a brown dog holds a pair of metal glasses.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?l (exists ?m (exists ?u (exists ?b (exists ?child (exists ?p (exists ?d (exists ?g (and (Is ?c 'clock') (HasShape ?c 'round') (Is ?l 'lamp') (HasColor ?l 'yellow') (LeftOf ?c ?l) (Is ?m 'man') (LeftOf ?l ?m) (Is ?u 'umbrella') (HasColor ?u 'black') (Holding ?m ?u) (Is ?b 'bed') (HasMaterial ?b 'wooden') (RightOf ?b ?m) (Is ?child 'child') (In ?child ?b) (Is ?p 'plate') (Holding ?child ?p) (Is ?d 'dog') (HasColor ?d 'brown') (RightOf ?d ?b) (Is ?g 'glasses') (HasMaterial ?g 'metal') (Holding ?d ?g))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?l (exists ?m (exists ?u (exists ?b (exists ?child (exists ?p (exists ?d (exists ?g (and (Is ?c 'clock') (HasShape ?c 'round') (LeftOf ?c ?l) (HasColor ?l 'yellow') (LeftOf ?l ?m) (Is ?l 'lamp') (Is ?m 'man') (Holding ?m ?u) (RightOf ?b ?m) (HasColor ?u 'black') (HasMaterial ?b 'wooden') (In ?child ?b) (Is ?u 'umbrella') (Is ?b 'bed') (RightOf ?d ?b) (Is ?child 'child') (Holding ?child ?p) (HasColor ?d 'brown') (Holding ?d ?g) (Is ?p 'plate') (Is ?d 'dog') (HasMaterial ?g 'metal') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "glasses",
+        "man",
+        "lamp",
+        "bed",
+        "clock",
+        "dog",
+        "child",
+        "plate"
+    ]
+}

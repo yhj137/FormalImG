@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A hammer is placed on the left side. To the right of the hammer is a bottle, followed by a ruler to the right of the bottle; the ruler is larger than the bottle. On the bottom side, a watch is aligned vertically with the ruler. A glove is positioned to the left of the watch. For every spoon in the scene, it is aligned vertically with the glove. To the right of the spoon is a screwdriver which is smaller than the spoon. Keys are placed to the right of the screwdriver. On the right side, scissors are aligned vertically with the keys.",
+    "dsl": "(exists ?hammer (exists ?bottle (exists ?ruler (exists ?watch (exists ?glove (and (Is ?hammer 'hammer') (OnLeftSide ?hammer) (Is ?bottle 'bottle') (RightOf ?bottle ?hammer) (Is ?ruler 'ruler') (RightOf ?ruler ?bottle) (LargerThan ?ruler ?bottle) (Is ?watch 'watch') (OnBottomSide ?watch) (AlignedVertically ?watch ?ruler) (Is ?glove 'glove') (LeftOf ?glove ?watch) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?screwdriver (exists ?keys (exists ?scissors (and (Is ?screwdriver 'screwdriver') (Is ?keys 'keys') (Is ?scissors 'scissors') (AlignedVertically ?spoon ?glove) (RightOf ?screwdriver ?spoon) (SmallerThan ?screwdriver ?spoon) (RightOf ?keys ?screwdriver) (AlignedVertically ?scissors ?keys) (OnRightSide ?scissors)))))))))))))",
+    "cnf": "(exists ?hammer (exists ?bottle (exists ?ruler (exists ?watch (exists ?glove (forall ?spoon (exists ?screwdriver (exists ?keys (exists ?scissors (and (Is ?hammer 'hammer') (OnLeftSide ?hammer) (RightOf ?bottle ?hammer) (Is ?bottle 'bottle') (RightOf ?ruler ?bottle) (LargerThan ?ruler ?bottle) (Is ?ruler 'ruler') (AlignedVertically ?watch ?ruler) (OnBottomSide ?watch) (LeftOf ?glove ?watch) (Is ?watch 'watch') (Is ?glove 'glove') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?glove)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (RightOf ?screwdriver ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?keys 'keys')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?scissors ?keys)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?screwdriver ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?spoon 'spoon')) (RightOf ?keys ?screwdriver)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?scissors))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "watch",
+        "screwdriver",
+        "hammer",
+        "bottle",
+        "glove",
+        "scissors",
+        "spoon"
+    ]
+}

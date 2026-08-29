@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a turned-on monitor with a peeled banana on it. Every toy car is located next to the monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'monitor') (HasState ?m 'on') (forall ?t (implies (Is ?t 'toy car') (NextTo ?t ?m))) (exists ?b (and (Is ?b 'banana') (HasState ?b 'peeled') (On ?b ?m))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (forall ?t (exists ?b (and (Is ?m 'monitor') (HasState ?m 'on') (or (not (Is ?t 'toy car')) (NextTo ?t ?m)) (On ?b ?m) (HasState ?b 'peeled') (Is ?b 'banana'))))))",
+    "k": 3,
+    "object_classes": [
+        "banana",
+        "monitor",
+        "toy car"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase, a camera, and a pan are arranged horizontally, with the suitcase positioned on the top side; the suitcase is to the left of the camera, which is to the left of the pan. A keyboard and a bowl are aligned vertically with the suitcase, with the bowl positioned on the bottom side. A mouse is placed to the right of the keyboard and aligned horizontally with it. Furthermore, for every sock in the image, it is aligned vertically with the pan, and features a sequence of objects to its left: a fork is located to the left of the sock, a set of keys is to the left of the fork, and a wallet is to the left of the keys, all maintaining horizontal alignment.",
+    "dsl": "(exists ?suitcase (exists ?camera (exists ?pan (exists ?keyboard (exists ?mouse (exists ?bowl (and (Is ?suitcase 'suitcase') (Is ?camera 'camera') (Is ?pan 'pan') (Is ?keyboard 'keyboard') (Is ?mouse 'mouse') (Is ?bowl 'bowl') (OnTopSide ?suitcase) (OnBottomSide ?bowl) (LeftOf ?suitcase ?camera) (LeftOf ?camera ?pan) (AlignedHorizontally ?suitcase ?camera) (AlignedHorizontally ?camera ?pan) (AlignedVertically ?suitcase ?keyboard) (AlignedVertically ?keyboard ?bowl) (LeftOf ?keyboard ?mouse) (AlignedHorizontally ?keyboard ?mouse) (forall ?sock (implies (Is ?sock 'sock') (exists ?keys (exists ?fork (exists ?wallet (and (Is ?keys 'keys') (Is ?fork 'fork') (Is ?wallet 'wallet') (AlignedVertically ?pan ?sock) (LeftOf ?fork ?sock) (LeftOf ?keys ?fork) (LeftOf ?wallet ?keys) (AlignedHorizontally ?fork ?sock) (AlignedHorizontally ?keys ?fork) (AlignedHorizontally ?wallet ?keys))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?camera (exists ?pan (exists ?keyboard (exists ?mouse (exists ?bowl (forall ?sock (exists ?keys (exists ?fork (exists ?wallet (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LeftOf ?suitcase ?camera) (AlignedHorizontally ?suitcase ?camera) (Is ?camera 'camera') (LeftOf ?camera ?pan) (AlignedVertically ?suitcase ?keyboard) (AlignedHorizontally ?camera ?pan) (Is ?pan 'pan') (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?bowl) (or (not (Is ?sock 'sock')) (AlignedVertically ?pan ?sock)) (LeftOf ?keyboard ?mouse) (OnBottomSide ?bowl) (or (not (Is ?sock 'sock')) (Is ?wallet 'wallet')) (or (not (Is ?sock 'sock')) (LeftOf ?fork ?sock)) (AlignedHorizontally ?keyboard ?mouse) (Is ?mouse 'mouse') (Is ?bowl 'bowl') (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (LeftOf ?wallet ?keys)) (or (not (Is ?sock 'sock')) (LeftOf ?keys ?fork)) (or (not (Is ?sock 'sock')) (Is ?keys 'keys')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?fork ?sock)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?keys ?fork)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?wallet ?keys)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "sock",
+        "keyboard",
+        "fork",
+        "pan",
+        "wallet",
+        "camera",
+        "bowl",
+        "mouse",
+        "suitcase"
+    ]
+}

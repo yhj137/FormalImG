@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All apples in the scene are located on the bottom side of the image.",
+    "dsl": "(forall ?a (implies (Is ?a 'apple') (OnBottomSide ?a)))",
+    "cnf": "(forall ?a (or (not (Is ?a 'apple')) (OnBottomSide ?a)))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

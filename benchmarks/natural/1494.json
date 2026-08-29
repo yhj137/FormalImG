@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene features a lion and a cake on a rug. Every cup is placed next to the cake. The lion holds a round basket. To the left of the rug is a tree with a butterfly on it, while a boat is positioned to the right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?l (exists ?ck (and (Is ?r 'rug') (Is ?l 'lion') (Is ?ck 'cake') (On ?l ?r) (On ?ck ?r) (forall ?cp (implies (Is ?cp 'cup') (NextTo ?cp ?ck))) (exists ?bk (exists ?tr (exists ?bt (exists ?bf (and (Is ?bk 'basket') (HasShape ?bk 'round') (Is ?tr 'tree') (Is ?bt 'boat') (Is ?bf 'butterfly') (Holding ?l ?bk) (LeftOf ?tr ?r) (RightOf ?bt ?r) (On ?bf ?tr)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?l (exists ?ck (forall ?cp (exists ?bk (exists ?tr (exists ?bt (exists ?bf (and (Is ?r 'rug') (On ?l ?r) (On ?ck ?r) (Is ?l 'lion') (Holding ?l ?bk) (LeftOf ?tr ?r) (Is ?ck 'cake') (or (not (Is ?cp 'cup')) (NextTo ?cp ?ck)) (HasShape ?bk 'round') (RightOf ?bt ?r) (Is ?tr 'tree') (On ?bf ?tr) (Is ?bk 'basket') (Is ?bt 'boat') (Is ?bf 'butterfly')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tree",
+        "cake",
+        "rug",
+        "boat",
+        "cup",
+        "lion",
+        "butterfly",
+        "basket"
+    ]
+}

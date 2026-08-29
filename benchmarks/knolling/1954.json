@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a suitcase positioned on the top side, which is visually larger than the backpack located directly below it. Below the backpack are jeans, and below the jeans is a shoe. A bowl is aligned horizontally with the suitcase. On the right side of the image, below the bowl, is a calculator, and a stapler smaller than the calculator is placed below it. Finally, for every mouse present, there is a game controller above it and a carrot below it, with the game controller aligned horizontally with the jeans.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?jeans (exists ?shoe (exists ?bowl (exists ?calc (exists ?stapler (and (Is ?suitcase 'suitcase') (Is ?backpack 'backpack') (Is ?jeans 'jeans') (Is ?shoe 'shoe') (Is ?bowl 'bowl') (Is ?calc 'calculator') (Is ?stapler 'stapler') (OnTopSide ?suitcase) (LargerThan ?suitcase ?backpack) (Above ?suitcase ?backpack) (Above ?backpack ?jeans) (Above ?jeans ?shoe) (AlignedHorizontally ?suitcase ?bowl) (OnRightSide ?calc) (Below ?calc ?bowl) (SmallerThan ?stapler ?calc) (Below ?stapler ?calc) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?controller (exists ?carrot (and (Is ?controller 'game_controller') (Is ?carrot 'carrot') (Above ?controller ?mouse) (Below ?carrot ?mouse) (AlignedHorizontally ?jeans ?controller))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?jeans (exists ?shoe (exists ?bowl (exists ?calc (exists ?stapler (forall ?mouse (exists ?controller (exists ?carrot (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LargerThan ?suitcase ?backpack) (Above ?suitcase ?backpack) (Is ?backpack 'backpack') (AlignedHorizontally ?suitcase ?bowl) (Above ?backpack ?jeans) (Is ?bowl 'bowl') (Below ?calc ?bowl) (Is ?jeans 'jeans') (Above ?jeans ?shoe) (OnRightSide ?calc) (SmallerThan ?stapler ?calc) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?jeans ?controller)) (Is ?shoe 'shoe') (Is ?calc 'calculator') (Below ?stapler ?calc) (Is ?stapler 'stapler') (or (not (Is ?mouse 'mouse')) (Below ?carrot ?mouse)) (or (not (Is ?mouse 'mouse')) (Above ?controller ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?carrot 'carrot')) (or (not (Is ?mouse 'mouse')) (Is ?controller 'game_controller')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "stapler",
+        "carrot",
+        "game_controller",
+        "backpack",
+        "jeans",
+        "calculator",
+        "mouse",
+        "bowl",
+        "suitcase",
+        "shoe"
+    ]
+}

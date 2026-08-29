@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a sofa. All shoes are positioned next to the sofa. A man is sitting on the sofa, and an open blue book rests on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (and (Is ?s 'sofa') (forall ?sh (implies (Is ?sh 'shoes') (NextTo ?sh ?s))) (exists ?m (exists ?b (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?s) (Is ?b 'book') (HasColor ?b 'blue') (HasState ?b 'open') (On ?b ?s)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (forall ?sh (exists ?m (exists ?b (and (Is ?s 'sofa') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?s)) (On ?m ?s) (On ?b ?s) (HasState ?m 'sitting') (HasState ?b 'open') (Is ?m 'man') (HasColor ?b 'blue') (Is ?b 'book')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "book",
+        "sofa",
+        "shoes"
+    ]
+}

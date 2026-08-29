@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image of a plastic fish.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?f (and (Is ?f 'fish') (HasMaterial ?f 'plastic'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?f (and (Is ?f 'fish') (HasMaterial ?f 'plastic'))))",
+    "k": 1,
+    "object_classes": [
+        "fish"
+    ]
+}

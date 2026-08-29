@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a person in green positioned to the left of every car. A pink teddy bear is located next to the person on the right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'person') (HasColor ?p 'green') (forall ?c (implies (Is ?c 'car') (LeftOf ?p ?c))) (exists ?t (and (Is ?t 'teddy bear') (HasColor ?t 'pink') (NextTo ?t ?p) (RightOf ?t ?p))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (forall ?c (exists ?t (and (Is ?p 'person') (HasColor ?p 'green') (or (not (Is ?c 'car')) (LeftOf ?p ?c)) (NextTo ?t ?p) (RightOf ?t ?p) (HasColor ?t 'pink') (Is ?t 'teddy bear'))))))",
+    "k": 3,
+    "object_classes": [
+        "teddy bear",
+        "person",
+        "car"
+    ]
+}

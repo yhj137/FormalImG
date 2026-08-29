@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every carrot present in the scene, it is positioned on the top side of the image.",
+    "dsl": "(forall ?c (implies (Is ?c 'carrot') (OnTopSide ?c)))",
+    "cnf": "(forall ?c (or (not (Is ?c 'carrot')) (OnTopSide ?c)))",
+    "k": 1,
+    "object_classes": [
+        "carrot"
+    ]
+}

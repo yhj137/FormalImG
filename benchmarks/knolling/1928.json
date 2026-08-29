@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the top side. To the right of the suitcase is a keyboard, and the suitcase is larger than the keyboard. To the right of the keyboard is a phone, which is smaller than the keyboard. A pizza is located on the bottom side, positioned below the suitcase. To the right of the pizza is a plate. A ruler is located below the phone. For every lemon in the scene, there is a bowl below it, a knife to the right of the bowl, and a calculator to the right of the knife. The lemon is smaller than the pizza.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (exists ?phone (exists ?pizza (exists ?plate (exists ?ruler (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?suitcase) (LargerThan ?suitcase ?keyboard) (Is ?phone 'phone') (RightOf ?phone ?keyboard) (SmallerThan ?phone ?keyboard) (Is ?pizza 'pizza') (OnBottomSide ?pizza) (Below ?pizza ?suitcase) (Is ?plate 'plate') (RightOf ?plate ?pizza) (Is ?ruler 'ruler') (Below ?ruler ?phone) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?bowl (exists ?knife (exists ?calculator (and (Is ?bowl 'bowl') (Is ?knife 'knife') (Is ?calculator 'calculator') (Below ?bowl ?lemon) (RightOf ?knife ?bowl) (RightOf ?calculator ?knife) (SmallerThan ?lemon ?pizza))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (exists ?phone (exists ?pizza (exists ?plate (exists ?ruler (forall ?lemon (exists ?bowl (exists ?knife (exists ?calculator (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?keyboard ?suitcase) (LargerThan ?suitcase ?keyboard) (Is ?keyboard 'keyboard') (Below ?pizza ?suitcase) (RightOf ?phone ?keyboard) (OnBottomSide ?pizza) (RightOf ?plate ?pizza) (SmallerThan ?phone ?keyboard) (Is ?phone 'phone') (Is ?pizza 'pizza') (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?pizza)) (Is ?plate 'plate') (Below ?ruler ?phone) (or (not (Is ?lemon 'lemon')) (RightOf ?calculator ?knife)) (Is ?ruler 'ruler') (or (not (Is ?lemon 'lemon')) (RightOf ?knife ?bowl)) (or (not (Is ?lemon 'lemon')) (Is ?calculator 'calculator')) (or (not (Is ?lemon 'lemon')) (Below ?bowl ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?knife 'knife')) (or (not (Is ?lemon 'lemon')) (Is ?bowl 'bowl')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "keyboard",
+        "lemon",
+        "phone",
+        "pizza",
+        "calculator",
+        "knife",
+        "bowl",
+        "suitcase"
+    ]
+}

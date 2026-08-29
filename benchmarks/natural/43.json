@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a metal knife.",
+    "dsl": "(and (IsStyle 'photo') (exists ?k (and (Is ?k 'knife') (HasMaterial ?k 'metal'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?k (and (Is ?k 'knife') (HasMaterial ?k 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "knife"
+    ]
+}

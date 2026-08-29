@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A single backpack is neatly positioned on the top side of the layout.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack)))",
+    "cnf": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack)))",
+    "k": 1,
+    "object_classes": [
+        "backpack"
+    ]
+}

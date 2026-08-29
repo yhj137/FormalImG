@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a cutting board, a laptop, a pizza, and a wallet. The cutting board is positioned on the left side of the image, while the laptop is located on the bottom side. The cutting board is placed to the left of the laptop. The pizza is aligned vertically with the cutting board. The wallet is aligned vertically with the laptop and is visually smaller than the laptop.",
+    "dsl": "(exists ?cutting_board (exists ?laptop (exists ?pizza (exists ?wallet (and (Is ?cutting_board 'cutting_board') (Is ?laptop 'laptop') (Is ?pizza 'pizza') (Is ?wallet 'wallet') (OnLeftSide ?cutting_board) (OnBottomSide ?laptop) (LeftOf ?cutting_board ?laptop) (AlignedVertically ?cutting_board ?pizza) (AlignedVertically ?wallet ?laptop) (SmallerThan ?wallet ?laptop))))))",
+    "cnf": "(exists ?cutting_board (exists ?laptop (exists ?pizza (exists ?wallet (and (Is ?cutting_board 'cutting_board') (OnLeftSide ?cutting_board) (LeftOf ?cutting_board ?laptop) (AlignedVertically ?cutting_board ?pizza) (OnBottomSide ?laptop) (AlignedVertically ?wallet ?laptop) (Is ?pizza 'pizza') (Is ?laptop 'laptop') (SmallerThan ?wallet ?laptop) (Is ?wallet 'wallet'))))))",
+    "k": 4,
+    "object_classes": [
+        "wallet",
+        "cutting_board",
+        "laptop",
+        "pizza"
+    ]
+}

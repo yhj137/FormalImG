@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is holding a hat and stands to the left of a sofa. A wooden bookshelf is next to the sofa, and there is a shirt inside the bookshelf. Additionally, all shoes in the scene are placed next to the sofa.",
+    "dsl": "(exists ?m (exists ?h (exists ?so (exists ?b (exists ?sh (and (Is ?m 'man') (Is ?h 'hat') (Is ?so 'sofa') (Is ?b 'bookshelf') (Is ?sh 'shirt') (Holding ?m ?h) (LeftOf ?m ?so) (NextTo ?so ?b) (HasMaterial ?b 'wooden') (In ?sh ?b) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?so)))))))))",
+    "cnf": "(exists ?m (exists ?h (exists ?so (exists ?b (exists ?sh (forall ?s (and (Is ?m 'man') (Holding ?m ?h) (LeftOf ?m ?so) (Is ?h 'hat') (Is ?so 'sofa') (NextTo ?so ?b) (or (not (Is ?s 'shoes')) (NextTo ?s ?so)) (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (In ?sh ?b) (Is ?sh 'shirt'))))))))",
+    "k": 6,
+    "object_classes": [
+        "shirt",
+        "sofa",
+        "shoes",
+        "man",
+        "bookshelf",
+        "hat"
+    ]
+}

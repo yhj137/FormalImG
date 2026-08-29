@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the composition, there are jeans and a shoe, with the jeans positioned above the shoe. Along the bottom side, a plate, a knife, and a fork are arranged and aligned horizontally with the shoe. A bowl is placed above the plate. For every carrot present in the arrangement, there is a stapler, a game controller, and a pen; the carrot is smaller than the bowl, the stapler is located above the carrot, the game controller is positioned above the knife, the pen is positioned above the fork, the stapler, game controller, and pen form a horizontal alignment, and the pen is smaller than the stapler.",
+    "dsl": "(exists ?jeans (exists ?shoe (exists ?plate (exists ?knife (exists ?fork (exists ?bowl (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?shoe 'shoe') (OnLeftSide ?shoe) (Above ?jeans ?shoe) (Is ?plate 'plate') (OnBottomSide ?plate) (AlignedHorizontally ?shoe ?plate) (Is ?knife 'knife') (OnBottomSide ?knife) (AlignedHorizontally ?plate ?knife) (Is ?fork 'fork') (OnBottomSide ?fork) (AlignedHorizontally ?knife ?fork) (Is ?bowl 'bowl') (Above ?bowl ?plate) (forall ?c (implies (Is ?c 'carrot') (exists ?stapler (exists ?controller (exists ?pen (and (Is ?stapler 'stapler') (Is ?controller 'game_controller') (Is ?pen 'pen') (SmallerThan ?c ?bowl) (Above ?stapler ?c) (Above ?controller ?knife) (Above ?pen ?fork) (AlignedHorizontally ?stapler ?controller) (AlignedHorizontally ?controller ?pen) (SmallerThan ?pen ?stapler))))))))))))))",
+    "cnf": "(exists ?jeans (exists ?shoe (exists ?plate (exists ?knife (exists ?fork (exists ?bowl (forall ?c (exists ?stapler (exists ?controller (exists ?pen (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Above ?jeans ?shoe) (OnLeftSide ?shoe) (AlignedHorizontally ?shoe ?plate) (Is ?shoe 'shoe') (OnBottomSide ?plate) (AlignedHorizontally ?plate ?knife) (Is ?plate 'plate') (Above ?bowl ?plate) (OnBottomSide ?knife) (AlignedHorizontally ?knife ?fork) (Is ?bowl 'bowl') (or (not (Is ?c 'carrot')) (SmallerThan ?c ?bowl)) (Is ?knife 'knife') (or (not (Is ?c 'carrot')) (Above ?controller ?knife)) (OnBottomSide ?fork) (or (not (Is ?c 'carrot')) (Above ?pen ?fork)) (or (not (Is ?c 'carrot')) (Is ?pen 'pen')) (or (not (Is ?c 'carrot')) (Above ?stapler ?c)) (or (not (Is ?c 'carrot')) (Is ?controller 'game_controller')) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?stapler ?controller)) (Is ?fork 'fork') (or (not (Is ?c 'carrot')) (AlignedHorizontally ?controller ?pen)) (or (not (Is ?c 'carrot')) (Is ?stapler 'stapler')) (or (not (Is ?c 'carrot')) (SmallerThan ?pen ?stapler)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "stapler",
+        "pen",
+        "carrot",
+        "game_controller",
+        "fork",
+        "jeans",
+        "knife",
+        "bowl",
+        "shoe"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat in the scene, it is positioned on the top side of the image. Positioned directly below the hat is a bottle. To the left of the bottle is an apple, which is smaller than the bottle. A game controller is located below the bottle. To the left of the game controller is a ruler, and to the left of the ruler is a stapler. Additionally, a donut is located above the stapler and is smaller than the stapler.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'hat') (exists ?b (exists ?a (exists ?gc (exists ?r (exists ?s (exists ?d (and (Is ?b 'bottle') (Is ?a 'apple') (Is ?gc 'game_controller') (Is ?r 'ruler') (Is ?s 'stapler') (Is ?d 'donut') (OnTopSide ?h) (Above ?h ?b) (LeftOf ?a ?b) (SmallerThan ?a ?b) (Below ?gc ?b) (LeftOf ?r ?gc) (LeftOf ?s ?r) (Above ?d ?s) (SmallerThan ?d ?s)))))))))))",
+    "cnf": "(forall ?h (exists ?b (exists ?a (exists ?gc (exists ?r (exists ?s (exists ?d (and (or (not (Is ?h 'hat')) (Is ?b 'bottle')) (or (not (Is ?h 'hat')) (Above ?h ?b)) (or (not (Is ?h 'hat')) (Is ?a 'apple')) (or (not (Is ?h 'hat')) (LeftOf ?a ?b)) (or (not (Is ?h 'hat')) (OnTopSide ?h)) (or (not (Is ?h 'hat')) (Is ?gc 'game_controller')) (or (not (Is ?h 'hat')) (SmallerThan ?a ?b)) (or (not (Is ?h 'hat')) (Is ?d 'donut')) (or (not (Is ?h 'hat')) (Is ?r 'ruler')) (or (not (Is ?h 'hat')) (Below ?gc ?b)) (or (not (Is ?h 'hat')) (Is ?s 'stapler')) (or (not (Is ?h 'hat')) (Above ?d ?s)) (or (not (Is ?h 'hat')) (LeftOf ?r ?gc)) (or (not (Is ?h 'hat')) (LeftOf ?s ?r)) (or (not (Is ?h 'hat')) (SmallerThan ?d ?s))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "stapler",
+        "apple",
+        "game_controller",
+        "hat",
+        "bottle",
+        "donut"
+    ]
+}

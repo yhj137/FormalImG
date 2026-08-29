@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a bus standing next to a house. To the left of the house is a rock with an open umbrella beside it. All flowers in the scene are located to the left of the rock. A pan containing a sandwich also sits next to the rock, accompanied by a metal knife. A round hat rests near the pan, with a laptop placed next to the hat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?r (exists ?u (and (Is ?h 'house') (Is ?b 'bus') (Is ?r 'rock') (Is ?u 'umbrella') (NextTo ?b ?h) (LeftOf ?r ?h) (HasState ?u 'open') (NextTo ?u ?r) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?r))) (exists ?p (exists ?s (exists ?k (exists ?ha (exists ?l (and (Is ?p 'pan') (Is ?s 'sandwich') (Is ?k 'knife') (Is ?ha 'hat') (Is ?l 'laptop') (NextTo ?p ?r) (In ?s ?p) (NextTo ?k ?p) (HasMaterial ?k 'metal') (NextTo ?ha ?p) (HasShape ?ha 'round') (NextTo ?l ?ha)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?r (exists ?u (forall ?f (exists ?p (exists ?s (exists ?k (exists ?ha (exists ?l (and (Is ?h 'house') (NextTo ?b ?h) (LeftOf ?r ?h) (Is ?b 'bus') (Is ?r 'rock') (NextTo ?u ?r) (or (not (Is ?f 'flower')) (LeftOf ?f ?r)) (HasState ?u 'open') (NextTo ?p ?r) (Is ?u 'umbrella') (Is ?p 'pan') (In ?s ?p) (NextTo ?k ?p) (Is ?s 'sandwich') (NextTo ?ha ?p) (Is ?k 'knife') (HasMaterial ?k 'metal') (Is ?ha 'hat') (HasShape ?ha 'round') (NextTo ?l ?ha) (Is ?l 'laptop')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "knife",
+        "laptop",
+        "rock",
+        "flower",
+        "pan",
+        "sandwich",
+        "bus",
+        "hat"
+    ]
+}

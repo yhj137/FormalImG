@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a yellow lion sitting on a red sofa and holding a blue umbrella. All chairs, as well as a square backpack, are positioned to the right of the sofa.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?l (and (Is ?s 'sofa') (HasColor ?s 'red') (Is ?l 'lion') (HasColor ?l 'yellow') (On ?l ?s) (forall ?c (implies (Is ?c 'chair') (RightOf ?c ?s))) (exists ?u (exists ?b (and (Is ?u 'umbrella') (HasColor ?u 'blue') (Is ?b 'backpack') (HasShape ?b 'square') (Holding ?l ?u) (RightOf ?b ?s))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?l (forall ?c (exists ?u (exists ?b (and (Is ?s 'sofa') (HasColor ?s 'red') (On ?l ?s) (or (not (Is ?c 'chair')) (RightOf ?c ?s)) (HasColor ?l 'yellow') (Holding ?l ?u) (RightOf ?b ?s) (Is ?l 'lion') (HasColor ?u 'blue') (HasShape ?b 'square') (Is ?u 'umbrella') (Is ?b 'backpack'))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "backpack",
+        "chair",
+        "lion"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical column of items. At the very top is a monitor, which is larger than the phone located further down. Directly below the monitor are blue jeans. A cutting board is positioned below the jeans but above a black camera. The camera is above the phone. Below the phone is a red apple, which is placed above a spoon. The spoon is smaller than the cutting board and is positioned above a carrot. Finally, for every pen in the image, it is a black pen located below the carrot, aligned vertically with it, and strictly smaller than the carrot.",
+    "dsl": "(exists ?monitor (exists ?jeans (exists ?board (exists ?camera (exists ?phone (exists ?apple (exists ?spoon (exists ?carrot (and (Is ?monitor 'monitor') (Is ?jeans 'jeans') (Is ?board 'cutting_board') (Is ?camera 'camera') (Is ?phone 'phone') (Is ?apple 'apple') (Is ?spoon 'spoon') (Is ?carrot 'carrot') (Has ?jeans 'blue') (Has ?camera 'black') (Has ?apple 'red') (Above ?monitor ?jeans) (Below ?jeans ?monitor) (Below ?board ?jeans) (Above ?board ?camera) (Above ?camera ?phone) (Below ?apple ?phone) (Above ?apple ?spoon) (Above ?spoon ?carrot) (AlignedVertically ?monitor ?jeans) (AlignedVertically ?jeans ?board) (AlignedVertically ?board ?camera) (AlignedVertically ?camera ?phone) (AlignedVertically ?phone ?apple) (AlignedVertically ?apple ?spoon) (AlignedVertically ?spoon ?carrot) (LargerThan ?monitor ?phone) (SmallerThan ?spoon ?board) (forall ?pen (implies (Is ?pen 'pen') (and (Has ?pen 'black') (Below ?pen ?carrot) (AlignedVertically ?pen ?carrot) (SmallerThan ?pen ?carrot)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (exists ?board (exists ?camera (exists ?phone (exists ?apple (exists ?spoon (exists ?carrot (forall ?pen (and (Is ?monitor 'monitor') (Above ?monitor ?jeans) (Below ?jeans ?monitor) (Has ?jeans 'blue') (AlignedVertically ?monitor ?jeans) (Below ?board ?jeans) (Is ?jeans 'jeans') (LargerThan ?monitor ?phone) (AlignedVertically ?jeans ?board) (Is ?board 'cutting_board') (Above ?board ?camera) (AlignedVertically ?phone ?apple) (AlignedVertically ?board ?camera) (Has ?camera 'black') (Above ?camera ?phone) (AlignedVertically ?camera ?phone) (Above ?apple ?spoon) (AlignedVertically ?apple ?spoon) (SmallerThan ?spoon ?board) (Is ?camera 'camera') (Is ?phone 'phone') (Below ?apple ?phone) (Is ?spoon 'spoon') (Above ?spoon ?carrot) (AlignedVertically ?spoon ?carrot) (Has ?apple 'red') (Is ?carrot 'carrot') (or (not (Is ?pen 'pen')) (Below ?pen ?carrot)) (Is ?apple 'apple') (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?carrot)) (or (not (Is ?pen 'pen')) (Has ?pen 'black')) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?carrot))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "apple",
+        "pen",
+        "carrot",
+        "phone",
+        "cutting_board",
+        "jeans",
+        "camera",
+        "monitor",
+        "spoon"
+    ]
+}

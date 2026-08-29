@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For any set of keys located on the left side of the scene, there exists a pair of pliers and a monitor arranged in a sequence. The pliers are positioned to the right of the keys, and the monitor is positioned to the right of the pliers. In terms of size, the keys are smaller than the pliers, and the pliers are smaller than the monitor.",
+    "dsl": "(forall ?keys (implies (and (Is ?keys 'keys') (OnLeftSide ?keys)) (exists ?pliers (exists ?monitor (and (Is ?pliers 'pliers') (Is ?monitor 'monitor') (RightOf ?pliers ?keys) (RightOf ?monitor ?pliers) (SmallerThan ?keys ?pliers) (SmallerThan ?pliers ?monitor))))))",
+    "cnf": "(forall ?keys (exists ?pliers (exists ?monitor (and (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (Is ?pliers 'pliers')) (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (RightOf ?pliers ?keys)) (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (Is ?monitor 'monitor')) (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (RightOf ?monitor ?pliers)) (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (SmallerThan ?keys ?pliers)) (or (not (Is ?keys 'keys')) (not (OnLeftSide ?keys)) (SmallerThan ?pliers ?monitor))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "keys",
+        "pliers"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style scene where every rock is round.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?r (implies (Is ?r 'rock') (HasShape ?r 'round'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?r (or (not (Is ?r 'rock')) (HasShape ?r 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "rock"
+    ]
+}

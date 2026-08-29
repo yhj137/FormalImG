@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the display, there are four associated objects: a sandwich, a mouse, a cup, and an apple. All these items are aligned vertically with the plate. The apple is positioned on the bottom side of the layout. The plate is larger than the sandwich, the sandwich is larger than the mouse, and the cup is smaller than the plate.",
+    "dsl": "(forall ?plate (implies (Is ?plate 'plate') (exists ?sandwich (exists ?mouse (exists ?cup (exists ?apple (and (Is ?sandwich 'sandwich') (Is ?mouse 'mouse') (Is ?cup 'cup') (Is ?apple 'apple') (AlignedVertically ?plate ?sandwich) (AlignedVertically ?sandwich ?mouse) (AlignedVertically ?mouse ?cup) (AlignedVertically ?cup ?apple) (OnBottomSide ?apple) (LargerThan ?plate ?sandwich) (LargerThan ?sandwich ?mouse) (SmallerThan ?cup ?plate))))))))",
+    "cnf": "(forall ?plate (exists ?sandwich (exists ?mouse (exists ?cup (exists ?apple (and (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich')) (or (not (Is ?plate 'plate')) (Is ?mouse 'mouse')) (or (not (Is ?plate 'plate')) (AlignedVertically ?plate ?sandwich)) (or (not (Is ?plate 'plate')) (Is ?cup 'cup')) (or (not (Is ?plate 'plate')) (AlignedVertically ?sandwich ?mouse)) (or (not (Is ?plate 'plate')) (Is ?apple 'apple')) (or (not (Is ?plate 'plate')) (AlignedVertically ?mouse ?cup)) (or (not (Is ?plate 'plate')) (LargerThan ?plate ?sandwich)) (or (not (Is ?plate 'plate')) (AlignedVertically ?cup ?apple)) (or (not (Is ?plate 'plate')) (LargerThan ?sandwich ?mouse)) (or (not (Is ?plate 'plate')) (OnBottomSide ?apple)) (or (not (Is ?plate 'plate')) (SmallerThan ?cup ?plate))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "apple",
+        "cup",
+        "mouse",
+        "sandwich"
+    ]
+}

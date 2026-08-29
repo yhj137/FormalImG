@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a phone, a wrench, and a knife arranged in a vertical column. The phone is located on the top side and is positioned above the wrench. The wrench is above the knife, which is located on the bottom side; these three objects are aligned vertically. Additionally, a specific arrangement rule applies: for every spoon in the scene, there is a lemon above it. The spoon is aligned horizontally with the wrench, while the lemon is aligned vertically with the spoon and horizontally with the phone.",
+    "dsl": "(exists ?phone (exists ?wrench (exists ?knife (and (Is ?phone 'phone') (Is ?wrench 'wrench') (Is ?knife 'knife') (OnTopSide ?phone) (OnBottomSide ?knife) (Above ?phone ?wrench) (Above ?wrench ?knife) (AlignedVertically ?phone ?wrench) (AlignedVertically ?wrench ?knife) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?lemon (and (Is ?lemon 'lemon') (Above ?lemon ?spoon) (AlignedHorizontally ?spoon ?wrench) (AlignedVertically ?lemon ?spoon) (AlignedHorizontally ?lemon ?phone)))))))))",
+    "cnf": "(exists ?phone (exists ?wrench (exists ?knife (forall ?spoon (exists ?lemon (and (Is ?phone 'phone') (OnTopSide ?phone) (Above ?phone ?wrench) (AlignedVertically ?phone ?wrench) (Is ?wrench 'wrench') (Above ?wrench ?knife) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?lemon ?phone)) (AlignedVertically ?wrench ?knife) (OnBottomSide ?knife) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?lemon ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?wrench)) (Is ?knife 'knife') (or (not (Is ?spoon 'spoon')) (Above ?lemon ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?lemon 'lemon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "wrench",
+        "lemon",
+        "phone",
+        "knife",
+        "spoon"
+    ]
+}

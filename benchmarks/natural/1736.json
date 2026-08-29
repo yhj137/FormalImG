@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicts a man sitting on a sofa, holding a screwdriver. A blue jacket lies on the sofa next to the man, and a round clock is placed next to the sofa. Every book is on the sofa, along with a pair of glasses. A bottle sits to the right of the sofa, and a tree stands to the left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?sf (exists ?sd (exists ?j (exists ?c (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?sf 'sofa') (Is ?sd 'screwdriver') (Is ?j 'jacket') (HasColor ?j 'blue') (Is ?c 'clock') (HasShape ?c 'round') (On ?m ?sf) (Holding ?m ?sd) (On ?j ?sf) (NextTo ?j ?m) (NextTo ?c ?sf) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?sf))) (exists ?g (exists ?bt (exists ?t (and (Is ?g 'glasses') (Is ?bt 'bottle') (Is ?t 'tree') (On ?g ?sf) (RightOf ?bt ?sf) (LeftOf ?t ?sf))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?sf (exists ?sd (exists ?j (exists ?c (forall ?bk (exists ?g (exists ?bt (exists ?t (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?sf) (Holding ?m ?sd) (Is ?sf 'sofa') (On ?j ?sf) (NextTo ?j ?m) (Is ?sd 'screwdriver') (NextTo ?c ?sf) (HasColor ?j 'blue') (or (not (Is ?bk 'book')) (On ?bk ?sf)) (HasShape ?c 'round') (Is ?j 'jacket') (On ?g ?sf) (Is ?c 'clock') (RightOf ?bt ?sf) (Is ?g 'glasses') (LeftOf ?t ?sf) (Is ?bt 'bottle') (Is ?t 'tree'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "glasses",
+        "sofa",
+        "man",
+        "screwdriver",
+        "book",
+        "tree",
+        "clock"
+    ]
+}

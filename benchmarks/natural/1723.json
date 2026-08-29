@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a horse wearing round glasses and holding a red umbrella. To the left of the horse stands a wooden bookshelf with a lamp and a cylindrical bottle on it, where every spoon in the scene is positioned next to the bottle. To the right of the horse is a mirror with a fish beside it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?bs (exists ?u (exists ?g (exists ?bt (and (Is ?h 'horse') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?bs ?h) (Is ?u 'umbrella') (HasColor ?u 'red') (Holding ?h ?u) (Is ?g 'glasses') (HasShape ?g 'round') (On ?g ?h) (Is ?bt 'bottle') (HasShape ?bt 'cylindrical') (On ?bt ?bs) (forall ?s (implies (Is ?s 'spoon') (NextTo ?s ?bt))) (exists ?l (exists ?m (exists ?f (and (Is ?l 'lamp') (On ?l ?bs) (Is ?m 'mirror') (RightOf ?m ?h) (Is ?f 'fish') (NextTo ?f ?m))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?bs (exists ?u (exists ?g (exists ?bt (forall ?s (exists ?l (exists ?m (exists ?f (and (Is ?h 'horse') (LeftOf ?bs ?h) (Holding ?h ?u) (HasMaterial ?bs 'wooden') (On ?bt ?bs) (On ?g ?h) (HasColor ?u 'red') (Is ?bs 'bookshelf') (On ?l ?bs) (HasShape ?bt 'cylindrical') (or (not (Is ?s 'spoon')) (NextTo ?s ?bt)) (RightOf ?m ?h) (HasShape ?g 'round') (Is ?u 'umbrella') (Is ?l 'lamp') (Is ?bt 'bottle') (Is ?m 'mirror') (NextTo ?f ?m) (Is ?g 'glasses') (Is ?f 'fish'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "glasses",
+        "fish",
+        "lamp",
+        "horse",
+        "mirror",
+        "bookshelf",
+        "spoon"
+    ]
+}

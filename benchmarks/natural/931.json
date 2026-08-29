@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cup containing a screwdriver is next to a red car. Every fork is to the left of the cup, and a bird is to the left of the car.",
+    "dsl": "(exists ?c (exists ?u (and (Is ?c 'car') (HasColor ?c 'red') (Is ?u 'cup') (NextTo ?u ?c) (forall ?f (implies (Is ?f 'fork') (LeftOf ?f ?u))) (exists ?s (and (Is ?s 'screwdriver') (In ?s ?u))) (exists ?b (and (Is ?b 'bird') (LeftOf ?b ?c))))))",
+    "cnf": "(exists ?c (exists ?u (forall ?f (exists ?s (exists ?b (and (Is ?c 'car') (HasColor ?c 'red') (NextTo ?u ?c) (LeftOf ?b ?c) (Is ?u 'cup') (or (not (Is ?f 'fork')) (LeftOf ?f ?u)) (Is ?b 'bird') (In ?s ?u) (Is ?s 'screwdriver')))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "bird",
+        "car",
+        "cup",
+        "screwdriver"
+    ]
+}

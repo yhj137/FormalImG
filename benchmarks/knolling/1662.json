@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a handbag on the left side and a keyboard on the right side. For every red stapler in the image, the following items and constraints exist: the stapler is positioned below the handbag and to the left of the keyboard; a lighter is above the stapler and a calculator is below it, with these three aligned vertically; a sandwich is below the calculator; a carrot is to the left of the sandwich; a lemon is above the carrot; and a mouse is positioned to the left of the keyboard, with the keyboard being larger than the mouse.",
+    "dsl": "(exists ?handbag (exists ?keyboard (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (forall ?stapler (implies (and (Is ?stapler 'stapler') (Has ?stapler 'red')) (exists ?lighter (exists ?calculator (exists ?mouse (exists ?sandwich (exists ?carrot (exists ?lemon (and (Is ?lighter 'lighter') (Is ?calculator 'calculator') (Is ?mouse 'mouse') (Is ?sandwich 'sandwich') (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Above ?lighter ?stapler) (Below ?calculator ?stapler) (AlignedVertically ?lighter ?stapler) (AlignedVertically ?stapler ?calculator) (Below ?stapler ?handbag) (LeftOf ?stapler ?keyboard) (LeftOf ?mouse ?keyboard) (LargerThan ?keyboard ?mouse) (Below ?sandwich ?calculator) (LeftOf ?carrot ?sandwich) (Above ?lemon ?carrot)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (forall ?stapler (exists ?lighter (exists ?calculator (exists ?mouse (exists ?sandwich (exists ?carrot (exists ?lemon (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Below ?stapler ?handbag)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (AlignedVertically ?stapler ?calculator)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (LeftOf ?stapler ?keyboard)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (AlignedVertically ?lighter ?stapler)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Below ?calculator ?stapler)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Below ?sandwich ?calculator)) (OnRightSide ?keyboard) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (LeftOf ?mouse ?keyboard)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Above ?lighter ?stapler)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?calculator 'calculator')) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (LargerThan ?keyboard ?mouse)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (LeftOf ?carrot ?sandwich)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?sandwich 'sandwich')) (Is ?keyboard 'keyboard') (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?mouse 'mouse')) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?lemon 'lemon')) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?lighter 'lighter')) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Above ?lemon ?carrot)) (or (not (Is ?stapler 'stapler')) (not (Has ?stapler 'red')) (Is ?carrot 'carrot'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "keyboard",
+        "lemon",
+        "carrot",
+        "handbag",
+        "calculator",
+        "lighter",
+        "mouse",
+        "sandwich"
+    ]
+}

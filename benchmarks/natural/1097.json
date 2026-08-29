@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rusty bicycle stands next to a wardrobe. Every chair is located to the right of the wardrobe. A smiling child wearing headphones is also to the right of the wardrobe, and a clock sits next to the bicycle.",
+    "dsl": "(exists ?w (and (Is ?w 'wardrobe') (exists ?b (and (Is ?b 'bicycle') (HasState ?b 'rusty') (NextTo ?b ?w) (forall ?c (implies (Is ?c 'chair') (RightOf ?c ?w))) (exists ?k (and (Is ?k 'child') (HasState ?k 'smiling') (RightOf ?k ?w) (exists ?h (and (Is ?h 'headphones') (On ?h ?k))) (exists ?cl (and (Is ?cl 'clock') (NextTo ?cl ?b)))))))))",
+    "cnf": "(exists ?w (exists ?b (forall ?c (exists ?k (exists ?h (exists ?cl (and (Is ?w 'wardrobe') (NextTo ?b ?w) (or (not (Is ?c 'chair')) (RightOf ?c ?w)) (HasState ?b 'rusty') (NextTo ?cl ?b) (RightOf ?k ?w) (Is ?b 'bicycle') (Is ?cl 'clock') (HasState ?k 'smiling') (On ?h ?k) (Is ?k 'child') (Is ?h 'headphones'))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "child",
+        "chair",
+        "bicycle",
+        "clock",
+        "wardrobe"
+    ]
+}

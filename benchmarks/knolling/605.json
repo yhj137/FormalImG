@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The upper section of the image features a pair of glasses, a knife, and a sock arranged in a horizontal line, meaning they are all located on the top side and aligned horizontally with one another. Additionally, a bowl is positioned directly below the sock.",
+    "dsl": "(exists ?glasses (exists ?knife (exists ?sock (exists ?bowl (and (Is ?glasses 'glasses') (Is ?knife 'knife') (Is ?sock 'sock') (Is ?bowl 'bowl') (OnTopSide ?glasses) (OnTopSide ?knife) (OnTopSide ?sock) (AlignedHorizontally ?glasses ?knife) (AlignedHorizontally ?knife ?sock) (Below ?bowl ?sock))))))",
+    "cnf": "(exists ?glasses (exists ?knife (exists ?sock (exists ?bowl (and (Is ?glasses 'glasses') (OnTopSide ?glasses) (AlignedHorizontally ?glasses ?knife) (OnTopSide ?knife) (AlignedHorizontally ?knife ?sock) (Is ?knife 'knife') (OnTopSide ?sock) (Below ?bowl ?sock) (Is ?sock 'sock') (Is ?bowl 'bowl'))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "glasses",
+        "bowl",
+        "sock"
+    ]
+}

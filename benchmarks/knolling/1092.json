@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue suitcase and a red handbag, with the suitcase positioned to the left of the handbag. For every remote in the composition, there is a corresponding group consisting of a black keyboard, a white plate, and a pair of scissors. In this arrangement, the handbag is located above the remote, the remote is placed above the keyboard, and the keyboard is to the left of the plate. Additionally, the plate is positioned on the right side of the image, and the scissors are visually smaller than the plate.",
+    "dsl": "(exists ?suitcase (exists ?handbag (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?handbag 'handbag') (Has ?handbag 'red') (LeftOf ?suitcase ?handbag) (forall ?remote (implies (Is ?remote 'remote') (exists ?keyboard (exists ?plate (exists ?scissors (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?plate 'plate') (Has ?plate 'white') (Is ?scissors 'scissors') (Above ?handbag ?remote) (Above ?remote ?keyboard) (LeftOf ?keyboard ?plate) (OnRightSide ?plate) (SmallerThan ?scissors ?plate))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (forall ?remote (exists ?keyboard (exists ?plate (exists ?scissors (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (LeftOf ?suitcase ?handbag) (Has ?handbag 'red') (or (not (Is ?remote 'remote')) (Above ?handbag ?remote)) (Is ?handbag 'handbag') (or (not (Is ?remote 'remote')) (Is ?scissors 'scissors')) (or (not (Is ?remote 'remote')) (Above ?remote ?keyboard)) (or (not (Is ?remote 'remote')) (Has ?plate 'white')) (or (not (Is ?remote 'remote')) (SmallerThan ?scissors ?plate)) (or (not (Is ?remote 'remote')) (Has ?keyboard 'black')) (or (not (Is ?remote 'remote')) (LeftOf ?keyboard ?plate)) (or (not (Is ?remote 'remote')) (Is ?plate 'plate')) (or (not (Is ?remote 'remote')) (OnRightSide ?plate)) (or (not (Is ?remote 'remote')) (Is ?keyboard 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "remote",
+        "keyboard",
+        "handbag",
+        "scissors",
+        "suitcase"
+    ]
+}

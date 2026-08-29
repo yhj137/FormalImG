@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every lemon in the image, there is a black pan on the left side with a cutting board above it, and the pan is larger than the lemon. Additionally, for every lemon, there is a pink donut to the right of the lemon with a fork below it, and a blue hat to the right of the cutting board with a remote below the hat and a mouse below the remote on the right side.",
+    "dsl": "(exists ?pan (exists ?board (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?donut (exists ?fork (exists ?hat (exists ?remote (exists ?mouse (and (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (Is ?board 'cutting_board') (Above ?board ?pan) (LargerThan ?pan ?lemon) (Is ?donut 'donut') (Has ?donut 'pink') (RightOf ?donut ?lemon) (Is ?fork 'fork') (Below ?fork ?donut) (Is ?hat 'hat') (Has ?hat 'blue') (RightOf ?hat ?board) (Is ?remote 'remote') (Below ?remote ?hat) (Is ?mouse 'mouse') (Below ?mouse ?remote) (OnRightSide ?mouse)))))))))))",
+    "cnf": "(exists ?pan (exists ?board (forall ?lemon (exists ?donut (exists ?fork (exists ?hat (exists ?remote (exists ?mouse (and (or (not (Is ?lemon 'lemon')) (Is ?pan 'pan')) (or (not (Is ?lemon 'lemon')) (Has ?pan 'black')) (or (not (Is ?lemon 'lemon')) (OnLeftSide ?pan)) (or (not (Is ?lemon 'lemon')) (Is ?board 'cutting_board')) (or (not (Is ?lemon 'lemon')) (Above ?board ?pan)) (or (not (Is ?lemon 'lemon')) (LargerThan ?pan ?lemon)) (or (not (Is ?lemon 'lemon')) (RightOf ?hat ?board)) (or (not (Is ?lemon 'lemon')) (Is ?donut 'donut')) (or (not (Is ?lemon 'lemon')) (Has ?hat 'blue')) (or (not (Is ?lemon 'lemon')) (Is ?remote 'remote')) (or (not (Is ?lemon 'lemon')) (Below ?remote ?hat)) (or (not (Is ?lemon 'lemon')) (Has ?donut 'pink')) (or (not (Is ?lemon 'lemon')) (Is ?hat 'hat')) (or (not (Is ?lemon 'lemon')) (Is ?mouse 'mouse')) (or (not (Is ?lemon 'lemon')) (Below ?mouse ?remote)) (or (not (Is ?lemon 'lemon')) (RightOf ?donut ?lemon)) (or (not (Is ?lemon 'lemon')) (Below ?fork ?donut)) (or (not (Is ?lemon 'lemon')) (OnRightSide ?mouse)) (or (not (Is ?lemon 'lemon')) (Is ?fork 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "lemon",
+        "cutting_board",
+        "pan",
+        "hat",
+        "fork",
+        "mouse",
+        "donut"
+    ]
+}

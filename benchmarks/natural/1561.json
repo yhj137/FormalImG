@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a table with a man standing to its left and a woman next to him. A bookshelf containing a teddy bear stands next to the table, with a mirror beside it. All flowers in the scene are red and rest inside a plate on the table.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'table') (exists ?m (and (Is ?m 'man') (LeftOf ?m ?t) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?m) (exists ?bs (and (Is ?bs 'bookshelf') (NextTo ?bs ?t) (exists ?tb (and (Is ?tb 'teddy bear') (In ?tb ?bs) (exists ?mi (and (Is ?mi 'mirror') (NextTo ?mi ?bs) (forall ?f (implies (Is ?f 'flower') (and (HasColor ?f 'red') (exists ?p (and (Is ?p 'plate') (On ?p ?t) (In ?f ?p)))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?m (exists ?w (exists ?bs (exists ?tb (exists ?mi (forall ?f (exists ?p (and (Is ?t 'table') (LeftOf ?m ?t) (NextTo ?bs ?t) (Is ?m 'man') (NextTo ?w ?m) (or (not (Is ?f 'flower')) (On ?p ?t)) (Is ?bs 'bookshelf') (In ?tb ?bs) (Is ?w 'woman') (or (not (Is ?f 'flower')) (Is ?p 'plate')) (or (not (Is ?f 'flower')) (In ?f ?p)) (NextTo ?mi ?bs) (Is ?tb 'teddy bear') (or (not (Is ?f 'flower')) (HasColor ?f 'red')) (Is ?mi 'mirror')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "man",
+        "woman",
+        "teddy bear",
+        "table",
+        "flower",
+        "mirror",
+        "bookshelf"
+    ]
+}

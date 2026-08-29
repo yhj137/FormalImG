@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop and a pair of jeans, where the laptop is positioned above the jeans. For every remote appearing in the scene, it is located above the laptop. Below the jeans is a cup, and the jeans are physically larger than the cup. The cup is placed above a spoon, which is situated on the bottom side of the image.",
+    "dsl": "(exists ?laptop (exists ?jeans (and (Is ?laptop 'laptop') (Is ?jeans 'jeans') (Above ?laptop ?jeans) (forall ?remote (implies (Is ?remote 'remote') (Above ?remote ?laptop))) (exists ?cup (exists ?spoon (and (Is ?cup 'cup') (Is ?spoon 'spoon') (Above ?jeans ?cup) (LargerThan ?jeans ?cup) (Above ?cup ?spoon) (OnBottomSide ?spoon)))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (forall ?remote (exists ?cup (exists ?spoon (and (Is ?laptop 'laptop') (Above ?laptop ?jeans) (or (not (Is ?remote 'remote')) (Above ?remote ?laptop)) (Is ?jeans 'jeans') (Above ?jeans ?cup) (LargerThan ?jeans ?cup) (Is ?cup 'cup') (Above ?cup ?spoon) (Is ?spoon 'spoon') (OnBottomSide ?spoon)))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "cup",
+        "jeans",
+        "spoon"
+    ]
+}

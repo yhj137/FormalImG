@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a man holding every pair of glasses, with a metal clock next to him.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'man') (forall ?g (implies (Is ?g 'glasses') (Holding ?m ?g))) (exists ?c (and (Is ?c 'clock') (HasMaterial ?c 'metal') (NextTo ?c ?m))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (forall ?g (exists ?c (and (Is ?m 'man') (or (not (Is ?g 'glasses')) (Holding ?m ?g)) (NextTo ?c ?m) (HasMaterial ?c 'metal') (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "glasses",
+        "man"
+    ]
+}

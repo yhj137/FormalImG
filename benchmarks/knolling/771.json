@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a brown handbag located on the bottom side of the image, which is visually larger than a camera. There is also a bowl positioned to the right of the handbag. Additionally, for every set of keys in the image, they are placed to the right of the camera.",
+    "dsl": "(exists ?handbag (exists ?camera (exists ?bowl (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (Is ?camera 'camera') (LargerThan ?handbag ?camera) (Is ?bowl 'bowl') (RightOf ?bowl ?handbag) (forall ?keys (implies (Is ?keys 'keys') (RightOf ?keys ?camera)))))))",
+    "cnf": "(exists ?handbag (exists ?camera (exists ?bowl (forall ?keys (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (LargerThan ?handbag ?camera) (RightOf ?bowl ?handbag) (Is ?camera 'camera') (or (not (Is ?keys 'keys')) (RightOf ?keys ?camera)) (Is ?bowl 'bowl'))))))",
+    "k": 4,
+    "object_classes": [
+        "keys",
+        "bowl",
+        "handbag",
+        "camera"
+    ]
+}

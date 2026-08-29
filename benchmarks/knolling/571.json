@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene specifically includes a red stapler and a gray wrench, with the stapler positioned to the left of the wrench. Furthermore, a rule applies to the lighters: every lighter in the image is smaller than the red stapler and is located to the left of it.",
+    "dsl": "(exists ?stapler (exists ?wrench (and (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?wrench 'wrench') (Has ?wrench 'gray') (LeftOf ?stapler ?wrench) (forall ?lighter (implies (Is ?lighter 'lighter') (and (SmallerThan ?lighter ?stapler) (LeftOf ?lighter ?stapler)))))))",
+    "cnf": "(exists ?stapler (exists ?wrench (forall ?lighter (and (Is ?stapler 'stapler') (Has ?stapler 'red') (LeftOf ?stapler ?wrench) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?stapler)) (Has ?wrench 'gray') (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?stapler)) (Is ?wrench 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "lighter",
+        "stapler"
+    ]
+}

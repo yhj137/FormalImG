@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A wooden bench is located to the left of a bed. A child sits on the bed next to an open backpack containing a round ball. The child holds a metal pan with a banana inside. All shoes are located below the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bed (exists ?bench (exists ?child (exists ?backpack (and (Is ?bed 'bed') (Is ?bench 'bench') (HasMaterial ?bench 'wooden') (LeftOf ?bench ?bed) (Is ?child 'child') (On ?child ?bed) (Is ?backpack 'backpack') (HasState ?backpack 'open') (NextTo ?backpack ?child) (forall ?s (implies (Is ?s 'shoes') (Below ?s ?bed))) (exists ?pan (exists ?banana (exists ?ball (and (Is ?pan 'pan') (HasMaterial ?pan 'metal') (Holding ?child ?pan) (Is ?banana 'banana') (In ?banana ?pan) (Is ?ball 'ball') (HasShape ?ball 'round') (In ?ball ?backpack)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bed (exists ?bench (exists ?child (exists ?backpack (forall ?s (exists ?pan (exists ?banana (exists ?ball (and (Is ?bed 'bed') (LeftOf ?bench ?bed) (On ?child ?bed) (HasMaterial ?bench 'wooden') (or (not (Is ?s 'shoes')) (Below ?s ?bed)) (Is ?child 'child') (NextTo ?backpack ?child) (Is ?bench 'bench') (Holding ?child ?pan) (HasState ?backpack 'open') (In ?ball ?backpack) (HasMaterial ?pan 'metal') (In ?banana ?pan) (Is ?backpack 'backpack') (HasShape ?ball 'round') (Is ?pan 'pan') (Is ?banana 'banana') (Is ?ball 'ball')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "bench",
+        "shoes",
+        "backpack",
+        "bed",
+        "pan",
+        "ball",
+        "banana"
+    ]
+}

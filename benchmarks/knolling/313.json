@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, there exists a yellow ruler that is aligned horizontally with it.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keyboard') (exists ?r (and (Is ?r 'ruler') (Has ?r 'yellow') (AlignedHorizontally ?k ?r))))))",
+    "cnf": "(forall ?k (exists ?r (and (or (not (Is ?k 'keyboard')) (Is ?r 'ruler')) (or (not (Is ?k 'keyboard')) (Has ?r 'yellow')) (or (not (Is ?k 'keyboard')) (AlignedHorizontally ?k ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "keyboard"
+    ]
+}

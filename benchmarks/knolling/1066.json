@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans positioned on the left side of the image. For every glove present in the scene, it is visually smaller than the jeans, and there is a specific column of items arranged above it: a drill is located above the glove, a bottle is above the drill, a pair of scissors is above the bottle, and a pan is positioned above the scissors.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (forall ?glove (implies (Is ?glove 'glove') (exists ?drill (exists ?bottle (exists ?scissors (exists ?pan (and (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?scissors 'scissors') (Is ?pan 'pan') (SmallerThan ?glove ?jeans) (Above ?drill ?glove) (Above ?bottle ?drill) (Above ?scissors ?bottle) (Above ?pan ?scissors))))))))))",
+    "cnf": "(exists ?jeans (forall ?glove (exists ?drill (exists ?bottle (exists ?scissors (exists ?pan (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (or (not (Is ?glove 'glove')) (SmallerThan ?glove ?jeans)) (or (not (Is ?glove 'glove')) (Is ?pan 'pan')) (or (not (Is ?glove 'glove')) (Above ?drill ?glove)) (or (not (Is ?glove 'glove')) (Is ?scissors 'scissors')) (or (not (Is ?glove 'glove')) (Above ?pan ?scissors)) (or (not (Is ?glove 'glove')) (Above ?bottle ?drill)) (or (not (Is ?glove 'glove')) (Is ?drill 'drill')) (or (not (Is ?glove 'glove')) (Is ?bottle 'bottle')) (or (not (Is ?glove 'glove')) (Above ?scissors ?bottle)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "scissors",
+        "jeans",
+        "drill",
+        "glove",
+        "bottle"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art scene featuring a triangular tree.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'tree') (HasShape ?t 'triangular'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'tree') (HasShape ?t 'triangular'))))",
+    "k": 1,
+    "object_classes": [
+        "tree"
+    ]
+}

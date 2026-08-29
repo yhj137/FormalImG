@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene depicts a man holding a hammer, with an elephant to his left and a refrigerator to his right. All rocks are situated below the elephant. A red apple is inside the refrigerator, while a clock rests on top of it. A metal lamp stands next to the refrigerator, with a screwdriver positioned to the right of the lamp.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?e (exists ?r (and (Is ?m 'man') (Is ?e 'elephant') (Is ?r 'refrigerator') (LeftOf ?e ?m) (RightOf ?r ?m) (forall ?rk (implies (Is ?rk 'rock') (Below ?rk ?e))) (exists ?h (exists ?a (exists ?c (exists ?l (exists ?s (and (Is ?h 'hammer') (Holding ?m ?h) (Is ?a 'apple') (HasColor ?a 'red') (In ?a ?r) (Is ?c 'clock') (On ?c ?r) (Is ?l 'lamp') (HasMaterial ?l 'metal') (NextTo ?l ?r) (Is ?s 'screwdriver') (RightOf ?s ?l))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?e (exists ?r (forall ?rk (exists ?h (exists ?a (exists ?c (exists ?l (exists ?s (and (Is ?m 'man') (LeftOf ?e ?m) (RightOf ?r ?m) (Is ?e 'elephant') (or (not (Is ?rk 'rock')) (Below ?rk ?e)) (Holding ?m ?h) (Is ?r 'refrigerator') (In ?a ?r) (Is ?h 'hammer') (On ?c ?r) (HasColor ?a 'red') (NextTo ?l ?r) (Is ?c 'clock') (Is ?a 'apple') (HasMaterial ?l 'metal') (RightOf ?s ?l) (Is ?l 'lamp') (Is ?s 'screwdriver'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "rock",
+        "man",
+        "lamp",
+        "screwdriver",
+        "hammer",
+        "refrigerator",
+        "clock",
+        "apple",
+        "elephant"
+    ]
+}

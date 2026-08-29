@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every man is standing. To the right of each man is a desk, and next to the desk is a bowl containing a fish. To the left of the man is a tree, with a bicycle next to it and a ball next to the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?m (implies (Is ?m 'man') (exists ?d (exists ?b (exists ?f (exists ?t (exists ?bi (exists ?ba (and (Is ?d 'desk') (Is ?b 'bowl') (Is ?f 'fish') (Is ?t 'tree') (Is ?bi 'bicycle') (Is ?ba 'ball') (HasState ?m 'standing') (RightOf ?d ?m) (NextTo ?b ?d) (In ?f ?b) (LeftOf ?t ?m) (NextTo ?bi ?t) (NextTo ?ba ?bi)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?m (exists ?d (exists ?b (exists ?f (exists ?t (exists ?bi (exists ?ba (and (or (not (Is ?m 'man')) (Is ?d 'desk')) (or (not (Is ?m 'man')) (RightOf ?d ?m)) (or (not (Is ?m 'man')) (Is ?b 'bowl')) (or (not (Is ?m 'man')) (NextTo ?b ?d)) (or (not (Is ?m 'man')) (HasState ?m 'standing')) (or (not (Is ?m 'man')) (Is ?f 'fish')) (or (not (Is ?m 'man')) (In ?f ?b)) (or (not (Is ?m 'man')) (Is ?ba 'ball')) (or (not (Is ?m 'man')) (Is ?t 'tree')) (or (not (Is ?m 'man')) (LeftOf ?t ?m)) (or (not (Is ?m 'man')) (Is ?bi 'bicycle')) (or (not (Is ?m 'man')) (NextTo ?ba ?bi)) (or (not (Is ?m 'man')) (NextTo ?bi ?t)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fish",
+        "tree",
+        "man",
+        "desk",
+        "bicycle",
+        "ball",
+        "bowl"
+    ]
+}

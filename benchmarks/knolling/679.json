@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate situated on the top side of the frame, there is a knife placed below it. A lemon is aligned horizontally with the knife, and the knife is positioned above a sock.",
+    "dsl": "(and (forall ?p (implies (and (Is ?p 'plate') (OnTopSide ?p)) (exists ?k (exists ?l (exists ?s (and (Is ?k 'knife') (Is ?l 'lemon') (Is ?s 'sock') (Below ?k ?p) (AlignedHorizontally ?l ?k) (Above ?k ?s))))))))",
+    "cnf": "(forall ?p (exists ?k (exists ?l (exists ?s (and (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?k 'knife')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Below ?k ?p)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?l 'lemon')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (AlignedHorizontally ?l ?k)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?s 'sock')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Above ?k ?s)))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "lemon",
+        "plate",
+        "sock"
+    ]
+}

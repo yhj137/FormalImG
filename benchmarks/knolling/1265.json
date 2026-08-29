@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a camera located on the bottom side of the layout. For every hammer present, there exists a specific surrounding arrangement consisting of pliers, a knife, a fork, a pizza, and a sandwich. The pliers are aligned horizontally with the camera and vertically with the hammer. The hammer forms a horizontal line with the knife and the fork. The knife is aligned vertically with the pizza, and the fork is aligned vertically with the sandwich. The pizza and the sandwich are aligned horizontally with each other. Additionally, the camera is visually smaller than the pizza.",
+    "dsl": "(exists ?cam (and (Is ?cam 'camera') (OnBottomSide ?cam) (forall ?ham (implies (Is ?ham 'hammer') (exists ?pli (exists ?kni (exists ?for (exists ?piz (exists ?san (and (Is ?pli 'pliers') (Is ?kni 'knife') (Is ?for 'fork') (Is ?piz 'pizza') (Is ?san 'sandwich') (AlignedHorizontally ?cam ?pli) (AlignedVertically ?pli ?ham) (AlignedHorizontally ?ham ?kni) (AlignedHorizontally ?kni ?for) (AlignedVertically ?kni ?piz) (AlignedVertically ?for ?san) (AlignedHorizontally ?piz ?san) (SmallerThan ?cam ?piz)))))))))))",
+    "cnf": "(exists ?cam (forall ?ham (exists ?pli (exists ?kni (exists ?for (exists ?piz (exists ?san (and (Is ?cam 'camera') (OnBottomSide ?cam) (or (not (Is ?ham 'hammer')) (AlignedHorizontally ?cam ?pli)) (or (not (Is ?ham 'hammer')) (SmallerThan ?cam ?piz)) (or (not (Is ?ham 'hammer')) (Is ?san 'sandwich')) (or (not (Is ?ham 'hammer')) (AlignedVertically ?pli ?ham)) (or (not (Is ?ham 'hammer')) (Is ?pli 'pliers')) (or (not (Is ?ham 'hammer')) (AlignedHorizontally ?piz ?san)) (or (not (Is ?ham 'hammer')) (Is ?piz 'pizza')) (or (not (Is ?ham 'hammer')) (AlignedVertically ?for ?san)) (or (not (Is ?ham 'hammer')) (AlignedHorizontally ?ham ?kni)) (or (not (Is ?ham 'hammer')) (Is ?kni 'knife')) (or (not (Is ?ham 'hammer')) (AlignedVertically ?kni ?piz)) (or (not (Is ?ham 'hammer')) (Is ?for 'fork')) (or (not (Is ?ham 'hammer')) (AlignedHorizontally ?kni ?for))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hammer",
+        "pizza",
+        "knife",
+        "pliers",
+        "camera",
+        "fork",
+        "sandwich"
+    ]
+}

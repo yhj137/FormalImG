@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a red apple.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

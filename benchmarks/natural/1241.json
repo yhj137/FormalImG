@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. For every monitor, there is a refrigerator located to its right. A woman stands to the right of the refrigerator, holding a phone and a pair of glasses. Additionally, a pan rests on the refrigerator, while a round clock hangs above it.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?m (implies (Is ?m 'monitor') (exists ?r (exists ?w (exists ?p (exists ?g (exists ?pan (exists ?c (and (Is ?r 'refrigerator') (LeftOf ?m ?r) (Is ?w 'woman') (RightOf ?w ?r) (Is ?p 'phone') (Holding ?w ?p) (Is ?g 'glasses') (Holding ?w ?g) (Is ?pan 'pan') (On ?pan ?r) (Is ?c 'clock') (HasShape ?c 'round') (Above ?c ?r)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?m (exists ?r (exists ?w (exists ?p (exists ?g (exists ?pan (exists ?c (and (or (not (Is ?m 'monitor')) (Is ?r 'refrigerator')) (or (not (Is ?m 'monitor')) (LeftOf ?m ?r)) (or (not (Is ?m 'monitor')) (Is ?w 'woman')) (or (not (Is ?m 'monitor')) (RightOf ?w ?r)) (or (not (Is ?m 'monitor')) (Is ?p 'phone')) (or (not (Is ?m 'monitor')) (On ?pan ?r)) (or (not (Is ?m 'monitor')) (Holding ?w ?p)) (or (not (Is ?m 'monitor')) (Is ?pan 'pan')) (or (not (Is ?m 'monitor')) (Is ?c 'clock')) (or (not (Is ?m 'monitor')) (Above ?c ?r)) (or (not (Is ?m 'monitor')) (Is ?g 'glasses')) (or (not (Is ?m 'monitor')) (Holding ?w ?g)) (or (not (Is ?m 'monitor')) (HasShape ?c 'round')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "monitor",
+        "phone",
+        "glasses",
+        "refrigerator",
+        "pan",
+        "clock",
+        "woman"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pair of blue jeans. For every camera in the arrangement, the blue jeans are positioned vertically below it, and there is a white sock located to the left of the camera.",
+    "dsl": "(exists ?j (and (Is ?j 'jeans') (Has ?j 'blue') (forall ?c (implies (Is ?c 'camera') (exists ?s (and (Is ?s 'sock') (Has ?s 'white') (Below ?j ?c) (LeftOf ?s ?c)))))))",
+    "cnf": "(exists ?j (forall ?c (exists ?s (and (Is ?j 'jeans') (Has ?j 'blue') (or (not (Is ?c 'camera')) (Below ?j ?c)) (or (not (Is ?c 'camera')) (Has ?s 'white')) (or (not (Is ?c 'camera')) (LeftOf ?s ?c)) (or (not (Is ?c 'camera')) (Is ?s 'sock'))))))",
+    "k": 3,
+    "object_classes": [
+        "jeans",
+        "sock",
+        "camera"
+    ]
+}

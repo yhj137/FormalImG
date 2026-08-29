@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two vertical columns of objects. The left column contains, from top to bottom, a backpack, black headphones, a drill, a brown shoe, and a ruler. The right column contains a red apple, a donut, a carrot, a knife, and glasses. The backpack is to the left of the apple and is visually larger than it. The donut, carrot, knife, and glasses are located to the right of the headphones, drill, shoe, and ruler, respectively. The ruler and glasses are situated on the bottom side of the arrangement. All objects within each column are aligned vertically.",
+    "dsl": "(exists ?backpack (exists ?headphones (exists ?drill (exists ?shoe (exists ?ruler (exists ?apple (exists ?donut (exists ?carrot (exists ?knife (exists ?glasses (and (Is ?backpack 'backpack') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?drill 'drill') (Is ?shoe 'shoe') (Has ?shoe 'brown') (Is ?ruler 'ruler') (Is ?apple 'apple') (Has ?apple 'red') (Is ?donut 'donut') (Is ?carrot 'carrot') (Is ?knife 'knife') (Is ?glasses 'glasses') (Above ?backpack ?headphones) (Above ?headphones ?drill) (Above ?drill ?shoe) (Above ?shoe ?ruler) (AlignedVertically ?backpack ?headphones) (AlignedVertically ?headphones ?drill) (AlignedVertically ?drill ?shoe) (AlignedVertically ?shoe ?ruler) (Above ?apple ?donut) (Above ?donut ?carrot) (Above ?carrot ?knife) (Above ?knife ?glasses) (AlignedVertically ?apple ?donut) (AlignedVertically ?donut ?carrot) (AlignedVertically ?carrot ?knife) (AlignedVertically ?knife ?glasses) (LeftOf ?backpack ?apple) (RightOf ?donut ?headphones) (RightOf ?carrot ?drill) (RightOf ?knife ?shoe) (RightOf ?glasses ?ruler) (LargerThan ?backpack ?apple) (OnBottomSide ?ruler) (OnBottomSide ?glasses))))))))))))",
+    "cnf": "(exists ?backpack (exists ?headphones (exists ?drill (exists ?shoe (exists ?ruler (exists ?apple (exists ?donut (exists ?carrot (exists ?knife (exists ?glasses (and (Is ?backpack 'backpack') (Above ?backpack ?headphones) (AlignedVertically ?backpack ?headphones) (Has ?headphones 'black') (Above ?headphones ?drill) (LeftOf ?backpack ?apple) (AlignedVertically ?headphones ?drill) (Is ?headphones 'headphones') (Is ?drill 'drill') (Above ?drill ?shoe) (LargerThan ?backpack ?apple) (AlignedVertically ?apple ?donut) (RightOf ?donut ?headphones) (AlignedVertically ?drill ?shoe) (Has ?shoe 'brown') (Above ?shoe ?ruler) (Above ?apple ?donut) (Above ?donut ?carrot) (AlignedVertically ?donut ?carrot) (RightOf ?carrot ?drill) (AlignedVertically ?shoe ?ruler) (Is ?shoe 'shoe') (Is ?ruler 'ruler') (Has ?apple 'red') (Is ?donut 'donut') (Is ?carrot 'carrot') (Above ?carrot ?knife) (AlignedVertically ?carrot ?knife) (RightOf ?knife ?shoe) (RightOf ?glasses ?ruler) (Is ?apple 'apple') (Is ?knife 'knife') (Above ?knife ?glasses) (AlignedVertically ?knife ?glasses) (OnBottomSide ?ruler) (OnBottomSide ?glasses) (Is ?glasses 'glasses'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "apple",
+        "carrot",
+        "drill",
+        "backpack",
+        "knife",
+        "headphones",
+        "shoe",
+        "donut"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a brown horse standing next to a bench to its left. A cake with a fork inside sits on the bench, and every cup is positioned to the right of the cake.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?ck (exists ?f (and (Is ?b 'bench') (Is ?h 'horse') (HasColor ?h 'brown') (HasState ?h 'standing') (NextTo ?h ?b) (LeftOf ?b ?h) (Is ?ck 'cake') (On ?ck ?b) (Is ?f 'fork') (In ?f ?ck) (forall ?cp (implies (Is ?cp 'cup') (RightOf ?cp ?ck)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?ck (exists ?f (forall ?cp (and (Is ?b 'bench') (NextTo ?h ?b) (LeftOf ?b ?h) (HasState ?h 'standing') (On ?ck ?b) (HasColor ?h 'brown') (Is ?ck 'cake') (In ?f ?ck) (Is ?h 'horse') (or (not (Is ?cp 'cup')) (RightOf ?cp ?ck)) (Is ?f 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "fork",
+        "horse",
+        "cake",
+        "cup"
+    ]
+}

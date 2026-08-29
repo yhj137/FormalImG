@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical arrangement of items. At the top is a black hammer. Directly below the hammer is a blue bottle, which is smaller than the hammer. Below the bottle lies a white glove. Underneath the glove is a red stapler, which is smaller than the glove. Below the stapler is a gray knife. Finally, for every carrot in the image, it is located below the knife and is smaller than the knife.",
+    "dsl": "(exists ?hammer (exists ?bottle (exists ?glove (exists ?stapler (exists ?knife (and (Is ?hammer 'hammer') (Has ?hammer 'black') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?glove 'glove') (Has ?glove 'white') (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?knife 'knife') (Has ?knife 'gray') (Below ?bottle ?hammer) (SmallerThan ?bottle ?hammer) (Below ?glove ?bottle) (Below ?stapler ?glove) (SmallerThan ?stapler ?glove) (Below ?knife ?stapler) (forall ?carrot (implies (Is ?carrot 'carrot') (and (Below ?carrot ?knife) (SmallerThan ?carrot ?knife))))))))))",
+    "cnf": "(exists ?hammer (exists ?bottle (exists ?glove (exists ?stapler (exists ?knife (forall ?carrot (and (Is ?hammer 'hammer') (Has ?hammer 'black') (Below ?bottle ?hammer) (SmallerThan ?bottle ?hammer) (Has ?bottle 'blue') (Below ?glove ?bottle) (Is ?bottle 'bottle') (Has ?glove 'white') (Below ?stapler ?glove) (Is ?glove 'glove') (SmallerThan ?stapler ?glove) (Has ?stapler 'red') (Below ?knife ?stapler) (Is ?stapler 'stapler') (Has ?knife 'gray') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?knife)) (Is ?knife 'knife') (or (not (Is ?carrot 'carrot')) (SmallerThan ?carrot ?knife)))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "carrot",
+        "hammer",
+        "knife",
+        "bottle",
+        "glove"
+    ]
+}

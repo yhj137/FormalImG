@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene depicts a woman inside a rusty boat. An orange is located next to the woman, with a fork positioned to its left. Additionally, every key in the scene rests on the boat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'boat') (HasState ?b 'rusty') (exists ?w (and (Is ?w 'woman') (In ?w ?b) (exists ?o (and (Is ?o 'orange') (NextTo ?o ?w) (exists ?f (and (Is ?f 'fork') (LeftOf ?f ?o) (forall ?k (implies (Is ?k 'key') (On ?k ?b))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?w (exists ?o (exists ?f (forall ?k (and (Is ?b 'boat') (HasState ?b 'rusty') (In ?w ?b) (or (not (Is ?k 'key')) (On ?k ?b)) (Is ?w 'woman') (NextTo ?o ?w) (Is ?o 'orange') (LeftOf ?f ?o) (Is ?f 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "key",
+        "fork",
+        "woman",
+        "boat",
+        "orange"
+    ]
+}

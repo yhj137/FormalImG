@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a backpack, a keyboard, a game controller, a plate, a sandwich, a lemon, and a cup. The keyboard is positioned to the right of the backpack, and the game controller is to the right of the keyboard. The plate is vertically aligned with the backpack, and the backpack is physically larger than the plate. The sandwich is located to the right of the plate and is vertically aligned with the keyboard. The lemon is positioned to the right of the sandwich and vertically aligned with the game controller. The cup is situated on the right side of the image, to the right of the lemon. Furthermore, for every knife in the scene, it is located to the right of the plate.",
+    "dsl": "(exists ?backpack (exists ?keyboard (exists ?game_controller (exists ?plate (exists ?sandwich (exists ?lemon (exists ?cup (and (Is ?backpack 'backpack') (Is ?keyboard 'keyboard') (Is ?game_controller 'game_controller') (Is ?plate 'plate') (Is ?sandwich 'sandwich') (Is ?lemon 'lemon') (Is ?cup 'cup') (RightOf ?keyboard ?backpack) (RightOf ?game_controller ?keyboard) (AlignedVertically ?plate ?backpack) (LargerThan ?backpack ?plate) (RightOf ?sandwich ?plate) (AlignedVertically ?sandwich ?keyboard) (RightOf ?lemon ?sandwich) (AlignedVertically ?lemon ?game_controller) (OnRightSide ?cup) (RightOf ?cup ?lemon) (forall ?knife (implies (Is ?knife 'knife') (RightOf ?knife ?plate)))))))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (exists ?game_controller (exists ?plate (exists ?sandwich (exists ?lemon (exists ?cup (forall ?knife (and (Is ?backpack 'backpack') (RightOf ?keyboard ?backpack) (AlignedVertically ?plate ?backpack) (Is ?keyboard 'keyboard') (RightOf ?game_controller ?keyboard) (LargerThan ?backpack ?plate) (Is ?plate 'plate') (AlignedVertically ?sandwich ?keyboard) (Is ?game_controller 'game_controller') (AlignedVertically ?lemon ?game_controller) (RightOf ?sandwich ?plate) (RightOf ?lemon ?sandwich) (RightOf ?cup ?lemon) (or (not (Is ?knife 'knife')) (RightOf ?knife ?plate)) (Is ?sandwich 'sandwich') (Is ?lemon 'lemon') (OnRightSide ?cup) (Is ?cup 'cup'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "keyboard",
+        "lemon",
+        "cup",
+        "game_controller",
+        "backpack",
+        "knife",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pizza located on the left side of the layout. For every shirt in the image, it is positioned below that pizza.",
+    "dsl": "(exists ?p (and (Is ?p 'pizza') (OnLeftSide ?p) (forall ?s (implies (Is ?s 'shirt') (Below ?s ?p)))))",
+    "cnf": "(exists ?p (forall ?s (and (Is ?p 'pizza') (OnLeftSide ?p) (or (not (Is ?s 'shirt')) (Below ?s ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "shirt"
+    ]
+}

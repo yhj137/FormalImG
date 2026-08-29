@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is holding a rectangular keyboard. There is a spoon resting on the keyboard.",
+    "dsl": "(exists ?c (exists ?k (exists ?s (and (Is ?c 'child') (Is ?k 'keyboard') (Is ?s 'spoon') (HasShape ?k 'rectangular') (Holding ?c ?k) (On ?s ?k)))))",
+    "cnf": "(exists ?c (exists ?k (exists ?s (and (Is ?c 'child') (Holding ?c ?k) (HasShape ?k 'rectangular') (On ?s ?k) (Is ?k 'keyboard') (Is ?s 'spoon')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "child",
+        "keyboard"
+    ]
+}

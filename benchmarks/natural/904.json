@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. The scene depicts the interior of a house where there is an open refrigerator. All flowers visible in the scene are positioned to the left of the refrigerator. A rug is located to the right of the refrigerator, and there is a pizza stored inside the refrigerator.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (In ?r ?h) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?r))) (exists ?u (and (Is ?u 'rug') (RightOf ?u ?r) (exists ?p (and (Is ?p 'pizza') (In ?p ?r))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?r (forall ?f (exists ?u (exists ?p (and (Is ?h 'house') (In ?r ?h) (HasState ?r 'open') (or (not (Is ?f 'flower')) (LeftOf ?f ?r)) (Is ?r 'refrigerator') (RightOf ?u ?r) (In ?p ?r) (Is ?u 'rug') (Is ?p 'pizza'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "rug",
+        "pizza",
+        "flower",
+        "refrigerator"
+    ]
+}

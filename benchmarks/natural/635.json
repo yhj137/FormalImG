@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a red bus. To the right of the bus, there is a mirror. A wooden basket is located to the right of the mirror, and inside the basket is a pizza.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bus (exists ?mirror (exists ?basket (exists ?pizza (and (Is ?bus 'bus') (HasColor ?bus 'red') (Is ?mirror 'mirror') (RightOf ?mirror ?bus) (Is ?basket 'basket') (HasMaterial ?basket 'wooden') (RightOf ?basket ?mirror) (Is ?pizza 'pizza') (In ?pizza ?basket)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bus (exists ?mirror (exists ?basket (exists ?pizza (and (Is ?bus 'bus') (HasColor ?bus 'red') (RightOf ?mirror ?bus) (Is ?mirror 'mirror') (RightOf ?basket ?mirror) (HasMaterial ?basket 'wooden') (In ?pizza ?basket) (Is ?basket 'basket') (Is ?pizza 'pizza')))))))",
+    "k": 4,
+    "object_classes": [
+        "mirror",
+        "pizza",
+        "bus",
+        "basket"
+    ]
+}

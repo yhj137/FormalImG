@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the scene, it is positioned on the left side. There is a donut located below the plate, and an apple located below the donut. Additionally, a watch is positioned on the right side of the image and is horizontally aligned with the plate.",
+    "dsl": "(forall ?plate (implies (Is ?plate 'plate') (exists ?donut (exists ?apple (exists ?watch (and (Is ?donut 'donut') (Is ?apple 'apple') (Is ?watch 'watch') (OnLeftSide ?plate) (Below ?donut ?plate) (Below ?apple ?donut) (OnRightSide ?watch) (AlignedHorizontally ?watch ?plate)))))))",
+    "cnf": "(forall ?plate (exists ?donut (exists ?apple (exists ?watch (and (or (not (Is ?plate 'plate')) (Is ?donut 'donut')) (or (not (Is ?plate 'plate')) (Is ?apple 'apple')) (or (not (Is ?plate 'plate')) (Below ?donut ?plate)) (or (not (Is ?plate 'plate')) (Is ?watch 'watch')) (or (not (Is ?plate 'plate')) (Below ?apple ?donut)) (or (not (Is ?plate 'plate')) (OnLeftSide ?plate)) (or (not (Is ?plate 'plate')) (OnRightSide ?watch)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?watch ?plate)))))))",
+    "k": 4,
+    "object_classes": [
+        "plate",
+        "apple",
+        "donut",
+        "watch"
+    ]
+}

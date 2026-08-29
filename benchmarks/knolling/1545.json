@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a suitcase positioned on the left side. To the right of the suitcase is a shirt. A tie, which is smaller than the shirt, is aligned vertically with it. Headphones are placed on the top side of the layout, with the shirt located below them. A wallet is positioned below the shirt. For every fork present, there is a pair of glasses directly above it and a bowl to its right. The headphones and the glasses are aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?tie (exists ?headphones (exists ?wallet (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?shirt 'shirt') (LeftOf ?suitcase ?shirt) (Is ?tie 'tie') (SmallerThan ?tie ?shirt) (AlignedVertically ?tie ?shirt) (Is ?headphones 'headphones') (OnTopSide ?headphones) (Below ?shirt ?headphones) (Is ?wallet 'wallet') (Below ?wallet ?shirt) (forall ?fork (implies (Is ?fork 'fork') (exists ?bowl (exists ?glasses (and (Is ?bowl 'bowl') (Is ?glasses 'glasses') (LeftOf ?fork ?bowl) (Below ?fork ?glasses) (AlignedHorizontally ?headphones ?glasses))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?tie (exists ?headphones (exists ?wallet (forall ?fork (exists ?bowl (exists ?glasses (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?shirt) (Is ?shirt 'shirt') (SmallerThan ?tie ?shirt) (AlignedVertically ?tie ?shirt) (Is ?tie 'tie') (Below ?shirt ?headphones) (Below ?wallet ?shirt) (OnTopSide ?headphones) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?headphones ?glasses)) (Is ?wallet 'wallet') (Is ?headphones 'headphones') (or (not (Is ?fork 'fork')) (Below ?fork ?glasses)) (or (not (Is ?fork 'fork')) (LeftOf ?fork ?bowl)) (or (not (Is ?fork 'fork')) (Is ?glasses 'glasses')) (or (not (Is ?fork 'fork')) (Is ?bowl 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "fork",
+        "wallet",
+        "bowl",
+        "headphones",
+        "suitcase",
+        "shirt"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing eight items arranged in two parallel horizontal rows. The top row features a bottle, a pen, a remote, and a lighter, positioned sequentially from left to right and aligned horizontally. The bottom row contains headphones, a stapler, a knife, and a lemon, also positioned sequentially from left to right and aligned horizontally. There is a precise vertical alignment between the rows: the bottle aligns with the headphones, the pen with the stapler, the remote with the knife, and the lighter with the lemon. Additionally, the lighter and the lemon are located on the right side of the image.",
+    "dsl": "(exists ?bottle (exists ?pen (exists ?remote (exists ?lighter (exists ?headphones (exists ?stapler (exists ?knife (exists ?lemon (and (Is ?bottle 'bottle') (Is ?pen 'pen') (Is ?remote 'remote') (Is ?lighter 'lighter') (Is ?headphones 'headphones') (Is ?stapler 'stapler') (Is ?knife 'knife') (Is ?lemon 'lemon') (RightOf ?pen ?bottle) (RightOf ?remote ?pen) (RightOf ?lighter ?remote) (RightOf ?stapler ?headphones) (RightOf ?knife ?stapler) (RightOf ?lemon ?knife) (AlignedHorizontally ?bottle ?pen) (AlignedHorizontally ?pen ?remote) (AlignedHorizontally ?remote ?lighter) (AlignedHorizontally ?headphones ?stapler) (AlignedHorizontally ?stapler ?knife) (AlignedHorizontally ?knife ?lemon) (AlignedVertically ?bottle ?headphones) (AlignedVertically ?pen ?stapler) (AlignedVertically ?remote ?knife) (AlignedVertically ?lighter ?lemon) (OnRightSide ?lighter) (OnRightSide ?lemon))))))))))",
+    "cnf": "(exists ?bottle (exists ?pen (exists ?remote (exists ?lighter (exists ?headphones (exists ?stapler (exists ?knife (exists ?lemon (and (Is ?bottle 'bottle') (RightOf ?pen ?bottle) (AlignedHorizontally ?bottle ?pen) (Is ?pen 'pen') (RightOf ?remote ?pen) (AlignedVertically ?bottle ?headphones) (AlignedHorizontally ?pen ?remote) (Is ?remote 'remote') (RightOf ?lighter ?remote) (AlignedHorizontally ?headphones ?stapler) (AlignedVertically ?pen ?stapler) (AlignedHorizontally ?remote ?lighter) (Is ?lighter 'lighter') (RightOf ?stapler ?headphones) (RightOf ?knife ?stapler) (AlignedHorizontally ?stapler ?knife) (AlignedVertically ?remote ?knife) (AlignedVertically ?lighter ?lemon) (Is ?headphones 'headphones') (Is ?stapler 'stapler') (Is ?knife 'knife') (RightOf ?lemon ?knife) (AlignedHorizontally ?knife ?lemon) (OnRightSide ?lighter) (OnRightSide ?lemon) (Is ?lemon 'lemon'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "stapler",
+        "pen",
+        "lemon",
+        "lighter",
+        "knife",
+        "bottle",
+        "headphones"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This photo depicts a lion to the right of a monitor. A teddy bear holding a plastic umbrella sits on the monitor. A round clock and all shoes are next to the lion.",
+    "dsl": "(and (IsStyle 'photo') (exists ?l (exists ?m (exists ?tb (and (Is ?l 'lion') (Is ?m 'monitor') (Is ?tb 'teddy bear') (RightOf ?l ?m) (On ?tb ?m) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?l))) (exists ?u (exists ?c (and (Is ?u 'umbrella') (Is ?c 'clock') (HasMaterial ?u 'plastic') (Holding ?tb ?u) (HasShape ?c 'round') (NextTo ?c ?l)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?l (exists ?m (exists ?tb (forall ?s (exists ?u (exists ?c (and (Is ?l 'lion') (RightOf ?l ?m) (or (not (Is ?s 'shoes')) (NextTo ?s ?l)) (Is ?m 'monitor') (On ?tb ?m) (NextTo ?c ?l) (Is ?tb 'teddy bear') (Holding ?tb ?u) (HasShape ?c 'round') (HasMaterial ?u 'plastic') (Is ?c 'clock') (Is ?u 'umbrella')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "monitor",
+        "shoes",
+        "teddy bear",
+        "clock",
+        "lion"
+    ]
+}

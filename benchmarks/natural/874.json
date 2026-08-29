@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This oil painting features a wooden bench where every bird in the scene is perched. A book rests on the bench with a sandwich on top of it, and a pan sits to the right of the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (forall ?bi (implies (Is ?bi 'bird') (On ?bi ?b))) (exists ?bk (exists ?s (exists ?p (and (Is ?bk 'book') (Is ?s 'sandwich') (Is ?p 'pan') (On ?bk ?b) (On ?s ?bk) (RightOf ?p ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?bi (exists ?bk (exists ?s (exists ?p (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (or (not (Is ?bi 'bird')) (On ?bi ?b)) (On ?bk ?b) (RightOf ?p ?b) (Is ?bk 'book') (On ?s ?bk) (Is ?p 'pan') (Is ?s 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "book",
+        "bird",
+        "pan",
+        "sandwich"
+    ]
+}

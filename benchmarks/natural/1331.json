@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring an open refrigerator with a plant to its left. A child stands next to the refrigerator, holding a wet umbrella. All shoes are positioned to the left of the plant. Inside the refrigerator, there is a cake and a fish.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?p (exists ?c (exists ?u (and (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?p 'plant') (LeftOf ?p ?r) (Is ?c 'child') (NextTo ?c ?r) (Is ?u 'umbrella') (HasState ?u 'wet') (Holding ?c ?u) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?p))) (exists ?k (exists ?f (and (Is ?k 'cake') (In ?k ?r) (Is ?f 'fish') (In ?f ?r))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?p (exists ?c (exists ?u (forall ?s (exists ?k (exists ?f (and (Is ?r 'refrigerator') (HasState ?r 'open') (LeftOf ?p ?r) (NextTo ?c ?r) (Is ?p 'plant') (or (not (Is ?s 'shoes')) (LeftOf ?s ?p)) (In ?k ?r) (Is ?c 'child') (Holding ?c ?u) (In ?f ?r) (Is ?k 'cake') (HasState ?u 'wet') (Is ?f 'fish') (Is ?u 'umbrella'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "plant",
+        "fish",
+        "cake",
+        "shoes",
+        "refrigerator",
+        "child"
+    ]
+}

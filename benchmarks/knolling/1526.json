@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the image, there is a backpack, a shoe, a tie, and a wrench, arranged horizontally from left to right. The layout implies a rule: for every bowl in the scene, there is a fork to its right, a bottle to the right of the fork, and a phone to the right of the bottle, forming a horizontal alignment. Additionally, the backpack is visually larger than the bowl.",
+    "dsl": "(exists ?backpack (exists ?shoe (exists ?tie (exists ?wrench (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?shoe 'shoe') (OnTopSide ?shoe) (RightOf ?shoe ?backpack) (AlignedHorizontally ?backpack ?shoe) (Is ?tie 'tie') (OnTopSide ?tie) (RightOf ?tie ?shoe) (AlignedHorizontally ?shoe ?tie) (Is ?wrench 'wrench') (OnTopSide ?wrench) (RightOf ?wrench ?tie) (AlignedHorizontally ?tie ?wrench) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?fork (exists ?bottle (exists ?phone (and (Is ?fork 'fork') (RightOf ?fork ?bowl) (AlignedHorizontally ?bowl ?fork) (Is ?bottle 'bottle') (RightOf ?bottle ?fork) (AlignedHorizontally ?fork ?bottle) (Is ?phone 'phone') (RightOf ?phone ?bottle) (AlignedHorizontally ?bottle ?phone) (LargerThan ?backpack ?bowl))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shoe (exists ?tie (exists ?wrench (forall ?bowl (exists ?fork (exists ?bottle (exists ?phone (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?shoe ?backpack) (AlignedHorizontally ?backpack ?shoe) (OnTopSide ?shoe) (or (not (Is ?bowl 'bowl')) (LargerThan ?backpack ?bowl)) (RightOf ?tie ?shoe) (Is ?shoe 'shoe') (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?bottle ?phone)) (AlignedHorizontally ?shoe ?tie) (OnTopSide ?tie) (or (not (Is ?bowl 'bowl')) (RightOf ?phone ?bottle)) (RightOf ?wrench ?tie) (Is ?tie 'tie') (or (not (Is ?bowl 'bowl')) (Is ?phone 'phone')) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?fork ?bottle)) (AlignedHorizontally ?tie ?wrench) (OnTopSide ?wrench) (or (not (Is ?bowl 'bowl')) (RightOf ?bottle ?fork)) (Is ?wrench 'wrench') (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?bowl ?fork)) (or (not (Is ?bowl 'bowl')) (Is ?bottle 'bottle')) (or (not (Is ?bowl 'bowl')) (RightOf ?fork ?bowl)) (or (not (Is ?bowl 'bowl')) (Is ?fork 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "wrench",
+        "phone",
+        "fork",
+        "backpack",
+        "bottle",
+        "bowl",
+        "shoe"
+    ]
+}

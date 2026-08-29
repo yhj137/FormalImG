@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the right side of the scene. To the left of the monitor sits a phone, while a bowl is placed above the phone. Additionally, every calculator in the image is positioned to the left of the bowl.",
+    "dsl": "(exists ?monitor (exists ?phone (exists ?bowl (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?phone 'phone') (LeftOf ?phone ?monitor) (Is ?bowl 'bowl') (Above ?bowl ?phone) (forall ?calc (implies (Is ?calc 'calculator') (LeftOf ?calc ?bowl)))))))",
+    "cnf": "(exists ?monitor (exists ?phone (exists ?bowl (forall ?calc (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (LeftOf ?phone ?monitor) (Is ?phone 'phone') (Above ?bowl ?phone) (Is ?bowl 'bowl') (or (not (Is ?calc 'calculator')) (LeftOf ?calc ?bowl)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "bowl",
+        "phone",
+        "calculator"
+    ]
+}

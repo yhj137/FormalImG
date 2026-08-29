@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring headphones, scissors, a knife, a cutting board, a bowl, and a donut arranged in a sequence. The scissors are positioned to the right of the headphones, the knife is to the right of the scissors, the cutting board is to the right of the knife, the bowl is to the right of the cutting board, and the donut is to the right of the bowl. The cutting board is located on the bottom side of the image. In terms of size, the headphones are larger than the scissors, the cutting board is larger than the knife, and the donut is smaller than the bowl.",
+    "dsl": "(exists ?hp (exists ?sc (exists ?kn (exists ?cb (exists ?bo (exists ?do (and (Is ?hp 'headphones') (Is ?sc 'scissors') (Is ?kn 'knife') (Is ?cb 'cutting_board') (Is ?bo 'bowl') (Is ?do 'donut') (RightOf ?sc ?hp) (RightOf ?kn ?sc) (RightOf ?cb ?kn) (RightOf ?bo ?cb) (RightOf ?do ?bo) (OnBottomSide ?cb) (LargerThan ?hp ?sc) (LargerThan ?cb ?kn) (SmallerThan ?do ?bo))))))))",
+    "cnf": "(exists ?hp (exists ?sc (exists ?kn (exists ?cb (exists ?bo (exists ?do (and (Is ?hp 'headphones') (RightOf ?sc ?hp) (LargerThan ?hp ?sc) (Is ?sc 'scissors') (RightOf ?kn ?sc) (Is ?kn 'knife') (RightOf ?cb ?kn) (LargerThan ?cb ?kn) (Is ?cb 'cutting_board') (RightOf ?bo ?cb) (OnBottomSide ?cb) (Is ?bo 'bowl') (RightOf ?do ?bo) (SmallerThan ?do ?bo) (Is ?do 'donut'))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "scissors",
+        "knife",
+        "headphones",
+        "cutting_board",
+        "donut"
+    ]
+}

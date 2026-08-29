@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is an apple located on the left side of the scene, and every pizza present in the image is aligned vertically with that apple.",
+    "dsl": "(exists ?a (and (Is ?a 'apple') (OnLeftSide ?a) (forall ?p (implies (Is ?p 'pizza') (AlignedVertically ?a ?p)))))",
+    "cnf": "(exists ?a (forall ?p (and (Is ?a 'apple') (OnLeftSide ?a) (or (not (Is ?p 'pizza')) (AlignedVertically ?a ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "apple"
+    ]
+}

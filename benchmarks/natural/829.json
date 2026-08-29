@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a man holding a triangular sandwich beside a rusty car. A bookshelf with shoes on it stands to the left of the car.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?sa (exists ?c (exists ?b (exists ?sh (and (Is ?m 'man') (Is ?sa 'sandwich') (Is ?c 'car') (Is ?b 'bookshelf') (Is ?sh 'shoes') (HasShape ?sa 'triangular') (HasState ?c 'rusty') (Holding ?m ?sa) (NextTo ?m ?c) (LeftOf ?b ?c) (On ?sh ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?sa (exists ?c (exists ?b (exists ?sh (and (Is ?m 'man') (Holding ?m ?sa) (NextTo ?m ?c) (HasShape ?sa 'triangular') (HasState ?c 'rusty') (LeftOf ?b ?c) (Is ?sa 'sandwich') (Is ?c 'car') (Is ?b 'bookshelf') (On ?sh ?b) (Is ?sh 'shoes'))))))))",
+    "k": 5,
+    "object_classes": [
+        "man",
+        "sandwich",
+        "shoes",
+        "bookshelf",
+        "car"
+    ]
+}

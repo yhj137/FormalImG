@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a man holding a smiling child next to an open refrigerator. A bus is located next to the refrigerator, and every car in the scene is positioned next to the bus. A desk also stands next to the refrigerator, supporting a laptop, a keyboard, and a lamp that is turned on. A chair sits beside the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?m (and (Is ?b 'bus') (Is ?m 'man') (forall ?c (implies (Is ?c 'car') (NextTo ?c ?b))) (exists ?ch (exists ?r (exists ?d (exists ?l (exists ?k (exists ?la (exists ?chr (and (Is ?ch 'child') (Is ?r 'refrigerator') (Is ?d 'desk') (Is ?l 'laptop') (Is ?k 'keyboard') (Is ?la 'lamp') (Is ?chr 'chair') (HasState ?ch 'smiling') (HasState ?r 'open') (HasState ?la 'on') (Holding ?m ?ch) (NextTo ?m ?r) (NextTo ?r ?b) (NextTo ?d ?r) (On ?l ?d) (On ?k ?d) (On ?la ?d) (NextTo ?chr ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?m (forall ?c (exists ?ch (exists ?r (exists ?d (exists ?l (exists ?k (exists ?la (exists ?chr (and (Is ?b 'bus') (or (not (Is ?c 'car')) (NextTo ?c ?b)) (NextTo ?r ?b) (NextTo ?m ?r) (NextTo ?d ?r) (Holding ?m ?ch) (HasState ?r 'open') (Is ?d 'desk') (On ?l ?d) (Is ?m 'man') (HasState ?ch 'smiling') (Is ?r 'refrigerator') (On ?k ?d) (Is ?l 'laptop') (Is ?ch 'child') (On ?la ?d) (Is ?k 'keyboard') (NextTo ?chr ?d) (HasState ?la 'on') (Is ?chr 'chair') (Is ?la 'lamp')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "man",
+        "desk",
+        "bus",
+        "laptop",
+        "lamp",
+        "chair",
+        "refrigerator",
+        "child",
+        "car"
+    ]
+}

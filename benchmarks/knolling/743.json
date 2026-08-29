@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pizza positioned on the left side. Located to the right of the pizza is a mouse. Furthermore, for every pen in the image, the pen is situated to the left of the mouse, and there is a spoon to the right of that pen.",
+    "dsl": "(exists ?pizza (exists ?mouse (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (Is ?mouse 'mouse') (RightOf ?mouse ?pizza) (forall ?pen (implies (Is ?pen 'pen') (exists ?spoon (and (Is ?spoon 'spoon') (LeftOf ?pen ?mouse) (RightOf ?spoon ?pen))))))))",
+    "cnf": "(exists ?pizza (exists ?mouse (forall ?pen (exists ?spoon (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (RightOf ?mouse ?pizza) (Is ?mouse 'mouse') (or (not (Is ?pen 'pen')) (LeftOf ?pen ?mouse)) (or (not (Is ?pen 'pen')) (Is ?spoon 'spoon')) (or (not (Is ?pen 'pen')) (RightOf ?spoon ?pen)))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "pen",
+        "pizza",
+        "mouse"
+    ]
+}

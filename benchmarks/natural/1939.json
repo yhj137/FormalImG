@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style image. A boat is located next to a tree. Inside the boat, a man holds a sandwich, accompanied by an open red umbrella and a metal screwdriver. Every bicycle is positioned next to the tree, and beside each bicycle stands a wooden table with an empty bottle and a phone on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bt (exists ?tr (exists ?m (exists ?sw (exists ?um (exists ?sd (and (Is ?bt 'boat') (Is ?tr 'tree') (NextTo ?bt ?tr) (Is ?m 'man') (In ?m ?bt) (Is ?sw 'sandwich') (Holding ?m ?sw) (Is ?um 'umbrella') (HasColor ?um 'red') (HasState ?um 'open') (In ?um ?bt) (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (In ?sd ?bt) (forall ?bc (implies (Is ?bc 'bicycle') (exists ?tbl (exists ?bot (exists ?ph (and (NextTo ?bc ?tr) (Is ?tbl 'table') (HasMaterial ?tbl 'wooden') (NextTo ?tbl ?bc) (Is ?bot 'bottle') (HasState ?bot 'empty') (On ?bot ?tbl) (Is ?ph 'phone') (On ?ph ?tbl)))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bt (exists ?tr (exists ?m (exists ?sw (exists ?um (exists ?sd (forall ?bc (exists ?tbl (exists ?bot (exists ?ph (and (Is ?bt 'boat') (NextTo ?bt ?tr) (In ?m ?bt) (Is ?tr 'tree') (or (not (Is ?bc 'bicycle')) (NextTo ?bc ?tr)) (In ?um ?bt) (Is ?m 'man') (Holding ?m ?sw) (or (not (Is ?bc 'bicycle')) (Is ?tbl 'table')) (In ?sd ?bt) (HasState ?um 'open') (Is ?sw 'sandwich') (or (not (Is ?bc 'bicycle')) (HasMaterial ?tbl 'wooden')) (HasMaterial ?sd 'metal') (HasColor ?um 'red') (or (not (Is ?bc 'bicycle')) (NextTo ?tbl ?bc)) (Is ?sd 'screwdriver') (Is ?um 'umbrella') (or (not (Is ?bc 'bicycle')) (Is ?bot 'bottle')) (or (not (Is ?bc 'bicycle')) (On ?bot ?tbl)) (or (not (Is ?bc 'bicycle')) (HasState ?bot 'empty')) (or (not (Is ?bc 'bicycle')) (Is ?ph 'phone')) (or (not (Is ?bc 'bicycle')) (On ?ph ?tbl))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "phone",
+        "bottle",
+        "tree",
+        "man",
+        "table",
+        "bicycle",
+        "sandwich",
+        "boat",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring a chair with a pan on it. Inside the pan, there is a fish. To the right of the chair, a child is standing and holding a toy car.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?ch (exists ?p (exists ?f (exists ?c (exists ?tc (and (Is ?ch 'chair') (Is ?p 'pan') (Is ?f 'fish') (Is ?c 'child') (Is ?tc 'toy car') (On ?p ?ch) (In ?f ?p) (RightOf ?c ?ch) (HasState ?c 'standing') (Holding ?c ?tc))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?ch (exists ?p (exists ?f (exists ?c (exists ?tc (and (Is ?ch 'chair') (On ?p ?ch) (RightOf ?c ?ch) (Is ?p 'pan') (In ?f ?p) (Is ?c 'child') (HasState ?c 'standing') (Is ?f 'fish') (Holding ?c ?tc) (Is ?tc 'toy car'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fish",
+        "child",
+        "chair",
+        "toy car",
+        "pan"
+    ]
+}

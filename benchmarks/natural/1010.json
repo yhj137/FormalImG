@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A broken mirror is on the left. To the right of the mirror is an elephant with a fluffy teddy bear on it. To the right of the elephant is a cup containing a key, and a fish is to the right of the cup.",
+    "dsl": "(exists ?m (exists ?e (exists ?t (exists ?c (exists ?k (exists ?f (and (Is ?m 'mirror') (HasState ?m 'broken') (Is ?e 'elephant') (RightOf ?e ?m) (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (On ?t ?e) (Is ?c 'cup') (RightOf ?c ?e) (Is ?k 'key') (In ?k ?c) (Is ?f 'fish') (RightOf ?f ?c))))))))",
+    "cnf": "(exists ?m (exists ?e (exists ?t (exists ?c (exists ?k (exists ?f (and (Is ?m 'mirror') (HasState ?m 'broken') (RightOf ?e ?m) (Is ?e 'elephant') (On ?t ?e) (RightOf ?c ?e) (HasMaterial ?t 'fluffy') (Is ?c 'cup') (In ?k ?c) (Is ?t 'teddy bear') (RightOf ?f ?c) (Is ?k 'key') (Is ?f 'fish'))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "fish",
+        "teddy bear",
+        "cup",
+        "mirror",
+        "elephant"
+    ]
+}

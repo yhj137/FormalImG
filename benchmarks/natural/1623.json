@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Next to every boat is a wooden house. Inside the boat, a woman holds a metal fork, and there is a red rug. Resting on the rug are a pair of glasses and a round plate with a fish on it, while a round ball is next to the rug.",
+    "dsl": "(forall ?b (implies (Is ?b 'boat') (exists ?h (exists ?w (exists ?f (exists ?r (exists ?p (exists ?fi (exists ?g (exists ?ba (and (Is ?h 'house') (HasMaterial ?h 'wooden') (NextTo ?b ?h) (Is ?w 'woman') (In ?w ?b) (Is ?f 'fork') (HasMaterial ?f 'metal') (Holding ?w ?f) (Is ?r 'rug') (HasColor ?r 'red') (In ?r ?b) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?r) (Is ?fi 'fish') (On ?fi ?p) (Is ?g 'glasses') (On ?g ?r) (Is ?ba 'ball') (HasShape ?ba 'round') (NextTo ?ba ?r))))))))))))",
+    "cnf": "(forall ?b (exists ?h (exists ?w (exists ?f (exists ?r (exists ?p (exists ?fi (exists ?g (exists ?ba (and (or (not (Is ?b 'boat')) (Is ?h 'house')) (or (not (Is ?b 'boat')) (HasMaterial ?h 'wooden')) (or (not (Is ?b 'boat')) (NextTo ?b ?h)) (or (not (Is ?b 'boat')) (Is ?w 'woman')) (or (not (Is ?b 'boat')) (In ?w ?b)) (or (not (Is ?b 'boat')) (Is ?f 'fork')) (or (not (Is ?b 'boat')) (Holding ?w ?f)) (or (not (Is ?b 'boat')) (HasMaterial ?f 'metal')) (or (not (Is ?b 'boat')) (Is ?r 'rug')) (or (not (Is ?b 'boat')) (HasColor ?r 'red')) (or (not (Is ?b 'boat')) (In ?r ?b)) (or (not (Is ?b 'boat')) (Is ?p 'plate')) (or (not (Is ?b 'boat')) (On ?p ?r)) (or (not (Is ?b 'boat')) (HasShape ?p 'round')) (or (not (Is ?b 'boat')) (Is ?fi 'fish')) (or (not (Is ?b 'boat')) (On ?g ?r)) (or (not (Is ?b 'boat')) (On ?fi ?p)) (or (not (Is ?b 'boat')) (Is ?g 'glasses')) (or (not (Is ?b 'boat')) (Is ?ba 'ball')) (or (not (Is ?b 'boat')) (NextTo ?ba ?r)) (or (not (Is ?b 'boat')) (HasShape ?ba 'round'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fish",
+        "house",
+        "fork",
+        "boat",
+        "glasses",
+        "ball",
+        "woman",
+        "plate",
+        "rug"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pen and a glove. The pen is positioned on the top side of the image, and the glove is aligned horizontally with the pen.",
+    "dsl": "(exists ?p (exists ?g (and (Is ?p 'pen') (Is ?g 'glove') (OnTopSide ?p) (AlignedHorizontally ?p ?g))))",
+    "cnf": "(exists ?p (exists ?g (and (Is ?p 'pen') (OnTopSide ?p) (AlignedHorizontally ?p ?g) (Is ?g 'glove'))))",
+    "k": 2,
+    "object_classes": [
+        "glove",
+        "pen"
+    ]
+}

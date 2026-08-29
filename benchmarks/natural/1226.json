@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Next to every horse stands an elephant. A woman holding an open umbrella and a sleeping dog is also beside each horse. Next to the woman is a bookshelf containing a hat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?h (implies (Is ?h 'horse') (exists ?e (exists ?w (exists ?u (exists ?d (exists ?b (exists ?hat (and (Is ?e 'elephant') (NextTo ?e ?h) (Is ?w 'woman') (NextTo ?w ?h) (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?w ?u) (Is ?d 'dog') (HasState ?d 'sleeping') (Holding ?w ?d) (Is ?b 'bookshelf') (NextTo ?b ?w) (Is ?hat 'hat') (In ?hat ?b)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?h (exists ?e (exists ?w (exists ?u (exists ?d (exists ?b (exists ?hat (and (or (not (Is ?h 'horse')) (Is ?e 'elephant')) (or (not (Is ?h 'horse')) (NextTo ?e ?h)) (or (not (Is ?h 'horse')) (Is ?w 'woman')) (or (not (Is ?h 'horse')) (NextTo ?w ?h)) (or (not (Is ?h 'horse')) (Is ?u 'umbrella')) (or (not (Is ?h 'horse')) (Holding ?w ?u)) (or (not (Is ?h 'horse')) (HasState ?u 'open')) (or (not (Is ?h 'horse')) (Is ?d 'dog')) (or (not (Is ?h 'horse')) (Holding ?w ?d)) (or (not (Is ?h 'horse')) (HasState ?d 'sleeping')) (or (not (Is ?h 'horse')) (Is ?b 'bookshelf')) (or (not (Is ?h 'horse')) (NextTo ?b ?w)) (or (not (Is ?h 'horse')) (Is ?hat 'hat')) (or (not (Is ?h 'horse')) (In ?hat ?b)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "horse",
+        "dog",
+        "bookshelf",
+        "elephant",
+        "hat",
+        "woman"
+    ]
+}

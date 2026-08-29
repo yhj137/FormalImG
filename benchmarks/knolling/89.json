@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the left side.",
+    "dsl": "(exists ?c (and (Is ?c 'cutting_board') (OnLeftSide ?c)))",
+    "cnf": "(exists ?c (and (Is ?c 'cutting_board') (OnLeftSide ?c)))",
+    "k": 1,
+    "object_classes": [
+        "cutting_board"
+    ]
+}

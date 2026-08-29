@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is placed on the right side of the layout, and a bottle is positioned to the left of the laptop. For every remote present, it is aligned horizontally with the bottle, has a hammer located directly below it, and there is a lighter situated to the left of the hammer on the bottom side of the image.",
+    "dsl": "(exists ?laptop (exists ?bottle (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (Is ?bottle 'bottle') (LeftOf ?bottle ?laptop) (forall ?remote (implies (Is ?remote 'remote') (exists ?hammer (exists ?lighter (and (Is ?hammer 'hammer') (Is ?lighter 'lighter') (AlignedHorizontally ?remote ?bottle) (Below ?hammer ?remote) (LeftOf ?lighter ?hammer) (OnBottomSide ?lighter)))))))))",
+    "cnf": "(exists ?laptop (exists ?bottle (forall ?remote (exists ?hammer (exists ?lighter (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (LeftOf ?bottle ?laptop) (Is ?bottle 'bottle') (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?bottle)) (or (not (Is ?remote 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?remote 'remote')) (Below ?hammer ?remote)) (or (not (Is ?remote 'remote')) (Is ?hammer 'hammer')) (or (not (Is ?remote 'remote')) (LeftOf ?lighter ?hammer)) (or (not (Is ?remote 'remote')) (OnBottomSide ?lighter))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "hammer",
+        "lighter",
+        "bottle"
+    ]
+}

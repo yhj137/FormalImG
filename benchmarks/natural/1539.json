@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a sitting lion holding an open umbrella next to a bus. The bus is positioned to the left of a bed, on which every teddy bear is placed. A metal bookshelf with a clock stands next to the bed, and a round table sits to the right of the bookshelf.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?b (exists ?bed (exists ?sh (exists ?t (and (Is ?l 'lion') (HasState ?l 'sitting') (Is ?b 'bus') (Is ?bed 'bed') (Is ?sh 'bookshelf') (HasMaterial ?sh 'metal') (Is ?t 'table') (HasShape ?t 'round') (NextTo ?l ?b) (LeftOf ?b ?bed) (NextTo ?sh ?bed) (RightOf ?t ?sh) (forall ?tb (implies (Is ?tb 'teddy bear') (On ?tb ?bed))) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?l ?u))) (exists ?c (and (Is ?c 'clock') (On ?c ?sh))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?b (exists ?bed (exists ?sh (exists ?t (forall ?tb (exists ?u (exists ?c (and (Is ?l 'lion') (HasState ?l 'sitting') (NextTo ?l ?b) (Holding ?l ?u) (Is ?b 'bus') (LeftOf ?b ?bed) (HasState ?u 'open') (Is ?bed 'bed') (NextTo ?sh ?bed) (Is ?u 'umbrella') (or (not (Is ?tb 'teddy bear')) (On ?tb ?bed)) (HasMaterial ?sh 'metal') (RightOf ?t ?sh) (Is ?sh 'bookshelf') (On ?c ?sh) (HasShape ?t 'round') (Is ?c 'clock') (Is ?t 'table')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "bus",
+        "teddy bear",
+        "bed",
+        "table",
+        "clock",
+        "lion",
+        "bookshelf"
+    ]
+}

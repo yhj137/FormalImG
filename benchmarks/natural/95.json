@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a wooden apple.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?a (and (Is ?a 'apple') (HasMaterial ?a 'wooden'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?a (and (Is ?a 'apple') (HasMaterial ?a 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

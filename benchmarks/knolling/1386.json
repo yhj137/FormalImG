@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a laptop, a book, a plate, a bowl, a game controller, a calculator, and pizza. The book is placed below the laptop. To the right of the book is a plate, and a bowl is placed below that plate. On the bottom side of the image, there is a game controller positioned below the book, and a calculator is located to the right of the game controller. The laptop is larger than the calculator. Additionally, every piece of pizza present is located to the right of the bowl.",
+    "dsl": "(exists ?l (exists ?b (exists ?p (exists ?bowl (exists ?g (exists ?c (and (Is ?l 'laptop') (Is ?b 'book') (Is ?p 'plate') (Is ?bowl 'bowl') (Is ?g 'game_controller') (Is ?c 'calculator') (Below ?b ?l) (RightOf ?p ?b) (Below ?bowl ?p) (Below ?g ?b) (OnBottomSide ?g) (RightOf ?c ?g) (OnBottomSide ?c) (LargerThan ?l ?c) (forall ?pizza (implies (Is ?pizza 'pizza') (RightOf ?pizza ?bowl))))))))))",
+    "cnf": "(exists ?l (exists ?b (exists ?p (exists ?bowl (exists ?g (exists ?c (forall ?pizza (and (Is ?l 'laptop') (Below ?b ?l) (LargerThan ?l ?c) (Is ?b 'book') (RightOf ?p ?b) (OnBottomSide ?c) (Below ?g ?b) (Is ?p 'plate') (Below ?bowl ?p) (RightOf ?c ?g) (Is ?g 'game_controller') (OnBottomSide ?g) (Is ?bowl 'bowl') (or (not (Is ?pizza 'pizza')) (RightOf ?pizza ?bowl)) (Is ?c 'calculator')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "laptop",
+        "plate",
+        "pizza",
+        "game_controller",
+        "calculator",
+        "bowl"
+    ]
+}

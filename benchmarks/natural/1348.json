@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden table with a child to its left. A rusty key, a pair of glasses, and a rock rest on the table. All books are positioned to the right of the glasses, and a hammer lies to the right of the rock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?c (exists ?k (exists ?g (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?c 'child') (LeftOf ?c ?t) (Is ?k 'key') (HasState ?k 'rusty') (On ?k ?t) (Is ?g 'glasses') (On ?g ?t) (forall ?b (implies (Is ?b 'book') (RightOf ?b ?g))) (exists ?r (exists ?h (and (Is ?r 'rock') (On ?r ?t) (Is ?h 'hammer') (RightOf ?h ?r))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?c (exists ?k (exists ?g (forall ?b (exists ?r (exists ?h (and (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?c ?t) (On ?k ?t) (Is ?c 'child') (On ?g ?t) (HasState ?k 'rusty') (On ?r ?t) (Is ?g 'glasses') (or (not (Is ?b 'book')) (RightOf ?b ?g)) (Is ?k 'key') (Is ?r 'rock') (RightOf ?h ?r) (Is ?h 'hammer'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "glasses",
+        "rock",
+        "hammer",
+        "book",
+        "table",
+        "child"
+    ]
+}

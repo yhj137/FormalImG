@@ -1,0 +1,16 @@
+{
+    "prompt": "For every remote in the display, there is a pair of jeans on the left side with a watch below it. The remote is positioned to the right of the jeans and to the left of a drill which is on the right side. A lighter is placed to the right of the remote, and a pen is below the lighter. Additionally, a calculator is above the drill, and a pair of headphones, larger than the watch, is above the jeans.",
+    "dsl": "(exists ?jeans (exists ?watch (forall ?remote (implies (Is ?remote 'remote') (exists ?lighter (exists ?drill (exists ?calculator (exists ?pen (exists ?headphones (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?watch 'watch') (Below ?watch ?jeans) (Is ?lighter 'lighter') (RightOf ?lighter ?remote) (Is ?drill 'drill') (OnRightSide ?drill) (RightOf ?remote ?jeans) (LeftOf ?remote ?drill) (Is ?calculator 'calculator') (Above ?calculator ?drill) (Is ?pen 'pen') (Below ?pen ?lighter) (Is ?headphones 'headphones') (Above ?headphones ?jeans) (LargerThan ?headphones ?watch)))))))))))",
+    "cnf": "(exists ?jeans (exists ?watch (forall ?remote (exists ?lighter (exists ?drill (exists ?calculator (exists ?pen (exists ?headphones (and (or (not (Is ?remote 'remote')) (Is ?jeans 'jeans')) (or (not (Is ?remote 'remote')) (OnLeftSide ?jeans)) (or (not (Is ?remote 'remote')) (Below ?watch ?jeans)) (or (not (Is ?remote 'remote')) (Is ?watch 'watch')) (or (not (Is ?remote 'remote')) (RightOf ?remote ?jeans)) (or (not (Is ?remote 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?remote 'remote')) (LargerThan ?headphones ?watch)) (or (not (Is ?remote 'remote')) (Above ?headphones ?jeans)) (or (not (Is ?remote 'remote')) (OnRightSide ?drill)) (or (not (Is ?remote 'remote')) (LeftOf ?remote ?drill)) (or (not (Is ?remote 'remote')) (RightOf ?lighter ?remote)) (or (not (Is ?remote 'remote')) (Is ?headphones 'headphones')) (or (not (Is ?remote 'remote')) (Is ?drill 'drill')) (or (not (Is ?remote 'remote')) (Is ?calculator 'calculator')) (or (not (Is ?remote 'remote')) (Above ?calculator ?drill)) (or (not (Is ?remote 'remote')) (Below ?pen ?lighter)) (or (not (Is ?remote 'remote')) (Is ?pen 'pen')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "pen",
+        "watch",
+        "drill",
+        "lighter",
+        "jeans",
+        "calculator",
+        "headphones"
+    ]
+}

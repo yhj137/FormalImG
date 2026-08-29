@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring an elephant holding a bowl containing a cake. A plant is to the right of the elephant, and all birds are positioned to the right of the plant. A rug lies next to the elephant, with a blue shirt placed beside the rug.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?p (exists ?r (and (Is ?e 'elephant') (Is ?p 'plant') (Is ?r 'rug') (RightOf ?p ?e) (NextTo ?r ?e) (forall ?b (implies (Is ?b 'bird') (RightOf ?b ?p))) (exists ?bo (exists ?c (exists ?s (and (Is ?bo 'bowl') (Is ?c 'cake') (Is ?s 'shirt') (Holding ?e ?bo) (In ?c ?bo) (HasColor ?s 'blue') (NextTo ?s ?r))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?p (exists ?r (forall ?b (exists ?bo (exists ?c (exists ?s (and (Is ?e 'elephant') (RightOf ?p ?e) (NextTo ?r ?e) (Is ?p 'plant') (or (not (Is ?b 'bird')) (RightOf ?b ?p)) (Holding ?e ?bo) (Is ?r 'rug') (NextTo ?s ?r) (Is ?bo 'bowl') (In ?c ?bo) (HasColor ?s 'blue') (Is ?c 'cake') (Is ?s 'shirt'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "plant",
+        "cake",
+        "shirt",
+        "rug",
+        "bird",
+        "elephant"
+    ]
+}

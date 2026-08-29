@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a child on a purple horse. All flowers are to the right of the horse. A broken bottle is next to the horse, and a knife lies next to the bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (and (Is ?c 'child') (Is ?h 'horse') (On ?c ?h) (HasColor ?h 'purple') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?h))) (exists ?b (exists ?k (and (Is ?b 'bottle') (Is ?k 'knife') (NextTo ?b ?h) (HasState ?b 'broken') (NextTo ?k ?b))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (forall ?f (exists ?b (exists ?k (and (Is ?c 'child') (On ?c ?h) (Is ?h 'horse') (HasColor ?h 'purple') (or (not (Is ?f 'flower')) (RightOf ?f ?h)) (NextTo ?b ?h) (Is ?b 'bottle') (HasState ?b 'broken') (NextTo ?k ?b) (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "child",
+        "horse",
+        "bottle",
+        "flower"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat linear arrangement of items. The scene is comprised of two groups. On the left side, there is a backpack, a handbag, and a pizza; the backpack is placed to the left of the handbag, and the handbag is placed to the left of the pizza. On the right side, for every ruler in the scene, there is a specific set of tools and items: a wrench, a calculator, and a bowl. The ruler acts as the connector, positioned to the right of the pizza. The wrench is to the right of the ruler, the calculator is to the right of the wrench, and the bowl is to the right of the calculator. Furthermore, the ruler, wrench, calculator, and bowl are all aligned horizontally.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?pizza (and (Is ?backpack 'backpack') (Is ?handbag 'handbag') (Is ?pizza 'pizza') (OnLeftSide ?backpack) (OnLeftSide ?handbag) (OnLeftSide ?pizza) (LeftOf ?backpack ?handbag) (LeftOf ?handbag ?pizza) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?wrench (exists ?calculator (exists ?bowl (and (Is ?wrench 'wrench') (Is ?calculator 'calculator') (Is ?bowl 'bowl') (OnRightSide ?ruler) (RightOf ?ruler ?pizza) (RightOf ?wrench ?ruler) (RightOf ?calculator ?wrench) (RightOf ?bowl ?calculator) (AlignedHorizontally ?ruler ?wrench) (AlignedHorizontally ?wrench ?calculator) (AlignedHorizontally ?calculator ?bowl)))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?pizza (forall ?ruler (exists ?wrench (exists ?calculator (exists ?bowl (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (LeftOf ?backpack ?handbag) (OnLeftSide ?handbag) (LeftOf ?handbag ?pizza) (Is ?handbag 'handbag') (OnLeftSide ?pizza) (or (not (Is ?ruler 'ruler')) (RightOf ?ruler ?pizza)) (Is ?pizza 'pizza') (or (not (Is ?ruler 'ruler')) (OnRightSide ?ruler)) (or (not (Is ?ruler 'ruler')) (RightOf ?wrench ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?bowl 'bowl')) (or (not (Is ?ruler 'ruler')) (RightOf ?calculator ?wrench)) (or (not (Is ?ruler 'ruler')) (Is ?wrench 'wrench')) (or (not (Is ?ruler 'ruler')) (Is ?calculator 'calculator')) (or (not (Is ?ruler 'ruler')) (RightOf ?bowl ?calculator)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?ruler ?wrench)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?wrench ?calculator)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?calculator ?bowl))))))))))",
+    "k": 7,
+    "object_classes": [
+        "backpack",
+        "pizza",
+        "bowl",
+        "calculator",
+        "wrench",
+        "ruler",
+        "handbag"
+    ]
+}

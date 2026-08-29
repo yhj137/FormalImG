@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a dog holding a backpack. Inside the backpack is a triangular sandwich, and a shirt rests on the bag. All toy cars are positioned to the right of the dog.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (and (Is ?d 'dog') (forall ?t (implies (Is ?t 'toy car') (RightOf ?t ?d))) (exists ?b (and (Is ?b 'backpack') (Holding ?d ?b) (exists ?s (and (Is ?s 'sandwich') (HasShape ?s 'triangular') (In ?s ?b))) (exists ?h (and (Is ?h 'shirt') (On ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (forall ?t (exists ?b (exists ?s (exists ?h (and (Is ?d 'dog') (or (not (Is ?t 'toy car')) (RightOf ?t ?d)) (Holding ?d ?b) (Is ?b 'backpack') (In ?s ?b) (On ?h ?b) (HasShape ?s 'triangular') (Is ?h 'shirt') (Is ?s 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "toy car",
+        "sandwich",
+        "backpack",
+        "shirt",
+        "dog"
+    ]
+}

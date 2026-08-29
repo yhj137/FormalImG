@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat located on the left side of the scene. For every donut in the image, it is horizontally aligned with the hat and is smaller than the hat. Furthermore, associated with each donut is a watch that is horizontally aligned with the donut and is strictly smaller than the donut.",
+    "dsl": "(exists ?h (and (Is ?h 'hat') (OnLeftSide ?h) (forall ?d (implies (Is ?d 'donut') (exists ?w (and (Is ?w 'watch') (AlignedHorizontally ?d ?h) (SmallerThan ?d ?h) (AlignedHorizontally ?w ?d) (SmallerThan ?w ?d)))))))",
+    "cnf": "(exists ?h (forall ?d (exists ?w (and (Is ?h 'hat') (OnLeftSide ?h) (or (not (Is ?d 'donut')) (AlignedHorizontally ?d ?h)) (or (not (Is ?d 'donut')) (SmallerThan ?d ?h)) (or (not (Is ?d 'donut')) (Is ?w 'watch')) (or (not (Is ?d 'donut')) (AlignedHorizontally ?w ?d)) (or (not (Is ?d 'donut')) (SmallerThan ?w ?d))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "watch",
+        "donut"
+    ]
+}

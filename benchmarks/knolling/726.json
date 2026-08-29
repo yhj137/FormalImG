@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue shirt and a red book arranged in a row, with the shirt positioned to the left of the book and aligned horizontally with it. Additionally, for every yellow pizza in the image, there is a white bowl paired with it; the pizza is located below the shirt, and the pizza is positioned to the left of the bowl, with these two items also aligned horizontally.",
+    "dsl": "(exists ?shirt (exists ?book (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?book 'book') (Has ?book 'red') (LeftOf ?shirt ?book) (AlignedHorizontally ?shirt ?book) (forall ?pizza (implies (and (Is ?pizza 'pizza') (Has ?pizza 'yellow')) (exists ?bowl (and (Is ?bowl 'bowl') (Has ?bowl 'white') (Below ?pizza ?shirt) (LeftOf ?pizza ?bowl) (AlignedHorizontally ?pizza ?bowl))))))))",
+    "cnf": "(exists ?shirt (exists ?book (forall ?pizza (exists ?bowl (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (LeftOf ?shirt ?book) (AlignedHorizontally ?shirt ?book) (Has ?book 'red') (or (not (Is ?pizza 'pizza')) (not (Has ?pizza 'yellow')) (Below ?pizza ?shirt)) (Is ?book 'book') (or (not (Is ?pizza 'pizza')) (not (Has ?pizza 'yellow')) (Has ?bowl 'white')) (or (not (Is ?pizza 'pizza')) (not (Has ?pizza 'yellow')) (LeftOf ?pizza ?bowl)) (or (not (Is ?pizza 'pizza')) (not (Has ?pizza 'yellow')) (Is ?bowl 'bowl')) (or (not (Is ?pizza 'pizza')) (not (Has ?pizza 'yellow')) (AlignedHorizontally ?pizza ?bowl)))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "pizza",
+        "bowl",
+        "shirt"
+    ]
+}

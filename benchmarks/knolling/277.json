@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every wrench in the scene, there is a pair of pliers located vertically below it. Additionally, every wrench is positioned on the right side of the image.",
+    "dsl": "(and (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?pliers (and (Is ?pliers 'pliers') (Above ?wrench ?pliers) (OnRightSide ?wrench))))))",
+    "cnf": "(forall ?wrench (exists ?pliers (and (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (or (not (Is ?wrench 'wrench')) (Above ?wrench ?pliers)) (or (not (Is ?wrench 'wrench')) (OnRightSide ?wrench)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "pliers"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a rectangular sofa, with every cat sitting on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (and (Is ?s 'sofa') (HasShape ?s 'rectangular') (forall ?c (implies (Is ?c 'cat') (On ?c ?s))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (forall ?c (and (Is ?s 'sofa') (HasShape ?s 'rectangular') (or (not (Is ?c 'cat')) (On ?c ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "sofa",
+        "cat"
+    ]
+}

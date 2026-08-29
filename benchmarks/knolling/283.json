@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every sandwich in the scene, there is a lemon located to its left. Additionally, each sandwich is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'sandwich') (exists ?l (and (Is ?l 'lemon') (LeftOf ?l ?s) (OnBottomSide ?s))))))",
+    "cnf": "(forall ?s (exists ?l (and (or (not (Is ?s 'sandwich')) (Is ?l 'lemon')) (or (not (Is ?s 'sandwich')) (LeftOf ?l ?s)) (or (not (Is ?s 'sandwich')) (OnBottomSide ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "lemon",
+        "sandwich"
+    ]
+}

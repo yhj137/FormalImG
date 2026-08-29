@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A man is on a wooden bed, holding a pan with a phone inside. A shirt also lies on the bed. All the hats in the scene are red and are on the man. To the right of the bed is a dog. Next to the dog, an elephant is holding a lion, which has a cat on top.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?v0 (exists ?v1 (and (Is ?v0 'man') (Is ?v1 'bed') (HasMaterial ?v1 'wooden') (On ?v0 ?v1) (forall ?v2 (implies (Is ?v2 'hat') (and (HasColor ?v2 'red') (On ?v2 ?v0)))) (exists ?v3 (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (exists ?v8 (exists ?v9 (and (Is ?v3 'dog') (RightOf ?v3 ?v1) (Is ?v4 'pan') (Holding ?v0 ?v4) (Is ?v5 'phone') (In ?v5 ?v4) (Is ?v6 'shirt') (On ?v6 ?v1) (Is ?v7 'elephant') (NextTo ?v7 ?v3) (Is ?v8 'lion') (Holding ?v7 ?v8) (Is ?v9 'cat') (On ?v9 ?v8)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?v0 (exists ?v1 (forall ?v2 (exists ?v3 (exists ?v4 (exists ?v5 (exists ?v6 (exists ?v7 (exists ?v8 (exists ?v9 (and (Is ?v0 'man') (On ?v0 ?v1) (or (not (Is ?v2 'hat')) (On ?v2 ?v0)) (HasMaterial ?v1 'wooden') (RightOf ?v3 ?v1) (Holding ?v0 ?v4) (or (not (Is ?v2 'hat')) (HasColor ?v2 'red')) (Is ?v1 'bed') (On ?v6 ?v1) (Is ?v3 'dog') (NextTo ?v7 ?v3) (Is ?v4 'pan') (In ?v5 ?v4) (Is ?v6 'shirt') (Is ?v7 'elephant') (Holding ?v7 ?v8) (Is ?v5 'phone') (Is ?v8 'lion') (On ?v9 ?v8) (Is ?v9 'cat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "shirt",
+        "phone",
+        "bed",
+        "man",
+        "pan",
+        "lion",
+        "cat",
+        "dog",
+        "hat"
+    ]
+}

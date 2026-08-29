@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring an elephant holding a round pan, with every sofa positioned next to and to the right of the elephant.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?p (and (Is ?e 'elephant') (Is ?p 'pan') (HasShape ?p 'round') (Holding ?e ?p) (forall ?s (implies (Is ?s 'sofa') (and (RightOf ?s ?e) (NextTo ?s ?e))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?p (forall ?s (and (Is ?e 'elephant') (Holding ?e ?p) (or (not (Is ?s 'sofa')) (RightOf ?s ?e)) (HasShape ?p 'round') (or (not (Is ?s 'sofa')) (NextTo ?s ?e)) (Is ?p 'pan'))))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "sofa",
+        "elephant"
+    ]
+}

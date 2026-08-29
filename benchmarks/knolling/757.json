@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a red hammer and a blue bottle. For every black knife included in the composition, it is placed to the right of the red hammer, and there is a corresponding white shoe located to the right of the knife. Additionally, the white shoe is aligned vertically with the blue bottle.",
+    "dsl": "(exists ?hammer (exists ?bottle (and (Is ?hammer 'hammer') (Has ?hammer 'red') (Is ?bottle 'bottle') (Has ?bottle 'blue') (forall ?knife (implies (and (Is ?knife 'knife') (Has ?knife 'black')) (exists ?shoe (and (Is ?shoe 'shoe') (Has ?shoe 'white') (RightOf ?knife ?hammer) (RightOf ?shoe ?knife) (AlignedVertically ?shoe ?bottle))))))))",
+    "cnf": "(exists ?hammer (exists ?bottle (forall ?knife (exists ?shoe (and (Is ?hammer 'hammer') (Has ?hammer 'red') (or (not (Is ?knife 'knife')) (not (Has ?knife 'black')) (RightOf ?knife ?hammer)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'black')) (Has ?shoe 'white')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'black')) (RightOf ?shoe ?knife)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'black')) (Is ?shoe 'shoe')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'black')) (AlignedVertically ?shoe ?bottle)) (Has ?bottle 'blue') (Is ?bottle 'bottle'))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "hammer",
+        "shoe",
+        "bottle"
+    ]
+}

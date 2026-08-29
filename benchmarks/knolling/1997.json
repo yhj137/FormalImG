@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured 3x3 grid arrangement. The top row contains a black monitor, a gray laptop, and a blue book, arranged from left to right and aligned horizontally. The middle row consists of a hammer, a sandwich, and a knife, also positioned from left to right and aligned horizontally. The bottom row includes a black remote, a pizza, and a fork, following the same left-to-right horizontal alignment. Objects within the same columns (monitor-hammer-remote, laptop-sandwich-pizza, and book-knife-fork) are aligned vertically. Additionally, for every lemon present in the scene, it is located to the left of the black remote and is visually smaller than the gray laptop.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?book (exists ?hammer (exists ?sandwich (exists ?knife (exists ?remote (exists ?pizza (exists ?fork (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?book 'book') (Has ?book 'blue') (Is ?hammer 'hammer') (Is ?sandwich 'sandwich') (Is ?knife 'knife') (Is ?remote 'remote') (Has ?remote 'black') (Is ?pizza 'pizza') (Is ?fork 'fork') (LeftOf ?monitor ?laptop) (LeftOf ?laptop ?book) (AlignedHorizontally ?monitor ?laptop) (AlignedHorizontally ?laptop ?book) (LeftOf ?hammer ?sandwich) (LeftOf ?sandwich ?knife) (AlignedHorizontally ?hammer ?sandwich) (AlignedHorizontally ?sandwich ?knife) (LeftOf ?remote ?pizza) (LeftOf ?pizza ?fork) (AlignedHorizontally ?remote ?pizza) (AlignedHorizontally ?pizza ?fork) (AlignedVertically ?monitor ?hammer) (AlignedVertically ?hammer ?remote) (AlignedVertically ?laptop ?sandwich) (AlignedVertically ?sandwich ?pizza) (AlignedVertically ?book ?knife) (AlignedVertically ?knife ?fork) (forall ?lemon (implies (Is ?lemon 'lemon') (and (LeftOf ?lemon ?remote) (SmallerThan ?lemon ?laptop))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?book (exists ?hammer (exists ?sandwich (exists ?knife (exists ?remote (exists ?pizza (exists ?fork (forall ?lemon (and (Is ?monitor 'monitor') (Has ?monitor 'black') (LeftOf ?monitor ?laptop) (AlignedHorizontally ?monitor ?laptop) (Has ?laptop 'gray') (LeftOf ?laptop ?book) (AlignedVertically ?monitor ?hammer) (AlignedHorizontally ?laptop ?book) (Is ?laptop 'laptop') (Has ?book 'blue') (AlignedHorizontally ?hammer ?sandwich) (AlignedVertically ?hammer ?remote) (AlignedVertically ?laptop ?sandwich) (AlignedVertically ?book ?knife) (Is ?book 'book') (LeftOf ?hammer ?sandwich) (LeftOf ?sandwich ?knife) (AlignedHorizontally ?sandwich ?knife) (AlignedHorizontally ?remote ?pizza) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?remote)) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?laptop)) (AlignedVertically ?sandwich ?pizza) (AlignedVertically ?knife ?fork) (Is ?hammer 'hammer') (Is ?sandwich 'sandwich') (Is ?knife 'knife') (LeftOf ?remote ?pizza) (LeftOf ?pizza ?fork) (AlignedHorizontally ?pizza ?fork) (Has ?remote 'black') (Is ?pizza 'pizza') (Is ?fork 'fork') (Is ?remote 'remote'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "book",
+        "remote",
+        "lemon",
+        "pizza",
+        "hammer",
+        "fork",
+        "knife",
+        "monitor",
+        "sandwich"
+    ]
+}

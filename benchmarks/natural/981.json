@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A gray rock is to the left of a wooden table. A man holding an umbrella is next to the table, and all chairs are positioned to the right of the table.",
+    "dsl": "(exists ?t (exists ?r (exists ?m (exists ?u (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?r 'rock') (HasColor ?r 'gray') (LeftOf ?r ?t) (Is ?m 'man') (Is ?u 'umbrella') (NextTo ?m ?t) (Holding ?m ?u) (forall ?c (implies (Is ?c 'chair') (RightOf ?c ?t))))))))",
+    "cnf": "(exists ?t (exists ?r (exists ?m (exists ?u (forall ?c (and (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?r ?t) (NextTo ?m ?t) (HasColor ?r 'gray') (or (not (Is ?c 'chair')) (RightOf ?c ?t)) (Is ?m 'man') (Holding ?m ?u) (Is ?r 'rock') (Is ?u 'umbrella')))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "chair",
+        "man",
+        "rock",
+        "table"
+    ]
+}

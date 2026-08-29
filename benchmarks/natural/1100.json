@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a dog holding a metal screwdriver. All butterflies are located to the left of the dog. A green bottle stands next to the dog, with an apple resting on it and a fruit placed beside the apple.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (and (Is ?d 'dog') (exists ?s (and (Is ?s 'screwdriver') (HasMaterial ?s 'metal') (Holding ?d ?s))) (forall ?bfly (implies (Is ?bfly 'butterfly') (LeftOf ?bfly ?d))) (exists ?b (exists ?a (exists ?f (and (Is ?b 'bottle') (HasColor ?b 'green') (NextTo ?b ?d) (Is ?a 'apple') (On ?a ?b) (Is ?f 'fruit') (NextTo ?f ?a))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?s (forall ?bfly (exists ?b (exists ?a (exists ?f (and (Is ?d 'dog') (Holding ?d ?s) (or (not (Is ?bfly 'butterfly')) (LeftOf ?bfly ?d)) (HasMaterial ?s 'metal') (NextTo ?b ?d) (Is ?s 'screwdriver') (HasColor ?b 'green') (On ?a ?b) (Is ?b 'bottle') (Is ?a 'apple') (NextTo ?f ?a) (Is ?f 'fruit')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "screwdriver",
+        "butterfly",
+        "apple",
+        "dog",
+        "fruit"
+    ]
+}

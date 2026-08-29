@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a pair of jeans positioned on the bottom side of the scene. To the left of the jeans is a wrench, and to the right of the jeans is a pair of scissors, which is also located on the right side of the image. The layout follows a rule for cups: for every cup present, there is a glove to its left and a stapler to its right. These three items\u2014the glove, the cup, and the stapler\u2014are aligned horizontally, and the cup is positioned above the jeans.",
+    "dsl": "(exists ?jeans (exists ?wrench (exists ?scissors (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Is ?wrench 'wrench') (LeftOf ?wrench ?jeans) (Is ?scissors 'scissors') (RightOf ?scissors ?jeans) (OnRightSide ?scissors) (forall ?cup (implies (Is ?cup 'cup') (exists ?glove (exists ?stapler (and (Is ?glove 'glove') (Is ?stapler 'stapler') (LeftOf ?glove ?cup) (RightOf ?stapler ?cup) (AlignedHorizontally ?glove ?cup) (AlignedHorizontally ?cup ?stapler) (Above ?cup ?jeans))))))))))",
+    "cnf": "(exists ?jeans (exists ?wrench (exists ?scissors (forall ?cup (exists ?glove (exists ?stapler (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (LeftOf ?wrench ?jeans) (RightOf ?scissors ?jeans) (Is ?wrench 'wrench') (or (not (Is ?cup 'cup')) (Above ?cup ?jeans)) (Is ?scissors 'scissors') (OnRightSide ?scissors) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?stapler)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?glove ?cup)) (or (not (Is ?cup 'cup')) (RightOf ?stapler ?cup)) (or (not (Is ?cup 'cup')) (LeftOf ?glove ?cup)) (or (not (Is ?cup 'cup')) (Is ?stapler 'stapler')) (or (not (Is ?cup 'cup')) (Is ?glove 'glove')))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "wrench",
+        "cup",
+        "jeans",
+        "scissors",
+        "glove"
+    ]
+}

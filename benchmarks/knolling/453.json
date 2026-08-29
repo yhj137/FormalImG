@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of headphones positioned on the right side of the image, there is a calculator located to its left, and a drill is placed above the calculator.",
+    "dsl": "(and (forall ?h (implies (and (Is ?h 'headphones') (OnRightSide ?h)) (exists ?c (exists ?d (and (Is ?c 'calculator') (Is ?d 'drill') (LeftOf ?c ?h) (Above ?d ?c)))))))",
+    "cnf": "(forall ?h (exists ?c (exists ?d (and (or (not (Is ?h 'headphones')) (not (OnRightSide ?h)) (Is ?c 'calculator')) (or (not (Is ?h 'headphones')) (not (OnRightSide ?h)) (LeftOf ?c ?h)) (or (not (Is ?h 'headphones')) (not (OnRightSide ?h)) (Is ?d 'drill')) (or (not (Is ?h 'headphones')) (not (OnRightSide ?h)) (Above ?d ?c))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "headphones",
+        "calculator"
+    ]
+}

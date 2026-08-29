@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A bus is positioned to the left of a bicycle. There is a leather jacket located next to the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?j (and (Is ?b 'bus') (Is ?c 'bicycle') (Is ?j 'jacket') (LeftOf ?b ?c) (NextTo ?j ?c) (HasMaterial ?j 'leather'))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?j (and (Is ?b 'bus') (LeftOf ?b ?c) (Is ?c 'bicycle') (NextTo ?j ?c) (Is ?j 'jacket') (HasMaterial ?j 'leather'))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "bus",
+        "bicycle"
+    ]
+}

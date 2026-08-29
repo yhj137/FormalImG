@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack, a wallet, a mouse, a pair of glasses, a lemon, screwdrivers, and wrenches. A wallet is placed to the left of the backpack, which is visually larger than the wallet. The mouse is located on the right side of the scene, with the backpack positioned to its left. On the bottom side of the image, there is a pair of glasses which is smaller than the backpack, and a lemon is arranged to the left of the glasses. Furthermore, for every screwdriver in the scene, it is positioned to the left of the mouse, and there is a wrench placed to the left of that screwdriver.",
+    "dsl": "(exists ?backpack (exists ?wallet (exists ?mouse (exists ?glasses (exists ?lemon (and (Is ?backpack 'backpack') (Is ?wallet 'wallet') (Is ?mouse 'mouse') (Is ?glasses 'glasses') (Is ?lemon 'lemon') (OnRightSide ?mouse) (OnBottomSide ?glasses) (LeftOf ?wallet ?backpack) (LeftOf ?backpack ?mouse) (LargerThan ?backpack ?wallet) (LargerThan ?backpack ?glasses) (LeftOf ?lemon ?glasses) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?wrench (and (Is ?wrench 'wrench') (LeftOf ?screwdriver ?mouse) (LeftOf ?wrench ?screwdriver)))))))))))",
+    "cnf": "(exists ?backpack (exists ?wallet (exists ?mouse (exists ?glasses (exists ?lemon (forall ?screwdriver (exists ?wrench (and (Is ?backpack 'backpack') (LeftOf ?wallet ?backpack) (LeftOf ?backpack ?mouse) (Is ?wallet 'wallet') (LargerThan ?backpack ?wallet) (OnRightSide ?mouse) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?screwdriver ?mouse)) (LargerThan ?backpack ?glasses) (Is ?mouse 'mouse') (or (not (Is ?screwdriver 'screwdriver')) (Is ?wrench 'wrench')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?wrench ?screwdriver)) (OnBottomSide ?glasses) (LeftOf ?lemon ?glasses) (Is ?glasses 'glasses') (Is ?lemon 'lemon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "wrench",
+        "lemon",
+        "screwdriver",
+        "backpack",
+        "wallet",
+        "mouse"
+    ]
+}

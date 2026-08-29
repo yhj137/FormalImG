@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized layout of ten items. A shirt is located on the top side of the image and is positioned to the left of a backpack. Below the shirt is a cutting board, and below the backpack is a bowl which is smaller than the backpack. The cutting board is placed above a glove, while the bowl is positioned above a phone. Moving further down, a screwdriver is below the glove, and a mouse is below the phone. At the bottom layer, a lemon is located below the screwdriver, and a lighter is below the mouse. Finally, the lemon is to the left of the lighter, and the lighter is visually smaller than the cutting board.",
+    "dsl": "(exists ?shirt (exists ?backpack (exists ?board (exists ?bowl (exists ?glove (exists ?phone (exists ?driver (exists ?mouse (exists ?lemon (exists ?lighter (and (Is ?shirt 'shirt') (Is ?backpack 'backpack') (Is ?board 'cutting_board') (Is ?bowl 'bowl') (Is ?glove 'glove') (Is ?phone 'phone') (Is ?driver 'screwdriver') (Is ?mouse 'mouse') (Is ?lemon 'lemon') (Is ?lighter 'lighter') (OnTopSide ?shirt) (LeftOf ?shirt ?backpack) (Below ?board ?shirt) (Below ?bowl ?backpack) (SmallerThan ?bowl ?backpack) (Above ?board ?glove) (Above ?bowl ?phone) (Below ?driver ?glove) (Below ?mouse ?phone) (Below ?lemon ?driver) (Below ?lighter ?mouse) (LeftOf ?lemon ?lighter) (SmallerThan ?lighter ?board))))))))))))",
+    "cnf": "(exists ?shirt (exists ?backpack (exists ?board (exists ?bowl (exists ?glove (exists ?phone (exists ?driver (exists ?mouse (exists ?lemon (exists ?lighter (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LeftOf ?shirt ?backpack) (Below ?board ?shirt) (Is ?backpack 'backpack') (Below ?bowl ?backpack) (Is ?board 'cutting_board') (Above ?board ?glove) (SmallerThan ?bowl ?backpack) (Is ?bowl 'bowl') (SmallerThan ?lighter ?board) (Is ?glove 'glove') (Below ?driver ?glove) (Above ?bowl ?phone) (LeftOf ?lemon ?lighter) (Is ?driver 'screwdriver') (Below ?lemon ?driver) (Is ?phone 'phone') (Below ?mouse ?phone) (Below ?lighter ?mouse) (Is ?lemon 'lemon') (Is ?mouse 'mouse') (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lighter",
+        "backpack",
+        "mouse",
+        "bowl",
+        "shirt",
+        "lemon",
+        "screwdriver",
+        "glove",
+        "cutting_board",
+        "phone"
+    ]
+}

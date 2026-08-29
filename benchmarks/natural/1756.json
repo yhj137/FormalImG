@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A lion sits on a rug, holding a screwdriver. Next to the lion, a basket on the rug contains a sandwich and a pizza. A bus is positioned to the left of the rug, while a bicycle stands to the right. Every toy car in the scene is also placed on the rug.",
+    "dsl": "(exists ?r (exists ?l (exists ?b (exists ?s (exists ?p (exists ?bus (and (Is ?r 'rug') (Is ?l 'lion') (On ?l ?r) (HasState ?l 'sitting') (Is ?b 'basket') (On ?b ?r) (NextTo ?b ?l) (Is ?s 'sandwich') (In ?s ?b) (Is ?p 'pizza') (In ?p ?b) (Is ?bus 'bus') (LeftOf ?bus ?r) (forall ?tc (implies (Is ?tc 'toy car') (On ?tc ?r))) (exists ?sd (exists ?bike (and (Is ?sd 'screwdriver') (Holding ?l ?sd) (Is ?bike 'bicycle') (RightOf ?bike ?r)))))))))))",
+    "cnf": "(exists ?r (exists ?l (exists ?b (exists ?s (exists ?p (exists ?bus (forall ?tc (exists ?sd (exists ?bike (and (Is ?r 'rug') (On ?l ?r) (On ?b ?r) (Is ?l 'lion') (HasState ?l 'sitting') (LeftOf ?bus ?r) (Is ?b 'basket') (NextTo ?b ?l) (or (not (Is ?tc 'toy car')) (On ?tc ?r)) (Is ?bus 'bus') (Holding ?l ?sd) (In ?s ?b) (RightOf ?bike ?r) (Is ?sd 'screwdriver') (In ?p ?b) (Is ?s 'sandwich') (Is ?bike 'bicycle') (Is ?p 'pizza')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "rug",
+        "pizza",
+        "toy car",
+        "bicycle",
+        "sandwich",
+        "lion",
+        "basket",
+        "screwdriver",
+        "bus"
+    ]
+}

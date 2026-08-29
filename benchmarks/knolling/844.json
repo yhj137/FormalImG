@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, there corresponds a specific arrangement of four other items. The jeans are positioned on the bottom side of the image and are physically larger than a plate. This plate is located vertically above the jeans. To the immediate right of the plate lies a ruler, and these two objects are aligned horizontally. Directly above the ruler is a stapler. Finally, a pen is placed to the right of the stapler, situated on the right side of the composition.",
+    "dsl": "(and (forall ?j (implies (Is ?j 'jeans') (exists ?p (exists ?r (exists ?s (exists ?pn (and (Is ?p 'plate') (Is ?r 'ruler') (Is ?s 'stapler') (Is ?pn 'pen') (OnBottomSide ?j) (LargerThan ?j ?p) (Above ?p ?j) (RightOf ?r ?p) (AlignedHorizontally ?p ?r) (Above ?s ?r) (RightOf ?pn ?s) (OnRightSide ?pn)))))))))",
+    "cnf": "(forall ?j (exists ?p (exists ?r (exists ?s (exists ?pn (and (or (not (Is ?j 'jeans')) (Is ?p 'plate')) (or (not (Is ?j 'jeans')) (Is ?r 'ruler')) (or (not (Is ?j 'jeans')) (LargerThan ?j ?p)) (or (not (Is ?j 'jeans')) (Is ?s 'stapler')) (or (not (Is ?j 'jeans')) (RightOf ?r ?p)) (or (not (Is ?j 'jeans')) (OnBottomSide ?j)) (or (not (Is ?j 'jeans')) (Above ?p ?j)) (or (not (Is ?j 'jeans')) (Is ?pn 'pen')) (or (not (Is ?j 'jeans')) (Above ?s ?r)) (or (not (Is ?j 'jeans')) (AlignedHorizontally ?p ?r)) (or (not (Is ?j 'jeans')) (RightOf ?pn ?s)) (or (not (Is ?j 'jeans')) (OnRightSide ?pn))))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "stapler",
+        "pen",
+        "jeans"
+    ]
+}

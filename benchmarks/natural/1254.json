@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a woman wearing a hat and holding a sleeping cat. To her right is a backpack with a laptop on it, and a plant is positioned to the right of the backpack. All books in the scene are also located to the right of the woman.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'woman') (forall ?b (implies (Is ?b 'book') (RightOf ?b ?w))) (exists ?h (exists ?bp (exists ?c (exists ?l (exists ?p (and (Is ?h 'hat') (Is ?bp 'backpack') (Is ?c 'cat') (Is ?l 'laptop') (Is ?p 'plant') (On ?h ?w) (Holding ?w ?c) (HasState ?c 'sleeping') (RightOf ?bp ?w) (On ?l ?bp) (RightOf ?p ?bp))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (forall ?b (exists ?h (exists ?bp (exists ?c (exists ?l (exists ?p (and (Is ?w 'woman') (or (not (Is ?b 'book')) (RightOf ?b ?w)) (On ?h ?w) (Holding ?w ?c) (Is ?h 'hat') (RightOf ?bp ?w) (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?bp 'backpack') (On ?l ?bp) (RightOf ?p ?bp) (Is ?l 'laptop') (Is ?p 'plant'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "cat",
+        "plant",
+        "hat",
+        "backpack",
+        "laptop",
+        "book",
+        "woman"
+    ]
+}

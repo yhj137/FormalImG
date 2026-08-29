@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A rug is laid out with a sofa and a desk placed on it. The desk is to the left of the sofa, and a bookshelf stands to the left of the desk. A bench is positioned to the right of the sofa. Every butterfly in the scene is flying above the rug. A teddy bear sits on the sofa, accompanied by a jacket. A clock rests on the desk, and an orange is inside the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'rug') (exists ?s (and (Is ?s 'sofa') (On ?s ?r) (exists ?d (and (Is ?d 'desk') (On ?d ?r) (LeftOf ?d ?s) (exists ?bs (and (Is ?bs 'bookshelf') (LeftOf ?bs ?d) (exists ?bn (and (Is ?bn 'bench') (RightOf ?bn ?s) (forall ?bf (implies (Is ?bf 'butterfly') (and (Above ?bf ?r) (HasState ?bf 'flying')))) (exists ?tb (and (Is ?tb 'teddy bear') (On ?tb ?s) (HasState ?tb 'sitting') (exists ?j (and (Is ?j 'jacket') (On ?j ?s) (exists ?c (and (Is ?c 'clock') (On ?c ?d) (exists ?o (and (Is ?o 'orange') (In ?o ?d))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (exists ?s (exists ?d (exists ?bs (exists ?bn (forall ?bf (exists ?tb (exists ?j (exists ?c (exists ?o (and (Is ?r 'rug') (On ?s ?r) (On ?d ?r) (Is ?s 'sofa') (LeftOf ?d ?s) (or (not (Is ?bf 'butterfly')) (Above ?bf ?r)) (Is ?d 'desk') (RightOf ?bn ?s) (LeftOf ?bs ?d) (or (not (Is ?bf 'butterfly')) (HasState ?bf 'flying')) (On ?tb ?s) (Is ?bn 'bench') (On ?c ?d) (Is ?bs 'bookshelf') (On ?j ?s) (Is ?tb 'teddy bear') (HasState ?tb 'sitting') (In ?o ?d) (Is ?c 'clock') (Is ?j 'jacket') (Is ?o 'orange')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sofa",
+        "bench",
+        "rug",
+        "teddy bear",
+        "jacket",
+        "orange",
+        "desk",
+        "clock",
+        "butterfly",
+        "bookshelf"
+    ]
+}

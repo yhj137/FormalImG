@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. To the left of a wooden bookshelf stands a tree. Every book in the scene is stored inside the bookshelf. A bird is perched on the tree, holding a yellow key. A horse stands to the right of the bookshelf. A black phone sits on the bookshelf with headphones to its left, alongside a cylindrical bottle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (exists ?t (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?t 'tree') (LeftOf ?t ?bs) (forall ?bk (implies (Is ?bk 'book') (In ?bk ?bs))) (exists ?brd (exists ?k (exists ?h (exists ?p (exists ?hp (exists ?bt (and (Is ?brd 'bird') (On ?brd ?t) (Is ?k 'key') (HasColor ?k 'yellow') (Holding ?brd ?k) (Is ?h 'horse') (RightOf ?h ?bs) (Is ?p 'phone') (HasColor ?p 'black') (On ?p ?bs) (Is ?hp 'headphones') (LeftOf ?hp ?p) (Is ?bt 'bottle') (HasShape ?bt 'cylindrical') (On ?bt ?bs))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (exists ?t (forall ?bk (exists ?brd (exists ?k (exists ?h (exists ?p (exists ?hp (exists ?bt (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?t ?bs) (or (not (Is ?bk 'book')) (In ?bk ?bs)) (Is ?t 'tree') (On ?brd ?t) (RightOf ?h ?bs) (Is ?brd 'bird') (Holding ?brd ?k) (On ?p ?bs) (Is ?h 'horse') (HasColor ?k 'yellow') (On ?bt ?bs) (HasColor ?p 'black') (LeftOf ?hp ?p) (Is ?k 'key') (HasShape ?bt 'cylindrical') (Is ?p 'phone') (Is ?hp 'headphones') (Is ?bt 'bottle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "horse",
+        "book",
+        "bottle",
+        "tree",
+        "bird",
+        "bookshelf",
+        "key"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of items. The scene includes a handbag, a drill, a bottle, and a sock. The handbag is larger than the drill. The drill is placed to the right of the handbag, and the bottle is to the right of the drill, with all three aligned horizontally. The sock is positioned on the bottom side of the image and is smaller than the handbag. A specific rule applies to eyewear: for every pair of glasses, there is a sequence of keys, a remote, scissors, and a spoon arranged to its right. Specifically, the keys are to the right of the glasses, the remote to the right of the keys, the scissors to the right of the remote, and the spoon to the right of the scissors. These items are aligned horizontally with the glasses. Furthermore, the glasses are located to the right of the sock, and the spoon is situated on the right side of the image.",
+    "dsl": "(exists ?handbag (exists ?drill (exists ?bottle (exists ?sock (and (Is ?handbag 'handbag') (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?sock 'sock') (LargerThan ?handbag ?drill) (RightOf ?drill ?handbag) (AlignedHorizontally ?handbag ?drill) (RightOf ?bottle ?drill) (AlignedHorizontally ?drill ?bottle) (OnBottomSide ?sock) (SmallerThan ?sock ?handbag) (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?keys (exists ?remote (exists ?scissors (exists ?spoon (and (Is ?keys 'keys') (Is ?remote 'remote') (Is ?scissors 'scissors') (Is ?spoon 'spoon') (RightOf ?glasses ?sock) (RightOf ?keys ?glasses) (AlignedHorizontally ?glasses ?keys) (RightOf ?remote ?keys) (AlignedHorizontally ?keys ?remote) (RightOf ?scissors ?remote) (AlignedHorizontally ?remote ?scissors) (RightOf ?spoon ?scissors) (AlignedHorizontally ?scissors ?spoon) (OnRightSide ?spoon)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?drill (exists ?bottle (exists ?sock (forall ?glasses (exists ?keys (exists ?remote (exists ?scissors (exists ?spoon (and (Is ?handbag 'handbag') (LargerThan ?handbag ?drill) (RightOf ?drill ?handbag) (Is ?drill 'drill') (AlignedHorizontally ?handbag ?drill) (SmallerThan ?sock ?handbag) (RightOf ?bottle ?drill) (OnBottomSide ?sock) (or (not (Is ?glasses 'glasses')) (RightOf ?glasses ?sock)) (AlignedHorizontally ?drill ?bottle) (Is ?bottle 'bottle') (Is ?sock 'sock') (or (not (Is ?glasses 'glasses')) (Is ?spoon 'spoon')) (or (not (Is ?glasses 'glasses')) (RightOf ?keys ?glasses)) (or (not (Is ?glasses 'glasses')) (Is ?scissors 'scissors')) (or (not (Is ?glasses 'glasses')) (RightOf ?spoon ?scissors)) (or (not (Is ?glasses 'glasses')) (Is ?keys 'keys')) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?glasses ?keys)) (or (not (Is ?glasses 'glasses')) (Is ?remote 'remote')) (or (not (Is ?glasses 'glasses')) (RightOf ?scissors ?remote)) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?remote ?scissors)) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?scissors ?spoon)) (or (not (Is ?glasses 'glasses')) (RightOf ?remote ?keys)) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?keys ?remote)) (or (not (Is ?glasses 'glasses')) (OnRightSide ?spoon))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "remote",
+        "sock",
+        "drill",
+        "handbag",
+        "bottle",
+        "scissors",
+        "spoon"
+    ]
+}

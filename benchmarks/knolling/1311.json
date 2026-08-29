@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a suitcase positioned on the top side of the image. A laptop is placed below the suitcase, and a backpack is located on the right side, aligned horizontally with the laptop. The scene strictly follows a structural rule: for every wrench present, it is visually smaller than the suitcase, and there is a spoon positioned above it, a mouse aligned horizontally with it, and a pair of glasses placed above the mouse.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?backpack (and (Is ?suitcase 'suitcase') (Is ?laptop 'laptop') (Is ?backpack 'backpack') (OnTopSide ?suitcase) (OnRightSide ?backpack) (Above ?suitcase ?laptop) (AlignedHorizontally ?laptop ?backpack) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?spoon (exists ?mouse (exists ?glasses (and (Is ?spoon 'spoon') (Is ?mouse 'mouse') (Is ?glasses 'glasses') (SmallerThan ?wrench ?suitcase) (Above ?spoon ?wrench) (AlignedHorizontally ?wrench ?mouse) (Above ?glasses ?mouse)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?backpack (forall ?wrench (exists ?spoon (exists ?mouse (exists ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Above ?suitcase ?laptop) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?suitcase)) (Is ?laptop 'laptop') (AlignedHorizontally ?laptop ?backpack) (or (not (Is ?wrench 'wrench')) (Is ?glasses 'glasses')) (or (not (Is ?wrench 'wrench')) (Above ?spoon ?wrench)) (OnRightSide ?backpack) (or (not (Is ?wrench 'wrench')) (Is ?mouse 'mouse')) (or (not (Is ?wrench 'wrench')) (Above ?glasses ?mouse)) (or (not (Is ?wrench 'wrench')) (Is ?spoon 'spoon')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?wrench ?mouse)) (Is ?backpack 'backpack')))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "wrench",
+        "backpack",
+        "mouse",
+        "spoon",
+        "suitcase"
+    ]
+}

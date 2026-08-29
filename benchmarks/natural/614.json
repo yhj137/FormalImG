@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a basket containing a round, peeled orange and a spoon to the right of the orange.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?o (exists ?s (and (Is ?w 'woman') (Is ?b 'basket') (Is ?o 'orange') (Is ?s 'spoon') (Holding ?w ?b) (In ?o ?b) (In ?s ?b) (LeftOf ?o ?s) (HasShape ?o 'round') (HasState ?o 'peeled')))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?o (exists ?s (and (Is ?w 'woman') (Holding ?w ?b) (Is ?b 'basket') (In ?o ?b) (In ?s ?b) (Is ?o 'orange') (LeftOf ?o ?s) (Is ?s 'spoon') (HasShape ?o 'round') (HasState ?o 'peeled')))))))",
+    "k": 4,
+    "object_classes": [
+        "orange",
+        "basket",
+        "spoon",
+        "woman"
+    ]
+}

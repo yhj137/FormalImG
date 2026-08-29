@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe located on the left side of the scene, there is a sequence of items arranged to its right in the following order: a glove, a stapler, a cup, a sandwich, a knife, and a carrot. Additionally, the shoe is visually larger than the glove.",
+    "dsl": "(forall ?shoe (implies (and (Is ?shoe 'shoe') (OnLeftSide ?shoe)) (exists ?glove (exists ?stapler (exists ?cup (exists ?sandwich (exists ?knife (exists ?carrot (and (Is ?glove 'glove') (Is ?stapler 'stapler') (Is ?cup 'cup') (Is ?sandwich 'sandwich') (Is ?knife 'knife') (Is ?carrot 'carrot') (RightOf ?glove ?shoe) (RightOf ?stapler ?glove) (RightOf ?cup ?stapler) (RightOf ?sandwich ?cup) (RightOf ?knife ?sandwich) (RightOf ?carrot ?knife) (LargerThan ?shoe ?glove))))))))))",
+    "cnf": "(forall ?shoe (exists ?glove (exists ?stapler (exists ?cup (exists ?sandwich (exists ?knife (exists ?carrot (and (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?glove 'glove')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?stapler 'stapler')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?glove ?shoe)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?cup 'cup')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?stapler ?glove)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?carrot 'carrot')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?sandwich 'sandwich')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?cup ?stapler)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (LargerThan ?shoe ?glove)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?carrot ?knife)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?sandwich ?cup)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?knife ?sandwich))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "carrot",
+        "cup",
+        "knife",
+        "sandwich",
+        "glove",
+        "shoe"
+    ]
+}

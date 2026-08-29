@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image where every spoon is made of metal.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?s (implies (Is ?s 'spoon') (HasMaterial ?s 'metal'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?s (or (not (Is ?s 'spoon')) (HasMaterial ?s 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "spoon"
+    ]
+}

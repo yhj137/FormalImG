@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in an organized grid. There is a pair of blue jeans, with a gray laptop positioned directly below them and aligned vertically. To the right of the laptop is a black keyboard, aligned horizontally, which has a black mouse located directly below it; the mouse is visually smaller than the keyboard. Continuing to the right of the keyboard is a yellow drill, aligned horizontally, with a red hammer positioned vertically below it. To the right of the drill is a white phone, aligned horizontally, with black glasses located directly below it. Finally, every book in the scene is green, has a white ruler located directly below it and aligned vertically, is positioned to the right of the phone and aligned horizontally, and is larger than the phone.",
+    "dsl": "(exists ?jeans (exists ?laptop (exists ?keyboard (exists ?mouse (exists ?drill (exists ?hammer (exists ?phone (exists ?glasses (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?hammer 'hammer') (Has ?hammer 'red') (Is ?phone 'phone') (Has ?phone 'white') (Is ?glasses 'glasses') (Has ?glasses 'black') (Below ?laptop ?jeans) (AlignedVertically ?jeans ?laptop) (LeftOf ?laptop ?keyboard) (AlignedHorizontally ?laptop ?keyboard) (Below ?mouse ?keyboard) (AlignedVertically ?keyboard ?mouse) (SmallerThan ?mouse ?keyboard) (LeftOf ?keyboard ?drill) (AlignedHorizontally ?keyboard ?drill) (Below ?hammer ?drill) (AlignedVertically ?drill ?hammer) (LeftOf ?drill ?phone) (AlignedHorizontally ?drill ?phone) (Below ?glasses ?phone) (AlignedVertically ?phone ?glasses) (forall ?book (implies (Is ?book 'book') (exists ?ruler (and (Is ?ruler 'ruler') (Has ?ruler 'white') (Has ?book 'green') (Below ?ruler ?book) (AlignedVertically ?book ?ruler) (LeftOf ?phone ?book) (AlignedHorizontally ?phone ?book) (SmallerThan ?phone ?book))))))))))))))",
+    "cnf": "(exists ?jeans (exists ?laptop (exists ?keyboard (exists ?mouse (exists ?drill (exists ?hammer (exists ?phone (exists ?glasses (forall ?book (exists ?ruler (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?laptop ?jeans) (AlignedVertically ?jeans ?laptop) (Has ?laptop 'gray') (LeftOf ?laptop ?keyboard) (Is ?laptop 'laptop') (AlignedHorizontally ?laptop ?keyboard) (Has ?keyboard 'black') (Below ?mouse ?keyboard) (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?mouse) (Has ?mouse 'black') (SmallerThan ?mouse ?keyboard) (Is ?mouse 'mouse') (LeftOf ?keyboard ?drill) (AlignedHorizontally ?keyboard ?drill) (Has ?drill 'yellow') (Below ?hammer ?drill) (Is ?drill 'drill') (AlignedVertically ?drill ?hammer) (Has ?hammer 'red') (LeftOf ?drill ?phone) (Is ?hammer 'hammer') (AlignedHorizontally ?drill ?phone) (Has ?phone 'white') (Below ?glasses ?phone) (Is ?phone 'phone') (AlignedVertically ?phone ?glasses) (Has ?glasses 'black') (or (not (Is ?book 'book')) (LeftOf ?phone ?book)) (Is ?glasses 'glasses') (or (not (Is ?book 'book')) (AlignedHorizontally ?phone ?book)) (or (not (Is ?book 'book')) (AlignedVertically ?book ?ruler)) (or (not (Is ?book 'book')) (SmallerThan ?phone ?book)) (or (not (Is ?book 'book')) (Below ?ruler ?book)) (or (not (Is ?book 'book')) (Has ?ruler 'white')) (or (not (Is ?book 'book')) (Has ?book 'green')) (or (not (Is ?book 'book')) (Is ?ruler 'ruler')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "book",
+        "glasses",
+        "keyboard",
+        "phone",
+        "drill",
+        "hammer",
+        "jeans",
+        "mouse"
+    ]
+}

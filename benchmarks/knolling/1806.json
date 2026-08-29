@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement of ten items. At the top of the scene, there is a handbag and a camera aligned horizontally, with the handbag on the top side and the camera positioned on the top side to the right. A vertical column of items is arranged beneath the handbag: a book is below the handbag, a cutting board is below the book, a pan is below the cutting board, and a sandwich is below the pan; these five items are all aligned vertically. The cutting board is visually larger than the sandwich. On the right side of the image, below the camera, there is a second vertical column consisting of glasses, keys, and a wrench; the camera is above the glasses, the glasses are above the keys, and the keys are above the wrench. These items are aligned vertically, and the wrench is located on the bottom side. Finally, an apple is positioned on the bottom side and aligned horizontally with the sandwich. The handbag is larger than the glasses.",
+    "dsl": "(exists ?handbag (exists ?camera (exists ?book (exists ?cutting_board (exists ?pan (exists ?sandwich (exists ?glasses (exists ?keys (exists ?wrench (exists ?apple (and (Is ?handbag 'handbag') (Is ?camera 'camera') (Is ?book 'book') (Is ?cutting_board 'cutting_board') (Is ?pan 'pan') (Is ?sandwich 'sandwich') (Is ?glasses 'glasses') (Is ?keys 'keys') (Is ?wrench 'wrench') (Is ?apple 'apple') (OnTopSide ?handbag) (OnTopSide ?camera) (OnRightSide ?camera) (AlignedHorizontally ?handbag ?camera) (LargerThan ?handbag ?glasses) (Above ?handbag ?book) (Above ?book ?cutting_board) (Above ?cutting_board ?pan) (Above ?pan ?sandwich) (AlignedVertically ?handbag ?book) (AlignedVertically ?book ?cutting_board) (AlignedVertically ?cutting_board ?pan) (AlignedVertically ?pan ?sandwich) (LargerThan ?cutting_board ?sandwich) (OnRightSide ?glasses) (OnRightSide ?keys) (OnRightSide ?wrench) (Above ?camera ?glasses) (Above ?glasses ?keys) (Above ?keys ?wrench) (AlignedVertically ?camera ?glasses) (AlignedVertically ?glasses ?keys) (AlignedVertically ?keys ?wrench) (OnBottomSide ?wrench) (OnBottomSide ?apple) (AlignedHorizontally ?sandwich ?apple))))))))))))",
+    "cnf": "(exists ?handbag (exists ?camera (exists ?book (exists ?cutting_board (exists ?pan (exists ?sandwich (exists ?glasses (exists ?keys (exists ?wrench (exists ?apple (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (AlignedHorizontally ?handbag ?camera) (LargerThan ?handbag ?glasses) (OnRightSide ?camera) (Above ?camera ?glasses) (Above ?handbag ?book) (Is ?glasses 'glasses') (OnRightSide ?glasses) (OnTopSide ?camera) (AlignedVertically ?camera ?glasses) (Above ?glasses ?keys) (AlignedVertically ?handbag ?book) (Is ?book 'book') (Above ?book ?cutting_board) (Is ?camera 'camera') (AlignedVertically ?glasses ?keys) (OnRightSide ?keys) (Above ?keys ?wrench) (AlignedVertically ?book ?cutting_board) (Is ?cutting_board 'cutting_board') (Above ?cutting_board ?pan) (AlignedVertically ?keys ?wrench) (Is ?keys 'keys') (OnRightSide ?wrench) (AlignedVertically ?cutting_board ?pan) (Is ?pan 'pan') (Above ?pan ?sandwich) (OnBottomSide ?wrench) (Is ?wrench 'wrench') (LargerThan ?cutting_board ?sandwich) (AlignedVertically ?pan ?sandwich) (Is ?sandwich 'sandwich') (AlignedHorizontally ?sandwich ?apple) (OnBottomSide ?apple) (Is ?apple 'apple'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "glasses",
+        "keys",
+        "apple",
+        "wrench",
+        "cutting_board",
+        "handbag",
+        "pan",
+        "camera",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a handbag, keys, a bottle, a donut, a glove, and a tie. There is a handbag positioned on the top side of the image. For every set of keys in the scene, there is a sequence of items arranged to its right: a bottle, which is smaller than the handbag; a donut located to the right of the bottle and smaller than it; a glove to the right of the donut; and a tie to the right of the glove. The tie is situated on the right side of the image and is smaller than the glove.",
+    "dsl": "(exists ?h (and (Is ?h 'handbag') (OnTopSide ?h) (forall ?k (implies (Is ?k 'keys') (exists ?b (exists ?d (exists ?g (exists ?t (and (Is ?b 'bottle') (Is ?d 'donut') (Is ?g 'glove') (Is ?t 'tie') (RightOf ?b ?k) (SmallerThan ?b ?h) (RightOf ?d ?b) (SmallerThan ?d ?b) (RightOf ?g ?d) (RightOf ?t ?g) (OnRightSide ?t) (SmallerThan ?t ?g))))))))))",
+    "cnf": "(exists ?h (forall ?k (exists ?b (exists ?d (exists ?g (exists ?t (and (Is ?h 'handbag') (OnTopSide ?h) (or (not (Is ?k 'keys')) (SmallerThan ?b ?h)) (or (not (Is ?k 'keys')) (RightOf ?b ?k)) (or (not (Is ?k 'keys')) (RightOf ?d ?b)) (or (not (Is ?k 'keys')) (Is ?t 'tie')) (or (not (Is ?k 'keys')) (Is ?b 'bottle')) (or (not (Is ?k 'keys')) (SmallerThan ?d ?b)) (or (not (Is ?k 'keys')) (Is ?d 'donut')) (or (not (Is ?k 'keys')) (Is ?g 'glove')) (or (not (Is ?k 'keys')) (RightOf ?t ?g)) (or (not (Is ?k 'keys')) (RightOf ?g ?d)) (or (not (Is ?k 'keys')) (OnRightSide ?t)) (or (not (Is ?k 'keys')) (SmallerThan ?t ?g)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "tie",
+        "handbag",
+        "bottle",
+        "glove",
+        "donut"
+    ]
+}

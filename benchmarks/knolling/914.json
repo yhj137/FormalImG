@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a blue backpack and a gray keyboard. The keyboard is placed below the backpack. Additionally, for every camera in the scene, it is located to the left of the backpack, and there is a white spoon above that camera and a black phone to the left of that camera.",
+    "dsl": "(exists ?b (exists ?k (and (Is ?b 'backpack') (Has ?b 'blue') (Is ?k 'keyboard') (Has ?k 'gray') (Below ?k ?b) (forall ?c (implies (Is ?c 'camera') (exists ?s (exists ?p (and (Is ?s 'spoon') (Has ?s 'white') (Is ?p 'phone') (Has ?p 'black') (LeftOf ?c ?b) (Above ?s ?c) (LeftOf ?p ?c)))))))))",
+    "cnf": "(exists ?b (exists ?k (forall ?c (exists ?s (exists ?p (and (Is ?b 'backpack') (Has ?b 'blue') (Below ?k ?b) (or (not (Is ?c 'camera')) (LeftOf ?c ?b)) (Has ?k 'gray') (or (not (Is ?c 'camera')) (Has ?p 'black')) (or (not (Is ?c 'camera')) (Above ?s ?c)) (Is ?k 'keyboard') (or (not (Is ?c 'camera')) (Is ?p 'phone')) (or (not (Is ?c 'camera')) (LeftOf ?p ?c)) (or (not (Is ?c 'camera')) (Has ?s 'white')) (or (not (Is ?c 'camera')) (Is ?s 'spoon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "phone",
+        "backpack",
+        "camera",
+        "spoon"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a wardrobe standing next to a mirror, with a sleeping cat resting on top. A laptop sits to the left of the mirror, and a round bowl is placed to the right of the laptop. Additionally, every shirt is stored inside the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?c (exists ?l (and (Is ?w 'wardrobe') (Is ?m 'mirror') (NextTo ?m ?w) (Is ?c 'cat') (On ?c ?w) (HasState ?c 'sleeping') (Is ?l 'laptop') (LeftOf ?l ?m) (forall ?s (implies (Is ?s 'shirt') (In ?s ?w))) (exists ?b (and (Is ?b 'bowl') (HasShape ?b 'round') (RightOf ?b ?l)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?c (exists ?l (forall ?s (exists ?b (and (Is ?w 'wardrobe') (NextTo ?m ?w) (On ?c ?w) (Is ?m 'mirror') (LeftOf ?l ?m) (or (not (Is ?s 'shirt')) (In ?s ?w)) (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?l 'laptop') (RightOf ?b ?l) (HasShape ?b 'round') (Is ?b 'bowl')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "cat",
+        "laptop",
+        "shirt",
+        "wardrobe",
+        "mirror"
+    ]
+}

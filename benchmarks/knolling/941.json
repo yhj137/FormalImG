@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a game controller positioned on the bottom side of the scene, which is visually larger than a mouse. A phone is arranged above the game controller, and the mouse is located to the left of the phone. Additionally, the arrangement follows a rule where for every bowl, there is a book positioned above it such that the bowl is below the book, and the phone is to the left of that bowl.",
+    "dsl": "(exists ?gc (exists ?ph (exists ?m (and (Is ?gc 'game_controller') (Is ?ph 'phone') (Is ?m 'mouse') (OnBottomSide ?gc) (LargerThan ?gc ?m) (Above ?ph ?gc) (LeftOf ?m ?ph) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?bk (and (Is ?bk 'book') (Below ?bowl ?bk) (LeftOf ?ph ?bowl)))))))))",
+    "cnf": "(exists ?gc (exists ?ph (exists ?m (forall ?bowl (exists ?bk (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (LargerThan ?gc ?m) (Above ?ph ?gc) (Is ?m 'mouse') (LeftOf ?m ?ph) (Is ?ph 'phone') (or (not (Is ?bowl 'bowl')) (LeftOf ?ph ?bowl)) (or (not (Is ?bowl 'bowl')) (Below ?bowl ?bk)) (or (not (Is ?bowl 'bowl')) (Is ?bk 'book'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "phone",
+        "game_controller",
+        "mouse",
+        "bowl"
+    ]
+}

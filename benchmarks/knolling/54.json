@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a single lighter located on the right side of the composition.",
+    "dsl": "(exists ?lighter (and (Is ?lighter 'lighter') (OnRightSide ?lighter)))",
+    "cnf": "(exists ?lighter (and (Is ?lighter 'lighter') (OnRightSide ?lighter)))",
+    "k": 1,
+    "object_classes": [
+        "lighter"
+    ]
+}

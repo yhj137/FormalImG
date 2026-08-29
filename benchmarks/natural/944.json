@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant stands to the left of a wooden bench. A round cake sits on the bench, and a sandwich is placed to the right of the cake. Every bird in the scene is perched on the elephant.",
+    "dsl": "(exists ?be (exists ?el (exists ?ca (and (Is ?be 'bench') (HasMaterial ?be 'wooden') (Is ?el 'elephant') (LeftOf ?el ?be) (Is ?ca 'cake') (HasShape ?ca 'round') (On ?ca ?be) (forall ?bi (implies (Is ?bi 'bird') (On ?bi ?el))) (exists ?sa (and (Is ?sa 'sandwich') (RightOf ?sa ?ca)))))))",
+    "cnf": "(exists ?be (exists ?el (exists ?ca (forall ?bi (exists ?sa (and (Is ?be 'bench') (HasMaterial ?be 'wooden') (LeftOf ?el ?be) (On ?ca ?be) (Is ?el 'elephant') (or (not (Is ?bi 'bird')) (On ?bi ?el)) (HasShape ?ca 'round') (RightOf ?sa ?ca) (Is ?ca 'cake') (Is ?sa 'sandwich')))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "bench",
+        "cake",
+        "bird",
+        "sandwich"
+    ]
+}

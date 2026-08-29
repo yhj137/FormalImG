@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a donut positioned on the left side of the image. For every glove in the scene, it is located to the right of this donut.",
+    "dsl": "(exists ?d (and (Is ?d 'donut') (OnLeftSide ?d) (forall ?g (implies (Is ?g 'glove') (RightOf ?g ?d)))))",
+    "cnf": "(exists ?d (forall ?g (and (Is ?d 'donut') (OnLeftSide ?d) (or (not (Is ?g 'glove')) (RightOf ?g ?d)))))",
+    "k": 2,
+    "object_classes": [
+        "glove",
+        "donut"
+    ]
+}

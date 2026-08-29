@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of glasses positioned on the bottom side of the layout. For every bowl present in the scene, it is arranged vertically above the glasses.",
+    "dsl": "(exists ?g (and (Is ?g 'glasses') (OnBottomSide ?g) (forall ?b (implies (Is ?b 'bowl') (Above ?b ?g)))))",
+    "cnf": "(exists ?g (forall ?b (and (Is ?g 'glasses') (OnBottomSide ?g) (or (not (Is ?b 'bowl')) (Above ?b ?g)))))",
+    "k": 2,
+    "object_classes": [
+        "glasses",
+        "bowl"
+    ]
+}

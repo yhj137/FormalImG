@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a round rock, and every clock is located next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'rock') (HasShape ?r 'round') (forall ?c (implies (Is ?c 'clock') (NextTo ?c ?r))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (forall ?c (and (Is ?r 'rock') (HasShape ?r 'round') (or (not (Is ?c 'clock')) (NextTo ?c ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "clock",
+        "rock"
+    ]
+}

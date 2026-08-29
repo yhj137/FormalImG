@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every person is smiling inside a car.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?p (implies (Is ?p 'person') (exists ?c (and (Is ?c 'car') (In ?p ?c) (HasState ?p 'smiling'))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?p (exists ?c (and (or (not (Is ?p 'person')) (Is ?c 'car')) (or (not (Is ?p 'person')) (In ?p ?c)) (or (not (Is ?p 'person')) (HasState ?p 'smiling'))))))",
+    "k": 2,
+    "object_classes": [
+        "person",
+        "car"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene. Every flower is inside a bottle situated to the right of a monitor. The monitor is inside a bus, which also contains a person holding a fork, with a sleeping cat to their right.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?fl (implies (Is ?fl 'flower') (exists ?bo (exists ?m (exists ?b (exists ?p (exists ?f (exists ?c (and (Is ?bo 'bottle') (Is ?m 'monitor') (Is ?b 'bus') (Is ?p 'person') (Is ?f 'fork') (Is ?c 'cat') (In ?fl ?bo) (RightOf ?bo ?m) (In ?m ?b) (In ?p ?b) (Holding ?p ?f) (RightOf ?c ?p) (HasState ?c 'sleeping')))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?fl (exists ?bo (exists ?m (exists ?b (exists ?p (exists ?f (exists ?c (and (or (not (Is ?fl 'flower')) (Is ?bo 'bottle')) (or (not (Is ?fl 'flower')) (Is ?m 'monitor')) (or (not (Is ?fl 'flower')) (In ?fl ?bo)) (or (not (Is ?fl 'flower')) (Is ?b 'bus')) (or (not (Is ?fl 'flower')) (RightOf ?bo ?m)) (or (not (Is ?fl 'flower')) (Is ?c 'cat')) (or (not (Is ?fl 'flower')) (Is ?p 'person')) (or (not (Is ?fl 'flower')) (In ?m ?b)) (or (not (Is ?fl 'flower')) (Is ?f 'fork')) (or (not (Is ?fl 'flower')) (RightOf ?c ?p)) (or (not (Is ?fl 'flower')) (In ?p ?b)) (or (not (Is ?fl 'flower')) (Holding ?p ?f)) (or (not (Is ?fl 'flower')) (HasState ?c 'sleeping')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "fork",
+        "bottle",
+        "monitor",
+        "flower",
+        "cat",
+        "bus"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a man holding a hammer standing next to a desk with an open laptop. A backpack is next to the desk, to the right of a red sofa with a jacket on it. An oval mirror stands to the left of the sofa, and every toy car is located below the sofa.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (exists ?h (exists ?d (exists ?l (exists ?b (exists ?s (exists ?j (exists ?m (and (Is ?p 'man') (Is ?h 'hammer') (Is ?d 'desk') (Is ?l 'laptop') (Is ?b 'backpack') (Is ?s 'sofa') (Is ?j 'jacket') (Is ?m 'mirror') (Holding ?p ?h) (NextTo ?p ?d) (On ?l ?d) (HasState ?l 'open') (NextTo ?b ?d) (RightOf ?b ?s) (HasColor ?s 'red') (On ?j ?s) (LeftOf ?m ?s) (HasShape ?m 'oval') (forall ?tc (implies (Is ?tc 'toy car') (Below ?tc ?s)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (exists ?h (exists ?d (exists ?l (exists ?b (exists ?s (exists ?j (exists ?m (forall ?tc (and (Is ?p 'man') (Holding ?p ?h) (NextTo ?p ?d) (Is ?h 'hammer') (Is ?d 'desk') (On ?l ?d) (NextTo ?b ?d) (Is ?l 'laptop') (HasState ?l 'open') (Is ?b 'backpack') (RightOf ?b ?s) (Is ?s 'sofa') (HasColor ?s 'red') (On ?j ?s) (LeftOf ?m ?s) (Is ?j 'jacket') (or (not (Is ?tc 'toy car')) (Below ?tc ?s)) (Is ?m 'mirror') (HasShape ?m 'oval'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "backpack",
+        "laptop",
+        "man",
+        "jacket",
+        "toy car",
+        "hammer",
+        "desk",
+        "mirror"
+    ]
+}

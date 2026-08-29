@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a sofa sitting on a rug, with a man seated on it holding an open laptop. To the left of the sofa is a refrigerator containing a metal knife, and a hammer is located to the right of the sofa. All shoes in the scene are placed on the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?sf (exists ?m (exists ?l (exists ?rf (exists ?k (and (Is ?r 'rug') (Is ?sf 'sofa') (Is ?m 'man') (Is ?l 'laptop') (Is ?rf 'refrigerator') (Is ?k 'knife') (On ?sf ?r) (On ?m ?sf) (Holding ?m ?l) (HasState ?l 'open') (LeftOf ?rf ?sf) (In ?k ?rf) (HasMaterial ?k 'metal') (forall ?s (implies (Is ?s 'shoes') (On ?s ?r))) (exists ?h (and (Is ?h 'hammer') (RightOf ?h ?sf)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?sf (exists ?m (exists ?l (exists ?rf (exists ?k (forall ?s (exists ?h (and (Is ?r 'rug') (On ?sf ?r) (or (not (Is ?s 'shoes')) (On ?s ?r)) (Is ?sf 'sofa') (On ?m ?sf) (LeftOf ?rf ?sf) (Is ?m 'man') (Holding ?m ?l) (RightOf ?h ?sf) (Is ?rf 'refrigerator') (In ?k ?rf) (Is ?l 'laptop') (HasState ?l 'open') (Is ?h 'hammer') (Is ?k 'knife') (HasMaterial ?k 'metal')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "knife",
+        "shoes",
+        "laptop",
+        "man",
+        "rug",
+        "hammer",
+        "refrigerator"
+    ]
+}

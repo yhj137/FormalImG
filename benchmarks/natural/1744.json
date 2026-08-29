@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is on a fabric rug, along with a black umbrella. Next to the person is a metal laptop, with a keyboard beside it. To the left of the person stands a white refrigerator containing all the fruit in the scene. A green plant rests on the refrigerator, and a clock is located to its left.",
+    "dsl": "(exists ?r (exists ?p (exists ?l (exists ?k (exists ?u (exists ?ref (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?p 'person') (On ?p ?r) (Is ?l 'laptop') (HasMaterial ?l 'metal') (NextTo ?l ?p) (Is ?k 'keyboard') (NextTo ?k ?l) (Is ?u 'umbrella') (HasColor ?u 'black') (On ?u ?r) (Is ?ref 'refrigerator') (HasColor ?ref 'white') (LeftOf ?ref ?p) (forall ?f (implies (Is ?f 'fruit') (In ?f ?ref))) (exists ?pl (and (Is ?pl 'plant') (HasColor ?pl 'green') (On ?pl ?ref))) (exists ?c (and (Is ?c 'clock') (LeftOf ?c ?ref))))))))))",
+    "cnf": "(exists ?r (exists ?p (exists ?l (exists ?k (exists ?u (exists ?ref (forall ?f (exists ?pl (exists ?c (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?p ?r) (On ?u ?r) (Is ?p 'person') (NextTo ?l ?p) (HasColor ?u 'black') (LeftOf ?ref ?p) (HasMaterial ?l 'metal') (NextTo ?k ?l) (Is ?u 'umbrella') (HasColor ?ref 'white') (or (not (Is ?f 'fruit')) (In ?f ?ref)) (Is ?l 'laptop') (Is ?k 'keyboard') (Is ?ref 'refrigerator') (On ?pl ?ref) (LeftOf ?c ?ref) (HasColor ?pl 'green') (Is ?c 'clock') (Is ?pl 'plant')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "person",
+        "plant",
+        "laptop",
+        "refrigerator",
+        "rug",
+        "clock",
+        "fruit"
+    ]
+}

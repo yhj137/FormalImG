@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image of a round orange.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?o (and (Is ?o 'orange') (HasShape ?o 'round'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?o (and (Is ?o 'orange') (HasShape ?o 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "orange"
+    ]
+}

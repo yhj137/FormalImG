@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown cutting board positioned on the bottom side, with a green bottle located to its right; the cutting board is visually larger than the bottle. To the right of the bottle lies a blue tie. Every wrench in the scene is gray and is placed to the right of the tie. Furthermore, for each wrench, there is a white cup to its right and a set of yellow keys to the right of the cup. The wrench is larger than the keys.",
+    "dsl": "(exists ?cb (exists ?bt (exists ?t (and (Is ?cb 'cutting_board') (Has ?cb 'brown') (OnBottomSide ?cb) (Is ?bt 'bottle') (Has ?bt 'green') (Is ?t 'tie') (Has ?t 'blue') (RightOf ?bt ?cb) (LargerThan ?cb ?bt) (RightOf ?t ?bt) (forall ?w (implies (Is ?w 'wrench') (exists ?c (exists ?k (and (Has ?w 'gray') (Is ?c 'cup') (Has ?c 'white') (Is ?k 'keys') (Has ?k 'yellow') (RightOf ?w ?t) (RightOf ?c ?w) (RightOf ?k ?c) (LargerThan ?w ?k))))))))))",
+    "cnf": "(exists ?cb (exists ?bt (exists ?t (forall ?w (exists ?c (exists ?k (and (Is ?cb 'cutting_board') (Has ?cb 'brown') (OnBottomSide ?cb) (RightOf ?bt ?cb) (LargerThan ?cb ?bt) (Has ?bt 'green') (RightOf ?t ?bt) (Is ?bt 'bottle') (Has ?t 'blue') (or (not (Is ?w 'wrench')) (RightOf ?w ?t)) (Is ?t 'tie') (or (not (Is ?w 'wrench')) (Has ?k 'yellow')) (or (not (Is ?w 'wrench')) (RightOf ?c ?w)) (or (not (Is ?w 'wrench')) (Is ?k 'keys')) (or (not (Is ?w 'wrench')) (RightOf ?k ?c)) (or (not (Is ?w 'wrench')) (Has ?c 'white')) (or (not (Is ?w 'wrench')) (LargerThan ?w ?k)) (or (not (Is ?w 'wrench')) (Is ?c 'cup')) (or (not (Is ?w 'wrench')) (Has ?w 'gray')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "tie",
+        "wrench",
+        "cup",
+        "cutting_board",
+        "bottle"
+    ]
+}

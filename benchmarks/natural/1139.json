@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a boat next to a bicycle. A rectangular book lies beside the bicycle, and next to the book is a round bowl containing a fork. All shoes are positioned to the left of the boat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?boat (exists ?bike (exists ?book (and (Is ?boat 'boat') (Is ?bike 'bicycle') (NextTo ?bike ?boat) (Is ?book 'book') (HasShape ?book 'rectangular') (NextTo ?book ?bike) (forall ?shoes (implies (Is ?shoes 'shoes') (LeftOf ?shoes ?boat))) (exists ?bowl (exists ?fork (and (Is ?bowl 'bowl') (HasShape ?bowl 'round') (NextTo ?bowl ?book) (Is ?fork 'fork') (In ?fork ?bowl)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?boat (exists ?bike (exists ?book (forall ?shoes (exists ?bowl (exists ?fork (and (Is ?boat 'boat') (NextTo ?bike ?boat) (or (not (Is ?shoes 'shoes')) (LeftOf ?shoes ?boat)) (Is ?bike 'bicycle') (NextTo ?book ?bike) (HasShape ?book 'rectangular') (NextTo ?bowl ?book) (Is ?book 'book') (HasShape ?bowl 'round') (In ?fork ?bowl) (Is ?bowl 'bowl') (Is ?fork 'fork')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "fork",
+        "shoes",
+        "book",
+        "boat",
+        "bicycle"
+    ]
+}

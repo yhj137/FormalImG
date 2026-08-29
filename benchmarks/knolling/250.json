@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. An apple is placed on the top side of the composition. To the right of the apple, there is a carrot.",
+    "dsl": "(exists ?a (exists ?c (and (Is ?a 'apple') (Is ?c 'carrot') (OnTopSide ?a) (RightOf ?c ?a))))",
+    "cnf": "(exists ?a (exists ?c (and (Is ?a 'apple') (OnTopSide ?a) (RightOf ?c ?a) (Is ?c 'carrot'))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "apple"
+    ]
+}

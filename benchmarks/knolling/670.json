@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every lighter in the scene, there is a specific arrangement involving a pan, a fork, and a stapler. The pan is located on the left side of the image. The fork is positioned below the pan. The lighter is found to the right of the fork. Additionally, the stapler is located below the lighter, and the stapler is visually smaller than the pan.",
+    "dsl": "(and (forall ?l (implies (Is ?l 'lighter') (exists ?p (exists ?f (exists ?s (and (Is ?p 'pan') (Is ?f 'fork') (Is ?s 'stapler') (OnLeftSide ?p) (Below ?f ?p) (RightOf ?l ?f) (Below ?s ?l) (SmallerThan ?s ?p))))))))",
+    "cnf": "(forall ?l (exists ?p (exists ?f (exists ?s (and (or (not (Is ?l 'lighter')) (Is ?p 'pan')) (or (not (Is ?l 'lighter')) (Is ?f 'fork')) (or (not (Is ?l 'lighter')) (OnLeftSide ?p)) (or (not (Is ?l 'lighter')) (Is ?s 'stapler')) (or (not (Is ?l 'lighter')) (Below ?f ?p)) (or (not (Is ?l 'lighter')) (Below ?s ?l)) (or (not (Is ?l 'lighter')) (RightOf ?l ?f)) (or (not (Is ?l 'lighter')) (SmallerThan ?s ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "pan",
+        "lighter",
+        "stapler"
+    ]
+}

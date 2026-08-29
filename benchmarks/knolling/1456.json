@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a stapler located on the left side. For every set of keys present, it is positioned below the stapler and is physically smaller than the stapler. Associated with the keys is a black remote located to the right. Directly above the remote are headphones, while a phone is placed to the right of the remote. Below the phone lies a screwdriver. A pair of glasses is vertically aligned with the screwdriver, and a carrot is found to the right of the screwdriver, situated on the bottom side of the image.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (forall ?keys (implies (Is ?keys 'keys') (exists ?remote (exists ?headphones (exists ?phone (exists ?screwdriver (exists ?glasses (exists ?carrot (and (Is ?remote 'remote') (Has ?remote 'black') (Is ?headphones 'headphones') (Is ?phone 'phone') (Is ?screwdriver 'screwdriver') (Is ?glasses 'glasses') (Is ?carrot 'carrot') (Below ?keys ?stapler) (SmallerThan ?keys ?stapler) (RightOf ?remote ?keys) (Above ?headphones ?remote) (RightOf ?phone ?remote) (Below ?screwdriver ?phone) (AlignedVertically ?glasses ?screwdriver) (RightOf ?carrot ?screwdriver) (OnBottomSide ?carrot))))))))))))",
+    "cnf": "(exists ?stapler (forall ?keys (exists ?remote (exists ?headphones (exists ?phone (exists ?screwdriver (exists ?glasses (exists ?carrot (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (or (not (Is ?keys 'keys')) (Below ?keys ?stapler)) (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?stapler)) (or (not (Is ?keys 'keys')) (Is ?carrot 'carrot')) (or (not (Is ?keys 'keys')) (RightOf ?remote ?keys)) (or (not (Is ?keys 'keys')) (Is ?glasses 'glasses')) (or (not (Is ?keys 'keys')) (RightOf ?carrot ?screwdriver)) (or (not (Is ?keys 'keys')) (Above ?headphones ?remote)) (or (not (Is ?keys 'keys')) (Has ?remote 'black')) (or (not (Is ?keys 'keys')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?keys 'keys')) (AlignedVertically ?glasses ?screwdriver)) (or (not (Is ?keys 'keys')) (OnBottomSide ?carrot)) (or (not (Is ?keys 'keys')) (RightOf ?phone ?remote)) (or (not (Is ?keys 'keys')) (Is ?headphones 'headphones')) (or (not (Is ?keys 'keys')) (Is ?remote 'remote')) (or (not (Is ?keys 'keys')) (Is ?phone 'phone')) (or (not (Is ?keys 'keys')) (Below ?screwdriver ?phone)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "remote",
+        "stapler",
+        "carrot",
+        "phone",
+        "screwdriver",
+        "headphones"
+    ]
+}

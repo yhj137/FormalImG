@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag positioned on the right side. For every pen in the image, it is located to the left of the handbag and serves as an anchor for the rest of the items: a game controller is positioned to the left of the pen, a hammer is to the left of the game controller, and a lighter is to the left of the hammer. Additionally, a wallet is located below the pen, and a set of keys is placed below the wallet.",
+    "dsl": "(exists ?handbag (forall ?pen (exists ?game_controller (exists ?hammer (exists ?lighter (exists ?wallet (exists ?keys (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (implies (Is ?pen 'pen') (and (LeftOf ?pen ?handbag) (Is ?game_controller 'game_controller') (LeftOf ?game_controller ?pen) (Is ?hammer 'hammer') (LeftOf ?hammer ?game_controller) (Is ?lighter 'lighter') (LeftOf ?lighter ?hammer) (Is ?wallet 'wallet') (Below ?wallet ?pen) (Is ?keys 'keys') (Below ?keys ?wallet)))))))))))",
+    "cnf": "(exists ?handbag (forall ?pen (exists ?game_controller (exists ?hammer (exists ?lighter (exists ?wallet (exists ?keys (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?handbag)) (or (not (Is ?pen 'pen')) (Is ?game_controller 'game_controller')) (or (not (Is ?pen 'pen')) (LeftOf ?game_controller ?pen)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (LeftOf ?hammer ?game_controller)) (or (not (Is ?pen 'pen')) (Is ?lighter 'lighter')) (or (not (Is ?pen 'pen')) (LeftOf ?lighter ?hammer)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (Below ?wallet ?pen)) (or (not (Is ?pen 'pen')) (Is ?keys 'keys')) (or (not (Is ?pen 'pen')) (Below ?keys ?wallet))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keys",
+        "pen",
+        "game_controller",
+        "hammer",
+        "handbag",
+        "lighter",
+        "wallet"
+    ]
+}

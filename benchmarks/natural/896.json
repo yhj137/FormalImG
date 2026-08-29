@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a man holding a black phone, positioned to the left of a plastic laptop with an orange resting on it. Every bird is located to the left of the man.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (and (Is ?m 'man') (forall ?b (implies (Is ?b 'bird') (LeftOf ?b ?m))) (exists ?p (exists ?l (exists ?o (and (Is ?p 'phone') (Is ?l 'laptop') (Is ?o 'orange') (HasColor ?p 'black') (HasMaterial ?l 'plastic') (Holding ?m ?p) (LeftOf ?m ?l) (On ?o ?l))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (forall ?b (exists ?p (exists ?l (exists ?o (and (Is ?m 'man') (or (not (Is ?b 'bird')) (LeftOf ?b ?m)) (Holding ?m ?p) (LeftOf ?m ?l) (HasColor ?p 'black') (HasMaterial ?l 'plastic') (On ?o ?l) (Is ?p 'phone') (Is ?l 'laptop') (Is ?o 'orange'))))))))",
+    "k": 5,
+    "object_classes": [
+        "man",
+        "laptop",
+        "phone",
+        "bird",
+        "orange"
+    ]
+}

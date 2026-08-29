@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene features a house containing a wooden bed. On the bed sit a dog, a black phone, a plastic keyboard, and a round cake with a metal spoon inside. Every book in the scene is positioned to the right of the phone.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?bed (exists ?d (exists ?p (exists ?k (exists ?c (exists ?s (and (Is ?h 'house') (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (In ?bed ?h) (Is ?d 'dog') (On ?d ?bed) (Is ?p 'phone') (HasColor ?p 'black') (On ?p ?bed) (Is ?k 'keyboard') (HasMaterial ?k 'plastic') (On ?k ?bed) (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?bed) (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?c) (forall ?b (implies (Is ?b 'book') (RightOf ?b ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?bed (exists ?d (exists ?p (exists ?k (exists ?c (exists ?s (forall ?b (and (Is ?h 'house') (In ?bed ?h) (HasMaterial ?bed 'wooden') (On ?d ?bed) (Is ?bed 'bed') (On ?p ?bed) (Is ?d 'dog') (On ?k ?bed) (HasColor ?p 'black') (or (not (Is ?b 'book')) (RightOf ?b ?p)) (On ?c ?bed) (HasMaterial ?k 'plastic') (Is ?p 'phone') (HasShape ?c 'round') (In ?s ?c) (Is ?k 'keyboard') (Is ?c 'cake') (HasMaterial ?s 'metal') (Is ?s 'spoon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "spoon",
+        "book",
+        "bed",
+        "keyboard",
+        "cake",
+        "dog",
+        "phone"
+    ]
+}

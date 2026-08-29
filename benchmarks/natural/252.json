@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A flower rests on a wooden bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?f (exists ?b (and (Is ?f 'flower') (Is ?b 'bed') (HasMaterial ?b 'wooden') (On ?f ?b)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?f (exists ?b (and (Is ?f 'flower') (On ?f ?b) (HasMaterial ?b 'wooden') (Is ?b 'bed')))))",
+    "k": 2,
+    "object_classes": [
+        "flower",
+        "bed"
+    ]
+}

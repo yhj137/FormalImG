@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a white laptop and a black keyboard, where the laptop is positioned to the left of the keyboard. For every red lighter located on the right side of the image, the following arrangement must exist relative to it: the keyboard is to the left of the lighter, a pizza is placed directly above the lighter, and a wrench is placed directly above the pizza. These three items (lighter, pizza, wrench) are aligned vertically. Additionally, there is a knife positioned to the left of the wrench, and the knife is visually smaller than the wrench.",
+    "dsl": "(exists ?laptop (exists ?keyboard (and (Is ?laptop 'laptop') (Has ?laptop 'white') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (LeftOf ?laptop ?keyboard) (forall ?lighter (implies (and (Is ?lighter 'lighter') (Has ?lighter 'red') (OnRightSide ?lighter)) (exists ?pizza (exists ?wrench (exists ?knife (and (Is ?pizza 'pizza') (Is ?wrench 'wrench') (Is ?knife 'knife') (LeftOf ?keyboard ?lighter) (Above ?pizza ?lighter) (AlignedVertically ?pizza ?lighter) (Above ?wrench ?pizza) (AlignedVertically ?wrench ?pizza) (LeftOf ?knife ?wrench) (SmallerThan ?knife ?wrench))))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (forall ?lighter (exists ?pizza (exists ?wrench (exists ?knife (and (Is ?laptop 'laptop') (Has ?laptop 'white') (LeftOf ?laptop ?keyboard) (Has ?keyboard 'black') (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (LeftOf ?keyboard ?lighter)) (Is ?keyboard 'keyboard') (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (Is ?knife 'knife')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (Above ?pizza ?lighter)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (Is ?wrench 'wrench')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (LeftOf ?knife ?wrench)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (Is ?pizza 'pizza')) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (AlignedVertically ?pizza ?lighter)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (Above ?wrench ?pizza)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (AlignedVertically ?wrench ?pizza)) (or (not (Is ?lighter 'lighter')) (not (Has ?lighter 'red')) (not (OnRightSide ?lighter)) (SmallerThan ?knife ?wrench)))))))))",
+    "k": 6,
+    "object_classes": [
+        "lighter",
+        "pizza",
+        "knife",
+        "wrench",
+        "keyboard",
+        "laptop"
+    ]
+}

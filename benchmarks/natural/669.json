@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every flower rests on a round plate to the left of a man holding an umbrella.",
+    "dsl": "(and (IsStyle 'photo') (forall ?f (implies (Is ?f 'flower') (exists ?p (exists ?m (exists ?u (and (Is ?p 'plate') (HasShape ?p 'round') (Is ?m 'man') (Is ?u 'umbrella') (On ?f ?p) (LeftOf ?p ?m) (Holding ?m ?u))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?f (exists ?p (exists ?m (exists ?u (and (or (not (Is ?f 'flower')) (Is ?p 'plate')) (or (not (Is ?f 'flower')) (HasShape ?p 'round')) (or (not (Is ?f 'flower')) (Is ?m 'man')) (or (not (Is ?f 'flower')) (On ?f ?p)) (or (not (Is ?f 'flower')) (Is ?u 'umbrella')) (or (not (Is ?f 'flower')) (LeftOf ?p ?m)) (or (not (Is ?f 'flower')) (Holding ?m ?u))))))))",
+    "k": 4,
+    "object_classes": [
+        "umbrella",
+        "plate",
+        "flower",
+        "man"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a round fruit inside a bowl, positioned to the left of a keyboard.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?f (exists ?b (exists ?k (and (Is ?f 'fruit') (Is ?b 'bowl') (Is ?k 'keyboard') (HasShape ?f 'round') (In ?f ?b) (LeftOf ?b ?k))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?f (exists ?b (exists ?k (and (Is ?f 'fruit') (HasShape ?f 'round') (In ?f ?b) (Is ?b 'bowl') (LeftOf ?b ?k) (Is ?k 'keyboard'))))))",
+    "k": 3,
+    "object_classes": [
+        "keyboard",
+        "bowl",
+        "fruit"
+    ]
+}

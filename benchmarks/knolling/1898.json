@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a backpack, a shirt, a keyboard, and a remote. The shirt is positioned to the left of the backpack and is aligned horizontally with it. The keyboard is placed to the right of the backpack. The remote is smaller than the keyboard and is located to the left of the keyboard. For every drill in the scene, it is aligned horizontally to the right of the keyboard. Keys are positioned to the left of the drill. A cutting board is located on the right side of the image, to the right of the drill, and is larger than the carrot located to its left. A bowl is to the right of the cutting board, and a donut, which is smaller than the bowl, is located to the right of the bowl.",
+    "dsl": "(exists ?backpack (exists ?shirt (exists ?keyboard (exists ?remote (and (Is ?backpack 'backpack') (Is ?shirt 'shirt') (Is ?keyboard 'keyboard') (Is ?remote 'remote') (LeftOf ?shirt ?backpack) (AlignedHorizontally ?shirt ?backpack) (RightOf ?keyboard ?backpack) (SmallerThan ?remote ?keyboard) (LeftOf ?remote ?keyboard) (forall ?drill (implies (Is ?drill 'drill') (exists ?keys (exists ?cutting_board (exists ?carrot (exists ?bowl (exists ?donut (and (Is ?keys 'keys') (Is ?cutting_board 'cutting_board') (Is ?carrot 'carrot') (Is ?bowl 'bowl') (Is ?donut 'donut') (AlignedHorizontally ?drill ?keyboard) (RightOf ?drill ?keyboard) (LeftOf ?keys ?drill) (OnRightSide ?cutting_board) (RightOf ?cutting_board ?drill) (LargerThan ?cutting_board ?carrot) (LeftOf ?carrot ?cutting_board) (RightOf ?bowl ?cutting_board) (SmallerThan ?donut ?bowl) (RightOf ?donut ?bowl))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shirt (exists ?keyboard (exists ?remote (forall ?drill (exists ?keys (exists ?cutting_board (exists ?carrot (exists ?bowl (exists ?donut (and (Is ?backpack 'backpack') (LeftOf ?shirt ?backpack) (AlignedHorizontally ?shirt ?backpack) (Is ?shirt 'shirt') (RightOf ?keyboard ?backpack) (Is ?keyboard 'keyboard') (SmallerThan ?remote ?keyboard) (LeftOf ?remote ?keyboard) (Is ?remote 'remote') (or (not (Is ?drill 'drill')) (AlignedHorizontally ?drill ?keyboard)) (or (not (Is ?drill 'drill')) (RightOf ?drill ?keyboard)) (or (not (Is ?drill 'drill')) (Is ?donut 'donut')) (or (not (Is ?drill 'drill')) (LeftOf ?keys ?drill)) (or (not (Is ?drill 'drill')) (Is ?bowl 'bowl')) (or (not (Is ?drill 'drill')) (SmallerThan ?donut ?bowl)) (or (not (Is ?drill 'drill')) (OnRightSide ?cutting_board)) (or (not (Is ?drill 'drill')) (Is ?keys 'keys')) (or (not (Is ?drill 'drill')) (Is ?carrot 'carrot')) (or (not (Is ?drill 'drill')) (RightOf ?bowl ?cutting_board)) (or (not (Is ?drill 'drill')) (RightOf ?donut ?bowl)) (or (not (Is ?drill 'drill')) (RightOf ?cutting_board ?drill)) (or (not (Is ?drill 'drill')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?drill 'drill')) (LargerThan ?cutting_board ?carrot)) (or (not (Is ?drill 'drill')) (LeftOf ?carrot ?cutting_board)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "remote",
+        "keyboard",
+        "carrot",
+        "donut",
+        "drill",
+        "cutting_board",
+        "backpack",
+        "bowl",
+        "shirt"
+    ]
+}

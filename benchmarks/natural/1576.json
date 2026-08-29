@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts a man holding a screwdriver to the left of a broken bicycle. Next to the bicycle is a table with a turned-on laptop and headphones. All bananas in the scene are also on the table, and a round clock is positioned above it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?s (exists ?b (exists ?t (exists ?l (exists ?h (and (Is ?m 'man') (Is ?s 'screwdriver') (Is ?b 'bicycle') (Is ?t 'table') (Is ?l 'laptop') (Is ?h 'headphones') (Holding ?m ?s) (LeftOf ?m ?b) (HasState ?b 'broken') (NextTo ?b ?t) (On ?l ?t) (HasState ?l 'on') (On ?h ?t) (forall ?ba (implies (Is ?ba 'banana') (On ?ba ?t))) (exists ?c (and (Is ?c 'clock') (HasShape ?c 'round') (Above ?c ?t)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?s (exists ?b (exists ?t (exists ?l (exists ?h (forall ?ba (exists ?c (and (Is ?m 'man') (Holding ?m ?s) (LeftOf ?m ?b) (Is ?s 'screwdriver') (Is ?b 'bicycle') (HasState ?b 'broken') (NextTo ?b ?t) (Is ?t 'table') (On ?l ?t) (On ?h ?t) (Is ?l 'laptop') (HasState ?l 'on') (or (not (Is ?ba 'banana')) (On ?ba ?t)) (Is ?h 'headphones') (Above ?c ?t) (HasShape ?c 'round') (Is ?c 'clock')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "man",
+        "laptop",
+        "screwdriver",
+        "banana",
+        "table",
+        "bicycle",
+        "clock"
+    ]
+}

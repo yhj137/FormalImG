@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden boat, with every butterfly positioned next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (forall ?f (implies (Is ?f 'butterfly') (NextTo ?f ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?f (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (or (not (Is ?f 'butterfly')) (NextTo ?f ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "boat"
+    ]
+}

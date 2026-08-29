@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A tree stands in the scene, with all flowers positioned to its right. To the left of the tree is a man holding a plastic umbrella. A horse stands to the left of the man, and further left is an open refrigerator containing a cake, an orange, and headphones.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'tree') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?t))) (exists ?m (exists ?u (exists ?h (exists ?r (exists ?c (exists ?o (exists ?hp (and (Is ?m 'man') (LeftOf ?m ?t) (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (Holding ?m ?u) (Is ?h 'horse') (LeftOf ?h ?m) (Is ?r 'refrigerator') (LeftOf ?r ?h) (HasState ?r 'open') (Is ?c 'cake') (In ?c ?r) (Is ?o 'orange') (In ?o ?r) (Is ?hp 'headphones') (In ?hp ?r))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (forall ?f (exists ?m (exists ?u (exists ?h (exists ?r (exists ?c (exists ?o (exists ?hp (and (Is ?t 'tree') (or (not (Is ?f 'flower')) (RightOf ?f ?t)) (LeftOf ?m ?t) (Is ?m 'man') (Holding ?m ?u) (LeftOf ?h ?m) (HasMaterial ?u 'plastic') (Is ?h 'horse') (LeftOf ?r ?h) (Is ?u 'umbrella') (Is ?r 'refrigerator') (HasState ?r 'open') (In ?c ?r) (In ?o ?r) (Is ?c 'cake') (In ?hp ?r) (Is ?o 'orange') (Is ?hp 'headphones'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "horse",
+        "tree",
+        "man",
+        "cake",
+        "orange",
+        "flower",
+        "refrigerator"
+    ]
+}

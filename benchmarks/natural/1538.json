@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cartoon style scene, a metal laptop sits to the left of a turned-on monitor, with a book resting on top of the laptop. A plastic fork lies to the left of the laptop, and a knife is placed to the left of the fork. Perched on the monitor is a bird holding a flower, while all butterflies are positioned to the right of the monitor.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?l (exists ?b (exists ?f (exists ?k (and (Is ?m 'monitor') (HasState ?m 'on') (Is ?l 'laptop') (HasMaterial ?l 'metal') (LeftOf ?l ?m) (Is ?b 'book') (On ?b ?l) (Is ?f 'fork') (HasMaterial ?f 'plastic') (LeftOf ?f ?l) (Is ?k 'knife') (LeftOf ?k ?f) (forall ?bt (implies (Is ?bt 'butterfly') (RightOf ?bt ?m))) (exists ?bd (exists ?fl (and (Is ?bd 'bird') (On ?bd ?m) (Is ?fl 'flower') (Holding ?bd ?fl)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?l (exists ?b (exists ?f (exists ?k (forall ?bt (exists ?bd (exists ?fl (and (Is ?m 'monitor') (HasState ?m 'on') (LeftOf ?l ?m) (or (not (Is ?bt 'butterfly')) (RightOf ?bt ?m)) (HasMaterial ?l 'metal') (On ?b ?l) (On ?bd ?m) (Is ?l 'laptop') (LeftOf ?f ?l) (Is ?b 'book') (Is ?bd 'bird') (Holding ?bd ?fl) (HasMaterial ?f 'plastic') (LeftOf ?k ?f) (Is ?fl 'flower') (Is ?f 'fork') (Is ?k 'knife')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "fork",
+        "knife",
+        "laptop",
+        "book",
+        "butterfly",
+        "bird",
+        "flower"
+    ]
+}

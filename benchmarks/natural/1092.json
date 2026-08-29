@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a house situated next to a boat. Every lamp in the scene is switched on and located inside the house. To the right of the boat stands a horse next to a round ball, and a rusty knife lies inside the boat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (and (Is ?h 'house') (Is ?b 'boat') (NextTo ?h ?b) (forall ?l (implies (Is ?l 'lamp') (and (In ?l ?h) (HasState ?l 'on')))) (exists ?ho (exists ?ba (exists ?k (and (Is ?ho 'horse') (Is ?ba 'ball') (Is ?k 'knife') (RightOf ?ho ?b) (NextTo ?ba ?ho) (HasShape ?ba 'round') (In ?k ?b) (HasState ?k 'rusty')))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (forall ?l (exists ?ho (exists ?ba (exists ?k (and (Is ?h 'house') (NextTo ?h ?b) (or (not (Is ?l 'lamp')) (In ?l ?h)) (Is ?b 'boat') (RightOf ?ho ?b) (or (not (Is ?l 'lamp')) (HasState ?l 'on')) (In ?k ?b) (Is ?ho 'horse') (NextTo ?ba ?ho) (Is ?k 'knife') (HasState ?k 'rusty') (Is ?ba 'ball') (HasShape ?ba 'round')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "knife",
+        "horse",
+        "lamp",
+        "ball",
+        "boat"
+    ]
+}

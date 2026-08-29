@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a laptop positioned on the right side of the layout. Additionally, for every phone in the scene, it is visually smaller than that laptop.",
+    "dsl": "(exists ?l (and (Is ?l 'laptop') (OnRightSide ?l) (forall ?p (implies (Is ?p 'phone') (SmallerThan ?p ?l)))))",
+    "cnf": "(exists ?l (forall ?p (and (Is ?l 'laptop') (OnRightSide ?l) (or (not (Is ?p 'phone')) (SmallerThan ?p ?l)))))",
+    "k": 2,
+    "object_classes": [
+        "laptop",
+        "phone"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a blue backpack on the top side. For every set of keys in the image, the keys are positioned to the right of the backpack, and there exists a black keyboard below the backpack (with the backpack being larger than the keyboard), a watch to the left of the keyboard, a red lighter to the right of the keyboard, a donut below the keyboard, a white bowl to the left of the donut, a glove to the right of the donut, and the donut is positioned above a wrench.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnTopSide ?backpack) (forall ?keys (implies (Is ?keys 'keys') (exists ?keyboard (exists ?watch (exists ?lighter (exists ?donut (exists ?bowl (exists ?glove (exists ?wrench (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?watch 'watch') (Is ?lighter 'lighter') (Has ?lighter 'red') (Is ?donut 'donut') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?glove 'glove') (Is ?wrench 'wrench') (RightOf ?keys ?backpack) (Below ?keyboard ?backpack) (LargerThan ?backpack ?keyboard) (LeftOf ?watch ?keyboard) (RightOf ?lighter ?keyboard) (Below ?donut ?keyboard) (LeftOf ?bowl ?donut) (RightOf ?glove ?donut) (Above ?donut ?wrench)))))))))))))",
+    "cnf": "(exists ?backpack (forall ?keys (exists ?keyboard (exists ?watch (exists ?lighter (exists ?donut (exists ?bowl (exists ?glove (exists ?wrench (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnTopSide ?backpack) (or (not (Is ?keys 'keys')) (RightOf ?keys ?backpack)) (or (not (Is ?keys 'keys')) (Below ?keyboard ?backpack)) (or (not (Is ?keys 'keys')) (Is ?wrench 'wrench')) (or (not (Is ?keys 'keys')) (LargerThan ?backpack ?keyboard)) (or (not (Is ?keys 'keys')) (Has ?keyboard 'black')) (or (not (Is ?keys 'keys')) (Is ?glove 'glove')) (or (not (Is ?keys 'keys')) (Above ?donut ?wrench)) (or (not (Is ?keys 'keys')) (LeftOf ?watch ?keyboard)) (or (not (Is ?keys 'keys')) (Is ?keyboard 'keyboard')) (or (not (Is ?keys 'keys')) (Is ?watch 'watch')) (or (not (Is ?keys 'keys')) (Has ?bowl 'white')) (or (not (Is ?keys 'keys')) (RightOf ?glove ?donut)) (or (not (Is ?keys 'keys')) (RightOf ?lighter ?keyboard)) (or (not (Is ?keys 'keys')) (Is ?lighter 'lighter')) (or (not (Is ?keys 'keys')) (Is ?bowl 'bowl')) (or (not (Is ?keys 'keys')) (LeftOf ?bowl ?donut)) (or (not (Is ?keys 'keys')) (Below ?donut ?keyboard)) (or (not (Is ?keys 'keys')) (Has ?lighter 'red')) (or (not (Is ?keys 'keys')) (Is ?donut 'donut'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "keyboard",
+        "wrench",
+        "watch",
+        "backpack",
+        "lighter",
+        "bowl",
+        "glove",
+        "donut"
+    ]
+}

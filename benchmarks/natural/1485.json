@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a man on a wooden bed holding an umbrella. A keyboard is also on the bed, next to the man. The bed is to the left of a tree. A basket is to the right of the tree, with a metal pan next to it. Every ball in the scene is round and located on the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?bd (and (Is ?m 'man') (Is ?bd 'bed') (HasMaterial ?bd 'wooden') (On ?m ?bd) (forall ?bl (implies (Is ?bl 'ball') (and (HasShape ?bl 'round') (On ?bl ?bd)))) (exists ?t (exists ?u (exists ?k (exists ?bk (exists ?p (and (Is ?t 'tree') (Is ?u 'umbrella') (Is ?k 'keyboard') (Is ?bk 'basket') (Is ?p 'pan') (HasMaterial ?p 'metal') (LeftOf ?bd ?t) (Holding ?m ?u) (On ?k ?bd) (NextTo ?k ?m) (RightOf ?bk ?t) (NextTo ?p ?bk)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?bd (forall ?bl (exists ?t (exists ?u (exists ?k (exists ?bk (exists ?p (and (Is ?m 'man') (On ?m ?bd) (Holding ?m ?u) (HasMaterial ?bd 'wooden') (or (not (Is ?bl 'ball')) (On ?bl ?bd)) (NextTo ?k ?m) (Is ?u 'umbrella') (Is ?bd 'bed') (LeftOf ?bd ?t) (or (not (Is ?bl 'ball')) (HasShape ?bl 'round')) (On ?k ?bd) (Is ?t 'tree') (RightOf ?bk ?t) (Is ?k 'keyboard') (Is ?bk 'basket') (NextTo ?p ?bk) (HasMaterial ?p 'metal') (Is ?p 'pan')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "pan",
+        "man",
+        "ball",
+        "bed",
+        "basket",
+        "tree"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A desk stands with a bench to its right, and a round rug lies next to the bench. A turned-on monitor and a cup containing a spoon are on the desk. Every banana is placed on the bench. A lion sits on the rug, with an orange to its left.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?bn (exists ?r (exists ?m (exists ?c (and (Is ?d 'desk') (Is ?bn 'bench') (RightOf ?bn ?d) (Is ?r 'rug') (HasShape ?r 'round') (NextTo ?r ?bn) (Is ?m 'monitor') (On ?m ?d) (HasState ?m 'on') (Is ?c 'cup') (On ?c ?d) (forall ?b (implies (Is ?b 'banana') (On ?b ?bn))) (exists ?s (exists ?l (exists ?o (and (Is ?s 'spoon') (In ?s ?c) (Is ?l 'lion') (On ?l ?r) (HasState ?l 'sitting') (Is ?o 'orange') (LeftOf ?o ?l))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?bn (exists ?r (exists ?m (exists ?c (forall ?b (exists ?s (exists ?l (exists ?o (and (Is ?d 'desk') (RightOf ?bn ?d) (On ?m ?d) (Is ?bn 'bench') (NextTo ?r ?bn) (On ?c ?d) (Is ?m 'monitor') (HasState ?m 'on') (or (not (Is ?b 'banana')) (On ?b ?bn)) (HasShape ?r 'round') (On ?l ?r) (Is ?c 'cup') (In ?s ?c) (Is ?r 'rug') (Is ?l 'lion') (HasState ?l 'sitting') (Is ?s 'spoon') (LeftOf ?o ?l) (Is ?o 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "spoon",
+        "rug",
+        "monitor",
+        "orange",
+        "desk",
+        "cup",
+        "lion",
+        "banana"
+    ]
+}

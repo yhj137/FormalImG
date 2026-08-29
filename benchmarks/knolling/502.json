@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans positioned on the top side of the layout. For every remote control in the scene, the jeans are located vertically above it, and there is a lighter placed to the right of that remote.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (forall ?remote (implies (Is ?remote 'remote') (exists ?lighter (and (Is ?lighter 'lighter') (Above ?jeans ?remote) (RightOf ?lighter ?remote)))))))",
+    "cnf": "(exists ?jeans (forall ?remote (exists ?lighter (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (or (not (Is ?remote 'remote')) (Above ?jeans ?remote)) (or (not (Is ?remote 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?remote 'remote')) (RightOf ?lighter ?remote))))))",
+    "k": 3,
+    "object_classes": [
+        "remote",
+        "jeans",
+        "lighter"
+    ]
+}

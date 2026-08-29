@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every bird is located to the left of a leather jacket containing a fruit, with a woman next to the jacket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bird') (exists ?j (exists ?f (exists ?w (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (Is ?f 'fruit') (In ?f ?j) (Is ?w 'woman') (LeftOf ?b ?j) (NextTo ?w ?j))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?j (exists ?f (exists ?w (and (or (not (Is ?b 'bird')) (Is ?j 'jacket')) (or (not (Is ?b 'bird')) (HasMaterial ?j 'leather')) (or (not (Is ?b 'bird')) (In ?f ?j)) (or (not (Is ?b 'bird')) (Is ?f 'fruit')) (or (not (Is ?b 'bird')) (LeftOf ?b ?j)) (or (not (Is ?b 'bird')) (Is ?w 'woman')) (or (not (Is ?b 'bird')) (NextTo ?w ?j))))))))",
+    "k": 4,
+    "object_classes": [
+        "jacket",
+        "bird",
+        "fruit",
+        "woman"
+    ]
+}

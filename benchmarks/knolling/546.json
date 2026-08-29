@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of jeans positioned on the left side of the scene. For every sandwich in the image, it is located below the jeans, aligned vertically with them, and appears smaller than the jeans. Additionally, for each sandwich, there is a knife placed directly below it, maintaining the vertical alignment.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?knife (and (Is ?knife 'knife') (Below ?sandwich ?jeans) (AlignedVertically ?sandwich ?jeans) (SmallerThan ?sandwich ?jeans) (Below ?knife ?sandwich) (AlignedVertically ?knife ?sandwich)))))))",
+    "cnf": "(exists ?jeans (forall ?sandwich (exists ?knife (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (or (not (Is ?sandwich 'sandwich')) (Below ?sandwich ?jeans)) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?sandwich ?jeans)) (or (not (Is ?sandwich 'sandwich')) (Is ?knife 'knife')) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?sandwich ?jeans)) (or (not (Is ?sandwich 'sandwich')) (Below ?knife ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?knife ?sandwich))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "sandwich",
+        "jeans"
+    ]
+}

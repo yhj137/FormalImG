@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, it is positioned on the right side of the image. There is a glove located to the left of the backpack. Furthermore, there are keys aligned vertically with the glove, and the backpack is positioned to the right of these keys.",
+    "dsl": "(and (forall ?backpack (implies (Is ?backpack 'backpack') (exists ?glove (exists ?keys (and (Is ?glove 'glove') (Is ?keys 'keys') (OnRightSide ?backpack) (LeftOf ?glove ?backpack) (AlignedVertically ?glove ?keys) (RightOf ?backpack ?keys)))))))",
+    "cnf": "(forall ?backpack (exists ?glove (exists ?keys (and (or (not (Is ?backpack 'backpack')) (Is ?glove 'glove')) (or (not (Is ?backpack 'backpack')) (LeftOf ?glove ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?keys 'keys')) (or (not (Is ?backpack 'backpack')) (AlignedVertically ?glove ?keys)) (or (not (Is ?backpack 'backpack')) (OnRightSide ?backpack)) (or (not (Is ?backpack 'backpack')) (RightOf ?backpack ?keys))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "backpack",
+        "glove"
+    ]
+}

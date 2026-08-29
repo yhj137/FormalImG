@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a bicycle with a basket containing a round pizza. All bananas are peeled and positioned to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (exists ?p (and (Is ?b 'bicycle') (Is ?k 'basket') (On ?k ?b) (Is ?p 'pizza') (HasShape ?p 'round') (In ?p ?k) (forall ?n (implies (Is ?n 'banana') (and (HasState ?n 'peeled') (RightOf ?n ?b)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (exists ?p (forall ?n (and (Is ?b 'bicycle') (On ?k ?b) (or (not (Is ?n 'banana')) (RightOf ?n ?b)) (Is ?k 'basket') (In ?p ?k) (or (not (Is ?n 'banana')) (HasState ?n 'peeled')) (HasShape ?p 'round') (Is ?p 'pizza')))))))",
+    "k": 4,
+    "object_classes": [
+        "bicycle",
+        "pizza",
+        "banana",
+        "basket"
+    ]
+}

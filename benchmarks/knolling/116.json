@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every screwdriver in the scene, it is located on the top side of the image.",
+    "dsl": "(forall ?x (implies (Is ?x 'screwdriver') (OnTopSide ?x)))",
+    "cnf": "(forall ?x (or (not (Is ?x 'screwdriver')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "screwdriver"
+    ]
+}

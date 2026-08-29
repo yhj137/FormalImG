@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a backpack positioned on the top side of the image. To the right of the backpack is a monitor, followed by a tie to the right of the monitor, a wrench to the right of the tie, a pair of scissors to the right of the wrench, and a phone to the right of the scissors. The monitor is larger than the phone, while the phone is smaller than the backpack. Additionally, for every spoon in the image, it is located to the left of the backpack.",
+    "dsl": "(exists ?bp (exists ?m (exists ?t (exists ?w (exists ?sc (exists ?p (and (Is ?bp 'backpack') (Is ?m 'monitor') (Is ?t 'tie') (Is ?w 'wrench') (Is ?sc 'scissors') (Is ?p 'phone') (OnTopSide ?bp) (RightOf ?m ?bp) (RightOf ?t ?m) (RightOf ?w ?t) (RightOf ?sc ?w) (RightOf ?p ?sc) (LargerThan ?m ?p) (SmallerThan ?p ?bp) (forall ?sp (implies (Is ?sp 'spoon') (LeftOf ?sp ?bp))))))))))",
+    "cnf": "(exists ?bp (exists ?m (exists ?t (exists ?w (exists ?sc (exists ?p (forall ?sp (and (Is ?bp 'backpack') (OnTopSide ?bp) (RightOf ?m ?bp) (SmallerThan ?p ?bp) (Is ?m 'monitor') (RightOf ?t ?m) (or (not (Is ?sp 'spoon')) (LeftOf ?sp ?bp)) (LargerThan ?m ?p) (Is ?t 'tie') (RightOf ?w ?t) (RightOf ?p ?sc) (Is ?w 'wrench') (RightOf ?sc ?w) (Is ?p 'phone') (Is ?sc 'scissors')))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "backpack",
+        "scissors",
+        "wrench",
+        "tie",
+        "monitor",
+        "phone"
+    ]
+}

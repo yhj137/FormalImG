@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a shirt positioned on the left side of the frame. To the right of the shirt is a glove, and they are aligned horizontally. The glove is positioned above a pair of pliers. Additionally, every donut in the image is located on the bottom side, aligned vertically with the shirt, and has a sandwich above it with an apple located to the right of the sandwich.",
+    "dsl": "(exists ?shirt (exists ?glove (exists ?pliers (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?glove 'glove') (Is ?pliers 'pliers') (RightOf ?glove ?shirt) (AlignedHorizontally ?shirt ?glove) (Above ?glove ?pliers) (forall ?donut (implies (Is ?donut 'donut') (exists ?sandwich (exists ?apple (and (Is ?sandwich 'sandwich') (Is ?apple 'apple') (OnBottomSide ?donut) (AlignedVertically ?donut ?shirt) (Above ?sandwich ?donut) (RightOf ?apple ?sandwich))))))))))",
+    "cnf": "(exists ?shirt (exists ?glove (exists ?pliers (forall ?donut (exists ?sandwich (exists ?apple (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (RightOf ?glove ?shirt) (AlignedHorizontally ?shirt ?glove) (Is ?glove 'glove') (or (not (Is ?donut 'donut')) (AlignedVertically ?donut ?shirt)) (Above ?glove ?pliers) (or (not (Is ?donut 'donut')) (OnBottomSide ?donut)) (or (not (Is ?donut 'donut')) (Above ?sandwich ?donut)) (Is ?pliers 'pliers') (or (not (Is ?donut 'donut')) (Is ?apple 'apple')) (or (not (Is ?donut 'donut')) (RightOf ?apple ?sandwich)) (or (not (Is ?donut 'donut')) (Is ?sandwich 'sandwich')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pliers",
+        "apple",
+        "shirt",
+        "sandwich",
+        "glove",
+        "donut"
+    ]
+}

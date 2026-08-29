@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal bench with a pizza on it. Next to the bench is a black bookshelf, on which every fish is resting.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?p (exists ?s (and (Is ?b 'bench') (HasMaterial ?b 'metal') (Is ?p 'pizza') (On ?p ?b) (Is ?s 'bookshelf') (HasColor ?s 'black') (NextTo ?s ?b) (forall ?f (implies (Is ?f 'fish') (On ?f ?s))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?p (exists ?s (forall ?f (and (Is ?b 'bench') (HasMaterial ?b 'metal') (On ?p ?b) (NextTo ?s ?b) (Is ?p 'pizza') (HasColor ?s 'black') (or (not (Is ?f 'fish')) (On ?f ?s)) (Is ?s 'bookshelf')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "pizza",
+        "bookshelf",
+        "fish"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image featuring a rectangular table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasShape ?t 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasShape ?t 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "table"
+    ]
+}

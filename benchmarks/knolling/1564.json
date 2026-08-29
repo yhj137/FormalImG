@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the scene, there is a vertical column of objects aligned vertically: a bottle is at the top, followed by headphones, a ruler, a glove, a carrot, and a stapler at the bottom. The bottle is visually larger than the ruler, and the carrot is smaller than the headphones. Additionally, for every book present in the image, there is a lemon positioned directly below it. The book is aligned horizontally with the bottle, and the lemon is smaller than the stapler.",
+    "dsl": "(exists ?bottle (exists ?headphones (exists ?ruler (exists ?glove (exists ?carrot (exists ?stapler (and (Is ?bottle 'bottle') (OnRightSide ?bottle) (Is ?headphones 'headphones') (Is ?ruler 'ruler') (Is ?glove 'glove') (Is ?carrot 'carrot') (Is ?stapler 'stapler') (Below ?headphones ?bottle) (AlignedVertically ?bottle ?headphones) (Below ?ruler ?headphones) (AlignedVertically ?headphones ?ruler) (Below ?glove ?ruler) (AlignedVertically ?ruler ?glove) (Below ?carrot ?glove) (AlignedVertically ?glove ?carrot) (Below ?stapler ?carrot) (AlignedVertically ?carrot ?stapler) (LargerThan ?bottle ?ruler) (SmallerThan ?carrot ?headphones) (forall ?b (implies (Is ?b 'book') (exists ?lemon (and (Is ?lemon 'lemon') (Below ?lemon ?b) (AlignedHorizontally ?b ?bottle) (SmallerThan ?lemon ?stapler))))))))))))",
+    "cnf": "(exists ?bottle (exists ?headphones (exists ?ruler (exists ?glove (exists ?carrot (exists ?stapler (forall ?b (exists ?lemon (and (Is ?bottle 'bottle') (OnRightSide ?bottle) (Below ?headphones ?bottle) (AlignedVertically ?bottle ?headphones) (Is ?headphones 'headphones') (LargerThan ?bottle ?ruler) (Below ?ruler ?headphones) (or (not (Is ?b 'book')) (AlignedHorizontally ?b ?bottle)) (AlignedVertically ?ruler ?glove) (AlignedVertically ?headphones ?ruler) (Is ?ruler 'ruler') (or (not (Is ?b 'book')) (Below ?lemon ?b)) (or (not (Is ?b 'book')) (SmallerThan ?lemon ?stapler)) (Below ?glove ?ruler) (Below ?carrot ?glove) (SmallerThan ?carrot ?headphones) (or (not (Is ?b 'book')) (Is ?lemon 'lemon')) (AlignedVertically ?carrot ?stapler) (Is ?glove 'glove') (AlignedVertically ?glove ?carrot) (Is ?carrot 'carrot') (Below ?stapler ?carrot) (Is ?stapler 'stapler'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "stapler",
+        "lemon",
+        "carrot",
+        "bottle",
+        "headphones",
+        "glove"
+    ]
+}

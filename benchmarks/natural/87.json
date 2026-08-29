@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting of a green plant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green'))))",
+    "k": 1,
+    "object_classes": [
+        "plant"
+    ]
+}

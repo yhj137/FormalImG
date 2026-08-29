@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a standing woman with a jacket next to her. A rusty bicycle is to her right, while a bus is positioned to her left. To the right of the bicycle sits a rectangular monitor next to a keyboard. A screwdriver lies to the left of the keyboard, beside a dirty fork. Every toy car in the scene is located to the right of the bus.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?j (exists ?b (exists ?bu (exists ?m (exists ?k (exists ?s (exists ?f (and (Is ?w 'woman') (HasState ?w 'standing') (Is ?j 'jacket') (NextTo ?j ?w) (Is ?b 'bicycle') (HasState ?b 'rusty') (RightOf ?b ?w) (Is ?bu 'bus') (LeftOf ?bu ?w) (Is ?m 'monitor') (HasShape ?m 'rectangular') (RightOf ?m ?b) (Is ?k 'keyboard') (NextTo ?k ?m) (Is ?s 'screwdriver') (LeftOf ?s ?k) (Is ?f 'fork') (HasState ?f 'dirty') (NextTo ?f ?s) (forall ?tc (implies (Is ?tc 'toy car') (RightOf ?tc ?bu)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?j (exists ?b (exists ?bu (exists ?m (exists ?k (exists ?s (exists ?f (forall ?tc (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?j ?w) (RightOf ?b ?w) (Is ?j 'jacket') (LeftOf ?bu ?w) (HasState ?b 'rusty') (RightOf ?m ?b) (Is ?bu 'bus') (or (not (Is ?tc 'toy car')) (RightOf ?tc ?bu)) (Is ?b 'bicycle') (HasShape ?m 'rectangular') (NextTo ?k ?m) (Is ?m 'monitor') (Is ?k 'keyboard') (LeftOf ?s ?k) (Is ?s 'screwdriver') (NextTo ?f ?s) (HasState ?f 'dirty') (Is ?f 'fork'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "jacket",
+        "monitor",
+        "toy car",
+        "fork",
+        "bus",
+        "screwdriver",
+        "woman",
+        "bicycle"
+    ]
+}

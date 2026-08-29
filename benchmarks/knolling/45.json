@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a sock which is located on the right side of the composition.",
+    "dsl": "(exists ?sock (and (Is ?sock 'sock') (OnRightSide ?sock)))",
+    "cnf": "(exists ?sock (and (Is ?sock 'sock') (OnRightSide ?sock)))",
+    "k": 1,
+    "object_classes": [
+        "sock"
+    ]
+}

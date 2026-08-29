@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack located on the bottom side. For every pen present, there are glasses and a mouse arranged vertically above it. Specifically, the backpack is below the pen, the pen is below the glasses, and the glasses are below the mouse. These objects are aligned vertically, and the backpack is larger than the mouse.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (forall ?pen (implies (Is ?pen 'pen') (exists ?glasses (exists ?mouse (and (Is ?glasses 'glasses') (Is ?mouse 'mouse') (Below ?backpack ?pen) (Below ?pen ?glasses) (Below ?glasses ?mouse) (AlignedVertically ?backpack ?pen) (AlignedVertically ?pen ?glasses) (AlignedVertically ?glasses ?mouse) (LargerThan ?backpack ?mouse))))))))",
+    "cnf": "(exists ?backpack (forall ?pen (exists ?glasses (exists ?mouse (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (or (not (Is ?pen 'pen')) (Below ?backpack ?pen)) (or (not (Is ?pen 'pen')) (AlignedVertically ?backpack ?pen)) (or (not (Is ?pen 'pen')) (Is ?mouse 'mouse')) (or (not (Is ?pen 'pen')) (Below ?pen ?glasses)) (or (not (Is ?pen 'pen')) (LargerThan ?backpack ?mouse)) (or (not (Is ?pen 'pen')) (Below ?glasses ?mouse)) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?glasses)) (or (not (Is ?pen 'pen')) (Is ?glasses 'glasses')) (or (not (Is ?pen 'pen')) (AlignedVertically ?glasses ?mouse)))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "mouse",
+        "backpack",
+        "pen"
+    ]
+}

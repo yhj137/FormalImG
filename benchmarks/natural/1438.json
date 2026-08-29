@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In this cartoon style scene, every car has a man to its left wearing a round hat and holding a sandwich. A wooden table stands next to the man, supporting a mirror with a butterfly resting on it. Additionally, a bottle is inside the car.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'car') (exists ?m (exists ?h (exists ?s (exists ?t (exists ?mi (exists ?bu (exists ?bo (and (Is ?m 'man') (Is ?h 'hat') (Is ?s 'sandwich') (Is ?t 'table') (Is ?mi 'mirror') (Is ?bu 'butterfly') (Is ?bo 'bottle') (LeftOf ?m ?c) (On ?h ?m) (HasShape ?h 'round') (Holding ?m ?s) (NextTo ?t ?m) (HasMaterial ?t 'wooden') (On ?mi ?t) (On ?bu ?mi) (In ?bo ?c))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?m (exists ?h (exists ?s (exists ?t (exists ?mi (exists ?bu (exists ?bo (and (or (not (Is ?c 'car')) (Is ?m 'man')) (or (not (Is ?c 'car')) (LeftOf ?m ?c)) (or (not (Is ?c 'car')) (Is ?h 'hat')) (or (not (Is ?c 'car')) (On ?h ?m)) (or (not (Is ?c 'car')) (Is ?bo 'bottle')) (or (not (Is ?c 'car')) (Is ?s 'sandwich')) (or (not (Is ?c 'car')) (Holding ?m ?s)) (or (not (Is ?c 'car')) (HasShape ?h 'round')) (or (not (Is ?c 'car')) (Is ?bu 'butterfly')) (or (not (Is ?c 'car')) (In ?bo ?c)) (or (not (Is ?c 'car')) (Is ?t 'table')) (or (not (Is ?c 'car')) (NextTo ?t ?m)) (or (not (Is ?c 'car')) (Is ?mi 'mirror')) (or (not (Is ?c 'car')) (On ?bu ?mi)) (or (not (Is ?c 'car')) (HasMaterial ?t 'wooden')) (or (not (Is ?c 'car')) (On ?mi ?t))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sandwich",
+        "table",
+        "bottle",
+        "hat",
+        "mirror",
+        "butterfly",
+        "man",
+        "car"
+    ]
+}

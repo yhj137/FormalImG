@@ -1,0 +1,9 @@
+{
+    "prompt": "All hammers are red.",
+    "dsl": "(forall ?h (implies (Is ?h 'hammer') (HasColor ?h 'red')))",
+    "cnf": "(forall ?h (or (not (Is ?h 'hammer')) (HasColor ?h 'red')))",
+    "k": 1,
+    "object_classes": [
+        "hammer"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a teddy bear holding a banana next to a plastic toy car. Every fork is inside the toy car.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?c (and (Is ?t 'teddy bear') (Is ?b 'banana') (Is ?c 'toy car') (HasMaterial ?c 'plastic') (Holding ?t ?b) (NextTo ?t ?c) (forall ?f (implies (Is ?f 'fork') (In ?f ?c))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?c (forall ?f (and (Is ?t 'teddy bear') (Holding ?t ?b) (NextTo ?t ?c) (Is ?b 'banana') (HasMaterial ?c 'plastic') (or (not (Is ?f 'fork')) (In ?f ?c)) (Is ?c 'toy car')))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "fork",
+        "banana",
+        "toy car"
+    ]
+}

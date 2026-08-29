@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bus is located to the right of a wooden bench where a woman is sitting. Next to the bench is a table with a keyboard on it. The woman wears a red hat with a butterfly inside. All people in the scene are positioned to the left of the bus.",
+    "dsl": "(exists ?b (exists ?be (exists ?w (exists ?t (and (Is ?b 'bus') (Is ?be 'bench') (HasMaterial ?be 'wooden') (RightOf ?b ?be) (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?be) (Is ?t 'table') (NextTo ?t ?be) (forall ?p (implies (Is ?p 'person') (LeftOf ?p ?b))) (exists ?h (exists ?f (exists ?k (and (Is ?h 'hat') (HasColor ?h 'red') (On ?h ?w) (Is ?f 'butterfly') (In ?f ?h) (Is ?k 'keyboard') (On ?k ?t))))))))))",
+    "cnf": "(exists ?b (exists ?be (exists ?w (exists ?t (forall ?p (exists ?h (exists ?f (exists ?k (and (Is ?b 'bus') (RightOf ?b ?be) (or (not (Is ?p 'person')) (LeftOf ?p ?b)) (HasMaterial ?be 'wooden') (On ?w ?be) (Is ?be 'bench') (NextTo ?t ?be) (HasState ?w 'sitting') (On ?h ?w) (Is ?t 'table') (On ?k ?t) (Is ?w 'woman') (HasColor ?h 'red') (In ?f ?h) (Is ?k 'keyboard') (Is ?h 'hat') (Is ?f 'butterfly'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "person",
+        "hat",
+        "woman",
+        "table",
+        "butterfly",
+        "bus",
+        "keyboard"
+    ]
+}

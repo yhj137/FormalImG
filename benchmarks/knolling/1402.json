@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two distinct columns of items neatly arranged. On the left side of the image, there is a blue backpack, a pair of jeans, a red hat, and a drill, arranged vertically from top to bottom. On the right side of the image, there is a black camera, a white cup, a gray mouse, and a carrot. The black camera is positioned above the white cup, the gray mouse is located below the cup, and the carrot is below the mouse. All items within each column are aligned vertically. Spatially connecting the columns, the blue backpack is to the left of the black camera, the white cup is to the right of the jeans, the red hat is to the left of the gray mouse, and the carrot is to the right of the drill.",
+    "dsl": "(exists ?backpack (exists ?jeans (exists ?hat (exists ?drill (exists ?camera (exists ?cup (exists ?mouse (exists ?carrot (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?jeans 'jeans') (Is ?hat 'hat') (Has ?hat 'red') (Is ?drill 'drill') (Is ?camera 'camera') (Has ?camera 'black') (Is ?cup 'cup') (Has ?cup 'white') (Is ?mouse 'mouse') (Has ?mouse 'gray') (Is ?carrot 'carrot') (OnLeftSide ?backpack) (OnLeftSide ?jeans) (OnLeftSide ?hat) (OnLeftSide ?drill) (OnRightSide ?camera) (OnRightSide ?cup) (OnRightSide ?mouse) (OnRightSide ?carrot) (Above ?backpack ?jeans) (Above ?jeans ?hat) (Above ?hat ?drill) (Above ?camera ?cup) (Below ?mouse ?cup) (Below ?carrot ?mouse) (AlignedVertically ?backpack ?jeans) (AlignedVertically ?jeans ?hat) (AlignedVertically ?hat ?drill) (AlignedVertically ?camera ?cup) (AlignedVertically ?cup ?mouse) (AlignedVertically ?mouse ?carrot) (LeftOf ?backpack ?camera) (RightOf ?cup ?jeans) (LeftOf ?hat ?mouse) (RightOf ?carrot ?drill))))))))))",
+    "cnf": "(exists ?backpack (exists ?jeans (exists ?hat (exists ?drill (exists ?camera (exists ?cup (exists ?mouse (exists ?carrot (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Above ?backpack ?jeans) (AlignedVertically ?backpack ?jeans) (OnLeftSide ?jeans) (Above ?jeans ?hat) (LeftOf ?backpack ?camera) (AlignedVertically ?jeans ?hat) (Is ?jeans 'jeans') (OnLeftSide ?hat) (Above ?hat ?drill) (AlignedVertically ?camera ?cup) (RightOf ?cup ?jeans) (AlignedVertically ?hat ?drill) (Has ?hat 'red') (OnLeftSide ?drill) (Above ?camera ?cup) (Below ?mouse ?cup) (AlignedVertically ?cup ?mouse) (LeftOf ?hat ?mouse) (RightOf ?carrot ?drill) (Is ?hat 'hat') (Is ?drill 'drill') (OnRightSide ?camera) (OnRightSide ?cup) (OnRightSide ?mouse) (Below ?carrot ?mouse) (AlignedVertically ?mouse ?carrot) (Has ?camera 'black') (Has ?cup 'white') (Has ?mouse 'gray') (OnRightSide ?carrot) (Is ?camera 'camera') (Is ?cup 'cup') (Is ?mouse 'mouse') (Is ?carrot 'carrot'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "carrot",
+        "cup",
+        "drill",
+        "hat",
+        "backpack",
+        "jeans",
+        "camera",
+        "mouse"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man holding every knife in the scene. A standing horse is next to the man, who is positioned to the left of the horse.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (and (Is ?m 'man') (forall ?k (implies (Is ?k 'knife') (Holding ?m ?k))) (exists ?h (and (Is ?h 'horse') (HasState ?h 'standing') (NextTo ?m ?h) (LeftOf ?m ?h))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (forall ?k (exists ?h (and (Is ?m 'man') (or (not (Is ?k 'knife')) (Holding ?m ?k)) (NextTo ?m ?h) (LeftOf ?m ?h) (HasState ?h 'standing') (Is ?h 'horse'))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "horse",
+        "knife"
+    ]
+}

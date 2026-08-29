@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a house with a cat inside holding a metal key. A bird holding a screwdriver is perched on the house. Next to the house stands a blue bicycle, with a round orange resting on it beside a fruit.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?k (exists ?br (exists ?s (exists ?bi (exists ?o (exists ?f (and (Is ?h 'house') (Is ?c 'cat') (Is ?k 'key') (HasMaterial ?k 'metal') (Is ?br 'bird') (Is ?s 'screwdriver') (Is ?bi 'bicycle') (HasColor ?bi 'blue') (Is ?o 'orange') (HasShape ?o 'round') (Is ?f 'fruit') (In ?c ?h) (Holding ?c ?k) (On ?br ?h) (Holding ?br ?s) (NextTo ?bi ?h) (On ?o ?bi) (NextTo ?f ?o)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?k (exists ?br (exists ?s (exists ?bi (exists ?o (exists ?f (and (Is ?h 'house') (In ?c ?h) (On ?br ?h) (Is ?c 'cat') (Holding ?c ?k) (NextTo ?bi ?h) (Is ?br 'bird') (Holding ?br ?s) (HasMaterial ?k 'metal') (HasColor ?bi 'blue') (On ?o ?bi) (Is ?s 'screwdriver') (Is ?k 'key') (Is ?bi 'bicycle') (HasShape ?o 'round') (NextTo ?f ?o) (Is ?o 'orange') (Is ?f 'fruit')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "cat",
+        "screwdriver",
+        "bicycle",
+        "house",
+        "bird",
+        "fruit",
+        "orange"
+    ]
+}

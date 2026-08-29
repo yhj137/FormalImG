@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board located on the left side. There is a plate that is aligned vertically with the cutting board. Additionally, for every spoon present in the image, it is aligned horizontally with the plate.",
+    "dsl": "(exists ?board (exists ?plate (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Is ?plate 'plate') (AlignedVertically ?board ?plate) (forall ?spoon (implies (Is ?spoon 'spoon') (AlignedHorizontally ?spoon ?plate))))))",
+    "cnf": "(exists ?board (exists ?plate (forall ?spoon (and (Is ?board 'cutting_board') (OnLeftSide ?board) (AlignedVertically ?board ?plate) (Is ?plate 'plate') (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?plate))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "cutting_board",
+        "plate"
+    ]
+}

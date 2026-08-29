@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. Every round rock is located to the left of a fabric rug. A metal refrigerator containing a round pan stands to the right of the rug. A laptop sits to the right of the refrigerator. A phone is placed to the left of the laptop, and a leather jacket is located to the right of the phone.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?r (implies (and (Is ?r 'rock') (HasShape ?r 'round')) (exists ?ru (exists ?f (exists ?p (exists ?l (exists ?ph (exists ?j (and (Is ?ru 'rug') (HasMaterial ?ru 'fabric') (Is ?f 'refrigerator') (HasMaterial ?f 'metal') (Is ?p 'pan') (HasShape ?p 'round') (Is ?l 'laptop') (Is ?ph 'phone') (Is ?j 'jacket') (HasMaterial ?j 'leather') (LeftOf ?r ?ru) (RightOf ?f ?ru) (In ?p ?f) (RightOf ?l ?f) (LeftOf ?ph ?l) (RightOf ?j ?ph)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?r (exists ?ru (exists ?f (exists ?p (exists ?l (exists ?ph (exists ?j (and (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?ru 'rug')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (HasMaterial ?ru 'fabric')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (LeftOf ?r ?ru)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?f 'refrigerator')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (RightOf ?f ?ru)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (HasMaterial ?j 'leather')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (HasMaterial ?f 'metal')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (In ?p ?f)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?j 'jacket')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (RightOf ?j ?ph)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?p 'pan')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (RightOf ?l ?f)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (HasShape ?p 'round')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?ph 'phone')) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (LeftOf ?ph ?l)) (or (not (Is ?r 'rock')) (not (HasShape ?r 'round')) (Is ?l 'laptop')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "rock",
+        "phone",
+        "refrigerator",
+        "pan",
+        "jacket",
+        "rug"
+    ]
+}

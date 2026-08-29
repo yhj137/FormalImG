@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the composition, there is a laptop. To the right of the laptop is a handbag, and there is a drill positioned such that the handbag is to its left. On the bottom side, there is a glove which is smaller than the handbag. The layout follows a rule: for every spoon in the image, it is located to the right of the glove and is smaller than the laptop. Furthermore, there is a screwdriver to the right of the spoon, a ruler to the right of the screwdriver, and a sock positioned to the right of the ruler, with the sock explicitly placed on the bottom side.",
+    "dsl": "(exists ?laptop (exists ?handbag (exists ?drill (exists ?glove (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?handbag 'handbag') (OnTopSide ?handbag) (RightOf ?handbag ?laptop) (Is ?drill 'drill') (OnTopSide ?drill) (LeftOf ?handbag ?drill) (Is ?glove 'glove') (OnBottomSide ?glove) (SmallerThan ?glove ?handbag) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?screwdriver (exists ?ruler (exists ?sock (and (Is ?screwdriver 'screwdriver') (Is ?ruler 'ruler') (Is ?sock 'sock') (RightOf ?spoon ?glove) (LargerThan ?laptop ?spoon) (RightOf ?screwdriver ?spoon) (RightOf ?ruler ?screwdriver) (LeftOf ?ruler ?sock) (OnBottomSide ?sock))))))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (exists ?drill (exists ?glove (forall ?spoon (exists ?screwdriver (exists ?ruler (exists ?sock (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (RightOf ?handbag ?laptop) (or (not (Is ?spoon 'spoon')) (LargerThan ?laptop ?spoon)) (OnTopSide ?handbag) (LeftOf ?handbag ?drill) (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?glove)) (or (not (Is ?spoon 'spoon')) (RightOf ?screwdriver ?spoon)) (Is ?handbag 'handbag') (SmallerThan ?glove ?handbag) (OnTopSide ?drill) (or (not (Is ?spoon 'spoon')) (Is ?sock 'sock')) (or (not (Is ?spoon 'spoon')) (RightOf ?ruler ?screwdriver)) (or (not (Is ?spoon 'spoon')) (Is ?screwdriver 'screwdriver')) (OnBottomSide ?glove) (Is ?drill 'drill') (or (not (Is ?spoon 'spoon')) (Is ?ruler 'ruler')) (or (not (Is ?spoon 'spoon')) (LeftOf ?ruler ?sock)) (Is ?glove 'glove') (or (not (Is ?spoon 'spoon')) (OnBottomSide ?sock)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "sock",
+        "screwdriver",
+        "drill",
+        "handbag",
+        "spoon",
+        "glove"
+    ]
+}

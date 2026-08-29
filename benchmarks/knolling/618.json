@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shoe, scissors, a cup, and a lemon. The shoe is located on the bottom side of the layout and is horizontally aligned with the scissors. In terms of vertical arrangement, the shoe is below the cup, which in turn is below the lemon. Furthermore, the shoe is visibly larger than the lemon.",
+    "dsl": "(exists ?shoe (exists ?scissors (exists ?cup (exists ?lemon (and (Is ?shoe 'shoe') (Is ?scissors 'scissors') (Is ?cup 'cup') (Is ?lemon 'lemon') (OnBottomSide ?shoe) (AlignedHorizontally ?shoe ?scissors) (Below ?shoe ?cup) (Below ?cup ?lemon) (LargerThan ?shoe ?lemon))))))",
+    "cnf": "(exists ?shoe (exists ?scissors (exists ?cup (exists ?lemon (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (AlignedHorizontally ?shoe ?scissors) (Below ?shoe ?cup) (Is ?scissors 'scissors') (LargerThan ?shoe ?lemon) (Is ?cup 'cup') (Below ?cup ?lemon) (Is ?lemon 'lemon'))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "cup",
+        "lemon",
+        "shoe"
+    ]
+}

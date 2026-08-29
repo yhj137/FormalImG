@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shirt, a handbag, a pan, a watch, and a carrot. The shirt is located on the left side of the view. All five items\u2014the shirt, handbag, pan, watch, and carrot\u2014are aligned horizontally. In terms of size, the watch is smaller than the pan, and the carrot is smaller than the handbag.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?pan (exists ?watch (exists ?carrot (and (Is ?shirt 'shirt') (Is ?handbag 'handbag') (Is ?pan 'pan') (Is ?watch 'watch') (Is ?carrot 'carrot') (OnLeftSide ?shirt) (AlignedHorizontally ?shirt ?handbag) (AlignedHorizontally ?handbag ?pan) (AlignedHorizontally ?pan ?watch) (AlignedHorizontally ?watch ?carrot) (SmallerThan ?watch ?pan) (SmallerThan ?carrot ?handbag)))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?pan (exists ?watch (exists ?carrot (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (AlignedHorizontally ?shirt ?handbag) (Is ?handbag 'handbag') (AlignedHorizontally ?handbag ?pan) (SmallerThan ?carrot ?handbag) (Is ?pan 'pan') (AlignedHorizontally ?pan ?watch) (AlignedHorizontally ?watch ?carrot) (SmallerThan ?watch ?pan) (Is ?watch 'watch') (Is ?carrot 'carrot')))))))",
+    "k": 5,
+    "object_classes": [
+        "carrot",
+        "watch",
+        "pan",
+        "handbag",
+        "shirt"
+    ]
+}

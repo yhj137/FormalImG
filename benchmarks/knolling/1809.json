@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten items arranged in two organized rows. The top row consists of a monitor, a camera, a drill, a hammer, and a pair of jeans arranged from left to right; all are aligned horizontally, with the jeans located specifically on the right side of the image. The bottom row starts with a mouse positioned directly below the monitor. To the right of the mouse follows a knife, a pair of scissors, an apple, and a donut, all aligned horizontally with the mouse. Additionally, the layout maintains specific vertical relationships: the knife is below the camera, the scissors are below the drill, the apple is below the hammer, and the donut is below the jeans.",
+    "dsl": "(exists ?monitor (exists ?camera (exists ?drill (exists ?hammer (exists ?jeans (exists ?mouse (exists ?knife (exists ?scissors (exists ?apple (exists ?donut (and (Is ?monitor 'monitor') (Is ?camera 'camera') (Is ?drill 'drill') (Is ?hammer 'hammer') (Is ?jeans 'jeans') (Is ?mouse 'mouse') (Is ?knife 'knife') (Is ?scissors 'scissors') (Is ?apple 'apple') (Is ?donut 'donut') (RightOf ?camera ?monitor) (RightOf ?drill ?camera) (RightOf ?hammer ?drill) (RightOf ?jeans ?hammer) (AlignedHorizontally ?monitor ?camera) (AlignedHorizontally ?camera ?drill) (AlignedHorizontally ?drill ?hammer) (AlignedHorizontally ?hammer ?jeans) (OnRightSide ?jeans) (Below ?mouse ?monitor) (Below ?knife ?camera) (Below ?scissors ?drill) (Below ?apple ?hammer) (Below ?donut ?jeans) (RightOf ?knife ?mouse) (RightOf ?scissors ?knife) (RightOf ?apple ?scissors) (RightOf ?donut ?apple) (AlignedHorizontally ?mouse ?knife) (AlignedHorizontally ?knife ?scissors) (AlignedHorizontally ?scissors ?apple) (AlignedHorizontally ?apple ?donut))))))))))))",
+    "cnf": "(exists ?monitor (exists ?camera (exists ?drill (exists ?hammer (exists ?jeans (exists ?mouse (exists ?knife (exists ?scissors (exists ?apple (exists ?donut (and (Is ?monitor 'monitor') (RightOf ?camera ?monitor) (AlignedHorizontally ?monitor ?camera) (Is ?camera 'camera') (RightOf ?drill ?camera) (Below ?mouse ?monitor) (AlignedHorizontally ?camera ?drill) (Is ?drill 'drill') (RightOf ?hammer ?drill) (Is ?mouse 'mouse') (RightOf ?knife ?mouse) (Below ?knife ?camera) (AlignedHorizontally ?drill ?hammer) (Is ?hammer 'hammer') (RightOf ?jeans ?hammer) (AlignedHorizontally ?mouse ?knife) (RightOf ?scissors ?knife) (Is ?knife 'knife') (Below ?scissors ?drill) (AlignedHorizontally ?hammer ?jeans) (Is ?jeans 'jeans') (AlignedHorizontally ?knife ?scissors) (RightOf ?apple ?scissors) (Is ?scissors 'scissors') (Below ?apple ?hammer) (OnRightSide ?jeans) (AlignedHorizontally ?scissors ?apple) (RightOf ?donut ?apple) (Is ?apple 'apple') (Below ?donut ?jeans) (AlignedHorizontally ?apple ?donut) (Is ?donut 'donut'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "apple",
+        "donut",
+        "camera",
+        "drill",
+        "hammer",
+        "jeans",
+        "knife",
+        "mouse",
+        "monitor",
+        "scissors"
+    ]
+}

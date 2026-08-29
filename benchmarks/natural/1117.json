@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a dog with a blue backpack next to it. A brown teddy bear is located to the right of the backpack. All shoes in the scene are positioned to the left of the dog. A cylindrical bottle is next to the backpack, with round glasses to the right of the bottle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?b (exists ?t (and (Is ?d 'dog') (Is ?b 'backpack') (HasColor ?b 'blue') (Is ?t 'teddy bear') (HasColor ?t 'brown') (NextTo ?b ?d) (RightOf ?t ?b) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?d))) (exists ?bo (exists ?g (and (Is ?bo 'bottle') (HasShape ?bo 'cylindrical') (Is ?g 'glasses') (HasShape ?g 'round') (NextTo ?bo ?b) (RightOf ?g ?bo)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?b (exists ?t (forall ?s (exists ?bo (exists ?g (and (Is ?d 'dog') (NextTo ?b ?d) (or (not (Is ?s 'shoes')) (LeftOf ?s ?d)) (HasColor ?b 'blue') (RightOf ?t ?b) (Is ?b 'backpack') (NextTo ?bo ?b) (HasColor ?t 'brown') (HasShape ?bo 'cylindrical') (RightOf ?g ?bo) (Is ?t 'teddy bear') (Is ?bo 'bottle') (HasShape ?g 'round') (Is ?g 'glasses')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "shoes",
+        "backpack",
+        "glasses",
+        "teddy bear",
+        "dog"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a single ruler positioned on the right side of the arrangement.",
+    "dsl": "(exists ?ruler (and (Is ?ruler 'ruler') (OnRightSide ?ruler)))",
+    "cnf": "(exists ?ruler (and (Is ?ruler 'ruler') (OnRightSide ?ruler)))",
+    "k": 1,
+    "object_classes": [
+        "ruler"
+    ]
+}

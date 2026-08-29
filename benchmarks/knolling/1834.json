@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza, it is located on the top and left side of the scene, and there is a structured arrangement of nine other objects. A bowl is positioned to the right of the pizza, aligned horizontally. Directly below the pizza is a fork, and to the right of the fork is a knife; these two are aligned horizontally. Below the fork lies a keyboard, which is aligned horizontally with a watch to its right. The keyboard is positioned above a hat. To the right of the hat is a phone, and they are aligned horizontally. Furthermore, the hat is above a backpack, which is aligned horizontally with a handbag to its right. Finally, the backpack is visually larger than the phone.",
+    "dsl": "(forall ?pizza (implies (Is ?pizza 'pizza') (exists ?bowl (exists ?fork (exists ?knife (exists ?keyboard (exists ?watch (exists ?hat (exists ?phone (exists ?backpack (exists ?handbag (and (Is ?bowl 'bowl') (Is ?fork 'fork') (Is ?knife 'knife') (Is ?keyboard 'keyboard') (Is ?watch 'watch') (Is ?hat 'hat') (Is ?phone 'phone') (Is ?backpack 'backpack') (Is ?handbag 'handbag') (OnTopSide ?pizza) (OnLeftSide ?pizza) (RightOf ?bowl ?pizza) (AlignedHorizontally ?pizza ?bowl) (Below ?fork ?pizza) (RightOf ?knife ?fork) (AlignedHorizontally ?fork ?knife) (Below ?keyboard ?fork) (RightOf ?watch ?keyboard) (AlignedHorizontally ?keyboard ?watch) (Above ?keyboard ?hat) (RightOf ?phone ?hat) (AlignedHorizontally ?hat ?phone) (Above ?hat ?backpack) (RightOf ?handbag ?backpack) (AlignedHorizontally ?backpack ?handbag) (LargerThan ?backpack ?phone)))))))))))))",
+    "cnf": "(forall ?pizza (exists ?bowl (exists ?fork (exists ?knife (exists ?keyboard (exists ?watch (exists ?hat (exists ?phone (exists ?backpack (exists ?handbag (and (or (not (Is ?pizza 'pizza')) (Is ?bowl 'bowl')) (or (not (Is ?pizza 'pizza')) (Is ?fork 'fork')) (or (not (Is ?pizza 'pizza')) (RightOf ?bowl ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?knife 'knife')) (or (not (Is ?pizza 'pizza')) (Below ?fork ?pizza)) (or (not (Is ?pizza 'pizza')) (OnLeftSide ?pizza)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?bowl)) (or (not (Is ?pizza 'pizza')) (Is ?keyboard 'keyboard')) (or (not (Is ?pizza 'pizza')) (RightOf ?knife ?fork)) (or (not (Is ?pizza 'pizza')) (OnTopSide ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?watch 'watch')) (or (not (Is ?pizza 'pizza')) (Below ?keyboard ?fork)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?fork ?knife)) (or (not (Is ?pizza 'pizza')) (Is ?handbag 'handbag')) (or (not (Is ?pizza 'pizza')) (Is ?hat 'hat')) (or (not (Is ?pizza 'pizza')) (RightOf ?watch ?keyboard)) (or (not (Is ?pizza 'pizza')) (Is ?backpack 'backpack')) (or (not (Is ?pizza 'pizza')) (RightOf ?handbag ?backpack)) (or (not (Is ?pizza 'pizza')) (Is ?phone 'phone')) (or (not (Is ?pizza 'pizza')) (Above ?keyboard ?hat)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?keyboard ?watch)) (or (not (Is ?pizza 'pizza')) (Above ?hat ?backpack)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?backpack ?handbag)) (or (not (Is ?pizza 'pizza')) (RightOf ?phone ?hat)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?hat ?phone)) (or (not (Is ?pizza 'pizza')) (LargerThan ?backpack ?phone)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "phone",
+        "pizza",
+        "watch",
+        "fork",
+        "handbag",
+        "hat",
+        "backpack",
+        "knife",
+        "bowl"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every handbag present in the scene is positioned on the right side of the image.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'handbag') (OnRightSide ?h))))",
+    "cnf": "(forall ?h (or (not (Is ?h 'handbag')) (OnRightSide ?h)))",
+    "k": 1,
+    "object_classes": [
+        "handbag"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene centered on a backpack. To the left of the backpack is an elephant with a metal screwdriver on it. A plastic toy car sits to the right of the backpack, next to which every flower is located. A teddy bear rests on the backpack with a fork beside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bp (exists ?e (exists ?sd (exists ?tc (and (Is ?bp 'backpack') (Is ?e 'elephant') (LeftOf ?e ?bp) (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (On ?sd ?e) (Is ?tc 'toy car') (HasMaterial ?tc 'plastic') (RightOf ?tc ?bp) (forall ?fl (implies (Is ?fl 'flower') (NextTo ?fl ?tc))) (exists ?tb (exists ?f (and (Is ?tb 'teddy bear') (On ?tb ?bp) (Is ?f 'fork') (NextTo ?f ?tb))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bp (exists ?e (exists ?sd (exists ?tc (forall ?fl (exists ?tb (exists ?f (and (Is ?bp 'backpack') (LeftOf ?e ?bp) (RightOf ?tc ?bp) (Is ?e 'elephant') (On ?sd ?e) (On ?tb ?bp) (HasMaterial ?tc 'plastic') (or (not (Is ?fl 'flower')) (NextTo ?fl ?tc)) (HasMaterial ?sd 'metal') (Is ?tb 'teddy bear') (NextTo ?f ?tb) (Is ?tc 'toy car') (Is ?sd 'screwdriver') (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "fork",
+        "backpack",
+        "teddy bear",
+        "flower",
+        "toy car",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that every camera in the scene is positioned on the top side of the image, and for each camera, there is a set of keys located directly below it.",
+    "dsl": "(and (forall ?c (implies (Is ?c 'camera') (exists ?k (and (Is ?k 'keys') (OnTopSide ?c) (Above ?c ?k))))))",
+    "cnf": "(forall ?c (exists ?k (and (or (not (Is ?c 'camera')) (Is ?k 'keys')) (or (not (Is ?c 'camera')) (OnTopSide ?c)) (or (not (Is ?c 'camera')) (Above ?c ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "camera"
+    ]
+}

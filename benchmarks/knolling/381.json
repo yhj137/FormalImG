@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a brown cutting board in the scene, and every phone in the image is positioned to the right of that cutting board.",
+    "dsl": "(exists ?board (and (Is ?board 'cutting_board') (Has ?board 'brown') (forall ?phone (implies (Is ?phone 'phone') (RightOf ?phone ?board)))))",
+    "cnf": "(exists ?board (forall ?phone (and (Is ?board 'cutting_board') (Has ?board 'brown') (or (not (Is ?phone 'phone')) (RightOf ?phone ?board)))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "phone"
+    ]
+}

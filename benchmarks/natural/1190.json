@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a rusty bus with a man on it, holding a basket. A broken phone lies on the basket, with a hammer resting on the phone. Every apple in the scene is located on the bus.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?bt (exists ?p (exists ?h (and (Is ?m 'man') (Is ?b 'bus') (HasState ?b 'rusty') (Is ?bt 'basket') (Is ?p 'phone') (HasState ?p 'broken') (Is ?h 'hammer') (On ?m ?b) (Holding ?m ?bt) (On ?p ?bt) (On ?h ?p) (forall ?a (implies (Is ?a 'apple') (On ?a ?b))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?bt (exists ?p (exists ?h (forall ?a (and (Is ?m 'man') (On ?m ?b) (Holding ?m ?bt) (HasState ?b 'rusty') (or (not (Is ?a 'apple')) (On ?a ?b)) (Is ?bt 'basket') (On ?p ?bt) (Is ?b 'bus') (HasState ?p 'broken') (On ?h ?p) (Is ?p 'phone') (Is ?h 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "man",
+        "basket",
+        "hammer",
+        "apple",
+        "bus"
+    ]
+}

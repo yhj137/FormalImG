@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the top side of the layout. Below the suitcase, there is a keyboard, which is aligned horizontally with a ruler and a calculator. Following a specific pattern, for every apple in the image, there is a knife positioned above it; this knife is aligned horizontally with the keyboard and is smaller than the keyboard. Additionally, a watch and a set of keys are aligned horizontally with one another, with the watch being smaller than the calculator and the keys being smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (exists ?ruler (exists ?calculator (exists ?watch (exists ?keys (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?keyboard 'keyboard') (Above ?suitcase ?keyboard) (Is ?ruler 'ruler') (AlignedHorizontally ?keyboard ?ruler) (Is ?calculator 'calculator') (AlignedHorizontally ?ruler ?calculator) (Is ?watch 'watch') (SmallerThan ?watch ?calculator) (Is ?keys 'keys') (SmallerThan ?keys ?suitcase) (AlignedHorizontally ?watch ?keys) (forall ?apple (implies (Is ?apple 'apple') (exists ?knife (and (Is ?knife 'knife') (Above ?knife ?apple) (SmallerThan ?knife ?keyboard) (AlignedHorizontally ?knife ?keyboard))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (exists ?ruler (exists ?calculator (exists ?watch (exists ?keys (forall ?apple (exists ?knife (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Above ?suitcase ?keyboard) (SmallerThan ?keys ?suitcase) (Is ?keyboard 'keyboard') (AlignedHorizontally ?keyboard ?ruler) (Is ?keys 'keys') (AlignedHorizontally ?watch ?keys) (or (not (Is ?apple 'apple')) (SmallerThan ?knife ?keyboard)) (Is ?ruler 'ruler') (AlignedHorizontally ?ruler ?calculator) (SmallerThan ?watch ?calculator) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?knife ?keyboard)) (or (not (Is ?apple 'apple')) (Above ?knife ?apple)) (Is ?calculator 'calculator') (Is ?watch 'watch') (or (not (Is ?apple 'apple')) (Is ?knife 'knife')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "apple",
+        "keyboard",
+        "watch",
+        "calculator",
+        "knife",
+        "suitcase"
+    ]
+}

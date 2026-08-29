@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every woman holds an empty basket and stands next to a bed.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?x (implies (Is ?x 'woman') (exists ?y (exists ?z (and (Is ?y 'basket') (Is ?z 'bed') (HasState ?y 'empty') (Holding ?x ?y) (NextTo ?x ?z)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?x (exists ?y (exists ?z (and (or (not (Is ?x 'woman')) (Is ?y 'basket')) (or (not (Is ?x 'woman')) (Is ?z 'bed')) (or (not (Is ?x 'woman')) (HasState ?y 'empty')) (or (not (Is ?x 'woman')) (NextTo ?x ?z)) (or (not (Is ?x 'woman')) (Holding ?x ?y)))))))",
+    "k": 3,
+    "object_classes": [
+        "bed",
+        "basket",
+        "woman"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a cup containing all the spoons, with a metal fork next to it and a peeled banana to the left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'cup') (forall ?s (implies (Is ?s 'spoon') (In ?s ?c))) (exists ?f (and (Is ?f 'fork') (HasMaterial ?f 'metal') (NextTo ?f ?c))) (exists ?b (and (Is ?b 'banana') (HasState ?b 'peeled') (LeftOf ?b ?c))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (forall ?s (exists ?f (exists ?b (and (Is ?c 'cup') (or (not (Is ?s 'spoon')) (In ?s ?c)) (NextTo ?f ?c) (LeftOf ?b ?c) (HasMaterial ?f 'metal') (HasState ?b 'peeled') (Is ?f 'fork') (Is ?b 'banana')))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "fork",
+        "cup",
+        "spoon"
+    ]
+}

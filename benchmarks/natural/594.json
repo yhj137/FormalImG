@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a wet rock to the left of a tree. Every orange is inside the tree.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?r (and (Is ?t 'tree') (Is ?r 'rock') (HasState ?r 'wet') (LeftOf ?r ?t) (forall ?o (implies (Is ?o 'orange') (In ?o ?t)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?r (forall ?o (and (Is ?t 'tree') (LeftOf ?r ?t) (or (not (Is ?o 'orange')) (In ?o ?t)) (HasState ?r 'wet') (Is ?r 'rock'))))))",
+    "k": 3,
+    "object_classes": [
+        "rock",
+        "orange",
+        "tree"
+    ]
+}

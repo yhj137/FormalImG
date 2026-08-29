@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A pizza is placed on the bottom side of the layout. For every donut in the scene, there is a mouse positioned directly above it. Additionally, each mouse is smaller than the pizza.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (forall ?donut (implies (Is ?donut 'donut') (exists ?mouse (and (Is ?mouse 'mouse') (Above ?mouse ?donut) (SmallerThan ?mouse ?pizza)))))))",
+    "cnf": "(exists ?pizza (forall ?donut (exists ?mouse (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (or (not (Is ?donut 'donut')) (SmallerThan ?mouse ?pizza)) (or (not (Is ?donut 'donut')) (Above ?mouse ?donut)) (or (not (Is ?donut 'donut')) (Is ?mouse 'mouse'))))))",
+    "k": 3,
+    "object_classes": [
+        "pizza",
+        "donut",
+        "mouse"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. Inside every house lies a square rug with a child, a keyboard, a pan, a pair of glasses, and a lamp on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?h (implies (Is ?h 'house') (exists ?r (exists ?c (exists ?k (exists ?p (exists ?g (exists ?l (and (Is ?r 'rug') (HasShape ?r 'square') (In ?r ?h) (Is ?c 'child') (On ?c ?r) (Is ?k 'keyboard') (On ?k ?r) (Is ?p 'pan') (On ?p ?r) (Is ?g 'glasses') (On ?g ?r) (Is ?l 'lamp') (On ?l ?r)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?h (exists ?r (exists ?c (exists ?k (exists ?p (exists ?g (exists ?l (and (or (not (Is ?h 'house')) (Is ?r 'rug')) (or (not (Is ?h 'house')) (HasShape ?r 'square')) (or (not (Is ?h 'house')) (In ?r ?h)) (or (not (Is ?h 'house')) (On ?c ?r)) (or (not (Is ?h 'house')) (Is ?c 'child')) (or (not (Is ?h 'house')) (On ?k ?r)) (or (not (Is ?h 'house')) (Is ?k 'keyboard')) (or (not (Is ?h 'house')) (On ?p ?r)) (or (not (Is ?h 'house')) (Is ?p 'pan')) (or (not (Is ?h 'house')) (On ?g ?r)) (or (not (Is ?h 'house')) (Is ?g 'glasses')) (or (not (Is ?h 'house')) (On ?l ?r)) (or (not (Is ?h 'house')) (Is ?l 'lamp')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "lamp",
+        "keyboard",
+        "glasses",
+        "child",
+        "pan",
+        "rug"
+    ]
+}

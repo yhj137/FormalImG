@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every red book positioned on the top side of the scene, there is a blue stapler located to its left. A black laptop is aligned vertically with the stapler, and a gray fork is placed to the left of the laptop.",
+    "dsl": "(and (forall ?b (implies (and (Is ?b 'book') (Has ?b 'red') (OnTopSide ?b)) (exists ?s (exists ?l (exists ?f (and (Is ?s 'stapler') (Has ?s 'blue') (Is ?l 'laptop') (Has ?l 'black') (Is ?f 'fork') (Has ?f 'gray') (LeftOf ?s ?b) (AlignedVertically ?l ?s) (LeftOf ?f ?l))))))))",
+    "cnf": "(forall ?b (exists ?s (exists ?l (exists ?f (and (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Is ?s 'stapler')) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Has ?s 'blue')) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (LeftOf ?s ?b)) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Is ?l 'laptop')) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (AlignedVertically ?l ?s)) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Has ?f 'gray')) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Has ?l 'black')) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (LeftOf ?f ?l)) (or (not (Is ?b 'book')) (not (Has ?b 'red')) (not (OnTopSide ?b)) (Is ?f 'fork')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "laptop",
+        "fork",
+        "stapler"
+    ]
+}

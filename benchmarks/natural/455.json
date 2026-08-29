@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child is sitting on a wooden chair and holding an apple.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?ch (exists ?a (and (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (Is ?a 'apple') (On ?c ?ch) (Holding ?c ?a))))))",
+    "cnf": "(forall ?c (exists ?ch (exists ?a (and (or (not (Is ?c 'child')) (Is ?ch 'chair')) (or (not (Is ?c 'child')) (HasMaterial ?ch 'wooden')) (or (not (Is ?c 'child')) (Is ?a 'apple')) (or (not (Is ?c 'child')) (On ?c ?ch)) (or (not (Is ?c 'child')) (Holding ?c ?a))))))",
+    "k": 3,
+    "object_classes": [
+        "chair",
+        "apple",
+        "child"
+    ]
+}

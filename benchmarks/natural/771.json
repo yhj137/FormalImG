@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a man holding a rectangular laptop. Red shoes are next to the man, and all butterflies are to his right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?l (exists ?s (and (Is ?m 'man') (Is ?l 'laptop') (HasShape ?l 'rectangular') (Holding ?m ?l) (Is ?s 'shoes') (HasColor ?s 'red') (NextTo ?s ?m) (forall ?b (implies (Is ?b 'butterfly') (RightOf ?b ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?l (exists ?s (forall ?b (and (Is ?m 'man') (Holding ?m ?l) (NextTo ?s ?m) (HasShape ?l 'rectangular') (or (not (Is ?b 'butterfly')) (RightOf ?b ?m)) (HasColor ?s 'red') (Is ?l 'laptop') (Is ?s 'shoes')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "shoes",
+        "laptop",
+        "man"
+    ]
+}

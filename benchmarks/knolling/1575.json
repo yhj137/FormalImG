@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a red handbag positioned on the left side. To the right of the handbag is a black keyboard, and further to the right of the keyboard is a yellow drill. A wallet is located below the handbag, with the handbag being larger than the wallet. A sandwich is placed below the keyboard. A watch is positioned below the drill and lies on the bottom side of the image. Additionally, for every white sock in the scene, there is a pair of black glasses located below it, and the sock is smaller than the keyboard.",
+    "dsl": "(exists ?handbag (exists ?keyboard (exists ?drill (exists ?wallet (exists ?sandwich (exists ?watch (and (Is ?handbag 'handbag') (Has ?handbag 'red') (OnLeftSide ?handbag) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (RightOf ?keyboard ?handbag) (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?drill ?keyboard) (Is ?wallet 'wallet') (Below ?wallet ?handbag) (LargerThan ?handbag ?wallet) (Is ?sandwich 'sandwich') (Below ?sandwich ?keyboard) (Is ?watch 'watch') (Below ?watch ?drill) (OnBottomSide ?watch) (forall ?sock (implies (and (Is ?sock 'sock') (Has ?sock 'white')) (exists ?glasses (and (Is ?glasses 'glasses') (Has ?glasses 'black') (Below ?glasses ?sock) (SmallerThan ?sock ?keyboard))))))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (exists ?drill (exists ?wallet (exists ?sandwich (exists ?watch (forall ?sock (exists ?glasses (and (Is ?handbag 'handbag') (Has ?handbag 'red') (OnLeftSide ?handbag) (RightOf ?keyboard ?handbag) (Below ?wallet ?handbag) (Has ?keyboard 'black') (RightOf ?drill ?keyboard) (LargerThan ?handbag ?wallet) (Is ?wallet 'wallet') (Is ?keyboard 'keyboard') (Below ?sandwich ?keyboard) (Has ?drill 'yellow') (Below ?watch ?drill) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (SmallerThan ?sock ?keyboard)) (Is ?sandwich 'sandwich') (Is ?drill 'drill') (Is ?watch 'watch') (OnBottomSide ?watch) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Below ?glasses ?sock)) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Has ?glasses 'black')) (or (not (Is ?sock 'sock')) (not (Has ?sock 'white')) (Is ?glasses 'glasses')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "keyboard",
+        "watch",
+        "drill",
+        "handbag",
+        "wallet",
+        "sandwich"
+    ]
+}

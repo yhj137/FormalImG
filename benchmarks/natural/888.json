@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular refrigerator containing every knife. Next to the refrigerator is a man wearing a hat and holding a hammer.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (forall ?k (implies (Is ?k 'knife') (In ?k ?r))) (exists ?m (exists ?h (exists ?t (and (Is ?m 'man') (Is ?h 'hammer') (Is ?t 'hat') (NextTo ?m ?r) (Holding ?m ?h) (On ?t ?m))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (forall ?k (exists ?m (exists ?h (exists ?t (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (or (not (Is ?k 'knife')) (In ?k ?r)) (NextTo ?m ?r) (Is ?m 'man') (Holding ?m ?h) (On ?t ?m) (Is ?h 'hammer') (Is ?t 'hat'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "man",
+        "hammer",
+        "refrigerator",
+        "hat"
+    ]
+}

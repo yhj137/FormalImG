@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a sofa. Every shoe is dirty and located to the left of the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (and (Is ?s 'sofa') (forall ?sh (implies (Is ?sh 'shoes') (and (HasState ?sh 'dirty') (LeftOf ?sh ?s)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (forall ?sh (and (Is ?s 'sofa') (or (not (Is ?sh 'shoes')) (LeftOf ?sh ?s)) (or (not (Is ?sh 'shoes')) (HasState ?sh 'dirty'))))))",
+    "k": 2,
+    "object_classes": [
+        "sofa",
+        "shoes"
+    ]
+}

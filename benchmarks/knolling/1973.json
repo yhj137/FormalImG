@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the left side of the scene, with a handbag positioned directly below it. To the right of the suitcase, aligned horizontally, is a cutting board. A sandwich, which is visually smaller than the cutting board, is placed below it. To the right of the cutting board is a bottle, and below the bottle are headphones. Further to the right of the bottle is a mouse, with a black watch located below it. Finally, for every pair of scissors in the image, there is a stapler positioned below it, which is also located to the right of the watch.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?cutting_board (exists ?sandwich (exists ?bottle (exists ?headphones (exists ?mouse (exists ?watch (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (Below ?handbag ?suitcase) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?suitcase) (AlignedHorizontally ?suitcase ?cutting_board) (Is ?sandwich 'sandwich') (Below ?sandwich ?cutting_board) (SmallerThan ?sandwich ?cutting_board) (Is ?bottle 'bottle') (RightOf ?bottle ?cutting_board) (Is ?headphones 'headphones') (Below ?headphones ?bottle) (Is ?mouse 'mouse') (RightOf ?mouse ?bottle) (Is ?watch 'watch') (Has ?watch 'black') (Below ?watch ?mouse) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?stapler (and (Is ?stapler 'stapler') (Below ?stapler ?scissors) (RightOf ?stapler ?watch))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?cutting_board (exists ?sandwich (exists ?bottle (exists ?headphones (exists ?mouse (exists ?watch (forall ?scissors (exists ?stapler (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?handbag ?suitcase) (RightOf ?cutting_board ?suitcase) (Is ?handbag 'handbag') (AlignedHorizontally ?suitcase ?cutting_board) (Is ?cutting_board 'cutting_board') (Below ?sandwich ?cutting_board) (SmallerThan ?sandwich ?cutting_board) (Is ?sandwich 'sandwich') (RightOf ?bottle ?cutting_board) (Is ?bottle 'bottle') (Below ?headphones ?bottle) (RightOf ?mouse ?bottle) (Is ?headphones 'headphones') (Is ?mouse 'mouse') (Below ?watch ?mouse) (Has ?watch 'black') (or (not (Is ?scissors 'scissors')) (RightOf ?stapler ?watch)) (Is ?watch 'watch') (or (not (Is ?scissors 'scissors')) (Below ?stapler ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?stapler 'stapler')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "stapler",
+        "suitcase",
+        "watch",
+        "cutting_board",
+        "handbag",
+        "mouse",
+        "bottle",
+        "headphones",
+        "sandwich",
+        "scissors"
+    ]
+}

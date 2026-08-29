@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A fabric sofa is placed between a lamp on the left and a clock on the right. A woman sits on the sofa holding a metal pan with a key resting on it, while a pair of glasses also lies on the sofa.",
+    "dsl": "(exists ?s (exists ?l (exists ?c (exists ?w (exists ?p (exists ?k (exists ?g (and (Is ?s 'sofa') (HasMaterial ?s 'fabric') (Is ?l 'lamp') (LeftOf ?l ?s) (Is ?c 'clock') (RightOf ?c ?s) (Is ?w 'woman') (On ?w ?s) (Is ?p 'pan') (HasMaterial ?p 'metal') (Holding ?w ?p) (Is ?k 'key') (On ?k ?p) (Is ?g 'glasses') (On ?g ?s)))))))))",
+    "cnf": "(exists ?s (exists ?l (exists ?c (exists ?w (exists ?p (exists ?k (exists ?g (and (Is ?s 'sofa') (HasMaterial ?s 'fabric') (LeftOf ?l ?s) (RightOf ?c ?s) (Is ?l 'lamp') (On ?w ?s) (Is ?c 'clock') (On ?g ?s) (Is ?w 'woman') (Holding ?w ?p) (Is ?g 'glasses') (HasMaterial ?p 'metal') (On ?k ?p) (Is ?p 'pan') (Is ?k 'key')))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "glasses",
+        "pan",
+        "sofa",
+        "lamp",
+        "woman",
+        "clock"
+    ]
+}

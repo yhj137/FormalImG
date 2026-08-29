@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of every rock sits a bus, with a wooden bookshelf standing to its right. A keyboard is placed to the left of the bookshelf, and a fabric hat lies to the right of the keyboard.",
+    "dsl": "(forall ?r (implies (Is ?r 'rock') (exists ?b (exists ?s (exists ?k (exists ?h (and (Is ?b 'bus') (Is ?s 'bookshelf') (HasMaterial ?s 'wooden') (Is ?k 'keyboard') (Is ?h 'hat') (HasMaterial ?h 'fabric') (LeftOf ?r ?b) (RightOf ?s ?b) (LeftOf ?k ?s) (RightOf ?h ?k))))))))",
+    "cnf": "(forall ?r (exists ?b (exists ?s (exists ?k (exists ?h (and (or (not (Is ?r 'rock')) (Is ?b 'bus')) (or (not (Is ?r 'rock')) (Is ?s 'bookshelf')) (or (not (Is ?r 'rock')) (LeftOf ?r ?b)) (or (not (Is ?r 'rock')) (HasMaterial ?s 'wooden')) (or (not (Is ?r 'rock')) (HasMaterial ?h 'fabric')) (or (not (Is ?r 'rock')) (RightOf ?s ?b)) (or (not (Is ?r 'rock')) (Is ?k 'keyboard')) (or (not (Is ?r 'rock')) (Is ?h 'hat')) (or (not (Is ?r 'rock')) (RightOf ?h ?k)) (or (not (Is ?r 'rock')) (LeftOf ?k ?s))))))))",
+    "k": 5,
+    "object_classes": [
+        "bus",
+        "rock",
+        "keyboard",
+        "bookshelf",
+        "hat"
+    ]
+}

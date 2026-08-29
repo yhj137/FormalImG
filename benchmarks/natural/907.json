@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts a man holding a round rock next to a wooden bed. Every hat in the scene rests on the bed, and a house sits to the right of the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'bed') (HasMaterial ?b 'wooden') (NextTo ?m ?b) (forall ?h (implies (Is ?h 'hat') (On ?h ?b))) (exists ?r (and (Is ?r 'rock') (HasShape ?r 'round') (Holding ?m ?r))) (exists ?ho (and (Is ?ho 'house') (RightOf ?ho ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (forall ?h (exists ?r (exists ?ho (and (Is ?m 'man') (NextTo ?m ?b) (Holding ?m ?r) (HasMaterial ?b 'wooden') (or (not (Is ?h 'hat')) (On ?h ?b)) (HasShape ?r 'round') (Is ?b 'bed') (RightOf ?ho ?b) (Is ?r 'rock') (Is ?ho 'house'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "bed",
+        "man",
+        "rock",
+        "hat"
+    ]
+}

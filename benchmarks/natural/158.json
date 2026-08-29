@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo style image where every apple is made of glass.",
+    "dsl": "(and (IsStyle 'photo') (forall ?a (implies (Is ?a 'apple') (HasMaterial ?a 'glass'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?a (or (not (Is ?a 'apple')) (HasMaterial ?a 'glass'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

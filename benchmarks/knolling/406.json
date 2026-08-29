@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black suitcase, a white shoe, and a red bowl arranged in a vertical layout. The white shoe is placed above the black suitcase, and the red bowl is positioned above the white shoe. Additionally, the red bowl is visually smaller than the black suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?bowl (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (Is ?shoe 'shoe') (Has ?shoe 'white') (Is ?bowl 'bowl') (Has ?bowl 'red') (Above ?shoe ?suitcase) (Above ?bowl ?shoe) (SmallerThan ?bowl ?suitcase)))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?bowl (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (Above ?shoe ?suitcase) (SmallerThan ?bowl ?suitcase) (Has ?shoe 'white') (Above ?bowl ?shoe) (Is ?shoe 'shoe') (Has ?bowl 'red') (Is ?bowl 'bowl')))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "suitcase",
+        "shoe"
+    ]
+}

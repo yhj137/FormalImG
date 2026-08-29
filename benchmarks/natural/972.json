@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style image. There is a bed with a fabric shirt on it. To the left of the bed sits a round rock, which has a knife on top of it. Additionally, all bananas in the image are located on the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?s (exists ?r (exists ?k (and (Is ?b 'bed') (Is ?s 'shirt') (HasMaterial ?s 'fabric') (Is ?r 'rock') (HasShape ?r 'round') (Is ?k 'knife') (On ?s ?b) (LeftOf ?r ?b) (On ?k ?r) (forall ?ba (implies (Is ?ba 'banana') (On ?ba ?b)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?s (exists ?r (exists ?k (forall ?ba (and (Is ?b 'bed') (On ?s ?b) (LeftOf ?r ?b) (HasMaterial ?s 'fabric') (or (not (Is ?ba 'banana')) (On ?ba ?b)) (HasShape ?r 'round') (On ?k ?r) (Is ?s 'shirt') (Is ?r 'rock') (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "shirt",
+        "knife",
+        "bed",
+        "rock",
+        "banana"
+    ]
+}

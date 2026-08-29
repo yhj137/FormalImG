@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden bookshelf with a clock on top. Every cup is positioned to the right of the clock, and a pair of headphones lies next to it. Beside the bookshelf stands a man wearing a hat and holding a backpack.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (exists ?cl (and (Is ?cl 'clock') (On ?cl ?b) (forall ?c (implies (Is ?c 'cup') (RightOf ?c ?cl))) (exists ?m (and (Is ?m 'man') (NextTo ?m ?b) (exists ?bp (and (Is ?bp 'backpack') (Holding ?m ?bp))) (exists ?h (and (Is ?h 'hat') (On ?h ?m))) (exists ?hp (and (Is ?hp 'headphones') (NextTo ?hp ?cl))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?cl (forall ?c (exists ?m (exists ?bp (exists ?h (exists ?hp (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (On ?cl ?b) (NextTo ?m ?b) (Is ?cl 'clock') (or (not (Is ?c 'cup')) (RightOf ?c ?cl)) (Is ?m 'man') (Holding ?m ?bp) (NextTo ?hp ?cl) (On ?h ?m) (Is ?bp 'backpack') (Is ?hp 'headphones') (Is ?h 'hat'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "backpack",
+        "man",
+        "cup",
+        "clock",
+        "bookshelf",
+        "hat"
+    ]
+}

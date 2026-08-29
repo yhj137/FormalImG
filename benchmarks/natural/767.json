@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a clock to the left of a bus. A lit lamp is next to the clock, and every book is inside the bus.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?l (and (Is ?b 'bus') (Is ?c 'clock') (Is ?l 'lamp') (LeftOf ?c ?b) (NextTo ?l ?c) (HasState ?l 'on') (forall ?k (implies (Is ?k 'book') (In ?k ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?l (forall ?k (and (Is ?b 'bus') (LeftOf ?c ?b) (or (not (Is ?k 'book')) (In ?k ?b)) (Is ?c 'clock') (NextTo ?l ?c) (Is ?l 'lamp') (HasState ?l 'on')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "lamp",
+        "bus",
+        "clock"
+    ]
+}

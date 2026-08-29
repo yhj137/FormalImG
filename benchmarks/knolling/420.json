@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a spoon, a black remote, and a blue tie. The spoon is placed to the left of the remote, and the remote is positioned to the left of the tie. Additionally, the tie is visually larger than the remote.",
+    "dsl": "(exists ?s (exists ?r (exists ?t (and (Is ?s 'spoon') (Is ?r 'remote') (Has ?r 'black') (Is ?t 'tie') (Has ?t 'blue') (LeftOf ?s ?r) (LeftOf ?r ?t) (LargerThan ?t ?r)))))",
+    "cnf": "(exists ?s (exists ?r (exists ?t (and (Is ?s 'spoon') (LeftOf ?s ?r) (Has ?r 'black') (LeftOf ?r ?t) (Is ?r 'remote') (LargerThan ?t ?r) (Has ?t 'blue') (Is ?t 'tie')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "tie",
+        "remote"
+    ]
+}

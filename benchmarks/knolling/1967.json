@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout organizes objects into aligned rows. At the top left is a monitor, with a laptop to its right (aligned horizontally); next to the laptop is a mouse (which is smaller than the laptop), followed by a phone to the right of the mouse. Below the monitor lies a pizza, and to the right of the pizza is a sandwich that is smaller than the pizza and aligned horizontally with it. Positioned on the bottom side of the image, below the phone, is a wallet, with a glove located to the right of the wallet (also on the bottom side). Finally, for every cup in the scene, it is positioned below the sandwich and has a spoon to its right (placing the cup to the left of the spoon), and they are aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?mouse (exists ?phone (exists ?pizza (exists ?sandwich (exists ?wallet (exists ?glove (and (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?mouse 'mouse') (Is ?phone 'phone') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (Is ?wallet 'wallet') (Is ?glove 'glove') (RightOf ?laptop ?monitor) (AlignedHorizontally ?laptop ?monitor) (RightOf ?mouse ?laptop) (SmallerThan ?mouse ?laptop) (RightOf ?phone ?mouse) (Below ?pizza ?monitor) (RightOf ?sandwich ?pizza) (SmallerThan ?sandwich ?pizza) (AlignedHorizontally ?sandwich ?pizza) (Below ?wallet ?phone) (OnBottomSide ?wallet) (RightOf ?glove ?wallet) (OnBottomSide ?glove) (forall ?cup (implies (Is ?cup 'cup') (exists ?spoon (and (Is ?spoon 'spoon') (Below ?cup ?sandwich) (LeftOf ?cup ?spoon) (AlignedHorizontally ?cup ?spoon))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?mouse (exists ?phone (exists ?pizza (exists ?sandwich (exists ?wallet (exists ?glove (forall ?cup (exists ?spoon (and (Is ?monitor 'monitor') (RightOf ?laptop ?monitor) (AlignedHorizontally ?laptop ?monitor) (Is ?laptop 'laptop') (Below ?pizza ?monitor) (RightOf ?mouse ?laptop) (Is ?pizza 'pizza') (RightOf ?sandwich ?pizza) (SmallerThan ?mouse ?laptop) (Is ?mouse 'mouse') (SmallerThan ?sandwich ?pizza) (Is ?sandwich 'sandwich') (RightOf ?phone ?mouse) (AlignedHorizontally ?sandwich ?pizza) (Is ?phone 'phone') (Below ?wallet ?phone) (or (not (Is ?cup 'cup')) (Below ?cup ?sandwich)) (Is ?wallet 'wallet') (OnBottomSide ?wallet) (or (not (Is ?cup 'cup')) (Is ?spoon 'spoon')) (or (not (Is ?cup 'cup')) (LeftOf ?cup ?spoon)) (RightOf ?glove ?wallet) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?spoon)) (Is ?glove 'glove') (OnBottomSide ?glove))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "phone",
+        "pizza",
+        "cup",
+        "wallet",
+        "mouse",
+        "monitor",
+        "sandwich",
+        "glove",
+        "spoon"
+    ]
+}

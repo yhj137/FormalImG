@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where a man stands on a car, holding an open umbrella and every orange. Inside the car is a pan containing a round ball.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'man') (forall ?o (implies (Is ?o 'orange') (Holding ?m ?o))) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?m ?u))) (exists ?c (and (Is ?c 'car') (On ?m ?c) (exists ?p (and (Is ?p 'pan') (In ?p ?c) (exists ?b (and (Is ?b 'ball') (HasShape ?b 'round') (In ?b ?p))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (forall ?o (exists ?u (exists ?c (exists ?p (exists ?b (and (Is ?m 'man') (or (not (Is ?o 'orange')) (Holding ?m ?o)) (Holding ?m ?u) (On ?m ?c) (HasState ?u 'open') (Is ?c 'car') (In ?p ?c) (Is ?u 'umbrella') (Is ?p 'pan') (In ?b ?p) (HasShape ?b 'round') (Is ?b 'ball')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "pan",
+        "man",
+        "ball",
+        "car",
+        "orange"
+    ]
+}

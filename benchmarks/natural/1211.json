@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. There is a wooden table, and a bird stands on it holding a metal spoon. To the right of the table is a backpack containing a shirt. Additionally, a hat and a pair of round glasses are resting on the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?b (exists ?s (exists ?bp (exists ?sh (exists ?h (exists ?g (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?b 'bird') (Is ?s 'spoon') (HasMaterial ?s 'metal') (Is ?bp 'backpack') (Is ?sh 'shirt') (Is ?h 'hat') (Is ?g 'glasses') (HasShape ?g 'round') (On ?b ?t) (Holding ?b ?s) (RightOf ?bp ?t) (In ?sh ?bp) (On ?h ?t) (On ?g ?t))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?b (exists ?s (exists ?bp (exists ?sh (exists ?h (exists ?g (and (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?b ?t) (RightOf ?bp ?t) (Is ?b 'bird') (Holding ?b ?s) (On ?h ?t) (Is ?bp 'backpack') (In ?sh ?bp) (HasMaterial ?s 'metal') (On ?g ?t) (Is ?h 'hat') (Is ?sh 'shirt') (Is ?s 'spoon') (HasShape ?g 'round') (Is ?g 'glasses'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "hat",
+        "backpack",
+        "shirt",
+        "table",
+        "bird",
+        "spoon"
+    ]
+}

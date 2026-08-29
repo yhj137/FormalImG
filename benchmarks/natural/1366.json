@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a desk with a monitor and a round ball resting on it. To the right of the desk stands a horse, and to the right of the horse is a car. Every bird is positioned to the right of the car and holds an apple.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?m (exists ?b (exists ?h (exists ?c (and (Is ?d 'desk') (Is ?m 'monitor') (Is ?b 'ball') (HasShape ?b 'round') (Is ?h 'horse') (Is ?c 'car') (On ?m ?d) (On ?b ?d) (RightOf ?h ?d) (RightOf ?c ?h) (forall ?bird (implies (Is ?bird 'bird') (exists ?a (and (Is ?a 'apple') (RightOf ?bird ?c) (Holding ?bird ?a))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?m (exists ?b (exists ?h (exists ?c (forall ?bird (exists ?a (and (Is ?d 'desk') (On ?m ?d) (On ?b ?d) (Is ?m 'monitor') (RightOf ?h ?d) (HasShape ?b 'round') (Is ?h 'horse') (RightOf ?c ?h) (Is ?b 'ball') (Is ?c 'car') (or (not (Is ?bird 'bird')) (RightOf ?bird ?c)) (or (not (Is ?bird 'bird')) (Is ?a 'apple')) (or (not (Is ?bird 'bird')) (Holding ?bird ?a)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "horse",
+        "monitor",
+        "bird",
+        "desk",
+        "car",
+        "ball",
+        "apple"
+    ]
+}

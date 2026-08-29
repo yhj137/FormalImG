@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a child holding a hat next to a bookshelf. A keyboard, a wooden horse, and a bowl are inside the bookshelf, with every cup placed inside the bowl.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?h (exists ?k (exists ?o (exists ?a (and (Is ?b 'bookshelf') (Is ?c 'child') (Is ?h 'horse') (Is ?k 'keyboard') (Is ?o 'bowl') (Is ?a 'hat') (NextTo ?c ?b) (HasMaterial ?h 'wooden') (In ?h ?b) (In ?k ?b) (In ?o ?b) (Holding ?c ?a) (forall ?u (implies (Is ?u 'cup') (In ?u ?o)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?h (exists ?k (exists ?o (exists ?a (forall ?u (and (Is ?b 'bookshelf') (NextTo ?c ?b) (In ?h ?b) (Is ?c 'child') (Holding ?c ?a) (In ?k ?b) (HasMaterial ?h 'wooden') (Is ?a 'hat') (In ?o ?b) (Is ?k 'keyboard') (Is ?h 'horse') (Is ?o 'bowl') (or (not (Is ?u 'cup')) (In ?u ?o)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hat",
+        "child",
+        "horse",
+        "cup",
+        "bowl",
+        "bookshelf",
+        "keyboard"
+    ]
+}

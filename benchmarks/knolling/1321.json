@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The top side of the scene features a hat, a drill, and a glove, all aligned horizontally, where the hat is visually larger than the glove. Additionally, every lighter in the image is red, smaller than the glove, and is aligned horizontally with a white plate, a blue cup, and a pink donut. The plate is larger than the lighter, and both the cup and the donut are smaller than the plate.",
+    "dsl": "(exists ?h (exists ?d (exists ?g (and (Is ?h 'hat') (OnTopSide ?h) (Is ?d 'drill') (OnTopSide ?d) (Is ?g 'glove') (OnTopSide ?g) (AlignedHorizontally ?h ?d) (AlignedHorizontally ?d ?g) (LargerThan ?h ?g) (forall ?l (implies (Is ?l 'lighter') (exists ?p (exists ?c (exists ?dn (and (Is ?p 'plate') (Has ?p 'white') (Is ?c 'cup') (Has ?c 'blue') (Is ?dn 'donut') (Has ?dn 'pink') (Has ?l 'red') (SmallerThan ?l ?g) (AlignedHorizontally ?l ?p) (AlignedHorizontally ?p ?c) (AlignedHorizontally ?c ?dn) (LargerThan ?p ?l) (SmallerThan ?c ?p) (SmallerThan ?dn ?p)))))))))))",
+    "cnf": "(exists ?h (exists ?d (exists ?g (forall ?l (exists ?p (exists ?c (exists ?dn (and (Is ?h 'hat') (OnTopSide ?h) (AlignedHorizontally ?h ?d) (LargerThan ?h ?g) (OnTopSide ?d) (AlignedHorizontally ?d ?g) (or (not (Is ?l 'lighter')) (SmallerThan ?l ?g)) (Is ?d 'drill') (OnTopSide ?g) (or (not (Is ?l 'lighter')) (Has ?l 'red')) (or (not (Is ?l 'lighter')) (AlignedHorizontally ?l ?p)) (Is ?g 'glove') (or (not (Is ?l 'lighter')) (Has ?dn 'pink')) (or (not (Is ?l 'lighter')) (AlignedHorizontally ?p ?c)) (or (not (Is ?l 'lighter')) (Has ?p 'white')) (or (not (Is ?l 'lighter')) (Is ?dn 'donut')) (or (not (Is ?l 'lighter')) (AlignedHorizontally ?c ?dn)) (or (not (Is ?l 'lighter')) (LargerThan ?p ?l)) (or (not (Is ?l 'lighter')) (Has ?c 'blue')) (or (not (Is ?l 'lighter')) (Is ?p 'plate')) (or (not (Is ?l 'lighter')) (Is ?c 'cup')) (or (not (Is ?l 'lighter')) (SmallerThan ?c ?p)) (or (not (Is ?l 'lighter')) (SmallerThan ?dn ?p))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "cup",
+        "drill",
+        "hat",
+        "lighter",
+        "glove",
+        "donut"
+    ]
+}

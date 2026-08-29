@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every fruit is inside an open jacket held by a woman, with the jacket positioned to her left.",
+    "dsl": "(forall ?f (implies (Is ?f 'fruit') (exists ?j (exists ?w (and (Is ?j 'jacket') (Is ?w 'woman') (In ?f ?j) (HasState ?j 'open') (Holding ?w ?j) (LeftOf ?j ?w))))))",
+    "cnf": "(forall ?f (exists ?j (exists ?w (and (or (not (Is ?f 'fruit')) (Is ?j 'jacket')) (or (not (Is ?f 'fruit')) (Is ?w 'woman')) (or (not (Is ?f 'fruit')) (In ?f ?j)) (or (not (Is ?f 'fruit')) (Holding ?w ?j)) (or (not (Is ?f 'fruit')) (HasState ?j 'open')) (or (not (Is ?f 'fruit')) (LeftOf ?j ?w))))))",
+    "k": 3,
+    "object_classes": [
+        "fruit",
+        "jacket",
+        "woman"
+    ]
+}

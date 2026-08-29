@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a central arrangement of a game controller, a black watch, red pliers, and a white cup. The watch is positioned to the left of the game controller, while the pliers are to the right, and these three items are aligned horizontally. The pliers are visually smaller than the game controller. The white cup is placed above the game controller. Additionally, a specific rule applies to every blue pen in the scene: each is accompanied by a fork, a bowl, and a sandwich. For this grouping, the bowl is located below the game controller and is larger than the cup. The fork is positioned to the left of the bowl, and the sandwich is to the right of the bowl, with all three aligned horizontally. The blue pen is placed above the fork and is smaller than the white cup.",
+    "dsl": "(exists ?controller (exists ?watch (exists ?pliers (exists ?cup (and (Is ?controller 'game_controller') (Is ?watch 'watch') (Has ?watch 'black') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?cup 'cup') (Has ?cup 'white') (LeftOf ?watch ?controller) (LeftOf ?controller ?pliers) (AlignedHorizontally ?watch ?controller) (AlignedHorizontally ?controller ?pliers) (Above ?cup ?controller) (SmallerThan ?pliers ?controller) (forall ?pen (implies (and (Is ?pen 'pen') (Has ?pen 'blue')) (exists ?fork (exists ?bowl (exists ?sandwich (and (Is ?fork 'fork') (Is ?bowl 'bowl') (Is ?sandwich 'sandwich') (Above ?controller ?bowl) (LeftOf ?fork ?bowl) (LeftOf ?bowl ?sandwich) (AlignedHorizontally ?fork ?bowl) (AlignedHorizontally ?bowl ?sandwich) (Above ?pen ?fork) (SmallerThan ?pen ?cup) (LargerThan ?bowl ?cup))))))))))))",
+    "cnf": "(exists ?controller (exists ?watch (exists ?pliers (exists ?cup (forall ?pen (exists ?fork (exists ?bowl (exists ?sandwich (and (Is ?controller 'game_controller') (LeftOf ?watch ?controller) (LeftOf ?controller ?pliers) (Has ?watch 'black') (AlignedHorizontally ?watch ?controller) (Has ?pliers 'red') (AlignedHorizontally ?controller ?pliers) (Is ?watch 'watch') (Is ?pliers 'pliers') (Above ?cup ?controller) (SmallerThan ?pliers ?controller) (Has ?cup 'white') (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (SmallerThan ?pen ?cup)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (Above ?controller ?bowl)) (Is ?cup 'cup') (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (LargerThan ?bowl ?cup)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (Above ?pen ?fork)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (Is ?sandwich 'sandwich')) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (LeftOf ?fork ?bowl)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (Is ?bowl 'bowl')) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (AlignedHorizontally ?bowl ?sandwich)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (AlignedHorizontally ?fork ?bowl)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (LeftOf ?bowl ?sandwich)) (or (not (Is ?pen 'pen')) (not (Has ?pen 'blue')) (Is ?fork 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "pen",
+        "watch",
+        "cup",
+        "game_controller",
+        "fork",
+        "bowl",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A calculator is positioned on the left side of the composition. In terms of size, this calculator is smaller than every glove found in the image.",
+    "dsl": "(exists ?c (and (Is ?c 'calculator') (OnLeftSide ?c) (forall ?g (implies (Is ?g 'glove') (SmallerThan ?c ?g)))))",
+    "cnf": "(exists ?c (forall ?g (and (Is ?c 'calculator') (OnLeftSide ?c) (or (not (Is ?g 'glove')) (SmallerThan ?c ?g)))))",
+    "k": 2,
+    "object_classes": [
+        "calculator",
+        "glove"
+    ]
+}

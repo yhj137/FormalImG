@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a handbag positioned on the top side and a hammer on the left side, with the handbag placed above the hammer. For every lemon in the image, there is a stapler located above it. Furthermore, the stapler is aligned vertically with the handbag.",
+    "dsl": "(exists ?handbag (exists ?hammer (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?hammer 'hammer') (OnLeftSide ?hammer) (Above ?handbag ?hammer) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?stapler (and (Is ?stapler 'stapler') (Above ?stapler ?lemon) (AlignedVertically ?stapler ?handbag))))))))",
+    "cnf": "(exists ?handbag (exists ?hammer (forall ?lemon (exists ?stapler (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Above ?handbag ?hammer) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?stapler ?handbag)) (OnLeftSide ?hammer) (or (not (Is ?lemon 'lemon')) (Above ?stapler ?lemon)) (Is ?hammer 'hammer') (or (not (Is ?lemon 'lemon')) (Is ?stapler 'stapler')))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "handbag",
+        "stapler",
+        "hammer"
+    ]
+}

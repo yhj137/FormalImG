@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A vertical column of five aligned objects dominates the left side: a book is at the top, followed by a remote, a phone, and a stapler below each respective item, ending with a pair of scissors positioned on the bottom side of the image. The book is visually larger than the phone. To the side, an apple is located to the right of the book, and a lemon is located to the right of the remote.",
+    "dsl": "(exists ?book (exists ?remote (exists ?phone (exists ?stapler (exists ?scissors (exists ?apple (exists ?lemon (and (Is ?book 'book') (Is ?remote 'remote') (Is ?phone 'phone') (Is ?stapler 'stapler') (Is ?scissors 'scissors') (Is ?apple 'apple') (Is ?lemon 'lemon') (Above ?book ?remote) (Above ?remote ?phone) (Above ?phone ?stapler) (Above ?stapler ?scissors) (AlignedVertically ?book ?remote) (AlignedVertically ?remote ?phone) (AlignedVertically ?phone ?stapler) (AlignedVertically ?stapler ?scissors) (OnBottomSide ?scissors) (LargerThan ?book ?phone) (RightOf ?apple ?book) (RightOf ?lemon ?remote)))))))))",
+    "cnf": "(exists ?book (exists ?remote (exists ?phone (exists ?stapler (exists ?scissors (exists ?apple (exists ?lemon (and (Is ?book 'book') (Above ?book ?remote) (AlignedVertically ?book ?remote) (Is ?remote 'remote') (Above ?remote ?phone) (LargerThan ?book ?phone) (AlignedVertically ?remote ?phone) (Is ?phone 'phone') (Above ?phone ?stapler) (RightOf ?apple ?book) (AlignedVertically ?phone ?stapler) (RightOf ?lemon ?remote) (Is ?stapler 'stapler') (Above ?stapler ?scissors) (Is ?apple 'apple') (AlignedVertically ?stapler ?scissors) (Is ?lemon 'lemon') (Is ?scissors 'scissors') (OnBottomSide ?scissors)))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "remote",
+        "stapler",
+        "apple",
+        "lemon",
+        "phone",
+        "scissors"
+    ]
+}

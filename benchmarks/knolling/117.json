@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that every suitcase present in the scene is positioned on the top side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'suitcase') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'suitcase')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "suitcase"
+    ]
+}

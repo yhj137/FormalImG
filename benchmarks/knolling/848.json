@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is defined by a specific rule: for every laptop in the image, it must be positioned on the right side. Extending to the left of the laptop is a sequence of objects: a drill, a pair of headphones, an apple, and a glove. Specifically, the drill is to the left of the laptop, the headphones are to the left of the drill, the apple is to the left of the headphones, and the glove is to the left of the apple, located on the left side of the image. All five objects are aligned horizontally.",
+    "dsl": "(forall ?laptop (implies (Is ?laptop 'laptop') (exists ?drill (exists ?headphones (exists ?apple (exists ?glove (and (Is ?drill 'drill') (Is ?headphones 'headphones') (Is ?apple 'apple') (Is ?glove 'glove') (OnRightSide ?laptop) (LeftOf ?drill ?laptop) (LeftOf ?headphones ?drill) (LeftOf ?apple ?headphones) (LeftOf ?glove ?apple) (OnLeftSide ?glove) (AlignedHorizontally ?laptop ?drill) (AlignedHorizontally ?drill ?headphones) (AlignedHorizontally ?headphones ?apple) (AlignedHorizontally ?apple ?glove))))))))",
+    "cnf": "(forall ?laptop (exists ?drill (exists ?headphones (exists ?apple (exists ?glove (and (or (not (Is ?laptop 'laptop')) (Is ?drill 'drill')) (or (not (Is ?laptop 'laptop')) (LeftOf ?drill ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?headphones 'headphones')) (or (not (Is ?laptop 'laptop')) (LeftOf ?headphones ?drill)) (or (not (Is ?laptop 'laptop')) (OnRightSide ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?apple 'apple')) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?laptop ?drill)) (or (not (Is ?laptop 'laptop')) (LeftOf ?apple ?headphones)) (or (not (Is ?laptop 'laptop')) (Is ?glove 'glove')) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?drill ?headphones)) (or (not (Is ?laptop 'laptop')) (OnLeftSide ?glove)) (or (not (Is ?laptop 'laptop')) (LeftOf ?glove ?apple)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?headphones ?apple)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?apple ?glove))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "drill",
+        "headphones",
+        "glove"
+    ]
+}

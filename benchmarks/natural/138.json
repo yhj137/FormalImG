@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image where every apple is round.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?a (implies (Is ?a 'apple') (HasShape ?a 'round'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?a (or (not (Is ?a 'apple')) (HasShape ?a 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

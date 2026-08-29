@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a round basket containing a pair of glasses, with headphones to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?g (exists ?h (and (Is ?b 'basket') (HasShape ?b 'round') (Is ?g 'glasses') (In ?g ?b) (Is ?h 'headphones') (RightOf ?h ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?g (exists ?h (and (Is ?b 'basket') (HasShape ?b 'round') (In ?g ?b) (RightOf ?h ?b) (Is ?g 'glasses') (Is ?h 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "glasses",
+        "basket",
+        "headphones"
+    ]
+}

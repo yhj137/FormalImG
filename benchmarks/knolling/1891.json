@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a single vertical column. At the top, there is a monitor, which is positioned above a keyboard. A watch is located below the keyboard. These objects are aligned vertically. The arrangement enforces a specific rule: for every hat in the image, it is red, positioned below the watch, and followed by a vertically aligned sequence of items underneath it: a pair of glasses, keys, a red apple, a book, a pizza, and a bowl. Additionally, the apple is physically smaller than the pizza.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?watch (and (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (Is ?watch 'watch') (Above ?monitor ?keyboard) (Below ?watch ?keyboard) (AlignedVertically ?monitor ?keyboard) (AlignedVertically ?keyboard ?watch) (forall ?hat (implies (Is ?hat 'hat') (exists ?glasses (exists ?keys (exists ?apple (exists ?book (exists ?pizza (exists ?bowl (and (Is ?glasses 'glasses') (Is ?keys 'keys') (Is ?apple 'apple') (Is ?book 'book') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Has ?hat 'red') (Has ?apple 'red') (Below ?hat ?watch) (Below ?glasses ?hat) (AlignedVertically ?glasses ?hat) (Below ?keys ?glasses) (AlignedVertically ?keys ?glasses) (Below ?apple ?keys) (AlignedVertically ?apple ?keys) (Below ?book ?apple) (AlignedVertically ?book ?apple) (Below ?pizza ?book) (AlignedVertically ?pizza ?book) (Below ?bowl ?pizza) (AlignedVertically ?bowl ?pizza) (SmallerThan ?apple ?pizza))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?watch (forall ?hat (exists ?glasses (exists ?keys (exists ?apple (exists ?book (exists ?pizza (exists ?bowl (and (Is ?monitor 'monitor') (Above ?monitor ?keyboard) (AlignedVertically ?monitor ?keyboard) (Is ?keyboard 'keyboard') (Below ?watch ?keyboard) (AlignedVertically ?keyboard ?watch) (Is ?watch 'watch') (or (not (Is ?hat 'hat')) (Below ?hat ?watch)) (or (not (Is ?hat 'hat')) (Has ?apple 'red')) (or (not (Is ?hat 'hat')) (Below ?glasses ?hat)) (or (not (Is ?hat 'hat')) (Has ?hat 'red')) (or (not (Is ?hat 'hat')) (Is ?apple 'apple')) (or (not (Is ?hat 'hat')) (Below ?apple ?keys)) (or (not (Is ?hat 'hat')) (AlignedVertically ?glasses ?hat)) (or (not (Is ?hat 'hat')) (Is ?glasses 'glasses')) (or (not (Is ?hat 'hat')) (Is ?bowl 'bowl')) (or (not (Is ?hat 'hat')) (Is ?keys 'keys')) (or (not (Is ?hat 'hat')) (Is ?book 'book')) (or (not (Is ?hat 'hat')) (AlignedVertically ?keys ?glasses)) (or (not (Is ?hat 'hat')) (AlignedVertically ?apple ?keys)) (or (not (Is ?hat 'hat')) (Below ?keys ?glasses)) (or (not (Is ?hat 'hat')) (Is ?pizza 'pizza')) (or (not (Is ?hat 'hat')) (Below ?bowl ?pizza)) (or (not (Is ?hat 'hat')) (Below ?book ?apple)) (or (not (Is ?hat 'hat')) (Below ?pizza ?book)) (or (not (Is ?hat 'hat')) (AlignedVertically ?pizza ?book)) (or (not (Is ?hat 'hat')) (AlignedVertically ?bowl ?pizza)) (or (not (Is ?hat 'hat')) (AlignedVertically ?book ?apple)) (or (not (Is ?hat 'hat')) (SmallerThan ?apple ?pizza)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "book",
+        "apple",
+        "keyboard",
+        "watch",
+        "pizza",
+        "hat",
+        "monitor",
+        "bowl"
+    ]
+}

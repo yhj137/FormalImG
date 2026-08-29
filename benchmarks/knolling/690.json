@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a blue suitcase located on the right side of the image. For every pair of pliers present in the scene, there is a remote positioned below it and a red drill positioned above it. Furthermore, the pliers are visually smaller than the suitcase.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (Has ?s 'blue') (OnRightSide ?s) (forall ?p (implies (Is ?p 'pliers') (exists ?r (exists ?d (and (Is ?r 'remote') (Is ?d 'drill') (Has ?d 'red') (Below ?r ?p) (Above ?d ?p) (SmallerThan ?p ?s))))))))",
+    "cnf": "(exists ?s (forall ?p (exists ?r (exists ?d (and (Is ?s 'suitcase') (Has ?s 'blue') (OnRightSide ?s) (or (not (Is ?p 'pliers')) (SmallerThan ?p ?s)) (or (not (Is ?p 'pliers')) (Above ?d ?p)) (or (not (Is ?p 'pliers')) (Below ?r ?p)) (or (not (Is ?p 'pliers')) (Has ?d 'red')) (or (not (Is ?p 'pliers')) (Is ?r 'remote')) (or (not (Is ?p 'pliers')) (Is ?d 'drill')))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "suitcase",
+        "pliers",
+        "remote"
+    ]
+}

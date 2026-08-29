@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a backpack positioned on the top side of the scene, and there is a hammer. The backpack is larger than the hammer, and they are aligned vertically. For every screwdriver in the scene, there is a knife; the knife is larger than the screwdriver, and the screwdriver is also aligned vertically with the backpack.",
+    "dsl": "(exists ?backpack (exists ?hammer (and (Is ?backpack 'backpack') (Is ?hammer 'hammer') (OnTopSide ?backpack) (LargerThan ?backpack ?hammer) (AlignedVertically ?backpack ?hammer) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?knife (and (Is ?knife 'knife') (LargerThan ?knife ?screwdriver) (AlignedVertically ?screwdriver ?backpack))))))))",
+    "cnf": "(exists ?backpack (exists ?hammer (forall ?screwdriver (exists ?knife (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (LargerThan ?backpack ?hammer) (AlignedVertically ?backpack ?hammer) (Is ?hammer 'hammer') (or (not (Is ?screwdriver 'screwdriver')) (AlignedVertically ?screwdriver ?backpack)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?knife ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?knife 'knife')))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "hammer",
+        "backpack",
+        "screwdriver"
+    ]
+}

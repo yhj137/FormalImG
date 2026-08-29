@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged set of items. A monitor is positioned on the right side of the image. A mouse is placed to the left of the monitor, and a remote is located directly below the mouse. For every red apple found to the left of the remote, there is a set of keys positioned above it and a wallet positioned below it; the keys are visually smaller than the wallet. Furthermore, a white sock is located to the left of the wallet on the bottom side of the image, with a pair of pliers arranged above the sock.",
+    "dsl": "(exists ?monitor (exists ?mouse (exists ?remote (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?mouse 'mouse') (LeftOf ?mouse ?monitor) (Is ?remote 'remote') (Below ?remote ?mouse) (forall ?apple (implies (and (Is ?apple 'apple') (Has ?apple 'red') (RightOf ?remote ?apple)) (exists ?keys (exists ?wallet (exists ?sock (exists ?pliers (and (Is ?keys 'keys') (Above ?keys ?apple) (Is ?wallet 'wallet') (Below ?wallet ?apple) (SmallerThan ?keys ?wallet) (Is ?sock 'sock') (Has ?sock 'white') (LeftOf ?sock ?wallet) (OnBottomSide ?sock) (Is ?pliers 'pliers') (Above ?pliers ?sock))))))))))))",
+    "cnf": "(exists ?monitor (exists ?mouse (exists ?remote (forall ?apple (exists ?keys (exists ?wallet (exists ?sock (exists ?pliers (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (LeftOf ?mouse ?monitor) (Is ?mouse 'mouse') (Below ?remote ?mouse) (Is ?remote 'remote') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Is ?keys 'keys')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Above ?keys ?apple)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Is ?wallet 'wallet')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (SmallerThan ?keys ?wallet)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Below ?wallet ?apple)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Is ?sock 'sock')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (LeftOf ?sock ?wallet)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Has ?sock 'white')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (OnBottomSide ?sock)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Is ?pliers 'pliers')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (not (RightOf ?remote ?apple)) (Above ?pliers ?sock)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "remote",
+        "pliers",
+        "apple",
+        "sock",
+        "wallet",
+        "mouse",
+        "monitor"
+    ]
+}

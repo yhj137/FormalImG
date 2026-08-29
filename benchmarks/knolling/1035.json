@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of headphones in the scene, there is a complex arrangement of five other objects surrounding it. A hat is located on the right side of the image, and the headphones are positioned to the left of this hat. A sandwich is placed to the left of the headphones, and a pair of scissors is located further to the left of the sandwich. Vertically, a cup is placed above the sandwich, and a bottle is positioned above the cup.",
+    "dsl": "(forall ?h (implies (Is ?h 'headphones') (exists ?hat (exists ?s (exists ?sci (exists ?c (exists ?b (and (Is ?hat 'hat') (Is ?s 'sandwich') (Is ?sci 'scissors') (Is ?c 'cup') (Is ?b 'bottle') (OnRightSide ?hat) (LeftOf ?h ?hat) (LeftOf ?s ?h) (LeftOf ?sci ?s) (Above ?c ?s) (Above ?b ?c)))))))))",
+    "cnf": "(forall ?h (exists ?hat (exists ?s (exists ?sci (exists ?c (exists ?b (and (or (not (Is ?h 'headphones')) (Is ?hat 'hat')) (or (not (Is ?h 'headphones')) (OnRightSide ?hat)) (or (not (Is ?h 'headphones')) (Is ?s 'sandwich')) (or (not (Is ?h 'headphones')) (LeftOf ?h ?hat)) (or (not (Is ?h 'headphones')) (Is ?b 'bottle')) (or (not (Is ?h 'headphones')) (Is ?sci 'scissors')) (or (not (Is ?h 'headphones')) (LeftOf ?s ?h)) (or (not (Is ?h 'headphones')) (Is ?c 'cup')) (or (not (Is ?h 'headphones')) (Above ?b ?c)) (or (not (Is ?h 'headphones')) (LeftOf ?sci ?s)) (or (not (Is ?h 'headphones')) (Above ?c ?s)))))))))",
+    "k": 6,
+    "object_classes": [
+        "cup",
+        "hat",
+        "bottle",
+        "headphones",
+        "sandwich",
+        "scissors"
+    ]
+}

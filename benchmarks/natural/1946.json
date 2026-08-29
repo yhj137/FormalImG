@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a sitting man holding a metal hammer. He wears a black hat with a blue bird perched on it. Next to the man is a plate with a ceramic cup containing an orange and all the keys. An open laptop sits next to the plate, beside a lit lamp.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?hm (exists ?h (exists ?b (exists ?p (exists ?c (exists ?o (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?hm 'hammer') (HasMaterial ?hm 'metal') (Holding ?m ?hm) (Is ?h 'hat') (HasColor ?h 'black') (On ?h ?m) (Is ?b 'bird') (HasColor ?b 'blue') (On ?b ?h) (Is ?p 'plate') (NextTo ?p ?m) (Is ?c 'cup') (HasMaterial ?c 'ceramic') (On ?c ?p) (Is ?o 'orange') (In ?o ?c) (forall ?k (implies (Is ?k 'key') (In ?k ?c))) (exists ?l (exists ?lmp (and (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?l ?p) (Is ?lmp 'lamp') (HasState ?lmp 'on') (NextTo ?lmp ?l)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?hm (exists ?h (exists ?b (exists ?p (exists ?c (exists ?o (forall ?k (exists ?l (exists ?lmp (and (Is ?m 'man') (HasState ?m 'sitting') (Holding ?m ?hm) (On ?h ?m) (HasMaterial ?hm 'metal') (NextTo ?p ?m) (HasColor ?h 'black') (On ?b ?h) (Is ?hm 'hammer') (Is ?p 'plate') (On ?c ?p) (Is ?h 'hat') (HasColor ?b 'blue') (NextTo ?l ?p) (HasMaterial ?c 'ceramic') (In ?o ?c) (Is ?b 'bird') (HasState ?l 'open') (NextTo ?lmp ?l) (Is ?c 'cup') (or (not (Is ?k 'key')) (In ?k ?c)) (Is ?o 'orange') (Is ?l 'laptop') (HasState ?lmp 'on') (Is ?lmp 'lamp')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "laptop",
+        "man",
+        "orange",
+        "bird",
+        "hammer",
+        "cup",
+        "key",
+        "lamp",
+        "hat"
+    ]
+}

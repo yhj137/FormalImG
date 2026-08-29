@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition centers around a suitcase. A hammer is placed to the left of the suitcase, and a wrench is positioned to the left of the hammer. To the right of the suitcase lies a pan. A keyboard is arranged below the suitcase. A calculator is located on the bottom side of the image, to the right of the keyboard. A sandwich is situated on the left side of the image and is aligned horizontally with the calculator. Furthermore, for every cup in the scene, there is a pair of scissors to its left, and the cup itself is positioned below the pan.",
+    "dsl": "(exists ?suitcase (exists ?hammer (exists ?wrench (exists ?pan (exists ?keyboard (exists ?calculator (exists ?sandwich (and (Is ?suitcase 'suitcase') (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?pan 'pan') (Is ?keyboard 'keyboard') (Is ?calculator 'calculator') (Is ?sandwich 'sandwich') (LeftOf ?hammer ?suitcase) (LeftOf ?wrench ?hammer) (RightOf ?pan ?suitcase) (Below ?keyboard ?suitcase) (OnBottomSide ?calculator) (RightOf ?calculator ?keyboard) (OnLeftSide ?sandwich) (AlignedHorizontally ?sandwich ?calculator) (forall ?cup (implies (Is ?cup 'cup') (exists ?scissors (and (Is ?scissors 'scissors') (LeftOf ?scissors ?cup) (Below ?cup ?pan)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?hammer (exists ?wrench (exists ?pan (exists ?keyboard (exists ?calculator (exists ?sandwich (forall ?cup (exists ?scissors (and (Is ?suitcase 'suitcase') (LeftOf ?hammer ?suitcase) (RightOf ?pan ?suitcase) (Is ?hammer 'hammer') (LeftOf ?wrench ?hammer) (Below ?keyboard ?suitcase) (Is ?pan 'pan') (or (not (Is ?cup 'cup')) (Below ?cup ?pan)) (Is ?wrench 'wrench') (Is ?keyboard 'keyboard') (RightOf ?calculator ?keyboard) (or (not (Is ?cup 'cup')) (LeftOf ?scissors ?cup)) (OnBottomSide ?calculator) (AlignedHorizontally ?sandwich ?calculator) (or (not (Is ?cup 'cup')) (Is ?scissors 'scissors')) (Is ?calculator 'calculator') (OnLeftSide ?sandwich) (Is ?sandwich 'sandwich')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "wrench",
+        "cup",
+        "sandwich",
+        "hammer",
+        "pan",
+        "calculator",
+        "scissors",
+        "suitcase"
+    ]
+}

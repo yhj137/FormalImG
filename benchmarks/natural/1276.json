@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is an oil painting featuring a wooden desk with a bench to its right. All balls in the scene are round and sit on the bench. A person is positioned to the right of the desk. A phone and a plate containing a fork rest on the desk.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?be (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?be 'bench') (RightOf ?be ?d) (forall ?b (implies (Is ?b 'ball') (and (HasShape ?b 'round') (On ?b ?be)))) (exists ?p (exists ?pl (exists ?f (exists ?ph (and (Is ?p 'person') (RightOf ?p ?d) (Is ?pl 'plate') (On ?pl ?d) (Is ?f 'fork') (In ?f ?pl) (Is ?ph 'phone') (On ?ph ?d))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?be (forall ?b (exists ?p (exists ?pl (exists ?f (exists ?ph (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (RightOf ?be ?d) (RightOf ?p ?d) (Is ?be 'bench') (or (not (Is ?b 'ball')) (On ?b ?be)) (On ?pl ?d) (Is ?p 'person') (or (not (Is ?b 'ball')) (HasShape ?b 'round')) (On ?ph ?d) (Is ?pl 'plate') (In ?f ?pl) (Is ?ph 'phone') (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "fork",
+        "person",
+        "desk",
+        "ball",
+        "phone",
+        "plate"
+    ]
+}

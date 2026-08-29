@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a stapler located on the top side of the layout. For every watch present in the scene, the stapler is positioned to the left of that watch.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (forall ?watch (implies (Is ?watch 'watch') (LeftOf ?stapler ?watch)))))",
+    "cnf": "(exists ?stapler (forall ?watch (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (or (not (Is ?watch 'watch')) (LeftOf ?stapler ?watch)))))",
+    "k": 2,
+    "object_classes": [
+        "watch",
+        "stapler"
+    ]
+}

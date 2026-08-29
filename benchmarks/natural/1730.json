@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a pizza. Beside her is a bowl, and next to the bowl is a monitor that is turned on. To the left of the monitor is a clock. Every cup in the scene is next to the bowl and contains a fork. Additionally, there is a fish next to each cup, and each fish has a red hat on top of it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?b (exists ?m (exists ?cl (and (Is ?w 'woman') (Is ?p 'pizza') (Is ?b 'bowl') (Is ?m 'monitor') (Is ?cl 'clock') (Holding ?w ?p) (NextTo ?b ?w) (NextTo ?m ?b) (HasState ?m 'on') (LeftOf ?cl ?m) (forall ?c (implies (Is ?c 'cup') (exists ?f (exists ?fi (exists ?h (and (Is ?f 'fork') (Is ?fi 'fish') (Is ?h 'hat') (NextTo ?c ?b) (In ?f ?c) (NextTo ?fi ?c) (On ?h ?fi) (HasColor ?h 'red'))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?b (exists ?m (exists ?cl (forall ?c (exists ?f (exists ?fi (exists ?h (and (Is ?w 'woman') (Holding ?w ?p) (NextTo ?b ?w) (Is ?p 'pizza') (Is ?b 'bowl') (NextTo ?m ?b) (or (not (Is ?c 'cup')) (NextTo ?c ?b)) (Is ?m 'monitor') (HasState ?m 'on') (or (not (Is ?c 'cup')) (Is ?h 'hat')) (or (not (Is ?c 'cup')) (In ?f ?c)) (LeftOf ?cl ?m) (or (not (Is ?c 'cup')) (Is ?fi 'fish')) (or (not (Is ?c 'cup')) (On ?h ?fi)) (or (not (Is ?c 'cup')) (Is ?f 'fork')) (or (not (Is ?c 'cup')) (NextTo ?fi ?c)) (Is ?cl 'clock') (or (not (Is ?c 'cup')) (HasColor ?h 'red')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fish",
+        "fork",
+        "woman",
+        "monitor",
+        "pizza",
+        "cup",
+        "clock",
+        "bowl",
+        "hat"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting featuring a leather sofa. To the right of the sofa is an oval mirror, and to the left sits a wooden basket. Every orange in the scene is contained within the basket. A laptop is placed next to the sofa, with a pair of glasses beside it. Additionally, a round cake is next to the basket, and a piece of fruit is positioned to the left of the cake.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?b (exists ?m (exists ?l (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?b 'basket') (HasMaterial ?b 'wooden') (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?l 'laptop') (RightOf ?m ?s) (LeftOf ?b ?s) (NextTo ?l ?s) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?g (exists ?c (exists ?f (and (Is ?g 'glasses') (Is ?c 'cake') (HasShape ?c 'round') (Is ?f 'fruit') (NextTo ?g ?l) (NextTo ?c ?b) (LeftOf ?f ?c)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?b (exists ?m (exists ?l (forall ?o (exists ?g (exists ?c (exists ?f (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (RightOf ?m ?s) (LeftOf ?b ?s) (HasShape ?m 'oval') (NextTo ?l ?s) (HasMaterial ?b 'wooden') (or (not (Is ?o 'orange')) (In ?o ?b)) (Is ?m 'mirror') (Is ?l 'laptop') (NextTo ?g ?l) (Is ?b 'basket') (NextTo ?c ?b) (Is ?g 'glasses') (HasShape ?c 'round') (LeftOf ?f ?c) (Is ?c 'cake') (Is ?f 'fruit')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "sofa",
+        "laptop",
+        "cake",
+        "basket",
+        "mirror",
+        "fruit",
+        "orange"
+    ]
+}

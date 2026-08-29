@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a suitcase positioned on the right side of the frame. To the left of the suitcase lies a mouse, which is visually smaller than the suitcase. Additionally, a calculator is arranged above the mouse.",
+    "dsl": "(exists ?s (exists ?m (exists ?c (and (Is ?s 'suitcase') (Is ?m 'mouse') (Is ?c 'calculator') (OnRightSide ?s) (LeftOf ?m ?s) (SmallerThan ?m ?s) (Above ?c ?m)))))",
+    "cnf": "(exists ?s (exists ?m (exists ?c (and (Is ?s 'suitcase') (OnRightSide ?s) (LeftOf ?m ?s) (SmallerThan ?m ?s) (Is ?m 'mouse') (Above ?c ?m) (Is ?c 'calculator')))))",
+    "k": 3,
+    "object_classes": [
+        "suitcase",
+        "calculator",
+        "mouse"
+    ]
+}

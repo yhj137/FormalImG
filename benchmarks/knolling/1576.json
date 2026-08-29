@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized with a monitor positioned above a keyboard. To the right of the monitor are jeans, while a cutting board is placed below the jeans. A phone is located to the right of the keyboard and is visually smaller than the cutting board. A wallet is positioned on the bottom side of the arrangement, directly below the phone, and is smaller than the jeans. Finally, for every shoe in the layout, it is placed below the jeans, accompanied by a sock to its right that is smaller than the shoe.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?jeans (exists ?cutting_board (exists ?phone (exists ?wallet (and (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (Is ?jeans 'jeans') (Is ?cutting_board 'cutting_board') (Is ?phone 'phone') (Is ?wallet 'wallet') (Above ?monitor ?keyboard) (RightOf ?jeans ?monitor) (Below ?cutting_board ?jeans) (RightOf ?phone ?keyboard) (SmallerThan ?phone ?cutting_board) (OnBottomSide ?wallet) (Below ?wallet ?phone) (SmallerThan ?wallet ?jeans) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?sock (and (Is ?sock 'sock') (Below ?shoe ?jeans) (RightOf ?sock ?shoe) (SmallerThan ?sock ?shoe))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?jeans (exists ?cutting_board (exists ?phone (exists ?wallet (forall ?shoe (exists ?sock (and (Is ?monitor 'monitor') (Above ?monitor ?keyboard) (RightOf ?jeans ?monitor) (Is ?keyboard 'keyboard') (RightOf ?phone ?keyboard) (Is ?jeans 'jeans') (Below ?cutting_board ?jeans) (Is ?phone 'phone') (SmallerThan ?phone ?cutting_board) (SmallerThan ?wallet ?jeans) (Is ?cutting_board 'cutting_board') (Below ?wallet ?phone) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?jeans)) (OnBottomSide ?wallet) (or (not (Is ?shoe 'shoe')) (Is ?sock 'sock')) (or (not (Is ?shoe 'shoe')) (RightOf ?sock ?shoe)) (Is ?wallet 'wallet') (or (not (Is ?shoe 'shoe')) (SmallerThan ?sock ?shoe)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "phone",
+        "cutting_board",
+        "jeans",
+        "wallet",
+        "monitor",
+        "shoe"
+    ]
+}

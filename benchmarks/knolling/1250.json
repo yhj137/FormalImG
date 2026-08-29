@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a handbag. For every fork in the image, it is positioned below the handbag. To the right of the fork is a pair of jeans, and they are aligned horizontally. To the right of the jeans is a game controller. Below the fork is a wrench. To the right of the wrench is a donut, and to the right of the donut is a drill. The drill is located on the bottom side of the image.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (forall ?fork (implies (Is ?fork 'fork') (exists ?jeans (exists ?game_controller (exists ?wrench (exists ?donut (exists ?drill (and (Is ?jeans 'jeans') (Is ?game_controller 'game_controller') (Is ?wrench 'wrench') (Is ?donut 'donut') (Is ?drill 'drill') (Below ?fork ?handbag) (RightOf ?jeans ?fork) (AlignedHorizontally ?fork ?jeans) (RightOf ?game_controller ?jeans) (Below ?wrench ?fork) (RightOf ?donut ?wrench) (RightOf ?drill ?donut) (OnBottomSide ?drill)))))))))))",
+    "cnf": "(exists ?handbag (forall ?fork (exists ?jeans (exists ?game_controller (exists ?wrench (exists ?donut (exists ?drill (and (Is ?handbag 'handbag') (or (not (Is ?fork 'fork')) (Below ?fork ?handbag)) (or (not (Is ?fork 'fork')) (Is ?drill 'drill')) (or (not (Is ?fork 'fork')) (RightOf ?jeans ?fork)) (or (not (Is ?fork 'fork')) (Is ?donut 'donut')) (or (not (Is ?fork 'fork')) (RightOf ?drill ?donut)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?jeans)) (or (not (Is ?fork 'fork')) (Is ?jeans 'jeans')) (or (not (Is ?fork 'fork')) (Is ?wrench 'wrench')) (or (not (Is ?fork 'fork')) (RightOf ?donut ?wrench)) (or (not (Is ?fork 'fork')) (OnBottomSide ?drill)) (or (not (Is ?fork 'fork')) (RightOf ?game_controller ?jeans)) (or (not (Is ?fork 'fork')) (Is ?game_controller 'game_controller')) (or (not (Is ?fork 'fork')) (Below ?wrench ?fork))))))))))",
+    "k": 7,
+    "object_classes": [
+        "wrench",
+        "game_controller",
+        "drill",
+        "fork",
+        "handbag",
+        "jeans",
+        "donut"
+    ]
+}

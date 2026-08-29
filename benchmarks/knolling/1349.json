@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the top-left side of the scene. Directly below the shirt are glasses, and a wallet is positioned below the glasses. The wallet is located to the left of a game controller. For every cup present, it is aligned horizontally to the right of the game controller. Additionally, a bottle is located to the right of the cup, and a bowl is placed below the bottle.",
+    "dsl": "(exists ?shirt (exists ?glasses (exists ?wallet (exists ?game_controller (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Is ?glasses 'glasses') (Below ?glasses ?shirt) (Is ?wallet 'wallet') (Below ?wallet ?glasses) (Is ?game_controller 'game_controller') (LeftOf ?wallet ?game_controller) (forall ?cup (implies (Is ?cup 'cup') (exists ?bottle (exists ?bowl (and (Is ?bottle 'bottle') (Is ?bowl 'bowl') (RightOf ?cup ?game_controller) (AlignedHorizontally ?cup ?game_controller) (RightOf ?bottle ?cup) (Below ?bowl ?bottle)))))))))))",
+    "cnf": "(exists ?shirt (exists ?glasses (exists ?wallet (exists ?game_controller (forall ?cup (exists ?bottle (exists ?bowl (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Below ?glasses ?shirt) (Is ?glasses 'glasses') (Below ?wallet ?glasses) (Is ?wallet 'wallet') (LeftOf ?wallet ?game_controller) (Is ?game_controller 'game_controller') (or (not (Is ?cup 'cup')) (RightOf ?cup ?game_controller)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?game_controller)) (or (not (Is ?cup 'cup')) (Is ?bowl 'bowl')) (or (not (Is ?cup 'cup')) (RightOf ?bottle ?cup)) (or (not (Is ?cup 'cup')) (Is ?bottle 'bottle')) (or (not (Is ?cup 'cup')) (Below ?bowl ?bottle))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "cup",
+        "game_controller",
+        "wallet",
+        "bottle",
+        "bowl",
+        "shirt"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image. A tree stands with a bicycle next to it. A wooden basket containing a sandwich sits on the bicycle, and all fruit in the scene are also inside the basket. To the right of the tree is a closed book, while to the left, a dog holds a pair of shoes.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?bi (exists ?ba (exists ?s (exists ?bo (exists ?d (exists ?sh (and (Is ?t 'tree') (Is ?bi 'bicycle') (NextTo ?bi ?t) (Is ?ba 'basket') (HasMaterial ?ba 'wooden') (On ?ba ?bi) (Is ?s 'sandwich') (In ?s ?ba) (forall ?f (implies (Is ?f 'fruit') (In ?f ?ba))) (Is ?bo 'book') (HasState ?bo 'closed') (RightOf ?bo ?t) (Is ?d 'dog') (LeftOf ?d ?t) (Is ?sh 'shoes') (Holding ?d ?sh))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?bi (exists ?ba (exists ?s (exists ?bo (exists ?d (exists ?sh (forall ?f (and (Is ?t 'tree') (NextTo ?bi ?t) (RightOf ?bo ?t) (Is ?bi 'bicycle') (On ?ba ?bi) (LeftOf ?d ?t) (HasState ?bo 'closed') (HasMaterial ?ba 'wooden') (In ?s ?ba) (Is ?d 'dog') (Holding ?d ?sh) (Is ?bo 'book') (Is ?ba 'basket') (or (not (Is ?f 'fruit')) (In ?f ?ba)) (Is ?s 'sandwich') (Is ?sh 'shoes')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sandwich",
+        "shoes",
+        "book",
+        "basket",
+        "tree",
+        "bicycle",
+        "dog",
+        "fruit"
+    ]
+}

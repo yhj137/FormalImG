@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a knife stands next to a car containing a teddy bear. An open laptop with a banana on top sits on the car. A plant is positioned to the right of the car, and every orange in the scene is located to the right of the laptop.",
+    "dsl": "(exists ?m (exists ?c (exists ?tb (exists ?l (exists ?p (and (Is ?m 'man') (Is ?c 'car') (NextTo ?m ?c) (Is ?tb 'teddy bear') (In ?tb ?c) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?c) (Is ?p 'plant') (RightOf ?p ?c) (forall ?o (implies (Is ?o 'orange') (RightOf ?o ?l))) (exists ?k (and (Is ?k 'knife') (Holding ?m ?k))) (exists ?b (and (Is ?b 'banana') (On ?b ?l)))))))))",
+    "cnf": "(exists ?m (exists ?c (exists ?tb (exists ?l (exists ?p (forall ?o (exists ?k (exists ?b (and (Is ?m 'man') (NextTo ?m ?c) (Holding ?m ?k) (Is ?c 'car') (In ?tb ?c) (Is ?k 'knife') (On ?l ?c) (Is ?tb 'teddy bear') (RightOf ?p ?c) (HasState ?l 'open') (or (not (Is ?o 'orange')) (RightOf ?o ?l)) (Is ?p 'plant') (Is ?l 'laptop') (On ?b ?l) (Is ?b 'banana'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "knife",
+        "laptop",
+        "man",
+        "plant",
+        "teddy bear",
+        "orange",
+        "car",
+        "banana"
+    ]
+}

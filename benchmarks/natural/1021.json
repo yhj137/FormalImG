@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a teddy bear holding a phone. Next to the teddy bear are glasses made of glass. To the left of the teddy bear sits a metal pan with a cake inside, and a lamp is placed next to the pan.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?tb (exists ?ph (exists ?g (exists ?p (exists ?c (exists ?l (and (Is ?tb 'teddy bear') (Is ?ph 'phone') (Is ?g 'glasses') (Is ?p 'pan') (Is ?c 'cake') (Is ?l 'lamp') (Holding ?tb ?ph) (NextTo ?g ?tb) (HasMaterial ?g 'glass') (LeftOf ?p ?tb) (HasMaterial ?p 'metal') (In ?c ?p) (NextTo ?l ?p)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?tb (exists ?ph (exists ?g (exists ?p (exists ?c (exists ?l (and (Is ?tb 'teddy bear') (Holding ?tb ?ph) (NextTo ?g ?tb) (Is ?ph 'phone') (LeftOf ?p ?tb) (Is ?g 'glasses') (HasMaterial ?g 'glass') (Is ?p 'pan') (HasMaterial ?p 'metal') (In ?c ?p) (NextTo ?l ?p) (Is ?c 'cake') (Is ?l 'lamp')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "glasses",
+        "lamp",
+        "cake",
+        "teddy bear",
+        "phone"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every tree in the scene is located to the left of a woman. A wooden bench sits next to the woman, and a refrigerator stands beside the bench. Inside the refrigerator is a metal pan containing a fork. A laptop rests on the bench next to a pair of glasses. Additionally, a cat is next to the bench, with a toy car beside it.",
+    "dsl": "(exists ?w (and (Is ?w 'woman') (forall ?t (implies (Is ?t 'tree') (LeftOf ?t ?w))) (exists ?b (exists ?r (exists ?p (exists ?f (exists ?l (exists ?g (exists ?c (exists ?tc (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (NextTo ?b ?w) (Is ?r 'refrigerator') (NextTo ?r ?b) (Is ?p 'pan') (HasMaterial ?p 'metal') (In ?p ?r) (Is ?f 'fork') (In ?f ?p) (Is ?l 'laptop') (On ?l ?b) (Is ?g 'glasses') (NextTo ?g ?l) (Is ?c 'cat') (NextTo ?c ?b) (Is ?tc 'toy car') (NextTo ?tc ?c))))))))))))",
+    "cnf": "(exists ?w (forall ?t (exists ?b (exists ?r (exists ?p (exists ?f (exists ?l (exists ?g (exists ?c (exists ?tc (and (Is ?w 'woman') (or (not (Is ?t 'tree')) (LeftOf ?t ?w)) (NextTo ?b ?w) (HasMaterial ?b 'wooden') (NextTo ?r ?b) (Is ?b 'bench') (On ?l ?b) (Is ?r 'refrigerator') (In ?p ?r) (NextTo ?c ?b) (Is ?l 'laptop') (NextTo ?g ?l) (HasMaterial ?p 'metal') (In ?f ?p) (Is ?c 'cat') (NextTo ?tc ?c) (Is ?g 'glasses') (Is ?p 'pan') (Is ?f 'fork') (Is ?tc 'toy car'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "woman",
+        "glasses",
+        "pan",
+        "fork",
+        "cat",
+        "toy car",
+        "laptop",
+        "refrigerator",
+        "tree"
+    ]
+}

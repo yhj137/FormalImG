@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style scene where every cat is fluffy.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?c (implies (Is ?c 'cat') (HasMaterial ?c 'fluffy'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?c (or (not (Is ?c 'cat')) (HasMaterial ?c 'fluffy'))))",
+    "k": 1,
+    "object_classes": [
+        "cat"
+    ]
+}

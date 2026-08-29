@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller located on the bottom side. For every carrot in the image, there are glasses and pliers arranged in a horizontal line: the carrot is positioned to the right of the game controller, the glasses are to the right of the carrot, and the pliers are to the right of the glasses. All these items are aligned horizontally.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (forall ?c (implies (Is ?c 'carrot') (exists ?g (exists ?p (and (Is ?g 'glasses') (Is ?p 'pliers') (RightOf ?c ?gc) (RightOf ?g ?c) (RightOf ?p ?g) (AlignedHorizontally ?gc ?c) (AlignedHorizontally ?c ?g) (AlignedHorizontally ?g ?p))))))))",
+    "cnf": "(exists ?gc (forall ?c (exists ?g (exists ?p (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (or (not (Is ?c 'carrot')) (RightOf ?c ?gc)) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?gc ?c)) (or (not (Is ?c 'carrot')) (Is ?p 'pliers')) (or (not (Is ?c 'carrot')) (RightOf ?g ?c)) (or (not (Is ?c 'carrot')) (RightOf ?p ?g)) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?c ?g)) (or (not (Is ?c 'carrot')) (Is ?g 'glasses')) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?g ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "pliers",
+        "game_controller"
+    ]
+}

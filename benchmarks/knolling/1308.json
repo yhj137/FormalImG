@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the image, there is a vertical arrangement consisting of a hat, a pair of headphones, and a shoe, positioned from top to bottom. For every lemon in the scene, there is a group consisting of a plate, a knife, and scissors. The hat is located to the left of the lemon, and the lemon is located to the left of the plate. The plate is visually larger than the lemon. Furthermore, the plate is positioned above the knife, and the knife is positioned above the scissors.",
+    "dsl": "(exists ?hat (exists ?headphones (exists ?shoe (and (Is ?hat 'hat') (Is ?headphones 'headphones') (Is ?shoe 'shoe') (OnLeftSide ?hat) (OnLeftSide ?headphones) (OnLeftSide ?shoe) (AlignedVertically ?hat ?headphones) (AlignedVertically ?headphones ?shoe) (Above ?hat ?headphones) (Above ?headphones ?shoe) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?plate (exists ?knife (exists ?scissors (and (Is ?plate 'plate') (Is ?knife 'knife') (Is ?scissors 'scissors') (LargerThan ?plate ?lemon) (LeftOf ?hat ?lemon) (LeftOf ?lemon ?plate) (Above ?plate ?knife) (Above ?knife ?scissors)))))))))))",
+    "cnf": "(exists ?hat (exists ?headphones (exists ?shoe (forall ?lemon (exists ?plate (exists ?knife (exists ?scissors (and (Is ?hat 'hat') (OnLeftSide ?hat) (AlignedVertically ?hat ?headphones) (Above ?hat ?headphones) (OnLeftSide ?headphones) (AlignedVertically ?headphones ?shoe) (or (not (Is ?lemon 'lemon')) (LeftOf ?hat ?lemon)) (Above ?headphones ?shoe) (Is ?headphones 'headphones') (OnLeftSide ?shoe) (or (not (Is ?lemon 'lemon')) (LargerThan ?plate ?lemon)) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?plate)) (Is ?shoe 'shoe') (or (not (Is ?lemon 'lemon')) (Is ?scissors 'scissors')) (or (not (Is ?lemon 'lemon')) (Is ?plate 'plate')) (or (not (Is ?lemon 'lemon')) (Above ?plate ?knife)) (or (not (Is ?lemon 'lemon')) (Is ?knife 'knife')) (or (not (Is ?lemon 'lemon')) (Above ?knife ?scissors))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "scissors",
+        "knife",
+        "headphones",
+        "lemon",
+        "hat",
+        "shoe"
+    ]
+}

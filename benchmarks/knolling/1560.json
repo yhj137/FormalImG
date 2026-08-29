@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the left side of the scene. On the right side of the image, there is a cutting board located on the top side. The suitcase is visually larger than the cutting board. Arranged in a vertical column starting below the cutting board are a pair of headphones, a cup, a calculator, and a tie, in that order. These items\u2014cutting board, headphones, cup, calculator, and tie\u2014are all aligned vertically. Additionally, for every pen in the image, it is located to the right of the suitcase, and there is a lemon positioned directly below it, aligned vertically.",
+    "dsl": "(exists ?s (exists ?cb (exists ?hp (exists ?c (exists ?calc (exists ?t (and (Is ?s 'suitcase') (OnLeftSide ?s) (Is ?cb 'cutting_board') (OnRightSide ?cb) (OnTopSide ?cb) (RightOf ?cb ?s) (LargerThan ?s ?cb) (Is ?hp 'headphones') (Is ?c 'cup') (Is ?calc 'calculator') (Is ?t 'tie') (Above ?cb ?hp) (Above ?hp ?c) (Below ?calc ?c) (Below ?t ?calc) (AlignedVertically ?cb ?hp) (AlignedVertically ?hp ?c) (AlignedVertically ?c ?calc) (AlignedVertically ?calc ?t) (forall ?p (implies (Is ?p 'pen') (exists ?l (and (Is ?l 'lemon') (RightOf ?p ?s) (Below ?l ?p) (AlignedVertically ?p ?l))))))))))))",
+    "cnf": "(exists ?s (exists ?cb (exists ?hp (exists ?c (exists ?calc (exists ?t (forall ?p (exists ?l (and (Is ?s 'suitcase') (OnLeftSide ?s) (RightOf ?cb ?s) (LargerThan ?s ?cb) (OnTopSide ?cb) (or (not (Is ?p 'pen')) (RightOf ?p ?s)) (Above ?cb ?hp) (OnRightSide ?cb) (or (not (Is ?p 'pen')) (Is ?l 'lemon')) (or (not (Is ?p 'pen')) (Below ?l ?p)) (AlignedVertically ?cb ?hp) (Is ?hp 'headphones') (Above ?hp ?c) (Is ?cb 'cutting_board') (or (not (Is ?p 'pen')) (AlignedVertically ?p ?l)) (AlignedVertically ?hp ?c) (Is ?c 'cup') (Below ?calc ?c) (AlignedVertically ?c ?calc) (Is ?calc 'calculator') (Below ?t ?calc) (AlignedVertically ?calc ?t) (Is ?t 'tie'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "pen",
+        "lemon",
+        "suitcase",
+        "cup",
+        "cutting_board",
+        "calculator",
+        "headphones"
+    ]
+}

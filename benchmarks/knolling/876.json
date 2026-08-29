@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is located on the left side of the scene. For every sock present, the handbag is positioned to its left, and the sock is smaller than the handbag. Furthermore, the sock is located to the left of a calculator, the calculator is to the left of a keyboard, and the keyboard is to the left of a cutting board. The cutting board is visually larger than the keyboard.",
+    "dsl": "(exists ?h (and (Is ?h 'handbag') (OnLeftSide ?h) (forall ?s (implies (Is ?s 'sock') (exists ?c (exists ?kb (exists ?cb (and (Is ?c 'calculator') (Is ?kb 'keyboard') (Is ?cb 'cutting_board') (SmallerThan ?s ?h) (LeftOf ?h ?s) (LeftOf ?s ?c) (LeftOf ?c ?kb) (LeftOf ?kb ?cb) (LargerThan ?cb ?kb)))))))))",
+    "cnf": "(exists ?h (forall ?s (exists ?c (exists ?kb (exists ?cb (and (Is ?h 'handbag') (OnLeftSide ?h) (or (not (Is ?s 'sock')) (SmallerThan ?s ?h)) (or (not (Is ?s 'sock')) (LeftOf ?h ?s)) (or (not (Is ?s 'sock')) (Is ?cb 'cutting_board')) (or (not (Is ?s 'sock')) (LeftOf ?s ?c)) (or (not (Is ?s 'sock')) (Is ?kb 'keyboard')) (or (not (Is ?s 'sock')) (LeftOf ?kb ?cb)) (or (not (Is ?s 'sock')) (Is ?c 'calculator')) (or (not (Is ?s 'sock')) (LeftOf ?c ?kb)) (or (not (Is ?s 'sock')) (LargerThan ?cb ?kb))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "cutting_board",
+        "handbag",
+        "calculator"
+    ]
+}

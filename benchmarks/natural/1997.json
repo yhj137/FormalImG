@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a bookshelf with a person next to it and a dog to the right of the person. A lamp sits on the bookshelf next to a keyboard. A cup is also on the shelf, located next to a round orange with a butterfly on it. A fish lies to the right of the orange. All books in the scene are arranged on the bookshelf.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bs (exists ?p (exists ?d (exists ?l (exists ?k (exists ?c (exists ?o (exists ?but (exists ?f (and (Is ?bs 'bookshelf') (Is ?p 'person') (Is ?d 'dog') (Is ?l 'lamp') (Is ?k 'keyboard') (Is ?c 'cup') (Is ?o 'orange') (Is ?but 'butterfly') (Is ?f 'fish') (NextTo ?p ?bs) (RightOf ?d ?p) (On ?l ?bs) (NextTo ?k ?l) (On ?c ?bs) (NextTo ?o ?c) (HasShape ?o 'round') (On ?but ?o) (RightOf ?f ?o) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bs))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bs (exists ?p (exists ?d (exists ?l (exists ?k (exists ?c (exists ?o (exists ?but (exists ?f (forall ?bk (and (Is ?bs 'bookshelf') (NextTo ?p ?bs) (On ?l ?bs) (Is ?p 'person') (RightOf ?d ?p) (On ?c ?bs) (Is ?l 'lamp') (NextTo ?k ?l) (Is ?d 'dog') (or (not (Is ?bk 'book')) (On ?bk ?bs)) (Is ?c 'cup') (NextTo ?o ?c) (Is ?k 'keyboard') (Is ?o 'orange') (HasShape ?o 'round') (On ?but ?o) (RightOf ?f ?o) (Is ?but 'butterfly') (Is ?f 'fish')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "person",
+        "book",
+        "orange",
+        "lamp",
+        "dog",
+        "cup",
+        "butterfly",
+        "bookshelf",
+        "keyboard"
+    ]
+}

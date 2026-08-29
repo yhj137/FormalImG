@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a handbag and a phone, where the handbag is larger than the phone and they are positioned in a vertical alignment. Additionally, for every tie in the image, it is blue and aligned vertically with the phone.",
+    "dsl": "(exists ?handbag (exists ?phone (and (Is ?handbag 'handbag') (Is ?phone 'phone') (LargerThan ?handbag ?phone) (AlignedVertically ?handbag ?phone) (forall ?tie (implies (Is ?tie 'tie') (and (Has ?tie 'blue') (AlignedVertically ?tie ?phone)))))))",
+    "cnf": "(exists ?handbag (exists ?phone (forall ?tie (and (Is ?handbag 'handbag') (LargerThan ?handbag ?phone) (AlignedVertically ?handbag ?phone) (Is ?phone 'phone') (or (not (Is ?tie 'tie')) (AlignedVertically ?tie ?phone)) (or (not (Is ?tie 'tie')) (Has ?tie 'blue'))))))",
+    "k": 3,
+    "object_classes": [
+        "tie",
+        "handbag",
+        "phone"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pair of jeans, a pan, a knife, and a lighter arranged neatly. The pair of jeans is placed on the left side of the image. The jeans are positioned to the left of the pan, and the two objects are aligned horizontally. A lighter is placed above the jeans and is vertically aligned with them. A knife is located above the pan, vertically aligned with the pan, and horizontally aligned with the lighter. Finally, for any donut present in the scene, the knife is positioned to the left of that donut.",
+    "dsl": "(exists ?j (exists ?p (exists ?k (exists ?l (and (Is ?j 'jeans') (Is ?p 'pan') (Is ?k 'knife') (Is ?l 'lighter') (OnLeftSide ?j) (LeftOf ?j ?p) (AlignedHorizontally ?j ?p) (Above ?l ?j) (AlignedVertically ?l ?j) (Above ?k ?p) (AlignedVertically ?k ?p) (AlignedHorizontally ?l ?k) (forall ?d (implies (Is ?d 'donut') (LeftOf ?k ?d))))))))",
+    "cnf": "(exists ?j (exists ?p (exists ?k (exists ?l (forall ?d (and (Is ?j 'jeans') (OnLeftSide ?j) (LeftOf ?j ?p) (AlignedHorizontally ?j ?p) (Is ?p 'pan') (Above ?l ?j) (Above ?k ?p) (AlignedVertically ?l ?j) (Is ?l 'lighter') (AlignedVertically ?k ?p) (Is ?k 'knife') (AlignedHorizontally ?l ?k) (or (not (Is ?d 'donut')) (LeftOf ?k ?d))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "lighter",
+        "jeans",
+        "knife",
+        "donut"
+    ]
+}

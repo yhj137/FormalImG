@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a house, a woman sits on a sofa holding a phone. All plants in the scene are positioned to the right of the sofa. A bookshelf also stands to the right of the sofa. To the left of the sofa is a closed refrigerator, and a bench is located next to it. A rectangular rug lies below the sofa with red shoes on it.",
+    "dsl": "(exists ?h (exists ?s (and (Is ?h 'house') (Is ?s 'sofa') (In ?s ?h) (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?s))) (exists ?w (exists ?ph (exists ?r (exists ?sh (exists ?bs (exists ?rf (exists ?bn (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?s) (Is ?ph 'phone') (Holding ?w ?ph) (Is ?r 'rug') (HasShape ?r 'rectangular') (Below ?r ?s) (Is ?sh 'shoes') (HasColor ?sh 'red') (On ?sh ?r) (Is ?bs 'bookshelf') (RightOf ?bs ?s) (Is ?rf 'refrigerator') (HasState ?rf 'closed') (LeftOf ?rf ?s) (Is ?bn 'bench') (NextTo ?bn ?rf))))))))))))",
+    "cnf": "(exists ?h (exists ?s (forall ?p (exists ?w (exists ?ph (exists ?r (exists ?sh (exists ?bs (exists ?rf (exists ?bn (and (Is ?h 'house') (In ?s ?h) (Is ?s 'sofa') (or (not (Is ?p 'plant')) (RightOf ?p ?s)) (On ?w ?s) (Below ?r ?s) (HasState ?w 'sitting') (Holding ?w ?ph) (RightOf ?bs ?s) (HasShape ?r 'rectangular') (On ?sh ?r) (Is ?w 'woman') (Is ?ph 'phone') (LeftOf ?rf ?s) (Is ?bs 'bookshelf') (Is ?r 'rug') (HasColor ?sh 'red') (HasState ?rf 'closed') (NextTo ?bn ?rf) (Is ?sh 'shoes') (Is ?rf 'refrigerator') (Is ?bn 'bench'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "phone",
+        "sofa",
+        "bench",
+        "shoes",
+        "plant",
+        "woman",
+        "rug",
+        "refrigerator",
+        "bookshelf"
+    ]
+}

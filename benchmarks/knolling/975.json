@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a wrench on the top side of the image and a pair of headphones on the right side. The wrench is visually smaller than the headphones. The headphones are larger than a sock, and that sock is larger than a stapler. Furthermore, every shoe present in the arrangement is strictly larger than the stapler.",
+    "dsl": "(exists ?w (exists ?h (exists ?so (exists ?st (and (Is ?w 'wrench') (Is ?h 'headphones') (Is ?so 'sock') (Is ?st 'stapler') (OnTopSide ?w) (OnRightSide ?h) (SmallerThan ?w ?h) (LargerThan ?h ?so) (LargerThan ?so ?st) (forall ?sh (implies (Is ?sh 'shoe') (LargerThan ?sh ?st))))))))",
+    "cnf": "(exists ?w (exists ?h (exists ?so (exists ?st (forall ?sh (and (Is ?w 'wrench') (OnTopSide ?w) (SmallerThan ?w ?h) (OnRightSide ?h) (LargerThan ?h ?so) (Is ?h 'headphones') (Is ?so 'sock') (LargerThan ?so ?st) (Is ?st 'stapler') (or (not (Is ?sh 'shoe')) (LargerThan ?sh ?st))))))))",
+    "k": 5,
+    "object_classes": [
+        "wrench",
+        "headphones",
+        "stapler",
+        "sock",
+        "shoe"
+    ]
+}

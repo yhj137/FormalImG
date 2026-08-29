@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a leather sofa. A dog holding a toy car stands next to the sofa, along with an umbrella. All clocks are positioned to the left of the sofa, while a car is visible to the right. A bowl containing a cylindrical bottle rests on the sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?d (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?d 'dog') (NextTo ?d ?s) (forall ?c (implies (Is ?c 'clock') (LeftOf ?c ?s))) (exists ?tc (and (Is ?tc 'toy car') (Holding ?d ?tc))) (exists ?u (and (Is ?u 'umbrella') (NextTo ?u ?s))) (exists ?bo (exists ?b (and (Is ?bo 'bowl') (On ?bo ?s) (Is ?b 'bottle') (In ?b ?bo) (HasShape ?b 'cylindrical')))) (exists ?ca (and (Is ?ca 'car') (RightOf ?ca ?s)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?d (forall ?c (exists ?tc (exists ?u (exists ?bo (exists ?b (exists ?ca (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (NextTo ?d ?s) (or (not (Is ?c 'clock')) (LeftOf ?c ?s)) (Is ?d 'dog') (Holding ?d ?tc) (NextTo ?u ?s) (Is ?tc 'toy car') (On ?bo ?s) (Is ?u 'umbrella') (RightOf ?ca ?s) (Is ?bo 'bowl') (In ?b ?bo) (Is ?ca 'car') (Is ?b 'bottle') (HasShape ?b 'cylindrical')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "bowl",
+        "sofa",
+        "toy car",
+        "clock",
+        "dog",
+        "car"
+    ]
+}

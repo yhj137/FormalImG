@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a phone that is red in color.",
+    "dsl": "(exists ?phone (and (Is ?phone 'phone') (Has ?phone 'red')))",
+    "cnf": "(exists ?phone (and (Is ?phone 'phone') (Has ?phone 'red')))",
+    "k": 1,
+    "object_classes": [
+        "phone"
+    ]
+}

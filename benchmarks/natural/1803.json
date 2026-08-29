@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf stands to the left of a closed refrigerator. Adjacent to the refrigerator is a table with a knife and a fork on it. A woman stands next to the table, holding a triangular sandwich. To the right of the table is a sofa, where a blue jacket is laid. A sleeping cat is resting next to the sofa.",
+    "dsl": "(exists ?b (exists ?r (exists ?t (exists ?k (exists ?f (exists ?w (exists ?s (exists ?sf (exists ?j (exists ?c (and (Is ?b 'bookshelf') (Is ?r 'refrigerator') (HasState ?r 'closed') (LeftOf ?b ?r) (Is ?t 'table') (NextTo ?t ?r) (Is ?k 'knife') (On ?k ?t) (Is ?f 'fork') (On ?f ?t) (Is ?w 'woman') (NextTo ?w ?t) (Is ?s 'sandwich') (HasShape ?s 'triangular') (Holding ?w ?s) (Is ?sf 'sofa') (RightOf ?sf ?t) (Is ?j 'jacket') (HasColor ?j 'blue') (On ?j ?sf) (Is ?c 'cat') (HasState ?c 'sleeping') (NextTo ?c ?sf))))))))))))",
+    "cnf": "(exists ?b (exists ?r (exists ?t (exists ?k (exists ?f (exists ?w (exists ?s (exists ?sf (exists ?j (exists ?c (and (Is ?b 'bookshelf') (LeftOf ?b ?r) (HasState ?r 'closed') (NextTo ?t ?r) (Is ?r 'refrigerator') (Is ?t 'table') (On ?k ?t) (On ?f ?t) (Is ?k 'knife') (NextTo ?w ?t) (Is ?f 'fork') (RightOf ?sf ?t) (Is ?w 'woman') (Holding ?w ?s) (Is ?sf 'sofa') (On ?j ?sf) (HasShape ?s 'triangular') (NextTo ?c ?sf) (HasColor ?j 'blue') (Is ?s 'sandwich') (HasState ?c 'sleeping') (Is ?j 'jacket') (Is ?c 'cat'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "woman",
+        "jacket",
+        "fork",
+        "sofa",
+        "cat",
+        "knife",
+        "sandwich",
+        "refrigerator",
+        "table",
+        "bookshelf"
+    ]
+}

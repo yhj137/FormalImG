@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the bottom side of the layout. There is a set of keys aligned vertically with the drill, and the drill is visually larger than the keys. Furthermore, for every carrot in the scene, it is smaller than the keys.",
+    "dsl": "(exists ?d (exists ?k (and (Is ?d 'drill') (OnBottomSide ?d) (Is ?k 'keys') (AlignedVertically ?d ?k) (LargerThan ?d ?k) (forall ?c (implies (Is ?c 'carrot') (SmallerThan ?c ?k))))))",
+    "cnf": "(exists ?d (exists ?k (forall ?c (and (Is ?d 'drill') (OnBottomSide ?d) (AlignedVertically ?d ?k) (LargerThan ?d ?k) (Is ?k 'keys') (or (not (Is ?c 'carrot')) (SmallerThan ?c ?k))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "keys",
+        "carrot"
+    ]
+}

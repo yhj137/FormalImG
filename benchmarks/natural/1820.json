@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child has a metal lamp to their left and a rug to their right, while holding a banana and headphones. To the right of the rug is a bus containing a book, a flower, and a bottle with a fish inside.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?l (exists ?r (exists ?ba (exists ?h (exists ?bu (exists ?bk (exists ?f (exists ?bo (exists ?fi (and (Is ?l 'lamp') (HasMaterial ?l 'metal') (Is ?r 'rug') (Is ?ba 'banana') (Is ?h 'headphones') (Is ?bu 'bus') (Is ?bk 'book') (Is ?f 'flower') (Is ?bo 'bottle') (Is ?fi 'fish') (LeftOf ?l ?c) (RightOf ?r ?c) (Holding ?c ?ba) (Holding ?c ?h) (RightOf ?bu ?r) (In ?bk ?bu) (In ?f ?bu) (In ?bo ?bu) (In ?fi ?bo)))))))))))))",
+    "cnf": "(forall ?c (exists ?l (exists ?r (exists ?ba (exists ?h (exists ?bu (exists ?bk (exists ?f (exists ?bo (exists ?fi (and (or (not (Is ?c 'child')) (Is ?l 'lamp')) (or (not (Is ?c 'child')) (HasMaterial ?l 'metal')) (or (not (Is ?c 'child')) (LeftOf ?l ?c)) (or (not (Is ?c 'child')) (Is ?r 'rug')) (or (not (Is ?c 'child')) (Is ?fi 'fish')) (or (not (Is ?c 'child')) (RightOf ?r ?c)) (or (not (Is ?c 'child')) (Is ?ba 'banana')) (or (not (Is ?c 'child')) (Is ?bo 'bottle')) (or (not (Is ?c 'child')) (In ?fi ?bo)) (or (not (Is ?c 'child')) (Holding ?c ?ba)) (or (not (Is ?c 'child')) (RightOf ?bu ?r)) (or (not (Is ?c 'child')) (Is ?h 'headphones')) (or (not (Is ?c 'child')) (Is ?f 'flower')) (or (not (Is ?c 'child')) (In ?bo ?bu)) (or (not (Is ?c 'child')) (Holding ?c ?h)) (or (not (Is ?c 'child')) (In ?bk ?bu)) (or (not (Is ?c 'child')) (Is ?bu 'bus')) (or (not (Is ?c 'child')) (Is ?bk 'book')) (or (not (Is ?c 'child')) (In ?f ?bu)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "lamp",
+        "banana",
+        "bus",
+        "bottle",
+        "book",
+        "headphones",
+        "child",
+        "flower",
+        "rug"
+    ]
+}

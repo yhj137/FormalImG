@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child holding a toy car while sitting on a fluffy rug. To the left of the rug stands a white refrigerator with a bird perched on it, and a wooden bookshelf stands to the right. An open laptop rests on the bookshelf next to a hat. Every flower in the scene is located on the rug, and a table is positioned next to the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?tc (exists ?r (exists ?ref (exists ?b (exists ?bs (exists ?l (exists ?h (and (Is ?c 'child') (Is ?tc 'toy car') (Is ?r 'rug') (HasMaterial ?r 'fluffy') (Is ?ref 'refrigerator') (HasColor ?ref 'white') (Is ?b 'bird') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?l 'laptop') (HasState ?l 'open') (Is ?h 'hat') (Holding ?c ?tc) (On ?c ?r) (LeftOf ?ref ?r) (On ?b ?ref) (RightOf ?bs ?r) (On ?l ?bs) (NextTo ?h ?l) (forall ?f (implies (Is ?f 'flower') (On ?f ?r))) (exists ?t (and (Is ?t 'table') (NextTo ?t ?r)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?tc (exists ?r (exists ?ref (exists ?b (exists ?bs (exists ?l (exists ?h (forall ?f (exists ?t (and (Is ?c 'child') (Holding ?c ?tc) (On ?c ?r) (Is ?tc 'toy car') (HasMaterial ?r 'fluffy') (LeftOf ?ref ?r) (Is ?r 'rug') (RightOf ?bs ?r) (HasColor ?ref 'white') (On ?b ?ref) (or (not (Is ?f 'flower')) (On ?f ?r)) (HasMaterial ?bs 'wooden') (On ?l ?bs) (Is ?ref 'refrigerator') (Is ?b 'bird') (NextTo ?t ?r) (Is ?bs 'bookshelf') (HasState ?l 'open') (NextTo ?h ?l) (Is ?t 'table') (Is ?l 'laptop') (Is ?h 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "toy car",
+        "laptop",
+        "hat",
+        "bookshelf",
+        "table",
+        "refrigerator",
+        "rug",
+        "bird",
+        "flower",
+        "child"
+    ]
+}

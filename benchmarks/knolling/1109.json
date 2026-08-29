@@ -1,0 +1,14 @@
+{
+    "prompt": "For every sock in the image, there is a laptop on the right side, a shirt to the left of the laptop, a plate below the laptop, a fork to the right of the plate, and a cutting board on the bottom side aligned horizontally with the plate; additionally, the sock is positioned below the shirt.",
+    "dsl": "(exists ?laptop (exists ?shirt (forall ?sock (implies (Is ?sock 'sock') (exists ?plate (exists ?fork (exists ?cutting_board (and (Is ?laptop 'laptop') (Is ?shirt 'shirt') (Is ?plate 'plate') (Is ?fork 'fork') (Is ?cutting_board 'cutting_board') (OnRightSide ?laptop) (LeftOf ?shirt ?laptop) (Below ?sock ?shirt) (Below ?plate ?laptop) (RightOf ?fork ?plate) (OnBottomSide ?cutting_board) (AlignedHorizontally ?cutting_board ?plate)))))))))",
+    "cnf": "(exists ?laptop (exists ?shirt (forall ?sock (exists ?plate (exists ?fork (exists ?cutting_board (and (or (not (Is ?sock 'sock')) (Is ?laptop 'laptop')) (or (not (Is ?sock 'sock')) (Is ?shirt 'shirt')) (or (not (Is ?sock 'sock')) (OnRightSide ?laptop)) (or (not (Is ?sock 'sock')) (Is ?plate 'plate')) (or (not (Is ?sock 'sock')) (LeftOf ?shirt ?laptop)) (or (not (Is ?sock 'sock')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?sock 'sock')) (Is ?fork 'fork')) (or (not (Is ?sock 'sock')) (Below ?plate ?laptop)) (or (not (Is ?sock 'sock')) (Below ?sock ?shirt)) (or (not (Is ?sock 'sock')) (OnBottomSide ?cutting_board)) (or (not (Is ?sock 'sock')) (RightOf ?fork ?plate)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?cutting_board ?plate)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "sock",
+        "cutting_board",
+        "fork",
+        "shirt"
+    ]
+}

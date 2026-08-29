@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every wrench present, there is a yellow ruler vertically aligned with it.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'wrench') (exists ?r (and (Is ?r 'ruler') (Has ?r 'yellow') (AlignedVertically ?w ?r))))))",
+    "cnf": "(forall ?w (exists ?r (and (or (not (Is ?w 'wrench')) (Is ?r 'ruler')) (or (not (Is ?w 'wrench')) (Has ?r 'yellow')) (or (not (Is ?w 'wrench')) (AlignedVertically ?w ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "ruler"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every book in the scene, there is a wrench aligned horizontally with it, and that wrench is located on the right side of the image.",
+    "dsl": "(and (forall ?book (implies (Is ?book 'book') (exists ?wrench (and (Is ?wrench 'wrench') (OnRightSide ?wrench) (AlignedHorizontally ?book ?wrench))))))",
+    "cnf": "(forall ?book (exists ?wrench (and (or (not (Is ?book 'book')) (Is ?wrench 'wrench')) (or (not (Is ?book 'book')) (OnRightSide ?wrench)) (or (not (Is ?book 'book')) (AlignedHorizontally ?book ?wrench)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "book"
+    ]
+}

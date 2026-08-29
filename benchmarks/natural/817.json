@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A bed is located next to a bookshelf. A toy car sits on the bookshelf. There is also an open refrigerator next to the bookshelf, with a banana placed on top of it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?be (exists ?bs (exists ?tc (exists ?r (exists ?ba (and (Is ?be 'bed') (Is ?bs 'bookshelf') (Is ?tc 'toy car') (Is ?r 'refrigerator') (Is ?ba 'banana') (NextTo ?be ?bs) (On ?tc ?bs) (NextTo ?r ?bs) (HasState ?r 'open') (On ?ba ?r))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?be (exists ?bs (exists ?tc (exists ?r (exists ?ba (and (Is ?be 'bed') (NextTo ?be ?bs) (Is ?bs 'bookshelf') (On ?tc ?bs) (NextTo ?r ?bs) (Is ?tc 'toy car') (Is ?r 'refrigerator') (HasState ?r 'open') (On ?ba ?r) (Is ?ba 'banana'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bed",
+        "toy car",
+        "refrigerator",
+        "bookshelf",
+        "banana"
+    ]
+}

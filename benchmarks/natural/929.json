@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden bed has a plant located to its right. Every lamp in the scene is positioned to the left of the bed. A basket containing a pizza sits next to the bed.",
+    "dsl": "(exists ?b (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (exists ?p (and (Is ?p 'plant') (RightOf ?p ?b))) (forall ?l (implies (Is ?l 'lamp') (LeftOf ?l ?b))) (exists ?k (and (Is ?k 'basket') (NextTo ?k ?b) (exists ?z (and (Is ?z 'pizza') (In ?z ?k)))))))",
+    "cnf": "(exists ?b (exists ?p (forall ?l (exists ?k (exists ?z (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (RightOf ?p ?b) (or (not (Is ?l 'lamp')) (LeftOf ?l ?b)) (Is ?p 'plant') (NextTo ?k ?b) (Is ?k 'basket') (In ?z ?k) (Is ?z 'pizza')))))))",
+    "k": 5,
+    "object_classes": [
+        "plant",
+        "lamp",
+        "pizza",
+        "bed",
+        "basket"
+    ]
+}

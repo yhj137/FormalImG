@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicting a woman sitting on a wooden chair, holding a basket containing a cat. Every shoe is positioned to the right of the chair.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?c (and (Is ?w 'woman') (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?w ?c) (forall ?s (implies (Is ?s 'shoes') (RightOf ?s ?c))) (exists ?b (exists ?k (and (Is ?b 'basket') (Is ?k 'cat') (Holding ?w ?b) (In ?k ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?c (forall ?s (exists ?b (exists ?k (and (Is ?w 'woman') (On ?w ?c) (Holding ?w ?b) (HasMaterial ?c 'wooden') (or (not (Is ?s 'shoes')) (RightOf ?s ?c)) (Is ?b 'basket') (In ?k ?b) (Is ?c 'chair') (Is ?k 'cat'))))))))",
+    "k": 5,
+    "object_classes": [
+        "cat",
+        "shoes",
+        "chair",
+        "basket",
+        "woman"
+    ]
+}

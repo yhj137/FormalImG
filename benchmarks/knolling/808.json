@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene comprises a blue shirt, a black shoe, a black camera, a pink donut, and a gray fork. The objects define a hierarchy of size: the shirt is larger than the shoe, the shoe is larger than the camera, and the camera is larger than the donut. Additionally, the fork is smaller than the donut. Finally, the shirt is located on the bottom side of the image.",
+    "dsl": "(exists ?shirt (exists ?shoe (exists ?camera (exists ?donut (exists ?fork (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?camera 'camera') (Has ?camera 'black') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?fork 'fork') (Has ?fork 'gray') (LargerThan ?shirt ?shoe) (LargerThan ?shoe ?camera) (LargerThan ?camera ?donut) (SmallerThan ?fork ?donut) (OnBottomSide ?shirt)))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (exists ?camera (exists ?donut (exists ?fork (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (LargerThan ?shirt ?shoe) (OnBottomSide ?shirt) (Has ?shoe 'black') (LargerThan ?shoe ?camera) (Is ?shoe 'shoe') (Has ?camera 'black') (LargerThan ?camera ?donut) (Is ?camera 'camera') (Has ?donut 'pink') (SmallerThan ?fork ?donut) (Is ?donut 'donut') (Has ?fork 'gray') (Is ?fork 'fork')))))))",
+    "k": 5,
+    "object_classes": [
+        "camera",
+        "fork",
+        "shirt",
+        "shoe",
+        "donut"
+    ]
+}

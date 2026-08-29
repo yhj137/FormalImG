@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A set of keys is arranged neatly on the right side of the surface.",
+    "dsl": "(exists ?keys (and (Is ?keys 'keys') (OnRightSide ?keys)))",
+    "cnf": "(exists ?keys (and (Is ?keys 'keys') (OnRightSide ?keys)))",
+    "k": 1,
+    "object_classes": [
+        "keys"
+    ]
+}

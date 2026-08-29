@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue hat, a red book, a pink donut, and a gray fork arranged in a grid-like pattern. The blue hat is positioned to the left of the red book. Directly below the hat is the pink donut, and directly below the book is the gray fork. Furthermore, the pink donut is situated to the left of the gray fork.",
+    "dsl": "(exists ?hat (exists ?book (exists ?donut (exists ?fork (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?book 'book') (Has ?book 'red') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?fork 'fork') (Has ?fork 'gray') (LeftOf ?hat ?book) (Below ?donut ?hat) (Below ?fork ?book) (LeftOf ?donut ?fork))))))",
+    "cnf": "(exists ?hat (exists ?book (exists ?donut (exists ?fork (and (Is ?hat 'hat') (Has ?hat 'blue') (LeftOf ?hat ?book) (Below ?donut ?hat) (Has ?book 'red') (Below ?fork ?book) (Has ?donut 'pink') (LeftOf ?donut ?fork) (Is ?book 'book') (Has ?fork 'gray') (Is ?donut 'donut') (Is ?fork 'fork'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "hat",
+        "fork",
+        "donut"
+    ]
+}

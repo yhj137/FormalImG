@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where every shoe is inside a rectangular backpack held by a lion on a wooden bench.",
+    "dsl": "(and (IsStyle 'photo') (forall ?s (implies (Is ?s 'shoes') (exists ?b (exists ?l (exists ?bn (and (Is ?b 'backpack') (HasShape ?b 'rectangular') (Is ?l 'lion') (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (In ?s ?b) (Holding ?l ?b) (On ?l ?bn))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?s (exists ?b (exists ?l (exists ?bn (and (or (not (Is ?s 'shoes')) (Is ?b 'backpack')) (or (not (Is ?s 'shoes')) (HasShape ?b 'rectangular')) (or (not (Is ?s 'shoes')) (In ?s ?b)) (or (not (Is ?s 'shoes')) (Is ?l 'lion')) (or (not (Is ?s 'shoes')) (Holding ?l ?b)) (or (not (Is ?s 'shoes')) (HasMaterial ?bn 'wooden')) (or (not (Is ?s 'shoes')) (Is ?bn 'bench')) (or (not (Is ?s 'shoes')) (On ?l ?bn))))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "lion",
+        "backpack",
+        "shoes"
+    ]
+}

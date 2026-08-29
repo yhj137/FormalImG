@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. An apple is positioned on the right side of the scene. Furthermore, every spoon in the arrangement is aligned horizontally with this apple.",
+    "dsl": "(exists ?a (and (Is ?a 'apple') (OnRightSide ?a) (forall ?s (implies (Is ?s 'spoon') (AlignedHorizontally ?s ?a)))))",
+    "cnf": "(exists ?a (forall ?s (and (Is ?a 'apple') (OnRightSide ?a) (or (not (Is ?s 'spoon')) (AlignedHorizontally ?s ?a)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "apple"
+    ]
+}

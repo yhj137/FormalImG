@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pan in the image, there is a watch positioned to its right, and this watch is located on the bottom side of the scene.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pan') (exists ?w (and (Is ?w 'watch') (RightOf ?w ?p) (OnBottomSide ?w))))))",
+    "cnf": "(forall ?p (exists ?w (and (or (not (Is ?p 'pan')) (Is ?w 'watch')) (or (not (Is ?p 'pan')) (RightOf ?w ?p)) (or (not (Is ?p 'pan')) (OnBottomSide ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "pan",
+        "watch"
+    ]
+}

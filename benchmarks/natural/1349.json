@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a house next to a wooden table. On the table, there is a cake and a round pan with a fish inside, with every spoon in the scene placed next to the pan. A car is located to the right of the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?p (exists ?f (and (Is ?h 'house') (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?t ?h) (Is ?p 'pan') (HasShape ?p 'round') (On ?p ?t) (Is ?f 'fish') (In ?f ?p) (forall ?s (implies (Is ?s 'spoon') (NextTo ?s ?p))) (exists ?c (exists ?car (and (Is ?c 'cake') (On ?c ?t) (Is ?car 'car') (RightOf ?car ?h))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (exists ?p (exists ?f (forall ?s (exists ?c (exists ?car (and (Is ?h 'house') (NextTo ?t ?h) (RightOf ?car ?h) (HasMaterial ?t 'wooden') (On ?p ?t) (Is ?car 'car') (Is ?t 'table') (On ?c ?t) (HasShape ?p 'round') (In ?f ?p) (Is ?c 'cake') (Is ?p 'pan') (or (not (Is ?s 'spoon')) (NextTo ?s ?p)) (Is ?f 'fish'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pan",
+        "fish",
+        "cake",
+        "table",
+        "house",
+        "car",
+        "spoon"
+    ]
+}

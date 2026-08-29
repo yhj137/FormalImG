@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A woman is holding a jacket. To her left is a wardrobe, and next to the wardrobe are shoes. All shirts in the scene are located to the left of the woman. To her right is a child holding a toy car. Further to the right of the child is a desk, and on the desk sits a round fruit.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'woman') (forall ?s (implies (Is ?s 'shirt') (LeftOf ?s ?w))) (exists ?j (exists ?wd (exists ?sh (exists ?c (exists ?tc (exists ?d (exists ?f (and (Is ?j 'jacket') (Is ?wd 'wardrobe') (Is ?sh 'shoes') (Is ?c 'child') (Is ?tc 'toy car') (Is ?d 'desk') (Is ?f 'fruit') (Holding ?w ?j) (LeftOf ?wd ?w) (NextTo ?sh ?wd) (RightOf ?c ?w) (Holding ?c ?tc) (RightOf ?d ?c) (On ?f ?d) (HasShape ?f 'round'))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (forall ?s (exists ?j (exists ?wd (exists ?sh (exists ?c (exists ?tc (exists ?d (exists ?f (and (Is ?w 'woman') (or (not (Is ?s 'shirt')) (LeftOf ?s ?w)) (Holding ?w ?j) (LeftOf ?wd ?w) (Is ?j 'jacket') (RightOf ?c ?w) (Is ?wd 'wardrobe') (NextTo ?sh ?wd) (Is ?c 'child') (Holding ?c ?tc) (Is ?sh 'shoes') (RightOf ?d ?c) (Is ?tc 'toy car') (Is ?d 'desk') (On ?f ?d) (Is ?f 'fruit') (HasShape ?f 'round'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "fruit",
+        "child",
+        "shoes",
+        "woman",
+        "jacket",
+        "toy car",
+        "desk",
+        "wardrobe"
+    ]
+}

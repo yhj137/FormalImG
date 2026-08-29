@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring nine items arranged in a neat 3x3 grid layout. The centerpiece of the top row is a cutting board located on the top side of the image. Directly aligned vertically beneath the cutting board are a pair of black headphones, and below those is a mouse. The cutting board is visually larger than the mouse. To the left of the cutting board is a red hammer; aligned vertically beneath the hammer are pliers, followed by blue scissors. To the right of the cutting board is a stapler; aligned vertically beneath the stapler is a remote, followed by a set of keys. The keys are visually smaller than the remote.",
+    "dsl": "(exists ?board (exists ?headphones (exists ?mouse (exists ?hammer (exists ?pliers (exists ?scissors (exists ?stapler (exists ?remote (exists ?keys (and (Is ?board 'cutting_board') (Is ?headphones 'headphones') (Is ?mouse 'mouse') (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?scissors 'scissors') (Is ?stapler 'stapler') (Is ?remote 'remote') (Is ?keys 'keys') (OnTopSide ?board) (Has ?hammer 'red') (Has ?scissors 'blue') (Has ?headphones 'black') (LargerThan ?board ?mouse) (SmallerThan ?keys ?remote) (LeftOf ?hammer ?board) (LeftOf ?pliers ?headphones) (RightOf ?stapler ?board) (RightOf ?remote ?headphones) (AlignedVertically ?board ?headphones) (AlignedVertically ?headphones ?mouse) (AlignedVertically ?hammer ?pliers) (AlignedVertically ?pliers ?scissors) (AlignedVertically ?stapler ?remote) (AlignedVertically ?remote ?keys)))))))))))",
+    "cnf": "(exists ?board (exists ?headphones (exists ?mouse (exists ?hammer (exists ?pliers (exists ?scissors (exists ?stapler (exists ?remote (exists ?keys (and (Is ?board 'cutting_board') (OnTopSide ?board) (LargerThan ?board ?mouse) (LeftOf ?hammer ?board) (Is ?mouse 'mouse') (AlignedVertically ?headphones ?mouse) (RightOf ?stapler ?board) (Has ?hammer 'red') (AlignedVertically ?hammer ?pliers) (AlignedVertically ?board ?headphones) (Is ?stapler 'stapler') (AlignedVertically ?stapler ?remote) (Is ?hammer 'hammer') (LeftOf ?pliers ?headphones) (AlignedVertically ?pliers ?scissors) (RightOf ?remote ?headphones) (AlignedVertically ?remote ?keys) (Has ?headphones 'black') (Is ?pliers 'pliers') (Has ?scissors 'blue') (SmallerThan ?keys ?remote) (Is ?headphones 'headphones') (Is ?scissors 'scissors') (Is ?remote 'remote') (Is ?keys 'keys')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "remote",
+        "pliers",
+        "stapler",
+        "cutting_board",
+        "hammer",
+        "mouse",
+        "scissors",
+        "headphones"
+    ]
+}

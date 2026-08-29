@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a child holding a yellow basket to their right, with a sandwich inside.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (exists ?s (and (Is ?c 'child') (Is ?b 'basket') (HasColor ?b 'yellow') (Is ?s 'sandwich') (Holding ?c ?b) (RightOf ?b ?c) (In ?s ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (exists ?s (and (Is ?c 'child') (Holding ?c ?b) (RightOf ?b ?c) (HasColor ?b 'yellow') (In ?s ?b) (Is ?b 'basket') (Is ?s 'sandwich'))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "child",
+        "sandwich"
+    ]
+}

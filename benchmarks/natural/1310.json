@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene depicts a plant next to a bed. To the right of the bed is a sofa with a child on it holding a butterfly. A round rug lies next to the sofa, and every car in the scene is on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?r (and (Is ?b 'bed') (Is ?s 'sofa') (Is ?r 'rug') (HasShape ?r 'round') (RightOf ?s ?b) (NextTo ?r ?s) (forall ?c (implies (Is ?c 'car') (On ?c ?r))) (exists ?ch (exists ?bf (exists ?p (and (Is ?ch 'child') (Is ?bf 'butterfly') (Is ?p 'plant') (On ?ch ?s) (Holding ?ch ?bf) (NextTo ?p ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?r (forall ?c (exists ?ch (exists ?bf (exists ?p (and (Is ?b 'bed') (RightOf ?s ?b) (NextTo ?p ?b) (Is ?s 'sofa') (NextTo ?r ?s) (Is ?p 'plant') (On ?ch ?s) (HasShape ?r 'round') (or (not (Is ?c 'car')) (On ?c ?r)) (Is ?ch 'child') (Holding ?ch ?bf) (Is ?r 'rug') (Is ?bf 'butterfly'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "child",
+        "bed",
+        "plant",
+        "rug",
+        "car",
+        "butterfly"
+    ]
+}

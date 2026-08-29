@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of a house is a car, with a sleeping lion next to it. To the right of the house is a boat containing all the fruit in the scene, including an orange. A child wearing headphones and holding a metal spoon is located next to the house.",
+    "dsl": "(exists ?h (exists ?ca (exists ?l (exists ?b (exists ?c (and (Is ?h 'house') (Is ?ca 'car') (LeftOf ?ca ?h) (Is ?l 'lion') (NextTo ?l ?ca) (HasState ?l 'sleeping') (Is ?b 'boat') (RightOf ?b ?h) (Is ?c 'child') (NextTo ?c ?h) (forall ?x (implies (Is ?x 'fruit') (In ?x ?b))) (exists ?o (exists ?hp (exists ?s (and (Is ?o 'orange') (Is ?o 'fruit') (In ?o ?b) (Is ?hp 'headphones') (On ?hp ?c) (Is ?s 'spoon') (HasMaterial ?s 'metal') (Holding ?c ?s)))))))))))",
+    "cnf": "(exists ?h (exists ?ca (exists ?l (exists ?b (exists ?c (forall ?x (exists ?o (exists ?hp (exists ?s (and (Is ?h 'house') (LeftOf ?ca ?h) (RightOf ?b ?h) (Is ?ca 'car') (NextTo ?l ?ca) (NextTo ?c ?h) (Is ?b 'boat') (or (not (Is ?x 'fruit')) (In ?x ?b)) (Is ?l 'lion') (HasState ?l 'sleeping') (Is ?c 'child') (On ?hp ?c) (In ?o ?b) (Holding ?c ?s) (Is ?hp 'headphones') (Is ?o 'fruit') (HasMaterial ?s 'metal') (Is ?o 'orange') (Is ?s 'spoon')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "fruit",
+        "headphones",
+        "child",
+        "spoon",
+        "orange",
+        "car",
+        "lion",
+        "boat"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring nine items arranged in a structured grid layout. The top row consists of a pair of jeans on the left, a hat to the right of the jeans, and a book to the right of the hat. Directly below the jeans is a tie, with a ruler to its right and a glove to the right of the ruler. The bottom row, positioned on the bottom side of the image, contains a watch, a calculator, and an apple. Specifically, the watch is located below the tie, the calculator is to the right of the watch, and the apple is to the right of the calculator. The watch, calculator, and apple are aligned horizontally. Additionally, the watch is visually smaller than the jeans, and the apple is smaller than the hat.",
+    "dsl": "(exists ?jeans (exists ?hat (exists ?book (exists ?tie (exists ?ruler (exists ?glove (exists ?watch (exists ?calculator (exists ?apple (and (Is ?jeans 'jeans') (Is ?hat 'hat') (Is ?book 'book') (Is ?tie 'tie') (Is ?ruler 'ruler') (Is ?glove 'glove') (Is ?watch 'watch') (Is ?calculator 'calculator') (Is ?apple 'apple') (RightOf ?hat ?jeans) (RightOf ?book ?hat) (Below ?tie ?jeans) (RightOf ?ruler ?tie) (RightOf ?glove ?ruler) (Below ?watch ?tie) (RightOf ?calculator ?watch) (RightOf ?apple ?calculator) (OnBottomSide ?watch) (OnBottomSide ?calculator) (OnBottomSide ?apple) (AlignedHorizontally ?watch ?calculator) (AlignedHorizontally ?calculator ?apple) (SmallerThan ?watch ?jeans) (SmallerThan ?apple ?hat)))))))))))",
+    "cnf": "(exists ?jeans (exists ?hat (exists ?book (exists ?tie (exists ?ruler (exists ?glove (exists ?watch (exists ?calculator (exists ?apple (and (Is ?jeans 'jeans') (RightOf ?hat ?jeans) (Below ?tie ?jeans) (Is ?hat 'hat') (RightOf ?book ?hat) (SmallerThan ?watch ?jeans) (Is ?tie 'tie') (RightOf ?ruler ?tie) (SmallerThan ?apple ?hat) (Is ?book 'book') (AlignedHorizontally ?watch ?calculator) (Below ?watch ?tie) (Is ?ruler 'ruler') (RightOf ?glove ?ruler) (AlignedHorizontally ?calculator ?apple) (OnBottomSide ?watch) (OnBottomSide ?calculator) (Is ?watch 'watch') (RightOf ?calculator ?watch) (Is ?glove 'glove') (OnBottomSide ?apple) (RightOf ?apple ?calculator) (Is ?calculator 'calculator') (Is ?apple 'apple')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "book",
+        "tie",
+        "apple",
+        "watch",
+        "hat",
+        "calculator",
+        "jeans",
+        "glove"
+    ]
+}

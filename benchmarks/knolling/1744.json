@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a handbag positioned on the bottom side of the image. To the right of the handbag is a shoe, and to the right of the shoe are headphones. Directly above the handbag is a laptop, and above the laptop is a ruler. A calculator is located to the right of the laptop, with the laptop being visually larger than the calculator. Furthermore, for every lemon in the scene, it is positioned to the right of the calculator, and there is a bottle above the lemon, with a mouse situated to the right of that bottle.",
+    "dsl": "(exists ?handbag (exists ?shoe (exists ?headphones (exists ?laptop (exists ?ruler (exists ?calculator (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Is ?shoe 'shoe') (RightOf ?shoe ?handbag) (Is ?headphones 'headphones') (RightOf ?headphones ?shoe) (Is ?laptop 'laptop') (Above ?laptop ?handbag) (Is ?ruler 'ruler') (Above ?ruler ?laptop) (Is ?calculator 'calculator') (RightOf ?calculator ?laptop) (LargerThan ?laptop ?calculator) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?bottle (exists ?mouse (and (Is ?bottle 'bottle') (Is ?mouse 'mouse') (RightOf ?lemon ?calculator) (Above ?bottle ?lemon) (RightOf ?mouse ?bottle)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?shoe (exists ?headphones (exists ?laptop (exists ?ruler (exists ?calculator (forall ?lemon (exists ?bottle (exists ?mouse (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (RightOf ?shoe ?handbag) (Above ?laptop ?handbag) (Is ?shoe 'shoe') (RightOf ?headphones ?shoe) (Is ?laptop 'laptop') (Above ?ruler ?laptop) (Is ?headphones 'headphones') (RightOf ?calculator ?laptop) (Is ?ruler 'ruler') (LargerThan ?laptop ?calculator) (Is ?calculator 'calculator') (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?calculator)) (or (not (Is ?lemon 'lemon')) (Is ?mouse 'mouse')) (or (not (Is ?lemon 'lemon')) (Above ?bottle ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?bottle 'bottle')) (or (not (Is ?lemon 'lemon')) (RightOf ?mouse ?bottle))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "mouse",
+        "calculator",
+        "shoe",
+        "headphones",
+        "ruler",
+        "lemon",
+        "bottle",
+        "laptop",
+        "handbag"
+    ]
+}

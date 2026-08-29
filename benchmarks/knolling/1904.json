@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hammer on the top side and a plate on the bottom side, aligned vertically. To the right of the hammer is a stapler, and the hammer is to the left of the stapler. Vertically aligned below the stapler is a phone, which is visually smaller than the plate. For every tie in the image, it is blue, located to the right of the stapler on the top side, and has a white glove aligned vertically below it on the bottom side. To the right of the tie is a fork (placing the tie to the left of the fork), and aligned vertically below the fork is a calculator. Finally, a cup is positioned to the right of the fork on the top side, with a wallet aligned vertically below it on the bottom side.",
+    "dsl": "(exists ?hammer (exists ?plate (exists ?stapler (exists ?phone (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (Is ?plate 'plate') (OnBottomSide ?plate) (AlignedVertically ?hammer ?plate) (Is ?stapler 'stapler') (OnTopSide ?stapler) (RightOf ?stapler ?hammer) (LeftOf ?hammer ?stapler) (Is ?phone 'phone') (OnBottomSide ?phone) (AlignedVertically ?stapler ?phone) (LargerThan ?plate ?phone) (forall ?tie (implies (Is ?tie 'tie') (exists ?glove (exists ?fork (exists ?calculator (exists ?cup (exists ?wallet (and (Has ?tie 'blue') (OnTopSide ?tie) (RightOf ?tie ?stapler) (Is ?glove 'glove') (Has ?glove 'white') (OnBottomSide ?glove) (AlignedVertically ?tie ?glove) (Is ?fork 'fork') (OnTopSide ?fork) (LeftOf ?tie ?fork) (Is ?calculator 'calculator') (OnBottomSide ?calculator) (AlignedVertically ?fork ?calculator) (Is ?cup 'cup') (OnTopSide ?cup) (RightOf ?cup ?fork) (Is ?wallet 'wallet') (OnBottomSide ?wallet) (AlignedVertically ?cup ?wallet))))))))))))))",
+    "cnf": "(exists ?hammer (exists ?plate (exists ?stapler (exists ?phone (forall ?tie (exists ?glove (exists ?fork (exists ?calculator (exists ?cup (exists ?wallet (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (AlignedVertically ?hammer ?plate) (RightOf ?stapler ?hammer) (OnBottomSide ?plate) (LargerThan ?plate ?phone) (LeftOf ?hammer ?stapler) (OnTopSide ?stapler) (Is ?plate 'plate') (AlignedVertically ?stapler ?phone) (Is ?stapler 'stapler') (or (not (Is ?tie 'tie')) (RightOf ?tie ?stapler)) (OnBottomSide ?phone) (or (not (Is ?tie 'tie')) (OnTopSide ?tie)) (or (not (Is ?tie 'tie')) (Is ?glove 'glove')) (Is ?phone 'phone') (or (not (Is ?tie 'tie')) (Has ?tie 'blue')) (or (not (Is ?tie 'tie')) (Has ?glove 'white')) (or (not (Is ?tie 'tie')) (OnBottomSide ?glove)) (or (not (Is ?tie 'tie')) (AlignedVertically ?tie ?glove)) (or (not (Is ?tie 'tie')) (Is ?fork 'fork')) (or (not (Is ?tie 'tie')) (OnTopSide ?fork)) (or (not (Is ?tie 'tie')) (LeftOf ?tie ?fork)) (or (not (Is ?tie 'tie')) (Is ?calculator 'calculator')) (or (not (Is ?tie 'tie')) (AlignedVertically ?fork ?calculator)) (or (not (Is ?tie 'tie')) (OnBottomSide ?calculator)) (or (not (Is ?tie 'tie')) (Is ?cup 'cup')) (or (not (Is ?tie 'tie')) (RightOf ?cup ?fork)) (or (not (Is ?tie 'tie')) (OnTopSide ?cup)) (or (not (Is ?tie 'tie')) (Is ?wallet 'wallet')) (or (not (Is ?tie 'tie')) (AlignedVertically ?cup ?wallet)) (or (not (Is ?tie 'tie')) (OnBottomSide ?wallet)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "tie",
+        "stapler",
+        "phone",
+        "cup",
+        "hammer",
+        "fork",
+        "calculator",
+        "wallet",
+        "glove"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a chair. All fruits are positioned to the left of the chair. A cat sits on the chair, holding a red toy car.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'chair') (forall ?f (implies (Is ?f 'fruit') (LeftOf ?f ?c))) (exists ?k (exists ?t (and (Is ?k 'cat') (Is ?t 'toy car') (HasState ?k 'sitting') (On ?k ?c) (HasColor ?t 'red') (Holding ?k ?t)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?f (exists ?k (exists ?t (and (Is ?c 'chair') (or (not (Is ?f 'fruit')) (LeftOf ?f ?c)) (On ?k ?c) (HasState ?k 'sitting') (Holding ?k ?t) (Is ?k 'cat') (HasColor ?t 'red') (Is ?t 'toy car')))))))",
+    "k": 4,
+    "object_classes": [
+        "fruit",
+        "cat",
+        "chair",
+        "toy car"
+    ]
+}

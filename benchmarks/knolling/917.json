@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a hat on the right side and a pizza on the bottom side. For every ruler in the scene, there is a wrench positioned above it and a stapler aligned horizontally with it. Additionally, the ruler is located above the pizza, and the wrench is aligned horizontally with the hat.",
+    "dsl": "(exists ?hat (exists ?pizza (and (Is ?hat 'hat') (OnRightSide ?hat) (Is ?pizza 'pizza') (OnBottomSide ?pizza) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?wrench (exists ?stapler (and (Is ?wrench 'wrench') (Is ?stapler 'stapler') (Above ?wrench ?ruler) (AlignedHorizontally ?stapler ?ruler) (Above ?ruler ?pizza) (AlignedHorizontally ?wrench ?hat)))))))))",
+    "cnf": "(exists ?hat (exists ?pizza (forall ?ruler (exists ?wrench (exists ?stapler (and (Is ?hat 'hat') (OnRightSide ?hat) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?wrench ?hat)) (or (not (Is ?ruler 'ruler')) (Above ?ruler ?pizza)) (or (not (Is ?ruler 'ruler')) (Above ?wrench ?ruler)) (OnBottomSide ?pizza) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?stapler ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?stapler 'stapler')) (or (not (Is ?ruler 'ruler')) (Is ?wrench 'wrench')) (Is ?pizza 'pizza')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "stapler",
+        "wrench",
+        "pizza",
+        "hat"
+    ]
+}

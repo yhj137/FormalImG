@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image where all glasses are black.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?g (implies (Is ?g 'glasses') (HasColor ?g 'black'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?g (or (not (Is ?g 'glasses')) (HasColor ?g 'black'))))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board, it is positioned on the right side of the image and has a bottle located directly above it, sharing the same vertical alignment. To the left of the cutting board lies a knife; to the left of the knife is a fork; to the left of the fork is a spoon; and the spoon is positioned to the right of a wallet.",
+    "dsl": "(forall ?cb (implies (Is ?cb 'cutting_board') (exists ?bottle (exists ?knife (exists ?fork (exists ?spoon (exists ?wallet (and (Is ?bottle 'bottle') (Is ?knife 'knife') (Is ?fork 'fork') (Is ?spoon 'spoon') (Is ?wallet 'wallet') (OnRightSide ?cb) (Above ?bottle ?cb) (AlignedVertically ?bottle ?cb) (LeftOf ?knife ?cb) (LeftOf ?fork ?knife) (LeftOf ?spoon ?fork) (RightOf ?spoon ?wallet)))))))))",
+    "cnf": "(forall ?cb (exists ?bottle (exists ?knife (exists ?fork (exists ?spoon (exists ?wallet (and (or (not (Is ?cb 'cutting_board')) (Is ?bottle 'bottle')) (or (not (Is ?cb 'cutting_board')) (Above ?bottle ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?knife 'knife')) (or (not (Is ?cb 'cutting_board')) (AlignedVertically ?bottle ?cb)) (or (not (Is ?cb 'cutting_board')) (OnRightSide ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?fork 'fork')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?knife ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?wallet 'wallet')) (or (not (Is ?cb 'cutting_board')) (Is ?spoon 'spoon')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?fork ?knife)) (or (not (Is ?cb 'cutting_board')) (RightOf ?spoon ?wallet)) (or (not (Is ?cb 'cutting_board')) (LeftOf ?spoon ?fork)))))))))",
+    "k": 6,
+    "object_classes": [
+        "cutting_board",
+        "fork",
+        "wallet",
+        "knife",
+        "bottle",
+        "spoon"
+    ]
+}

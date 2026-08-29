@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a brown wallet and a white game controller that are aligned horizontally, with the game controller being visually larger than the wallet. A blue cup is situated on the right side of the image, positioned directly below the game controller. Furthermore, a carrot is arranged below the blue cup.",
+    "dsl": "(exists ?wallet (exists ?controller (exists ?cup (exists ?carrot (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?cup 'cup') (Has ?cup 'blue') (Is ?carrot 'carrot') (AlignedHorizontally ?wallet ?controller) (LargerThan ?controller ?wallet) (OnRightSide ?cup) (Below ?cup ?controller) (Below ?carrot ?cup))))))",
+    "cnf": "(exists ?wallet (exists ?controller (exists ?cup (exists ?carrot (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (AlignedHorizontally ?wallet ?controller) (LargerThan ?controller ?wallet) (Has ?controller 'white') (Below ?cup ?controller) (Is ?controller 'game_controller') (OnRightSide ?cup) (Below ?carrot ?cup) (Has ?cup 'blue') (Is ?carrot 'carrot') (Is ?cup 'cup'))))))",
+    "k": 4,
+    "object_classes": [
+        "carrot",
+        "wallet",
+        "cup",
+        "game_controller"
+    ]
+}

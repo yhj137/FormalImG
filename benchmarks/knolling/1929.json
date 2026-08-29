@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a monitor positioned on the left side, with a backpack located below it. To the right of the monitor is a pan, and below the pan is a bowl that is smaller than the pan. Further to the right of the pan lies a book, with a cup positioned below it; the cup is smaller than the book. For every apple in the scene, the apple is located to the right of the book. Below the apple is a donut, followed by a watch below the donut, and finally a glove below the watch. The watch is smaller than the donut, and the glove is situated on the bottom side of the image.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?pan (exists ?bowl (exists ?book (exists ?cup (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?backpack 'backpack') (Below ?backpack ?monitor) (Is ?pan 'pan') (LeftOf ?monitor ?pan) (Is ?bowl 'bowl') (Below ?bowl ?pan) (SmallerThan ?bowl ?pan) (Is ?book 'book') (LeftOf ?pan ?book) (Is ?cup 'cup') (Below ?cup ?book) (SmallerThan ?cup ?book) (forall ?apple (implies (Is ?apple 'apple') (exists ?donut (exists ?watch (exists ?glove (and (Is ?donut 'donut') (Is ?watch 'watch') (Is ?glove 'glove') (LeftOf ?book ?apple) (Below ?donut ?apple) (Below ?watch ?donut) (Below ?glove ?watch) (SmallerThan ?watch ?donut) (OnBottomSide ?glove))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?pan (exists ?bowl (exists ?book (exists ?cup (forall ?apple (exists ?donut (exists ?watch (exists ?glove (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Below ?backpack ?monitor) (LeftOf ?monitor ?pan) (Is ?backpack 'backpack') (Is ?pan 'pan') (Below ?bowl ?pan) (SmallerThan ?bowl ?pan) (Is ?bowl 'bowl') (LeftOf ?pan ?book) (Is ?book 'book') (Below ?cup ?book) (SmallerThan ?cup ?book) (Is ?cup 'cup') (or (not (Is ?apple 'apple')) (LeftOf ?book ?apple)) (or (not (Is ?apple 'apple')) (Is ?glove 'glove')) (or (not (Is ?apple 'apple')) (Below ?donut ?apple)) (or (not (Is ?apple 'apple')) (Is ?watch 'watch')) (or (not (Is ?apple 'apple')) (Below ?glove ?watch)) (or (not (Is ?apple 'apple')) (Is ?donut 'donut')) (or (not (Is ?apple 'apple')) (Below ?watch ?donut)) (or (not (Is ?apple 'apple')) (SmallerThan ?watch ?donut)) (or (not (Is ?apple 'apple')) (OnBottomSide ?glove)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "apple",
+        "watch",
+        "cup",
+        "pan",
+        "backpack",
+        "monitor",
+        "bowl",
+        "glove",
+        "donut"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a black monitor. To the left of the monitor are shoes with a plant inside. A paper book sits next to the monitor with a metal screwdriver on it, and a pink cake topped with a fruit is beside the book.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?s (exists ?p (exists ?b (exists ?sd (exists ?c (exists ?f (and (Is ?m 'monitor') (HasColor ?m 'black') (Is ?s 'shoes') (LeftOf ?s ?m) (Is ?p 'plant') (In ?p ?s) (Is ?b 'book') (HasMaterial ?b 'paper') (NextTo ?b ?m) (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (On ?sd ?b) (Is ?c 'cake') (HasColor ?c 'pink') (NextTo ?c ?b) (Is ?f 'fruit') (On ?f ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?s (exists ?p (exists ?b (exists ?sd (exists ?c (exists ?f (and (Is ?m 'monitor') (HasColor ?m 'black') (LeftOf ?s ?m) (NextTo ?b ?m) (Is ?s 'shoes') (In ?p ?s) (HasMaterial ?b 'paper') (On ?sd ?b) (Is ?p 'plant') (Is ?b 'book') (NextTo ?c ?b) (HasMaterial ?sd 'metal') (HasColor ?c 'pink') (On ?f ?c) (Is ?sd 'screwdriver') (Is ?c 'cake') (Is ?f 'fruit'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "book",
+        "shoes",
+        "plant",
+        "monitor",
+        "cake",
+        "screwdriver"
+    ]
+}

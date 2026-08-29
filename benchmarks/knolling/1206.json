@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The image displays a laptop, a plate, a book, a knife, a ruler, a screwdriver, and a wrench. The laptop is positioned on the left side, and the plate is aligned vertically with the laptop. A book is located to the right of the laptop, and a knife is aligned vertically with the book. To the right of the book is a ruler, and a screwdriver is aligned vertically with the ruler. The screwdriver is located to the left of the wrench. Additionally, the screwdriver is visually smaller than the wrench.",
+    "dsl": "(exists ?laptop (exists ?plate (exists ?book (exists ?knife (exists ?ruler (exists ?screwdriver (exists ?wrench (and (Is ?laptop 'laptop') (Is ?plate 'plate') (Is ?book 'book') (Is ?knife 'knife') (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (Is ?wrench 'wrench') (OnLeftSide ?laptop) (AlignedVertically ?laptop ?plate) (RightOf ?book ?laptop) (AlignedVertically ?book ?knife) (RightOf ?ruler ?book) (AlignedVertically ?ruler ?screwdriver) (LeftOf ?screwdriver ?wrench) (SmallerThan ?screwdriver ?wrench)))))))))",
+    "cnf": "(exists ?laptop (exists ?plate (exists ?book (exists ?knife (exists ?ruler (exists ?screwdriver (exists ?wrench (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (AlignedVertically ?laptop ?plate) (RightOf ?book ?laptop) (Is ?plate 'plate') (Is ?book 'book') (AlignedVertically ?book ?knife) (RightOf ?ruler ?book) (Is ?knife 'knife') (Is ?ruler 'ruler') (AlignedVertically ?ruler ?screwdriver) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?wrench) (SmallerThan ?screwdriver ?wrench) (Is ?wrench 'wrench')))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "knife",
+        "wrench",
+        "ruler",
+        "book",
+        "screwdriver",
+        "laptop"
+    ]
+}

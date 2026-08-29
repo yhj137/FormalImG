@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring an elephant on a bench. Every bird in the scene is perched on the elephant. The elephant holds a basket containing a flower, and a round plate rests on the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (and (Is ?e 'elephant') (forall ?b (implies (Is ?b 'bird') (On ?b ?e))) (exists ?be (exists ?bk (exists ?f (exists ?p (and (Is ?be 'bench') (Is ?bk 'basket') (Is ?f 'flower') (Is ?p 'plate') (On ?e ?be) (Holding ?e ?bk) (In ?f ?bk) (On ?p ?be) (HasShape ?p 'round')))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (forall ?b (exists ?be (exists ?bk (exists ?f (exists ?p (and (Is ?e 'elephant') (or (not (Is ?b 'bird')) (On ?b ?e)) (On ?e ?be) (Holding ?e ?bk) (Is ?be 'bench') (On ?p ?be) (Is ?bk 'basket') (In ?f ?bk) (Is ?p 'plate') (HasShape ?p 'round') (Is ?f 'flower')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "basket",
+        "bird",
+        "flower",
+        "elephant",
+        "plate"
+    ]
+}

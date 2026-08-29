@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image where every elephant wears a yellow hat.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?e (implies (Is ?e 'elephant') (exists ?h (and (Is ?h 'hat') (HasColor ?h 'yellow') (On ?h ?e))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?e (exists ?h (and (or (not (Is ?e 'elephant')) (Is ?h 'hat')) (or (not (Is ?e 'elephant')) (HasColor ?h 'yellow')) (or (not (Is ?e 'elephant')) (On ?h ?e))))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "hat"
+    ]
+}

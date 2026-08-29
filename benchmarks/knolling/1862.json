@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top left side of the scene, there is a black pan. Directly below the pan is a brown cutting board, and these two items are aligned vertically. For every white bowl in the image, which is positioned to the right of the pan and aligned horizontally with it, there is a pink donut located below the bowl that is smaller than it, and a carrot to the right of the donut. Furthermore, for every such bowl, there exists a yellow drill to the right of the cutting board with a ruler below it, as well as a phone to the right of the drill, a brown wallet to the right of the phone, and a red lighter to the right of the wallet, with the phone, wallet, and lighter aligned horizontally.",
+    "dsl": "(exists ?pan (exists ?cb (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?donut (exists ?drill (exists ?ruler (exists ?carrot (exists ?phone (exists ?wallet (exists ?lighter (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (OnLeftSide ?pan) (Is ?cb 'cutting_board') (Has ?cb 'brown') (Below ?cb ?pan) (AlignedVertically ?pan ?cb) (Has ?bowl 'white') (RightOf ?bowl ?pan) (AlignedHorizontally ?pan ?bowl) (Is ?donut 'donut') (Has ?donut 'pink') (Below ?donut ?bowl) (SmallerThan ?donut ?bowl) (Is ?carrot 'carrot') (RightOf ?carrot ?donut) (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?drill ?cb) (Is ?ruler 'ruler') (Below ?ruler ?drill) (Is ?phone 'phone') (RightOf ?phone ?drill) (Is ?wallet 'wallet') (Has ?wallet 'brown') (RightOf ?wallet ?phone) (AlignedHorizontally ?phone ?wallet) (Is ?lighter 'lighter') (Has ?lighter 'red') (RightOf ?lighter ?wallet) (AlignedHorizontally ?wallet ?lighter)))))))))))))",
+    "cnf": "(exists ?pan (exists ?cb (forall ?bowl (exists ?donut (exists ?drill (exists ?ruler (exists ?carrot (exists ?phone (exists ?wallet (exists ?lighter (and (or (not (Is ?bowl 'bowl')) (Is ?pan 'pan')) (or (not (Is ?bowl 'bowl')) (Has ?pan 'black')) (or (not (Is ?bowl 'bowl')) (OnTopSide ?pan)) (or (not (Is ?bowl 'bowl')) (OnLeftSide ?pan)) (or (not (Is ?bowl 'bowl')) (Is ?cb 'cutting_board')) (or (not (Is ?bowl 'bowl')) (Below ?cb ?pan)) (or (not (Is ?bowl 'bowl')) (Has ?cb 'brown')) (or (not (Is ?bowl 'bowl')) (AlignedVertically ?pan ?cb)) (or (not (Is ?bowl 'bowl')) (Has ?bowl 'white')) (or (not (Is ?bowl 'bowl')) (RightOf ?bowl ?pan)) (or (not (Is ?bowl 'bowl')) (RightOf ?drill ?cb)) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?pan ?bowl)) (or (not (Is ?bowl 'bowl')) (Has ?drill 'yellow')) (or (not (Is ?bowl 'bowl')) (Is ?ruler 'ruler')) (or (not (Is ?bowl 'bowl')) (Below ?ruler ?drill)) (or (not (Is ?bowl 'bowl')) (Is ?donut 'donut')) (or (not (Is ?bowl 'bowl')) (Is ?drill 'drill')) (or (not (Is ?bowl 'bowl')) (Is ?phone 'phone')) (or (not (Is ?bowl 'bowl')) (RightOf ?phone ?drill)) (or (not (Is ?bowl 'bowl')) (Has ?donut 'pink')) (or (not (Is ?bowl 'bowl')) (RightOf ?carrot ?donut)) (or (not (Is ?bowl 'bowl')) (Is ?wallet 'wallet')) (or (not (Is ?bowl 'bowl')) (RightOf ?wallet ?phone)) (or (not (Is ?bowl 'bowl')) (Below ?donut ?bowl)) (or (not (Is ?bowl 'bowl')) (Is ?carrot 'carrot')) (or (not (Is ?bowl 'bowl')) (SmallerThan ?donut ?bowl)) (or (not (Is ?bowl 'bowl')) (Has ?wallet 'brown')) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?phone ?wallet)) (or (not (Is ?bowl 'bowl')) (Is ?lighter 'lighter')) (or (not (Is ?bowl 'bowl')) (RightOf ?lighter ?wallet)) (or (not (Is ?bowl 'bowl')) (Has ?lighter 'red')) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?wallet ?lighter)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "phone",
+        "cutting_board",
+        "pan",
+        "drill",
+        "wallet",
+        "lighter",
+        "bowl",
+        "donut"
+    ]
+}

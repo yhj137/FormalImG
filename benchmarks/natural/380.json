@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a fluffy teddy bear with every orange placed on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (forall ?o (implies (Is ?o 'orange') (On ?o ?t))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?o (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (or (not (Is ?o 'orange')) (On ?o ?t))))))",
+    "k": 2,
+    "object_classes": [
+        "teddy bear",
+        "orange"
+    ]
+}

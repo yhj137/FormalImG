@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a tree where every bird is perched. The tree is next to a wardrobe, which is to the left of a chair. A jacket rests on the chair with a hat on top. A hammer is next to the chair, and to the right of the hammer sits a round orange with glasses on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (exists ?c (exists ?j (exists ?h (exists ?hm (exists ?o (exists ?g (and (Is ?t 'tree') (Is ?w 'wardrobe') (Is ?c 'chair') (Is ?j 'jacket') (Is ?h 'hat') (Is ?hm 'hammer') (Is ?o 'orange') (Is ?g 'glasses') (forall ?b (implies (Is ?b 'bird') (On ?b ?t))) (NextTo ?t ?w) (LeftOf ?w ?c) (On ?j ?c) (On ?h ?j) (NextTo ?hm ?c) (HasShape ?o 'round') (RightOf ?o ?hm) (On ?g ?o)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (exists ?c (exists ?j (exists ?h (exists ?hm (exists ?o (exists ?g (forall ?b (and (Is ?t 'tree') (or (not (Is ?b 'bird')) (On ?b ?t)) (NextTo ?t ?w) (Is ?w 'wardrobe') (LeftOf ?w ?c) (Is ?c 'chair') (On ?j ?c) (NextTo ?hm ?c) (Is ?j 'jacket') (On ?h ?j) (Is ?hm 'hammer') (RightOf ?o ?hm) (Is ?h 'hat') (HasShape ?o 'round') (On ?g ?o) (Is ?o 'orange') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "chair",
+        "tree",
+        "glasses",
+        "orange",
+        "jacket",
+        "bird",
+        "hammer",
+        "hat",
+        "wardrobe"
+    ]
+}

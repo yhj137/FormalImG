@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo of a woman holding an orange backpack.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'backpack') (HasColor ?b 'orange') (Holding ?w ?b)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (Holding ?w ?b) (HasColor ?b 'orange') (Is ?b 'backpack')))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "woman"
+    ]
+}

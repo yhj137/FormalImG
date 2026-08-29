@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shirt and a pair of glasses. The shirt, which is positioned on the left side of the layout, is visually larger than the glasses.",
+    "dsl": "(exists ?s (exists ?g (and (Is ?s 'shirt') (Is ?g 'glasses') (OnLeftSide ?s) (LargerThan ?s ?g))))",
+    "cnf": "(exists ?s (exists ?g (and (Is ?s 'shirt') (OnLeftSide ?s) (LargerThan ?s ?g) (Is ?g 'glasses'))))",
+    "k": 2,
+    "object_classes": [
+        "glasses",
+        "shirt"
+    ]
+}

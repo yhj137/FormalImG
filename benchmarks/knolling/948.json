@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a book, a cup, and headphones arranged in a row; the book is positioned on the bottom side, the cup is to the right of the book, and the headphones are to the right of the cup, with all three aligned horizontally. Furthermore, for every calculator in the image, there is a screwdriver aligned horizontally to its right. The calculator is located above the book, and the screwdriver is located above the cup.",
+    "dsl": "(exists ?b (exists ?c (exists ?h (and (Is ?b 'book') (OnBottomSide ?b) (Is ?c 'cup') (RightOf ?c ?b) (AlignedHorizontally ?b ?c) (Is ?h 'headphones') (RightOf ?h ?c) (AlignedHorizontally ?c ?h) (forall ?calc (implies (Is ?calc 'calculator') (exists ?s (and (Is ?s 'screwdriver') (Above ?calc ?b) (Above ?s ?c) (RightOf ?s ?calc) (AlignedHorizontally ?calc ?s)))))))))",
+    "cnf": "(exists ?b (exists ?c (exists ?h (forall ?calc (exists ?s (and (Is ?b 'book') (OnBottomSide ?b) (RightOf ?c ?b) (AlignedHorizontally ?b ?c) (Is ?c 'cup') (or (not (Is ?calc 'calculator')) (Above ?calc ?b)) (RightOf ?h ?c) (or (not (Is ?calc 'calculator')) (Is ?s 'screwdriver')) (or (not (Is ?calc 'calculator')) (Above ?s ?c)) (AlignedHorizontally ?c ?h) (Is ?h 'headphones') (or (not (Is ?calc 'calculator')) (RightOf ?s ?calc)) (or (not (Is ?calc 'calculator')) (AlignedHorizontally ?calc ?s))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "screwdriver",
+        "cup",
+        "calculator",
+        "headphones"
+    ]
+}

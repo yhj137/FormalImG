@@ -1,0 +1,10 @@
+{
+    "prompt": "A cartoon style scene of a child holding a rectangular book.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (and (Is ?c 'child') (Is ?b 'book') (HasShape ?b 'rectangular') (Holding ?c ?b)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (and (Is ?c 'child') (Holding ?c ?b) (HasShape ?b 'rectangular') (Is ?b 'book')))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "child"
+    ]
+}

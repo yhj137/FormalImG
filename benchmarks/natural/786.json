@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a black knife to the right of a rectangular bed, with every tree in the scene positioned next to the bed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?k (exists ?b (and (Is ?m 'man') (Is ?k 'knife') (HasColor ?k 'black') (Holding ?m ?k) (Is ?b 'bed') (HasShape ?b 'rectangular') (RightOf ?m ?b) (forall ?t (implies (Is ?t 'tree') (NextTo ?t ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?k (exists ?b (forall ?t (and (Is ?m 'man') (Holding ?m ?k) (RightOf ?m ?b) (HasColor ?k 'black') (HasShape ?b 'rectangular') (or (not (Is ?t 'tree')) (NextTo ?t ?b)) (Is ?k 'knife') (Is ?b 'bed')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "knife",
+        "bed",
+        "tree"
+    ]
+}

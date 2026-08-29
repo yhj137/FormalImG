@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pizza, a book, a camera, and a stapler. The stapler is located on the bottom side of the layout. The book is positioned to the left of the camera, and the camera is positioned to the left of the stapler. The pizza is larger than the book. Furthermore, for every watch present in the scene, there is a spoon to its left, and the watch is positioned to the left of the pizza.",
+    "dsl": "(exists ?pizza (exists ?book (exists ?camera (exists ?stapler (and (Is ?pizza 'pizza') (Is ?book 'book') (Is ?camera 'camera') (Is ?stapler 'stapler') (OnBottomSide ?stapler) (LeftOf ?book ?camera) (LeftOf ?camera ?stapler) (LargerThan ?pizza ?book) (forall ?watch (implies (Is ?watch 'watch') (exists ?spoon (and (Is ?spoon 'spoon') (LeftOf ?spoon ?watch) (LeftOf ?watch ?pizza))))))))))",
+    "cnf": "(exists ?pizza (exists ?book (exists ?camera (exists ?stapler (forall ?watch (exists ?spoon (and (Is ?pizza 'pizza') (LargerThan ?pizza ?book) (or (not (Is ?watch 'watch')) (LeftOf ?watch ?pizza)) (LeftOf ?book ?camera) (or (not (Is ?watch 'watch')) (LeftOf ?spoon ?watch)) (Is ?book 'book') (Is ?camera 'camera') (LeftOf ?camera ?stapler) (or (not (Is ?watch 'watch')) (Is ?spoon 'spoon')) (OnBottomSide ?stapler) (Is ?stapler 'stapler'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "stapler",
+        "pizza",
+        "watch",
+        "camera",
+        "spoon"
+    ]
+}

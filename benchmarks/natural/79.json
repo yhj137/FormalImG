@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a red hammer.",
+    "dsl": "(exists ?h (and (Is ?h 'hammer') (HasColor ?h 'red')))",
+    "cnf": "(exists ?h (and (Is ?h 'hammer') (HasColor ?h 'red')))",
+    "k": 1,
+    "object_classes": [
+        "hammer"
+    ]
+}

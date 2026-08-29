@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every game controller present, it is located on the bottom side of the image. Above each game controller is a set of keys, and positioned above the keys is a carrot. Additionally, the game controller is larger than the keys.",
+    "dsl": "(forall ?gc (implies (Is ?gc 'game_controller') (exists ?k (exists ?c (and (Is ?k 'keys') (Is ?c 'carrot') (OnBottomSide ?gc) (Above ?k ?gc) (Above ?c ?k) (LargerThan ?gc ?k))))))",
+    "cnf": "(forall ?gc (exists ?k (exists ?c (and (or (not (Is ?gc 'game_controller')) (Is ?k 'keys')) (or (not (Is ?gc 'game_controller')) (Above ?k ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?c 'carrot')) (or (not (Is ?gc 'game_controller')) (Above ?c ?k)) (or (not (Is ?gc 'game_controller')) (OnBottomSide ?gc)) (or (not (Is ?gc 'game_controller')) (LargerThan ?gc ?k))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "carrot",
+        "game_controller"
+    ]
+}

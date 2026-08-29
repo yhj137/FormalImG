@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor present in the scene, there is a specific arrangement of items: a camera is positioned to the right of the monitor, while a wrench is placed below the monitor. A ruler is located to the left of the monitor and is situated on the left side of the image. Furthermore, a donut is located below the camera on the bottom side of the image, and a lemon is placed to the right of the donut. The donut appears visually larger than the lemon.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?camera (exists ?wrench (exists ?ruler (exists ?donut (exists ?lemon (and (Is ?camera 'camera') (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Is ?donut 'donut') (Is ?lemon 'lemon') (RightOf ?camera ?monitor) (Below ?wrench ?monitor) (LeftOf ?ruler ?monitor) (OnLeftSide ?ruler) (Below ?donut ?camera) (OnBottomSide ?donut) (RightOf ?lemon ?donut) (LargerThan ?donut ?lemon))))))))))",
+    "cnf": "(forall ?monitor (exists ?camera (exists ?wrench (exists ?ruler (exists ?donut (exists ?lemon (and (or (not (Is ?monitor 'monitor')) (Is ?camera 'camera')) (or (not (Is ?monitor 'monitor')) (Is ?wrench 'wrench')) (or (not (Is ?monitor 'monitor')) (RightOf ?camera ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?ruler 'ruler')) (or (not (Is ?monitor 'monitor')) (Below ?wrench ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?lemon 'lemon')) (or (not (Is ?monitor 'monitor')) (Below ?donut ?camera)) (or (not (Is ?monitor 'monitor')) (Is ?donut 'donut')) (or (not (Is ?monitor 'monitor')) (LeftOf ?ruler ?monitor)) (or (not (Is ?monitor 'monitor')) (RightOf ?lemon ?donut)) (or (not (Is ?monitor 'monitor')) (OnLeftSide ?ruler)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?donut)) (or (not (Is ?monitor 'monitor')) (LargerThan ?donut ?lemon)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "wrench",
+        "lemon",
+        "camera",
+        "monitor",
+        "donut"
+    ]
+}

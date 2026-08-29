@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag located on the right side. Every pen in the image is black and is positioned to the left of the handbag. A laptop is located to the left of the pen and is visually larger than it. A keyboard is aligned vertically with the laptop. To the left of the laptop are headphones, and a wallet is aligned vertically with the headphones. Further to the left, there is a white cup, and a camera is aligned vertically with the cup. Finally, a carrot is located on the top side of the image, to the left of the camera.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (forall ?pen (implies (Is ?pen 'pen') (exists ?laptop (exists ?keyboard (exists ?headphones (exists ?wallet (exists ?cup (exists ?camera (exists ?carrot (and (Has ?pen 'black') (LeftOf ?pen ?handbag) (Is ?laptop 'laptop') (LargerThan ?laptop ?pen) (LeftOf ?laptop ?pen) (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?laptop) (Is ?headphones 'headphones') (LeftOf ?headphones ?laptop) (Is ?wallet 'wallet') (AlignedVertically ?wallet ?headphones) (Is ?cup 'cup') (Has ?cup 'white') (LeftOf ?cup ?headphones) (Is ?camera 'camera') (AlignedVertically ?camera ?cup) (Is ?carrot 'carrot') (OnTopSide ?carrot) (LeftOf ?carrot ?camera)))))))))))))",
+    "cnf": "(exists ?handbag (forall ?pen (exists ?laptop (exists ?keyboard (exists ?headphones (exists ?wallet (exists ?cup (exists ?camera (exists ?carrot (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnRightSide ?handbag) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?handbag)) (or (not (Is ?pen 'pen')) (Has ?pen 'black')) (or (not (Is ?pen 'pen')) (Is ?laptop 'laptop')) (or (not (Is ?pen 'pen')) (LargerThan ?laptop ?pen)) (or (not (Is ?pen 'pen')) (LeftOf ?laptop ?pen)) (or (not (Is ?pen 'pen')) (Is ?keyboard 'keyboard')) (or (not (Is ?pen 'pen')) (AlignedVertically ?keyboard ?laptop)) (or (not (Is ?pen 'pen')) (Is ?headphones 'headphones')) (or (not (Is ?pen 'pen')) (LeftOf ?headphones ?laptop)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (AlignedVertically ?wallet ?headphones)) (or (not (Is ?pen 'pen')) (Is ?cup 'cup')) (or (not (Is ?pen 'pen')) (LeftOf ?cup ?headphones)) (or (not (Is ?pen 'pen')) (Has ?cup 'white')) (or (not (Is ?pen 'pen')) (Is ?camera 'camera')) (or (not (Is ?pen 'pen')) (AlignedVertically ?camera ?cup)) (or (not (Is ?pen 'pen')) (Is ?carrot 'carrot')) (or (not (Is ?pen 'pen')) (LeftOf ?carrot ?camera)) (or (not (Is ?pen 'pen')) (OnTopSide ?carrot))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "keyboard",
+        "pen",
+        "carrot",
+        "cup",
+        "handbag",
+        "wallet",
+        "camera",
+        "headphones"
+    ]
+}

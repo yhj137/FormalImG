@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene features a desk holding a rectangular keyboard and a pan containing a pizza. A round bowl sits next to the pan. Every chair is positioned to the right of the desk. A tree stands next to the desk with a jacket hanging on it, and beside the tree, an elephant holds a bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?k (exists ?p (exists ?z (and (Is ?d 'desk') (Is ?k 'keyboard') (HasShape ?k 'rectangular') (On ?k ?d) (Is ?p 'pan') (On ?p ?d) (Is ?z 'pizza') (In ?z ?p) (forall ?c (implies (Is ?c 'chair') (RightOf ?c ?d))) (exists ?t (exists ?e (exists ?b (exists ?j (exists ?bo (and (Is ?t 'tree') (NextTo ?t ?d) (Is ?e 'elephant') (NextTo ?e ?t) (Is ?b 'bottle') (Holding ?e ?b) (Is ?j 'jacket') (On ?j ?t) (Is ?bo 'bowl') (HasShape ?bo 'round') (NextTo ?bo ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?k (exists ?p (exists ?z (forall ?c (exists ?t (exists ?e (exists ?b (exists ?j (exists ?bo (and (Is ?d 'desk') (On ?k ?d) (On ?p ?d) (HasShape ?k 'rectangular') (or (not (Is ?c 'chair')) (RightOf ?c ?d)) (Is ?p 'pan') (In ?z ?p) (Is ?k 'keyboard') (NextTo ?t ?d) (NextTo ?bo ?p) (Is ?z 'pizza') (Is ?t 'tree') (NextTo ?e ?t) (HasShape ?bo 'round') (On ?j ?t) (Is ?e 'elephant') (Holding ?e ?b) (Is ?bo 'bowl') (Is ?j 'jacket') (Is ?b 'bottle')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "bottle",
+        "jacket",
+        "pan",
+        "bowl",
+        "desk",
+        "chair",
+        "pizza",
+        "tree",
+        "elephant"
+    ]
+}

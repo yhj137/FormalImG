@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a blooming plant with every flower inside it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (and (Is ?p 'plant') (HasState ?p 'blooming') (forall ?f (implies (Is ?f 'flower') (In ?f ?p))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (forall ?f (and (Is ?p 'plant') (HasState ?p 'blooming') (or (not (Is ?f 'flower')) (In ?f ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "flower",
+        "plant"
+    ]
+}

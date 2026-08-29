@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting of a round basket with a knife to its left. All backpacks are positioned to the right of the basket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (and (Is ?b 'basket') (HasShape ?b 'round') (Is ?k 'knife') (LeftOf ?k ?b) (forall ?p (implies (Is ?p 'backpack') (RightOf ?p ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?k (forall ?p (and (Is ?b 'basket') (HasShape ?b 'round') (LeftOf ?k ?b) (or (not (Is ?p 'backpack')) (RightOf ?p ?b)) (Is ?k 'knife'))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "backpack",
+        "basket"
+    ]
+}

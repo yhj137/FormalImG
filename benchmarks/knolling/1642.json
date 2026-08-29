@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a shirt at the top left. For every shoe in the scene, there is a corresponding set of items arranged relative to it and the shirt: a pair of jeans, a game controller, a stapler, a pan, a pizza, a bowl, and an apple. Specifically, the jeans are positioned below the shirt, and the shoe is below the jeans; these three objects are aligned vertically, with the shirt being larger than the shoe. To the right of the jeans is a game controller, and to the right of the shoe is a stapler. On the right side of the image, a pan is located to the right of the shirt. Below the pan is a pizza (where the pan is larger than the pizza), followed by a bowl below the pizza, and finally an apple below the bowl which is smaller than the bowl.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?jeans (exists ?game_controller (exists ?stapler (exists ?pan (exists ?pizza (exists ?bowl (exists ?apple (and (Is ?jeans 'jeans') (Is ?game_controller 'game_controller') (Is ?stapler 'stapler') (Is ?pan 'pan') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Is ?apple 'apple') (Below ?jeans ?shirt) (Below ?shoe ?jeans) (AlignedVertically ?shirt ?jeans) (AlignedVertically ?jeans ?shoe) (LargerThan ?shirt ?shoe) (RightOf ?game_controller ?jeans) (RightOf ?stapler ?shoe) (RightOf ?pan ?shirt) (OnRightSide ?pan) (Below ?pizza ?pan) (LargerThan ?pan ?pizza) (Below ?bowl ?pizza) (Below ?apple ?bowl) (SmallerThan ?apple ?bowl)))))))))))))",
+    "cnf": "(exists ?shirt (forall ?shoe (exists ?jeans (exists ?game_controller (exists ?stapler (exists ?pan (exists ?pizza (exists ?bowl (exists ?apple (and (Is ?shirt 'shirt') (or (not (Is ?shoe 'shoe')) (Below ?jeans ?shirt)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shirt ?jeans)) (or (not (Is ?shoe 'shoe')) (Is ?apple 'apple')) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?jeans)) (or (not (Is ?shoe 'shoe')) (Is ?jeans 'jeans')) (or (not (Is ?shoe 'shoe')) (LargerThan ?shirt ?shoe)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?jeans ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?bowl 'bowl')) (or (not (Is ?shoe 'shoe')) (Below ?apple ?bowl)) (or (not (Is ?shoe 'shoe')) (Is ?game_controller 'game_controller')) (or (not (Is ?shoe 'shoe')) (RightOf ?pan ?shirt)) (or (not (Is ?shoe 'shoe')) (RightOf ?game_controller ?jeans)) (or (not (Is ?shoe 'shoe')) (Is ?pizza 'pizza')) (or (not (Is ?shoe 'shoe')) (Below ?bowl ?pizza)) (or (not (Is ?shoe 'shoe')) (SmallerThan ?apple ?bowl)) (or (not (Is ?shoe 'shoe')) (Is ?stapler 'stapler')) (or (not (Is ?shoe 'shoe')) (RightOf ?stapler ?shoe)) (or (not (Is ?shoe 'shoe')) (OnRightSide ?pan)) (or (not (Is ?shoe 'shoe')) (Is ?pan 'pan')) (or (not (Is ?shoe 'shoe')) (Below ?pizza ?pan)) (or (not (Is ?shoe 'shoe')) (LargerThan ?pan ?pizza))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "apple",
+        "pizza",
+        "game_controller",
+        "pan",
+        "jeans",
+        "bowl",
+        "shoe",
+        "shirt"
+    ]
+}

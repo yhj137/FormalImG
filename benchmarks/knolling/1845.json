@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans positioned on the top side of the frame. To the left of the jeans, there is a wallet, followed by a set of keys, a mouse, a cup, and a fork, arranged sequentially to the left. The jeans are visually larger than the wallet. To the right of the jeans, there is a tie, followed by a hammer, and then a bottle. The hammer is larger than the bottle. Furthermore, any laptop present in the image is located to the right of the jeans.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (forall ?laptop (implies (Is ?laptop 'laptop') (RightOf ?laptop ?jeans))) (exists ?tie (exists ?hammer (exists ?bottle (exists ?wallet (exists ?keys (exists ?mouse (exists ?cup (exists ?fork (and (Is ?tie 'tie') (Is ?hammer 'hammer') (Is ?bottle 'bottle') (Is ?wallet 'wallet') (Is ?keys 'keys') (Is ?mouse 'mouse') (Is ?cup 'cup') (Is ?fork 'fork') (RightOf ?tie ?jeans) (RightOf ?hammer ?tie) (RightOf ?bottle ?hammer) (LargerThan ?hammer ?bottle) (LeftOf ?wallet ?jeans) (LargerThan ?jeans ?wallet) (LeftOf ?keys ?wallet) (LeftOf ?mouse ?keys) (LeftOf ?cup ?mouse) (LeftOf ?fork ?cup))))))))))))",
+    "cnf": "(exists ?jeans (forall ?laptop (exists ?tie (exists ?hammer (exists ?bottle (exists ?wallet (exists ?keys (exists ?mouse (exists ?cup (exists ?fork (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (or (not (Is ?laptop 'laptop')) (RightOf ?laptop ?jeans)) (RightOf ?tie ?jeans) (LeftOf ?wallet ?jeans) (Is ?tie 'tie') (RightOf ?hammer ?tie) (LargerThan ?jeans ?wallet) (Is ?wallet 'wallet') (Is ?hammer 'hammer') (RightOf ?bottle ?hammer) (LeftOf ?keys ?wallet) (LargerThan ?hammer ?bottle) (Is ?bottle 'bottle') (Is ?keys 'keys') (LeftOf ?mouse ?keys) (Is ?mouse 'mouse') (LeftOf ?cup ?mouse) (Is ?cup 'cup') (LeftOf ?fork ?cup) (Is ?fork 'fork'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "tie",
+        "cup",
+        "hammer",
+        "fork",
+        "wallet",
+        "jeans",
+        "mouse",
+        "bottle"
+    ]
+}

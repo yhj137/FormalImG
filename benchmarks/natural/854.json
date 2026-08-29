@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of every horse stands a man holding a fork, and to the left of the man is a rectangular bench with a backpack resting on it.",
+    "dsl": "(forall ?h (implies (Is ?h 'horse') (exists ?m (exists ?f (exists ?b (exists ?bp (and (Is ?m 'man') (LeftOf ?m ?h) (Is ?f 'fork') (Holding ?m ?f) (Is ?b 'bench') (HasShape ?b 'rectangular') (LeftOf ?b ?m) (Is ?bp 'backpack') (On ?bp ?b))))))))",
+    "cnf": "(forall ?h (exists ?m (exists ?f (exists ?b (exists ?bp (and (or (not (Is ?h 'horse')) (Is ?m 'man')) (or (not (Is ?h 'horse')) (LeftOf ?m ?h)) (or (not (Is ?h 'horse')) (Is ?f 'fork')) (or (not (Is ?h 'horse')) (Holding ?m ?f)) (or (not (Is ?h 'horse')) (Is ?b 'bench')) (or (not (Is ?h 'horse')) (LeftOf ?b ?m)) (or (not (Is ?h 'horse')) (HasShape ?b 'rectangular')) (or (not (Is ?h 'horse')) (Is ?bp 'backpack')) (or (not (Is ?h 'horse')) (On ?bp ?b))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "fork",
+        "horse",
+        "backpack",
+        "man"
+    ]
+}

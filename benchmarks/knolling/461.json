@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill present, it is positioned on the top side of the scene. Each drill is vertically aligned with an apple and a mouse. Additionally, the drill is larger than the apple, and the apple is larger than the mouse.",
+    "dsl": "(and (forall ?d (implies (Is ?d 'drill') (exists ?a (exists ?m (and (Is ?a 'apple') (Is ?m 'mouse') (OnTopSide ?d) (AlignedVertically ?d ?a) (AlignedVertically ?a ?m) (LargerThan ?d ?a) (LargerThan ?a ?m)))))))",
+    "cnf": "(forall ?d (exists ?a (exists ?m (and (or (not (Is ?d 'drill')) (Is ?a 'apple')) (or (not (Is ?d 'drill')) (Is ?m 'mouse')) (or (not (Is ?d 'drill')) (AlignedVertically ?d ?a)) (or (not (Is ?d 'drill')) (OnTopSide ?d)) (or (not (Is ?d 'drill')) (AlignedVertically ?a ?m)) (or (not (Is ?d 'drill')) (LargerThan ?d ?a)) (or (not (Is ?d 'drill')) (LargerThan ?a ?m))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "apple",
+        "mouse"
+    ]
+}

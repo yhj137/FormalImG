@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A table is situated to the left of a bookshelf. All fruits in the image are round and contained within the bookshelf. A child stands to the left of the table, holding a green hat with a ball inside. A laptop is positioned to the right of the child.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?t (and (Is ?bs 'bookshelf') (Is ?t 'table') (LeftOf ?t ?bs) (forall ?f (implies (Is ?f 'fruit') (and (HasShape ?f 'round') (In ?f ?bs)))) (exists ?c (exists ?h (exists ?b (exists ?l (and (Is ?c 'child') (Is ?h 'hat') (Is ?b 'ball') (Is ?l 'laptop') (LeftOf ?c ?t) (HasColor ?h 'green') (Holding ?c ?h) (In ?b ?h) (RightOf ?l ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?t (forall ?f (exists ?c (exists ?h (exists ?b (exists ?l (and (Is ?bs 'bookshelf') (LeftOf ?t ?bs) (or (not (Is ?f 'fruit')) (In ?f ?bs)) (Is ?t 'table') (LeftOf ?c ?t) (or (not (Is ?f 'fruit')) (HasShape ?f 'round')) (Is ?c 'child') (Holding ?c ?h) (RightOf ?l ?c) (HasColor ?h 'green') (In ?b ?h) (Is ?l 'laptop') (Is ?h 'hat') (Is ?b 'ball'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "hat",
+        "ball",
+        "bookshelf",
+        "table",
+        "fruit",
+        "child"
+    ]
+}

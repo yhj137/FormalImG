@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman wearing a red hat, with every butterfly in the scene resting on it. She is holding a teddy bear. To her right is a black monitor with a round cup containing a fork placed on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?h (and (Is ?w 'woman') (Is ?h 'hat') (HasColor ?h 'red') (On ?h ?w) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?h))) (exists ?tb (exists ?m (exists ?c (exists ?f (and (Is ?tb 'teddy bear') (Is ?m 'monitor') (HasColor ?m 'black') (Is ?c 'cup') (HasShape ?c 'round') (Is ?f 'fork') (Holding ?w ?tb) (RightOf ?m ?w) (On ?c ?m) (In ?f ?c))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?h (forall ?b (exists ?tb (exists ?m (exists ?c (exists ?f (and (Is ?w 'woman') (On ?h ?w) (Holding ?w ?tb) (HasColor ?h 'red') (or (not (Is ?b 'butterfly')) (On ?b ?h)) (RightOf ?m ?w) (Is ?tb 'teddy bear') (Is ?h 'hat') (HasColor ?m 'black') (On ?c ?m) (Is ?m 'monitor') (HasShape ?c 'round') (In ?f ?c) (Is ?c 'cup') (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fork",
+        "woman",
+        "monitor",
+        "teddy bear",
+        "cup",
+        "butterfly",
+        "hat"
+    ]
+}

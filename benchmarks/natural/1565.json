@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a lion holding a round pan with a burning fish. To the left of the lion lies a jacket, where every cat sits next to a teddy bear. A backpack with a hammer resting on it is located next to the lion.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?p (exists ?f (exists ?j (exists ?b (exists ?h (and (Is ?l 'lion') (Is ?p 'pan') (HasShape ?p 'round') (Holding ?l ?p) (Is ?f 'fish') (HasState ?f 'burning') (On ?f ?p) (Is ?j 'jacket') (LeftOf ?j ?l) (Is ?b 'backpack') (NextTo ?b ?l) (Is ?h 'hammer') (On ?h ?b) (forall ?c (implies (Is ?c 'cat') (exists ?tb (and (Is ?tb 'teddy bear') (On ?c ?j) (NextTo ?tb ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?p (exists ?f (exists ?j (exists ?b (exists ?h (forall ?c (exists ?tb (and (Is ?l 'lion') (Holding ?l ?p) (LeftOf ?j ?l) (HasShape ?p 'round') (On ?f ?p) (NextTo ?b ?l) (Is ?j 'jacket') (or (not (Is ?c 'cat')) (On ?c ?j)) (Is ?p 'pan') (HasState ?f 'burning') (Is ?b 'backpack') (On ?h ?b) (or (not (Is ?c 'cat')) (Is ?tb 'teddy bear')) (or (not (Is ?c 'cat')) (NextTo ?tb ?c)) (Is ?f 'fish') (Is ?h 'hammer')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fish",
+        "backpack",
+        "teddy bear",
+        "jacket",
+        "hammer",
+        "pan",
+        "lion",
+        "cat"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Next to every monitor stands a man holding a metal pan, with a mirror positioned to his left.",
+    "dsl": "(forall ?m (implies (Is ?m 'monitor') (exists ?p (exists ?pa (exists ?mi (and (Is ?p 'man') (Is ?pa 'pan') (HasMaterial ?pa 'metal') (Is ?mi 'mirror') (NextTo ?p ?m) (Holding ?p ?pa) (LeftOf ?mi ?p)))))))",
+    "cnf": "(forall ?m (exists ?p (exists ?pa (exists ?mi (and (or (not (Is ?m 'monitor')) (Is ?p 'man')) (or (not (Is ?m 'monitor')) (NextTo ?p ?m)) (or (not (Is ?m 'monitor')) (Is ?pa 'pan')) (or (not (Is ?m 'monitor')) (Holding ?p ?pa)) (or (not (Is ?m 'monitor')) (Is ?mi 'mirror')) (or (not (Is ?m 'monitor')) (HasMaterial ?pa 'metal')) (or (not (Is ?m 'monitor')) (LeftOf ?mi ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "pan",
+        "monitor",
+        "mirror"
+    ]
+}

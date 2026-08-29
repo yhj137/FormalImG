@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a laptop, a pair of jeans, a bowl, and an apple. The bowl is positioned to the right of the laptop, while the apple is located to the right of the bowl, sitting on the right side of the image. The jeans are arranged on the bottom side of the scene. For every book present, it is positioned below the laptop and above the jeans. Associated with the book is a wallet to its right, which is aligned horizontally with the book. Additionally, there is a pen above the wallet, a pair of glasses below the wallet, and a lemon to the right of the glasses. The lemon is visually smaller than the apple.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?bowl (exists ?apple (and (Is ?laptop 'laptop') (Is ?jeans 'jeans') (Is ?bowl 'bowl') (Is ?apple 'apple') (RightOf ?bowl ?laptop) (RightOf ?apple ?bowl) (OnRightSide ?apple) (OnBottomSide ?jeans) (forall ?book (implies (Is ?book 'book') (exists ?wallet (exists ?pen (exists ?glasses (exists ?lemon (and (Is ?wallet 'wallet') (Is ?pen 'pen') (Is ?glasses 'glasses') (Is ?lemon 'lemon') (Below ?book ?laptop) (Above ?book ?jeans) (RightOf ?wallet ?book) (AlignedHorizontally ?book ?wallet) (Above ?pen ?wallet) (Below ?glasses ?wallet) (RightOf ?lemon ?glasses) (SmallerThan ?lemon ?apple)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?bowl (exists ?apple (forall ?book (exists ?wallet (exists ?pen (exists ?glasses (exists ?lemon (and (Is ?laptop 'laptop') (RightOf ?bowl ?laptop) (or (not (Is ?book 'book')) (Below ?book ?laptop)) (Is ?bowl 'bowl') (RightOf ?apple ?bowl) (or (not (Is ?book 'book')) (Is ?lemon 'lemon')) (or (not (Is ?book 'book')) (Above ?book ?jeans)) (Is ?apple 'apple') (OnRightSide ?apple) (or (not (Is ?book 'book')) (Is ?glasses 'glasses')) (or (not (Is ?book 'book')) (RightOf ?lemon ?glasses)) (OnBottomSide ?jeans) (or (not (Is ?book 'book')) (RightOf ?wallet ?book)) (or (not (Is ?book 'book')) (SmallerThan ?lemon ?apple)) (or (not (Is ?book 'book')) (Is ?pen 'pen')) (or (not (Is ?book 'book')) (Below ?glasses ?wallet)) (Is ?jeans 'jeans') (or (not (Is ?book 'book')) (Is ?wallet 'wallet')) (or (not (Is ?book 'book')) (AlignedHorizontally ?book ?wallet)) (or (not (Is ?book 'book')) (Above ?pen ?wallet))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "laptop",
+        "glasses",
+        "apple",
+        "pen",
+        "lemon",
+        "jeans",
+        "wallet",
+        "bowl"
+    ]
+}

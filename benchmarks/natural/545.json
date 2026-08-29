@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a table. Every orange is round and placed on the table. A car is located to the right of the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (forall ?o (implies (Is ?o 'orange') (and (HasShape ?o 'round') (On ?o ?t)))) (exists ?c (and (Is ?c 'car') (RightOf ?c ?t))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?o (exists ?c (and (Is ?t 'table') (or (not (Is ?o 'orange')) (On ?o ?t)) (RightOf ?c ?t) (or (not (Is ?o 'orange')) (HasShape ?o 'round')) (Is ?c 'car'))))))",
+    "k": 3,
+    "object_classes": [
+        "orange",
+        "table",
+        "car"
+    ]
+}

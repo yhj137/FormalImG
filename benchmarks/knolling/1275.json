@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a laptop and a pair of jeans. The jeans are positioned on the right side of the image, while the laptop is to the left of the jeans. The layout follows a specific rule for every sock: there is a spoon positioned above it. To the left of the spoon is a camera, above the camera is a wallet, and keys are located above the wallet. Additionally, the laptop is larger than the camera.",
+    "dsl": "(exists ?laptop (exists ?jeans (and (Is ?laptop 'laptop') (Is ?jeans 'jeans') (OnRightSide ?jeans) (LeftOf ?laptop ?jeans) (forall ?sock (implies (Is ?sock 'sock') (exists ?spoon (exists ?camera (exists ?wallet (exists ?keys (and (Is ?spoon 'spoon') (Is ?camera 'camera') (Is ?wallet 'wallet') (Is ?keys 'keys') (Above ?spoon ?sock) (LeftOf ?camera ?spoon) (Above ?wallet ?camera) (Above ?keys ?wallet) (LargerThan ?laptop ?camera)))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (forall ?sock (exists ?spoon (exists ?camera (exists ?wallet (exists ?keys (and (Is ?laptop 'laptop') (LeftOf ?laptop ?jeans) (or (not (Is ?sock 'sock')) (LargerThan ?laptop ?camera)) (OnRightSide ?jeans) (or (not (Is ?sock 'sock')) (Above ?keys ?wallet)) (or (not (Is ?sock 'sock')) (Above ?wallet ?camera)) (Is ?jeans 'jeans') (or (not (Is ?sock 'sock')) (Is ?keys 'keys')) (or (not (Is ?sock 'sock')) (LeftOf ?camera ?spoon)) (or (not (Is ?sock 'sock')) (Is ?wallet 'wallet')) (or (not (Is ?sock 'sock')) (Above ?spoon ?sock)) (or (not (Is ?sock 'sock')) (Is ?camera 'camera')) (or (not (Is ?sock 'sock')) (Is ?spoon 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "sock",
+        "wallet",
+        "jeans",
+        "camera",
+        "spoon"
+    ]
+}

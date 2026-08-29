@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A woman holding a jacket stands to the left of a wooden table, which supports an open laptop and a monitor. To the right of the table is an open refrigerator containing all the fruit. A bicycle sits to the right of the refrigerator, and a bus is located to the left of the woman.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?j (exists ?t (exists ?r (and (Is ?w 'woman') (Is ?j 'jacket') (Is ?t 'table') (Is ?r 'refrigerator') (Holding ?w ?j) (LeftOf ?w ?t) (HasMaterial ?t 'wooden') (HasState ?r 'open') (RightOf ?r ?t) (forall ?f (implies (Is ?f 'fruit') (In ?f ?r))) (exists ?l (exists ?m (exists ?b (exists ?bus (and (Is ?l 'laptop') (Is ?m 'monitor') (Is ?b 'bicycle') (Is ?bus 'bus') (On ?l ?t) (HasState ?l 'open') (On ?m ?t) (RightOf ?b ?r) (LeftOf ?bus ?w))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?j (exists ?t (exists ?r (forall ?f (exists ?l (exists ?m (exists ?b (exists ?bus (and (Is ?w 'woman') (Holding ?w ?j) (LeftOf ?w ?t) (Is ?j 'jacket') (LeftOf ?bus ?w) (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?bus 'bus') (RightOf ?r ?t) (On ?l ?t) (HasState ?r 'open') (or (not (Is ?f 'fruit')) (In ?f ?r)) (On ?m ?t) (Is ?l 'laptop') (HasState ?l 'open') (Is ?r 'refrigerator') (RightOf ?b ?r) (Is ?m 'monitor') (Is ?b 'bicycle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "laptop",
+        "woman",
+        "monitor",
+        "jacket",
+        "table",
+        "refrigerator",
+        "bicycle",
+        "bus"
+    ]
+}

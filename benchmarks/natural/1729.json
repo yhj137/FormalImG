@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene depicts a man next to a wardrobe. A lamp rests on the wardrobe, while a red ball is inside it. A sleeping lion lies to the left of the man. All the fruit in the scene is inside the wardrobe. To the right of the wardrobe is a sliced pizza with a dog beside it, and a yellow umbrella is next to the man.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?w (exists ?l (exists ?b (exists ?li (and (Is ?m 'man') (Is ?w 'wardrobe') (Is ?l 'lamp') (Is ?b 'ball') (Is ?li 'lion') (NextTo ?m ?w) (On ?l ?w) (In ?b ?w) (HasColor ?b 'red') (LeftOf ?li ?m) (HasState ?li 'sleeping') (forall ?f (implies (Is ?f 'fruit') (In ?f ?w))) (exists ?p (exists ?d (exists ?u (and (Is ?p 'pizza') (Is ?d 'dog') (Is ?u 'umbrella') (RightOf ?p ?w) (HasState ?p 'sliced') (NextTo ?d ?p) (NextTo ?u ?m) (HasColor ?u 'yellow'))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?w (exists ?l (exists ?b (exists ?li (forall ?f (exists ?p (exists ?d (exists ?u (and (Is ?m 'man') (NextTo ?m ?w) (LeftOf ?li ?m) (Is ?w 'wardrobe') (On ?l ?w) (NextTo ?u ?m) (Is ?li 'lion') (HasState ?li 'sleeping') (In ?b ?w) (Is ?l 'lamp') (Is ?u 'umbrella') (HasColor ?u 'yellow') (or (not (Is ?f 'fruit')) (In ?f ?w)) (Is ?b 'ball') (HasColor ?b 'red') (RightOf ?p ?w) (Is ?p 'pizza') (HasState ?p 'sliced') (NextTo ?d ?p) (Is ?d 'dog'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "umbrella",
+        "ball",
+        "man",
+        "pizza",
+        "lamp",
+        "lion",
+        "dog",
+        "wardrobe"
+    ]
+}

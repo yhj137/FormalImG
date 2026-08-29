@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a backpack positioned on the top side. Directly below the backpack is a remote, and below the remote is a spoon, with these three items aligned vertically. A glove is placed to the left of the remote, and a ruler is placed to the left of the spoon. Furthermore, for every lighter in the image, it is positioned below the glove.",
+    "dsl": "(exists ?backpack (exists ?remote (exists ?spoon (exists ?glove (exists ?ruler (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?remote 'remote') (Below ?remote ?backpack) (AlignedVertically ?remote ?backpack) (Is ?spoon 'spoon') (Below ?spoon ?remote) (AlignedVertically ?spoon ?remote) (Is ?glove 'glove') (LeftOf ?glove ?remote) (Is ?ruler 'ruler') (LeftOf ?ruler ?spoon) (forall ?lighter (implies (Is ?lighter 'lighter') (Below ?lighter ?glove)))))))))",
+    "cnf": "(exists ?backpack (exists ?remote (exists ?spoon (exists ?glove (exists ?ruler (forall ?lighter (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Below ?remote ?backpack) (AlignedVertically ?remote ?backpack) (Is ?remote 'remote') (Below ?spoon ?remote) (AlignedVertically ?spoon ?remote) (Is ?spoon 'spoon') (LeftOf ?glove ?remote) (LeftOf ?ruler ?spoon) (Is ?glove 'glove') (or (not (Is ?lighter 'lighter')) (Below ?lighter ?glove)) (Is ?ruler 'ruler'))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "backpack",
+        "lighter",
+        "spoon",
+        "glove"
+    ]
+}

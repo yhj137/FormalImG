@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a monitor, a sandwich, and a pair of glasses. The monitor is positioned on the right side of the layout. A sandwich is placed to the left of the monitor, and the glasses are located above the sandwich.",
+    "dsl": "(exists ?monitor (exists ?sandwich (exists ?glasses (and (Is ?monitor 'monitor') (Is ?sandwich 'sandwich') (Is ?glasses 'glasses') (OnRightSide ?monitor) (LeftOf ?sandwich ?monitor) (Above ?glasses ?sandwich)))))",
+    "cnf": "(exists ?monitor (exists ?sandwich (exists ?glasses (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (LeftOf ?sandwich ?monitor) (Is ?sandwich 'sandwich') (Above ?glasses ?sandwich) (Is ?glasses 'glasses')))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "glasses",
+        "sandwich"
+    ]
+}

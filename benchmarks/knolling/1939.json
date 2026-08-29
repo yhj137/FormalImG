@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans located on the bottom side, and a tie aligned vertically with the jeans; the tie is smaller than the jeans. To the left of the jeans is a drill, and below the drill are pliers. On the top side, there is a plate aligned vertically with the jeans. A sandwich is placed below the plate, and the plate is larger than the sandwich. Additionally, for every carrot in the scene, there is a fork to its left, a red cup, and a bottle. The carrot is positioned below the cup, and the bottle is to the left of the cup. The carrots are located to the left of the plate.",
+    "dsl": "(exists ?jeans (exists ?tie (exists ?drill (exists ?pliers (exists ?plate (exists ?sandwich (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?tie 'tie') (SmallerThan ?tie ?jeans) (AlignedVertically ?tie ?jeans) (Is ?drill 'drill') (LeftOf ?drill ?jeans) (Is ?pliers 'pliers') (Below ?pliers ?drill) (Is ?plate 'plate') (OnTopSide ?plate) (AlignedVertically ?plate ?jeans) (Is ?sandwich 'sandwich') (Below ?sandwich ?plate) (LargerThan ?plate ?sandwich) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?fork (exists ?cup (exists ?bottle (and (Is ?fork 'fork') (Is ?cup 'cup') (Has ?cup 'red') (Is ?bottle 'bottle') (LeftOf ?carrot ?plate) (LeftOf ?fork ?carrot) (Below ?carrot ?cup) (LeftOf ?bottle ?cup))))))))))))))",
+    "cnf": "(exists ?jeans (exists ?tie (exists ?drill (exists ?pliers (exists ?plate (exists ?sandwich (forall ?carrot (exists ?fork (exists ?cup (exists ?bottle (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (SmallerThan ?tie ?jeans) (AlignedVertically ?tie ?jeans) (Is ?tie 'tie') (LeftOf ?drill ?jeans) (AlignedVertically ?plate ?jeans) (Is ?drill 'drill') (Below ?pliers ?drill) (OnTopSide ?plate) (Below ?sandwich ?plate) (Is ?pliers 'pliers') (Is ?plate 'plate') (LargerThan ?plate ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?plate)) (or (not (Is ?carrot 'carrot')) (Is ?bottle 'bottle')) (or (not (Is ?carrot 'carrot')) (LeftOf ?fork ?carrot)) (or (not (Is ?carrot 'carrot')) (Has ?cup 'red')) (or (not (Is ?carrot 'carrot')) (LeftOf ?bottle ?cup)) (or (not (Is ?carrot 'carrot')) (Below ?carrot ?cup)) (or (not (Is ?carrot 'carrot')) (Is ?fork 'fork')) (or (not (Is ?carrot 'carrot')) (Is ?cup 'cup')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "plate",
+        "carrot",
+        "cup",
+        "drill",
+        "fork",
+        "jeans",
+        "bottle",
+        "sandwich"
+    ]
+}

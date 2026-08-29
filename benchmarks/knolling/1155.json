@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag located on the left side and a shirt on the bottom side, which are aligned vertically. There is also a pizza and a calculator; the handbag is larger than the pizza, and the pizza is vertically aligned with the calculator. Additionally, for every sandwich in the image, there is a fork that is aligned vertically with the sandwich, and this fork is larger than the calculator.",
+    "dsl": "(exists ?handbag (exists ?shirt (exists ?pizza (exists ?calculator (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?shirt 'shirt') (OnBottomSide ?shirt) (Is ?pizza 'pizza') (Is ?calculator 'calculator') (AlignedVertically ?handbag ?shirt) (LargerThan ?handbag ?pizza) (AlignedVertically ?pizza ?calculator) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?fork (and (Is ?fork 'fork') (AlignedVertically ?sandwich ?fork) (LargerThan ?fork ?calculator))))))))))",
+    "cnf": "(exists ?handbag (exists ?shirt (exists ?pizza (exists ?calculator (forall ?sandwich (exists ?fork (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (AlignedVertically ?handbag ?shirt) (LargerThan ?handbag ?pizza) (OnBottomSide ?shirt) (Is ?pizza 'pizza') (AlignedVertically ?pizza ?calculator) (Is ?shirt 'shirt') (Is ?calculator 'calculator') (or (not (Is ?sandwich 'sandwich')) (LargerThan ?fork ?calculator)) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?sandwich ?fork)) (or (not (Is ?sandwich 'sandwich')) (Is ?fork 'fork')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pizza",
+        "fork",
+        "handbag",
+        "calculator",
+        "sandwich",
+        "shirt"
+    ]
+}

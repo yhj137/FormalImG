@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is holding a spoon, with an open laptop on them and a bottle next to the laptop. Every lion is located to the right of the person, with a plant next to each one.",
+    "dsl": "(exists ?p (exists ?s (exists ?l (exists ?b (and (Is ?p 'person') (Is ?s 'spoon') (Is ?l 'laptop') (Is ?b 'bottle') (Holding ?p ?s) (On ?l ?p) (HasState ?l 'open') (NextTo ?b ?l) (forall ?li (implies (Is ?li 'lion') (exists ?pl (and (Is ?pl 'plant') (NextTo ?pl ?li) (RightOf ?li ?p))))))))))",
+    "cnf": "(exists ?p (exists ?s (exists ?l (exists ?b (forall ?li (exists ?pl (and (Is ?p 'person') (Holding ?p ?s) (On ?l ?p) (Is ?s 'spoon') (or (not (Is ?li 'lion')) (RightOf ?li ?p)) (Is ?l 'laptop') (HasState ?l 'open') (or (not (Is ?li 'lion')) (NextTo ?pl ?li)) (NextTo ?b ?l) (or (not (Is ?li 'lion')) (Is ?pl 'plant')) (Is ?b 'bottle'))))))))",
+    "k": 6,
+    "object_classes": [
+        "person",
+        "spoon",
+        "bottle",
+        "laptop",
+        "plant",
+        "lion"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a metal wardrobe containing a shirt. To the right of the wardrobe is a child holding a fork, and every knife is placed on the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (exists ?s (and (Is ?s 'shirt') (In ?s ?w))) (exists ?c (and (Is ?c 'child') (RightOf ?c ?w) (forall ?k (implies (Is ?k 'knife') (On ?k ?w))) (exists ?f (and (Is ?f 'fork') (Holding ?c ?f))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?s (exists ?c (forall ?k (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (In ?s ?w) (RightOf ?c ?w) (Is ?s 'shirt') (or (not (Is ?k 'knife')) (On ?k ?w)) (Is ?c 'child') (Holding ?c ?f) (Is ?f 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "knife",
+        "shirt",
+        "wardrobe",
+        "child"
+    ]
+}

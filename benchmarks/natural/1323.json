@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden bench with a lion next to it and an orange resting on top. To the right of the bench stands a wardrobe containing every apple. Further to the right of the wardrobe is a red car with a book inside.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?l (exists ?w (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?l 'lion') (NextTo ?l ?b) (Is ?w 'wardrobe') (RightOf ?w ?b) (forall ?a (implies (Is ?a 'apple') (In ?a ?w))) (exists ?o (exists ?c (exists ?bk (and (Is ?o 'orange') (On ?o ?b) (Is ?c 'car') (HasColor ?c 'red') (RightOf ?c ?w) (Is ?bk 'book') (In ?bk ?c))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?l (exists ?w (forall ?a (exists ?o (exists ?c (exists ?bk (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (NextTo ?l ?b) (RightOf ?w ?b) (Is ?l 'lion') (On ?o ?b) (Is ?w 'wardrobe') (or (not (Is ?a 'apple')) (In ?a ?w)) (Is ?o 'orange') (RightOf ?c ?w) (HasColor ?c 'red') (In ?bk ?c) (Is ?c 'car') (Is ?bk 'book'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "book",
+        "orange",
+        "car",
+        "lion",
+        "apple",
+        "wardrobe"
+    ]
+}

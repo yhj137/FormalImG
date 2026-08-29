@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the right side of the scene. For every sock present, it is positioned to the left of the suitcase. There is a phone, which is smaller than the suitcase, also located to the left of it. A pair of headphones is found on the top side of the image, to the left of the suitcase. Additionally, a cutting board is placed to the left of the suitcase, and a sandwich is positioned to the left of the cutting board.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (forall ?sock (implies (Is ?sock 'sock') (LeftOf ?sock ?suitcase))) (exists ?phone (exists ?headphones (exists ?board (exists ?sandwich (and (Is ?phone 'phone') (Is ?headphones 'headphones') (Is ?board 'cutting_board') (Is ?sandwich 'sandwich') (SmallerThan ?phone ?suitcase) (LeftOf ?phone ?suitcase) (OnTopSide ?headphones) (LeftOf ?headphones ?suitcase) (LeftOf ?board ?suitcase) (LeftOf ?sandwich ?board))))))))",
+    "cnf": "(exists ?suitcase (forall ?sock (exists ?phone (exists ?headphones (exists ?board (exists ?sandwich (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?suitcase)) (SmallerThan ?phone ?suitcase) (LeftOf ?phone ?suitcase) (Is ?phone 'phone') (LeftOf ?headphones ?suitcase) (LeftOf ?board ?suitcase) (OnTopSide ?headphones) (Is ?board 'cutting_board') (LeftOf ?sandwich ?board) (Is ?headphones 'headphones') (Is ?sandwich 'sandwich'))))))))",
+    "k": 6,
+    "object_classes": [
+        "sock",
+        "phone",
+        "suitcase",
+        "sandwich",
+        "cutting_board",
+        "headphones"
+    ]
+}

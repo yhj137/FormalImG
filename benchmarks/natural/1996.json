@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman wearing a shirt, with a plastic keyboard resting on her. A fish sandwich sits on the keyboard. A cat is located to the woman's right, while a red umbrella is positioned above her. To her left, there is a cake topped with an orange. Every butterfly in the scene is to the left of the umbrella.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?sh (exists ?k (exists ?sand (exists ?f (exists ?c (exists ?u (exists ?cake (exists ?o (and (Is ?w 'woman') (Is ?sh 'shirt') (On ?sh ?w) (Is ?k 'keyboard') (HasMaterial ?k 'plastic') (On ?k ?w) (Is ?sand 'sandwich') (On ?sand ?k) (Is ?f 'fish') (In ?f ?sand) (Is ?c 'cat') (RightOf ?c ?w) (Is ?u 'umbrella') (HasColor ?u 'red') (Above ?u ?w) (Is ?cake 'cake') (LeftOf ?cake ?w) (Is ?o 'orange') (On ?o ?cake) (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?u))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?sh (exists ?k (exists ?sand (exists ?f (exists ?c (exists ?u (exists ?cake (exists ?o (forall ?b (and (Is ?w 'woman') (On ?sh ?w) (On ?k ?w) (Is ?sh 'shirt') (RightOf ?c ?w) (HasMaterial ?k 'plastic') (On ?sand ?k) (Above ?u ?w) (Is ?c 'cat') (Is ?k 'keyboard') (Is ?sand 'sandwich') (In ?f ?sand) (LeftOf ?cake ?w) (HasColor ?u 'red') (or (not (Is ?b 'butterfly')) (LeftOf ?b ?u)) (Is ?f 'fish') (Is ?cake 'cake') (On ?o ?cake) (Is ?u 'umbrella') (Is ?o 'orange')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "cat",
+        "sandwich",
+        "fish",
+        "cake",
+        "butterfly",
+        "shirt",
+        "woman",
+        "orange"
+    ]
+}

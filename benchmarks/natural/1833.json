@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting. For every flower, there is an open brown wardrobe it rests on. A child is next to the wardrobe, and a teddy bear is on it. To the right of the wardrobe is a white refrigerator, with a sleeping lion next to it. A fish and a laptop are on the refrigerator, and some fruit is next to the laptop. A hammer is to the right of the lion.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?fl (implies (Is ?fl 'flower') (exists ?w (exists ?c (exists ?t (exists ?r (exists ?l (exists ?fi (exists ?la (exists ?fr (exists ?h (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (HasState ?w 'open') (On ?fl ?w) (Is ?c 'child') (NextTo ?c ?w) (Is ?t 'teddy bear') (On ?t ?w) (Is ?r 'refrigerator') (HasColor ?r 'white') (RightOf ?r ?w) (Is ?l 'lion') (HasState ?l 'sleeping') (NextTo ?l ?r) (Is ?fi 'fish') (On ?fi ?r) (Is ?la 'laptop') (On ?la ?r) (Is ?fr 'fruit') (NextTo ?fr ?la) (Is ?h 'hammer') (RightOf ?h ?l))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?fl (exists ?w (exists ?c (exists ?t (exists ?r (exists ?l (exists ?fi (exists ?la (exists ?fr (exists ?h (and (or (not (Is ?fl 'flower')) (Is ?w 'wardrobe')) (or (not (Is ?fl 'flower')) (HasColor ?w 'brown')) (or (not (Is ?fl 'flower')) (HasState ?w 'open')) (or (not (Is ?fl 'flower')) (On ?fl ?w)) (or (not (Is ?fl 'flower')) (NextTo ?c ?w)) (or (not (Is ?fl 'flower')) (Is ?c 'child')) (or (not (Is ?fl 'flower')) (On ?t ?w)) (or (not (Is ?fl 'flower')) (Is ?t 'teddy bear')) (or (not (Is ?fl 'flower')) (RightOf ?r ?w)) (or (not (Is ?fl 'flower')) (Is ?r 'refrigerator')) (or (not (Is ?fl 'flower')) (HasColor ?r 'white')) (or (not (Is ?fl 'flower')) (Is ?l 'lion')) (or (not (Is ?fl 'flower')) (NextTo ?l ?r)) (or (not (Is ?fl 'flower')) (HasState ?l 'sleeping')) (or (not (Is ?fl 'flower')) (Is ?fi 'fish')) (or (not (Is ?fl 'flower')) (On ?fi ?r)) (or (not (Is ?fl 'flower')) (RightOf ?h ?l)) (or (not (Is ?fl 'flower')) (Is ?la 'laptop')) (or (not (Is ?fl 'flower')) (On ?la ?r)) (or (not (Is ?fl 'flower')) (Is ?h 'hammer')) (or (not (Is ?fl 'flower')) (Is ?fr 'fruit')) (or (not (Is ?fl 'flower')) (NextTo ?fr ?la))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "teddy bear",
+        "lion",
+        "laptop",
+        "flower",
+        "wardrobe",
+        "hammer",
+        "refrigerator",
+        "fruit",
+        "fish",
+        "child"
+    ]
+}

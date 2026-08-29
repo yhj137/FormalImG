@@ -1,0 +1,13 @@
+{
+    "prompt": "For every pair of jeans, it is located on the left side of the scene, and there is a keyboard aligned horizontally with it. Below the jeans is a wallet, which is vertically aligned with the jeans. There is also a mouse positioned below the keyboard; the keyboard is larger than the mouse. Finally, a knife is located on the bottom side of the image, situated below the mouse and aligned vertically with it.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?keyboard (exists ?wallet (exists ?mouse (exists ?knife (and (Is ?keyboard 'keyboard') (Is ?wallet 'wallet') (Is ?mouse 'mouse') (Is ?knife 'knife') (OnLeftSide ?jeans) (AlignedHorizontally ?jeans ?keyboard) (Below ?wallet ?jeans) (AlignedVertically ?jeans ?wallet) (LargerThan ?keyboard ?mouse) (Below ?mouse ?keyboard) (OnBottomSide ?knife) (Below ?knife ?mouse) (AlignedVertically ?mouse ?knife)))))))))",
+    "cnf": "(forall ?jeans (exists ?keyboard (exists ?wallet (exists ?mouse (exists ?knife (and (or (not (Is ?jeans 'jeans')) (Is ?keyboard 'keyboard')) (or (not (Is ?jeans 'jeans')) (Is ?wallet 'wallet')) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?jeans ?keyboard)) (or (not (Is ?jeans 'jeans')) (Is ?mouse 'mouse')) (or (not (Is ?jeans 'jeans')) (Below ?wallet ?jeans)) (or (not (Is ?jeans 'jeans')) (OnLeftSide ?jeans)) (or (not (Is ?jeans 'jeans')) (LargerThan ?keyboard ?mouse)) (or (not (Is ?jeans 'jeans')) (Is ?knife 'knife')) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?jeans ?wallet)) (or (not (Is ?jeans 'jeans')) (Below ?mouse ?keyboard)) (or (not (Is ?jeans 'jeans')) (OnBottomSide ?knife)) (or (not (Is ?jeans 'jeans')) (Below ?knife ?mouse)) (or (not (Is ?jeans 'jeans')) (AlignedVertically ?mouse ?knife))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "wallet",
+        "jeans",
+        "mouse",
+        "knife"
+    ]
+}

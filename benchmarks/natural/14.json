@@ -1,0 +1,9 @@
+{
+    "prompt": "A rectangular house in a cyberpunk style scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (HasShape ?h 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (HasShape ?h 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "house"
+    ]
+}

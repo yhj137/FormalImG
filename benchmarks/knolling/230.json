@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a brown handbag and a white mouse, with the handbag appearing visually larger than the mouse.",
+    "dsl": "(exists ?h (exists ?m (and (Is ?h 'handbag') (Has ?h 'brown') (Is ?m 'mouse') (Has ?m 'white') (LargerThan ?h ?m))))",
+    "cnf": "(exists ?h (exists ?m (and (Is ?h 'handbag') (Has ?h 'brown') (LargerThan ?h ?m) (Has ?m 'white') (Is ?m 'mouse'))))",
+    "k": 2,
+    "object_classes": [
+        "handbag",
+        "mouse"
+    ]
+}

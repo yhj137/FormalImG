@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A book is positioned on the right side of the layout. Directly below the book is a calculator, which is situated on the bottom side of the image; these two objects are aligned vertically. For every set of keys present in the scene, it is placed above the book and aligned vertically with it. Furthermore, there is a lemon located above the keys, maintaining the same vertical alignment chain.",
+    "dsl": "(exists ?book (exists ?calculator (and (Is ?book 'book') (OnRightSide ?book) (Is ?calculator 'calculator') (OnBottomSide ?calculator) (Below ?calculator ?book) (AlignedVertically ?book ?calculator) (forall ?keys (implies (Is ?keys 'keys') (exists ?lemon (and (Is ?lemon 'lemon') (Above ?keys ?book) (AlignedVertically ?keys ?book) (Above ?lemon ?keys) (AlignedVertically ?lemon ?keys))))))))",
+    "cnf": "(exists ?book (exists ?calculator (forall ?keys (exists ?lemon (and (Is ?book 'book') (OnRightSide ?book) (Below ?calculator ?book) (AlignedVertically ?book ?calculator) (OnBottomSide ?calculator) (or (not (Is ?keys 'keys')) (Above ?keys ?book)) (Is ?calculator 'calculator') (or (not (Is ?keys 'keys')) (AlignedVertically ?keys ?book)) (or (not (Is ?keys 'keys')) (Is ?lemon 'lemon')) (or (not (Is ?keys 'keys')) (Above ?lemon ?keys)) (or (not (Is ?keys 'keys')) (AlignedVertically ?lemon ?keys)))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "keys",
+        "calculator",
+        "lemon"
+    ]
+}

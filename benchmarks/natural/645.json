@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every umbrella sits on a wooden desk. Next to the desk is a wardrobe, and a woman is to the left of the wardrobe.",
+    "dsl": "(forall ?u (implies (Is ?u 'umbrella') (exists ?d (exists ?wd (exists ?w (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?wd 'wardrobe') (Is ?w 'woman') (On ?u ?d) (NextTo ?d ?wd) (LeftOf ?w ?wd)))))))",
+    "cnf": "(forall ?u (exists ?d (exists ?wd (exists ?w (and (or (not (Is ?u 'umbrella')) (Is ?d 'desk')) (or (not (Is ?u 'umbrella')) (HasMaterial ?d 'wooden')) (or (not (Is ?u 'umbrella')) (On ?u ?d)) (or (not (Is ?u 'umbrella')) (Is ?wd 'wardrobe')) (or (not (Is ?u 'umbrella')) (NextTo ?d ?wd)) (or (not (Is ?u 'umbrella')) (Is ?w 'woman')) (or (not (Is ?u 'umbrella')) (LeftOf ?w ?wd)))))))",
+    "k": 4,
+    "object_classes": [
+        "umbrella",
+        "desk",
+        "woman",
+        "wardrobe"
+    ]
+}

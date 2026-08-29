@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene features a rectangular wardrobe with a phone resting on it. A woman stands to the right of the wardrobe. To her right is a car, and every bookshelf in the scene is also located to her right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?wd (exists ?w (and (Is ?wd 'wardrobe') (HasShape ?wd 'rectangular') (Is ?w 'woman') (RightOf ?w ?wd) (forall ?b (implies (Is ?b 'bookshelf') (RightOf ?b ?w))) (exists ?p (and (Is ?p 'phone') (On ?p ?wd))) (exists ?c (and (Is ?c 'car') (RightOf ?c ?w)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?wd (exists ?w (forall ?b (exists ?p (exists ?c (and (Is ?wd 'wardrobe') (HasShape ?wd 'rectangular') (RightOf ?w ?wd) (On ?p ?wd) (Is ?w 'woman') (or (not (Is ?b 'bookshelf')) (RightOf ?b ?w)) (Is ?p 'phone') (RightOf ?c ?w) (Is ?c 'car'))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "wardrobe",
+        "woman",
+        "bookshelf",
+        "car"
+    ]
+}

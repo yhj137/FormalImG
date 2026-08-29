@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing eight distinct items. A suitcase is positioned on the right side of the layout. Above the suitcase is a shoe, and the suitcase is physically larger than the shoe. To the left of the shoe is a sock, and to the left of the sock is a tie; the tie, sock, and shoe are aligned horizontally. Above the tie sits a wallet, with a phone placed to its left, and these two are also aligned horizontally. Additionally, a pair of pliers is located to the left of the suitcase, and a screwdriver is to the left of the pliers, with both tools aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?sock (exists ?tie (exists ?wallet (exists ?phone (exists ?pliers (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?tie 'tie') (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?pliers 'pliers') (Is ?screwdriver 'screwdriver') (OnRightSide ?suitcase) (LargerThan ?suitcase ?shoe) (Above ?shoe ?suitcase) (LeftOf ?sock ?shoe) (LeftOf ?tie ?sock) (AlignedHorizontally ?tie ?sock) (AlignedHorizontally ?sock ?shoe) (Above ?wallet ?tie) (LeftOf ?phone ?wallet) (AlignedHorizontally ?phone ?wallet) (LeftOf ?pliers ?suitcase) (LeftOf ?screwdriver ?pliers) (AlignedHorizontally ?screwdriver ?pliers))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?sock (exists ?tie (exists ?wallet (exists ?phone (exists ?pliers (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LargerThan ?suitcase ?shoe) (Above ?shoe ?suitcase) (Is ?shoe 'shoe') (LeftOf ?pliers ?suitcase) (LeftOf ?sock ?shoe) (Is ?pliers 'pliers') (LeftOf ?screwdriver ?pliers) (AlignedHorizontally ?sock ?shoe) (Is ?sock 'sock') (LeftOf ?tie ?sock) (AlignedHorizontally ?screwdriver ?pliers) (Is ?screwdriver 'screwdriver') (AlignedHorizontally ?tie ?sock) (Is ?tie 'tie') (Above ?wallet ?tie) (Is ?wallet 'wallet') (LeftOf ?phone ?wallet) (AlignedHorizontally ?phone ?wallet) (Is ?phone 'phone'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "sock",
+        "phone",
+        "screwdriver",
+        "wallet",
+        "suitcase",
+        "shoe"
+    ]
+}

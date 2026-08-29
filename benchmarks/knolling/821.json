@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue bottle and a pizza aligned horizontally. Below them, there is a book, a ruler, and a black wallet, which are also aligned horizontally with one another. The bottle is located above the wallet, while the pizza is located above the book. Additionally, the wallet is visually smaller than the book.",
+    "dsl": "(exists ?bottle (exists ?pizza (exists ?book (exists ?ruler (exists ?wallet (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?pizza 'pizza') (Is ?book 'book') (Is ?ruler 'ruler') (Is ?wallet 'wallet') (Has ?wallet 'black') (AlignedHorizontally ?bottle ?pizza) (AlignedHorizontally ?book ?ruler) (AlignedHorizontally ?book ?wallet) (Above ?bottle ?wallet) (Above ?pizza ?book) (SmallerThan ?wallet ?book)))))))",
+    "cnf": "(exists ?bottle (exists ?pizza (exists ?book (exists ?ruler (exists ?wallet (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (AlignedHorizontally ?bottle ?pizza) (Above ?bottle ?wallet) (Is ?pizza 'pizza') (Above ?pizza ?book) (AlignedHorizontally ?book ?wallet) (SmallerThan ?wallet ?book) (AlignedHorizontally ?book ?ruler) (Has ?wallet 'black') (Is ?book 'book') (Is ?ruler 'ruler') (Is ?wallet 'wallet')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "book",
+        "pizza",
+        "wallet",
+        "bottle"
+    ]
+}

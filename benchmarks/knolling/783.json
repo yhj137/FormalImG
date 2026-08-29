@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a gray laptop, a pair of jeans, and a wallet. The jeans are placed on the bottom side of the image, while the laptop is positioned above the jeans. The wallet is located to the right of the jeans. The laptop is larger than the wallet. Furthermore, for every shirt present in the arrangement, it is placed to the right of the laptop.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?wallet (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Is ?wallet 'wallet') (Above ?laptop ?jeans) (RightOf ?wallet ?jeans) (LargerThan ?laptop ?wallet) (forall ?shirt (implies (Is ?shirt 'shirt') (RightOf ?shirt ?laptop)))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?wallet (forall ?shirt (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Above ?laptop ?jeans) (LargerThan ?laptop ?wallet) (OnBottomSide ?jeans) (RightOf ?wallet ?jeans) (or (not (Is ?shirt 'shirt')) (RightOf ?shirt ?laptop)) (Is ?jeans 'jeans') (Is ?wallet 'wallet'))))))",
+    "k": 4,
+    "object_classes": [
+        "wallet",
+        "laptop",
+        "jeans",
+        "shirt"
+    ]
+}

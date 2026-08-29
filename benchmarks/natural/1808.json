@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene inside a house features a red sofa with a man next to it. To the right of the sofa is a bench holding a black keyboard and a screwdriver placed next to each other. A sandwich sits to the left of the keyboard, while a blue fish lies to the right of the screwdriver. Beside the bench, a bird perches on a rock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?m (exists ?b (exists ?k (exists ?sc (exists ?sa (exists ?f (exists ?r (exists ?bi (and (Is ?h 'house') (Is ?s 'sofa') (HasColor ?s 'red') (In ?s ?h) (Is ?m 'man') (NextTo ?m ?s) (Is ?b 'bench') (RightOf ?b ?s) (Is ?k 'keyboard') (HasColor ?k 'black') (On ?k ?b) (Is ?sc 'screwdriver') (On ?sc ?b) (NextTo ?sc ?k) (Is ?sa 'sandwich') (LeftOf ?sa ?k) (Is ?f 'fish') (HasColor ?f 'blue') (RightOf ?f ?sc) (Is ?r 'rock') (NextTo ?r ?b) (Is ?bi 'bird') (On ?bi ?r)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?m (exists ?b (exists ?k (exists ?sc (exists ?sa (exists ?f (exists ?r (exists ?bi (and (Is ?h 'house') (In ?s ?h) (HasColor ?s 'red') (NextTo ?m ?s) (Is ?s 'sofa') (RightOf ?b ?s) (Is ?m 'man') (Is ?b 'bench') (On ?k ?b) (On ?sc ?b) (HasColor ?k 'black') (NextTo ?sc ?k) (NextTo ?r ?b) (Is ?sc 'screwdriver') (Is ?k 'keyboard') (LeftOf ?sa ?k) (RightOf ?f ?sc) (Is ?r 'rock') (On ?bi ?r) (Is ?sa 'sandwich') (HasColor ?f 'blue') (Is ?bi 'bird') (Is ?f 'fish')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "sofa",
+        "bench",
+        "fish",
+        "man",
+        "rock",
+        "bird",
+        "sandwich",
+        "screwdriver",
+        "keyboard"
+    ]
+}

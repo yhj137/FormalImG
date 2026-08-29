@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is defined relative to every monitor in the scene: a calculator is placed below the monitor and is smaller than it. A ruler is arranged to the left of the calculator, and a bowl is placed below the ruler. To the left of the bowl sits a pizza, with a tie positioned below the pizza. Finally, a glove is located to the left of the tie, appearing on the bottom side of the image.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?calculator (exists ?ruler (exists ?bowl (exists ?pizza (exists ?tie (exists ?glove (and (Is ?calculator 'calculator') (Is ?ruler 'ruler') (Is ?bowl 'bowl') (Is ?pizza 'pizza') (Is ?tie 'tie') (Is ?glove 'glove') (Below ?calculator ?monitor) (SmallerThan ?calculator ?monitor) (LeftOf ?ruler ?calculator) (Below ?bowl ?ruler) (LeftOf ?pizza ?bowl) (Below ?tie ?pizza) (LeftOf ?glove ?tie) (OnBottomSide ?glove)))))))))))",
+    "cnf": "(forall ?monitor (exists ?calculator (exists ?ruler (exists ?bowl (exists ?pizza (exists ?tie (exists ?glove (and (or (not (Is ?monitor 'monitor')) (Is ?calculator 'calculator')) (or (not (Is ?monitor 'monitor')) (Is ?ruler 'ruler')) (or (not (Is ?monitor 'monitor')) (Below ?calculator ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?bowl 'bowl')) (or (not (Is ?monitor 'monitor')) (LeftOf ?ruler ?calculator)) (or (not (Is ?monitor 'monitor')) (Is ?glove 'glove')) (or (not (Is ?monitor 'monitor')) (SmallerThan ?calculator ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?pizza 'pizza')) (or (not (Is ?monitor 'monitor')) (Below ?bowl ?ruler)) (or (not (Is ?monitor 'monitor')) (Is ?tie 'tie')) (or (not (Is ?monitor 'monitor')) (LeftOf ?glove ?tie)) (or (not (Is ?monitor 'monitor')) (LeftOf ?pizza ?bowl)) (or (not (Is ?monitor 'monitor')) (Below ?tie ?pizza)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?glove))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "tie",
+        "pizza",
+        "calculator",
+        "monitor",
+        "bowl",
+        "glove"
+    ]
+}

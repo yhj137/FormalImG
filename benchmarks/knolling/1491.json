@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop positioned on the top left side and a cutting board on the top right side. A hat is placed to the right of the laptop, and the cutting board is located to the right of the hat. For every spoon in the image, there is a bowl directly below it, with the spoon itself situated below the cutting board. Additionally, a pair of scissors is located below the laptop and aligned vertically with it. A watch is positioned below the scissors, and a cup is placed to the right of the scissors. The laptop is larger than the cup, while the watch is smaller than the hat.",
+    "dsl": "(exists ?laptop (exists ?cutting_board (exists ?hat (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (OnTopSide ?laptop) (Is ?cutting_board 'cutting_board') (OnRightSide ?cutting_board) (OnTopSide ?cutting_board) (Is ?hat 'hat') (RightOf ?hat ?laptop) (RightOf ?cutting_board ?hat) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bowl (and (Is ?bowl 'bowl') (Below ?spoon ?cutting_board) (Below ?bowl ?spoon))))) (exists ?scissors (exists ?watch (exists ?cup (and (Is ?scissors 'scissors') (Is ?watch 'watch') (Is ?cup 'cup') (Below ?scissors ?laptop) (AlignedVertically ?laptop ?scissors) (Below ?watch ?scissors) (RightOf ?cup ?scissors) (LargerThan ?laptop ?cup) (SmallerThan ?watch ?hat)))))))))",
+    "cnf": "(exists ?laptop (exists ?cutting_board (exists ?hat (forall ?spoon (exists ?bowl (exists ?scissors (exists ?watch (exists ?cup (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (OnTopSide ?laptop) (RightOf ?hat ?laptop) (Below ?scissors ?laptop) (Is ?hat 'hat') (RightOf ?cutting_board ?hat) (AlignedVertically ?laptop ?scissors) (Is ?scissors 'scissors') (OnTopSide ?cutting_board) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?cutting_board)) (SmallerThan ?watch ?hat) (LargerThan ?laptop ?cup) (Below ?watch ?scissors) (OnRightSide ?cutting_board) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (Below ?bowl ?spoon)) (RightOf ?cup ?scissors) (Is ?watch 'watch') (Is ?cutting_board 'cutting_board') (Is ?cup 'cup'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "watch",
+        "cup",
+        "cutting_board",
+        "hat",
+        "scissors",
+        "bowl",
+        "spoon"
+    ]
+}

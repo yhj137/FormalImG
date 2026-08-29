@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a bus containing a man holding a book with a pair of glasses resting on it. A laptop sits next to the man, and a keyboard is to the left of the laptop. Every shoe in the scene is on the man, and a rectangular mirror is also inside the bus.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bu (and (Is ?bu 'bus') (exists ?m (and (Is ?m 'man') (In ?m ?bu) (exists ?bk (and (Is ?bk 'book') (Holding ?m ?bk) (exists ?g (and (Is ?g 'glasses') (On ?g ?bk) (exists ?l (and (Is ?l 'laptop') (NextTo ?l ?m) (exists ?k (and (Is ?k 'keyboard') (LeftOf ?k ?l) (and (forall ?s (implies (Is ?s 'shoes') (On ?s ?m))) (exists ?mi (and (Is ?mi 'mirror') (HasShape ?mi 'rectangular') (In ?mi ?bu)))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bu (exists ?m (exists ?bk (exists ?g (exists ?l (exists ?k (forall ?s (exists ?mi (and (Is ?bu 'bus') (In ?m ?bu) (In ?mi ?bu) (Is ?m 'man') (Holding ?m ?bk) (HasShape ?mi 'rectangular') (NextTo ?l ?m) (Is ?bk 'book') (On ?g ?bk) (Is ?mi 'mirror') (or (not (Is ?s 'shoes')) (On ?s ?m)) (Is ?l 'laptop') (LeftOf ?k ?l) (Is ?g 'glasses') (Is ?k 'keyboard')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "man",
+        "bus",
+        "laptop",
+        "shoes",
+        "book",
+        "mirror"
+    ]
+}

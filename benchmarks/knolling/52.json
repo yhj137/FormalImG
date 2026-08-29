@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image containing a single mouse. The mouse is positioned on the left side of the image.",
+    "dsl": "(exists ?mouse (and (Is ?mouse 'mouse') (OnLeftSide ?mouse)))",
+    "cnf": "(exists ?mouse (and (Is ?mouse 'mouse') (OnLeftSide ?mouse)))",
+    "k": 1,
+    "object_classes": [
+        "mouse"
+    ]
+}

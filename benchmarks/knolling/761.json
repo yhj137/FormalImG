@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop, a black camera, and a white watch. Both the camera and the watch are positioned below the laptop, and they are aligned horizontally with each other. Furthermore, for every donut present in the scene, it is located below the watch.",
+    "dsl": "(exists ?laptop (exists ?camera (exists ?watch (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?camera 'camera') (Has ?camera 'black') (Is ?watch 'watch') (Has ?watch 'white') (Below ?camera ?laptop) (Below ?watch ?laptop) (AlignedHorizontally ?camera ?watch) (forall ?donut (implies (Is ?donut 'donut') (Below ?donut ?watch)))))))",
+    "cnf": "(exists ?laptop (exists ?camera (exists ?watch (forall ?donut (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Below ?camera ?laptop) (Below ?watch ?laptop) (Has ?camera 'black') (AlignedHorizontally ?camera ?watch) (Has ?watch 'white') (Is ?camera 'camera') (or (not (Is ?donut 'donut')) (Below ?donut ?watch)) (Is ?watch 'watch'))))))",
+    "k": 4,
+    "object_classes": [
+        "laptop",
+        "watch",
+        "donut",
+        "camera"
+    ]
+}

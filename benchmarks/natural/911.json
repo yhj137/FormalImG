@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. There is a rock with a wooden bowl to its right. All butterflies are located to the left of the rock. To the right of the bowl sits a gray knife, with a pair of glasses positioned to the left of the knife.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?b (and (Is ?r 'rock') (Is ?b 'bowl') (HasMaterial ?b 'wooden') (RightOf ?b ?r) (forall ?f (implies (Is ?f 'butterfly') (LeftOf ?f ?r))) (exists ?k (exists ?g (and (Is ?k 'knife') (HasColor ?k 'gray') (Is ?g 'glasses') (RightOf ?k ?b) (LeftOf ?g ?k))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?b (forall ?f (exists ?k (exists ?g (and (Is ?r 'rock') (RightOf ?b ?r) (or (not (Is ?f 'butterfly')) (LeftOf ?f ?r)) (HasMaterial ?b 'wooden') (RightOf ?k ?b) (Is ?b 'bowl') (HasColor ?k 'gray') (LeftOf ?g ?k) (Is ?k 'knife') (Is ?g 'glasses'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "glasses",
+        "rock",
+        "knife",
+        "butterfly"
+    ]
+}

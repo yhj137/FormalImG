@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of red headphones and a black phone; the phone is smaller than the headphones, and they are aligned horizontally. For every book present, it is located above the phone. Associated with each book, there is a black camera aligned horizontally with it. Additionally, a white bowl is placed above the camera, and a blue lighter smaller than the bowl is included.",
+    "dsl": "(exists ?h (exists ?p (and (Is ?h 'headphones') (Has ?h 'red') (Is ?p 'phone') (Has ?p 'black') (AlignedHorizontally ?h ?p) (SmallerThan ?p ?h) (forall ?b (implies (Is ?b 'book') (exists ?c (exists ?bowl (exists ?l (and (Is ?c 'camera') (Has ?c 'black') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?l 'lighter') (Has ?l 'blue') (Above ?b ?p) (AlignedHorizontally ?b ?c) (Above ?bowl ?c) (SmallerThan ?l ?bowl))))))))))",
+    "cnf": "(exists ?h (exists ?p (forall ?b (exists ?c (exists ?bowl (exists ?l (and (Is ?h 'headphones') (Has ?h 'red') (AlignedHorizontally ?h ?p) (SmallerThan ?p ?h) (Has ?p 'black') (or (not (Is ?b 'book')) (Above ?b ?p)) (Is ?p 'phone') (or (not (Is ?b 'book')) (Has ?l 'blue')) (or (not (Is ?b 'book')) (AlignedHorizontally ?b ?c)) (or (not (Is ?b 'book')) (Is ?l 'lighter')) (or (not (Is ?b 'book')) (SmallerThan ?l ?bowl)) (or (not (Is ?b 'book')) (Has ?c 'black')) (or (not (Is ?b 'book')) (Above ?bowl ?c)) (or (not (Is ?b 'book')) (Has ?bowl 'white')) (or (not (Is ?b 'book')) (Is ?c 'camera')) (or (not (Is ?b 'book')) (Is ?bowl 'bowl')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "phone",
+        "lighter",
+        "camera",
+        "bowl",
+        "headphones"
+    ]
+}

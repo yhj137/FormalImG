@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate positioned on the right side. For every donut in the image, it is placed above the plate, and there is a pizza to the right of that donut.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnRightSide ?plate) (forall ?donut (implies (Is ?donut 'donut') (and (Above ?donut ?plate) (exists ?pizza (and (Is ?pizza 'pizza') (RightOf ?pizza ?donut))))))))",
+    "cnf": "(exists ?plate (forall ?donut (exists ?pizza (and (Is ?plate 'plate') (OnRightSide ?plate) (or (not (Is ?donut 'donut')) (Above ?donut ?plate)) (or (not (Is ?donut 'donut')) (Is ?pizza 'pizza')) (or (not (Is ?donut 'donut')) (RightOf ?pizza ?donut))))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "pizza",
+        "donut"
+    ]
+}

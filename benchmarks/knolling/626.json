@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A plate is positioned on the right side of the image. Directly below the plate is a cup, and below the cup is a shoe; these three objects are aligned vertically. Additionally, a screwdriver is present and is aligned horizontally with the shoe.",
+    "dsl": "(exists ?plate (exists ?cup (exists ?shoe (exists ?screwdriver (and (Is ?plate 'plate') (Is ?cup 'cup') (Is ?shoe 'shoe') (Is ?screwdriver 'screwdriver') (OnRightSide ?plate) (Below ?cup ?plate) (AlignedVertically ?cup ?plate) (Below ?shoe ?cup) (AlignedVertically ?shoe ?cup) (AlignedHorizontally ?screwdriver ?shoe))))))",
+    "cnf": "(exists ?plate (exists ?cup (exists ?shoe (exists ?screwdriver (and (Is ?plate 'plate') (OnRightSide ?plate) (Below ?cup ?plate) (AlignedVertically ?cup ?plate) (Is ?cup 'cup') (Below ?shoe ?cup) (AlignedVertically ?shoe ?cup) (Is ?shoe 'shoe') (AlignedHorizontally ?screwdriver ?shoe) (Is ?screwdriver 'screwdriver'))))))",
+    "k": 4,
+    "object_classes": [
+        "shoe",
+        "plate",
+        "screwdriver",
+        "cup"
+    ]
+}

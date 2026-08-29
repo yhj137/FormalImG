@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the top side of the frame. For every tie in the image, it is placed vertically below the cutting board, and there is a keyboard located to the right of that tie.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (forall ?t (implies (Is ?t 'tie') (exists ?k (and (Is ?k 'keyboard') (Below ?t ?cb) (RightOf ?k ?t)))))))",
+    "cnf": "(exists ?cb (forall ?t (exists ?k (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (or (not (Is ?t 'tie')) (Below ?t ?cb)) (or (not (Is ?t 'tie')) (Is ?k 'keyboard')) (or (not (Is ?t 'tie')) (RightOf ?k ?t))))))",
+    "k": 3,
+    "object_classes": [
+        "cutting_board",
+        "tie",
+        "keyboard"
+    ]
+}

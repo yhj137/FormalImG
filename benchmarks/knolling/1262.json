@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the left side. For every set of keys in the image, there are also a tie, a shoe, a watch, scissors, and a knife present. The shoe is placed on the bottom side of the scene, and the suitcase is visually larger than the shoe. A horizontal alignment runs through the objects, connecting the suitcase, tie, watch, scissors, knife, and the keys.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (forall ?key (implies (Is ?key 'keys') (exists ?tie (exists ?shoe (exists ?watch (exists ?scissors (exists ?knife (and (Is ?tie 'tie') (Is ?shoe 'shoe') (Is ?watch 'watch') (Is ?scissors 'scissors') (Is ?knife 'knife') (OnBottomSide ?shoe) (LargerThan ?suitcase ?shoe) (AlignedHorizontally ?suitcase ?tie) (AlignedHorizontally ?tie ?watch) (AlignedHorizontally ?watch ?scissors) (AlignedHorizontally ?scissors ?knife) (AlignedHorizontally ?knife ?key)))))))))))",
+    "cnf": "(exists ?suitcase (forall ?key (exists ?tie (exists ?shoe (exists ?watch (exists ?scissors (exists ?knife (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (or (not (Is ?key 'keys')) (LargerThan ?suitcase ?shoe)) (or (not (Is ?key 'keys')) (AlignedHorizontally ?suitcase ?tie)) (or (not (Is ?key 'keys')) (OnBottomSide ?shoe)) (or (not (Is ?key 'keys')) (AlignedHorizontally ?tie ?watch)) (or (not (Is ?key 'keys')) (Is ?tie 'tie')) (or (not (Is ?key 'keys')) (Is ?knife 'knife')) (or (not (Is ?key 'keys')) (Is ?shoe 'shoe')) (or (not (Is ?key 'keys')) (AlignedHorizontally ?watch ?scissors)) (or (not (Is ?key 'keys')) (Is ?watch 'watch')) (or (not (Is ?key 'keys')) (Is ?scissors 'scissors')) (or (not (Is ?key 'keys')) (AlignedHorizontally ?scissors ?knife)) (or (not (Is ?key 'keys')) (AlignedHorizontally ?knife ?key))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "keys",
+        "scissors",
+        "knife",
+        "tie",
+        "suitcase",
+        "shoe"
+    ]
+}

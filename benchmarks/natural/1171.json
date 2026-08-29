@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman holding a red apple. To the left of the woman is an open backpack. To the left of the backpack sits a plate with a blue ball on it. All shoes in the scene are positioned to the left of the backpack.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?a (exists ?bp (exists ?p (and (Is ?w 'woman') (Is ?a 'apple') (Is ?bp 'backpack') (Is ?p 'plate') (Holding ?w ?a) (HasColor ?a 'red') (LeftOf ?bp ?w) (HasState ?bp 'open') (LeftOf ?p ?bp) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?bp))) (exists ?b (and (Is ?b 'ball') (HasColor ?b 'blue') (On ?b ?p)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?a (exists ?bp (exists ?p (forall ?s (exists ?b (and (Is ?w 'woman') (Holding ?w ?a) (LeftOf ?bp ?w) (Is ?a 'apple') (HasColor ?a 'red') (Is ?bp 'backpack') (HasState ?bp 'open') (LeftOf ?p ?bp) (or (not (Is ?s 'shoes')) (LeftOf ?s ?bp)) (Is ?p 'plate') (On ?b ?p) (HasColor ?b 'blue') (Is ?b 'ball')))))))))",
+    "k": 6,
+    "object_classes": [
+        "ball",
+        "backpack",
+        "shoes",
+        "woman",
+        "apple",
+        "plate"
+    ]
+}

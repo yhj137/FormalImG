@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bed with a woman, a cat, a cylindrical cup, and a cake on it. An oval mirror is to the left of the woman. A basket containing a banana is to the left of the bed, and a monitor is to its right. Every bird in the scene is positioned to the left of the mirror.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bed (exists ?woman (exists ?cat (exists ?cup (exists ?cake (exists ?mirror (exists ?basket (exists ?banana (exists ?monitor (and (Is ?bed 'bed') (Is ?woman 'woman') (Is ?cat 'cat') (Is ?cup 'cup') (HasShape ?cup 'cylindrical') (Is ?cake 'cake') (Is ?mirror 'mirror') (HasShape ?mirror 'oval') (Is ?basket 'basket') (Is ?banana 'banana') (Is ?monitor 'monitor') (On ?woman ?bed) (On ?cat ?bed) (On ?cup ?bed) (On ?cake ?bed) (LeftOf ?mirror ?woman) (LeftOf ?basket ?bed) (In ?banana ?basket) (RightOf ?monitor ?bed) (forall ?bird (implies (Is ?bird 'bird') (LeftOf ?bird ?mirror))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bed (exists ?woman (exists ?cat (exists ?cup (exists ?cake (exists ?mirror (exists ?basket (exists ?banana (exists ?monitor (forall ?bird (and (Is ?bed 'bed') (On ?woman ?bed) (On ?cat ?bed) (Is ?woman 'woman') (LeftOf ?mirror ?woman) (On ?cup ?bed) (Is ?cat 'cat') (HasShape ?mirror 'oval') (or (not (Is ?bird 'bird')) (LeftOf ?bird ?mirror)) (On ?cake ?bed) (HasShape ?cup 'cylindrical') (Is ?mirror 'mirror') (LeftOf ?basket ?bed) (Is ?cake 'cake') (Is ?cup 'cup') (RightOf ?monitor ?bed) (Is ?basket 'basket') (In ?banana ?basket) (Is ?monitor 'monitor') (Is ?banana 'banana')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bird",
+        "banana",
+        "bed",
+        "cake",
+        "cup",
+        "basket",
+        "mirror",
+        "monitor",
+        "woman",
+        "cat"
+    ]
+}

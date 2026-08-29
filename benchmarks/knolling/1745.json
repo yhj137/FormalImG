@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board, a pan, and a plate arranged and aligned horizontally on the top side of the image. The cutting board is larger than the pan, and the plate is smaller than the pan. A keyboard is aligned vertically with the cutting board, a tie is aligned vertically with the pan, and a pair of pliers is aligned vertically with the plate. Furthermore, the keyboard, tie, and pliers are aligned horizontally with each other. For every set of keys present in the image, there exists a donut and a pen such that the pen is aligned vertically with the pliers, the donut is aligned horizontally with the pen, and the keys are aligned vertically with the donut while being smaller than it.",
+    "dsl": "(exists ?cb (exists ?pan (exists ?plate (exists ?kb (exists ?tie (exists ?pliers (and (Is ?cb 'cutting_board') (Is ?pan 'pan') (Is ?plate 'plate') (Is ?kb 'keyboard') (Is ?tie 'tie') (Is ?pliers 'pliers') (OnTopSide ?cb) (OnTopSide ?pan) (OnTopSide ?plate) (AlignedHorizontally ?cb ?pan) (AlignedHorizontally ?pan ?plate) (LargerThan ?cb ?pan) (SmallerThan ?plate ?pan) (AlignedVertically ?cb ?kb) (AlignedVertically ?pan ?tie) (AlignedVertically ?plate ?pliers) (AlignedHorizontally ?kb ?tie) (AlignedHorizontally ?tie ?pliers) (forall ?k (implies (Is ?k 'keys') (exists ?donut (exists ?pen (and (Is ?donut 'donut') (Is ?pen 'pen') (AlignedVertically ?pen ?pliers) (AlignedHorizontally ?pen ?donut) (AlignedVertically ?k ?donut) (SmallerThan ?k ?donut)))))))))))))",
+    "cnf": "(exists ?cb (exists ?pan (exists ?plate (exists ?kb (exists ?tie (exists ?pliers (forall ?k (exists ?donut (exists ?pen (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (AlignedHorizontally ?cb ?pan) (LargerThan ?cb ?pan) (OnTopSide ?pan) (AlignedHorizontally ?pan ?plate) (AlignedVertically ?cb ?kb) (SmallerThan ?plate ?pan) (Is ?pan 'pan') (OnTopSide ?plate) (Is ?kb 'keyboard') (AlignedHorizontally ?kb ?tie) (AlignedVertically ?pan ?tie) (AlignedVertically ?plate ?pliers) (Is ?plate 'plate') (AlignedHorizontally ?tie ?pliers) (Is ?tie 'tie') (Is ?pliers 'pliers') (or (not (Is ?k 'keys')) (AlignedVertically ?pen ?pliers)) (or (not (Is ?k 'keys')) (Is ?pen 'pen')) (or (not (Is ?k 'keys')) (AlignedHorizontally ?pen ?donut)) (or (not (Is ?k 'keys')) (Is ?donut 'donut')) (or (not (Is ?k 'keys')) (AlignedVertically ?k ?donut)) (or (not (Is ?k 'keys')) (SmallerThan ?k ?donut))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "plate",
+        "tie",
+        "pliers",
+        "keyboard",
+        "pen",
+        "cutting_board",
+        "pan",
+        "donut"
+    ]
+}

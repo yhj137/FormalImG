@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every cat is next to a wooden desk, with a fork positioned to the left of the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?c (implies (Is ?c 'cat') (exists ?d (exists ?f (and (Is ?d 'desk') (Is ?f 'fork') (HasMaterial ?d 'wooden') (NextTo ?c ?d) (LeftOf ?f ?d)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?c (exists ?d (exists ?f (and (or (not (Is ?c 'cat')) (Is ?d 'desk')) (or (not (Is ?c 'cat')) (HasMaterial ?d 'wooden')) (or (not (Is ?c 'cat')) (Is ?f 'fork')) (or (not (Is ?c 'cat')) (NextTo ?c ?d)) (or (not (Is ?c 'cat')) (LeftOf ?f ?d)))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "cat",
+        "desk"
+    ]
+}

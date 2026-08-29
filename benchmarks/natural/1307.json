@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a man holding a metal hammer to the left of a mirror, with an umbrella to his left. Every flower is pink and located to the right of the mirror. A plastic bottle is also to the right of the mirror, with shoes positioned to the right of the bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?h (exists ?mir (and (Is ?m 'man') (Is ?h 'hammer') (Is ?mir 'mirror') (Holding ?m ?h) (HasMaterial ?h 'metal') (LeftOf ?m ?mir) (forall ?f (implies (Is ?f 'flower') (and (HasColor ?f 'pink') (RightOf ?f ?mir)))) (exists ?u (exists ?b (exists ?s (and (Is ?u 'umbrella') (Is ?b 'bottle') (Is ?s 'shoes') (LeftOf ?u ?m) (HasMaterial ?b 'plastic') (RightOf ?b ?mir) (RightOf ?s ?b))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?h (exists ?mir (forall ?f (exists ?u (exists ?b (exists ?s (and (Is ?m 'man') (Holding ?m ?h) (LeftOf ?m ?mir) (Is ?h 'hammer') (HasMaterial ?h 'metal') (LeftOf ?u ?m) (Is ?mir 'mirror') (or (not (Is ?f 'flower')) (RightOf ?f ?mir)) (Is ?u 'umbrella') (RightOf ?b ?mir) (or (not (Is ?f 'flower')) (HasColor ?f 'pink')) (HasMaterial ?b 'plastic') (RightOf ?s ?b) (Is ?b 'bottle') (Is ?s 'shoes'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "bottle",
+        "shoes",
+        "man",
+        "flower",
+        "hammer",
+        "mirror"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene of a bird on a jacket, holding a round umbrella to the right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?j (and (Is ?b 'bird') (Is ?u 'umbrella') (Is ?j 'jacket') (HasShape ?u 'round') (Holding ?b ?u) (On ?b ?j) (RightOf ?u ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?j (and (Is ?b 'bird') (Holding ?b ?u) (On ?b ?j) (HasShape ?u 'round') (RightOf ?u ?b) (Is ?j 'jacket') (Is ?u 'umbrella'))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "bird",
+        "umbrella"
+    ]
+}

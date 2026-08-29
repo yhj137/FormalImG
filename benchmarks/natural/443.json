@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal bird holding a backpack containing a glass bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?bp (exists ?bo (and (Is ?b 'bird') (HasMaterial ?b 'metal') (Is ?bp 'backpack') (Is ?bo 'bottle') (HasMaterial ?bo 'glass') (Holding ?b ?bp) (In ?bo ?bp))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?bp (exists ?bo (and (Is ?b 'bird') (HasMaterial ?b 'metal') (Holding ?b ?bp) (Is ?bp 'backpack') (In ?bo ?bp) (HasMaterial ?bo 'glass') (Is ?bo 'bottle'))))))",
+    "k": 3,
+    "object_classes": [
+        "backpack",
+        "bottle",
+        "bird"
+    ]
+}

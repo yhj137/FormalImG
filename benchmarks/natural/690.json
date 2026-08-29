@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is present, and every flower is located to their left. A keyboard is next to the person, with a round clock positioned beside the keyboard.",
+    "dsl": "(exists ?p (and (Is ?p 'person') (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?p))) (exists ?k (and (Is ?k 'keyboard') (NextTo ?k ?p) (exists ?c (and (Is ?c 'clock') (HasShape ?c 'round') (NextTo ?c ?k)))))))",
+    "cnf": "(exists ?p (forall ?f (exists ?k (exists ?c (and (Is ?p 'person') (or (not (Is ?f 'flower')) (LeftOf ?f ?p)) (NextTo ?k ?p) (Is ?k 'keyboard') (NextTo ?c ?k) (HasShape ?c 'round') (Is ?c 'clock'))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "clock",
+        "flower",
+        "person"
+    ]
+}

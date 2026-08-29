@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a row of items starting with a backpack. To the right of the backpack is a handbag, which is smaller than the backpack. Next to the handbag, on its right, is a plate, followed by a bottle to the right of the plate. The bottle is positioned to the left of a knife. Continuing the line, the knife is to the left of a ruler, and the ruler is to the left of a lighter. The lighter is located on the right side of the image and is smaller than the ruler.",
+    "dsl": "(exists ?bp (exists ?hb (exists ?p (exists ?bot (exists ?k (exists ?r (exists ?l (and (Is ?bp 'backpack') (Is ?hb 'handbag') (Is ?p 'plate') (Is ?bot 'bottle') (Is ?k 'knife') (Is ?r 'ruler') (Is ?l 'lighter') (RightOf ?hb ?bp) (SmallerThan ?hb ?bp) (RightOf ?p ?hb) (RightOf ?bot ?p) (LeftOf ?bot ?k) (LeftOf ?k ?r) (LeftOf ?r ?l) (SmallerThan ?l ?r) (OnRightSide ?l)))))))))",
+    "cnf": "(exists ?bp (exists ?hb (exists ?p (exists ?bot (exists ?k (exists ?r (exists ?l (and (Is ?bp 'backpack') (RightOf ?hb ?bp) (SmallerThan ?hb ?bp) (Is ?hb 'handbag') (RightOf ?p ?hb) (Is ?p 'plate') (RightOf ?bot ?p) (Is ?bot 'bottle') (LeftOf ?bot ?k) (Is ?k 'knife') (LeftOf ?k ?r) (Is ?r 'ruler') (LeftOf ?r ?l) (SmallerThan ?l ?r) (Is ?l 'lighter') (OnRightSide ?l)))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "handbag",
+        "backpack",
+        "lighter",
+        "knife",
+        "bottle"
+    ]
+}

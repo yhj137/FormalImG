@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image arranged neatly. The composition features a shoe positioned on the top side of the image. Aligned horizontally with the shoe are a sock and a glove. Below the shoe, there is a camera, and below the camera is a wallet which is physically larger than the camera. For every lighter in the scene, it is aligned horizontally with the wallet. Furthermore, associated with each lighter is a bottle that is larger than the lighter, and a carrot located above the bottle is not correct, rather the bottle is above the carrot, and the carrot is smaller than the bottle.",
+    "dsl": "(exists ?shoe (exists ?sock (exists ?glove (exists ?camera (exists ?wallet (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (Is ?sock 'sock') (AlignedHorizontally ?shoe ?sock) (Is ?glove 'glove') (AlignedHorizontally ?sock ?glove) (Is ?camera 'camera') (Above ?shoe ?camera) (Is ?wallet 'wallet') (Above ?camera ?wallet) (LargerThan ?wallet ?camera) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?bottle (exists ?carrot (and (Is ?bottle 'bottle') (Is ?carrot 'carrot') (AlignedHorizontally ?lighter ?wallet) (SmallerThan ?lighter ?bottle) (Above ?bottle ?carrot) (SmallerThan ?carrot ?bottle))))))))))))",
+    "cnf": "(exists ?shoe (exists ?sock (exists ?glove (exists ?camera (exists ?wallet (forall ?lighter (exists ?bottle (exists ?carrot (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (AlignedHorizontally ?shoe ?sock) (Above ?shoe ?camera) (Is ?sock 'sock') (AlignedHorizontally ?sock ?glove) (Is ?camera 'camera') (Above ?camera ?wallet) (Is ?glove 'glove') (LargerThan ?wallet ?camera) (Is ?wallet 'wallet') (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?wallet)) (or (not (Is ?lighter 'lighter')) (Is ?carrot 'carrot')) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?bottle)) (or (not (Is ?lighter 'lighter')) (Is ?bottle 'bottle')) (or (not (Is ?lighter 'lighter')) (Above ?bottle ?carrot)) (or (not (Is ?lighter 'lighter')) (SmallerThan ?carrot ?bottle)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "carrot",
+        "lighter",
+        "wallet",
+        "camera",
+        "bottle",
+        "glove",
+        "shoe"
+    ]
+}

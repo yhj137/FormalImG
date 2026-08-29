@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A remote is positioned on the left side of the layout. For every shoe in the scene, it is visually larger than the remote. Additionally, a specific sequence of items exists to the left of the shoe: a lemon is to the left of the shoe, a donut is to the left of the lemon, a mouse is to the left of the donut, a carrot is to the left of the mouse, and a phone is to the left of the carrot.",
+    "dsl": "(exists ?remote (and (Is ?remote 'remote') (OnLeftSide ?remote) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?lemon (exists ?donut (exists ?mouse (exists ?carrot (exists ?phone (and (Is ?lemon 'lemon') (Is ?donut 'donut') (Is ?mouse 'mouse') (Is ?carrot 'carrot') (Is ?phone 'phone') (LargerThan ?shoe ?remote) (LeftOf ?lemon ?shoe) (LeftOf ?donut ?lemon) (LeftOf ?mouse ?donut) (LeftOf ?carrot ?mouse) (LeftOf ?phone ?carrot)))))))))))",
+    "cnf": "(exists ?remote (forall ?shoe (exists ?lemon (exists ?donut (exists ?mouse (exists ?carrot (exists ?phone (and (Is ?remote 'remote') (OnLeftSide ?remote) (or (not (Is ?shoe 'shoe')) (LargerThan ?shoe ?remote)) (or (not (Is ?shoe 'shoe')) (Is ?phone 'phone')) (or (not (Is ?shoe 'shoe')) (LeftOf ?lemon ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?carrot 'carrot')) (or (not (Is ?shoe 'shoe')) (LeftOf ?phone ?carrot)) (or (not (Is ?shoe 'shoe')) (LeftOf ?donut ?lemon)) (or (not (Is ?shoe 'shoe')) (Is ?lemon 'lemon')) (or (not (Is ?shoe 'shoe')) (Is ?mouse 'mouse')) (or (not (Is ?shoe 'shoe')) (LeftOf ?carrot ?mouse)) (or (not (Is ?shoe 'shoe')) (LeftOf ?mouse ?donut)) (or (not (Is ?shoe 'shoe')) (Is ?donut 'donut'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "lemon",
+        "carrot",
+        "phone",
+        "mouse",
+        "shoe",
+        "donut"
+    ]
+}

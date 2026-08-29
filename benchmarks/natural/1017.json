@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. A child is holding a bowl, inside of which is a toy car. A table is located to the left of the child. Sitting on the table is a round mirror, and a pair of shoes is placed next to the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?tc (exists ?t (exists ?m (exists ?s (and (Is ?c 'child') (Is ?b 'bowl') (Is ?tc 'toy car') (Is ?t 'table') (Is ?m 'mirror') (Is ?s 'shoes') (Holding ?c ?b) (In ?tc ?b) (LeftOf ?t ?c) (On ?m ?t) (HasShape ?m 'round') (NextTo ?s ?t)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?tc (exists ?t (exists ?m (exists ?s (and (Is ?c 'child') (Holding ?c ?b) (LeftOf ?t ?c) (Is ?b 'bowl') (In ?tc ?b) (Is ?t 'table') (On ?m ?t) (Is ?tc 'toy car') (NextTo ?s ?t) (Is ?m 'mirror') (HasShape ?m 'round') (Is ?s 'shoes')))))))))",
+    "k": 6,
+    "object_classes": [
+        "child",
+        "shoes",
+        "table",
+        "toy car",
+        "mirror",
+        "bowl"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a laptop in the top half of the image. Below the laptop and vertically aligned with it is a handbag, and below the handbag and vertically aligned with it is a hat. To the right of the laptop and horizontally aligned with it is a spoon. Below the spoon and vertically aligned with it is a tie, which is also to the right of the handbag and horizontally aligned with it. For every pen, it is positioned below the tie and vertically aligned with it. To the right of the pen and horizontally aligned with it are keys; to the right of the keys and horizontally aligned with them is a lighter; and above the lighter and vertically aligned with it is a screwdriver.",
+    "dsl": "(exists ?laptop (exists ?handbag (exists ?hat (exists ?spoon (exists ?tie (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?handbag 'handbag') (Below ?handbag ?laptop) (AlignedVertically ?handbag ?laptop) (Is ?hat 'hat') (Below ?hat ?handbag) (AlignedVertically ?hat ?handbag) (Is ?spoon 'spoon') (RightOf ?spoon ?laptop) (AlignedHorizontally ?spoon ?laptop) (Is ?tie 'tie') (Below ?tie ?spoon) (AlignedVertically ?tie ?spoon) (RightOf ?tie ?handbag) (AlignedHorizontally ?tie ?handbag) (forall ?pen (implies (Is ?pen 'pen') (exists ?keys (exists ?lighter (exists ?screwdriver (and (Is ?keys 'keys') (Is ?lighter 'lighter') (Is ?screwdriver 'screwdriver') (Below ?pen ?tie) (AlignedVertically ?pen ?tie) (RightOf ?keys ?pen) (AlignedHorizontally ?keys ?pen) (RightOf ?lighter ?keys) (AlignedHorizontally ?lighter ?keys) (Above ?screwdriver ?lighter) (AlignedVertically ?screwdriver ?lighter)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (exists ?hat (exists ?spoon (exists ?tie (forall ?pen (exists ?keys (exists ?lighter (exists ?screwdriver (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?handbag ?laptop) (AlignedVertically ?handbag ?laptop) (Is ?handbag 'handbag') (RightOf ?spoon ?laptop) (Below ?hat ?handbag) (AlignedHorizontally ?spoon ?laptop) (Is ?spoon 'spoon') (AlignedVertically ?hat ?handbag) (Is ?hat 'hat') (Below ?tie ?spoon) (RightOf ?tie ?handbag) (AlignedVertically ?tie ?spoon) (Is ?tie 'tie') (AlignedHorizontally ?tie ?handbag) (or (not (Is ?pen 'pen')) (Below ?pen ?tie)) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?tie)) (or (not (Is ?pen 'pen')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pen 'pen')) (RightOf ?keys ?pen)) (or (not (Is ?pen 'pen')) (Is ?lighter 'lighter')) (or (not (Is ?pen 'pen')) (Above ?screwdriver ?lighter)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?keys ?pen)) (or (not (Is ?pen 'pen')) (Is ?keys 'keys')) (or (not (Is ?pen 'pen')) (RightOf ?lighter ?keys)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?lighter ?keys)) (or (not (Is ?pen 'pen')) (AlignedVertically ?screwdriver ?lighter))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "tie",
+        "pen",
+        "screwdriver",
+        "handbag",
+        "hat",
+        "lighter",
+        "spoon"
+    ]
+}

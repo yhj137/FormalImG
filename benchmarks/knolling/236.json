@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pizza and a carrot. Both the pizza and the carrot are positioned on the right side of the image, and they are aligned vertically relative to each other.",
+    "dsl": "(exists ?pizza (exists ?carrot (and (Is ?pizza 'pizza') (Is ?carrot 'carrot') (OnRightSide ?pizza) (OnRightSide ?carrot) (AlignedVertically ?pizza ?carrot))))",
+    "cnf": "(exists ?pizza (exists ?carrot (and (Is ?pizza 'pizza') (OnRightSide ?pizza) (AlignedVertically ?pizza ?carrot) (OnRightSide ?carrot) (Is ?carrot 'carrot'))))",
+    "k": 2,
+    "object_classes": [
+        "carrot",
+        "pizza"
+    ]
+}

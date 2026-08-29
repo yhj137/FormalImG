@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A sofa is situated next to a house. To the right of the sofa is a plant, and to the right of the plant lies a hammer. Resting on the sofa is a rectangular laptop, positioned next to a pair of round glasses.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?s (exists ?p (exists ?hm (exists ?l (exists ?g (and (Is ?h 'house') (Is ?s 'sofa') (NextTo ?s ?h) (Is ?p 'plant') (RightOf ?p ?s) (Is ?hm 'hammer') (RightOf ?hm ?p) (Is ?l 'laptop') (HasShape ?l 'rectangular') (On ?l ?s) (Is ?g 'glasses') (HasShape ?g 'round') (NextTo ?g ?l)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?s (exists ?p (exists ?hm (exists ?l (exists ?g (and (Is ?h 'house') (NextTo ?s ?h) (Is ?s 'sofa') (RightOf ?p ?s) (On ?l ?s) (Is ?p 'plant') (RightOf ?hm ?p) (HasShape ?l 'rectangular') (NextTo ?g ?l) (Is ?hm 'hammer') (Is ?l 'laptop') (HasShape ?g 'round') (Is ?g 'glasses')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "sofa",
+        "laptop",
+        "glasses",
+        "plant",
+        "hammer"
+    ]
+}

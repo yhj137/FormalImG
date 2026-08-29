@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt, which is blue, there exists a black pan and a pen. The pan is aligned vertically with the shirt, and the pen is aligned vertically with the pan. Furthermore, the pen is visually smaller than the pan.",
+    "dsl": "(forall ?s (implies (Is ?s 'shirt') (exists ?p (exists ?pen (and (Is ?p 'pan') (Is ?pen 'pen') (Has ?s 'blue') (Has ?p 'black') (AlignedVertically ?s ?p) (AlignedVertically ?p ?pen) (SmallerThan ?pen ?p))))))",
+    "cnf": "(forall ?s (exists ?p (exists ?pen (and (or (not (Is ?s 'shirt')) (Is ?p 'pan')) (or (not (Is ?s 'shirt')) (Is ?pen 'pen')) (or (not (Is ?s 'shirt')) (Has ?p 'black')) (or (not (Is ?s 'shirt')) (Has ?s 'blue')) (or (not (Is ?s 'shirt')) (AlignedVertically ?p ?pen)) (or (not (Is ?s 'shirt')) (AlignedVertically ?s ?p)) (or (not (Is ?s 'shirt')) (SmallerThan ?pen ?p))))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "shirt",
+        "pen"
+    ]
+}

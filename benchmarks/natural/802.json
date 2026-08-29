@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring an open wardrobe containing a backpack with a metal pan inside. To the right of the wardrobe, an elephant holds a banana.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?b (exists ?p (exists ?e (exists ?ba (and (Is ?w 'wardrobe') (Is ?b 'backpack') (Is ?p 'pan') (Is ?e 'elephant') (Is ?ba 'banana') (HasState ?w 'open') (In ?b ?w) (In ?p ?b) (HasMaterial ?p 'metal') (RightOf ?e ?w) (Holding ?e ?ba))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?b (exists ?p (exists ?e (exists ?ba (and (Is ?w 'wardrobe') (HasState ?w 'open') (In ?b ?w) (RightOf ?e ?w) (Is ?b 'backpack') (In ?p ?b) (Is ?e 'elephant') (Holding ?e ?ba) (Is ?p 'pan') (HasMaterial ?p 'metal') (Is ?ba 'banana'))))))))",
+    "k": 5,
+    "object_classes": [
+        "elephant",
+        "backpack",
+        "pan",
+        "banana",
+        "wardrobe"
+    ]
+}

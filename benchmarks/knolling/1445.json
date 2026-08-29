@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board in the scene, there is a plate positioned to its left, which is also located on the left side of the image. An apple, which is smaller than the plate, is placed below the plate. A ruler lies above the cutting board, and a carrot is placed above the ruler. Below the cutting board, a game controller, a camera, and a watch are arranged in a horizontal line; the game controller is to the left of the camera, and the camera is to the left of the watch.",
+    "dsl": "(and (forall ?cb (implies (Is ?cb 'cutting_board') (exists ?p (exists ?a (exists ?r (exists ?c (exists ?gc (exists ?cam (exists ?w (and (Is ?p 'plate') (Is ?a 'apple') (Is ?r 'ruler') (Is ?c 'carrot') (Is ?gc 'game_controller') (Is ?cam 'camera') (Is ?w 'watch') (OnLeftSide ?p) (LeftOf ?p ?cb) (SmallerThan ?a ?p) (Below ?a ?p) (Above ?r ?cb) (Above ?c ?r) (Below ?gc ?cb) (LeftOf ?gc ?cam) (LeftOf ?cam ?w) (AlignedHorizontally ?gc ?cam) (AlignedHorizontally ?cam ?w))))))))))))",
+    "cnf": "(forall ?cb (exists ?p (exists ?a (exists ?r (exists ?c (exists ?gc (exists ?cam (exists ?w (and (or (not (Is ?cb 'cutting_board')) (Is ?p 'plate')) (or (not (Is ?cb 'cutting_board')) (Is ?a 'apple')) (or (not (Is ?cb 'cutting_board')) (OnLeftSide ?p)) (or (not (Is ?cb 'cutting_board')) (Is ?r 'ruler')) (or (not (Is ?cb 'cutting_board')) (SmallerThan ?a ?p)) (or (not (Is ?cb 'cutting_board')) (Is ?w 'watch')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?p ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?c 'carrot')) (or (not (Is ?cb 'cutting_board')) (Above ?r ?cb)) (or (not (Is ?cb 'cutting_board')) (Below ?a ?p)) (or (not (Is ?cb 'cutting_board')) (Is ?cam 'camera')) (or (not (Is ?cb 'cutting_board')) (LeftOf ?cam ?w)) (or (not (Is ?cb 'cutting_board')) (Is ?gc 'game_controller')) (or (not (Is ?cb 'cutting_board')) (Above ?c ?r)) (or (not (Is ?cb 'cutting_board')) (LeftOf ?gc ?cam)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?gc ?cam)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?cam ?w)) (or (not (Is ?cb 'cutting_board')) (Below ?gc ?cb)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "apple",
+        "carrot",
+        "watch",
+        "game_controller",
+        "cutting_board",
+        "camera"
+    ]
+}

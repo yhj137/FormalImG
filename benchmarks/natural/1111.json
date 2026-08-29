@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a wooden house containing a refrigerator. Every pizza is inside the refrigerator. A man holding a cat is positioned to the right of the refrigerator, and a butterfly is to the right of the cat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?r (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?r 'refrigerator') (In ?r ?h) (forall ?p (implies (Is ?p 'pizza') (In ?p ?r))) (exists ?m (exists ?c (exists ?b (and (Is ?m 'man') (Is ?c 'cat') (Is ?b 'butterfly') (RightOf ?m ?r) (Holding ?m ?c) (RightOf ?b ?c)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?r (forall ?p (exists ?m (exists ?c (exists ?b (and (Is ?h 'house') (HasMaterial ?h 'wooden') (In ?r ?h) (Is ?r 'refrigerator') (or (not (Is ?p 'pizza')) (In ?p ?r)) (RightOf ?m ?r) (Is ?m 'man') (Holding ?m ?c) (Is ?c 'cat') (RightOf ?b ?c) (Is ?b 'butterfly')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "man",
+        "pizza",
+        "refrigerator",
+        "butterfly",
+        "cat"
+    ]
+}

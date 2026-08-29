@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring an elephant holding a round pan. A lion is to the right of the elephant. All shoes and a shirt are positioned to the right of the lion.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (exists ?p (exists ?l (and (Is ?e 'elephant') (Is ?p 'pan') (HasShape ?p 'round') (Holding ?e ?p) (Is ?l 'lion') (RightOf ?l ?e) (forall ?sh (implies (Is ?sh 'shoes') (RightOf ?sh ?l))) (exists ?s (and (Is ?s 'shirt') (RightOf ?s ?l))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (exists ?p (exists ?l (forall ?sh (exists ?s (and (Is ?e 'elephant') (Holding ?e ?p) (RightOf ?l ?e) (HasShape ?p 'round') (Is ?l 'lion') (or (not (Is ?sh 'shoes')) (RightOf ?sh ?l)) (Is ?p 'pan') (RightOf ?s ?l) (Is ?s 'shirt'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "shoes",
+        "shirt",
+        "lion",
+        "elephant"
+    ]
+}

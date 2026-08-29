@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every elephant holds an empty plate. A table is positioned to the right of each elephant, with a keyboard located to the left of the table.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?e (implies (Is ?e 'elephant') (exists ?p (exists ?t (exists ?k (and (Is ?p 'plate') (Is ?t 'table') (Is ?k 'keyboard') (HasState ?p 'empty') (Holding ?e ?p) (RightOf ?t ?e) (LeftOf ?k ?t))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?e (exists ?p (exists ?t (exists ?k (and (or (not (Is ?e 'elephant')) (Is ?p 'plate')) (or (not (Is ?e 'elephant')) (Is ?t 'table')) (or (not (Is ?e 'elephant')) (HasState ?p 'empty')) (or (not (Is ?e 'elephant')) (Is ?k 'keyboard')) (or (not (Is ?e 'elephant')) (RightOf ?t ?e)) (or (not (Is ?e 'elephant')) (Holding ?e ?p)) (or (not (Is ?e 'elephant')) (LeftOf ?k ?t))))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "table",
+        "elephant",
+        "plate"
+    ]
+}

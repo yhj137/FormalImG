@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image where every shirt is held by a man and contains a round rock next to him.",
+    "dsl": "(and (IsStyle 'photo') (forall ?s (implies (Is ?s 'shirt') (exists ?m (exists ?r (and (Is ?m 'man') (Is ?r 'rock') (HasShape ?r 'round') (Holding ?m ?s) (In ?r ?s) (NextTo ?m ?r)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?s (exists ?m (exists ?r (and (or (not (Is ?s 'shirt')) (Is ?m 'man')) (or (not (Is ?s 'shirt')) (Is ?r 'rock')) (or (not (Is ?s 'shirt')) (Holding ?m ?s)) (or (not (Is ?s 'shirt')) (HasShape ?r 'round')) (or (not (Is ?s 'shirt')) (In ?r ?s)) (or (not (Is ?s 'shirt')) (NextTo ?m ?r)))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "shirt",
+        "rock"
+    ]
+}

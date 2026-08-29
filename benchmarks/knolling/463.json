@@ -1,0 +1,11 @@
+{
+    "prompt": "For every glove present in the scene, there is a spoon positioned directly below it, and these two items are aligned vertically. Additionally, there is a screwdriver located to the left of the spoon, and the screwdriver is situated on the bottom side of the image.",
+    "dsl": "(and (forall ?g (implies (Is ?g 'glove') (exists ?sp (exists ?sc (and (Is ?sp 'spoon') (Is ?sc 'screwdriver') (Below ?sp ?g) (AlignedVertically ?g ?sp) (LeftOf ?sc ?sp) (OnBottomSide ?sc)))))))",
+    "cnf": "(forall ?g (exists ?sp (exists ?sc (and (or (not (Is ?g 'glove')) (Is ?sp 'spoon')) (or (not (Is ?g 'glove')) (Is ?sc 'screwdriver')) (or (not (Is ?g 'glove')) (Below ?sp ?g)) (or (not (Is ?g 'glove')) (LeftOf ?sc ?sp)) (or (not (Is ?g 'glove')) (AlignedVertically ?g ?sp)) (or (not (Is ?g 'glove')) (OnBottomSide ?sc))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "glove",
+        "screwdriver"
+    ]
+}

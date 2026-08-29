@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cartoon style. A backpack sits on a desk. Inside the backpack is a round ball, and a butterfly is perched on the ball.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?bp (exists ?bl (exists ?bt (and (Is ?d 'desk') (Is ?bp 'backpack') (Is ?bl 'ball') (Is ?bt 'butterfly') (On ?bp ?d) (In ?bl ?bp) (HasShape ?bl 'round') (On ?bt ?bl)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?bp (exists ?bl (exists ?bt (and (Is ?d 'desk') (On ?bp ?d) (Is ?bp 'backpack') (In ?bl ?bp) (Is ?bl 'ball') (HasShape ?bl 'round') (On ?bt ?bl) (Is ?bt 'butterfly')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "backpack",
+        "desk",
+        "ball"
+    ]
+}

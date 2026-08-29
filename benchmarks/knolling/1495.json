@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The top section of the scene features a cutting board, a laptop, and a handbag. The cutting board is positioned to the left of the laptop, and they are aligned horizontally. The handbag is located on the right side of the image, positioned to the right of the laptop. For every remote in the scene, it is placed directly below the cutting board and aligned vertically with it, and there is a calculator located directly below the remote, also maintaining vertical alignment. Additionally, for each remote, a pan is positioned below the laptop, a pair of scissors is located below the pan, and a red tie is placed below the handbag, where the pan is visually larger than the calculator.",
+    "dsl": "(exists ?cb (exists ?lt (exists ?hb (and (Is ?cb 'cutting_board') (Is ?lt 'laptop') (Is ?hb 'handbag') (OnRightSide ?hb) (LeftOf ?cb ?lt) (LeftOf ?lt ?hb) (AlignedHorizontally ?cb ?lt) (forall ?rm (implies (Is ?rm 'remote') (exists ?ca (exists ?pn (exists ?ti (exists ?sc (and (Is ?ca 'calculator') (Is ?pn 'pan') (Is ?ti 'tie') (Is ?sc 'scissors') (Has ?ti 'red') (Below ?rm ?cb) (AlignedVertically ?rm ?cb) (Below ?ca ?rm) (AlignedVertically ?ca ?rm) (Below ?pn ?lt) (Below ?sc ?pn) (Below ?ti ?hb) (LargerThan ?pn ?ca))))))))))))",
+    "cnf": "(exists ?cb (exists ?lt (exists ?hb (forall ?rm (exists ?ca (exists ?pn (exists ?ti (exists ?sc (and (Is ?cb 'cutting_board') (LeftOf ?cb ?lt) (AlignedHorizontally ?cb ?lt) (Is ?lt 'laptop') (LeftOf ?lt ?hb) (or (not (Is ?rm 'remote')) (Below ?rm ?cb)) (or (not (Is ?rm 'remote')) (Below ?pn ?lt)) (OnRightSide ?hb) (or (not (Is ?rm 'remote')) (Below ?ti ?hb)) (or (not (Is ?rm 'remote')) (AlignedVertically ?rm ?cb)) (or (not (Is ?rm 'remote')) (Has ?ti 'red')) (or (not (Is ?rm 'remote')) (AlignedVertically ?ca ?rm)) (or (not (Is ?rm 'remote')) (Below ?sc ?pn)) (or (not (Is ?rm 'remote')) (Is ?pn 'pan')) (Is ?hb 'handbag') (or (not (Is ?rm 'remote')) (LargerThan ?pn ?ca)) (or (not (Is ?rm 'remote')) (Below ?ca ?rm)) (or (not (Is ?rm 'remote')) (Is ?sc 'scissors')) (or (not (Is ?rm 'remote')) (Is ?ti 'tie')) (or (not (Is ?rm 'remote')) (Is ?ca 'calculator')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "tie",
+        "cutting_board",
+        "pan",
+        "handbag",
+        "calculator",
+        "scissors"
+    ]
+}

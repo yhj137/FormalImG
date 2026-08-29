@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every handbag in the scene, there is a bottle positioned below it. To the right of the handbag, there is a pair of headphones, and the handbag is visually larger than the headphones. A game controller is located below the headphones. A calculator is placed to the right of the headphones. Below the calculator lies a pen, and to the right of the calculator is a donut, which is located on the right side of the image.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'handbag') (exists ?b (exists ?hp (exists ?gc (exists ?c (exists ?p (exists ?d (and (Is ?b 'bottle') (Is ?hp 'headphones') (Is ?gc 'game_controller') (Is ?c 'calculator') (Is ?p 'pen') (Is ?d 'donut') (Below ?b ?h) (RightOf ?hp ?h) (LargerThan ?h ?hp) (Below ?gc ?hp) (RightOf ?c ?hp) (Below ?p ?c) (RightOf ?d ?c) (OnRightSide ?d)))))))))))",
+    "cnf": "(forall ?h (exists ?b (exists ?hp (exists ?gc (exists ?c (exists ?p (exists ?d (and (or (not (Is ?h 'handbag')) (Is ?b 'bottle')) (or (not (Is ?h 'handbag')) (Below ?b ?h)) (or (not (Is ?h 'handbag')) (Is ?hp 'headphones')) (or (not (Is ?h 'handbag')) (Is ?d 'donut')) (or (not (Is ?h 'handbag')) (RightOf ?hp ?h)) (or (not (Is ?h 'handbag')) (Is ?gc 'game_controller')) (or (not (Is ?h 'handbag')) (Is ?p 'pen')) (or (not (Is ?h 'handbag')) (RightOf ?d ?c)) (or (not (Is ?h 'handbag')) (LargerThan ?h ?hp)) (or (not (Is ?h 'handbag')) (Is ?c 'calculator')) (or (not (Is ?h 'handbag')) (Below ?gc ?hp)) (or (not (Is ?h 'handbag')) (Below ?p ?c)) (or (not (Is ?h 'handbag')) (OnRightSide ?d)) (or (not (Is ?h 'handbag')) (RightOf ?c ?hp))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pen",
+        "game_controller",
+        "handbag",
+        "calculator",
+        "bottle",
+        "headphones",
+        "donut"
+    ]
+}

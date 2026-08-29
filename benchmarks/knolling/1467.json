@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image with a monitor on the top side. Every screwdriver in the image is positioned to the right of the monitor. For each screwdriver, there is a laptop directly below and vertically aligned with the monitor, a hammer to the left of the laptop, a cutting board to the right of the laptop, a tie to the right of the cutting board, a phone to the left of the monitor, and a wallet to the left of the phone.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?laptop (exists ?hammer (exists ?cb (exists ?tie (exists ?phone (exists ?wallet (and (Is ?laptop 'laptop') (Is ?hammer 'hammer') (Is ?cb 'cutting_board') (Is ?tie 'tie') (Is ?phone 'phone') (Is ?wallet 'wallet') (RightOf ?sd ?monitor) (Above ?monitor ?laptop) (AlignedVertically ?monitor ?laptop) (LeftOf ?hammer ?laptop) (RightOf ?cb ?laptop) (RightOf ?tie ?cb) (LeftOf ?phone ?monitor) (LeftOf ?wallet ?phone))))))))))))",
+    "cnf": "(exists ?monitor (forall ?sd (exists ?laptop (exists ?hammer (exists ?cb (exists ?tie (exists ?phone (exists ?wallet (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?sd 'screwdriver')) (RightOf ?sd ?monitor)) (or (not (Is ?sd 'screwdriver')) (Above ?monitor ?laptop)) (or (not (Is ?sd 'screwdriver')) (Is ?wallet 'wallet')) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?monitor ?laptop)) (or (not (Is ?sd 'screwdriver')) (Is ?laptop 'laptop')) (or (not (Is ?sd 'screwdriver')) (Is ?phone 'phone')) (or (not (Is ?sd 'screwdriver')) (LeftOf ?wallet ?phone)) (or (not (Is ?sd 'screwdriver')) (LeftOf ?phone ?monitor)) (or (not (Is ?sd 'screwdriver')) (LeftOf ?hammer ?laptop)) (or (not (Is ?sd 'screwdriver')) (Is ?hammer 'hammer')) (or (not (Is ?sd 'screwdriver')) (Is ?tie 'tie')) (or (not (Is ?sd 'screwdriver')) (RightOf ?tie ?cb)) (or (not (Is ?sd 'screwdriver')) (RightOf ?cb ?laptop)) (or (not (Is ?sd 'screwdriver')) (Is ?cb 'cutting_board')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "phone",
+        "screwdriver",
+        "hammer",
+        "cutting_board",
+        "wallet",
+        "monitor"
+    ]
+}

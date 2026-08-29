@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans, a black shoe, a red stapler, and a white ruler. The stapler is positioned above the jeans, while the ruler is located to the left of the stapler. The jeans are visually larger than the shoe. Furthermore, for every lemon present in the layout, there is a cup positioned above it, a plate to the left of that cup, and a bowl to the left of the plate. The cup is aligned horizontally with the shoe, and the bowl is smaller than the plate.",
+    "dsl": "(exists ?jeans (exists ?shoe (exists ?stapler (exists ?ruler (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?ruler 'ruler') (Has ?ruler 'white') (Above ?stapler ?jeans) (LeftOf ?ruler ?stapler) (LargerThan ?jeans ?shoe) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?cup (exists ?plate (exists ?bowl (and (Is ?cup 'cup') (Is ?plate 'plate') (Is ?bowl 'bowl') (Above ?cup ?lemon) (LeftOf ?plate ?cup) (LeftOf ?bowl ?plate) (AlignedHorizontally ?cup ?shoe) (SmallerThan ?bowl ?plate))))))))))))",
+    "cnf": "(exists ?jeans (exists ?shoe (exists ?stapler (exists ?ruler (forall ?lemon (exists ?cup (exists ?plate (exists ?bowl (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Above ?stapler ?jeans) (LargerThan ?jeans ?shoe) (Has ?stapler 'red') (LeftOf ?ruler ?stapler) (Has ?shoe 'black') (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?cup ?shoe)) (Is ?stapler 'stapler') (Has ?ruler 'white') (Is ?shoe 'shoe') (or (not (Is ?lemon 'lemon')) (LeftOf ?plate ?cup)) (or (not (Is ?lemon 'lemon')) (LeftOf ?bowl ?plate)) (or (not (Is ?lemon 'lemon')) (SmallerThan ?bowl ?plate)) (Is ?ruler 'ruler') (or (not (Is ?lemon 'lemon')) (Above ?cup ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?plate 'plate')) (or (not (Is ?lemon 'lemon')) (Is ?bowl 'bowl')) (or (not (Is ?lemon 'lemon')) (Is ?cup 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "bowl",
+        "ruler",
+        "cup",
+        "jeans",
+        "stapler",
+        "lemon",
+        "shoe"
+    ]
+}

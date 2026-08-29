@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene featuring a wooden bookshelf with a metal lamp on it. A pair of glasses lies next to the lamp, and a plastic toy car sits to the left of the bookshelf. All books in the scene are located on the bookshelf. Adjacent to the bookshelf stands a wooden wardrobe; inside it is a basket containing a sandwich. An orange fish rests on the wardrobe, while a blue bird flies above it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (exists ?tc (exists ?l (exists ?g (exists ?wd (exists ?bt (exists ?sw (exists ?f (exists ?bd (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?tc 'toy car') (HasMaterial ?tc 'plastic') (LeftOf ?tc ?bs) (Is ?l 'lamp') (HasMaterial ?l 'metal') (On ?l ?bs) (Is ?g 'glasses') (NextTo ?g ?l) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bs))) (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (NextTo ?wd ?bs) (Is ?bt 'basket') (In ?bt ?wd) (Is ?sw 'sandwich') (In ?sw ?bt) (Is ?f 'fish') (HasColor ?f 'orange') (On ?f ?wd) (Is ?bd 'bird') (HasColor ?bd 'blue') (Above ?bd ?wd))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (exists ?tc (exists ?l (exists ?g (exists ?wd (exists ?bt (exists ?sw (exists ?f (exists ?bd (forall ?bk (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?tc ?bs) (On ?l ?bs) (HasMaterial ?tc 'plastic') (or (not (Is ?bk 'book')) (On ?bk ?bs)) (HasMaterial ?l 'metal') (NextTo ?g ?l) (Is ?tc 'toy car') (NextTo ?wd ?bs) (Is ?l 'lamp') (Is ?g 'glasses') (HasMaterial ?wd 'wooden') (In ?bt ?wd) (Is ?wd 'wardrobe') (On ?f ?wd) (Is ?bt 'basket') (In ?sw ?bt) (Above ?bd ?wd) (HasColor ?f 'orange') (Is ?sw 'sandwich') (HasColor ?bd 'blue') (Is ?f 'fish') (Is ?bd 'bird')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "basket",
+        "book",
+        "sandwich",
+        "wardrobe",
+        "glasses",
+        "bird",
+        "bookshelf",
+        "toy car",
+        "fish",
+        "lamp"
+    ]
+}

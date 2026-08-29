@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase present in the scene, there is a specific arrangement of items surrounding it: a shoe is located to the left of the suitcase and is positioned on the left side of the image. Vertically, a plate is placed above the suitcase, and a pizza is placed above the plate. Below the suitcase lies a glove, and keys are located below the glove. Finally, a pair of glasses is found to the left of the keys, situated on the bottom side of the image.",
+    "dsl": "(forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?shoe (exists ?plate (exists ?pizza (exists ?glove (exists ?keys (exists ?glasses (and (Is ?shoe 'shoe') (Is ?plate 'plate') (Is ?pizza 'pizza') (Is ?glove 'glove') (Is ?keys 'keys') (Is ?glasses 'glasses') (LeftOf ?shoe ?suitcase) (OnLeftSide ?shoe) (Above ?plate ?suitcase) (Above ?pizza ?plate) (Below ?glove ?suitcase) (Below ?keys ?glove) (LeftOf ?glasses ?keys) (OnBottomSide ?glasses))))))))))",
+    "cnf": "(forall ?suitcase (exists ?shoe (exists ?plate (exists ?pizza (exists ?glove (exists ?keys (exists ?glasses (and (or (not (Is ?suitcase 'suitcase')) (Is ?shoe 'shoe')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?shoe ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?plate 'plate')) (or (not (Is ?suitcase 'suitcase')) (OnLeftSide ?shoe)) (or (not (Is ?suitcase 'suitcase')) (Is ?glasses 'glasses')) (or (not (Is ?suitcase 'suitcase')) (Is ?pizza 'pizza')) (or (not (Is ?suitcase 'suitcase')) (Above ?plate ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?keys 'keys')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?glasses ?keys)) (or (not (Is ?suitcase 'suitcase')) (Is ?glove 'glove')) (or (not (Is ?suitcase 'suitcase')) (Above ?pizza ?plate)) (or (not (Is ?suitcase 'suitcase')) (Below ?keys ?glove)) (or (not (Is ?suitcase 'suitcase')) (OnBottomSide ?glasses)) (or (not (Is ?suitcase 'suitcase')) (Below ?glove ?suitcase))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "plate",
+        "pizza",
+        "suitcase",
+        "glove",
+        "shoe"
+    ]
+}

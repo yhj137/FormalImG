@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a monitor positioned on the top side of the image. To the right of the monitor is a camera, which is smaller than the monitor. A backpack is also present in the scene. Every shirt is located on the bottom side, positioned below the monitor and to the right of the backpack. For each shirt, a pair of scissors is placed above it, a wrench is located below it, and a glove lies to its right. Additionally, a fork is aligned vertically with the shirt and positioned above the scissors.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?camera (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?camera 'camera') (OnTopSide ?monitor) (RightOf ?camera ?monitor) (SmallerThan ?camera ?monitor) (forall ?shirt (implies (Is ?shirt 'shirt') (exists ?glove (exists ?scissors (exists ?wrench (exists ?fork (and (Is ?glove 'glove') (Is ?scissors 'scissors') (Is ?wrench 'wrench') (Is ?fork 'fork') (OnBottomSide ?shirt) (Below ?shirt ?monitor) (RightOf ?shirt ?backpack) (RightOf ?glove ?shirt) (Above ?scissors ?shirt) (Below ?wrench ?shirt) (AlignedVertically ?fork ?shirt) (Above ?fork ?scissors))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?camera (forall ?shirt (exists ?glove (exists ?scissors (exists ?wrench (exists ?fork (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (RightOf ?camera ?monitor) (SmallerThan ?camera ?monitor) (Is ?camera 'camera') (or (not (Is ?shirt 'shirt')) (Below ?shirt ?monitor)) (or (not (Is ?shirt 'shirt')) (OnBottomSide ?shirt)) (or (not (Is ?shirt 'shirt')) (RightOf ?shirt ?backpack)) (or (not (Is ?shirt 'shirt')) (Is ?fork 'fork')) (Is ?backpack 'backpack') (or (not (Is ?shirt 'shirt')) (RightOf ?glove ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?wrench 'wrench')) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?fork ?shirt)) (or (not (Is ?shirt 'shirt')) (Above ?scissors ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?glove 'glove')) (or (not (Is ?shirt 'shirt')) (Is ?scissors 'scissors')) (or (not (Is ?shirt 'shirt')) (Below ?wrench ?shirt)) (or (not (Is ?shirt 'shirt')) (Above ?fork ?scissors)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "wrench",
+        "scissors",
+        "fork",
+        "backpack",
+        "camera",
+        "monitor",
+        "glove",
+        "shirt"
+    ]
+}

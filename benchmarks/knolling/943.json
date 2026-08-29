@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A calculator is positioned on the top side of the image, while a sandwich is located to the left of the calculator. A tie is placed on the bottom side of the layout, and the calculator is visually smaller than the tie. Additionally, for every pair of headphones in the scene, there is a stapler situated to its left, and this stapler is smaller than the sandwich.",
+    "dsl": "(exists ?calc (exists ?sand (exists ?tie (and (Is ?calc 'calculator') (OnTopSide ?calc) (Is ?sand 'sandwich') (LeftOf ?sand ?calc) (Is ?tie 'tie') (OnBottomSide ?tie) (SmallerThan ?calc ?tie) (forall ?hp (implies (Is ?hp 'headphones') (exists ?stap (and (Is ?stap 'stapler') (LeftOf ?stap ?hp) (SmallerThan ?stap ?sand)))))))))",
+    "cnf": "(exists ?calc (exists ?sand (exists ?tie (forall ?hp (exists ?stap (and (Is ?calc 'calculator') (OnTopSide ?calc) (LeftOf ?sand ?calc) (SmallerThan ?calc ?tie) (Is ?sand 'sandwich') (or (not (Is ?hp 'headphones')) (SmallerThan ?stap ?sand)) (OnBottomSide ?tie) (or (not (Is ?hp 'headphones')) (LeftOf ?stap ?hp)) (Is ?tie 'tie') (or (not (Is ?hp 'headphones')) (Is ?stap 'stapler'))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "stapler",
+        "calculator",
+        "headphones",
+        "sandwich"
+    ]
+}

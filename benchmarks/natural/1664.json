@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a woman standing next to a wardrobe that contains all the plates. She is holding a pan with a sliced fish inside. To the left of the wardrobe is a chair with a phone on it, a clock is above the wardrobe, and a basket is to the right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?wd (and (Is ?w 'woman') (Is ?wd 'wardrobe') (NextTo ?w ?wd) (forall ?pl (implies (Is ?pl 'plate') (In ?pl ?wd))) (exists ?pa (and (Is ?pa 'pan') (Holding ?w ?pa) (exists ?f (and (Is ?f 'fish') (HasState ?f 'sliced') (In ?f ?pa))))) (exists ?ch (and (Is ?ch 'chair') (LeftOf ?ch ?wd) (exists ?ph (and (Is ?ph 'phone') (On ?ph ?ch))))) (exists ?cl (and (Is ?cl 'clock') (Above ?cl ?wd))) (exists ?b (and (Is ?b 'basket') (RightOf ?b ?wd)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?wd (forall ?pl (exists ?pa (exists ?f (exists ?ch (exists ?ph (exists ?cl (exists ?b (and (Is ?w 'woman') (NextTo ?w ?wd) (Holding ?w ?pa) (Is ?wd 'wardrobe') (or (not (Is ?pl 'plate')) (In ?pl ?wd)) (Is ?pa 'pan') (In ?f ?pa) (LeftOf ?ch ?wd) (HasState ?f 'sliced') (Above ?cl ?wd) (Is ?ch 'chair') (On ?ph ?ch) (Is ?f 'fish') (RightOf ?b ?wd) (Is ?cl 'clock') (Is ?ph 'phone') (Is ?b 'basket'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "phone",
+        "fish",
+        "chair",
+        "plate",
+        "woman",
+        "pan",
+        "clock",
+        "basket",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every book in the scene, it is positioned on the left side of the image. To the right of the book, there is a linear sequence of items horizontally aligned with the book: a ruler, a stapler, a pen, a spoon, a carrot, a lemon, and a cup. Specifically, the book is to the left of the ruler, the ruler is to the left of the stapler, the stapler is to the left of the pen, the pen is to the left of the spoon, the spoon is to the left of the carrot, the carrot is to the left of the lemon, and the lemon is to the left of the cup. Additionally, the pen is smaller than the ruler, and the lemon is smaller than the cup.",
+    "dsl": "(forall ?book (implies (Is ?book 'book') (exists ?ruler (exists ?stapler (exists ?pen (exists ?spoon (exists ?carrot (exists ?lemon (exists ?cup (and (Is ?ruler 'ruler') (Is ?stapler 'stapler') (Is ?pen 'pen') (Is ?spoon 'spoon') (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Is ?cup 'cup') (OnLeftSide ?book) (LeftOf ?book ?ruler) (LeftOf ?ruler ?stapler) (LeftOf ?stapler ?pen) (LeftOf ?pen ?spoon) (LeftOf ?spoon ?carrot) (LeftOf ?carrot ?lemon) (LeftOf ?lemon ?cup) (AlignedHorizontally ?book ?ruler) (AlignedHorizontally ?ruler ?stapler) (AlignedHorizontally ?stapler ?pen) (AlignedHorizontally ?pen ?spoon) (AlignedHorizontally ?spoon ?carrot) (AlignedHorizontally ?carrot ?lemon) (AlignedHorizontally ?lemon ?cup) (SmallerThan ?pen ?ruler) (SmallerThan ?lemon ?cup)))))))))))",
+    "cnf": "(forall ?book (exists ?ruler (exists ?stapler (exists ?pen (exists ?spoon (exists ?carrot (exists ?lemon (exists ?cup (and (or (not (Is ?book 'book')) (Is ?ruler 'ruler')) (or (not (Is ?book 'book')) (LeftOf ?book ?ruler)) (or (not (Is ?book 'book')) (Is ?stapler 'stapler')) (or (not (Is ?book 'book')) (LeftOf ?ruler ?stapler)) (or (not (Is ?book 'book')) (OnLeftSide ?book)) (or (not (Is ?book 'book')) (Is ?pen 'pen')) (or (not (Is ?book 'book')) (AlignedHorizontally ?book ?ruler)) (or (not (Is ?book 'book')) (LeftOf ?stapler ?pen)) (or (not (Is ?book 'book')) (Is ?cup 'cup')) (or (not (Is ?book 'book')) (Is ?spoon 'spoon')) (or (not (Is ?book 'book')) (AlignedHorizontally ?ruler ?stapler)) (or (not (Is ?book 'book')) (LeftOf ?lemon ?cup)) (or (not (Is ?book 'book')) (LeftOf ?pen ?spoon)) (or (not (Is ?book 'book')) (Is ?lemon 'lemon')) (or (not (Is ?book 'book')) (Is ?carrot 'carrot')) (or (not (Is ?book 'book')) (SmallerThan ?pen ?ruler)) (or (not (Is ?book 'book')) (AlignedHorizontally ?stapler ?pen)) (or (not (Is ?book 'book')) (LeftOf ?carrot ?lemon)) (or (not (Is ?book 'book')) (AlignedHorizontally ?carrot ?lemon)) (or (not (Is ?book 'book')) (AlignedHorizontally ?lemon ?cup)) (or (not (Is ?book 'book')) (LeftOf ?spoon ?carrot)) (or (not (Is ?book 'book')) (SmallerThan ?lemon ?cup)) (or (not (Is ?book 'book')) (AlignedHorizontally ?pen ?spoon)) (or (not (Is ?book 'book')) (AlignedHorizontally ?spoon ?carrot)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "stapler",
+        "pen",
+        "lemon",
+        "carrot",
+        "cup",
+        "spoon"
+    ]
+}

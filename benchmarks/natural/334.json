@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a red chair, with every cup placed next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'chair') (HasColor ?c 'red') (forall ?u (implies (Is ?u 'cup') (NextTo ?u ?c))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?u (and (Is ?c 'chair') (HasColor ?c 'red') (or (not (Is ?u 'cup')) (NextTo ?u ?c))))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "cup"
+    ]
+}

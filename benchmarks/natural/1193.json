@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a child holding a key next to an open refrigerator. A red backpack sits on the refrigerator, and a lion stands next to it. All fruit in the scene is inside the refrigerator.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?k (exists ?r (exists ?b (exists ?l (and (Is ?c 'child') (Is ?k 'key') (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?b 'backpack') (HasColor ?b 'red') (Is ?l 'lion') (Holding ?c ?k) (NextTo ?c ?r) (On ?b ?r) (NextTo ?l ?r) (forall ?f (implies (Is ?f 'fruit') (In ?f ?r))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?k (exists ?r (exists ?b (exists ?l (forall ?f (and (Is ?c 'child') (Holding ?c ?k) (NextTo ?c ?r) (Is ?k 'key') (HasState ?r 'open') (On ?b ?r) (Is ?r 'refrigerator') (NextTo ?l ?r) (HasColor ?b 'red') (or (not (Is ?f 'fruit')) (In ?f ?r)) (Is ?l 'lion') (Is ?b 'backpack')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "child",
+        "backpack",
+        "refrigerator",
+        "lion",
+        "key"
+    ]
+}

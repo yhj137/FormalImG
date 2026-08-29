@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a person wearing a metal shirt and oval glasses next to a plant. To the left of the plant is a bowl with every toy car on top of it, and a pan sits next to the bowl.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?g (exists ?pl (exists ?b (and (Is ?p 'person') (Is ?s 'shirt') (HasMaterial ?s 'metal') (On ?s ?p) (Is ?g 'glasses') (HasShape ?g 'oval') (On ?g ?p) (Is ?pl 'plant') (NextTo ?pl ?p) (Is ?b 'bowl') (LeftOf ?b ?pl) (forall ?tc (implies (Is ?tc 'toy car') (On ?tc ?b))) (exists ?pan (and (Is ?pan 'pan') (NextTo ?pan ?b))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?g (exists ?pl (exists ?b (forall ?tc (exists ?pan (and (Is ?p 'person') (On ?s ?p) (On ?g ?p) (HasMaterial ?s 'metal') (NextTo ?pl ?p) (HasShape ?g 'oval') (Is ?s 'shirt') (Is ?pl 'plant') (LeftOf ?b ?pl) (Is ?g 'glasses') (Is ?b 'bowl') (or (not (Is ?tc 'toy car')) (On ?tc ?b)) (NextTo ?pan ?b) (Is ?pan 'pan'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "person",
+        "glasses",
+        "plant",
+        "toy car",
+        "pan",
+        "bowl"
+    ]
+}

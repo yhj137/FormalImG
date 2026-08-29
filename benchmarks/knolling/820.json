@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement of five objects. On the left side of the image, a pan, a cup, and an apple are arranged in a column, aligned vertically with each other. On the right side of the image, a watch and a lighter are positioned and also aligned vertically. For horizontal symmetry, the pan on the left is aligned horizontally with the watch on the right, and the cup on the left is aligned horizontally with the lighter on the right.",
+    "dsl": "(exists ?pan (exists ?cup (exists ?apple (exists ?watch (exists ?lighter (and (Is ?pan 'pan') (Is ?cup 'cup') (Is ?apple 'apple') (Is ?watch 'watch') (Is ?lighter 'lighter') (OnLeftSide ?pan) (OnLeftSide ?cup) (OnLeftSide ?apple) (AlignedVertically ?pan ?cup) (AlignedVertically ?cup ?apple) (OnRightSide ?watch) (OnRightSide ?lighter) (AlignedVertically ?watch ?lighter) (AlignedHorizontally ?pan ?watch) (AlignedHorizontally ?cup ?lighter)))))))",
+    "cnf": "(exists ?pan (exists ?cup (exists ?apple (exists ?watch (exists ?lighter (and (Is ?pan 'pan') (OnLeftSide ?pan) (AlignedVertically ?pan ?cup) (AlignedHorizontally ?pan ?watch) (OnLeftSide ?cup) (AlignedVertically ?cup ?apple) (AlignedVertically ?watch ?lighter) (Is ?cup 'cup') (AlignedHorizontally ?cup ?lighter) (OnLeftSide ?apple) (OnRightSide ?watch) (OnRightSide ?lighter) (Is ?apple 'apple') (Is ?watch 'watch') (Is ?lighter 'lighter')))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "watch",
+        "cup",
+        "pan",
+        "lighter"
+    ]
+}

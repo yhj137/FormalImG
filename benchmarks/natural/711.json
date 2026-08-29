@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a metal man holding every book. A monitor is next to the man, and a red hat is next to the monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'man') (HasMaterial ?m 'metal') (forall ?b (implies (Is ?b 'book') (Holding ?m ?b))) (exists ?mon (and (Is ?mon 'monitor') (NextTo ?mon ?m) (exists ?h (and (Is ?h 'hat') (HasColor ?h 'red') (NextTo ?h ?mon))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (forall ?b (exists ?mon (exists ?h (and (Is ?m 'man') (HasMaterial ?m 'metal') (or (not (Is ?b 'book')) (Holding ?m ?b)) (NextTo ?mon ?m) (Is ?mon 'monitor') (NextTo ?h ?mon) (HasColor ?h 'red') (Is ?h 'hat')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "book",
+        "hat",
+        "monitor"
+    ]
+}

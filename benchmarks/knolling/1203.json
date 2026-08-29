@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The top side features a backpack, a pan, and a cutting board aligned horizontally. The bottom side contains a book, a remote, a fork, and a donut, which are also aligned horizontally. Structurally connecting the rows, the donut is visually smaller than the pan, and the fork is smaller than the cutting board.",
+    "dsl": "(exists ?backpack (exists ?pan (exists ?cutting_board (exists ?book (exists ?remote (exists ?fork (exists ?donut (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?pan 'pan') (OnTopSide ?pan) (Is ?cutting_board 'cutting_board') (OnTopSide ?cutting_board) (AlignedHorizontally ?backpack ?pan) (AlignedHorizontally ?pan ?cutting_board) (Is ?book 'book') (OnBottomSide ?book) (Is ?remote 'remote') (OnBottomSide ?remote) (Is ?fork 'fork') (OnBottomSide ?fork) (Is ?donut 'donut') (OnBottomSide ?donut) (AlignedHorizontally ?book ?remote) (AlignedHorizontally ?remote ?fork) (AlignedHorizontally ?fork ?donut) (SmallerThan ?donut ?pan) (SmallerThan ?fork ?cutting_board)))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (exists ?cutting_board (exists ?book (exists ?remote (exists ?fork (exists ?donut (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?pan) (OnTopSide ?pan) (AlignedHorizontally ?pan ?cutting_board) (Is ?pan 'pan') (SmallerThan ?donut ?pan) (OnTopSide ?cutting_board) (SmallerThan ?fork ?cutting_board) (AlignedHorizontally ?fork ?donut) (Is ?cutting_board 'cutting_board') (AlignedHorizontally ?remote ?fork) (OnBottomSide ?donut) (AlignedHorizontally ?book ?remote) (OnBottomSide ?fork) (Is ?donut 'donut') (OnBottomSide ?book) (OnBottomSide ?remote) (Is ?fork 'fork') (Is ?book 'book') (Is ?remote 'remote')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "remote",
+        "cutting_board",
+        "pan",
+        "backpack",
+        "fork",
+        "donut"
+    ]
+}

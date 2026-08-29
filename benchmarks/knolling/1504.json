@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a blue suitcase, a red game controller, and a black calculator. The suitcase is larger than the game controller. The game controller is located below the suitcase, and the calculator is aligned horizontally with the game controller. For every gray spoon present, there is a white cup positioned below it. The calculator is larger than the cup. Furthermore, a pair of pliers is aligned horizontally with the cup, a stapler is situated below the pliers, and a ruler is aligned horizontally with the stapler.",
+    "dsl": "(exists ?suitcase (exists ?controller (exists ?calculator (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?controller 'game_controller') (Has ?controller 'red') (Is ?calculator 'calculator') (Has ?calculator 'black') (LargerThan ?suitcase ?controller) (Below ?controller ?suitcase) (AlignedHorizontally ?controller ?calculator) (forall ?spoon (implies (and (Is ?spoon 'spoon') (Has ?spoon 'gray')) (exists ?cup (exists ?pliers (exists ?stapler (exists ?ruler (and (Is ?cup 'cup') (Has ?cup 'white') (Is ?pliers 'pliers') (Is ?stapler 'stapler') (Is ?ruler 'ruler') (Below ?cup ?spoon) (LargerThan ?calculator ?cup) (AlignedHorizontally ?cup ?pliers) (Below ?stapler ?pliers) (AlignedHorizontally ?stapler ?ruler))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?controller (exists ?calculator (forall ?spoon (exists ?cup (exists ?pliers (exists ?stapler (exists ?ruler (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (LargerThan ?suitcase ?controller) (Below ?controller ?suitcase) (Has ?controller 'red') (AlignedHorizontally ?controller ?calculator) (Is ?controller 'game_controller') (Has ?calculator 'black') (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (LargerThan ?calculator ?cup)) (Is ?calculator 'calculator') (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Below ?cup ?spoon)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?cup ?pliers)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?ruler 'ruler')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?cup 'white')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Below ?stapler ?pliers)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?pliers 'pliers')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?stapler 'stapler')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?stapler ?ruler)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?cup 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "pliers",
+        "stapler",
+        "cup",
+        "game_controller",
+        "calculator",
+        "spoon",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, it is positioned on the top side of the image, and there is a laptop located to its left. Additionally, there are headphones aligned vertically with the laptop, and a bowl aligned horizontally with the headphones.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?laptop (exists ?headphones (exists ?bowl (and (Is ?laptop 'laptop') (Is ?headphones 'headphones') (Is ?bowl 'bowl') (OnTopSide ?monitor) (LeftOf ?laptop ?monitor) (AlignedVertically ?headphones ?laptop) (AlignedHorizontally ?bowl ?headphones))))))))",
+    "cnf": "(forall ?monitor (exists ?laptop (exists ?headphones (exists ?bowl (and (or (not (Is ?monitor 'monitor')) (Is ?laptop 'laptop')) (or (not (Is ?monitor 'monitor')) (Is ?headphones 'headphones')) (or (not (Is ?monitor 'monitor')) (LeftOf ?laptop ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?bowl 'bowl')) (or (not (Is ?monitor 'monitor')) (AlignedVertically ?headphones ?laptop)) (or (not (Is ?monitor 'monitor')) (OnTopSide ?monitor)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?bowl ?headphones)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "laptop",
+        "headphones",
+        "bowl"
+    ]
+}

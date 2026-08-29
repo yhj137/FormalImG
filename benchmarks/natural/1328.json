@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a child in a bed. A cylindrical bottle containing a key is next to the bed. An elephant is also next to the bed, with a purple banana beside it. All plants are positioned to the left of the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?bot (exists ?key (exists ?child (and (Is ?bed 'bed') (Is ?bot 'bottle') (HasShape ?bot 'cylindrical') (NextTo ?bot ?bed) (Is ?key 'key') (In ?key ?bot) (Is ?child 'child') (In ?child ?bed) (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?bed))) (exists ?e (exists ?ban (and (Is ?e 'elephant') (NextTo ?e ?bed) (Is ?ban 'banana') (HasColor ?ban 'purple') (NextTo ?ban ?e))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?bot (exists ?key (exists ?child (forall ?p (exists ?e (exists ?ban (and (Is ?bed 'bed') (NextTo ?bot ?bed) (In ?child ?bed) (HasShape ?bot 'cylindrical') (In ?key ?bot) (or (not (Is ?p 'plant')) (LeftOf ?p ?bed)) (Is ?child 'child') (Is ?bot 'bottle') (Is ?key 'key') (NextTo ?e ?bed) (Is ?e 'elephant') (NextTo ?ban ?e) (HasColor ?ban 'purple') (Is ?ban 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "key",
+        "plant",
+        "banana",
+        "bed",
+        "elephant",
+        "child"
+    ]
+}

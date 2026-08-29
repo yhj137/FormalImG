@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a remote and a pair of jeans. The remote is positioned on the top side of the image and is located to the left of the jeans. Additionally, for every wrench in the scene, it is placed below the remote.",
+    "dsl": "(exists ?remote (exists ?jeans (and (Is ?remote 'remote') (Is ?jeans 'jeans') (OnTopSide ?remote) (LeftOf ?remote ?jeans) (forall ?wrench (implies (Is ?wrench 'wrench') (Below ?wrench ?remote))))))",
+    "cnf": "(exists ?remote (exists ?jeans (forall ?wrench (and (Is ?remote 'remote') (OnTopSide ?remote) (LeftOf ?remote ?jeans) (or (not (Is ?wrench 'wrench')) (Below ?wrench ?remote)) (Is ?jeans 'jeans')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "remote",
+        "jeans"
+    ]
+}

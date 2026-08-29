@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a blue hat and a pair of red pliers. The blue hat is notably larger than the pliers.",
+    "dsl": "(exists ?hat (exists ?pliers (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?pliers 'pliers') (Has ?pliers 'red') (LargerThan ?hat ?pliers))))",
+    "cnf": "(exists ?hat (exists ?pliers (and (Is ?hat 'hat') (Has ?hat 'blue') (LargerThan ?hat ?pliers) (Has ?pliers 'red') (Is ?pliers 'pliers'))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "pliers"
+    ]
+}

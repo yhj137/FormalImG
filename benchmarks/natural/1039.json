@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. Next to every desk stands a woman holding a spoon. An open laptop sits on the desk next to a round plate with a cake on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?d (implies (Is ?d 'desk') (exists ?w (exists ?l (exists ?p (exists ?c (exists ?s (and (Is ?w 'woman') (Is ?l 'laptop') (Is ?p 'plate') (Is ?c 'cake') (Is ?s 'spoon') (NextTo ?w ?d) (Holding ?w ?s) (On ?l ?d) (HasState ?l 'open') (On ?p ?d) (HasShape ?p 'round') (NextTo ?l ?p) (On ?c ?p))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?d (exists ?w (exists ?l (exists ?p (exists ?c (exists ?s (and (or (not (Is ?d 'desk')) (Is ?w 'woman')) (or (not (Is ?d 'desk')) (Is ?l 'laptop')) (or (not (Is ?d 'desk')) (NextTo ?w ?d)) (or (not (Is ?d 'desk')) (Is ?p 'plate')) (or (not (Is ?d 'desk')) (On ?l ?d)) (or (not (Is ?d 'desk')) (Is ?s 'spoon')) (or (not (Is ?d 'desk')) (Holding ?w ?s)) (or (not (Is ?d 'desk')) (Is ?c 'cake')) (or (not (Is ?d 'desk')) (On ?p ?d)) (or (not (Is ?d 'desk')) (HasState ?l 'open')) (or (not (Is ?d 'desk')) (On ?c ?p)) (or (not (Is ?d 'desk')) (HasShape ?p 'round')) (or (not (Is ?d 'desk')) (NextTo ?l ?p))))))))))",
+    "k": 6,
+    "object_classes": [
+        "spoon",
+        "plate",
+        "laptop",
+        "woman",
+        "cake",
+        "desk"
+    ]
+}

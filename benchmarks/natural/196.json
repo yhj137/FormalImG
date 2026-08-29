@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting style scene where all the fish are wooden.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?f (implies (Is ?f 'fish') (HasMaterial ?f 'wooden'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?f (or (not (Is ?f 'fish')) (HasMaterial ?f 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "fish"
+    ]
+}

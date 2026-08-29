@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring jeans, a ruler, and a phone. The jeans are positioned on the top side of the frame. Both the ruler and the phone are located below the jeans, and they are aligned horizontally with one another.",
+    "dsl": "(exists ?j (exists ?r (exists ?p (and (Is ?j 'jeans') (Is ?r 'ruler') (Is ?p 'phone') (OnTopSide ?j) (Below ?r ?j) (Below ?p ?j) (AlignedHorizontally ?r ?p)))))",
+    "cnf": "(exists ?j (exists ?r (exists ?p (and (Is ?j 'jeans') (OnTopSide ?j) (Below ?r ?j) (Below ?p ?j) (Is ?r 'ruler') (AlignedHorizontally ?r ?p) (Is ?p 'phone')))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "phone",
+        "jeans"
+    ]
+}

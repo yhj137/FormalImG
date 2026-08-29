@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image featuring a boat containing a sleeping lion. Inside the boat, next to the lion, is a round plate with a sliced pizza. To the right of the boat stands a man with a butterfly next to him. Every person in the scene is located to the right of the boat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?l (exists ?pl (and (Is ?b 'boat') (Is ?l 'lion') (Is ?pl 'plate') (HasState ?l 'sleeping') (HasShape ?pl 'round') (In ?l ?b) (In ?pl ?b) (NextTo ?pl ?l) (forall ?p (implies (Is ?p 'person') (RightOf ?p ?b))) (exists ?m (exists ?pi (exists ?bu (and (Is ?m 'man') (Is ?pi 'pizza') (Is ?bu 'butterfly') (RightOf ?m ?b) (HasState ?m 'standing') (HasState ?pi 'sliced') (On ?pi ?pl) (NextTo ?bu ?m))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?l (exists ?pl (forall ?p (exists ?m (exists ?pi (exists ?bu (and (Is ?b 'boat') (In ?l ?b) (In ?pl ?b) (HasState ?l 'sleeping') (NextTo ?pl ?l) (or (not (Is ?p 'person')) (RightOf ?p ?b)) (HasShape ?pl 'round') (Is ?l 'lion') (On ?pi ?pl) (RightOf ?m ?b) (Is ?pl 'plate') (HasState ?pi 'sliced') (Is ?m 'man') (HasState ?m 'standing') (Is ?pi 'pizza') (NextTo ?bu ?m) (Is ?bu 'butterfly'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "man",
+        "pizza",
+        "butterfly",
+        "boat",
+        "lion",
+        "plate"
+    ]
+}

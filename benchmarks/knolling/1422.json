@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two neatly arranged rows of objects. On the left side of the scene, there is a black keyboard in the bottom row, with a game controller positioned directly above it. Moving towards the right, the top row contains a remote, then a wrench, and ends with a blue hat on the right side of the image. The bottom row follows a similar pattern: to the right of the keyboard is a lighter, followed by a pair of scissors, and ending with a red cup on the right side. Vertically, the remote is above the lighter, the wrench is above the scissors, and the hat is above the cup. The keyboard is visually larger than the lighter. All items in the top row are aligned horizontally with each other, as are the items in the bottom row.",
+    "dsl": "(exists ?kb (exists ?gc (exists ?rem (exists ?lig (exists ?wr (exists ?sc (exists ?hat (exists ?cup (and (Is ?kb 'keyboard') (Has ?kb 'black') (OnLeftSide ?kb) (Is ?gc 'game_controller') (OnLeftSide ?gc) (Is ?rem 'remote') (Is ?lig 'lighter') (Is ?wr 'wrench') (Is ?sc 'scissors') (Is ?hat 'hat') (Has ?hat 'blue') (OnRightSide ?hat) (Is ?cup 'cup') (Has ?cup 'red') (OnRightSide ?cup) (Above ?gc ?kb) (Above ?rem ?lig) (Above ?wr ?sc) (Above ?hat ?cup) (RightOf ?rem ?gc) (RightOf ?wr ?rem) (RightOf ?hat ?wr) (RightOf ?lig ?kb) (RightOf ?sc ?lig) (RightOf ?cup ?sc) (AlignedHorizontally ?gc ?rem) (AlignedHorizontally ?rem ?wr) (AlignedHorizontally ?wr ?hat) (AlignedHorizontally ?kb ?lig) (AlignedHorizontally ?lig ?sc) (AlignedHorizontally ?sc ?cup) (LargerThan ?kb ?lig))))))))))",
+    "cnf": "(exists ?kb (exists ?gc (exists ?rem (exists ?lig (exists ?wr (exists ?sc (exists ?hat (exists ?cup (and (Is ?kb 'keyboard') (Has ?kb 'black') (OnLeftSide ?kb) (Above ?gc ?kb) (RightOf ?lig ?kb) (OnLeftSide ?gc) (RightOf ?rem ?gc) (AlignedHorizontally ?kb ?lig) (Above ?rem ?lig) (RightOf ?sc ?lig) (Is ?gc 'game_controller') (AlignedHorizontally ?gc ?rem) (RightOf ?wr ?rem) (LargerThan ?kb ?lig) (AlignedHorizontally ?lig ?sc) (Is ?rem 'remote') (Is ?lig 'lighter') (Above ?wr ?sc) (RightOf ?cup ?sc) (AlignedHorizontally ?rem ?wr) (RightOf ?hat ?wr) (AlignedHorizontally ?sc ?cup) (Is ?wr 'wrench') (Is ?sc 'scissors') (Above ?hat ?cup) (AlignedHorizontally ?wr ?hat) (OnRightSide ?hat) (OnRightSide ?cup) (Has ?hat 'blue') (Has ?cup 'red') (Is ?hat 'hat') (Is ?cup 'cup'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "wrench",
+        "cup",
+        "game_controller",
+        "hat",
+        "lighter",
+        "scissors"
+    ]
+}

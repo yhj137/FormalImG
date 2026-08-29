@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill located on the left side. Positioned below the drill is a hammer, and below the hammer is a glove. To the right of the drill lies a plate, while a bowl is placed above the plate; the plate is larger than the bowl. A game controller sits to the right of the hammer and below the plate. To the right of the glove and below the game controller is a camera. Lastly, headphones are located to the right of the camera and are smaller than the drill.",
+    "dsl": "(exists ?d (exists ?h (exists ?g (exists ?p (exists ?b (exists ?gc (exists ?c (exists ?hp (and (Is ?d 'drill') (OnLeftSide ?d) (Is ?h 'hammer') (Below ?h ?d) (Is ?g 'glove') (Below ?g ?h) (Is ?p 'plate') (RightOf ?p ?d) (Is ?b 'bowl') (Above ?b ?p) (LargerThan ?p ?b) (Is ?gc 'game_controller') (RightOf ?gc ?h) (Below ?gc ?p) (Is ?c 'camera') (RightOf ?c ?g) (Below ?c ?gc) (Is ?hp 'headphones') (RightOf ?hp ?c) (SmallerThan ?hp ?d))))))))))",
+    "cnf": "(exists ?d (exists ?h (exists ?g (exists ?p (exists ?b (exists ?gc (exists ?c (exists ?hp (and (Is ?d 'drill') (OnLeftSide ?d) (Below ?h ?d) (RightOf ?p ?d) (Is ?h 'hammer') (Below ?g ?h) (SmallerThan ?hp ?d) (Is ?p 'plate') (Above ?b ?p) (RightOf ?gc ?h) (Is ?g 'glove') (RightOf ?c ?g) (RightOf ?hp ?c) (LargerThan ?p ?b) (Is ?b 'bowl') (Is ?gc 'game_controller') (Below ?gc ?p) (Is ?c 'camera') (Below ?c ?gc) (Is ?hp 'headphones'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "hammer",
+        "plate",
+        "bowl",
+        "headphones",
+        "game_controller",
+        "drill",
+        "camera",
+        "glove"
+    ]
+}

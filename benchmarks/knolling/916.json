@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a blue tie and a black pan. The pan is located on the right side of the image, and the tie is aligned horizontally with the pan. For every white phone in the scene, it is positioned below the tie; furthermore, there is a mouse located vertically below the phone, and a pair of pliers aligned horizontally with the mouse.",
+    "dsl": "(exists ?pan (exists ?tie (and (Is ?pan 'pan') (Has ?pan 'black') (OnRightSide ?pan) (Is ?tie 'tie') (Has ?tie 'blue') (AlignedHorizontally ?tie ?pan) (forall ?phone (implies (and (Is ?phone 'phone') (Has ?phone 'white')) (exists ?mouse (exists ?pliers (and (Is ?mouse 'mouse') (Is ?pliers 'pliers') (Below ?phone ?tie) (Below ?mouse ?phone) (AlignedVertically ?mouse ?phone) (AlignedHorizontally ?pliers ?mouse)))))))))",
+    "cnf": "(exists ?pan (exists ?tie (forall ?phone (exists ?mouse (exists ?pliers (and (Is ?pan 'pan') (Has ?pan 'black') (OnRightSide ?pan) (AlignedHorizontally ?tie ?pan) (Has ?tie 'blue') (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Below ?phone ?tie)) (Is ?tie 'tie') (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Is ?pliers 'pliers')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Below ?mouse ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Is ?mouse 'mouse')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (AlignedHorizontally ?pliers ?mouse)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (AlignedVertically ?mouse ?phone))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "phone",
+        "pan",
+        "mouse"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene features a person sitting on a sofa to the left of a desk, while a bench stands to the right of the desk. Every butterfly in the scene is flying above the bench. A keyboard rests on the desk next to a screwdriver, alongside a round bowl. A basket sits on the bench with a pan lying beside it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?p (exists ?d (exists ?be (and (Is ?s 'sofa') (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?s) (Is ?d 'desk') (LeftOf ?s ?d) (Is ?be 'bench') (RightOf ?be ?d) (forall ?bu (implies (Is ?bu 'butterfly') (Above ?bu ?be))) (exists ?k (exists ?sd (exists ?bo (exists ?ba (exists ?pa (and (Is ?k 'keyboard') (On ?k ?d) (Is ?sd 'screwdriver') (NextTo ?sd ?k) (Is ?bo 'bowl') (On ?bo ?d) (HasShape ?bo 'round') (Is ?ba 'basket') (On ?ba ?be) (Is ?pa 'pan') (NextTo ?pa ?ba)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?p (exists ?d (exists ?be (forall ?bu (exists ?k (exists ?sd (exists ?bo (exists ?ba (exists ?pa (and (Is ?s 'sofa') (On ?p ?s) (LeftOf ?s ?d) (HasState ?p 'sitting') (Is ?d 'desk') (RightOf ?be ?d) (Is ?p 'person') (On ?k ?d) (Is ?be 'bench') (or (not (Is ?bu 'butterfly')) (Above ?bu ?be)) (On ?bo ?d) (Is ?k 'keyboard') (NextTo ?sd ?k) (On ?ba ?be) (Is ?bo 'bowl') (HasShape ?bo 'round') (Is ?sd 'screwdriver') (Is ?ba 'basket') (NextTo ?pa ?ba) (Is ?pa 'pan')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sofa",
+        "bench",
+        "person",
+        "basket",
+        "desk",
+        "pan",
+        "butterfly",
+        "bowl",
+        "screwdriver",
+        "keyboard"
+    ]
+}

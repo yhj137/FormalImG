@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a suitcase on the bottom side and a keyboard on the top side, with a backpack positioned between them; these three items are vertically aligned, with the backpack below the keyboard and above the suitcase. For every handbag in the image, there is a calculator located above it. The handbag is positioned to the left of the suitcase, and the calculator is smaller than the handbag. To the right of the central items, the suitcase is left of a stapler, the backpack is left of a pizza, and the keyboard is left of a pair of headphones. Additionally, the pizza is located above the stapler and is vertically aligned with it, while the headphones are above the pizza. On the far left, scissors are placed to the left of the backpack, and a wrench is located to the left of the keyboard and above the scissors.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (AlignedVertically ?suitcase ?keyboard) (forall ?handbag (implies (Is ?handbag 'handbag') (exists ?calculator (and (Is ?calculator 'calculator') (Above ?calculator ?handbag) (LeftOf ?handbag ?suitcase) (SmallerThan ?calculator ?handbag))))) (exists ?backpack (exists ?stapler (exists ?pizza (exists ?headphones (exists ?scissors (exists ?wrench (and (Is ?backpack 'backpack') (Above ?backpack ?suitcase) (Below ?backpack ?keyboard) (AlignedVertically ?backpack ?suitcase) (Is ?stapler 'stapler') (LeftOf ?suitcase ?stapler) (Is ?pizza 'pizza') (Above ?pizza ?stapler) (LeftOf ?backpack ?pizza) (AlignedVertically ?pizza ?stapler) (Is ?headphones 'headphones') (Above ?headphones ?pizza) (LeftOf ?keyboard ?headphones) (Is ?scissors 'scissors') (LeftOf ?scissors ?backpack) (Is ?wrench 'wrench') (Above ?wrench ?scissors) (LeftOf ?wrench ?keyboard)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (forall ?handbag (exists ?calculator (exists ?backpack (exists ?stapler (exists ?pizza (exists ?headphones (exists ?scissors (exists ?wrench (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (AlignedVertically ?suitcase ?keyboard) (or (not (Is ?handbag 'handbag')) (LeftOf ?handbag ?suitcase)) (OnTopSide ?keyboard) (Below ?backpack ?keyboard) (Above ?backpack ?suitcase) (or (not (Is ?handbag 'handbag')) (Above ?calculator ?handbag)) (or (not (Is ?handbag 'handbag')) (SmallerThan ?calculator ?handbag)) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?headphones) (AlignedVertically ?backpack ?suitcase) (Is ?backpack 'backpack') (or (not (Is ?handbag 'handbag')) (Is ?calculator 'calculator')) (LeftOf ?wrench ?keyboard) (Above ?headphones ?pizza) (LeftOf ?suitcase ?stapler) (LeftOf ?backpack ?pizza) (Above ?wrench ?scissors) (AlignedVertically ?pizza ?stapler) (Is ?headphones 'headphones') (Is ?stapler 'stapler') (Above ?pizza ?stapler) (LeftOf ?scissors ?backpack) (Is ?wrench 'wrench') (Is ?pizza 'pizza') (Is ?scissors 'scissors'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "stapler",
+        "keyboard",
+        "wrench",
+        "pizza",
+        "handbag",
+        "calculator",
+        "backpack",
+        "scissors",
+        "headphones",
+        "suitcase"
+    ]
+}

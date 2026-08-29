@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical column of six objects located on the right side of the scene. The column begins with a wallet in the top half of the image. A calculator is positioned below the wallet, followed by a remote below the calculator. Further down, there is a sock below the remote, a lighter below the sock, and finally a cutting board below the lighter. All six items\u2014the wallet, calculator, remote, sock, lighter, and cutting board\u2014are aligned vertically.",
+    "dsl": "(exists ?wallet (exists ?calculator (exists ?remote (exists ?sock (exists ?lighter (exists ?cutting_board (and (Is ?wallet 'wallet') (Is ?calculator 'calculator') (Is ?remote 'remote') (Is ?sock 'sock') (Is ?lighter 'lighter') (Is ?cutting_board 'cutting_board') (OnTopSide ?wallet) (OnRightSide ?wallet) (Below ?calculator ?wallet) (Below ?remote ?calculator) (Below ?sock ?remote) (Below ?lighter ?sock) (Below ?cutting_board ?lighter) (AlignedVertically ?wallet ?calculator) (AlignedVertically ?calculator ?remote) (AlignedVertically ?remote ?sock) (AlignedVertically ?sock ?lighter) (AlignedVertically ?lighter ?cutting_board))))))))",
+    "cnf": "(exists ?wallet (exists ?calculator (exists ?remote (exists ?sock (exists ?lighter (exists ?cutting_board (and (Is ?wallet 'wallet') (OnTopSide ?wallet) (OnRightSide ?wallet) (Below ?calculator ?wallet) (AlignedVertically ?wallet ?calculator) (Is ?calculator 'calculator') (Below ?remote ?calculator) (AlignedVertically ?calculator ?remote) (Is ?remote 'remote') (Below ?sock ?remote) (AlignedVertically ?remote ?sock) (Is ?sock 'sock') (Below ?lighter ?sock) (AlignedVertically ?sock ?lighter) (Is ?lighter 'lighter') (Below ?cutting_board ?lighter) (AlignedVertically ?lighter ?cutting_board) (Is ?cutting_board 'cutting_board'))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "sock",
+        "cutting_board",
+        "calculator",
+        "wallet",
+        "lighter"
+    ]
+}

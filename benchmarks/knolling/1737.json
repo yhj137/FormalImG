@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a tie, a wallet below it, and a sock below the wallet; these three are aligned vertically, with the sock on the bottom side. To the right of the tie is a pair of scissors, and below the scissors is a phone, aligned vertically. For every book in the scene, it must be positioned below the phone, aligned vertically with it, and on the bottom side. Additionally, for every such book, there exists a sandwich, a pizza, and a pan arranged in a vertical column: the sandwich is to the right of the scissors, the pizza is to the right of the phone and below the sandwich, and the pan is to the right of the book and below the pizza, with the pan also positioned on the bottom side.",
+    "dsl": "(exists ?tie (exists ?wallet (exists ?sock (exists ?scissors (exists ?phone (and (Is ?tie 'tie') (Is ?wallet 'wallet') (Is ?sock 'sock') (Is ?scissors 'scissors') (Is ?phone 'phone') (Below ?wallet ?tie) (AlignedVertically ?wallet ?tie) (Below ?sock ?wallet) (AlignedVertically ?sock ?wallet) (OnBottomSide ?sock) (RightOf ?scissors ?tie) (Below ?phone ?scissors) (AlignedVertically ?phone ?scissors) (forall ?book (implies (Is ?book 'book') (exists ?sandwich (exists ?pizza (exists ?pan (and (Is ?sandwich 'sandwich') (Is ?pizza 'pizza') (Is ?pan 'pan') (Below ?book ?phone) (AlignedVertically ?book ?phone) (OnBottomSide ?book) (RightOf ?sandwich ?scissors) (RightOf ?pizza ?phone) (RightOf ?pan ?book) (Below ?pizza ?sandwich) (AlignedVertically ?pizza ?sandwich) (Below ?pan ?pizza) (AlignedVertically ?pan ?pizza) (OnBottomSide ?pan)))))))))))))",
+    "cnf": "(exists ?tie (exists ?wallet (exists ?sock (exists ?scissors (exists ?phone (forall ?book (exists ?sandwich (exists ?pizza (exists ?pan (and (Is ?tie 'tie') (Below ?wallet ?tie) (AlignedVertically ?wallet ?tie) (Is ?wallet 'wallet') (RightOf ?scissors ?tie) (Below ?sock ?wallet) (Is ?scissors 'scissors') (Below ?phone ?scissors) (AlignedVertically ?sock ?wallet) (Is ?sock 'sock') (AlignedVertically ?phone ?scissors) (Is ?phone 'phone') (OnBottomSide ?sock) (or (not (Is ?book 'book')) (RightOf ?sandwich ?scissors)) (or (not (Is ?book 'book')) (Below ?book ?phone)) (or (not (Is ?book 'book')) (OnBottomSide ?book)) (or (not (Is ?book 'book')) (RightOf ?pizza ?phone)) (or (not (Is ?book 'book')) (Is ?sandwich 'sandwich')) (or (not (Is ?book 'book')) (Below ?pizza ?sandwich)) (or (not (Is ?book 'book')) (AlignedVertically ?book ?phone)) (or (not (Is ?book 'book')) (Is ?pan 'pan')) (or (not (Is ?book 'book')) (RightOf ?pan ?book)) (or (not (Is ?book 'book')) (Is ?pizza 'pizza')) (or (not (Is ?book 'book')) (AlignedVertically ?pizza ?sandwich)) (or (not (Is ?book 'book')) (Below ?pan ?pizza)) (or (not (Is ?book 'book')) (AlignedVertically ?pan ?pizza)) (or (not (Is ?book 'book')) (OnBottomSide ?pan))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "tie",
+        "sock",
+        "phone",
+        "pizza",
+        "pan",
+        "wallet",
+        "scissors",
+        "sandwich"
+    ]
+}

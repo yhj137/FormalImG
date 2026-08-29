@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board located on the bottom side. Every game controller is positioned above the cutting board and has a camera situated to its right and below it.",
+    "dsl": "(exists ?cutting_board (and (Is ?cutting_board 'cutting_board') (OnBottomSide ?cutting_board) (forall ?game_controller (implies (Is ?game_controller 'game_controller') (and (Above ?game_controller ?cutting_board) (exists ?camera (and (Is ?camera 'camera') (RightOf ?camera ?game_controller) (Below ?camera ?game_controller))))))))",
+    "cnf": "(exists ?cutting_board (forall ?game_controller (exists ?camera (and (Is ?cutting_board 'cutting_board') (OnBottomSide ?cutting_board) (or (not (Is ?game_controller 'game_controller')) (Above ?game_controller ?cutting_board)) (or (not (Is ?game_controller 'game_controller')) (Is ?camera 'camera')) (or (not (Is ?game_controller 'game_controller')) (RightOf ?camera ?game_controller)) (or (not (Is ?game_controller 'game_controller')) (Below ?camera ?game_controller))))))",
+    "k": 3,
+    "object_classes": [
+        "cutting_board",
+        "camera",
+        "game_controller"
+    ]
+}

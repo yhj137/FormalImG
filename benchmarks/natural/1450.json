@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a car. All plants are positioned to the right of the car. Inside the car, a sleeping lion has a red jacket on it. To the left of the car is a backpack containing an umbrella. Next to the car stands a bookshelf with a keyboard on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'car') (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?c))) (exists ?l (and (Is ?l 'lion') (HasState ?l 'sleeping') (In ?l ?c) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'red') (On ?j ?l))))) (exists ?b (and (Is ?b 'backpack') (LeftOf ?b ?c) (exists ?u (and (Is ?u 'umbrella') (In ?u ?b))))) (exists ?bs (and (Is ?bs 'bookshelf') (NextTo ?bs ?c) (exists ?k (and (Is ?k 'keyboard') (On ?k ?bs))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?p (exists ?l (exists ?j (exists ?b (exists ?u (exists ?bs (exists ?k (and (Is ?c 'car') (or (not (Is ?p 'plant')) (RightOf ?p ?c)) (In ?l ?c) (LeftOf ?b ?c) (HasState ?l 'sleeping') (On ?j ?l) (NextTo ?bs ?c) (Is ?b 'backpack') (In ?u ?b) (Is ?l 'lion') (HasColor ?j 'red') (Is ?bs 'bookshelf') (On ?k ?bs) (Is ?u 'umbrella') (Is ?j 'jacket') (Is ?k 'keyboard')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "backpack",
+        "plant",
+        "jacket",
+        "car",
+        "lion",
+        "bookshelf",
+        "keyboard"
+    ]
+}

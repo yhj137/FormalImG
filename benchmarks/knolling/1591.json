@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue shirt is positioned on the right side of the image. To the left of the shirt, a bowl, a cup, and a red apple are arranged in a vertical column, where the bowl is above the cup, and the cup is above the apple. The shirt is larger than the bowl, while the cup is smaller than the bowl. Further to the left of these items, there is another vertically aligned column with a donut at the top, a stapler in the middle, and a screwdriver at the bottom. Finally, for every lighter in the scene, it is located to the left of the red apple.",
+    "dsl": "(exists ?shirt (exists ?bowl (exists ?cup (exists ?apple (exists ?donut (exists ?stapler (exists ?screwdriver (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnRightSide ?shirt) (Is ?bowl 'bowl') (Is ?cup 'cup') (Is ?apple 'apple') (Has ?apple 'red') (Is ?donut 'donut') (Is ?stapler 'stapler') (Is ?screwdriver 'screwdriver') (LeftOf ?bowl ?shirt) (LeftOf ?stapler ?bowl) (Above ?bowl ?cup) (Above ?cup ?apple) (AlignedVertically ?bowl ?cup) (AlignedVertically ?cup ?apple) (Above ?donut ?stapler) (Above ?stapler ?screwdriver) (AlignedVertically ?donut ?stapler) (AlignedVertically ?stapler ?screwdriver) (LargerThan ?shirt ?bowl) (SmallerThan ?cup ?bowl) (forall ?lighter (implies (Is ?lighter 'lighter') (LeftOf ?lighter ?apple)))))))))))",
+    "cnf": "(exists ?shirt (exists ?bowl (exists ?cup (exists ?apple (exists ?donut (exists ?stapler (exists ?screwdriver (forall ?lighter (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnRightSide ?shirt) (LeftOf ?bowl ?shirt) (LargerThan ?shirt ?bowl) (Is ?bowl 'bowl') (LeftOf ?stapler ?bowl) (AlignedVertically ?bowl ?cup) (SmallerThan ?cup ?bowl) (Above ?bowl ?cup) (Is ?stapler 'stapler') (Above ?donut ?stapler) (Above ?cup ?apple) (AlignedVertically ?cup ?apple) (Is ?cup 'cup') (Is ?donut 'donut') (AlignedVertically ?donut ?stapler) (Above ?stapler ?screwdriver) (Has ?apple 'red') (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?apple)) (AlignedVertically ?stapler ?screwdriver) (Is ?screwdriver 'screwdriver') (Is ?apple 'apple'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "stapler",
+        "apple",
+        "cup",
+        "donut",
+        "screwdriver",
+        "lighter",
+        "bowl",
+        "shirt"
+    ]
+}

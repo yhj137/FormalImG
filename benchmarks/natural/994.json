@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is holding a shirt. A bus is to the left of the man, and a rectangular wardrobe is to his right. Every keyboard is positioned to the right of the wardrobe.",
+    "dsl": "(exists ?m (exists ?s (exists ?b (exists ?w (and (Is ?m 'man') (Is ?s 'shirt') (Is ?b 'bus') (Is ?w 'wardrobe') (Holding ?m ?s) (LeftOf ?b ?m) (RightOf ?w ?m) (HasShape ?w 'rectangular') (forall ?k (implies (Is ?k 'keyboard') (RightOf ?k ?w))))))))",
+    "cnf": "(exists ?m (exists ?s (exists ?b (exists ?w (forall ?k (and (Is ?m 'man') (Holding ?m ?s) (LeftOf ?b ?m) (Is ?s 'shirt') (RightOf ?w ?m) (Is ?b 'bus') (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (or (not (Is ?k 'keyboard')) (RightOf ?k ?w))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "man",
+        "bus",
+        "wardrobe",
+        "shirt"
+    ]
+}

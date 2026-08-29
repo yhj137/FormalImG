@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A man is holding a screwdriver. To the right of the man stands a bookshelf. A rectangular monitor and a basket are placed on the bookshelf. A hat also sits on the bookshelf to the left of the basket. Inside the basket are an apple, a banana, and every key in the scene. To the left of the man is a shirt.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?bs (exists ?mon (exists ?bkt (and (Is ?m 'man') (Is ?sd 'screwdriver') (Is ?bs 'bookshelf') (Is ?mon 'monitor') (Is ?bkt 'basket') (Holding ?m ?sd) (RightOf ?bs ?m) (On ?mon ?bs) (HasShape ?mon 'rectangular') (On ?bkt ?bs) (forall ?k (implies (Is ?k 'key') (In ?k ?bkt))) (exists ?h (exists ?a (exists ?bn (exists ?s (and (Is ?h 'hat') (Is ?a 'apple') (Is ?bn 'banana') (Is ?s 'shirt') (On ?h ?bs) (LeftOf ?h ?bkt) (In ?a ?bkt) (In ?bn ?bkt) (LeftOf ?s ?m)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?bs (exists ?mon (exists ?bkt (forall ?k (exists ?h (exists ?a (exists ?bn (exists ?s (and (Is ?m 'man') (Holding ?m ?sd) (RightOf ?bs ?m) (Is ?sd 'screwdriver') (LeftOf ?s ?m) (Is ?bs 'bookshelf') (On ?mon ?bs) (Is ?s 'shirt') (On ?bkt ?bs) (Is ?mon 'monitor') (HasShape ?mon 'rectangular') (On ?h ?bs) (Is ?bkt 'basket') (or (not (Is ?k 'key')) (In ?k ?bkt)) (Is ?h 'hat') (LeftOf ?h ?bkt) (In ?a ?bkt) (In ?bn ?bkt) (Is ?a 'apple') (Is ?bn 'banana')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "hat",
+        "banana",
+        "man",
+        "monitor",
+        "basket",
+        "apple",
+        "screwdriver",
+        "bookshelf",
+        "key"
+    ]
+}

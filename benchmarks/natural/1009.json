@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cat and a glass cup rest on an open umbrella. Next to the umbrella, a dog holds a plastic bottle, with a lit lamp beside the dog.",
+    "dsl": "(exists ?u (exists ?c (exists ?cp (exists ?d (exists ?b (exists ?l (and (Is ?u 'umbrella') (HasState ?u 'open') (Is ?c 'cat') (On ?c ?u) (Is ?cp 'cup') (HasMaterial ?cp 'glass') (On ?cp ?u) (Is ?d 'dog') (NextTo ?d ?u) (Is ?b 'bottle') (HasMaterial ?b 'plastic') (Holding ?d ?b) (Is ?l 'lamp') (HasState ?l 'on') (NextTo ?l ?d))))))))",
+    "cnf": "(exists ?u (exists ?c (exists ?cp (exists ?d (exists ?b (exists ?l (and (Is ?u 'umbrella') (HasState ?u 'open') (On ?c ?u) (On ?cp ?u) (Is ?c 'cat') (NextTo ?d ?u) (HasMaterial ?cp 'glass') (Is ?d 'dog') (Holding ?d ?b) (Is ?cp 'cup') (NextTo ?l ?d) (HasMaterial ?b 'plastic') (HasState ?l 'on') (Is ?b 'bottle') (Is ?l 'lamp'))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "cat",
+        "lamp",
+        "cup",
+        "dog"
+    ]
+}

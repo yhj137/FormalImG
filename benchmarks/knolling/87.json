@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A set of keys is positioned on the top side of the layout.",
+    "dsl": "(exists ?k (and (Is ?k 'keys') (OnTopSide ?k)))",
+    "cnf": "(exists ?k (and (Is ?k 'keys') (OnTopSide ?k)))",
+    "k": 1,
+    "object_classes": [
+        "keys"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon-style scene featuring a fabric sofa, with every plate located to its left. A man sits on the sofa wearing a hat that contains a metal screwdriver. A person is positioned to the left of the man.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (and (Is ?s 'sofa') (HasMaterial ?s 'fabric') (forall ?p (implies (Is ?p 'plate') (LeftOf ?p ?s))) (exists ?m (and (Is ?m 'man') (On ?m ?s) (exists ?h (and (Is ?h 'hat') (On ?h ?m) (exists ?sd (and (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (In ?sd ?h) (exists ?per (and (Is ?per 'person') (LeftOf ?per ?m))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (forall ?p (exists ?m (exists ?h (exists ?sd (exists ?per (and (Is ?s 'sofa') (HasMaterial ?s 'fabric') (or (not (Is ?p 'plate')) (LeftOf ?p ?s)) (On ?m ?s) (Is ?m 'man') (On ?h ?m) (LeftOf ?per ?m) (Is ?h 'hat') (In ?sd ?h) (Is ?per 'person') (HasMaterial ?sd 'metal') (Is ?sd 'screwdriver')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "person",
+        "plate",
+        "man",
+        "screwdriver",
+        "hat"
+    ]
+}

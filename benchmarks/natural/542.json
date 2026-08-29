@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a tree with a yellow lion on it. Every cake is positioned to the left of the tree.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (and (Is ?t 'tree') (forall ?c (implies (Is ?c 'cake') (LeftOf ?c ?t))) (exists ?l (and (Is ?l 'lion') (On ?l ?t) (HasColor ?l 'yellow'))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (forall ?c (exists ?l (and (Is ?t 'tree') (or (not (Is ?c 'cake')) (LeftOf ?c ?t)) (On ?l ?t) (Is ?l 'lion') (HasColor ?l 'yellow'))))))",
+    "k": 3,
+    "object_classes": [
+        "tree",
+        "cake",
+        "lion"
+    ]
+}

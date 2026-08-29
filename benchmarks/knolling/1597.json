@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard, and to its left is a handbag located on the left side of the image. A book is arranged above the handbag, and a tie is placed above the book. To the left of the tie is a hat. A sock is aligned horizontally with the hat and positioned to its left. A lighter is located above the sock. Finally, every screwdriver in the image is arranged to the left of the lighter.",
+    "dsl": "(exists ?keyboard (exists ?handbag (exists ?book (exists ?tie (exists ?hat (exists ?sock (exists ?lighter (and (Is ?keyboard 'keyboard') (Is ?handbag 'handbag') (LeftOf ?handbag ?keyboard) (OnLeftSide ?handbag) (Is ?book 'book') (Above ?book ?handbag) (Is ?tie 'tie') (Above ?tie ?book) (Is ?hat 'hat') (LeftOf ?hat ?tie) (Is ?sock 'sock') (AlignedHorizontally ?sock ?hat) (LeftOf ?sock ?hat) (Is ?lighter 'lighter') (Above ?lighter ?sock) (forall ?screw (implies (Is ?screw 'screwdriver') (LeftOf ?screw ?lighter)))))))))))",
+    "cnf": "(exists ?keyboard (exists ?handbag (exists ?book (exists ?tie (exists ?hat (exists ?sock (exists ?lighter (forall ?screw (and (Is ?keyboard 'keyboard') (LeftOf ?handbag ?keyboard) (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Above ?book ?handbag) (Is ?book 'book') (Above ?tie ?book) (Is ?tie 'tie') (LeftOf ?hat ?tie) (Is ?hat 'hat') (AlignedHorizontally ?sock ?hat) (LeftOf ?sock ?hat) (Is ?sock 'sock') (Above ?lighter ?sock) (Is ?lighter 'lighter') (or (not (Is ?screw 'screwdriver')) (LeftOf ?screw ?lighter)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "lighter",
+        "keyboard",
+        "tie",
+        "book",
+        "screwdriver",
+        "hat",
+        "handbag"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the left side of the scene. Directly above the backpack is a bottle, and directly below the backpack is a donut. Visually, the bottle is smaller than the backpack, and the donut is also smaller than the backpack.",
+    "dsl": "(exists ?backpack (exists ?bottle (exists ?donut (and (Is ?backpack 'backpack') (Is ?bottle 'bottle') (Is ?donut 'donut') (OnLeftSide ?backpack) (Above ?bottle ?backpack) (Below ?donut ?backpack) (SmallerThan ?bottle ?backpack) (SmallerThan ?donut ?backpack)))))",
+    "cnf": "(exists ?backpack (exists ?bottle (exists ?donut (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Above ?bottle ?backpack) (Below ?donut ?backpack) (Is ?bottle 'bottle') (SmallerThan ?bottle ?backpack) (Is ?donut 'donut') (SmallerThan ?donut ?backpack)))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "backpack",
+        "donut"
+    ]
+}

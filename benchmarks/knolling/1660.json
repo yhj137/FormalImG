@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a plate and a pan, with the pan positioned to the right of the plate. A rule applies to every spoon in the image: each must be smaller than the plate and located above it. A camera is placed below the plate. A bottle is located on the top side of the image, positioned above the pan. A drill lies to the right of the pan, with a hammer located below it. Pliers are positioned on the right side of the image, to the right of the drill, and a stapler is found on the bottom side, directly below the pliers.",
+    "dsl": "(exists ?plate (exists ?pan (and (Is ?plate 'plate') (Is ?pan 'pan') (RightOf ?pan ?plate) (forall ?spoon (implies (Is ?spoon 'spoon') (and (SmallerThan ?spoon ?plate) (Above ?spoon ?plate)))) (exists ?camera (exists ?bottle (exists ?drill (exists ?hammer (exists ?pliers (exists ?stapler (and (Is ?camera 'camera') (Below ?camera ?plate) (Is ?bottle 'bottle') (OnTopSide ?bottle) (Above ?bottle ?pan) (Is ?drill 'drill') (RightOf ?drill ?pan) (Is ?hammer 'hammer') (Below ?hammer ?drill) (Is ?pliers 'pliers') (OnRightSide ?pliers) (RightOf ?pliers ?drill) (Is ?stapler 'stapler') (OnBottomSide ?stapler) (Below ?stapler ?pliers)))))))))))",
+    "cnf": "(exists ?plate (exists ?pan (forall ?spoon (exists ?camera (exists ?bottle (exists ?drill (exists ?hammer (exists ?pliers (exists ?stapler (and (Is ?plate 'plate') (RightOf ?pan ?plate) (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?plate)) (Is ?pan 'pan') (Above ?bottle ?pan) (or (not (Is ?spoon 'spoon')) (Above ?spoon ?plate)) (RightOf ?drill ?pan) (OnTopSide ?bottle) (Below ?camera ?plate) (Is ?drill 'drill') (Below ?hammer ?drill) (Is ?bottle 'bottle') (Is ?camera 'camera') (RightOf ?pliers ?drill) (Is ?hammer 'hammer') (OnRightSide ?pliers) (Below ?stapler ?pliers) (Is ?pliers 'pliers') (OnBottomSide ?stapler) (Is ?stapler 'stapler')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "hammer",
+        "plate",
+        "pan",
+        "pliers",
+        "camera",
+        "drill",
+        "stapler",
+        "bottle"
+    ]
+}

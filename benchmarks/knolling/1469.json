@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue shirt and black headphones. The blue shirt is positioned on the left side of the image, with the black headphones located to its right; these two items are aligned horizontally. For every spoon in the scene, it is positioned directly below the shirt and is vertically aligned with it. The shirt is visually larger than the spoon. Extending to the right of the spoon is a sequence of items: a pizza, a watch, a pair of scissors, a stapler, and a calculator. These items (spoon, pizza, watch, scissors, stapler, calculator) are all aligned horizontally in a row, with the calculator positioned on the right side of the image.",
+    "dsl": "(exists ?shirt (exists ?headphones (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (Is ?headphones 'headphones') (Has ?headphones 'black') (RightOf ?headphones ?shirt) (AlignedHorizontally ?shirt ?headphones) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?pizza (exists ?watch (exists ?scissors (exists ?stapler (exists ?calculator (and (Is ?pizza 'pizza') (Is ?watch 'watch') (Is ?scissors 'scissors') (Is ?stapler 'stapler') (Is ?calculator 'calculator') (Above ?shirt ?spoon) (AlignedVertically ?shirt ?spoon) (LargerThan ?shirt ?spoon) (RightOf ?pizza ?spoon) (AlignedHorizontally ?spoon ?pizza) (RightOf ?watch ?pizza) (AlignedHorizontally ?pizza ?watch) (RightOf ?scissors ?watch) (AlignedHorizontally ?watch ?scissors) (RightOf ?stapler ?scissors) (AlignedHorizontally ?scissors ?stapler) (RightOf ?calculator ?stapler) (AlignedHorizontally ?stapler ?calculator) (OnRightSide ?calculator))))))))))))",
+    "cnf": "(exists ?shirt (exists ?headphones (forall ?spoon (exists ?pizza (exists ?watch (exists ?scissors (exists ?stapler (exists ?calculator (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (RightOf ?headphones ?shirt) (AlignedHorizontally ?shirt ?headphones) (Has ?headphones 'black') (or (not (Is ?spoon 'spoon')) (Above ?shirt ?spoon)) (Is ?headphones 'headphones') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?shirt ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?calculator 'calculator')) (or (not (Is ?spoon 'spoon')) (LargerThan ?shirt ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?stapler 'stapler')) (or (not (Is ?spoon 'spoon')) (RightOf ?calculator ?stapler)) (or (not (Is ?spoon 'spoon')) (RightOf ?pizza ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (RightOf ?stapler ?scissors)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?scissors ?stapler)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?stapler ?calculator)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?pizza)) (or (not (Is ?spoon 'spoon')) (Is ?pizza 'pizza')) (or (not (Is ?spoon 'spoon')) (Is ?watch 'watch')) (or (not (Is ?spoon 'spoon')) (RightOf ?scissors ?watch)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?watch ?scissors)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?calculator)) (or (not (Is ?spoon 'spoon')) (RightOf ?watch ?pizza)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?pizza ?watch)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "stapler",
+        "scissors",
+        "pizza",
+        "watch",
+        "calculator",
+        "spoon",
+        "headphones",
+        "shirt"
+    ]
+}

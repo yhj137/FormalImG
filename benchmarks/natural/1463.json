@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a wooden wardrobe to the right of a sofa. A woman sits on the sofa holding an open laptop. To the right of the wardrobe are all the flowers in the scene, as well as an elephant holding shoes and standing on a round rock.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?wa (and (Is ?wa 'wardrobe') (HasMaterial ?wa 'wooden') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?wa))) (exists ?s (exists ?w (exists ?l (exists ?e (exists ?sh (exists ?r (and (Is ?s 'sofa') (RightOf ?wa ?s) (Is ?w 'woman') (On ?w ?s) (Is ?l 'laptop') (HasState ?l 'open') (Holding ?w ?l) (Is ?e 'elephant') (RightOf ?e ?wa) (Is ?sh 'shoes') (Holding ?e ?sh) (Is ?r 'rock') (HasShape ?r 'round') (On ?e ?r)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?wa (forall ?f (exists ?s (exists ?w (exists ?l (exists ?e (exists ?sh (exists ?r (and (Is ?wa 'wardrobe') (HasMaterial ?wa 'wooden') (or (not (Is ?f 'flower')) (RightOf ?f ?wa)) (RightOf ?wa ?s) (RightOf ?e ?wa) (Is ?s 'sofa') (On ?w ?s) (Is ?e 'elephant') (Holding ?e ?sh) (Is ?w 'woman') (Holding ?w ?l) (On ?e ?r) (Is ?sh 'shoes') (HasState ?l 'open') (HasShape ?r 'round') (Is ?l 'laptop') (Is ?r 'rock')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "rock",
+        "laptop",
+        "shoes",
+        "wardrobe",
+        "woman",
+        "flower",
+        "elephant"
+    ]
+}

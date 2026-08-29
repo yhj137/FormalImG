@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a person wearing a blue shirt sitting on a bench. Every horse is located to the left of the bench. An open laptop rests on the bench next to the person, with a yellow banana next to the laptop.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?p (and (Is ?b 'bench') (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?b) (forall ?h (implies (Is ?h 'horse') (LeftOf ?h ?b))) (exists ?s (exists ?l (exists ?ban (and (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?p) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?b) (NextTo ?l ?p) (Is ?ban 'banana') (HasColor ?ban 'yellow') (NextTo ?ban ?l)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?p (forall ?h (exists ?s (exists ?l (exists ?ban (and (Is ?b 'bench') (On ?p ?b) (or (not (Is ?h 'horse')) (LeftOf ?h ?b)) (HasState ?p 'sitting') (On ?s ?p) (On ?l ?b) (Is ?p 'person') (NextTo ?l ?p) (HasColor ?s 'blue') (HasState ?l 'open') (NextTo ?ban ?l) (Is ?s 'shirt') (Is ?l 'laptop') (HasColor ?ban 'yellow') (Is ?ban 'banana')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shirt",
+        "bench",
+        "person",
+        "horse",
+        "laptop",
+        "banana"
+    ]
+}

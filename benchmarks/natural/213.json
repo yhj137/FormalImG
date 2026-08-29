@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a blue bird next to a laptop.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?b (and (Is ?l 'laptop') (Is ?b 'bird') (HasColor ?b 'blue') (NextTo ?b ?l)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?b (and (Is ?l 'laptop') (NextTo ?b ?l) (HasColor ?b 'blue') (Is ?b 'bird')))))",
+    "k": 2,
+    "object_classes": [
+        "laptop",
+        "bird"
+    ]
+}

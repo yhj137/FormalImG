@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a jacket. Every key is located next to the jacket, with a round flower positioned to the right of each key.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?j (and (Is ?j 'jacket') (forall ?k (implies (Is ?k 'key') (and (NextTo ?k ?j) (exists ?f (and (Is ?f 'flower') (HasShape ?f 'round') (RightOf ?f ?k)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?j (forall ?k (exists ?f (and (Is ?j 'jacket') (or (not (Is ?k 'key')) (NextTo ?k ?j)) (or (not (Is ?k 'key')) (Is ?f 'flower')) (or (not (Is ?k 'key')) (HasShape ?f 'round')) (or (not (Is ?k 'key')) (RightOf ?f ?k)))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "flower",
+        "key"
+    ]
+}

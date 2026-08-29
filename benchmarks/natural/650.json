@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where, to the right of every monitor, a man holds a metal knife on a pizza.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?m (implies (Is ?m 'monitor') (exists ?man (and (Is ?man 'man') (RightOf ?man ?m) (exists ?k (and (Is ?k 'knife') (HasMaterial ?k 'metal') (Holding ?man ?k) (exists ?p (and (Is ?p 'pizza') (On ?k ?p))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?m (exists ?man (exists ?k (exists ?p (and (or (not (Is ?m 'monitor')) (Is ?man 'man')) (or (not (Is ?m 'monitor')) (RightOf ?man ?m)) (or (not (Is ?m 'monitor')) (Holding ?man ?k)) (or (not (Is ?m 'monitor')) (Is ?k 'knife')) (or (not (Is ?m 'monitor')) (HasMaterial ?k 'metal')) (or (not (Is ?m 'monitor')) (Is ?p 'pizza')) (or (not (Is ?m 'monitor')) (On ?k ?p))))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "knife",
+        "man",
+        "monitor"
+    ]
+}

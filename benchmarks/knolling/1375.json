@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a shirt, a cutting board, a drill, a calculator, scissors, and a watch. The shirt is positioned on the left side of the image. All these six items are aligned vertically with each other. There is a specific size progression: the shirt is larger than the cutting board, the cutting board is larger than the drill, the drill is larger than the calculator, the calculator is larger than the scissors, and the scissors are larger than the watch. Additionally, for any plate present in the scene, it must be aligned vertically with the shirt, the cutting board must be larger than the plate, and the plate must be larger than the watch.",
+    "dsl": "(exists ?shirt (exists ?board (exists ?drill (exists ?calc (exists ?sciss (exists ?watch (and (Is ?shirt 'shirt') (Is ?board 'cutting_board') (Is ?drill 'drill') (Is ?calc 'calculator') (Is ?sciss 'scissors') (Is ?watch 'watch') (OnLeftSide ?shirt) (AlignedVertically ?shirt ?board) (AlignedVertically ?board ?drill) (AlignedVertically ?drill ?calc) (AlignedVertically ?calc ?sciss) (AlignedVertically ?sciss ?watch) (LargerThan ?shirt ?board) (LargerThan ?board ?drill) (LargerThan ?drill ?calc) (LargerThan ?calc ?sciss) (LargerThan ?sciss ?watch) (forall ?p (implies (Is ?p 'plate') (and (AlignedVertically ?p ?shirt) (LargerThan ?board ?p) (LargerThan ?p ?watch)))))))))))",
+    "cnf": "(exists ?shirt (exists ?board (exists ?drill (exists ?calc (exists ?sciss (exists ?watch (forall ?p (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (AlignedVertically ?shirt ?board) (LargerThan ?shirt ?board) (Is ?board 'cutting_board') (AlignedVertically ?board ?drill) (or (not (Is ?p 'plate')) (AlignedVertically ?p ?shirt)) (LargerThan ?board ?drill) (Is ?drill 'drill') (AlignedVertically ?drill ?calc) (or (not (Is ?p 'plate')) (LargerThan ?board ?p)) (LargerThan ?drill ?calc) (Is ?calc 'calculator') (AlignedVertically ?calc ?sciss) (or (not (Is ?p 'plate')) (LargerThan ?p ?watch)) (LargerThan ?calc ?sciss) (Is ?sciss 'scissors') (AlignedVertically ?sciss ?watch) (LargerThan ?sciss ?watch) (Is ?watch 'watch')))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "watch",
+        "drill",
+        "cutting_board",
+        "calculator",
+        "scissors",
+        "shirt"
+    ]
+}

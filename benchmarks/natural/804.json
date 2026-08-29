@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring an open umbrella to the left of a bed. A hat is on the bed, along with a round bowl positioned to the right of the hat. A flower is next to the bowl.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?h (exists ?w (exists ?f (and (Is ?b 'bed') (Is ?u 'umbrella') (Is ?h 'hat') (Is ?w 'bowl') (Is ?f 'flower') (LeftOf ?u ?b) (HasState ?u 'open') (On ?h ?b) (On ?w ?b) (HasShape ?w 'round') (RightOf ?w ?h) (NextTo ?f ?w))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?h (exists ?w (exists ?f (and (Is ?b 'bed') (LeftOf ?u ?b) (On ?h ?b) (Is ?u 'umbrella') (HasState ?u 'open') (On ?w ?b) (Is ?h 'hat') (RightOf ?w ?h) (Is ?w 'bowl') (HasShape ?w 'round') (NextTo ?f ?w) (Is ?f 'flower'))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "bowl",
+        "hat",
+        "bed",
+        "flower"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image featuring a leather jacket, with every orange positioned to the right of the jacket.",
+    "dsl": "(and (IsStyle 'photo') (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (forall ?o (implies (Is ?o 'orange') (RightOf ?o ?j))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?j (forall ?o (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (or (not (Is ?o 'orange')) (RightOf ?o ?j))))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "orange"
+    ]
+}

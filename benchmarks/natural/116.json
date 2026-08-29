@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every desk is broken.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?d (implies (Is ?d 'desk') (HasState ?d 'broken'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?d (or (not (Is ?d 'desk')) (HasState ?d 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "desk"
+    ]
+}

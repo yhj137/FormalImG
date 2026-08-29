@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene with a blooming tree next to a full bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (Is ?b 'bookshelf') (HasState ?b 'full') (NextTo ?t ?b)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (NextTo ?t ?b) (HasState ?b 'full') (Is ?b 'bookshelf')))))",
+    "k": 2,
+    "object_classes": [
+        "bookshelf",
+        "tree"
+    ]
+}

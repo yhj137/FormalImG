@@ -1,0 +1,16 @@
+{
+    "prompt": "For every lemon in the scene, there exists a pair of jeans on the left side, a keyboard on the bottom side, a stapler, a pizza, a bowl, a phone, and glasses. The stapler is above the jeans. The jeans are to the left of the pizza. The pizza is above the keyboard. The bowl is above the pizza. The lemon is placed above the bowl and is smaller than the pizza. The phone is to the left of the keyboard. The glasses are above the phone and smaller than the keyboard.",
+    "dsl": "(exists ?jeans (exists ?keyboard (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?pizza (exists ?bowl (exists ?stapler (exists ?phone (exists ?glasses (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Is ?stapler 'stapler') (Is ?phone 'phone') (Is ?glasses 'glasses') (LeftOf ?jeans ?pizza) (Above ?stapler ?jeans) (Above ?pizza ?keyboard) (Above ?bowl ?pizza) (Above ?lemon ?bowl) (SmallerThan ?lemon ?pizza) (LeftOf ?phone ?keyboard) (Above ?glasses ?phone) (SmallerThan ?glasses ?keyboard)))))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (forall ?lemon (exists ?pizza (exists ?bowl (exists ?stapler (exists ?phone (exists ?glasses (and (or (not (Is ?lemon 'lemon')) (Is ?jeans 'jeans')) (or (not (Is ?lemon 'lemon')) (OnLeftSide ?jeans)) (or (not (Is ?lemon 'lemon')) (LeftOf ?jeans ?pizza)) (or (not (Is ?lemon 'lemon')) (Is ?keyboard 'keyboard')) (or (not (Is ?lemon 'lemon')) (Above ?stapler ?jeans)) (or (not (Is ?lemon 'lemon')) (Is ?glasses 'glasses')) (or (not (Is ?lemon 'lemon')) (Is ?pizza 'pizza')) (or (not (Is ?lemon 'lemon')) (Above ?pizza ?keyboard)) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?keyboard)) (or (not (Is ?lemon 'lemon')) (Is ?stapler 'stapler')) (or (not (Is ?lemon 'lemon')) (Is ?phone 'phone')) (or (not (Is ?lemon 'lemon')) (Above ?glasses ?phone)) (or (not (Is ?lemon 'lemon')) (Is ?bowl 'bowl')) (or (not (Is ?lemon 'lemon')) (Above ?bowl ?pizza)) (or (not (Is ?lemon 'lemon')) (LeftOf ?phone ?keyboard)) (or (not (Is ?lemon 'lemon')) (SmallerThan ?glasses ?keyboard)) (or (not (Is ?lemon 'lemon')) (Above ?lemon ?bowl)) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?pizza)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "keyboard",
+        "lemon",
+        "phone",
+        "pizza",
+        "jeans",
+        "bowl"
+    ]
+}

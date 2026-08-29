@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a desk inside a white house. A knife sits on the desk, and all fruits in the scene are round and located to the right of the knife.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?d (exists ?k (and (Is ?h 'house') (HasColor ?h 'white') (Is ?d 'desk') (In ?d ?h) (Is ?k 'knife') (On ?k ?d) (forall ?f (implies (Is ?f 'fruit') (and (HasShape ?f 'round') (RightOf ?f ?k)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?d (exists ?k (forall ?f (and (Is ?h 'house') (HasColor ?h 'white') (In ?d ?h) (Is ?d 'desk') (On ?k ?d) (Is ?k 'knife') (or (not (Is ?f 'fruit')) (RightOf ?f ?k)) (or (not (Is ?f 'fruit')) (HasShape ?f 'round'))))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "fruit",
+        "desk",
+        "knife"
+    ]
+}

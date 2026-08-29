@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the layout. For every ruler found in the scene, the following conditions apply: the ruler is below the suitcase; there is a handbag to the left of the suitcase and headphones to the right of the suitcase (horizontally aligned, with the suitcase larger than the handbag); there is a book to the left of the ruler and a wallet to the right of the ruler (horizontally aligned); and there is a glove below the book with an apple to its right.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?handbag (exists ?headphones (exists ?book (exists ?wallet (exists ?glove (exists ?apple (and (Is ?handbag 'handbag') (Is ?headphones 'headphones') (Is ?book 'book') (Is ?wallet 'wallet') (Is ?glove 'glove') (Is ?apple 'apple') (Above ?suitcase ?ruler) (LeftOf ?handbag ?suitcase) (RightOf ?headphones ?suitcase) (AlignedHorizontally ?handbag ?suitcase) (AlignedHorizontally ?suitcase ?headphones) (LargerThan ?suitcase ?handbag) (LeftOf ?book ?ruler) (RightOf ?wallet ?ruler) (AlignedHorizontally ?book ?ruler) (AlignedHorizontally ?ruler ?wallet) (Above ?book ?glove) (RightOf ?apple ?glove))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?ruler (exists ?handbag (exists ?headphones (exists ?book (exists ?wallet (exists ?glove (exists ?apple (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (or (not (Is ?ruler 'ruler')) (Above ?suitcase ?ruler)) (or (not (Is ?ruler 'ruler')) (LeftOf ?handbag ?suitcase)) (or (not (Is ?ruler 'ruler')) (Is ?apple 'apple')) (or (not (Is ?ruler 'ruler')) (RightOf ?headphones ?suitcase)) (or (not (Is ?ruler 'ruler')) (Is ?handbag 'handbag')) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?handbag ?suitcase)) (or (not (Is ?ruler 'ruler')) (Is ?glove 'glove')) (or (not (Is ?ruler 'ruler')) (RightOf ?apple ?glove)) (or (not (Is ?ruler 'ruler')) (Is ?headphones 'headphones')) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?suitcase ?headphones)) (or (not (Is ?ruler 'ruler')) (LargerThan ?suitcase ?handbag)) (or (not (Is ?ruler 'ruler')) (Is ?wallet 'wallet')) (or (not (Is ?ruler 'ruler')) (Above ?book ?glove)) (or (not (Is ?ruler 'ruler')) (Is ?book 'book')) (or (not (Is ?ruler 'ruler')) (LeftOf ?book ?ruler)) (or (not (Is ?ruler 'ruler')) (RightOf ?wallet ?ruler)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?ruler ?wallet)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?book ?ruler)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "apple",
+        "handbag",
+        "wallet",
+        "headphones",
+        "suitcase",
+        "glove"
+    ]
+}

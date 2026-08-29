@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single wallet positioned on the bottom side of the layout.",
+    "dsl": "(exists ?wallet (and (Is ?wallet 'wallet') (OnBottomSide ?wallet)))",
+    "cnf": "(exists ?wallet (and (Is ?wallet 'wallet') (OnBottomSide ?wallet)))",
+    "k": 1,
+    "object_classes": [
+        "wallet"
+    ]
+}

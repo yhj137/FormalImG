@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene. A wooden bench sits to the right of a house. Every tree is located to the right of the bench. On the bench are a switched-off phone, a peeled banana, and a metal spoon.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?be (and (Is ?h 'house') (Is ?be 'bench') (HasMaterial ?be 'wooden') (RightOf ?be ?h) (forall ?t (implies (Is ?t 'tree') (RightOf ?t ?be))) (exists ?p (exists ?ba (exists ?s (and (Is ?p 'phone') (HasState ?p 'off') (Is ?ba 'banana') (HasState ?ba 'peeled') (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?p ?be) (On ?ba ?be) (On ?s ?be)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?be (forall ?t (exists ?p (exists ?ba (exists ?s (and (Is ?h 'house') (RightOf ?be ?h) (HasMaterial ?be 'wooden') (or (not (Is ?t 'tree')) (RightOf ?t ?be)) (Is ?be 'bench') (On ?p ?be) (On ?ba ?be) (HasState ?p 'off') (On ?s ?be) (HasState ?ba 'peeled') (Is ?p 'phone') (HasMaterial ?s 'metal') (Is ?ba 'banana') (Is ?s 'spoon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "banana",
+        "phone",
+        "tree",
+        "house",
+        "spoon"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a person to the right of a plant. The person is wearing a blue shirt and shoes, and every key in the scene is located inside the shoes. To the right of the person sits a keyboard with a cylindrical screwdriver resting on top of it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?pl (exists ?p (exists ?s (exists ?sh (and (Is ?pl 'plant') (Is ?p 'person') (RightOf ?p ?pl) (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?p) (Is ?sh 'shoes') (On ?sh ?p) (forall ?k (implies (Is ?k 'key') (In ?k ?sh))) (exists ?kb (exists ?sd (and (Is ?kb 'keyboard') (RightOf ?kb ?p) (Is ?sd 'screwdriver') (HasShape ?sd 'cylindrical') (On ?sd ?kb))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?pl (exists ?p (exists ?s (exists ?sh (forall ?k (exists ?kb (exists ?sd (and (Is ?pl 'plant') (RightOf ?p ?pl) (Is ?p 'person') (On ?s ?p) (On ?sh ?p) (HasColor ?s 'blue') (RightOf ?kb ?p) (Is ?sh 'shoes') (or (not (Is ?k 'key')) (In ?k ?sh)) (Is ?s 'shirt') (Is ?kb 'keyboard') (On ?sd ?kb) (HasShape ?sd 'cylindrical') (Is ?sd 'screwdriver'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "person",
+        "shoes",
+        "plant",
+        "keyboard",
+        "screwdriver",
+        "key"
+    ]
+}

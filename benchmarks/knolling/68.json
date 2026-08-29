@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a carrot that is red.",
+    "dsl": "(exists ?carrot (and (Is ?carrot 'carrot') (Has ?carrot 'red')))",
+    "cnf": "(exists ?carrot (and (Is ?carrot 'carrot') (Has ?carrot 'red')))",
+    "k": 1,
+    "object_classes": [
+        "carrot"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pizza located on the top side. To the right of the pizza is a knife, which is smaller than the pizza. For every wrench in the image, the knife is positioned above it, while a shoe is located to the right of the wrench and a carrot is to the left of the wrench.",
+    "dsl": "(exists ?pizza (exists ?knife (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (Is ?knife 'knife') (RightOf ?knife ?pizza) (SmallerThan ?knife ?pizza) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?shoe (exists ?carrot (and (Is ?shoe 'shoe') (Is ?carrot 'carrot') (Above ?knife ?wrench) (RightOf ?shoe ?wrench) (LeftOf ?carrot ?wrench)))))))))",
+    "cnf": "(exists ?pizza (exists ?knife (forall ?wrench (exists ?shoe (exists ?carrot (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (RightOf ?knife ?pizza) (SmallerThan ?knife ?pizza) (Is ?knife 'knife') (or (not (Is ?wrench 'wrench')) (Above ?knife ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?carrot 'carrot')) (or (not (Is ?wrench 'wrench')) (RightOf ?shoe ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?shoe 'shoe')) (or (not (Is ?wrench 'wrench')) (LeftOf ?carrot ?wrench))))))))",
+    "k": 5,
+    "object_classes": [
+        "wrench",
+        "carrot",
+        "pizza",
+        "knife",
+        "shoe"
+    ]
+}

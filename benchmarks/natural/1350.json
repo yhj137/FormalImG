@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a fabric rug with a woman, a dog, a wooden basket, and a cup on it. The woman is to the left of the dog. Every apple is inside the basket. A person is also on the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?w (exists ?d (exists ?b (exists ?c (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?w 'woman') (On ?w ?r) (Is ?d 'dog') (On ?d ?r) (LeftOf ?w ?d) (Is ?b 'basket') (HasMaterial ?b 'wooden') (On ?b ?r) (Is ?c 'cup') (On ?c ?r) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?p (and (Is ?p 'person') (On ?p ?r))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?w (exists ?d (exists ?b (exists ?c (forall ?a (exists ?p (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?w ?r) (On ?d ?r) (Is ?w 'woman') (LeftOf ?w ?d) (On ?b ?r) (Is ?d 'dog') (On ?c ?r) (HasMaterial ?b 'wooden') (or (not (Is ?a 'apple')) (In ?a ?b)) (On ?p ?r) (Is ?c 'cup') (Is ?b 'basket') (Is ?p 'person'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "rug",
+        "woman",
+        "basket",
+        "cup",
+        "apple",
+        "dog"
+    ]
+}

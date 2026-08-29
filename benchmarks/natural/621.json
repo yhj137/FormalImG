@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A purple car is positioned next to a rug. A red umbrella lies on the rug, and a blue butterfly is resting on the umbrella.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?r (exists ?u (exists ?b (and (Is ?c 'car') (HasColor ?c 'purple') (Is ?r 'rug') (Is ?u 'umbrella') (HasColor ?u 'red') (Is ?b 'butterfly') (HasColor ?b 'blue') (NextTo ?c ?r) (On ?u ?r) (On ?b ?u)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?r (exists ?u (exists ?b (and (Is ?c 'car') (HasColor ?c 'purple') (NextTo ?c ?r) (Is ?r 'rug') (On ?u ?r) (HasColor ?u 'red') (On ?b ?u) (Is ?u 'umbrella') (HasColor ?b 'blue') (Is ?b 'butterfly')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "umbrella",
+        "car",
+        "rug"
+    ]
+}

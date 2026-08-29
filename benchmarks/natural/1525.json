@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A blue lion holds a basket containing every key. Next to the lion is a horse holding a fork, positioned to the left of an open wardrobe. To the left of the wardrobe, there is also a turned-on monitor with a pair of glasses resting on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?l (exists ?h (exists ?w (and (Is ?b 'basket') (Is ?l 'lion') (HasColor ?l 'blue') (Holding ?l ?b) (Is ?h 'horse') (NextTo ?l ?h) (Is ?w 'wardrobe') (HasState ?w 'open') (LeftOf ?h ?w) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?f (and (Is ?f 'fork') (Holding ?h ?f))) (exists ?m (exists ?g (and (Is ?m 'monitor') (HasState ?m 'on') (LeftOf ?m ?w) (Is ?g 'glasses') (On ?g ?m))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?l (exists ?h (exists ?w (forall ?k (exists ?f (exists ?m (exists ?g (and (Is ?b 'basket') (Holding ?l ?b) (or (not (Is ?k 'key')) (In ?k ?b)) (HasColor ?l 'blue') (NextTo ?l ?h) (Is ?l 'lion') (Is ?h 'horse') (LeftOf ?h ?w) (Holding ?h ?f) (HasState ?w 'open') (LeftOf ?m ?w) (Is ?f 'fork') (Is ?w 'wardrobe') (HasState ?m 'on') (On ?g ?m) (Is ?m 'monitor') (Is ?g 'glasses')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "horse",
+        "glasses",
+        "monitor",
+        "lion",
+        "basket",
+        "key",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A lion holds an umbrella and a metal basket containing a banana. To the right of the lion is a bed, upon which lie a sliced pizza, a phone, and every fork in the scene, all made of plastic. To the right of the bed stands a refrigerator with a round cake on top.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?b (exists ?u (exists ?ban (exists ?bed (and (Is ?l 'lion') (Is ?b 'basket') (Is ?u 'umbrella') (Is ?ban 'banana') (Is ?bed 'bed') (Holding ?l ?b) (HasMaterial ?b 'metal') (Holding ?l ?u) (In ?ban ?b) (RightOf ?bed ?l) (forall ?f (implies (Is ?f 'fork') (and (On ?f ?bed) (HasMaterial ?f 'plastic')))) (exists ?p (exists ?ph (exists ?r (exists ?c (and (Is ?p 'pizza') (Is ?ph 'phone') (Is ?r 'refrigerator') (Is ?c 'cake') (On ?p ?bed) (HasState ?p 'sliced') (On ?ph ?bed) (RightOf ?r ?bed) (On ?c ?r) (HasShape ?c 'round')))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?b (exists ?u (exists ?ban (exists ?bed (forall ?f (exists ?p (exists ?ph (exists ?r (exists ?c (and (Is ?l 'lion') (Holding ?l ?b) (Holding ?l ?u) (Is ?b 'basket') (HasMaterial ?b 'metal') (RightOf ?bed ?l) (Is ?u 'umbrella') (In ?ban ?b) (Is ?bed 'bed') (or (not (Is ?f 'fork')) (On ?f ?bed)) (Is ?ban 'banana') (On ?p ?bed) (or (not (Is ?f 'fork')) (HasMaterial ?f 'plastic')) (On ?ph ?bed) (Is ?p 'pizza') (HasState ?p 'sliced') (RightOf ?r ?bed) (Is ?ph 'phone') (Is ?r 'refrigerator') (On ?c ?r) (Is ?c 'cake') (HasShape ?c 'round')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "phone",
+        "fork",
+        "bed",
+        "cake",
+        "pizza",
+        "refrigerator",
+        "lion",
+        "basket",
+        "banana"
+    ]
+}

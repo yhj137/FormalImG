@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bed placed on a blue rug, with a bus positioned to the left of the bed. A lion sits on the bed holding a plate containing a round orange and a sandwich with a knife inside it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?bd (exists ?bu (exists ?l (exists ?p (exists ?s (exists ?o (exists ?k (and (Is ?r 'rug') (HasColor ?r 'blue') (Is ?bd 'bed') (On ?bd ?r) (Is ?bu 'bus') (LeftOf ?bu ?bd) (Is ?l 'lion') (HasState ?l 'sitting') (On ?l ?bd) (Holding ?l ?p) (Is ?p 'plate') (Is ?s 'sandwich') (On ?s ?p) (Is ?o 'orange') (HasShape ?o 'round') (On ?o ?p) (Is ?k 'knife') (In ?k ?s)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?bd (exists ?bu (exists ?l (exists ?p (exists ?s (exists ?o (exists ?k (and (Is ?r 'rug') (HasColor ?r 'blue') (On ?bd ?r) (Is ?bd 'bed') (LeftOf ?bu ?bd) (On ?l ?bd) (Is ?bu 'bus') (HasState ?l 'sitting') (Holding ?l ?p) (Is ?l 'lion') (Is ?p 'plate') (On ?s ?p) (On ?o ?p) (Is ?s 'sandwich') (In ?k ?s) (HasShape ?o 'round') (Is ?k 'knife') (Is ?o 'orange')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sandwich",
+        "knife",
+        "bus",
+        "bed",
+        "rug",
+        "lion",
+        "orange",
+        "plate"
+    ]
+}

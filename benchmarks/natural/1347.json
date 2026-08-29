@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene depicts a metal table next to a bus, while a plastic bookshelf stands to the left of the table. A rock is located next to the bookshelf, and every flower is positioned to the left of the rock. A cake sits next to the table, with an orange beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (exists ?bs (exists ?r (and (Is ?b 'bus') (Is ?t 'table') (HasMaterial ?t 'metal') (Is ?bs 'bookshelf') (HasMaterial ?bs 'plastic') (Is ?r 'rock') (NextTo ?t ?b) (LeftOf ?bs ?t) (NextTo ?r ?bs) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?r))) (exists ?c (exists ?o (and (Is ?c 'cake') (Is ?o 'orange') (NextTo ?c ?t) (NextTo ?o ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (exists ?bs (exists ?r (forall ?f (exists ?c (exists ?o (and (Is ?b 'bus') (NextTo ?t ?b) (HasMaterial ?t 'metal') (LeftOf ?bs ?t) (Is ?t 'table') (NextTo ?c ?t) (HasMaterial ?bs 'plastic') (NextTo ?r ?bs) (Is ?c 'cake') (NextTo ?o ?c) (Is ?bs 'bookshelf') (Is ?r 'rock') (or (not (Is ?f 'flower')) (LeftOf ?f ?r)) (Is ?o 'orange'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "rock",
+        "bus",
+        "cake",
+        "flower",
+        "table",
+        "bookshelf",
+        "orange"
+    ]
+}

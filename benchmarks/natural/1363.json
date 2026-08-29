@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a plant to the left of a bench. A man holding a laptop stands next to the bench. A red backpack sits on the bench; inside it, every screwdriver is placed next to a round pizza.",
+    "dsl": "(and (IsStyle 'photo') (exists ?be (exists ?m (exists ?bp (exists ?l (exists ?pl (and (Is ?be 'bench') (Is ?m 'man') (Is ?bp 'backpack') (HasColor ?bp 'red') (On ?bp ?be) (Is ?l 'laptop') (Is ?pl 'plant') (LeftOf ?pl ?be) (NextTo ?m ?be) (Holding ?m ?l) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (In ?sd ?bp) (NextTo ?sd ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?be (exists ?m (exists ?bp (exists ?l (exists ?pl (forall ?sd (exists ?p (and (Is ?be 'bench') (On ?bp ?be) (LeftOf ?pl ?be) (HasColor ?bp 'red') (or (not (Is ?sd 'screwdriver')) (In ?sd ?bp)) (NextTo ?m ?be) (Is ?pl 'plant') (Is ?bp 'backpack') (or (not (Is ?sd 'screwdriver')) (HasShape ?p 'round')) (or (not (Is ?sd 'screwdriver')) (NextTo ?sd ?p)) (Is ?m 'man') (Holding ?m ?l) (or (not (Is ?sd 'screwdriver')) (Is ?p 'pizza')) (Is ?l 'laptop'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "backpack",
+        "laptop",
+        "man",
+        "plant",
+        "pizza",
+        "screwdriver"
+    ]
+}

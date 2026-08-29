@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard positioned on the left side of the image, there is a specific arrangement of surrounding objects. A mouse is located to the right of the keyboard, and they are aligned horizontally. Directly above the keyboard are headphones, while a lighter is placed to the left of the headphones. The keyboard is visually larger than the lighter. A ruler is situated below the keyboard. Beneath the ruler, a knife, a fork, and a spoon are arranged in a row from left to right and aligned horizontally. Additionally, a donut is placed above the mouse, and a bottle is positioned to the right of the mouse.",
+    "dsl": "(forall ?k (implies (and (Is ?k 'keyboard') (OnLeftSide ?k)) (exists ?m (exists ?h (exists ?li (exists ?r (exists ?kn (exists ?f (exists ?s (exists ?d (exists ?bo (and (Is ?m 'mouse') (Is ?h 'headphones') (Is ?li 'lighter') (Is ?r 'ruler') (Is ?kn 'knife') (Is ?f 'fork') (Is ?s 'spoon') (Is ?d 'donut') (Is ?bo 'bottle') (LeftOf ?k ?m) (AlignedHorizontally ?k ?m) (Above ?h ?k) (LeftOf ?li ?h) (LargerThan ?k ?li) (Below ?r ?k) (Above ?r ?kn) (LeftOf ?kn ?f) (LeftOf ?f ?s) (AlignedHorizontally ?kn ?f) (AlignedHorizontally ?f ?s) (Above ?d ?m) (LeftOf ?m ?bo)))))))))))))",
+    "cnf": "(forall ?k (exists ?m (exists ?h (exists ?li (exists ?r (exists ?kn (exists ?f (exists ?s (exists ?d (exists ?bo (and (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?m 'mouse')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?h 'headphones')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LeftOf ?k ?m)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?li 'lighter')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Above ?h ?k)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?bo 'bottle')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedHorizontally ?k ?m)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?r 'ruler')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LeftOf ?li ?h)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?d 'donut')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LeftOf ?m ?bo)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Above ?d ?m)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?kn 'knife')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Below ?r ?k)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LargerThan ?k ?li)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?s 'spoon')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedHorizontally ?f ?s)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Is ?f 'fork')) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (Above ?r ?kn)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LeftOf ?f ?s)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (AlignedHorizontally ?kn ?f)) (or (not (Is ?k 'keyboard')) (not (OnLeftSide ?k)) (LeftOf ?kn ?f)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "fork",
+        "lighter",
+        "knife",
+        "mouse",
+        "bottle",
+        "headphones",
+        "donut",
+        "spoon"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A wardrobe is located next to a rug, and inside the wardrobe is a spoon. A round rock sits on the rug, with a flower positioned next to the rock.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?r (exists ?s (exists ?k (exists ?f (and (Is ?w 'wardrobe') (Is ?r 'rug') (Is ?s 'spoon') (Is ?k 'rock') (Is ?f 'flower') (NextTo ?w ?r) (In ?s ?w) (On ?k ?r) (HasShape ?k 'round') (NextTo ?f ?k))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?r (exists ?s (exists ?k (exists ?f (and (Is ?w 'wardrobe') (NextTo ?w ?r) (In ?s ?w) (Is ?r 'rug') (On ?k ?r) (Is ?s 'spoon') (Is ?k 'rock') (HasShape ?k 'round') (NextTo ?f ?k) (Is ?f 'flower'))))))))",
+    "k": 5,
+    "object_classes": [
+        "rock",
+        "wardrobe",
+        "rug",
+        "flower",
+        "spoon"
+    ]
+}

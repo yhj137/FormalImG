@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the bottom left side of the scene, there is a shirt. Positioned to the right of the shirt and aligned horizontally with it is a plate. For every knife present in the image, it is located to the right of the plate and aligned horizontally. Following this sequence, there is a ruler to the right of the knife, a wallet to the right of the ruler, and a pair of headphones to the right of the wallet, with all objects maintaining a horizontal alignment.",
+    "dsl": "(exists ?shirt (exists ?plate (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (OnBottomSide ?shirt) (Is ?plate 'plate') (RightOf ?plate ?shirt) (AlignedHorizontally ?shirt ?plate) (forall ?knife (implies (Is ?knife 'knife') (exists ?ruler (exists ?wallet (exists ?headphones (and (Is ?ruler 'ruler') (Is ?wallet 'wallet') (Is ?headphones 'headphones') (RightOf ?knife ?plate) (AlignedHorizontally ?plate ?knife) (RightOf ?ruler ?knife) (AlignedHorizontally ?knife ?ruler) (RightOf ?wallet ?ruler) (AlignedHorizontally ?ruler ?wallet) (RightOf ?headphones ?wallet) (AlignedHorizontally ?wallet ?headphones))))))))))",
+    "cnf": "(exists ?shirt (exists ?plate (forall ?knife (exists ?ruler (exists ?wallet (exists ?headphones (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (OnBottomSide ?shirt) (RightOf ?plate ?shirt) (AlignedHorizontally ?shirt ?plate) (Is ?plate 'plate') (or (not (Is ?knife 'knife')) (RightOf ?knife ?plate)) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?plate ?knife)) (or (not (Is ?knife 'knife')) (Is ?headphones 'headphones')) (or (not (Is ?knife 'knife')) (RightOf ?ruler ?knife)) (or (not (Is ?knife 'knife')) (Is ?wallet 'wallet')) (or (not (Is ?knife 'knife')) (RightOf ?headphones ?wallet)) (or (not (Is ?knife 'knife')) (Is ?ruler 'ruler')) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?knife ?ruler)) (or (not (Is ?knife 'knife')) (RightOf ?wallet ?ruler)) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?ruler ?wallet)) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?wallet ?headphones)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "wallet",
+        "knife",
+        "headphones",
+        "shirt"
+    ]
+}

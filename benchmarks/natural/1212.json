@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of a wooden bed stands a chair. A keyboard rests on the bed, with a round plate positioned to its right. On the chair, a square clock sits to the left of a rock that has a bird perched on top.",
+    "dsl": "(exists ?b (exists ?c (exists ?k (exists ?p (exists ?r (exists ?bi (exists ?cl (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?c 'chair') (LeftOf ?c ?b) (Is ?k 'keyboard') (On ?k ?b) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?b) (RightOf ?p ?k) (Is ?r 'rock') (On ?r ?c) (Is ?bi 'bird') (On ?bi ?r) (Is ?cl 'clock') (HasShape ?cl 'square') (On ?cl ?c) (LeftOf ?cl ?r)))))))))",
+    "cnf": "(exists ?b (exists ?c (exists ?k (exists ?p (exists ?r (exists ?bi (exists ?cl (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (LeftOf ?c ?b) (On ?k ?b) (Is ?c 'chair') (On ?r ?c) (On ?p ?b) (Is ?k 'keyboard') (RightOf ?p ?k) (On ?cl ?c) (Is ?r 'rock') (On ?bi ?r) (HasShape ?p 'round') (HasShape ?cl 'square') (LeftOf ?cl ?r) (Is ?bi 'bird') (Is ?p 'plate') (Is ?cl 'clock')))))))))",
+    "k": 7,
+    "object_classes": [
+        "bed",
+        "chair",
+        "plate",
+        "rock",
+        "bird",
+        "clock",
+        "keyboard"
+    ]
+}

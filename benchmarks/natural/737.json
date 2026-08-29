@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A glass mirror is located to the right of a man. The man is wearing every hat in the scene, all of which are black. For each hat, a sandwich is positioned to the right of the mirror.",
+    "dsl": "(exists ?m (exists ?mir (and (Is ?m 'man') (Is ?mir 'mirror') (HasMaterial ?mir 'glass') (RightOf ?mir ?m) (forall ?h (implies (Is ?h 'hat') (exists ?s (and (Is ?s 'sandwich') (HasColor ?h 'black') (On ?h ?m) (RightOf ?s ?mir))))))))",
+    "cnf": "(exists ?m (exists ?mir (forall ?h (exists ?s (and (Is ?m 'man') (RightOf ?mir ?m) (or (not (Is ?h 'hat')) (On ?h ?m)) (HasMaterial ?mir 'glass') (or (not (Is ?h 'hat')) (RightOf ?s ?mir)) (or (not (Is ?h 'hat')) (HasColor ?h 'black')) (Is ?mir 'mirror') (or (not (Is ?h 'hat')) (Is ?s 'sandwich')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "hat",
+        "sandwich",
+        "mirror"
+    ]
+}

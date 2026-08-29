@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a car to the left of a rectangular wooden desk. Inside the car, a shirt lies next to a pair of shoes. A horse stands beside the desk holding a green fruit, while a knife rests on the desk next to a plant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?d (exists ?s (exists ?sh (exists ?h (exists ?f (exists ?k (exists ?p (and (Is ?c 'car') (Is ?d 'desk') (Is ?s 'shirt') (Is ?sh 'shoes') (Is ?h 'horse') (Is ?f 'fruit') (Is ?k 'knife') (Is ?p 'plant') (LeftOf ?c ?d) (HasMaterial ?d 'wooden') (HasShape ?d 'rectangular') (In ?s ?c) (NextTo ?sh ?s) (NextTo ?h ?d) (Holding ?h ?f) (HasColor ?f 'green') (On ?k ?d) (NextTo ?p ?k)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?d (exists ?s (exists ?sh (exists ?h (exists ?f (exists ?k (exists ?p (and (Is ?c 'car') (LeftOf ?c ?d) (In ?s ?c) (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?s 'shirt') (NextTo ?sh ?s) (HasShape ?d 'rectangular') (Is ?sh 'shoes') (NextTo ?h ?d) (On ?k ?d) (Is ?h 'horse') (Holding ?h ?f) (Is ?k 'knife') (NextTo ?p ?k) (Is ?f 'fruit') (HasColor ?f 'green') (Is ?p 'plant')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "knife",
+        "plant",
+        "desk",
+        "shoes",
+        "shirt",
+        "horse",
+        "fruit",
+        "car"
+    ]
+}

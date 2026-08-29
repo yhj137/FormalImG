@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A yellow toy car can be seen positioned to the right of a plate.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?p (and (Is ?t 'toy car') (HasColor ?t 'yellow') (Is ?p 'plate') (RightOf ?t ?p)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?p (and (Is ?t 'toy car') (HasColor ?t 'yellow') (RightOf ?t ?p) (Is ?p 'plate')))))",
+    "k": 2,
+    "object_classes": [
+        "toy car",
+        "plate"
+    ]
+}

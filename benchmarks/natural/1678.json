@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a woman next to a red bicycle, holding a basket. To the left of the bicycle is a plant with a pair of leather shoes beside it. A metal pan with a cake on it sits next to the bicycle, with a hammer nearby. All cars in the scene are located to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'bicycle') (HasColor ?b 'red') (NextTo ?w ?b) (forall ?c (implies (Is ?c 'car') (RightOf ?c ?b))) (exists ?bk (exists ?p (exists ?ck (exists ?pl (exists ?s (exists ?h (and (Is ?bk 'basket') (Holding ?w ?bk) (Is ?p 'pan') (HasMaterial ?p 'metal') (NextTo ?p ?b) (Is ?ck 'cake') (On ?ck ?p) (Is ?pl 'plant') (LeftOf ?pl ?b) (Is ?s 'shoes') (HasMaterial ?s 'leather') (NextTo ?s ?pl) (Is ?h 'hammer') (NextTo ?h ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (forall ?c (exists ?bk (exists ?p (exists ?ck (exists ?pl (exists ?s (exists ?h (and (Is ?w 'woman') (NextTo ?w ?b) (Holding ?w ?bk) (HasColor ?b 'red') (or (not (Is ?c 'car')) (RightOf ?c ?b)) (Is ?bk 'basket') (Is ?b 'bicycle') (NextTo ?p ?b) (LeftOf ?pl ?b) (HasMaterial ?p 'metal') (On ?ck ?p) (Is ?pl 'plant') (NextTo ?s ?pl) (Is ?p 'pan') (NextTo ?h ?p) (Is ?ck 'cake') (HasMaterial ?s 'leather') (Is ?h 'hammer') (Is ?s 'shoes'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pan",
+        "plant",
+        "cake",
+        "shoes",
+        "hammer",
+        "basket",
+        "woman",
+        "bicycle",
+        "car"
+    ]
+}

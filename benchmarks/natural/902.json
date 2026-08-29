@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a person inside a boat, holding a phone. Next to the person is a round bowl containing every key.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (exists ?bo (and (Is ?p 'person') (Is ?bo 'bowl') (NextTo ?bo ?p) (HasShape ?bo 'round') (forall ?k (implies (Is ?k 'key') (In ?k ?bo))) (exists ?b (and (Is ?b 'boat') (In ?p ?b))) (exists ?ph (and (Is ?ph 'phone') (Holding ?p ?ph)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (exists ?bo (forall ?k (exists ?b (exists ?ph (and (Is ?p 'person') (NextTo ?bo ?p) (In ?p ?b) (Is ?bo 'bowl') (HasShape ?bo 'round') (Holding ?p ?ph) (Is ?b 'boat') (or (not (Is ?k 'key')) (In ?k ?bo)) (Is ?ph 'phone'))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "person",
+        "boat",
+        "bowl",
+        "key"
+    ]
+}

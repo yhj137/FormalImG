@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden bench. An elephant wearing headphones stands next to the bench. Every fruit in the scene is positioned to the right of the elephant, including an orange inside a cake that sits on the bench. An oval mirror is also placed on the bench, and a closed umbrella stands next to the bench. To the right of the bench stands a horse wearing glasses.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?e (exists ?hp (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?e 'elephant') (NextTo ?e ?b) (Is ?hp 'headphones') (On ?hp ?e) (forall ?f (implies (Is ?f 'fruit') (RightOf ?f ?e))) (exists ?o (exists ?c (exists ?m (exists ?u (exists ?h (exists ?g (and (Is ?o 'orange') (Is ?o 'fruit') (Is ?c 'cake') (In ?o ?c) (On ?c ?b) (Is ?m 'mirror') (HasShape ?m 'oval') (On ?m ?b) (Is ?u 'umbrella') (HasState ?u 'closed') (NextTo ?u ?b) (Is ?h 'horse') (RightOf ?h ?b) (Is ?g 'glasses') (On ?g ?h)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?e (exists ?hp (forall ?f (exists ?o (exists ?c (exists ?m (exists ?u (exists ?h (exists ?g (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (NextTo ?e ?b) (On ?c ?b) (Is ?e 'elephant') (On ?hp ?e) (On ?m ?b) (In ?o ?c) (or (not (Is ?f 'fruit')) (RightOf ?f ?e)) (Is ?hp 'headphones') (NextTo ?u ?b) (HasShape ?m 'oval') (Is ?o 'fruit') (Is ?c 'cake') (RightOf ?h ?b) (HasState ?u 'closed') (Is ?m 'mirror') (Is ?o 'orange') (Is ?h 'horse') (On ?g ?h) (Is ?u 'umbrella') (Is ?g 'glasses')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "headphones",
+        "umbrella",
+        "bench",
+        "horse",
+        "glasses",
+        "cake",
+        "orange",
+        "mirror"
+    ]
+}

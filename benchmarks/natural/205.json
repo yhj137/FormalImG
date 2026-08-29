@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round apple is positioned to the left of a cylindrical cup.",
+    "dsl": "(exists ?a (exists ?c (and (Is ?a 'apple') (HasShape ?a 'round') (Is ?c 'cup') (HasShape ?c 'cylindrical') (LeftOf ?a ?c))))",
+    "cnf": "(exists ?a (exists ?c (and (Is ?a 'apple') (HasShape ?a 'round') (LeftOf ?a ?c) (HasShape ?c 'cylindrical') (Is ?c 'cup'))))",
+    "k": 2,
+    "object_classes": [
+        "apple",
+        "cup"
+    ]
+}

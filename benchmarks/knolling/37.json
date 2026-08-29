@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of pliers. The pliers are located on the bottom side of the image.",
+    "dsl": "(exists ?pliers (and (Is ?pliers 'pliers') (OnBottomSide ?pliers)))",
+    "cnf": "(exists ?pliers (and (Is ?pliers 'pliers') (OnBottomSide ?pliers)))",
+    "k": 1,
+    "object_classes": [
+        "pliers"
+    ]
+}

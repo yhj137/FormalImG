@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a banana is to the left of a house containing a rectangular keyboard, and a butterfly is to the right of the house.",
+    "dsl": "(exists ?h (exists ?w (exists ?b (exists ?k (exists ?f (and (Is ?h 'house') (Is ?w 'woman') (Is ?b 'banana') (Is ?k 'keyboard') (Is ?f 'butterfly') (LeftOf ?w ?h) (Holding ?w ?b) (In ?k ?h) (HasShape ?k 'rectangular') (RightOf ?f ?h)))))))",
+    "cnf": "(exists ?h (exists ?w (exists ?b (exists ?k (exists ?f (and (Is ?h 'house') (LeftOf ?w ?h) (In ?k ?h) (Is ?w 'woman') (Holding ?w ?b) (RightOf ?f ?h) (Is ?k 'keyboard') (HasShape ?k 'rectangular') (Is ?b 'banana') (Is ?f 'butterfly')))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "woman",
+        "butterfly",
+        "banana",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical column of objects. At the top is a keyboard, followed by a camera below it, and a wallet below the camera; these three items are aligned vertically. The arrangement continues such that for every knife in the scene, it is located below the wallet, with a ruler positioned below the knife, and a glove positioned below the ruler. The entire column maintains vertical alignment, and the glove is located on the bottom side of the image.",
+    "dsl": "(exists ?keyboard (exists ?camera (exists ?wallet (and (Is ?keyboard 'keyboard') (Is ?camera 'camera') (Is ?wallet 'wallet') (Below ?camera ?keyboard) (Below ?wallet ?camera) (AlignedVertically ?keyboard ?camera) (AlignedVertically ?camera ?wallet) (forall ?knife (implies (Is ?knife 'knife') (exists ?ruler (exists ?glove (and (Is ?ruler 'ruler') (Is ?glove 'glove') (Below ?knife ?wallet) (Below ?ruler ?knife) (Below ?glove ?ruler) (AlignedVertically ?wallet ?knife) (AlignedVertically ?knife ?ruler) (AlignedVertically ?ruler ?glove) (OnBottomSide ?glove))))))))))",
+    "cnf": "(exists ?keyboard (exists ?camera (exists ?wallet (forall ?knife (exists ?ruler (exists ?glove (and (Is ?keyboard 'keyboard') (Below ?camera ?keyboard) (AlignedVertically ?keyboard ?camera) (Is ?camera 'camera') (Below ?wallet ?camera) (AlignedVertically ?camera ?wallet) (Is ?wallet 'wallet') (or (not (Is ?knife 'knife')) (Below ?knife ?wallet)) (or (not (Is ?knife 'knife')) (AlignedVertically ?wallet ?knife)) (or (not (Is ?knife 'knife')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (Below ?ruler ?knife)) (or (not (Is ?knife 'knife')) (Below ?glove ?ruler)) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?ruler)) (or (not (Is ?knife 'knife')) (Is ?ruler 'ruler')) (or (not (Is ?knife 'knife')) (AlignedVertically ?ruler ?glove)) (or (not (Is ?knife 'knife')) (OnBottomSide ?glove)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "wallet",
+        "camera",
+        "knife",
+        "glove"
+    ]
+}

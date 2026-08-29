@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag on the left side, aligned horizontally with a glove to its right. A cup is placed on the top side, and positioned below it is an apple. A pizza is located on the bottom side, directly below the handbag. To the right of the pizza is a cutting board, which is larger than the apple. A spoon is placed to the right of the cutting board. Finally, for every hat in the scene, there is a lighter to its right, and the spoon is located above that lighter.",
+    "dsl": "(exists ?handbag (exists ?glove (exists ?cup (exists ?pizza (exists ?board (exists ?apple (exists ?spoon (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?glove 'glove') (RightOf ?glove ?handbag) (AlignedHorizontally ?handbag ?glove) (Is ?cup 'cup') (OnTopSide ?cup) (Is ?apple 'apple') (Below ?apple ?cup) (Is ?pizza 'pizza') (OnBottomSide ?pizza) (Below ?pizza ?handbag) (Is ?board 'cutting_board') (RightOf ?board ?pizza) (LargerThan ?board ?apple) (Is ?spoon 'spoon') (RightOf ?spoon ?board) (forall ?hat (implies (Is ?hat 'hat') (exists ?lighter (and (Is ?lighter 'lighter') (RightOf ?lighter ?hat) (Above ?spoon ?lighter)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?glove (exists ?cup (exists ?pizza (exists ?board (exists ?apple (exists ?spoon (forall ?hat (exists ?lighter (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (RightOf ?glove ?handbag) (AlignedHorizontally ?handbag ?glove) (Is ?glove 'glove') (Below ?pizza ?handbag) (OnBottomSide ?pizza) (RightOf ?board ?pizza) (Is ?pizza 'pizza') (Is ?board 'cutting_board') (LargerThan ?board ?apple) (Below ?apple ?cup) (RightOf ?spoon ?board) (OnTopSide ?cup) (Is ?apple 'apple') (Is ?spoon 'spoon') (or (not (Is ?hat 'hat')) (Above ?spoon ?lighter)) (Is ?cup 'cup') (or (not (Is ?hat 'hat')) (RightOf ?lighter ?hat)) (or (not (Is ?hat 'hat')) (Is ?lighter 'lighter'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "apple",
+        "pizza",
+        "cup",
+        "cutting_board",
+        "handbag",
+        "hat",
+        "lighter",
+        "spoon",
+        "glove"
+    ]
+}

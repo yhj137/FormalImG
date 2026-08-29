@@ -1,0 +1,9 @@
+{
+    "prompt": "A purple chair in a cyberpunk style scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (and (Is ?c 'chair') (HasColor ?c 'purple'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (and (Is ?c 'chair') (HasColor ?c 'purple'))))",
+    "k": 1,
+    "object_classes": [
+        "chair"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a child holding a metal laptop to the left of a round basket. All the fruit in the scene is on the basket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?l (exists ?b (and (Is ?c 'child') (Is ?l 'laptop') (Is ?b 'basket') (HasMaterial ?l 'metal') (HasShape ?b 'round') (Holding ?c ?l) (LeftOf ?c ?b) (forall ?f (implies (Is ?f 'fruit') (On ?f ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?l (exists ?b (forall ?f (and (Is ?c 'child') (Holding ?c ?l) (LeftOf ?c ?b) (HasMaterial ?l 'metal') (HasShape ?b 'round') (or (not (Is ?f 'fruit')) (On ?f ?b)) (Is ?l 'laptop') (Is ?b 'basket')))))))",
+    "k": 4,
+    "object_classes": [
+        "fruit",
+        "basket",
+        "laptop",
+        "child"
+    ]
+}

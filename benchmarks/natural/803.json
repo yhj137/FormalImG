@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bookshelf to the right of a bed. A horse sits on the bed holding a fork, and a black laptop is inside the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bed (exists ?bookshelf (exists ?horse (exists ?fork (exists ?laptop (and (Is ?bed 'bed') (Is ?bookshelf 'bookshelf') (RightOf ?bookshelf ?bed) (Is ?horse 'horse') (On ?horse ?bed) (HasState ?horse 'sitting') (Is ?fork 'fork') (Holding ?horse ?fork) (Is ?laptop 'laptop') (HasColor ?laptop 'black') (In ?laptop ?bookshelf))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bed (exists ?bookshelf (exists ?horse (exists ?fork (exists ?laptop (and (Is ?bed 'bed') (RightOf ?bookshelf ?bed) (On ?horse ?bed) (Is ?bookshelf 'bookshelf') (In ?laptop ?bookshelf) (Is ?horse 'horse') (HasState ?horse 'sitting') (HasColor ?laptop 'black') (Holding ?horse ?fork) (Is ?laptop 'laptop') (Is ?fork 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "horse",
+        "bed",
+        "laptop",
+        "bookshelf"
+    ]
+}

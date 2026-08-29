@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every knife in the scene, there is a glove aligned horizontally with it. Furthermore, each knife is positioned on the top side of the image.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'knife') (exists ?g (and (Is ?g 'glove') (OnTopSide ?k) (AlignedHorizontally ?k ?g))))))",
+    "cnf": "(forall ?k (exists ?g (and (or (not (Is ?k 'knife')) (Is ?g 'glove')) (or (not (Is ?k 'knife')) (AlignedHorizontally ?k ?g)) (or (not (Is ?k 'knife')) (OnTopSide ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "glove"
+    ]
+}

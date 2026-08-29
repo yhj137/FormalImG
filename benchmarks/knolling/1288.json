@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a cutting board and a knife aligned horizontally. For every pen in the scene, it aligns vertically with the cutting board. Forming a horizontal row with the pen are a book, a lighter, and a blue tie. Finally, a wrench is aligned vertically with the blue tie and is positioned on the right side of the image.",
+    "dsl": "(exists ?cb (exists ?k (and (Is ?cb 'cutting_board') (Is ?k 'knife') (AlignedHorizontally ?cb ?k) (forall ?p (implies (Is ?p 'pen') (exists ?b (exists ?l (exists ?t (exists ?w (and (Is ?b 'book') (Is ?l 'lighter') (Is ?t 'tie') (Has ?t 'blue') (Is ?w 'wrench') (OnRightSide ?w) (AlignedVertically ?p ?cb) (AlignedHorizontally ?p ?b) (AlignedHorizontally ?b ?l) (AlignedHorizontally ?l ?t) (AlignedVertically ?t ?w)))))))))))",
+    "cnf": "(exists ?cb (exists ?k (forall ?p (exists ?b (exists ?l (exists ?t (exists ?w (and (Is ?cb 'cutting_board') (AlignedHorizontally ?cb ?k) (or (not (Is ?p 'pen')) (AlignedVertically ?p ?cb)) (Is ?k 'knife') (or (not (Is ?p 'pen')) (OnRightSide ?w)) (or (not (Is ?p 'pen')) (AlignedHorizontally ?p ?b)) (or (not (Is ?p 'pen')) (Is ?w 'wrench')) (or (not (Is ?p 'pen')) (AlignedVertically ?t ?w)) (or (not (Is ?p 'pen')) (AlignedHorizontally ?b ?l)) (or (not (Is ?p 'pen')) (Is ?b 'book')) (or (not (Is ?p 'pen')) (Has ?t 'blue')) (or (not (Is ?p 'pen')) (AlignedHorizontally ?l ?t)) (or (not (Is ?p 'pen')) (Is ?l 'lighter')) (or (not (Is ?p 'pen')) (Is ?t 'tie'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "tie",
+        "pen",
+        "wrench",
+        "cutting_board",
+        "lighter",
+        "knife"
+    ]
+}

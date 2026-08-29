@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a blue horse, with all oranges positioned to its left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'horse') (HasColor ?h 'blue') (forall ?o (implies (Is ?o 'orange') (LeftOf ?o ?h))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?o (and (Is ?h 'horse') (HasColor ?h 'blue') (or (not (Is ?o 'orange')) (LeftOf ?o ?h))))))",
+    "k": 2,
+    "object_classes": [
+        "orange",
+        "horse"
+    ]
+}

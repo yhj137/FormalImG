@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where every elephant stands next to a table while holding a banana. An open laptop sits on the table with a black phone to its left, alongside a round pizza with a spoon next to it, and a hammer.",
+    "dsl": "(and (IsStyle 'photo') (forall ?e (implies (Is ?e 'elephant') (exists ?t (exists ?b (exists ?l (exists ?p (exists ?z (exists ?s (exists ?h (and (Is ?t 'table') (NextTo ?e ?t) (Is ?b 'banana') (Holding ?e ?b) (Is ?l 'laptop') (On ?l ?t) (HasState ?l 'open') (Is ?p 'phone') (HasColor ?p 'black') (LeftOf ?p ?l) (Is ?z 'pizza') (On ?z ?t) (HasShape ?z 'round') (Is ?s 'spoon') (On ?s ?t) (NextTo ?s ?z) (Is ?h 'hammer') (On ?h ?t))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?e (exists ?t (exists ?b (exists ?l (exists ?p (exists ?z (exists ?s (exists ?h (and (or (not (Is ?e 'elephant')) (Is ?t 'table')) (or (not (Is ?e 'elephant')) (NextTo ?e ?t)) (or (not (Is ?e 'elephant')) (Is ?b 'banana')) (or (not (Is ?e 'elephant')) (On ?l ?t)) (or (not (Is ?e 'elephant')) (Holding ?e ?b)) (or (not (Is ?e 'elephant')) (Is ?l 'laptop')) (or (not (Is ?e 'elephant')) (HasState ?l 'open')) (or (not (Is ?e 'elephant')) (On ?z ?t)) (or (not (Is ?e 'elephant')) (Is ?p 'phone')) (or (not (Is ?e 'elephant')) (LeftOf ?p ?l)) (or (not (Is ?e 'elephant')) (Is ?z 'pizza')) (or (not (Is ?e 'elephant')) (HasShape ?z 'round')) (or (not (Is ?e 'elephant')) (On ?s ?t)) (or (not (Is ?e 'elephant')) (HasColor ?p 'black')) (or (not (Is ?e 'elephant')) (Is ?s 'spoon')) (or (not (Is ?e 'elephant')) (NextTo ?s ?z)) (or (not (Is ?e 'elephant')) (On ?h ?t)) (or (not (Is ?e 'elephant')) (Is ?h 'hammer'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "spoon",
+        "laptop",
+        "pizza",
+        "table",
+        "hammer",
+        "banana"
+    ]
+}

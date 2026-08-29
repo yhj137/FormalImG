@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the right side of the image. A drill is aligned vertically with the backpack, and the backpack is visually larger than the drill. The backpack is located to the right of a calculator, and the calculator is located to the right of a cup. A pair of glasses is aligned vertically with the cup. For every screwdriver present in the scene, it is positioned to the right of the glasses, and there is a lighter to the right of the screwdriver. Arranged with the lighter are a carrot, a fork, and keys: the carrot is aligned vertically with the lighter, the fork is aligned vertically with the carrot, and the keys are aligned vertically with the fork. The carrot is larger than the keys.",
+    "dsl": "(exists ?backpack (exists ?drill (exists ?calculator (exists ?cup (exists ?glasses (and (Is ?backpack 'backpack') (Is ?drill 'drill') (Is ?calculator 'calculator') (Is ?cup 'cup') (Is ?glasses 'glasses') (OnRightSide ?backpack) (AlignedVertically ?drill ?backpack) (LargerThan ?backpack ?drill) (RightOf ?backpack ?calculator) (RightOf ?calculator ?cup) (AlignedVertically ?glasses ?cup) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?lighter (exists ?carrot (exists ?fork (exists ?keys (and (Is ?lighter 'lighter') (Is ?carrot 'carrot') (Is ?fork 'fork') (Is ?keys 'keys') (RightOf ?screwdriver ?glasses) (RightOf ?lighter ?screwdriver) (AlignedVertically ?carrot ?lighter) (AlignedVertically ?fork ?carrot) (AlignedVertically ?keys ?fork) (LargerThan ?carrot ?keys))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?drill (exists ?calculator (exists ?cup (exists ?glasses (forall ?screwdriver (exists ?lighter (exists ?carrot (exists ?fork (exists ?keys (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (AlignedVertically ?drill ?backpack) (LargerThan ?backpack ?drill) (Is ?drill 'drill') (RightOf ?backpack ?calculator) (Is ?calculator 'calculator') (RightOf ?calculator ?cup) (Is ?cup 'cup') (AlignedVertically ?glasses ?cup) (Is ?glasses 'glasses') (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?screwdriver ?glasses)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?keys 'keys')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?lighter ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?fork 'fork')) (or (not (Is ?screwdriver 'screwdriver')) (AlignedVertically ?keys ?fork)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedVertically ?carrot ?lighter)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?lighter 'lighter')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?carrot 'carrot')) (or (not (Is ?screwdriver 'screwdriver')) (AlignedVertically ?fork ?carrot)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?carrot ?keys)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "carrot",
+        "cup",
+        "screwdriver",
+        "drill",
+        "fork",
+        "backpack",
+        "calculator",
+        "lighter"
+    ]
+}

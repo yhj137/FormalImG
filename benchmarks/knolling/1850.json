@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue suitcase is located on the bottom-left side of the scene. For every pizza in the image, the following configuration exists: the pizza is to the right of the suitcase, and a red pan is to the right of the pizza, with the suitcase, pizza, and pan aligned horizontally. Furthermore, for each pizza, there is a laptop above the suitcase that is smaller than the suitcase, a hat above the pizza and to the right of the laptop, a tie to the right of the hat and above the pan, a sock above the laptop, a spoon to the right of the sock, a fork to the right of the spoon, and a screwdriver below the pan.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnBottomSide ?suitcase) (OnLeftSide ?suitcase) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?pan (exists ?laptop (exists ?hat (exists ?tie (exists ?sock (exists ?spoon (exists ?fork (exists ?screwdriver (and (Is ?pan 'pan') (Has ?pan 'red') (Is ?laptop 'laptop') (Is ?hat 'hat') (Is ?tie 'tie') (Is ?sock 'sock') (Is ?spoon 'spoon') (Is ?fork 'fork') (Is ?screwdriver 'screwdriver') (RightOf ?pizza ?suitcase) (RightOf ?pan ?pizza) (AlignedHorizontally ?suitcase ?pizza) (AlignedHorizontally ?pizza ?pan) (Above ?laptop ?suitcase) (LargerThan ?suitcase ?laptop) (Above ?hat ?pizza) (RightOf ?hat ?laptop) (RightOf ?tie ?hat) (Above ?tie ?pan) (Above ?sock ?laptop) (RightOf ?spoon ?sock) (RightOf ?fork ?spoon) (Below ?screwdriver ?pan))))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?pizza (exists ?pan (exists ?laptop (exists ?hat (exists ?tie (exists ?sock (exists ?spoon (exists ?fork (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnBottomSide ?suitcase) (OnLeftSide ?suitcase) (or (not (Is ?pizza 'pizza')) (RightOf ?pizza ?suitcase)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?suitcase ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pizza 'pizza')) (RightOf ?pan ?pizza)) (or (not (Is ?pizza 'pizza')) (Above ?laptop ?suitcase)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?pan)) (or (not (Is ?pizza 'pizza')) (Is ?fork 'fork')) (or (not (Is ?pizza 'pizza')) (Below ?screwdriver ?pan)) (or (not (Is ?pizza 'pizza')) (Has ?pan 'red')) (or (not (Is ?pizza 'pizza')) (LargerThan ?suitcase ?laptop)) (or (not (Is ?pizza 'pizza')) (Is ?laptop 'laptop')) (or (not (Is ?pizza 'pizza')) (Above ?tie ?pan)) (or (not (Is ?pizza 'pizza')) (Is ?spoon 'spoon')) (or (not (Is ?pizza 'pizza')) (RightOf ?fork ?spoon)) (or (not (Is ?pizza 'pizza')) (Is ?pan 'pan')) (or (not (Is ?pizza 'pizza')) (Above ?hat ?pizza)) (or (not (Is ?pizza 'pizza')) (RightOf ?hat ?laptop)) (or (not (Is ?pizza 'pizza')) (Is ?hat 'hat')) (or (not (Is ?pizza 'pizza')) (RightOf ?tie ?hat)) (or (not (Is ?pizza 'pizza')) (Above ?sock ?laptop)) (or (not (Is ?pizza 'pizza')) (Is ?sock 'sock')) (or (not (Is ?pizza 'pizza')) (RightOf ?spoon ?sock)) (or (not (Is ?pizza 'pizza')) (Is ?tie 'tie')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "sock",
+        "pizza",
+        "screwdriver",
+        "fork",
+        "pan",
+        "hat",
+        "spoon",
+        "suitcase"
+    ]
+}

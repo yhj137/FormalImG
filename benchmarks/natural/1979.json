@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A tree is located to the left of a bus. Inside the bus is a person with shoes and a phone. A rug lies to the right of the bus, with an open laptop sitting on it. To the right of the rug stands an elephant wearing a hat. All horses in the scene are positioned to the right of the elephant.",
+    "dsl": "(exists ?t (exists ?b (exists ?p (exists ?s (exists ?ph (exists ?r (exists ?l (exists ?e (and (Is ?t 'tree') (Is ?b 'bus') (LeftOf ?t ?b) (Is ?p 'person') (In ?p ?b) (Is ?s 'shoes') (On ?s ?p) (Is ?ph 'phone') (On ?ph ?p) (Is ?r 'rug') (RightOf ?r ?b) (Is ?l 'laptop') (On ?l ?r) (HasState ?l 'open') (Is ?e 'elephant') (RightOf ?e ?r) (forall ?h (implies (Is ?h 'horse') (RightOf ?h ?e))) (exists ?ha (and (Is ?ha 'hat') (On ?ha ?e))))))))))))",
+    "cnf": "(exists ?t (exists ?b (exists ?p (exists ?s (exists ?ph (exists ?r (exists ?l (exists ?e (forall ?h (exists ?ha (and (Is ?t 'tree') (LeftOf ?t ?b) (Is ?b 'bus') (In ?p ?b) (RightOf ?r ?b) (Is ?p 'person') (On ?s ?p) (Is ?r 'rug') (On ?l ?r) (On ?ph ?p) (Is ?s 'shoes') (RightOf ?e ?r) (Is ?l 'laptop') (HasState ?l 'open') (Is ?ph 'phone') (Is ?e 'elephant') (or (not (Is ?h 'horse')) (RightOf ?h ?e)) (On ?ha ?e) (Is ?ha 'hat'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "person",
+        "horse",
+        "shoes",
+        "laptop",
+        "tree",
+        "rug",
+        "bus",
+        "hat"
+    ]
+}

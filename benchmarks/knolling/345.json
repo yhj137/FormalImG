@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a game controller positioned on the bottom side of the scene. For every calculator present, it is located to the right of the game controller.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (forall ?c (implies (Is ?c 'calculator') (RightOf ?c ?gc)))))",
+    "cnf": "(exists ?gc (forall ?c (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (or (not (Is ?c 'calculator')) (RightOf ?c ?gc)))))",
+    "k": 2,
+    "object_classes": [
+        "calculator",
+        "game_controller"
+    ]
+}

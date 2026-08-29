@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features multiple remotes, and for every remote present, it is positioned on the top side of the layout.",
+    "dsl": "(and (forall ?r (implies (Is ?r 'remote') (OnTopSide ?r))))",
+    "cnf": "(forall ?r (or (not (Is ?r 'remote')) (OnTopSide ?r)))",
+    "k": 1,
+    "object_classes": [
+        "remote"
+    ]
+}

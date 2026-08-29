@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat present in the scene, there is a screwdriver aligned horizontally with it, and a sock located above that screwdriver. The screwdriver appears smaller than the hat, and the sock is situated on the right side of the scene.",
+    "dsl": "(forall ?hat (implies (Is ?hat 'hat') (exists ?screwdriver (exists ?sock (and (Is ?screwdriver 'screwdriver') (Is ?sock 'sock') (AlignedHorizontally ?hat ?screwdriver) (Above ?sock ?screwdriver) (SmallerThan ?screwdriver ?hat) (OnRightSide ?sock))))))",
+    "cnf": "(forall ?hat (exists ?screwdriver (exists ?sock (and (or (not (Is ?hat 'hat')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?hat ?screwdriver)) (or (not (Is ?hat 'hat')) (Is ?sock 'sock')) (or (not (Is ?hat 'hat')) (Above ?sock ?screwdriver)) (or (not (Is ?hat 'hat')) (SmallerThan ?screwdriver ?hat)) (or (not (Is ?hat 'hat')) (OnRightSide ?sock))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "screwdriver",
+        "sock"
+    ]
+}

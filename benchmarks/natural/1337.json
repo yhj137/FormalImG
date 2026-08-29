@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a person holding a key to the right of a tree. The tree is positioned to the left of a rectangular table. A cat is inside the tree. All glasses and a bitten sandwich are placed on the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?k (exists ?t (exists ?tr (and (Is ?p 'person') (Is ?k 'key') (Is ?t 'table') (HasShape ?t 'rectangular') (Is ?tr 'tree') (Holding ?p ?k) (RightOf ?p ?tr) (LeftOf ?tr ?t) (forall ?g (implies (Is ?g 'glasses') (On ?g ?t))) (exists ?s (exists ?c (and (Is ?s 'sandwich') (HasState ?s 'bitten') (On ?s ?t) (Is ?c 'cat') (In ?c ?tr))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?k (exists ?t (exists ?tr (forall ?g (exists ?s (exists ?c (and (Is ?p 'person') (Holding ?p ?k) (RightOf ?p ?tr) (Is ?k 'key') (Is ?tr 'tree') (LeftOf ?tr ?t) (HasShape ?t 'rectangular') (or (not (Is ?g 'glasses')) (On ?g ?t)) (In ?c ?tr) (Is ?t 'table') (On ?s ?t) (Is ?c 'cat') (HasState ?s 'bitten') (Is ?s 'sandwich'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "glasses",
+        "tree",
+        "table",
+        "sandwich",
+        "cat",
+        "key"
+    ]
+}

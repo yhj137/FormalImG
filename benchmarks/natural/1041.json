@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every bus is positioned to the right of a boat. Next to the boat is a withered plant. To the left of the plant lies a wooden hammer. A screwdriver is placed next to the hammer, and a key is located to the left of the screwdriver.",
+    "dsl": "(forall ?b (implies (Is ?b 'bus') (exists ?bt (exists ?p (exists ?h (exists ?s (exists ?k (and (Is ?bt 'boat') (Is ?p 'plant') (Is ?h 'hammer') (Is ?s 'screwdriver') (Is ?k 'key') (RightOf ?b ?bt) (HasState ?p 'withered') (NextTo ?p ?bt) (HasMaterial ?h 'wooden') (LeftOf ?h ?p) (NextTo ?s ?h) (LeftOf ?k ?s)))))))))",
+    "cnf": "(forall ?b (exists ?bt (exists ?p (exists ?h (exists ?s (exists ?k (and (or (not (Is ?b 'bus')) (Is ?bt 'boat')) (or (not (Is ?b 'bus')) (RightOf ?b ?bt)) (or (not (Is ?b 'bus')) (Is ?p 'plant')) (or (not (Is ?b 'bus')) (NextTo ?p ?bt)) (or (not (Is ?b 'bus')) (Is ?k 'key')) (or (not (Is ?b 'bus')) (HasState ?p 'withered')) (or (not (Is ?b 'bus')) (Is ?h 'hammer')) (or (not (Is ?b 'bus')) (HasMaterial ?h 'wooden')) (or (not (Is ?b 'bus')) (LeftOf ?h ?p)) (or (not (Is ?b 'bus')) (Is ?s 'screwdriver')) (or (not (Is ?b 'bus')) (LeftOf ?k ?s)) (or (not (Is ?b 'bus')) (NextTo ?s ?h)))))))))",
+    "k": 6,
+    "object_classes": [
+        "plant",
+        "hammer",
+        "boat",
+        "screwdriver",
+        "bus",
+        "key"
+    ]
+}

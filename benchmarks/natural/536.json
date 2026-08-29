@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a child holding a brown basket next to every tree.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (and (Is ?c 'child') (forall ?t (implies (Is ?t 'tree') (NextTo ?c ?t))) (exists ?b (and (Is ?b 'basket') (HasColor ?b 'brown') (Holding ?c ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (forall ?t (exists ?b (and (Is ?c 'child') (or (not (Is ?t 'tree')) (NextTo ?c ?t)) (Holding ?c ?b) (HasColor ?b 'brown') (Is ?b 'basket'))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "child",
+        "tree"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every apple in the scene, there is a hammer positioned to its right, and the apple itself is located on the left side of the image.",
+    "dsl": "(and (forall ?a (implies (Is ?a 'apple') (exists ?h (and (Is ?h 'hammer') (RightOf ?h ?a) (OnLeftSide ?a))))))",
+    "cnf": "(forall ?a (exists ?h (and (or (not (Is ?a 'apple')) (Is ?h 'hammer')) (or (not (Is ?a 'apple')) (RightOf ?h ?a)) (or (not (Is ?a 'apple')) (OnLeftSide ?a)))))",
+    "k": 2,
+    "object_classes": [
+        "hammer",
+        "apple"
+    ]
+}

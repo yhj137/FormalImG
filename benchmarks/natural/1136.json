@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman standing next to a tree, holding a rectangular toy car. Every bird is sitting on the tree. To the left of the woman is a dog, with a pair of shoes next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?w (exists ?tc (and (Is ?t 'tree') (Is ?w 'woman') (NextTo ?w ?t) (Is ?tc 'toy car') (Holding ?w ?tc) (HasShape ?tc 'rectangular') (forall ?b (implies (Is ?b 'bird') (On ?b ?t))) (exists ?d (exists ?s (and (Is ?d 'dog') (LeftOf ?d ?w) (Is ?s 'shoes') (NextTo ?s ?d)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?w (exists ?tc (forall ?b (exists ?d (exists ?s (and (Is ?t 'tree') (NextTo ?w ?t) (or (not (Is ?b 'bird')) (On ?b ?t)) (Is ?w 'woman') (Holding ?w ?tc) (LeftOf ?d ?w) (Is ?tc 'toy car') (HasShape ?tc 'rectangular') (Is ?d 'dog') (NextTo ?s ?d) (Is ?s 'shoes')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shoes",
+        "tree",
+        "woman",
+        "bird",
+        "toy car",
+        "dog"
+    ]
+}

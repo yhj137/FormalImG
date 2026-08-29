@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is located on the top side of the scene. Every pair of glasses in the image is aligned vertically with the keyboard. There is a pair of headphones aligned vertically with the keyboard, where the keyboard is larger than the headphones. A bowl is vertically aligned with the headphones and is larger than the headphones. Continuing the vertical arrangement, a wrench is aligned with the bowl, a ruler is aligned with the wrench, and a knife is aligned with the ruler.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (forall ?glasses (implies (Is ?glasses 'glasses') (AlignedVertically ?glasses ?keyboard))) (exists ?headphones (and (Is ?headphones 'headphones') (AlignedVertically ?headphones ?keyboard) (LargerThan ?keyboard ?headphones) (exists ?bowl (and (Is ?bowl 'bowl') (AlignedVertically ?bowl ?headphones) (LargerThan ?bowl ?headphones) (exists ?wrench (and (Is ?wrench 'wrench') (AlignedVertically ?wrench ?bowl) (exists ?ruler (and (Is ?ruler 'ruler') (AlignedVertically ?ruler ?wrench) (exists ?knife (and (Is ?knife 'knife') (AlignedVertically ?knife ?ruler)))))))))))))",
+    "cnf": "(exists ?keyboard (forall ?glasses (exists ?headphones (exists ?bowl (exists ?wrench (exists ?ruler (exists ?knife (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (or (not (Is ?glasses 'glasses')) (AlignedVertically ?glasses ?keyboard)) (AlignedVertically ?headphones ?keyboard) (LargerThan ?keyboard ?headphones) (Is ?headphones 'headphones') (AlignedVertically ?bowl ?headphones) (LargerThan ?bowl ?headphones) (Is ?bowl 'bowl') (AlignedVertically ?wrench ?bowl) (Is ?wrench 'wrench') (AlignedVertically ?ruler ?wrench) (Is ?ruler 'ruler') (AlignedVertically ?knife ?ruler) (Is ?knife 'knife')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "keyboard",
+        "wrench",
+        "knife",
+        "bowl",
+        "headphones"
+    ]
+}

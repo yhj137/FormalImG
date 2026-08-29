@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase located on the left side of the scene, there is a red backpack, a black keyboard, a pink donut, and a pair of gray pliers arranged in a sequence to its right. The arrangement follows a strict horizontal line: the suitcase is to the left of the backpack, the backpack is to the left of the keyboard, the keyboard is to the left of the donut, and the donut is to the left of the pliers. All five items are aligned horizontally, and the suitcase is visually larger than the backpack.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'suitcase') (OnLeftSide ?s)) (exists ?b (exists ?k (exists ?d (exists ?p (and (Is ?b 'backpack') (Has ?b 'red') (Is ?k 'keyboard') (Has ?k 'black') (Is ?d 'donut') (Has ?d 'pink') (Is ?p 'pliers') (Has ?p 'gray') (LeftOf ?s ?b) (LeftOf ?b ?k) (LeftOf ?k ?d) (LeftOf ?d ?p) (AlignedHorizontally ?s ?b) (AlignedHorizontally ?b ?k) (AlignedHorizontally ?k ?d) (AlignedHorizontally ?d ?p) (LargerThan ?s ?b)))))))))",
+    "cnf": "(forall ?s (exists ?b (exists ?k (exists ?d (exists ?p (and (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Is ?b 'backpack')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Has ?b 'red')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Is ?k 'keyboard')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (LeftOf ?s ?b)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Has ?k 'black')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Has ?p 'gray')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (LeftOf ?b ?k)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Is ?d 'donut')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Is ?p 'pliers')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (LeftOf ?d ?p)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (LeftOf ?k ?d)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (AlignedHorizontally ?s ?b)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (Has ?d 'pink')) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (AlignedHorizontally ?k ?d)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (AlignedHorizontally ?d ?p)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (AlignedHorizontally ?b ?k)) (or (not (Is ?s 'suitcase')) (not (OnLeftSide ?s)) (LargerThan ?s ?b))))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "backpack",
+        "suitcase",
+        "donut"
+    ]
+}

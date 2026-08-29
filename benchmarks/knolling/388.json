@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a red pair of pliers in the scene. For every set of keys present, it is aligned vertically with the pliers.",
+    "dsl": "(exists ?p (and (Is ?p 'pliers') (Has ?p 'red') (forall ?k (implies (Is ?k 'keys') (AlignedVertically ?p ?k)))))",
+    "cnf": "(exists ?p (forall ?k (and (Is ?p 'pliers') (Has ?p 'red') (or (not (Is ?k 'keys')) (AlignedVertically ?p ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "pliers"
+    ]
+}

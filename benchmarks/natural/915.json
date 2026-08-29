@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a table with a backpack placed next to it. All bowls are inside the backpack. A blue lamp stands to the left of the table, and a round rug lies next to the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?bp (and (Is ?t 'table') (Is ?bp 'backpack') (NextTo ?bp ?t) (forall ?b (implies (Is ?b 'bowl') (In ?b ?bp))) (exists ?l (and (Is ?l 'lamp') (HasColor ?l 'blue') (LeftOf ?l ?t))) (exists ?r (and (Is ?r 'rug') (HasShape ?r 'round') (NextTo ?r ?t)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?bp (forall ?b (exists ?l (exists ?r (and (Is ?t 'table') (NextTo ?bp ?t) (LeftOf ?l ?t) (Is ?bp 'backpack') (or (not (Is ?b 'bowl')) (In ?b ?bp)) (NextTo ?r ?t) (HasColor ?l 'blue') (HasShape ?r 'round') (Is ?l 'lamp') (Is ?r 'rug'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "lamp",
+        "backpack",
+        "rug",
+        "table"
+    ]
+}

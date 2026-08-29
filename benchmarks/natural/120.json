@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo style image where every rug is rectangular.",
+    "dsl": "(and (IsStyle 'photo') (forall ?r (implies (Is ?r 'rug') (HasShape ?r 'rectangular'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?r (or (not (Is ?r 'rug')) (HasShape ?r 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "rug"
+    ]
+}

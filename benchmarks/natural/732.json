@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a metal bicycle situated next to a plant. Every hat in the scene is placed on the bicycle, and a lamp is positioned to the right of the plant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?p (and (Is ?b 'bicycle') (HasMaterial ?b 'metal') (Is ?p 'plant') (NextTo ?p ?b) (forall ?h (implies (Is ?h 'hat') (On ?h ?b))) (exists ?l (and (Is ?l 'lamp') (RightOf ?l ?p)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (forall ?h (exists ?l (and (Is ?b 'bicycle') (HasMaterial ?b 'metal') (NextTo ?p ?b) (or (not (Is ?h 'hat')) (On ?h ?b)) (Is ?p 'plant') (RightOf ?l ?p) (Is ?l 'lamp')))))))",
+    "k": 4,
+    "object_classes": [
+        "bicycle",
+        "plant",
+        "hat",
+        "lamp"
+    ]
+}

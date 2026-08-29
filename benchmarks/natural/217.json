@@ -1,0 +1,10 @@
+{
+    "prompt": "A woman is holding a wooden basket.",
+    "dsl": "(exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'basket') (HasMaterial ?b 'wooden') (Holding ?w ?b))))",
+    "cnf": "(exists ?w (exists ?b (and (Is ?w 'woman') (Holding ?w ?b) (HasMaterial ?b 'wooden') (Is ?b 'basket'))))",
+    "k": 2,
+    "object_classes": [
+        "basket",
+        "woman"
+    ]
+}

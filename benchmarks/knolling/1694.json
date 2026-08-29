@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a neatly arranged grid of items. On the left, there is a brown handbag positioned above a sandwich; these two are aligned vertically. To the right of the handbag is a pizza. For every ruler in the scene, it is placed to the right of the pizza. Associated with the ruler are several items forming a vertical column: a stapler is directly below the ruler, and a plate is directly below the stapler, with the ruler, stapler, and plate aligned vertically. Furthermore, a bowl is located to the right of the ruler. Below the bowl is a white glove, and below the glove is a carrot. The bowl, glove, and carrot are also aligned vertically, and the carrot is positioned on the bottom side of the image.",
+    "dsl": "(exists ?handbag (exists ?sandwich (exists ?pizza (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?sandwich 'sandwich') (Is ?pizza 'pizza') (Above ?handbag ?sandwich) (AlignedVertically ?handbag ?sandwich) (LeftOf ?handbag ?pizza) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?stapler (exists ?plate (exists ?bowl (exists ?glove (exists ?carrot (and (Is ?stapler 'stapler') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?glove 'glove') (Has ?glove 'white') (Is ?carrot 'carrot') (RightOf ?ruler ?pizza) (Above ?ruler ?stapler) (Above ?stapler ?plate) (AlignedVertically ?ruler ?stapler) (AlignedVertically ?stapler ?plate) (RightOf ?bowl ?ruler) (Above ?bowl ?glove) (Above ?glove ?carrot) (AlignedVertically ?bowl ?glove) (AlignedVertically ?glove ?carrot) (OnBottomSide ?carrot)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?sandwich (exists ?pizza (forall ?ruler (exists ?stapler (exists ?plate (exists ?bowl (exists ?glove (exists ?carrot (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (Above ?handbag ?sandwich) (AlignedVertically ?handbag ?sandwich) (Is ?sandwich 'sandwich') (LeftOf ?handbag ?pizza) (Is ?pizza 'pizza') (or (not (Is ?ruler 'ruler')) (RightOf ?ruler ?pizza)) (or (not (Is ?ruler 'ruler')) (Is ?carrot 'carrot')) (or (not (Is ?ruler 'ruler')) (Above ?ruler ?stapler)) (or (not (Is ?ruler 'ruler')) (Has ?glove 'white')) (or (not (Is ?ruler 'ruler')) (Above ?glove ?carrot)) (or (not (Is ?ruler 'ruler')) (Above ?stapler ?plate)) (or (not (Is ?ruler 'ruler')) (Is ?stapler 'stapler')) (or (not (Is ?ruler 'ruler')) (Is ?glove 'glove')) (or (not (Is ?ruler 'ruler')) (Above ?bowl ?glove)) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?bowl ?glove)) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?glove ?carrot)) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?ruler ?stapler)) (or (not (Is ?ruler 'ruler')) (Is ?plate 'plate')) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?stapler ?plate)) (or (not (Is ?ruler 'ruler')) (Is ?bowl 'bowl')) (or (not (Is ?ruler 'ruler')) (RightOf ?bowl ?ruler)) (or (not (Is ?ruler 'ruler')) (OnBottomSide ?carrot))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "stapler",
+        "carrot",
+        "pizza",
+        "handbag",
+        "bowl",
+        "sandwich",
+        "glove"
+    ]
+}

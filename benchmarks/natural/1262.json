@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicts a leather sofa where a man sits holding a banana. A metal key also lies on the sofa, with a round cup to its right. A boat is positioned to the left of the sofa, and all cars are located to the right of the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (forall ?c (implies (Is ?c 'car') (RightOf ?c ?s))) (exists ?m (exists ?b (exists ?k (exists ?cp (exists ?bt (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?b 'banana') (Is ?k 'key') (Is ?cp 'cup') (Is ?bt 'boat') (On ?m ?s) (Holding ?m ?b) (On ?k ?s) (HasMaterial ?k 'metal') (RightOf ?cp ?k) (HasShape ?cp 'round') (LeftOf ?bt ?s))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (forall ?c (exists ?m (exists ?b (exists ?k (exists ?cp (exists ?bt (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (or (not (Is ?c 'car')) (RightOf ?c ?s)) (On ?m ?s) (On ?k ?s) (HasState ?m 'sitting') (Holding ?m ?b) (LeftOf ?bt ?s) (Is ?k 'key') (HasMaterial ?k 'metal') (Is ?m 'man') (Is ?b 'banana') (Is ?bt 'boat') (RightOf ?cp ?k) (Is ?cp 'cup') (HasShape ?cp 'round'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "key",
+        "sofa",
+        "man",
+        "banana",
+        "cup",
+        "boat",
+        "car"
+    ]
+}

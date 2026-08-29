@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene inside a metal bus, featuring a woman holding a sliced pizza. All glasses in the scene are on the woman.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?w (exists ?p (and (Is ?b 'bus') (HasMaterial ?b 'metal') (Is ?w 'woman') (In ?w ?b) (Is ?p 'pizza') (HasState ?p 'sliced') (Holding ?w ?p) (forall ?g (implies (Is ?g 'glasses') (On ?g ?w))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?w (exists ?p (forall ?g (and (Is ?b 'bus') (HasMaterial ?b 'metal') (In ?w ?b) (Is ?w 'woman') (Holding ?w ?p) (or (not (Is ?g 'glasses')) (On ?g ?w)) (HasState ?p 'sliced') (Is ?p 'pizza')))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "glasses",
+        "bus",
+        "woman"
+    ]
+}

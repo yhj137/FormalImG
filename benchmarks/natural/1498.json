@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a man on a wooden chair. A bookshelf stands next to the chair, and every shoe is next to the bookshelf. A lion is to the right of the man, and a cat is to his left. A fruit and a flower are inside the bookshelf.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?c (exists ?b (and (Is ?m 'man') (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?b 'bookshelf') (On ?m ?c) (NextTo ?c ?b) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?b))) (exists ?l (exists ?cat (exists ?fr (exists ?fl (and (Is ?l 'lion') (Is ?cat 'cat') (Is ?fr 'fruit') (Is ?fl 'flower') (RightOf ?l ?m) (LeftOf ?cat ?m) (In ?fr ?b) (In ?fl ?b)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?c (exists ?b (forall ?s (exists ?l (exists ?cat (exists ?fr (exists ?fl (and (Is ?m 'man') (On ?m ?c) (RightOf ?l ?m) (HasMaterial ?c 'wooden') (NextTo ?c ?b) (LeftOf ?cat ?m) (Is ?l 'lion') (Is ?c 'chair') (Is ?b 'bookshelf') (or (not (Is ?s 'shoes')) (NextTo ?s ?b)) (Is ?cat 'cat') (In ?fr ?b) (In ?fl ?b) (Is ?fr 'fruit') (Is ?fl 'flower')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "shoes",
+        "chair",
+        "man",
+        "flower",
+        "lion",
+        "cat",
+        "bookshelf"
+    ]
+}

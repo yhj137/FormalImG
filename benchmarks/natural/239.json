@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style image of a man holding a leather jacket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?j (and (Is ?m 'man') (Is ?j 'jacket') (HasMaterial ?j 'leather') (Holding ?m ?j)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?j (and (Is ?m 'man') (Holding ?m ?j) (HasMaterial ?j 'leather') (Is ?j 'jacket')))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "man"
+    ]
+}

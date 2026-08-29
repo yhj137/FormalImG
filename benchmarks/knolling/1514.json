@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a brown suitcase, and a white hat is positioned above it; these two objects are aligned vertically. On the right side, there is a handbag, with a sandwich located above it. The suitcase is visually larger than the sandwich. For every remote in the image, the suitcase is located to its left, and the remote is located to the left of the handbag. Furthermore, there is a ruler to the left of the remote, a pair of red scissors above the remote, and a black glove below the remote. The remote and the glove are aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?sandwich (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (OnRightSide ?handbag) (Is ?hat 'hat') (Has ?hat 'white') (Above ?hat ?suitcase) (AlignedVertically ?hat ?suitcase) (Is ?sandwich 'sandwich') (Above ?sandwich ?handbag) (LargerThan ?suitcase ?sandwich) (forall ?remote (implies (Is ?remote 'remote') (exists ?ruler (exists ?scissors (exists ?glove (and (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?glove 'glove') (Has ?glove 'black') (LeftOf ?suitcase ?remote) (LeftOf ?remote ?handbag) (LeftOf ?ruler ?remote) (Above ?scissors ?remote) (Above ?remote ?glove) (AlignedVertically ?remote ?glove))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?sandwich (forall ?remote (exists ?ruler (exists ?scissors (exists ?glove (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Above ?hat ?suitcase) (AlignedVertically ?hat ?suitcase) (Has ?hat 'white') (LargerThan ?suitcase ?sandwich) (Is ?hat 'hat') (or (not (Is ?remote 'remote')) (LeftOf ?suitcase ?remote)) (Above ?sandwich ?handbag) (or (not (Is ?remote 'remote')) (Has ?glove 'black')) (or (not (Is ?remote 'remote')) (LeftOf ?remote ?handbag)) (OnRightSide ?handbag) (Is ?sandwich 'sandwich') (or (not (Is ?remote 'remote')) (Is ?glove 'glove')) (or (not (Is ?remote 'remote')) (Above ?remote ?glove)) (or (not (Is ?remote 'remote')) (LeftOf ?ruler ?remote)) (Is ?handbag 'handbag') (or (not (Is ?remote 'remote')) (Has ?scissors 'red')) (or (not (Is ?remote 'remote')) (Above ?scissors ?remote)) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?glove)) (or (not (Is ?remote 'remote')) (Is ?ruler 'ruler')) (or (not (Is ?remote 'remote')) (Is ?scissors 'scissors')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "suitcase",
+        "hat",
+        "handbag",
+        "scissors",
+        "sandwich",
+        "glove"
+    ]
+}

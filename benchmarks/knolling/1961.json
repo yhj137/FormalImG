@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a laptop on the left side of the image, which is visually larger than the game controller positioned below it. Aligned horizontally with the laptop is a stapler. A wallet is located below the stapler, and below the wallet is a watch that is smaller than the wallet. Further to the right, a sandwich is aligned horizontally with the stapler, and a set of keys is placed below the sandwich. Finally, for every carrot appearing in the scene, there is a fork below it and a screwdriver below the fork. The carrots are located on the right side of the image and aligned horizontally with the laptop, while the fork is positioned above the screwdriver.",
+    "dsl": "(exists ?laptop (exists ?controller (exists ?stapler (exists ?wallet (exists ?watch (exists ?sandwich (exists ?keys (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?controller 'game_controller') (Below ?controller ?laptop) (LargerThan ?laptop ?controller) (Is ?stapler 'stapler') (AlignedHorizontally ?laptop ?stapler) (Is ?wallet 'wallet') (Below ?wallet ?stapler) (Is ?watch 'watch') (Below ?watch ?wallet) (SmallerThan ?watch ?wallet) (Is ?sandwich 'sandwich') (AlignedHorizontally ?stapler ?sandwich) (Is ?keys 'keys') (Below ?keys ?sandwich) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?fork (exists ?screwdriver (and (Is ?fork 'fork') (Is ?screwdriver 'screwdriver') (OnRightSide ?carrot) (AlignedHorizontally ?carrot ?laptop) (Below ?fork ?carrot) (Above ?fork ?screwdriver))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?controller (exists ?stapler (exists ?wallet (exists ?watch (exists ?sandwich (exists ?keys (forall ?carrot (exists ?fork (exists ?screwdriver (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Below ?controller ?laptop) (LargerThan ?laptop ?controller) (Is ?controller 'game_controller') (AlignedHorizontally ?laptop ?stapler) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?carrot ?laptop)) (Is ?stapler 'stapler') (Below ?wallet ?stapler) (or (not (Is ?carrot 'carrot')) (OnRightSide ?carrot)) (or (not (Is ?carrot 'carrot')) (Below ?fork ?carrot)) (AlignedHorizontally ?stapler ?sandwich) (Is ?wallet 'wallet') (Below ?watch ?wallet) (or (not (Is ?carrot 'carrot')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?carrot 'carrot')) (Above ?fork ?screwdriver)) (or (not (Is ?carrot 'carrot')) (Is ?fork 'fork')) (Is ?sandwich 'sandwich') (Below ?keys ?sandwich) (SmallerThan ?watch ?wallet) (Is ?watch 'watch') (Is ?keys 'keys'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "stapler",
+        "carrot",
+        "watch",
+        "screwdriver",
+        "game_controller",
+        "fork",
+        "wallet",
+        "sandwich"
+    ]
+}

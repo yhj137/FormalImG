@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, there is a phone positioned to its right. A set of keys is aligned vertically with the phone. To the right of the keys is a spoon, which is aligned vertically with a ruler. Finally, a pair of pliers is located to the right of the ruler, such that the pliers are situated on the right side of the image.",
+    "dsl": "(forall ?keyboard (implies (Is ?keyboard 'keyboard') (exists ?phone (exists ?keys (exists ?spoon (exists ?ruler (exists ?pliers (and (Is ?phone 'phone') (Is ?keys 'keys') (Is ?spoon 'spoon') (Is ?ruler 'ruler') (Is ?pliers 'pliers') (RightOf ?phone ?keyboard) (AlignedVertically ?keys ?phone) (RightOf ?spoon ?keys) (AlignedVertically ?ruler ?spoon) (RightOf ?pliers ?ruler) (OnRightSide ?pliers)))))))))",
+    "cnf": "(forall ?keyboard (exists ?phone (exists ?keys (exists ?spoon (exists ?ruler (exists ?pliers (and (or (not (Is ?keyboard 'keyboard')) (Is ?phone 'phone')) (or (not (Is ?keyboard 'keyboard')) (RightOf ?phone ?keyboard)) (or (not (Is ?keyboard 'keyboard')) (Is ?keys 'keys')) (or (not (Is ?keyboard 'keyboard')) (AlignedVertically ?keys ?phone)) (or (not (Is ?keyboard 'keyboard')) (Is ?pliers 'pliers')) (or (not (Is ?keyboard 'keyboard')) (Is ?spoon 'spoon')) (or (not (Is ?keyboard 'keyboard')) (RightOf ?spoon ?keys)) (or (not (Is ?keyboard 'keyboard')) (Is ?ruler 'ruler')) (or (not (Is ?keyboard 'keyboard')) (RightOf ?pliers ?ruler)) (or (not (Is ?keyboard 'keyboard')) (AlignedVertically ?ruler ?spoon)) (or (not (Is ?keyboard 'keyboard')) (OnRightSide ?pliers)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "pliers",
+        "keyboard",
+        "phone",
+        "spoon"
+    ]
+}

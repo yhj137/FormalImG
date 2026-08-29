@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black monitor positioned on the left side. For any keys found to the right of the monitor, the following items are present: a pair of headphones on the top side located above the keys, a keyboard placed below the monitor and vertically aligned with it, a shirt below the keys which is larger than the headphones, a brown wallet below the shirt with a watch to its left, and a hammer below the keyboard with pliers to its right and a lemon to the right of the pliers.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Has ?monitor 'black') (forall ?keys (implies (and (Is ?keys 'keys') (RightOf ?keys ?monitor)) (exists ?headphones (and (Is ?headphones 'headphones') (OnTopSide ?headphones) (Above ?headphones ?keys) (exists ?keyboard (and (Is ?keyboard 'keyboard') (Below ?keyboard ?monitor) (AlignedVertically ?keyboard ?monitor) (exists ?shirt (and (Is ?shirt 'shirt') (Below ?shirt ?keys) (LargerThan ?shirt ?headphones) (exists ?wallet (and (Is ?wallet 'wallet') (Below ?wallet ?shirt) (Has ?wallet 'brown') (exists ?watch (and (Is ?watch 'watch') (LeftOf ?watch ?wallet) (exists ?hammer (and (Is ?hammer 'hammer') (Below ?hammer ?keyboard) (exists ?pliers (and (Is ?pliers 'pliers') (RightOf ?pliers ?hammer) (exists ?lemon (and (Is ?lemon 'lemon') (RightOf ?lemon ?pliers)))))))))))))))))))))",
+    "cnf": "(exists ?monitor (forall ?keys (exists ?headphones (exists ?keyboard (exists ?shirt (exists ?wallet (exists ?watch (exists ?hammer (exists ?pliers (exists ?lemon (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Has ?monitor 'black') (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?headphones 'headphones')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (OnTopSide ?headphones)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Above ?headphones ?keys)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?keyboard 'keyboard')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (LargerThan ?shirt ?headphones)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Below ?keyboard ?monitor)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Below ?shirt ?keys)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?wallet 'wallet')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Below ?wallet ?shirt)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (AlignedVertically ?keyboard ?monitor)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?shirt 'shirt')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Has ?wallet 'brown')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Below ?hammer ?keyboard)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?watch 'watch')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (LeftOf ?watch ?wallet)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?hammer 'hammer')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?pliers 'pliers')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (RightOf ?pliers ?hammer)) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (Is ?lemon 'lemon')) (or (not (Is ?keys 'keys')) (not (RightOf ?keys ?monitor)) (RightOf ?lemon ?pliers)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "keyboard",
+        "lemon",
+        "watch",
+        "hammer",
+        "wallet",
+        "monitor",
+        "headphones",
+        "shirt"
+    ]
+}

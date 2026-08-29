@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a bottle positioned on the top side of the frame. For every wrench in the image, it is aligned vertically with the bottle and is visually smaller than the bottle. Forming a vertical column with the wrench are a ruler, an apple, a spoon, and a watch. Specifically, the ruler is aligned vertically with the wrench, the apple is aligned vertically with the ruler, the spoon is aligned vertically with the apple, and the watch is aligned vertically with the spoon. Additionally, the watch is smaller than the apple.",
+    "dsl": "(exists ?b (and (Is ?b 'bottle') (OnTopSide ?b) (forall ?w (implies (Is ?w 'wrench') (exists ?r (exists ?a (exists ?s (exists ?wa (and (Is ?r 'ruler') (Is ?a 'apple') (Is ?s 'spoon') (Is ?wa 'watch') (AlignedVertically ?w ?b) (SmallerThan ?w ?b) (AlignedVertically ?r ?w) (AlignedVertically ?a ?r) (AlignedVertically ?s ?a) (AlignedVertically ?wa ?s) (SmallerThan ?wa ?a))))))))))",
+    "cnf": "(exists ?b (forall ?w (exists ?r (exists ?a (exists ?s (exists ?wa (and (Is ?b 'bottle') (OnTopSide ?b) (or (not (Is ?w 'wrench')) (AlignedVertically ?w ?b)) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?b)) (or (not (Is ?w 'wrench')) (Is ?wa 'watch')) (or (not (Is ?w 'wrench')) (AlignedVertically ?r ?w)) (or (not (Is ?w 'wrench')) (Is ?s 'spoon')) (or (not (Is ?w 'wrench')) (AlignedVertically ?wa ?s)) (or (not (Is ?w 'wrench')) (AlignedVertically ?a ?r)) (or (not (Is ?w 'wrench')) (Is ?r 'ruler')) (or (not (Is ?w 'wrench')) (Is ?a 'apple')) (or (not (Is ?w 'wrench')) (AlignedVertically ?s ?a)) (or (not (Is ?w 'wrench')) (SmallerThan ?wa ?a)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "wrench",
+        "watch",
+        "bottle",
+        "spoon"
+    ]
+}

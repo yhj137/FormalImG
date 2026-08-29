@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat 3x3 grid arrangement. The top row contains a red backpack, a blue handbag, and a black shoe, aligned horizontally; the backpack is to the left of the handbag, and the handbag is to the left of the shoe. The middle row consists of a white game controller, a green book, and a yellow bowl, also aligned horizontally; the game controller is to the left of the book, and the book is to the left of the bowl. The bottom row features a gray stapler, red scissors, and a gray wrench, aligned horizontally, with the stapler to the left of the scissors and the scissors to the left of the wrench. Vertically, the backpack is located above the game controller, and the game controller is above the stapler. Comparison-wise, the backpack is larger than the stapler, and the scissors are smaller than the handbag. Finally, for every knife in the image, it is located above the backpack and is smaller than the book.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?shoe (exists ?controller (exists ?book (exists ?bowl (exists ?stapler (exists ?scissors (exists ?wrench (and (Is ?backpack 'backpack') (Has ?backpack 'red') (Is ?handbag 'handbag') (Has ?handbag 'blue') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?book 'book') (Has ?book 'green') (Is ?bowl 'bowl') (Has ?bowl 'yellow') (Is ?stapler 'stapler') (Has ?stapler 'gray') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?wrench 'wrench') (Has ?wrench 'gray') (AlignedHorizontally ?backpack ?handbag) (AlignedHorizontally ?handbag ?shoe) (LeftOf ?backpack ?handbag) (LeftOf ?handbag ?shoe) (AlignedHorizontally ?controller ?book) (AlignedHorizontally ?book ?bowl) (LeftOf ?controller ?book) (LeftOf ?book ?bowl) (AlignedHorizontally ?stapler ?scissors) (AlignedHorizontally ?scissors ?wrench) (LeftOf ?stapler ?scissors) (LeftOf ?scissors ?wrench) (Above ?backpack ?controller) (Above ?controller ?stapler) (LargerThan ?backpack ?stapler) (SmallerThan ?scissors ?handbag) (forall ?knife (implies (Is ?knife 'knife') (and (Above ?knife ?backpack) (SmallerThan ?knife ?book))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?shoe (exists ?controller (exists ?book (exists ?bowl (exists ?stapler (exists ?scissors (exists ?wrench (forall ?knife (and (Is ?backpack 'backpack') (Has ?backpack 'red') (AlignedHorizontally ?backpack ?handbag) (LeftOf ?backpack ?handbag) (Has ?handbag 'blue') (AlignedHorizontally ?handbag ?shoe) (Above ?backpack ?controller) (LeftOf ?handbag ?shoe) (Is ?handbag 'handbag') (Has ?shoe 'black') (LargerThan ?backpack ?stapler) (LeftOf ?controller ?book) (Above ?controller ?stapler) (SmallerThan ?scissors ?handbag) (Is ?shoe 'shoe') (or (not (Is ?knife 'knife')) (Above ?knife ?backpack)) (AlignedHorizontally ?controller ?book) (AlignedHorizontally ?book ?bowl) (LeftOf ?book ?bowl) (LeftOf ?stapler ?scissors) (LeftOf ?scissors ?wrench) (or (not (Is ?knife 'knife')) (SmallerThan ?knife ?book)) (Has ?controller 'white') (Has ?book 'green') (Has ?bowl 'yellow') (AlignedHorizontally ?stapler ?scissors) (AlignedHorizontally ?scissors ?wrench) (Is ?controller 'game_controller') (Is ?book 'book') (Is ?bowl 'bowl') (Has ?stapler 'gray') (Has ?scissors 'red') (Has ?wrench 'gray') (Is ?stapler 'stapler') (Is ?scissors 'scissors') (Is ?wrench 'wrench'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "stapler",
+        "wrench",
+        "game_controller",
+        "handbag",
+        "backpack",
+        "knife",
+        "bowl",
+        "shoe",
+        "scissors"
+    ]
+}

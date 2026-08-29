@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase and a handbag positioned on the left side, while a monitor, a keyboard, and an apple are arranged on the right side. The suitcase is aligned horizontally with the monitor, and the handbag is aligned horizontally with the keyboard. In terms of size, the suitcase is larger than the handbag, the monitor is larger than the keyboard, and the keyboard is larger than the apple. Additionally, for every pair of pliers in the scene, there is a pair of scissors located on the left side that is aligned horizontally with the apple, and the pliers are larger than the scissors.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?monitor (exists ?keyboard (exists ?apple (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (Is ?apple 'apple') (OnRightSide ?apple) (AlignedHorizontally ?suitcase ?monitor) (AlignedHorizontally ?handbag ?keyboard) (LargerThan ?suitcase ?handbag) (LargerThan ?monitor ?keyboard) (LargerThan ?keyboard ?apple) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?scissors (and (Is ?scissors 'scissors') (OnLeftSide ?scissors) (AlignedHorizontally ?scissors ?apple) (LargerThan ?pliers ?scissors)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?monitor (exists ?keyboard (exists ?apple (forall ?pliers (exists ?scissors (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedHorizontally ?suitcase ?monitor) (LargerThan ?suitcase ?handbag) (OnRightSide ?monitor) (LargerThan ?monitor ?keyboard) (AlignedHorizontally ?handbag ?keyboard) (Is ?monitor 'monitor') (LargerThan ?keyboard ?apple) (OnLeftSide ?handbag) (OnRightSide ?keyboard) (OnRightSide ?apple) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?scissors ?apple)) (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?apple 'apple') (or (not (Is ?pliers 'pliers')) (OnLeftSide ?scissors)) (or (not (Is ?pliers 'pliers')) (LargerThan ?pliers ?scissors)) (or (not (Is ?pliers 'pliers')) (Is ?scissors 'scissors'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "apple",
+        "keyboard",
+        "handbag",
+        "monitor",
+        "suitcase",
+        "scissors"
+    ]
+}

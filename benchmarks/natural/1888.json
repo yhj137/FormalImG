@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. To the left of a wooden desk stands a woman holding a knife. A round plate containing all the fruit sits on the desk, alongside a cup and a clock. To the right of the desk is a bed, where an open book rests with a key lying on top.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?d (exists ?p (and (Is ?w 'woman') (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?p 'plate') (HasShape ?p 'round') (LeftOf ?w ?d) (On ?p ?d) (forall ?f (implies (Is ?f 'fruit') (In ?f ?p))) (exists ?k (exists ?c (exists ?cl (exists ?bd (exists ?bk (exists ?ky (and (Is ?k 'knife') (Holding ?w ?k) (Is ?c 'cup') (On ?c ?d) (Is ?cl 'clock') (On ?cl ?d) (Is ?bd 'bed') (RightOf ?bd ?d) (Is ?bk 'book') (HasState ?bk 'open') (On ?bk ?bd) (Is ?ky 'key') (On ?ky ?bk)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?d (exists ?p (forall ?f (exists ?k (exists ?c (exists ?cl (exists ?bd (exists ?bk (exists ?ky (and (Is ?w 'woman') (LeftOf ?w ?d) (Holding ?w ?k) (HasMaterial ?d 'wooden') (On ?p ?d) (Is ?k 'knife') (Is ?d 'desk') (On ?c ?d) (HasShape ?p 'round') (or (not (Is ?f 'fruit')) (In ?f ?p)) (On ?cl ?d) (Is ?c 'cup') (Is ?p 'plate') (RightOf ?bd ?d) (Is ?cl 'clock') (Is ?bd 'bed') (On ?bk ?bd) (HasState ?bk 'open') (On ?ky ?bk) (Is ?bk 'book') (Is ?ky 'key')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "knife",
+        "desk",
+        "book",
+        "bed",
+        "cup",
+        "woman",
+        "clock",
+        "fruit",
+        "plate"
+    ]
+}

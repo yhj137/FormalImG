@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every stapler in the scene is positioned on the top side.",
+    "dsl": "(and (forall ?stapler (implies (Is ?stapler 'stapler') (OnTopSide ?stapler))))",
+    "cnf": "(forall ?stapler (or (not (Is ?stapler 'stapler')) (OnTopSide ?stapler)))",
+    "k": 1,
+    "object_classes": [
+        "stapler"
+    ]
+}

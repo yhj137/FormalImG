@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is placed on the top side of the layout. For every spoon in the scene, it is positioned below the laptop, and there is a bottle located directly below that spoon and aligned vertically with it. Additionally, for every spoon, there is a book located below the laptop and aligned vertically with it, a drill positioned on the bottom side below the book and aligned vertically with the book, a ruler aligned horizontally with the book, a set of keys on the left side aligned horizontally with the drill, and a pair of scissors located above the keys.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bottle (exists ?book (exists ?drill (exists ?ruler (exists ?keys (exists ?scissors (and (Is ?bottle 'bottle') (Is ?book 'book') (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?keys 'keys') (Is ?scissors 'scissors') (Below ?spoon ?laptop) (Below ?bottle ?spoon) (AlignedVertically ?bottle ?spoon) (Below ?book ?laptop) (AlignedVertically ?book ?laptop) (Below ?drill ?book) (AlignedVertically ?drill ?book) (OnBottomSide ?drill) (AlignedHorizontally ?ruler ?book) (OnLeftSide ?keys) (AlignedHorizontally ?keys ?drill) (Above ?scissors ?keys))))))))))))",
+    "cnf": "(exists ?laptop (forall ?spoon (exists ?bottle (exists ?book (exists ?drill (exists ?ruler (exists ?keys (exists ?scissors (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?laptop)) (or (not (Is ?spoon 'spoon')) (Below ?book ?laptop)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (Below ?bottle ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?book ?laptop)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?bottle ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?book 'book')) (or (not (Is ?spoon 'spoon')) (Is ?keys 'keys')) (or (not (Is ?spoon 'spoon')) (Above ?scissors ?keys)) (or (not (Is ?spoon 'spoon')) (Is ?bottle 'bottle')) (or (not (Is ?spoon 'spoon')) (Below ?drill ?book)) (or (not (Is ?spoon 'spoon')) (Is ?drill 'drill')) (or (not (Is ?spoon 'spoon')) (Is ?ruler 'ruler')) (or (not (Is ?spoon 'spoon')) (OnLeftSide ?keys)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?keys ?drill)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?drill ?book)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?ruler ?book)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?drill)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "keys",
+        "book",
+        "drill",
+        "bottle",
+        "spoon",
+        "scissors"
+    ]
+}

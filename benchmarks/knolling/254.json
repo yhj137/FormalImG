@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the image, there is a pen. Positioned directly below the pen is a sandwich.",
+    "dsl": "(exists ?pen (exists ?sandwich (and (Is ?pen 'pen') (Is ?sandwich 'sandwich') (OnLeftSide ?pen) (Below ?sandwich ?pen))))",
+    "cnf": "(exists ?pen (exists ?sandwich (and (Is ?pen 'pen') (OnLeftSide ?pen) (Below ?sandwich ?pen) (Is ?sandwich 'sandwich'))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "pen"
+    ]
+}

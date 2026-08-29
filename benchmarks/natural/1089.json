@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts a bench with a jacket on it. All headphones in the scene are resting on the jacket. A woman sits on the bench beside the jacket, holding a turned-on phone, and a horse stands to the right of the bench.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?j (and (Is ?b 'bench') (Is ?j 'jacket') (On ?j ?b) (forall ?hp (implies (Is ?hp 'headphones') (On ?hp ?j))) (exists ?w (exists ?p (exists ?h (and (Is ?w 'woman') (Is ?p 'phone') (Is ?h 'horse') (On ?w ?b) (NextTo ?w ?j) (Holding ?w ?p) (HasState ?p 'on') (RightOf ?h ?b)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?j (forall ?hp (exists ?w (exists ?p (exists ?h (and (Is ?b 'bench') (On ?j ?b) (On ?w ?b) (Is ?j 'jacket') (or (not (Is ?hp 'headphones')) (On ?hp ?j)) (RightOf ?h ?b) (Is ?w 'woman') (NextTo ?w ?j) (Is ?h 'horse') (Holding ?w ?p) (Is ?p 'phone') (HasState ?p 'on')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "bench",
+        "horse",
+        "woman",
+        "jacket"
+    ]
+}

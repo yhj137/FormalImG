@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child is holding a red apple, with a teddy bear next to the apple. Shoes are next to the child, and a blue hat is beside the shoes. A phone is next to the hat, and a flower is next to the phone.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?a (exists ?s (exists ?h (exists ?tb (exists ?p (exists ?f (and (Is ?a 'apple') (HasColor ?a 'red') (Is ?s 'shoes') (Is ?h 'hat') (HasColor ?h 'blue') (Is ?tb 'teddy bear') (Is ?p 'phone') (Is ?f 'flower') (Holding ?c ?a) (NextTo ?c ?s) (NextTo ?h ?s) (NextTo ?tb ?a) (NextTo ?p ?h) (NextTo ?f ?p))))))))))",
+    "cnf": "(forall ?c (exists ?a (exists ?s (exists ?h (exists ?tb (exists ?p (exists ?f (and (or (not (Is ?c 'child')) (Is ?a 'apple')) (or (not (Is ?c 'child')) (HasColor ?a 'red')) (or (not (Is ?c 'child')) (Holding ?c ?a)) (or (not (Is ?c 'child')) (Is ?s 'shoes')) (or (not (Is ?c 'child')) (NextTo ?tb ?a)) (or (not (Is ?c 'child')) (Is ?f 'flower')) (or (not (Is ?c 'child')) (NextTo ?c ?s)) (or (not (Is ?c 'child')) (Is ?h 'hat')) (or (not (Is ?c 'child')) (NextTo ?h ?s)) (or (not (Is ?c 'child')) (NextTo ?p ?h)) (or (not (Is ?c 'child')) (Is ?tb 'teddy bear')) (or (not (Is ?c 'child')) (Is ?p 'phone')) (or (not (Is ?c 'child')) (NextTo ?f ?p)) (or (not (Is ?c 'child')) (HasColor ?h 'blue'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "child",
+        "shoes",
+        "teddy bear",
+        "flower",
+        "apple",
+        "hat"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a drill positioned above a screwdriver. For every wrench present in the image, the screwdriver is located above it. Additionally, a pizza is aligned horizontally with the wrench, and this pizza is situated above a cup, which is placed on the right side of the image.",
+    "dsl": "(exists ?d (exists ?s (and (Is ?d 'drill') (Is ?s 'screwdriver') (Above ?d ?s) (forall ?w (implies (Is ?w 'wrench') (exists ?p (exists ?c (and (Is ?p 'pizza') (Is ?c 'cup') (Above ?s ?w) (AlignedHorizontally ?w ?p) (Above ?p ?c) (OnRightSide ?c)))))))))",
+    "cnf": "(exists ?d (exists ?s (forall ?w (exists ?p (exists ?c (and (Is ?d 'drill') (Above ?d ?s) (Is ?s 'screwdriver') (or (not (Is ?w 'wrench')) (Above ?s ?w)) (or (not (Is ?w 'wrench')) (Is ?c 'cup')) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?w ?p)) (or (not (Is ?w 'wrench')) (Is ?p 'pizza')) (or (not (Is ?w 'wrench')) (Above ?p ?c)) (or (not (Is ?w 'wrench')) (OnRightSide ?c))))))))",
+    "k": 5,
+    "object_classes": [
+        "wrench",
+        "pizza",
+        "screwdriver",
+        "cup",
+        "drill"
+    ]
+}

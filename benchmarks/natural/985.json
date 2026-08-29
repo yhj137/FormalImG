@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A green tree stands in the center. To the right of the tree is a keyboard with a red ball resting on it. A teddy bear is located to the left of the tree, and every fish in the scene is positioned to the right of the teddy bear.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?k (exists ?b (exists ?tb (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?k 'keyboard') (RightOf ?k ?t) (Is ?b 'ball') (HasColor ?b 'red') (On ?b ?k) (Is ?tb 'teddy bear') (LeftOf ?tb ?t) (forall ?f (implies (Is ?f 'fish') (RightOf ?f ?tb)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?k (exists ?b (exists ?tb (forall ?f (and (Is ?t 'tree') (HasColor ?t 'green') (RightOf ?k ?t) (LeftOf ?tb ?t) (Is ?k 'keyboard') (On ?b ?k) (Is ?tb 'teddy bear') (or (not (Is ?f 'fish')) (RightOf ?f ?tb)) (HasColor ?b 'red') (Is ?b 'ball'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fish",
+        "tree",
+        "teddy bear",
+        "ball",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop, a pair of jeans, and keys. The laptop is located above the jeans, while the keys are positioned to the right of the laptop and lie on the right side of the image. Additionally, for every wrench in the scene, it is located on the bottom side of the image to the right of the jeans; there is a sock positioned to the right of the wrench, and a screwdriver is placed above the wrench.",
+    "dsl": "(exists ?jeans (exists ?laptop (exists ?keys (and (Is ?jeans 'jeans') (Is ?laptop 'laptop') (Is ?keys 'keys') (Above ?laptop ?jeans) (RightOf ?keys ?laptop) (OnRightSide ?keys) (forall ?w (implies (Is ?w 'wrench') (exists ?sock (exists ?sd (and (Is ?sock 'sock') (Is ?sd 'screwdriver') (OnBottomSide ?w) (RightOf ?w ?jeans) (RightOf ?sock ?w) (Above ?sd ?w))))))))))",
+    "cnf": "(exists ?jeans (exists ?laptop (exists ?keys (forall ?w (exists ?sock (exists ?sd (and (Is ?jeans 'jeans') (Above ?laptop ?jeans) (or (not (Is ?w 'wrench')) (RightOf ?w ?jeans)) (Is ?laptop 'laptop') (RightOf ?keys ?laptop) (or (not (Is ?w 'wrench')) (OnBottomSide ?w)) (or (not (Is ?w 'wrench')) (RightOf ?sock ?w)) (Is ?keys 'keys') (OnRightSide ?keys) (or (not (Is ?w 'wrench')) (Is ?sd 'screwdriver')) (or (not (Is ?w 'wrench')) (Is ?sock 'sock')) (or (not (Is ?w 'wrench')) (Above ?sd ?w)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "sock",
+        "wrench",
+        "screwdriver",
+        "jeans"
+    ]
+}

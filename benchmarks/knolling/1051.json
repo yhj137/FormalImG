@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every red book in the display, there is a corresponding arrangement of items: a pen lies directly below the book and is aligned vertically with it. To the right of the pen are scissors, and to the right of the scissors is a mouse. Situated below the pen is a blue shoe, which is also vertically aligned with the pen. Finally, the shoe is positioned to the left of a spoon.",
+    "dsl": "(forall ?book (implies (and (Is ?book 'book') (Has ?book 'red')) (exists ?pen (exists ?scissors (exists ?mouse (exists ?shoe (exists ?spoon (and (Is ?pen 'pen') (Is ?scissors 'scissors') (Is ?mouse 'mouse') (Is ?shoe 'shoe') (Has ?shoe 'blue') (Is ?spoon 'spoon') (Below ?pen ?book) (AlignedVertically ?book ?pen) (RightOf ?scissors ?pen) (RightOf ?mouse ?scissors) (Below ?shoe ?pen) (AlignedVertically ?pen ?shoe) (LeftOf ?shoe ?spoon)))))))))",
+    "cnf": "(forall ?book (exists ?pen (exists ?scissors (exists ?mouse (exists ?shoe (exists ?spoon (and (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Is ?pen 'pen')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Below ?pen ?book)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Is ?scissors 'scissors')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (AlignedVertically ?book ?pen)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Is ?spoon 'spoon')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Is ?mouse 'mouse')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (RightOf ?scissors ?pen)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Has ?shoe 'blue')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (LeftOf ?shoe ?spoon)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Is ?shoe 'shoe')) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (RightOf ?mouse ?scissors)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (Below ?shoe ?pen)) (or (not (Is ?book 'book')) (not (Has ?book 'red')) (AlignedVertically ?pen ?shoe)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "pen",
+        "mouse",
+        "scissors",
+        "shoe",
+        "spoon"
+    ]
+}

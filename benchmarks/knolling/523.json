@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a watch located on the left side of the scene. For every pair of pliers in the image, the watch is positioned above it and aligned vertically with it. Furthermore, corresponding to the pliers, there is a pair of headphones aligned horizontally with the pliers.",
+    "dsl": "(exists ?w (and (Is ?w 'watch') (OnLeftSide ?w) (forall ?p (implies (Is ?p 'pliers') (exists ?h (and (Is ?h 'headphones') (Above ?w ?p) (AlignedVertically ?w ?p) (AlignedHorizontally ?p ?h)))))))",
+    "cnf": "(exists ?w (forall ?p (exists ?h (and (Is ?w 'watch') (OnLeftSide ?w) (or (not (Is ?p 'pliers')) (Above ?w ?p)) (or (not (Is ?p 'pliers')) (AlignedVertically ?w ?p)) (or (not (Is ?p 'pliers')) (Is ?h 'headphones')) (or (not (Is ?p 'pliers')) (AlignedHorizontally ?p ?h))))))",
+    "k": 3,
+    "object_classes": [
+        "pliers",
+        "headphones",
+        "watch"
+    ]
+}

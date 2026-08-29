@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a desk next to a white refrigerator containing a sliced sandwich. A woman stands beside the refrigerator holding a black phone. Every key is inside the desk, and a monitor is placed next to the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (and (Is ?d 'desk') (exists ?r (and (Is ?r 'refrigerator') (HasColor ?r 'white') (NextTo ?r ?d) (exists ?s (and (Is ?s 'sandwich') (HasState ?s 'sliced') (In ?s ?r) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?r) (forall ?k (implies (Is ?k 'key') (In ?k ?d))) (exists ?p (and (Is ?p 'phone') (HasColor ?p 'black') (Holding ?w ?p) (exists ?m (and (Is ?m 'monitor') (NextTo ?m ?d))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?r (exists ?s (exists ?w (forall ?k (exists ?p (exists ?m (and (Is ?d 'desk') (NextTo ?r ?d) (or (not (Is ?k 'key')) (In ?k ?d)) (HasColor ?r 'white') (In ?s ?r) (NextTo ?m ?d) (Is ?r 'refrigerator') (NextTo ?w ?r) (HasState ?s 'sliced') (Is ?m 'monitor') (Is ?w 'woman') (Holding ?w ?p) (Is ?s 'sandwich') (HasColor ?p 'black') (Is ?p 'phone'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "woman",
+        "monitor",
+        "desk",
+        "refrigerator",
+        "sandwich",
+        "key"
+    ]
+}

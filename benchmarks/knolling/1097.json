@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the top side of the layout, and a game controller is placed below it. For every screwdriver in the scene, it is located below the game controller. Furthermore, to the left of each screwdriver, there is a red hammer; below that hammer sits a book, and to the left of the book is a calculator.",
+    "dsl": "(exists ?backpack (exists ?controller (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?controller 'game_controller') (Below ?controller ?backpack) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?hammer (exists ?book (exists ?calculator (and (Is ?hammer 'hammer') (Has ?hammer 'red') (Is ?book 'book') (Is ?calculator 'calculator') (Below ?screwdriver ?controller) (LeftOf ?hammer ?screwdriver) (Below ?book ?hammer) (LeftOf ?calculator ?book))))))))))",
+    "cnf": "(exists ?backpack (exists ?controller (forall ?screwdriver (exists ?hammer (exists ?book (exists ?calculator (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Below ?controller ?backpack) (Is ?controller 'game_controller') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?controller)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?calculator 'calculator')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?hammer ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?book 'book')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?calculator ?book)) (or (not (Is ?screwdriver 'screwdriver')) (Below ?book ?hammer)) (or (not (Is ?screwdriver 'screwdriver')) (Has ?hammer 'red')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?hammer 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "screwdriver",
+        "game_controller",
+        "hammer",
+        "backpack",
+        "calculator"
+    ]
+}

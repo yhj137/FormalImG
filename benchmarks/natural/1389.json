@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a woman wearing a hat and holding a yellow banana. To her left is a car with a round rock on top, and to her right is a pan containing every fish in the scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?h (exists ?b (exists ?r (exists ?p (and (Is ?w 'woman') (Is ?c 'car') (Is ?h 'hat') (Is ?b 'banana') (Is ?r 'rock') (Is ?p 'pan') (LeftOf ?c ?w) (On ?h ?w) (Holding ?w ?b) (HasColor ?b 'yellow') (On ?r ?c) (HasShape ?r 'round') (RightOf ?p ?w) (forall ?f (implies (Is ?f 'fish') (In ?f ?p)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (exists ?h (exists ?b (exists ?r (exists ?p (forall ?f (and (Is ?w 'woman') (LeftOf ?c ?w) (On ?h ?w) (Is ?c 'car') (On ?r ?c) (Holding ?w ?b) (Is ?h 'hat') (Is ?r 'rock') (HasShape ?r 'round') (RightOf ?p ?w) (Is ?b 'banana') (HasColor ?b 'yellow') (Is ?p 'pan') (or (not (Is ?f 'fish')) (In ?f ?p)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pan",
+        "rock",
+        "fish",
+        "hat",
+        "banana",
+        "woman",
+        "car"
+    ]
+}

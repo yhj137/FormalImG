@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. There is a blue car with a cat inside it. A horse is located next to the car. To the left of the horse stands a man holding a red apple. Additionally, all keys in the image are gray and positioned next to the man.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?ct (exists ?h (exists ?m (and (Is ?c 'car') (HasColor ?c 'blue') (Is ?ct 'cat') (In ?ct ?c) (Is ?h 'horse') (NextTo ?h ?c) (Is ?m 'man') (LeftOf ?m ?h) (forall ?k (implies (Is ?k 'key') (and (HasColor ?k 'gray') (NextTo ?k ?m)))) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (Holding ?m ?a)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?ct (exists ?h (exists ?m (forall ?k (exists ?a (and (Is ?c 'car') (HasColor ?c 'blue') (In ?ct ?c) (NextTo ?h ?c) (Is ?ct 'cat') (Is ?h 'horse') (LeftOf ?m ?h) (Is ?m 'man') (or (not (Is ?k 'key')) (NextTo ?k ?m)) (Holding ?m ?a) (or (not (Is ?k 'key')) (HasColor ?k 'gray')) (HasColor ?a 'red') (Is ?a 'apple')))))))))",
+    "k": 6,
+    "object_classes": [
+        "horse",
+        "man",
+        "car",
+        "apple",
+        "cat",
+        "key"
+    ]
+}

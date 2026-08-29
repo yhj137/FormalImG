@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of every chair is a woman, with glasses to her left. The woman is also positioned to the left of an open refrigerator containing a plate. To the right of the refrigerator is a metal pan, followed by a bowl with a flower inside.",
+    "dsl": "(forall ?c (exists ?w (exists ?g (exists ?r (exists ?pl (exists ?p (exists ?b (exists ?f (implies (Is ?c 'chair') (and (Is ?w 'woman') (LeftOf ?w ?c) (Is ?g 'glasses') (LeftOf ?g ?w) (Is ?r 'refrigerator') (LeftOf ?w ?r) (HasState ?r 'open') (Is ?pl 'plate') (In ?pl ?r) (Is ?p 'pan') (RightOf ?p ?r) (HasMaterial ?p 'metal') (Is ?b 'bowl') (RightOf ?b ?p) (Is ?f 'flower') (In ?f ?b)))))))))))",
+    "cnf": "(forall ?c (exists ?w (exists ?g (exists ?r (exists ?pl (exists ?p (exists ?b (exists ?f (and (or (not (Is ?c 'chair')) (Is ?w 'woman')) (or (not (Is ?c 'chair')) (LeftOf ?w ?c)) (or (not (Is ?c 'chair')) (LeftOf ?g ?w)) (or (not (Is ?c 'chair')) (Is ?g 'glasses')) (or (not (Is ?c 'chair')) (LeftOf ?w ?r)) (or (not (Is ?c 'chair')) (Is ?r 'refrigerator')) (or (not (Is ?c 'chair')) (HasState ?r 'open')) (or (not (Is ?c 'chair')) (Is ?pl 'plate')) (or (not (Is ?c 'chair')) (In ?pl ?r)) (or (not (Is ?c 'chair')) (Is ?p 'pan')) (or (not (Is ?c 'chair')) (RightOf ?p ?r)) (or (not (Is ?c 'chair')) (HasMaterial ?p 'metal')) (or (not (Is ?c 'chair')) (Is ?b 'bowl')) (or (not (Is ?c 'chair')) (RightOf ?b ?p)) (or (not (Is ?c 'chair')) (Is ?f 'flower')) (or (not (Is ?c 'chair')) (In ?f ?b)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "pan",
+        "bowl",
+        "chair",
+        "refrigerator",
+        "woman",
+        "flower",
+        "plate"
+    ]
+}

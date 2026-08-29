@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is positioned on the top side of the scene. A mouse is located to the right of the laptop, while a hat is placed to the left of the laptop. For every book found below the laptop, there is a pen to the right of the book, and a screwdriver is situated below the pen. Furthermore, a bowl is located on the bottom side to the right of the screwdriver, and a carrot, which is smaller than the bowl, is positioned on the right side of the image.",
+    "dsl": "(exists ?laptop (exists ?mouse (exists ?hat (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?mouse 'mouse') (RightOf ?mouse ?laptop) (Is ?hat 'hat') (LeftOf ?hat ?laptop) (forall ?book (implies (and (Is ?book 'book') (Below ?book ?laptop)) (exists ?pen (exists ?screwdriver (exists ?bowl (exists ?carrot (and (Is ?pen 'pen') (RightOf ?pen ?book) (Is ?screwdriver 'screwdriver') (Below ?screwdriver ?pen) (Is ?bowl 'bowl') (OnBottomSide ?bowl) (RightOf ?bowl ?screwdriver) (Is ?carrot 'carrot') (SmallerThan ?carrot ?bowl) (OnRightSide ?carrot))))))))))))",
+    "cnf": "(exists ?laptop (exists ?mouse (exists ?hat (forall ?book (exists ?pen (exists ?screwdriver (exists ?bowl (exists ?carrot (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (RightOf ?mouse ?laptop) (LeftOf ?hat ?laptop) (Is ?mouse 'mouse') (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (Is ?pen 'pen')) (Is ?hat 'hat') (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (RightOf ?pen ?book)) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (Below ?screwdriver ?pen)) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (Is ?bowl 'bowl')) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (RightOf ?bowl ?screwdriver)) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (OnBottomSide ?bowl)) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (Is ?carrot 'carrot')) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (SmallerThan ?carrot ?bowl)) (or (not (Is ?book 'book')) (not (Below ?book ?laptop)) (OnRightSide ?carrot)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "laptop",
+        "pen",
+        "carrot",
+        "screwdriver",
+        "hat",
+        "mouse",
+        "bowl"
+    ]
+}

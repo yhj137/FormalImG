@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the composition, there is a laptop. A drill is arranged above the laptop, and the laptop is arranged above a camera; these three items are aligned vertically. The layout follows a specific constraint: for every phone in the image, there is a wallet and a hammer associated with it. The phone is placed to the right of the laptop and is visually smaller than the laptop. Additionally, the phone is positioned above the wallet, and the wallet is positioned above the hammer, with the phone, wallet, and hammer also aligned vertically.",
+    "dsl": "(exists ?laptop (exists ?drill (exists ?camera (and (Is ?laptop 'laptop') (Is ?drill 'drill') (Is ?camera 'camera') (OnLeftSide ?laptop) (Above ?drill ?laptop) (Above ?laptop ?camera) (AlignedVertically ?drill ?laptop) (AlignedVertically ?laptop ?camera) (forall ?phone (implies (Is ?phone 'phone') (exists ?wallet (exists ?hammer (and (Is ?wallet 'wallet') (Is ?hammer 'hammer') (RightOf ?phone ?laptop) (LargerThan ?laptop ?phone) (Above ?phone ?wallet) (Above ?wallet ?hammer) (AlignedVertically ?phone ?wallet) (AlignedVertically ?wallet ?hammer))))))))))",
+    "cnf": "(exists ?laptop (exists ?drill (exists ?camera (forall ?phone (exists ?wallet (exists ?hammer (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?drill ?laptop) (Above ?laptop ?camera) (Is ?drill 'drill') (AlignedVertically ?drill ?laptop) (Is ?camera 'camera') (AlignedVertically ?laptop ?camera) (or (not (Is ?phone 'phone')) (RightOf ?phone ?laptop)) (or (not (Is ?phone 'phone')) (LargerThan ?laptop ?phone)) (or (not (Is ?phone 'phone')) (Is ?hammer 'hammer')) (or (not (Is ?phone 'phone')) (Above ?phone ?wallet)) (or (not (Is ?phone 'phone')) (Is ?wallet 'wallet')) (or (not (Is ?phone 'phone')) (Above ?wallet ?hammer)) (or (not (Is ?phone 'phone')) (AlignedVertically ?phone ?wallet)) (or (not (Is ?phone 'phone')) (AlignedVertically ?wallet ?hammer)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "phone",
+        "drill",
+        "hammer",
+        "wallet",
+        "camera"
+    ]
+}

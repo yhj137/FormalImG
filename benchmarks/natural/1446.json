@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a child holding a bitten sandwich. All butterflies are to the left of the child, while a jacket is to the right. To the right of the jacket stands an elephant holding a boat with a cup inside, and a ball is to the right of the elephant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (and (Is ?c 'child') (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?c))) (exists ?s (and (Is ?s 'sandwich') (HasState ?s 'bitten') (Holding ?c ?s))) (exists ?j (and (Is ?j 'jacket') (RightOf ?j ?c) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?j) (exists ?bt (and (Is ?bt 'boat') (Holding ?e ?bt) (exists ?cp (and (Is ?cp 'cup') (In ?cp ?bt))) (exists ?bl (and (Is ?bl 'ball') (RightOf ?bl ?e))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (forall ?bf (exists ?s (exists ?j (exists ?e (exists ?bt (exists ?cp (exists ?bl (and (Is ?c 'child') (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?c)) (Holding ?c ?s) (RightOf ?j ?c) (HasState ?s 'bitten') (Is ?j 'jacket') (RightOf ?e ?j) (Is ?s 'sandwich') (Is ?e 'elephant') (Holding ?e ?bt) (RightOf ?bl ?e) (Is ?bt 'boat') (In ?cp ?bt) (Is ?bl 'ball') (Is ?cp 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "jacket",
+        "sandwich",
+        "ball",
+        "butterfly",
+        "cup",
+        "elephant",
+        "boat",
+        "child"
+    ]
+}

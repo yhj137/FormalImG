@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pizza is placed on the left side of the scene. To the right of the pizza and aligned horizontally with it is a knife. For every pair of headphones in the image, they are located to the left of the pizza. Further to the right of the knife is an apple, which is smaller than the pizza. A pen is positioned to the right of the apple and aligned horizontally with it. Finally, a screwdriver is located to the right of the pen, residing on the right side of the image.",
+    "dsl": "(exists ?pizza (exists ?knife (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (Is ?knife 'knife') (RightOf ?knife ?pizza) (AlignedHorizontally ?knife ?pizza) (forall ?hp (implies (Is ?hp 'headphones') (LeftOf ?hp ?pizza))) (exists ?apple (exists ?pen (exists ?sd (and (Is ?apple 'apple') (Is ?pen 'pen') (Is ?sd 'screwdriver') (RightOf ?apple ?knife) (SmallerThan ?apple ?pizza) (RightOf ?pen ?apple) (AlignedHorizontally ?pen ?apple) (RightOf ?sd ?pen) (OnRightSide ?sd))))))))",
+    "cnf": "(exists ?pizza (exists ?knife (forall ?hp (exists ?apple (exists ?pen (exists ?sd (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (RightOf ?knife ?pizza) (AlignedHorizontally ?knife ?pizza) (Is ?knife 'knife') (or (not (Is ?hp 'headphones')) (LeftOf ?hp ?pizza)) (RightOf ?apple ?knife) (SmallerThan ?apple ?pizza) (Is ?apple 'apple') (RightOf ?pen ?apple) (AlignedHorizontally ?pen ?apple) (Is ?pen 'pen') (RightOf ?sd ?pen) (Is ?sd 'screwdriver') (OnRightSide ?sd))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "pen",
+        "pizza",
+        "screwdriver",
+        "knife",
+        "headphones"
+    ]
+}

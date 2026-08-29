@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Depicted in pixel art style, the scene features a bench with a refrigerator to its right containing a cake. A brown horse holding a hammer stands next to the bench. A blue shirt and a round bowl containing all the spoons rest on the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?r (exists ?h (exists ?bo (and (Is ?b 'bench') (Is ?r 'refrigerator') (RightOf ?r ?b) (Is ?h 'horse') (HasColor ?h 'brown') (NextTo ?h ?b) (Is ?bo 'bowl') (HasShape ?bo 'round') (On ?bo ?b) (forall ?s (implies (Is ?s 'spoon') (In ?s ?bo))) (exists ?c (and (Is ?c 'cake') (In ?c ?r))) (exists ?ha (and (Is ?ha 'hammer') (Holding ?h ?ha))) (exists ?sh (and (Is ?sh 'shirt') (HasColor ?sh 'blue') (On ?sh ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?r (exists ?h (exists ?bo (forall ?s (exists ?c (exists ?ha (exists ?sh (and (Is ?b 'bench') (RightOf ?r ?b) (NextTo ?h ?b) (Is ?r 'refrigerator') (In ?c ?r) (On ?bo ?b) (HasColor ?h 'brown') (Holding ?h ?ha) (Is ?c 'cake') (On ?sh ?b) (HasShape ?bo 'round') (or (not (Is ?s 'spoon')) (In ?s ?bo)) (Is ?h 'horse') (Is ?ha 'hammer') (HasColor ?sh 'blue') (Is ?bo 'bowl') (Is ?sh 'shirt')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "bench",
+        "spoon",
+        "horse",
+        "cake",
+        "hammer",
+        "refrigerator",
+        "bowl"
+    ]
+}

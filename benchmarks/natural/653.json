@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In this cartoon style scene, every wooden clock contains a bird, has a pizza on top, and has a black phone to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (and (Is ?c 'clock') (HasMaterial ?c 'wooden')) (exists ?b (exists ?p (exists ?ph (and (Is ?b 'bird') (In ?b ?c) (Is ?p 'pizza') (On ?p ?c) (Is ?ph 'phone') (HasColor ?ph 'black') (RightOf ?ph ?c))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?b (exists ?p (exists ?ph (and (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (Is ?b 'bird')) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (In ?b ?c)) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (Is ?p 'pizza')) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (On ?p ?c)) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (Is ?ph 'phone')) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (HasColor ?ph 'black')) (or (not (Is ?c 'clock')) (not (HasMaterial ?c 'wooden')) (RightOf ?ph ?c))))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "clock",
+        "bird",
+        "phone"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a camera positioned on the left side of the image. To the right of the camera is a glove (so the camera is to the left of the glove). For every hammer in the arrangement, it is aligned horizontally with the glove, and there is a carrot positioned to the left of the hammer.",
+    "dsl": "(exists ?camera (exists ?glove (and (Is ?camera 'camera') (Is ?glove 'glove') (OnLeftSide ?camera) (LeftOf ?camera ?glove) (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?carrot (and (Is ?carrot 'carrot') (AlignedHorizontally ?hammer ?glove) (LeftOf ?carrot ?hammer))))))))",
+    "cnf": "(exists ?camera (exists ?glove (forall ?hammer (exists ?carrot (and (Is ?camera 'camera') (OnLeftSide ?camera) (LeftOf ?camera ?glove) (Is ?glove 'glove') (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?hammer ?glove)) (or (not (Is ?hammer 'hammer')) (Is ?carrot 'carrot')) (or (not (Is ?hammer 'hammer')) (LeftOf ?carrot ?hammer)))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "carrot",
+        "glove",
+        "camera"
+    ]
+}

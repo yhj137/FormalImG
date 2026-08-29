@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a sock and a backpack. The sock is located on the bottom side of the image and is positioned to the left of the backpack.",
+    "dsl": "(exists ?sock (exists ?backpack (and (Is ?sock 'sock') (Is ?backpack 'backpack') (OnBottomSide ?sock) (LeftOf ?sock ?backpack))))",
+    "cnf": "(exists ?sock (exists ?backpack (and (Is ?sock 'sock') (OnBottomSide ?sock) (LeftOf ?sock ?backpack) (Is ?backpack 'backpack'))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "sock"
+    ]
+}

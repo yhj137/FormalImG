@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a red backpack. For every remote present, which is black, it is positioned to the right of the backpack and is smaller than it. A yellow drill is located to the right of the remote, and a blue bottle is to the right of the drill. A black camera is aligned vertically with the backpack. A gray calculator is to the right of the camera and aligned vertically with the remote. Black glasses are aligned vertically with the drill and are smaller than the camera. Finally, a pink donut is aligned vertically with the bottle, with the glasses positioned to its left.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (Has ?backpack 'red') (forall ?remote (implies (Is ?remote 'remote') (exists ?drill (exists ?bottle (exists ?camera (exists ?calculator (exists ?glasses (exists ?donut (and (Has ?remote 'black') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?calculator 'calculator') (Has ?calculator 'gray') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?donut 'donut') (Has ?donut 'pink') (RightOf ?remote ?backpack) (SmallerThan ?remote ?backpack) (RightOf ?drill ?remote) (RightOf ?bottle ?drill) (AlignedVertically ?camera ?backpack) (RightOf ?calculator ?camera) (AlignedVertically ?calculator ?remote) (AlignedVertically ?glasses ?drill) (SmallerThan ?glasses ?camera) (AlignedVertically ?donut ?bottle) (LeftOf ?glasses ?donut))))))))))))",
+    "cnf": "(exists ?backpack (forall ?remote (exists ?drill (exists ?bottle (exists ?camera (exists ?calculator (exists ?glasses (exists ?donut (and (Is ?backpack 'backpack') (Has ?backpack 'red') (or (not (Is ?remote 'remote')) (RightOf ?remote ?backpack)) (or (not (Is ?remote 'remote')) (SmallerThan ?remote ?backpack)) (or (not (Is ?remote 'remote')) (Has ?donut 'pink')) (or (not (Is ?remote 'remote')) (AlignedVertically ?camera ?backpack)) (or (not (Is ?remote 'remote')) (RightOf ?drill ?remote)) (or (not (Is ?remote 'remote')) (Is ?donut 'donut')) (or (not (Is ?remote 'remote')) (AlignedVertically ?donut ?bottle)) (or (not (Is ?remote 'remote')) (RightOf ?bottle ?drill)) (or (not (Is ?remote 'remote')) (RightOf ?calculator ?camera)) (or (not (Is ?remote 'remote')) (Has ?camera 'black')) (or (not (Is ?remote 'remote')) (Has ?drill 'yellow')) (or (not (Is ?remote 'remote')) (Has ?glasses 'black')) (or (not (Is ?remote 'remote')) (SmallerThan ?glasses ?camera)) (or (not (Is ?remote 'remote')) (LeftOf ?glasses ?donut)) (or (not (Is ?remote 'remote')) (AlignedVertically ?glasses ?drill)) (or (not (Is ?remote 'remote')) (Has ?bottle 'blue')) (or (not (Is ?remote 'remote')) (AlignedVertically ?calculator ?remote)) (or (not (Is ?remote 'remote')) (Has ?calculator 'gray')) (or (not (Is ?remote 'remote')) (Is ?camera 'camera')) (or (not (Is ?remote 'remote')) (Is ?calculator 'calculator')) (or (not (Is ?remote 'remote')) (Is ?drill 'drill')) (or (not (Is ?remote 'remote')) (Is ?bottle 'bottle')) (or (not (Is ?remote 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?remote 'remote')) (Has ?remote 'black')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "backpack",
+        "calculator",
+        "camera",
+        "drill",
+        "glasses",
+        "bottle",
+        "donut",
+        "remote"
+    ]
+}

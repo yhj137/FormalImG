@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene of a lion holding a basket containing a round clock.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (exists ?b (exists ?c (and (Is ?l 'lion') (Is ?b 'basket') (Is ?c 'clock') (HasShape ?c 'round') (Holding ?l ?b) (In ?c ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (exists ?b (exists ?c (and (Is ?l 'lion') (Holding ?l ?b) (Is ?b 'basket') (In ?c ?b) (HasShape ?c 'round') (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "lion",
+        "basket"
+    ]
+}

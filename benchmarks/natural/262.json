@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man sitting to the left of a table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?t (and (Is ?m 'man') (Is ?t 'table') (HasState ?m 'sitting') (LeftOf ?m ?t)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?t (and (Is ?m 'man') (HasState ?m 'sitting') (LeftOf ?m ?t) (Is ?t 'table')))))",
+    "k": 2,
+    "object_classes": [
+        "man",
+        "table"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oval mirror is situated to the left of a standing lion, which is located to the left of an elephant. The elephant is next to a table. A rug and a sliced pizza are positioned to the right of the table. Every bottle and a keyboard are also found next to the table. Additionally, a fish is next to a basket that lies to the left of the rug.",
+    "dsl": "(exists ?l (exists ?e (exists ?t (exists ?r (and (Is ?l 'lion') (HasState ?l 'standing') (Is ?e 'elephant') (Is ?t 'table') (Is ?r 'rug') (LeftOf ?l ?e) (NextTo ?e ?t) (RightOf ?r ?t) (forall ?b (implies (Is ?b 'bottle') (NextTo ?b ?t))) (exists ?m (exists ?p (exists ?k (exists ?f (exists ?bk (and (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?p 'pizza') (HasState ?p 'sliced') (Is ?k 'keyboard') (Is ?f 'fish') (Is ?bk 'basket') (LeftOf ?m ?l) (RightOf ?p ?t) (NextTo ?k ?t) (NextTo ?f ?bk) (LeftOf ?bk ?r))))))))))))",
+    "cnf": "(exists ?l (exists ?e (exists ?t (exists ?r (forall ?b (exists ?m (exists ?p (exists ?k (exists ?f (exists ?bk (and (Is ?l 'lion') (HasState ?l 'standing') (LeftOf ?l ?e) (LeftOf ?m ?l) (Is ?e 'elephant') (NextTo ?e ?t) (HasShape ?m 'oval') (Is ?t 'table') (RightOf ?r ?t) (Is ?m 'mirror') (or (not (Is ?b 'bottle')) (NextTo ?b ?t)) (Is ?r 'rug') (LeftOf ?bk ?r) (RightOf ?p ?t) (NextTo ?f ?bk) (NextTo ?k ?t) (HasState ?p 'sliced') (Is ?f 'fish') (Is ?bk 'basket') (Is ?k 'keyboard') (Is ?p 'pizza'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bottle",
+        "keyboard",
+        "rug",
+        "fish",
+        "pizza",
+        "basket",
+        "table",
+        "mirror",
+        "lion",
+        "elephant"
+    ]
+}

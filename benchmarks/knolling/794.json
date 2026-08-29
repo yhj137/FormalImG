@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a bowl, a sandwich, and a tie. The bowl is positioned on the top side of the image. The sandwich is located to the right of the bowl, and the bowl is visually larger than the sandwich. The tie is placed to the right of the sandwich. Additionally, the tie is larger than every fork present in the image.",
+    "dsl": "(exists ?b (exists ?s (exists ?t (and (Is ?b 'bowl') (Is ?s 'sandwich') (Is ?t 'tie') (OnTopSide ?b) (RightOf ?s ?b) (LargerThan ?b ?s) (RightOf ?t ?s) (forall ?f (implies (Is ?f 'fork') (LargerThan ?t ?f)))))))",
+    "cnf": "(exists ?b (exists ?s (exists ?t (forall ?f (and (Is ?b 'bowl') (OnTopSide ?b) (RightOf ?s ?b) (LargerThan ?b ?s) (Is ?s 'sandwich') (RightOf ?t ?s) (Is ?t 'tie') (or (not (Is ?f 'fork')) (LargerThan ?t ?f)))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "bowl",
+        "sandwich",
+        "tie"
+    ]
+}

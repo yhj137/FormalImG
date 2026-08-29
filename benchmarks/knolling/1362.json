@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown handbag is placed on the top side of the image. Situated below the handbag is a keyboard, which is smaller than the handbag. Below the keyboard are black headphones. Below the headphones is a watch, which is smaller than the headphones. Below the watch is a white sock. Additionally, for every knife in the scene, there is a pen that is smaller than the knife and located above it; the knife is also located above the white sock.",
+    "dsl": "(exists ?handbag (exists ?keyboard (exists ?headphones (exists ?watch (exists ?sock (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Is ?keyboard 'keyboard') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?watch 'watch') (Is ?sock 'sock') (Has ?sock 'white') (Above ?handbag ?keyboard) (LargerThan ?handbag ?keyboard) (Above ?keyboard ?headphones) (Above ?headphones ?watch) (SmallerThan ?watch ?headphones) (Above ?watch ?sock) (forall ?knife (implies (Is ?knife 'knife') (exists ?pen (and (Is ?pen 'pen') (SmallerThan ?pen ?knife) (Above ?pen ?knife) (Above ?knife ?sock)))))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (exists ?headphones (exists ?watch (exists ?sock (forall ?knife (exists ?pen (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnTopSide ?handbag) (Above ?handbag ?keyboard) (LargerThan ?handbag ?keyboard) (Is ?keyboard 'keyboard') (Above ?keyboard ?headphones) (Has ?headphones 'black') (Above ?headphones ?watch) (Is ?headphones 'headphones') (SmallerThan ?watch ?headphones) (Is ?watch 'watch') (Above ?watch ?sock) (Has ?sock 'white') (or (not (Is ?knife 'knife')) (Above ?knife ?sock)) (Is ?sock 'sock') (or (not (Is ?knife 'knife')) (Above ?pen ?knife)) (or (not (Is ?knife 'knife')) (SmallerThan ?pen ?knife)) (or (not (Is ?knife 'knife')) (Is ?pen 'pen'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "pen",
+        "watch",
+        "handbag",
+        "knife",
+        "headphones"
+    ]
+}

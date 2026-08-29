@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a standing elephant. Every spoon is inside a bowl held by a person on the elephant.",
+    "dsl": "(exists ?e (and (Is ?e 'elephant') (HasState ?e 'standing') (forall ?s (implies (Is ?s 'spoon') (exists ?p (exists ?b (and (Is ?p 'person') (Is ?b 'bowl') (On ?p ?e) (Holding ?p ?b) (In ?s ?b))))))))",
+    "cnf": "(exists ?e (forall ?s (exists ?p (exists ?b (and (Is ?e 'elephant') (HasState ?e 'standing') (or (not (Is ?s 'spoon')) (On ?p ?e)) (or (not (Is ?s 'spoon')) (Is ?p 'person')) (or (not (Is ?s 'spoon')) (Holding ?p ?b)) (or (not (Is ?s 'spoon')) (Is ?b 'bowl')) (or (not (Is ?s 'spoon')) (In ?s ?b)))))))",
+    "k": 4,
+    "object_classes": [
+        "person",
+        "bowl",
+        "elephant",
+        "spoon"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man to the left of an elephant. Every key rests on a plastic keyboard placed next to the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?e (and (Is ?m 'man') (Is ?e 'elephant') (LeftOf ?m ?e) (forall ?k (implies (Is ?k 'key') (exists ?kb (and (Is ?kb 'keyboard') (HasMaterial ?kb 'plastic') (On ?k ?kb) (NextTo ?kb ?e)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?e (forall ?k (exists ?kb (and (Is ?m 'man') (LeftOf ?m ?e) (Is ?e 'elephant') (or (not (Is ?k 'key')) (NextTo ?kb ?e)) (or (not (Is ?k 'key')) (On ?k ?kb)) (or (not (Is ?k 'key')) (HasMaterial ?kb 'plastic')) (or (not (Is ?k 'key')) (Is ?kb 'keyboard'))))))))",
+    "k": 4,
+    "object_classes": [
+        "elephant",
+        "keyboard",
+        "key",
+        "man"
+    ]
+}

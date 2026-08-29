@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of items. The top row consists of a drill, a screwdriver, and pliers; the drill is positioned to the left of the screwdriver, and the screwdriver is to the left of the pliers. Below the drill is a phone, and a sock is placed directly below the phone. To the right of the phone is a wallet, with the screwdriver located above this wallet. The wallet is also positioned to the left of a bottle. Furthermore, for every glove in the scene, it is located below the bottle, and there is a hat to the right of the glove. The hat is visually smaller than the glove and is situated on the right side of the image.",
+    "dsl": "(exists ?drill (exists ?screwdriver (exists ?pliers (exists ?phone (exists ?wallet (exists ?bottle (exists ?sock (and (Is ?drill 'drill') (Is ?screwdriver 'screwdriver') (Is ?pliers 'pliers') (Is ?phone 'phone') (Is ?wallet 'wallet') (Is ?bottle 'bottle') (Is ?sock 'sock') (LeftOf ?drill ?screwdriver) (LeftOf ?screwdriver ?pliers) (Below ?phone ?drill) (Above ?screwdriver ?wallet) (RightOf ?wallet ?phone) (LeftOf ?wallet ?bottle) (Below ?sock ?phone) (forall ?glove (implies (Is ?glove 'glove') (exists ?hat (and (Is ?hat 'hat') (Below ?glove ?bottle) (RightOf ?hat ?glove) (SmallerThan ?hat ?glove) (OnRightSide ?hat)))))))))))))",
+    "cnf": "(exists ?drill (exists ?screwdriver (exists ?pliers (exists ?phone (exists ?wallet (exists ?bottle (exists ?sock (forall ?glove (exists ?hat (and (Is ?drill 'drill') (LeftOf ?drill ?screwdriver) (Below ?phone ?drill) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?pliers) (Is ?phone 'phone') (RightOf ?wallet ?phone) (Above ?screwdriver ?wallet) (Is ?pliers 'pliers') (Below ?sock ?phone) (LeftOf ?wallet ?bottle) (Is ?wallet 'wallet') (Is ?sock 'sock') (Is ?bottle 'bottle') (or (not (Is ?glove 'glove')) (Below ?glove ?bottle)) (or (not (Is ?glove 'glove')) (Is ?hat 'hat')) (or (not (Is ?glove 'glove')) (RightOf ?hat ?glove)) (or (not (Is ?glove 'glove')) (SmallerThan ?hat ?glove)) (or (not (Is ?glove 'glove')) (OnRightSide ?hat))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "phone",
+        "screwdriver",
+        "drill",
+        "hat",
+        "wallet",
+        "bottle",
+        "glove"
+    ]
+}

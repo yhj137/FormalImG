@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the image, it is situated on the left side and has a phone positioned to its right. Additionally, a set of keys is located above the phone, and the keys are visually smaller than the phone.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'shirt') (exists ?p (exists ?k (and (Is ?p 'phone') (Is ?k 'keys') (OnLeftSide ?s) (RightOf ?p ?s) (Above ?k ?p) (SmallerThan ?k ?p)))))))",
+    "cnf": "(forall ?s (exists ?p (exists ?k (and (or (not (Is ?s 'shirt')) (Is ?p 'phone')) (or (not (Is ?s 'shirt')) (Is ?k 'keys')) (or (not (Is ?s 'shirt')) (RightOf ?p ?s)) (or (not (Is ?s 'shirt')) (OnLeftSide ?s)) (or (not (Is ?s 'shirt')) (Above ?k ?p)) (or (not (Is ?s 'shirt')) (SmallerThan ?k ?p))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "phone",
+        "shirt"
+    ]
+}

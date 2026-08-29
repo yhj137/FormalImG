@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a laptop positioned on the top side. To the right of the laptop is a pair of jeans, to the right of the jeans is a hat, and to the right of the hat is a sandwich. For every book located on the bottom side, there is a watch to its right, a bottle to the right of the watch, a stapler to the right of the bottle, a hammer to the right of the stapler, and a tie to the right of the hammer. Additionally, the laptop is directly above and vertically aligned with the book, and the jeans are directly above and vertically aligned with the watch.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?hat (exists ?sandwich (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?jeans 'jeans') (LeftOf ?laptop ?jeans) (Is ?hat 'hat') (LeftOf ?jeans ?hat) (Is ?sandwich 'sandwich') (LeftOf ?hat ?sandwich) (forall ?book (implies (and (Is ?book 'book') (OnBottomSide ?book)) (exists ?watch (exists ?bottle (exists ?stapler (exists ?hammer (exists ?tie (and (Is ?watch 'watch') (Is ?bottle 'bottle') (Is ?stapler 'stapler') (Is ?hammer 'hammer') (Is ?tie 'tie') (Above ?laptop ?book) (AlignedVertically ?laptop ?book) (RightOf ?watch ?book) (Above ?jeans ?watch) (AlignedVertically ?jeans ?watch) (RightOf ?bottle ?watch) (RightOf ?stapler ?bottle) (RightOf ?hammer ?stapler) (RightOf ?tie ?hammer))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?hat (exists ?sandwich (forall ?book (exists ?watch (exists ?bottle (exists ?stapler (exists ?hammer (exists ?tie (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (LeftOf ?laptop ?jeans) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Above ?laptop ?book)) (Is ?jeans 'jeans') (LeftOf ?jeans ?hat) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (AlignedVertically ?laptop ?book)) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Is ?tie 'tie')) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Above ?jeans ?watch)) (Is ?hat 'hat') (LeftOf ?hat ?sandwich) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (RightOf ?watch ?book)) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Is ?hammer 'hammer')) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (RightOf ?tie ?hammer)) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (AlignedVertically ?jeans ?watch)) (Is ?sandwich 'sandwich') (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Is ?watch 'watch')) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Is ?stapler 'stapler')) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (RightOf ?hammer ?stapler)) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (RightOf ?bottle ?watch)) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (Is ?bottle 'bottle')) (or (not (Is ?book 'book')) (not (OnBottomSide ?book)) (RightOf ?stapler ?bottle)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "watch",
+        "hammer",
+        "stapler",
+        "bottle",
+        "tie",
+        "jeans",
+        "book",
+        "hat",
+        "sandwich",
+        "laptop"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a shoe, a ruler, scissors, and a carrot. The shoe is located on the left side of the image. Below the shoe is a ruler, below the ruler are the scissors, and below the scissors is a carrot. These four objects are aligned vertically. Additionally, the carrot is smaller than the shoe.",
+    "dsl": "(exists ?shoe (exists ?ruler (exists ?scissors (exists ?carrot (and (Is ?shoe 'shoe') (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Is ?carrot 'carrot') (OnLeftSide ?shoe) (Below ?ruler ?shoe) (Below ?scissors ?ruler) (Below ?carrot ?scissors) (AlignedVertically ?shoe ?ruler) (AlignedVertically ?ruler ?scissors) (AlignedVertically ?scissors ?carrot) (SmallerThan ?carrot ?shoe))))))",
+    "cnf": "(exists ?shoe (exists ?ruler (exists ?scissors (exists ?carrot (and (Is ?shoe 'shoe') (OnLeftSide ?shoe) (Below ?ruler ?shoe) (AlignedVertically ?shoe ?ruler) (Is ?ruler 'ruler') (Below ?scissors ?ruler) (SmallerThan ?carrot ?shoe) (AlignedVertically ?ruler ?scissors) (Is ?scissors 'scissors') (Below ?carrot ?scissors) (AlignedVertically ?scissors ?carrot) (Is ?carrot 'carrot'))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "shoe",
+        "scissors"
+    ]
+}

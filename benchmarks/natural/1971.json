@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is next to a desk that holds a keyboard and a bitten sandwich. To the right of the desk stands a bookshelf with a clock resting on it; every book in the scene is inside the bookshelf. Next to the bookshelf is a table with a cake topped with a fruit.",
+    "dsl": "(exists ?d (exists ?w (exists ?k (exists ?s (exists ?bs (exists ?cl (exists ?t (exists ?ca (and (Is ?d 'desk') (Is ?w 'woman') (Is ?k 'keyboard') (Is ?s 'sandwich') (Is ?bs 'bookshelf') (Is ?cl 'clock') (Is ?t 'table') (Is ?ca 'cake') (NextTo ?w ?d) (On ?k ?d) (On ?s ?d) (HasState ?s 'bitten') (RightOf ?bs ?d) (On ?cl ?bs) (NextTo ?t ?bs) (On ?ca ?t) (forall ?bk (implies (Is ?bk 'book') (In ?bk ?bs))) (exists ?f (and (Is ?f 'fruit') (On ?f ?ca))))))))))))",
+    "cnf": "(exists ?d (exists ?w (exists ?k (exists ?s (exists ?bs (exists ?cl (exists ?t (exists ?ca (forall ?bk (exists ?f (and (Is ?d 'desk') (NextTo ?w ?d) (On ?k ?d) (Is ?w 'woman') (On ?s ?d) (Is ?k 'keyboard') (RightOf ?bs ?d) (Is ?s 'sandwich') (HasState ?s 'bitten') (Is ?bs 'bookshelf') (On ?cl ?bs) (NextTo ?t ?bs) (Is ?cl 'clock') (or (not (Is ?bk 'book')) (In ?bk ?bs)) (Is ?t 'table') (On ?ca ?t) (Is ?ca 'cake') (On ?f ?ca) (Is ?f 'fruit'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "book",
+        "woman",
+        "cake",
+        "table",
+        "desk",
+        "sandwich",
+        "clock",
+        "bookshelf",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, it is black and located on the top side of the image. Below the monitor, there is a black pan positioned on the left side. A white plate and a sandwich are aligned horizontally with the pan, and the sandwich is smaller than the plate. Directly below the pan is a brown shoe, which is aligned horizontally with a white sock and a blue tie. Further below the shoe is a carrot, which is aligned horizontally with a set of gray keys that are smaller than the shoe.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?pan (exists ?plate (exists ?sandwich (exists ?shoe (exists ?sock (exists ?tie (exists ?carrot (exists ?keys (and (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (Below ?pan ?monitor) (Is ?plate 'plate') (Has ?plate 'white') (AlignedHorizontally ?pan ?plate) (Is ?sandwich 'sandwich') (AlignedHorizontally ?plate ?sandwich) (SmallerThan ?sandwich ?plate) (Is ?shoe 'shoe') (Has ?shoe 'brown') (Below ?shoe ?pan) (Is ?sock 'sock') (Has ?sock 'white') (AlignedHorizontally ?shoe ?sock) (Is ?tie 'tie') (Has ?tie 'blue') (AlignedHorizontally ?sock ?tie) (Is ?carrot 'carrot') (Below ?carrot ?shoe) (Is ?keys 'keys') (Has ?keys 'gray') (AlignedHorizontally ?carrot ?keys) (SmallerThan ?keys ?shoe)))))))))))))",
+    "cnf": "(forall ?monitor (exists ?pan (exists ?plate (exists ?sandwich (exists ?shoe (exists ?sock (exists ?tie (exists ?carrot (exists ?keys (and (or (not (Is ?monitor 'monitor')) (Has ?monitor 'black')) (or (not (Is ?monitor 'monitor')) (OnTopSide ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?pan 'pan')) (or (not (Is ?monitor 'monitor')) (Has ?pan 'black')) (or (not (Is ?monitor 'monitor')) (OnLeftSide ?pan)) (or (not (Is ?monitor 'monitor')) (Below ?pan ?monitor)) (or (not (Is ?monitor 'monitor')) (Is ?plate 'plate')) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?pan ?plate)) (or (not (Is ?monitor 'monitor')) (Has ?plate 'white')) (or (not (Is ?monitor 'monitor')) (Is ?sandwich 'sandwich')) (or (not (Is ?monitor 'monitor')) (Below ?shoe ?pan)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?plate ?sandwich)) (or (not (Is ?monitor 'monitor')) (Has ?shoe 'brown')) (or (not (Is ?monitor 'monitor')) (Is ?sock 'sock')) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?shoe ?sock)) (or (not (Is ?monitor 'monitor')) (SmallerThan ?sandwich ?plate)) (or (not (Is ?monitor 'monitor')) (Is ?shoe 'shoe')) (or (not (Is ?monitor 'monitor')) (Has ?sock 'white')) (or (not (Is ?monitor 'monitor')) (Is ?tie 'tie')) (or (not (Is ?monitor 'monitor')) (Below ?carrot ?shoe)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?sock ?tie)) (or (not (Is ?monitor 'monitor')) (Has ?tie 'blue')) (or (not (Is ?monitor 'monitor')) (Is ?carrot 'carrot')) (or (not (Is ?monitor 'monitor')) (Is ?keys 'keys')) (or (not (Is ?monitor 'monitor')) (SmallerThan ?keys ?shoe)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?carrot ?keys)) (or (not (Is ?monitor 'monitor')) (Has ?keys 'gray'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "plate",
+        "tie",
+        "sock",
+        "carrot",
+        "pan",
+        "monitor",
+        "sandwich",
+        "shoe"
+    ]
+}

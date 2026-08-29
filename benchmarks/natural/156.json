@@ -1,0 +1,9 @@
+{
+    "prompt": "Every pan in the scene has a round shape.",
+    "dsl": "(forall ?p (implies (Is ?p 'pan') (HasShape ?p 'round')))",
+    "cnf": "(forall ?p (or (not (Is ?p 'pan')) (HasShape ?p 'round')))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

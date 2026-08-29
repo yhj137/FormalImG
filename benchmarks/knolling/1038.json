@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone in the scene, there is a specific corresponding arrangement of five other objects: a shoe is located to the left of the phone, and a hat is positioned to the left of the shoe. Additionally, a book is placed above the phone, a calculator is above the shoe, and a camera is above the hat. The book, calculator, and camera are all situated on the top side of the image.",
+    "dsl": "(and (forall ?phone (implies (Is ?phone 'phone') (exists ?shoe (exists ?hat (exists ?book (exists ?calculator (exists ?camera (and (Is ?shoe 'shoe') (Is ?hat 'hat') (Is ?book 'book') (Is ?calculator 'calculator') (Is ?camera 'camera') (LeftOf ?shoe ?phone) (LeftOf ?hat ?shoe) (Above ?book ?phone) (Above ?calculator ?shoe) (Above ?camera ?hat) (OnTopSide ?book) (OnTopSide ?calculator) (OnTopSide ?camera))))))))))",
+    "cnf": "(forall ?phone (exists ?shoe (exists ?hat (exists ?book (exists ?calculator (exists ?camera (and (or (not (Is ?phone 'phone')) (Is ?shoe 'shoe')) (or (not (Is ?phone 'phone')) (LeftOf ?shoe ?phone)) (or (not (Is ?phone 'phone')) (Is ?hat 'hat')) (or (not (Is ?phone 'phone')) (LeftOf ?hat ?shoe)) (or (not (Is ?phone 'phone')) (Is ?camera 'camera')) (or (not (Is ?phone 'phone')) (Is ?book 'book')) (or (not (Is ?phone 'phone')) (Above ?calculator ?shoe)) (or (not (Is ?phone 'phone')) (Above ?book ?phone)) (or (not (Is ?phone 'phone')) (Above ?camera ?hat)) (or (not (Is ?phone 'phone')) (Is ?calculator 'calculator')) (or (not (Is ?phone 'phone')) (OnTopSide ?calculator)) (or (not (Is ?phone 'phone')) (OnTopSide ?book)) (or (not (Is ?phone 'phone')) (OnTopSide ?camera)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "phone",
+        "hat",
+        "calculator",
+        "camera",
+        "shoe"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sofa has a table to its left and a desk to its right. A teddy bear sits on the sofa, and all shoes are located below the desk. On the table is a plate with a sliced cake, a sandwich next to the cake, and a peeled banana to the right of the plate. A sleeping cat is inside the desk.",
+    "dsl": "(exists ?s (exists ?t (exists ?d (and (Is ?s 'sofa') (Is ?t 'table') (Is ?d 'desk') (LeftOf ?t ?s) (RightOf ?d ?s) (forall ?sh (implies (Is ?sh 'shoes') (Below ?sh ?d))) (exists ?tb (exists ?p (exists ?c (exists ?sw (exists ?cat (exists ?b (and (Is ?tb 'teddy bear') (On ?tb ?s) (Is ?p 'plate') (On ?p ?t) (Is ?c 'cake') (HasState ?c 'sliced') (On ?c ?p) (Is ?sw 'sandwich') (NextTo ?sw ?c) (Is ?cat 'cat') (HasState ?cat 'sleeping') (In ?cat ?d) (Is ?b 'banana') (HasState ?b 'peeled') (RightOf ?b ?p))))))))))))",
+    "cnf": "(exists ?s (exists ?t (exists ?d (forall ?sh (exists ?tb (exists ?p (exists ?c (exists ?sw (exists ?cat (exists ?b (and (Is ?s 'sofa') (LeftOf ?t ?s) (RightOf ?d ?s) (Is ?t 'table') (On ?p ?t) (On ?tb ?s) (Is ?d 'desk') (or (not (Is ?sh 'shoes')) (Below ?sh ?d)) (Is ?p 'plate') (On ?c ?p) (Is ?tb 'teddy bear') (In ?cat ?d) (RightOf ?b ?p) (HasState ?c 'sliced') (NextTo ?sw ?c) (HasState ?cat 'sleeping') (HasState ?b 'peeled') (Is ?c 'cake') (Is ?sw 'sandwich') (Is ?cat 'cat') (Is ?b 'banana'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sofa",
+        "cat",
+        "sandwich",
+        "desk",
+        "cake",
+        "shoes",
+        "banana",
+        "teddy bear",
+        "table",
+        "plate"
+    ]
+}

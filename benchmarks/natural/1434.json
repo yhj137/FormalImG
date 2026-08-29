@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. Every man is seated on a leather sofa with a child next to him. A round pizza is also on the sofa. To the right of the sofa is a turned-on monitor with an apple on top. A pair of glasses sits next to the apple, and a rock is next to the glasses.",
+    "dsl": "(and (IsStyle 'photo') (forall ?m (implies (Is ?m 'man') (exists ?s (exists ?c (exists ?p (exists ?mo (exists ?a (exists ?g (exists ?r (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?m ?s) (Is ?c 'child') (NextTo ?c ?m) (Is ?p 'pizza') (HasShape ?p 'round') (On ?p ?s) (Is ?mo 'monitor') (HasState ?mo 'on') (RightOf ?mo ?s) (Is ?a 'apple') (On ?a ?mo) (Is ?g 'glasses') (NextTo ?g ?a) (Is ?r 'rock') (NextTo ?r ?g))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?m (exists ?s (exists ?c (exists ?p (exists ?mo (exists ?a (exists ?g (exists ?r (and (or (not (Is ?m 'man')) (Is ?s 'sofa')) (or (not (Is ?m 'man')) (HasMaterial ?s 'leather')) (or (not (Is ?m 'man')) (On ?m ?s)) (or (not (Is ?m 'man')) (Is ?c 'child')) (or (not (Is ?m 'man')) (On ?p ?s)) (or (not (Is ?m 'man')) (NextTo ?c ?m)) (or (not (Is ?m 'man')) (HasShape ?p 'round')) (or (not (Is ?m 'man')) (Is ?mo 'monitor')) (or (not (Is ?m 'man')) (RightOf ?mo ?s)) (or (not (Is ?m 'man')) (Is ?p 'pizza')) (or (not (Is ?m 'man')) (HasState ?mo 'on')) (or (not (Is ?m 'man')) (Is ?a 'apple')) (or (not (Is ?m 'man')) (On ?a ?mo)) (or (not (Is ?m 'man')) (Is ?g 'glasses')) (or (not (Is ?m 'man')) (NextTo ?g ?a)) (or (not (Is ?m 'man')) (Is ?r 'rock')) (or (not (Is ?m 'man')) (NextTo ?r ?g))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "sofa",
+        "rock",
+        "man",
+        "pizza",
+        "apple",
+        "child"
+    ]
+}

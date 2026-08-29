@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features an open wardrobe in the center. A turned-on laptop sits on the wardrobe, with headphones to its right. To the left of the laptop is a book with an empty cup resting on it. A shirt is positioned to the left of the wardrobe, and every butterfly in the scene is flying above it. A pair of dirty shoes sits to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?l (exists ?h (exists ?b (exists ?c (exists ?s (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?l 'laptop') (HasState ?l 'on') (On ?l ?w) (Is ?h 'headphones') (RightOf ?h ?l) (Is ?b 'book') (LeftOf ?b ?l) (Is ?c 'cup') (HasState ?c 'empty') (On ?c ?b) (Is ?s 'shirt') (LeftOf ?s ?w) (forall ?bu (implies (Is ?bu 'butterfly') (and (HasState ?bu 'flying') (Above ?bu ?s)))) (exists ?sh (and (Is ?sh 'shoes') (HasState ?sh 'dirty') (RightOf ?sh ?w)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?l (exists ?h (exists ?b (exists ?c (exists ?s (forall ?bu (exists ?sh (and (Is ?w 'wardrobe') (HasState ?w 'open') (On ?l ?w) (LeftOf ?s ?w) (HasState ?l 'on') (RightOf ?h ?l) (RightOf ?sh ?w) (Is ?s 'shirt') (or (not (Is ?bu 'butterfly')) (Above ?bu ?s)) (Is ?l 'laptop') (LeftOf ?b ?l) (Is ?h 'headphones') (HasState ?sh 'dirty') (or (not (Is ?bu 'butterfly')) (HasState ?bu 'flying')) (Is ?b 'book') (On ?c ?b) (Is ?sh 'shoes') (HasState ?c 'empty') (Is ?c 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "laptop",
+        "shoes",
+        "book",
+        "butterfly",
+        "shirt",
+        "wardrobe",
+        "cup"
+    ]
+}

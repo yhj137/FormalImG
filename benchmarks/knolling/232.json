@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image containing a calculator and keys. The calculator is positioned on the top side of the image, and the keys are aligned vertically with the calculator.",
+    "dsl": "(exists ?calculator (exists ?keys (and (Is ?calculator 'calculator') (Is ?keys 'keys') (OnTopSide ?calculator) (AlignedVertically ?calculator ?keys))))",
+    "cnf": "(exists ?calculator (exists ?keys (and (Is ?calculator 'calculator') (OnTopSide ?calculator) (AlignedVertically ?calculator ?keys) (Is ?keys 'keys'))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "calculator"
+    ]
+}

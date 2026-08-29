@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pizza positioned on the bottom side. To the right of the pizza, there is a hammer. Additionally, for every spoon present in the image, the hammer is visually larger than the spoon.",
+    "dsl": "(exists ?pizza (exists ?hammer (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (Is ?hammer 'hammer') (RightOf ?hammer ?pizza) (forall ?spoon (implies (Is ?spoon 'spoon') (LargerThan ?hammer ?spoon))))))",
+    "cnf": "(exists ?pizza (exists ?hammer (forall ?spoon (and (Is ?pizza 'pizza') (OnBottomSide ?pizza) (RightOf ?hammer ?pizza) (Is ?hammer 'hammer') (or (not (Is ?spoon 'spoon')) (LargerThan ?hammer ?spoon))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "hammer",
+        "pizza"
+    ]
+}

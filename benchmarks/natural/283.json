@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo where every child holds a gray spoon.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'child') (exists ?s (and (Is ?s 'spoon') (HasColor ?s 'gray') (Holding ?c ?s))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?s (and (or (not (Is ?c 'child')) (Is ?s 'spoon')) (or (not (Is ?c 'child')) (HasColor ?s 'gray')) (or (not (Is ?c 'child')) (Holding ?c ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "child"
+    ]
+}

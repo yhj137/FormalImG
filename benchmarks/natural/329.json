@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where every car is on a metal boat.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'car') (exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'metal') (On ?c ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?b (and (or (not (Is ?c 'car')) (Is ?b 'boat')) (or (not (Is ?c 'car')) (HasMaterial ?b 'metal')) (or (not (Is ?c 'car')) (On ?c ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "boat",
+        "car"
+    ]
+}

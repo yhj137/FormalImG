@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a central bed where a child sits holding a boat. To the right of the bed is a basket containing all the toy cars, with a mirror placed next to it. To the left of the bed stands a chair with a jacket on it, beside a closed umbrella. A turned-on lamp is positioned next to the bed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bed (and (Is ?bed 'bed') (exists ?basket (and (Is ?basket 'basket') (RightOf ?basket ?bed) (exists ?child (and (Is ?child 'child') (On ?child ?bed) (exists ?boat (and (Is ?boat 'boat') (Holding ?child ?boat) (exists ?chair (and (Is ?chair 'chair') (LeftOf ?chair ?bed) (and (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?basket))) (exists ?jacket (and (Is ?jacket 'jacket') (On ?jacket ?chair) (exists ?mirror (and (Is ?mirror 'mirror') (NextTo ?mirror ?basket) (exists ?lamp (and (Is ?lamp 'lamp') (NextTo ?lamp ?bed) (HasState ?lamp 'on') (exists ?umbrella (and (Is ?umbrella 'umbrella') (NextTo ?umbrella ?chair) (HasState ?umbrella 'closed')))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bed (exists ?basket (exists ?child (exists ?boat (exists ?chair (forall ?tc (exists ?jacket (exists ?mirror (exists ?lamp (exists ?umbrella (and (Is ?bed 'bed') (RightOf ?basket ?bed) (On ?child ?bed) (Is ?basket 'basket') (or (not (Is ?tc 'toy car')) (In ?tc ?basket)) (LeftOf ?chair ?bed) (Is ?child 'child') (Holding ?child ?boat) (NextTo ?mirror ?basket) (NextTo ?lamp ?bed) (Is ?chair 'chair') (On ?jacket ?chair) (Is ?boat 'boat') (Is ?mirror 'mirror') (Is ?lamp 'lamp') (HasState ?lamp 'on') (NextTo ?umbrella ?chair) (Is ?jacket 'jacket') (Is ?umbrella 'umbrella') (HasState ?umbrella 'closed')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "child",
+        "bed",
+        "chair",
+        "jacket",
+        "toy car",
+        "boat",
+        "mirror",
+        "lamp",
+        "basket"
+    ]
+}

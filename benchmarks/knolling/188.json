@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All of the laptops are positioned on the right side of the image.",
+    "dsl": "(forall ?laptop (implies (Is ?laptop 'laptop') (OnRightSide ?laptop)))",
+    "cnf": "(forall ?laptop (or (not (Is ?laptop 'laptop')) (OnRightSide ?laptop)))",
+    "k": 1,
+    "object_classes": [
+        "laptop"
+    ]
+}

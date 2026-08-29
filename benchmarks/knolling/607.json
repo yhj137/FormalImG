@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a hat, a pizza, a tie, and a glove. The hat is located on the top side and the left side of the layout. To the right of the hat is the pizza. A tie is arranged below the hat, while a glove is placed below the pizza. Additionally, the glove is visually smaller than the pizza.",
+    "dsl": "(exists ?hat (exists ?pizza (exists ?tie (exists ?glove (and (Is ?hat 'hat') (Is ?pizza 'pizza') (Is ?tie 'tie') (Is ?glove 'glove') (OnTopSide ?hat) (OnLeftSide ?hat) (LeftOf ?hat ?pizza) (Above ?hat ?tie) (Above ?pizza ?glove) (SmallerThan ?glove ?pizza))))))",
+    "cnf": "(exists ?hat (exists ?pizza (exists ?tie (exists ?glove (and (Is ?hat 'hat') (OnTopSide ?hat) (OnLeftSide ?hat) (LeftOf ?hat ?pizza) (Above ?hat ?tie) (Is ?pizza 'pizza') (Above ?pizza ?glove) (Is ?tie 'tie') (SmallerThan ?glove ?pizza) (Is ?glove 'glove'))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "tie",
+        "pizza",
+        "glove"
+    ]
+}

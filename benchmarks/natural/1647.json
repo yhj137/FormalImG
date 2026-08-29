@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene displays an open wardrobe containing every key, plus a backpack with headphones inside. An elephant stands next to the wardrobe. To the left of the elephant lies a sleeping lion. Next to the lion is a horse, followed by a dog, and finally a fish next to the dog.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'wardrobe') (HasState ?w 'open') (forall ?k (implies (Is ?k 'key') (In ?k ?w))) (exists ?b (exists ?h (exists ?e (exists ?l (exists ?ho (exists ?d (exists ?f (and (Is ?b 'backpack') (Is ?h 'headphones') (Is ?e 'elephant') (Is ?l 'lion') (Is ?ho 'horse') (Is ?d 'dog') (Is ?f 'fish') (In ?b ?w) (In ?h ?b) (NextTo ?e ?w) (LeftOf ?l ?e) (HasState ?l 'sleeping') (NextTo ?ho ?l) (NextTo ?d ?ho) (NextTo ?f ?d))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (forall ?k (exists ?b (exists ?h (exists ?e (exists ?l (exists ?ho (exists ?d (exists ?f (and (Is ?w 'wardrobe') (HasState ?w 'open') (or (not (Is ?k 'key')) (In ?k ?w)) (In ?b ?w) (NextTo ?e ?w) (Is ?b 'backpack') (In ?h ?b) (Is ?e 'elephant') (LeftOf ?l ?e) (Is ?h 'headphones') (Is ?l 'lion') (HasState ?l 'sleeping') (NextTo ?ho ?l) (Is ?ho 'horse') (NextTo ?d ?ho) (Is ?d 'dog') (NextTo ?f ?d) (Is ?f 'fish'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "headphones",
+        "fish",
+        "backpack",
+        "wardrobe",
+        "horse",
+        "dog",
+        "lion",
+        "elephant"
+    ]
+}

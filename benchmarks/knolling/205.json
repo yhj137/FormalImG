@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pan and a camera. Both the pan and the camera are positioned on the bottom side of the image, and they are aligned horizontally.",
+    "dsl": "(exists ?pan (exists ?camera (and (Is ?pan 'pan') (Is ?camera 'camera') (OnBottomSide ?pan) (OnBottomSide ?camera) (AlignedHorizontally ?pan ?camera))))",
+    "cnf": "(exists ?pan (exists ?camera (and (Is ?pan 'pan') (OnBottomSide ?pan) (AlignedHorizontally ?pan ?camera) (OnBottomSide ?camera) (Is ?camera 'camera'))))",
+    "k": 2,
+    "object_classes": [
+        "pan",
+        "camera"
+    ]
+}

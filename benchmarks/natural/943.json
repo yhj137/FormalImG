@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a rug with shoes and a brown horse. All oranges are inside the shoes, and headphones are next to the shoes.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?s (exists ?h (and (Is ?r 'rug') (Is ?s 'shoes') (Is ?h 'horse') (HasColor ?h 'brown') (On ?s ?r) (On ?h ?r) (forall ?o (implies (Is ?o 'orange') (In ?o ?s))) (exists ?hp (and (Is ?hp 'headphones') (NextTo ?hp ?s))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?s (exists ?h (forall ?o (exists ?hp (and (Is ?r 'rug') (On ?s ?r) (On ?h ?r) (Is ?s 'shoes') (or (not (Is ?o 'orange')) (In ?o ?s)) (HasColor ?h 'brown') (NextTo ?hp ?s) (Is ?h 'horse') (Is ?hp 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "shoes",
+        "horse",
+        "rug",
+        "orange"
+    ]
+}

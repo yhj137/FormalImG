@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a tree situated next to a boat. Every flower in the scene is on the tree. Inside the boat are a lion and an elephant holding a red apple, while a keyboard and a pan containing a cat rest on the boat.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (and (Is ?b 'boat') (Is ?t 'tree') (NextTo ?t ?b) (forall ?f (implies (Is ?f 'flower') (On ?f ?t))) (exists ?e (exists ?l (exists ?p (exists ?c (exists ?a (exists ?k (and (Is ?e 'elephant') (Is ?l 'lion') (Is ?p 'pan') (Is ?c 'cat') (Is ?a 'apple') (Is ?k 'keyboard') (In ?e ?b) (In ?l ?b) (On ?p ?b) (In ?c ?p) (Holding ?e ?a) (HasColor ?a 'red') (On ?k ?b))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (forall ?f (exists ?e (exists ?l (exists ?p (exists ?c (exists ?a (exists ?k (and (Is ?b 'boat') (NextTo ?t ?b) (In ?e ?b) (Is ?t 'tree') (or (not (Is ?f 'flower')) (On ?f ?t)) (In ?l ?b) (Is ?e 'elephant') (Holding ?e ?a) (On ?p ?b) (Is ?l 'lion') (Is ?a 'apple') (HasColor ?a 'red') (On ?k ?b) (Is ?p 'pan') (In ?c ?p) (Is ?k 'keyboard') (Is ?c 'cat'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "pan",
+        "cat",
+        "tree",
+        "boat",
+        "apple",
+        "lion",
+        "flower",
+        "elephant"
+    ]
+}

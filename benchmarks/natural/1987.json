@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden house with a bird sitting on it. A metal refrigerator stands next to the house, and every elephant in the scene is positioned next to the refrigerator. A horse is also located next to the house. Beside the horse stands a woman holding a leather jacket. Next to the woman is a child holding a plant, with shoes placed next to the child.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?b (exists ?r (exists ?ho (exists ?w (exists ?j (exists ?c (exists ?p (exists ?s (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?b 'bird') (On ?b ?h) (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (NextTo ?r ?h) (forall ?e (implies (Is ?e 'elephant') (NextTo ?e ?r))) (Is ?ho 'horse') (NextTo ?ho ?h) (Is ?w 'woman') (NextTo ?w ?ho) (Is ?j 'jacket') (HasMaterial ?j 'leather') (Holding ?w ?j) (Is ?c 'child') (NextTo ?c ?w) (Is ?p 'plant') (Holding ?c ?p) (Is ?s 'shoes') (NextTo ?s ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?b (exists ?r (exists ?ho (exists ?w (exists ?j (exists ?c (exists ?p (exists ?s (forall ?e (and (Is ?h 'house') (HasMaterial ?h 'wooden') (On ?b ?h) (NextTo ?r ?h) (Is ?b 'bird') (NextTo ?ho ?h) (HasMaterial ?r 'metal') (or (not (Is ?e 'elephant')) (NextTo ?e ?r)) (Is ?ho 'horse') (NextTo ?w ?ho) (Is ?r 'refrigerator') (Is ?w 'woman') (Holding ?w ?j) (NextTo ?c ?w) (HasMaterial ?j 'leather') (Is ?c 'child') (Holding ?c ?p) (Is ?j 'jacket') (NextTo ?s ?c) (Is ?p 'plant') (Is ?s 'shoes')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "jacket",
+        "plant",
+        "shoes",
+        "refrigerator",
+        "horse",
+        "woman",
+        "house",
+        "child",
+        "bird",
+        "elephant"
+    ]
+}

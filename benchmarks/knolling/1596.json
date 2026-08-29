@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized arrangement. A gray laptop is placed in the top-left area. The laptop is positioned to the left of a white shoe, and they are aligned horizontally. The laptop is also positioned above a black camera, with which it is aligned vertically. To the right of the camera is a pink donut, aligned horizontally. The camera is positioned above a phone, maintaining vertical alignment. To the right of the phone is a pizza, aligned horizontally. A black hammer is located to the right of the pizza. Finally, for every set of keys present, it is positioned to the right of the hammer.",
+    "dsl": "(exists ?laptop (exists ?shoe (exists ?camera (exists ?donut (exists ?phone (exists ?pizza (exists ?hammer (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (OnTopSide ?laptop) (Is ?shoe 'shoe') (Has ?shoe 'white') (Is ?camera 'camera') (Has ?camera 'black') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?phone 'phone') (Is ?pizza 'pizza') (Is ?hammer 'hammer') (Has ?hammer 'black') (LeftOf ?laptop ?shoe) (AlignedHorizontally ?laptop ?shoe) (Above ?laptop ?camera) (AlignedVertically ?laptop ?camera) (RightOf ?donut ?camera) (AlignedHorizontally ?camera ?donut) (Above ?camera ?phone) (AlignedVertically ?camera ?phone) (RightOf ?pizza ?phone) (AlignedHorizontally ?phone ?pizza) (RightOf ?hammer ?pizza) (forall ?keys (implies (Is ?keys 'keys') (RightOf ?keys ?hammer)))))))))))",
+    "cnf": "(exists ?laptop (exists ?shoe (exists ?camera (exists ?donut (exists ?phone (exists ?pizza (exists ?hammer (forall ?keys (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (OnTopSide ?laptop) (LeftOf ?laptop ?shoe) (AlignedHorizontally ?laptop ?shoe) (Has ?shoe 'white') (Above ?laptop ?camera) (Is ?shoe 'shoe') (AlignedVertically ?laptop ?camera) (Has ?camera 'black') (RightOf ?donut ?camera) (Is ?camera 'camera') (AlignedHorizontally ?camera ?donut) (Has ?donut 'pink') (Above ?camera ?phone) (Is ?donut 'donut') (AlignedVertically ?camera ?phone) (Is ?phone 'phone') (RightOf ?pizza ?phone) (AlignedHorizontally ?phone ?pizza) (Is ?pizza 'pizza') (RightOf ?hammer ?pizza) (Has ?hammer 'black') (or (not (Is ?keys 'keys')) (RightOf ?keys ?hammer)) (Is ?hammer 'hammer'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "phone",
+        "pizza",
+        "hammer",
+        "camera",
+        "shoe",
+        "donut"
+    ]
+}

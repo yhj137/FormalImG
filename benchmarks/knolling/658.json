@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the image, there is a monitor located to its left, and a game controller located to the left of the monitor. Additionally, a bottle is placed to the right of the suitcase. The bottle is specifically located on the right side of the image, and all four objects\u2014game controller, monitor, suitcase, and bottle\u2014are aligned horizontally.",
+    "dsl": "(forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?monitor (exists ?controller (exists ?bottle (and (Is ?monitor 'monitor') (Is ?controller 'game_controller') (Is ?bottle 'bottle') (LeftOf ?monitor ?suitcase) (LeftOf ?controller ?monitor) (RightOf ?bottle ?suitcase) (OnRightSide ?bottle) (AlignedHorizontally ?controller ?monitor) (AlignedHorizontally ?monitor ?suitcase) (AlignedHorizontally ?suitcase ?bottle)))))))",
+    "cnf": "(forall ?suitcase (exists ?monitor (exists ?controller (exists ?bottle (and (or (not (Is ?suitcase 'suitcase')) (Is ?monitor 'monitor')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?monitor ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?controller 'game_controller')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?controller ?monitor)) (or (not (Is ?suitcase 'suitcase')) (Is ?bottle 'bottle')) (or (not (Is ?suitcase 'suitcase')) (AlignedHorizontally ?controller ?monitor)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?bottle ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (AlignedHorizontally ?monitor ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (OnRightSide ?bottle)) (or (not (Is ?suitcase 'suitcase')) (AlignedHorizontally ?suitcase ?bottle)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "suitcase",
+        "bottle",
+        "game_controller"
+    ]
+}

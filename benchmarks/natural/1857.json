@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A woman is on a rug, and every plant in the image is positioned next to the rug. A sandwich with a fork inside it is also on the rug. To the right of the rug is a broken bicycle with a cat on it. A horse is next to the bicycle, and to the right of the horse is a car with a flower on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?w (and (Is ?r 'rug') (Is ?w 'woman') (On ?w ?r) (forall ?p (implies (Is ?p 'plant') (NextTo ?p ?r))) (exists ?s (exists ?f (exists ?b (exists ?c (exists ?h (exists ?car (exists ?fl (and (Is ?s 'sandwich') (On ?s ?r) (Is ?f 'fork') (In ?f ?s) (Is ?b 'bicycle') (RightOf ?b ?r) (HasState ?b 'broken') (Is ?c 'cat') (On ?c ?b) (Is ?h 'horse') (NextTo ?h ?b) (Is ?car 'car') (RightOf ?car ?h) (Is ?fl 'flower') (On ?fl ?car)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?w (forall ?p (exists ?s (exists ?f (exists ?b (exists ?c (exists ?h (exists ?car (exists ?fl (and (Is ?r 'rug') (On ?w ?r) (or (not (Is ?p 'plant')) (NextTo ?p ?r)) (Is ?w 'woman') (On ?s ?r) (RightOf ?b ?r) (Is ?s 'sandwich') (In ?f ?s) (Is ?b 'bicycle') (HasState ?b 'broken') (Is ?f 'fork') (On ?c ?b) (NextTo ?h ?b) (Is ?c 'cat') (Is ?h 'horse') (RightOf ?car ?h) (Is ?car 'car') (On ?fl ?car) (Is ?fl 'flower')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fork",
+        "cat",
+        "sandwich",
+        "plant",
+        "rug",
+        "horse",
+        "woman",
+        "bicycle",
+        "flower",
+        "car"
+    ]
+}

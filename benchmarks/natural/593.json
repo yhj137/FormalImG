@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a turned-on monitor with a clock sitting on it. All plates are positioned next to the monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'monitor') (HasState ?m 'on') (exists ?c (and (Is ?c 'clock') (On ?c ?m) (forall ?p (implies (Is ?p 'plate') (NextTo ?p ?m))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?c (forall ?p (and (Is ?m 'monitor') (HasState ?m 'on') (On ?c ?m) (or (not (Is ?p 'plate')) (NextTo ?p ?m)) (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "clock",
+        "monitor"
+    ]
+}

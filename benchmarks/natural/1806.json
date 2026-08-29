@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is depicted in an oil painting style. A rug lies on the ground with a pair of shoes and a peeled orange on it. An off phone rests next to the shoes, and a fork is placed next to the orange. To the right of the rug sits a basket containing a closed umbrella. A plant is positioned next to the rug, while a mirror stands to the left of the plant. Finally, a bird is perched on the mirror.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?s (exists ?o (exists ?p (exists ?f (exists ?b (exists ?u (exists ?pl (exists ?m (exists ?bi (and (Is ?r 'rug') (Is ?s 'shoes') (Is ?o 'orange') (Is ?p 'phone') (Is ?f 'fork') (Is ?b 'basket') (Is ?u 'umbrella') (Is ?pl 'plant') (Is ?m 'mirror') (Is ?bi 'bird') (On ?s ?r) (On ?o ?r) (HasState ?o 'peeled') (NextTo ?p ?s) (HasState ?p 'off') (NextTo ?f ?o) (RightOf ?b ?r) (In ?u ?b) (HasState ?u 'closed') (NextTo ?pl ?r) (LeftOf ?m ?pl) (On ?bi ?m)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?s (exists ?o (exists ?p (exists ?f (exists ?b (exists ?u (exists ?pl (exists ?m (exists ?bi (and (Is ?r 'rug') (On ?s ?r) (On ?o ?r) (Is ?s 'shoes') (NextTo ?p ?s) (RightOf ?b ?r) (Is ?o 'orange') (HasState ?o 'peeled') (Is ?p 'phone') (HasState ?p 'off') (NextTo ?pl ?r) (Is ?b 'basket') (In ?u ?b) (NextTo ?f ?o) (Is ?pl 'plant') (LeftOf ?m ?pl) (Is ?u 'umbrella') (HasState ?u 'closed') (Is ?f 'fork') (Is ?m 'mirror') (On ?bi ?m) (Is ?bi 'bird')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "plant",
+        "shoes",
+        "phone",
+        "basket",
+        "rug",
+        "mirror",
+        "bird",
+        "orange"
+    ]
+}

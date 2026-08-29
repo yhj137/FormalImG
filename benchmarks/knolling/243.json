@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pair of black headphones and a red apple. The headphones are placed to the left of the apple.",
+    "dsl": "(exists ?h (exists ?a (and (Is ?h 'headphones') (Has ?h 'black') (Is ?a 'apple') (Has ?a 'red') (LeftOf ?h ?a))))",
+    "cnf": "(exists ?h (exists ?a (and (Is ?h 'headphones') (Has ?h 'black') (LeftOf ?h ?a) (Has ?a 'red') (Is ?a 'apple'))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "apple"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, there is a specific arrangement of items surrounding it. Directly above the jeans is a tie, and above the tie is a sandwich. To the left of the sandwich lies a fork, while to the right is a cup with a donut placed above it. To the left of the jeans is a wallet, which is visually larger than the jeans is false (the jeans are larger than the wallet). Above the wallet is a lighter, which is smaller than the wallet. To the far left of the lighter, positioned on the left side of the image, is a pen. Finally, to the right of the jeans, situated on the bottom side of the image, are keys.",
+    "dsl": "(forall ?jeans (implies (Is ?jeans 'jeans') (exists ?tie (exists ?sandwich (exists ?fork (exists ?cup (exists ?donut (exists ?wallet (exists ?lighter (exists ?pen (exists ?keys (and (Is ?tie 'tie') (Is ?sandwich 'sandwich') (Is ?fork 'fork') (Is ?cup 'cup') (Is ?donut 'donut') (Is ?wallet 'wallet') (Is ?lighter 'lighter') (Is ?pen 'pen') (Is ?keys 'keys') (Above ?tie ?jeans) (Above ?sandwich ?tie) (LeftOf ?fork ?sandwich) (RightOf ?cup ?sandwich) (Above ?donut ?cup) (LeftOf ?wallet ?jeans) (LargerThan ?jeans ?wallet) (Above ?lighter ?wallet) (SmallerThan ?lighter ?wallet) (LeftOf ?pen ?lighter) (OnLeftSide ?pen) (RightOf ?keys ?jeans) (OnBottomSide ?keys)))))))))))))",
+    "cnf": "(forall ?jeans (exists ?tie (exists ?sandwich (exists ?fork (exists ?cup (exists ?donut (exists ?wallet (exists ?lighter (exists ?pen (exists ?keys (and (or (not (Is ?jeans 'jeans')) (Is ?tie 'tie')) (or (not (Is ?jeans 'jeans')) (Is ?sandwich 'sandwich')) (or (not (Is ?jeans 'jeans')) (Above ?tie ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?fork 'fork')) (or (not (Is ?jeans 'jeans')) (Above ?sandwich ?tie)) (or (not (Is ?jeans 'jeans')) (Is ?keys 'keys')) (or (not (Is ?jeans 'jeans')) (Is ?cup 'cup')) (or (not (Is ?jeans 'jeans')) (LeftOf ?fork ?sandwich)) (or (not (Is ?jeans 'jeans')) (Is ?pen 'pen')) (or (not (Is ?jeans 'jeans')) (RightOf ?keys ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?donut 'donut')) (or (not (Is ?jeans 'jeans')) (RightOf ?cup ?sandwich)) (or (not (Is ?jeans 'jeans')) (Is ?lighter 'lighter')) (or (not (Is ?jeans 'jeans')) (LeftOf ?pen ?lighter)) (or (not (Is ?jeans 'jeans')) (OnLeftSide ?pen)) (or (not (Is ?jeans 'jeans')) (OnBottomSide ?keys)) (or (not (Is ?jeans 'jeans')) (Is ?wallet 'wallet')) (or (not (Is ?jeans 'jeans')) (Above ?donut ?cup)) (or (not (Is ?jeans 'jeans')) (Above ?lighter ?wallet)) (or (not (Is ?jeans 'jeans')) (SmallerThan ?lighter ?wallet)) (or (not (Is ?jeans 'jeans')) (LeftOf ?wallet ?jeans)) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?wallet)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "tie",
+        "pen",
+        "cup",
+        "fork",
+        "lighter",
+        "jeans",
+        "wallet",
+        "sandwich",
+        "donut"
+    ]
+}

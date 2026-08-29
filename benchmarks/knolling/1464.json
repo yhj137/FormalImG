@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase. For every tie in the image, it is smaller than and located below the suitcase, and has a shoe to its left. Additionally, for each tie, there exists a cutting board on the right side of the image (with the suitcase to its left), a bowl below the cutting board, a donut below the bowl, a mouse to the left of the donut, and a lighter below the shoe that is smaller than the mouse.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (forall ?tie (implies (Is ?tie 'tie') (exists ?shoe (exists ?cutting_board (exists ?bowl (exists ?donut (exists ?mouse (exists ?lighter (and (Is ?shoe 'shoe') (Is ?cutting_board 'cutting_board') (Is ?bowl 'bowl') (Is ?donut 'donut') (Is ?mouse 'mouse') (Is ?lighter 'lighter') (SmallerThan ?tie ?suitcase) (Below ?tie ?suitcase) (LeftOf ?shoe ?tie) (OnRightSide ?cutting_board) (LeftOf ?suitcase ?cutting_board) (Below ?bowl ?cutting_board) (Below ?donut ?bowl) (LeftOf ?mouse ?donut) (Below ?lighter ?shoe) (SmallerThan ?lighter ?mouse))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?tie (exists ?shoe (exists ?cutting_board (exists ?bowl (exists ?donut (exists ?mouse (exists ?lighter (and (Is ?suitcase 'suitcase') (or (not (Is ?tie 'tie')) (SmallerThan ?tie ?suitcase)) (or (not (Is ?tie 'tie')) (Below ?tie ?suitcase)) (or (not (Is ?tie 'tie')) (Is ?lighter 'lighter')) (or (not (Is ?tie 'tie')) (LeftOf ?suitcase ?cutting_board)) (or (not (Is ?tie 'tie')) (LeftOf ?shoe ?tie)) (or (not (Is ?tie 'tie')) (Is ?mouse 'mouse')) (or (not (Is ?tie 'tie')) (Below ?lighter ?shoe)) (or (not (Is ?tie 'tie')) (OnRightSide ?cutting_board)) (or (not (Is ?tie 'tie')) (Below ?bowl ?cutting_board)) (or (not (Is ?tie 'tie')) (Is ?shoe 'shoe')) (or (not (Is ?tie 'tie')) (Is ?donut 'donut')) (or (not (Is ?tie 'tie')) (LeftOf ?mouse ?donut)) (or (not (Is ?tie 'tie')) (SmallerThan ?lighter ?mouse)) (or (not (Is ?tie 'tie')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?tie 'tie')) (Below ?donut ?bowl)) (or (not (Is ?tie 'tie')) (Is ?bowl 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "cutting_board",
+        "lighter",
+        "mouse",
+        "bowl",
+        "suitcase",
+        "shoe",
+        "donut"
+    ]
+}

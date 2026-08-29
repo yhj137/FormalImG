@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a shirt, a hammer, a wallet, and an apple. The hammer is placed to the right of the shirt and is specifically located on the right side of the image. The wallet is positioned directly below the hammer, while the apple is located below the shirt. Additionally, the wallet appears smaller than the shirt.",
+    "dsl": "(exists ?shirt (exists ?hammer (exists ?wallet (exists ?apple (and (Is ?shirt 'shirt') (Is ?hammer 'hammer') (Is ?wallet 'wallet') (Is ?apple 'apple') (RightOf ?hammer ?shirt) (OnRightSide ?hammer) (Below ?wallet ?hammer) (Below ?apple ?shirt) (SmallerThan ?wallet ?shirt))))))",
+    "cnf": "(exists ?shirt (exists ?hammer (exists ?wallet (exists ?apple (and (Is ?shirt 'shirt') (RightOf ?hammer ?shirt) (Below ?apple ?shirt) (Is ?hammer 'hammer') (OnRightSide ?hammer) (SmallerThan ?wallet ?shirt) (Is ?apple 'apple') (Below ?wallet ?hammer) (Is ?wallet 'wallet'))))))",
+    "k": 4,
+    "object_classes": [
+        "wallet",
+        "hammer",
+        "apple",
+        "shirt"
+    ]
+}

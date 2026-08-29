@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black pan, a brown cutting board, a sandwich, and a yellow drill. The black pan is placed above the brown cutting board, and the cutting board is positioned above the sandwich. The sandwich is located above the yellow drill. The drill is positioned on the bottom side of the scene, and the pan appears visually larger than the sandwich.",
+    "dsl": "(exists ?pan (exists ?cutting_board (exists ?sandwich (exists ?drill (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Is ?sandwich 'sandwich') (Is ?drill 'drill') (Has ?drill 'yellow') (Above ?pan ?cutting_board) (Above ?cutting_board ?sandwich) (Above ?sandwich ?drill) (LargerThan ?pan ?sandwich) (OnBottomSide ?drill))))))",
+    "cnf": "(exists ?pan (exists ?cutting_board (exists ?sandwich (exists ?drill (and (Is ?pan 'pan') (Has ?pan 'black') (Above ?pan ?cutting_board) (LargerThan ?pan ?sandwich) (Has ?cutting_board 'brown') (Above ?cutting_board ?sandwich) (Above ?sandwich ?drill) (Is ?cutting_board 'cutting_board') (Is ?sandwich 'sandwich') (Has ?drill 'yellow') (OnBottomSide ?drill) (Is ?drill 'drill'))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "cutting_board",
+        "pan",
+        "sandwich"
+    ]
+}

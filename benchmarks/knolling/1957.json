@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue pair of jeans, a yellow drill, and a white hat aligned horizontally in a row from left to right. Below the jeans is a black phone. To the right of the phone is a gray mouse, and to the right of the mouse is a brown cutting board; these items are horizontally aligned, and the cutting board is on the right side of the image. Below the phone are black headphones. Any lemon present in the scene is yellow and positioned to the left of the jeans. To the right of the headphones is a brown shoe, and to the right of the shoe is a gray wrench; these items are horizontally aligned, and the wrench is located below the cutting board. All items are neatly arranged.",
+    "dsl": "(exists ?jeans (exists ?drill (exists ?hat (exists ?phone (exists ?mouse (exists ?cutting_board (exists ?headphones (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?hat 'hat') (Has ?hat 'white') (RightOf ?drill ?jeans) (RightOf ?hat ?drill) (AlignedHorizontally ?jeans ?drill) (AlignedHorizontally ?drill ?hat) (Is ?phone 'phone') (Has ?phone 'black') (Below ?phone ?jeans) (Is ?mouse 'mouse') (Has ?mouse 'gray') (RightOf ?mouse ?phone) (AlignedHorizontally ?phone ?mouse) (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (RightOf ?cutting_board ?mouse) (AlignedHorizontally ?mouse ?cutting_board) (OnRightSide ?cutting_board) (Is ?headphones 'headphones') (Has ?headphones 'black') (Below ?headphones ?phone) (forall ?lemon (implies (Is ?lemon 'lemon') (and (Has ?lemon 'yellow') (LeftOf ?lemon ?jeans)))) (exists ?shoe (exists ?wrench (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (RightOf ?shoe ?headphones) (AlignedHorizontally ?headphones ?shoe) (Is ?wrench 'wrench') (Has ?wrench 'gray') (RightOf ?wrench ?shoe) (AlignedHorizontally ?shoe ?wrench) (Below ?wrench ?cutting_board))))))))))))",
+    "cnf": "(exists ?jeans (exists ?drill (exists ?hat (exists ?phone (exists ?mouse (exists ?cutting_board (exists ?headphones (forall ?lemon (exists ?shoe (exists ?wrench (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?drill ?jeans) (AlignedHorizontally ?jeans ?drill) (Has ?drill 'yellow') (RightOf ?hat ?drill) (Below ?phone ?jeans) (AlignedHorizontally ?drill ?hat) (Is ?drill 'drill') (Has ?hat 'white') (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?jeans)) (Has ?phone 'black') (RightOf ?mouse ?phone) (Is ?hat 'hat') (or (not (Is ?lemon 'lemon')) (Has ?lemon 'yellow')) (Is ?phone 'phone') (AlignedHorizontally ?phone ?mouse) (Has ?mouse 'gray') (Below ?headphones ?phone) (RightOf ?cutting_board ?mouse) (Is ?mouse 'mouse') (Has ?headphones 'black') (RightOf ?shoe ?headphones) (AlignedHorizontally ?mouse ?cutting_board) (Has ?cutting_board 'brown') (Is ?headphones 'headphones') (AlignedHorizontally ?headphones ?shoe) (Has ?shoe 'brown') (OnRightSide ?cutting_board) (Is ?cutting_board 'cutting_board') (RightOf ?wrench ?shoe) (Is ?shoe 'shoe') (Below ?wrench ?cutting_board) (AlignedHorizontally ?shoe ?wrench) (Has ?wrench 'gray') (Is ?wrench 'wrench'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "wrench",
+        "lemon",
+        "phone",
+        "drill",
+        "hat",
+        "cutting_board",
+        "jeans",
+        "mouse",
+        "headphones",
+        "shoe"
+    ]
+}

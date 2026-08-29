@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A plastic monitor is next to a man with a cat on him. A plant is to the left of the monitor, and an apple is next to the plant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?mo (exists ?m (exists ?c (exists ?p (exists ?a (and (Is ?mo 'monitor') (HasMaterial ?mo 'plastic') (Is ?m 'man') (NextTo ?mo ?m) (Is ?c 'cat') (On ?c ?m) (Is ?p 'plant') (LeftOf ?p ?mo) (Is ?a 'apple') (NextTo ?a ?p))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?mo (exists ?m (exists ?c (exists ?p (exists ?a (and (Is ?mo 'monitor') (HasMaterial ?mo 'plastic') (NextTo ?mo ?m) (LeftOf ?p ?mo) (Is ?m 'man') (On ?c ?m) (Is ?p 'plant') (NextTo ?a ?p) (Is ?c 'cat') (Is ?a 'apple'))))))))",
+    "k": 5,
+    "object_classes": [
+        "monitor",
+        "cat",
+        "man",
+        "plant",
+        "apple"
+    ]
+}

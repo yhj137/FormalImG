@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition starts with a remote located on the left side of the scene. To the right of the remote is a pen. For every donut included in the arrangement, it is positioned to the right of the pen, and there is a pair of scissors located to the right of that donut. Furthermore, a carrot is placed to the right of the scissors. The scissors are visually smaller than the remote, and the carrot is situated on the right side of the image.",
+    "dsl": "(exists ?remote (exists ?pen (and (Is ?remote 'remote') (OnLeftSide ?remote) (Is ?pen 'pen') (RightOf ?pen ?remote) (forall ?donut (implies (Is ?donut 'donut') (exists ?scissors (exists ?carrot (and (Is ?scissors 'scissors') (Is ?carrot 'carrot') (RightOf ?donut ?pen) (RightOf ?scissors ?donut) (SmallerThan ?scissors ?remote) (RightOf ?carrot ?scissors) (OnRightSide ?carrot)))))))))",
+    "cnf": "(exists ?remote (exists ?pen (forall ?donut (exists ?scissors (exists ?carrot (and (Is ?remote 'remote') (OnLeftSide ?remote) (RightOf ?pen ?remote) (or (not (Is ?donut 'donut')) (SmallerThan ?scissors ?remote)) (Is ?pen 'pen') (or (not (Is ?donut 'donut')) (RightOf ?donut ?pen)) (or (not (Is ?donut 'donut')) (RightOf ?scissors ?donut)) (or (not (Is ?donut 'donut')) (RightOf ?carrot ?scissors)) (or (not (Is ?donut 'donut')) (Is ?carrot 'carrot')) (or (not (Is ?donut 'donut')) (Is ?scissors 'scissors')) (or (not (Is ?donut 'donut')) (OnRightSide ?carrot))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "pen",
+        "carrot",
+        "scissors",
+        "donut"
+    ]
+}

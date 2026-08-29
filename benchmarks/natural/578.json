@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicting a purple basket containing a jacket. Every plant rests on the basket to the left of the jacket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?j (and (Is ?b 'basket') (HasColor ?b 'purple') (Is ?j 'jacket') (In ?j ?b) (forall ?p (implies (Is ?p 'plant') (and (On ?p ?b) (LeftOf ?p ?j))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?j (forall ?p (and (Is ?b 'basket') (HasColor ?b 'purple') (In ?j ?b) (or (not (Is ?p 'plant')) (On ?p ?b)) (Is ?j 'jacket') (or (not (Is ?p 'plant')) (LeftOf ?p ?j)))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "jacket",
+        "plant"
+    ]
+}

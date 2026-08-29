@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a wooden bench. Every spoon is on the bench, and each is held by a woman next to the bench.",
+    "dsl": "(exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (forall ?s (implies (Is ?s 'spoon') (and (On ?s ?b) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?b) (Holding ?w ?s))))))))",
+    "cnf": "(exists ?b (forall ?s (exists ?w (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (or (not (Is ?s 'spoon')) (On ?s ?b)) (or (not (Is ?s 'spoon')) (NextTo ?w ?b)) (or (not (Is ?s 'spoon')) (Is ?w 'woman')) (or (not (Is ?s 'spoon')) (Holding ?w ?s))))))",
+    "k": 3,
+    "object_classes": [
+        "bench",
+        "woman",
+        "spoon"
+    ]
+}

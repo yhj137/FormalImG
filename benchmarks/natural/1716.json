@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A man holding a gray knife is to the left of a desk with a keyboard on it. All plants are located to the right of the desk. A bed is also positioned to the right of the desk, with a round clock above it. To the left of the bed is a bench where a person is sitting.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?k (exists ?d (exists ?kb (and (Is ?m 'man') (Is ?k 'knife') (HasColor ?k 'gray') (Holding ?m ?k) (Is ?d 'desk') (LeftOf ?m ?d) (Is ?kb 'keyboard') (On ?kb ?d) (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?d))) (exists ?bd (exists ?c (exists ?bn (exists ?pe (and (Is ?bd 'bed') (RightOf ?bd ?d) (Is ?c 'clock') (HasShape ?c 'round') (Above ?c ?bd) (Is ?bn 'bench') (LeftOf ?bn ?bd) (Is ?pe 'person') (On ?pe ?bn) (HasState ?pe 'sitting'))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?k (exists ?d (exists ?kb (forall ?p (exists ?bd (exists ?c (exists ?bn (exists ?pe (and (Is ?m 'man') (Holding ?m ?k) (LeftOf ?m ?d) (HasColor ?k 'gray') (Is ?d 'desk') (On ?kb ?d) (Is ?k 'knife') (or (not (Is ?p 'plant')) (RightOf ?p ?d)) (Is ?kb 'keyboard') (RightOf ?bd ?d) (Is ?bd 'bed') (Above ?c ?bd) (LeftOf ?bn ?bd) (HasShape ?c 'round') (Is ?bn 'bench') (On ?pe ?bn) (Is ?c 'clock') (Is ?pe 'person') (HasState ?pe 'sitting'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "bench",
+        "person",
+        "man",
+        "plant",
+        "desk",
+        "knife",
+        "bed",
+        "clock"
+    ]
+}

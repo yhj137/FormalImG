@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every knife in the scene, there is a carrot and a yellow lemon positioned below it. The carrot and the lemon are aligned horizontally, and the carrot is visually larger than the lemon.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'knife') (exists ?c (exists ?l (and (Is ?c 'carrot') (Is ?l 'lemon') (Has ?l 'yellow') (Below ?c ?k) (AlignedHorizontally ?c ?l) (LargerThan ?c ?l)))))))",
+    "cnf": "(forall ?k (exists ?c (exists ?l (and (or (not (Is ?k 'knife')) (Is ?c 'carrot')) (or (not (Is ?k 'knife')) (Below ?c ?k)) (or (not (Is ?k 'knife')) (Is ?l 'lemon')) (or (not (Is ?k 'knife')) (AlignedHorizontally ?c ?l)) (or (not (Is ?k 'knife')) (Has ?l 'yellow')) (or (not (Is ?k 'knife')) (LargerThan ?c ?l))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "lemon",
+        "carrot"
+    ]
+}

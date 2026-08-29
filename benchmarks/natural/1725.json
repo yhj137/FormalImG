@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk scene, a man wearing a shirt with a phone inside holds a cat. A table stands next to the man. Every fork is placed on the table, along with a round mirror. A cup containing a pair of glasses sits next to the mirror.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?man (exists ?shirt (exists ?phone (exists ?cat (exists ?table (and (Is ?man 'man') (Is ?shirt 'shirt') (On ?shirt ?man) (Is ?phone 'phone') (In ?phone ?shirt) (Is ?cat 'cat') (Holding ?man ?cat) (Is ?table 'table') (NextTo ?table ?man) (forall ?fork (implies (Is ?fork 'fork') (On ?fork ?table))) (exists ?mirror (exists ?cup (exists ?glasses (and (Is ?mirror 'mirror') (HasShape ?mirror 'round') (On ?mirror ?table) (Is ?cup 'cup') (NextTo ?cup ?mirror) (Is ?glasses 'glasses') (In ?glasses ?cup))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?man (exists ?shirt (exists ?phone (exists ?cat (exists ?table (forall ?fork (exists ?mirror (exists ?cup (exists ?glasses (and (Is ?man 'man') (On ?shirt ?man) (Holding ?man ?cat) (Is ?shirt 'shirt') (In ?phone ?shirt) (NextTo ?table ?man) (Is ?cat 'cat') (Is ?phone 'phone') (Is ?table 'table') (or (not (Is ?fork 'fork')) (On ?fork ?table)) (On ?mirror ?table) (HasShape ?mirror 'round') (NextTo ?cup ?mirror) (Is ?mirror 'mirror') (Is ?cup 'cup') (In ?glasses ?cup) (Is ?glasses 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "fork",
+        "glasses",
+        "man",
+        "table",
+        "mirror",
+        "cup",
+        "cat"
+    ]
+}

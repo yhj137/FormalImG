@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of a standing person are dirty shoes containing every screwdriver.",
+    "dsl": "(exists ?p (exists ?s (and (Is ?p 'person') (HasState ?p 'standing') (Is ?s 'shoes') (HasState ?s 'dirty') (RightOf ?s ?p) (forall ?d (implies (Is ?d 'screwdriver') (In ?d ?s))))))",
+    "cnf": "(exists ?p (exists ?s (forall ?d (and (Is ?p 'person') (HasState ?p 'standing') (RightOf ?s ?p) (HasState ?s 'dirty') (or (not (Is ?d 'screwdriver')) (In ?d ?s)) (Is ?s 'shoes')))))",
+    "k": 3,
+    "object_classes": [
+        "person",
+        "shoes",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman wearing red shoes sits on a bicycle holding a hammer. A basket containing a round cup rests on the bicycle. A cake is to the left of the bicycle, while all cars in the scene are positioned to the right of the bicycle.",
+    "dsl": "(exists ?w (exists ?bi (exists ?h (and (Is ?w 'woman') (Is ?bi 'bicycle') (Is ?h 'hammer') (On ?w ?bi) (Holding ?w ?h) (forall ?c (implies (Is ?c 'car') (RightOf ?c ?bi))) (exists ?ba (exists ?cu (exists ?s (exists ?ka (and (Is ?ba 'basket') (Is ?cu 'cup') (Is ?s 'shoes') (Is ?ka 'cake') (On ?ba ?bi) (In ?cu ?ba) (HasShape ?cu 'round') (On ?s ?w) (HasColor ?s 'red') (LeftOf ?ka ?bi))))))))))",
+    "cnf": "(exists ?w (exists ?bi (exists ?h (forall ?c (exists ?ba (exists ?cu (exists ?s (exists ?ka (and (Is ?w 'woman') (On ?w ?bi) (Holding ?w ?h) (Is ?bi 'bicycle') (or (not (Is ?c 'car')) (RightOf ?c ?bi)) (On ?s ?w) (Is ?h 'hammer') (On ?ba ?bi) (Is ?s 'shoes') (HasColor ?s 'red') (LeftOf ?ka ?bi) (Is ?ba 'basket') (In ?cu ?ba) (Is ?ka 'cake') (Is ?cu 'cup') (HasShape ?cu 'round'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "cake",
+        "shoes",
+        "hammer",
+        "basket",
+        "cup",
+        "woman",
+        "bicycle",
+        "car"
+    ]
+}

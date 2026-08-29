@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every pair of headphones in the image is white.",
+    "dsl": "(forall ?h (implies (Is ?h 'headphones') (Has ?h 'white')))",
+    "cnf": "(forall ?h (or (not (Is ?h 'headphones')) (Has ?h 'white')))",
+    "k": 1,
+    "object_classes": [
+        "headphones"
+    ]
+}

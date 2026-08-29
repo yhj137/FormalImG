@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the left side, located directly above a laptop. A cutting board is aligned horizontally with the laptop, such that the laptop is to the left of the cutting board. A knife is placed on the right side of the image, positioned to the right of the cutting board. Furthermore, for every spoon in the scene, it is placed above the cutting board, and there is a donut to the right of that spoon.",
+    "dsl": "(exists ?m (exists ?l (exists ?cb (exists ?k (and (Is ?m 'monitor') (Is ?l 'laptop') (Is ?cb 'cutting_board') (Is ?k 'knife') (OnLeftSide ?m) (Above ?m ?l) (AlignedHorizontally ?l ?cb) (LeftOf ?l ?cb) (OnRightSide ?k) (RightOf ?k ?cb) (forall ?s (implies (Is ?s 'spoon') (exists ?d (and (Is ?d 'donut') (Above ?s ?cb) (RightOf ?d ?s))))))))))",
+    "cnf": "(exists ?m (exists ?l (exists ?cb (exists ?k (forall ?s (exists ?d (and (Is ?m 'monitor') (OnLeftSide ?m) (Above ?m ?l) (Is ?l 'laptop') (AlignedHorizontally ?l ?cb) (LeftOf ?l ?cb) (Is ?cb 'cutting_board') (RightOf ?k ?cb) (or (not (Is ?s 'spoon')) (Above ?s ?cb)) (OnRightSide ?k) (or (not (Is ?s 'spoon')) (Is ?d 'donut')) (or (not (Is ?s 'spoon')) (RightOf ?d ?s)) (Is ?k 'knife'))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "cutting_board",
+        "knife",
+        "monitor",
+        "donut",
+        "spoon"
+    ]
+}

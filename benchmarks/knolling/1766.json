@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged set of items. A keyboard is positioned on the bottom side of the layout. Directly above the keyboard is a mouse, and directly above the mouse are headphones; these three items are aligned vertically, and the mouse is smaller than the keyboard. To the left of the keyboard lies a sandwich, while a stapler is placed to the right of the keyboard. Similarly, a donut is located to the left of the mouse, and a wallet is positioned to the right of the mouse. Finally, for every set of keys in the scene, there is a lighter to its right, and this lighter is also situated to the left of the headphones.",
+    "dsl": "(exists ?keyboard (exists ?mouse (exists ?headphones (exists ?sandwich (exists ?stapler (exists ?donut (exists ?wallet (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Is ?mouse 'mouse') (Above ?mouse ?keyboard) (AlignedVertically ?mouse ?keyboard) (SmallerThan ?mouse ?keyboard) (Is ?headphones 'headphones') (Above ?headphones ?mouse) (AlignedVertically ?headphones ?mouse) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?keyboard) (Is ?stapler 'stapler') (RightOf ?stapler ?keyboard) (Is ?donut 'donut') (LeftOf ?donut ?mouse) (Is ?wallet 'wallet') (RightOf ?wallet ?mouse) (forall ?keys (implies (Is ?keys 'keys') (exists ?lighter (and (Is ?lighter 'lighter') (RightOf ?lighter ?keys) (LeftOf ?lighter ?headphones)))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?mouse (exists ?headphones (exists ?sandwich (exists ?stapler (exists ?donut (exists ?wallet (forall ?keys (exists ?lighter (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Above ?mouse ?keyboard) (AlignedVertically ?mouse ?keyboard) (Is ?mouse 'mouse') (SmallerThan ?mouse ?keyboard) (LeftOf ?sandwich ?keyboard) (Above ?headphones ?mouse) (RightOf ?stapler ?keyboard) (Is ?sandwich 'sandwich') (AlignedVertically ?headphones ?mouse) (Is ?headphones 'headphones') (Is ?stapler 'stapler') (LeftOf ?donut ?mouse) (or (not (Is ?keys 'keys')) (LeftOf ?lighter ?headphones)) (RightOf ?wallet ?mouse) (Is ?donut 'donut') (or (not (Is ?keys 'keys')) (RightOf ?lighter ?keys)) (Is ?wallet 'wallet') (or (not (Is ?keys 'keys')) (Is ?lighter 'lighter'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "lighter",
+        "keys",
+        "mouse",
+        "headphones",
+        "keyboard",
+        "wallet",
+        "stapler",
+        "sandwich",
+        "donut"
+    ]
+}

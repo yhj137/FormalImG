@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman wearing dirty glasses and holding a basket. Every orange in the scene is round and sits inside the basket.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'basket') (forall ?o (implies (Is ?o 'orange') (and (HasShape ?o 'round') (In ?o ?b)))) (exists ?w (and (Is ?w 'woman') (Holding ?w ?b) (exists ?g (and (Is ?g 'glasses') (HasState ?g 'dirty') (On ?g ?w))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?o (exists ?w (exists ?g (and (Is ?b 'basket') (or (not (Is ?o 'orange')) (In ?o ?b)) (Holding ?w ?b) (or (not (Is ?o 'orange')) (HasShape ?o 'round')) (Is ?w 'woman') (On ?g ?w) (HasState ?g 'dirty') (Is ?g 'glasses')))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "basket",
+        "orange",
+        "woman"
+    ]
+}

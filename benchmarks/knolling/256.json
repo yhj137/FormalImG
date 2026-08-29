@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a brown shoe and a blue pen, where the brown shoe is visually larger than the blue pen.",
+    "dsl": "(exists ?shoe (exists ?pen (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (Is ?pen 'pen') (Has ?pen 'blue') (LargerThan ?shoe ?pen))))",
+    "cnf": "(exists ?shoe (exists ?pen (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (LargerThan ?shoe ?pen) (Has ?pen 'blue') (Is ?pen 'pen'))))",
+    "k": 2,
+    "object_classes": [
+        "shoe",
+        "pen"
+    ]
+}

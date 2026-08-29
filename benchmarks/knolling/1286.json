@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a suitcase located on the left side of the image, which is positioned strictly to the left of a shoe. For every glove present in the composition, it is arranged below the suitcase. A pan is placed to the right of the shoe. Above the pan, there is an apple. A ruler is situated on the bottom side of the layout and is located below the pan. Finally, a pen is placed to the right of the ruler.",
+    "dsl": "(exists ?suitcase (exists ?shoe (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?shoe 'shoe') (LeftOf ?suitcase ?shoe) (forall ?glove (implies (Is ?glove 'glove') (Below ?glove ?suitcase))) (exists ?pan (exists ?apple (exists ?ruler (exists ?pen (and (Is ?pan 'pan') (RightOf ?pan ?shoe) (Is ?apple 'apple') (Above ?apple ?pan) (Is ?ruler 'ruler') (OnBottomSide ?ruler) (Below ?ruler ?pan) (Is ?pen 'pen') (RightOf ?pen ?ruler)))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (forall ?glove (exists ?pan (exists ?apple (exists ?ruler (exists ?pen (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?shoe) (or (not (Is ?glove 'glove')) (Below ?glove ?suitcase)) (Is ?shoe 'shoe') (RightOf ?pan ?shoe) (Is ?pan 'pan') (Above ?apple ?pan) (Below ?ruler ?pan) (Is ?apple 'apple') (OnBottomSide ?ruler) (RightOf ?pen ?ruler) (Is ?ruler 'ruler') (Is ?pen 'pen')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "pen",
+        "pan",
+        "suitcase",
+        "glove",
+        "shoe"
+    ]
+}

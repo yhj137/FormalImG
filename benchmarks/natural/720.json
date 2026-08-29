@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene. A chair is positioned to the right of a rock. Every fish is located to the left of the rock, and a blue car is to the right of the chair.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?ch (and (Is ?r 'rock') (Is ?ch 'chair') (RightOf ?ch ?r) (forall ?f (implies (Is ?f 'fish') (LeftOf ?f ?r))) (exists ?c (and (Is ?c 'car') (HasColor ?c 'blue') (RightOf ?c ?ch)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?ch (forall ?f (exists ?c (and (Is ?r 'rock') (RightOf ?ch ?r) (or (not (Is ?f 'fish')) (LeftOf ?f ?r)) (Is ?ch 'chair') (RightOf ?c ?ch) (HasColor ?c 'blue') (Is ?c 'car')))))))",
+    "k": 4,
+    "object_classes": [
+        "rock",
+        "chair",
+        "fish",
+        "car"
+    ]
+}

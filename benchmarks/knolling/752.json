@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the bottom side of the layout. To the right of the suitcase is a pizza, which is smaller than the suitcase. Every apple is positioned on the top side and has a stapler to its left that is smaller than the pizza.",
+    "dsl": "(exists ?suitcase (exists ?pizza (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?pizza 'pizza') (RightOf ?pizza ?suitcase) (SmallerThan ?pizza ?suitcase) (forall ?apple (implies (Is ?apple 'apple') (exists ?stapler (and (Is ?stapler 'stapler') (OnTopSide ?apple) (LeftOf ?stapler ?apple) (SmallerThan ?stapler ?pizza))))))))",
+    "cnf": "(exists ?suitcase (exists ?pizza (forall ?apple (exists ?stapler (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (RightOf ?pizza ?suitcase) (SmallerThan ?pizza ?suitcase) (Is ?pizza 'pizza') (or (not (Is ?apple 'apple')) (SmallerThan ?stapler ?pizza)) (or (not (Is ?apple 'apple')) (LeftOf ?stapler ?apple)) (or (not (Is ?apple 'apple')) (Is ?stapler 'stapler')) (or (not (Is ?apple 'apple')) (OnTopSide ?apple)))))))",
+    "k": 4,
+    "object_classes": [
+        "suitcase",
+        "pizza",
+        "stapler",
+        "apple"
+    ]
+}

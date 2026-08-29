@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene with an open refrigerator containing a round orange and a piece of fruit. Next to the refrigerator is a child holding a hammer. To the left of the child is a rock with a toy car on top, and a ball is next to the rock.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?ref (exists ?o (exists ?f (exists ?c (exists ?h (exists ?r (exists ?t (exists ?b (and (Is ?ref 'refrigerator') (HasState ?ref 'open') (Is ?o 'orange') (HasShape ?o 'round') (Is ?f 'fruit') (Is ?c 'child') (Is ?h 'hammer') (Is ?r 'rock') (Is ?t 'toy car') (Is ?b 'ball') (In ?o ?ref) (In ?f ?ref) (NextTo ?c ?ref) (Holding ?c ?h) (LeftOf ?r ?c) (On ?t ?r) (NextTo ?b ?r)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?ref (exists ?o (exists ?f (exists ?c (exists ?h (exists ?r (exists ?t (exists ?b (and (Is ?ref 'refrigerator') (HasState ?ref 'open') (In ?o ?ref) (In ?f ?ref) (HasShape ?o 'round') (NextTo ?c ?ref) (Is ?f 'fruit') (Is ?o 'orange') (Is ?c 'child') (Holding ?c ?h) (LeftOf ?r ?c) (Is ?h 'hammer') (Is ?r 'rock') (On ?t ?r) (NextTo ?b ?r) (Is ?t 'toy car') (Is ?b 'ball')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "rock",
+        "toy car",
+        "ball",
+        "hammer",
+        "refrigerator",
+        "fruit",
+        "child",
+        "orange"
+    ]
+}

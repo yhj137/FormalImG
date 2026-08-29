@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black monitor, a pizza, a brown wallet, a white phone, and a watch, arranged in a row from left to right. The monitor is larger than the phone, and the pizza is larger than the watch. For every lemon in the image, it is yellow and is followed by a sequence of objects to its right: a ruler, a red screwdriver, a fork, and a knife. The lemon is vertically aligned with the monitor, the ruler with the pizza, the screwdriver with the wallet, the fork with the phone, and the knife with the watch.",
+    "dsl": "(exists ?monitor (exists ?pizza (exists ?wallet (exists ?phone (exists ?watch (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?pizza 'pizza') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?phone 'phone') (Has ?phone 'white') (Is ?watch 'watch') (RightOf ?pizza ?monitor) (RightOf ?wallet ?pizza) (RightOf ?phone ?wallet) (RightOf ?watch ?phone) (LargerThan ?monitor ?phone) (LargerThan ?pizza ?watch) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?ruler (exists ?screwdriver (exists ?fork (exists ?knife (and (Has ?lemon 'yellow') (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?fork 'fork') (Is ?knife 'knife') (RightOf ?ruler ?lemon) (RightOf ?screwdriver ?ruler) (RightOf ?fork ?screwdriver) (RightOf ?knife ?fork) (AlignedVertically ?monitor ?lemon) (AlignedVertically ?pizza ?ruler) (AlignedVertically ?wallet ?screwdriver) (AlignedVertically ?phone ?fork) (AlignedVertically ?watch ?knife))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?pizza (exists ?wallet (exists ?phone (exists ?watch (forall ?lemon (exists ?ruler (exists ?screwdriver (exists ?fork (exists ?knife (and (Is ?monitor 'monitor') (Has ?monitor 'black') (RightOf ?pizza ?monitor) (LargerThan ?monitor ?phone) (Is ?pizza 'pizza') (RightOf ?wallet ?pizza) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?monitor ?lemon)) (RightOf ?watch ?phone) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?phone ?fork)) (LargerThan ?pizza ?watch) (Has ?wallet 'brown') (RightOf ?phone ?wallet) (or (not (Is ?lemon 'lemon')) (RightOf ?knife ?fork)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?pizza ?ruler)) (Is ?watch 'watch') (or (not (Is ?lemon 'lemon')) (AlignedVertically ?wallet ?screwdriver)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?watch ?knife)) (Is ?wallet 'wallet') (Has ?phone 'white') (or (not (Is ?lemon 'lemon')) (RightOf ?fork ?screwdriver)) (or (not (Is ?lemon 'lemon')) (Is ?knife 'knife')) (or (not (Is ?lemon 'lemon')) (RightOf ?screwdriver ?ruler)) (Is ?phone 'phone') (or (not (Is ?lemon 'lemon')) (Is ?fork 'fork')) (or (not (Is ?lemon 'lemon')) (RightOf ?ruler ?lemon)) (or (not (Is ?lemon 'lemon')) (Has ?screwdriver 'red')) (or (not (Is ?lemon 'lemon')) (Is ?ruler 'ruler')) (or (not (Is ?lemon 'lemon')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?lemon 'lemon')) (Has ?lemon 'yellow')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "phone",
+        "pizza",
+        "watch",
+        "screwdriver",
+        "fork",
+        "wallet",
+        "knife",
+        "monitor"
+    ]
+}

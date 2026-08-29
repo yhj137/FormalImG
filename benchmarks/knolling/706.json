@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black monitor. For every wallet in the scene, it is positioned such that it is aligned vertically with the monitor. Furthermore, there is a cutting board aligned horizontally with the wallet, and a pair of blue jeans aligned vertically with the cutting board.",
+    "dsl": "(exists ?m (and (Is ?m 'monitor') (Has ?m 'black') (forall ?w (implies (Is ?w 'wallet') (exists ?cb (exists ?j (and (Is ?cb 'cutting_board') (Is ?j 'jeans') (Has ?j 'blue') (AlignedVertically ?w ?m) (AlignedHorizontally ?cb ?w) (AlignedVertically ?j ?cb))))))))",
+    "cnf": "(exists ?m (forall ?w (exists ?cb (exists ?j (and (Is ?m 'monitor') (Has ?m 'black') (or (not (Is ?w 'wallet')) (AlignedVertically ?w ?m)) (or (not (Is ?w 'wallet')) (Has ?j 'blue')) (or (not (Is ?w 'wallet')) (AlignedHorizontally ?cb ?w)) (or (not (Is ?w 'wallet')) (Is ?j 'jeans')) (or (not (Is ?w 'wallet')) (AlignedVertically ?j ?cb)) (or (not (Is ?w 'wallet')) (Is ?cb 'cutting_board')))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "cutting_board",
+        "wallet",
+        "jeans"
+    ]
+}

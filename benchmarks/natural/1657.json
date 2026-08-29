@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A woman wearing glasses is located inside a house. All cups in the image are positioned to the left of the woman. To the right of the woman stands a wooden wardrobe, and a sleeping lion lies next to it. A cylindrical bottle is also next to the woman, with a bowl containing fruit placed to the right of the bottle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'woman') (forall ?c (implies (Is ?c 'cup') (LeftOf ?c ?w))) (exists ?h (and (Is ?h 'house') (In ?w ?h))) (exists ?wd (and (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (RightOf ?wd ?w) (exists ?l (and (Is ?l 'lion') (HasState ?l 'sleeping') (NextTo ?l ?wd))))) (exists ?gl (and (Is ?gl 'glasses') (On ?gl ?w))) (exists ?bt (and (Is ?bt 'bottle') (HasShape ?bt 'cylindrical') (NextTo ?bt ?w) (exists ?bo (and (Is ?bo 'bowl') (RightOf ?bo ?bt) (exists ?f (and (Is ?f 'fruit') (In ?f ?bo))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?c (exists ?h (exists ?wd (exists ?l (exists ?gl (exists ?bt (exists ?bo (exists ?f (and (Is ?w 'woman') (or (not (Is ?c 'cup')) (LeftOf ?c ?w)) (In ?w ?h) (RightOf ?wd ?w) (Is ?h 'house') (On ?gl ?w) (HasMaterial ?wd 'wooden') (NextTo ?l ?wd) (NextTo ?bt ?w) (Is ?gl 'glasses') (Is ?wd 'wardrobe') (HasState ?l 'sleeping') (HasShape ?bt 'cylindrical') (RightOf ?bo ?bt) (Is ?l 'lion') (Is ?bt 'bottle') (Is ?bo 'bowl') (In ?f ?bo) (Is ?f 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "glasses",
+        "bowl",
+        "wardrobe",
+        "cup",
+        "woman",
+        "house",
+        "lion",
+        "fruit"
+    ]
+}

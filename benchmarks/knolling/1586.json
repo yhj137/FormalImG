@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a hat, a tie, a game controller, a remote, a cutting board, a sandwich, and a wrench. The hat is located to the left of the game controller, and the game controller is to the left of the cutting board. Vertically, the tie is aligned with the hat, the remote is aligned with the game controller, and the sandwich is aligned with the cutting board. The cutting board is larger than the sandwich. The wrench is positioned on the bottom side of the image and is aligned horizontally with the tie. Furthermore, every spoon in the image is aligned vertically with the sandwich.",
+    "dsl": "(exists ?hat (exists ?tie (exists ?gc (exists ?remote (exists ?cb (exists ?sandwich (exists ?wrench (and (Is ?hat 'hat') (Is ?tie 'tie') (Is ?gc 'game_controller') (Is ?remote 'remote') (Is ?cb 'cutting_board') (Is ?sandwich 'sandwich') (Is ?wrench 'wrench') (LeftOf ?hat ?gc) (LeftOf ?gc ?cb) (AlignedVertically ?hat ?tie) (AlignedVertically ?gc ?remote) (AlignedVertically ?sandwich ?cb) (LargerThan ?cb ?sandwich) (OnBottomSide ?wrench) (AlignedHorizontally ?wrench ?tie) (forall ?spoon (implies (Is ?spoon 'spoon') (AlignedVertically ?spoon ?sandwich)))))))))))",
+    "cnf": "(exists ?hat (exists ?tie (exists ?gc (exists ?remote (exists ?cb (exists ?sandwich (exists ?wrench (forall ?spoon (and (Is ?hat 'hat') (LeftOf ?hat ?gc) (AlignedVertically ?hat ?tie) (Is ?gc 'game_controller') (LeftOf ?gc ?cb) (Is ?tie 'tie') (AlignedHorizontally ?wrench ?tie) (AlignedVertically ?gc ?remote) (Is ?cb 'cutting_board') (AlignedVertically ?sandwich ?cb) (OnBottomSide ?wrench) (Is ?remote 'remote') (LargerThan ?cb ?sandwich) (Is ?sandwich 'sandwich') (Is ?wrench 'wrench') (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?sandwich)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "remote",
+        "wrench",
+        "game_controller",
+        "cutting_board",
+        "hat",
+        "spoon",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf containing a teddy bear stands next to a square chair, and every bird in the scene is sitting on the chair.",
+    "dsl": "(exists ?b (exists ?c (and (Is ?b 'bookshelf') (Is ?c 'chair') (NextTo ?b ?c) (HasShape ?c 'square') (forall ?bi (implies (Is ?bi 'bird') (On ?bi ?c))) (exists ?t (and (Is ?t 'teddy bear') (In ?t ?b))))))",
+    "cnf": "(exists ?b (exists ?c (forall ?bi (exists ?t (and (Is ?b 'bookshelf') (NextTo ?b ?c) (In ?t ?b) (Is ?c 'chair') (HasShape ?c 'square') (Is ?t 'teddy bear') (or (not (Is ?bi 'bird')) (On ?bi ?c)))))))",
+    "k": 4,
+    "object_classes": [
+        "chair",
+        "teddy bear",
+        "bookshelf",
+        "bird"
+    ]
+}

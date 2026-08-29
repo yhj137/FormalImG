@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hammer located on the top side and a pizza positioned on the right side. For every bowl in the image, there is a lighter to its left and a spoon aligned horizontally with it. Furthermore, the lighter is vertically aligned with the hammer, and the spoon is vertically aligned with the pizza.",
+    "dsl": "(exists ?hammer (exists ?pizza (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (Is ?pizza 'pizza') (OnRightSide ?pizza) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?lighter (exists ?spoon (and (Is ?lighter 'lighter') (Is ?spoon 'spoon') (LeftOf ?lighter ?bowl) (AlignedHorizontally ?spoon ?bowl) (AlignedVertically ?lighter ?hammer) (AlignedVertically ?spoon ?pizza)))))))))",
+    "cnf": "(exists ?hammer (exists ?pizza (forall ?bowl (exists ?lighter (exists ?spoon (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (or (not (Is ?bowl 'bowl')) (AlignedVertically ?lighter ?hammer)) (or (not (Is ?bowl 'bowl')) (LeftOf ?lighter ?bowl)) (or (not (Is ?bowl 'bowl')) (AlignedHorizontally ?spoon ?bowl)) (or (not (Is ?bowl 'bowl')) (AlignedVertically ?spoon ?pizza)) (or (not (Is ?bowl 'bowl')) (Is ?lighter 'lighter')) (or (not (Is ?bowl 'bowl')) (Is ?spoon 'spoon')) (OnRightSide ?pizza) (Is ?pizza 'pizza')))))))",
+    "k": 5,
+    "object_classes": [
+        "lighter",
+        "spoon",
+        "hammer",
+        "pizza",
+        "bowl"
+    ]
+}

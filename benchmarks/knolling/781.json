@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the top side of the layout. There is a ruler located below the drill, and a calculator is placed below the ruler. Additionally, every wrench present in the scene is smaller than the drill.",
+    "dsl": "(exists ?d (exists ?r (exists ?c (and (Is ?d 'drill') (OnTopSide ?d) (Is ?r 'ruler') (Above ?d ?r) (Is ?c 'calculator') (Above ?r ?c) (forall ?w (implies (Is ?w 'wrench') (SmallerThan ?w ?d)))))))",
+    "cnf": "(exists ?d (exists ?r (exists ?c (forall ?w (and (Is ?d 'drill') (OnTopSide ?d) (Above ?d ?r) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?d)) (Is ?r 'ruler') (Above ?r ?c) (Is ?c 'calculator'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "drill",
+        "calculator",
+        "ruler"
+    ]
+}

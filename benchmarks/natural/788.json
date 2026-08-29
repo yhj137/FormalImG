@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A keyboard is located to the left of a table, with a pair of round glasses next to the keyboard. Every fish is positioned to the right of the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?k (exists ?g (and (Is ?t 'table') (Is ?k 'keyboard') (Is ?g 'glasses') (HasShape ?g 'round') (LeftOf ?k ?t) (NextTo ?g ?k) (forall ?f (implies (Is ?f 'fish') (RightOf ?f ?t))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?k (exists ?g (forall ?f (and (Is ?t 'table') (LeftOf ?k ?t) (or (not (Is ?f 'fish')) (RightOf ?f ?t)) (Is ?k 'keyboard') (NextTo ?g ?k) (HasShape ?g 'round') (Is ?g 'glasses')))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "fish",
+        "glasses",
+        "table"
+    ]
+}

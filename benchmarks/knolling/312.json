@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop positioned on the left side of the frame, there is a pair of headphones located to the right of it.",
+    "dsl": "(and (forall ?l (implies (and (Is ?l 'laptop') (OnLeftSide ?l)) (exists ?h (and (Is ?h 'headphones') (RightOf ?h ?l))))))",
+    "cnf": "(forall ?l (exists ?h (and (or (not (Is ?l 'laptop')) (not (OnLeftSide ?l)) (Is ?h 'headphones')) (or (not (Is ?l 'laptop')) (not (OnLeftSide ?l)) (RightOf ?h ?l)))))",
+    "k": 2,
+    "object_classes": [
+        "laptop",
+        "headphones"
+    ]
+}

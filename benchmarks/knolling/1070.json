@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue backpack positioned on the right side of the scene. For every lemon present, the following arrangement is observed: the lemon is smaller than the backpack, and there exists a vertical column of items aligned directly above the backpack. This column consists of a cutting board, a wallet, a white glove, and a wrench, arranged in that order from bottom to top. All these items are aligned vertically with each other and the backpack. Additionally, the cutting board is visually larger than the wallet.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnRightSide ?backpack) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?cutting_board (exists ?wallet (exists ?glove (exists ?wrench (and (Is ?cutting_board 'cutting_board') (Is ?wallet 'wallet') (Is ?glove 'glove') (Has ?glove 'white') (Is ?wrench 'wrench') (SmallerThan ?lemon ?backpack) (Above ?cutting_board ?backpack) (AlignedVertically ?cutting_board ?backpack) (Above ?wallet ?cutting_board) (AlignedVertically ?wallet ?cutting_board) (Above ?glove ?wallet) (AlignedVertically ?glove ?wallet) (Above ?wrench ?glove) (AlignedVertically ?wrench ?glove) (LargerThan ?cutting_board ?wallet))))))))))",
+    "cnf": "(exists ?backpack (forall ?lemon (exists ?cutting_board (exists ?wallet (exists ?glove (exists ?wrench (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnRightSide ?backpack) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?backpack)) (or (not (Is ?lemon 'lemon')) (Above ?cutting_board ?backpack)) (or (not (Is ?lemon 'lemon')) (Is ?wrench 'wrench')) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?cutting_board ?backpack)) (or (not (Is ?lemon 'lemon')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?lemon 'lemon')) (Has ?glove 'white')) (or (not (Is ?lemon 'lemon')) (Above ?wrench ?glove)) (or (not (Is ?lemon 'lemon')) (Above ?wallet ?cutting_board)) (or (not (Is ?lemon 'lemon')) (Is ?wallet 'wallet')) (or (not (Is ?lemon 'lemon')) (Is ?glove 'glove')) (or (not (Is ?lemon 'lemon')) (Above ?glove ?wallet)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?glove ?wallet)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?wrench ?glove)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?wallet ?cutting_board)) (or (not (Is ?lemon 'lemon')) (LargerThan ?cutting_board ?wallet)))))))))",
+    "k": 6,
+    "object_classes": [
+        "wrench",
+        "lemon",
+        "cutting_board",
+        "backpack",
+        "wallet",
+        "glove"
+    ]
+}

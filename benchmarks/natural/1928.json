@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden desk inside a house. A child holding an umbrella stands next to the desk, along with a plant. A keyboard, a blue shirt, and every book in the scene are on the desk. A ceramic bowl sits next to the keyboard. A gray elephant stands next to the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?d (exists ?c (exists ?u (exists ?k (exists ?p (and (Is ?h 'house') (Is ?d 'desk') (HasMaterial ?d 'wooden') (In ?d ?h) (Is ?c 'child') (NextTo ?c ?d) (Is ?u 'umbrella') (Holding ?c ?u) (Is ?k 'keyboard') (On ?k ?d) (Is ?p 'plant') (NextTo ?p ?d) (forall ?b (implies (Is ?b 'book') (On ?b ?d))) (exists ?bo (and (Is ?bo 'bowl') (HasMaterial ?bo 'ceramic') (NextTo ?bo ?k))) (exists ?s (and (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?d))) (exists ?e (and (Is ?e 'elephant') (HasColor ?e 'gray') (NextTo ?e ?h)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?d (exists ?c (exists ?u (exists ?k (exists ?p (forall ?b (exists ?bo (exists ?s (exists ?e (and (Is ?h 'house') (In ?d ?h) (NextTo ?e ?h) (HasMaterial ?d 'wooden') (NextTo ?c ?d) (HasColor ?e 'gray') (Is ?d 'desk') (On ?k ?d) (Is ?c 'child') (Holding ?c ?u) (Is ?e 'elephant') (NextTo ?p ?d) (Is ?k 'keyboard') (NextTo ?bo ?k) (Is ?u 'umbrella') (or (not (Is ?b 'book')) (On ?b ?d)) (Is ?p 'plant') (HasMaterial ?bo 'ceramic') (On ?s ?d) (Is ?bo 'bowl') (HasColor ?s 'blue') (Is ?s 'shirt')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "bowl",
+        "plant",
+        "desk",
+        "book",
+        "shirt",
+        "elephant",
+        "house",
+        "child"
+    ]
+}

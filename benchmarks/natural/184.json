@@ -1,0 +1,9 @@
+{
+    "prompt": "This is a cyberpunk style image. All benches in the scene are rusty.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bench') (HasState ?b 'rusty'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (or (not (Is ?b 'bench')) (HasState ?b 'rusty'))))",
+    "k": 1,
+    "object_classes": [
+        "bench"
+    ]
+}

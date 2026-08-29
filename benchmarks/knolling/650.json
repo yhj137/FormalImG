@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, it is positioned on the left side of the image. Arranged relative to each backpack, there is a pizza located directly below it. Furthermore, a cup is positioned below the pizza, and this cup is placed to the left of a tie.",
+    "dsl": "(and (forall ?b (implies (Is ?b 'backpack') (exists ?p (exists ?c (exists ?t (and (Is ?p 'pizza') (Is ?c 'cup') (Is ?t 'tie') (OnLeftSide ?b) (Below ?p ?b) (Below ?c ?p) (LeftOf ?c ?t))))))))",
+    "cnf": "(forall ?b (exists ?p (exists ?c (exists ?t (and (or (not (Is ?b 'backpack')) (Is ?p 'pizza')) (or (not (Is ?b 'backpack')) (Below ?p ?b)) (or (not (Is ?b 'backpack')) (Is ?c 'cup')) (or (not (Is ?b 'backpack')) (Below ?c ?p)) (or (not (Is ?b 'backpack')) (OnLeftSide ?b)) (or (not (Is ?b 'backpack')) (Is ?t 'tie')) (or (not (Is ?b 'backpack')) (LeftOf ?c ?t)))))))",
+    "k": 4,
+    "object_classes": [
+        "tie",
+        "backpack",
+        "pizza",
+        "cup"
+    ]
+}

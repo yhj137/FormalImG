@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a bus. Every butterfly is on the bus, and a round apple is located to the left of the bus.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bus') (forall ?f (implies (Is ?f 'butterfly') (On ?f ?b))) (exists ?a (and (Is ?a 'apple') (HasShape ?a 'round') (LeftOf ?a ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?f (exists ?a (and (Is ?b 'bus') (or (not (Is ?f 'butterfly')) (On ?f ?b)) (LeftOf ?a ?b) (HasShape ?a 'round') (Is ?a 'apple'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "apple",
+        "bus"
+    ]
+}

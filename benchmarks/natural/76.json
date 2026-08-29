@@ -1,0 +1,9 @@
+{
+    "prompt": "A rectangular book.",
+    "dsl": "(exists ?b (and (Is ?b 'book') (HasShape ?b 'rectangular')))",
+    "cnf": "(exists ?b (and (Is ?b 'book') (HasShape ?b 'rectangular')))",
+    "k": 1,
+    "object_classes": [
+        "book"
+    ]
+}

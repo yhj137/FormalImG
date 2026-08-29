@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A man sits on a rectangular bed, holding a black hammer. To the right of every bird, an open umbrella rests on the bed, accompanied by headphones and a broken toy car with a banana to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?ha (and (Is ?m 'man') (Is ?b 'bed') (Is ?ha 'hammer') (HasState ?m 'sitting') (On ?m ?b) (HasShape ?b 'rectangular') (Holding ?m ?ha) (HasColor ?ha 'black') (forall ?bi (implies (Is ?bi 'bird') (exists ?u (exists ?h (exists ?t (exists ?ba (and (Is ?u 'umbrella') (Is ?h 'headphones') (Is ?t 'toy car') (Is ?ba 'banana') (HasState ?u 'open') (RightOf ?u ?bi) (On ?u ?b) (On ?h ?b) (On ?t ?b) (HasState ?t 'broken') (LeftOf ?ba ?t)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?ha (forall ?bi (exists ?u (exists ?h (exists ?t (exists ?ba (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?b) (Holding ?m ?ha) (Is ?b 'bed') (HasShape ?b 'rectangular') (Is ?ha 'hammer') (HasColor ?ha 'black') (or (not (Is ?bi 'bird')) (On ?u ?b)) (or (not (Is ?bi 'bird')) (On ?h ?b)) (or (not (Is ?bi 'bird')) (RightOf ?u ?bi)) (or (not (Is ?bi 'bird')) (On ?t ?b)) (or (not (Is ?bi 'bird')) (Is ?h 'headphones')) (or (not (Is ?bi 'bird')) (HasState ?u 'open')) (or (not (Is ?bi 'bird')) (HasState ?t 'broken')) (or (not (Is ?bi 'bird')) (Is ?t 'toy car')) (or (not (Is ?bi 'bird')) (Is ?u 'umbrella')) (or (not (Is ?bi 'bird')) (Is ?ba 'banana')) (or (not (Is ?bi 'bird')) (LeftOf ?ba ?t))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "bed",
+        "man",
+        "bird",
+        "hammer",
+        "toy car",
+        "banana"
+    ]
+}

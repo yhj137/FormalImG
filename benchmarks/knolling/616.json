@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a drill, keys, a glove, and a wrench. The drill is positioned on the left side of the image, and the keys are placed to the right of the drill. A glove is aligned vertically with the drill and positioned to the left of the wrench. The wrench is aligned vertically with the keys and is located on the bottom side of the layout.",
+    "dsl": "(exists ?d (exists ?k (exists ?g (exists ?w (and (Is ?d 'drill') (Is ?k 'keys') (Is ?g 'glove') (Is ?w 'wrench') (OnLeftSide ?d) (RightOf ?k ?d) (AlignedVertically ?g ?d) (LeftOf ?g ?w) (AlignedVertically ?w ?k) (OnBottomSide ?w))))))",
+    "cnf": "(exists ?d (exists ?k (exists ?g (exists ?w (and (Is ?d 'drill') (OnLeftSide ?d) (RightOf ?k ?d) (AlignedVertically ?g ?d) (Is ?k 'keys') (AlignedVertically ?w ?k) (Is ?g 'glove') (LeftOf ?g ?w) (OnBottomSide ?w) (Is ?w 'wrench'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "drill",
+        "keys",
+        "glove"
+    ]
+}

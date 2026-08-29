@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill, a screwdriver, and a bottle aligned vertically in a column. To the right of the bottle is a bowl, which forms another vertical alignment with a cup and a donut. A knife is positioned to the right of the donut, located on the right side of the image.",
+    "dsl": "(exists ?drill (exists ?screwdriver (exists ?bottle (exists ?bowl (exists ?cup (exists ?donut (exists ?knife (and (Is ?drill 'drill') (Is ?screwdriver 'screwdriver') (Is ?bottle 'bottle') (Is ?bowl 'bowl') (Is ?cup 'cup') (Is ?donut 'donut') (Is ?knife 'knife') (AlignedVertically ?drill ?screwdriver) (AlignedVertically ?screwdriver ?bottle) (RightOf ?bowl ?bottle) (AlignedVertically ?bowl ?cup) (AlignedVertically ?cup ?donut) (RightOf ?knife ?donut) (OnRightSide ?knife)))))))))",
+    "cnf": "(exists ?drill (exists ?screwdriver (exists ?bottle (exists ?bowl (exists ?cup (exists ?donut (exists ?knife (and (Is ?drill 'drill') (AlignedVertically ?drill ?screwdriver) (Is ?screwdriver 'screwdriver') (AlignedVertically ?screwdriver ?bottle) (Is ?bottle 'bottle') (RightOf ?bowl ?bottle) (Is ?bowl 'bowl') (AlignedVertically ?bowl ?cup) (Is ?cup 'cup') (AlignedVertically ?cup ?donut) (Is ?donut 'donut') (RightOf ?knife ?donut) (Is ?knife 'knife') (OnRightSide ?knife)))))))))",
+    "k": 7,
+    "object_classes": [
+        "screwdriver",
+        "cup",
+        "drill",
+        "knife",
+        "bottle",
+        "bowl",
+        "donut"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a donut and an apple. The donut is located on the top side of the image and is positioned above the apple; these two items are aligned vertically. Additionally, for any book found in the image, the apple is positioned above that book and is vertically aligned with it.",
+    "dsl": "(exists ?d (exists ?a (and (Is ?d 'donut') (Is ?a 'apple') (OnTopSide ?d) (Above ?d ?a) (AlignedVertically ?d ?a) (forall ?b (implies (Is ?b 'book') (and (Above ?a ?b) (AlignedVertically ?a ?b)))))))",
+    "cnf": "(exists ?d (exists ?a (forall ?b (and (Is ?d 'donut') (OnTopSide ?d) (Above ?d ?a) (AlignedVertically ?d ?a) (Is ?a 'apple') (or (not (Is ?b 'book')) (Above ?a ?b)) (or (not (Is ?b 'book')) (AlignedVertically ?a ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "apple",
+        "donut"
+    ]
+}

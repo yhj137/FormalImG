@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a shirt, a book, a bottle, a plate, and a keyboard. The keyboard is located on the right side of the image. To the left of the keyboard is a shirt. The shirt forms a vertical line with the book, the bottle, and the plate, meaning these four objects are aligned vertically.",
+    "dsl": "(exists ?shirt (exists ?book (exists ?bottle (exists ?plate (exists ?keyboard (and (Is ?shirt 'shirt') (Is ?book 'book') (Is ?bottle 'bottle') (Is ?plate 'plate') (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (LeftOf ?shirt ?keyboard) (AlignedVertically ?shirt ?book) (AlignedVertically ?book ?bottle) (AlignedVertically ?bottle ?plate)))))))",
+    "cnf": "(exists ?shirt (exists ?book (exists ?bottle (exists ?plate (exists ?keyboard (and (Is ?shirt 'shirt') (LeftOf ?shirt ?keyboard) (AlignedVertically ?shirt ?book) (OnRightSide ?keyboard) (Is ?book 'book') (AlignedVertically ?book ?bottle) (Is ?keyboard 'keyboard') (Is ?bottle 'bottle') (AlignedVertically ?bottle ?plate) (Is ?plate 'plate')))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "plate",
+        "keyboard",
+        "bottle",
+        "shirt"
+    ]
+}

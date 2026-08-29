@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cat holds a metal hammer. Every flower in the scene is inside a sandwich resting on the hammer.",
+    "dsl": "(exists ?c (exists ?h (and (Is ?c 'cat') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Holding ?c ?h) (forall ?f (implies (Is ?f 'flower') (exists ?s (and (Is ?s 'sandwich') (On ?s ?h) (In ?f ?s))))))))",
+    "cnf": "(exists ?c (exists ?h (forall ?f (exists ?s (and (Is ?c 'cat') (Holding ?c ?h) (HasMaterial ?h 'metal') (or (not (Is ?f 'flower')) (On ?s ?h)) (Is ?h 'hammer') (or (not (Is ?f 'flower')) (Is ?s 'sandwich')) (or (not (Is ?f 'flower')) (In ?f ?s)))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "flower",
+        "cat",
+        "hammer"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a rectangular bench. Every chair is to the right of the bench. A red boat is next to the bench, and a key is next to the boat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bench') (HasShape ?b 'rectangular') (forall ?c (implies (Is ?c 'chair') (RightOf ?c ?b))) (exists ?bt (and (Is ?bt 'boat') (HasColor ?bt 'red') (NextTo ?bt ?b) (exists ?k (and (Is ?k 'key') (NextTo ?k ?bt))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?c (exists ?bt (exists ?k (and (Is ?b 'bench') (HasShape ?b 'rectangular') (or (not (Is ?c 'chair')) (RightOf ?c ?b)) (NextTo ?bt ?b) (HasColor ?bt 'red') (NextTo ?k ?bt) (Is ?bt 'boat') (Is ?k 'key')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "chair",
+        "key",
+        "boat"
+    ]
+}

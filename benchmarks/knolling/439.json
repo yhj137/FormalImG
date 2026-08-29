@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pair of jeans positioned on the bottom side of the frame. A screwdriver is placed to the left of the jeans, while a set of keys is located to the right of the jeans.",
+    "dsl": "(exists ?screwdriver (exists ?jeans (exists ?keys (and (Is ?screwdriver 'screwdriver') (Is ?jeans 'jeans') (Is ?keys 'keys') (OnBottomSide ?jeans) (LeftOf ?screwdriver ?jeans) (RightOf ?keys ?jeans)))))",
+    "cnf": "(exists ?screwdriver (exists ?jeans (exists ?keys (and (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?jeans) (OnBottomSide ?jeans) (RightOf ?keys ?jeans) (Is ?jeans 'jeans') (Is ?keys 'keys')))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "jeans",
+        "screwdriver"
+    ]
+}

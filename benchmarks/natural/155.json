@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every teddy bear is made of metal.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'teddy bear') (HasMaterial ?t 'metal'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (or (not (Is ?t 'teddy bear')) (HasMaterial ?t 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

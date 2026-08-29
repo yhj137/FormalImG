@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack, a black keyboard, a white bottle, and a pink donut. The backpack is positioned above the keyboard, and the keyboard is above the bottle; these three objects are aligned vertically. The keyboard is smaller than the backpack, and the bottle is smaller than the keyboard. The pink donut is located to the left of the bottle. Additionally, for every green shirt in the scene, there is a yellow glove and a pair of red pliers such that the shirt is to the left of the keyboard, the glove is above the shirt, and the shirt is above the pliers.",
+    "dsl": "(exists ?backpack (exists ?keyboard (exists ?bottle (exists ?donut (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?bottle 'bottle') (Has ?bottle 'white') (Is ?donut 'donut') (Has ?donut 'pink') (Above ?backpack ?keyboard) (Above ?keyboard ?bottle) (AlignedVertically ?backpack ?keyboard) (AlignedVertically ?keyboard ?bottle) (SmallerThan ?keyboard ?backpack) (SmallerThan ?bottle ?keyboard) (LeftOf ?donut ?bottle) (forall ?shirt (implies (and (Is ?shirt 'shirt') (Has ?shirt 'green')) (exists ?glove (exists ?pliers (and (Is ?glove 'glove') (Has ?glove 'yellow') (Is ?pliers 'pliers') (Has ?pliers 'red') (LeftOf ?shirt ?keyboard) (Above ?glove ?shirt) (Above ?shirt ?pliers)))))))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (exists ?bottle (exists ?donut (forall ?shirt (exists ?glove (exists ?pliers (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Above ?backpack ?keyboard) (AlignedVertically ?backpack ?keyboard) (Has ?keyboard 'black') (Above ?keyboard ?bottle) (SmallerThan ?keyboard ?backpack) (AlignedVertically ?keyboard ?bottle) (Is ?keyboard 'keyboard') (Has ?bottle 'white') (SmallerThan ?bottle ?keyboard) (Is ?bottle 'bottle') (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (LeftOf ?shirt ?keyboard)) (LeftOf ?donut ?bottle) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Has ?pliers 'red')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Above ?glove ?shirt)) (Has ?donut 'pink') (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Is ?pliers 'pliers')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Above ?shirt ?pliers)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Has ?glove 'yellow')) (Is ?donut 'donut') (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'green')) (Is ?glove 'glove'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "donut",
+        "backpack",
+        "bottle",
+        "glove",
+        "shirt"
+    ]
+}

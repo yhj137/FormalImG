@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Next to every bus stands a tree. To the right of the tree, a man holds an open umbrella, while a basket containing a cylindrical cup sits to the left. A yellow screwdriver lies beside the basket, and a pair of headphones rests next to the screwdriver. A blue butterfly flies above the tree.",
+    "dsl": "(forall ?b (implies (Is ?b 'bus') (exists ?t (exists ?m (exists ?u (exists ?bas (exists ?c (exists ?s (exists ?h (exists ?but (and (Is ?t 'tree') (NextTo ?b ?t) (Is ?m 'man') (RightOf ?m ?t) (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?m ?u) (Is ?bas 'basket') (LeftOf ?bas ?t) (Is ?c 'cup') (HasShape ?c 'cylindrical') (In ?c ?bas) (Is ?s 'screwdriver') (HasColor ?s 'yellow') (NextTo ?s ?bas) (Is ?h 'headphones') (NextTo ?h ?s) (Is ?but 'butterfly') (HasColor ?but 'blue') (Above ?but ?t))))))))))))",
+    "cnf": "(forall ?b (exists ?t (exists ?m (exists ?u (exists ?bas (exists ?c (exists ?s (exists ?h (exists ?but (and (or (not (Is ?b 'bus')) (Is ?t 'tree')) (or (not (Is ?b 'bus')) (NextTo ?b ?t)) (or (not (Is ?b 'bus')) (Is ?m 'man')) (or (not (Is ?b 'bus')) (RightOf ?m ?t)) (or (not (Is ?b 'bus')) (Is ?u 'umbrella')) (or (not (Is ?b 'bus')) (LeftOf ?bas ?t)) (or (not (Is ?b 'bus')) (Holding ?m ?u)) (or (not (Is ?b 'bus')) (HasState ?u 'open')) (or (not (Is ?b 'bus')) (Is ?bas 'basket')) (or (not (Is ?b 'bus')) (Is ?c 'cup')) (or (not (Is ?b 'bus')) (Above ?but ?t)) (or (not (Is ?b 'bus')) (In ?c ?bas)) (or (not (Is ?b 'bus')) (HasShape ?c 'cylindrical')) (or (not (Is ?b 'bus')) (HasColor ?but 'blue')) (or (not (Is ?b 'bus')) (Is ?s 'screwdriver')) (or (not (Is ?b 'bus')) (NextTo ?s ?bas)) (or (not (Is ?b 'bus')) (Is ?but 'butterfly')) (or (not (Is ?b 'bus')) (HasColor ?s 'yellow')) (or (not (Is ?b 'bus')) (Is ?h 'headphones')) (or (not (Is ?b 'bus')) (NextTo ?h ?s))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "basket",
+        "bus",
+        "umbrella",
+        "man",
+        "tree",
+        "screwdriver",
+        "cup",
+        "butterfly",
+        "headphones"
+    ]
+}

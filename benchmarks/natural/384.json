@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a black jacket. Every hat in the scene is red and located next to the jacket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (forall ?h (implies (Is ?h 'hat') (and (HasColor ?h 'red') (NextTo ?h ?j)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?j (forall ?h (and (Is ?j 'jacket') (HasColor ?j 'black') (or (not (Is ?h 'hat')) (NextTo ?h ?j)) (or (not (Is ?h 'hat')) (HasColor ?h 'red'))))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "hat"
+    ]
+}

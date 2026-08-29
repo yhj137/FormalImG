@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a backpack positioned on the left side and a mouse positioned on the right side, which are aligned horizontally. An apple is also present, which is smaller than the backpack. Additionally, for any wrench found in the scene, it is smaller than the backpack and horizontally aligned with the mouse.",
+    "dsl": "(exists ?backpack (exists ?mouse (exists ?apple (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?mouse 'mouse') (OnRightSide ?mouse) (AlignedHorizontally ?backpack ?mouse) (Is ?apple 'apple') (SmallerThan ?apple ?backpack) (forall ?wrench (implies (Is ?wrench 'wrench') (and (SmallerThan ?wrench ?backpack) (AlignedHorizontally ?wrench ?mouse))))))))",
+    "cnf": "(exists ?backpack (exists ?mouse (exists ?apple (forall ?wrench (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (AlignedHorizontally ?backpack ?mouse) (SmallerThan ?apple ?backpack) (OnRightSide ?mouse) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?wrench ?mouse)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?backpack)) (Is ?apple 'apple') (Is ?mouse 'mouse'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "backpack",
+        "apple",
+        "mouse"
+    ]
+}

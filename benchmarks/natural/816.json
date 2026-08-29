@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. An open wardrobe stands in the middle. To the left of the wardrobe is a tree, and to the right of the wardrobe is a round cake. Inside the wardrobe sits a basket, which contains a toy car.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?t (exists ?c (exists ?b (exists ?tc (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?t 'tree') (LeftOf ?t ?w) (Is ?c 'cake') (HasShape ?c 'round') (RightOf ?c ?w) (Is ?b 'basket') (In ?b ?w) (Is ?tc 'toy car') (In ?tc ?b))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?t (exists ?c (exists ?b (exists ?tc (and (Is ?w 'wardrobe') (HasState ?w 'open') (LeftOf ?t ?w) (RightOf ?c ?w) (Is ?t 'tree') (In ?b ?w) (HasShape ?c 'round') (Is ?b 'basket') (In ?tc ?b) (Is ?c 'cake') (Is ?tc 'toy car'))))))))",
+    "k": 5,
+    "object_classes": [
+        "toy car",
+        "cake",
+        "basket",
+        "wardrobe",
+        "tree"
+    ]
+}

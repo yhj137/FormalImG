@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A lamp is next to a wooden wardrobe, which is to the left of an open refrigerator containing a keyboard. To the right of the refrigerator stands a man holding every ball in the scene, positioned next to a horse. A tree is located to the right of the horse, and a red bus is positioned to the right of the tree.",
+    "dsl": "(exists ?l (exists ?w (exists ?r (exists ?k (exists ?m (exists ?h (exists ?t (exists ?b (and (Is ?l 'lamp') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?l ?w) (Is ?r 'refrigerator') (HasState ?r 'open') (LeftOf ?w ?r) (Is ?k 'keyboard') (In ?k ?r) (Is ?m 'man') (RightOf ?m ?r) (forall ?x (implies (Is ?x 'ball') (Holding ?m ?x))) (Is ?h 'horse') (NextTo ?m ?h) (Is ?t 'tree') (RightOf ?t ?h) (Is ?b 'bus') (HasColor ?b 'red') (RightOf ?b ?t))))))))))",
+    "cnf": "(exists ?l (exists ?w (exists ?r (exists ?k (exists ?m (exists ?h (exists ?t (exists ?b (forall ?x (and (Is ?l 'lamp') (NextTo ?l ?w) (HasMaterial ?w 'wooden') (LeftOf ?w ?r) (Is ?w 'wardrobe') (HasState ?r 'open') (In ?k ?r) (Is ?r 'refrigerator') (RightOf ?m ?r) (Is ?k 'keyboard') (Is ?m 'man') (or (not (Is ?x 'ball')) (Holding ?m ?x)) (NextTo ?m ?h) (Is ?h 'horse') (RightOf ?t ?h) (Is ?t 'tree') (RightOf ?b ?t) (HasColor ?b 'red') (Is ?b 'bus')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "man",
+        "ball",
+        "lamp",
+        "bus",
+        "refrigerator",
+        "wardrobe",
+        "horse",
+        "tree"
+    ]
+}

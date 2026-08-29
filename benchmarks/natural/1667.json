@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo-style image. A wooden table holds a black clock and a basket containing every key. To the left of the table is a red sofa with headphones resting on it. A horse and a person holding a green apple are positioned next to the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?t (and (Is ?b 'basket') (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?b ?t) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?s (exists ?p (exists ?a (exists ?ho (exists ?he (exists ?cl (and (Is ?s 'sofa') (HasColor ?s 'red') (LeftOf ?s ?t) (Is ?p 'person') (NextTo ?p ?s) (Is ?a 'apple') (HasColor ?a 'green') (Holding ?p ?a) (Is ?ho 'horse') (NextTo ?ho ?s) (Is ?he 'headphones') (On ?he ?s) (Is ?cl 'clock') (HasColor ?cl 'black') (On ?cl ?t))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?t (forall ?k (exists ?s (exists ?p (exists ?a (exists ?ho (exists ?he (exists ?cl (and (Is ?b 'basket') (On ?b ?t) (or (not (Is ?k 'key')) (In ?k ?b)) (HasMaterial ?t 'wooden') (LeftOf ?s ?t) (Is ?t 'table') (On ?cl ?t) (HasColor ?s 'red') (NextTo ?p ?s) (HasColor ?cl 'black') (Is ?s 'sofa') (NextTo ?ho ?s) (Is ?p 'person') (Holding ?p ?a) (Is ?cl 'clock') (On ?he ?s) (Is ?ho 'horse') (HasColor ?a 'green') (Is ?he 'headphones') (Is ?a 'apple'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "person",
+        "sofa",
+        "headphones",
+        "basket",
+        "horse",
+        "table",
+        "clock",
+        "apple"
+    ]
+}

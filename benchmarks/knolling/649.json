@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black phone, there is a white game controller located to its right that is larger than the phone. To the right of the game controller is a yellow screwdriver positioned on the right side of the image. Additionally, a gray knife is aligned vertically with the screwdriver.",
+    "dsl": "(forall ?phone (implies (and (Is ?phone 'phone') (Has ?phone 'black')) (exists ?controller (exists ?screwdriver (exists ?knife (and (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (Is ?knife 'knife') (Has ?knife 'gray') (RightOf ?controller ?phone) (LargerThan ?controller ?phone) (RightOf ?screwdriver ?controller) (OnRightSide ?screwdriver) (AlignedVertically ?knife ?screwdriver)))))))",
+    "cnf": "(forall ?phone (exists ?controller (exists ?screwdriver (exists ?knife (and (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?controller 'game_controller')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Has ?controller 'white')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (RightOf ?controller ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (LargerThan ?controller ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Has ?knife 'gray')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Has ?screwdriver 'yellow')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (RightOf ?screwdriver ?controller)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?knife 'knife')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (AlignedVertically ?knife ?screwdriver)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (OnRightSide ?screwdriver)))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "phone",
+        "screwdriver",
+        "game_controller"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A horse is standing on the left side. Located to the right of the horse is a wooden bench. Resting on the bench are a basket, a bitten apple, a metal knife, and a fork. A chair is positioned next to the bench, with a pair of headphones lying on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?bn (exists ?bs (exists ?a (exists ?k (exists ?f (exists ?c (exists ?hp (and (Is ?h 'horse') (HasState ?h 'standing') (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (RightOf ?bn ?h) (Is ?bs 'basket') (On ?bs ?bn) (Is ?a 'apple') (HasState ?a 'bitten') (On ?a ?bn) (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?bn) (Is ?f 'fork') (On ?f ?bn) (Is ?c 'chair') (NextTo ?c ?bn) (Is ?hp 'headphones') (On ?hp ?c)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?bn (exists ?bs (exists ?a (exists ?k (exists ?f (exists ?c (exists ?hp (and (Is ?h 'horse') (HasState ?h 'standing') (RightOf ?bn ?h) (HasMaterial ?bn 'wooden') (On ?bs ?bn) (Is ?bn 'bench') (On ?a ?bn) (Is ?bs 'basket') (On ?k ?bn) (HasState ?a 'bitten') (On ?f ?bn) (HasMaterial ?k 'metal') (Is ?a 'apple') (NextTo ?c ?bn) (Is ?f 'fork') (Is ?k 'knife') (Is ?c 'chair') (On ?hp ?c) (Is ?hp 'headphones')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "knife",
+        "bench",
+        "fork",
+        "horse",
+        "chair",
+        "basket",
+        "apple"
+    ]
+}

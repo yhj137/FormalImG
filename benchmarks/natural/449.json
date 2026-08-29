@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A standing person is next to a basket, holding a rusty key inside it.",
+    "dsl": "(exists ?p (exists ?b (exists ?k (and (Is ?p 'person') (Is ?b 'basket') (Is ?k 'key') (HasState ?p 'standing') (HasState ?k 'rusty') (NextTo ?p ?b) (Holding ?p ?k) (In ?k ?b)))))",
+    "cnf": "(exists ?p (exists ?b (exists ?k (and (Is ?p 'person') (HasState ?p 'standing') (NextTo ?p ?b) (Holding ?p ?k) (Is ?b 'basket') (In ?k ?b) (HasState ?k 'rusty') (Is ?k 'key')))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "key",
+        "person"
+    ]
+}

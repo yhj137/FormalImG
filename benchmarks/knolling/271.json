@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans, there is a bowl positioned on the bottom side of the image, and the two items are aligned vertically.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'jeans') (exists ?y (and (Is ?y 'bowl') (OnBottomSide ?y) (AlignedVertically ?x ?y))))))",
+    "cnf": "(forall ?x (exists ?y (and (or (not (Is ?x 'jeans')) (Is ?y 'bowl')) (or (not (Is ?x 'jeans')) (OnBottomSide ?y)) (or (not (Is ?x 'jeans')) (AlignedVertically ?x ?y)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "jeans"
+    ]
+}

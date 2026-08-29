@@ -1,0 +1,16 @@
+{
+    "prompt": "For every sock in the image, there exists a brown suitcase on the bottom side, a black shoe, a keyboard, a game controller, a phone, a wallet, and a pair of pliers. The keyboard, game controller, phone, wallet, and suitcase are arranged in a vertical line from top to bottom. The suitcase is larger than the wallet, and the phone is smaller than the keyboard. The pliers are aligned horizontally with the game controller. The shoe is below the pliers and aligned vertically with them. The sock is white, smaller than the shoe, and aligned horizontally with the shoe.",
+    "dsl": "(exists ?suitcase (forall ?sock (exists ?shoe (exists ?keyboard (exists ?controller (exists ?phone (exists ?wallet (exists ?pliers (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnBottomSide ?suitcase) (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?keyboard 'keyboard') (Is ?controller 'game_controller') (Is ?phone 'phone') (Is ?wallet 'wallet') (Is ?pliers 'pliers') (implies (Is ?sock 'sock') (and (Has ?sock 'white') (SmallerThan ?sock ?shoe) (AlignedHorizontally ?sock ?shoe))) (Below ?controller ?keyboard) (Below ?phone ?controller) (Below ?wallet ?phone) (Below ?suitcase ?wallet) (Below ?shoe ?pliers) (AlignedVertically ?keyboard ?controller) (AlignedVertically ?controller ?phone) (AlignedVertically ?phone ?wallet) (AlignedVertically ?wallet ?suitcase) (AlignedVertically ?pliers ?shoe) (AlignedHorizontally ?pliers ?controller) (LargerThan ?suitcase ?wallet) (SmallerThan ?phone ?keyboard))))))))))",
+    "cnf": "(exists ?suitcase (forall ?sock (exists ?shoe (exists ?keyboard (exists ?controller (exists ?phone (exists ?wallet (exists ?pliers (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnBottomSide ?suitcase) (Below ?suitcase ?wallet) (AlignedVertically ?wallet ?suitcase) (Below ?wallet ?phone) (AlignedVertically ?phone ?wallet) (LargerThan ?suitcase ?wallet) (Below ?phone ?controller) (AlignedVertically ?controller ?phone) (Is ?wallet 'wallet') (SmallerThan ?phone ?keyboard) (Below ?controller ?keyboard) (AlignedVertically ?keyboard ?controller) (Is ?phone 'phone') (AlignedHorizontally ?pliers ?controller) (Is ?keyboard 'keyboard') (Is ?controller 'game_controller') (AlignedVertically ?pliers ?shoe) (Below ?shoe ?pliers) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?shoe)) (Is ?pliers 'pliers') (or (not (Is ?sock 'sock')) (SmallerThan ?sock ?shoe)) (Has ?shoe 'black') (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (Is ?shoe 'shoe'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "pliers",
+        "wallet",
+        "keyboard",
+        "game_controller",
+        "suitcase",
+        "phone",
+        "shoe"
+    ]
+}

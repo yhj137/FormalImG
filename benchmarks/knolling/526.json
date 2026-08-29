@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A shoe is positioned on the top side of the layout. For every hat in the scene, which is visually smaller than the shoe, there is a corresponding bottle aligned horizontally with it that is larger than the hat.",
+    "dsl": "(exists ?shoe (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (forall ?hat (implies (Is ?hat 'hat') (exists ?bottle (and (Is ?bottle 'bottle') (SmallerThan ?hat ?shoe) (LargerThan ?bottle ?hat) (AlignedHorizontally ?bottle ?hat)))))))",
+    "cnf": "(exists ?shoe (forall ?hat (exists ?bottle (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (or (not (Is ?hat 'hat')) (SmallerThan ?hat ?shoe)) (or (not (Is ?hat 'hat')) (Is ?bottle 'bottle')) (or (not (Is ?hat 'hat')) (LargerThan ?bottle ?hat)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?bottle ?hat))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "hat",
+        "shoe"
+    ]
+}

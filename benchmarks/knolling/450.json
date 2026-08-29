@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, it is located on the left side. Situated below the jeans is a glove. To the left of the glove is a carrot, and the carrot and glove are aligned horizontally.",
+    "dsl": "(forall ?j (implies (Is ?j 'jeans') (exists ?g (exists ?c (and (Is ?g 'glove') (Is ?c 'carrot') (OnLeftSide ?j) (Below ?g ?j) (LeftOf ?c ?g) (AlignedHorizontally ?c ?g))))))",
+    "cnf": "(forall ?j (exists ?g (exists ?c (and (or (not (Is ?j 'jeans')) (Is ?g 'glove')) (or (not (Is ?j 'jeans')) (Below ?g ?j)) (or (not (Is ?j 'jeans')) (Is ?c 'carrot')) (or (not (Is ?j 'jeans')) (LeftOf ?c ?g)) (or (not (Is ?j 'jeans')) (OnLeftSide ?j)) (or (not (Is ?j 'jeans')) (AlignedHorizontally ?c ?g))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "jeans",
+        "glove"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A pan is located on the left side of the scene. For every book in the image, which is blue, there is a specific arrangement of tools: the pan is positioned to the left of the book, a remote is aligned vertically with the book, a pair of glasses is aligned vertically with the pan, and a yellow screwdriver is located to the left of the glasses.",
+    "dsl": "(exists ?p (and (Is ?p 'pan') (OnLeftSide ?p) (forall ?b (implies (Is ?b 'book') (exists ?r (exists ?g (exists ?s (and (Is ?r 'remote') (Is ?g 'glasses') (Is ?s 'screwdriver') (Has ?b 'blue') (Has ?s 'yellow') (LeftOf ?p ?b) (AlignedVertically ?r ?b) (AlignedVertically ?g ?p) (LeftOf ?s ?g)))))))))",
+    "cnf": "(exists ?p (forall ?b (exists ?r (exists ?g (exists ?s (and (Is ?p 'pan') (OnLeftSide ?p) (or (not (Is ?b 'book')) (LeftOf ?p ?b)) (or (not (Is ?b 'book')) (AlignedVertically ?g ?p)) (or (not (Is ?b 'book')) (Has ?s 'yellow')) (or (not (Is ?b 'book')) (AlignedVertically ?r ?b)) (or (not (Is ?b 'book')) (LeftOf ?s ?g)) (or (not (Is ?b 'book')) (Is ?g 'glasses')) (or (not (Is ?b 'book')) (Has ?b 'blue')) (or (not (Is ?b 'book')) (Is ?s 'screwdriver')) (or (not (Is ?b 'book')) (Is ?r 'remote'))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "glasses",
+        "remote",
+        "screwdriver",
+        "pan"
+    ]
+}

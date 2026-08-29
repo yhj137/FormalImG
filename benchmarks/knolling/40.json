@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout includes a donut positioned on the bottom side.",
+    "dsl": "(exists ?donut (and (Is ?donut 'donut') (OnBottomSide ?donut)))",
+    "cnf": "(exists ?donut (and (Is ?donut 'donut') (OnBottomSide ?donut)))",
+    "k": 1,
+    "object_classes": [
+        "donut"
+    ]
+}

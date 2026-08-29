@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene showing a bus to the left of a house. Next to the house is a chair. On the chair sits a cup containing every flower, along with a cat holding a sandwich. A lamp is next to the chair. A red apple is located to the right of the lamp, with a fruit next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?c (and (Is ?h 'house') (Is ?c 'cup') (forall ?fl (implies (Is ?fl 'flower') (In ?fl ?c))) (exists ?b (exists ?ch (exists ?ct (exists ?s (exists ?l (exists ?a (exists ?fr (and (Is ?b 'bus') (LeftOf ?b ?h) (Is ?ch 'chair') (NextTo ?ch ?h) (On ?c ?ch) (Is ?ct 'cat') (On ?ct ?ch) (Is ?s 'sandwich') (Holding ?ct ?s) (Is ?l 'lamp') (NextTo ?l ?ch) (Is ?a 'apple') (HasColor ?a 'red') (RightOf ?a ?l) (Is ?fr 'fruit') (NextTo ?fr ?a)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?c (forall ?fl (exists ?b (exists ?ch (exists ?ct (exists ?s (exists ?l (exists ?a (exists ?fr (and (Is ?h 'house') (LeftOf ?b ?h) (NextTo ?ch ?h) (Is ?b 'bus') (Is ?ch 'chair') (On ?c ?ch) (or (not (Is ?fl 'flower')) (In ?fl ?c)) (On ?ct ?ch) (Is ?c 'cup') (NextTo ?l ?ch) (Is ?ct 'cat') (Holding ?ct ?s) (Is ?l 'lamp') (RightOf ?a ?l) (Is ?s 'sandwich') (HasColor ?a 'red') (NextTo ?fr ?a) (Is ?a 'apple') (Is ?fr 'fruit')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "cat",
+        "sandwich",
+        "bus",
+        "lamp",
+        "fruit",
+        "chair",
+        "cup",
+        "house",
+        "apple",
+        "flower"
+    ]
+}

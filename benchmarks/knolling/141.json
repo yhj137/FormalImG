@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image where every pair of glasses in the scene is black.",
+    "dsl": "(and (forall ?g (implies (Is ?g 'glasses') (Has ?g 'black'))))",
+    "cnf": "(forall ?g (or (not (Is ?g 'glasses')) (Has ?g 'black')))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

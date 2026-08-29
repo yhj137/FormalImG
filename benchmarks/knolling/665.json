@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every handbag in the scene, there is a sequence of objects aligned horizontally with it. Specifically, the handbag is brown and is located to the left of a yellow ruler. Positioned to the right of the ruler is a remote, and to the right of the remote is a stapler. All four items\u2014the handbag, ruler, remote, and stapler\u2014are arranged in a neat horizontal line.",
+    "dsl": "(and (forall ?handbag (implies (Is ?handbag 'handbag') (exists ?ruler (exists ?remote (exists ?stapler (and (Is ?ruler 'ruler') (Is ?remote 'remote') (Is ?stapler 'stapler') (Has ?handbag 'brown') (Has ?ruler 'yellow') (LeftOf ?handbag ?ruler) (RightOf ?remote ?ruler) (RightOf ?stapler ?remote) (AlignedHorizontally ?handbag ?ruler) (AlignedHorizontally ?ruler ?remote) (AlignedHorizontally ?remote ?stapler))))))))",
+    "cnf": "(forall ?handbag (exists ?ruler (exists ?remote (exists ?stapler (and (or (not (Is ?handbag 'handbag')) (Is ?ruler 'ruler')) (or (not (Is ?handbag 'handbag')) (Has ?ruler 'yellow')) (or (not (Is ?handbag 'handbag')) (Is ?remote 'remote')) (or (not (Is ?handbag 'handbag')) (LeftOf ?handbag ?ruler)) (or (not (Is ?handbag 'handbag')) (Has ?handbag 'brown')) (or (not (Is ?handbag 'handbag')) (Is ?stapler 'stapler')) (or (not (Is ?handbag 'handbag')) (RightOf ?remote ?ruler)) (or (not (Is ?handbag 'handbag')) (RightOf ?stapler ?remote)) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?handbag ?ruler)) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?ruler ?remote)) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?remote ?stapler)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "handbag",
+        "remote",
+        "stapler"
+    ]
+}

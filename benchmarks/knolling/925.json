@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the arrangement, there is a pair of jeans, and a tie is placed to the right of the jeans. Additionally, every shoe in the image is located on the bottom side, positioned directly below and vertically aligned with the jeans, and has a mouse to its left and a lighter to its right.",
+    "dsl": "(exists ?jeans (exists ?tie (and (Is ?jeans 'jeans') (Is ?tie 'tie') (OnTopSide ?jeans) (RightOf ?tie ?jeans) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?mouse (exists ?lighter (and (Is ?mouse 'mouse') (Is ?lighter 'lighter') (OnBottomSide ?shoe) (Below ?shoe ?jeans) (AlignedVertically ?shoe ?jeans) (LeftOf ?mouse ?shoe) (RightOf ?lighter ?shoe)))))))))",
+    "cnf": "(exists ?jeans (exists ?tie (forall ?shoe (exists ?mouse (exists ?lighter (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (RightOf ?tie ?jeans) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?jeans)) (Is ?tie 'tie') (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?jeans)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?shoe)) (or (not (Is ?shoe 'shoe')) (LeftOf ?mouse ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?lighter 'lighter')) (or (not (Is ?shoe 'shoe')) (Is ?mouse 'mouse')) (or (not (Is ?shoe 'shoe')) (RightOf ?lighter ?shoe))))))))",
+    "k": 5,
+    "object_classes": [
+        "lighter",
+        "mouse",
+        "tie",
+        "jeans",
+        "shoe"
+    ]
+}

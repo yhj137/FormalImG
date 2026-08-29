@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat located on the top side of the scene. For every remote in the image, it is positioned to the right of the hat.",
+    "dsl": "(exists ?h (and (Is ?h 'hat') (OnTopSide ?h) (forall ?r (implies (Is ?r 'remote') (RightOf ?r ?h)))))",
+    "cnf": "(exists ?h (forall ?r (and (Is ?h 'hat') (OnTopSide ?h) (or (not (Is ?r 'remote')) (RightOf ?r ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "remote"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a red sofa with a sitting dog on it. The dog is holding a hat containing a pair of glasses. A lamp stands next to the sofa. Beside the lamp sits a rock supporting a pan that contains a metal cup. Every butterfly in the scene is resting on the lamp.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?d (exists ?h (exists ?g (exists ?l (exists ?r (exists ?p (exists ?c (and (Is ?s 'sofa') (HasColor ?s 'red') (Is ?d 'dog') (HasState ?d 'sitting') (On ?d ?s) (Is ?h 'hat') (Holding ?d ?h) (Is ?g 'glasses') (In ?g ?h) (Is ?l 'lamp') (NextTo ?l ?s) (Is ?r 'rock') (NextTo ?r ?l) (Is ?p 'pan') (On ?p ?r) (Is ?c 'cup') (HasMaterial ?c 'metal') (In ?c ?p) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?l)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?d (exists ?h (exists ?g (exists ?l (exists ?r (exists ?p (exists ?c (forall ?b (and (Is ?s 'sofa') (HasColor ?s 'red') (On ?d ?s) (NextTo ?l ?s) (HasState ?d 'sitting') (Holding ?d ?h) (Is ?l 'lamp') (NextTo ?r ?l) (Is ?d 'dog') (Is ?h 'hat') (In ?g ?h) (or (not (Is ?b 'butterfly')) (On ?b ?l)) (Is ?r 'rock') (On ?p ?r) (Is ?g 'glasses') (Is ?p 'pan') (In ?c ?p) (HasMaterial ?c 'metal') (Is ?c 'cup'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "glasses",
+        "rock",
+        "lamp",
+        "pan",
+        "cup",
+        "butterfly",
+        "dog",
+        "hat"
+    ]
+}

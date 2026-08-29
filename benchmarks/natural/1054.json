@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every lamp has a wardrobe to its right. Next to the wardrobe is a bench with a round pizza on it, where a man sits holding a key.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?l (implies (Is ?l 'lamp') (exists ?w (exists ?b (exists ?m (exists ?k (exists ?p (and (Is ?w 'wardrobe') (Is ?b 'bench') (Is ?m 'man') (Is ?k 'key') (Is ?p 'pizza') (RightOf ?w ?l) (NextTo ?b ?w) (On ?m ?b) (HasState ?m 'sitting') (Holding ?m ?k) (On ?p ?b) (HasShape ?p 'round'))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?l (exists ?w (exists ?b (exists ?m (exists ?k (exists ?p (and (or (not (Is ?l 'lamp')) (Is ?w 'wardrobe')) (or (not (Is ?l 'lamp')) (RightOf ?w ?l)) (or (not (Is ?l 'lamp')) (Is ?b 'bench')) (or (not (Is ?l 'lamp')) (NextTo ?b ?w)) (or (not (Is ?l 'lamp')) (Is ?p 'pizza')) (or (not (Is ?l 'lamp')) (Is ?m 'man')) (or (not (Is ?l 'lamp')) (On ?m ?b)) (or (not (Is ?l 'lamp')) (Is ?k 'key')) (or (not (Is ?l 'lamp')) (On ?p ?b)) (or (not (Is ?l 'lamp')) (HasState ?m 'sitting')) (or (not (Is ?l 'lamp')) (Holding ?m ?k)) (or (not (Is ?l 'lamp')) (HasShape ?p 'round'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "wardrobe",
+        "man",
+        "key",
+        "bench",
+        "pizza",
+        "lamp"
+    ]
+}

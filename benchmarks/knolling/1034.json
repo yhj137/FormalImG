@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill in the scene, it is positioned on the left side. Arranged relative to the drill are five other objects: a hammer is to the right of the drill, and a wallet is directly below the drill. The drill is visually larger than the wallet. To the right of the wallet is a phone, which is smaller than the hammer. Finally, a sock is located below the wallet, with a glove positioned to the right of the sock.",
+    "dsl": "(and (forall ?d (implies (Is ?d 'drill') (exists ?h (exists ?w (exists ?p (exists ?s (exists ?g (and (Is ?h 'hammer') (Is ?w 'wallet') (Is ?p 'phone') (Is ?s 'sock') (Is ?g 'glove') (OnLeftSide ?d) (RightOf ?h ?d) (Below ?w ?d) (RightOf ?p ?w) (Below ?s ?w) (RightOf ?g ?s) (LargerThan ?d ?w) (SmallerThan ?p ?h))))))))))",
+    "cnf": "(forall ?d (exists ?h (exists ?w (exists ?p (exists ?s (exists ?g (and (or (not (Is ?d 'drill')) (Is ?h 'hammer')) (or (not (Is ?d 'drill')) (Is ?w 'wallet')) (or (not (Is ?d 'drill')) (RightOf ?h ?d)) (or (not (Is ?d 'drill')) (Is ?p 'phone')) (or (not (Is ?d 'drill')) (Below ?w ?d)) (or (not (Is ?d 'drill')) (OnLeftSide ?d)) (or (not (Is ?d 'drill')) (SmallerThan ?p ?h)) (or (not (Is ?d 'drill')) (Is ?s 'sock')) (or (not (Is ?d 'drill')) (RightOf ?p ?w)) (or (not (Is ?d 'drill')) (Is ?g 'glove')) (or (not (Is ?d 'drill')) (LargerThan ?d ?w)) (or (not (Is ?d 'drill')) (Below ?s ?w)) (or (not (Is ?d 'drill')) (RightOf ?g ?s)))))))))",
+    "k": 6,
+    "object_classes": [
+        "sock",
+        "phone",
+        "drill",
+        "hammer",
+        "wallet",
+        "glove"
+    ]
+}

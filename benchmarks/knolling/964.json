@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase, a backpack, and a pair of jeans, all of which are aligned horizontally and situated on the bottom side of the image. Furthermore, for every stapler present in the scene, it is positioned above the suitcase, and there is a shirt located above that stapler.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?jeans (and (Is ?suitcase 'suitcase') (Is ?backpack 'backpack') (Is ?jeans 'jeans') (OnBottomSide ?suitcase) (OnBottomSide ?backpack) (OnBottomSide ?jeans) (AlignedHorizontally ?suitcase ?backpack) (AlignedHorizontally ?backpack ?jeans) (forall ?stapler (implies (Is ?stapler 'stapler') (exists ?shirt (and (Is ?shirt 'shirt') (Above ?stapler ?suitcase) (Above ?shirt ?stapler)))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?jeans (forall ?stapler (exists ?shirt (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (AlignedHorizontally ?suitcase ?backpack) (or (not (Is ?stapler 'stapler')) (Above ?stapler ?suitcase)) (OnBottomSide ?backpack) (AlignedHorizontally ?backpack ?jeans) (or (not (Is ?stapler 'stapler')) (Is ?shirt 'shirt')) (or (not (Is ?stapler 'stapler')) (Above ?shirt ?stapler)) (Is ?backpack 'backpack') (OnBottomSide ?jeans) (Is ?jeans 'jeans')))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "backpack",
+        "jeans",
+        "suitcase",
+        "shirt"
+    ]
+}

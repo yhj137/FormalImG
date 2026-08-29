@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a black monitor, with a black camera positioned to its left. A gray laptop is located below the monitor, and the monitor is visually larger than the laptop. To the left of the laptop sits a white game controller. A white plate is positioned below the laptop, and a brown wallet is located to the left of the plate. For every apple, it is red, positioned below the white plate, and has a yellow lemon to its left. Below the lemon is a black phone, and black glasses are to the left of the phone.",
+    "dsl": "(exists ?monitor (exists ?camera (exists ?laptop (exists ?game_controller (exists ?plate (exists ?wallet (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?camera 'camera') (Has ?camera 'black') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (Is ?plate 'plate') (Has ?plate 'white') (Is ?wallet 'wallet') (Has ?wallet 'brown') (LeftOf ?camera ?monitor) (Below ?laptop ?monitor) (LargerThan ?monitor ?laptop) (LeftOf ?game_controller ?laptop) (Below ?plate ?laptop) (LeftOf ?wallet ?plate) (forall ?apple (implies (Is ?apple 'apple') (exists ?lemon (exists ?phone (exists ?glasses (and (Has ?apple 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?phone 'phone') (Has ?phone 'black') (Is ?glasses 'glasses') (Has ?glasses 'black') (Below ?apple ?plate) (LeftOf ?lemon ?apple) (Below ?phone ?lemon) (LeftOf ?glasses ?phone))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?camera (exists ?laptop (exists ?game_controller (exists ?plate (exists ?wallet (forall ?apple (exists ?lemon (exists ?phone (exists ?glasses (and (Is ?monitor 'monitor') (Has ?monitor 'black') (LeftOf ?camera ?monitor) (Below ?laptop ?monitor) (Has ?camera 'black') (LargerThan ?monitor ?laptop) (Has ?laptop 'gray') (Is ?camera 'camera') (LeftOf ?game_controller ?laptop) (Is ?laptop 'laptop') (Below ?plate ?laptop) (Has ?game_controller 'white') (Has ?plate 'white') (LeftOf ?wallet ?plate) (Is ?game_controller 'game_controller') (Is ?plate 'plate') (or (not (Is ?apple 'apple')) (Below ?apple ?plate)) (Has ?wallet 'brown') (or (not (Is ?apple 'apple')) (Has ?glasses 'black')) (or (not (Is ?apple 'apple')) (LeftOf ?lemon ?apple)) (Is ?wallet 'wallet') (or (not (Is ?apple 'apple')) (Is ?glasses 'glasses')) (or (not (Is ?apple 'apple')) (LeftOf ?glasses ?phone)) (or (not (Is ?apple 'apple')) (Below ?phone ?lemon)) (or (not (Is ?apple 'apple')) (Has ?lemon 'yellow')) (or (not (Is ?apple 'apple')) (Has ?phone 'black')) (or (not (Is ?apple 'apple')) (Is ?lemon 'lemon')) (or (not (Is ?apple 'apple')) (Is ?phone 'phone')) (or (not (Is ?apple 'apple')) (Has ?apple 'red')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "plate",
+        "apple",
+        "lemon",
+        "phone",
+        "game_controller",
+        "wallet",
+        "camera",
+        "monitor"
+    ]
+}

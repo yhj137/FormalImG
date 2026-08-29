@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A shoe is positioned on the bottom side of the layout, and a suitcase is placed above it. Furthermore, for every lemon in the scene, there is a pair of headphones located to its left, and the lemon itself is positioned to the left of the suitcase.",
+    "dsl": "(exists ?shoe (exists ?suitcase (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (Is ?suitcase 'suitcase') (Above ?suitcase ?shoe) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?headphones (and (Is ?headphones 'headphones') (LeftOf ?headphones ?lemon) (LeftOf ?lemon ?suitcase))))))))",
+    "cnf": "(exists ?shoe (exists ?suitcase (forall ?lemon (exists ?headphones (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (Above ?suitcase ?shoe) (Is ?suitcase 'suitcase') (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?suitcase)) (or (not (Is ?lemon 'lemon')) (LeftOf ?headphones ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?headphones 'headphones')))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "headphones",
+        "suitcase",
+        "shoe"
+    ]
+}

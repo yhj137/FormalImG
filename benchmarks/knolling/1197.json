@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black calculator, a sandwich, a gray wrench, a black watch, and a knife. The calculator is positioned on the top side of the scene. These five objects are all aligned horizontally. The sandwich is visually larger than the watch. Additionally, for every fork present in the image, it is aligned horizontally with the knife and is larger than the watch.",
+    "dsl": "(exists ?c (exists ?s (exists ?w (exists ?wa (exists ?k (and (Is ?c 'calculator') (Has ?c 'black') (Is ?s 'sandwich') (Is ?w 'wrench') (Has ?w 'gray') (Is ?wa 'watch') (Has ?wa 'black') (Is ?k 'knife') (OnTopSide ?c) (AlignedHorizontally ?c ?s) (AlignedHorizontally ?s ?w) (AlignedHorizontally ?w ?wa) (AlignedHorizontally ?wa ?k) (LargerThan ?s ?wa) (forall ?f (implies (Is ?f 'fork') (and (AlignedHorizontally ?f ?k) (LargerThan ?f ?wa))))))))))",
+    "cnf": "(exists ?c (exists ?s (exists ?w (exists ?wa (exists ?k (forall ?f (and (Is ?c 'calculator') (Has ?c 'black') (OnTopSide ?c) (AlignedHorizontally ?c ?s) (Is ?s 'sandwich') (AlignedHorizontally ?s ?w) (LargerThan ?s ?wa) (Has ?w 'gray') (AlignedHorizontally ?w ?wa) (AlignedHorizontally ?wa ?k) (or (not (Is ?f 'fork')) (LargerThan ?f ?wa)) (Is ?w 'wrench') (Has ?wa 'black') (Is ?k 'knife') (or (not (Is ?f 'fork')) (AlignedHorizontally ?f ?k)) (Is ?wa 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "watch",
+        "calculator",
+        "wrench",
+        "knife",
+        "fork",
+        "sandwich"
+    ]
+}

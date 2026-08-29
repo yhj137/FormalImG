@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection. On the left side, there is a backpack. Directly below the backpack is a pan, and below the pan is a keyboard; these three items are aligned vertically. To the right of the backpack lies a tie. Below the tie and to the right of the pan, there is a game controller, which is visually smaller than the backpack. Further down from the game controller are a wrench and then a screwdriver. Situated to the right of the screwdriver is a knife that is smaller than the screwdriver. Finally, every donut is located on the right side of the scene, with the tie to its left, and has a set of keys positioned above it.",
+    "dsl": "(exists ?backpack (exists ?pan (exists ?keyboard (exists ?tie (exists ?gc (exists ?wrench (exists ?sd (exists ?knife (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?pan 'pan') (Below ?pan ?backpack) (AlignedVertically ?backpack ?pan) (Is ?keyboard 'keyboard') (Below ?keyboard ?pan) (AlignedVertically ?pan ?keyboard) (Is ?tie 'tie') (RightOf ?tie ?backpack) (Is ?gc 'game_controller') (Below ?gc ?tie) (RightOf ?gc ?pan) (LargerThan ?backpack ?gc) (Is ?wrench 'wrench') (Below ?wrench ?gc) (Is ?sd 'screwdriver') (Below ?sd ?wrench) (Is ?knife 'knife') (RightOf ?knife ?sd) (SmallerThan ?knife ?sd) (forall ?donut (implies (Is ?donut 'donut') (exists ?keys (and (Is ?keys 'keys') (OnRightSide ?donut) (LeftOf ?tie ?donut) (Above ?keys ?donut))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (exists ?keyboard (exists ?tie (exists ?gc (exists ?wrench (exists ?sd (exists ?knife (forall ?donut (exists ?keys (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Below ?pan ?backpack) (AlignedVertically ?backpack ?pan) (Is ?pan 'pan') (RightOf ?tie ?backpack) (Below ?keyboard ?pan) (LargerThan ?backpack ?gc) (Is ?tie 'tie') (Below ?gc ?tie) (AlignedVertically ?pan ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?gc ?pan) (Below ?wrench ?gc) (or (not (Is ?donut 'donut')) (LeftOf ?tie ?donut)) (Is ?gc 'game_controller') (Is ?wrench 'wrench') (Below ?sd ?wrench) (or (not (Is ?donut 'donut')) (OnRightSide ?donut)) (or (not (Is ?donut 'donut')) (Above ?keys ?donut)) (Is ?sd 'screwdriver') (RightOf ?knife ?sd) (or (not (Is ?donut 'donut')) (Is ?keys 'keys')) (SmallerThan ?knife ?sd) (Is ?knife 'knife'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "tie",
+        "keyboard",
+        "wrench",
+        "screwdriver",
+        "game_controller",
+        "pan",
+        "backpack",
+        "knife",
+        "donut"
+    ]
+}

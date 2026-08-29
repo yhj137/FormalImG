@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a suitcase positioned on the bottom side of the image. A handbag is placed to the left of the suitcase. Directly above the suitcase is a pan. To the left of the pan lies a tie, and to the left of the tie is a calculator. The layout follows a strict arrangement rule: for every spoon in the scene, there is a knife to its left and a camera positioned above it. To maintain the grid alignment, the camera is aligned horizontally with the pan, and the spoon is aligned horizontally with the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?pan (exists ?tie (exists ?calculator (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?handbag 'handbag') (LeftOf ?handbag ?suitcase) (Is ?pan 'pan') (Above ?pan ?suitcase) (Is ?tie 'tie') (LeftOf ?tie ?pan) (Is ?calculator 'calculator') (LeftOf ?calculator ?tie) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (exists ?camera (and (Is ?knife 'knife') (Is ?camera 'camera') (LeftOf ?knife ?spoon) (Above ?camera ?spoon) (AlignedHorizontally ?camera ?pan) (AlignedHorizontally ?spoon ?suitcase))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?pan (exists ?tie (exists ?calculator (forall ?spoon (exists ?knife (exists ?camera (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (LeftOf ?handbag ?suitcase) (Above ?pan ?suitcase) (Is ?handbag 'handbag') (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?suitcase)) (Is ?pan 'pan') (LeftOf ?tie ?pan) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?camera ?pan)) (Is ?tie 'tie') (LeftOf ?calculator ?tie) (or (not (Is ?spoon 'spoon')) (Above ?camera ?spoon)) (Is ?calculator 'calculator') (or (not (Is ?spoon 'spoon')) (LeftOf ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?camera 'camera')) (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "handbag",
+        "pan",
+        "calculator",
+        "knife",
+        "camera",
+        "spoon",
+        "suitcase"
+    ]
+}

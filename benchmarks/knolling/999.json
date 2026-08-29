@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue backpack, a camera, a shoe, and a carrot. All these items are aligned vertically in a column. The backpack is visually larger than the camera, the shoe, and the carrot. Additionally, for every fork present in the scene, it must be white and also aligned vertically with the backpack.",
+    "dsl": "(exists ?b (exists ?c (exists ?s (exists ?ca (and (Is ?b 'backpack') (Has ?b 'blue') (Is ?c 'camera') (Is ?s 'shoe') (Is ?ca 'carrot') (AlignedVertically ?b ?c) (AlignedVertically ?b ?s) (AlignedVertically ?b ?ca) (LargerThan ?b ?c) (LargerThan ?b ?s) (LargerThan ?b ?ca) (forall ?f (implies (Is ?f 'fork') (and (Has ?f 'white') (AlignedVertically ?f ?b)))))))))",
+    "cnf": "(exists ?b (exists ?c (exists ?s (exists ?ca (forall ?f (and (Is ?b 'backpack') (Has ?b 'blue') (AlignedVertically ?b ?c) (AlignedVertically ?b ?s) (Is ?c 'camera') (LargerThan ?b ?c) (AlignedVertically ?b ?ca) (Is ?s 'shoe') (LargerThan ?b ?s) (Is ?ca 'carrot') (LargerThan ?b ?ca) (or (not (Is ?f 'fork')) (AlignedVertically ?f ?b)) (or (not (Is ?f 'fork')) (Has ?f 'white'))))))))",
+    "k": 5,
+    "object_classes": [
+        "carrot",
+        "fork",
+        "backpack",
+        "camera",
+        "shoe"
+    ]
+}

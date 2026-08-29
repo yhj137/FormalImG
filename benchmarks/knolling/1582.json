@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a laptop, a handbag, a drill, a game controller, a shoe, pliers, and a fork. The laptop is positioned on the left side of the image and is located to the left of the handbag. The drill is placed above the laptop, while the fork is positioned below the drill. The game controller is located below the handbag. A shoe is found on the bottom side of the image, positioned to the left of the game controller. The pliers are arranged above the shoe, and the fork is visually smaller than the pliers. Furthermore, every pair of jeans in the image is located above the drill.",
+    "dsl": "(exists ?laptop (exists ?handbag (exists ?drill (exists ?controller (exists ?shoe (exists ?pliers (exists ?fork (and (Is ?laptop 'laptop') (Is ?handbag 'handbag') (Is ?drill 'drill') (Is ?controller 'game_controller') (Is ?shoe 'shoe') (Is ?pliers 'pliers') (Is ?fork 'fork') (OnLeftSide ?laptop) (LeftOf ?laptop ?handbag) (Above ?drill ?laptop) (Below ?fork ?drill) (Below ?controller ?handbag) (OnBottomSide ?shoe) (LeftOf ?shoe ?controller) (Above ?pliers ?shoe) (SmallerThan ?fork ?pliers) (forall ?jeans (implies (Is ?jeans 'jeans') (Above ?jeans ?drill)))))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (exists ?drill (exists ?controller (exists ?shoe (exists ?pliers (exists ?fork (forall ?jeans (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (LeftOf ?laptop ?handbag) (Above ?drill ?laptop) (Is ?handbag 'handbag') (Below ?controller ?handbag) (Is ?drill 'drill') (Below ?fork ?drill) (Is ?controller 'game_controller') (LeftOf ?shoe ?controller) (or (not (Is ?jeans 'jeans')) (Above ?jeans ?drill)) (Is ?fork 'fork') (SmallerThan ?fork ?pliers) (OnBottomSide ?shoe) (Above ?pliers ?shoe) (Is ?shoe 'shoe') (Is ?pliers 'pliers'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "game_controller",
+        "drill",
+        "handbag",
+        "fork",
+        "jeans",
+        "shoe"
+    ]
+}

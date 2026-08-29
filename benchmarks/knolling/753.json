@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top side of the layout. A shirt is arranged below the monitor. The arrangement follows a specific constraint: for every tie present in the image, the shirt appears larger than the tie, and a knife is placed directly below the tie.",
+    "dsl": "(exists ?monitor (exists ?shirt (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?shirt 'shirt') (Above ?monitor ?shirt) (forall ?tie (implies (Is ?tie 'tie') (exists ?knife (and (Is ?knife 'knife') (LargerThan ?shirt ?tie) (Below ?knife ?tie))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (forall ?tie (exists ?knife (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Above ?monitor ?shirt) (Is ?shirt 'shirt') (or (not (Is ?tie 'tie')) (LargerThan ?shirt ?tie)) (or (not (Is ?tie 'tie')) (Is ?knife 'knife')) (or (not (Is ?tie 'tie')) (Below ?knife ?tie)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "tie",
+        "knife",
+        "shirt"
+    ]
+}

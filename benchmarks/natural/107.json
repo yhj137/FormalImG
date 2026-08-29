@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo where every cake is round.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'cake') (HasShape ?c 'round'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (or (not (Is ?c 'cake')) (HasShape ?c 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "cake"
+    ]
+}

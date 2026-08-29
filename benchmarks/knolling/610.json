@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pan located on the left side. A shirt is arranged below the pan. A ruler is placed such that the pan is to its left. A wrench is positioned below the ruler.",
+    "dsl": "(exists ?pan (exists ?shirt (exists ?ruler (exists ?wrench (and (Is ?pan 'pan') (Is ?shirt 'shirt') (Is ?ruler 'ruler') (Is ?wrench 'wrench') (OnLeftSide ?pan) (Below ?shirt ?pan) (LeftOf ?pan ?ruler) (Below ?wrench ?ruler))))))",
+    "cnf": "(exists ?pan (exists ?shirt (exists ?ruler (exists ?wrench (and (Is ?pan 'pan') (OnLeftSide ?pan) (Below ?shirt ?pan) (LeftOf ?pan ?ruler) (Is ?shirt 'shirt') (Is ?ruler 'ruler') (Below ?wrench ?ruler) (Is ?wrench 'wrench'))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "pan",
+        "shirt",
+        "wrench"
+    ]
+}

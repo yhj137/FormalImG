@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring eight objects. A pair of blue jeans and a blue backpack are aligned horizontally, with the backpack positioned to the right of the jeans. A white mouse is placed to the right of the backpack. Above the jeans is a black camera, while a hammer sits above the backpack, and a set of keys is located above the mouse. Located on the bottom side of the image is a lighter, which the jeans are positioned above. A fork is placed to the left of the lighter. Additionally, the lighter is smaller than the backpack.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?lighter (exists ?fork (exists ?backpack (exists ?mouse (exists ?hammer (exists ?keys (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?lighter 'lighter') (Is ?fork 'fork') (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?hammer 'hammer') (Is ?keys 'keys') (AlignedHorizontally ?jeans ?backpack) (RightOf ?backpack ?jeans) (RightOf ?mouse ?backpack) (Above ?camera ?jeans) (Above ?hammer ?backpack) (Above ?keys ?mouse) (OnBottomSide ?lighter) (Above ?jeans ?lighter) (LeftOf ?fork ?lighter) (SmallerThan ?lighter ?backpack))))))))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?lighter (exists ?fork (exists ?backpack (exists ?mouse (exists ?hammer (exists ?keys (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (AlignedHorizontally ?jeans ?backpack) (RightOf ?backpack ?jeans) (Has ?backpack 'blue') (Above ?camera ?jeans) (RightOf ?mouse ?backpack) (Is ?backpack 'backpack') (Above ?jeans ?lighter) (Has ?camera 'black') (Above ?hammer ?backpack) (Has ?mouse 'white') (Above ?keys ?mouse) (OnBottomSide ?lighter) (LeftOf ?fork ?lighter) (Is ?camera 'camera') (SmallerThan ?lighter ?backpack) (Is ?hammer 'hammer') (Is ?mouse 'mouse') (Is ?keys 'keys') (Is ?lighter 'lighter') (Is ?fork 'fork'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "camera",
+        "hammer",
+        "fork",
+        "backpack",
+        "jeans",
+        "lighter",
+        "mouse"
+    ]
+}

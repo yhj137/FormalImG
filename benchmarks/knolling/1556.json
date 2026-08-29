@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans at the top left and a brown wallet to its right. A stapler is located below the wallet. To the left of the stapler is a shoe, which is also positioned below the jeans and aligned vertically with them. A book is placed below the shoe; the wallet is visually smaller than this book. To the right of the book is a wrench, which is aligned vertically with the stapler. Finally, for every spoon in the image, it is located below the wrench, and there is a knife positioned to its left on the bottom side of the scene.",
+    "dsl": "(exists ?jeans (exists ?wallet (exists ?stapler (exists ?shoe (exists ?book (exists ?wrench (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?stapler 'stapler') (Is ?shoe 'shoe') (Is ?book 'book') (Is ?wrench 'wrench') (RightOf ?wallet ?jeans) (Below ?stapler ?wallet) (LeftOf ?shoe ?stapler) (Below ?shoe ?jeans) (AlignedVertically ?shoe ?jeans) (Below ?book ?shoe) (SmallerThan ?wallet ?book) (RightOf ?wrench ?book) (AlignedVertically ?wrench ?stapler) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (and (Is ?knife 'knife') (Below ?spoon ?wrench) (LeftOf ?knife ?spoon) (OnBottomSide ?knife))))))))))))",
+    "cnf": "(exists ?jeans (exists ?wallet (exists ?stapler (exists ?shoe (exists ?book (exists ?wrench (forall ?spoon (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?wallet ?jeans) (Below ?shoe ?jeans) (Has ?wallet 'brown') (Below ?stapler ?wallet) (AlignedVertically ?shoe ?jeans) (LeftOf ?shoe ?stapler) (Is ?wallet 'wallet') (SmallerThan ?wallet ?book) (Is ?stapler 'stapler') (Below ?book ?shoe) (AlignedVertically ?wrench ?stapler) (Is ?shoe 'shoe') (RightOf ?wrench ?book) (Is ?book 'book') (or (not (Is ?spoon 'spoon')) (Below ?spoon ?wrench)) (Is ?wrench 'wrench') (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')) (or (not (Is ?spoon 'spoon')) (LeftOf ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?knife)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "spoon",
+        "stapler",
+        "wrench",
+        "knife",
+        "wallet",
+        "jeans",
+        "book",
+        "shoe"
+    ]
+}

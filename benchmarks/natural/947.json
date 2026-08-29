@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a red umbrella resting on a table. A round rock is positioned next to the umbrella, and a fish is next to the rock. Every apple in the scene is inside the umbrella.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?u (exists ?r (and (Is ?t 'table') (Is ?u 'umbrella') (HasColor ?u 'red') (On ?u ?t) (Is ?r 'rock') (HasShape ?r 'round') (NextTo ?r ?u) (forall ?a (implies (Is ?a 'apple') (In ?a ?u))) (exists ?f (and (Is ?f 'fish') (NextTo ?f ?r))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?u (exists ?r (forall ?a (exists ?f (and (Is ?t 'table') (On ?u ?t) (HasColor ?u 'red') (NextTo ?r ?u) (Is ?u 'umbrella') (or (not (Is ?a 'apple')) (In ?a ?u)) (HasShape ?r 'round') (NextTo ?f ?r) (Is ?r 'rock') (Is ?f 'fish'))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "rock",
+        "table",
+        "apple"
+    ]
+}

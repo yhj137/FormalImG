@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a yellow screwdriver in the scene. Every hat in the image is located to the right of this screwdriver. Furthermore, for each hat, there is a bowl that is larger than the hat, and a lighter that is smaller than the bowl.",
+    "dsl": "(exists ?s (and (Is ?s 'screwdriver') (Has ?s 'yellow') (forall ?h (implies (Is ?h 'hat') (exists ?b (exists ?l (and (Is ?b 'bowl') (Is ?l 'lighter') (RightOf ?h ?s) (LargerThan ?b ?h) (SmallerThan ?l ?b))))))))",
+    "cnf": "(exists ?s (forall ?h (exists ?b (exists ?l (and (Is ?s 'screwdriver') (Has ?s 'yellow') (or (not (Is ?h 'hat')) (RightOf ?h ?s)) (or (not (Is ?h 'hat')) (Is ?l 'lighter')) (or (not (Is ?h 'hat')) (LargerThan ?b ?h)) (or (not (Is ?h 'hat')) (Is ?b 'bowl')) (or (not (Is ?h 'hat')) (SmallerThan ?l ?b)))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "hat",
+        "lighter",
+        "screwdriver"
+    ]
+}

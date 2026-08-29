@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a broken car. Inside the car is a backpack containing a key. A woman is positioned to the left of the car, and a hat is to the left of the woman. Every flower in the scene is situated to the left of the hat. To the right of the car is a round cake, with a toy car to its right, and a fruit to the right of the toy car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?k (exists ?w (exists ?h (exists ?ck (exists ?tc (exists ?f (and (Is ?c 'car') (HasState ?c 'broken') (Is ?b 'backpack') (In ?b ?c) (Is ?k 'key') (In ?k ?b) (Is ?w 'woman') (LeftOf ?w ?c) (Is ?h 'hat') (LeftOf ?h ?w) (forall ?fl (implies (Is ?fl 'flower') (LeftOf ?fl ?h))) (Is ?ck 'cake') (HasShape ?ck 'round') (RightOf ?ck ?c) (Is ?tc 'toy car') (RightOf ?tc ?ck) (Is ?f 'fruit') (RightOf ?f ?tc)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?k (exists ?w (exists ?h (exists ?ck (exists ?tc (exists ?f (forall ?fl (and (Is ?c 'car') (HasState ?c 'broken') (In ?b ?c) (LeftOf ?w ?c) (Is ?b 'backpack') (In ?k ?b) (RightOf ?ck ?c) (Is ?w 'woman') (LeftOf ?h ?w) (Is ?k 'key') (HasShape ?ck 'round') (RightOf ?tc ?ck) (Is ?h 'hat') (or (not (Is ?fl 'flower')) (LeftOf ?fl ?h)) (Is ?ck 'cake') (Is ?tc 'toy car') (RightOf ?f ?tc) (Is ?f 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "hat",
+        "backpack",
+        "woman",
+        "cake",
+        "flower",
+        "toy car",
+        "car",
+        "key"
+    ]
+}

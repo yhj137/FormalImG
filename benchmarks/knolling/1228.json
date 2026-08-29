@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the scene, it is positioned in the top-right area. Arranged in a strict vertical column directly below the shirt are a hat, a pair of headphones, an apple, a pizza, a pair of scissors, and a sock, in that order. All items in this chain are vertically aligned with one another.",
+    "dsl": "(and (forall ?shirt (implies (Is ?shirt 'shirt') (exists ?hat (exists ?headphones (exists ?apple (exists ?pizza (exists ?scissors (exists ?sock (and (Is ?hat 'hat') (Is ?headphones 'headphones') (Is ?apple 'apple') (Is ?pizza 'pizza') (Is ?scissors 'scissors') (Is ?sock 'sock') (OnTopSide ?shirt) (OnRightSide ?shirt) (Below ?hat ?shirt) (Below ?headphones ?hat) (Below ?apple ?headphones) (Below ?pizza ?apple) (Below ?scissors ?pizza) (Below ?sock ?scissors) (AlignedVertically ?shirt ?hat) (AlignedVertically ?hat ?headphones) (AlignedVertically ?headphones ?apple) (AlignedVertically ?apple ?pizza) (AlignedVertically ?pizza ?scissors) (AlignedVertically ?scissors ?sock)))))))))))",
+    "cnf": "(forall ?shirt (exists ?hat (exists ?headphones (exists ?apple (exists ?pizza (exists ?scissors (exists ?sock (and (or (not (Is ?shirt 'shirt')) (Is ?hat 'hat')) (or (not (Is ?shirt 'shirt')) (Is ?headphones 'headphones')) (or (not (Is ?shirt 'shirt')) (Below ?hat ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?apple 'apple')) (or (not (Is ?shirt 'shirt')) (Below ?headphones ?hat)) (or (not (Is ?shirt 'shirt')) (OnRightSide ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?pizza 'pizza')) (or (not (Is ?shirt 'shirt')) (Below ?apple ?headphones)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?shirt ?hat)) (or (not (Is ?shirt 'shirt')) (OnTopSide ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?scissors 'scissors')) (or (not (Is ?shirt 'shirt')) (Below ?pizza ?apple)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?hat ?headphones)) (or (not (Is ?shirt 'shirt')) (Below ?sock ?scissors)) (or (not (Is ?shirt 'shirt')) (Is ?sock 'sock')) (or (not (Is ?shirt 'shirt')) (Below ?scissors ?pizza)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?headphones ?apple)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?pizza ?scissors)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?scissors ?sock)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?apple ?pizza))))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "sock",
+        "pizza",
+        "hat",
+        "scissors",
+        "headphones",
+        "shirt"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a child holding headphones on a bed, with a chair positioned next to it. All books in the scene are located on the bed. A round pan containing a toy car sits on the chair.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?ch (and (Is ?c 'child') (Is ?b 'bed') (Is ?ch 'chair') (On ?c ?b) (NextTo ?ch ?b) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?b))) (exists ?h (exists ?p (exists ?tc (and (Is ?h 'headphones') (Is ?p 'pan') (Is ?tc 'toy car') (Holding ?c ?h) (On ?p ?ch) (HasShape ?p 'round') (In ?tc ?p))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?b (exists ?ch (forall ?bk (exists ?h (exists ?p (exists ?tc (and (Is ?c 'child') (On ?c ?b) (Holding ?c ?h) (Is ?b 'bed') (NextTo ?ch ?b) (Is ?h 'headphones') (or (not (Is ?bk 'book')) (On ?bk ?b)) (Is ?ch 'chair') (On ?p ?ch) (Is ?p 'pan') (HasShape ?p 'round') (In ?tc ?p) (Is ?tc 'toy car'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pan",
+        "toy car",
+        "headphones",
+        "chair",
+        "book",
+        "bed",
+        "child"
+    ]
+}

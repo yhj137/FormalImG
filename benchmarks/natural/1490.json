@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a man sitting on a wooden chair, holding a cup containing all the knives. To the left of the man is a hat with a banana inside, while to his right is a round clock with a pair of headphones next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?c (exists ?cp (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?cp 'cup') (On ?m ?c) (Holding ?m ?cp) (forall ?k (implies (Is ?k 'knife') (In ?k ?cp))) (exists ?ht (exists ?b (exists ?cl (exists ?hp (and (Is ?ht 'hat') (Is ?b 'banana') (Is ?cl 'clock') (HasShape ?cl 'round') (Is ?hp 'headphones') (LeftOf ?ht ?m) (In ?b ?ht) (RightOf ?cl ?m) (NextTo ?hp ?cl)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?c (exists ?cp (forall ?k (exists ?ht (exists ?b (exists ?cl (exists ?hp (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?c) (Holding ?m ?cp) (HasMaterial ?c 'wooden') (LeftOf ?ht ?m) (Is ?cp 'cup') (or (not (Is ?k 'knife')) (In ?k ?cp)) (Is ?c 'chair') (RightOf ?cl ?m) (Is ?ht 'hat') (In ?b ?ht) (HasShape ?cl 'round') (NextTo ?hp ?cl) (Is ?b 'banana') (Is ?cl 'clock') (Is ?hp 'headphones')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "man",
+        "knife",
+        "hat",
+        "banana",
+        "chair",
+        "cup",
+        "clock"
+    ]
+}

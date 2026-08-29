@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a bus with a cat to its right. Inside the bus, a teddy bear holds a ball, and every key in the scene is located there. A black pan containing a fork sits on the bus. To the right of the cat is a rock supporting a plastic basket, which holds an open laptop.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?c (exists ?tb (and (Is ?b 'bus') (Is ?c 'cat') (RightOf ?c ?b) (Is ?tb 'teddy bear') (In ?tb ?b) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?p (exists ?f (exists ?bl (exists ?r (exists ?bs (exists ?l (and (Is ?p 'pan') (HasColor ?p 'black') (On ?p ?b) (Is ?f 'fork') (In ?f ?p) (Is ?bl 'ball') (Holding ?tb ?bl) (Is ?r 'rock') (RightOf ?r ?c) (Is ?bs 'basket') (HasMaterial ?bs 'plastic') (On ?bs ?r) (Is ?l 'laptop') (HasState ?l 'open') (In ?l ?bs)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?c (exists ?tb (forall ?k (exists ?p (exists ?f (exists ?bl (exists ?r (exists ?bs (exists ?l (and (Is ?b 'bus') (RightOf ?c ?b) (In ?tb ?b) (Is ?c 'cat') (RightOf ?r ?c) (or (not (Is ?k 'key')) (In ?k ?b)) (Is ?tb 'teddy bear') (Holding ?tb ?bl) (Is ?r 'rock') (On ?bs ?r) (On ?p ?b) (Is ?bl 'ball') (HasMaterial ?bs 'plastic') (In ?l ?bs) (HasColor ?p 'black') (In ?f ?p) (Is ?bs 'basket') (HasState ?l 'open') (Is ?p 'pan') (Is ?f 'fork') (Is ?l 'laptop')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fork",
+        "laptop",
+        "teddy bear",
+        "rock",
+        "pan",
+        "ball",
+        "basket",
+        "cat",
+        "bus",
+        "key"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every dog has a dirty jacket to its left and a peeled banana to its right.",
+    "dsl": "(forall ?d (implies (Is ?d 'dog') (exists ?j (exists ?b (and (Is ?j 'jacket') (HasState ?j 'dirty') (Is ?b 'banana') (HasState ?b 'peeled') (LeftOf ?j ?d) (RightOf ?b ?d))))))",
+    "cnf": "(forall ?d (exists ?j (exists ?b (and (or (not (Is ?d 'dog')) (Is ?j 'jacket')) (or (not (Is ?d 'dog')) (HasState ?j 'dirty')) (or (not (Is ?d 'dog')) (Is ?b 'banana')) (or (not (Is ?d 'dog')) (LeftOf ?j ?d)) (or (not (Is ?d 'dog')) (HasState ?b 'peeled')) (or (not (Is ?d 'dog')) (RightOf ?b ?d))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "dog",
+        "banana"
+    ]
+}

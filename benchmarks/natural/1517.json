@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. A person holding a knife stands next to a horse. Beside the horse are shoes containing every key. A chair is located next to the shoes, with a triangular sandwich next to the chair and a black phone next to the sandwich.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (exists ?kn (exists ?sh (exists ?h (and (Is ?p 'person') (Is ?kn 'knife') (Is ?sh 'shoes') (Is ?h 'horse') (Holding ?p ?kn) (NextTo ?h ?p) (NextTo ?sh ?h) (forall ?k (implies (Is ?k 'key') (In ?k ?sh))) (exists ?c (exists ?sa (exists ?ph (and (Is ?c 'chair') (Is ?sa 'sandwich') (Is ?ph 'phone') (NextTo ?c ?sh) (NextTo ?sa ?c) (HasShape ?sa 'triangular') (NextTo ?ph ?sa) (HasColor ?ph 'black')))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?kn (exists ?sh (exists ?h (forall ?k (exists ?c (exists ?sa (exists ?ph (and (Is ?p 'person') (Holding ?p ?kn) (NextTo ?h ?p) (Is ?kn 'knife') (Is ?h 'horse') (NextTo ?sh ?h) (Is ?sh 'shoes') (or (not (Is ?k 'key')) (In ?k ?sh)) (NextTo ?c ?sh) (Is ?c 'chair') (NextTo ?sa ?c) (Is ?sa 'sandwich') (HasShape ?sa 'triangular') (NextTo ?ph ?sa) (Is ?ph 'phone') (HasColor ?ph 'black')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "knife",
+        "person",
+        "horse",
+        "shoes",
+        "chair",
+        "sandwich",
+        "key"
+    ]
+}

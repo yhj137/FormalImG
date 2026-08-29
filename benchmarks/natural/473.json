@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every bicycle has a basket on it positioned to its left, containing a standing bird.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bicycle') (exists ?k (exists ?bird (and (Is ?k 'basket') (Is ?bird 'bird') (On ?k ?b) (In ?bird ?k) (HasState ?bird 'standing') (LeftOf ?k ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?k (exists ?bird (and (or (not (Is ?b 'bicycle')) (Is ?k 'basket')) (or (not (Is ?b 'bicycle')) (On ?k ?b)) (or (not (Is ?b 'bicycle')) (Is ?bird 'bird')) (or (not (Is ?b 'bicycle')) (In ?bird ?k)) (or (not (Is ?b 'bicycle')) (LeftOf ?k ?b)) (or (not (Is ?b 'bicycle')) (HasState ?bird 'standing')))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "bird",
+        "bicycle"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the scene, there is a suitcase. A shirt, a drill, and a ruler are aligned vertically with the suitcase. The ruler is smaller than the suitcase. For every lemon present in the image, there is a horizontal sequence of items to its left: a donut is located to the left of the lemon, a fork is to the left of the donut, and a pair of scissors is to the left of the fork. Furthermore, the lemon is positioned to the left of the ruler, and the scissors are smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?drill (exists ?ruler (and (Is ?suitcase 'suitcase') (Is ?shirt 'shirt') (Is ?drill 'drill') (Is ?ruler 'ruler') (OnRightSide ?suitcase) (AlignedVertically ?suitcase ?shirt) (AlignedVertically ?shirt ?drill) (AlignedVertically ?drill ?ruler) (SmallerThan ?ruler ?suitcase) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?donut (exists ?fork (exists ?scissors (and (Is ?donut 'donut') (Is ?fork 'fork') (Is ?scissors 'scissors') (LeftOf ?lemon ?ruler) (LeftOf ?donut ?lemon) (LeftOf ?fork ?donut) (LeftOf ?scissors ?fork) (SmallerThan ?scissors ?suitcase))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?drill (exists ?ruler (forall ?lemon (exists ?donut (exists ?fork (exists ?scissors (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (AlignedVertically ?suitcase ?shirt) (SmallerThan ?ruler ?suitcase) (Is ?shirt 'shirt') (AlignedVertically ?shirt ?drill) (or (not (Is ?lemon 'lemon')) (SmallerThan ?scissors ?suitcase)) (AlignedVertically ?drill ?ruler) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?ruler)) (Is ?drill 'drill') (or (not (Is ?lemon 'lemon')) (LeftOf ?scissors ?fork)) (Is ?ruler 'ruler') (or (not (Is ?lemon 'lemon')) (Is ?scissors 'scissors')) (or (not (Is ?lemon 'lemon')) (LeftOf ?donut ?lemon)) (or (not (Is ?lemon 'lemon')) (LeftOf ?fork ?donut)) (or (not (Is ?lemon 'lemon')) (Is ?fork 'fork')) (or (not (Is ?lemon 'lemon')) (Is ?donut 'donut')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "donut",
+        "drill",
+        "fork",
+        "scissors",
+        "suitcase",
+        "shirt"
+    ]
+}

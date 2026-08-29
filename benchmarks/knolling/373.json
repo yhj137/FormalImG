@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a book positioned on the right side of the scene. For every cup in the image, it is aligned vertically with that book.",
+    "dsl": "(exists ?b (and (Is ?b 'book') (OnRightSide ?b) (forall ?c (implies (Is ?c 'cup') (AlignedVertically ?c ?b)))))",
+    "cnf": "(exists ?b (forall ?c (and (Is ?b 'book') (OnRightSide ?b) (or (not (Is ?c 'cup')) (AlignedVertically ?c ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "cup"
+    ]
+}

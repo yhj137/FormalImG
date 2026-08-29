@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a teddy bear holding a metal hammer on a sofa. A shirt lies next to the teddy bear. A keyboard is also on the sofa with a pair of glasses on top, and every cup in the scene is positioned next to the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?tb (exists ?h (exists ?s (exists ?sh (exists ?k (exists ?g (and (Is ?tb 'teddy bear') (Is ?h 'hammer') (Is ?s 'sofa') (Is ?sh 'shirt') (Is ?k 'keyboard') (Is ?g 'glasses') (HasMaterial ?h 'metal') (Holding ?tb ?h) (On ?tb ?s) (NextTo ?sh ?tb) (On ?k ?s) (On ?g ?k) (forall ?c (implies (Is ?c 'cup') (NextTo ?c ?k)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?tb (exists ?h (exists ?s (exists ?sh (exists ?k (exists ?g (forall ?c (and (Is ?tb 'teddy bear') (Holding ?tb ?h) (On ?tb ?s) (HasMaterial ?h 'metal') (NextTo ?sh ?tb) (Is ?s 'sofa') (On ?k ?s) (Is ?h 'hammer') (Is ?sh 'shirt') (Is ?k 'keyboard') (On ?g ?k) (or (not (Is ?c 'cup')) (NextTo ?c ?k)) (Is ?g 'glasses'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "sofa",
+        "hammer",
+        "teddy bear",
+        "shirt",
+        "cup"
+    ]
+}

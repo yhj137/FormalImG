@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a bus. Every elephant is positioned to the right of the bus. A sandwich is located next to the bus, with a phone to the left of the sandwich. A plastic cup sits on the bus, and an orange is placed next to the cup.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (forall ?e (implies (Is ?e 'elephant') (RightOf ?e ?b))) (exists ?s (exists ?c (exists ?p (exists ?o (and (Is ?s 'sandwich') (Is ?c 'cup') (HasMaterial ?c 'plastic') (Is ?p 'phone') (Is ?o 'orange') (NextTo ?s ?b) (On ?c ?b) (LeftOf ?p ?s) (NextTo ?o ?c)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?e (exists ?s (exists ?c (exists ?p (exists ?o (and (Is ?b 'bus') (or (not (Is ?e 'elephant')) (RightOf ?e ?b)) (NextTo ?s ?b) (On ?c ?b) (Is ?s 'sandwich') (LeftOf ?p ?s) (HasMaterial ?c 'plastic') (NextTo ?o ?c) (Is ?p 'phone') (Is ?c 'cup') (Is ?o 'orange')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sandwich",
+        "bus",
+        "phone",
+        "cup",
+        "elephant",
+        "orange"
+    ]
+}

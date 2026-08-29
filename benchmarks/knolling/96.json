@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A single calculator is arranged neatly on the top side of the surface.",
+    "dsl": "(exists ?c (and (Is ?c 'calculator') (OnTopSide ?c)))",
+    "cnf": "(exists ?c (and (Is ?c 'calculator') (OnTopSide ?c)))",
+    "k": 1,
+    "object_classes": [
+        "calculator"
+    ]
+}

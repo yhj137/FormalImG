@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style image featuring an empty bookshelf.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bookshelf') (HasState ?b 'empty'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bookshelf') (HasState ?b 'empty'))))",
+    "k": 1,
+    "object_classes": [
+        "bookshelf"
+    ]
+}

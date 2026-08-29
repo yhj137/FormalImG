@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a bus, a bed supports an open laptop. A book lies next to the laptop, with all glasses resting on it. A bird hovers above the bed, holding a triangular sandwich. To the right of the laptop sits a toy car, accompanied by a screwdriver.",
+    "dsl": "(exists ?bus (and (Is ?bus 'bus') (exists ?bed (and (Is ?bed 'bed') (In ?bed ?bus) (exists ?lap (and (Is ?lap 'laptop') (HasState ?lap 'open') (On ?lap ?bed) (exists ?bk (and (Is ?bk 'book') (NextTo ?bk ?lap) (forall ?gl (implies (Is ?gl 'glasses') (On ?gl ?bk))) (exists ?brd (and (Is ?brd 'bird') (Above ?brd ?bed) (exists ?snd (and (Is ?snd 'sandwich') (HasShape ?snd 'triangular') (Holding ?brd ?snd) (exists ?toy (and (Is ?toy 'toy car') (RightOf ?toy ?lap) (exists ?scr (and (Is ?scr 'screwdriver') (NextTo ?scr ?toy)))))))))))))))))",
+    "cnf": "(exists ?bus (exists ?bed (exists ?lap (exists ?bk (forall ?gl (exists ?brd (exists ?snd (exists ?toy (exists ?scr (and (Is ?bus 'bus') (In ?bed ?bus) (Is ?bed 'bed') (On ?lap ?bed) (Above ?brd ?bed) (HasState ?lap 'open') (NextTo ?bk ?lap) (Is ?brd 'bird') (Holding ?brd ?snd) (Is ?lap 'laptop') (RightOf ?toy ?lap) (Is ?bk 'book') (or (not (Is ?gl 'glasses')) (On ?gl ?bk)) (HasShape ?snd 'triangular') (Is ?toy 'toy car') (NextTo ?scr ?toy) (Is ?snd 'sandwich') (Is ?scr 'screwdriver')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "bed",
+        "laptop",
+        "glasses",
+        "bird",
+        "toy car",
+        "sandwich",
+        "screwdriver",
+        "bus"
+    ]
+}

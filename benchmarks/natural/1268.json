@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a refrigerator with a woman to its right. To the right of the woman is a bed with a cat inside. Inside the refrigerator are a round bowl containing a flower and all the bananas.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'refrigerator') (forall ?b (implies (Is ?b 'banana') (In ?b ?r))) (exists ?w (and (Is ?w 'woman') (RightOf ?w ?r) (exists ?d (and (Is ?d 'bed') (RightOf ?d ?w) (exists ?c (and (Is ?c 'cat') (In ?c ?d))))))) (exists ?o (and (Is ?o 'bowl') (HasShape ?o 'round') (In ?o ?r) (exists ?f (and (Is ?f 'flower') (In ?f ?o))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (forall ?b (exists ?w (exists ?d (exists ?c (exists ?o (exists ?f (and (Is ?r 'refrigerator') (or (not (Is ?b 'banana')) (In ?b ?r)) (RightOf ?w ?r) (In ?o ?r) (Is ?w 'woman') (RightOf ?d ?w) (HasShape ?o 'round') (In ?f ?o) (Is ?d 'bed') (In ?c ?d) (Is ?o 'bowl') (Is ?f 'flower') (Is ?c 'cat'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bed",
+        "woman",
+        "flower",
+        "refrigerator",
+        "bowl",
+        "cat",
+        "banana"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. A closed umbrella is located to the left of a sofa, and a man is on the sofa. To the right of the sofa stands a bookshelf with a keyboard on it. Every apple is next to an orange inside a cup that is placed next to the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?u (exists ?s (exists ?m (exists ?bs (exists ?k (and (Is ?u 'umbrella') (Is ?s 'sofa') (Is ?m 'man') (Is ?bs 'bookshelf') (Is ?k 'keyboard') (HasState ?u 'closed') (LeftOf ?u ?s) (On ?m ?s) (RightOf ?bs ?s) (On ?k ?bs) (forall ?a (implies (Is ?a 'apple') (exists ?c (exists ?o (and (Is ?c 'cup') (Is ?o 'orange') (In ?o ?c) (NextTo ?c ?k) (NextTo ?a ?o)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?u (exists ?s (exists ?m (exists ?bs (exists ?k (forall ?a (exists ?c (exists ?o (and (Is ?u 'umbrella') (HasState ?u 'closed') (LeftOf ?u ?s) (Is ?s 'sofa') (On ?m ?s) (RightOf ?bs ?s) (Is ?m 'man') (Is ?bs 'bookshelf') (On ?k ?bs) (Is ?k 'keyboard') (or (not (Is ?a 'apple')) (NextTo ?c ?k)) (or (not (Is ?a 'apple')) (In ?o ?c)) (or (not (Is ?a 'apple')) (NextTo ?a ?o)) (or (not (Is ?a 'apple')) (Is ?c 'cup')) (or (not (Is ?a 'apple')) (Is ?o 'orange'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "sofa",
+        "man",
+        "cup",
+        "apple",
+        "bookshelf",
+        "orange"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "For every tie in the image, it is situated on the left side, and there is a keyboard positioned below it. Additionally, there is a mouse located below the keyboard, and the keyboard is larger than the mouse.",
+    "dsl": "(and (forall ?tie (implies (Is ?tie 'tie') (exists ?keyboard (exists ?mouse (and (Is ?keyboard 'keyboard') (Is ?mouse 'mouse') (OnLeftSide ?tie) (Above ?tie ?keyboard) (Above ?keyboard ?mouse) (LargerThan ?keyboard ?mouse)))))))",
+    "cnf": "(forall ?tie (exists ?keyboard (exists ?mouse (and (or (not (Is ?tie 'tie')) (Is ?keyboard 'keyboard')) (or (not (Is ?tie 'tie')) (Is ?mouse 'mouse')) (or (not (Is ?tie 'tie')) (Above ?tie ?keyboard)) (or (not (Is ?tie 'tie')) (OnLeftSide ?tie)) (or (not (Is ?tie 'tie')) (Above ?keyboard ?mouse)) (or (not (Is ?tie 'tie')) (LargerThan ?keyboard ?mouse))))))",
+    "k": 3,
+    "object_classes": [
+        "mouse",
+        "tie",
+        "keyboard"
+    ]
+}

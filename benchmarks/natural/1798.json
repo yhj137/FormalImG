@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child wearing headphones and holding an open umbrella. A bookshelf stands next to the child with a ball on it, containing every toy car. To the right of the child is a bus, and to the right of the bus is a car with a rock next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?u (exists ?hp (exists ?bs (exists ?b (exists ?bus (exists ?car (exists ?r (and (Is ?c 'child') (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?c ?u) (Is ?hp 'headphones') (On ?hp ?c) (Is ?bs 'bookshelf') (NextTo ?bs ?c) (Is ?b 'ball') (On ?b ?bs) (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?bs))) (Is ?bus 'bus') (LeftOf ?c ?bus) (Is ?car 'car') (RightOf ?car ?bus) (Is ?r 'rock') (NextTo ?r ?car)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?u (exists ?hp (exists ?bs (exists ?b (exists ?bus (exists ?car (exists ?r (forall ?tc (and (Is ?c 'child') (Holding ?c ?u) (On ?hp ?c) (HasState ?u 'open') (NextTo ?bs ?c) (Is ?hp 'headphones') (Is ?u 'umbrella') (LeftOf ?c ?bus) (Is ?bs 'bookshelf') (On ?b ?bs) (Is ?bus 'bus') (RightOf ?car ?bus) (or (not (Is ?tc 'toy car')) (In ?tc ?bs)) (Is ?b 'ball') (Is ?car 'car') (NextTo ?r ?car) (Is ?r 'rock'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "toy car",
+        "rock",
+        "headphones",
+        "bus",
+        "ball",
+        "bookshelf",
+        "child",
+        "car"
+    ]
+}

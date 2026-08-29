@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A refrigerator stands in the center, containing a round cake, a bowl, and every fruit. To the left of the refrigerator is a chair with a cup on it. To the right of the refrigerator is a keyboard. Situated to the right of the keyboard are headphones. Further to the right of the headphones is a bicycle, and a lion stands to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'refrigerator') (forall ?f (implies (Is ?f 'fruit') (In ?f ?r))) (exists ?ck (exists ?bw (exists ?ch (exists ?cp (exists ?kb (exists ?hp (exists ?bi (exists ?ln (and (Is ?ck 'cake') (HasShape ?ck 'round') (In ?ck ?r) (Is ?bw 'bowl') (In ?bw ?r) (Is ?ch 'chair') (LeftOf ?ch ?r) (Is ?cp 'cup') (On ?cp ?ch) (Is ?kb 'keyboard') (RightOf ?kb ?r) (Is ?hp 'headphones') (RightOf ?hp ?kb) (Is ?bi 'bicycle') (RightOf ?bi ?hp) (Is ?ln 'lion') (RightOf ?ln ?bi)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (forall ?f (exists ?ck (exists ?bw (exists ?ch (exists ?cp (exists ?kb (exists ?hp (exists ?bi (exists ?ln (and (Is ?r 'refrigerator') (or (not (Is ?f 'fruit')) (In ?f ?r)) (In ?ck ?r) (In ?bw ?r) (HasShape ?ck 'round') (LeftOf ?ch ?r) (Is ?bw 'bowl') (Is ?ck 'cake') (RightOf ?kb ?r) (Is ?ch 'chair') (On ?cp ?ch) (Is ?kb 'keyboard') (RightOf ?hp ?kb) (Is ?cp 'cup') (Is ?hp 'headphones') (RightOf ?bi ?hp) (Is ?bi 'bicycle') (RightOf ?ln ?bi) (Is ?ln 'lion')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "bowl",
+        "headphones",
+        "cake",
+        "chair",
+        "refrigerator",
+        "cup",
+        "bicycle",
+        "lion",
+        "fruit"
+    ]
+}

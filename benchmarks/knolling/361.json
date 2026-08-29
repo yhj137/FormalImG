@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is positioned on the bottom side of the scene. Every glove present in the image is vertically aligned with this keyboard.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (OnBottomSide ?k) (forall ?g (implies (Is ?g 'glove') (AlignedVertically ?g ?k)))))",
+    "cnf": "(exists ?k (forall ?g (and (Is ?k 'keyboard') (OnBottomSide ?k) (or (not (Is ?g 'glove')) (AlignedVertically ?g ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "glove",
+        "keyboard"
+    ]
+}

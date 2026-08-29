@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a tie positioned on the right side. A cutting board is aligned horizontally with the tie. A bowl is located on the bottom side of the image and is positioned below the cutting board. A pair of pliers is vertically aligned with the cutting board, and a screwdriver is vertically aligned with the pliers. Furthermore, for every carrot in the image, it is located below the screwdriver and is visually smaller than the bowl.",
+    "dsl": "(exists ?tie (exists ?board (exists ?bowl (exists ?pliers (exists ?driver (and (Is ?tie 'tie') (OnRightSide ?tie) (Is ?board 'cutting_board') (AlignedHorizontally ?board ?tie) (Is ?bowl 'bowl') (OnBottomSide ?bowl) (Below ?bowl ?board) (Is ?pliers 'pliers') (AlignedVertically ?pliers ?board) (Is ?driver 'screwdriver') (AlignedVertically ?driver ?pliers) (forall ?c (implies (Is ?c 'carrot') (and (Below ?c ?driver) (SmallerThan ?c ?bowl))))))))))",
+    "cnf": "(exists ?tie (exists ?board (exists ?bowl (exists ?pliers (exists ?driver (forall ?c (and (Is ?tie 'tie') (OnRightSide ?tie) (AlignedHorizontally ?board ?tie) (Is ?board 'cutting_board') (Below ?bowl ?board) (AlignedVertically ?pliers ?board) (OnBottomSide ?bowl) (or (not (Is ?c 'carrot')) (SmallerThan ?c ?bowl)) (Is ?pliers 'pliers') (AlignedVertically ?driver ?pliers) (Is ?bowl 'bowl') (or (not (Is ?c 'carrot')) (Below ?c ?driver)) (Is ?driver 'screwdriver'))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "carrot",
+        "screwdriver",
+        "cutting_board",
+        "bowl"
+    ]
+}

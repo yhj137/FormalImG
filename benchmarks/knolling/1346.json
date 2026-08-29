@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a vertical arrangement starting with a monitor at the top, followed by a laptop, a phone, and a calculator, each positioned below the previous one. These four objects are aligned vertically, with the monitor being visually larger than the laptop, and the calculator residing on the bottom side of the image. The composition follows a specific rule regarding shoes: for every shoe in the scene, there is a bowl situated below it and a fork situated below the bowl. Furthermore, each shoe is located below the calculator and shares the same vertical alignment, forming a continuous neat column.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?phone (exists ?calculator (and (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?phone 'phone') (Is ?calculator 'calculator') (Below ?laptop ?monitor) (Below ?phone ?laptop) (Below ?calculator ?phone) (AlignedVertically ?monitor ?laptop) (AlignedVertically ?laptop ?phone) (AlignedVertically ?phone ?calculator) (LargerThan ?monitor ?laptop) (OnBottomSide ?calculator) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?bowl (exists ?fork (and (Is ?bowl 'bowl') (Is ?fork 'fork') (Below ?shoe ?calculator) (AlignedVertically ?shoe ?calculator) (Below ?bowl ?shoe) (Below ?fork ?bowl) (AlignedVertically ?shoe ?bowl) (AlignedVertically ?bowl ?fork)))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?phone (exists ?calculator (forall ?shoe (exists ?bowl (exists ?fork (and (Is ?monitor 'monitor') (Below ?laptop ?monitor) (AlignedVertically ?monitor ?laptop) (Is ?laptop 'laptop') (Below ?phone ?laptop) (LargerThan ?monitor ?laptop) (AlignedVertically ?laptop ?phone) (Is ?phone 'phone') (Below ?calculator ?phone) (AlignedVertically ?phone ?calculator) (Is ?calculator 'calculator') (OnBottomSide ?calculator) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?calculator)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?calculator)) (or (not (Is ?shoe 'shoe')) (Is ?fork 'fork')) (or (not (Is ?shoe 'shoe')) (Below ?bowl ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?bowl 'bowl')) (or (not (Is ?shoe 'shoe')) (Below ?fork ?bowl)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?bowl)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?bowl ?fork))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "phone",
+        "fork",
+        "calculator",
+        "monitor",
+        "bowl",
+        "shoe"
+    ]
+}

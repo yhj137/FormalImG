@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the left side of the image. The drill is located to the left of a pair of scissors. A book is placed below the drill, and the book is also to the left of a donut. A plate is situated below the book, and the plate is to the left of a fork. A bowl is found below the plate. Finally, for every sock in the scene, it is arranged below the bowl.",
+    "dsl": "(exists ?drill (exists ?scissors (exists ?book (exists ?donut (exists ?plate (exists ?fork (exists ?bowl (and (Is ?drill 'drill') (Is ?scissors 'scissors') (Is ?book 'book') (Is ?donut 'donut') (Is ?plate 'plate') (Is ?fork 'fork') (Is ?bowl 'bowl') (OnLeftSide ?drill) (LeftOf ?drill ?scissors) (Above ?drill ?book) (LeftOf ?book ?donut) (Above ?book ?plate) (LeftOf ?plate ?fork) (Above ?plate ?bowl) (forall ?sock (implies (Is ?sock 'sock') (Below ?sock ?bowl)))))))))))",
+    "cnf": "(exists ?drill (exists ?scissors (exists ?book (exists ?donut (exists ?plate (exists ?fork (exists ?bowl (forall ?sock (and (Is ?drill 'drill') (OnLeftSide ?drill) (LeftOf ?drill ?scissors) (Above ?drill ?book) (Is ?scissors 'scissors') (Is ?book 'book') (LeftOf ?book ?donut) (Above ?book ?plate) (Is ?donut 'donut') (Is ?plate 'plate') (LeftOf ?plate ?fork) (Above ?plate ?bowl) (Is ?fork 'fork') (Is ?bowl 'bowl') (or (not (Is ?sock 'sock')) (Below ?sock ?bowl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "bowl",
+        "scissors",
+        "drill",
+        "book",
+        "fork",
+        "sock",
+        "donut"
+    ]
+}

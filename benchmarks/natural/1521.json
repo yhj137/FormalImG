@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a man standing next to a metal refrigerator. A ball is located to the left of the man. A flower sits on top of the refrigerator, and inside the refrigerator is a pan. An orange rests on the pan, positioned to the right of a fruit. Every bus in the scene is located to the right of the man.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?r (exists ?p (exists ?ba (and (Is ?m 'man') (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (NextTo ?m ?r) (Is ?p 'pan') (In ?p ?r) (Is ?ba 'ball') (LeftOf ?ba ?m) (forall ?bu (implies (Is ?bu 'bus') (RightOf ?bu ?m))) (exists ?fl (exists ?o (exists ?fr (and (Is ?fl 'flower') (On ?fl ?r) (Is ?o 'orange') (On ?o ?p) (Is ?fr 'fruit') (RightOf ?o ?fr)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?r (exists ?p (exists ?ba (forall ?bu (exists ?fl (exists ?o (exists ?fr (and (Is ?m 'man') (NextTo ?m ?r) (LeftOf ?ba ?m) (HasMaterial ?r 'metal') (In ?p ?r) (or (not (Is ?bu 'bus')) (RightOf ?bu ?m)) (Is ?ba 'ball') (Is ?r 'refrigerator') (On ?fl ?r) (Is ?p 'pan') (On ?o ?p) (Is ?fl 'flower') (Is ?o 'orange') (RightOf ?o ?fr) (Is ?fr 'fruit')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pan",
+        "man",
+        "bus",
+        "ball",
+        "fruit",
+        "refrigerator",
+        "flower",
+        "orange"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The image portrays a cyberpunk style scene. A purple umbrella is positioned to the left of a broken bus. A bird is perched on the bus. Inside the vehicle, a dog is holding a screwdriver, while a hammer lies to the left of the dog. A clock is located to the right of the bus. There is a pan on the clock, and a spoon is inside the pan.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?u (exists ?b (exists ?d (exists ?s (exists ?h (exists ?bird (exists ?c (exists ?p (exists ?sp (and (Is ?u 'umbrella') (Is ?b 'bus') (Is ?d 'dog') (Is ?s 'screwdriver') (Is ?h 'hammer') (Is ?bird 'bird') (Is ?c 'clock') (Is ?p 'pan') (Is ?sp 'spoon') (HasColor ?u 'purple') (LeftOf ?u ?b) (HasState ?b 'broken') (On ?bird ?b) (In ?d ?b) (Holding ?d ?s) (LeftOf ?h ?d) (RightOf ?c ?b) (On ?p ?c) (In ?sp ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?u (exists ?b (exists ?d (exists ?s (exists ?h (exists ?bird (exists ?c (exists ?p (exists ?sp (and (Is ?u 'umbrella') (HasColor ?u 'purple') (LeftOf ?u ?b) (Is ?b 'bus') (HasState ?b 'broken') (On ?bird ?b) (In ?d ?b) (Is ?bird 'bird') (RightOf ?c ?b) (Is ?d 'dog') (Holding ?d ?s) (Is ?c 'clock') (On ?p ?c) (LeftOf ?h ?d) (Is ?s 'screwdriver') (Is ?p 'pan') (In ?sp ?p) (Is ?h 'hammer') (Is ?sp 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "pan",
+        "bus",
+        "screwdriver",
+        "hammer",
+        "clock",
+        "dog",
+        "bird",
+        "spoon"
+    ]
+}

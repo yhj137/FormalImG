@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image with a neat arrangement of items. On the top side of the scene, there is a pair of headphones and a laptop; the laptop is positioned to the right of the headphones, and they are aligned horizontally. On the bottom side, there is a sandwich and a bottle, with the bottle located to the right of the sandwich and aligned horizontally. The laptop is visually larger than the sandwich. Furthermore, the layout enforces a specific constraint: for every pair of pliers, it is located on the bottom side, and there is a knife to its right and a phone to the right of the knife. These three items\u2014pliers, knife, and phone\u2014are aligned horizontally, and the sandwich is larger than the phone.",
+    "dsl": "(exists ?laptop (exists ?headphones (exists ?sandwich (exists ?bottle (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?headphones 'headphones') (OnTopSide ?headphones) (RightOf ?laptop ?headphones) (AlignedHorizontally ?laptop ?headphones) (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich) (Is ?bottle 'bottle') (OnBottomSide ?bottle) (RightOf ?bottle ?sandwich) (AlignedHorizontally ?bottle ?sandwich) (LargerThan ?laptop ?sandwich) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?knife (exists ?phone (and (Is ?knife 'knife') (Is ?phone 'phone') (OnBottomSide ?pliers) (RightOf ?knife ?pliers) (RightOf ?phone ?knife) (AlignedHorizontally ?pliers ?knife) (AlignedHorizontally ?knife ?phone) (LargerThan ?sandwich ?phone)))))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (exists ?sandwich (exists ?bottle (forall ?pliers (exists ?knife (exists ?phone (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (RightOf ?laptop ?headphones) (AlignedHorizontally ?laptop ?headphones) (OnTopSide ?headphones) (LargerThan ?laptop ?sandwich) (Is ?headphones 'headphones') (AlignedHorizontally ?bottle ?sandwich) (or (not (Is ?pliers 'pliers')) (LargerThan ?sandwich ?phone)) (RightOf ?bottle ?sandwich) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?knife ?phone)) (OnBottomSide ?sandwich) (OnBottomSide ?bottle) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?pliers ?knife)) (or (not (Is ?pliers 'pliers')) (RightOf ?phone ?knife)) (Is ?sandwich 'sandwich') (Is ?bottle 'bottle') (or (not (Is ?pliers 'pliers')) (RightOf ?knife ?pliers)) (or (not (Is ?pliers 'pliers')) (Is ?phone 'phone')) (or (not (Is ?pliers 'pliers')) (OnBottomSide ?pliers)) (or (not (Is ?pliers 'pliers')) (Is ?knife 'knife'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "phone",
+        "knife",
+        "bottle",
+        "headphones",
+        "sandwich"
+    ]
+}

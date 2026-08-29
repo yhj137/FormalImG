@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is located on the top side of the layout and is visually smaller than the game controller found to its right. For every ruler in the scene, the camera is positioned above that ruler. Additionally, there is a hat situated below the ruler and a bowl located to the right of the hat.",
+    "dsl": "(exists ?c (exists ?g (and (Is ?c 'camera') (OnTopSide ?c) (Is ?g 'game_controller') (RightOf ?g ?c) (SmallerThan ?c ?g) (forall ?r (implies (Is ?r 'ruler') (exists ?h (exists ?b (and (Is ?h 'hat') (Is ?b 'bowl') (Above ?c ?r) (Above ?r ?h) (RightOf ?b ?h)))))))))",
+    "cnf": "(exists ?c (exists ?g (forall ?r (exists ?h (exists ?b (and (Is ?c 'camera') (OnTopSide ?c) (RightOf ?g ?c) (SmallerThan ?c ?g) (Is ?g 'game_controller') (or (not (Is ?r 'ruler')) (Above ?c ?r)) (or (not (Is ?r 'ruler')) (Is ?b 'bowl')) (or (not (Is ?r 'ruler')) (Above ?r ?h)) (or (not (Is ?r 'ruler')) (Is ?h 'hat')) (or (not (Is ?r 'ruler')) (RightOf ?b ?h))))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "game_controller",
+        "hat",
+        "camera",
+        "bowl"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a boat. An elephant stands on the boat holding a sliced pizza, with a backpack to its right. Additionally, every cake in the scene is located on the boat and has a keyboard next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?e (exists ?p (exists ?bp (and (Is ?b 'boat') (Is ?e 'elephant') (Is ?p 'pizza') (Is ?bp 'backpack') (On ?e ?b) (Holding ?e ?p) (HasState ?p 'sliced') (RightOf ?bp ?e) (forall ?c (implies (Is ?c 'cake') (exists ?k (and (Is ?k 'keyboard') (On ?c ?b) (NextTo ?k ?c)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?e (exists ?p (exists ?bp (forall ?c (exists ?k (and (Is ?b 'boat') (On ?e ?b) (or (not (Is ?c 'cake')) (On ?c ?b)) (Is ?e 'elephant') (Holding ?e ?p) (or (not (Is ?c 'cake')) (Is ?k 'keyboard')) (or (not (Is ?c 'cake')) (NextTo ?k ?c)) (RightOf ?bp ?e) (Is ?p 'pizza') (HasState ?p 'sliced') (Is ?bp 'backpack')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "backpack",
+        "cake",
+        "pizza",
+        "boat",
+        "keyboard"
+    ]
+}

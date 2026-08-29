@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every teddy bear is fluffy.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?t (implies (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?t (or (not (Is ?t 'teddy bear')) (HasMaterial ?t 'fluffy'))))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

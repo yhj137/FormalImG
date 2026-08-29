@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A green bottle sits on a bookshelf, with every screwdriver placed next to it. To the left of the bookshelf is a dog. Beside the dog sits a basket with headphones on it. A round pizza lies to the right of the bookshelf.",
+    "dsl": "(exists ?bs (and (Is ?bs 'bookshelf') (exists ?bt (and (Is ?bt 'bottle') (HasColor ?bt 'green') (On ?bt ?bs) (forall ?sd (implies (Is ?sd 'screwdriver') (NextTo ?sd ?bt))))) (exists ?d (and (Is ?d 'dog') (LeftOf ?d ?bs) (exists ?bk (and (Is ?bk 'basket') (NextTo ?bk ?d) (exists ?h (and (Is ?h 'headphones') (On ?h ?bk))))))) (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (RightOf ?p ?bs)))))",
+    "cnf": "(exists ?bs (exists ?bt (forall ?sd (exists ?d (exists ?bk (exists ?h (exists ?p (and (Is ?bs 'bookshelf') (On ?bt ?bs) (LeftOf ?d ?bs) (HasColor ?bt 'green') (or (not (Is ?sd 'screwdriver')) (NextTo ?sd ?bt)) (RightOf ?p ?bs) (Is ?d 'dog') (NextTo ?bk ?d) (Is ?bt 'bottle') (HasShape ?p 'round') (Is ?bk 'basket') (On ?h ?bk) (Is ?p 'pizza') (Is ?h 'headphones')))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "bottle",
+        "pizza",
+        "dog",
+        "basket",
+        "screwdriver",
+        "bookshelf"
+    ]
+}

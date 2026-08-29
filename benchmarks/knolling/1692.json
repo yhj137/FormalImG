@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a suitcase, a hat, and a cutting board. The hat is placed above the suitcase, and the suitcase is larger than the hat. The cutting board is positioned below the suitcase and is smaller than the suitcase. For every spoon in the arrangement, it is located above the cutting board. Associated with the spoon is a white cup positioned above it, a bowl above the cup, and a black pan above the bowl, with the pan being larger than the bowl. Additionally, a donut is located below the spoon, and a ruler is positioned below the donut. The donut is smaller than the cutting board, and the ruler is located on the right side of the image.",
+    "dsl": "(exists ?suit (exists ?hat (exists ?board (and (Is ?suit 'suitcase') (Is ?hat 'hat') (Is ?board 'cutting_board') (Above ?hat ?suit) (Below ?board ?suit) (LargerThan ?suit ?hat) (SmallerThan ?board ?suit) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?cup (exists ?bowl (exists ?pan (exists ?donut (exists ?ruler (and (Is ?cup 'cup') (Has ?cup 'white') (Is ?bowl 'bowl') (Is ?pan 'pan') (Has ?pan 'black') (Is ?donut 'donut') (Is ?ruler 'ruler') (Above ?spoon ?board) (Above ?cup ?spoon) (Above ?bowl ?cup) (Above ?pan ?bowl) (Below ?donut ?spoon) (Below ?ruler ?donut) (LargerThan ?pan ?bowl) (SmallerThan ?donut ?board) (OnRightSide ?ruler)))))))))))))",
+    "cnf": "(exists ?suit (exists ?hat (exists ?board (forall ?spoon (exists ?cup (exists ?bowl (exists ?pan (exists ?donut (exists ?ruler (and (Is ?suit 'suitcase') (Above ?hat ?suit) (Below ?board ?suit) (Is ?hat 'hat') (LargerThan ?suit ?hat) (Is ?board 'cutting_board') (SmallerThan ?board ?suit) (or (not (Is ?spoon 'spoon')) (Above ?spoon ?board)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?donut ?board)) (or (not (Is ?spoon 'spoon')) (Is ?ruler 'ruler')) (or (not (Is ?spoon 'spoon')) (Above ?cup ?spoon)) (or (not (Is ?spoon 'spoon')) (LargerThan ?pan ?bowl)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?ruler)) (or (not (Is ?spoon 'spoon')) (Below ?ruler ?donut)) (or (not (Is ?spoon 'spoon')) (Is ?donut 'donut')) (or (not (Is ?spoon 'spoon')) (Above ?bowl ?cup)) (or (not (Is ?spoon 'spoon')) (Has ?cup 'white')) (or (not (Is ?spoon 'spoon')) (Above ?pan ?bowl)) (or (not (Is ?spoon 'spoon')) (Below ?donut ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?pan 'black')) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (Is ?cup 'cup')) (or (not (Is ?spoon 'spoon')) (Is ?pan 'pan'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "cup",
+        "cutting_board",
+        "hat",
+        "pan",
+        "spoon",
+        "bowl",
+        "suitcase",
+        "donut"
+    ]
+}

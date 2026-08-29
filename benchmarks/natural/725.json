@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a standing elephant next to a hammer. To the right of the elephant is a brown teddy bear, and all headphones are located next to the teddy bear.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?e (exists ?t (and (Is ?e 'elephant') (HasState ?e 'standing') (Is ?t 'teddy bear') (HasColor ?t 'brown') (RightOf ?t ?e) (forall ?hp (implies (Is ?hp 'headphones') (NextTo ?hp ?t))) (exists ?hm (and (Is ?hm 'hammer') (NextTo ?hm ?e)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?e (exists ?t (forall ?hp (exists ?hm (and (Is ?e 'elephant') (HasState ?e 'standing') (RightOf ?t ?e) (NextTo ?hm ?e) (HasColor ?t 'brown') (or (not (Is ?hp 'headphones')) (NextTo ?hp ?t)) (Is ?hm 'hammer') (Is ?t 'teddy bear')))))))",
+    "k": 4,
+    "object_classes": [
+        "elephant",
+        "headphones",
+        "hammer",
+        "teddy bear"
+    ]
+}

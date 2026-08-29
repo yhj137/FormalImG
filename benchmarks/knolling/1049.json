@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza positioned on the left side of the scene, there is a vertical arrangement of objects beneath it: an apple is located below the pizza, a bowl is below the apple, a drill is below the bowl, and a ruler is below the drill. Additionally, there is a watch that is aligned horizontally with the ruler.",
+    "dsl": "(and (forall ?pizza (implies (and (Is ?pizza 'pizza') (OnLeftSide ?pizza)) (exists ?apple (exists ?bowl (exists ?drill (exists ?ruler (exists ?watch (and (Is ?apple 'apple') (Is ?bowl 'bowl') (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?watch 'watch') (Below ?apple ?pizza) (Below ?bowl ?apple) (Below ?drill ?bowl) (Below ?ruler ?drill) (AlignedHorizontally ?watch ?ruler))))))))))",
+    "cnf": "(forall ?pizza (exists ?apple (exists ?bowl (exists ?drill (exists ?ruler (exists ?watch (and (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Is ?apple 'apple')) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Is ?bowl 'bowl')) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Below ?apple ?pizza)) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Is ?drill 'drill')) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Below ?bowl ?apple)) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Is ?watch 'watch')) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Is ?ruler 'ruler')) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Below ?drill ?bowl)) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (AlignedHorizontally ?watch ?ruler)) (or (not (Is ?pizza 'pizza')) (not (OnLeftSide ?pizza)) (Below ?ruler ?drill)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "pizza",
+        "watch",
+        "drill",
+        "bowl"
+    ]
+}

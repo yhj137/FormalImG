@@ -1,0 +1,13 @@
+{
+    "prompt": "For every sandwich, it is positioned on the left side of the image, and to its right is an apple. To the right of the apple is a lemon that is smaller than the apple, to the right of the lemon is a mouse, and to the right of the mouse is a screwdriver located on the top side.",
+    "dsl": "(and (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?apple (exists ?lemon (exists ?mouse (exists ?screwdriver (and (Is ?apple 'apple') (Is ?lemon 'lemon') (Is ?mouse 'mouse') (Is ?screwdriver 'screwdriver') (OnLeftSide ?sandwich) (RightOf ?apple ?sandwich) (RightOf ?lemon ?apple) (SmallerThan ?lemon ?apple) (RightOf ?mouse ?lemon) (RightOf ?screwdriver ?mouse) (OnTopSide ?screwdriver)))))))))",
+    "cnf": "(forall ?sandwich (exists ?apple (exists ?lemon (exists ?mouse (exists ?screwdriver (and (or (not (Is ?sandwich 'sandwich')) (Is ?apple 'apple')) (or (not (Is ?sandwich 'sandwich')) (Is ?lemon 'lemon')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?apple ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?mouse 'mouse')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?lemon ?apple)) (or (not (Is ?sandwich 'sandwich')) (OnLeftSide ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?mouse ?lemon)) (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?lemon ?apple)) (or (not (Is ?sandwich 'sandwich')) (RightOf ?screwdriver ?mouse)) (or (not (Is ?sandwich 'sandwich')) (OnTopSide ?screwdriver))))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "lemon",
+        "screwdriver",
+        "mouse",
+        "sandwich"
+    ]
+}

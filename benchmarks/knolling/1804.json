@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with ten distinct objects arranged in two neat vertical columns. The left column contains a handbag at the top, a laptop in the middle, and a pan below the laptop; these three are aligned vertically. Extending further down this left column, there is a pair of scissors below the pan, and a fork located on the bottom side of the image directly below the scissors. The right column, positioned on the right side of the scene, starts with a camera at the top, followed by a phone below it, and a glove below the phone, all aligned vertically. Below the glove is a lighter, and beneath the lighter is a knife, which is also on the bottom side. The rows are aligned horizontally: the handbag with the camera, the laptop with the phone, the pan with the glove, and finally, the fork and knife are aligned horizontally at the bottom.",
+    "dsl": "(exists ?handbag (exists ?laptop (exists ?pan (exists ?scissors (exists ?fork (exists ?camera (exists ?phone (exists ?glove (exists ?lighter (exists ?knife (and (Is ?handbag 'handbag') (Is ?laptop 'laptop') (Is ?pan 'pan') (Is ?scissors 'scissors') (Is ?fork 'fork') (Is ?camera 'camera') (Is ?phone 'phone') (Is ?glove 'glove') (Is ?lighter 'lighter') (Is ?knife 'knife') (Above ?handbag ?laptop) (Below ?pan ?laptop) (Below ?scissors ?pan) (Below ?fork ?scissors) (AlignedVertically ?handbag ?laptop) (AlignedVertically ?laptop ?pan) (AlignedVertically ?pan ?scissors) (AlignedVertically ?scissors ?fork) (OnBottomSide ?fork) (OnRightSide ?camera) (Below ?phone ?camera) (Below ?glove ?phone) (Below ?lighter ?glove) (Below ?knife ?lighter) (AlignedVertically ?camera ?phone) (AlignedVertically ?phone ?glove) (AlignedVertically ?glove ?lighter) (AlignedVertically ?lighter ?knife) (OnBottomSide ?knife) (AlignedHorizontally ?handbag ?camera) (AlignedHorizontally ?laptop ?phone) (AlignedHorizontally ?pan ?glove) (AlignedHorizontally ?fork ?knife))))))))))))",
+    "cnf": "(exists ?handbag (exists ?laptop (exists ?pan (exists ?scissors (exists ?fork (exists ?camera (exists ?phone (exists ?glove (exists ?lighter (exists ?knife (and (Is ?handbag 'handbag') (Above ?handbag ?laptop) (AlignedVertically ?handbag ?laptop) (Is ?laptop 'laptop') (Below ?pan ?laptop) (AlignedHorizontally ?handbag ?camera) (AlignedVertically ?laptop ?pan) (Is ?pan 'pan') (Below ?scissors ?pan) (AlignedVertically ?camera ?phone) (AlignedHorizontally ?laptop ?phone) (AlignedVertically ?pan ?scissors) (Is ?scissors 'scissors') (Below ?fork ?scissors) (Below ?phone ?camera) (Below ?glove ?phone) (AlignedVertically ?phone ?glove) (AlignedHorizontally ?pan ?glove) (AlignedVertically ?scissors ?fork) (Is ?fork 'fork') (OnRightSide ?camera) (Is ?phone 'phone') (Is ?glove 'glove') (Below ?lighter ?glove) (AlignedVertically ?glove ?lighter) (OnBottomSide ?fork) (Is ?camera 'camera') (Is ?lighter 'lighter') (Below ?knife ?lighter) (AlignedVertically ?lighter ?knife) (AlignedHorizontally ?fork ?knife) (Is ?knife 'knife') (OnBottomSide ?knife))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "phone",
+        "fork",
+        "pan",
+        "handbag",
+        "lighter",
+        "knife",
+        "camera",
+        "scissors",
+        "glove"
+    ]
+}

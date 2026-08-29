@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every watch in the scene, which is black, there is a corresponding yellow ruler and a set of keys. The watch is positioned above the ruler, and these two objects are aligned vertically. The keys are located to the right of the ruler.",
+    "dsl": "(forall ?w (implies (Is ?w 'watch') (exists ?r (exists ?k (and (Is ?r 'ruler') (Is ?k 'keys') (Has ?w 'black') (Has ?r 'yellow') (Above ?w ?r) (AlignedVertically ?w ?r) (RightOf ?k ?r))))))",
+    "cnf": "(forall ?w (exists ?r (exists ?k (and (or (not (Is ?w 'watch')) (Is ?r 'ruler')) (or (not (Is ?w 'watch')) (Is ?k 'keys')) (or (not (Is ?w 'watch')) (Has ?r 'yellow')) (or (not (Is ?w 'watch')) (Has ?w 'black')) (or (not (Is ?w 'watch')) (RightOf ?k ?r)) (or (not (Is ?w 'watch')) (Above ?w ?r)) (or (not (Is ?w 'watch')) (AlignedVertically ?w ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "watch"
+    ]
+}

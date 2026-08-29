@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring headphones to the left of an open laptop. To the right of the laptop is a person holding a sleeping cat, and a plastic basket containing all the forks is positioned to the person's right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?l (exists ?p (exists ?c (exists ?b (and (Is ?h 'headphones') (Is ?l 'laptop') (HasState ?l 'open') (Is ?p 'person') (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?b 'basket') (HasMaterial ?b 'plastic') (LeftOf ?h ?l) (RightOf ?p ?l) (Holding ?p ?c) (RightOf ?b ?p) (forall ?f (implies (Is ?f 'fork') (In ?f ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?l (exists ?p (exists ?c (exists ?b (forall ?f (and (Is ?h 'headphones') (LeftOf ?h ?l) (HasState ?l 'open') (RightOf ?p ?l) (Is ?l 'laptop') (Is ?p 'person') (Holding ?p ?c) (RightOf ?b ?p) (HasState ?c 'sleeping') (HasMaterial ?b 'plastic') (or (not (Is ?f 'fork')) (In ?f ?b)) (Is ?c 'cat') (Is ?b 'basket')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fork",
+        "person",
+        "cat",
+        "headphones",
+        "laptop",
+        "basket"
+    ]
+}

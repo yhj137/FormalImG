@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every book is inside a house that also contains a wooden wardrobe. A refrigerator stands next to the wardrobe, with a pan on top and a key to the left of the pan.",
+    "dsl": "(forall ?b (implies (Is ?b 'book') (exists ?h (exists ?w (exists ?r (exists ?p (exists ?k (and (Is ?h 'house') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?r 'refrigerator') (Is ?p 'pan') (Is ?k 'key') (In ?b ?h) (In ?w ?h) (NextTo ?r ?w) (On ?p ?r) (LeftOf ?k ?p)))))))))",
+    "cnf": "(forall ?b (exists ?h (exists ?w (exists ?r (exists ?p (exists ?k (and (or (not (Is ?b 'book')) (Is ?h 'house')) (or (not (Is ?b 'book')) (Is ?w 'wardrobe')) (or (not (Is ?b 'book')) (In ?b ?h)) (or (not (Is ?b 'book')) (HasMaterial ?w 'wooden')) (or (not (Is ?b 'book')) (Is ?k 'key')) (or (not (Is ?b 'book')) (In ?w ?h)) (or (not (Is ?b 'book')) (Is ?r 'refrigerator')) (or (not (Is ?b 'book')) (Is ?p 'pan')) (or (not (Is ?b 'book')) (LeftOf ?k ?p)) (or (not (Is ?b 'book')) (NextTo ?r ?w)) (or (not (Is ?b 'book')) (On ?p ?r)))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "pan",
+        "book",
+        "refrigerator",
+        "wardrobe",
+        "house"
+    ]
+}

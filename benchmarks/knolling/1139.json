@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a black backpack, a laptop, and a mouse, which are aligned vertically with each other. For every wrench in the image, it is positioned to the left of the backpack. Additionally, for each wrench, there is a red apple located to its left, and a white glove is aligned vertically with the apple.",
+    "dsl": "(exists ?backpack (exists ?laptop (exists ?mouse (and (Is ?backpack 'backpack') (Has ?backpack 'black') (Is ?laptop 'laptop') (Is ?mouse 'mouse') (AlignedVertically ?backpack ?laptop) (AlignedVertically ?laptop ?mouse) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?apple (exists ?glove (and (Is ?apple 'apple') (Has ?apple 'red') (Is ?glove 'glove') (Has ?glove 'white') (LeftOf ?wrench ?backpack) (LeftOf ?apple ?wrench) (AlignedVertically ?apple ?glove))))))))))",
+    "cnf": "(exists ?backpack (exists ?laptop (exists ?mouse (forall ?wrench (exists ?apple (exists ?glove (and (Is ?backpack 'backpack') (Has ?backpack 'black') (AlignedVertically ?backpack ?laptop) (or (not (Is ?wrench 'wrench')) (LeftOf ?wrench ?backpack)) (Is ?laptop 'laptop') (AlignedVertically ?laptop ?mouse) (or (not (Is ?wrench 'wrench')) (Has ?glove 'white')) (or (not (Is ?wrench 'wrench')) (LeftOf ?apple ?wrench)) (Is ?mouse 'mouse') (or (not (Is ?wrench 'wrench')) (Is ?glove 'glove')) (or (not (Is ?wrench 'wrench')) (AlignedVertically ?apple ?glove)) (or (not (Is ?wrench 'wrench')) (Has ?apple 'red')) (or (not (Is ?wrench 'wrench')) (Is ?apple 'apple')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "wrench",
+        "backpack",
+        "mouse",
+        "glove"
+    ]
+}

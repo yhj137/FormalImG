@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant is holding an oval spoon. Next to every cup stands a horse that is also positioned beside the elephant.",
+    "dsl": "(exists ?e (exists ?s (and (Is ?e 'elephant') (Is ?s 'spoon') (HasShape ?s 'oval') (Holding ?e ?s) (forall ?c (implies (Is ?c 'cup') (exists ?h (and (Is ?h 'horse') (NextTo ?c ?h) (NextTo ?h ?e))))))))",
+    "cnf": "(exists ?e (exists ?s (forall ?c (exists ?h (and (Is ?e 'elephant') (Holding ?e ?s) (or (not (Is ?c 'cup')) (NextTo ?h ?e)) (HasShape ?s 'oval') (or (not (Is ?c 'cup')) (NextTo ?c ?h)) (Is ?s 'spoon') (or (not (Is ?c 'cup')) (Is ?h 'horse')))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "elephant",
+        "cup",
+        "spoon"
+    ]
+}

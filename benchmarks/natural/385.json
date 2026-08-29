@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a stone elephant, with every orange located next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (and (Is ?e 'elephant') (HasMaterial ?e 'stone') (forall ?o (implies (Is ?o 'orange') (NextTo ?o ?e))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (forall ?o (and (Is ?e 'elephant') (HasMaterial ?e 'stone') (or (not (Is ?o 'orange')) (NextTo ?o ?e))))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "orange"
+    ]
+}

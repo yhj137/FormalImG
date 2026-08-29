@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a hammer is on a red sofa. All the trees are to the right of the sofa, and an umbrella is positioned to the right of each tree.",
+    "dsl": "(exists ?m (exists ?h (exists ?s (and (Is ?m 'man') (Is ?h 'hammer') (Holding ?m ?h) (Is ?s 'sofa') (HasColor ?s 'red') (On ?m ?s) (forall ?t (implies (Is ?t 'tree') (and (RightOf ?t ?s) (exists ?u (and (Is ?u 'umbrella') (RightOf ?u ?t))))))))))",
+    "cnf": "(exists ?m (exists ?h (exists ?s (forall ?t (exists ?u (and (Is ?m 'man') (Holding ?m ?h) (On ?m ?s) (Is ?h 'hammer') (HasColor ?s 'red') (or (not (Is ?t 'tree')) (RightOf ?t ?s)) (Is ?s 'sofa') (or (not (Is ?t 'tree')) (Is ?u 'umbrella')) (or (not (Is ?t 'tree')) (RightOf ?u ?t))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "tree",
+        "man",
+        "hammer"
+    ]
+}

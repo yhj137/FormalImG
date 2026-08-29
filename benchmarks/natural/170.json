@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where all beds are rectangular.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'bed') (HasShape ?x 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'bed')) (HasShape ?x 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "bed"
+    ]
+}

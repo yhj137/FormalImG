@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. An open refrigerator is depicted. To the right of the refrigerator, there is an elephant. Inside the refrigerator, one can see a teddy bear and a jacket. There is also a bird perched on the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?e (exists ?t (exists ?j (exists ?b (and (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?e 'elephant') (RightOf ?e ?r) (Is ?t 'teddy bear') (In ?t ?r) (Is ?j 'jacket') (In ?j ?r) (Is ?b 'bird') (On ?b ?e))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?e (exists ?t (exists ?j (exists ?b (and (Is ?r 'refrigerator') (HasState ?r 'open') (RightOf ?e ?r) (In ?t ?r) (Is ?e 'elephant') (On ?b ?e) (In ?j ?r) (Is ?t 'teddy bear') (Is ?b 'bird') (Is ?j 'jacket'))))))))",
+    "k": 5,
+    "object_classes": [
+        "jacket",
+        "teddy bear",
+        "refrigerator",
+        "bird",
+        "elephant"
+    ]
+}

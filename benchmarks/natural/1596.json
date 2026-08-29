@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A house contains a sofa and a bookshelf, with a shirt lying on the sofa. A rectangular bench sits to the left of the house. To the right of the bench is an elephant holding a screwdriver. Every rock in the scene is located to the right of the elephant.",
+    "dsl": "(exists ?h (exists ?s (exists ?bs (exists ?sh (exists ?b (exists ?e (exists ?sc (and (Is ?h 'house') (Is ?s 'sofa') (Is ?bs 'bookshelf') (Is ?sh 'shirt') (Is ?b 'bench') (Is ?e 'elephant') (Is ?sc 'screwdriver') (HasShape ?b 'rectangular') (In ?s ?h) (In ?bs ?h) (On ?sh ?s) (LeftOf ?b ?h) (RightOf ?e ?b) (Holding ?e ?sc) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?e)))))))))))",
+    "cnf": "(exists ?h (exists ?s (exists ?bs (exists ?sh (exists ?b (exists ?e (exists ?sc (forall ?r (and (Is ?h 'house') (In ?s ?h) (In ?bs ?h) (Is ?s 'sofa') (On ?sh ?s) (LeftOf ?b ?h) (Is ?bs 'bookshelf') (Is ?sh 'shirt') (HasShape ?b 'rectangular') (RightOf ?e ?b) (Is ?b 'bench') (Is ?e 'elephant') (Holding ?e ?sc) (or (not (Is ?r 'rock')) (RightOf ?r ?e)) (Is ?sc 'screwdriver'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "sofa",
+        "rock",
+        "screwdriver",
+        "shirt",
+        "house",
+        "bookshelf",
+        "elephant"
+    ]
+}

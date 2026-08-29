@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is on a sofa, holding a book with headphones resting on it. A round pizza is next to the child, and a toy car is also on the sofa. To the left of the sofa is a cup containing every flower. A blue bird is above the sofa, with a butterfly next to it.",
+    "dsl": "(exists ?s (exists ?c (exists ?bk (exists ?hp (exists ?p (exists ?cp (and (Is ?s 'sofa') (Is ?c 'child') (On ?c ?s) (Is ?bk 'book') (Holding ?c ?bk) (Is ?hp 'headphones') (On ?hp ?bk) (Is ?p 'pizza') (HasShape ?p 'round') (NextTo ?p ?c) (Is ?cp 'cup') (LeftOf ?cp ?s) (forall ?f (implies (Is ?f 'flower') (In ?f ?cp))) (exists ?tc (exists ?bi (exists ?bf (and (Is ?tc 'toy car') (On ?tc ?s) (Is ?bi 'bird') (HasColor ?bi 'blue') (Above ?bi ?s) (Is ?bf 'butterfly') (NextTo ?bf ?bi))))))))))))",
+    "cnf": "(exists ?s (exists ?c (exists ?bk (exists ?hp (exists ?p (exists ?cp (forall ?f (exists ?tc (exists ?bi (exists ?bf (and (Is ?s 'sofa') (On ?c ?s) (LeftOf ?cp ?s) (Is ?c 'child') (Holding ?c ?bk) (On ?tc ?s) (Is ?cp 'cup') (or (not (Is ?f 'flower')) (In ?f ?cp)) (NextTo ?p ?c) (Is ?bk 'book') (On ?hp ?bk) (Above ?bi ?s) (Is ?tc 'toy car') (HasShape ?p 'round') (Is ?hp 'headphones') (HasColor ?bi 'blue') (NextTo ?bf ?bi) (Is ?p 'pizza') (Is ?bi 'bird') (Is ?bf 'butterfly'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sofa",
+        "toy car",
+        "headphones",
+        "book",
+        "pizza",
+        "butterfly",
+        "cup",
+        "bird",
+        "flower",
+        "child"
+    ]
+}

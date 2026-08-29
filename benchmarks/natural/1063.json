@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a sofa. To the left of the sofa stands a man holding a pan with a cake inside. Every cup in the scene is also situated to the left of the sofa. An oval mirror is placed to the left of the man.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (and (Is ?s 'sofa') (forall ?c (implies (Is ?c 'cup') (LeftOf ?c ?s))) (exists ?m (and (Is ?m 'man') (LeftOf ?m ?s) (exists ?p (and (Is ?p 'pan') (Holding ?m ?p) (exists ?ck (and (Is ?ck 'cake') (In ?ck ?p))))) (exists ?mi (and (Is ?mi 'mirror') (HasShape ?mi 'oval') (LeftOf ?mi ?m))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (forall ?c (exists ?m (exists ?p (exists ?ck (exists ?mi (and (Is ?s 'sofa') (or (not (Is ?c 'cup')) (LeftOf ?c ?s)) (LeftOf ?m ?s) (Is ?m 'man') (Holding ?m ?p) (LeftOf ?mi ?m) (Is ?p 'pan') (In ?ck ?p) (HasShape ?mi 'oval') (Is ?ck 'cake') (Is ?mi 'mirror')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "sofa",
+        "man",
+        "cake",
+        "cup",
+        "mirror"
+    ]
+}

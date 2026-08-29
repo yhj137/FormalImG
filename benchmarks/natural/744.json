@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where a child holding a rectangular backpack stands to the left of a wooden desk. Every toy car is placed on the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?d (and (Is ?c 'child') (Is ?d 'desk') (LeftOf ?c ?d) (HasMaterial ?d 'wooden') (forall ?t (implies (Is ?t 'toy car') (On ?t ?d))) (exists ?b (and (Is ?b 'backpack') (HasShape ?b 'rectangular') (Holding ?c ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?d (forall ?t (exists ?b (and (Is ?c 'child') (LeftOf ?c ?d) (Holding ?c ?b) (Is ?d 'desk') (HasMaterial ?d 'wooden') (HasShape ?b 'rectangular') (or (not (Is ?t 'toy car')) (On ?t ?d)) (Is ?b 'backpack')))))))",
+    "k": 4,
+    "object_classes": [
+        "desk",
+        "backpack",
+        "child",
+        "toy car"
+    ]
+}

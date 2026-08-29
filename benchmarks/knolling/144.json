@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every keyboard present in the scene is positioned on the top side of the image.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keyboard') (OnTopSide ?k))))",
+    "cnf": "(forall ?k (or (not (Is ?k 'keyboard')) (OnTopSide ?k)))",
+    "k": 1,
+    "object_classes": [
+        "keyboard"
+    ]
+}

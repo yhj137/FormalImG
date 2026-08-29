@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop, a black phone, a brown sandwich, and a yellow carrot arranged in a row. The phone is positioned to the right of the laptop, the sandwich is to the right of the phone, and the carrot is to the right of the sandwich. Additionally, for every drill in the image, it is green, located to the left of the laptop, and is visually larger than the phone.",
+    "dsl": "(exists ?laptop (exists ?phone (exists ?sandwich (exists ?carrot (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?phone 'phone') (Has ?phone 'black') (Is ?sandwich 'sandwich') (Has ?sandwich 'brown') (Is ?carrot 'carrot') (Has ?carrot 'yellow') (RightOf ?phone ?laptop) (RightOf ?sandwich ?phone) (RightOf ?carrot ?sandwich) (forall ?d (implies (Is ?d 'drill') (and (Has ?d 'green') (LeftOf ?d ?laptop) (LargerThan ?d ?phone)))))))))",
+    "cnf": "(exists ?laptop (exists ?phone (exists ?sandwich (exists ?carrot (forall ?d (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (RightOf ?phone ?laptop) (or (not (Is ?d 'drill')) (LeftOf ?d ?laptop)) (Has ?phone 'black') (RightOf ?sandwich ?phone) (or (not (Is ?d 'drill')) (Has ?d 'green')) (or (not (Is ?d 'drill')) (LargerThan ?d ?phone)) (Is ?phone 'phone') (Has ?sandwich 'brown') (RightOf ?carrot ?sandwich) (Is ?sandwich 'sandwich') (Has ?carrot 'yellow') (Is ?carrot 'carrot')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "carrot",
+        "phone",
+        "drill",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a brown horse in the center with black headphones on. All birds in the scene are positioned to the left of the horse. To the right of the horse is a white dog, and next to it are leather shoes containing a toy car. A sandwich with a metal fork inside sits next to the horse, with an orange fish located to the right of the sandwich.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (and (Is ?h 'horse') (HasColor ?h 'brown') (forall ?b (implies (Is ?b 'bird') (LeftOf ?b ?h))) (exists ?d (exists ?sh (exists ?tc (exists ?hp (exists ?s (exists ?fk (exists ?fi (and (Is ?d 'dog') (HasColor ?d 'white') (RightOf ?d ?h) (Is ?sh 'shoes') (HasMaterial ?sh 'leather') (NextTo ?sh ?d) (Is ?tc 'toy car') (In ?tc ?sh) (Is ?hp 'headphones') (HasColor ?hp 'black') (On ?hp ?h) (Is ?s 'sandwich') (NextTo ?s ?h) (Is ?fk 'fork') (HasMaterial ?fk 'metal') (In ?fk ?s) (Is ?fi 'fish') (HasColor ?fi 'orange') (RightOf ?fi ?s))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (forall ?b (exists ?d (exists ?sh (exists ?tc (exists ?hp (exists ?s (exists ?fk (exists ?fi (and (Is ?h 'horse') (HasColor ?h 'brown') (or (not (Is ?b 'bird')) (LeftOf ?b ?h)) (RightOf ?d ?h) (On ?hp ?h) (HasColor ?d 'white') (NextTo ?sh ?d) (NextTo ?s ?h) (HasColor ?hp 'black') (Is ?d 'dog') (HasMaterial ?sh 'leather') (In ?tc ?sh) (Is ?s 'sandwich') (In ?fk ?s) (Is ?hp 'headphones') (Is ?sh 'shoes') (Is ?tc 'toy car') (RightOf ?fi ?s) (HasMaterial ?fk 'metal') (HasColor ?fi 'orange') (Is ?fk 'fork') (Is ?fi 'fish'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "fish",
+        "fork",
+        "horse",
+        "shoes",
+        "bird",
+        "toy car",
+        "sandwich",
+        "dog"
+    ]
+}

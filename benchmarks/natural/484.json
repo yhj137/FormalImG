@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every bed has a sleeping horse next to it. The bed is positioned to the right of the horse, with a fork inside the bed.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'bed') (exists ?h (exists ?f (and (Is ?h 'horse') (Is ?f 'fork') (HasState ?h 'sleeping') (NextTo ?h ?b) (RightOf ?b ?h) (In ?f ?b)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?h (exists ?f (and (or (not (Is ?b 'bed')) (Is ?h 'horse')) (or (not (Is ?b 'bed')) (HasState ?h 'sleeping')) (or (not (Is ?b 'bed')) (Is ?f 'fork')) (or (not (Is ?b 'bed')) (NextTo ?h ?b)) (or (not (Is ?b 'bed')) (In ?f ?b)) (or (not (Is ?b 'bed')) (RightOf ?b ?h)))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "horse",
+        "bed"
+    ]
+}

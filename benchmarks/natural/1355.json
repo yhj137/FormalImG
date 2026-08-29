@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A child sits on a wooden horse. To the right of the horse is a turned-off monitor. A keyboard is positioned to the right of the monitor. A metal key and a fork lie on the keyboard. Every screwdriver in the scene is located to the right of the key.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?c (exists ?m (exists ?kb (exists ?k (and (Is ?h 'horse') (HasMaterial ?h 'wooden') (Is ?c 'child') (On ?c ?h) (Is ?m 'monitor') (HasState ?m 'off') (RightOf ?m ?h) (Is ?kb 'keyboard') (RightOf ?kb ?m) (Is ?k 'key') (HasMaterial ?k 'metal') (On ?k ?kb) (forall ?s (implies (Is ?s 'screwdriver') (RightOf ?s ?k))) (exists ?f (and (Is ?f 'fork') (On ?f ?kb))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?c (exists ?m (exists ?kb (exists ?k (forall ?s (exists ?f (and (Is ?h 'horse') (HasMaterial ?h 'wooden') (On ?c ?h) (RightOf ?m ?h) (Is ?c 'child') (HasState ?m 'off') (RightOf ?kb ?m) (Is ?m 'monitor') (Is ?kb 'keyboard') (On ?k ?kb) (On ?f ?kb) (HasMaterial ?k 'metal') (or (not (Is ?s 'screwdriver')) (RightOf ?s ?k)) (Is ?f 'fork') (Is ?k 'key'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "monitor",
+        "fork",
+        "screwdriver",
+        "horse",
+        "child"
+    ]
+}

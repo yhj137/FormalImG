@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a wooden desk with a rectangular rug next to it. A plate and a plant are on the desk. An apple and an orange are in the plate, and all flowers in the scene are within the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?r (exists ?p (exists ?pl (exists ?a (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?r 'rug') (HasShape ?r 'rectangular') (NextTo ?r ?d) (Is ?p 'plate') (On ?p ?d) (Is ?pl 'plant') (On ?pl ?d) (Is ?a 'apple') (In ?a ?p) (forall ?f (implies (Is ?f 'flower') (In ?f ?pl))) (exists ?o (and (Is ?o 'orange') (In ?o ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?r (exists ?p (exists ?pl (exists ?a (forall ?f (exists ?o (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?r ?d) (On ?p ?d) (HasShape ?r 'rectangular') (On ?pl ?d) (Is ?p 'plate') (In ?a ?p) (Is ?r 'rug') (Is ?pl 'plant') (or (not (Is ?f 'flower')) (In ?f ?pl)) (In ?o ?p) (Is ?a 'apple') (Is ?o 'orange'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "plant",
+        "rug",
+        "orange",
+        "flower",
+        "desk",
+        "apple"
+    ]
+}

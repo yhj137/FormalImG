@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every game controller present, there is a white plate to its right. Directly below the plate is a black remote, and below the remote is a sock, with the plate, remote, and sock being vertically aligned. Additionally, a laptop is positioned to the right of the sock and resides on the right side of the image.",
+    "dsl": "(and (forall ?gc (implies (Is ?gc 'game_controller') (exists ?plate (exists ?remote (exists ?sock (exists ?laptop (and (Is ?plate 'plate') (Has ?plate 'white') (Is ?remote 'remote') (Has ?remote 'black') (Is ?sock 'sock') (Is ?laptop 'laptop') (RightOf ?plate ?gc) (Below ?remote ?plate) (Below ?sock ?remote) (AlignedVertically ?plate ?remote) (AlignedVertically ?remote ?sock) (RightOf ?laptop ?sock) (OnRightSide ?laptop)))))))))",
+    "cnf": "(forall ?gc (exists ?plate (exists ?remote (exists ?sock (exists ?laptop (and (or (not (Is ?gc 'game_controller')) (Is ?plate 'plate')) (or (not (Is ?gc 'game_controller')) (Has ?plate 'white')) (or (not (Is ?gc 'game_controller')) (RightOf ?plate ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?remote 'remote')) (or (not (Is ?gc 'game_controller')) (Below ?remote ?plate)) (or (not (Is ?gc 'game_controller')) (Is ?laptop 'laptop')) (or (not (Is ?gc 'game_controller')) (Has ?remote 'black')) (or (not (Is ?gc 'game_controller')) (AlignedVertically ?plate ?remote)) (or (not (Is ?gc 'game_controller')) (Below ?sock ?remote)) (or (not (Is ?gc 'game_controller')) (Is ?sock 'sock')) (or (not (Is ?gc 'game_controller')) (RightOf ?laptop ?sock)) (or (not (Is ?gc 'game_controller')) (AlignedVertically ?remote ?sock)) (or (not (Is ?gc 'game_controller')) (OnRightSide ?laptop))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "remote",
+        "sock",
+        "game_controller"
+    ]
+}

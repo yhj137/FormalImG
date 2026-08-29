@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man wearing a black hat to the right of a hammer, with a screwdriver next to the hammer.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?h (exists ?ha (exists ?s (and (Is ?m 'man') (Is ?h 'hat') (HasColor ?h 'black') (On ?h ?m) (Is ?ha 'hammer') (Is ?s 'screwdriver') (RightOf ?m ?ha) (NextTo ?s ?ha)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?h (exists ?ha (exists ?s (and (Is ?m 'man') (On ?h ?m) (RightOf ?m ?ha) (HasColor ?h 'black') (Is ?ha 'hammer') (NextTo ?s ?ha) (Is ?h 'hat') (Is ?s 'screwdriver')))))))",
+    "k": 4,
+    "object_classes": [
+        "screwdriver",
+        "hammer",
+        "hat",
+        "man"
+    ]
+}

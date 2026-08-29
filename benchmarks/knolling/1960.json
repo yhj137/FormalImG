@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a monitor on the left side, with a donut placed directly above it. To the right of the monitor is a laptop, and a book is positioned above the laptop. Further to the right of the laptop lies a game controller. On the far right side of the scene is a calculator, which is visually smaller than the monitor. A wallet is located on the bottom side, positioned such that the monitor is above it. Furthermore, for every pen present in the image, it is located to the right of the book, accompanied by a wrench to the right of the pen and a watch positioned above the wrench.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?controller (exists ?book (exists ?calculator (exists ?wallet (exists ?donut (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?laptop 'laptop') (RightOf ?laptop ?monitor) (Is ?controller 'game_controller') (RightOf ?controller ?laptop) (Is ?book 'book') (Above ?book ?laptop) (Is ?calculator 'calculator') (OnRightSide ?calculator) (LargerThan ?monitor ?calculator) (Is ?wallet 'wallet') (OnBottomSide ?wallet) (Above ?monitor ?wallet) (Is ?donut 'donut') (Above ?donut ?monitor) (forall ?pen (implies (Is ?pen 'pen') (exists ?wrench (exists ?watch (and (Is ?wrench 'wrench') (Is ?watch 'watch') (RightOf ?pen ?book) (RightOf ?wrench ?pen) (Above ?watch ?wrench))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?controller (exists ?book (exists ?calculator (exists ?wallet (exists ?donut (forall ?pen (exists ?wrench (exists ?watch (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (RightOf ?laptop ?monitor) (LargerThan ?monitor ?calculator) (Is ?laptop 'laptop') (RightOf ?controller ?laptop) (Above ?monitor ?wallet) (OnRightSide ?calculator) (Above ?book ?laptop) (Is ?controller 'game_controller') (Above ?donut ?monitor) (OnBottomSide ?wallet) (Is ?calculator 'calculator') (Is ?book 'book') (or (not (Is ?pen 'pen')) (RightOf ?pen ?book)) (Is ?donut 'donut') (Is ?wallet 'wallet') (or (not (Is ?pen 'pen')) (Is ?watch 'watch')) (or (not (Is ?pen 'pen')) (RightOf ?wrench ?pen)) (or (not (Is ?pen 'pen')) (Is ?wrench 'wrench')) (or (not (Is ?pen 'pen')) (Above ?watch ?wrench)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "book",
+        "pen",
+        "wrench",
+        "watch",
+        "game_controller",
+        "calculator",
+        "wallet",
+        "monitor",
+        "donut"
+    ]
+}

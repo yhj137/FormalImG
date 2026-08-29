@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hat located on the top side, with a handbag positioned to the right of the hat. Every pair of scissors is located below the hat and has a calculator to its right, a bottle below it, and a cup to the right of the bottle, with the cup situated on the bottom side.",
+    "dsl": "(exists ?hat (exists ?handbag (and (Is ?hat 'hat') (OnTopSide ?hat) (Is ?handbag 'handbag') (RightOf ?handbag ?hat) (forall ?scis (implies (Is ?scis 'scissors') (exists ?calc (exists ?bot (exists ?cup (and (Is ?calc 'calculator') (Is ?bot 'bottle') (Is ?cup 'cup') (Below ?scis ?hat) (RightOf ?calc ?scis) (Below ?bot ?scis) (RightOf ?cup ?bot) (OnBottomSide ?cup))))))))))",
+    "cnf": "(exists ?hat (exists ?handbag (forall ?scis (exists ?calc (exists ?bot (exists ?cup (and (Is ?hat 'hat') (OnTopSide ?hat) (RightOf ?handbag ?hat) (or (not (Is ?scis 'scissors')) (Below ?scis ?hat)) (Is ?handbag 'handbag') (or (not (Is ?scis 'scissors')) (Is ?cup 'cup')) (or (not (Is ?scis 'scissors')) (RightOf ?calc ?scis)) (or (not (Is ?scis 'scissors')) (Is ?bot 'bottle')) (or (not (Is ?scis 'scissors')) (RightOf ?cup ?bot)) (or (not (Is ?scis 'scissors')) (Below ?bot ?scis)) (or (not (Is ?scis 'scissors')) (Is ?calc 'calculator')) (or (not (Is ?scis 'scissors')) (OnBottomSide ?cup)))))))))",
+    "k": 6,
+    "object_classes": [
+        "scissors",
+        "calculator",
+        "cup",
+        "hat",
+        "bottle",
+        "handbag"
+    ]
+}

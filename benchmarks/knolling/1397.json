@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack and a game controller, where the game controller is positioned to the right of the backpack, and the backpack is visually larger than the controller. A calculator is located above the game controller and is situated on the right side of the image. To the right of the calculator is a white cup. Above the cup is a pair of glasses, and strictly above the glasses is a pair of scissors. Finally, for every knife in the image, it is placed above the backpack.",
+    "dsl": "(exists ?backpack (exists ?controller (exists ?calculator (exists ?cup (exists ?glasses (exists ?scissors (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?controller 'game_controller') (Is ?calculator 'calculator') (Is ?cup 'cup') (Has ?cup 'white') (Is ?glasses 'glasses') (Is ?scissors 'scissors') (RightOf ?controller ?backpack) (LargerThan ?backpack ?controller) (Above ?calculator ?controller) (OnRightSide ?calculator) (RightOf ?cup ?calculator) (Above ?glasses ?cup) (Above ?scissors ?glasses) (forall ?knife (implies (Is ?knife 'knife') (Above ?knife ?backpack))))))))))",
+    "cnf": "(exists ?backpack (exists ?controller (exists ?calculator (exists ?cup (exists ?glasses (exists ?scissors (forall ?knife (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (RightOf ?controller ?backpack) (LargerThan ?backpack ?controller) (Is ?controller 'game_controller') (or (not (Is ?knife 'knife')) (Above ?knife ?backpack)) (Above ?calculator ?controller) (Is ?calculator 'calculator') (OnRightSide ?calculator) (RightOf ?cup ?calculator) (Has ?cup 'white') (Above ?glasses ?cup) (Is ?cup 'cup') (Is ?glasses 'glasses') (Above ?scissors ?glasses) (Is ?scissors 'scissors')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "cup",
+        "game_controller",
+        "backpack",
+        "calculator",
+        "knife",
+        "scissors"
+    ]
+}

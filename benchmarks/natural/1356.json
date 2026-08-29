@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene depicts a red bus with a chair inside. A yellow lion sits on the chair holding a spoon, and a monitor is positioned next to the lion. Every book in the scene is located next to the monitor, with a pair of headphones resting on each book.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasColor ?b 'red') (exists ?c (and (Is ?c 'chair') (In ?c ?b) (exists ?l (and (Is ?l 'lion') (HasColor ?l 'yellow') (On ?l ?c) (exists ?s (and (Is ?s 'spoon') (Holding ?l ?s) (exists ?m (and (Is ?m 'monitor') (NextTo ?m ?l) (forall ?bk (implies (Is ?bk 'book') (and (NextTo ?bk ?m) (exists ?h (and (Is ?h 'headphones') (On ?h ?bk)))))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?l (exists ?s (exists ?m (forall ?bk (exists ?h (and (Is ?b 'bus') (HasColor ?b 'red') (In ?c ?b) (Is ?c 'chair') (On ?l ?c) (HasColor ?l 'yellow') (Holding ?l ?s) (Is ?l 'lion') (NextTo ?m ?l) (Is ?s 'spoon') (Is ?m 'monitor') (or (not (Is ?bk 'book')) (NextTo ?bk ?m)) (or (not (Is ?bk 'book')) (Is ?h 'headphones')) (or (not (Is ?bk 'book')) (On ?h ?bk)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "spoon",
+        "book",
+        "chair",
+        "monitor",
+        "lion",
+        "bus"
+    ]
+}

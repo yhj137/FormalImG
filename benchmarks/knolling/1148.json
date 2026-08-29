@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene is a black shoe. To the right of the shoe is a blue book, to the right of the book is a green bottle, and to the right of the bottle is a sandwich; these four items are aligned horizontally. Additionally, for every ruler in the image, it is aligned vertically with the black shoe, and there is a yellow screwdriver located to its right and aligned horizontally with it.",
+    "dsl": "(exists ?shoe (exists ?book (exists ?bottle (exists ?sandwich (and (Is ?shoe 'shoe') (Has ?shoe 'black') (OnLeftSide ?shoe) (Is ?book 'book') (Has ?book 'blue') (Is ?bottle 'bottle') (Has ?bottle 'green') (Is ?sandwich 'sandwich') (RightOf ?book ?shoe) (RightOf ?bottle ?book) (RightOf ?sandwich ?bottle) (AlignedHorizontally ?shoe ?book) (AlignedHorizontally ?book ?bottle) (AlignedHorizontally ?bottle ?sandwich) (forall ?r (implies (Is ?r 'ruler') (exists ?sd (and (Is ?sd 'screwdriver') (Has ?sd 'yellow') (AlignedVertically ?r ?shoe) (RightOf ?sd ?r) (AlignedHorizontally ?sd ?r))))))))))",
+    "cnf": "(exists ?shoe (exists ?book (exists ?bottle (exists ?sandwich (forall ?r (exists ?sd (and (Is ?shoe 'shoe') (Has ?shoe 'black') (OnLeftSide ?shoe) (RightOf ?book ?shoe) (AlignedHorizontally ?shoe ?book) (Has ?book 'blue') (RightOf ?bottle ?book) (or (not (Is ?r 'ruler')) (AlignedVertically ?r ?shoe)) (AlignedHorizontally ?book ?bottle) (Is ?book 'book') (Has ?bottle 'green') (RightOf ?sandwich ?bottle) (or (not (Is ?r 'ruler')) (Has ?sd 'yellow')) (or (not (Is ?r 'ruler')) (RightOf ?sd ?r)) (AlignedHorizontally ?bottle ?sandwich) (Is ?bottle 'bottle') (Is ?sandwich 'sandwich') (or (not (Is ?r 'ruler')) (Is ?sd 'screwdriver')) (or (not (Is ?r 'ruler')) (AlignedHorizontally ?sd ?r)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "ruler",
+        "book",
+        "screwdriver",
+        "sandwich",
+        "shoe"
+    ]
+}

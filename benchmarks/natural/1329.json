@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image featuring a wooden wardrobe next to a chair. A woman sits on the chair holding a plate, on which every cake in the scene is placed. A bird rests on the wardrobe, and a cup is inside it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?p (exists ?pl (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?c 'chair') (NextTo ?c ?w) (Is ?p 'woman') (On ?p ?c) (Is ?pl 'plate') (Holding ?p ?pl) (forall ?ck (implies (Is ?ck 'cake') (On ?ck ?pl))) (exists ?b (exists ?cp (and (Is ?b 'bird') (On ?b ?w) (Is ?cp 'cup') (In ?cp ?w))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?p (exists ?pl (forall ?ck (exists ?b (exists ?cp (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?c ?w) (On ?b ?w) (Is ?c 'chair') (On ?p ?c) (In ?cp ?w) (Is ?b 'bird') (Is ?p 'woman') (Holding ?p ?pl) (Is ?cp 'cup') (Is ?pl 'plate') (or (not (Is ?ck 'cake')) (On ?ck ?pl)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "cake",
+        "chair",
+        "wardrobe",
+        "cup",
+        "woman",
+        "bird",
+        "plate"
+    ]
+}

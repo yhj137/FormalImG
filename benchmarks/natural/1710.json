@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An open house contains a wooden wardrobe. Inside, a man holds a black phone. Every fork in the scene is made of metal and rests on the wardrobe, along with a sliced pizza, a sandwich, a hammer, and a clock.",
+    "dsl": "(exists ?h (and (Is ?h 'house') (HasState ?h 'open') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?w ?h) (exists ?m (and (Is ?m 'man') (In ?m ?h) (exists ?ph (and (Is ?ph 'phone') (HasColor ?ph 'black') (Holding ?m ?ph) (forall ?f (implies (Is ?f 'fork') (and (HasMaterial ?f 'metal') (On ?f ?w)))) (exists ?p (and (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?w) (exists ?s (and (Is ?s 'sandwich') (On ?s ?w) (exists ?hm (and (Is ?hm 'hammer') (On ?hm ?w) (exists ?c (and (Is ?c 'clock') (On ?c ?w)))))))))))))))))",
+    "cnf": "(exists ?h (exists ?w (exists ?m (exists ?ph (forall ?f (exists ?p (exists ?s (exists ?hm (exists ?c (and (Is ?h 'house') (HasState ?h 'open') (In ?w ?h) (In ?m ?h) (HasMaterial ?w 'wooden') (or (not (Is ?f 'fork')) (On ?f ?w)) (Is ?m 'man') (Holding ?m ?ph) (Is ?w 'wardrobe') (On ?p ?w) (or (not (Is ?f 'fork')) (HasMaterial ?f 'metal')) (HasColor ?ph 'black') (On ?s ?w) (HasState ?p 'sliced') (Is ?ph 'phone') (On ?hm ?w) (Is ?s 'sandwich') (Is ?p 'pizza') (On ?c ?w) (Is ?hm 'hammer') (Is ?c 'clock')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fork",
+        "man",
+        "sandwich",
+        "hammer",
+        "pizza",
+        "phone",
+        "wardrobe",
+        "house",
+        "clock"
+    ]
+}

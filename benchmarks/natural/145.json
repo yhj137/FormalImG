@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every bird is flying.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bird') (HasState ?b 'flying'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (or (not (Is ?b 'bird')) (HasState ?b 'flying'))))",
+    "k": 1,
+    "object_classes": [
+        "bird"
+    ]
+}

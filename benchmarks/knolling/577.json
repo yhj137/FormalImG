@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a bowl and a pair of scissors. The scissors are positioned on the right side of the image and are placed to the right of the bowl. Furthermore, for every watch in the image, it is located below the bowl.",
+    "dsl": "(exists ?bowl (exists ?scissors (and (Is ?bowl 'bowl') (Is ?scissors 'scissors') (OnRightSide ?scissors) (RightOf ?scissors ?bowl) (forall ?watch (implies (Is ?watch 'watch') (Below ?watch ?bowl))))))",
+    "cnf": "(exists ?bowl (exists ?scissors (forall ?watch (and (Is ?bowl 'bowl') (RightOf ?scissors ?bowl) (or (not (Is ?watch 'watch')) (Below ?watch ?bowl)) (OnRightSide ?scissors) (Is ?scissors 'scissors')))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "bowl",
+        "watch"
+    ]
+}

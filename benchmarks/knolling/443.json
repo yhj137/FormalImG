@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a suitcase, a glove, and a spoon. The suitcase is positioned on the top side of the frame. Both the glove and the spoon are aligned horizontally with the suitcase. In terms of size, the glove is smaller than the suitcase, and the spoon is smaller than the glove.",
+    "dsl": "(exists ?s (exists ?g (exists ?sp (and (Is ?s 'suitcase') (Is ?g 'glove') (Is ?sp 'spoon') (OnTopSide ?s) (AlignedHorizontally ?s ?g) (AlignedHorizontally ?g ?sp) (SmallerThan ?g ?s) (SmallerThan ?sp ?g)))))",
+    "cnf": "(exists ?s (exists ?g (exists ?sp (and (Is ?s 'suitcase') (OnTopSide ?s) (AlignedHorizontally ?s ?g) (SmallerThan ?g ?s) (Is ?g 'glove') (AlignedHorizontally ?g ?sp) (SmallerThan ?sp ?g) (Is ?sp 'spoon')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "suitcase",
+        "glove"
+    ]
+}

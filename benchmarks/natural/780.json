@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a yellow umbrella to the left of a keyboard. A round orange is placed next to the keyboard, and every butterfly is on the umbrella.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?u (exists ?k (exists ?o (and (Is ?u 'umbrella') (HasColor ?u 'yellow') (Is ?k 'keyboard') (Is ?o 'orange') (HasShape ?o 'round') (LeftOf ?u ?k) (NextTo ?o ?k) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?u))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?u (exists ?k (exists ?o (forall ?b (and (Is ?u 'umbrella') (HasColor ?u 'yellow') (LeftOf ?u ?k) (or (not (Is ?b 'butterfly')) (On ?b ?u)) (Is ?k 'keyboard') (NextTo ?o ?k) (HasShape ?o 'round') (Is ?o 'orange')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "keyboard",
+        "umbrella",
+        "orange"
+    ]
+}

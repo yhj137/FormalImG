@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A red screwdriver is positioned to the left of an elephant holding a yellow umbrella. The elephant stands to the left of a horse, which carries a green backpack with black headphones on top. Every pizza in the scene is round and located to the right of the horse.",
+    "dsl": "(exists ?e (exists ?h (and (Is ?e 'elephant') (Is ?h 'horse') (LeftOf ?e ?h) (forall ?p (implies (Is ?p 'pizza') (and (HasShape ?p 'round') (RightOf ?p ?h)))) (exists ?b (exists ?u (exists ?hp (exists ?s (and (Is ?b 'backpack') (HasColor ?b 'green') (On ?b ?h) (Is ?u 'umbrella') (HasColor ?u 'yellow') (Holding ?e ?u) (Is ?hp 'headphones') (HasColor ?hp 'black') (On ?hp ?b) (Is ?s 'screwdriver') (HasColor ?s 'red') (LeftOf ?s ?e)))))))))",
+    "cnf": "(exists ?e (exists ?h (forall ?p (exists ?b (exists ?u (exists ?hp (exists ?s (and (Is ?e 'elephant') (LeftOf ?e ?h) (Holding ?e ?u) (Is ?h 'horse') (or (not (Is ?p 'pizza')) (RightOf ?p ?h)) (LeftOf ?s ?e) (HasColor ?u 'yellow') (On ?b ?h) (or (not (Is ?p 'pizza')) (HasShape ?p 'round')) (HasColor ?s 'red') (Is ?u 'umbrella') (HasColor ?b 'green') (On ?hp ?b) (Is ?s 'screwdriver') (Is ?b 'backpack') (HasColor ?hp 'black') (Is ?hp 'headphones')))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "headphones",
+        "umbrella",
+        "horse",
+        "backpack",
+        "pizza",
+        "screwdriver"
+    ]
+}

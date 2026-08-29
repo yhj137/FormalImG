@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a scene where every hat is held by a child and has a butterfly resting on it. Each child is positioned to the left of an oval mirror with a jacket draped over it.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?h (implies (Is ?h 'hat') (exists ?b (exists ?c (exists ?m (exists ?j (and (Is ?b 'butterfly') (Is ?c 'child') (Is ?m 'mirror') (Is ?j 'jacket') (On ?b ?h) (Holding ?c ?h) (LeftOf ?c ?m) (HasShape ?m 'oval') (On ?j ?m)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?h (exists ?b (exists ?c (exists ?m (exists ?j (and (or (not (Is ?h 'hat')) (Is ?b 'butterfly')) (or (not (Is ?h 'hat')) (On ?b ?h)) (or (not (Is ?h 'hat')) (Is ?c 'child')) (or (not (Is ?h 'hat')) (Is ?j 'jacket')) (or (not (Is ?h 'hat')) (Holding ?c ?h)) (or (not (Is ?h 'hat')) (Is ?m 'mirror')) (or (not (Is ?h 'hat')) (On ?j ?m)) (or (not (Is ?h 'hat')) (LeftOf ?c ?m)) (or (not (Is ?h 'hat')) (HasShape ?m 'oval')))))))))",
+    "k": 5,
+    "object_classes": [
+        "jacket",
+        "hat",
+        "butterfly",
+        "mirror",
+        "child"
+    ]
+}

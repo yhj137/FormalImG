@@ -1,0 +1,15 @@
+{
+    "prompt": "There is an object. For every pair of headphones, the headphones are on the top side, the object is a glove on the top side, and there is a hammer on the top side to the right of the headphones. Additionally, for each pair of headphones, there is a pizza, a wallet, a phone, and a pair of glasses on the bottom side. The headphones are to the right of the glove. The wallet is to the right of the pizza, the phone is to the right of the wallet, and the glasses are to the right of the phone. The glove aligns vertically with the pizza, the headphones align vertically with the wallet, and the hammer aligns vertically with the phone.",
+    "dsl": "(exists ?glove (forall ?hp (implies (Is ?hp 'headphones') (exists ?hammer (exists ?pizza (exists ?wallet (exists ?phone (exists ?glasses (and (Is ?glove 'glove') (Is ?hammer 'hammer') (Is ?pizza 'pizza') (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?glasses 'glasses') (OnTopSide ?glove) (OnTopSide ?hp) (OnTopSide ?hammer) (OnBottomSide ?pizza) (OnBottomSide ?wallet) (OnBottomSide ?phone) (OnBottomSide ?glasses) (RightOf ?hp ?glove) (RightOf ?hammer ?hp) (RightOf ?wallet ?pizza) (RightOf ?phone ?wallet) (RightOf ?glasses ?phone) (AlignedVertically ?glove ?pizza) (AlignedVertically ?hp ?wallet) (AlignedVertically ?hammer ?phone))))))))))",
+    "cnf": "(exists ?glove (forall ?hp (exists ?hammer (exists ?pizza (exists ?wallet (exists ?phone (exists ?glasses (and (or (not (Is ?hp 'headphones')) (Is ?glove 'glove')) (or (not (Is ?hp 'headphones')) (OnTopSide ?glove)) (or (not (Is ?hp 'headphones')) (Is ?hammer 'hammer')) (or (not (Is ?hp 'headphones')) (RightOf ?hp ?glove)) (or (not (Is ?hp 'headphones')) (Is ?glasses 'glasses')) (or (not (Is ?hp 'headphones')) (OnTopSide ?hp)) (or (not (Is ?hp 'headphones')) (Is ?pizza 'pizza')) (or (not (Is ?hp 'headphones')) (OnTopSide ?hammer)) (or (not (Is ?hp 'headphones')) (AlignedVertically ?glove ?pizza)) (or (not (Is ?hp 'headphones')) (OnBottomSide ?glasses)) (or (not (Is ?hp 'headphones')) (RightOf ?hammer ?hp)) (or (not (Is ?hp 'headphones')) (Is ?phone 'phone')) (or (not (Is ?hp 'headphones')) (Is ?wallet 'wallet')) (or (not (Is ?hp 'headphones')) (OnBottomSide ?pizza)) (or (not (Is ?hp 'headphones')) (RightOf ?glasses ?phone)) (or (not (Is ?hp 'headphones')) (AlignedVertically ?hp ?wallet)) (or (not (Is ?hp 'headphones')) (RightOf ?wallet ?pizza)) (or (not (Is ?hp 'headphones')) (OnBottomSide ?phone)) (or (not (Is ?hp 'headphones')) (AlignedVertically ?hammer ?phone)) (or (not (Is ?hp 'headphones')) (OnBottomSide ?wallet)) (or (not (Is ?hp 'headphones')) (RightOf ?phone ?wallet))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "phone",
+        "pizza",
+        "hammer",
+        "wallet",
+        "headphones",
+        "glove"
+    ]
+}

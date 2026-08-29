@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the image, there is a pair of blue jeans. A white hat is positioned to the right of the jeans, and the jeans are visually larger than the hat. A cutting board is placed below the jeans. Additionally, for every donut in the scene, there is a yellow glove located to its right; the donut is smaller than the cutting board, and the glove is positioned below the cutting board.",
+    "dsl": "(exists ?jeans (exists ?hat (exists ?board (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Is ?hat 'hat') (Has ?hat 'white') (RightOf ?hat ?jeans) (LargerThan ?jeans ?hat) (Is ?board 'cutting_board') (Below ?board ?jeans) (forall ?donut (implies (Is ?donut 'donut') (exists ?glove (and (Is ?glove 'glove') (Has ?glove 'yellow') (RightOf ?glove ?donut) (SmallerThan ?donut ?board) (Below ?glove ?board)))))))))",
+    "cnf": "(exists ?jeans (exists ?hat (exists ?board (forall ?donut (exists ?glove (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (RightOf ?hat ?jeans) (LargerThan ?jeans ?hat) (Has ?hat 'white') (Below ?board ?jeans) (Is ?hat 'hat') (Is ?board 'cutting_board') (or (not (Is ?donut 'donut')) (SmallerThan ?donut ?board)) (or (not (Is ?donut 'donut')) (Below ?glove ?board)) (or (not (Is ?donut 'donut')) (RightOf ?glove ?donut)) (or (not (Is ?donut 'donut')) (Has ?glove 'yellow')) (or (not (Is ?donut 'donut')) (Is ?glove 'glove'))))))))",
+    "k": 5,
+    "object_classes": [
+        "jeans",
+        "glove",
+        "cutting_board",
+        "hat",
+        "donut"
+    ]
+}

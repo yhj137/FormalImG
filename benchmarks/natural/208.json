@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A blue bird is perched on top of a black hammer.",
+    "dsl": "(exists ?b (exists ?h (and (Is ?b 'bird') (HasColor ?b 'blue') (Is ?h 'hammer') (HasColor ?h 'black') (On ?b ?h))))",
+    "cnf": "(exists ?b (exists ?h (and (Is ?b 'bird') (HasColor ?b 'blue') (On ?b ?h) (HasColor ?h 'black') (Is ?h 'hammer'))))",
+    "k": 2,
+    "object_classes": [
+        "bird",
+        "hammer"
+    ]
+}

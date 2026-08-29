@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every cat sits on a blue jacket, holding a hammer and a turned-on phone. An orange is next to the cat, and an empty bottle is next to the orange.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'cat') (exists ?j (exists ?p (exists ?h (exists ?o (exists ?b (and (HasState ?c 'sitting') (Is ?j 'jacket') (HasColor ?j 'blue') (On ?c ?j) (Is ?p 'phone') (HasState ?p 'on') (Holding ?c ?p) (Is ?h 'hammer') (Holding ?c ?h) (Is ?o 'orange') (NextTo ?c ?o) (Is ?b 'bottle') (HasState ?b 'empty') (NextTo ?o ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?j (exists ?p (exists ?h (exists ?o (exists ?b (and (or (not (Is ?c 'cat')) (HasState ?c 'sitting')) (or (not (Is ?c 'cat')) (Is ?j 'jacket')) (or (not (Is ?c 'cat')) (HasColor ?j 'blue')) (or (not (Is ?c 'cat')) (On ?c ?j)) (or (not (Is ?c 'cat')) (Is ?p 'phone')) (or (not (Is ?c 'cat')) (HasState ?p 'on')) (or (not (Is ?c 'cat')) (Holding ?c ?p)) (or (not (Is ?c 'cat')) (Is ?h 'hammer')) (or (not (Is ?c 'cat')) (Holding ?c ?h)) (or (not (Is ?c 'cat')) (Is ?o 'orange')) (or (not (Is ?c 'cat')) (NextTo ?c ?o)) (or (not (Is ?c 'cat')) (Is ?b 'bottle')) (or (not (Is ?c 'cat')) (NextTo ?o ?b)) (or (not (Is ?c 'cat')) (HasState ?b 'empty'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "cat",
+        "hammer",
+        "phone",
+        "orange"
+    ]
+}

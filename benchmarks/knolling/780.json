@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag located on the top side of the layout and a wrench located on the bottom side. The handbag is visually larger than the wrench. There is also a mouse included in the scene that is smaller than the wrench. Additionally, for every fork present in the image, it is positioned to the left of the mouse.",
+    "dsl": "(exists ?h (exists ?w (exists ?m (and (Is ?h 'handbag') (OnTopSide ?h) (Is ?w 'wrench') (OnBottomSide ?w) (Is ?m 'mouse') (LargerThan ?h ?w) (SmallerThan ?m ?w) (forall ?f (implies (Is ?f 'fork') (LeftOf ?f ?m)))))))",
+    "cnf": "(exists ?h (exists ?w (exists ?m (forall ?f (and (Is ?h 'handbag') (OnTopSide ?h) (LargerThan ?h ?w) (OnBottomSide ?w) (SmallerThan ?m ?w) (Is ?w 'wrench') (Is ?m 'mouse') (or (not (Is ?f 'fork')) (LeftOf ?f ?m)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "fork",
+        "handbag",
+        "mouse"
+    ]
+}

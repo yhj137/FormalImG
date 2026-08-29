@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza in the layout, there exists a wrench located on the bottom side of the image which is smaller than the pizza.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pizza') (exists ?w (and (Is ?w 'wrench') (OnBottomSide ?w) (SmallerThan ?w ?p))))))",
+    "cnf": "(forall ?p (exists ?w (and (or (not (Is ?p 'pizza')) (Is ?w 'wrench')) (or (not (Is ?p 'pizza')) (OnBottomSide ?w)) (or (not (Is ?p 'pizza')) (SmallerThan ?w ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "pizza"
+    ]
+}

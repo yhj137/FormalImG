@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a blue shirt, a black camera below the shirt, and a white plate below the camera; the plate is positioned on the bottom side of the image. For every screwdriver, it is located on the right side of the image with the shirt to its left. To the right of the screwdriver, there is a gray wrench. A black mouse is positioned above and vertically aligned with the wrench. A red lighter is below the wrench, and blue scissors are below the lighter. The wrench is visually larger than the lighter. Furthermore, for every screwdriver, there is a sandwich located below the plate and a gray fork placed to the left of the plate.",
+    "dsl": "(exists ?shirt (exists ?camera (exists ?plate (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?plate 'plate') (Has ?plate 'white') (Below ?camera ?shirt) (Below ?plate ?camera) (OnBottomSide ?plate) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?wrench (exists ?mouse (exists ?lighter (exists ?scissors (exists ?sandwich (exists ?fork (and (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?lighter 'lighter') (Has ?lighter 'red') (Is ?scissors 'scissors') (Has ?scissors 'blue') (Is ?sandwich 'sandwich') (Is ?fork 'fork') (Has ?fork 'gray') (OnRightSide ?sd) (LeftOf ?shirt ?sd) (LeftOf ?sd ?wrench) (Above ?mouse ?wrench) (AlignedVertically ?mouse ?wrench) (Below ?lighter ?wrench) (LargerThan ?wrench ?lighter) (Below ?scissors ?lighter) (Below ?sandwich ?plate) (LeftOf ?fork ?plate))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?camera (exists ?plate (forall ?sd (exists ?wrench (exists ?mouse (exists ?lighter (exists ?scissors (exists ?sandwich (exists ?fork (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Below ?camera ?shirt) (or (not (Is ?sd 'screwdriver')) (LeftOf ?shirt ?sd)) (Has ?camera 'black') (Below ?plate ?camera) (or (not (Is ?sd 'screwdriver')) (OnRightSide ?sd)) (or (not (Is ?sd 'screwdriver')) (LeftOf ?sd ?wrench)) (Is ?camera 'camera') (Has ?plate 'white') (OnBottomSide ?plate) (or (not (Is ?sd 'screwdriver')) (Has ?fork 'gray')) (or (not (Is ?sd 'screwdriver')) (Above ?mouse ?wrench)) (or (not (Is ?sd 'screwdriver')) (Has ?wrench 'gray')) (Is ?plate 'plate') (or (not (Is ?sd 'screwdriver')) (Below ?sandwich ?plate)) (or (not (Is ?sd 'screwdriver')) (Is ?fork 'fork')) (or (not (Is ?sd 'screwdriver')) (LeftOf ?fork ?plate)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?mouse ?wrench)) (or (not (Is ?sd 'screwdriver')) (Has ?mouse 'black')) (or (not (Is ?sd 'screwdriver')) (Is ?wrench 'wrench')) (or (not (Is ?sd 'screwdriver')) (Is ?mouse 'mouse')) (or (not (Is ?sd 'screwdriver')) (Below ?scissors ?lighter)) (or (not (Is ?sd 'screwdriver')) (Is ?sandwich 'sandwich')) (or (not (Is ?sd 'screwdriver')) (Below ?lighter ?wrench)) (or (not (Is ?sd 'screwdriver')) (Is ?lighter 'lighter')) (or (not (Is ?sd 'screwdriver')) (LargerThan ?wrench ?lighter)) (or (not (Is ?sd 'screwdriver')) (Has ?scissors 'blue')) (or (not (Is ?sd 'screwdriver')) (Has ?lighter 'red')) (or (not (Is ?sd 'screwdriver')) (Is ?scissors 'scissors')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "wrench",
+        "screwdriver",
+        "fork",
+        "lighter",
+        "camera",
+        "scissors",
+        "mouse",
+        "sandwich",
+        "shirt"
+    ]
+}

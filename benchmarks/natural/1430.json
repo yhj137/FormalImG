@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every child holds a sandwich and stands next to a table. On the table are a pan containing a pizza, a blue bottle, a keyboard, and a clock.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'child') (exists ?t (exists ?s (exists ?pa (exists ?p (exists ?b (exists ?k (exists ?cl (and (Is ?t 'table') (Is ?s 'sandwich') (Is ?pa 'pan') (Is ?p 'pizza') (Is ?b 'bottle') (HasColor ?b 'blue') (Is ?k 'keyboard') (Is ?cl 'clock') (Holding ?c ?s) (NextTo ?c ?t) (On ?pa ?t) (In ?p ?pa) (On ?b ?t) (On ?k ?t) (On ?cl ?t))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?t (exists ?s (exists ?pa (exists ?p (exists ?b (exists ?k (exists ?cl (and (or (not (Is ?c 'child')) (Is ?t 'table')) (or (not (Is ?c 'child')) (Is ?s 'sandwich')) (or (not (Is ?c 'child')) (NextTo ?c ?t)) (or (not (Is ?c 'child')) (Is ?pa 'pan')) (or (not (Is ?c 'child')) (Holding ?c ?s)) (or (not (Is ?c 'child')) (On ?pa ?t)) (or (not (Is ?c 'child')) (Is ?p 'pizza')) (or (not (Is ?c 'child')) (Is ?cl 'clock')) (or (not (Is ?c 'child')) (In ?p ?pa)) (or (not (Is ?c 'child')) (On ?b ?t)) (or (not (Is ?c 'child')) (Is ?b 'bottle')) (or (not (Is ?c 'child')) (Is ?k 'keyboard')) (or (not (Is ?c 'child')) (On ?cl ?t)) (or (not (Is ?c 'child')) (On ?k ?t)) (or (not (Is ?c 'child')) (HasColor ?b 'blue'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "table",
+        "sandwich",
+        "keyboard",
+        "pan",
+        "child",
+        "pizza",
+        "clock"
+    ]
+}

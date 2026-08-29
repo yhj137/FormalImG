@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a camera, an apple, and a stapler. The camera is located on the top side of the composition. An apple is placed to the left of the camera. The camera is positioned above the stapler, and these two items are aligned vertically.",
+    "dsl": "(exists ?camera (exists ?apple (exists ?stapler (and (Is ?camera 'camera') (Is ?apple 'apple') (Is ?stapler 'stapler') (OnTopSide ?camera) (LeftOf ?apple ?camera) (Above ?camera ?stapler) (AlignedVertically ?camera ?stapler)))))",
+    "cnf": "(exists ?camera (exists ?apple (exists ?stapler (and (Is ?camera 'camera') (OnTopSide ?camera) (LeftOf ?apple ?camera) (Above ?camera ?stapler) (Is ?apple 'apple') (AlignedVertically ?camera ?stapler) (Is ?stapler 'stapler')))))",
+    "k": 3,
+    "object_classes": [
+        "stapler",
+        "apple",
+        "camera"
+    ]
+}

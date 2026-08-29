@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a black dog holding a knife inside a desk. Every chair is positioned next to the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?g (exists ?k (and (Is ?d 'desk') (Is ?g 'dog') (HasColor ?g 'black') (In ?g ?d) (Is ?k 'knife') (Holding ?g ?k) (forall ?c (implies (Is ?c 'chair') (NextTo ?c ?d))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?g (exists ?k (forall ?c (and (Is ?d 'desk') (In ?g ?d) (or (not (Is ?c 'chair')) (NextTo ?c ?d)) (HasColor ?g 'black') (Holding ?g ?k) (Is ?g 'dog') (Is ?k 'knife')))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "chair",
+        "desk",
+        "dog"
+    ]
+}

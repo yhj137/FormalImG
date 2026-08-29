@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a structured horizontal row of items. The sequence begins on the bottom side of the image with a pair of jeans. Positioned to the right of the jeans are a camera, a bottle, a stapler, and a game controller, all maintaining horizontal alignment. The layout dictates that for every remote control present, it is placed to the right of the game controller and aligned with it. Furthermore, for each remote, there exists a pen (which is visually smaller than the remote) located to its right, followed by a knife positioned to the right of the pen. The knife is located on the right side of the image, completing the single aligned row.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?bottle (exists ?stapler (exists ?controller (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Is ?camera 'camera') (Is ?bottle 'bottle') (Is ?stapler 'stapler') (Is ?controller 'game_controller') (RightOf ?camera ?jeans) (RightOf ?bottle ?camera) (RightOf ?stapler ?bottle) (RightOf ?controller ?stapler) (AlignedHorizontally ?jeans ?camera) (AlignedHorizontally ?camera ?bottle) (AlignedHorizontally ?bottle ?stapler) (AlignedHorizontally ?stapler ?controller) (forall ?remote (implies (Is ?remote 'remote') (exists ?pen (exists ?knife (and (Is ?pen 'pen') (Is ?knife 'knife') (RightOf ?remote ?controller) (AlignedHorizontally ?controller ?remote) (RightOf ?pen ?remote) (SmallerThan ?pen ?remote) (AlignedHorizontally ?remote ?pen) (RightOf ?knife ?pen) (AlignedHorizontally ?pen ?knife) (OnRightSide ?knife))))))))))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?bottle (exists ?stapler (exists ?controller (forall ?remote (exists ?pen (exists ?knife (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (RightOf ?camera ?jeans) (AlignedHorizontally ?jeans ?camera) (Is ?camera 'camera') (RightOf ?bottle ?camera) (AlignedHorizontally ?camera ?bottle) (Is ?bottle 'bottle') (RightOf ?stapler ?bottle) (AlignedHorizontally ?bottle ?stapler) (Is ?stapler 'stapler') (RightOf ?controller ?stapler) (AlignedHorizontally ?stapler ?controller) (Is ?controller 'game_controller') (or (not (Is ?remote 'remote')) (RightOf ?remote ?controller)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?controller ?remote)) (or (not (Is ?remote 'remote')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (RightOf ?pen ?remote)) (or (not (Is ?remote 'remote')) (Is ?pen 'pen')) (or (not (Is ?remote 'remote')) (RightOf ?knife ?pen)) (or (not (Is ?remote 'remote')) (SmallerThan ?pen ?remote)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?pen)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?pen ?knife)) (or (not (Is ?remote 'remote')) (OnRightSide ?knife)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "knife",
+        "pen",
+        "game_controller",
+        "camera",
+        "jeans",
+        "stapler",
+        "bottle",
+        "remote"
+    ]
+}

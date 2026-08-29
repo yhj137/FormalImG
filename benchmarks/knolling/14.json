@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a pair of jeans positioned on the right side of the scene.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnRightSide ?jeans)))",
+    "cnf": "(exists ?jeans (and (Is ?jeans 'jeans') (OnRightSide ?jeans)))",
+    "k": 1,
+    "object_classes": [
+        "jeans"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a wrench positioned on the top side of the layout. Every knife in the image is aligned vertically with this wrench.",
+    "dsl": "(exists ?w (and (Is ?w 'wrench') (OnTopSide ?w) (forall ?k (implies (Is ?k 'knife') (AlignedVertically ?w ?k)))))",
+    "cnf": "(exists ?w (forall ?k (and (Is ?w 'wrench') (OnTopSide ?w) (or (not (Is ?k 'knife')) (AlignedVertically ?w ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "knife"
+    ]
+}

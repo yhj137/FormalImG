@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. A man stands next to a wooden table while holding a knife. On the table, there is a black phone and a pair of glasses. To the right of the man is a child holding a sleeping cat. Additionally, the man is positioned to the left of a house.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?t (exists ?k (exists ?p (exists ?g (exists ?c (exists ?ct (exists ?h (and (Is ?m 'man') (Is ?t 'table') (Is ?k 'knife') (Is ?p 'phone') (Is ?g 'glasses') (Is ?c 'child') (Is ?ct 'cat') (Is ?h 'house') (HasMaterial ?t 'wooden') (NextTo ?m ?t) (Holding ?m ?k) (On ?p ?t) (HasColor ?p 'black') (On ?g ?t) (RightOf ?c ?m) (Holding ?c ?ct) (HasState ?ct 'sleeping') (LeftOf ?m ?h)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?t (exists ?k (exists ?p (exists ?g (exists ?c (exists ?ct (exists ?h (and (Is ?m 'man') (NextTo ?m ?t) (Holding ?m ?k) (HasMaterial ?t 'wooden') (On ?p ?t) (RightOf ?c ?m) (Is ?k 'knife') (Is ?t 'table') (On ?g ?t) (Is ?p 'phone') (HasColor ?p 'black') (LeftOf ?m ?h) (Is ?c 'child') (Holding ?c ?ct) (Is ?g 'glasses') (Is ?h 'house') (Is ?ct 'cat') (HasState ?ct 'sleeping')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "phone",
+        "knife",
+        "child",
+        "glasses",
+        "man",
+        "table",
+        "cat"
+    ]
+}

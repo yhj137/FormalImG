@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene features a cyberpunk style. A child wearing a shirt and a round hat holds a phone. A lion stands next to the child. Beside the child is a fabric backpack with a round cake on it, and a banana is next to the cake. A metal hammer lies near the backpack, and every spoon in the scene is placed on the backpack.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?l (and (Is ?c 'child') (Is ?b 'backpack') (HasMaterial ?b 'fabric') (Is ?l 'lion') (NextTo ?b ?c) (NextTo ?l ?c) (forall ?s (implies (Is ?s 'spoon') (On ?s ?b))) (exists ?ck (and (Is ?ck 'cake') (HasShape ?ck 'round') (On ?ck ?b) (exists ?bn (and (Is ?bn 'banana') (NextTo ?bn ?ck))))) (exists ?p (and (Is ?p 'phone') (Holding ?c ?p))) (exists ?h (and (Is ?h 'hammer') (HasMaterial ?h 'metal') (NextTo ?h ?b))) (exists ?sh (and (Is ?sh 'shirt') (On ?sh ?c))) (exists ?ht (and (Is ?ht 'hat') (HasShape ?ht 'round') (On ?ht ?c))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?l (forall ?s (exists ?ck (exists ?bn (exists ?p (exists ?h (exists ?sh (exists ?ht (and (Is ?c 'child') (NextTo ?b ?c) (NextTo ?l ?c) (HasMaterial ?b 'fabric') (or (not (Is ?s 'spoon')) (On ?s ?b)) (Holding ?c ?p) (Is ?l 'lion') (Is ?b 'backpack') (On ?ck ?b) (On ?sh ?c) (Is ?p 'phone') (NextTo ?h ?b) (HasShape ?ck 'round') (NextTo ?bn ?ck) (On ?ht ?c) (Is ?sh 'shirt') (HasMaterial ?h 'metal') (Is ?ck 'cake') (Is ?bn 'banana') (HasShape ?ht 'round') (Is ?h 'hammer') (Is ?ht 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "child",
+        "hat",
+        "spoon",
+        "backpack",
+        "cake",
+        "hammer",
+        "lion",
+        "banana"
+    ]
+}

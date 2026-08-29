@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a neatly organized horizontal row of objects. The arrangement begins with a laptop and a pair of jeans. A constraint applies to any cup in the scene: it must be aligned horizontally with the jeans, positioned to the right of them, and be visually smaller than the laptop. Continuing the main sequence to the right of the jeans are a camera, a remote, a pair of scissors, a bottle, a carrot, and a phone. The camera is located to the right of the jeans, the remote to the right of the camera, the scissors to the right of the remote, the bottle to the right of the scissors, the carrot to the right of the bottle, and the phone to the right of the carrot. All specific objects are aligned horizontally. The phone is positioned on the right side of the image. Additionally, the laptop is larger than the phone, and the carrot is smaller than the jeans.",
+    "dsl": "(exists ?laptop (exists ?jeans (and (forall ?cup (implies (Is ?cup 'cup') (and (RightOf ?cup ?jeans) (AlignedHorizontally ?cup ?jeans) (SmallerThan ?cup ?laptop)))) (exists ?camera (exists ?remote (exists ?scissors (exists ?bottle (exists ?carrot (exists ?phone (and (Is ?laptop 'laptop') (Is ?jeans 'jeans') (Is ?camera 'camera') (Is ?remote 'remote') (Is ?scissors 'scissors') (Is ?bottle 'bottle') (Is ?carrot 'carrot') (Is ?phone 'phone') (RightOf ?jeans ?laptop) (RightOf ?camera ?jeans) (RightOf ?remote ?camera) (RightOf ?scissors ?remote) (RightOf ?bottle ?scissors) (RightOf ?carrot ?bottle) (RightOf ?phone ?carrot) (AlignedHorizontally ?laptop ?jeans) (AlignedHorizontally ?jeans ?camera) (AlignedHorizontally ?camera ?remote) (AlignedHorizontally ?remote ?scissors) (AlignedHorizontally ?scissors ?bottle) (AlignedHorizontally ?bottle ?carrot) (AlignedHorizontally ?carrot ?phone) (OnRightSide ?phone) (LargerThan ?laptop ?phone) (SmallerThan ?carrot ?jeans)))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (forall ?cup (exists ?camera (exists ?remote (exists ?scissors (exists ?bottle (exists ?carrot (exists ?phone (and (or (not (Is ?cup 'cup')) (RightOf ?cup ?jeans)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?jeans)) (Is ?jeans 'jeans') (or (not (Is ?cup 'cup')) (SmallerThan ?cup ?laptop)) (RightOf ?jeans ?laptop) (Is ?laptop 'laptop') (RightOf ?camera ?jeans) (AlignedHorizontally ?laptop ?jeans) (Is ?camera 'camera') (RightOf ?remote ?camera) (AlignedHorizontally ?jeans ?camera) (LargerThan ?laptop ?phone) (Is ?remote 'remote') (RightOf ?scissors ?remote) (SmallerThan ?carrot ?jeans) (AlignedHorizontally ?camera ?remote) (OnRightSide ?phone) (Is ?scissors 'scissors') (RightOf ?bottle ?scissors) (AlignedHorizontally ?carrot ?phone) (AlignedHorizontally ?remote ?scissors) (Is ?bottle 'bottle') (RightOf ?carrot ?bottle) (AlignedHorizontally ?bottle ?carrot) (RightOf ?phone ?carrot) (AlignedHorizontally ?scissors ?bottle) (Is ?carrot 'carrot') (Is ?phone 'phone')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "carrot",
+        "phone",
+        "cup",
+        "jeans",
+        "bottle",
+        "camera",
+        "scissors"
+    ]
+}

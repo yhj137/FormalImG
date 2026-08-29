@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A man holding a hammer stands next to a white wardrobe. A basket containing all the fruit in the scene sits on the wardrobe. To the right of the wardrobe is a desk where a monitor sits with a laptop next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?w (exists ?b (and (Is ?m 'man') (Is ?h 'hammer') (Holding ?m ?h) (Is ?w 'wardrobe') (HasColor ?w 'white') (NextTo ?m ?w) (Is ?b 'basket') (On ?b ?w) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))) (exists ?d (exists ?mo (exists ?l (and (Is ?d 'desk') (RightOf ?d ?w) (Is ?mo 'monitor') (On ?mo ?d) (Is ?l 'laptop') (NextTo ?l ?mo)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?w (exists ?b (forall ?f (exists ?d (exists ?mo (exists ?l (and (Is ?m 'man') (Holding ?m ?h) (NextTo ?m ?w) (Is ?h 'hammer') (HasColor ?w 'white') (On ?b ?w) (Is ?w 'wardrobe') (RightOf ?d ?w) (Is ?b 'basket') (or (not (Is ?f 'fruit')) (In ?f ?b)) (Is ?d 'desk') (On ?mo ?d) (Is ?mo 'monitor') (NextTo ?l ?mo) (Is ?l 'laptop')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "laptop",
+        "man",
+        "monitor",
+        "hammer",
+        "desk",
+        "basket",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a keyboard. The arrangement follows a specific rule: for every game controller found in the scene, it is positioned on the right side of the image. Corresponding to each game controller, there is a pair of glasses located below the keyboard, with the game controller placed to the right of those glasses.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (forall ?gc (implies (Is ?gc 'game_controller') (exists ?g (and (Is ?g 'glasses') (OnRightSide ?gc) (Below ?g ?k) (RightOf ?gc ?g)))))))",
+    "cnf": "(exists ?k (forall ?gc (exists ?g (and (Is ?k 'keyboard') (or (not (Is ?gc 'game_controller')) (Below ?g ?k)) (or (not (Is ?gc 'game_controller')) (Is ?g 'glasses')) (or (not (Is ?gc 'game_controller')) (RightOf ?gc ?g)) (or (not (Is ?gc 'game_controller')) (OnRightSide ?gc))))))",
+    "k": 3,
+    "object_classes": [
+        "glasses",
+        "game_controller",
+        "keyboard"
+    ]
+}

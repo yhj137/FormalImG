@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shirt on the top left side and a keyboard to its right. For every set of keys present, there is a hammer positioned below the shirt and above the keys, a phone to the right of the keys, a calculator to the right of the phone, a shoe below the keyboard, and a sock to the right of the shoe. The keys are smaller than the keyboard, and the phone is smaller than the calculator.",
+    "dsl": "(exists ?shirt (exists ?keyboard (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?shirt) (forall ?keys (implies (Is ?keys 'keys') (exists ?phone (exists ?calculator (exists ?shoe (exists ?sock (exists ?hammer (and (Is ?phone 'phone') (Is ?calculator 'calculator') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?hammer 'hammer') (Above ?shirt ?hammer) (Above ?hammer ?keys) (RightOf ?phone ?keys) (RightOf ?calculator ?phone) (Above ?keyboard ?shoe) (RightOf ?sock ?shoe) (SmallerThan ?keys ?keyboard) (SmallerThan ?phone ?calculator))))))))))))",
+    "cnf": "(exists ?shirt (exists ?keyboard (forall ?keys (exists ?phone (exists ?calculator (exists ?shoe (exists ?sock (exists ?hammer (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (OnLeftSide ?shirt) (RightOf ?keyboard ?shirt) (or (not (Is ?keys 'keys')) (Above ?shirt ?hammer)) (Is ?keyboard 'keyboard') (or (not (Is ?keys 'keys')) (Above ?keyboard ?shoe)) (or (not (Is ?keys 'keys')) (Is ?hammer 'hammer')) (or (not (Is ?keys 'keys')) (Above ?hammer ?keys)) (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?keyboard)) (or (not (Is ?keys 'keys')) (RightOf ?calculator ?phone)) (or (not (Is ?keys 'keys')) (RightOf ?sock ?shoe)) (or (not (Is ?keys 'keys')) (Is ?shoe 'shoe')) (or (not (Is ?keys 'keys')) (Is ?sock 'sock')) (or (not (Is ?keys 'keys')) (RightOf ?phone ?keys)) (or (not (Is ?keys 'keys')) (SmallerThan ?phone ?calculator)) (or (not (Is ?keys 'keys')) (Is ?calculator 'calculator')) (or (not (Is ?keys 'keys')) (Is ?phone 'phone')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "sock",
+        "keyboard",
+        "phone",
+        "hammer",
+        "calculator",
+        "shoe",
+        "shirt"
+    ]
+}

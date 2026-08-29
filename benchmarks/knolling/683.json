@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pan positioned on the top side of the image. For every bottle in the scene, it is aligned horizontally with the pan. Corresponding to this arrangement, there is a plate and a lighter located on the bottom side. The plate is vertically aligned with the pan, the lighter is vertically aligned with the bottle, and the plate and the lighter are aligned horizontally with each other.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnTopSide ?pan) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?plate (exists ?lighter (and (Is ?plate 'plate') (Is ?lighter 'lighter') (OnBottomSide ?plate) (OnBottomSide ?lighter) (AlignedHorizontally ?pan ?bottle) (AlignedVertically ?pan ?plate) (AlignedVertically ?bottle ?lighter) (AlignedHorizontally ?plate ?lighter))))))))",
+    "cnf": "(exists ?pan (forall ?bottle (exists ?plate (exists ?lighter (and (Is ?pan 'pan') (OnTopSide ?pan) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?pan ?bottle)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?pan ?plate)) (or (not (Is ?bottle 'bottle')) (OnBottomSide ?lighter)) (or (not (Is ?bottle 'bottle')) (OnBottomSide ?plate)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?plate ?lighter)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?bottle ?lighter)) (or (not (Is ?bottle 'bottle')) (Is ?lighter 'lighter')) (or (not (Is ?bottle 'bottle')) (Is ?plate 'plate')))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "plate",
+        "pan",
+        "lighter"
+    ]
+}

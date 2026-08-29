@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every child holds a round pizza, with a toy car to their right.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'child') (exists ?p (exists ?t (and (Is ?p 'pizza') (HasShape ?p 'round') (Is ?t 'toy car') (Holding ?c ?p) (RightOf ?t ?c)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?p (exists ?t (and (or (not (Is ?c 'child')) (Is ?p 'pizza')) (or (not (Is ?c 'child')) (HasShape ?p 'round')) (or (not (Is ?c 'child')) (Holding ?c ?p)) (or (not (Is ?c 'child')) (Is ?t 'toy car')) (or (not (Is ?c 'child')) (RightOf ?t ?c)))))))",
+    "k": 3,
+    "object_classes": [
+        "pizza",
+        "child",
+        "toy car"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a gray bus containing a table. A bed is positioned to the left of the table. On the table lies a blue screwdriver with a green apple to its left, and every bottle in the scene is also placed on the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bus (and (Is ?bus 'bus') (HasColor ?bus 'gray') (exists ?t (and (Is ?t 'table') (In ?t ?bus) (exists ?bed (and (Is ?bed 'bed') (LeftOf ?bed ?t))) (exists ?sd (and (Is ?sd 'screwdriver') (HasColor ?sd 'blue') (On ?sd ?t) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'green') (LeftOf ?a ?sd))))) (forall ?bot (implies (Is ?bot 'bottle') (On ?bot ?t))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bus (exists ?t (exists ?bed (exists ?sd (exists ?a (forall ?bot (and (Is ?bus 'bus') (HasColor ?bus 'gray') (In ?t ?bus) (Is ?t 'table') (LeftOf ?bed ?t) (On ?sd ?t) (Is ?bed 'bed') (or (not (Is ?bot 'bottle')) (On ?bot ?t)) (HasColor ?sd 'blue') (LeftOf ?a ?sd) (Is ?sd 'screwdriver') (HasColor ?a 'green') (Is ?a 'apple')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "bus",
+        "screwdriver",
+        "bed",
+        "table",
+        "apple"
+    ]
+}

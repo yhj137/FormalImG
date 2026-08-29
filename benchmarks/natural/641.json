@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. Every car contains a man with a metal laptop on him, and a stone rock.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'car') (exists ?m (exists ?l (exists ?r (and (Is ?m 'man') (Is ?l 'laptop') (Is ?r 'rock') (In ?m ?c) (On ?l ?m) (HasMaterial ?l 'metal') (In ?r ?c) (HasMaterial ?r 'stone'))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?m (exists ?l (exists ?r (and (or (not (Is ?c 'car')) (Is ?m 'man')) (or (not (Is ?c 'car')) (In ?m ?c)) (or (not (Is ?c 'car')) (Is ?l 'laptop')) (or (not (Is ?c 'car')) (On ?l ?m)) (or (not (Is ?c 'car')) (Is ?r 'rock')) (or (not (Is ?c 'car')) (HasMaterial ?l 'metal')) (or (not (Is ?c 'car')) (In ?r ?c)) (or (not (Is ?c 'car')) (HasMaterial ?r 'stone'))))))))",
+    "k": 4,
+    "object_classes": [
+        "car",
+        "laptop",
+        "rock",
+        "man"
+    ]
+}

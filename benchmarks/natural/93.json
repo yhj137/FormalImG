@@ -1,0 +1,9 @@
+{
+    "prompt": "A broken bicycle.",
+    "dsl": "(exists ?b (and (Is ?b 'bicycle') (HasState ?b 'broken')))",
+    "cnf": "(exists ?b (and (Is ?b 'bicycle') (HasState ?b 'broken')))",
+    "k": 1,
+    "object_classes": [
+        "bicycle"
+    ]
+}

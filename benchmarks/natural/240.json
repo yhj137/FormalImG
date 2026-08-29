@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a sitting brown teddy bear with a yellow bottle on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (HasState ?t 'sitting') (Is ?b 'bottle') (HasColor ?b 'yellow') (On ?b ?t)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (HasState ?t 'sitting') (On ?b ?t) (HasColor ?b 'yellow') (Is ?b 'bottle')))))",
+    "k": 2,
+    "object_classes": [
+        "teddy bear",
+        "bottle"
+    ]
+}

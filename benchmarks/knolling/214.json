@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a plate and a phone. The plate is positioned on the top side of the scene, and it is visually larger than the phone.",
+    "dsl": "(exists ?plate (exists ?phone (and (Is ?plate 'plate') (Is ?phone 'phone') (OnTopSide ?plate) (LargerThan ?plate ?phone))))",
+    "cnf": "(exists ?plate (exists ?phone (and (Is ?plate 'plate') (OnTopSide ?plate) (LargerThan ?plate ?phone) (Is ?phone 'phone'))))",
+    "k": 2,
+    "object_classes": [
+        "plate",
+        "phone"
+    ]
+}

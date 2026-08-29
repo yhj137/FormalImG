@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a wooden bookshelf. To its left stands a man, with a mirror positioned further to his left. A cat sits on the bookshelf alongside a basket, which contains a fish and every key in the scene. To the right of the bookshelf is a dog, and further right, a child sits on a stone rock.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bs (exists ?man (exists ?mr (exists ?c (exists ?d (exists ?ch (exists ?rk (exists ?b (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?man 'man') (LeftOf ?man ?bs) (Is ?mr 'mirror') (LeftOf ?mr ?man) (Is ?c 'cat') (On ?c ?bs) (Is ?d 'dog') (RightOf ?d ?bs) (Is ?ch 'child') (RightOf ?ch ?d) (Is ?rk 'rock') (HasMaterial ?rk 'stone') (On ?ch ?rk) (Is ?b 'basket') (On ?b ?bs) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?f (and (Is ?f 'fish') (In ?f ?b)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bs (exists ?man (exists ?mr (exists ?c (exists ?d (exists ?ch (exists ?rk (exists ?b (forall ?k (exists ?f (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?man ?bs) (On ?c ?bs) (Is ?man 'man') (LeftOf ?mr ?man) (RightOf ?d ?bs) (Is ?c 'cat') (Is ?mr 'mirror') (On ?b ?bs) (Is ?d 'dog') (RightOf ?ch ?d) (Is ?b 'basket') (or (not (Is ?k 'key')) (In ?k ?b)) (Is ?ch 'child') (On ?ch ?rk) (In ?f ?b) (HasMaterial ?rk 'stone') (Is ?f 'fish') (Is ?rk 'rock')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "rock",
+        "cat",
+        "man",
+        "fish",
+        "basket",
+        "mirror",
+        "dog",
+        "bookshelf",
+        "child"
+    ]
+}

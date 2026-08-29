@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a shirt, a tie, a screwdriver, a pen, and a keyboard. The shirt is positioned on the top side of the image. The tie is placed below the shirt, and the screwdriver is aligned horizontally with the tie. Additionally, the tie is situated above the pen, while the keyboard is aligned horizontally with the pen.",
+    "dsl": "(exists ?shirt (exists ?tie (exists ?screwdriver (exists ?pen (exists ?keyboard (and (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?screwdriver 'screwdriver') (Is ?pen 'pen') (Is ?keyboard 'keyboard') (OnTopSide ?shirt) (Below ?tie ?shirt) (AlignedHorizontally ?screwdriver ?tie) (Above ?tie ?pen) (AlignedHorizontally ?keyboard ?pen)))))))",
+    "cnf": "(exists ?shirt (exists ?tie (exists ?screwdriver (exists ?pen (exists ?keyboard (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Below ?tie ?shirt) (Is ?tie 'tie') (AlignedHorizontally ?screwdriver ?tie) (Above ?tie ?pen) (Is ?screwdriver 'screwdriver') (Is ?pen 'pen') (AlignedHorizontally ?keyboard ?pen) (Is ?keyboard 'keyboard')))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "keyboard",
+        "pen",
+        "screwdriver",
+        "shirt"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image where every orange is orange.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'orange') (HasColor ?x 'orange'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'orange')) (HasColor ?x 'orange'))))",
+    "k": 1,
+    "object_classes": [
+        "orange"
+    ]
+}

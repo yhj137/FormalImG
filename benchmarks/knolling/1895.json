@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a central vertical alignment of four items: a monitor is above a pan, the pan is above a pair of jeans, and a shirt is positioned below the jeans. To the left of the monitor is a camera, which is visually smaller than the monitor. To the left of the pan is a stapler, to the left of the jeans is a phone, and to the left of the shirt is a cup. Additionally, for every sock in the image, it is located below the shirt, and there is an apple on the bottom side of the image positioned to the left of the sock.",
+    "dsl": "(exists ?monitor (exists ?pan (exists ?jeans (exists ?shirt (and (Is ?monitor 'monitor') (Is ?pan 'pan') (Is ?jeans 'jeans') (Is ?shirt 'shirt') (AlignedVertically ?monitor ?pan) (AlignedVertically ?pan ?jeans) (AlignedVertically ?jeans ?shirt) (Above ?monitor ?pan) (Above ?pan ?jeans) (Below ?shirt ?jeans) (forall ?sock (implies (Is ?sock 'sock') (exists ?apple (and (Is ?apple 'apple') (OnBottomSide ?apple) (LeftOf ?apple ?sock) (Below ?sock ?shirt))))) (exists ?camera (exists ?stapler (exists ?phone (exists ?cup (and (Is ?camera 'camera') (Is ?stapler 'stapler') (Is ?phone 'phone') (Is ?cup 'cup') (LeftOf ?camera ?monitor) (LargerThan ?monitor ?camera) (LeftOf ?stapler ?pan) (LeftOf ?phone ?jeans) (LeftOf ?cup ?shirt)))))))))))",
+    "cnf": "(exists ?monitor (exists ?pan (exists ?jeans (exists ?shirt (forall ?sock (exists ?apple (exists ?camera (exists ?stapler (exists ?phone (exists ?cup (and (Is ?monitor 'monitor') (AlignedVertically ?monitor ?pan) (Above ?monitor ?pan) (Is ?pan 'pan') (AlignedVertically ?pan ?jeans) (LeftOf ?camera ?monitor) (Above ?pan ?jeans) (Is ?jeans 'jeans') (AlignedVertically ?jeans ?shirt) (LargerThan ?monitor ?camera) (Is ?camera 'camera') (LeftOf ?stapler ?pan) (Below ?shirt ?jeans) (Is ?shirt 'shirt') (Is ?stapler 'stapler') (LeftOf ?phone ?jeans) (or (not (Is ?sock 'sock')) (Below ?sock ?shirt)) (Is ?phone 'phone') (LeftOf ?cup ?shirt) (or (not (Is ?sock 'sock')) (LeftOf ?apple ?sock)) (Is ?cup 'cup') (or (not (Is ?sock 'sock')) (OnBottomSide ?apple)) (or (not (Is ?sock 'sock')) (Is ?apple 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "pan",
+        "apple",
+        "cup",
+        "jeans",
+        "camera",
+        "monitor",
+        "stapler",
+        "sock",
+        "phone"
+    ]
+}

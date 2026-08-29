@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the left side. Above the suitcase is a hat, and to the right of the suitcase is a pair of blue jeans. A calculator is located above the jeans, with a white mouse positioned to the right of the calculator. For every knife in the image, it is located on the bottom side and is smaller than the suitcase; furthermore, there is a red wrench to the right of the knife and a pair of glasses above the wrench.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?hat (exists ?calc (exists ?mouse (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?jeans 'jeans') (Has ?jeans 'blue') (RightOf ?jeans ?suitcase) (Is ?hat 'hat') (Above ?hat ?suitcase) (Is ?calc 'calculator') (Above ?calc ?jeans) (Is ?mouse 'mouse') (Has ?mouse 'white') (RightOf ?mouse ?calc) (forall ?k (implies (Is ?k 'knife') (exists ?w (exists ?g (and (Is ?w 'wrench') (Has ?w 'red') (Is ?g 'glasses') (OnBottomSide ?k) (SmallerThan ?k ?suitcase) (RightOf ?w ?k) (Above ?g ?w))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?hat (exists ?calc (exists ?mouse (forall ?k (exists ?w (exists ?g (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?jeans ?suitcase) (Above ?hat ?suitcase) (Has ?jeans 'blue') (Above ?calc ?jeans) (or (not (Is ?k 'knife')) (SmallerThan ?k ?suitcase)) (Is ?hat 'hat') (Is ?jeans 'jeans') (Is ?calc 'calculator') (RightOf ?mouse ?calc) (or (not (Is ?k 'knife')) (OnBottomSide ?k)) (or (not (Is ?k 'knife')) (RightOf ?w ?k)) (Has ?mouse 'white') (or (not (Is ?k 'knife')) (Is ?g 'glasses')) (or (not (Is ?k 'knife')) (Has ?w 'red')) (or (not (Is ?k 'knife')) (Above ?g ?w)) (Is ?mouse 'mouse') (or (not (Is ?k 'knife')) (Is ?w 'wrench')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "wrench",
+        "hat",
+        "calculator",
+        "jeans",
+        "mouse",
+        "knife",
+        "suitcase"
+    ]
+}

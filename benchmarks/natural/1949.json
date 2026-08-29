@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo depicting an open wardrobe on the left and a car to its right. On the wardrobe, a round pan sits beside a phone, while a bird holding a banana is also perched there. A keyboard and a basket containing an apple rest on the car; the basket also holds every flower in the scene.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?p (exists ?ph (exists ?k (exists ?b (exists ?bi (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?c 'car') (RightOf ?c ?w) (Is ?p 'pan') (HasShape ?p 'round') (On ?p ?w) (Is ?ph 'phone') (NextTo ?ph ?p) (Is ?k 'keyboard') (On ?k ?c) (Is ?b 'basket') (On ?b ?c) (Is ?bi 'bird') (On ?bi ?w) (forall ?f (implies (Is ?f 'flower') (In ?f ?b))) (exists ?a (exists ?ba (and (Is ?a 'apple') (In ?a ?b) (Is ?ba 'banana') (Holding ?bi ?ba)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?p (exists ?ph (exists ?k (exists ?b (exists ?bi (forall ?f (exists ?a (exists ?ba (and (Is ?w 'wardrobe') (HasState ?w 'open') (RightOf ?c ?w) (On ?p ?w) (Is ?c 'car') (On ?k ?c) (On ?bi ?w) (HasShape ?p 'round') (NextTo ?ph ?p) (On ?b ?c) (Is ?k 'keyboard') (Is ?bi 'bird') (Holding ?bi ?ba) (Is ?p 'pan') (Is ?ph 'phone') (Is ?b 'basket') (or (not (Is ?f 'flower')) (In ?f ?b)) (Is ?ba 'banana') (In ?a ?b) (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "pan",
+        "banana",
+        "phone",
+        "wardrobe",
+        "basket",
+        "apple",
+        "bird",
+        "flower",
+        "car"
+    ]
+}

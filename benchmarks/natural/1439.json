@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every child holds a hammer and stands next to a bed. To the left of the bed is a woman holding a rectangular phone. A monitor is located next to the bed, with a keyboard beside the monitor and a key next to the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?c (implies (Is ?c 'child') (exists ?b (exists ?w (exists ?p (exists ?h (exists ?m (exists ?kb (exists ?k (and (Is ?b 'bed') (Is ?w 'woman') (Is ?p 'phone') (Is ?h 'hammer') (Is ?m 'monitor') (Is ?kb 'keyboard') (Is ?k 'key') (Holding ?c ?h) (NextTo ?c ?b) (LeftOf ?w ?b) (Holding ?w ?p) (HasShape ?p 'rectangular') (NextTo ?m ?b) (NextTo ?kb ?m) (NextTo ?k ?kb))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?c (exists ?b (exists ?w (exists ?p (exists ?h (exists ?m (exists ?kb (exists ?k (and (or (not (Is ?c 'child')) (Is ?b 'bed')) (or (not (Is ?c 'child')) (Is ?w 'woman')) (or (not (Is ?c 'child')) (NextTo ?c ?b)) (or (not (Is ?c 'child')) (Is ?p 'phone')) (or (not (Is ?c 'child')) (LeftOf ?w ?b)) (or (not (Is ?c 'child')) (Holding ?c ?h)) (or (not (Is ?c 'child')) (Is ?h 'hammer')) (or (not (Is ?c 'child')) (Holding ?w ?p)) (or (not (Is ?c 'child')) (NextTo ?m ?b)) (or (not (Is ?c 'child')) (Is ?k 'key')) (or (not (Is ?c 'child')) (Is ?m 'monitor')) (or (not (Is ?c 'child')) (HasShape ?p 'rectangular')) (or (not (Is ?c 'child')) (NextTo ?kb ?m)) (or (not (Is ?c 'child')) (Is ?kb 'keyboard')) (or (not (Is ?c 'child')) (NextTo ?k ?kb))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "phone",
+        "key",
+        "hammer",
+        "bed",
+        "child",
+        "keyboard",
+        "woman"
+    ]
+}

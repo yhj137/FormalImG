@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a white spoon. Every glove in the image is yellow and has a corresponding red screwdriver and a black shoe. The glove is aligned horizontally with the red screwdriver. The white spoon is positioned below the glove and aligned vertically with it. The black shoe is located below the spoon and sits on the bottom side of the image.",
+    "dsl": "(exists ?spoon (and (Is ?spoon 'spoon') (Has ?spoon 'white') (forall ?glove (implies (Is ?glove 'glove') (exists ?screwdriver (exists ?shoe (and (Has ?glove 'yellow') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?shoe 'shoe') (Has ?shoe 'black') (AlignedHorizontally ?glove ?screwdriver) (AlignedVertically ?glove ?spoon) (Below ?spoon ?glove) (Below ?shoe ?spoon) (OnBottomSide ?shoe))))))))",
+    "cnf": "(exists ?spoon (forall ?glove (exists ?screwdriver (exists ?shoe (and (Is ?spoon 'spoon') (Has ?spoon 'white') (or (not (Is ?glove 'glove')) (AlignedVertically ?glove ?spoon)) (or (not (Is ?glove 'glove')) (Below ?spoon ?glove)) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?glove ?screwdriver)) (or (not (Is ?glove 'glove')) (Below ?shoe ?spoon)) (or (not (Is ?glove 'glove')) (Has ?shoe 'black')) (or (not (Is ?glove 'glove')) (Has ?screwdriver 'red')) (or (not (Is ?glove 'glove')) (OnBottomSide ?shoe)) (or (not (Is ?glove 'glove')) (Is ?shoe 'shoe')) (or (not (Is ?glove 'glove')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?glove 'glove')) (Has ?glove 'yellow')))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "screwdriver",
+        "glove",
+        "shoe"
+    ]
+}

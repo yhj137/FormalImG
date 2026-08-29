@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack positioned on the top side. Directly below the backpack is a handbag. Additionally, every bottle in the image is arranged to the right of the handbag, maintaining horizontal alignment with it.",
+    "dsl": "(exists ?backpack (exists ?handbag (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?handbag 'handbag') (Above ?backpack ?handbag) (forall ?bottle (implies (Is ?bottle 'bottle') (and (RightOf ?bottle ?handbag) (AlignedHorizontally ?bottle ?handbag)))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (forall ?bottle (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Above ?backpack ?handbag) (Is ?handbag 'handbag') (or (not (Is ?bottle 'bottle')) (RightOf ?bottle ?handbag)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?bottle ?handbag))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "handbag",
+        "backpack"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pair of headphones positioned on the bottom side of the layout. There is also a watch, and the headphones are visually larger than this watch. Furthermore, for every mouse present in the image, it is smaller than the watch.",
+    "dsl": "(exists ?headphones (exists ?watch (and (Is ?headphones 'headphones') (OnBottomSide ?headphones) (Is ?watch 'watch') (LargerThan ?headphones ?watch) (forall ?mouse (implies (Is ?mouse 'mouse') (SmallerThan ?mouse ?watch))))))",
+    "cnf": "(exists ?headphones (exists ?watch (forall ?mouse (and (Is ?headphones 'headphones') (OnBottomSide ?headphones) (LargerThan ?headphones ?watch) (Is ?watch 'watch') (or (not (Is ?mouse 'mouse')) (SmallerThan ?mouse ?watch))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "watch",
+        "mouse"
+    ]
+}

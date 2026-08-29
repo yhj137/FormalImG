@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A rock has a backpack, a plate, and a hammer sitting on it. An empty bottle is placed to the right of the backpack. To the right of the rock is a blooming plant, and every car in the scene is located to the right of the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?bp (exists ?p (exists ?h (exists ?b (exists ?pl (and (Is ?r 'rock') (Is ?bp 'backpack') (On ?bp ?r) (Is ?p 'plate') (On ?p ?r) (Is ?h 'hammer') (On ?h ?r) (Is ?b 'bottle') (HasState ?b 'empty') (RightOf ?b ?bp) (Is ?pl 'plant') (HasState ?pl 'blooming') (RightOf ?pl ?r) (forall ?c (implies (Is ?c 'car') (RightOf ?c ?pl)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?bp (exists ?p (exists ?h (exists ?b (exists ?pl (forall ?c (and (Is ?r 'rock') (On ?bp ?r) (On ?p ?r) (Is ?bp 'backpack') (RightOf ?b ?bp) (On ?h ?r) (Is ?p 'plate') (HasState ?b 'empty') (RightOf ?pl ?r) (Is ?h 'hammer') (Is ?b 'bottle') (HasState ?pl 'blooming') (or (not (Is ?c 'car')) (RightOf ?c ?pl)) (Is ?pl 'plant'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "rock",
+        "plant",
+        "backpack",
+        "hammer",
+        "car",
+        "plate"
+    ]
+}

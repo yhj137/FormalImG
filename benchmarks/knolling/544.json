@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black camera. For every lemon positioned above this camera, there is a ruler located to its left. Additionally, each lemon is visually smaller than the camera.",
+    "dsl": "(exists ?c (and (Is ?c 'camera') (Has ?c 'black') (forall ?l (implies (and (Is ?l 'lemon') (Above ?l ?c)) (exists ?r (and (Is ?r 'ruler') (LeftOf ?r ?l) (SmallerThan ?l ?c)))))))",
+    "cnf": "(exists ?c (forall ?l (exists ?r (and (Is ?c 'camera') (Has ?c 'black') (or (not (Is ?l 'lemon')) (not (Above ?l ?c)) (Is ?r 'ruler')) (or (not (Is ?l 'lemon')) (not (Above ?l ?c)) (LeftOf ?r ?l)) (or (not (Is ?l 'lemon')) (not (Above ?l ?c)) (SmallerThan ?l ?c))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "camera"
+    ]
+}

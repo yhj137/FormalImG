@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pair of scissors located on the left side of the image, with a mouse positioned directly below the scissors.",
+    "dsl": "(exists ?scissors (exists ?mouse (and (Is ?scissors 'scissors') (Is ?mouse 'mouse') (OnLeftSide ?scissors) (Below ?mouse ?scissors))))",
+    "cnf": "(exists ?scissors (exists ?mouse (and (Is ?scissors 'scissors') (OnLeftSide ?scissors) (Below ?mouse ?scissors) (Is ?mouse 'mouse'))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "mouse"
+    ]
+}

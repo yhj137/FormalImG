@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a cutting board positioned on the left side of the scene. A hammer is located to the left of the cutting board. Furthermore, for every apple in the image, it is placed to the right of the cutting board.",
+    "dsl": "(exists ?cb (exists ?h (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?h 'hammer') (LeftOf ?h ?cb) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?cb))))))",
+    "cnf": "(exists ?cb (exists ?h (forall ?a (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (LeftOf ?h ?cb) (or (not (Is ?a 'apple')) (RightOf ?a ?cb)) (Is ?h 'hammer')))))",
+    "k": 3,
+    "object_classes": [
+        "cutting_board",
+        "hammer",
+        "apple"
+    ]
+}

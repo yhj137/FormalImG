@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a cat standing on a dirty ball while holding a hammer.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?h (and (Is ?c 'cat') (HasState ?c 'standing') (Is ?b 'ball') (HasState ?b 'dirty') (Is ?h 'hammer') (On ?c ?b) (Holding ?c ?h))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?h (and (Is ?c 'cat') (HasState ?c 'standing') (On ?c ?b) (Holding ?c ?h) (HasState ?b 'dirty') (Is ?h 'hammer') (Is ?b 'ball'))))))",
+    "k": 3,
+    "object_classes": [
+        "cat",
+        "hammer",
+        "ball"
+    ]
+}

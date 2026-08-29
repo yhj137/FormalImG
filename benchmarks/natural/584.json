@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a brick house. A woman stands next to the house, holding every dog.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (HasMaterial ?h 'brick') (exists ?w (and (Is ?w 'woman') (NextTo ?w ?h) (forall ?d (implies (Is ?d 'dog') (Holding ?w ?d))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?w (forall ?d (and (Is ?h 'house') (HasMaterial ?h 'brick') (NextTo ?w ?h) (Is ?w 'woman') (or (not (Is ?d 'dog')) (Holding ?w ?d)))))))",
+    "k": 3,
+    "object_classes": [
+        "house",
+        "dog",
+        "woman"
+    ]
+}

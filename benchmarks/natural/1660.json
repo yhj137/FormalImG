@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sitting woman wearing a hat rests on a bench. All balls are round and located to the right of the bench. A boat is next to the bench; on it sits a pan with a hammer beside it. A peeled banana is on the pan, next to an orange.",
+    "dsl": "(exists ?w (exists ?be (and (Is ?w 'woman') (HasState ?w 'sitting') (Is ?be 'bench') (On ?w ?be) (forall ?ba (implies (Is ?ba 'ball') (and (HasShape ?ba 'round') (RightOf ?ba ?be)))) (exists ?h (exists ?bt (exists ?p (exists ?ham (exists ?ban (exists ?o (and (Is ?h 'hat') (On ?h ?w) (Is ?bt 'boat') (NextTo ?bt ?be) (Is ?p 'pan') (On ?p ?bt) (Is ?ham 'hammer') (NextTo ?ham ?p) (Is ?ban 'banana') (HasState ?ban 'peeled') (On ?ban ?p) (Is ?o 'orange') (NextTo ?o ?ban)))))))))))",
+    "cnf": "(exists ?w (exists ?be (forall ?ba (exists ?h (exists ?bt (exists ?p (exists ?ham (exists ?ban (exists ?o (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?be) (On ?h ?w) (Is ?be 'bench') (or (not (Is ?ba 'ball')) (RightOf ?ba ?be)) (Is ?h 'hat') (NextTo ?bt ?be) (or (not (Is ?ba 'ball')) (HasShape ?ba 'round')) (Is ?bt 'boat') (On ?p ?bt) (Is ?p 'pan') (NextTo ?ham ?p) (On ?ban ?p) (Is ?ham 'hammer') (HasState ?ban 'peeled') (NextTo ?o ?ban) (Is ?ban 'banana') (Is ?o 'orange')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "woman",
+        "pan",
+        "hat",
+        "ball",
+        "banana",
+        "hammer",
+        "boat",
+        "orange"
+    ]
+}

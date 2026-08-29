@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child holding every cup, with a flying butterfly to the left of each one.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'child') (forall ?u (implies (Is ?u 'cup') (and (Holding ?c ?u) (exists ?b (and (Is ?b 'butterfly') (HasState ?b 'flying') (LeftOf ?b ?u)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (forall ?u (exists ?b (and (Is ?c 'child') (or (not (Is ?u 'cup')) (Holding ?c ?u)) (or (not (Is ?u 'cup')) (Is ?b 'butterfly')) (or (not (Is ?u 'cup')) (HasState ?b 'flying')) (or (not (Is ?u 'cup')) (LeftOf ?b ?u)))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "child",
+        "cup"
+    ]
+}

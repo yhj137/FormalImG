@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a drill, a ruler, and a pair of pliers, with the ruler to the right of the drill and the pliers to the right of the ruler. The pliers are positioned on the right side of the scene. Below the drill is a camera which is located on the bottom side. A donut is placed below the ruler, and a carrot is located below the pliers. Additionally, for every lighter in the image, it is smaller than the camera.",
+    "dsl": "(exists ?drill (exists ?ruler (exists ?pliers (exists ?camera (exists ?donut (exists ?carrot (and (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?pliers 'pliers') (Is ?camera 'camera') (Is ?donut 'donut') (Is ?carrot 'carrot') (RightOf ?ruler ?drill) (RightOf ?pliers ?ruler) (OnRightSide ?pliers) (Below ?camera ?drill) (OnBottomSide ?camera) (Below ?donut ?ruler) (Below ?carrot ?pliers) (forall ?lighter (implies (Is ?lighter 'lighter') (SmallerThan ?lighter ?camera))))))))))",
+    "cnf": "(exists ?drill (exists ?ruler (exists ?pliers (exists ?camera (exists ?donut (exists ?carrot (forall ?lighter (and (Is ?drill 'drill') (RightOf ?ruler ?drill) (Below ?camera ?drill) (Is ?ruler 'ruler') (RightOf ?pliers ?ruler) (Is ?camera 'camera') (OnBottomSide ?camera) (Below ?donut ?ruler) (Is ?pliers 'pliers') (OnRightSide ?pliers) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?camera)) (Is ?donut 'donut') (Below ?carrot ?pliers) (Is ?carrot 'carrot')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "pliers",
+        "carrot",
+        "drill",
+        "lighter",
+        "camera",
+        "donut"
+    ]
+}

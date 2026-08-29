@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features an oval mirror to the left of a wooden boat. Next to the mirror are shoes containing a toy car. Inside the boat sits a teddy bear wearing a hat, along with every fish in the scene. A plate holding a bitten apple and an orange rests next to the boat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?b (exists ?s (exists ?tc (exists ?tb (exists ?h (exists ?p (exists ?a (exists ?o (and (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?b 'boat') (HasMaterial ?b 'wooden') (LeftOf ?m ?b) (Is ?s 'shoes') (NextTo ?s ?m) (Is ?tc 'toy car') (In ?tc ?s) (Is ?tb 'teddy bear') (In ?tb ?b) (Is ?h 'hat') (On ?h ?tb) (forall ?f (implies (Is ?f 'fish') (In ?f ?b))) (Is ?p 'plate') (NextTo ?p ?b) (Is ?a 'apple') (HasState ?a 'bitten') (On ?a ?p) (Is ?o 'orange') (On ?o ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?b (exists ?s (exists ?tc (exists ?tb (exists ?h (exists ?p (exists ?a (exists ?o (forall ?f (and (Is ?m 'mirror') (HasShape ?m 'oval') (LeftOf ?m ?b) (NextTo ?s ?m) (HasMaterial ?b 'wooden') (In ?tb ?b) (Is ?s 'shoes') (In ?tc ?s) (Is ?b 'boat') (or (not (Is ?f 'fish')) (In ?f ?b)) (Is ?tb 'teddy bear') (On ?h ?tb) (Is ?tc 'toy car') (NextTo ?p ?b) (Is ?h 'hat') (Is ?p 'plate') (On ?a ?p) (On ?o ?p) (HasState ?a 'bitten') (Is ?o 'orange') (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "shoes",
+        "plate",
+        "teddy bear",
+        "orange",
+        "toy car",
+        "mirror",
+        "boat",
+        "apple",
+        "hat"
+    ]
+}

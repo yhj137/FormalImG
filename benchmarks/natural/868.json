@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden boat carries a dog and a round plate. An oval mirror and every teddy bear are positioned to the right of the boat.",
+    "dsl": "(exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (forall ?t (implies (Is ?t 'teddy bear') (RightOf ?t ?b))) (exists ?d (and (Is ?d 'dog') (On ?d ?b))) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?b))) (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'oval') (RightOf ?m ?b)))))",
+    "cnf": "(exists ?b (forall ?t (exists ?d (exists ?p (exists ?m (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (or (not (Is ?t 'teddy bear')) (RightOf ?t ?b)) (On ?d ?b) (On ?p ?b) (Is ?d 'dog') (RightOf ?m ?b) (HasShape ?p 'round') (HasShape ?m 'oval') (Is ?p 'plate') (Is ?m 'mirror')))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "teddy bear",
+        "mirror",
+        "boat",
+        "dog"
+    ]
+}

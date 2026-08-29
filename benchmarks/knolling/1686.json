@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every remote in the image, the following conditions apply: there is a keyboard on the left, a game controller above it, and an apple on the top side. The remote is smaller than the keyboard, located to the right of the game controller, and below the apple. Furthermore, for each remote, there is a ruler to the right of the keyboard, a pair of glasses to the right of the ruler, a calculator above the glasses, a lighter to the right of the calculator on the right side, and a carrot to the right of the apple.",
+    "dsl": "(exists ?kb (exists ?gc (exists ?apple (forall ?rem (implies (Is ?rem 'remote') (exists ?ruler (exists ?glasses (exists ?calc (exists ?lighter (exists ?carrot (and (Is ?kb 'keyboard') (OnLeftSide ?kb) (Is ?gc 'game_controller') (Above ?gc ?kb) (Is ?apple 'apple') (OnTopSide ?apple) (SmallerThan ?rem ?kb) (RightOf ?rem ?gc) (Above ?apple ?rem) (Is ?ruler 'ruler') (RightOf ?ruler ?kb) (Is ?glasses 'glasses') (RightOf ?glasses ?ruler) (Is ?calc 'calculator') (Above ?calc ?glasses) (Is ?lighter 'lighter') (RightOf ?lighter ?calc) (OnRightSide ?lighter) (Is ?carrot 'carrot') (RightOf ?carrot ?apple))))))))))))",
+    "cnf": "(exists ?kb (exists ?gc (exists ?apple (forall ?rem (exists ?ruler (exists ?glasses (exists ?calc (exists ?lighter (exists ?carrot (and (or (not (Is ?rem 'remote')) (Is ?kb 'keyboard')) (or (not (Is ?rem 'remote')) (OnLeftSide ?kb)) (or (not (Is ?rem 'remote')) (Above ?gc ?kb)) (or (not (Is ?rem 'remote')) (Is ?gc 'game_controller')) (or (not (Is ?rem 'remote')) (SmallerThan ?rem ?kb)) (or (not (Is ?rem 'remote')) (Is ?apple 'apple')) (or (not (Is ?rem 'remote')) (RightOf ?rem ?gc)) (or (not (Is ?rem 'remote')) (RightOf ?ruler ?kb)) (or (not (Is ?rem 'remote')) (OnTopSide ?apple)) (or (not (Is ?rem 'remote')) (Above ?apple ?rem)) (or (not (Is ?rem 'remote')) (Is ?ruler 'ruler')) (or (not (Is ?rem 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?rem 'remote')) (RightOf ?glasses ?ruler)) (or (not (Is ?rem 'remote')) (RightOf ?carrot ?apple)) (or (not (Is ?rem 'remote')) (Is ?calc 'calculator')) (or (not (Is ?rem 'remote')) (Above ?calc ?glasses)) (or (not (Is ?rem 'remote')) (Is ?carrot 'carrot')) (or (not (Is ?rem 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?rem 'remote')) (RightOf ?lighter ?calc)) (or (not (Is ?rem 'remote')) (OnRightSide ?lighter))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "remote",
+        "apple",
+        "keyboard",
+        "carrot",
+        "game_controller",
+        "calculator",
+        "lighter"
+    ]
+}

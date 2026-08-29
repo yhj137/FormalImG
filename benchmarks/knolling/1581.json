@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop positioned on the right side. To the left of the laptop is a yellow drill, to the left of the drill is a blue bottle, and to the left of the bottle are red pliers. A second row exists below the first: a white game controller is below and vertically aligned with the laptop, a black remote is below and vertically aligned with the drill, and a brown cutting board is below and vertically aligned with the bottle. Furthermore, for every set of keys in the image, it is yellow, located below the cutting board, and is visually smaller than the remote.",
+    "dsl": "(exists ?laptop (exists ?drill (exists ?bottle (exists ?pliers (exists ?game_controller (exists ?remote (exists ?cutting_board (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnRightSide ?laptop) (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (Is ?remote 'remote') (Has ?remote 'black') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (LeftOf ?drill ?laptop) (LeftOf ?bottle ?drill) (LeftOf ?pliers ?bottle) (Below ?game_controller ?laptop) (AlignedVertically ?game_controller ?laptop) (Below ?remote ?drill) (AlignedVertically ?remote ?drill) (Below ?cutting_board ?bottle) (AlignedVertically ?cutting_board ?bottle) (forall ?keys (implies (Is ?keys 'keys') (and (Has ?keys 'yellow') (Below ?keys ?cutting_board) (SmallerThan ?keys ?remote))))))))))))",
+    "cnf": "(exists ?laptop (exists ?drill (exists ?bottle (exists ?pliers (exists ?game_controller (exists ?remote (exists ?cutting_board (forall ?keys (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnRightSide ?laptop) (LeftOf ?drill ?laptop) (Below ?game_controller ?laptop) (Has ?drill 'yellow') (LeftOf ?bottle ?drill) (AlignedVertically ?game_controller ?laptop) (Has ?game_controller 'white') (Is ?drill 'drill') (Below ?remote ?drill) (Has ?bottle 'blue') (LeftOf ?pliers ?bottle) (Is ?game_controller 'game_controller') (AlignedVertically ?remote ?drill) (Has ?remote 'black') (Is ?bottle 'bottle') (Below ?cutting_board ?bottle) (Has ?pliers 'red') (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?remote)) (Is ?remote 'remote') (AlignedVertically ?cutting_board ?bottle) (Has ?cutting_board 'brown') (Is ?pliers 'pliers') (or (not (Is ?keys 'keys')) (Below ?keys ?cutting_board)) (Is ?cutting_board 'cutting_board') (or (not (Is ?keys 'keys')) (Has ?keys 'yellow')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "remote",
+        "pliers",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "bottle"
+    ]
+}

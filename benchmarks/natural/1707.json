@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk style scene, a metal lion wearing a hat holds a round plate with an orange on it. All birds are positioned to the right of the lion. A dog stands next to the lion, and beside the dog is a boat containing a toy car. A red bus is located to the right of the dog.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (and (Is ?l 'lion') (HasMaterial ?l 'metal') (exists ?h (and (Is ?h 'hat') (On ?h ?l) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (Holding ?l ?p) (exists ?o (and (Is ?o 'orange') (On ?o ?p) (forall ?b (implies (Is ?b 'bird') (RightOf ?b ?l))) (exists ?d (and (Is ?d 'dog') (NextTo ?d ?l) (exists ?bt (and (Is ?bt 'boat') (NextTo ?bt ?d) (exists ?tc (and (Is ?tc 'toy car') (In ?tc ?bt) (exists ?bs (and (Is ?bs 'bus') (HasColor ?bs 'red') (RightOf ?bs ?d))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?h (exists ?p (exists ?o (forall ?b (exists ?d (exists ?bt (exists ?tc (exists ?bs (and (Is ?l 'lion') (HasMaterial ?l 'metal') (On ?h ?l) (Holding ?l ?p) (Is ?h 'hat') (or (not (Is ?b 'bird')) (RightOf ?b ?l)) (HasShape ?p 'round') (On ?o ?p) (NextTo ?d ?l) (Is ?p 'plate') (Is ?o 'orange') (Is ?d 'dog') (NextTo ?bt ?d) (RightOf ?bs ?d) (Is ?bt 'boat') (In ?tc ?bt) (HasColor ?bs 'red') (Is ?tc 'toy car') (Is ?bs 'bus'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bird",
+        "toy car",
+        "hat",
+        "bus",
+        "boat",
+        "dog",
+        "lion",
+        "orange",
+        "plate"
+    ]
+}

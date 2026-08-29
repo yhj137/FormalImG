@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All pliers in the image are positioned on the right side of the scene.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'pliers') (OnRightSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'pliers')) (OnRightSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "pliers"
+    ]
+}

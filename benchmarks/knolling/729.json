@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pizza and a pair of glasses, both situated on the bottom side of the image and aligned horizontally with each other. Additionally, for every ruler located on the top side, there is a lighter positioned directly below it, which is also aligned horizontally with the pizza.",
+    "dsl": "(exists ?p (exists ?g (and (Is ?p 'pizza') (OnBottomSide ?p) (Is ?g 'glasses') (OnBottomSide ?g) (AlignedHorizontally ?p ?g) (forall ?r (implies (and (Is ?r 'ruler') (OnTopSide ?r)) (exists ?l (and (Is ?l 'lighter') (Below ?l ?r) (AlignedHorizontally ?l ?p))))))))",
+    "cnf": "(exists ?p (exists ?g (forall ?r (exists ?l (and (Is ?p 'pizza') (OnBottomSide ?p) (AlignedHorizontally ?p ?g) (or (not (Is ?r 'ruler')) (not (OnTopSide ?r)) (AlignedHorizontally ?l ?p)) (OnBottomSide ?g) (or (not (Is ?r 'ruler')) (not (OnTopSide ?r)) (Below ?l ?r)) (Is ?g 'glasses') (or (not (Is ?r 'ruler')) (not (OnTopSide ?r)) (Is ?l 'lighter')))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "lighter",
+        "pizza"
+    ]
+}

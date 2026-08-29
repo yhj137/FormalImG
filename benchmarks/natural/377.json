@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a metal refrigerator, with every chair placed on top of it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (forall ?c (implies (Is ?c 'chair') (On ?c ?r))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (forall ?c (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (or (not (Is ?c 'chair')) (On ?c ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "refrigerator"
+    ]
+}

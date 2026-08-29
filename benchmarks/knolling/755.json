@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a shirt positioned on the right side of the image. To the left of the shirt is a shoe, and they are aligned horizontally. Furthermore, for every watch in the scene, there is a pair of headphones located on the top side of the image to its left. The headphones and the watch are aligned horizontally, and the shirt is visually larger than the watch.",
+    "dsl": "(exists ?shirt (exists ?shoe (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (Is ?shoe 'shoe') (LeftOf ?shoe ?shirt) (AlignedHorizontally ?shoe ?shirt) (forall ?watch (implies (Is ?watch 'watch') (exists ?headphones (and (Is ?headphones 'headphones') (OnTopSide ?headphones) (LeftOf ?headphones ?watch) (AlignedHorizontally ?headphones ?watch) (LargerThan ?shirt ?watch))))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (forall ?watch (exists ?headphones (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (LeftOf ?shoe ?shirt) (AlignedHorizontally ?shoe ?shirt) (Is ?shoe 'shoe') (or (not (Is ?watch 'watch')) (LargerThan ?shirt ?watch)) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?headphones ?watch)) (or (not (Is ?watch 'watch')) (LeftOf ?headphones ?watch)) (or (not (Is ?watch 'watch')) (OnTopSide ?headphones)) (or (not (Is ?watch 'watch')) (Is ?headphones 'headphones')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "watch",
+        "shoe",
+        "shirt"
+    ]
+}

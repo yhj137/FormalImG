@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a leather sofa with a bird and a lying cat holding headphones. Shoes are next to the sofa, and all balls are positioned to the right of the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (exists ?c (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?c 'cat') (HasState ?c 'lying') (On ?c ?s) (forall ?b (implies (Is ?b 'ball') (RightOf ?b ?s))) (exists ?h (exists ?sh (exists ?bi (and (Is ?h 'headphones') (Holding ?c ?h) (Is ?sh 'shoes') (NextTo ?sh ?s) (Is ?bi 'bird') (On ?bi ?s)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (exists ?c (forall ?b (exists ?h (exists ?sh (exists ?bi (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?c ?s) (or (not (Is ?b 'ball')) (RightOf ?b ?s)) (HasState ?c 'lying') (Holding ?c ?h) (NextTo ?sh ?s) (Is ?c 'cat') (Is ?h 'headphones') (On ?bi ?s) (Is ?sh 'shoes') (Is ?bi 'bird')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "sofa",
+        "shoes",
+        "bird",
+        "ball",
+        "cat"
+    ]
+}

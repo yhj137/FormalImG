@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden wardrobe. Every plant is next to the wardrobe. To the right of the wardrobe is a bicycle with a butterfly above it, while a bird is to the left of the wardrobe.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (forall ?p (implies (Is ?p 'plant') (NextTo ?p ?w))) (exists ?b (and (Is ?b 'bicycle') (RightOf ?b ?w) (exists ?bf (and (Is ?bf 'butterfly') (Above ?bf ?b))))) (exists ?br (and (Is ?br 'bird') (LeftOf ?br ?w))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?p (exists ?b (exists ?bf (exists ?br (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (or (not (Is ?p 'plant')) (NextTo ?p ?w)) (RightOf ?b ?w) (LeftOf ?br ?w) (Is ?b 'bicycle') (Above ?bf ?b) (Is ?br 'bird') (Is ?bf 'butterfly'))))))))",
+    "k": 5,
+    "object_classes": [
+        "plant",
+        "bird",
+        "bicycle",
+        "butterfly",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image featuring a man holding a black pan to the left of a blue bed. A screwdriver lies on the bed, and a bookshelf stands next to the bed. All glasses in the scene are on the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?p (exists ?b (exists ?s (exists ?bs (and (Is ?m 'man') (Is ?p 'pan') (Is ?b 'bed') (Is ?s 'screwdriver') (Is ?bs 'bookshelf') (HasColor ?p 'black') (HasColor ?b 'blue') (Holding ?m ?p) (LeftOf ?m ?b) (On ?s ?b) (NextTo ?bs ?b) (forall ?g (implies (Is ?g 'glasses') (On ?g ?bs))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?p (exists ?b (exists ?s (exists ?bs (forall ?g (and (Is ?m 'man') (Holding ?m ?p) (LeftOf ?m ?b) (HasColor ?p 'black') (HasColor ?b 'blue') (On ?s ?b) (Is ?p 'pan') (Is ?b 'bed') (NextTo ?bs ?b) (Is ?s 'screwdriver') (Is ?bs 'bookshelf') (or (not (Is ?g 'glasses')) (On ?g ?bs))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bed",
+        "glasses",
+        "man",
+        "pan",
+        "screwdriver",
+        "bookshelf"
+    ]
+}

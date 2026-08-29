@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt positioned on the left side. A plate is arranged to the right of the shirt, and they are aligned horizontally. For every fork present in the scene, it is located to the right of the plate. Additionally, for each of these forks, there is a hammer such that the fork is to the left of the hammer, and the pair is aligned horizontally.",
+    "dsl": "(exists ?shirt (exists ?plate (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?plate 'plate') (RightOf ?plate ?shirt) (AlignedHorizontally ?shirt ?plate) (forall ?fork (implies (Is ?fork 'fork') (and (RightOf ?fork ?plate) (exists ?hammer (and (Is ?hammer 'hammer') (LeftOf ?fork ?hammer) (AlignedHorizontally ?fork ?hammer)))))))))",
+    "cnf": "(exists ?shirt (exists ?plate (forall ?fork (exists ?hammer (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (RightOf ?plate ?shirt) (AlignedHorizontally ?shirt ?plate) (Is ?plate 'plate') (or (not (Is ?fork 'fork')) (RightOf ?fork ?plate)) (or (not (Is ?fork 'fork')) (Is ?hammer 'hammer')) (or (not (Is ?fork 'fork')) (LeftOf ?fork ?hammer)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?hammer)))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "hammer",
+        "plate",
+        "shirt"
+    ]
+}

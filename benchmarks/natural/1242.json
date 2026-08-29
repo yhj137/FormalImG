@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene. To the right of every boat lies a fabric rug. On the rug are a sleeping dog wearing a hat and a book with a phone next to it. A bicycle stands next to the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?bt (implies (Is ?bt 'boat') (exists ?r (exists ?d (exists ?h (exists ?bi (exists ?bk (exists ?p (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?d 'dog') (HasState ?d 'sleeping') (Is ?h 'hat') (Is ?bi 'bicycle') (Is ?bk 'book') (Is ?p 'phone') (RightOf ?r ?bt) (On ?d ?r) (On ?h ?d) (NextTo ?bi ?r) (On ?bk ?r) (NextTo ?p ?bk)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?bt (exists ?r (exists ?d (exists ?h (exists ?bi (exists ?bk (exists ?p (and (or (not (Is ?bt 'boat')) (Is ?r 'rug')) (or (not (Is ?bt 'boat')) (HasMaterial ?r 'fabric')) (or (not (Is ?bt 'boat')) (Is ?d 'dog')) (or (not (Is ?bt 'boat')) (RightOf ?r ?bt)) (or (not (Is ?bt 'boat')) (HasState ?d 'sleeping')) (or (not (Is ?bt 'boat')) (Is ?p 'phone')) (or (not (Is ?bt 'boat')) (On ?d ?r)) (or (not (Is ?bt 'boat')) (Is ?h 'hat')) (or (not (Is ?bt 'boat')) (Is ?bk 'book')) (or (not (Is ?bt 'boat')) (NextTo ?p ?bk)) (or (not (Is ?bt 'boat')) (On ?h ?d)) (or (not (Is ?bt 'boat')) (NextTo ?bi ?r)) (or (not (Is ?bt 'boat')) (Is ?bi 'bicycle')) (or (not (Is ?bt 'boat')) (On ?bk ?r)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hat",
+        "book",
+        "phone",
+        "rug",
+        "bicycle",
+        "dog",
+        "boat"
+    ]
+}

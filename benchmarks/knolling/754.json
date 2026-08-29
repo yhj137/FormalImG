@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt positioned on the left side, with a tie aligned horizontally to it. Additionally, for every pair of scissors located on the right side of the image, there is a knife that is smaller than the scissors, and the scissors are aligned horizontally with the shirt.",
+    "dsl": "(exists ?shirt (exists ?tie (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?tie 'tie') (AlignedHorizontally ?shirt ?tie) (forall ?scissors (implies (and (Is ?scissors 'scissors') (OnRightSide ?scissors)) (exists ?knife (and (Is ?knife 'knife') (SmallerThan ?knife ?scissors) (AlignedHorizontally ?scissors ?shirt))))))))",
+    "cnf": "(exists ?shirt (exists ?tie (forall ?scissors (exists ?knife (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (AlignedHorizontally ?shirt ?tie) (or (not (Is ?scissors 'scissors')) (not (OnRightSide ?scissors)) (AlignedHorizontally ?scissors ?shirt)) (Is ?tie 'tie') (or (not (Is ?scissors 'scissors')) (not (OnRightSide ?scissors)) (SmallerThan ?knife ?scissors)) (or (not (Is ?scissors 'scissors')) (not (OnRightSide ?scissors)) (Is ?knife 'knife')))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "tie",
+        "knife",
+        "shirt"
+    ]
+}

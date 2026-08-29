@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo-style scene. A wooden wardrobe is positioned to the left of a refrigerator. Inside the refrigerator are a bottle and a pizza. Every fork in the scene is placed on the pizza. To the right of the refrigerator stands a man holding a rock.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?w (exists ?p (and (Is ?r 'refrigerator') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (LeftOf ?w ?r) (Is ?p 'pizza') (In ?p ?r) (forall ?f (implies (Is ?f 'fork') (On ?f ?p))) (exists ?b (exists ?m (exists ?rk (and (Is ?b 'bottle') (In ?b ?r) (Is ?m 'man') (RightOf ?m ?r) (Is ?rk 'rock') (Holding ?m ?rk))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?w (exists ?p (forall ?f (exists ?b (exists ?m (exists ?rk (and (Is ?r 'refrigerator') (LeftOf ?w ?r) (In ?p ?r) (HasMaterial ?w 'wooden') (In ?b ?r) (Is ?p 'pizza') (or (not (Is ?f 'fork')) (On ?f ?p)) (Is ?w 'wardrobe') (RightOf ?m ?r) (Is ?b 'bottle') (Is ?m 'man') (Holding ?m ?rk) (Is ?rk 'rock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fork",
+        "bottle",
+        "man",
+        "pizza",
+        "rock",
+        "refrigerator",
+        "wardrobe"
+    ]
+}

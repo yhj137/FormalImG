@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a desk with a sitting teddy bear next to it. Every cup is located to the right of the teddy bear.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?t (and (Is ?d 'desk') (Is ?t 'teddy bear') (NextTo ?t ?d) (HasState ?t 'sitting') (forall ?c (implies (Is ?c 'cup') (RightOf ?c ?t)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?t (forall ?c (and (Is ?d 'desk') (NextTo ?t ?d) (Is ?t 'teddy bear') (HasState ?t 'sitting') (or (not (Is ?c 'cup')) (RightOf ?c ?t)))))))",
+    "k": 3,
+    "object_classes": [
+        "teddy bear",
+        "desk",
+        "cup"
+    ]
+}

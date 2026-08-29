@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a sofa, and all books in the scene are located to its right. A plastic monitor sits next to the sofa, with a toy car positioned to the right of the monitor. Additionally, a hat containing a flower is placed next to the sofa.",
+    "dsl": "(exists ?s (and (Is ?s 'sofa') (forall ?b (implies (Is ?b 'book') (RightOf ?b ?s))) (exists ?m (exists ?c (exists ?h (exists ?f (and (Is ?m 'monitor') (HasMaterial ?m 'plastic') (NextTo ?m ?s) (Is ?c 'toy car') (RightOf ?c ?m) (Is ?h 'hat') (NextTo ?h ?s) (Is ?f 'flower') (In ?f ?h))))))))",
+    "cnf": "(exists ?s (forall ?b (exists ?m (exists ?c (exists ?h (exists ?f (and (Is ?s 'sofa') (or (not (Is ?b 'book')) (RightOf ?b ?s)) (NextTo ?m ?s) (NextTo ?h ?s) (HasMaterial ?m 'plastic') (RightOf ?c ?m) (Is ?h 'hat') (In ?f ?h) (Is ?m 'monitor') (Is ?c 'toy car') (Is ?f 'flower'))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "book",
+        "monitor",
+        "toy car",
+        "flower",
+        "hat"
+    ]
+}

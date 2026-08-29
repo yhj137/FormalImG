@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every remote in the scene, there is a calculator positioned above it. Additionally, a carrot is located to the left of the calculator, and this carrot is situated on the left side of the image.",
+    "dsl": "(forall ?remote (implies (Is ?remote 'remote') (exists ?calc (exists ?carrot (and (Is ?calc 'calculator') (Is ?carrot 'carrot') (Above ?calc ?remote) (LeftOf ?carrot ?calc) (OnLeftSide ?carrot))))))",
+    "cnf": "(forall ?remote (exists ?calc (exists ?carrot (and (or (not (Is ?remote 'remote')) (Is ?calc 'calculator')) (or (not (Is ?remote 'remote')) (Above ?calc ?remote)) (or (not (Is ?remote 'remote')) (Is ?carrot 'carrot')) (or (not (Is ?remote 'remote')) (LeftOf ?carrot ?calc)) (or (not (Is ?remote 'remote')) (OnLeftSide ?carrot))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "remote",
+        "calculator"
+    ]
+}

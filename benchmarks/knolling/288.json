@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the image, there is a sandwich aligned vertically with it, and the keyboard is located on the top side of the image.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keyboard') (exists ?s (and (Is ?s 'sandwich') (OnTopSide ?k) (AlignedVertically ?k ?s))))))",
+    "cnf": "(forall ?k (exists ?s (and (or (not (Is ?k 'keyboard')) (Is ?s 'sandwich')) (or (not (Is ?k 'keyboard')) (AlignedVertically ?k ?s)) (or (not (Is ?k 'keyboard')) (OnTopSide ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "keyboard"
+    ]
+}

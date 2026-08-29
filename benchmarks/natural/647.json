@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every car contains a child, with a round flower on top and an open umbrella to its right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?c (implies (Is ?c 'car') (exists ?ch (exists ?f (exists ?u (and (Is ?ch 'child') (In ?ch ?c) (Is ?f 'flower') (On ?f ?c) (HasShape ?f 'round') (Is ?u 'umbrella') (HasState ?u 'open') (RightOf ?u ?c))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?c (exists ?ch (exists ?f (exists ?u (and (or (not (Is ?c 'car')) (Is ?ch 'child')) (or (not (Is ?c 'car')) (In ?ch ?c)) (or (not (Is ?c 'car')) (Is ?f 'flower')) (or (not (Is ?c 'car')) (On ?f ?c)) (or (not (Is ?c 'car')) (HasShape ?f 'round')) (or (not (Is ?c 'car')) (Is ?u 'umbrella')) (or (not (Is ?c 'car')) (HasState ?u 'open')) (or (not (Is ?c 'car')) (RightOf ?u ?c))))))))",
+    "k": 4,
+    "object_classes": [
+        "umbrella",
+        "flower",
+        "car",
+        "child"
+    ]
+}

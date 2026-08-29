@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout is defined by the following rule: for every monitor in the image, there is a handbag placed to its right. To the right of the handbag is a stapler, and to the right of the stapler is a glove positioned on the bottom side of the scene. Additionally, there is a bowl that is smaller than the monitor.",
+    "dsl": "(forall ?m (implies (Is ?m 'monitor') (exists ?h (exists ?s (exists ?g (exists ?b (and (Is ?h 'handbag') (Is ?s 'stapler') (Is ?g 'glove') (Is ?b 'bowl') (RightOf ?h ?m) (RightOf ?s ?h) (RightOf ?g ?s) (OnBottomSide ?g) (SmallerThan ?b ?m))))))))",
+    "cnf": "(forall ?m (exists ?h (exists ?s (exists ?g (exists ?b (and (or (not (Is ?m 'monitor')) (Is ?h 'handbag')) (or (not (Is ?m 'monitor')) (RightOf ?h ?m)) (or (not (Is ?m 'monitor')) (Is ?s 'stapler')) (or (not (Is ?m 'monitor')) (RightOf ?s ?h)) (or (not (Is ?m 'monitor')) (Is ?b 'bowl')) (or (not (Is ?m 'monitor')) (Is ?g 'glove')) (or (not (Is ?m 'monitor')) (RightOf ?g ?s)) (or (not (Is ?m 'monitor')) (SmallerThan ?b ?m)) (or (not (Is ?m 'monitor')) (OnBottomSide ?g))))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "handbag",
+        "monitor",
+        "bowl",
+        "glove"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every tree is triangular.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'tree') (HasShape ?t 'triangular'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (or (not (Is ?t 'tree')) (HasShape ?t 'triangular'))))",
+    "k": 1,
+    "object_classes": [
+        "tree"
+    ]
+}

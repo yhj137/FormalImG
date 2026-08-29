@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a lion inside a wooden wardrobe. To the left of the wardrobe is a bicycle next to a plant, while a bookshelf containing fruit stands beside the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (exists ?w (exists ?b (exists ?p (exists ?bs (exists ?f (and (Is ?l 'lion') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?l ?w) (Is ?b 'bicycle') (LeftOf ?b ?w) (Is ?p 'plant') (NextTo ?p ?b) (Is ?bs 'bookshelf') (NextTo ?bs ?w) (Is ?f 'fruit') (In ?f ?bs)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?w (exists ?b (exists ?p (exists ?bs (exists ?f (and (Is ?l 'lion') (In ?l ?w) (HasMaterial ?w 'wooden') (LeftOf ?b ?w) (Is ?w 'wardrobe') (NextTo ?bs ?w) (Is ?b 'bicycle') (NextTo ?p ?b) (Is ?bs 'bookshelf') (In ?f ?bs) (Is ?p 'plant') (Is ?f 'fruit')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "plant",
+        "bicycle",
+        "lion",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. Every chair has a black pan on it.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'chair') (exists ?p (and (Is ?p 'pan') (HasColor ?p 'black') (On ?p ?c))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?p (and (or (not (Is ?c 'chair')) (Is ?p 'pan')) (or (not (Is ?c 'chair')) (HasColor ?p 'black')) (or (not (Is ?c 'chair')) (On ?p ?c))))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "pan"
+    ]
+}

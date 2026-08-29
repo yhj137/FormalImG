@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden basket containing a sandwich is to the left of a laptop, with a cat next to the laptop.",
+    "dsl": "(exists ?s (exists ?b (exists ?l (exists ?c (and (Is ?s 'sandwich') (Is ?b 'basket') (Is ?l 'laptop') (Is ?c 'cat') (HasMaterial ?b 'wooden') (In ?s ?b) (LeftOf ?b ?l) (NextTo ?c ?l))))))",
+    "cnf": "(exists ?s (exists ?b (exists ?l (exists ?c (and (Is ?s 'sandwich') (In ?s ?b) (HasMaterial ?b 'wooden') (LeftOf ?b ?l) (Is ?b 'basket') (Is ?l 'laptop') (NextTo ?c ?l) (Is ?c 'cat'))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "laptop",
+        "basket",
+        "cat"
+    ]
+}

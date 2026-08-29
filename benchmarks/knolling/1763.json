@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a neatly arranged collection of items anchored by a pair of pliers on the top side of the image. To the right of the pliers is a knife, aligned horizontally. Below the pliers is a laptop, and directly below the laptop is a keyboard. To the left of the laptop is a pair of jeans, with a tie positioned above the jeans. A watch is placed to the right of the keyboard. Furthermore, for every screwdriver in the scene, it is located to the right of the knife, and a pair of scissors is located to the right of the screwdriver, maintaining the horizontal alignment of the top row.",
+    "dsl": "(exists ?pliers (exists ?knife (exists ?laptop (exists ?keyboard (exists ?jeans (exists ?tie (exists ?watch (and (Is ?pliers 'pliers') (OnTopSide ?pliers) (Is ?knife 'knife') (Is ?laptop 'laptop') (Is ?keyboard 'keyboard') (Is ?jeans 'jeans') (Is ?tie 'tie') (Is ?watch 'watch') (RightOf ?knife ?pliers) (AlignedHorizontally ?pliers ?knife) (Above ?pliers ?laptop) (Above ?laptop ?keyboard) (LeftOf ?jeans ?laptop) (Above ?tie ?jeans) (RightOf ?watch ?keyboard) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?scissors (and (Is ?scissors 'scissors') (RightOf ?screwdriver ?knife) (RightOf ?scissors ?screwdriver) (AlignedHorizontally ?knife ?screwdriver) (AlignedHorizontally ?screwdriver ?scissors)))))))))))))",
+    "cnf": "(exists ?pliers (exists ?knife (exists ?laptop (exists ?keyboard (exists ?jeans (exists ?tie (exists ?watch (forall ?screwdriver (exists ?scissors (and (Is ?pliers 'pliers') (OnTopSide ?pliers) (RightOf ?knife ?pliers) (AlignedHorizontally ?pliers ?knife) (Is ?knife 'knife') (Above ?pliers ?laptop) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?screwdriver ?knife)) (Is ?laptop 'laptop') (Above ?laptop ?keyboard) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?knife ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?scissors 'scissors')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?scissors ?screwdriver)) (LeftOf ?jeans ?laptop) (Is ?keyboard 'keyboard') (RightOf ?watch ?keyboard) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?screwdriver ?scissors)) (Is ?jeans 'jeans') (Above ?tie ?jeans) (Is ?watch 'watch') (Is ?tie 'tie')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "pliers",
+        "keyboard",
+        "watch",
+        "screwdriver",
+        "jeans",
+        "knife",
+        "scissors"
+    ]
+}

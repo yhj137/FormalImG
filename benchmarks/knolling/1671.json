@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a pair of jeans, and a glove is positioned below it. Every pen in the image is located to the right of the glove. For each pen, there is a stapler below it, a mouse to the right of the stapler, a wrench to the right of the mouse, and a donut below the wrench. Additionally, for every pen, there is a wallet to the right of the jeans that is smaller than the jeans, and a phone to the right of the wallet that is horizontally aligned with it.",
+    "dsl": "(exists ?jeans (exists ?glove (forall ?pen (implies (Is ?pen 'pen') (exists ?stapler (exists ?wallet (exists ?phone (exists ?mouse (exists ?wrench (exists ?donut (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?glove 'glove') (Below ?glove ?jeans) (Is ?wallet 'wallet') (RightOf ?wallet ?jeans) (LargerThan ?jeans ?wallet) (Is ?phone 'phone') (LeftOf ?wallet ?phone) (AlignedHorizontally ?wallet ?phone) (RightOf ?pen ?glove) (Is ?stapler 'stapler') (Below ?stapler ?pen) (Is ?mouse 'mouse') (RightOf ?mouse ?stapler) (Is ?wrench 'wrench') (RightOf ?wrench ?mouse) (Is ?donut 'donut') (Below ?donut ?wrench))))))))))))",
+    "cnf": "(exists ?jeans (exists ?glove (forall ?pen (exists ?stapler (exists ?wallet (exists ?phone (exists ?mouse (exists ?wrench (exists ?donut (and (or (not (Is ?pen 'pen')) (Is ?jeans 'jeans')) (or (not (Is ?pen 'pen')) (OnLeftSide ?jeans)) (or (not (Is ?pen 'pen')) (Below ?glove ?jeans)) (or (not (Is ?pen 'pen')) (Is ?glove 'glove')) (or (not (Is ?pen 'pen')) (RightOf ?wallet ?jeans)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')) (or (not (Is ?pen 'pen')) (RightOf ?pen ?glove)) (or (not (Is ?pen 'pen')) (LargerThan ?jeans ?wallet)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?wallet ?phone)) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (Is ?phone 'phone')) (or (not (Is ?pen 'pen')) (LeftOf ?wallet ?phone)) (or (not (Is ?pen 'pen')) (Below ?stapler ?pen)) (or (not (Is ?pen 'pen')) (Is ?mouse 'mouse')) (or (not (Is ?pen 'pen')) (RightOf ?mouse ?stapler)) (or (not (Is ?pen 'pen')) (Is ?wrench 'wrench')) (or (not (Is ?pen 'pen')) (RightOf ?wrench ?mouse)) (or (not (Is ?pen 'pen')) (Is ?donut 'donut')) (or (not (Is ?pen 'pen')) (Below ?donut ?wrench))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "pen",
+        "wrench",
+        "phone",
+        "wallet",
+        "jeans",
+        "mouse",
+        "glove",
+        "donut"
+    ]
+}

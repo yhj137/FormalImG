@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a bed. Every hat in the scene is red and rests on the bed. A backpack containing a ball also sits on the bed, with a round plate to its right and a teddy bear to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bed (and (Is ?bed 'bed') (forall ?h (implies (Is ?h 'hat') (and (HasColor ?h 'red') (On ?h ?bed)))) (exists ?bp (and (Is ?bp 'backpack') (On ?bp ?bed) (exists ?bl (and (Is ?bl 'ball') (In ?bl ?bp))) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (RightOf ?p ?bp))) (exists ?tb (and (Is ?tb 'teddy bear') (LeftOf ?tb ?bp))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bed (forall ?h (exists ?bp (exists ?bl (exists ?p (exists ?tb (and (Is ?bed 'bed') (or (not (Is ?h 'hat')) (On ?h ?bed)) (On ?bp ?bed) (or (not (Is ?h 'hat')) (HasColor ?h 'red')) (Is ?bp 'backpack') (In ?bl ?bp) (RightOf ?p ?bp) (Is ?bl 'ball') (LeftOf ?tb ?bp) (HasShape ?p 'round') (Is ?tb 'teddy bear') (Is ?p 'plate')))))))))",
+    "k": 6,
+    "object_classes": [
+        "hat",
+        "backpack",
+        "ball",
+        "teddy bear",
+        "bed",
+        "plate"
+    ]
+}

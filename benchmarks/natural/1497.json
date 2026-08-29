@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A yellow boat on the left contains a fish holding a sandwich. Every banana is also inside the boat. To the right of the boat stands an open refrigerator with a shirt inside. A desk is located to the right of the refrigerator, and a bicycle is positioned to the right of the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?boat (exists ?fish (exists ?fridge (and (Is ?boat 'boat') (HasColor ?boat 'yellow') (Is ?fish 'fish') (In ?fish ?boat) (Is ?fridge 'refrigerator') (HasState ?fridge 'open') (LeftOf ?boat ?fridge) (forall ?banana (implies (Is ?banana 'banana') (In ?banana ?boat))) (exists ?sandwich (exists ?shirt (exists ?desk (exists ?bike (and (Is ?sandwich 'sandwich') (Holding ?fish ?sandwich) (Is ?shirt 'shirt') (In ?shirt ?fridge) (Is ?desk 'desk') (LeftOf ?fridge ?desk) (Is ?bike 'bicycle') (LeftOf ?desk ?bike)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?boat (exists ?fish (exists ?fridge (forall ?banana (exists ?sandwich (exists ?shirt (exists ?desk (exists ?bike (and (Is ?boat 'boat') (HasColor ?boat 'yellow') (In ?fish ?boat) (LeftOf ?boat ?fridge) (Is ?fish 'fish') (Holding ?fish ?sandwich) (or (not (Is ?banana 'banana')) (In ?banana ?boat)) (HasState ?fridge 'open') (In ?shirt ?fridge) (Is ?sandwich 'sandwich') (Is ?fridge 'refrigerator') (LeftOf ?fridge ?desk) (Is ?shirt 'shirt') (Is ?desk 'desk') (LeftOf ?desk ?bike) (Is ?bike 'bicycle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "fish",
+        "desk",
+        "refrigerator",
+        "sandwich",
+        "bicycle",
+        "boat",
+        "banana"
+    ]
+}

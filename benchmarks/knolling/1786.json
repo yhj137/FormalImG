@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement of items. The layout begins with a pair of jeans located on the top side of the image. Directly below the jeans is a wrench, and below the wrench is a pizza; these three items are aligned vertically. To the right of the jeans is a tie. Below the tie, aligned vertically, is a calculator, which is also positioned to the right of the wrench. Below the calculator is a plate, which is aligned vertically with the tie and calculator, and is situated to the right of the pizza. Further to the right of the tie is a game controller. Below the game controller, aligned vertically, is a cutting board, which is also to the right of the calculator. Finally, for every lemon present in the scene, it is located below the cutting board and aligned vertically with it.",
+    "dsl": "(exists ?jeans (exists ?wrench (exists ?pizza (exists ?tie (exists ?calculator (exists ?plate (exists ?controller (exists ?board (and (Is ?jeans 'jeans') (Is ?wrench 'wrench') (Is ?pizza 'pizza') (Is ?tie 'tie') (Is ?calculator 'calculator') (Is ?plate 'plate') (Is ?controller 'game_controller') (Is ?board 'cutting_board') (OnTopSide ?jeans) (Below ?wrench ?jeans) (AlignedVertically ?wrench ?jeans) (Below ?pizza ?wrench) (AlignedVertically ?pizza ?wrench) (RightOf ?tie ?jeans) (Below ?calculator ?tie) (AlignedVertically ?calculator ?tie) (RightOf ?calculator ?wrench) (Below ?plate ?calculator) (AlignedVertically ?plate ?calculator) (RightOf ?plate ?pizza) (RightOf ?controller ?tie) (Below ?board ?controller) (AlignedVertically ?board ?controller) (RightOf ?board ?calculator) (forall ?lemon (implies (Is ?lemon 'lemon') (and (Below ?lemon ?board) (AlignedVertically ?lemon ?board)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?wrench (exists ?pizza (exists ?tie (exists ?calculator (exists ?plate (exists ?controller (exists ?board (forall ?lemon (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?wrench ?jeans) (AlignedVertically ?wrench ?jeans) (Is ?wrench 'wrench') (RightOf ?tie ?jeans) (Below ?pizza ?wrench) (Is ?tie 'tie') (Below ?calculator ?tie) (AlignedVertically ?pizza ?wrench) (Is ?pizza 'pizza') (AlignedVertically ?calculator ?tie) (Is ?calculator 'calculator') (RightOf ?calculator ?wrench) (RightOf ?plate ?pizza) (RightOf ?controller ?tie) (Below ?plate ?calculator) (AlignedVertically ?plate ?calculator) (Is ?controller 'game_controller') (Below ?board ?controller) (Is ?plate 'plate') (RightOf ?board ?calculator) (AlignedVertically ?board ?controller) (Is ?board 'cutting_board') (or (not (Is ?lemon 'lemon')) (Below ?lemon ?board)) (or (not (Is ?lemon 'lemon')) (AlignedVertically ?lemon ?board))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "plate",
+        "wrench",
+        "lemon",
+        "pizza",
+        "game_controller",
+        "cutting_board",
+        "calculator",
+        "jeans"
+    ]
+}

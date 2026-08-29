@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring a flying bird holding a red umbrella above a bowl containing every flower. A plate is placed next to the bowl, and a pair of shoes is to the left of the plate.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?bl (exists ?p (and (Is ?b 'bird') (HasState ?b 'flying') (Is ?u 'umbrella') (HasColor ?u 'red') (Is ?bl 'bowl') (Is ?p 'plate') (Holding ?b ?u) (Above ?b ?bl) (NextTo ?p ?bl) (forall ?f (implies (Is ?f 'flower') (In ?f ?bl))) (exists ?s (and (Is ?s 'shoes') (LeftOf ?s ?p)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?u (exists ?bl (exists ?p (forall ?f (exists ?s (and (Is ?b 'bird') (HasState ?b 'flying') (Holding ?b ?u) (Above ?b ?bl) (HasColor ?u 'red') (Is ?bl 'bowl') (NextTo ?p ?bl) (Is ?u 'umbrella') (or (not (Is ?f 'flower')) (In ?f ?bl)) (Is ?p 'plate') (LeftOf ?s ?p) (Is ?s 'shoes')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "bowl",
+        "shoes",
+        "bird",
+        "flower",
+        "plate"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene features a wooden desk with a chair next to it. A bus is located to the left of the desk, while every rock is positioned to the right of the bus. A pizza rests on the desk, and a dog sits to the right of the chair.",
+    "dsl": "(and (IsStyle 'photo') (exists ?k (exists ?c (exists ?b (and (Is ?k 'desk') (HasMaterial ?k 'wooden') (Is ?c 'chair') (NextTo ?c ?k) (Is ?b 'bus') (LeftOf ?b ?k) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?b))) (exists ?p (and (Is ?p 'pizza') (On ?p ?k))) (exists ?d (and (Is ?d 'dog') (RightOf ?d ?c))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?k (exists ?c (exists ?b (forall ?r (exists ?p (exists ?d (and (Is ?k 'desk') (HasMaterial ?k 'wooden') (NextTo ?c ?k) (LeftOf ?b ?k) (Is ?c 'chair') (RightOf ?d ?c) (On ?p ?k) (Is ?b 'bus') (or (not (Is ?r 'rock')) (RightOf ?r ?b)) (Is ?d 'dog') (Is ?p 'pizza')))))))))",
+    "k": 6,
+    "object_classes": [
+        "rock",
+        "desk",
+        "bus",
+        "chair",
+        "pizza",
+        "dog"
+    ]
+}

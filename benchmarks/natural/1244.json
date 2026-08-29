@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in pixel art style. For every key, there is an open white refrigerator containing it along with a bottle. A clock hangs above the refrigerator. To the right of the refrigerator sits a bicycle, and to the right of the bicycle stands a horse with a blue bird perched on it.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?k (implies (Is ?k 'key') (exists ?r (exists ?bo (exists ?c (exists ?bi (exists ?h (exists ?bird (and (Is ?r 'refrigerator') (HasColor ?r 'white') (HasState ?r 'open') (Is ?bo 'bottle') (Is ?c 'clock') (Is ?bi 'bicycle') (Is ?h 'horse') (Is ?bird 'bird') (HasColor ?bird 'blue') (In ?k ?r) (In ?bo ?r) (Above ?c ?r) (RightOf ?bi ?r) (RightOf ?h ?bi) (On ?bird ?h)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?k (exists ?r (exists ?bo (exists ?c (exists ?bi (exists ?h (exists ?bird (and (or (not (Is ?k 'key')) (Is ?r 'refrigerator')) (or (not (Is ?k 'key')) (HasColor ?r 'white')) (or (not (Is ?k 'key')) (HasState ?r 'open')) (or (not (Is ?k 'key')) (In ?k ?r)) (or (not (Is ?k 'key')) (Is ?bo 'bottle')) (or (not (Is ?k 'key')) (In ?bo ?r)) (or (not (Is ?k 'key')) (HasColor ?bird 'blue')) (or (not (Is ?k 'key')) (Is ?c 'clock')) (or (not (Is ?k 'key')) (Above ?c ?r)) (or (not (Is ?k 'key')) (Is ?bird 'bird')) (or (not (Is ?k 'key')) (On ?bird ?h)) (or (not (Is ?k 'key')) (Is ?bi 'bicycle')) (or (not (Is ?k 'key')) (RightOf ?bi ?r)) (or (not (Is ?k 'key')) (Is ?h 'horse')) (or (not (Is ?k 'key')) (RightOf ?h ?bi)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bird",
+        "key",
+        "bottle",
+        "clock",
+        "bicycle",
+        "refrigerator",
+        "horse"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a handbag positioned on the top left side. To the right of the handbag is a monitor, and to the right of the monitor is a plate. Arranged in a vertical column with the monitor are a laptop and a keyboard: the monitor is above the laptop, and the keyboard is below the laptop; these three items are aligned vertically. A sandwich is placed below the plate. A phone is located to the left of the keyboard. Finally, for every shoe in the scene, it is positioned below the handbag, and there is a pair of pliers to the left of the shoe that is visually smaller than the phone.",
+    "dsl": "(exists ?handbag (exists ?monitor (exists ?laptop (exists ?keyboard (exists ?phone (exists ?plate (exists ?sandwich (and (Is ?handbag 'handbag') (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?keyboard 'keyboard') (Is ?phone 'phone') (Is ?plate 'plate') (Is ?sandwich 'sandwich') (OnTopSide ?handbag) (OnLeftSide ?handbag) (LeftOf ?handbag ?monitor) (LeftOf ?monitor ?plate) (Above ?monitor ?laptop) (Below ?keyboard ?laptop) (AlignedVertically ?monitor ?laptop) (AlignedVertically ?laptop ?keyboard) (Below ?sandwich ?plate) (LeftOf ?phone ?keyboard) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?pliers (and (Is ?pliers 'pliers') (Below ?shoe ?handbag) (LeftOf ?pliers ?shoe) (SmallerThan ?pliers ?phone)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?monitor (exists ?laptop (exists ?keyboard (exists ?phone (exists ?plate (exists ?sandwich (forall ?shoe (exists ?pliers (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (OnLeftSide ?handbag) (LeftOf ?handbag ?monitor) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?handbag)) (Is ?monitor 'monitor') (LeftOf ?monitor ?plate) (or (not (Is ?shoe 'shoe')) (Is ?pliers 'pliers')) (or (not (Is ?shoe 'shoe')) (LeftOf ?pliers ?shoe)) (Above ?monitor ?laptop) (Is ?plate 'plate') (Below ?sandwich ?plate) (or (not (Is ?shoe 'shoe')) (SmallerThan ?pliers ?phone)) (AlignedVertically ?monitor ?laptop) (Is ?laptop 'laptop') (Below ?keyboard ?laptop) (Is ?sandwich 'sandwich') (LeftOf ?phone ?keyboard) (AlignedVertically ?laptop ?keyboard) (Is ?keyboard 'keyboard') (Is ?phone 'phone')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "pliers",
+        "keyboard",
+        "phone",
+        "handbag",
+        "monitor",
+        "sandwich",
+        "shoe"
+    ]
+}

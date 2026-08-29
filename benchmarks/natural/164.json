@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style scene where every teddy bear is sitting.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'teddy bear') (HasState ?t 'sitting'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (or (not (Is ?t 'teddy bear')) (HasState ?t 'sitting'))))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

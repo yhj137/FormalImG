@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a hammer standing next to a broken car that contains a book. A bus with a shirt inside is positioned next to the car. Beside the bus is a bed, adjacent to a wooden desk. A round orange sits next to the desk, with a plant located next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?h (exists ?c (exists ?bk (exists ?bs (exists ?s (exists ?bd (exists ?d (exists ?o (exists ?p (and (Is ?w 'woman') (Is ?h 'hammer') (Is ?c 'car') (Is ?bk 'book') (Is ?bs 'bus') (Is ?s 'shirt') (Is ?bd 'bed') (Is ?d 'desk') (Is ?o 'orange') (Is ?p 'plant') (Holding ?w ?h) (NextTo ?w ?c) (HasState ?c 'broken') (In ?bk ?c) (NextTo ?c ?bs) (In ?s ?bs) (NextTo ?bs ?bd) (NextTo ?bd ?d) (HasMaterial ?d 'wooden') (NextTo ?d ?o) (HasShape ?o 'round') (NextTo ?o ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?h (exists ?c (exists ?bk (exists ?bs (exists ?s (exists ?bd (exists ?d (exists ?o (exists ?p (and (Is ?w 'woman') (Holding ?w ?h) (NextTo ?w ?c) (Is ?h 'hammer') (Is ?c 'car') (HasState ?c 'broken') (In ?bk ?c) (NextTo ?c ?bs) (Is ?bk 'book') (Is ?bs 'bus') (In ?s ?bs) (NextTo ?bs ?bd) (Is ?s 'shirt') (Is ?bd 'bed') (NextTo ?bd ?d) (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?d ?o) (Is ?o 'orange') (HasShape ?o 'round') (NextTo ?o ?p) (Is ?p 'plant')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plant",
+        "desk",
+        "bus",
+        "hammer",
+        "book",
+        "bed",
+        "shirt",
+        "woman",
+        "car",
+        "orange"
+    ]
+}

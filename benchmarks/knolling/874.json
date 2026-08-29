@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A black game controller is positioned on the left side of the scene. For every screwdriver present, it is located below the game controller. Arranged with the screwdriver are red scissors, a yellow lemon, and a white cup. These four items (screwdriver, scissors, lemon, and cup) are aligned horizontally. Additionally, the game controller is visually larger than the cup.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (Has ?gc 'black') (OnLeftSide ?gc) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?sc (exists ?lm (exists ?cp (and (Is ?sc 'scissors') (Has ?sc 'red') (Is ?lm 'lemon') (Has ?lm 'yellow') (Is ?cp 'cup') (Has ?cp 'white') (Below ?sd ?gc) (AlignedHorizontally ?sd ?sc) (AlignedHorizontally ?sc ?lm) (AlignedHorizontally ?lm ?cp) (LargerThan ?gc ?cp)))))))))",
+    "cnf": "(exists ?gc (forall ?sd (exists ?sc (exists ?lm (exists ?cp (and (Is ?gc 'game_controller') (Has ?gc 'black') (OnLeftSide ?gc) (or (not (Is ?sd 'screwdriver')) (Below ?sd ?gc)) (or (not (Is ?sd 'screwdriver')) (LargerThan ?gc ?cp)) (or (not (Is ?sd 'screwdriver')) (Has ?cp 'white')) (or (not (Is ?sd 'screwdriver')) (AlignedHorizontally ?sd ?sc)) (or (not (Is ?sd 'screwdriver')) (AlignedHorizontally ?lm ?cp)) (or (not (Is ?sd 'screwdriver')) (Is ?cp 'cup')) (or (not (Is ?sd 'screwdriver')) (AlignedHorizontally ?sc ?lm)) (or (not (Is ?sd 'screwdriver')) (Has ?sc 'red')) (or (not (Is ?sd 'screwdriver')) (Has ?lm 'yellow')) (or (not (Is ?sd 'screwdriver')) (Is ?sc 'scissors')) (or (not (Is ?sd 'screwdriver')) (Is ?lm 'lemon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "lemon",
+        "cup",
+        "screwdriver",
+        "game_controller",
+        "scissors"
+    ]
+}

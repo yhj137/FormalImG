@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans positioned on the top side of the layout. For every phone in the image, there exists a stapler, a knife, and a pan. All five items\u2014the jeans, the phone, the stapler, the knife, and the pan\u2014are aligned horizontally. In terms of size, the phone is smaller than the jeans, while both the stapler and the knife are smaller than the pan.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (forall ?phone (implies (Is ?phone 'phone') (exists ?stapler (exists ?knife (exists ?pan (and (Is ?stapler 'stapler') (Is ?knife 'knife') (Is ?pan 'pan') (AlignedHorizontally ?jeans ?phone) (AlignedHorizontally ?phone ?stapler) (AlignedHorizontally ?stapler ?knife) (AlignedHorizontally ?knife ?pan) (SmallerThan ?phone ?jeans) (SmallerThan ?stapler ?pan) (SmallerThan ?knife ?pan)))))))))",
+    "cnf": "(exists ?jeans (forall ?phone (exists ?stapler (exists ?knife (exists ?pan (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (or (not (Is ?phone 'phone')) (AlignedHorizontally ?jeans ?phone)) (or (not (Is ?phone 'phone')) (SmallerThan ?phone ?jeans)) (or (not (Is ?phone 'phone')) (Is ?pan 'pan')) (or (not (Is ?phone 'phone')) (AlignedHorizontally ?phone ?stapler)) (or (not (Is ?phone 'phone')) (AlignedHorizontally ?knife ?pan)) (or (not (Is ?phone 'phone')) (SmallerThan ?stapler ?pan)) (or (not (Is ?phone 'phone')) (Is ?knife 'knife')) (or (not (Is ?phone 'phone')) (Is ?stapler 'stapler')) (or (not (Is ?phone 'phone')) (AlignedHorizontally ?stapler ?knife)) (or (not (Is ?phone 'phone')) (SmallerThan ?knife ?pan))))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "phone",
+        "pan",
+        "jeans",
+        "knife"
+    ]
+}

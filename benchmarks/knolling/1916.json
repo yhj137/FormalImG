@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white laptop, black headphones, and a blue book positioned from left to right; the headphones are to the right of the laptop, and the book is to the right of the headphones. The headphones are smaller than the laptop. Below the laptop is a red shirt, and to the right of the shirt is a green hat. Every screwdriver in the image is yellow, located below the shirt, and has a spoon to its left, a pizza to its right, and scissors below it. A knife is positioned to the right of the pizza, and the spoon is smaller than the pizza.",
+    "dsl": "(exists ?laptop (exists ?headphones (exists ?book (exists ?shirt (exists ?hat (and (Is ?laptop 'laptop') (Has ?laptop 'white') (Is ?headphones 'headphones') (Has ?headphones 'black') (SmallerThan ?headphones ?laptop) (RightOf ?headphones ?laptop) (Is ?book 'book') (Has ?book 'blue') (RightOf ?book ?headphones) (Is ?shirt 'shirt') (Has ?shirt 'red') (Below ?shirt ?laptop) (Is ?hat 'hat') (Has ?hat 'green') (RightOf ?hat ?shirt) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?pizza (exists ?knife (exists ?spoon (exists ?scissors (and (Has ?screwdriver 'yellow') (Below ?screwdriver ?shirt) (Is ?pizza 'pizza') (RightOf ?pizza ?screwdriver) (Is ?knife 'knife') (RightOf ?knife ?pizza) (Is ?spoon 'spoon') (LeftOf ?spoon ?screwdriver) (Is ?scissors 'scissors') (Below ?scissors ?screwdriver) (SmallerThan ?spoon ?pizza))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (exists ?book (exists ?shirt (exists ?hat (forall ?screwdriver (exists ?pizza (exists ?knife (exists ?spoon (exists ?scissors (and (Is ?laptop 'laptop') (Has ?laptop 'white') (SmallerThan ?headphones ?laptop) (RightOf ?headphones ?laptop) (Has ?headphones 'black') (Below ?shirt ?laptop) (RightOf ?book ?headphones) (Is ?headphones 'headphones') (Has ?shirt 'red') (RightOf ?hat ?shirt) (Has ?book 'blue') (Is ?shirt 'shirt') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?shirt)) (Has ?hat 'green') (Is ?book 'book') (or (not (Is ?screwdriver 'screwdriver')) (Has ?screwdriver 'yellow')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?pizza 'pizza')) (Is ?hat 'hat') (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?pizza ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?knife 'knife')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?knife ?pizza)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?spoon 'spoon')) (or (not (Is ?screwdriver 'screwdriver')) (SmallerThan ?spoon ?pizza)) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?spoon ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Below ?scissors ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?scissors 'scissors')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "pizza",
+        "shirt",
+        "scissors",
+        "knife",
+        "headphones",
+        "book",
+        "screwdriver",
+        "hat",
+        "laptop"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo-style scene inside a house featuring a red sofa. To the right of the sofa stands a wooden wardrobe, positioned to the left of a desk. All books in the scene are placed on the desk. There is also a round plate on the desk containing a yellow banana, with an orange next to the banana. Additionally, a rock sits on the desk, and a pair of shoes is placed next to the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?s (exists ?w (exists ?d (and (Is ?h 'house') (Is ?s 'sofa') (HasColor ?s 'red') (In ?s ?h) (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (RightOf ?w ?s) (Is ?d 'desk') (LeftOf ?w ?d) (forall ?b (implies (Is ?b 'book') (On ?b ?d))) (exists ?p (exists ?ba (exists ?o (exists ?r (exists ?sh (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?d) (Is ?ba 'banana') (HasColor ?ba 'yellow') (In ?ba ?p) (Is ?o 'orange') (NextTo ?o ?ba) (Is ?r 'rock') (On ?r ?d) (Is ?sh 'shoes') (NextTo ?sh ?s)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?s (exists ?w (exists ?d (forall ?b (exists ?p (exists ?ba (exists ?o (exists ?r (exists ?sh (and (Is ?h 'house') (In ?s ?h) (HasColor ?s 'red') (RightOf ?w ?s) (Is ?s 'sofa') (NextTo ?sh ?s) (HasMaterial ?w 'wooden') (LeftOf ?w ?d) (Is ?sh 'shoes') (Is ?w 'wardrobe') (Is ?d 'desk') (or (not (Is ?b 'book')) (On ?b ?d)) (On ?p ?d) (On ?r ?d) (HasShape ?p 'round') (In ?ba ?p) (Is ?r 'rock') (Is ?p 'plate') (HasColor ?ba 'yellow') (NextTo ?o ?ba) (Is ?ba 'banana') (Is ?o 'orange')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "sofa",
+        "shoes",
+        "book",
+        "plate",
+        "orange",
+        "rock",
+        "desk",
+        "banana",
+        "wardrobe"
+    ]
+}

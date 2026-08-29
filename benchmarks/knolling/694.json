@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a yellow drill. For every spoon in the scene, there is a black phone situated directly above it and a book located to the right of that phone. Furthermore, every spoon is positioned to the right of the drill, and the phones are vertically aligned with their corresponding spoons.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (Has ?drill 'yellow') (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?phone (exists ?book (and (Is ?phone 'phone') (Has ?phone 'black') (Is ?book 'book') (RightOf ?spoon ?drill) (Above ?phone ?spoon) (AlignedVertically ?phone ?spoon) (RightOf ?book ?phone))))))))",
+    "cnf": "(exists ?drill (forall ?spoon (exists ?phone (exists ?book (and (Is ?drill 'drill') (Has ?drill 'yellow') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?drill)) (or (not (Is ?spoon 'spoon')) (Is ?book 'book')) (or (not (Is ?spoon 'spoon')) (Above ?phone ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?phone 'black')) (or (not (Is ?spoon 'spoon')) (RightOf ?book ?phone)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?phone ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?phone 'phone')))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "drill",
+        "phone",
+        "book"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a brown horse holding a red flower next to a desk. A gray laptop and a white bowl containing all the oranges sit on the desk, while a green plant stands next to the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?f (exists ?d (exists ?b (and (Is ?h 'horse') (HasColor ?h 'brown') (Is ?f 'flower') (HasColor ?f 'red') (Holding ?h ?f) (Is ?d 'desk') (NextTo ?h ?d) (Is ?b 'bowl') (HasColor ?b 'white') (On ?b ?d) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?l (and (Is ?l 'laptop') (HasColor ?l 'gray') (On ?l ?d))) (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green') (NextTo ?p ?d)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?f (exists ?d (exists ?b (forall ?o (exists ?l (exists ?p (and (Is ?h 'horse') (HasColor ?h 'brown') (Holding ?h ?f) (NextTo ?h ?d) (HasColor ?f 'red') (Is ?d 'desk') (On ?b ?d) (Is ?f 'flower') (On ?l ?d) (HasColor ?b 'white') (or (not (Is ?o 'orange')) (In ?o ?b)) (NextTo ?p ?d) (HasColor ?l 'gray') (Is ?b 'bowl') (HasColor ?p 'green') (Is ?l 'laptop') (Is ?p 'plant'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "horse",
+        "laptop",
+        "plant",
+        "orange",
+        "flower",
+        "desk",
+        "bowl"
+    ]
+}

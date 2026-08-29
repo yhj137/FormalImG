@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image containing ten objects. A black monitor is located on the left side of the scene. The monitor is positioned to the left of a camera, and the camera is to the left of a white game controller. The monitor is visually larger than the game controller. Below the monitor is a white plate. The plate is to the left of a sandwich, and the sandwich is to the left of a spoon. Additionally, the sandwich is located above a remote. A blue shirt is positioned below the plate and to the left of the remote. The remote is to the left of a set of keys, which are located on the bottom side of the image. Finally, the keys are to the left of a pink donut, which is smaller than the plate.",
+    "dsl": "(exists ?monitor (exists ?camera (exists ?game_controller (exists ?plate (exists ?sandwich (exists ?spoon (exists ?shirt (exists ?remote (exists ?keys (exists ?donut (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnLeftSide ?monitor) (Is ?camera 'camera') (LeftOf ?monitor ?camera) (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (LeftOf ?camera ?game_controller) (LargerThan ?monitor ?game_controller) (Is ?plate 'plate') (Has ?plate 'white') (Below ?plate ?monitor) (Is ?sandwich 'sandwich') (LeftOf ?plate ?sandwich) (Is ?spoon 'spoon') (LeftOf ?sandwich ?spoon) (Is ?remote 'remote') (Above ?sandwich ?remote) (Is ?shirt 'shirt') (Has ?shirt 'blue') (Below ?shirt ?plate) (LeftOf ?shirt ?remote) (Is ?keys 'keys') (OnBottomSide ?keys) (LeftOf ?remote ?keys) (Is ?donut 'donut') (Has ?donut 'pink') (LeftOf ?keys ?donut) (SmallerThan ?donut ?plate))))))))))))",
+    "cnf": "(exists ?monitor (exists ?camera (exists ?game_controller (exists ?plate (exists ?sandwich (exists ?spoon (exists ?shirt (exists ?remote (exists ?keys (exists ?donut (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnLeftSide ?monitor) (LeftOf ?monitor ?camera) (LargerThan ?monitor ?game_controller) (Is ?camera 'camera') (LeftOf ?camera ?game_controller) (Below ?plate ?monitor) (Has ?game_controller 'white') (Has ?plate 'white') (LeftOf ?plate ?sandwich) (Is ?game_controller 'game_controller') (Is ?plate 'plate') (Below ?shirt ?plate) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?spoon) (SmallerThan ?donut ?plate) (Has ?shirt 'blue') (LeftOf ?shirt ?remote) (Above ?sandwich ?remote) (Is ?spoon 'spoon') (LeftOf ?keys ?donut) (Is ?shirt 'shirt') (LeftOf ?remote ?keys) (Is ?remote 'remote') (Has ?donut 'pink') (OnBottomSide ?keys) (Is ?donut 'donut') (Is ?keys 'keys'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "plate",
+        "remote",
+        "donut",
+        "game_controller",
+        "camera",
+        "monitor",
+        "sandwich",
+        "shirt",
+        "spoon"
+    ]
+}

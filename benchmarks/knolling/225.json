@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pan located on the left side of the composition, with a camera positioned directly below it.",
+    "dsl": "(exists ?pan (exists ?camera (and (Is ?pan 'pan') (Is ?camera 'camera') (OnLeftSide ?pan) (Below ?camera ?pan))))",
+    "cnf": "(exists ?pan (exists ?camera (and (Is ?pan 'pan') (OnLeftSide ?pan) (Below ?camera ?pan) (Is ?camera 'camera'))))",
+    "k": 2,
+    "object_classes": [
+        "pan",
+        "camera"
+    ]
+}

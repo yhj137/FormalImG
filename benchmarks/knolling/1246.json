@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, there is a hat positioned above it and a shoe positioned below it. A book is located to the left of the backpack, with a glove further to the left of the book. A bottle is placed to the right of the backpack, and to the right of the bottle is a sock, which is specifically positioned on the right side of the image.",
+    "dsl": "(and (forall ?backpack (implies (Is ?backpack 'backpack') (exists ?hat (exists ?shoe (exists ?book (exists ?glove (exists ?bottle (exists ?sock (and (Is ?hat 'hat') (Is ?shoe 'shoe') (Is ?book 'book') (Is ?glove 'glove') (Is ?bottle 'bottle') (Is ?sock 'sock') (Above ?hat ?backpack) (Below ?shoe ?backpack) (LeftOf ?book ?backpack) (LeftOf ?glove ?book) (RightOf ?bottle ?backpack) (RightOf ?sock ?bottle) (OnRightSide ?sock)))))))))))",
+    "cnf": "(forall ?backpack (exists ?hat (exists ?shoe (exists ?book (exists ?glove (exists ?bottle (exists ?sock (and (or (not (Is ?backpack 'backpack')) (Is ?hat 'hat')) (or (not (Is ?backpack 'backpack')) (Is ?shoe 'shoe')) (or (not (Is ?backpack 'backpack')) (Above ?hat ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?book 'book')) (or (not (Is ?backpack 'backpack')) (Below ?shoe ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?sock 'sock')) (or (not (Is ?backpack 'backpack')) (Is ?glove 'glove')) (or (not (Is ?backpack 'backpack')) (LeftOf ?book ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?bottle 'bottle')) (or (not (Is ?backpack 'backpack')) (RightOf ?sock ?bottle)) (or (not (Is ?backpack 'backpack')) (LeftOf ?glove ?book)) (or (not (Is ?backpack 'backpack')) (RightOf ?bottle ?backpack)) (or (not (Is ?backpack 'backpack')) (OnRightSide ?sock))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "sock",
+        "hat",
+        "backpack",
+        "bottle",
+        "glove",
+        "shoe"
+    ]
+}

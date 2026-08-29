@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a white shoe. Directly below the shoe are headphones, and below the headphones is a sandwich. On the right side, there is a yellow drill; the drill is positioned to the right of the shoe, and they are aligned horizontally. Below the drill is a mouse, which is aligned horizontally with the headphones. Below the mouse is a wrench. Additionally, for every carrot in the image, it is located to the left of the wrench, and there is a red pen positioned to the right of that carrot.",
+    "dsl": "(exists ?shoe (exists ?headphones (exists ?drill (exists ?sandwich (exists ?mouse (exists ?wrench (and (Is ?shoe 'shoe') (Has ?shoe 'white') (OnLeftSide ?shoe) (Is ?headphones 'headphones') (Below ?headphones ?shoe) (Is ?drill 'drill') (Has ?drill 'yellow') (OnRightSide ?drill) (RightOf ?drill ?shoe) (AlignedHorizontally ?shoe ?drill) (Is ?sandwich 'sandwich') (Below ?sandwich ?headphones) (Is ?mouse 'mouse') (Below ?mouse ?drill) (AlignedHorizontally ?headphones ?mouse) (Is ?wrench 'wrench') (Below ?wrench ?mouse) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?pen (and (Is ?pen 'pen') (Has ?pen 'red') (LeftOf ?carrot ?wrench) (RightOf ?pen ?carrot))))))))))))",
+    "cnf": "(exists ?shoe (exists ?headphones (exists ?drill (exists ?sandwich (exists ?mouse (exists ?wrench (forall ?carrot (exists ?pen (and (Is ?shoe 'shoe') (Has ?shoe 'white') (OnLeftSide ?shoe) (Below ?headphones ?shoe) (RightOf ?drill ?shoe) (Is ?headphones 'headphones') (Below ?sandwich ?headphones) (AlignedHorizontally ?shoe ?drill) (OnRightSide ?drill) (AlignedHorizontally ?headphones ?mouse) (Is ?sandwich 'sandwich') (Below ?mouse ?drill) (Has ?drill 'yellow') (Below ?wrench ?mouse) (Is ?mouse 'mouse') (Is ?drill 'drill') (Is ?wrench 'wrench') (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?wrench)) (or (not (Is ?carrot 'carrot')) (Has ?pen 'red')) (or (not (Is ?carrot 'carrot')) (RightOf ?pen ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?pen 'pen')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pen",
+        "wrench",
+        "carrot",
+        "drill",
+        "mouse",
+        "headphones",
+        "sandwich",
+        "shoe"
+    ]
+}

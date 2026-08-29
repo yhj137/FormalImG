@@ -1,0 +1,10 @@
+{
+    "prompt": "An oil painting style scene where every dog is holding a round ball.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?d (implies (Is ?d 'dog') (exists ?b (and (Is ?b 'ball') (HasShape ?b 'round') (Holding ?d ?b))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?d (exists ?b (and (or (not (Is ?d 'dog')) (Is ?b 'ball')) (or (not (Is ?d 'dog')) (HasShape ?b 'round')) (or (not (Is ?d 'dog')) (Holding ?d ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "dog",
+        "ball"
+    ]
+}

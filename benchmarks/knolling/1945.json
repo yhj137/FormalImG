@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the arrangement, a shirt, a plate, and a drill are aligned horizontally, with the shirt being larger than the plate. Below the shirt, there is a book, and below the plate, there is a game controller which is smaller than the book; both are vertically aligned with the items above them. A phone is positioned below the drill and aligned vertically with it. For every set of keys in the scene, there exist a stapler, a ruler, and a fork arranged such that the stapler is located below the game controller, the keys are smaller than the stapler and aligned vertically with it, the ruler is situated below the book and aligned horizontally with the stapler, and the fork is below the phone and aligned horizontally with the stapler.",
+    "dsl": "(exists ?shirt (exists ?plate (exists ?drill (exists ?book (exists ?controller (exists ?phone (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?plate 'plate') (Is ?drill 'drill') (AlignedHorizontally ?shirt ?plate) (AlignedHorizontally ?plate ?drill) (LargerThan ?shirt ?plate) (Is ?book 'book') (Below ?book ?shirt) (AlignedVertically ?book ?shirt) (Is ?controller 'game_controller') (Below ?controller ?plate) (AlignedVertically ?controller ?plate) (SmallerThan ?controller ?book) (Is ?phone 'phone') (Below ?phone ?drill) (AlignedVertically ?phone ?drill) (forall ?keys (implies (Is ?keys 'keys') (exists ?stapler (exists ?ruler (exists ?fork (and (Is ?stapler 'stapler') (Below ?stapler ?controller) (AlignedVertically ?stapler ?keys) (SmallerThan ?keys ?stapler) (Is ?ruler 'ruler') (Below ?ruler ?book) (AlignedHorizontally ?ruler ?stapler) (Is ?fork 'fork') (Below ?fork ?phone) (AlignedHorizontally ?fork ?stapler))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?plate (exists ?drill (exists ?book (exists ?controller (exists ?phone (forall ?keys (exists ?stapler (exists ?ruler (exists ?fork (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (AlignedHorizontally ?shirt ?plate) (LargerThan ?shirt ?plate) (Is ?plate 'plate') (AlignedHorizontally ?plate ?drill) (Below ?book ?shirt) (Below ?controller ?plate) (Is ?drill 'drill') (Below ?phone ?drill) (AlignedVertically ?book ?shirt) (Is ?book 'book') (AlignedVertically ?controller ?plate) (Is ?controller 'game_controller') (AlignedVertically ?phone ?drill) (Is ?phone 'phone') (SmallerThan ?controller ?book) (or (not (Is ?keys 'keys')) (Below ?fork ?phone)) (or (not (Is ?keys 'keys')) (Below ?ruler ?book)) (or (not (Is ?keys 'keys')) (Below ?stapler ?controller)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?fork ?stapler)) (or (not (Is ?keys 'keys')) (Is ?ruler 'ruler')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?ruler ?stapler)) (or (not (Is ?keys 'keys')) (Is ?stapler 'stapler')) (or (not (Is ?keys 'keys')) (AlignedVertically ?stapler ?keys)) (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?stapler)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "book",
+        "keys",
+        "plate",
+        "stapler",
+        "phone",
+        "game_controller",
+        "drill",
+        "fork",
+        "shirt"
+    ]
+}

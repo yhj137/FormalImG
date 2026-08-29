@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a book located on the top side. For every pair of headphones present, it is positioned to the left of the book, and there is a shoe smaller than the headphones situated to the left of the headphones.",
+    "dsl": "(exists ?book (and (Is ?book 'book') (OnTopSide ?book) (forall ?h (implies (Is ?h 'headphones') (exists ?s (and (Is ?s 'shoe') (LeftOf ?h ?book) (LeftOf ?s ?h) (SmallerThan ?s ?h)))))))",
+    "cnf": "(exists ?book (forall ?h (exists ?s (and (Is ?book 'book') (OnTopSide ?book) (or (not (Is ?h 'headphones')) (LeftOf ?h ?book)) (or (not (Is ?h 'headphones')) (Is ?s 'shoe')) (or (not (Is ?h 'headphones')) (LeftOf ?s ?h)) (or (not (Is ?h 'headphones')) (SmallerThan ?s ?h))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "headphones",
+        "shoe"
+    ]
+}

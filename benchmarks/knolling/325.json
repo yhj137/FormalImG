@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat in the scene, there is a sandwich located on the top side of the image that is smaller than the hat.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'hat') (exists ?s (and (Is ?s 'sandwich') (OnTopSide ?s) (SmallerThan ?s ?h))))))",
+    "cnf": "(forall ?h (exists ?s (and (or (not (Is ?h 'hat')) (Is ?s 'sandwich')) (or (not (Is ?h 'hat')) (OnTopSide ?s)) (or (not (Is ?h 'hat')) (SmallerThan ?s ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A mirror is located next to a wooden chair. All knives are positioned to the left of the mirror. A red backpack sits to the right of the chair, with a teddy bear inside.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?c (and (Is ?m 'mirror') (Is ?c 'chair') (HasMaterial ?c 'wooden') (NextTo ?m ?c) (forall ?k (implies (Is ?k 'knife') (LeftOf ?k ?m))) (exists ?b (exists ?t (and (Is ?b 'backpack') (HasColor ?b 'red') (RightOf ?b ?c) (Is ?t 'teddy bear') (In ?t ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?c (forall ?k (exists ?b (exists ?t (and (Is ?m 'mirror') (NextTo ?m ?c) (or (not (Is ?k 'knife')) (LeftOf ?k ?m)) (HasMaterial ?c 'wooden') (RightOf ?b ?c) (Is ?c 'chair') (HasColor ?b 'red') (In ?t ?b) (Is ?b 'backpack') (Is ?t 'teddy bear'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "backpack",
+        "chair",
+        "teddy bear",
+        "mirror"
+    ]
+}

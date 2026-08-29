@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where every bench has a bowl on top containing a yellow key.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bench') (exists ?w (exists ?k (and (Is ?w 'bowl') (Is ?k 'key') (HasColor ?k 'yellow') (On ?w ?b) (In ?k ?w)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?w (exists ?k (and (or (not (Is ?b 'bench')) (Is ?w 'bowl')) (or (not (Is ?b 'bench')) (On ?w ?b)) (or (not (Is ?b 'bench')) (Is ?k 'key')) (or (not (Is ?b 'bench')) (In ?k ?w)) (or (not (Is ?b 'bench')) (HasColor ?k 'yellow')))))))",
+    "k": 3,
+    "object_classes": [
+        "bench",
+        "key",
+        "bowl"
+    ]
+}

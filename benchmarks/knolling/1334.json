@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the top side of the frame. Arranged in a vertical column directly below the backpack are a laptop, a bowl, and a sock, all sharing the same vertical alignment. The composition follows a strict rule: for every knife in the scene, there corresponds a glove located below the sock and a fork located below the glove, continuing the vertical alignment line. Additionally, the knife is placed vertically above the fork, and the fork is visibly smaller than the bowl.",
+    "dsl": "(exists ?backpack (exists ?laptop (exists ?bowl (exists ?sock (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?laptop 'laptop') (Below ?laptop ?backpack) (AlignedVertically ?backpack ?laptop) (Is ?bowl 'bowl') (Below ?bowl ?laptop) (AlignedVertically ?laptop ?bowl) (Is ?sock 'sock') (Below ?sock ?bowl) (AlignedVertically ?bowl ?sock) (forall ?knife (implies (Is ?knife 'knife') (exists ?glove (exists ?fork (and (Is ?glove 'glove') (Below ?glove ?sock) (AlignedVertically ?sock ?glove) (Is ?fork 'fork') (Below ?fork ?glove) (AlignedVertically ?glove ?fork) (Above ?knife ?fork) (SmallerThan ?fork ?bowl)))))))))))",
+    "cnf": "(exists ?backpack (exists ?laptop (exists ?bowl (exists ?sock (forall ?knife (exists ?glove (exists ?fork (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Below ?laptop ?backpack) (AlignedVertically ?backpack ?laptop) (Is ?laptop 'laptop') (Below ?bowl ?laptop) (AlignedVertically ?laptop ?bowl) (Is ?bowl 'bowl') (Below ?sock ?bowl) (AlignedVertically ?bowl ?sock) (Is ?sock 'sock') (or (not (Is ?knife 'knife')) (SmallerThan ?fork ?bowl)) (or (not (Is ?knife 'knife')) (Below ?glove ?sock)) (or (not (Is ?knife 'knife')) (Above ?knife ?fork)) (or (not (Is ?knife 'knife')) (AlignedVertically ?sock ?glove)) (or (not (Is ?knife 'knife')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (AlignedVertically ?glove ?fork)) (or (not (Is ?knife 'knife')) (Is ?fork 'fork')) (or (not (Is ?knife 'knife')) (Below ?fork ?glove))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "fork",
+        "backpack",
+        "knife",
+        "bowl",
+        "glove"
+    ]
+}

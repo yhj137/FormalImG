@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a bitten apple.",
+    "dsl": "(and (IsStyle 'photo') (exists ?a (and (Is ?a 'apple') (HasState ?a 'bitten'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?a (and (Is ?a 'apple') (HasState ?a 'bitten'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

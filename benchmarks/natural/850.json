@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every car contains a key and is located to the left of an elephant, which is next to a metal table with a laptop beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?c (implies (Is ?c 'car') (exists ?k (exists ?e (exists ?t (exists ?l (and (Is ?k 'key') (Is ?e 'elephant') (Is ?t 'table') (HasMaterial ?t 'metal') (Is ?l 'laptop') (In ?k ?c) (LeftOf ?c ?e) (NextTo ?e ?t) (NextTo ?t ?l)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?c (exists ?k (exists ?e (exists ?t (exists ?l (and (or (not (Is ?c 'car')) (Is ?k 'key')) (or (not (Is ?c 'car')) (Is ?e 'elephant')) (or (not (Is ?c 'car')) (In ?k ?c)) (or (not (Is ?c 'car')) (Is ?t 'table')) (or (not (Is ?c 'car')) (LeftOf ?c ?e)) (or (not (Is ?c 'car')) (Is ?l 'laptop')) (or (not (Is ?c 'car')) (HasMaterial ?t 'metal')) (or (not (Is ?c 'car')) (NextTo ?e ?t)) (or (not (Is ?c 'car')) (NextTo ?t ?l)))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "table",
+        "key",
+        "car",
+        "elephant"
+    ]
+}

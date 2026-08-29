@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat row of six items arranged along the bottom side of the scene. Starting from the left, there is a hat; to the right of the hat is a watch; to the right of the watch is a glove; to the right of the glove are keys; to the right of the keys is a donut; and to the right of the donut is a game controller. All these objects are aligned horizontally.",
+    "dsl": "(exists ?hat (exists ?watch (exists ?glove (exists ?keys (exists ?donut (exists ?controller (and (Is ?hat 'hat') (Is ?watch 'watch') (Is ?glove 'glove') (Is ?keys 'keys') (Is ?donut 'donut') (Is ?controller 'game_controller') (OnBottomSide ?hat) (RightOf ?watch ?hat) (RightOf ?glove ?watch) (RightOf ?keys ?glove) (RightOf ?donut ?keys) (RightOf ?controller ?donut) (AlignedHorizontally ?hat ?watch) (AlignedHorizontally ?watch ?glove) (AlignedHorizontally ?glove ?keys) (AlignedHorizontally ?keys ?donut) (AlignedHorizontally ?donut ?controller))))))))",
+    "cnf": "(exists ?hat (exists ?watch (exists ?glove (exists ?keys (exists ?donut (exists ?controller (and (Is ?hat 'hat') (OnBottomSide ?hat) (RightOf ?watch ?hat) (AlignedHorizontally ?hat ?watch) (Is ?watch 'watch') (RightOf ?glove ?watch) (AlignedHorizontally ?watch ?glove) (Is ?glove 'glove') (RightOf ?keys ?glove) (AlignedHorizontally ?glove ?keys) (Is ?keys 'keys') (RightOf ?donut ?keys) (AlignedHorizontally ?keys ?donut) (Is ?donut 'donut') (RightOf ?controller ?donut) (AlignedHorizontally ?donut ?controller) (Is ?controller 'game_controller'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "watch",
+        "game_controller",
+        "hat",
+        "glove",
+        "donut"
+    ]
+}

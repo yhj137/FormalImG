@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Next to every child stands a wardrobe containing a toy car, a teddy bear, and a round apple.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?w (exists ?t (exists ?b (exists ?a (and (Is ?w 'wardrobe') (NextTo ?c ?w) (Is ?t 'toy car') (In ?t ?w) (Is ?b 'teddy bear') (In ?b ?w) (Is ?a 'apple') (HasShape ?a 'round') (In ?a ?w))))))))",
+    "cnf": "(forall ?c (exists ?w (exists ?t (exists ?b (exists ?a (and (or (not (Is ?c 'child')) (Is ?w 'wardrobe')) (or (not (Is ?c 'child')) (NextTo ?c ?w)) (or (not (Is ?c 'child')) (In ?t ?w)) (or (not (Is ?c 'child')) (Is ?t 'toy car')) (or (not (Is ?c 'child')) (In ?b ?w)) (or (not (Is ?c 'child')) (Is ?b 'teddy bear')) (or (not (Is ?c 'child')) (In ?a ?w)) (or (not (Is ?c 'child')) (Is ?a 'apple')) (or (not (Is ?c 'child')) (HasShape ?a 'round'))))))))",
+    "k": 5,
+    "object_classes": [
+        "toy car",
+        "teddy bear",
+        "wardrobe",
+        "apple",
+        "child"
+    ]
+}

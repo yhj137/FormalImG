@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone positioned on the bottom side of the layout, there is a screwdriver placed above it.",
+    "dsl": "(and (forall ?p (implies (and (Is ?p 'phone') (OnBottomSide ?p)) (exists ?s (and (Is ?s 'screwdriver') (Above ?s ?p))))))",
+    "cnf": "(forall ?p (exists ?s (and (or (not (Is ?p 'phone')) (not (OnBottomSide ?p)) (Is ?s 'screwdriver')) (or (not (Is ?p 'phone')) (not (OnBottomSide ?p)) (Above ?s ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is positioned on the right side of the scene. To the left of the keyboard is a pan, and directly below the pan are headphones. Below the headphones lies a sock. A watch is placed to the left of the sock, and the pan is visually larger than the watch. Below the keyboard is a ruler, with a screwdriver positioned below the ruler. To the left of the ruler is a fork that is smaller than the ruler. Finally, for every pair of scissors in the layout, it is located to the left of the headphones.",
+    "dsl": "(exists ?keyboard (exists ?pan (exists ?headphones (exists ?sock (exists ?watch (exists ?ruler (exists ?screwdriver (exists ?fork (and (Is ?keyboard 'keyboard') (Is ?pan 'pan') (Is ?headphones 'headphones') (Is ?sock 'sock') (Is ?watch 'watch') (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (Is ?fork 'fork') (OnRightSide ?keyboard) (LeftOf ?pan ?keyboard) (Below ?headphones ?pan) (Below ?sock ?headphones) (LeftOf ?watch ?sock) (LargerThan ?pan ?watch) (Below ?ruler ?keyboard) (Below ?screwdriver ?ruler) (LeftOf ?fork ?ruler) (SmallerThan ?fork ?ruler) (forall ?scissors (implies (Is ?scissors 'scissors') (LeftOf ?scissors ?headphones))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?pan (exists ?headphones (exists ?sock (exists ?watch (exists ?ruler (exists ?screwdriver (exists ?fork (forall ?scissors (and (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (LeftOf ?pan ?keyboard) (Below ?ruler ?keyboard) (Is ?pan 'pan') (Below ?headphones ?pan) (Is ?ruler 'ruler') (Below ?screwdriver ?ruler) (LargerThan ?pan ?watch) (Is ?headphones 'headphones') (Below ?sock ?headphones) (LeftOf ?fork ?ruler) (Is ?screwdriver 'screwdriver') (LeftOf ?watch ?sock) (or (not (Is ?scissors 'scissors')) (LeftOf ?scissors ?headphones)) (Is ?sock 'sock') (SmallerThan ?fork ?ruler) (Is ?fork 'fork') (Is ?watch 'watch')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "sock",
+        "keyboard",
+        "watch",
+        "screwdriver",
+        "fork",
+        "pan",
+        "scissors",
+        "headphones"
+    ]
+}

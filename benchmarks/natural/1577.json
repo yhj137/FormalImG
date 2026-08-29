@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene depicts an open refrigerator containing a cylindrical bottle. Next to it stands a table where a sitting cat holds a toy car. A phone also rests on the table. Every book in the scene is closed and lies on the table. A jacket is positioned next to the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?bt (exists ?t (exists ?c (exists ?tc (exists ?p (and (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?bt 'bottle') (HasShape ?bt 'cylindrical') (In ?bt ?r) (Is ?t 'table') (NextTo ?t ?r) (Is ?c 'cat') (HasState ?c 'sitting') (On ?c ?t) (Is ?tc 'toy car') (Holding ?c ?tc) (Is ?p 'phone') (On ?p ?t) (forall ?bk (implies (Is ?bk 'book') (and (HasState ?bk 'closed') (On ?bk ?t)))) (exists ?j (and (Is ?j 'jacket') (NextTo ?j ?t)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?bt (exists ?t (exists ?c (exists ?tc (exists ?p (forall ?bk (exists ?j (and (Is ?r 'refrigerator') (HasState ?r 'open') (In ?bt ?r) (NextTo ?t ?r) (HasShape ?bt 'cylindrical') (Is ?t 'table') (On ?c ?t) (Is ?bt 'bottle') (On ?p ?t) (HasState ?c 'sitting') (Holding ?c ?tc) (or (not (Is ?bk 'book')) (On ?bk ?t)) (Is ?p 'phone') (Is ?c 'cat') (Is ?tc 'toy car') (NextTo ?j ?t) (or (not (Is ?bk 'book')) (HasState ?bk 'closed')) (Is ?j 'jacket')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "toy car",
+        "cat",
+        "book",
+        "refrigerator",
+        "phone",
+        "table"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Inside every car sits a child holding a switched-on phone and a plate with a ball on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?c (implies (Is ?c 'car') (exists ?k (exists ?pl (exists ?b (exists ?ph (and (Is ?k 'child') (Is ?pl 'plate') (Is ?b 'ball') (Is ?ph 'phone') (In ?k ?c) (Holding ?k ?pl) (On ?b ?pl) (Holding ?k ?ph) (HasState ?ph 'on')))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?c (exists ?k (exists ?pl (exists ?b (exists ?ph (and (or (not (Is ?c 'car')) (Is ?k 'child')) (or (not (Is ?c 'car')) (In ?k ?c)) (or (not (Is ?c 'car')) (Is ?pl 'plate')) (or (not (Is ?c 'car')) (Holding ?k ?pl)) (or (not (Is ?c 'car')) (Is ?ph 'phone')) (or (not (Is ?c 'car')) (Is ?b 'ball')) (or (not (Is ?c 'car')) (Holding ?k ?ph)) (or (not (Is ?c 'car')) (On ?b ?pl)) (or (not (Is ?c 'car')) (HasState ?ph 'on')))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "child",
+        "plate",
+        "car",
+        "ball"
+    ]
+}

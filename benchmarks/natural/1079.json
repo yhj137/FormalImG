@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a tree. All apples are red and located to the left of the tree. A bus is also to the left of the tree, with a backpack placed to the left of the bus. To the right of the tree is a butterfly, and a plate sits to the right of the butterfly.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (LeftOf ?a ?t)))) (exists ?b (exists ?bp (exists ?bf (exists ?p (and (Is ?b 'bus') (Is ?bp 'backpack') (Is ?bf 'butterfly') (Is ?p 'plate') (LeftOf ?b ?t) (LeftOf ?bp ?b) (RightOf ?bf ?t) (RightOf ?p ?bf)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?a (exists ?b (exists ?bp (exists ?bf (exists ?p (and (Is ?t 'tree') (or (not (Is ?a 'apple')) (LeftOf ?a ?t)) (LeftOf ?b ?t) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (RightOf ?bf ?t) (Is ?b 'bus') (LeftOf ?bp ?b) (Is ?bf 'butterfly') (RightOf ?p ?bf) (Is ?bp 'backpack') (Is ?p 'plate')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bus",
+        "apple",
+        "tree",
+        "butterfly",
+        "plate",
+        "backpack"
+    ]
+}

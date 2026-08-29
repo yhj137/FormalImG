@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack positioned on the right side of the image. To the left of the backpack is a gray laptop, and to the left of the laptop is a book. A keyboard is placed below the laptop. Every screwdriver is located below the book, and for each screwdriver, there is a shoe to its left and a mouse aligned horizontally with it. Furthermore, there is a calculator positioned below the mouse which is smaller than the keyboard.",
+    "dsl": "(exists ?backpack (exists ?laptop (exists ?book (exists ?keyboard (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (Is ?laptop 'laptop') (Has ?laptop 'gray') (LeftOf ?laptop ?backpack) (Is ?book 'book') (LeftOf ?book ?laptop) (Is ?keyboard 'keyboard') (Below ?keyboard ?laptop) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?shoe (exists ?mouse (exists ?calculator (and (Is ?shoe 'shoe') (Is ?mouse 'mouse') (Is ?calculator 'calculator') (Below ?screwdriver ?book) (LeftOf ?shoe ?screwdriver) (AlignedHorizontally ?mouse ?screwdriver) (Below ?calculator ?mouse) (SmallerThan ?calculator ?keyboard))))))))))))",
+    "cnf": "(exists ?backpack (exists ?laptop (exists ?book (exists ?keyboard (forall ?screwdriver (exists ?shoe (exists ?mouse (exists ?calculator (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (LeftOf ?laptop ?backpack) (Has ?laptop 'gray') (LeftOf ?book ?laptop) (Is ?laptop 'laptop') (Below ?keyboard ?laptop) (Is ?book 'book') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?book)) (Is ?keyboard 'keyboard') (or (not (Is ?screwdriver 'screwdriver')) (SmallerThan ?calculator ?keyboard)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?calculator 'calculator')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?shoe ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Below ?calculator ?mouse)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?mouse 'mouse')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?shoe 'shoe')) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?mouse ?screwdriver)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "laptop",
+        "keyboard",
+        "screwdriver",
+        "backpack",
+        "calculator",
+        "mouse",
+        "shoe"
+    ]
+}

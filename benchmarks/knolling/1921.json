@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with a neatly organized collection of items. On the left side of the scene, there is a suitcase. Positioned directly above the suitcase is a hat, and they are aligned vertically. To the right of the suitcase is a shoe, which is visually smaller than the suitcase. Above the shoe lies a game controller, and the shoe is positioned above a calculator; these three items (game controller, shoe, calculator) are aligned vertically. The layout includes a universal rule for every pen in the image: each pen is located on the right side of the image, positioned to the right of the calculator, and is accompanied by a specific cluster of items. A bowl is placed above the pen, a fork is below the pen, and a glove is below the fork. The bowl, pen, fork, and glove are all aligned vertically. Additionally, a hammer is placed to the right of the pen, and the pen is smaller than the hammer.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?hat (exists ?game_controller (exists ?calculator (and (Is ?suitcase 'suitcase') (Is ?shoe 'shoe') (Is ?hat 'hat') (Is ?game_controller 'game_controller') (Is ?calculator 'calculator') (OnLeftSide ?suitcase) (Above ?hat ?suitcase) (AlignedVertically ?hat ?suitcase) (RightOf ?shoe ?suitcase) (LargerThan ?suitcase ?shoe) (Above ?game_controller ?shoe) (Above ?shoe ?calculator) (AlignedVertically ?game_controller ?shoe) (AlignedVertically ?shoe ?calculator) (forall ?pen (implies (Is ?pen 'pen') (exists ?hammer (exists ?fork (exists ?bowl (exists ?glove (and (Is ?hammer 'hammer') (Is ?fork 'fork') (Is ?bowl 'bowl') (Is ?glove 'glove') (OnRightSide ?pen) (RightOf ?pen ?calculator) (RightOf ?hammer ?pen) (SmallerThan ?pen ?hammer) (Above ?bowl ?pen) (Above ?pen ?fork) (Above ?fork ?glove) (AlignedVertically ?bowl ?pen) (AlignedVertically ?pen ?fork) (AlignedVertically ?fork ?glove))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?hat (exists ?game_controller (exists ?calculator (forall ?pen (exists ?hammer (exists ?fork (exists ?bowl (exists ?glove (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?hat ?suitcase) (AlignedVertically ?hat ?suitcase) (Is ?hat 'hat') (RightOf ?shoe ?suitcase) (LargerThan ?suitcase ?shoe) (Is ?shoe 'shoe') (Above ?game_controller ?shoe) (Above ?shoe ?calculator) (Is ?game_controller 'game_controller') (AlignedVertically ?game_controller ?shoe) (Is ?calculator 'calculator') (AlignedVertically ?shoe ?calculator) (or (not (Is ?pen 'pen')) (RightOf ?pen ?calculator)) (or (not (Is ?pen 'pen')) (OnRightSide ?pen)) (or (not (Is ?pen 'pen')) (RightOf ?hammer ?pen)) (or (not (Is ?pen 'pen')) (Is ?glove 'glove')) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?hammer)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (Is ?bowl 'bowl')) (or (not (Is ?pen 'pen')) (Above ?fork ?glove)) (or (not (Is ?pen 'pen')) (Above ?bowl ?pen)) (or (not (Is ?pen 'pen')) (Is ?fork 'fork')) (or (not (Is ?pen 'pen')) (Above ?pen ?fork)) (or (not (Is ?pen 'pen')) (AlignedVertically ?bowl ?pen)) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?fork)) (or (not (Is ?pen 'pen')) (AlignedVertically ?fork ?glove)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pen",
+        "game_controller",
+        "hammer",
+        "hat",
+        "calculator",
+        "fork",
+        "bowl",
+        "suitcase",
+        "glove",
+        "shoe"
+    ]
+}

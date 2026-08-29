@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. Every bus has a gray rock to its right. To the right of the rock stands a brown desk supporting a white keyboard, a yellow lamp, and a blue cup. A bookshelf holding a teddy bear and a green bowl is positioned to the right of the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'bus') (exists ?r (exists ?d (exists ?k (exists ?l (exists ?c (exists ?bs (exists ?t (exists ?bo (and (Is ?r 'rock') (HasColor ?r 'gray') (Is ?d 'desk') (HasColor ?d 'brown') (Is ?k 'keyboard') (HasColor ?k 'white') (Is ?l 'lamp') (HasColor ?l 'yellow') (Is ?c 'cup') (HasColor ?c 'blue') (Is ?bs 'bookshelf') (Is ?t 'teddy bear') (Is ?bo 'bowl') (HasColor ?bo 'green') (LeftOf ?b ?r) (RightOf ?d ?r) (On ?k ?d) (On ?l ?d) (On ?c ?d) (RightOf ?bs ?d) (On ?t ?bs) (On ?bo ?bs)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?r (exists ?d (exists ?k (exists ?l (exists ?c (exists ?bs (exists ?t (exists ?bo (and (or (not (Is ?b 'bus')) (Is ?r 'rock')) (or (not (Is ?b 'bus')) (HasColor ?r 'gray')) (or (not (Is ?b 'bus')) (LeftOf ?b ?r)) (or (not (Is ?b 'bus')) (Is ?d 'desk')) (or (not (Is ?b 'bus')) (RightOf ?d ?r)) (or (not (Is ?b 'bus')) (HasColor ?bo 'green')) (or (not (Is ?b 'bus')) (HasColor ?d 'brown')) (or (not (Is ?b 'bus')) (On ?k ?d)) (or (not (Is ?b 'bus')) (Is ?bo 'bowl')) (or (not (Is ?b 'bus')) (On ?bo ?bs)) (or (not (Is ?b 'bus')) (Is ?k 'keyboard')) (or (not (Is ?b 'bus')) (On ?l ?d)) (or (not (Is ?b 'bus')) (HasColor ?k 'white')) (or (not (Is ?b 'bus')) (Is ?t 'teddy bear')) (or (not (Is ?b 'bus')) (On ?t ?bs)) (or (not (Is ?b 'bus')) (On ?c ?d)) (or (not (Is ?b 'bus')) (HasColor ?l 'yellow')) (or (not (Is ?b 'bus')) (Is ?l 'lamp')) (or (not (Is ?b 'bus')) (Is ?bs 'bookshelf')) (or (not (Is ?b 'bus')) (RightOf ?bs ?d)) (or (not (Is ?b 'bus')) (HasColor ?c 'blue')) (or (not (Is ?b 'bus')) (Is ?c 'cup')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "teddy bear",
+        "bowl",
+        "bus",
+        "desk",
+        "rock",
+        "cup",
+        "bookshelf",
+        "keyboard",
+        "lamp"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rock is inside a wet jacket. Every fish is on the jacket to the left of the rock.",
+    "dsl": "(exists ?j (exists ?r (and (Is ?j 'jacket') (HasState ?j 'wet') (Is ?r 'rock') (In ?r ?j) (forall ?f (implies (Is ?f 'fish') (and (On ?f ?j) (LeftOf ?f ?r)))))))",
+    "cnf": "(exists ?j (exists ?r (forall ?f (and (Is ?j 'jacket') (HasState ?j 'wet') (In ?r ?j) (or (not (Is ?f 'fish')) (On ?f ?j)) (Is ?r 'rock') (or (not (Is ?f 'fish')) (LeftOf ?f ?r))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "rock",
+        "fish"
+    ]
+}

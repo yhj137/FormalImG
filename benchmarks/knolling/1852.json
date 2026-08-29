@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a fork on the top side. For every spoon in the image, there is a knife to its right, and a corresponding vertical arrangement of items: a plate is located below the fork (aligned vertically) with a donut to its left and a pizza to its right, glasses are below the plate (aligned vertically) with a tie to their right, and headphones are below the glasses (on the bottom side, aligned vertically) with a game controller on the right side to the right of the headphones.",
+    "dsl": "(exists ?fork (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (exists ?plate (exists ?donut (exists ?pizza (exists ?glasses (exists ?tie (exists ?headphones (exists ?game_controller (and (Is ?fork 'fork') (OnTopSide ?fork) (RightOf ?spoon ?fork) (Is ?knife 'knife') (RightOf ?knife ?spoon) (Is ?plate 'plate') (Above ?fork ?plate) (AlignedVertically ?fork ?plate) (Is ?donut 'donut') (LeftOf ?donut ?plate) (Is ?pizza 'pizza') (RightOf ?pizza ?plate) (Is ?glasses 'glasses') (Above ?plate ?glasses) (AlignedVertically ?plate ?glasses) (Is ?tie 'tie') (RightOf ?tie ?glasses) (Is ?headphones 'headphones') (OnBottomSide ?headphones) (Above ?glasses ?headphones) (AlignedVertically ?glasses ?headphones) (Is ?game_controller 'game_controller') (OnRightSide ?game_controller) (RightOf ?game_controller ?headphones)))))))))))))",
+    "cnf": "(exists ?fork (forall ?spoon (exists ?knife (exists ?plate (exists ?donut (exists ?pizza (exists ?glasses (exists ?tie (exists ?headphones (exists ?game_controller (and (or (not (Is ?spoon 'spoon')) (Is ?fork 'fork')) (or (not (Is ?spoon 'spoon')) (OnTopSide ?fork)) (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?fork)) (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')) (or (not (Is ?spoon 'spoon')) (Above ?fork ?plate)) (or (not (Is ?spoon 'spoon')) (RightOf ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?plate 'plate')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?fork ?plate)) (or (not (Is ?spoon 'spoon')) (Is ?donut 'donut')) (or (not (Is ?spoon 'spoon')) (LeftOf ?donut ?plate)) (or (not (Is ?spoon 'spoon')) (Is ?pizza 'pizza')) (or (not (Is ?spoon 'spoon')) (RightOf ?pizza ?plate)) (or (not (Is ?spoon 'spoon')) (Is ?glasses 'glasses')) (or (not (Is ?spoon 'spoon')) (Above ?plate ?glasses)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?plate ?glasses)) (or (not (Is ?spoon 'spoon')) (Is ?tie 'tie')) (or (not (Is ?spoon 'spoon')) (RightOf ?tie ?glasses)) (or (not (Is ?spoon 'spoon')) (Is ?headphones 'headphones')) (or (not (Is ?spoon 'spoon')) (Above ?glasses ?headphones)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?headphones)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?glasses ?headphones)) (or (not (Is ?spoon 'spoon')) (Is ?game_controller 'game_controller')) (or (not (Is ?spoon 'spoon')) (RightOf ?game_controller ?headphones)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?game_controller)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "tie",
+        "pizza",
+        "game_controller",
+        "fork",
+        "knife",
+        "spoon",
+        "headphones",
+        "donut"
+    ]
+}

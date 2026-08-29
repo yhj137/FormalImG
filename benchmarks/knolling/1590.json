@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A pan is located on the top side of the scene. Below the pan is a shoe, and below the shoe is a bottle; the shoe is smaller than the pan, and these objects are vertically aligned. A spoon, a donut, a watch, and a ruler are aligned horizontally with the bottle. The donut is smaller than the pan. Additionally, for any book present in the scene, it is located below the ruler, aligned vertically with it, and is visually larger than the watch.",
+    "dsl": "(exists ?pan (exists ?shoe (exists ?bottle (exists ?spoon (exists ?donut (exists ?watch (exists ?ruler (and (Is ?pan 'pan') (OnTopSide ?pan) (Is ?shoe 'shoe') (Below ?shoe ?pan) (AlignedVertically ?pan ?shoe) (SmallerThan ?shoe ?pan) (Is ?bottle 'bottle') (Below ?bottle ?shoe) (AlignedVertically ?shoe ?bottle) (Is ?spoon 'spoon') (AlignedHorizontally ?bottle ?spoon) (Is ?donut 'donut') (AlignedHorizontally ?spoon ?donut) (SmallerThan ?donut ?pan) (Is ?watch 'watch') (AlignedHorizontally ?donut ?watch) (Is ?ruler 'ruler') (AlignedHorizontally ?watch ?ruler) (forall ?book (implies (Is ?book 'book') (and (Below ?book ?ruler) (AlignedVertically ?ruler ?book) (LargerThan ?book ?watch))))))))))))",
+    "cnf": "(exists ?pan (exists ?shoe (exists ?bottle (exists ?spoon (exists ?donut (exists ?watch (exists ?ruler (forall ?book (and (Is ?pan 'pan') (OnTopSide ?pan) (Below ?shoe ?pan) (AlignedVertically ?pan ?shoe) (Is ?shoe 'shoe') (SmallerThan ?shoe ?pan) (SmallerThan ?donut ?pan) (Below ?bottle ?shoe) (AlignedHorizontally ?spoon ?donut) (AlignedHorizontally ?donut ?watch) (AlignedVertically ?shoe ?bottle) (Is ?bottle 'bottle') (AlignedHorizontally ?bottle ?spoon) (Is ?donut 'donut') (Is ?watch 'watch') (AlignedHorizontally ?watch ?ruler) (Is ?spoon 'spoon') (or (not (Is ?book 'book')) (LargerThan ?book ?watch)) (Is ?ruler 'ruler') (or (not (Is ?book 'book')) (Below ?book ?ruler)) (or (not (Is ?book 'book')) (AlignedVertically ?ruler ?book)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "watch",
+        "pan",
+        "bottle",
+        "shoe",
+        "donut",
+        "spoon"
+    ]
+}

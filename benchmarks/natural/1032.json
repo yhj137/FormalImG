@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the left of every elephant stands a refrigerator. A white plate with a bowl on it sits atop the refrigerator, with a bottle placed next to the plate. A phone rests beside the refrigerator.",
+    "dsl": "(forall ?e (implies (Is ?e 'elephant') (exists ?r (exists ?pl (exists ?bw (exists ?bo (exists ?ph (and (Is ?r 'refrigerator') (LeftOf ?r ?e) (Is ?pl 'plate') (HasColor ?pl 'white') (On ?pl ?r) (Is ?bw 'bowl') (On ?bw ?pl) (Is ?bo 'bottle') (NextTo ?bo ?pl) (Is ?ph 'phone') (NextTo ?ph ?r)))))))))",
+    "cnf": "(forall ?e (exists ?r (exists ?pl (exists ?bw (exists ?bo (exists ?ph (and (or (not (Is ?e 'elephant')) (Is ?r 'refrigerator')) (or (not (Is ?e 'elephant')) (LeftOf ?r ?e)) (or (not (Is ?e 'elephant')) (Is ?pl 'plate')) (or (not (Is ?e 'elephant')) (On ?pl ?r)) (or (not (Is ?e 'elephant')) (HasColor ?pl 'white')) (or (not (Is ?e 'elephant')) (Is ?bw 'bowl')) (or (not (Is ?e 'elephant')) (NextTo ?ph ?r)) (or (not (Is ?e 'elephant')) (On ?bw ?pl)) (or (not (Is ?e 'elephant')) (Is ?ph 'phone')) (or (not (Is ?e 'elephant')) (Is ?bo 'bottle')) (or (not (Is ?e 'elephant')) (NextTo ?bo ?pl)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "bowl",
+        "phone",
+        "refrigerator",
+        "elephant",
+        "plate"
+    ]
+}

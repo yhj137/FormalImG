@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image. Every knife is positioned to the right of a cylindrical cup. The cup is to the right of a clock with a metal screwdriver lying on it. A person wearing glasses is located to the left of the clock.",
+    "dsl": "(and (IsStyle 'photo') (forall ?k (implies (Is ?k 'knife') (exists ?p (exists ?g (exists ?c (exists ?s (exists ?u (and (Is ?p 'person') (Is ?g 'glasses') (Is ?c 'clock') (Is ?s 'screwdriver') (Is ?u 'cup') (On ?g ?p) (RightOf ?c ?p) (On ?s ?c) (HasMaterial ?s 'metal') (RightOf ?u ?c) (HasShape ?u 'cylindrical') (RightOf ?k ?u))))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?k (exists ?p (exists ?g (exists ?c (exists ?s (exists ?u (and (or (not (Is ?k 'knife')) (Is ?p 'person')) (or (not (Is ?k 'knife')) (Is ?g 'glasses')) (or (not (Is ?k 'knife')) (On ?g ?p)) (or (not (Is ?k 'knife')) (Is ?c 'clock')) (or (not (Is ?k 'knife')) (Is ?u 'cup')) (or (not (Is ?k 'knife')) (RightOf ?c ?p)) (or (not (Is ?k 'knife')) (Is ?s 'screwdriver')) (or (not (Is ?k 'knife')) (RightOf ?u ?c)) (or (not (Is ?k 'knife')) (On ?s ?c)) (or (not (Is ?k 'knife')) (HasMaterial ?s 'metal')) (or (not (Is ?k 'knife')) (HasShape ?u 'cylindrical')) (or (not (Is ?k 'knife')) (RightOf ?k ?u))))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "person",
+        "glasses",
+        "cup",
+        "clock",
+        "screwdriver"
+    ]
+}

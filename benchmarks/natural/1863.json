@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. A rectangular table stands to the right of a bed. All shoes are placed next to the bed. A person is on the bed holding a teddy bear inside the bed. A dog is positioned to the left of the bed. A laptop sits on the table next to headphones, and a flower is also on the table. A bicycle is located to the right of the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (and (Is ?b 'bed') (Is ?t 'table') (HasShape ?t 'rectangular') (RightOf ?t ?b) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?b))) (exists ?p (exists ?tb (exists ?d (exists ?l (exists ?h (exists ?bi (exists ?f (and (Is ?p 'person') (Is ?tb 'teddy bear') (Is ?d 'dog') (Is ?l 'laptop') (Is ?h 'headphones') (Is ?bi 'bicycle') (Is ?f 'flower') (On ?p ?b) (Holding ?p ?tb) (In ?tb ?b) (LeftOf ?d ?b) (On ?l ?t) (NextTo ?h ?l) (On ?f ?t) (RightOf ?bi ?t)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (forall ?s (exists ?p (exists ?tb (exists ?d (exists ?l (exists ?h (exists ?bi (exists ?f (and (Is ?b 'bed') (RightOf ?t ?b) (or (not (Is ?s 'shoes')) (NextTo ?s ?b)) (HasShape ?t 'rectangular') (On ?l ?t) (On ?p ?b) (Is ?t 'table') (On ?f ?t) (Is ?l 'laptop') (NextTo ?h ?l) (In ?tb ?b) (Is ?p 'person') (Holding ?p ?tb) (RightOf ?bi ?t) (Is ?f 'flower') (Is ?h 'headphones') (LeftOf ?d ?b) (Is ?tb 'teddy bear') (Is ?bi 'bicycle') (Is ?d 'dog')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "person",
+        "headphones",
+        "laptop",
+        "shoes",
+        "teddy bear",
+        "bed",
+        "table",
+        "bicycle",
+        "dog",
+        "flower"
+    ]
+}

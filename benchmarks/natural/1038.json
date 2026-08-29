@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of every bed is a rug, and to the left is a wooden bench with a jacket on it. A woman holding a peeled banana is in the bed.",
+    "dsl": "(forall ?b (implies (Is ?b 'bed') (exists ?r (exists ?bn (exists ?j (exists ?w (exists ?ba (and (Is ?r 'rug') (Is ?bn 'bench') (Is ?j 'jacket') (Is ?w 'woman') (Is ?ba 'banana') (RightOf ?r ?b) (LeftOf ?bn ?b) (HasMaterial ?bn 'wooden') (On ?j ?bn) (In ?w ?b) (Holding ?w ?ba) (HasState ?ba 'peeled')))))))))",
+    "cnf": "(forall ?b (exists ?r (exists ?bn (exists ?j (exists ?w (exists ?ba (and (or (not (Is ?b 'bed')) (Is ?r 'rug')) (or (not (Is ?b 'bed')) (RightOf ?r ?b)) (or (not (Is ?b 'bed')) (Is ?bn 'bench')) (or (not (Is ?b 'bed')) (Is ?ba 'banana')) (or (not (Is ?b 'bed')) (LeftOf ?bn ?b)) (or (not (Is ?b 'bed')) (Is ?j 'jacket')) (or (not (Is ?b 'bed')) (Is ?w 'woman')) (or (not (Is ?b 'bed')) (Holding ?w ?ba)) (or (not (Is ?b 'bed')) (HasMaterial ?bn 'wooden')) (or (not (Is ?b 'bed')) (On ?j ?bn)) (or (not (Is ?b 'bed')) (In ?w ?b)) (or (not (Is ?b 'bed')) (HasState ?ba 'peeled')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "bed",
+        "rug",
+        "woman",
+        "jacket",
+        "banana"
+    ]
+}

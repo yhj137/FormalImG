@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every sandwich has a wooden pizza to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?s (implies (Is ?s 'sandwich') (exists ?p (and (Is ?p 'pizza') (HasMaterial ?p 'wooden') (LeftOf ?p ?s))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?s (exists ?p (and (or (not (Is ?s 'sandwich')) (Is ?p 'pizza')) (or (not (Is ?s 'sandwich')) (HasMaterial ?p 'wooden')) (or (not (Is ?s 'sandwich')) (LeftOf ?p ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "sandwich"
+    ]
+}

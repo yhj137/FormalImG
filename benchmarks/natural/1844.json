@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a pink bicycle. All flowers are positioned to the left of the bicycle. To the right of the bicycle stands a metal horse. A black cat wearing blue headphones sits on the horse, holding a hammer. Next to the horse is a broken mirror with a turned-off clock resting on it. To the right of the mirror is a turned-on phone, with a red ball next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bicycle') (HasColor ?b 'pink') (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?b))) (exists ?h (and (Is ?h 'horse') (HasMaterial ?h 'metal') (RightOf ?h ?b) (exists ?c (and (Is ?c 'cat') (HasColor ?c 'black') (On ?c ?h) (exists ?ha (and (Is ?ha 'hammer') (Holding ?c ?ha))) (exists ?hp (and (Is ?hp 'headphones') (HasColor ?hp 'blue') (On ?hp ?c))))) (exists ?m (and (Is ?m 'mirror') (HasState ?m 'broken') (NextTo ?m ?h) (exists ?cl (and (Is ?cl 'clock') (HasState ?cl 'off') (On ?cl ?m))) (exists ?p (and (Is ?p 'phone') (HasState ?p 'on') (RightOf ?p ?m) (exists ?ba (and (Is ?ba 'ball') (HasColor ?ba 'red') (NextTo ?ba ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?f (exists ?h (exists ?c (exists ?ha (exists ?hp (exists ?m (exists ?cl (exists ?p (exists ?ba (and (Is ?b 'bicycle') (HasColor ?b 'pink') (or (not (Is ?f 'flower')) (LeftOf ?f ?b)) (RightOf ?h ?b) (HasMaterial ?h 'metal') (On ?c ?h) (Is ?h 'horse') (NextTo ?m ?h) (HasColor ?c 'black') (Holding ?c ?ha) (HasState ?m 'broken') (On ?cl ?m) (Is ?c 'cat') (On ?hp ?c) (Is ?ha 'hammer') (Is ?m 'mirror') (RightOf ?p ?m) (HasState ?cl 'off') (HasColor ?hp 'blue') (HasState ?p 'on') (NextTo ?ba ?p) (Is ?cl 'clock') (Is ?hp 'headphones') (Is ?p 'phone') (HasColor ?ba 'red') (Is ?ba 'ball')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "horse",
+        "ball",
+        "flower",
+        "hammer",
+        "bicycle",
+        "mirror",
+        "clock",
+        "cat"
+    ]
+}

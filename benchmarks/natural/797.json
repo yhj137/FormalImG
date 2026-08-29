@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a brown horse holding a flower. A house is located to the right of the horse, and every bus is positioned to the right of the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?f (exists ?ho (and (Is ?h 'horse') (HasColor ?h 'brown') (Is ?f 'flower') (Holding ?h ?f) (Is ?ho 'house') (RightOf ?ho ?h) (forall ?b (implies (Is ?b 'bus') (RightOf ?b ?ho))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?f (exists ?ho (forall ?b (and (Is ?h 'horse') (HasColor ?h 'brown') (Holding ?h ?f) (RightOf ?ho ?h) (Is ?f 'flower') (Is ?ho 'house') (or (not (Is ?b 'bus')) (RightOf ?b ?ho))))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "horse",
+        "flower",
+        "bus"
+    ]
+}

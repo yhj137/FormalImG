@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement of items. On the far left side, there is a set of keys. To the right of the keys, items are arranged in a column: a blue shirt is above a handbag, and the handbag is above a black suitcase. A pair of glasses is positioned to the left of the handbag. Further to the right, forming a parallel column, there is a pizza, a plate, and a bowl; the pizza is above the plate, and the plate is above the bowl. The shirt is to the left of the pizza, the handbag is to the left of the plate, and the suitcase is to the left of the bowl, with each pair aligned horizontally. Both the suitcase and the bowl are positioned on the bottom side of the image. Finally, for every sock in the scene, it is white and located above the pizza.",
+    "dsl": "(exists ?keys (exists ?glasses (exists ?shirt (exists ?handbag (exists ?suitcase (exists ?pizza (exists ?plate (exists ?bowl (and (Is ?keys 'keys') (OnLeftSide ?keys) (Is ?glasses 'glasses') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?handbag 'handbag') (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (OnBottomSide ?suitcase) (Is ?pizza 'pizza') (Is ?plate 'plate') (Is ?bowl 'bowl') (OnBottomSide ?bowl) (LeftOf ?keys ?suitcase) (LeftOf ?glasses ?handbag) (Above ?shirt ?handbag) (Above ?handbag ?suitcase) (Above ?pizza ?plate) (Above ?plate ?bowl) (LeftOf ?shirt ?pizza) (AlignedHorizontally ?shirt ?pizza) (LeftOf ?handbag ?plate) (AlignedHorizontally ?handbag ?plate) (LeftOf ?suitcase ?bowl) (AlignedHorizontally ?suitcase ?bowl) (forall ?sock (implies (Is ?sock 'sock') (and (Has ?sock 'white') (Above ?sock ?pizza)))))))))))))",
+    "cnf": "(exists ?keys (exists ?glasses (exists ?shirt (exists ?handbag (exists ?suitcase (exists ?pizza (exists ?plate (exists ?bowl (forall ?sock (and (Is ?keys 'keys') (OnLeftSide ?keys) (LeftOf ?keys ?suitcase) (OnBottomSide ?suitcase) (Above ?handbag ?suitcase) (Has ?suitcase 'black') (Above ?shirt ?handbag) (LeftOf ?handbag ?plate) (LeftOf ?suitcase ?bowl) (Is ?suitcase 'suitcase') (Has ?shirt 'blue') (LeftOf ?shirt ?pizza) (LeftOf ?glasses ?handbag) (AlignedHorizontally ?handbag ?plate) (Above ?plate ?bowl) (AlignedHorizontally ?suitcase ?bowl) (Is ?shirt 'shirt') (AlignedHorizontally ?shirt ?pizza) (Above ?pizza ?plate) (Is ?glasses 'glasses') (Is ?handbag 'handbag') (OnBottomSide ?bowl) (or (not (Is ?sock 'sock')) (Above ?sock ?pizza)) (Is ?pizza 'pizza') (Is ?plate 'plate') (Is ?bowl 'bowl') (or (not (Is ?sock 'sock')) (Has ?sock 'white'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "plate",
+        "sock",
+        "pizza",
+        "handbag",
+        "bowl",
+        "suitcase",
+        "shirt"
+    ]
+}

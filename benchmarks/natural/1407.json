@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A dog is sitting in a white bed and holding a metal spoon. A mirror is positioned to the left of the bed. To the right of the bed is a wooden bench. A black keyboard, a knife, and a fork are resting on the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?d (exists ?s (exists ?m (exists ?be (exists ?k (exists ?kn (exists ?f (and (Is ?b 'bed') (HasColor ?b 'white') (Is ?d 'dog') (HasState ?d 'sitting') (In ?d ?b) (Is ?s 'spoon') (HasMaterial ?s 'metal') (Holding ?d ?s) (Is ?m 'mirror') (LeftOf ?m ?b) (Is ?be 'bench') (HasMaterial ?be 'wooden') (RightOf ?be ?b) (Is ?k 'keyboard') (HasColor ?k 'black') (On ?k ?be) (Is ?kn 'knife') (On ?kn ?be) (Is ?f 'fork') (On ?f ?be)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?d (exists ?s (exists ?m (exists ?be (exists ?k (exists ?kn (exists ?f (and (Is ?b 'bed') (HasColor ?b 'white') (In ?d ?b) (LeftOf ?m ?b) (HasState ?d 'sitting') (Holding ?d ?s) (RightOf ?be ?b) (Is ?m 'mirror') (Is ?d 'dog') (HasMaterial ?s 'metal') (HasMaterial ?be 'wooden') (On ?k ?be) (Is ?s 'spoon') (Is ?be 'bench') (On ?kn ?be) (HasColor ?k 'black') (On ?f ?be) (Is ?kn 'knife') (Is ?k 'keyboard') (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "knife",
+        "bench",
+        "spoon",
+        "fork",
+        "bed",
+        "mirror",
+        "dog",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A wrench is located on the top side of the layout. A phone is positioned below the wrench. Additionally, for every sock present in the scene, it is placed to the left of the phone and above the phone.",
+    "dsl": "(exists ?w (exists ?p (and (Is ?w 'wrench') (OnTopSide ?w) (Is ?p 'phone') (Below ?p ?w) (forall ?s (implies (Is ?s 'sock') (and (LeftOf ?s ?p) (Above ?s ?p)))))))",
+    "cnf": "(exists ?w (exists ?p (forall ?s (and (Is ?w 'wrench') (OnTopSide ?w) (Below ?p ?w) (Is ?p 'phone') (or (not (Is ?s 'sock')) (LeftOf ?s ?p)) (or (not (Is ?s 'sock')) (Above ?s ?p))))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "phone",
+        "sock"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every brown suitcase in the scene, there is a structured arrangement of items beneath it. A yellow drill and a black hammer are positioned below the suitcase and are aligned horizontally. Further down, a white glove is below the drill, and a red cup is below the hammer; these two are also aligned horizontally. At the bottom, a yellow lemon is located below the glove, and a carrot is located below the cup, with the lemon and carrot aligned horizontally. The suitcase is visually larger than the drill.",
+    "dsl": "(forall ?s (implies (and (Is ?s 'suitcase') (Has ?s 'brown')) (exists ?d (exists ?h (exists ?g (exists ?c (exists ?l (exists ?ca (and (Is ?d 'drill') (Has ?d 'yellow') (Is ?h 'hammer') (Has ?h 'black') (Is ?g 'glove') (Has ?g 'white') (Is ?c 'cup') (Has ?c 'red') (Is ?l 'lemon') (Has ?l 'yellow') (Is ?ca 'carrot') (Below ?d ?s) (Below ?h ?s) (AlignedHorizontally ?d ?h) (Below ?g ?d) (Below ?c ?h) (AlignedHorizontally ?g ?c) (Below ?l ?g) (Below ?ca ?c) (AlignedHorizontally ?l ?ca) (LargerThan ?s ?d))))))))))",
+    "cnf": "(forall ?s (exists ?d (exists ?h (exists ?g (exists ?c (exists ?l (exists ?ca (and (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?d 'drill')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Has ?d 'yellow')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?d ?s)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?h 'hammer')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (AlignedHorizontally ?d ?h)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?ca 'carrot')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?h ?s)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Has ?h 'black')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?g ?d)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?c ?h)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Has ?l 'yellow')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?ca ?c)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?g 'glove')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (LargerThan ?s ?d)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Has ?g 'white')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (AlignedHorizontally ?g ?c)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Has ?c 'red')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?l 'lemon')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Below ?l ?g)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (AlignedHorizontally ?l ?ca)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'brown')) (Is ?c 'cup'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lemon",
+        "carrot",
+        "cup",
+        "drill",
+        "hammer",
+        "suitcase",
+        "glove"
+    ]
+}

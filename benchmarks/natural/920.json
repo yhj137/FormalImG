@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman standing to the left of a bus, holding a basket. The basket contains a rusty knife, and every flower in the scene is withered and located inside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?ba (and (Is ?w 'woman') (Is ?ba 'basket') (Holding ?w ?ba) (forall ?f (implies (Is ?f 'flower') (and (In ?f ?ba) (HasState ?f 'withered')))) (exists ?k (and (Is ?k 'knife') (HasState ?k 'rusty') (In ?k ?ba))) (exists ?bus (and (Is ?bus 'bus') (LeftOf ?w ?bus)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?ba (forall ?f (exists ?k (exists ?bus (and (Is ?w 'woman') (Holding ?w ?ba) (LeftOf ?w ?bus) (Is ?ba 'basket') (or (not (Is ?f 'flower')) (In ?f ?ba)) (Is ?bus 'bus') (In ?k ?ba) (or (not (Is ?f 'flower')) (HasState ?f 'withered')) (HasState ?k 'rusty') (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "woman",
+        "flower",
+        "basket",
+        "bus"
+    ]
+}

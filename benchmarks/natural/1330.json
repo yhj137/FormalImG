@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man holding a black knife, standing to the left of a table. A brown jacket lies on the table, alongside a keyboard and every cup in the scene. A toy car is positioned next to the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?k (exists ?t (exists ?j (and (Is ?m 'man') (Is ?k 'knife') (HasColor ?k 'black') (Holding ?m ?k) (Is ?t 'table') (LeftOf ?m ?t) (Is ?j 'jacket') (HasColor ?j 'brown') (On ?j ?t) (forall ?c (implies (Is ?c 'cup') (On ?c ?t))) (exists ?kb (exists ?tc (and (Is ?kb 'keyboard') (On ?kb ?t) (Is ?tc 'toy car') (NextTo ?tc ?kb))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?k (exists ?t (exists ?j (forall ?c (exists ?kb (exists ?tc (and (Is ?m 'man') (Holding ?m ?k) (LeftOf ?m ?t) (HasColor ?k 'black') (Is ?t 'table') (On ?j ?t) (Is ?k 'knife') (or (not (Is ?c 'cup')) (On ?c ?t)) (HasColor ?j 'brown') (On ?kb ?t) (Is ?j 'jacket') (Is ?kb 'keyboard') (NextTo ?tc ?kb) (Is ?tc 'toy car'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "jacket",
+        "toy car",
+        "man",
+        "knife",
+        "cup",
+        "table"
+    ]
+}

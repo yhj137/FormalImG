@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image showing a horizontal arrangement of six items: a blue tie, a white calculator, a gray wrench, a brown wallet, a green bottle, and a black remote. The tie is aligned horizontally with the calculator, which is aligned with the wrench. The wrench is aligned with the wallet, the wallet with the bottle, and the bottle with the remote. Visually, the brown wallet is smaller than the white calculator, and the black remote is smaller than the green bottle.",
+    "dsl": "(exists ?tie (exists ?calc (exists ?wrench (exists ?wallet (exists ?bottle (exists ?remote (and (Is ?tie 'tie') (Has ?tie 'blue') (Is ?calc 'calculator') (Has ?calc 'white') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?bottle 'bottle') (Has ?bottle 'green') (Is ?remote 'remote') (Has ?remote 'black') (AlignedHorizontally ?tie ?calc) (AlignedHorizontally ?calc ?wrench) (AlignedHorizontally ?wrench ?wallet) (AlignedHorizontally ?wallet ?bottle) (AlignedHorizontally ?bottle ?remote) (SmallerThan ?wallet ?calc) (SmallerThan ?remote ?bottle))))))))",
+    "cnf": "(exists ?tie (exists ?calc (exists ?wrench (exists ?wallet (exists ?bottle (exists ?remote (and (Is ?tie 'tie') (Has ?tie 'blue') (AlignedHorizontally ?tie ?calc) (Has ?calc 'white') (AlignedHorizontally ?calc ?wrench) (Is ?calc 'calculator') (SmallerThan ?wallet ?calc) (Has ?wrench 'gray') (AlignedHorizontally ?wrench ?wallet) (AlignedHorizontally ?wallet ?bottle) (Is ?wrench 'wrench') (Has ?wallet 'brown') (Has ?bottle 'green') (AlignedHorizontally ?bottle ?remote) (Is ?wallet 'wallet') (Is ?bottle 'bottle') (SmallerThan ?remote ?bottle) (Has ?remote 'black') (Is ?remote 'remote'))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "remote",
+        "wrench",
+        "calculator",
+        "wallet",
+        "bottle"
+    ]
+}

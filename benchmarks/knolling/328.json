@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every knife in the scene, there is a cutting board located on the bottom side of the image that is visually larger than the knife.",
+    "dsl": "(and (forall ?knife (implies (Is ?knife 'knife') (exists ?board (and (Is ?board 'cutting_board') (OnBottomSide ?board) (LargerThan ?board ?knife))))))",
+    "cnf": "(forall ?knife (exists ?board (and (or (not (Is ?knife 'knife')) (Is ?board 'cutting_board')) (or (not (Is ?knife 'knife')) (OnBottomSide ?board)) (or (not (Is ?knife 'knife')) (LargerThan ?board ?knife)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "cutting_board"
+    ]
+}

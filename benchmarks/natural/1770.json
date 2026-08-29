@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a metal wardrobe to the left of a wooden table, with a plant positioned to the left of the wardrobe. A backpack sits to the right of the wardrobe, next to a lamp. Beside the lamp is a cat, and next to the cat is a bowl. Every knife is located to the right of the bowl, and an umbrella stands to the right of the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (exists ?p (exists ?bp (exists ?l (exists ?c (exists ?b (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (LeftOf ?w ?t) (Is ?p 'plant') (LeftOf ?p ?w) (Is ?bp 'backpack') (RightOf ?bp ?w) (Is ?l 'lamp') (NextTo ?l ?bp) (Is ?c 'cat') (NextTo ?c ?l) (Is ?b 'bowl') (NextTo ?b ?c) (forall ?k (implies (Is ?k 'knife') (RightOf ?k ?b))) (exists ?u (and (Is ?u 'umbrella') (RightOf ?u ?t))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (exists ?p (exists ?bp (exists ?l (exists ?c (exists ?b (forall ?k (exists ?u (and (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?w ?t) (RightOf ?u ?t) (HasMaterial ?w 'metal') (LeftOf ?p ?w) (Is ?u 'umbrella') (Is ?w 'wardrobe') (RightOf ?bp ?w) (Is ?p 'plant') (Is ?bp 'backpack') (NextTo ?l ?bp) (Is ?l 'lamp') (NextTo ?c ?l) (Is ?c 'cat') (NextTo ?b ?c) (Is ?b 'bowl') (or (not (Is ?k 'knife')) (RightOf ?k ?b)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "knife",
+        "backpack",
+        "plant",
+        "table",
+        "lamp",
+        "bowl",
+        "cat",
+        "wardrobe"
+    ]
+}

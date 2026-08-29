@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single brown hat.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (Has ?hat 'brown')))",
+    "cnf": "(exists ?hat (and (Is ?hat 'hat') (Has ?hat 'brown')))",
+    "k": 1,
+    "object_classes": [
+        "hat"
+    ]
+}

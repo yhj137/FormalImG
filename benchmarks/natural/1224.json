@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a refrigerator containing a glass bottle and a bowl with a fish inside. To the right of the refrigerator sits a laptop, next to which is a plate with a round cake on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (exists ?bo (exists ?f (exists ?l (exists ?p (exists ?c (and (Is ?r 'refrigerator') (Is ?b 'bottle') (HasMaterial ?b 'glass') (In ?b ?r) (Is ?bo 'bowl') (In ?bo ?r) (Is ?f 'fish') (In ?f ?bo) (Is ?l 'laptop') (RightOf ?l ?r) (Is ?p 'plate') (NextTo ?p ?l) (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (exists ?bo (exists ?f (exists ?l (exists ?p (exists ?c (and (Is ?r 'refrigerator') (In ?b ?r) (In ?bo ?r) (HasMaterial ?b 'glass') (RightOf ?l ?r) (Is ?bo 'bowl') (In ?f ?bo) (Is ?b 'bottle') (Is ?l 'laptop') (NextTo ?p ?l) (Is ?f 'fish') (Is ?p 'plate') (On ?c ?p) (HasShape ?c 'round') (Is ?c 'cake'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fish",
+        "bottle",
+        "laptop",
+        "plate",
+        "cake",
+        "refrigerator",
+        "bowl"
+    ]
+}

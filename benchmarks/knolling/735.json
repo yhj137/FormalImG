@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A bottle is positioned on the left side of the arrangement, with a lemon placed directly above it. For every spoon in the scene, it is located to the right of the lemon, and there is a screwdriver placed above that spoon.",
+    "dsl": "(exists ?bottle (exists ?lemon (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (Is ?lemon 'lemon') (Above ?lemon ?bottle) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (RightOf ?spoon ?lemon) (Above ?screwdriver ?spoon))))))))",
+    "cnf": "(exists ?bottle (exists ?lemon (forall ?spoon (exists ?screwdriver (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (Above ?lemon ?bottle) (Is ?lemon 'lemon') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?lemon)) (or (not (Is ?spoon 'spoon')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?spoon 'spoon')) (Above ?screwdriver ?spoon)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "lemon",
+        "screwdriver",
+        "spoon"
+    ]
+}

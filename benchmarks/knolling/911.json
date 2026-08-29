@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a yellow drill and a brown handbag. The drill is located to the left of the handbag. For every gray spoon in the scene, there is a carrot and a set of keys arranged in a line: the spoon is positioned to the right of the drill, the carrot is to the right of the spoon, and the keys are to the right of the carrot and to the left of the handbag. All objects are aligned horizontally.",
+    "dsl": "(exists ?drill (exists ?handbag (and (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?handbag 'handbag') (Has ?handbag 'brown') (LeftOf ?drill ?handbag) (forall ?spoon (implies (and (Is ?spoon 'spoon') (Has ?spoon 'gray')) (exists ?carrot (exists ?keys (and (Is ?carrot 'carrot') (Is ?keys 'keys') (RightOf ?spoon ?drill) (RightOf ?carrot ?spoon) (RightOf ?keys ?carrot) (LeftOf ?keys ?handbag) (AlignedHorizontally ?drill ?spoon) (AlignedHorizontally ?spoon ?carrot) (AlignedHorizontally ?carrot ?keys) (AlignedHorizontally ?keys ?handbag)))))))))",
+    "cnf": "(exists ?drill (exists ?handbag (forall ?spoon (exists ?carrot (exists ?keys (and (Is ?drill 'drill') (Has ?drill 'yellow') (LeftOf ?drill ?handbag) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?spoon ?drill)) (Has ?handbag 'brown') (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (LeftOf ?keys ?handbag)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?drill ?spoon)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?keys 'keys')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?carrot ?spoon)) (Is ?handbag 'handbag') (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?keys ?handbag)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?keys ?carrot)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?carrot ?keys)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?spoon ?carrot)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?carrot 'carrot'))))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "keys",
+        "carrot",
+        "drill",
+        "handbag"
+    ]
+}

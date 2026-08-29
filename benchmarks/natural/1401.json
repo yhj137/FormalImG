@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a realistic photo capturing the interior of a blue bus. Inside, there is a leather sofa where a woman is sitting. A keyboard is resting on the woman. To the right of the woman, there is a monitor. Positioned above the monitor is a clock, and a bird is perched on the clock. Additionally, a closed bottle is resting on the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bu (exists ?w (exists ?s (exists ?k (exists ?m (exists ?c (exists ?bi (exists ?bo (and (Is ?bu 'bus') (HasColor ?bu 'blue') (Is ?w 'woman') (HasState ?w 'sitting') (Is ?s 'sofa') (HasMaterial ?s 'leather') (In ?s ?bu) (In ?w ?bu) (On ?w ?s) (Is ?k 'keyboard') (On ?k ?w) (Is ?m 'monitor') (RightOf ?m ?w) (Is ?c 'clock') (Above ?c ?m) (Is ?bi 'bird') (On ?bi ?c) (Is ?bo 'bottle') (HasState ?bo 'closed') (On ?bo ?s)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bu (exists ?w (exists ?s (exists ?k (exists ?m (exists ?c (exists ?bi (exists ?bo (and (Is ?bu 'bus') (HasColor ?bu 'blue') (In ?s ?bu) (In ?w ?bu) (HasMaterial ?s 'leather') (On ?w ?s) (HasState ?w 'sitting') (Is ?s 'sofa') (On ?k ?w) (On ?bo ?s) (Is ?w 'woman') (RightOf ?m ?w) (Is ?k 'keyboard') (HasState ?bo 'closed') (Is ?m 'monitor') (Above ?c ?m) (Is ?bo 'bottle') (Is ?c 'clock') (On ?bi ?c) (Is ?bi 'bird')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "bottle",
+        "monitor",
+        "sofa",
+        "bus",
+        "woman",
+        "clock",
+        "bird"
+    ]
+}

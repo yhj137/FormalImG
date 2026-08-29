@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. On every rock sits a basket containing a fish, with a metal screwdriver placed next to the basket.",
+    "dsl": "(forall ?r (implies (Is ?r 'rock') (exists ?b (and (Is ?b 'basket') (On ?b ?r) (exists ?f (and (Is ?f 'fish') (In ?f ?b) (exists ?s (and (Is ?s 'screwdriver') (HasMaterial ?s 'metal') (NextTo ?s ?b)))))))))",
+    "cnf": "(forall ?r (exists ?b (exists ?f (exists ?s (and (or (not (Is ?r 'rock')) (Is ?b 'basket')) (or (not (Is ?r 'rock')) (On ?b ?r)) (or (not (Is ?r 'rock')) (In ?f ?b)) (or (not (Is ?r 'rock')) (Is ?f 'fish')) (or (not (Is ?r 'rock')) (NextTo ?s ?b)) (or (not (Is ?r 'rock')) (Is ?s 'screwdriver')) (or (not (Is ?r 'rock')) (HasMaterial ?s 'metal')))))))",
+    "k": 4,
+    "object_classes": [
+        "screwdriver",
+        "fish",
+        "rock",
+        "basket"
+    ]
+}

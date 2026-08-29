@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style image where every cat is inside a wooden bed. To the right of the bed is a horse, and a bird is positioned to the right of the horse.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?c (implies (Is ?c 'cat') (exists ?b (exists ?h (exists ?bi (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?h 'horse') (Is ?bi 'bird') (In ?c ?b) (RightOf ?h ?b) (RightOf ?bi ?h))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?c (exists ?b (exists ?h (exists ?bi (and (or (not (Is ?c 'cat')) (Is ?b 'bed')) (or (not (Is ?c 'cat')) (HasMaterial ?b 'wooden')) (or (not (Is ?c 'cat')) (In ?c ?b)) (or (not (Is ?c 'cat')) (Is ?h 'horse')) (or (not (Is ?c 'cat')) (RightOf ?h ?b)) (or (not (Is ?c 'cat')) (Is ?bi 'bird')) (or (not (Is ?c 'cat')) (RightOf ?bi ?h))))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "cat",
+        "bird",
+        "bed"
+    ]
+}

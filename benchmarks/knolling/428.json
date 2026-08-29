@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a watch, a game controller, and a tie arranged on the right side of the image. All three objects are aligned vertically in a column. Additionally, the game controller is visibly larger than the watch, and the tie is also larger than the watch.",
+    "dsl": "(exists ?w (exists ?gc (exists ?t (and (Is ?w 'watch') (Is ?gc 'game_controller') (Is ?t 'tie') (OnRightSide ?w) (OnRightSide ?gc) (OnRightSide ?t) (AlignedVertically ?w ?gc) (AlignedVertically ?gc ?t) (LargerThan ?gc ?w) (LargerThan ?t ?w)))))",
+    "cnf": "(exists ?w (exists ?gc (exists ?t (and (Is ?w 'watch') (OnRightSide ?w) (AlignedVertically ?w ?gc) (LargerThan ?gc ?w) (OnRightSide ?gc) (AlignedVertically ?gc ?t) (LargerThan ?t ?w) (Is ?gc 'game_controller') (OnRightSide ?t) (Is ?t 'tie')))))",
+    "k": 3,
+    "object_classes": [
+        "tie",
+        "watch",
+        "game_controller"
+    ]
+}

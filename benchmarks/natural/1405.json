@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a desk next to a sofa. A plant and glasses are on the desk, with an apple inside it. On the sofa are headphones and a child holding a red umbrella.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?s (exists ?p (exists ?g (exists ?a (exists ?h (exists ?c (exists ?u (and (Is ?d 'desk') (Is ?s 'sofa') (Is ?p 'plant') (Is ?g 'glasses') (Is ?a 'apple') (Is ?h 'headphones') (Is ?c 'child') (Is ?u 'umbrella') (NextTo ?d ?s) (On ?p ?d) (On ?g ?d) (In ?a ?d) (On ?h ?s) (On ?c ?s) (Holding ?c ?u) (HasColor ?u 'red')))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?s (exists ?p (exists ?g (exists ?a (exists ?h (exists ?c (exists ?u (and (Is ?d 'desk') (NextTo ?d ?s) (On ?p ?d) (Is ?s 'sofa') (On ?h ?s) (On ?g ?d) (Is ?p 'plant') (On ?c ?s) (Is ?h 'headphones') (In ?a ?d) (Is ?g 'glasses') (Is ?c 'child') (Holding ?c ?u) (Is ?a 'apple') (Is ?u 'umbrella') (HasColor ?u 'red')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "sofa",
+        "child",
+        "glasses",
+        "plant",
+        "desk",
+        "apple"
+    ]
+}

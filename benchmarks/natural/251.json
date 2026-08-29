@@ -1,0 +1,10 @@
+{
+    "prompt": "A pixel art image of an elephant holding a metal fork.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (exists ?f (and (Is ?e 'elephant') (Is ?f 'fork') (HasMaterial ?f 'metal') (Holding ?e ?f)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (exists ?f (and (Is ?e 'elephant') (Holding ?e ?f) (HasMaterial ?f 'metal') (Is ?f 'fork')))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "fork"
+    ]
+}

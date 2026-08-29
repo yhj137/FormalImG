@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a yellow umbrella.",
+    "dsl": "(exists ?u (and (Is ?u 'umbrella') (HasColor ?u 'yellow')))",
+    "cnf": "(exists ?u (and (Is ?u 'umbrella') (HasColor ?u 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "umbrella"
+    ]
+}

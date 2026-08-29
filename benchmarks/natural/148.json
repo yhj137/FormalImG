@@ -1,0 +1,9 @@
+{
+    "prompt": "This is a pixel art style image. Every plate in the scene is empty.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?p (implies (Is ?p 'plate') (HasState ?p 'empty'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?p (or (not (Is ?p 'plate')) (HasState ?p 'empty'))))",
+    "k": 1,
+    "object_classes": [
+        "plate"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a man on a stone rock with a backpack next to him. A monitor is to the right of the man, and a metal pan is to his left. A boat is positioned to the right of the rock, while a yellow bus is to the left. Every butterfly in the scene is above the boat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?m (exists ?bp (exists ?mon (exists ?p (exists ?bt (exists ?bs (and (Is ?r 'rock') (HasMaterial ?r 'stone') (Is ?m 'man') (On ?m ?r) (Is ?bp 'backpack') (NextTo ?bp ?m) (Is ?mon 'monitor') (RightOf ?mon ?m) (Is ?p 'pan') (HasMaterial ?p 'metal') (LeftOf ?p ?m) (Is ?bt 'boat') (RightOf ?bt ?r) (Is ?bs 'bus') (HasColor ?bs 'yellow') (LeftOf ?bs ?r) (forall ?bf (implies (Is ?bf 'butterfly') (Above ?bf ?bt))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?m (exists ?bp (exists ?mon (exists ?p (exists ?bt (exists ?bs (forall ?bf (and (Is ?r 'rock') (HasMaterial ?r 'stone') (On ?m ?r) (RightOf ?bt ?r) (Is ?m 'man') (NextTo ?bp ?m) (LeftOf ?bs ?r) (Is ?bt 'boat') (or (not (Is ?bf 'butterfly')) (Above ?bf ?bt)) (RightOf ?mon ?m) (Is ?bp 'backpack') (HasColor ?bs 'yellow') (LeftOf ?p ?m) (Is ?mon 'monitor') (Is ?bs 'bus') (HasMaterial ?p 'metal') (Is ?p 'pan')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "backpack",
+        "man",
+        "monitor",
+        "rock",
+        "pan",
+        "butterfly",
+        "boat",
+        "bus"
+    ]
+}

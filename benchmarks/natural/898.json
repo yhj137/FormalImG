@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden wardrobe containing every hat. A plant stands next to the wardrobe, and to its right, a child holds a red ball.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (forall ?h (implies (Is ?h 'hat') (In ?h ?w))) (exists ?p (and (Is ?p 'plant') (NextTo ?p ?w))) (exists ?c (and (Is ?c 'child') (RightOf ?c ?w) (exists ?b (and (Is ?b 'ball') (HasColor ?b 'red') (Holding ?c ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?h (exists ?p (exists ?c (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (or (not (Is ?h 'hat')) (In ?h ?w)) (NextTo ?p ?w) (RightOf ?c ?w) (Is ?p 'plant') (Is ?c 'child') (Holding ?c ?b) (HasColor ?b 'red') (Is ?b 'ball'))))))))",
+    "k": 5,
+    "object_classes": [
+        "plant",
+        "hat",
+        "ball",
+        "wardrobe",
+        "child"
+    ]
+}

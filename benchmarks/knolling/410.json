@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the left side of the image. A screwdriver is placed to the right of the backpack, aligned horizontally with it. A pen is located below the screwdriver.",
+    "dsl": "(exists ?b (exists ?s (exists ?p (and (Is ?b 'backpack') (Is ?s 'screwdriver') (Is ?p 'pen') (OnLeftSide ?b) (RightOf ?s ?b) (AlignedHorizontally ?b ?s) (Below ?p ?s)))))",
+    "cnf": "(exists ?b (exists ?s (exists ?p (and (Is ?b 'backpack') (OnLeftSide ?b) (RightOf ?s ?b) (AlignedHorizontally ?b ?s) (Is ?s 'screwdriver') (Below ?p ?s) (Is ?p 'pen')))))",
+    "k": 3,
+    "object_classes": [
+        "backpack",
+        "screwdriver",
+        "pen"
+    ]
+}

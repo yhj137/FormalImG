@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase on the right side and a backpack to its left, with the suitcase being larger than the backpack. For every apple, there exists a bowl, a plate, a hat, a shoe, a phone, a mouse, and a wrench satisfying the following: the apple is to the left of the bowl, the bowl is to the left of the plate, and the plate is to the left of the backpack; the hat is on the bottom side and aligned vertically with the suitcase; the shoe is to the left of the hat and aligned vertically with the backpack; the phone is to the left of the shoe and aligned vertically with the plate; the mouse is to the left of the phone and aligned vertically with the bowl; and the wrench is to the left of the mouse and aligned vertically with the apple.",
+    "dsl": "(exists ?suitcase (exists ?backpack (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?backpack 'backpack') (LeftOf ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (forall ?apple (implies (Is ?apple 'apple') (exists ?bowl (exists ?plate (exists ?hat (exists ?shoe (exists ?phone (exists ?mouse (exists ?wrench (and (Is ?bowl 'bowl') (Is ?plate 'plate') (Is ?hat 'hat') (Is ?shoe 'shoe') (Is ?phone 'phone') (Is ?mouse 'mouse') (Is ?wrench 'wrench') (LeftOf ?apple ?bowl) (LeftOf ?bowl ?plate) (LeftOf ?plate ?backpack) (OnBottomSide ?hat) (LeftOf ?shoe ?hat) (LeftOf ?phone ?shoe) (LeftOf ?mouse ?phone) (LeftOf ?wrench ?mouse) (AlignedVertically ?hat ?suitcase) (AlignedVertically ?shoe ?backpack) (AlignedVertically ?phone ?plate) (AlignedVertically ?mouse ?bowl) (AlignedVertically ?wrench ?apple))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (forall ?apple (exists ?bowl (exists ?plate (exists ?hat (exists ?shoe (exists ?phone (exists ?mouse (exists ?wrench (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?backpack ?suitcase) (LargerThan ?suitcase ?backpack) (Is ?backpack 'backpack') (or (not (Is ?apple 'apple')) (AlignedVertically ?hat ?suitcase)) (or (not (Is ?apple 'apple')) (LeftOf ?plate ?backpack)) (or (not (Is ?apple 'apple')) (LeftOf ?wrench ?mouse)) (or (not (Is ?apple 'apple')) (AlignedVertically ?shoe ?backpack)) (or (not (Is ?apple 'apple')) (LeftOf ?shoe ?hat)) (or (not (Is ?apple 'apple')) (LeftOf ?bowl ?plate)) (or (not (Is ?apple 'apple')) (OnBottomSide ?hat)) (or (not (Is ?apple 'apple')) (AlignedVertically ?phone ?plate)) (or (not (Is ?apple 'apple')) (LeftOf ?mouse ?phone)) (or (not (Is ?apple 'apple')) (AlignedVertically ?mouse ?bowl)) (or (not (Is ?apple 'apple')) (Is ?wrench 'wrench')) (or (not (Is ?apple 'apple')) (AlignedVertically ?wrench ?apple)) (or (not (Is ?apple 'apple')) (LeftOf ?phone ?shoe)) (or (not (Is ?apple 'apple')) (Is ?shoe 'shoe')) (or (not (Is ?apple 'apple')) (LeftOf ?apple ?bowl)) (or (not (Is ?apple 'apple')) (Is ?plate 'plate')) (or (not (Is ?apple 'apple')) (Is ?hat 'hat')) (or (not (Is ?apple 'apple')) (Is ?mouse 'mouse')) (or (not (Is ?apple 'apple')) (Is ?phone 'phone')) (or (not (Is ?apple 'apple')) (Is ?bowl 'bowl')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "apple",
+        "wrench",
+        "phone",
+        "hat",
+        "backpack",
+        "mouse",
+        "bowl",
+        "suitcase",
+        "shoe"
+    ]
+}

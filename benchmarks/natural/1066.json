@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a table with every book placed on it. A basket containing a triangular sandwich rests on the table, alongside a cup with a bottle to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (and (Is ?t 'table') (forall ?b (implies (Is ?b 'book') (On ?b ?t))) (exists ?bs (exists ?s (exists ?c (exists ?bo (and (Is ?bs 'basket') (On ?bs ?t) (Is ?s 'sandwich') (HasShape ?s 'triangular') (In ?s ?bs) (Is ?c 'cup') (On ?c ?t) (Is ?bo 'bottle') (LeftOf ?bo ?c)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (forall ?b (exists ?bs (exists ?s (exists ?c (exists ?bo (and (Is ?t 'table') (or (not (Is ?b 'book')) (On ?b ?t)) (On ?bs ?t) (On ?c ?t) (Is ?bs 'basket') (In ?s ?bs) (Is ?c 'cup') (LeftOf ?bo ?c) (HasShape ?s 'triangular') (Is ?bo 'bottle') (Is ?s 'sandwich')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "book",
+        "table",
+        "cup",
+        "sandwich",
+        "basket"
+    ]
+}

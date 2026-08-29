@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is holding a blue cup. He is located to the right of a rectangular desk. There is a book inside the desk.",
+    "dsl": "(exists ?m (exists ?c (exists ?d (exists ?b (and (Is ?m 'man') (Is ?c 'cup') (HasColor ?c 'blue') (Is ?d 'desk') (HasShape ?d 'rectangular') (Is ?b 'book') (Holding ?m ?c) (RightOf ?m ?d) (In ?b ?d))))))",
+    "cnf": "(exists ?m (exists ?c (exists ?d (exists ?b (and (Is ?m 'man') (Holding ?m ?c) (RightOf ?m ?d) (HasColor ?c 'blue') (HasShape ?d 'rectangular') (In ?b ?d) (Is ?c 'cup') (Is ?d 'desk') (Is ?b 'book'))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "book",
+        "desk",
+        "cup"
+    ]
+}

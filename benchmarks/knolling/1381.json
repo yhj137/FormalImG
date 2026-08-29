@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown suitcase is positioned on the right side of the layout. Vertically aligned with the suitcase is a sequence of items: a laptop, a pizza, a book, a fork, and a pair of pliers. In terms of size, the laptop is smaller than the suitcase but larger than the book. The pizza is larger than the book. The fork is smaller than the pizza, while the pliers are larger than the fork. Finally, for every ruler present in the scene, it is vertically aligned with the pliers and is smaller than the pliers.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?pizza (exists ?book (exists ?fork (exists ?pliers (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnRightSide ?suitcase) (Is ?laptop 'laptop') (Is ?pizza 'pizza') (Is ?book 'book') (Is ?fork 'fork') (Is ?pliers 'pliers') (AlignedVertically ?suitcase ?laptop) (AlignedVertically ?laptop ?pizza) (AlignedVertically ?pizza ?book) (AlignedVertically ?book ?fork) (AlignedVertically ?fork ?pliers) (SmallerThan ?laptop ?suitcase) (LargerThan ?laptop ?book) (LargerThan ?pizza ?book) (SmallerThan ?fork ?pizza) (LargerThan ?pliers ?fork) (forall ?r (implies (Is ?r 'ruler') (and (AlignedVertically ?r ?pliers) (SmallerThan ?r ?pliers)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?pizza (exists ?book (exists ?fork (exists ?pliers (forall ?r (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnRightSide ?suitcase) (AlignedVertically ?suitcase ?laptop) (SmallerThan ?laptop ?suitcase) (Is ?laptop 'laptop') (AlignedVertically ?laptop ?pizza) (LargerThan ?laptop ?book) (Is ?pizza 'pizza') (AlignedVertically ?pizza ?book) (AlignedVertically ?book ?fork) (LargerThan ?pizza ?book) (Is ?book 'book') (Is ?fork 'fork') (AlignedVertically ?fork ?pliers) (SmallerThan ?fork ?pizza) (Is ?pliers 'pliers') (LargerThan ?pliers ?fork) (or (not (Is ?r 'ruler')) (AlignedVertically ?r ?pliers)) (or (not (Is ?r 'ruler')) (SmallerThan ?r ?pliers))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "book",
+        "laptop",
+        "pliers",
+        "pizza",
+        "fork",
+        "suitcase"
+    ]
+}

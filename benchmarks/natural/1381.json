@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman on a rug holding an open book. A monitor is also on the rug, with a bird holding a flower perched on it. Every ball in the scene is located on the rug.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?w (exists ?bk (exists ?m (exists ?b (exists ?f (and (Is ?r 'rug') (Is ?w 'woman') (Is ?bk 'book') (Is ?m 'monitor') (Is ?b 'bird') (Is ?f 'flower') (On ?w ?r) (Holding ?w ?bk) (HasState ?bk 'open') (On ?m ?r) (On ?b ?m) (Holding ?b ?f) (forall ?bl (implies (Is ?bl 'ball') (On ?bl ?r)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?w (exists ?bk (exists ?m (exists ?b (exists ?f (forall ?bl (and (Is ?r 'rug') (On ?w ?r) (On ?m ?r) (Is ?w 'woman') (Holding ?w ?bk) (or (not (Is ?bl 'ball')) (On ?bl ?r)) (Is ?m 'monitor') (On ?b ?m) (Is ?bk 'book') (HasState ?bk 'open') (Is ?b 'bird') (Holding ?b ?f) (Is ?f 'flower'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "rug",
+        "monitor",
+        "woman",
+        "bird",
+        "flower",
+        "ball"
+    ]
+}

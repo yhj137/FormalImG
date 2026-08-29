@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition begins with a pair of jeans located on the left side of the scene. To the right of the jeans is a tie, which is visually smaller than the jeans. Continuing the sequence to the right, there is a cutting board positioned to the right of the tie. A bottle is placed to the right of the cutting board, noting that the cutting board is larger than the bottle. Further along, there is a knife positioned such that the bottle is to its left. Finally, a spoon is situated on the right side of the image, with the knife located to its left.",
+    "dsl": "(exists ?jeans (exists ?tie (exists ?board (exists ?bottle (exists ?knife (exists ?spoon (and (Is ?jeans 'jeans') (Is ?tie 'tie') (Is ?board 'cutting_board') (Is ?bottle 'bottle') (Is ?knife 'knife') (Is ?spoon 'spoon') (OnLeftSide ?jeans) (RightOf ?tie ?jeans) (SmallerThan ?tie ?jeans) (RightOf ?board ?tie) (LargerThan ?board ?bottle) (RightOf ?bottle ?board) (LeftOf ?bottle ?knife) (LeftOf ?knife ?spoon) (OnRightSide ?spoon))))))))",
+    "cnf": "(exists ?jeans (exists ?tie (exists ?board (exists ?bottle (exists ?knife (exists ?spoon (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (RightOf ?tie ?jeans) (SmallerThan ?tie ?jeans) (Is ?tie 'tie') (RightOf ?board ?tie) (Is ?board 'cutting_board') (LargerThan ?board ?bottle) (RightOf ?bottle ?board) (Is ?bottle 'bottle') (LeftOf ?bottle ?knife) (Is ?knife 'knife') (LeftOf ?knife ?spoon) (Is ?spoon 'spoon') (OnRightSide ?spoon))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "cutting_board",
+        "jeans",
+        "knife",
+        "bottle",
+        "spoon"
+    ]
+}

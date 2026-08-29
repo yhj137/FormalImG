@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a pair of blue jeans and a cutting board aligned vertically, with the jeans above the board. A white sock is placed to the left of the cutting board, and the jeans are larger than the sock. A pizza, which is smaller than the cutting board, is positioned above the cutting board. A pair of scissors is located to the left of the jeans. A red apple is placed above the scissors, and the two are aligned vertically. Furthermore, for every white cup in the layout, there is a spoon to its left and a knife such that the cup is to the left of the knife; any such cup is also positioned above the red apple.",
+    "dsl": "(exists ?jeans (exists ?board (exists ?sock (exists ?scissors (exists ?apple (exists ?pizza (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?board 'cutting_board') (Is ?sock 'sock') (Has ?sock 'white') (Is ?scissors 'scissors') (Is ?apple 'apple') (Has ?apple 'red') (Is ?pizza 'pizza') (Above ?jeans ?board) (AlignedVertically ?jeans ?board) (LeftOf ?sock ?board) (LargerThan ?jeans ?sock) (Above ?pizza ?board) (SmallerThan ?pizza ?board) (LeftOf ?scissors ?jeans) (Above ?apple ?scissors) (AlignedVertically ?apple ?scissors) (forall ?cup (implies (and (Is ?cup 'cup') (Has ?cup 'white')) (exists ?spoon (exists ?knife (and (Is ?spoon 'spoon') (Is ?knife 'knife') (LeftOf ?spoon ?cup) (LeftOf ?cup ?knife) (Above ?cup ?apple)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?board (exists ?sock (exists ?scissors (exists ?apple (exists ?pizza (forall ?cup (exists ?spoon (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Above ?jeans ?board) (AlignedVertically ?jeans ?board) (Is ?board 'cutting_board') (LargerThan ?jeans ?sock) (LeftOf ?sock ?board) (LeftOf ?scissors ?jeans) (Above ?pizza ?board) (Has ?sock 'white') (Is ?scissors 'scissors') (Above ?apple ?scissors) (SmallerThan ?pizza ?board) (Is ?pizza 'pizza') (Is ?sock 'sock') (AlignedVertically ?apple ?scissors) (Has ?apple 'red') (or (not (Is ?cup 'cup')) (not (Has ?cup 'white')) (Above ?cup ?apple)) (Is ?apple 'apple') (or (not (Is ?cup 'cup')) (not (Has ?cup 'white')) (LeftOf ?cup ?knife)) (or (not (Is ?cup 'cup')) (not (Has ?cup 'white')) (LeftOf ?spoon ?cup)) (or (not (Is ?cup 'cup')) (not (Has ?cup 'white')) (Is ?knife 'knife')) (or (not (Is ?cup 'cup')) (not (Has ?cup 'white')) (Is ?spoon 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sock",
+        "apple",
+        "pizza",
+        "cup",
+        "cutting_board",
+        "jeans",
+        "knife",
+        "scissors",
+        "spoon"
+    ]
+}

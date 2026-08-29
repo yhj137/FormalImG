@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate located on the top side and a shoe located on the bottom side. A laptop is positioned such that it is vertically aligned with both the plate and the shoe. Furthermore, a lighter is placed to the left of the laptop, while a pair of glasses is positioned to the right of the laptop.",
+    "dsl": "(exists ?plate (exists ?shoe (exists ?laptop (exists ?lighter (exists ?glasses (and (Is ?plate 'plate') (Is ?shoe 'shoe') (Is ?laptop 'laptop') (Is ?lighter 'lighter') (Is ?glasses 'glasses') (OnTopSide ?plate) (OnBottomSide ?shoe) (AlignedVertically ?plate ?laptop) (AlignedVertically ?laptop ?shoe) (LeftOf ?lighter ?laptop) (RightOf ?glasses ?laptop)))))))",
+    "cnf": "(exists ?plate (exists ?shoe (exists ?laptop (exists ?lighter (exists ?glasses (and (Is ?plate 'plate') (OnTopSide ?plate) (AlignedVertically ?plate ?laptop) (Is ?laptop 'laptop') (AlignedVertically ?laptop ?shoe) (OnBottomSide ?shoe) (LeftOf ?lighter ?laptop) (Is ?shoe 'shoe') (RightOf ?glasses ?laptop) (Is ?lighter 'lighter') (Is ?glasses 'glasses')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "plate",
+        "lighter",
+        "shoe"
+    ]
+}

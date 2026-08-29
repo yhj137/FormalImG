@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a cutting board located on the left side of the image. Directly below the cutting board is a sandwich, and below the sandwich is a carrot; these three objects are aligned vertically. To the right of the cutting board is a camera. Positioned below the camera is a lighter, which is visually smaller than the camera and located to the right of the sandwich. Finally, a ruler is placed to the right of the carrot and is positioned on the bottom side of the scene.",
+    "dsl": "(exists ?cb (exists ?sw (exists ?ca (exists ?cam (exists ?li (exists ?ru (and (Is ?cb 'cutting_board') (Is ?sw 'sandwich') (Is ?ca 'carrot') (Is ?cam 'camera') (Is ?li 'lighter') (Is ?ru 'ruler') (OnLeftSide ?cb) (Below ?sw ?cb) (Below ?ca ?sw) (AlignedVertically ?cb ?sw) (AlignedVertically ?sw ?ca) (RightOf ?cam ?cb) (RightOf ?li ?sw) (Below ?li ?cam) (SmallerThan ?li ?cam) (RightOf ?ru ?ca) (OnBottomSide ?ru))))))))",
+    "cnf": "(exists ?cb (exists ?sw (exists ?ca (exists ?cam (exists ?li (exists ?ru (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Below ?sw ?cb) (AlignedVertically ?cb ?sw) (Is ?sw 'sandwich') (Below ?ca ?sw) (RightOf ?cam ?cb) (AlignedVertically ?sw ?ca) (Is ?ca 'carrot') (Is ?cam 'camera') (Below ?li ?cam) (RightOf ?li ?sw) (RightOf ?ru ?ca) (SmallerThan ?li ?cam) (Is ?li 'lighter') (Is ?ru 'ruler') (OnBottomSide ?ru))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "cutting_board",
+        "lighter",
+        "camera",
+        "sandwich"
+    ]
+}

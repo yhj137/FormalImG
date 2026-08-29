@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden bookshelf, with every shoe placed inside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (forall ?s (implies (Is ?s 'shoes') (In ?s ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?s (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (or (not (Is ?s 'shoes')) (In ?s ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "shoes",
+        "bookshelf"
+    ]
+}

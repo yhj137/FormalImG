@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A cup is positioned on the top side of the layout. A stapler is located to the right of the cup. For every carrot in the image, it is placed below the stapler and appears smaller than the stapler.",
+    "dsl": "(exists ?cup (exists ?stapler (and (Is ?cup 'cup') (OnTopSide ?cup) (Is ?stapler 'stapler') (RightOf ?stapler ?cup) (forall ?carrot (implies (Is ?carrot 'carrot') (and (Below ?carrot ?stapler) (SmallerThan ?carrot ?stapler)))))))",
+    "cnf": "(exists ?cup (exists ?stapler (forall ?carrot (and (Is ?cup 'cup') (OnTopSide ?cup) (RightOf ?stapler ?cup) (Is ?stapler 'stapler') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?stapler)) (or (not (Is ?carrot 'carrot')) (SmallerThan ?carrot ?stapler))))))",
+    "k": 3,
+    "object_classes": [
+        "stapler",
+        "carrot",
+        "cup"
+    ]
+}

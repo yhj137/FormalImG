@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. Every tree is positioned to the right of a lamp with headphones resting on it. To the left of the lamp stands a refrigerator containing a sandwich, topped with a round clock. A horse holding a flower is located to the left of the refrigerator, and shoes are found to the left of the horse.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'tree') (exists ?la (exists ?hp (exists ?r (exists ?sa (exists ?cl (exists ?h (exists ?fl (exists ?sh (and (Is ?la 'lamp') (Is ?hp 'headphones') (Is ?r 'refrigerator') (Is ?sa 'sandwich') (Is ?cl 'clock') (Is ?h 'horse') (Is ?fl 'flower') (Is ?sh 'shoes') (RightOf ?t ?la) (On ?hp ?la) (LeftOf ?r ?la) (In ?sa ?r) (On ?cl ?r) (HasShape ?cl 'round') (LeftOf ?h ?r) (Holding ?h ?fl) (LeftOf ?sh ?h)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (exists ?la (exists ?hp (exists ?r (exists ?sa (exists ?cl (exists ?h (exists ?fl (exists ?sh (and (or (not (Is ?t 'tree')) (Is ?la 'lamp')) (or (not (Is ?t 'tree')) (RightOf ?t ?la)) (or (not (Is ?t 'tree')) (Is ?hp 'headphones')) (or (not (Is ?t 'tree')) (On ?hp ?la)) (or (not (Is ?t 'tree')) (Is ?sh 'shoes')) (or (not (Is ?t 'tree')) (Is ?r 'refrigerator')) (or (not (Is ?t 'tree')) (LeftOf ?r ?la)) (or (not (Is ?t 'tree')) (Is ?fl 'flower')) (or (not (Is ?t 'tree')) (LeftOf ?sh ?h)) (or (not (Is ?t 'tree')) (Is ?sa 'sandwich')) (or (not (Is ?t 'tree')) (In ?sa ?r)) (or (not (Is ?t 'tree')) (Is ?h 'horse')) (or (not (Is ?t 'tree')) (Holding ?h ?fl)) (or (not (Is ?t 'tree')) (Is ?cl 'clock')) (or (not (Is ?t 'tree')) (On ?cl ?r)) (or (not (Is ?t 'tree')) (LeftOf ?h ?r)) (or (not (Is ?t 'tree')) (HasShape ?cl 'round')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shoes",
+        "flower",
+        "sandwich",
+        "horse",
+        "tree",
+        "refrigerator",
+        "clock",
+        "headphones",
+        "lamp"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a gray hammer, positioned next to and to the right of every monitor.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (exists ?h (and (Is ?p 'man') (Is ?h 'hammer') (HasColor ?h 'gray') (Holding ?p ?h) (forall ?m (implies (Is ?m 'monitor') (and (NextTo ?p ?m) (RightOf ?p ?m))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (exists ?h (forall ?m (and (Is ?p 'man') (Holding ?p ?h) (or (not (Is ?m 'monitor')) (NextTo ?p ?m)) (HasColor ?h 'gray') (or (not (Is ?m 'monitor')) (RightOf ?p ?m)) (Is ?h 'hammer'))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "man",
+        "monitor"
+    ]
+}

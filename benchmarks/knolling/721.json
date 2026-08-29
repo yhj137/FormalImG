@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill and a ruler, both positioned on the bottom side of the image and aligned horizontally with each other. Furthermore, for every glove in the image, there is a donut corresponding to it. Each donut is smaller than its paired glove, and each glove is aligned horizontally with the drill.",
+    "dsl": "(exists ?drill (exists ?ruler (and (Is ?drill 'drill') (Is ?ruler 'ruler') (OnBottomSide ?drill) (OnBottomSide ?ruler) (AlignedHorizontally ?drill ?ruler) (forall ?glove (implies (Is ?glove 'glove') (exists ?donut (and (Is ?donut 'donut') (SmallerThan ?donut ?glove) (AlignedHorizontally ?glove ?drill))))))))",
+    "cnf": "(exists ?drill (exists ?ruler (forall ?glove (exists ?donut (and (Is ?drill 'drill') (OnBottomSide ?drill) (AlignedHorizontally ?drill ?ruler) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?glove ?drill)) (OnBottomSide ?ruler) (or (not (Is ?glove 'glove')) (SmallerThan ?donut ?glove)) (Is ?ruler 'ruler') (or (not (Is ?glove 'glove')) (Is ?donut 'donut')))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "drill",
+        "glove",
+        "donut"
+    ]
+}

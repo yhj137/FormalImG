@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden bookshelf with a woman next to it. To the left of the woman is a brown dog. On the bookshelf rests a round rock with glasses on top, along with a pizza that has a metal spoon on it; a red apple sits next to the pizza. All shoes are positioned next to the dog.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (exists ?d (exists ?r (exists ?g (exists ?p (exists ?a (exists ?s (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?w 'woman') (NextTo ?w ?b) (Is ?d 'dog') (HasColor ?d 'brown') (LeftOf ?d ?w) (Is ?r 'rock') (HasShape ?r 'round') (On ?r ?b) (Is ?g 'glasses') (On ?g ?r) (Is ?p 'pizza') (On ?p ?b) (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?p) (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?s ?p) (forall ?sh (implies (Is ?sh 'shoes') (NextTo ?sh ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (exists ?d (exists ?r (exists ?g (exists ?p (exists ?a (exists ?s (forall ?sh (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (NextTo ?w ?b) (On ?r ?b) (Is ?w 'woman') (LeftOf ?d ?w) (On ?p ?b) (HasShape ?r 'round') (On ?g ?r) (HasColor ?d 'brown') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?d)) (Is ?p 'pizza') (NextTo ?a ?p) (Is ?r 'rock') (Is ?g 'glasses') (Is ?d 'dog') (On ?s ?p) (HasColor ?a 'red') (HasMaterial ?s 'metal') (Is ?a 'apple') (Is ?s 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "shoes",
+        "glasses",
+        "woman",
+        "pizza",
+        "rock",
+        "dog",
+        "apple",
+        "bookshelf"
+    ]
+}

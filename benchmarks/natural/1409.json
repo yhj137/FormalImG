@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. Headphones are to the left of a hat, which is to the left of a round orange. A banana is to the right of the orange, and a cat holding a rectangular phone is to the right of the banana. The cat is to the left of a horse, while a bus is to the right of the horse.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?headphones (exists ?hat (exists ?orange (exists ?banana (exists ?cat (exists ?phone (exists ?horse (exists ?bus (and (Is ?headphones 'headphones') (Is ?hat 'hat') (Is ?orange 'orange') (Is ?banana 'banana') (Is ?cat 'cat') (Is ?phone 'phone') (Is ?horse 'horse') (Is ?bus 'bus') (HasShape ?orange 'round') (HasShape ?phone 'rectangular') (LeftOf ?headphones ?hat) (LeftOf ?hat ?orange) (RightOf ?banana ?orange) (RightOf ?cat ?banana) (Holding ?cat ?phone) (LeftOf ?cat ?horse) (RightOf ?bus ?horse)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?headphones (exists ?hat (exists ?orange (exists ?banana (exists ?cat (exists ?phone (exists ?horse (exists ?bus (and (Is ?headphones 'headphones') (LeftOf ?headphones ?hat) (Is ?hat 'hat') (LeftOf ?hat ?orange) (HasShape ?orange 'round') (RightOf ?banana ?orange) (Is ?orange 'orange') (Is ?banana 'banana') (RightOf ?cat ?banana) (Is ?cat 'cat') (Holding ?cat ?phone) (LeftOf ?cat ?horse) (HasShape ?phone 'rectangular') (Is ?horse 'horse') (RightOf ?bus ?horse) (Is ?phone 'phone') (Is ?bus 'bus')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "cat",
+        "headphones",
+        "hat",
+        "bus",
+        "banana",
+        "phone",
+        "horse",
+        "orange"
+    ]
+}

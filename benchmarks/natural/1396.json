@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a metal desk with a sofa to its left. Every laptop is placed on the desk, along with a screwdriver and a fish. Above the desk, a bird is holding a knife.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?s (exists ?sc (exists ?f (exists ?b (exists ?k (and (Is ?d 'desk') (HasMaterial ?d 'metal') (Is ?s 'sofa') (Is ?sc 'screwdriver') (Is ?f 'fish') (Is ?b 'bird') (Is ?k 'knife') (LeftOf ?s ?d) (On ?sc ?d) (On ?f ?d) (Above ?b ?d) (Holding ?b ?k) (forall ?l (implies (Is ?l 'laptop') (On ?l ?d)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?s (exists ?sc (exists ?f (exists ?b (exists ?k (forall ?l (and (Is ?d 'desk') (HasMaterial ?d 'metal') (LeftOf ?s ?d) (On ?sc ?d) (Is ?s 'sofa') (On ?f ?d) (Is ?sc 'screwdriver') (Above ?b ?d) (Is ?f 'fish') (or (not (Is ?l 'laptop')) (On ?l ?d)) (Is ?b 'bird') (Holding ?b ?k) (Is ?k 'knife'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "knife",
+        "laptop",
+        "desk",
+        "bird",
+        "screwdriver",
+        "fish",
+        "sofa"
+    ]
+}

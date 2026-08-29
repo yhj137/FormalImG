@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene inside a bus features a man holding a basket and a metal wardrobe. To the left of the wardrobe is a desk with a keyboard on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?bk (exists ?w (exists ?d (exists ?k (and (Is ?b 'bus') (Is ?m 'man') (In ?m ?b) (Is ?bk 'basket') (Holding ?m ?bk) (Is ?w 'wardrobe') (In ?w ?b) (HasMaterial ?w 'metal') (Is ?d 'desk') (LeftOf ?d ?w) (Is ?k 'keyboard') (On ?k ?d)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?bk (exists ?w (exists ?d (exists ?k (and (Is ?b 'bus') (In ?m ?b) (In ?w ?b) (Is ?m 'man') (Holding ?m ?bk) (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (Is ?bk 'basket') (LeftOf ?d ?w) (Is ?d 'desk') (On ?k ?d) (Is ?k 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "man",
+        "desk",
+        "bus",
+        "wardrobe",
+        "basket"
+    ]
+}

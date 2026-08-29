@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a house containing a rug, on which stands an elephant wearing a red hat. A green shirt lies to the left of the rug. To the right of the house is a blue car with a pan on top, containing a cake topped with an orange. Every rock in the scene is located to the left of the house.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?r (exists ?s (exists ?e (exists ?ht (exists ?c (exists ?p (exists ?ck (and (Is ?h 'house') (Is ?r 'rug') (In ?r ?h) (Is ?s 'shirt') (HasColor ?s 'green') (LeftOf ?s ?r) (Is ?e 'elephant') (On ?e ?r) (Is ?ht 'hat') (HasColor ?ht 'red') (On ?ht ?e) (Is ?c 'car') (HasColor ?c 'blue') (RightOf ?c ?h) (Is ?p 'pan') (On ?p ?c) (Is ?ck 'cake') (In ?ck ?p) (forall ?rk (implies (Is ?rk 'rock') (LeftOf ?rk ?h))) (exists ?o (and (Is ?o 'orange') (On ?o ?ck)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?r (exists ?s (exists ?e (exists ?ht (exists ?c (exists ?p (exists ?ck (forall ?rk (exists ?o (and (Is ?h 'house') (In ?r ?h) (RightOf ?c ?h) (Is ?r 'rug') (LeftOf ?s ?r) (or (not (Is ?rk 'rock')) (LeftOf ?rk ?h)) (HasColor ?c 'blue') (On ?p ?c) (On ?e ?r) (HasColor ?s 'green') (Is ?c 'car') (Is ?p 'pan') (In ?ck ?p) (Is ?e 'elephant') (On ?ht ?e) (Is ?s 'shirt') (Is ?ck 'cake') (On ?o ?ck) (HasColor ?ht 'red') (Is ?o 'orange') (Is ?ht 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "rock",
+        "hat",
+        "cake",
+        "elephant",
+        "shirt",
+        "rug",
+        "house",
+        "car",
+        "orange"
+    ]
+}

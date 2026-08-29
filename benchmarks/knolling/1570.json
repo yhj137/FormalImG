@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a shirt. Below the shirt is a pair of jeans, aligned vertically with it. To the right of the shirt is a tie, aligned horizontally with the shirt, and below the tie is a sock, aligned vertically with it. To the right of the tie is a remote, aligned horizontally with the tie, and below the remote is a ruler, aligned vertically with it. For every pizza, it is on the right side of the image, the remote is to its left and aligned horizontally with it, and there is a pen below the pizza, aligned vertically with it.",
+    "dsl": "(exists ?shirt (exists ?jeans (exists ?tie (exists ?sock (exists ?remote (exists ?ruler (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?jeans 'jeans') (Below ?jeans ?shirt) (AlignedVertically ?jeans ?shirt) (Is ?tie 'tie') (RightOf ?tie ?shirt) (AlignedHorizontally ?tie ?shirt) (Is ?sock 'sock') (Below ?sock ?tie) (AlignedVertically ?sock ?tie) (Is ?remote 'remote') (RightOf ?remote ?tie) (AlignedHorizontally ?remote ?tie) (Is ?ruler 'ruler') (Below ?ruler ?remote) (AlignedVertically ?ruler ?remote) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?pen (and (Is ?pen 'pen') (OnRightSide ?pizza) (LeftOf ?remote ?pizza) (AlignedHorizontally ?remote ?pizza) (Below ?pen ?pizza) (AlignedVertically ?pen ?pizza))))))))))))",
+    "cnf": "(exists ?shirt (exists ?jeans (exists ?tie (exists ?sock (exists ?remote (exists ?ruler (forall ?pizza (exists ?pen (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Below ?jeans ?shirt) (AlignedVertically ?jeans ?shirt) (Is ?jeans 'jeans') (RightOf ?tie ?shirt) (AlignedHorizontally ?tie ?shirt) (Is ?tie 'tie') (Below ?sock ?tie) (AlignedVertically ?sock ?tie) (Is ?sock 'sock') (RightOf ?remote ?tie) (AlignedHorizontally ?remote ?tie) (Is ?remote 'remote') (Below ?ruler ?remote) (AlignedVertically ?ruler ?remote) (Is ?ruler 'ruler') (or (not (Is ?pizza 'pizza')) (LeftOf ?remote ?pizza)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?remote ?pizza)) (or (not (Is ?pizza 'pizza')) (OnRightSide ?pizza)) (or (not (Is ?pizza 'pizza')) (Below ?pen ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?pen 'pen')) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?pen ?pizza)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "tie",
+        "sock",
+        "pen",
+        "pizza",
+        "jeans",
+        "shirt"
+    ]
+}

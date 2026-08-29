@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. Every tree has a cat on it and a lion next to it. To the right of the lion sits a car with a fluffy teddy bear inside. A wooden desk stands next to the lion, with an umbrella beside it. Resting on the desk are a keyboard and a metal spoon, with a fork lying next to the spoon.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?t (implies (Is ?t 'tree') (exists ?c (exists ?l (exists ?car (exists ?tb (exists ?d (exists ?u (exists ?k (exists ?s (exists ?f (and (Is ?c 'cat') (On ?c ?t) (Is ?l 'lion') (NextTo ?l ?t) (Is ?car 'car') (RightOf ?car ?l) (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (In ?tb ?car) (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?d ?l) (Is ?u 'umbrella') (NextTo ?u ?d) (Is ?k 'keyboard') (On ?k ?d) (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?s ?d) (Is ?f 'fork') (NextTo ?f ?s))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?t (exists ?c (exists ?l (exists ?car (exists ?tb (exists ?d (exists ?u (exists ?k (exists ?s (exists ?f (and (or (not (Is ?t 'tree')) (Is ?c 'cat')) (or (not (Is ?t 'tree')) (On ?c ?t)) (or (not (Is ?t 'tree')) (Is ?l 'lion')) (or (not (Is ?t 'tree')) (NextTo ?l ?t)) (or (not (Is ?t 'tree')) (Is ?car 'car')) (or (not (Is ?t 'tree')) (RightOf ?car ?l)) (or (not (Is ?t 'tree')) (Is ?tb 'teddy bear')) (or (not (Is ?t 'tree')) (NextTo ?d ?l)) (or (not (Is ?t 'tree')) (In ?tb ?car)) (or (not (Is ?t 'tree')) (HasMaterial ?tb 'fluffy')) (or (not (Is ?t 'tree')) (HasMaterial ?d 'wooden')) (or (not (Is ?t 'tree')) (Is ?u 'umbrella')) (or (not (Is ?t 'tree')) (NextTo ?u ?d)) (or (not (Is ?t 'tree')) (Is ?d 'desk')) (or (not (Is ?t 'tree')) (Is ?k 'keyboard')) (or (not (Is ?t 'tree')) (On ?k ?d)) (or (not (Is ?t 'tree')) (Is ?s 'spoon')) (or (not (Is ?t 'tree')) (On ?s ?d)) (or (not (Is ?t 'tree')) (HasMaterial ?s 'metal')) (or (not (Is ?t 'tree')) (Is ?f 'fork')) (or (not (Is ?t 'tree')) (NextTo ?f ?s))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lion",
+        "desk",
+        "spoon",
+        "fork",
+        "keyboard",
+        "tree",
+        "cat",
+        "teddy bear",
+        "car",
+        "umbrella"
+    ]
+}

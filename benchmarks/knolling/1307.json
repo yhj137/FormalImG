@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase located on the left side, with a shirt placed above it. A keyboard is positioned to the left of the suitcase. For every sock in the image, there is a bottle aligned horizontally with the sock. Additionally, a watch is located to the left of the bottle, and a wrench is positioned above the watch. The sock is visually smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?keyboard (and (Is ?suitcase 'suitcase') (Is ?shirt 'shirt') (Is ?keyboard 'keyboard') (OnLeftSide ?suitcase) (Above ?shirt ?suitcase) (LeftOf ?keyboard ?suitcase) (forall ?sock (implies (Is ?sock 'sock') (exists ?bottle (exists ?watch (exists ?wrench (and (Is ?bottle 'bottle') (Is ?watch 'watch') (Is ?wrench 'wrench') (SmallerThan ?sock ?suitcase) (AlignedHorizontally ?sock ?bottle) (LeftOf ?watch ?bottle) (Above ?wrench ?watch)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?keyboard (forall ?sock (exists ?bottle (exists ?watch (exists ?wrench (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?shirt ?suitcase) (LeftOf ?keyboard ?suitcase) (Is ?shirt 'shirt') (or (not (Is ?sock 'sock')) (SmallerThan ?sock ?suitcase)) (Is ?keyboard 'keyboard') (or (not (Is ?sock 'sock')) (Is ?wrench 'wrench')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?bottle)) (or (not (Is ?sock 'sock')) (Is ?watch 'watch')) (or (not (Is ?sock 'sock')) (Above ?wrench ?watch)) (or (not (Is ?sock 'sock')) (LeftOf ?watch ?bottle)) (or (not (Is ?sock 'sock')) (Is ?bottle 'bottle'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "wrench",
+        "watch",
+        "bottle",
+        "suitcase",
+        "shirt"
+    ]
+}

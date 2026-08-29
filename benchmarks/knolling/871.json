@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue shirt is positioned on the right side of the scene. For every tie, which is red, the shirt is located to its right. Arranged vertically below the tie are a pink donut, a green lighter, and a black keyboard in that sequence.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnRightSide ?shirt) (forall ?tie (implies (Is ?tie 'tie') (exists ?donut (exists ?lighter (exists ?keyboard (and (Has ?tie 'red') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?lighter 'lighter') (Has ?lighter 'green') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (RightOf ?shirt ?tie) (Below ?donut ?tie) (Below ?lighter ?donut) (Below ?keyboard ?lighter)))))))))",
+    "cnf": "(exists ?shirt (forall ?tie (exists ?donut (exists ?lighter (exists ?keyboard (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnRightSide ?shirt) (or (not (Is ?tie 'tie')) (RightOf ?shirt ?tie)) (or (not (Is ?tie 'tie')) (Has ?keyboard 'black')) (or (not (Is ?tie 'tie')) (Below ?donut ?tie)) (or (not (Is ?tie 'tie')) (Is ?keyboard 'keyboard')) (or (not (Is ?tie 'tie')) (Below ?keyboard ?lighter)) (or (not (Is ?tie 'tie')) (Below ?lighter ?donut)) (or (not (Is ?tie 'tie')) (Has ?donut 'pink')) (or (not (Is ?tie 'tie')) (Has ?lighter 'green')) (or (not (Is ?tie 'tie')) (Is ?donut 'donut')) (or (not (Is ?tie 'tie')) (Is ?lighter 'lighter')) (or (not (Is ?tie 'tie')) (Has ?tie 'red'))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "keyboard",
+        "lighter",
+        "shirt",
+        "donut"
+    ]
+}

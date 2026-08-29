@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the image, there is a sequence of objects arranged to its right: a phone, a camera, a pen, and a shoe. The phone is positioned to the right of the plate and is smaller than the plate. The camera is located to the right of the phone. The pen is to the right of the camera. The shoe is located to the right of the pen on the right side of the image, and the pen is smaller than the shoe.",
+    "dsl": "(forall ?plate (implies (Is ?plate 'plate') (exists ?phone (exists ?camera (exists ?pen (exists ?shoe (and (Is ?phone 'phone') (Is ?camera 'camera') (Is ?pen 'pen') (Is ?shoe 'shoe') (RightOf ?phone ?plate) (SmallerThan ?phone ?plate) (RightOf ?camera ?phone) (RightOf ?pen ?camera) (RightOf ?shoe ?pen) (OnRightSide ?shoe) (SmallerThan ?pen ?shoe))))))))",
+    "cnf": "(forall ?plate (exists ?phone (exists ?camera (exists ?pen (exists ?shoe (and (or (not (Is ?plate 'plate')) (Is ?phone 'phone')) (or (not (Is ?plate 'plate')) (Is ?camera 'camera')) (or (not (Is ?plate 'plate')) (RightOf ?phone ?plate)) (or (not (Is ?plate 'plate')) (Is ?pen 'pen')) (or (not (Is ?plate 'plate')) (RightOf ?camera ?phone)) (or (not (Is ?plate 'plate')) (Is ?shoe 'shoe')) (or (not (Is ?plate 'plate')) (SmallerThan ?phone ?plate)) (or (not (Is ?plate 'plate')) (RightOf ?pen ?camera)) (or (not (Is ?plate 'plate')) (RightOf ?shoe ?pen)) (or (not (Is ?plate 'plate')) (OnRightSide ?shoe)) (or (not (Is ?plate 'plate')) (SmallerThan ?pen ?shoe))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "pen",
+        "phone",
+        "camera",
+        "shoe"
+    ]
+}

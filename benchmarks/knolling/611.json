@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of headphones located on the right side. A sock is arranged above the headphones, and a monitor is arranged below the headphones. A stapler is located on the left side of the image and is positioned below the monitor.",
+    "dsl": "(exists ?h (exists ?so (exists ?m (exists ?st (and (Is ?h 'headphones') (Is ?so 'sock') (Is ?m 'monitor') (Is ?st 'stapler') (OnRightSide ?h) (Above ?so ?h) (Below ?m ?h) (OnLeftSide ?st) (Below ?st ?m))))))",
+    "cnf": "(exists ?h (exists ?so (exists ?m (exists ?st (and (Is ?h 'headphones') (OnRightSide ?h) (Above ?so ?h) (Below ?m ?h) (Is ?so 'sock') (Is ?m 'monitor') (Below ?st ?m) (OnLeftSide ?st) (Is ?st 'stapler'))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "headphones",
+        "stapler",
+        "sock"
+    ]
+}

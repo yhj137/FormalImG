@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts a metal refrigerator with a chair next to it. A knife lies to the left of the refrigerator, and every clock is situated to the left of the knife.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?c (exists ?k (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (Is ?c 'chair') (NextTo ?c ?r) (Is ?k 'knife') (LeftOf ?k ?r) (forall ?cl (implies (Is ?cl 'clock') (LeftOf ?cl ?k))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?c (exists ?k (forall ?cl (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (NextTo ?c ?r) (LeftOf ?k ?r) (Is ?c 'chair') (Is ?k 'knife') (or (not (Is ?cl 'clock')) (LeftOf ?cl ?k))))))))",
+    "k": 4,
+    "object_classes": [
+        "clock",
+        "chair",
+        "refrigerator",
+        "knife"
+    ]
+}

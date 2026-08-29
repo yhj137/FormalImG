@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every monitor is rectangular.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?m (implies (Is ?m 'monitor') (HasShape ?m 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?m (or (not (Is ?m 'monitor')) (HasShape ?m 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Rendered in an oil painting style, the scene features a rectangular rug. A car is positioned to the right of the rug, while a monitor and a pan containing a pizza are located to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?m (exists ?pn (exists ?pz (and (Is ?r 'rug') (HasShape ?r 'rectangular') (Is ?c 'car') (RightOf ?c ?r) (Is ?m 'monitor') (LeftOf ?m ?r) (Is ?pn 'pan') (LeftOf ?pn ?r) (Is ?pz 'pizza') (In ?pz ?pn))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?m (exists ?pn (exists ?pz (and (Is ?r 'rug') (HasShape ?r 'rectangular') (RightOf ?c ?r) (LeftOf ?m ?r) (Is ?c 'car') (LeftOf ?pn ?r) (Is ?m 'monitor') (Is ?pn 'pan') (In ?pz ?pn) (Is ?pz 'pizza'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "monitor",
+        "pizza",
+        "rug",
+        "car"
+    ]
+}

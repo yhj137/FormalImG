@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a row of items aligned horizontally along the top side. It starts with a pizza, followed by a red sock to its right, and a lighter to the right of the sock. For every keyboard present in the image, the lighter is positioned to its left. Following the keyboard to the right is a shoe, then a phone, then a wrench, and finally a pair of blue jeans. The jeans are situated on the right side of the image.",
+    "dsl": "(exists ?pizza (exists ?sock (exists ?lighter (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (Is ?sock 'sock') (Has ?sock 'red') (OnTopSide ?sock) (Is ?lighter 'lighter') (OnTopSide ?lighter) (RightOf ?sock ?pizza) (RightOf ?lighter ?sock) (AlignedHorizontally ?pizza ?sock) (AlignedHorizontally ?sock ?lighter) (forall ?kb (implies (Is ?kb 'keyboard') (exists ?shoe (exists ?phone (exists ?wrench (exists ?jeans (and (Is ?shoe 'shoe') (Is ?phone 'phone') (Is ?wrench 'wrench') (Is ?jeans 'jeans') (Has ?jeans 'blue') (LeftOf ?lighter ?kb) (AlignedHorizontally ?lighter ?kb) (RightOf ?shoe ?kb) (AlignedHorizontally ?kb ?shoe) (RightOf ?phone ?shoe) (AlignedHorizontally ?shoe ?phone) (RightOf ?wrench ?phone) (AlignedHorizontally ?phone ?wrench) (RightOf ?jeans ?wrench) (AlignedHorizontally ?wrench ?jeans) (OnRightSide ?jeans))))))))))))",
+    "cnf": "(exists ?pizza (exists ?sock (exists ?lighter (forall ?kb (exists ?shoe (exists ?phone (exists ?wrench (exists ?jeans (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (RightOf ?sock ?pizza) (AlignedHorizontally ?pizza ?sock) (OnTopSide ?sock) (RightOf ?lighter ?sock) (AlignedHorizontally ?sock ?lighter) (Has ?sock 'red') (OnTopSide ?lighter) (or (not (Is ?kb 'keyboard')) (LeftOf ?lighter ?kb)) (Is ?sock 'sock') (Is ?lighter 'lighter') (or (not (Is ?kb 'keyboard')) (AlignedHorizontally ?lighter ?kb)) (or (not (Is ?kb 'keyboard')) (Has ?jeans 'blue')) (or (not (Is ?kb 'keyboard')) (RightOf ?shoe ?kb)) (or (not (Is ?kb 'keyboard')) (Is ?jeans 'jeans')) (or (not (Is ?kb 'keyboard')) (RightOf ?jeans ?wrench)) (or (not (Is ?kb 'keyboard')) (AlignedHorizontally ?kb ?shoe)) (or (not (Is ?kb 'keyboard')) (Is ?shoe 'shoe')) (or (not (Is ?kb 'keyboard')) (Is ?wrench 'wrench')) (or (not (Is ?kb 'keyboard')) (AlignedHorizontally ?phone ?wrench)) (or (not (Is ?kb 'keyboard')) (AlignedHorizontally ?wrench ?jeans)) (or (not (Is ?kb 'keyboard')) (RightOf ?phone ?shoe)) (or (not (Is ?kb 'keyboard')) (Is ?phone 'phone')) (or (not (Is ?kb 'keyboard')) (RightOf ?wrench ?phone)) (or (not (Is ?kb 'keyboard')) (OnRightSide ?jeans)) (or (not (Is ?kb 'keyboard')) (AlignedHorizontally ?shoe ?phone)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "lighter",
+        "pizza",
+        "wrench",
+        "keyboard",
+        "jeans",
+        "sock",
+        "shoe"
+    ]
+}

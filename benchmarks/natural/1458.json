@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a man on a metal bicycle. All birds in the scene are positioned above him. To the left of the bicycle is a lion, while a rectangular book with a butterfly on it is to the right. A basket containing a round apple is on the bicycle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (and (Is ?m 'man') (forall ?bi (implies (Is ?bi 'bird') (Above ?bi ?m))) (exists ?cy (exists ?li (exists ?bo (exists ?bu (exists ?ba (exists ?ap (and (Is ?cy 'bicycle') (HasMaterial ?cy 'metal') (Is ?li 'lion') (Is ?bo 'book') (HasShape ?bo 'rectangular') (Is ?bu 'butterfly') (Is ?ba 'basket') (Is ?ap 'apple') (HasShape ?ap 'round') (On ?m ?cy) (LeftOf ?li ?cy) (RightOf ?bo ?cy) (On ?bu ?bo) (On ?ba ?cy) (In ?ap ?ba)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (forall ?bi (exists ?cy (exists ?li (exists ?bo (exists ?bu (exists ?ba (exists ?ap (and (Is ?m 'man') (or (not (Is ?bi 'bird')) (Above ?bi ?m)) (On ?m ?cy) (HasMaterial ?cy 'metal') (LeftOf ?li ?cy) (Is ?cy 'bicycle') (RightOf ?bo ?cy) (Is ?li 'lion') (On ?ba ?cy) (HasShape ?bo 'rectangular') (On ?bu ?bo) (Is ?ba 'basket') (In ?ap ?ba) (Is ?bo 'book') (Is ?bu 'butterfly') (HasShape ?ap 'round') (Is ?ap 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "man",
+        "book",
+        "butterfly",
+        "lion",
+        "basket",
+        "bicycle",
+        "apple",
+        "bird"
+    ]
+}

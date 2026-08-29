@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a handbag located on the top side of the scene. For every sock in the image, the handbag is visually larger than the sock. To the right of the sock, there is a shoe, and to the right of the shoe is a bottle. Further to the right of the bottle is a laptop, which is larger than the bottle. Finally, a lighter is positioned to the right of the laptop.",
+    "dsl": "(exists ?hb (and (Is ?hb 'handbag') (OnTopSide ?hb) (forall ?s (implies (Is ?s 'sock') (exists ?sh (exists ?b (exists ?lap (exists ?li (and (Is ?sh 'shoe') (Is ?b 'bottle') (Is ?lap 'laptop') (Is ?li 'lighter') (LargerThan ?hb ?s) (RightOf ?sh ?s) (RightOf ?b ?sh) (RightOf ?lap ?b) (LargerThan ?lap ?b) (RightOf ?li ?lap))))))))))",
+    "cnf": "(exists ?hb (forall ?s (exists ?sh (exists ?b (exists ?lap (exists ?li (and (Is ?hb 'handbag') (OnTopSide ?hb) (or (not (Is ?s 'sock')) (LargerThan ?hb ?s)) (or (not (Is ?s 'sock')) (Is ?li 'lighter')) (or (not (Is ?s 'sock')) (RightOf ?sh ?s)) (or (not (Is ?s 'sock')) (Is ?lap 'laptop')) (or (not (Is ?s 'sock')) (RightOf ?li ?lap)) (or (not (Is ?s 'sock')) (RightOf ?b ?sh)) (or (not (Is ?s 'sock')) (Is ?sh 'shoe')) (or (not (Is ?s 'sock')) (Is ?b 'bottle')) (or (not (Is ?s 'sock')) (RightOf ?lap ?b)) (or (not (Is ?s 'sock')) (LargerThan ?lap ?b)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "handbag",
+        "lighter",
+        "bottle",
+        "shoe"
+    ]
+}

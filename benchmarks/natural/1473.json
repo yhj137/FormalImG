@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a man on a brown chair, with a blue shirt also on the chair. All flowers are located to the left of the chair. The man is holding a round cup containing a fork. To the right of the man is an open laptop, with headphones next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?m (and (Is ?c 'chair') (HasColor ?c 'brown') (Is ?m 'man') (On ?m ?c) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?c))) (exists ?s (exists ?l (exists ?h (exists ?cp (exists ?fk (and (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?c) (Is ?l 'laptop') (HasState ?l 'open') (RightOf ?l ?m) (Is ?h 'headphones') (NextTo ?h ?l) (Is ?cp 'cup') (HasShape ?cp 'round') (Holding ?m ?cp) (Is ?fk 'fork') (In ?fk ?cp)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?m (forall ?f (exists ?s (exists ?l (exists ?h (exists ?cp (exists ?fk (and (Is ?c 'chair') (HasColor ?c 'brown') (On ?m ?c) (or (not (Is ?f 'flower')) (LeftOf ?f ?c)) (Is ?m 'man') (RightOf ?l ?m) (On ?s ?c) (Holding ?m ?cp) (HasState ?l 'open') (NextTo ?h ?l) (HasColor ?s 'blue') (HasShape ?cp 'round') (In ?fk ?cp) (Is ?l 'laptop') (Is ?h 'headphones') (Is ?s 'shirt') (Is ?cp 'cup') (Is ?fk 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "shirt",
+        "fork",
+        "chair",
+        "laptop",
+        "man",
+        "flower",
+        "cup"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the top side of the scene. Directly below the suitcase is a book, which is smaller than the suitcase. A glove is positioned below the book, and a bowl is located below the glove on the bottom side of the image. These four items are aligned vertically. Additionally, for every apple in the scene, there is a set of keys and a remote associated with it: the apple is aligned horizontally with the suitcase, the keys are situated below the apple and aligned horizontally with the book, and the remote is below the keys, aligning horizontally with the glove. The apple, keys, and remote are also aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?book (exists ?glove (exists ?bowl (and (Is ?suitcase 'suitcase') (Is ?book 'book') (Is ?glove 'glove') (Is ?bowl 'bowl') (OnTopSide ?suitcase) (OnBottomSide ?bowl) (Below ?book ?suitcase) (Below ?glove ?book) (Below ?bowl ?glove) (AlignedVertically ?suitcase ?book) (AlignedVertically ?book ?glove) (AlignedVertically ?glove ?bowl) (SmallerThan ?book ?suitcase) (forall ?apple (implies (Is ?apple 'apple') (exists ?keys (exists ?remote (and (Is ?keys 'keys') (Is ?remote 'remote') (Below ?keys ?apple) (Below ?remote ?keys) (AlignedVertically ?apple ?keys) (AlignedVertically ?keys ?remote) (AlignedHorizontally ?apple ?suitcase) (AlignedHorizontally ?keys ?book) (AlignedHorizontally ?remote ?glove)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?book (exists ?glove (exists ?bowl (forall ?apple (exists ?keys (exists ?remote (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Below ?book ?suitcase) (AlignedVertically ?suitcase ?book) (Is ?book 'book') (Below ?glove ?book) (SmallerThan ?book ?suitcase) (AlignedVertically ?book ?glove) (Is ?glove 'glove') (Below ?bowl ?glove) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?apple ?suitcase)) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?keys ?book)) (AlignedVertically ?glove ?bowl) (OnBottomSide ?bowl) (or (not (Is ?apple 'apple')) (AlignedVertically ?keys ?remote)) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?remote ?glove)) (Is ?bowl 'bowl') (or (not (Is ?apple 'apple')) (AlignedVertically ?apple ?keys)) (or (not (Is ?apple 'apple')) (Below ?remote ?keys)) (or (not (Is ?apple 'apple')) (Below ?keys ?apple)) (or (not (Is ?apple 'apple')) (Is ?remote 'remote')) (or (not (Is ?apple 'apple')) (Is ?keys 'keys'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "keys",
+        "remote",
+        "apple",
+        "bowl",
+        "suitcase",
+        "glove"
+    ]
+}

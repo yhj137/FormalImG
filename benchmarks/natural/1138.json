@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A desk is positioned next to a refrigerator. A woman is next to the desk, holding a yellow banana. Every spoon in the scene is placed on the desk, and a hat rests on top of the refrigerator.",
+    "dsl": "(exists ?d (exists ?r (exists ?w (and (Is ?d 'desk') (Is ?r 'refrigerator') (NextTo ?d ?r) (Is ?w 'woman') (NextTo ?w ?d) (forall ?s (implies (Is ?s 'spoon') (On ?s ?d))) (exists ?b (and (Is ?b 'banana') (HasColor ?b 'yellow') (Holding ?w ?b))) (exists ?h (and (Is ?h 'hat') (On ?h ?r)))))))",
+    "cnf": "(exists ?d (exists ?r (exists ?w (forall ?s (exists ?b (exists ?h (and (Is ?d 'desk') (NextTo ?d ?r) (NextTo ?w ?d) (Is ?r 'refrigerator') (On ?h ?r) (or (not (Is ?s 'spoon')) (On ?s ?d)) (Is ?w 'woman') (Holding ?w ?b) (Is ?h 'hat') (HasColor ?b 'yellow') (Is ?b 'banana'))))))))",
+    "k": 6,
+    "object_classes": [
+        "desk",
+        "hat",
+        "banana",
+        "refrigerator",
+        "woman",
+        "spoon"
+    ]
+}

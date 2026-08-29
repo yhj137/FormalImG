@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene displays a purple wardrobe with a lion to its right and an umbrella to its left. All shoes are inside the wardrobe. A round spoon is positioned to the left of the umbrella, and a green fish is to the left of the spoon.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?u (exists ?l (exists ?f (and (Is ?w 'wardrobe') (HasColor ?w 'purple') (Is ?u 'umbrella') (LeftOf ?u ?w) (Is ?l 'lion') (RightOf ?l ?w) (Is ?f 'fish') (HasColor ?f 'green') (forall ?s (implies (Is ?s 'shoes') (In ?s ?w))) (exists ?sp (and (Is ?sp 'spoon') (HasShape ?sp 'round') (LeftOf ?sp ?u) (LeftOf ?f ?sp)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?u (exists ?l (exists ?f (forall ?s (exists ?sp (and (Is ?w 'wardrobe') (HasColor ?w 'purple') (LeftOf ?u ?w) (RightOf ?l ?w) (Is ?u 'umbrella') (LeftOf ?sp ?u) (or (not (Is ?s 'shoes')) (In ?s ?w)) (Is ?l 'lion') (HasShape ?sp 'round') (LeftOf ?f ?sp) (Is ?sp 'spoon') (HasColor ?f 'green') (Is ?f 'fish')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "spoon",
+        "shoes",
+        "lion",
+        "wardrobe"
+    ]
+}

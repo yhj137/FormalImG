@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pan present in the scene, it is located on the bottom side of the image and there is a remote aligned vertically with it. Additionally, there is a bottle positioned to the right of the remote.",
+    "dsl": "(forall ?pan (implies (Is ?pan 'pan') (exists ?remote (exists ?bottle (and (Is ?remote 'remote') (Is ?bottle 'bottle') (OnBottomSide ?pan) (AlignedVertically ?remote ?pan) (RightOf ?bottle ?remote))))))",
+    "cnf": "(forall ?pan (exists ?remote (exists ?bottle (and (or (not (Is ?pan 'pan')) (Is ?remote 'remote')) (or (not (Is ?pan 'pan')) (Is ?bottle 'bottle')) (or (not (Is ?pan 'pan')) (AlignedVertically ?remote ?pan)) (or (not (Is ?pan 'pan')) (OnBottomSide ?pan)) (or (not (Is ?pan 'pan')) (RightOf ?bottle ?remote))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "pan",
+        "remote"
+    ]
+}

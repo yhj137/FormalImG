@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black monitor located on the top side of the image. To the right of the monitor is a blue suitcase, followed by a white plate, and then a yellow bowl; these four items are aligned horizontally. There are also black glasses, red pliers, a green ruler, and a pink donut. The glasses are to the left of the pliers, the pliers are to the left of the ruler, and the ruler is to the left of the donut, with these four items aligned horizontally. The monitor is aligned vertically with the glasses, the suitcase with the pliers, the plate with the ruler, and the bowl with the donut.",
+    "dsl": "(exists ?monitor (exists ?suitcase (exists ?plate (exists ?bowl (exists ?glasses (exists ?pliers (exists ?ruler (exists ?donut (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?plate 'plate') (Has ?plate 'white') (Is ?bowl 'bowl') (Has ?bowl 'yellow') (RightOf ?suitcase ?monitor) (RightOf ?plate ?suitcase) (RightOf ?bowl ?plate) (AlignedHorizontally ?monitor ?suitcase) (AlignedHorizontally ?suitcase ?plate) (AlignedHorizontally ?plate ?bowl) (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?ruler 'ruler') (Has ?ruler 'green') (Is ?donut 'donut') (Has ?donut 'pink') (LeftOf ?glasses ?pliers) (LeftOf ?pliers ?ruler) (LeftOf ?ruler ?donut) (AlignedHorizontally ?glasses ?pliers) (AlignedHorizontally ?pliers ?ruler) (AlignedHorizontally ?ruler ?donut) (AlignedVertically ?monitor ?glasses) (AlignedVertically ?suitcase ?pliers) (AlignedVertically ?plate ?ruler) (AlignedVertically ?bowl ?donut))))))))))",
+    "cnf": "(exists ?monitor (exists ?suitcase (exists ?plate (exists ?bowl (exists ?glasses (exists ?pliers (exists ?ruler (exists ?donut (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (RightOf ?suitcase ?monitor) (AlignedHorizontally ?monitor ?suitcase) (Has ?suitcase 'blue') (RightOf ?plate ?suitcase) (AlignedVertically ?monitor ?glasses) (AlignedHorizontally ?suitcase ?plate) (Is ?suitcase 'suitcase') (Has ?plate 'white') (RightOf ?bowl ?plate) (AlignedHorizontally ?glasses ?pliers) (AlignedVertically ?suitcase ?pliers) (AlignedHorizontally ?plate ?bowl) (Is ?plate 'plate') (Has ?bowl 'yellow') (LeftOf ?glasses ?pliers) (LeftOf ?pliers ?ruler) (AlignedHorizontally ?pliers ?ruler) (AlignedVertically ?plate ?ruler) (AlignedVertically ?bowl ?donut) (Is ?bowl 'bowl') (Has ?glasses 'black') (Has ?pliers 'red') (Has ?ruler 'green') (LeftOf ?ruler ?donut) (AlignedHorizontally ?ruler ?donut) (Is ?glasses 'glasses') (Is ?pliers 'pliers') (Is ?ruler 'ruler') (Has ?donut 'pink') (Is ?donut 'donut'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "plate",
+        "pliers",
+        "monitor",
+        "bowl",
+        "suitcase",
+        "donut"
+    ]
+}

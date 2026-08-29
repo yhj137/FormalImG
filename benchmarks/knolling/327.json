@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the layout, the jeans are blue, and there is a red screwdriver positioned vertically below them.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?screwdriver (and (Has ?jeans 'blue') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Below ?screwdriver ?jeans))))))",
+    "cnf": "(forall ?jeans (exists ?screwdriver (and (or (not (Is ?jeans 'jeans')) (Has ?jeans 'blue')) (or (not (Is ?jeans 'jeans')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?jeans 'jeans')) (Has ?screwdriver 'red')) (or (not (Is ?jeans 'jeans')) (Below ?screwdriver ?jeans)))))",
+    "k": 2,
+    "object_classes": [
+        "jeans",
+        "screwdriver"
+    ]
+}

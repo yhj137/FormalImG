@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a person inside a house holding a metal pan that contains every spoon. A book rests to the right of the pan, while an elephant stands to the right of the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?pn (and (Is ?h 'house') (Is ?p 'person') (Is ?pn 'pan') (In ?p ?h) (Holding ?p ?pn) (HasMaterial ?pn 'metal') (forall ?s (implies (Is ?s 'spoon') (In ?s ?pn))) (exists ?b (exists ?e (and (Is ?b 'book') (Is ?e 'elephant') (RightOf ?b ?pn) (RightOf ?e ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?pn (forall ?s (exists ?b (exists ?e (and (Is ?h 'house') (In ?p ?h) (RightOf ?e ?h) (Is ?p 'person') (Holding ?p ?pn) (Is ?e 'elephant') (Is ?pn 'pan') (HasMaterial ?pn 'metal') (or (not (Is ?s 'spoon')) (In ?s ?pn)) (RightOf ?b ?pn) (Is ?b 'book')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pan",
+        "person",
+        "book",
+        "house",
+        "elephant",
+        "spoon"
+    ]
+}

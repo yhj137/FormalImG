@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is situated on the right side of the layout. A mouse is positioned such that the backpack is to the right of it, and a screwdriver is positioned such that the mouse is to the right of it; these three objects are aligned horizontally. Furthermore, for every donut in the scene, it is located to the left of the screwdriver, and a sandwich is placed to the left of that donut, maintaining horizontal alignment with the donut.",
+    "dsl": "(exists ?backpack (exists ?mouse (exists ?screwdriver (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (Is ?mouse 'mouse') (RightOf ?backpack ?mouse) (AlignedHorizontally ?backpack ?mouse) (Is ?screwdriver 'screwdriver') (RightOf ?mouse ?screwdriver) (AlignedHorizontally ?mouse ?screwdriver) (forall ?donut (implies (Is ?donut 'donut') (exists ?sandwich (and (Is ?sandwich 'sandwich') (LeftOf ?donut ?screwdriver) (LeftOf ?sandwich ?donut) (AlignedHorizontally ?sandwich ?donut)))))))))",
+    "cnf": "(exists ?backpack (exists ?mouse (exists ?screwdriver (forall ?donut (exists ?sandwich (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (RightOf ?backpack ?mouse) (AlignedHorizontally ?backpack ?mouse) (Is ?mouse 'mouse') (RightOf ?mouse ?screwdriver) (AlignedHorizontally ?mouse ?screwdriver) (Is ?screwdriver 'screwdriver') (or (not (Is ?donut 'donut')) (LeftOf ?donut ?screwdriver)) (or (not (Is ?donut 'donut')) (Is ?sandwich 'sandwich')) (or (not (Is ?donut 'donut')) (LeftOf ?sandwich ?donut)) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?sandwich ?donut))))))))",
+    "k": 5,
+    "object_classes": [
+        "screwdriver",
+        "backpack",
+        "mouse",
+        "sandwich",
+        "donut"
+    ]
+}

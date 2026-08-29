@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene consists of a hammer, a knife, a remote, and a sandwich. The hammer, knife, and remote are aligned vertically, where the hammer is larger than the knife. The sandwich is positioned on the bottom side of the image and is located to the left of the remote. Furthermore, for every apple in the scene, it is placed to the right of the hammer.",
+    "dsl": "(exists ?hammer (exists ?knife (exists ?remote (exists ?sandwich (and (Is ?hammer 'hammer') (Is ?knife 'knife') (Is ?remote 'remote') (Is ?sandwich 'sandwich') (AlignedVertically ?hammer ?knife) (AlignedVertically ?knife ?remote) (LargerThan ?hammer ?knife) (OnBottomSide ?sandwich) (LeftOf ?sandwich ?remote) (forall ?apple (implies (Is ?apple 'apple') (RightOf ?apple ?hammer))))))))",
+    "cnf": "(exists ?hammer (exists ?knife (exists ?remote (exists ?sandwich (forall ?apple (and (Is ?hammer 'hammer') (AlignedVertically ?hammer ?knife) (LargerThan ?hammer ?knife) (Is ?knife 'knife') (AlignedVertically ?knife ?remote) (or (not (Is ?apple 'apple')) (RightOf ?apple ?hammer)) (Is ?remote 'remote') (LeftOf ?sandwich ?remote) (OnBottomSide ?sandwich) (Is ?sandwich 'sandwich')))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "apple",
+        "hammer",
+        "knife",
+        "sandwich"
+    ]
+}

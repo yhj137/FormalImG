@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of jeans positioned on the right side of the layout. For every carrot in the scene, it is placed above the jeans. Additionally, for each of these carrots, there corresponds a game controller that is located above the carrot and is visually smaller than the jeans.",
+    "dsl": "(exists ?j (and (Is ?j 'jeans') (OnRightSide ?j) (forall ?c (implies (Is ?c 'carrot') (exists ?g (and (Is ?g 'game_controller') (Above ?c ?j) (Above ?g ?c) (SmallerThan ?g ?j)))))))",
+    "cnf": "(exists ?j (forall ?c (exists ?g (and (Is ?j 'jeans') (OnRightSide ?j) (or (not (Is ?c 'carrot')) (Above ?c ?j)) (or (not (Is ?c 'carrot')) (SmallerThan ?g ?j)) (or (not (Is ?c 'carrot')) (Is ?g 'game_controller')) (or (not (Is ?c 'carrot')) (Above ?g ?c))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "jeans",
+        "game_controller"
+    ]
+}

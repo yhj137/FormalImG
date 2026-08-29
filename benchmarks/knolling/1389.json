@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A black keyboard is positioned on the top side of the layout. To the left of the keyboard lies a red hammer, while a pair of pliers is placed to its right. Directly below the keyboard is a pizza, and to the right of the pizza is a calculator. Further below the pizza, there is a gray spoon. Finally, for every glove in the scene, it is located to the right of the spoon.",
+    "dsl": "(exists ?k (exists ?h (exists ?p (exists ?pi (exists ?c (exists ?s (and (Is ?k 'keyboard') (Has ?k 'black') (OnTopSide ?k) (Is ?h 'hammer') (Has ?h 'red') (LeftOf ?h ?k) (Is ?p 'pliers') (RightOf ?p ?k) (Is ?pi 'pizza') (Below ?pi ?k) (Is ?c 'calculator') (RightOf ?c ?pi) (Is ?s 'spoon') (Has ?s 'gray') (Below ?s ?pi) (forall ?g (implies (Is ?g 'glove') (RightOf ?g ?s))))))))))",
+    "cnf": "(exists ?k (exists ?h (exists ?p (exists ?pi (exists ?c (exists ?s (forall ?g (and (Is ?k 'keyboard') (Has ?k 'black') (OnTopSide ?k) (LeftOf ?h ?k) (RightOf ?p ?k) (Has ?h 'red') (Below ?pi ?k) (Is ?p 'pliers') (Is ?h 'hammer') (Is ?pi 'pizza') (RightOf ?c ?pi) (Below ?s ?pi) (Is ?c 'calculator') (Has ?s 'gray') (or (not (Is ?g 'glove')) (RightOf ?g ?s)) (Is ?s 'spoon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "pizza",
+        "hammer",
+        "calculator",
+        "spoon",
+        "glove"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo of a man holding a rectangular chair.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?c (and (Is ?m 'man') (Is ?c 'chair') (HasShape ?c 'rectangular') (Holding ?m ?c)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?c (and (Is ?m 'man') (Holding ?m ?c) (HasShape ?c 'rectangular') (Is ?c 'chair')))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "man"
+    ]
+}

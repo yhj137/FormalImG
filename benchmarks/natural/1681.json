@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a tree with a man standing next to it, holding an open book. A wooden chair sits to the left of the tree; on it rests a cup with a spoon inside and a key next to it. A lamp is placed to the left of the chair, and all cars are positioned to the right of the tree.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?m (exists ?ch (and (Is ?t 'tree') (Is ?m 'man') (NextTo ?m ?t) (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (LeftOf ?ch ?t) (forall ?c (implies (Is ?c 'car') (RightOf ?c ?t))) (exists ?cp (exists ?s (exists ?k (exists ?b (exists ?l (and (Is ?cp 'cup') (On ?cp ?ch) (Is ?s 'spoon') (In ?s ?cp) (Is ?k 'key') (NextTo ?k ?cp) (Is ?b 'book') (Holding ?m ?b) (HasState ?b 'open') (Is ?l 'lamp') (LeftOf ?l ?ch))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?m (exists ?ch (forall ?c (exists ?cp (exists ?s (exists ?k (exists ?b (exists ?l (and (Is ?t 'tree') (NextTo ?m ?t) (LeftOf ?ch ?t) (Is ?m 'man') (Holding ?m ?b) (or (not (Is ?c 'car')) (RightOf ?c ?t)) (HasMaterial ?ch 'wooden') (On ?cp ?ch) (Is ?b 'book') (HasState ?b 'open') (Is ?ch 'chair') (LeftOf ?l ?ch) (Is ?cp 'cup') (In ?s ?cp) (Is ?l 'lamp') (NextTo ?k ?cp) (Is ?s 'spoon') (Is ?k 'key'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "man",
+        "lamp",
+        "book",
+        "chair",
+        "cup",
+        "tree",
+        "car",
+        "spoon"
+    ]
+}

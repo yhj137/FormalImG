@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style scene where every mirror is broken.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?m (implies (Is ?m 'mirror') (HasState ?m 'broken'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?m (or (not (Is ?m 'mirror')) (HasState ?m 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "mirror"
+    ]
+}

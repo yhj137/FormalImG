@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a person sitting on a sofa, wearing a jacket and a hat, holding a pan with a blooming plant inside. A dog lies on the sofa to the right of the person, and a turned-on monitor sits to the left of the sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?s (exists ?pan (exists ?pl (exists ?h (exists ?j (exists ?d (exists ?m (and (Is ?p 'person') (HasState ?p 'sitting') (Is ?s 'sofa') (Is ?pan 'pan') (Is ?pl 'plant') (HasState ?pl 'blooming') (Is ?h 'hat') (Is ?j 'jacket') (Is ?d 'dog') (HasState ?d 'lying') (Is ?m 'monitor') (HasState ?m 'on') (On ?p ?s) (On ?j ?p) (On ?h ?p) (Holding ?p ?pan) (In ?pl ?pan) (On ?d ?s) (RightOf ?d ?p) (LeftOf ?m ?s)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?s (exists ?pan (exists ?pl (exists ?h (exists ?j (exists ?d (exists ?m (and (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?s) (On ?j ?p) (Is ?s 'sofa') (On ?d ?s) (On ?h ?p) (Is ?j 'jacket') (LeftOf ?m ?s) (HasState ?d 'lying') (RightOf ?d ?p) (Holding ?p ?pan) (Is ?h 'hat') (HasState ?m 'on') (Is ?d 'dog') (Is ?pan 'pan') (In ?pl ?pan) (Is ?m 'monitor') (HasState ?pl 'blooming') (Is ?pl 'plant')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "person",
+        "plant",
+        "monitor",
+        "jacket",
+        "pan",
+        "dog",
+        "hat"
+    ]
+}

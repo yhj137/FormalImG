@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout includes a blue handbag and a white hat, where the handbag is larger than the hat and aligned horizontally with it. Additionally, for every book in the arrangement, it is red, aligned horizontally with the hat, and the hat is larger than the book.",
+    "dsl": "(exists ?handbag (exists ?hat (and (Is ?handbag 'handbag') (Has ?handbag 'blue') (Is ?hat 'hat') (Has ?hat 'white') (LargerThan ?handbag ?hat) (AlignedHorizontally ?handbag ?hat) (forall ?book (implies (Is ?book 'book') (and (Has ?book 'red') (AlignedHorizontally ?hat ?book) (LargerThan ?hat ?book)))))))",
+    "cnf": "(exists ?handbag (exists ?hat (forall ?book (and (Is ?handbag 'handbag') (Has ?handbag 'blue') (LargerThan ?handbag ?hat) (AlignedHorizontally ?handbag ?hat) (Has ?hat 'white') (or (not (Is ?book 'book')) (AlignedHorizontally ?hat ?book)) (Is ?hat 'hat') (or (not (Is ?book 'book')) (LargerThan ?hat ?book)) (or (not (Is ?book 'book')) (Has ?book 'red'))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "book",
+        "handbag"
+    ]
+}

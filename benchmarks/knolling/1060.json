@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A black camera is located on the right side of the scene. For every gray knife in the image, there is a white cup positioned above it. A glove is aligned horizontally with the cup, and a set of keys is located below the glove. A calculator is aligned horizontally with the keys. Furthermore, the camera is visually larger than the calculator.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (Has ?camera 'black') (OnRightSide ?camera) (forall ?knife (implies (and (Is ?knife 'knife') (Has ?knife 'gray')) (exists ?cup (exists ?glove (exists ?keys (exists ?calc (and (Is ?cup 'cup') (Has ?cup 'white') (Is ?glove 'glove') (Is ?keys 'keys') (Is ?calc 'calculator') (Above ?cup ?knife) (AlignedHorizontally ?cup ?glove) (Above ?glove ?keys) (AlignedHorizontally ?keys ?calc) (LargerThan ?camera ?calc))))))))))",
+    "cnf": "(exists ?camera (forall ?knife (exists ?cup (exists ?glove (exists ?keys (exists ?calc (and (Is ?camera 'camera') (Has ?camera 'black') (OnRightSide ?camera) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (LargerThan ?camera ?calc)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (AlignedHorizontally ?keys ?calc)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Above ?glove ?keys)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Is ?calc 'calculator')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (AlignedHorizontally ?cup ?glove)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Is ?keys 'keys')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Above ?cup ?knife)) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Has ?cup 'white')) (or (not (Is ?knife 'knife')) (not (Has ?knife 'gray')) (Is ?cup 'cup')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "cup",
+        "calculator",
+        "camera",
+        "knife",
+        "glove"
+    ]
+}

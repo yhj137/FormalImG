@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every watch in the scene, it is placed on the left side, and there is a plate located to the right of it.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'watch') (exists ?p (and (Is ?p 'plate') (OnLeftSide ?w) (RightOf ?p ?w))))))",
+    "cnf": "(forall ?w (exists ?p (and (or (not (Is ?w 'watch')) (Is ?p 'plate')) (or (not (Is ?w 'watch')) (OnLeftSide ?w)) (or (not (Is ?w 'watch')) (RightOf ?p ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "plate",
+        "watch"
+    ]
+}

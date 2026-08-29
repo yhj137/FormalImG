@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside every boat, an elephant holds an umbrella. Also in the boat is a sofa with a leather jacket on it. Next to the jacket lies a book with a metal spoon resting on top, and a fruit sits beside the spoon. A plant with a bird perched on it stands next to the sofa.",
+    "dsl": "(forall ?b (implies (Is ?b 'boat') (exists ?e (exists ?u (exists ?s (exists ?j (exists ?bk (exists ?sp (exists ?f (exists ?p (exists ?bd (and (Is ?e 'elephant') (In ?e ?b) (Is ?u 'umbrella') (Holding ?e ?u) (Is ?s 'sofa') (In ?s ?b) (Is ?j 'jacket') (HasMaterial ?j 'leather') (On ?j ?s) (Is ?bk 'book') (NextTo ?bk ?j) (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (On ?sp ?bk) (Is ?f 'fruit') (NextTo ?f ?sp) (Is ?p 'plant') (NextTo ?p ?s) (Is ?bd 'bird') (On ?bd ?p)))))))))))))",
+    "cnf": "(forall ?b (exists ?e (exists ?u (exists ?s (exists ?j (exists ?bk (exists ?sp (exists ?f (exists ?p (exists ?bd (and (or (not (Is ?b 'boat')) (Is ?e 'elephant')) (or (not (Is ?b 'boat')) (In ?e ?b)) (or (not (Is ?b 'boat')) (Is ?u 'umbrella')) (or (not (Is ?b 'boat')) (Holding ?e ?u)) (or (not (Is ?b 'boat')) (Is ?s 'sofa')) (or (not (Is ?b 'boat')) (In ?s ?b)) (or (not (Is ?b 'boat')) (Is ?j 'jacket')) (or (not (Is ?b 'boat')) (On ?j ?s)) (or (not (Is ?b 'boat')) (HasMaterial ?j 'leather')) (or (not (Is ?b 'boat')) (Is ?bk 'book')) (or (not (Is ?b 'boat')) (NextTo ?p ?s)) (or (not (Is ?b 'boat')) (NextTo ?bk ?j)) (or (not (Is ?b 'boat')) (Is ?p 'plant')) (or (not (Is ?b 'boat')) (Is ?bd 'bird')) (or (not (Is ?b 'boat')) (On ?bd ?p)) (or (not (Is ?b 'boat')) (Is ?sp 'spoon')) (or (not (Is ?b 'boat')) (On ?sp ?bk)) (or (not (Is ?b 'boat')) (NextTo ?f ?sp)) (or (not (Is ?b 'boat')) (HasMaterial ?sp 'metal')) (or (not (Is ?b 'boat')) (Is ?f 'fruit')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bird",
+        "spoon",
+        "book",
+        "boat",
+        "jacket",
+        "plant",
+        "sofa",
+        "fruit",
+        "elephant",
+        "umbrella"
+    ]
+}

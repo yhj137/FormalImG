@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a metal lamp and a basket containing a ball on every refrigerator, with a man holding a phone positioned next to each one.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?r (implies (Is ?r 'refrigerator') (exists ?l (exists ?b (exists ?ba (exists ?m (exists ?p (and (Is ?l 'lamp') (HasMaterial ?l 'metal') (Is ?b 'basket') (Is ?ba 'ball') (Is ?m 'man') (Is ?p 'phone') (On ?l ?r) (On ?b ?r) (In ?ba ?b) (NextTo ?m ?r) (Holding ?m ?p))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?r (exists ?l (exists ?b (exists ?ba (exists ?m (exists ?p (and (or (not (Is ?r 'refrigerator')) (Is ?l 'lamp')) (or (not (Is ?r 'refrigerator')) (HasMaterial ?l 'metal')) (or (not (Is ?r 'refrigerator')) (Is ?b 'basket')) (or (not (Is ?r 'refrigerator')) (On ?l ?r)) (or (not (Is ?r 'refrigerator')) (Is ?ba 'ball')) (or (not (Is ?r 'refrigerator')) (On ?b ?r)) (or (not (Is ?r 'refrigerator')) (Is ?p 'phone')) (or (not (Is ?r 'refrigerator')) (Is ?m 'man')) (or (not (Is ?r 'refrigerator')) (In ?ba ?b)) (or (not (Is ?r 'refrigerator')) (Holding ?m ?p)) (or (not (Is ?r 'refrigerator')) (NextTo ?m ?r))))))))))",
+    "k": 6,
+    "object_classes": [
+        "man",
+        "ball",
+        "lamp",
+        "phone",
+        "refrigerator",
+        "basket"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every desk is empty.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?d (implies (Is ?d 'desk') (HasState ?d 'empty'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?d (or (not (Is ?d 'desk')) (HasState ?d 'empty'))))",
+    "k": 1,
+    "object_classes": [
+        "desk"
+    ]
+}

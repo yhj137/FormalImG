@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cyberpunk style. A man stands next to a table, holding a green screwdriver. All plates in the scene are resting on the table. To the right of the table, a woman is holding a purple flower. Adjacent to the woman is a wardrobe containing shoes. Finally, a horse is located to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?t (and (Is ?m 'man') (Is ?sd 'screwdriver') (HasColor ?sd 'green') (Holding ?m ?sd) (Is ?t 'table') (NextTo ?m ?t) (forall ?p (implies (Is ?p 'plate') (On ?p ?t))) (exists ?w (exists ?f (exists ?wd (exists ?sh (exists ?h (and (Is ?w 'woman') (RightOf ?w ?t) (Is ?f 'flower') (HasColor ?f 'purple') (Holding ?w ?f) (Is ?wd 'wardrobe') (NextTo ?wd ?w) (Is ?sh 'shoes') (In ?sh ?wd) (Is ?h 'horse') (RightOf ?h ?wd))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?t (forall ?p (exists ?w (exists ?f (exists ?wd (exists ?sh (exists ?h (and (Is ?m 'man') (Holding ?m ?sd) (NextTo ?m ?t) (HasColor ?sd 'green') (Is ?t 'table') (or (not (Is ?p 'plate')) (On ?p ?t)) (Is ?sd 'screwdriver') (RightOf ?w ?t) (Is ?w 'woman') (Holding ?w ?f) (NextTo ?wd ?w) (HasColor ?f 'purple') (Is ?wd 'wardrobe') (In ?sh ?wd) (Is ?f 'flower') (RightOf ?h ?wd) (Is ?sh 'shoes') (Is ?h 'horse'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "horse",
+        "shoes",
+        "plate",
+        "man",
+        "woman",
+        "table",
+        "flower",
+        "screwdriver",
+        "wardrobe"
+    ]
+}

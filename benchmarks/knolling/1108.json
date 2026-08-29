@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a hat and a backpack positioned on the top side of the scene, with the hat placed to the left of the backpack. For every drill in the arrangement, it is located directly below the hat and aligned vertically with it. Positioned below the drill is a book, which maintains the vertical alignment. This book is located to the left of an apple. The apple is positioned below the backpack and aligned vertically with it. Finally, the apple is placed above a carrot, which is found on the bottom side of the image.",
+    "dsl": "(exists ?hat (exists ?backpack (and (Is ?hat 'hat') (Is ?backpack 'backpack') (OnTopSide ?hat) (OnTopSide ?backpack) (LeftOf ?hat ?backpack) (forall ?drill (implies (Is ?drill 'drill') (exists ?book (exists ?apple (exists ?carrot (and (Is ?book 'book') (Is ?apple 'apple') (Is ?carrot 'carrot') (Below ?drill ?hat) (AlignedVertically ?hat ?drill) (Below ?book ?drill) (AlignedVertically ?drill ?book) (LeftOf ?book ?apple) (Below ?apple ?backpack) (AlignedVertically ?backpack ?apple) (Above ?apple ?carrot) (OnBottomSide ?carrot))))))))))",
+    "cnf": "(exists ?hat (exists ?backpack (forall ?drill (exists ?book (exists ?apple (exists ?carrot (and (Is ?hat 'hat') (OnTopSide ?hat) (LeftOf ?hat ?backpack) (or (not (Is ?drill 'drill')) (Below ?drill ?hat)) (OnTopSide ?backpack) (or (not (Is ?drill 'drill')) (Below ?apple ?backpack)) (or (not (Is ?drill 'drill')) (AlignedVertically ?hat ?drill)) (or (not (Is ?drill 'drill')) (Is ?carrot 'carrot')) (Is ?backpack 'backpack') (or (not (Is ?drill 'drill')) (AlignedVertically ?backpack ?apple)) (or (not (Is ?drill 'drill')) (LeftOf ?book ?apple)) (or (not (Is ?drill 'drill')) (Below ?book ?drill)) (or (not (Is ?drill 'drill')) (Is ?apple 'apple')) (or (not (Is ?drill 'drill')) (Above ?apple ?carrot)) (or (not (Is ?drill 'drill')) (AlignedVertically ?drill ?book)) (or (not (Is ?drill 'drill')) (Is ?book 'book')) (or (not (Is ?drill 'drill')) (OnBottomSide ?carrot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "apple",
+        "carrot",
+        "drill",
+        "hat",
+        "backpack"
+    ]
+}

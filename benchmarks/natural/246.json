@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pair of black shoes is located next to a red sofa.",
+    "dsl": "(exists ?s (exists ?f (and (Is ?s 'shoes') (HasColor ?s 'black') (Is ?f 'sofa') (HasColor ?f 'red') (NextTo ?s ?f))))",
+    "cnf": "(exists ?s (exists ?f (and (Is ?s 'shoes') (HasColor ?s 'black') (NextTo ?s ?f) (HasColor ?f 'red') (Is ?f 'sofa'))))",
+    "k": 2,
+    "object_classes": [
+        "sofa",
+        "shoes"
+    ]
+}

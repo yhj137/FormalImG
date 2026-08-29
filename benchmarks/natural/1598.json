@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A rug is laid out, and a wardrobe stands to the right of it. On the rug, there is a pair of shoes and a child holding a laptop. A bus is positioned next to the wardrobe. A blue butterfly rests on the wardrobe. Every book in the scene is also located on the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?w (exists ?s (exists ?c (exists ?l (exists ?bu (exists ?bt (and (Is ?r 'rug') (Is ?w 'wardrobe') (RightOf ?w ?r) (Is ?s 'shoes') (On ?s ?r) (Is ?c 'child') (On ?c ?r) (Is ?l 'laptop') (Holding ?c ?l) (Is ?bu 'bus') (NextTo ?bu ?w) (Is ?bt 'butterfly') (HasColor ?bt 'blue') (On ?bt ?w) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?w))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?w (exists ?s (exists ?c (exists ?l (exists ?bu (exists ?bt (forall ?bk (and (Is ?r 'rug') (RightOf ?w ?r) (On ?s ?r) (Is ?w 'wardrobe') (NextTo ?bu ?w) (On ?c ?r) (Is ?s 'shoes') (On ?bt ?w) (Is ?bu 'bus') (Is ?c 'child') (Holding ?c ?l) (or (not (Is ?bk 'book')) (On ?bk ?w)) (HasColor ?bt 'blue') (Is ?l 'laptop') (Is ?bt 'butterfly')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "shoes",
+        "book",
+        "laptop",
+        "rug",
+        "butterfly",
+        "bus",
+        "wardrobe"
+    ]
+}

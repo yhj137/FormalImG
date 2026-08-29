@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill, a hammer, and a shoe arranged vertically. The drill is located on the top side of the image, with the hammer positioned below it and the shoe positioned below the hammer; these three objects are aligned vertically. To the right of the drill creates a row with a mouse, and to the right of the mouse is a book. Additionally, for every pair of jeans in the scene, it is located to the right of the shoe.",
+    "dsl": "(exists ?drill (exists ?hammer (exists ?shoe (and (Is ?drill 'drill') (OnTopSide ?drill) (Is ?hammer 'hammer') (Is ?shoe 'shoe') (Above ?drill ?hammer) (Above ?hammer ?shoe) (AlignedVertically ?drill ?hammer) (AlignedVertically ?hammer ?shoe) (forall ?jeans (implies (Is ?jeans 'jeans') (RightOf ?jeans ?shoe))) (exists ?mouse (exists ?book (and (Is ?mouse 'mouse') (Is ?book 'book') (RightOf ?mouse ?drill) (RightOf ?book ?mouse))))))))",
+    "cnf": "(exists ?drill (exists ?hammer (exists ?shoe (forall ?jeans (exists ?mouse (exists ?book (and (Is ?drill 'drill') (OnTopSide ?drill) (Above ?drill ?hammer) (AlignedVertically ?drill ?hammer) (Is ?hammer 'hammer') (Above ?hammer ?shoe) (RightOf ?mouse ?drill) (AlignedVertically ?hammer ?shoe) (Is ?shoe 'shoe') (Is ?mouse 'mouse') (RightOf ?book ?mouse) (or (not (Is ?jeans 'jeans')) (RightOf ?jeans ?shoe)) (Is ?book 'book'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "drill",
+        "hammer",
+        "jeans",
+        "mouse",
+        "shoe"
+    ]
+}

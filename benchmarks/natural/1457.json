@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a blue rug where every key is located. A sleeping dog lies on the rug holding a shirt. To the right of the dog sits a red backpack with headphones on top, while a round bowl is positioned to the left. A phone also rests on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'rug') (HasColor ?r 'blue') (forall ?k (implies (Is ?k 'key') (On ?k ?r))) (exists ?d (and (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?r) (exists ?s (and (Is ?s 'shirt') (Holding ?d ?s) (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'red') (RightOf ?bp ?d) (exists ?h (and (Is ?h 'headphones') (On ?h ?bp) (exists ?bo (and (Is ?bo 'bowl') (HasShape ?bo 'round') (LeftOf ?bo ?d) (exists ?p (and (Is ?p 'phone') (On ?p ?r))))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (forall ?k (exists ?d (exists ?s (exists ?bp (exists ?h (exists ?bo (exists ?p (and (Is ?r 'rug') (HasColor ?r 'blue') (or (not (Is ?k 'key')) (On ?k ?r)) (On ?d ?r) (On ?p ?r) (HasState ?d 'sleeping') (Holding ?d ?s) (Is ?p 'phone') (Is ?d 'dog') (RightOf ?bp ?d) (Is ?s 'shirt') (LeftOf ?bo ?d) (HasColor ?bp 'red') (On ?h ?bp) (HasShape ?bo 'round') (Is ?bp 'backpack') (Is ?h 'headphones') (Is ?bo 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "shirt",
+        "phone",
+        "backpack",
+        "rug",
+        "bowl",
+        "dog",
+        "key"
+    ]
+}

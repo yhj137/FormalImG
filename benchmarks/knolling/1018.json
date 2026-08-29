@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a collection of items: keys, a remote, a donut, a game controller, a book, and a shoe. The keys are positioned on the left side of the image. There is a sequence from left to right where the keys are to the left of the remote, the remote is to the left of the donut, the donut is to the left of the game controller, the game controller is to the left of the book, and the book is to the left of the shoe. The shoe is located on the bottom side of the image. Visually, the keys are smaller than the book, and the remote is smaller than the game controller.",
+    "dsl": "(exists ?keys (exists ?remote (exists ?donut (exists ?controller (exists ?book (exists ?shoe (and (Is ?keys 'keys') (Is ?remote 'remote') (Is ?donut 'donut') (Is ?controller 'game_controller') (Is ?book 'book') (Is ?shoe 'shoe') (OnLeftSide ?keys) (LeftOf ?keys ?remote) (LeftOf ?remote ?donut) (LeftOf ?donut ?controller) (LeftOf ?controller ?book) (LeftOf ?book ?shoe) (OnBottomSide ?shoe) (SmallerThan ?keys ?book) (SmallerThan ?remote ?controller))))))))",
+    "cnf": "(exists ?keys (exists ?remote (exists ?donut (exists ?controller (exists ?book (exists ?shoe (and (Is ?keys 'keys') (OnLeftSide ?keys) (LeftOf ?keys ?remote) (SmallerThan ?keys ?book) (Is ?remote 'remote') (LeftOf ?remote ?donut) (LeftOf ?book ?shoe) (SmallerThan ?remote ?controller) (Is ?donut 'donut') (LeftOf ?donut ?controller) (LeftOf ?controller ?book) (Is ?shoe 'shoe') (OnBottomSide ?shoe) (Is ?controller 'game_controller') (Is ?book 'book'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "game_controller",
+        "book",
+        "shoe",
+        "donut",
+        "remote"
+    ]
+}

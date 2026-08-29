@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pan sits on a wooden bookshelf, with a rock positioned to the left of the pan.",
+    "dsl": "(exists ?b (exists ?p (exists ?r (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?p 'pan') (Is ?r 'rock') (On ?p ?b) (LeftOf ?r ?p)))))",
+    "cnf": "(exists ?b (exists ?p (exists ?r (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (On ?p ?b) (Is ?p 'pan') (LeftOf ?r ?p) (Is ?r 'rock')))))",
+    "k": 3,
+    "object_classes": [
+        "rock",
+        "bookshelf",
+        "pan"
+    ]
+}

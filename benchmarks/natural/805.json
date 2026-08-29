@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a mirror to the left of a desk and a boat to the right. A person inside the boat holds a blue hat.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?d (exists ?b (exists ?p (exists ?h (and (Is ?m 'mirror') (Is ?d 'desk') (Is ?b 'boat') (Is ?p 'person') (Is ?h 'hat') (LeftOf ?m ?d) (RightOf ?b ?d) (In ?p ?b) (Holding ?p ?h) (HasColor ?h 'blue'))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?d (exists ?b (exists ?p (exists ?h (and (Is ?m 'mirror') (LeftOf ?m ?d) (Is ?d 'desk') (RightOf ?b ?d) (Is ?b 'boat') (In ?p ?b) (Is ?p 'person') (Holding ?p ?h) (Is ?h 'hat') (HasColor ?h 'blue'))))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "desk",
+        "mirror",
+        "boat",
+        "hat"
+    ]
+}

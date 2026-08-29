@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every wardrobe contains a red screwdriver and has a laptop to its left.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?w (implies (Is ?w 'wardrobe') (exists ?s (exists ?l (and (Is ?s 'screwdriver') (Is ?l 'laptop') (HasColor ?s 'red') (In ?s ?w) (LeftOf ?l ?w)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?w (exists ?s (exists ?l (and (or (not (Is ?w 'wardrobe')) (Is ?s 'screwdriver')) (or (not (Is ?w 'wardrobe')) (Is ?l 'laptop')) (or (not (Is ?w 'wardrobe')) (HasColor ?s 'red')) (or (not (Is ?w 'wardrobe')) (LeftOf ?l ?w)) (or (not (Is ?w 'wardrobe')) (In ?s ?w)))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "wardrobe",
+        "screwdriver"
+    ]
+}

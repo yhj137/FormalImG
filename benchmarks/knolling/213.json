@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a knife and a cup. The cup is positioned on the right side of the scene, and the knife is placed to the left of the cup.",
+    "dsl": "(exists ?knife (exists ?cup (and (Is ?knife 'knife') (Is ?cup 'cup') (OnRightSide ?cup) (LeftOf ?knife ?cup))))",
+    "cnf": "(exists ?knife (exists ?cup (and (Is ?knife 'knife') (LeftOf ?knife ?cup) (OnRightSide ?cup) (Is ?cup 'cup'))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "cup"
+    ]
+}

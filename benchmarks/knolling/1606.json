@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a 3x3 grid of items. On the left side of the image, there is a vertical column containing headphones, a shoe, and a donut; the headphones are positioned above the shoe, and the shoe is above the donut, with all three aligned vertically. On the right side, there is a vertical column containing a handbag, a bottle, and a hat; the handbag is above the bottle, and the bottle is above the hat, also aligned vertically. In the middle column, a keyboard is placed above a lighter, which is in turn above a knife, and they are aligned vertically. Horizontally, the headphones, keyboard, and handbag are aligned in the top row; the shoe, lighter, and bottle are aligned in the middle row; and the donut, knife, and hat are aligned in the bottom row. Additionally, the keyboard is visually larger than the lighter, the handbag is larger than the bottle, and the hat is larger than the donut.",
+    "dsl": "(exists ?h (exists ?k (exists ?hb (exists ?s (exists ?l (exists ?b (exists ?d (exists ?kn (exists ?ht (and (Is ?h 'headphones') (Is ?k 'keyboard') (Is ?hb 'handbag') (Is ?s 'shoe') (Is ?l 'lighter') (Is ?b 'bottle') (Is ?d 'donut') (Is ?kn 'knife') (Is ?ht 'hat') (OnLeftSide ?h) (OnLeftSide ?s) (OnLeftSide ?d) (OnRightSide ?hb) (OnRightSide ?b) (OnRightSide ?ht) (Above ?h ?s) (Above ?s ?d) (AlignedVertically ?h ?s) (AlignedVertically ?s ?d) (Above ?k ?l) (Above ?l ?kn) (AlignedVertically ?k ?l) (AlignedVertically ?l ?kn) (Above ?hb ?b) (Above ?b ?ht) (AlignedVertically ?hb ?b) (AlignedVertically ?b ?ht) (AlignedHorizontally ?h ?k) (AlignedHorizontally ?k ?hb) (AlignedHorizontally ?s ?l) (AlignedHorizontally ?l ?b) (AlignedHorizontally ?d ?kn) (AlignedHorizontally ?kn ?ht) (LargerThan ?k ?l) (LargerThan ?hb ?b) (LargerThan ?ht ?d)))))))))))",
+    "cnf": "(exists ?h (exists ?k (exists ?hb (exists ?s (exists ?l (exists ?b (exists ?d (exists ?kn (exists ?ht (and (Is ?h 'headphones') (OnLeftSide ?h) (Above ?h ?s) (AlignedVertically ?h ?s) (OnLeftSide ?s) (Above ?s ?d) (AlignedHorizontally ?h ?k) (AlignedVertically ?s ?d) (Is ?s 'shoe') (OnLeftSide ?d) (AlignedVertically ?k ?l) (AlignedHorizontally ?k ?hb) (AlignedHorizontally ?s ?l) (AlignedHorizontally ?d ?kn) (Is ?d 'donut') (Above ?k ?l) (Above ?l ?kn) (AlignedVertically ?l ?kn) (LargerThan ?k ?l) (AlignedVertically ?hb ?b) (LargerThan ?hb ?b) (AlignedHorizontally ?l ?b) (LargerThan ?ht ?d) (AlignedHorizontally ?kn ?ht) (Is ?k 'keyboard') (Is ?l 'lighter') (Is ?kn 'knife') (Above ?hb ?b) (Above ?b ?ht) (AlignedVertically ?b ?ht) (OnRightSide ?hb) (OnRightSide ?b) (OnRightSide ?ht) (Is ?hb 'handbag') (Is ?b 'bottle') (Is ?ht 'hat')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "handbag",
+        "lighter",
+        "hat",
+        "bottle",
+        "knife",
+        "headphones",
+        "shoe",
+        "donut"
+    ]
+}

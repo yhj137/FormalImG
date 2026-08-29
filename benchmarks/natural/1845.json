@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene featuring a house. All butterflies are located to the right of the house. Inside the house lies a fabric rug, where a black cat holds a metal fork. To the right of the cat sits a pan with a sliced pizza, and a rusty hammer also rests on the rug. A sleeping lion is positioned to the right of the house, with a brown horse to the right of the lion.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (forall ?b (implies (Is ?b 'butterfly') (RightOf ?b ?h))) (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (In ?r ?h) (exists ?c (and (Is ?c 'cat') (HasColor ?c 'black') (On ?c ?r) (exists ?f (and (Is ?f 'fork') (HasMaterial ?f 'metal') (Holding ?c ?f))) (exists ?p (and (Is ?p 'pan') (RightOf ?p ?c) (exists ?z (and (Is ?z 'pizza') (HasState ?z 'sliced') (On ?z ?p))))) (exists ?hm (and (Is ?hm 'hammer') (HasState ?hm 'rusty') (On ?hm ?r))))) (exists ?l (and (Is ?l 'lion') (HasState ?l 'sleeping') (RightOf ?l ?h) (exists ?ho (and (Is ?ho 'horse') (HasColor ?ho 'brown') (RightOf ?ho ?l))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?b (exists ?r (exists ?c (exists ?f (exists ?p (exists ?z (exists ?hm (exists ?l (exists ?ho (and (Is ?h 'house') (or (not (Is ?b 'butterfly')) (RightOf ?b ?h)) (In ?r ?h) (RightOf ?l ?h) (HasMaterial ?r 'fabric') (On ?c ?r) (HasState ?l 'sleeping') (RightOf ?ho ?l) (Is ?r 'rug') (On ?hm ?r) (HasColor ?c 'black') (Holding ?c ?f) (Is ?l 'lion') (HasColor ?ho 'brown') (HasState ?hm 'rusty') (Is ?c 'cat') (RightOf ?p ?c) (HasMaterial ?f 'metal') (Is ?ho 'horse') (Is ?hm 'hammer') (Is ?p 'pan') (On ?z ?p) (Is ?f 'fork') (HasState ?z 'sliced') (Is ?z 'pizza')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "fork",
+        "cat",
+        "hammer",
+        "butterfly",
+        "pizza",
+        "horse",
+        "rug",
+        "house",
+        "lion"
+    ]
+}

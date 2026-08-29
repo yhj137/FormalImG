@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top side, which is larger than the keyboard located directly below it; the monitor and keyboard are aligned vertically. Below the keyboard is a game controller, which is also aligned vertically with the items above. A phone is present in the scene and is smaller than the game controller. A shirt is arranged on the left side and is smaller than the monitor. Furthermore, for every wrench found below the shirt, there is a cutting board positioned below that wrench on the bottom side of the image, and a lighter located above the wrench that is smaller than the wrench.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?shirt (exists ?controller (exists ?phone (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?keyboard 'keyboard') (Below ?keyboard ?monitor) (AlignedVertically ?keyboard ?monitor) (LargerThan ?monitor ?keyboard) (Is ?shirt 'shirt') (OnLeftSide ?shirt) (SmallerThan ?shirt ?monitor) (Is ?controller 'game_controller') (Below ?controller ?keyboard) (AlignedVertically ?controller ?keyboard) (Is ?phone 'phone') (SmallerThan ?phone ?controller) (forall ?wrench (implies (and (Is ?wrench 'wrench') (Below ?wrench ?shirt)) (exists ?cutting_board (exists ?lighter (and (Is ?cutting_board 'cutting_board') (Is ?lighter 'lighter') (Below ?cutting_board ?wrench) (OnBottomSide ?cutting_board) (Above ?lighter ?wrench) (SmallerThan ?lighter ?wrench))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?shirt (exists ?controller (exists ?phone (forall ?wrench (exists ?cutting_board (exists ?lighter (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Below ?keyboard ?monitor) (AlignedVertically ?keyboard ?monitor) (Is ?keyboard 'keyboard') (LargerThan ?monitor ?keyboard) (SmallerThan ?shirt ?monitor) (Below ?controller ?keyboard) (OnLeftSide ?shirt) (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (Is ?cutting_board 'cutting_board')) (AlignedVertically ?controller ?keyboard) (Is ?controller 'game_controller') (Is ?shirt 'shirt') (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (Is ?lighter 'lighter')) (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (Below ?cutting_board ?wrench)) (SmallerThan ?phone ?controller) (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (Above ?lighter ?wrench)) (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (OnBottomSide ?cutting_board)) (Is ?phone 'phone') (or (not (Is ?wrench 'wrench')) (not (Below ?wrench ?shirt)) (SmallerThan ?lighter ?wrench)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "wrench",
+        "phone",
+        "game_controller",
+        "cutting_board",
+        "lighter",
+        "monitor",
+        "shirt"
+    ]
+}

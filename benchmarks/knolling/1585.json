@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side and left side of the scene. The suitcase is located to the left of a pair of headphones, and they are aligned horizontally. The suitcase is positioned above a handbag, and the handbag is positioned above a wallet which is located on the bottom side; these three items are aligned vertically. The handbag is also located to the left of a hammer, with which it is horizontally aligned. The hammer is positioned above a wrench, and they are aligned vertically. The wrench is to the left of a remote, and they are aligned horizontally. Finally, for every spoon present, it is located above the remote and aligned vertically with it.",
+    "dsl": "(exists ?suit (exists ?head (exists ?bag (exists ?wal (exists ?ham (exists ?wren (exists ?rem (and (Is ?suit 'suitcase') (Is ?head 'headphones') (Is ?bag 'handbag') (Is ?wal 'wallet') (Is ?ham 'hammer') (Is ?wren 'wrench') (Is ?rem 'remote') (OnTopSide ?suit) (OnLeftSide ?suit) (LeftOf ?suit ?head) (AlignedHorizontally ?suit ?head) (Above ?suit ?bag) (AlignedVertically ?suit ?bag) (Above ?bag ?wal) (AlignedVertically ?bag ?wal) (OnBottomSide ?wal) (LeftOf ?bag ?ham) (AlignedHorizontally ?bag ?ham) (Above ?ham ?wren) (AlignedVertically ?ham ?wren) (LeftOf ?wren ?rem) (AlignedHorizontally ?wren ?rem) (forall ?sp (implies (Is ?sp 'spoon') (and (Above ?sp ?rem) (AlignedVertically ?sp ?rem))))))))))))",
+    "cnf": "(exists ?suit (exists ?head (exists ?bag (exists ?wal (exists ?ham (exists ?wren (exists ?rem (forall ?sp (and (Is ?suit 'suitcase') (OnTopSide ?suit) (OnLeftSide ?suit) (LeftOf ?suit ?head) (AlignedHorizontally ?suit ?head) (Is ?head 'headphones') (Above ?suit ?bag) (AlignedVertically ?suit ?bag) (Is ?bag 'handbag') (Above ?bag ?wal) (AlignedVertically ?bag ?wal) (Is ?wal 'wallet') (LeftOf ?bag ?ham) (OnBottomSide ?wal) (AlignedHorizontally ?bag ?ham) (Is ?ham 'hammer') (Above ?ham ?wren) (AlignedVertically ?ham ?wren) (Is ?wren 'wrench') (LeftOf ?wren ?rem) (AlignedHorizontally ?wren ?rem) (Is ?rem 'remote') (or (not (Is ?sp 'spoon')) (Above ?sp ?rem)) (or (not (Is ?sp 'spoon')) (AlignedVertically ?sp ?rem)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "wrench",
+        "suitcase",
+        "hammer",
+        "handbag",
+        "wallet",
+        "spoon",
+        "headphones"
+    ]
+}

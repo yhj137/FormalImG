@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a round rug. A bench is situated to the right of the rug, while all chairs are positioned to the left of the rug.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?b (and (Is ?r 'rug') (HasShape ?r 'round') (Is ?b 'bench') (RightOf ?b ?r) (forall ?c (implies (Is ?c 'chair') (LeftOf ?c ?r)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?b (forall ?c (and (Is ?r 'rug') (HasShape ?r 'round') (RightOf ?b ?r) (or (not (Is ?c 'chair')) (LeftOf ?c ?r)) (Is ?b 'bench'))))))",
+    "k": 3,
+    "object_classes": [
+        "chair",
+        "bench",
+        "rug"
+    ]
+}

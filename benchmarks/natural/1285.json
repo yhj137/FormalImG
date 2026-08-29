@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A rectangular desk stands next to a bed. Every book is open and rests on the desk. A screwdriver lies to the left of a round spoon on the desk. Dirty shoes sit next to the bed, and a boat is positioned to the left of the bed.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?bed (and (Is ?d 'desk') (HasShape ?d 'rectangular') (Is ?bed 'bed') (NextTo ?d ?bed) (forall ?b (implies (Is ?b 'book') (and (HasState ?b 'open') (On ?b ?d)))) (exists ?sd (exists ?sp (exists ?sh (exists ?bt (and (Is ?sd 'screwdriver') (Is ?sp 'spoon') (HasShape ?sp 'round') (Is ?sh 'shoes') (HasState ?sh 'dirty') (Is ?bt 'boat') (On ?sd ?d) (On ?sp ?d) (LeftOf ?sd ?sp) (NextTo ?sh ?bed) (LeftOf ?bt ?bed))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?bed (forall ?b (exists ?sd (exists ?sp (exists ?sh (exists ?bt (and (Is ?d 'desk') (HasShape ?d 'rectangular') (NextTo ?d ?bed) (or (not (Is ?b 'book')) (On ?b ?d)) (Is ?bed 'bed') (NextTo ?sh ?bed) (On ?sd ?d) (or (not (Is ?b 'book')) (HasState ?b 'open')) (LeftOf ?bt ?bed) (HasState ?sh 'dirty') (On ?sp ?d) (Is ?sd 'screwdriver') (LeftOf ?sd ?sp) (Is ?bt 'boat') (Is ?sh 'shoes') (HasShape ?sp 'round') (Is ?sp 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "book",
+        "bed",
+        "shoes",
+        "desk",
+        "boat",
+        "screwdriver"
+    ]
+}

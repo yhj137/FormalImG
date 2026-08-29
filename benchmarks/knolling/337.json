@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sock positioned on the left side of the image. Crucially, for every bottle in the scene, it is aligned vertically with this sock.",
+    "dsl": "(exists ?s (and (Is ?s 'sock') (OnLeftSide ?s) (forall ?b (implies (Is ?b 'bottle') (AlignedVertically ?b ?s)))))",
+    "cnf": "(exists ?s (forall ?b (and (Is ?s 'sock') (OnLeftSide ?s) (or (not (Is ?b 'bottle')) (AlignedVertically ?b ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "sock"
+    ]
+}

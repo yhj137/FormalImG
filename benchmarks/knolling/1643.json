@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of blue jeans on the bottom side. For every lighter in the scene, there is a black wallet located to its right, which is on the right side of the image. A gray remote is to the left of the wallet, and a white game controller is to the left of the remote. In the row below, a cup is situated below the game controller, a bowl is below the remote, and a red apple is below the wallet. The bowl is larger than the cup, and the cup, bowl, and apple are aligned horizontally. A red tie is positioned below the apple. The blue jeans are positioned below the cup.",
+    "dsl": "(exists ?jeans (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?wallet (exists ?remote (exists ?game_controller (exists ?cup (exists ?bowl (exists ?apple (exists ?tie (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?wallet 'wallet') (Has ?wallet 'black') (OnRightSide ?wallet) (Is ?remote 'remote') (Has ?remote 'gray') (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (Is ?cup 'cup') (Is ?bowl 'bowl') (Is ?apple 'apple') (Has ?apple 'red') (Is ?tie 'tie') (Has ?tie 'red') (LeftOf ?lighter ?wallet) (LeftOf ?game_controller ?remote) (LeftOf ?remote ?wallet) (Below ?cup ?game_controller) (Below ?bowl ?remote) (Below ?apple ?wallet) (Below ?jeans ?cup) (Below ?tie ?apple) (LargerThan ?bowl ?cup) (AlignedHorizontally ?cup ?bowl) (AlignedHorizontally ?bowl ?apple))))))))))))",
+    "cnf": "(exists ?jeans (forall ?lighter (exists ?wallet (exists ?remote (exists ?game_controller (exists ?cup (exists ?bowl (exists ?apple (exists ?tie (and (or (not (Is ?lighter 'lighter')) (Is ?jeans 'jeans')) (or (not (Is ?lighter 'lighter')) (Has ?jeans 'blue')) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?jeans)) (or (not (Is ?lighter 'lighter')) (Below ?jeans ?cup)) (or (not (Is ?lighter 'lighter')) (Is ?wallet 'wallet')) (or (not (Is ?lighter 'lighter')) (Below ?apple ?wallet)) (or (not (Is ?lighter 'lighter')) (Below ?tie ?apple)) (or (not (Is ?lighter 'lighter')) (Below ?cup ?game_controller)) (or (not (Is ?lighter 'lighter')) (LargerThan ?bowl ?cup)) (or (not (Is ?lighter 'lighter')) (Has ?wallet 'black')) (or (not (Is ?lighter 'lighter')) (Below ?bowl ?remote)) (or (not (Is ?lighter 'lighter')) (LeftOf ?remote ?wallet)) (or (not (Is ?lighter 'lighter')) (Has ?apple 'red')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?bowl ?apple)) (or (not (Is ?lighter 'lighter')) (Has ?tie 'red')) (or (not (Is ?lighter 'lighter')) (LeftOf ?game_controller ?remote)) (or (not (Is ?lighter 'lighter')) (Is ?cup 'cup')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?cup ?bowl)) (or (not (Is ?lighter 'lighter')) (OnRightSide ?wallet)) (or (not (Is ?lighter 'lighter')) (Is ?bowl 'bowl')) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?wallet)) (or (not (Is ?lighter 'lighter')) (Is ?apple 'apple')) (or (not (Is ?lighter 'lighter')) (Is ?tie 'tie')) (or (not (Is ?lighter 'lighter')) (Has ?remote 'gray')) (or (not (Is ?lighter 'lighter')) (Has ?game_controller 'white')) (or (not (Is ?lighter 'lighter')) (Is ?remote 'remote')) (or (not (Is ?lighter 'lighter')) (Is ?game_controller 'game_controller'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "remote",
+        "apple",
+        "cup",
+        "game_controller",
+        "lighter",
+        "wallet",
+        "jeans",
+        "bowl"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red rug with all headphones placed on it. An elephant is next to the rug, and a blue car is to the left of the elephant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (and (Is ?r 'rug') (HasColor ?r 'red') (forall ?h (implies (Is ?h 'headphones') (On ?h ?r))) (exists ?e (and (Is ?e 'elephant') (NextTo ?e ?r) (exists ?c (and (Is ?c 'car') (HasColor ?c 'blue') (LeftOf ?c ?e))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (forall ?h (exists ?e (exists ?c (and (Is ?r 'rug') (HasColor ?r 'red') (or (not (Is ?h 'headphones')) (On ?h ?r)) (NextTo ?e ?r) (Is ?e 'elephant') (LeftOf ?c ?e) (HasColor ?c 'blue') (Is ?c 'car')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "elephant",
+        "car",
+        "rug"
+    ]
+}

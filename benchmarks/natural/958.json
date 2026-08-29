@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sandwich is placed next to a green cup, and a rock is located to the left of the cup. All apples in the scene are positioned to the right of the rock, along with a yellow banana.",
+    "dsl": "(exists ?c (exists ?s (exists ?r (and (Is ?c 'cup') (HasColor ?c 'green') (Is ?s 'sandwich') (NextTo ?s ?c) (Is ?r 'rock') (LeftOf ?r ?c) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?r))) (exists ?b (and (Is ?b 'banana') (HasColor ?b 'yellow') (RightOf ?b ?r)))))))",
+    "cnf": "(exists ?c (exists ?s (exists ?r (forall ?a (exists ?b (and (Is ?c 'cup') (HasColor ?c 'green') (NextTo ?s ?c) (LeftOf ?r ?c) (Is ?s 'sandwich') (Is ?r 'rock') (or (not (Is ?a 'apple')) (RightOf ?a ?r)) (RightOf ?b ?r) (HasColor ?b 'yellow') (Is ?b 'banana')))))))",
+    "k": 5,
+    "object_classes": [
+        "rock",
+        "sandwich",
+        "banana",
+        "cup",
+        "apple"
+    ]
+}

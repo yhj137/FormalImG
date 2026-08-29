@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller positioned on the bottom side. For every wrench in the image, there is a corresponding pair of pliers and a sandwich. Specifically, the wrench is smaller than the game controller. The pliers are aligned horizontally with the wrench and are located on the right side of the scene. The sandwich is visually smaller than the pliers.",
+    "dsl": "(exists ?g (and (Is ?g 'game_controller') (OnBottomSide ?g) (forall ?w (implies (Is ?w 'wrench') (exists ?p (exists ?s (and (Is ?p 'pliers') (Is ?s 'sandwich') (SmallerThan ?w ?g) (AlignedHorizontally ?p ?w) (OnRightSide ?p) (SmallerThan ?s ?p))))))))",
+    "cnf": "(exists ?g (forall ?w (exists ?p (exists ?s (and (Is ?g 'game_controller') (OnBottomSide ?g) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?g)) (or (not (Is ?w 'wrench')) (Is ?s 'sandwich')) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?p ?w)) (or (not (Is ?w 'wrench')) (Is ?p 'pliers')) (or (not (Is ?w 'wrench')) (SmallerThan ?s ?p)) (or (not (Is ?w 'wrench')) (OnRightSide ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "sandwich",
+        "pliers",
+        "game_controller"
+    ]
+}

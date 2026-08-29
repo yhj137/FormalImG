@@ -1,0 +1,9 @@
+{
+    "prompt": "All baskets in the image are brown.",
+    "dsl": "(forall ?b (implies (Is ?b 'basket') (HasColor ?b 'brown')))",
+    "cnf": "(forall ?b (or (not (Is ?b 'basket')) (HasColor ?b 'brown')))",
+    "k": 1,
+    "object_classes": [
+        "basket"
+    ]
+}

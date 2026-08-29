@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a horse wearing a red hat. All fish are positioned to the left of the horse. A pizza sits to the right of the horse, and to the right of the pizza is a book with a metal key on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?hat (exists ?p (and (Is ?h 'horse') (Is ?hat 'hat') (HasColor ?hat 'red') (On ?hat ?h) (Is ?p 'pizza') (LeftOf ?h ?p) (forall ?f (implies (Is ?f 'fish') (LeftOf ?f ?h))) (exists ?b (exists ?k (and (Is ?b 'book') (Is ?k 'key') (HasMaterial ?k 'metal') (LeftOf ?p ?b) (On ?k ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?hat (exists ?p (forall ?f (exists ?b (exists ?k (and (Is ?h 'horse') (On ?hat ?h) (LeftOf ?h ?p) (HasColor ?hat 'red') (or (not (Is ?f 'fish')) (LeftOf ?f ?h)) (Is ?p 'pizza') (LeftOf ?p ?b) (Is ?hat 'hat') (Is ?b 'book') (On ?k ?b) (HasMaterial ?k 'metal') (Is ?k 'key')))))))))",
+    "k": 6,
+    "object_classes": [
+        "key",
+        "fish",
+        "hat",
+        "book",
+        "pizza",
+        "horse"
+    ]
+}

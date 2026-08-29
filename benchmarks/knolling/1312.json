@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a cutting board located on the left side of the image, with a camera positioned above it and headphones positioned below it. For every set of keys present in the scene, the cutting board is to the left of the keys. Additionally, a phone is located to the right of the keys, a game controller is situated below the phone, and a hammer is placed below the game controller.",
+    "dsl": "(exists ?board (exists ?cam (exists ?hp (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Is ?cam 'camera') (Above ?cam ?board) (Is ?hp 'headphones') (Below ?hp ?board) (forall ?key (implies (Is ?key 'keys') (exists ?phone (exists ?ctrl (exists ?hammer (and (Is ?phone 'phone') (Is ?ctrl 'game_controller') (Is ?hammer 'hammer') (LeftOf ?board ?key) (LeftOf ?key ?phone) (Below ?ctrl ?phone) (Below ?hammer ?ctrl)))))))))))",
+    "cnf": "(exists ?board (exists ?cam (exists ?hp (forall ?key (exists ?phone (exists ?ctrl (exists ?hammer (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Above ?cam ?board) (Below ?hp ?board) (Is ?cam 'camera') (or (not (Is ?key 'keys')) (LeftOf ?board ?key)) (Is ?hp 'headphones') (or (not (Is ?key 'keys')) (Is ?hammer 'hammer')) (or (not (Is ?key 'keys')) (LeftOf ?key ?phone)) (or (not (Is ?key 'keys')) (Is ?ctrl 'game_controller')) (or (not (Is ?key 'keys')) (Below ?hammer ?ctrl)) (or (not (Is ?key 'keys')) (Below ?ctrl ?phone)) (or (not (Is ?key 'keys')) (Is ?phone 'phone'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keys",
+        "phone",
+        "game_controller",
+        "cutting_board",
+        "hammer",
+        "camera",
+        "headphones"
+    ]
+}

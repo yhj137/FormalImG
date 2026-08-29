@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a metal wardrobe to the left of a bed. Every ball in the scene is inside the wardrobe. A child is on the bed next to a pair of black headphones, and a person holding a screwdriver is next to the bed. A round bowl containing a pizza sits on the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (forall ?b (implies (Is ?b 'ball') (In ?b ?w))) (exists ?bed (and (Is ?bed 'bed') (LeftOf ?w ?bed) (exists ?c (and (Is ?c 'child') (On ?c ?bed) (exists ?h (and (Is ?h 'headphones') (HasColor ?h 'black') (NextTo ?h ?c) (exists ?p (and (Is ?p 'person') (NextTo ?p ?bed) (exists ?s (and (Is ?s 'screwdriver') (Holding ?p ?s) (exists ?bo (and (Is ?bo 'bowl') (HasShape ?bo 'round') (On ?bo ?w) (exists ?pi (and (Is ?pi 'pizza') (In ?pi ?bo))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (forall ?b (exists ?bed (exists ?c (exists ?h (exists ?p (exists ?s (exists ?bo (exists ?pi (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (or (not (Is ?b 'ball')) (In ?b ?w)) (LeftOf ?w ?bed) (On ?bo ?w) (Is ?bed 'bed') (On ?c ?bed) (HasShape ?bo 'round') (In ?pi ?bo) (NextTo ?p ?bed) (Is ?c 'child') (NextTo ?h ?c) (Is ?bo 'bowl') (Is ?pi 'pizza') (Is ?p 'person') (Holding ?p ?s) (HasColor ?h 'black') (Is ?s 'screwdriver') (Is ?h 'headphones'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "person",
+        "headphones",
+        "ball",
+        "screwdriver",
+        "pizza",
+        "bed",
+        "wardrobe",
+        "child"
+    ]
+}

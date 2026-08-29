@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a table with a chair next to it. To the right of the table is a boat with an umbrella on it. A clock and a cup sit on the table, along with every ball in the scene, all of which are red. A fork is placed next to the cup.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?bt (exists ?u (exists ?ch (exists ?k (exists ?cp (and (Is ?t 'table') (Is ?bt 'boat') (Is ?u 'umbrella') (Is ?ch 'chair') (Is ?k 'clock') (Is ?cp 'cup') (RightOf ?bt ?t) (On ?u ?bt) (NextTo ?ch ?t) (On ?k ?t) (On ?cp ?t) (forall ?ba (implies (Is ?ba 'ball') (and (HasColor ?ba 'red') (On ?ba ?t)))) (exists ?f (and (Is ?f 'fork') (NextTo ?f ?cp)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?bt (exists ?u (exists ?ch (exists ?k (exists ?cp (forall ?ba (exists ?f (and (Is ?t 'table') (RightOf ?bt ?t) (NextTo ?ch ?t) (Is ?bt 'boat') (On ?u ?bt) (On ?k ?t) (Is ?ch 'chair') (Is ?u 'umbrella') (On ?cp ?t) (Is ?k 'clock') (or (not (Is ?ba 'ball')) (On ?ba ?t)) (Is ?cp 'cup') (NextTo ?f ?cp) (or (not (Is ?ba 'ball')) (HasColor ?ba 'red')) (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "chair",
+        "table",
+        "cup",
+        "clock",
+        "ball",
+        "boat"
+    ]
+}

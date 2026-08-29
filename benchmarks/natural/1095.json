@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man wearing headphones stands next to a horse with a hat on it. The man is holding a metal pan, and all toy cars are located to the right of the man.",
+    "dsl": "(exists ?m (exists ?h (and (Is ?m 'man') (Is ?h 'horse') (NextTo ?m ?h) (forall ?tc (implies (Is ?tc 'toy car') (RightOf ?tc ?m))) (exists ?p (exists ?hp (exists ?hat (and (Is ?p 'pan') (Is ?hp 'headphones') (Is ?hat 'hat') (Holding ?m ?p) (HasMaterial ?p 'metal') (On ?hp ?m) (On ?hat ?h))))))))",
+    "cnf": "(exists ?m (exists ?h (forall ?tc (exists ?p (exists ?hp (exists ?hat (and (Is ?m 'man') (NextTo ?m ?h) (or (not (Is ?tc 'toy car')) (RightOf ?tc ?m)) (Is ?h 'horse') (On ?hat ?h) (Holding ?m ?p) (Is ?hat 'hat') (On ?hp ?m) (Is ?p 'pan') (HasMaterial ?p 'metal') (Is ?hp 'headphones'))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "horse",
+        "man",
+        "toy car",
+        "pan",
+        "hat"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a round hat next to a rectangular sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (and (Is ?h 'hat') (HasShape ?h 'round') (Is ?s 'sofa') (HasShape ?s 'rectangular') (NextTo ?h ?s)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (and (Is ?h 'hat') (HasShape ?h 'round') (NextTo ?h ?s) (HasShape ?s 'rectangular') (Is ?s 'sofa')))))",
+    "k": 2,
+    "object_classes": [
+        "sofa",
+        "hat"
+    ]
+}

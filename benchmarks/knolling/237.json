@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a sock and a cup. Both objects are positioned on the top side of the image and are aligned horizontally.",
+    "dsl": "(exists ?sock (exists ?cup (and (Is ?sock 'sock') (Is ?cup 'cup') (OnTopSide ?sock) (OnTopSide ?cup) (AlignedHorizontally ?sock ?cup))))",
+    "cnf": "(exists ?sock (exists ?cup (and (Is ?sock 'sock') (OnTopSide ?sock) (AlignedHorizontally ?sock ?cup) (OnTopSide ?cup) (Is ?cup 'cup'))))",
+    "k": 2,
+    "object_classes": [
+        "cup",
+        "sock"
+    ]
+}

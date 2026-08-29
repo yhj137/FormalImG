@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features headphones positioned on the left side and a glove located on the right side. For every stapler present in the scene, there is a bottle positioned to its left. Additionally, this bottle is placed above the headphones and is visually smaller than the glove.",
+    "dsl": "(exists ?h (exists ?g (and (Is ?h 'headphones') (OnLeftSide ?h) (Is ?g 'glove') (OnRightSide ?g) (forall ?s (implies (Is ?s 'stapler') (exists ?b (and (Is ?b 'bottle') (LeftOf ?b ?s) (Above ?b ?h) (SmallerThan ?b ?g))))))))",
+    "cnf": "(exists ?h (exists ?g (forall ?s (exists ?b (and (Is ?h 'headphones') (OnLeftSide ?h) (or (not (Is ?s 'stapler')) (Above ?b ?h)) (or (not (Is ?s 'stapler')) (LeftOf ?b ?s)) (or (not (Is ?s 'stapler')) (SmallerThan ?b ?g)) (or (not (Is ?s 'stapler')) (Is ?b 'bottle')) (OnRightSide ?g) (Is ?g 'glove'))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "headphones",
+        "glove",
+        "stapler"
+    ]
+}

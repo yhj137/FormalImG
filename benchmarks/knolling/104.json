@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill in the image, it is located on the right side.",
+    "dsl": "(forall ?drill (implies (Is ?drill 'drill') (OnRightSide ?drill)))",
+    "cnf": "(forall ?drill (or (not (Is ?drill 'drill')) (OnRightSide ?drill)))",
+    "k": 1,
+    "object_classes": [
+        "drill"
+    ]
+}

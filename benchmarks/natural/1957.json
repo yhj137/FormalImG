@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is next to a bitten sandwich. To the right of the man is a pan with a knife inside, followed by a round bowl. The bowl contains an orange-colored orange and all the apples. To the right of the bowl is a bus, with a car next to it and a boat to its right.",
+    "dsl": "(exists ?man (exists ?sand (exists ?pan (exists ?knife (exists ?bowl (exists ?org (exists ?bus (and (Is ?man 'man') (Is ?sand 'sandwich') (HasState ?sand 'bitten') (NextTo ?sand ?man) (Is ?pan 'pan') (RightOf ?pan ?man) (Is ?knife 'knife') (In ?knife ?pan) (Is ?bowl 'bowl') (HasShape ?bowl 'round') (RightOf ?bowl ?pan) (Is ?org 'orange') (HasColor ?org 'orange') (In ?org ?bowl) (Is ?bus 'bus') (RightOf ?bus ?bowl) (forall ?apple (implies (Is ?apple 'apple') (In ?apple ?bowl))) (exists ?car (exists ?boat (and (Is ?car 'car') (NextTo ?car ?bus) (Is ?boat 'boat') (RightOf ?boat ?bus))))))))))))",
+    "cnf": "(exists ?man (exists ?sand (exists ?pan (exists ?knife (exists ?bowl (exists ?org (exists ?bus (forall ?apple (exists ?car (exists ?boat (and (Is ?man 'man') (NextTo ?sand ?man) (RightOf ?pan ?man) (HasState ?sand 'bitten') (Is ?pan 'pan') (In ?knife ?pan) (Is ?sand 'sandwich') (RightOf ?bowl ?pan) (Is ?knife 'knife') (HasShape ?bowl 'round') (In ?org ?bowl) (Is ?bowl 'bowl') (RightOf ?bus ?bowl) (HasColor ?org 'orange') (or (not (Is ?apple 'apple')) (In ?apple ?bowl)) (Is ?bus 'bus') (NextTo ?car ?bus) (Is ?org 'orange') (RightOf ?boat ?bus) (Is ?car 'car') (Is ?boat 'boat'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bowl",
+        "pan",
+        "man",
+        "sandwich",
+        "knife",
+        "bus",
+        "boat",
+        "apple",
+        "car",
+        "orange"
+    ]
+}

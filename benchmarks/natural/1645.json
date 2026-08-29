@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a tree containing every bird. To the left of the tree, a woman holds a key and a red apple. To the left of the woman is an open laptop with a blue shirt lying on it. To the left of the laptop is a cake with a spoon inside.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (and (Is ?t 'tree') (forall ?b (implies (Is ?b 'bird') (In ?b ?t))) (exists ?w (exists ?k (exists ?a (exists ?l (exists ?sh (exists ?c (exists ?sp (and (Is ?w 'woman') (Is ?k 'key') (Is ?a 'apple') (Is ?l 'laptop') (Is ?sh 'shirt') (Is ?c 'cake') (Is ?sp 'spoon') (LeftOf ?w ?t) (Holding ?w ?k) (Holding ?w ?a) (HasColor ?a 'red') (LeftOf ?l ?w) (HasState ?l 'open') (On ?sh ?l) (HasColor ?sh 'blue') (LeftOf ?c ?l) (In ?sp ?c))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (forall ?b (exists ?w (exists ?k (exists ?a (exists ?l (exists ?sh (exists ?c (exists ?sp (and (Is ?t 'tree') (or (not (Is ?b 'bird')) (In ?b ?t)) (LeftOf ?w ?t) (Is ?w 'woman') (Holding ?w ?k) (Holding ?w ?a) (Is ?k 'key') (LeftOf ?l ?w) (Is ?a 'apple') (HasColor ?a 'red') (Is ?l 'laptop') (HasState ?l 'open') (On ?sh ?l) (LeftOf ?c ?l) (Is ?sh 'shirt') (HasColor ?sh 'blue') (Is ?c 'cake') (In ?sp ?c) (Is ?sp 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "tree",
+        "laptop",
+        "cake",
+        "shirt",
+        "woman",
+        "apple",
+        "bird",
+        "spoon"
+    ]
+}

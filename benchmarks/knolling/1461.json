@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a gray laptop, a hammer, a blue tie, keys, a cutting board, a plate, a red pizza, and a sandwich. The gray laptop serves as a central anchor. To the left of the laptop is a hammer, and directly above the hammer is a blue tie; the tie and the hammer are aligned vertically. For every set of keys in the scene, they are white and located to the left of the laptop. On the right side of the image, there is a cutting board, and the laptop is positioned to the left of this cutting board. Arranged vertically above the cutting board is a sequence of items: a plate is above the cutting board, a red pizza is above the plate, and a sandwich is above the pizza. These four items (cutting board, plate, pizza, sandwich) share a vertical alignment.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (forall ?keys (implies (Is ?keys 'keys') (and (Has ?keys 'white') (LeftOf ?keys ?laptop)))) (exists ?hammer (exists ?tie (exists ?cutting_board (exists ?plate (exists ?pizza (exists ?sandwich (and (Is ?hammer 'hammer') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?cutting_board 'cutting_board') (OnRightSide ?cutting_board) (Is ?plate 'plate') (Is ?pizza 'pizza') (Has ?pizza 'red') (Is ?sandwich 'sandwich') (LeftOf ?hammer ?laptop) (Above ?tie ?hammer) (AlignedVertically ?tie ?hammer) (LeftOf ?laptop ?cutting_board) (Above ?plate ?cutting_board) (AlignedVertically ?plate ?cutting_board) (Above ?pizza ?plate) (AlignedVertically ?pizza ?plate) (Above ?sandwich ?pizza) (AlignedVertically ?sandwich ?pizza))))))))))",
+    "cnf": "(exists ?laptop (forall ?keys (exists ?hammer (exists ?tie (exists ?cutting_board (exists ?plate (exists ?pizza (exists ?sandwich (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (or (not (Is ?keys 'keys')) (LeftOf ?keys ?laptop)) (LeftOf ?hammer ?laptop) (or (not (Is ?keys 'keys')) (Has ?keys 'white')) (LeftOf ?laptop ?cutting_board) (Is ?hammer 'hammer') (Above ?tie ?hammer) (OnRightSide ?cutting_board) (Above ?plate ?cutting_board) (AlignedVertically ?tie ?hammer) (Has ?tie 'blue') (Is ?cutting_board 'cutting_board') (AlignedVertically ?plate ?cutting_board) (Is ?plate 'plate') (Is ?tie 'tie') (Above ?pizza ?plate) (AlignedVertically ?pizza ?plate) (Has ?pizza 'red') (Above ?sandwich ?pizza) (Is ?pizza 'pizza') (AlignedVertically ?sandwich ?pizza) (Is ?sandwich 'sandwich'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "plate",
+        "tie",
+        "pizza",
+        "cutting_board",
+        "hammer",
+        "sandwich"
+    ]
+}

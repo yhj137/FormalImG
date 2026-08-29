@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a specific arrangement of items ordered by size. The scene contains a shoe, a plate, a bottle, a tie, and a mouse. The shoe is positioned on the top side of the image and is larger than the plate. The plate is located on the left side and is larger than the bottle. Following this size hierarchy, the bottle is larger than the tie, and the tie is larger than the mouse. Additionally, for every spoon present in the composition, it is strictly smaller than the mouse.",
+    "dsl": "(exists ?shoe (exists ?plate (exists ?bottle (exists ?tie (exists ?mouse (and (Is ?shoe 'shoe') (Is ?plate 'plate') (Is ?bottle 'bottle') (Is ?tie 'tie') (Is ?mouse 'mouse') (OnTopSide ?shoe) (OnLeftSide ?plate) (LargerThan ?shoe ?plate) (LargerThan ?plate ?bottle) (LargerThan ?bottle ?tie) (LargerThan ?tie ?mouse) (forall ?spoon (implies (Is ?spoon 'spoon') (SmallerThan ?spoon ?mouse)))))))))",
+    "cnf": "(exists ?shoe (exists ?plate (exists ?bottle (exists ?tie (exists ?mouse (forall ?spoon (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (LargerThan ?shoe ?plate) (OnLeftSide ?plate) (LargerThan ?plate ?bottle) (Is ?plate 'plate') (Is ?bottle 'bottle') (LargerThan ?bottle ?tie) (Is ?tie 'tie') (LargerThan ?tie ?mouse) (Is ?mouse 'mouse') (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?mouse)))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "plate",
+        "mouse",
+        "bottle",
+        "shoe",
+        "spoon"
+    ]
+}

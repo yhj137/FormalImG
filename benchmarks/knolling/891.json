@@ -1,0 +1,13 @@
+{
+    "prompt": "A black keyboard is positioned on the top side of the frame. For every yellow lemon found in the scene, there is a blue lighter situated below it, the lemon is smaller than the keyboard, and there is a black mouse positioned below the keyboard with a brown wallet placed below the mouse.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (Has ?k 'black') (OnTopSide ?k) (forall ?l (implies (and (Is ?l 'lemon') (Has ?l 'yellow')) (exists ?li (exists ?m (exists ?w (and (Is ?li 'lighter') (Has ?li 'blue') (Is ?m 'mouse') (Has ?m 'black') (Is ?w 'wallet') (Has ?w 'brown') (SmallerThan ?l ?k) (Below ?li ?l) (Below ?m ?k) (Below ?w ?m)))))))))",
+    "cnf": "(exists ?k (forall ?l (exists ?li (exists ?m (exists ?w (and (Is ?k 'keyboard') (Has ?k 'black') (OnTopSide ?k) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (SmallerThan ?l ?k)) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Below ?m ?k)) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Has ?w 'brown')) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Below ?li ?l)) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Below ?w ?m)) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Has ?m 'black')) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Is ?w 'wallet')) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Has ?li 'blue')) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Is ?m 'mouse')) (or (not (Is ?l 'lemon')) (not (Has ?l 'yellow')) (Is ?li 'lighter'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "lemon",
+        "lighter",
+        "wallet",
+        "mouse"
+    ]
+}

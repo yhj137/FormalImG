@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features headphones positioned on the left side and a camera positioned on the right side, with the two objects aligned horizontally. A mouse is present and is aligned vertically with the camera. Additionally, for any wrench present in the scene, it is aligned horizontally with the mouse.",
+    "dsl": "(exists ?h (exists ?c (exists ?m (and (Is ?h 'headphones') (OnLeftSide ?h) (Is ?c 'camera') (OnRightSide ?c) (AlignedHorizontally ?h ?c) (Is ?m 'mouse') (AlignedVertically ?c ?m) (forall ?w (implies (Is ?w 'wrench') (AlignedHorizontally ?w ?m)))))))",
+    "cnf": "(exists ?h (exists ?c (exists ?m (forall ?w (and (Is ?h 'headphones') (OnLeftSide ?h) (AlignedHorizontally ?h ?c) (OnRightSide ?c) (AlignedVertically ?c ?m) (Is ?c 'camera') (Is ?m 'mouse') (or (not (Is ?w 'wrench')) (AlignedHorizontally ?w ?m)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "mouse",
+        "headphones",
+        "camera"
+    ]
+}

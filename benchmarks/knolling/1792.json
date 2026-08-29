@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the left side of the scene, located to the left of a phone. Below the phone are keys. To the right of the phone is a sandwich, and below the sandwich is a donut. Further to the right of the sandwich is a sock. Positioned vertically below the sock is a wrench, and below the wrench is a lighter. Finally, for every pair of scissors in the scene, it is located to the right of the lighter, and the monitor is larger than the scissors.",
+    "dsl": "(exists ?mon (exists ?ph (exists ?k (exists ?sand (exists ?don (exists ?sock (exists ?wr (exists ?li (and (Is ?mon 'monitor') (OnLeftSide ?mon) (Is ?ph 'phone') (LeftOf ?mon ?ph) (Is ?k 'keys') (Below ?k ?ph) (Is ?sand 'sandwich') (RightOf ?sand ?ph) (Is ?don 'donut') (Below ?don ?sand) (Is ?sock 'sock') (RightOf ?sock ?sand) (Is ?wr 'wrench') (Below ?wr ?sock) (Is ?li 'lighter') (Below ?li ?wr) (forall ?sc (implies (Is ?sc 'scissors') (and (RightOf ?sc ?li) (LargerThan ?mon ?sc)))))))))))))",
+    "cnf": "(exists ?mon (exists ?ph (exists ?k (exists ?sand (exists ?don (exists ?sock (exists ?wr (exists ?li (forall ?sc (and (Is ?mon 'monitor') (OnLeftSide ?mon) (LeftOf ?mon ?ph) (or (not (Is ?sc 'scissors')) (LargerThan ?mon ?sc)) (Is ?ph 'phone') (Below ?k ?ph) (or (not (Is ?sc 'scissors')) (RightOf ?sc ?li)) (RightOf ?sand ?ph) (Is ?k 'keys') (Below ?li ?wr) (Is ?sand 'sandwich') (Below ?don ?sand) (Below ?wr ?sock) (Is ?li 'lighter') (RightOf ?sock ?sand) (Is ?don 'donut') (Is ?wr 'wrench') (Is ?sock 'sock')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "sock",
+        "wrench",
+        "phone",
+        "donut",
+        "lighter",
+        "monitor",
+        "sandwich",
+        "scissors"
+    ]
+}

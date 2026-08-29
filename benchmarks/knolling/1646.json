@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a blue book. For every wrench present, it is positioned to the right of the book and is visually smaller than the book. Associated with each wrench, there is a hammer to its right, a black wallet to the right of the hammer, a remote located below the book, a pen to the right of the remote and below the wrench, a fork to the right of the pen and below the hammer, a pizza below the remote, and a white phone to the right of the pizza and below the pen.",
+    "dsl": "(exists ?book (and (Is ?book 'book') (Has ?book 'blue') (forall ?wrench (implies (Is ?wrench 'wrench') (and (RightOf ?wrench ?book) (SmallerThan ?wrench ?book) (exists ?hammer (and (Is ?hammer 'hammer') (LeftOf ?wrench ?hammer) (exists ?wallet (and (Is ?wallet 'wallet') (Has ?wallet 'black') (RightOf ?wallet ?hammer) (exists ?remote (and (Is ?remote 'remote') (Above ?book ?remote) (exists ?pen (and (Is ?pen 'pen') (Above ?wrench ?pen) (LeftOf ?remote ?pen) (exists ?fork (and (Is ?fork 'fork') (RightOf ?fork ?pen) (Below ?fork ?hammer) (exists ?pizza (and (Is ?pizza 'pizza') (Above ?remote ?pizza) (exists ?phone (and (Is ?phone 'phone') (Has ?phone 'white') (RightOf ?phone ?pizza) (Below ?phone ?pen))))))))))))))))))))",
+    "cnf": "(exists ?book (forall ?wrench (exists ?hammer (exists ?wallet (exists ?remote (exists ?pen (exists ?fork (exists ?pizza (exists ?phone (and (Is ?book 'book') (Has ?book 'blue') (or (not (Is ?wrench 'wrench')) (RightOf ?wrench ?book)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?book)) (or (not (Is ?wrench 'wrench')) (Above ?book ?remote)) (or (not (Is ?wrench 'wrench')) (Is ?hammer 'hammer')) (or (not (Is ?wrench 'wrench')) (Is ?remote 'remote')) (or (not (Is ?wrench 'wrench')) (Is ?pen 'pen')) (or (not (Is ?wrench 'wrench')) (LeftOf ?remote ?pen)) (or (not (Is ?wrench 'wrench')) (LeftOf ?wrench ?hammer)) (or (not (Is ?wrench 'wrench')) (RightOf ?wallet ?hammer)) (or (not (Is ?wrench 'wrench')) (Above ?wrench ?pen)) (or (not (Is ?wrench 'wrench')) (Is ?fork 'fork')) (or (not (Is ?wrench 'wrench')) (Above ?remote ?pizza)) (or (not (Is ?wrench 'wrench')) (RightOf ?fork ?pen)) (or (not (Is ?wrench 'wrench')) (Is ?wallet 'wallet')) (or (not (Is ?wrench 'wrench')) (Has ?wallet 'black')) (or (not (Is ?wrench 'wrench')) (Below ?fork ?hammer)) (or (not (Is ?wrench 'wrench')) (Is ?pizza 'pizza')) (or (not (Is ?wrench 'wrench')) (Is ?phone 'phone')) (or (not (Is ?wrench 'wrench')) (RightOf ?phone ?pizza)) (or (not (Is ?wrench 'wrench')) (Below ?phone ?pen)) (or (not (Is ?wrench 'wrench')) (Has ?phone 'white'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "remote",
+        "pen",
+        "wrench",
+        "phone",
+        "pizza",
+        "hammer",
+        "fork",
+        "wallet"
+    ]
+}

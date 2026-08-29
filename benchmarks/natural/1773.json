@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden wardrobe containing a red backpack. Situated next to the wardrobe is a metal desk with a keyboard and a green plant on top. A dog stands next to the desk, holding a pair of glasses. Every car is located to the left of the wardrobe, with a boat positioned to the right of each car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?bp (exists ?d (exists ?k (exists ?p (exists ?dog (exists ?g (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?bp 'backpack') (HasColor ?bp 'red') (In ?bp ?w) (Is ?d 'desk') (HasMaterial ?d 'metal') (NextTo ?d ?w) (Is ?k 'keyboard') (On ?k ?d) (Is ?p 'plant') (HasColor ?p 'green') (On ?p ?d) (Is ?dog 'dog') (NextTo ?dog ?d) (Is ?g 'glasses') (Holding ?dog ?g) (forall ?c (implies (Is ?c 'car') (and (LeftOf ?c ?w) (exists ?b (and (Is ?b 'boat') (RightOf ?b ?c)))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?bp (exists ?d (exists ?k (exists ?p (exists ?dog (exists ?g (forall ?c (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?bp ?w) (NextTo ?d ?w) (HasColor ?bp 'red') (or (not (Is ?c 'car')) (LeftOf ?c ?w)) (HasMaterial ?d 'metal') (On ?k ?d) (Is ?bp 'backpack') (or (not (Is ?c 'car')) (Is ?b 'boat')) (Is ?d 'desk') (On ?p ?d) (Is ?k 'keyboard') (or (not (Is ?c 'car')) (RightOf ?b ?c)) (NextTo ?dog ?d) (HasColor ?p 'green') (Is ?dog 'dog') (Holding ?dog ?g) (Is ?p 'plant') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "plant",
+        "desk",
+        "backpack",
+        "wardrobe",
+        "boat",
+        "dog",
+        "car"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child is on a yellow bus, holding a red ball.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?b (exists ?a (and (Is ?b 'bus') (HasColor ?b 'yellow') (Is ?a 'ball') (HasColor ?a 'red') (On ?c ?b) (Holding ?c ?a))))))",
+    "cnf": "(forall ?c (exists ?b (exists ?a (and (or (not (Is ?c 'child')) (Is ?b 'bus')) (or (not (Is ?c 'child')) (HasColor ?b 'yellow')) (or (not (Is ?c 'child')) (On ?c ?b)) (or (not (Is ?c 'child')) (Is ?a 'ball')) (or (not (Is ?c 'child')) (HasColor ?a 'red')) (or (not (Is ?c 'child')) (Holding ?c ?a))))))",
+    "k": 3,
+    "object_classes": [
+        "ball",
+        "child",
+        "bus"
+    ]
+}

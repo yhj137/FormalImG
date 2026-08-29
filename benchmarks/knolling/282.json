@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of headphones situated on the bottom side of the layout, there is a book placed above it.",
+    "dsl": "(and (forall ?h (implies (and (Is ?h 'headphones') (OnBottomSide ?h)) (exists ?b (and (Is ?b 'book') (Above ?b ?h))))))",
+    "cnf": "(forall ?h (exists ?b (and (or (not (Is ?h 'headphones')) (not (OnBottomSide ?h)) (Is ?b 'book')) (or (not (Is ?h 'headphones')) (not (OnBottomSide ?h)) (Above ?b ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "headphones"
+    ]
+}

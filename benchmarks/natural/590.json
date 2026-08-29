@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a blue boat with a pair of glasses inside. Every flower is located next to the boat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?g (and (Is ?b 'boat') (HasColor ?b 'blue') (Is ?g 'glasses') (In ?g ?b) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?g (forall ?f (and (Is ?b 'boat') (HasColor ?b 'blue') (In ?g ?b) (or (not (Is ?f 'flower')) (NextTo ?f ?b)) (Is ?g 'glasses'))))))",
+    "k": 3,
+    "object_classes": [
+        "boat",
+        "flower",
+        "glasses"
+    ]
+}

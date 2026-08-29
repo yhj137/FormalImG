@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman stands to the left of a house, holding a hammer and a pan. To the right of the woman is a monitor that is on, while a mirror is located to her left. All butterflies in the scene are positioned to the right of the house. A plate sits to the right of the pan, and a knife lies to the right of the plate.",
+    "dsl": "(exists ?h (exists ?w (exists ?hm (exists ?p (exists ?m (exists ?mr (and (Is ?h 'house') (Is ?w 'woman') (HasState ?w 'standing') (LeftOf ?w ?h) (Is ?hm 'hammer') (Holding ?w ?hm) (Is ?p 'pan') (Holding ?w ?p) (Is ?m 'monitor') (HasState ?m 'on') (RightOf ?m ?w) (Is ?mr 'mirror') (LeftOf ?mr ?w) (forall ?b (implies (Is ?b 'butterfly') (RightOf ?b ?h))) (exists ?pl (exists ?k (and (Is ?pl 'plate') (RightOf ?pl ?p) (Is ?k 'knife') (RightOf ?k ?pl)))))))))))",
+    "cnf": "(exists ?h (exists ?w (exists ?hm (exists ?p (exists ?m (exists ?mr (forall ?b (exists ?pl (exists ?k (and (Is ?h 'house') (LeftOf ?w ?h) (or (not (Is ?b 'butterfly')) (RightOf ?b ?h)) (HasState ?w 'standing') (Holding ?w ?hm) (Is ?w 'woman') (Holding ?w ?p) (Is ?hm 'hammer') (RightOf ?m ?w) (Is ?p 'pan') (RightOf ?pl ?p) (LeftOf ?mr ?w) (HasState ?m 'on') (Is ?pl 'plate') (RightOf ?k ?pl) (Is ?mr 'mirror') (Is ?m 'monitor') (Is ?k 'knife')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "knife",
+        "plate",
+        "woman",
+        "monitor",
+        "hammer",
+        "pan",
+        "mirror",
+        "butterfly"
+    ]
+}

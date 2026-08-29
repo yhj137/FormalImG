@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a suitcase on the left side. To the right of the suitcase are jeans, and below the jeans is a shirt. Positioned in the top area is a cup located to the right of the jeans, with a bottle further to the right of the cup. On the right side of the image is a monitor, which is to the right of the bottle. The monitor is larger than the mouse found to its left. Below the monitor is a plate that is smaller than the monitor. Finally, every pair of pliers is situated to the left of the plate and has a lighter positioned below it.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?shirt (exists ?cup (exists ?bottle (exists ?monitor (exists ?mouse (exists ?plate (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?jeans 'jeans') (RightOf ?jeans ?suitcase) (Is ?shirt 'shirt') (Below ?shirt ?jeans) (Is ?cup 'cup') (OnTopSide ?cup) (RightOf ?cup ?jeans) (Is ?bottle 'bottle') (RightOf ?bottle ?cup) (Is ?monitor 'monitor') (OnRightSide ?monitor) (RightOf ?monitor ?bottle) (LargerThan ?monitor ?mouse) (Is ?mouse 'mouse') (LeftOf ?mouse ?monitor) (Is ?plate 'plate') (Below ?plate ?monitor) (SmallerThan ?plate ?monitor) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?lighter (and (Is ?lighter 'lighter') (LeftOf ?pliers ?plate) (Below ?lighter ?pliers))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?shirt (exists ?cup (exists ?bottle (exists ?monitor (exists ?mouse (exists ?plate (forall ?pliers (exists ?lighter (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?jeans ?suitcase) (Is ?jeans 'jeans') (Below ?shirt ?jeans) (RightOf ?cup ?jeans) (Is ?shirt 'shirt') (OnTopSide ?cup) (RightOf ?bottle ?cup) (Is ?cup 'cup') (Is ?bottle 'bottle') (RightOf ?monitor ?bottle) (OnRightSide ?monitor) (LargerThan ?monitor ?mouse) (Is ?monitor 'monitor') (LeftOf ?mouse ?monitor) (Is ?mouse 'mouse') (Below ?plate ?monitor) (SmallerThan ?plate ?monitor) (Is ?plate 'plate') (or (not (Is ?pliers 'pliers')) (LeftOf ?pliers ?plate)) (or (not (Is ?pliers 'pliers')) (Is ?lighter 'lighter')) (or (not (Is ?pliers 'pliers')) (Below ?lighter ?pliers)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "pliers",
+        "cup",
+        "lighter",
+        "jeans",
+        "mouse",
+        "bottle",
+        "suitcase",
+        "monitor",
+        "shirt"
+    ]
+}

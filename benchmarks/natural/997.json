@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A standing bicycle is next to a book with a phone resting on it. To the right of the book is a pizza, and every sandwich in the scene is placed on the pizza.",
+    "dsl": "(exists ?bi (exists ?bo (exists ?ph (exists ?pi (and (Is ?bi 'bicycle') (HasState ?bi 'standing') (Is ?bo 'book') (NextTo ?bo ?bi) (Is ?ph 'phone') (On ?ph ?bo) (Is ?pi 'pizza') (RightOf ?pi ?bo) (forall ?sa (implies (Is ?sa 'sandwich') (On ?sa ?pi))))))))",
+    "cnf": "(exists ?bi (exists ?bo (exists ?ph (exists ?pi (forall ?sa (and (Is ?bi 'bicycle') (HasState ?bi 'standing') (NextTo ?bo ?bi) (Is ?bo 'book') (On ?ph ?bo) (RightOf ?pi ?bo) (Is ?ph 'phone') (Is ?pi 'pizza') (or (not (Is ?sa 'sandwich')) (On ?sa ?pi))))))))",
+    "k": 5,
+    "object_classes": [
+        "sandwich",
+        "book",
+        "pizza",
+        "phone",
+        "bicycle"
+    ]
+}

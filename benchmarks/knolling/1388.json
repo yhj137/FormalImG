@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a brown handbag. Directly below the handbag is a hammer, and below the hammer is a pizza; these three items are aligned vertically. The pizza is larger than the hammer. Forming a second column to the right, a bowl is aligned horizontally with the handbag. Below the bowl are black headphones, which are aligned horizontally with the hammer. Below the headphones is a game controller, aligned horizontally with the pizza. Finally, for every phone in the image, it is located below the game controller and aligned vertically with it.",
+    "dsl": "(exists ?handbag (exists ?hammer (exists ?pizza (exists ?bowl (exists ?headphones (exists ?controller (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (Is ?hammer 'hammer') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?controller 'game_controller') (Below ?hammer ?handbag) (Below ?pizza ?hammer) (AlignedVertically ?handbag ?hammer) (AlignedVertically ?hammer ?pizza) (LargerThan ?pizza ?hammer) (AlignedHorizontally ?handbag ?bowl) (AlignedHorizontally ?hammer ?headphones) (AlignedHorizontally ?pizza ?controller) (Below ?headphones ?bowl) (Below ?controller ?headphones) (AlignedVertically ?bowl ?headphones) (AlignedVertically ?headphones ?controller) (forall ?phone (implies (Is ?phone 'phone') (and (Below ?phone ?controller) (AlignedVertically ?controller ?phone)))))))))))",
+    "cnf": "(exists ?handbag (exists ?hammer (exists ?pizza (exists ?bowl (exists ?headphones (exists ?controller (forall ?phone (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (Below ?hammer ?handbag) (AlignedVertically ?handbag ?hammer) (Is ?hammer 'hammer') (Below ?pizza ?hammer) (AlignedHorizontally ?handbag ?bowl) (AlignedVertically ?hammer ?pizza) (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Below ?headphones ?bowl) (LargerThan ?pizza ?hammer) (AlignedVertically ?bowl ?headphones) (AlignedHorizontally ?hammer ?headphones) (Below ?controller ?headphones) (AlignedHorizontally ?pizza ?controller) (AlignedVertically ?headphones ?controller) (Has ?headphones 'black') (Is ?controller 'game_controller') (or (not (Is ?phone 'phone')) (Below ?phone ?controller)) (Is ?headphones 'headphones') (or (not (Is ?phone 'phone')) (AlignedVertically ?controller ?phone))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "pizza",
+        "game_controller",
+        "hammer",
+        "handbag",
+        "bowl",
+        "headphones"
+    ]
+}

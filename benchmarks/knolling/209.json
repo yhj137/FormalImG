@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of headphones and a cutting board. The headphones are visually smaller than the cutting board, and the cutting board is positioned on the bottom side of the image.",
+    "dsl": "(exists ?h (exists ?c (and (Is ?h 'headphones') (Is ?c 'cutting_board') (SmallerThan ?h ?c) (OnBottomSide ?c))))",
+    "cnf": "(exists ?h (exists ?c (and (Is ?h 'headphones') (SmallerThan ?h ?c) (Is ?c 'cutting_board') (OnBottomSide ?c))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "headphones"
+    ]
+}

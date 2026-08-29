@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image displaying a collection of items arranged neatly. The scene consists entirely of suitcases, and every suitcase in the arrangement is gray.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'suitcase') (Has ?x 'gray'))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'suitcase')) (Has ?x 'gray')))",
+    "k": 1,
+    "object_classes": [
+        "suitcase"
+    ]
+}

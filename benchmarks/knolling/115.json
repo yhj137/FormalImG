@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a collection of staplers arranged neatly. For every stapler present in the scene, it is blue.",
+    "dsl": "(and (forall ?stapler (implies (Is ?stapler 'stapler') (Has ?stapler 'blue'))))",
+    "cnf": "(forall ?stapler (or (not (Is ?stapler 'stapler')) (Has ?stapler 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "stapler"
+    ]
+}

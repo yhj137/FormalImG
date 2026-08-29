@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of monitors. For every monitor present in the scene, it is black.",
+    "dsl": "(forall ?x (implies (Is ?x 'monitor') (Has ?x 'black')))",
+    "cnf": "(forall ?x (or (not (Is ?x 'monitor')) (Has ?x 'black')))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

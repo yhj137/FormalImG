@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man with a black phone next to him. A child is located next to the man. Next to the child is a sliced pizza, with a fork to its right and an open bottle beside it. Adjacent to the man is a bookshelf containing a mirror. Every piece of fruit is located next to the bottle, with a blue butterfly resting on each.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?c (exists ?z (exists ?f (exists ?b (exists ?s (exists ?mr (and (Is ?m 'man') (Is ?p 'phone') (NextTo ?p ?m) (HasColor ?p 'black') (Is ?c 'child') (NextTo ?c ?m) (Is ?z 'pizza') (NextTo ?z ?c) (HasState ?z 'sliced') (Is ?f 'fork') (RightOf ?f ?z) (Is ?b 'bottle') (NextTo ?b ?z) (HasState ?b 'open') (Is ?s 'bookshelf') (NextTo ?s ?m) (Is ?mr 'mirror') (In ?mr ?s) (forall ?fr (implies (Is ?fr 'fruit') (and (NextTo ?fr ?b) (exists ?bf (and (Is ?bf 'butterfly') (HasColor ?bf 'blue') (On ?bf ?fr))))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?c (exists ?z (exists ?f (exists ?b (exists ?s (exists ?mr (forall ?fr (exists ?bf (and (Is ?m 'man') (NextTo ?p ?m) (NextTo ?c ?m) (Is ?p 'phone') (HasColor ?p 'black') (NextTo ?s ?m) (Is ?c 'child') (NextTo ?z ?c) (Is ?s 'bookshelf') (In ?mr ?s) (Is ?z 'pizza') (HasState ?z 'sliced') (Is ?mr 'mirror') (RightOf ?f ?z) (NextTo ?b ?z) (Is ?f 'fork') (Is ?b 'bottle') (HasState ?b 'open') (or (not (Is ?fr 'fruit')) (NextTo ?fr ?b)) (or (not (Is ?fr 'fruit')) (Is ?bf 'butterfly')) (or (not (Is ?fr 'fruit')) (HasColor ?bf 'blue')) (or (not (Is ?fr 'fruit')) (On ?bf ?fr))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "phone",
+        "child",
+        "fork",
+        "bottle",
+        "man",
+        "pizza",
+        "mirror",
+        "butterfly",
+        "bookshelf"
+    ]
+}

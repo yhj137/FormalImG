@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman holding a bowl containing a rusty screwdriver, with every keyboard in the scene positioned next to her.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'woman') (exists ?b (and (Is ?b 'bowl') (Holding ?w ?b) (exists ?s (and (Is ?s 'screwdriver') (In ?s ?b) (HasState ?s 'rusty'))) (forall ?k (implies (Is ?k 'keyboard') (NextTo ?k ?w))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?s (forall ?k (and (Is ?w 'woman') (Holding ?w ?b) (or (not (Is ?k 'keyboard')) (NextTo ?k ?w)) (Is ?b 'bowl') (In ?s ?b) (Is ?s 'screwdriver') (HasState ?s 'rusty')))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "keyboard",
+        "screwdriver",
+        "woman"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a house. Every child stands to the right of the house, holding a ball. Next to the house lies a rug. On the rug sits a basket containing a round cake, along with a book that has a hat next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (forall ?c (implies (Is ?c 'child') (and (RightOf ?c ?h) (exists ?l (and (Is ?l 'ball') (Holding ?c ?l)))))) (exists ?r (and (Is ?r 'rug') (NextTo ?r ?h) (exists ?b (and (Is ?b 'basket') (On ?b ?r) (exists ?k (and (Is ?k 'cake') (In ?k ?b) (HasShape ?k 'round'))))) (exists ?bk (and (Is ?bk 'book') (On ?bk ?r) (exists ?ht (and (Is ?ht 'hat') (NextTo ?ht ?bk))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?c (exists ?l (exists ?r (exists ?b (exists ?k (exists ?bk (exists ?ht (and (Is ?h 'house') (or (not (Is ?c 'child')) (RightOf ?c ?h)) (NextTo ?r ?h) (or (not (Is ?c 'child')) (Is ?l 'ball')) (Is ?r 'rug') (On ?b ?r) (or (not (Is ?c 'child')) (Holding ?c ?l)) (On ?bk ?r) (Is ?b 'basket') (In ?k ?b) (Is ?bk 'book') (NextTo ?ht ?bk) (Is ?k 'cake') (HasShape ?k 'round') (Is ?ht 'hat')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ball",
+        "hat",
+        "cake",
+        "book",
+        "basket",
+        "rug",
+        "house",
+        "child"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a vertical column. At the top is a blue shirt. Below the shirt, for every plate, there is a red hat positioned below it. Continuing the vertical line downwards, a black shoe is below the hat, a wallet is below the shoe, white keys are below the wallet, a yellow drill is below the keys, and a cutting board is at the bottom. All objects are aligned vertically, and the wallet is smaller than the shoe.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (forall ?plate (implies (Is ?plate 'plate') (exists ?hat (exists ?shoe (exists ?wallet (exists ?keys (exists ?drill (exists ?cutting_board (and (Is ?hat 'hat') (Has ?hat 'red') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?wallet 'wallet') (Is ?keys 'keys') (Has ?keys 'white') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?cutting_board 'cutting_board') (Below ?plate ?shirt) (Below ?hat ?plate) (Below ?shoe ?hat) (Below ?wallet ?shoe) (Below ?keys ?wallet) (Below ?drill ?keys) (Below ?cutting_board ?drill) (AlignedVertically ?shirt ?plate) (AlignedVertically ?plate ?hat) (AlignedVertically ?hat ?shoe) (AlignedVertically ?shoe ?wallet) (AlignedVertically ?wallet ?keys) (AlignedVertically ?keys ?drill) (AlignedVertically ?drill ?cutting_board) (SmallerThan ?wallet ?shoe))))))))))))",
+    "cnf": "(exists ?shirt (forall ?plate (exists ?hat (exists ?shoe (exists ?wallet (exists ?keys (exists ?drill (exists ?cutting_board (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (or (not (Is ?plate 'plate')) (Below ?plate ?shirt)) (or (not (Is ?plate 'plate')) (AlignedVertically ?shirt ?plate)) (or (not (Is ?plate 'plate')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?plate 'plate')) (Below ?hat ?plate)) (or (not (Is ?plate 'plate')) (Below ?cutting_board ?drill)) (or (not (Is ?plate 'plate')) (AlignedVertically ?plate ?hat)) (or (not (Is ?plate 'plate')) (Has ?drill 'yellow')) (or (not (Is ?plate 'plate')) (Below ?shoe ?hat)) (or (not (Is ?plate 'plate')) (Has ?hat 'red')) (or (not (Is ?plate 'plate')) (Below ?drill ?keys)) (or (not (Is ?plate 'plate')) (AlignedVertically ?keys ?drill)) (or (not (Is ?plate 'plate')) (AlignedVertically ?drill ?cutting_board)) (or (not (Is ?plate 'plate')) (AlignedVertically ?hat ?shoe)) (or (not (Is ?plate 'plate')) (Is ?drill 'drill')) (or (not (Is ?plate 'plate')) (Below ?wallet ?shoe)) (or (not (Is ?plate 'plate')) (Has ?shoe 'black')) (or (not (Is ?plate 'plate')) (Is ?hat 'hat')) (or (not (Is ?plate 'plate')) (Is ?shoe 'shoe')) (or (not (Is ?plate 'plate')) (Below ?keys ?wallet)) (or (not (Is ?plate 'plate')) (AlignedVertically ?wallet ?keys)) (or (not (Is ?plate 'plate')) (SmallerThan ?wallet ?shoe)) (or (not (Is ?plate 'plate')) (AlignedVertically ?shoe ?wallet)) (or (not (Is ?plate 'plate')) (Has ?keys 'white')) (or (not (Is ?plate 'plate')) (Is ?wallet 'wallet')) (or (not (Is ?plate 'plate')) (Is ?keys 'keys')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "plate",
+        "drill",
+        "cutting_board",
+        "hat",
+        "wallet",
+        "shoe",
+        "shirt"
+    ]
+}

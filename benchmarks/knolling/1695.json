@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a cutting board on the left side, a book on the bottom side, and a glove. For every lemon in the scene, there exist pliers, a ruler, a watch, a sock, and a black calculator arranged nearby. Specifically, the cutting board is to the left of the pliers, and the pliers are to the left of the lemon. The lemon is aligned horizontally with the ruler, and the ruler is aligned vertically with the book. The pliers are aligned vertically with the watch. The sock is to the left of the watch, and the glove is to the left of the sock. The calculator is black and aligned vertically with the lemon.",
+    "dsl": "(exists ?cb (exists ?bk (exists ?gl (forall ?lem (implies (Is ?lem 'lemon') (exists ?pl (exists ?ru (exists ?wa (exists ?so (exists ?ca (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?bk 'book') (OnBottomSide ?bk) (Is ?gl 'glove') (Is ?pl 'pliers') (Is ?ru 'ruler') (Is ?wa 'watch') (Is ?so 'sock') (Is ?ca 'calculator') (Has ?ca 'black') (LeftOf ?cb ?pl) (LeftOf ?pl ?lem) (AlignedHorizontally ?lem ?ru) (AlignedVertically ?bk ?ru) (AlignedVertically ?pl ?wa) (LeftOf ?so ?wa) (LeftOf ?gl ?so) (AlignedVertically ?ca ?lem))))))))))))",
+    "cnf": "(exists ?cb (exists ?bk (exists ?gl (forall ?lem (exists ?pl (exists ?ru (exists ?wa (exists ?so (exists ?ca (and (or (not (Is ?lem 'lemon')) (Is ?cb 'cutting_board')) (or (not (Is ?lem 'lemon')) (OnLeftSide ?cb)) (or (not (Is ?lem 'lemon')) (Is ?bk 'book')) (or (not (Is ?lem 'lemon')) (LeftOf ?cb ?pl)) (or (not (Is ?lem 'lemon')) (OnBottomSide ?bk)) (or (not (Is ?lem 'lemon')) (Has ?ca 'black')) (or (not (Is ?lem 'lemon')) (LeftOf ?pl ?lem)) (or (not (Is ?lem 'lemon')) (Is ?pl 'pliers')) (or (not (Is ?lem 'lemon')) (Is ?gl 'glove')) (or (not (Is ?lem 'lemon')) (AlignedVertically ?bk ?ru)) (or (not (Is ?lem 'lemon')) (Is ?ca 'calculator')) (or (not (Is ?lem 'lemon')) (AlignedVertically ?ca ?lem)) (or (not (Is ?lem 'lemon')) (AlignedHorizontally ?lem ?ru)) (or (not (Is ?lem 'lemon')) (AlignedVertically ?pl ?wa)) (or (not (Is ?lem 'lemon')) (Is ?ru 'ruler')) (or (not (Is ?lem 'lemon')) (LeftOf ?gl ?so)) (or (not (Is ?lem 'lemon')) (Is ?so 'sock')) (or (not (Is ?lem 'lemon')) (LeftOf ?so ?wa)) (or (not (Is ?lem 'lemon')) (Is ?wa 'watch'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "book",
+        "pliers",
+        "sock",
+        "lemon",
+        "watch",
+        "cutting_board",
+        "calculator",
+        "glove"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. Every handbag is located on the bottom side and the right side of the image. Vertically aligned with each handbag is a set of keys. To the left of the handbag lies a phone, which is vertically aligned with a lighter. To the left of the phone is a game controller, which is vertically aligned with a pair of glasses. To the left of the game controller is a tie, which is vertically aligned with a fork. Finally, a donut is positioned to the right of the handbag.",
+    "dsl": "(forall ?handbag (implies (Is ?handbag 'handbag') (exists ?keys (exists ?phone (exists ?lighter (exists ?game_controller (exists ?glasses (exists ?tie (exists ?fork (exists ?donut (and (Is ?keys 'keys') (Is ?phone 'phone') (Is ?lighter 'lighter') (Is ?game_controller 'game_controller') (Is ?glasses 'glasses') (Is ?tie 'tie') (Is ?fork 'fork') (Is ?donut 'donut') (OnBottomSide ?handbag) (OnRightSide ?handbag) (AlignedVertically ?keys ?handbag) (LeftOf ?phone ?handbag) (AlignedVertically ?lighter ?phone) (LeftOf ?game_controller ?phone) (AlignedVertically ?glasses ?game_controller) (LeftOf ?tie ?game_controller) (AlignedVertically ?fork ?tie) (RightOf ?donut ?handbag))))))))))))",
+    "cnf": "(forall ?handbag (exists ?keys (exists ?phone (exists ?lighter (exists ?game_controller (exists ?glasses (exists ?tie (exists ?fork (exists ?donut (and (or (not (Is ?handbag 'handbag')) (Is ?keys 'keys')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?keys ?handbag)) (or (not (Is ?handbag 'handbag')) (Is ?phone 'phone')) (or (not (Is ?handbag 'handbag')) (OnRightSide ?handbag)) (or (not (Is ?handbag 'handbag')) (LeftOf ?phone ?handbag)) (or (not (Is ?handbag 'handbag')) (Is ?lighter 'lighter')) (or (not (Is ?handbag 'handbag')) (OnBottomSide ?handbag)) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?lighter ?phone)) (or (not (Is ?handbag 'handbag')) (Is ?game_controller 'game_controller')) (or (not (Is ?handbag 'handbag')) (Is ?donut 'donut')) (or (not (Is ?handbag 'handbag')) (LeftOf ?game_controller ?phone)) (or (not (Is ?handbag 'handbag')) (Is ?glasses 'glasses')) (or (not (Is ?handbag 'handbag')) (Is ?fork 'fork')) (or (not (Is ?handbag 'handbag')) (RightOf ?donut ?handbag)) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?glasses ?game_controller)) (or (not (Is ?handbag 'handbag')) (Is ?tie 'tie')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?fork ?tie)) (or (not (Is ?handbag 'handbag')) (LeftOf ?tie ?game_controller))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "tie",
+        "phone",
+        "game_controller",
+        "fork",
+        "handbag",
+        "lighter",
+        "donut"
+    ]
+}

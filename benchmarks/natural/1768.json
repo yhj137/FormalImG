@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a man wearing headphones sitting on a leather sofa. A woman is to the right of the man. A plate with a sandwich rests on the sofa, and a fish is next to the plate. A horse stands to the left of the sofa, and all shoes in the scene are located next to the sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sofa (exists ?w (exists ?p (exists ?sd (exists ?f (exists ?hp (and (Is ?m 'man') (Is ?sofa 'sofa') (HasMaterial ?sofa 'leather') (Is ?w 'woman') (Is ?p 'plate') (Is ?sd 'sandwich') (Is ?f 'fish') (Is ?hp 'headphones') (On ?m ?sofa) (On ?hp ?m) (RightOf ?w ?m) (On ?p ?sofa) (On ?sd ?p) (NextTo ?f ?p) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?sofa))) (exists ?h (and (Is ?h 'horse') (LeftOf ?h ?sofa))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sofa (exists ?w (exists ?p (exists ?sd (exists ?f (exists ?hp (forall ?s (exists ?h (and (Is ?m 'man') (On ?m ?sofa) (On ?hp ?m) (HasMaterial ?sofa 'leather') (On ?p ?sofa) (RightOf ?w ?m) (Is ?hp 'headphones') (Is ?sofa 'sofa') (or (not (Is ?s 'shoes')) (NextTo ?s ?sofa)) (Is ?p 'plate') (On ?sd ?p) (Is ?w 'woman') (LeftOf ?h ?sofa) (NextTo ?f ?p) (Is ?sd 'sandwich') (Is ?h 'horse') (Is ?f 'fish'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "headphones",
+        "man",
+        "sandwich",
+        "fish",
+        "shoes",
+        "horse",
+        "woman",
+        "plate"
+    ]
+}

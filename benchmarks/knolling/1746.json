@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue bottle positioned on the left side. Aligned vertically with the bottle are keys, headphones, a knife, a drill, and a game controller. The drill is located on the top side and is larger than the game controller. For every black remote in the image, there exists a white sock and a pair of pliers. The remote is smaller than the drill, and the pliers are larger than the remote. Furthermore, the sock and the pliers are aligned vertically.",
+    "dsl": "(exists ?bottle (exists ?keys (exists ?headphones (exists ?knife (exists ?drill (exists ?game_controller (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnLeftSide ?bottle) (Is ?keys 'keys') (Is ?headphones 'headphones') (Is ?knife 'knife') (Is ?drill 'drill') (OnTopSide ?drill) (Is ?game_controller 'game_controller') (AlignedVertically ?bottle ?keys) (AlignedVertically ?keys ?headphones) (AlignedVertically ?headphones ?knife) (AlignedVertically ?knife ?drill) (AlignedVertically ?drill ?game_controller) (LargerThan ?drill ?game_controller) (forall ?remote (implies (and (Is ?remote 'remote') (Has ?remote 'black')) (exists ?sock (exists ?pliers (and (Is ?sock 'sock') (Has ?sock 'white') (Is ?pliers 'pliers') (SmallerThan ?remote ?drill) (LargerThan ?pliers ?remote) (AlignedVertically ?sock ?pliers)))))))))))))",
+    "cnf": "(exists ?bottle (exists ?keys (exists ?headphones (exists ?knife (exists ?drill (exists ?game_controller (forall ?remote (exists ?sock (exists ?pliers (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnLeftSide ?bottle) (AlignedVertically ?bottle ?keys) (Is ?keys 'keys') (AlignedVertically ?keys ?headphones) (Is ?headphones 'headphones') (AlignedVertically ?headphones ?knife) (Is ?knife 'knife') (AlignedVertically ?knife ?drill) (OnTopSide ?drill) (AlignedVertically ?drill ?game_controller) (Is ?drill 'drill') (LargerThan ?drill ?game_controller) (Is ?game_controller 'game_controller') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (SmallerThan ?remote ?drill)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?pliers 'pliers')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (LargerThan ?pliers ?remote)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?sock 'white')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (AlignedVertically ?sock ?pliers)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?sock 'sock'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "knife",
+        "pliers",
+        "headphones",
+        "game_controller",
+        "drill",
+        "sock",
+        "bottle",
+        "remote"
+    ]
+}

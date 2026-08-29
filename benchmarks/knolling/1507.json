@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a camera positioned on the right side. A red wrench is located above a screwdriver, and the camera is to the right of the wrench. For every pen present, there is a book placed directly below it, with the pen positioned to the right of the screwdriver. To the right of the book are pliers. Additionally, a sandwich is located on the bottom side of the image below the pliers, and a carrot is placed to the right of the sandwich.",
+    "dsl": "(exists ?camera (exists ?wrench (exists ?screwdriver (and (Is ?camera 'camera') (OnRightSide ?camera) (Is ?wrench 'wrench') (Has ?wrench 'red') (Is ?screwdriver 'screwdriver') (Above ?wrench ?screwdriver) (RightOf ?camera ?wrench) (forall ?pen (implies (Is ?pen 'pen') (exists ?book (exists ?pliers (exists ?sandwich (exists ?carrot (and (Is ?book 'book') (Is ?pliers 'pliers') (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich) (Is ?carrot 'carrot') (Below ?book ?pen) (RightOf ?pen ?screwdriver) (RightOf ?pliers ?book) (Below ?sandwich ?pliers) (RightOf ?carrot ?sandwich))))))))))))",
+    "cnf": "(exists ?camera (exists ?wrench (exists ?screwdriver (forall ?pen (exists ?book (exists ?pliers (exists ?sandwich (exists ?carrot (and (Is ?camera 'camera') (OnRightSide ?camera) (RightOf ?camera ?wrench) (Above ?wrench ?screwdriver) (Has ?wrench 'red') (Is ?screwdriver 'screwdriver') (or (not (Is ?pen 'pen')) (RightOf ?pen ?screwdriver)) (Is ?wrench 'wrench') (or (not (Is ?pen 'pen')) (Below ?book ?pen)) (or (not (Is ?pen 'pen')) (RightOf ?pliers ?book)) (or (not (Is ?pen 'pen')) (Is ?carrot 'carrot')) (or (not (Is ?pen 'pen')) (Is ?book 'book')) (or (not (Is ?pen 'pen')) (Below ?sandwich ?pliers)) (or (not (Is ?pen 'pen')) (Is ?pliers 'pliers')) (or (not (Is ?pen 'pen')) (OnBottomSide ?sandwich)) (or (not (Is ?pen 'pen')) (RightOf ?carrot ?sandwich)) (or (not (Is ?pen 'pen')) (Is ?sandwich 'sandwich')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "pliers",
+        "pen",
+        "wrench",
+        "carrot",
+        "screwdriver",
+        "camera",
+        "sandwich"
+    ]
+}

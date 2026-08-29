@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo where every man is holding a dirty hat.",
+    "dsl": "(and (IsStyle 'photo') (forall ?m (implies (Is ?m 'man') (exists ?h (and (Is ?h 'hat') (HasState ?h 'dirty') (Holding ?m ?h))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?m (exists ?h (and (or (not (Is ?m 'man')) (Is ?h 'hat')) (or (not (Is ?m 'man')) (HasState ?h 'dirty')) (or (not (Is ?m 'man')) (Holding ?m ?h))))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "man"
+    ]
+}

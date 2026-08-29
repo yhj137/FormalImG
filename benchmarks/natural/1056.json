@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In this cartoon scene, every pair of glasses lies next to a black jacket positioned beside a monitor. Next to the monitor, a man holds a plastic bowl containing a screwdriver.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?g (implies (Is ?g 'glasses') (exists ?j (exists ?mon (exists ?m (exists ?b (exists ?s (and (Is ?j 'jacket') (HasColor ?j 'black') (NextTo ?g ?j) (Is ?mon 'monitor') (NextTo ?j ?mon) (Is ?m 'man') (NextTo ?mon ?m) (Is ?b 'bowl') (HasMaterial ?b 'plastic') (Holding ?m ?b) (Is ?s 'screwdriver') (In ?s ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?g (exists ?j (exists ?mon (exists ?m (exists ?b (exists ?s (and (or (not (Is ?g 'glasses')) (Is ?j 'jacket')) (or (not (Is ?g 'glasses')) (HasColor ?j 'black')) (or (not (Is ?g 'glasses')) (NextTo ?g ?j)) (or (not (Is ?g 'glasses')) (Is ?mon 'monitor')) (or (not (Is ?g 'glasses')) (NextTo ?j ?mon)) (or (not (Is ?g 'glasses')) (Is ?m 'man')) (or (not (Is ?g 'glasses')) (NextTo ?mon ?m)) (or (not (Is ?g 'glasses')) (Is ?b 'bowl')) (or (not (Is ?g 'glasses')) (Holding ?m ?b)) (or (not (Is ?g 'glasses')) (HasMaterial ?b 'plastic')) (or (not (Is ?g 'glasses')) (Is ?s 'screwdriver')) (or (not (Is ?g 'glasses')) (In ?s ?b))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "monitor",
+        "man",
+        "glasses",
+        "screwdriver",
+        "jacket"
+    ]
+}

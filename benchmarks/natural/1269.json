@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a rock. Every butterfly in the image is located next to the rock. An open laptop sits next to the rock. Next to the laptop is a cake with a knife inside, and a peeled banana lies next to the cake. A fish is also positioned next to the rock.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'rock') (forall ?b (implies (Is ?b 'butterfly') (NextTo ?b ?r))) (exists ?l (exists ?c (exists ?k (exists ?ba (exists ?f (and (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?l ?r) (Is ?c 'cake') (NextTo ?c ?l) (Is ?k 'knife') (In ?k ?c) (Is ?ba 'banana') (HasState ?ba 'peeled') (NextTo ?ba ?c) (Is ?f 'fish') (NextTo ?f ?r))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (forall ?b (exists ?l (exists ?c (exists ?k (exists ?ba (exists ?f (and (Is ?r 'rock') (or (not (Is ?b 'butterfly')) (NextTo ?b ?r)) (NextTo ?l ?r) (NextTo ?f ?r) (HasState ?l 'open') (NextTo ?c ?l) (Is ?f 'fish') (Is ?l 'laptop') (Is ?c 'cake') (In ?k ?c) (NextTo ?ba ?c) (Is ?k 'knife') (HasState ?ba 'peeled') (Is ?ba 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "rock",
+        "knife",
+        "fish",
+        "laptop",
+        "cake",
+        "banana",
+        "butterfly"
+    ]
+}

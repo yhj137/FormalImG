@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a sitting dog holding a fork, with a backpack to its left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?f (exists ?b (and (Is ?d 'dog') (HasState ?d 'sitting') (Is ?f 'fork') (Is ?b 'backpack') (Holding ?d ?f) (LeftOf ?b ?d))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?f (exists ?b (and (Is ?d 'dog') (HasState ?d 'sitting') (Holding ?d ?f) (LeftOf ?b ?d) (Is ?f 'fork') (Is ?b 'backpack'))))))",
+    "k": 3,
+    "object_classes": [
+        "dog",
+        "backpack",
+        "fork"
+    ]
+}

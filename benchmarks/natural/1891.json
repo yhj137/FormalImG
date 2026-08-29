@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A blooming tree stands next to a lion holding a pair of headphones. To the right of the lion is a bench. All butterflies in the scene are positioned above the lion. An apple is located in the tree. A round cake sits on the bench next to a banana. A dirty shirt lies to the left of the bench, and a lit lamp stands to the right.",
+    "dsl": "(exists ?t (exists ?l (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (Is ?l 'lion') (NextTo ?l ?t) (Is ?b 'bench') (RightOf ?b ?l) (forall ?bf (implies (Is ?bf 'butterfly') (Above ?bf ?l))) (exists ?a (exists ?c (exists ?ban (exists ?s (exists ?lamp (exists ?hp (and (Is ?a 'apple') (In ?a ?t) (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?b) (Is ?ban 'banana') (NextTo ?ban ?c) (Is ?s 'shirt') (HasState ?s 'dirty') (LeftOf ?s ?b) (Is ?lamp 'lamp') (HasState ?lamp 'on') (RightOf ?lamp ?b) (Is ?hp 'headphones') (Holding ?l ?hp))))))))))))",
+    "cnf": "(exists ?t (exists ?l (exists ?b (forall ?bf (exists ?a (exists ?c (exists ?ban (exists ?s (exists ?lamp (exists ?hp (and (Is ?t 'tree') (HasState ?t 'blooming') (NextTo ?l ?t) (In ?a ?t) (Is ?l 'lion') (RightOf ?b ?l) (Is ?a 'apple') (or (not (Is ?bf 'butterfly')) (Above ?bf ?l)) (Is ?b 'bench') (On ?c ?b) (Holding ?l ?hp) (LeftOf ?s ?b) (HasShape ?c 'round') (NextTo ?ban ?c) (Is ?hp 'headphones') (RightOf ?lamp ?b) (HasState ?s 'dirty') (Is ?c 'cake') (Is ?ban 'banana') (HasState ?lamp 'on') (Is ?s 'shirt') (Is ?lamp 'lamp'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "shirt",
+        "bench",
+        "tree",
+        "cake",
+        "lamp",
+        "lion",
+        "butterfly",
+        "apple",
+        "banana"
+    ]
+}

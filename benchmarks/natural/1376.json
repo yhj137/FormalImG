@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A teddy bear is on a bed. To the right of the bed is a desk with a round orange, an apple, and a banana on it. Additionally, every butterfly in the scene is blue and positioned to the right of the teddy bear.",
+    "dsl": "(exists ?bed (exists ?desk (exists ?bear (exists ?o (exists ?a (exists ?ba (and (Is ?bed 'bed') (Is ?desk 'desk') (RightOf ?desk ?bed) (Is ?bear 'teddy bear') (On ?bear ?bed) (Is ?o 'orange') (HasShape ?o 'round') (On ?o ?desk) (Is ?a 'apple') (On ?a ?desk) (Is ?ba 'banana') (On ?ba ?desk) (forall ?bu (implies (Is ?bu 'butterfly') (and (HasColor ?bu 'blue') (RightOf ?bu ?bear)))))))))))",
+    "cnf": "(exists ?bed (exists ?desk (exists ?bear (exists ?o (exists ?a (exists ?ba (forall ?bu (and (Is ?bed 'bed') (RightOf ?desk ?bed) (On ?bear ?bed) (Is ?desk 'desk') (On ?o ?desk) (Is ?bear 'teddy bear') (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?bear)) (On ?a ?desk) (HasShape ?o 'round') (or (not (Is ?bu 'butterfly')) (HasColor ?bu 'blue')) (On ?ba ?desk) (Is ?a 'apple') (Is ?o 'orange') (Is ?ba 'banana')))))))))",
+    "k": 7,
+    "object_classes": [
+        "desk",
+        "banana",
+        "butterfly",
+        "teddy bear",
+        "bed",
+        "apple",
+        "orange"
+    ]
+}

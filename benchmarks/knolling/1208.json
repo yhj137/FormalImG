@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the arrangement, there is a brown suitcase. Directly below the suitcase are blue jeans, which are visibly smaller than the suitcase. Below the jeans is a cutting board. Positioned below the cutting board is a red book, which is horizontally aligned with a black remote, a gray fork, and a yellow lighter. The cutting board is larger than the book, and the lighter is smaller than the remote.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?cutting_board (exists ?book (exists ?remote (exists ?fork (exists ?lighter (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?cutting_board 'cutting_board') (Is ?book 'book') (Has ?book 'red') (Is ?remote 'remote') (Has ?remote 'black') (Is ?fork 'fork') (Has ?fork 'gray') (Is ?lighter 'lighter') (Has ?lighter 'yellow') (Below ?jeans ?suitcase) (SmallerThan ?jeans ?suitcase) (Below ?cutting_board ?jeans) (Below ?book ?cutting_board) (LargerThan ?cutting_board ?book) (AlignedHorizontally ?book ?remote) (AlignedHorizontally ?remote ?fork) (AlignedHorizontally ?fork ?lighter) (SmallerThan ?lighter ?remote)))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?cutting_board (exists ?book (exists ?remote (exists ?fork (exists ?lighter (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Below ?jeans ?suitcase) (SmallerThan ?jeans ?suitcase) (Has ?jeans 'blue') (Below ?cutting_board ?jeans) (Is ?jeans 'jeans') (Is ?cutting_board 'cutting_board') (Below ?book ?cutting_board) (LargerThan ?cutting_board ?book) (Has ?book 'red') (AlignedHorizontally ?book ?remote) (Is ?book 'book') (Has ?remote 'black') (AlignedHorizontally ?remote ?fork) (Is ?remote 'remote') (SmallerThan ?lighter ?remote) (Has ?fork 'gray') (AlignedHorizontally ?fork ?lighter) (Is ?fork 'fork') (Has ?lighter 'yellow') (Is ?lighter 'lighter')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "remote",
+        "cutting_board",
+        "fork",
+        "lighter",
+        "jeans",
+        "suitcase"
+    ]
+}

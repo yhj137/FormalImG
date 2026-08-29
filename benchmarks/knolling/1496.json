@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains three objects. For every spoon in the image, it is positioned to the left of the first object, which is a pan on the left side. The second object is a cutting board on the right side that is smaller than the pan, and the third object is a wallet on the bottom side. Additionally, for each spoon, there is a calculator to the left of the wallet (smaller than the cutting board), pliers to the left of the calculator (aligned horizontally with the wallet), a sandwich to the left of the pliers, and a donut to the left of the sandwich (smaller than the sandwich).",
+    "dsl": "(exists ?pan (exists ?cutting_board (exists ?wallet (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?calculator (exists ?pliers (exists ?sandwich (exists ?donut (and (Is ?pan 'pan') (OnLeftSide ?pan) (Is ?cutting_board 'cutting_board') (OnRightSide ?cutting_board) (LargerThan ?pan ?cutting_board) (Is ?wallet 'wallet') (OnBottomSide ?wallet) (LeftOf ?spoon ?pan) (Is ?calculator 'calculator') (LeftOf ?calculator ?wallet) (SmallerThan ?calculator ?cutting_board) (Is ?pliers 'pliers') (LeftOf ?pliers ?calculator) (AlignedHorizontally ?pliers ?wallet) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?pliers) (Is ?donut 'donut') (LeftOf ?donut ?sandwich) (SmallerThan ?donut ?sandwich)))))))))))",
+    "cnf": "(exists ?pan (exists ?cutting_board (exists ?wallet (forall ?spoon (exists ?calculator (exists ?pliers (exists ?sandwich (exists ?donut (and (or (not (Is ?spoon 'spoon')) (Is ?pan 'pan')) (or (not (Is ?spoon 'spoon')) (OnLeftSide ?pan)) (or (not (Is ?spoon 'spoon')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?spoon 'spoon')) (LargerThan ?pan ?cutting_board)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?cutting_board)) (or (not (Is ?spoon 'spoon')) (Is ?wallet 'wallet')) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?pan)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?calculator ?cutting_board)) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?wallet)) (or (not (Is ?spoon 'spoon')) (Is ?calculator 'calculator')) (or (not (Is ?spoon 'spoon')) (LeftOf ?calculator ?wallet)) (or (not (Is ?spoon 'spoon')) (Is ?pliers 'pliers')) (or (not (Is ?spoon 'spoon')) (LeftOf ?pliers ?calculator)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?pliers ?wallet)) (or (not (Is ?spoon 'spoon')) (Is ?sandwich 'sandwich')) (or (not (Is ?spoon 'spoon')) (LeftOf ?sandwich ?pliers)) (or (not (Is ?spoon 'spoon')) (Is ?donut 'donut')) (or (not (Is ?spoon 'spoon')) (LeftOf ?donut ?sandwich)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?donut ?sandwich)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "cutting_board",
+        "pan",
+        "calculator",
+        "wallet",
+        "spoon",
+        "sandwich",
+        "donut"
+    ]
+}

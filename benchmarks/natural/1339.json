@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene depicting a man sitting on a sofa and holding a screwdriver. To the right of the sofa is a green bed. All shoes are located next to the bed, and next to each pair of shoes is a cup with a banana inside.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?s (exists ?b (exists ?sd (and (Is ?m 'man') (Is ?s 'sofa') (Is ?b 'bed') (Is ?sd 'screwdriver') (On ?m ?s) (RightOf ?b ?s) (HasColor ?b 'green') (Holding ?m ?sd) (forall ?sh (implies (Is ?sh 'shoes') (exists ?c (exists ?ba (and (Is ?c 'cup') (Is ?ba 'banana') (NextTo ?sh ?b) (NextTo ?c ?sh) (In ?ba ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?s (exists ?b (exists ?sd (forall ?sh (exists ?c (exists ?ba (and (Is ?m 'man') (On ?m ?s) (Holding ?m ?sd) (Is ?s 'sofa') (RightOf ?b ?s) (Is ?sd 'screwdriver') (Is ?b 'bed') (HasColor ?b 'green') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?b)) (or (not (Is ?sh 'shoes')) (Is ?ba 'banana')) (or (not (Is ?sh 'shoes')) (NextTo ?c ?sh)) (or (not (Is ?sh 'shoes')) (Is ?c 'cup')) (or (not (Is ?sh 'shoes')) (In ?ba ?c)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "shoes",
+        "bed",
+        "man",
+        "cup",
+        "screwdriver",
+        "banana"
+    ]
+}

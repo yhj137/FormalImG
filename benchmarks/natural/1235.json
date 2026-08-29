@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every key sits on a gray rock inside a blue car that also contains a hammer, a pair of shoes, a monitor, and a lamp.",
+    "dsl": "(forall ?k (implies (Is ?k 'key') (exists ?r (exists ?c (exists ?h (exists ?s (exists ?m (exists ?l (and (Is ?r 'rock') (HasColor ?r 'gray') (Is ?c 'car') (HasColor ?c 'blue') (Is ?h 'hammer') (Is ?s 'shoes') (Is ?m 'monitor') (Is ?l 'lamp') (On ?k ?r) (In ?r ?c) (In ?h ?c) (In ?s ?c) (In ?m ?c) (In ?l ?c))))))))))",
+    "cnf": "(forall ?k (exists ?r (exists ?c (exists ?h (exists ?s (exists ?m (exists ?l (and (or (not (Is ?k 'key')) (Is ?r 'rock')) (or (not (Is ?k 'key')) (HasColor ?r 'gray')) (or (not (Is ?k 'key')) (On ?k ?r)) (or (not (Is ?k 'key')) (Is ?c 'car')) (or (not (Is ?k 'key')) (In ?r ?c)) (or (not (Is ?k 'key')) (Is ?l 'lamp')) (or (not (Is ?k 'key')) (HasColor ?c 'blue')) (or (not (Is ?k 'key')) (In ?h ?c)) (or (not (Is ?k 'key')) (Is ?m 'monitor')) (or (not (Is ?k 'key')) (In ?l ?c)) (or (not (Is ?k 'key')) (Is ?h 'hammer')) (or (not (Is ?k 'key')) (In ?s ?c)) (or (not (Is ?k 'key')) (Is ?s 'shoes')) (or (not (Is ?k 'key')) (In ?m ?c))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lamp",
+        "hammer",
+        "key",
+        "rock",
+        "monitor",
+        "shoes",
+        "car"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a purple rug. Every fork is placed on the rug. A green bicycle is located to the right of the rug, and a mirror lies on the rug.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'rug') (HasColor ?r 'purple') (forall ?f (implies (Is ?f 'fork') (On ?f ?r))) (exists ?b (and (Is ?b 'bicycle') (HasColor ?b 'green') (RightOf ?b ?r))) (exists ?m (and (Is ?m 'mirror') (On ?m ?r))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (forall ?f (exists ?b (exists ?m (and (Is ?r 'rug') (HasColor ?r 'purple') (or (not (Is ?f 'fork')) (On ?f ?r)) (RightOf ?b ?r) (On ?m ?r) (HasColor ?b 'green') (Is ?m 'mirror') (Is ?b 'bicycle')))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "mirror",
+        "rug",
+        "bicycle"
+    ]
+}

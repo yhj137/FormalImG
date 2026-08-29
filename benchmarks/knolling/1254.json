@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop. For every spoon present in the layout, the laptop is larger than the spoon. Arranged in a vertical alignment with the spoon is a red stapler, which is in turn aligned vertically with a black remote. A white mouse, positioned on the right side of the image, is aligned vertically with the remote. Furthermore, the mouse is larger than a pair of glasses, and the glasses are aligned vertically with a blue lighter.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?stapler (exists ?remote (exists ?mouse (exists ?glasses (exists ?lighter (and (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?remote 'remote') (Has ?remote 'black') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?glasses 'glasses') (Is ?lighter 'lighter') (Has ?lighter 'blue') (LargerThan ?laptop ?spoon) (AlignedVertically ?spoon ?stapler) (AlignedVertically ?stapler ?remote) (AlignedVertically ?remote ?mouse) (OnRightSide ?mouse) (LargerThan ?mouse ?glasses) (AlignedVertically ?glasses ?lighter)))))))))))",
+    "cnf": "(exists ?laptop (forall ?spoon (exists ?stapler (exists ?remote (exists ?mouse (exists ?glasses (exists ?lighter (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (or (not (Is ?spoon 'spoon')) (LargerThan ?laptop ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?lighter 'blue')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?stapler)) (or (not (Is ?spoon 'spoon')) (Is ?lighter 'lighter')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?glasses ?lighter)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?stapler ?remote)) (or (not (Is ?spoon 'spoon')) (Has ?stapler 'red')) (or (not (Is ?spoon 'spoon')) (Is ?glasses 'glasses')) (or (not (Is ?spoon 'spoon')) (LargerThan ?mouse ?glasses)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?remote ?mouse)) (or (not (Is ?spoon 'spoon')) (Has ?remote 'black')) (or (not (Is ?spoon 'spoon')) (Is ?stapler 'stapler')) (or (not (Is ?spoon 'spoon')) (Is ?remote 'remote')) (or (not (Is ?spoon 'spoon')) (Has ?mouse 'white')) (or (not (Is ?spoon 'spoon')) (OnRightSide ?mouse)) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "lighter",
+        "mouse",
+        "stapler",
+        "glasses",
+        "laptop",
+        "remote"
+    ]
+}

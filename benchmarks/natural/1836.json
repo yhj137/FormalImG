@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside every house is a rug. A leather sofa sits on the rug, with a woman holding a blue cup and a pizza placed on it. A white dog rests on the rug to the left of the sofa. Additionally, a ceramic elephant, a wooden boat, and a fluffy lion are arranged on the rug, with the elephant to the left of the boat and the boat to the left of the lion.",
+    "dsl": "(forall ?h (implies (Is ?h 'house') (exists ?r (exists ?s (exists ?w (exists ?c (exists ?p (exists ?d (exists ?b (exists ?e (exists ?l (and (Is ?r 'rug') (In ?r ?h) (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?s ?r) (Is ?w 'woman') (On ?w ?s) (Is ?c 'cup') (HasColor ?c 'blue') (Holding ?w ?c) (Is ?p 'pizza') (On ?p ?s) (Is ?d 'dog') (HasColor ?d 'white') (On ?d ?r) (LeftOf ?d ?s) (Is ?b 'boat') (HasMaterial ?b 'wooden') (On ?b ?r) (Is ?e 'elephant') (HasMaterial ?e 'ceramic') (On ?e ?r) (LeftOf ?e ?b) (Is ?l 'lion') (HasMaterial ?l 'fluffy') (On ?l ?r) (LeftOf ?b ?l)))))))))))))",
+    "cnf": "(forall ?h (exists ?r (exists ?s (exists ?w (exists ?c (exists ?p (exists ?d (exists ?b (exists ?e (exists ?l (and (or (not (Is ?h 'house')) (Is ?r 'rug')) (or (not (Is ?h 'house')) (In ?r ?h)) (or (not (Is ?h 'house')) (Is ?s 'sofa')) (or (not (Is ?h 'house')) (On ?s ?r)) (or (not (Is ?h 'house')) (HasMaterial ?s 'leather')) (or (not (Is ?h 'house')) (Is ?w 'woman')) (or (not (Is ?h 'house')) (On ?d ?r)) (or (not (Is ?h 'house')) (On ?w ?s)) (or (not (Is ?h 'house')) (HasColor ?d 'white')) (or (not (Is ?h 'house')) (LeftOf ?d ?s)) (or (not (Is ?h 'house')) (On ?b ?r)) (or (not (Is ?h 'house')) (Is ?c 'cup')) (or (not (Is ?h 'house')) (On ?p ?s)) (or (not (Is ?h 'house')) (Holding ?w ?c)) (or (not (Is ?h 'house')) (Is ?d 'dog')) (or (not (Is ?h 'house')) (Is ?b 'boat')) (or (not (Is ?h 'house')) (HasMaterial ?b 'wooden')) (or (not (Is ?h 'house')) (Is ?e 'elephant')) (or (not (Is ?h 'house')) (On ?e ?r)) (or (not (Is ?h 'house')) (LeftOf ?e ?b)) (or (not (Is ?h 'house')) (HasColor ?c 'blue')) (or (not (Is ?h 'house')) (Is ?p 'pizza')) (or (not (Is ?h 'house')) (HasMaterial ?e 'ceramic')) (or (not (Is ?h 'house')) (On ?l ?r)) (or (not (Is ?h 'house')) (Is ?l 'lion')) (or (not (Is ?h 'house')) (LeftOf ?b ?l)) (or (not (Is ?h 'house')) (HasMaterial ?l 'fluffy')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "elephant",
+        "sofa",
+        "rug",
+        "woman",
+        "pizza",
+        "cup",
+        "lion",
+        "boat",
+        "dog"
+    ]
+}

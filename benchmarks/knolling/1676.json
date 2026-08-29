@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A black monitor is located on the right side and is larger than a pair of blue jeans positioned below it. For every black remote, it is situated below the jeans and has a white mouse aligned horizontally with it. A black camera is placed below the mouse. Further down, on the bottom side of the image, lies a brown cutting board, which is positioned below the camera. A knife rests above the cutting board and is aligned horizontally with a fork. Finally, a cup, which is smaller than the cutting board, completes the arrangement.",
+    "dsl": "(exists ?monitor (exists ?jeans (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnRightSide ?monitor) (Is ?jeans 'jeans') (Has ?jeans 'blue') (LargerThan ?monitor ?jeans) (Above ?monitor ?jeans) (forall ?remote (implies (and (Is ?remote 'remote') (Has ?remote 'black')) (exists ?mouse (exists ?camera (exists ?cutting_board (exists ?knife (exists ?fork (exists ?cup (and (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?camera 'camera') (Has ?camera 'black') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Is ?knife 'knife') (Is ?fork 'fork') (Is ?cup 'cup') (Below ?remote ?jeans) (AlignedHorizontally ?mouse ?remote) (Below ?camera ?mouse) (Below ?cutting_board ?camera) (OnBottomSide ?cutting_board) (Above ?knife ?cutting_board) (AlignedHorizontally ?knife ?fork) (LargerThan ?cutting_board ?cup)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (forall ?remote (exists ?mouse (exists ?camera (exists ?cutting_board (exists ?knife (exists ?fork (exists ?cup (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnRightSide ?monitor) (LargerThan ?monitor ?jeans) (Above ?monitor ?jeans) (Has ?jeans 'blue') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Below ?remote ?jeans)) (Is ?jeans 'jeans') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?cup 'cup')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (AlignedHorizontally ?mouse ?remote)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?fork 'fork')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (LargerThan ?cutting_board ?cup)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?mouse 'white')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Below ?camera ?mouse)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (AlignedHorizontally ?knife ?fork)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Above ?knife ?cutting_board)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?mouse 'mouse')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?camera 'camera')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Below ?cutting_board ?camera)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?camera 'black')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?cutting_board 'brown')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (OnBottomSide ?cutting_board)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?cutting_board 'cutting_board'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "cup",
+        "camera",
+        "fork",
+        "cutting_board",
+        "jeans",
+        "knife",
+        "mouse",
+        "monitor"
+    ]
+}

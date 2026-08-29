@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a bowl and a glove. The bowl is positioned on the left side of the image and appears visually larger than the glove.",
+    "dsl": "(exists ?b (exists ?g (and (Is ?b 'bowl') (Is ?g 'glove') (OnLeftSide ?b) (LargerThan ?b ?g))))",
+    "cnf": "(exists ?b (exists ?g (and (Is ?b 'bowl') (OnLeftSide ?b) (LargerThan ?b ?g) (Is ?g 'glove'))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "glove"
+    ]
+}

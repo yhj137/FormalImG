@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a rug on the ground. A backpack containing a shirt sits on the rug. A switched-off monitor rests on the rug with headphones on top. A round pizza lies on the rug next to an empty cup. Additionally, shoes are placed on the rug, containing every flower in the scene.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rug') (exists ?b (and (Is ?b 'backpack') (On ?b ?r) (exists ?sh (and (Is ?sh 'shirt') (In ?sh ?b))))) (exists ?m (and (Is ?m 'monitor') (On ?m ?r) (HasState ?m 'off') (exists ?hp (and (Is ?hp 'headphones') (On ?hp ?m))))) (exists ?p (and (Is ?p 'pizza') (On ?p ?r) (HasShape ?p 'round') (exists ?c (and (Is ?c 'cup') (NextTo ?c ?p) (HasState ?c 'empty'))))) (exists ?s (and (Is ?s 'shoes') (On ?s ?r) (forall ?f (implies (Is ?f 'flower') (In ?f ?s))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?b (exists ?sh (exists ?m (exists ?hp (exists ?p (exists ?c (exists ?s (forall ?f (and (Is ?r 'rug') (On ?b ?r) (On ?m ?r) (Is ?b 'backpack') (In ?sh ?b) (On ?p ?r) (Is ?m 'monitor') (HasState ?m 'off') (Is ?sh 'shirt') (On ?s ?r) (Is ?p 'pizza') (HasShape ?p 'round') (On ?hp ?m) (Is ?s 'shoes') (or (not (Is ?f 'flower')) (In ?f ?s)) (NextTo ?c ?p) (Is ?hp 'headphones') (Is ?c 'cup') (HasState ?c 'empty'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "monitor",
+        "headphones",
+        "backpack",
+        "shoes",
+        "pizza",
+        "shirt",
+        "cup",
+        "rug",
+        "flower"
+    ]
+}

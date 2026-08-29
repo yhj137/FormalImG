@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a wardrobe, with a bookshelf standing to its right. To the right of the bookshelf is a rectangular table, and to the right of the table stands a woman holding a pair of shoes.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?wd (exists ?b (exists ?t (exists ?w (exists ?s (and (Is ?wd 'wardrobe') (Is ?b 'bookshelf') (Is ?t 'table') (HasShape ?t 'rectangular') (Is ?w 'woman') (Is ?s 'shoes') (RightOf ?b ?wd) (RightOf ?t ?b) (RightOf ?w ?t) (Holding ?w ?s))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?wd (exists ?b (exists ?t (exists ?w (exists ?s (and (Is ?wd 'wardrobe') (RightOf ?b ?wd) (Is ?b 'bookshelf') (RightOf ?t ?b) (HasShape ?t 'rectangular') (RightOf ?w ?t) (Is ?t 'table') (Is ?w 'woman') (Holding ?w ?s) (Is ?s 'shoes'))))))))",
+    "k": 5,
+    "object_classes": [
+        "shoes",
+        "woman",
+        "table",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

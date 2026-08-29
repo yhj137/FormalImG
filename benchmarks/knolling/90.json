@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a tie located on the top side.",
+    "dsl": "(exists ?tie (and (Is ?tie 'tie') (OnTopSide ?tie)))",
+    "cnf": "(exists ?tie (and (Is ?tie 'tie') (OnTopSide ?tie)))",
+    "k": 1,
+    "object_classes": [
+        "tie"
+    ]
+}

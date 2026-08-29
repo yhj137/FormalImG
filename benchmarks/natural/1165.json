@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a woman holding a sliced cake standing next to a wooden desk with an open laptop on it. All plants are located to the right of the desk, and a piece of fruit is next to the laptop.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?c (exists ?d (exists ?l (and (Is ?w 'woman') (Is ?c 'cake') (HasState ?c 'sliced') (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?l 'laptop') (HasState ?l 'open') (Holding ?w ?c) (NextTo ?w ?d) (On ?l ?d) (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?d))) (exists ?f (and (Is ?f 'fruit') (NextTo ?f ?l)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?c (exists ?d (exists ?l (forall ?p (exists ?f (and (Is ?w 'woman') (Holding ?w ?c) (NextTo ?w ?d) (HasState ?c 'sliced') (HasMaterial ?d 'wooden') (On ?l ?d) (Is ?c 'cake') (Is ?d 'desk') (or (not (Is ?p 'plant')) (RightOf ?p ?d)) (HasState ?l 'open') (NextTo ?f ?l) (Is ?l 'laptop') (Is ?f 'fruit')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "laptop",
+        "plant",
+        "cake",
+        "woman",
+        "desk"
+    ]
+}

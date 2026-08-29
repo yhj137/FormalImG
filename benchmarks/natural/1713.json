@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden desk supports a turned-on monitor, and every fork in the scene is made of metal and rests on the desk. To the left of the desk sits a car, inside of which is a teddy bear with a pair of headphones next to it. To the right of the desk stands a mirror, and beside it, a lion holds an open umbrella.",
+    "dsl": "(exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (exists ?m (and (Is ?m 'monitor') (HasState ?m 'on') (On ?m ?d) (exists ?mr (and (Is ?mr 'mirror') (RightOf ?mr ?d) (exists ?l (and (Is ?l 'lion') (NextTo ?l ?mr) (forall ?f (implies (Is ?f 'fork') (and (HasMaterial ?f 'metal') (On ?f ?d)))) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?l ?u) (exists ?c (and (Is ?c 'car') (LeftOf ?c ?d) (exists ?t (and (Is ?t 'teddy bear') (In ?t ?c) (exists ?h (and (Is ?h 'headphones') (NextTo ?h ?t)))))))))))))))))",
+    "cnf": "(exists ?d (exists ?m (exists ?mr (exists ?l (forall ?f (exists ?u (exists ?c (exists ?t (exists ?h (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?m ?d) (RightOf ?mr ?d) (HasState ?m 'on') (or (not (Is ?f 'fork')) (On ?f ?d)) (Is ?mr 'mirror') (NextTo ?l ?mr) (Is ?m 'monitor') (LeftOf ?c ?d) (or (not (Is ?f 'fork')) (HasMaterial ?f 'metal')) (Is ?l 'lion') (Holding ?l ?u) (Is ?c 'car') (In ?t ?c) (HasState ?u 'open') (Is ?t 'teddy bear') (NextTo ?h ?t) (Is ?u 'umbrella') (Is ?h 'headphones')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "monitor",
+        "headphones",
+        "desk",
+        "teddy bear",
+        "mirror",
+        "lion",
+        "car"
+    ]
+}

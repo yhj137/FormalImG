@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every plant sits on a rectangular rug alongside a black umbrella and a phone. A pair of headphones lies to the left of the phone. The rug is positioned to the left of a metal horse, which stands to the left of a refrigerator topped with a basket containing a yellow banana.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?p (implies (Is ?p 'plant') (exists ?r (exists ?u (exists ?ph (exists ?hp (exists ?h (exists ?ref (exists ?b (exists ?ba (and (Is ?r 'rug') (HasShape ?r 'rectangular') (Is ?u 'umbrella') (HasColor ?u 'black') (Is ?ph 'phone') (Is ?hp 'headphones') (Is ?h 'horse') (HasMaterial ?h 'metal') (Is ?ref 'refrigerator') (Is ?b 'basket') (Is ?ba 'banana') (HasColor ?ba 'yellow') (On ?p ?r) (On ?u ?r) (On ?ph ?r) (LeftOf ?hp ?ph) (LeftOf ?r ?h) (LeftOf ?h ?ref) (On ?b ?ref) (In ?ba ?b)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?p (exists ?r (exists ?u (exists ?ph (exists ?hp (exists ?h (exists ?ref (exists ?b (exists ?ba (and (or (not (Is ?p 'plant')) (Is ?r 'rug')) (or (not (Is ?p 'plant')) (HasShape ?r 'rectangular')) (or (not (Is ?p 'plant')) (Is ?u 'umbrella')) (or (not (Is ?p 'plant')) (On ?p ?r)) (or (not (Is ?p 'plant')) (HasColor ?u 'black')) (or (not (Is ?p 'plant')) (HasColor ?ba 'yellow')) (or (not (Is ?p 'plant')) (On ?u ?r)) (or (not (Is ?p 'plant')) (Is ?ph 'phone')) (or (not (Is ?p 'plant')) (Is ?ba 'banana')) (or (not (Is ?p 'plant')) (In ?ba ?b)) (or (not (Is ?p 'plant')) (On ?ph ?r)) (or (not (Is ?p 'plant')) (Is ?hp 'headphones')) (or (not (Is ?p 'plant')) (Is ?b 'basket')) (or (not (Is ?p 'plant')) (On ?b ?ref)) (or (not (Is ?p 'plant')) (LeftOf ?hp ?ph)) (or (not (Is ?p 'plant')) (LeftOf ?r ?h)) (or (not (Is ?p 'plant')) (Is ?h 'horse')) (or (not (Is ?p 'plant')) (Is ?ref 'refrigerator')) (or (not (Is ?p 'plant')) (LeftOf ?h ?ref)) (or (not (Is ?p 'plant')) (HasMaterial ?h 'metal')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "headphones",
+        "plant",
+        "banana",
+        "phone",
+        "basket",
+        "horse",
+        "rug",
+        "refrigerator"
+    ]
+}

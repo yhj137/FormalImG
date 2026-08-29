@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wardrobe contains a black jacket, and a yellow umbrella stands next to it. To the right of the wardrobe is a lamp. Next to the lamp sits a backpack with a fork inside. All toy cars are positioned to the right of the lamp, and headphones are next to the backpack.",
+    "dsl": "(exists ?w (exists ?j (exists ?u (exists ?l (exists ?b (exists ?f (and (Is ?w 'wardrobe') (Is ?j 'jacket') (HasColor ?j 'black') (In ?j ?w) (Is ?u 'umbrella') (HasColor ?u 'yellow') (NextTo ?u ?w) (Is ?l 'lamp') (RightOf ?l ?w) (Is ?b 'backpack') (NextTo ?b ?l) (Is ?f 'fork') (In ?f ?b) (forall ?tc (implies (Is ?tc 'toy car') (RightOf ?tc ?l))) (exists ?h (and (Is ?h 'headphones') (NextTo ?h ?b))))))))))",
+    "cnf": "(exists ?w (exists ?j (exists ?u (exists ?l (exists ?b (exists ?f (forall ?tc (exists ?h (and (Is ?w 'wardrobe') (In ?j ?w) (NextTo ?u ?w) (HasColor ?j 'black') (RightOf ?l ?w) (HasColor ?u 'yellow') (Is ?j 'jacket') (Is ?l 'lamp') (NextTo ?b ?l) (Is ?u 'umbrella') (or (not (Is ?tc 'toy car')) (RightOf ?tc ?l)) (Is ?b 'backpack') (In ?f ?b) (NextTo ?h ?b) (Is ?f 'fork') (Is ?h 'headphones'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "jacket",
+        "umbrella",
+        "fork",
+        "toy car",
+        "headphones",
+        "lamp",
+        "backpack",
+        "wardrobe"
+    ]
+}

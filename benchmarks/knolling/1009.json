@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor, a plate, a shoe, a screwdriver, a wrench, and a watch arranged in a neat grid. The monitor and plate are in the top row and are aligned horizontally, with the monitor being larger than the plate. Below the monitor is a shoe, and below the plate is a screwdriver; these two middle items are also aligned horizontally. At the bottom side of the image, a wrench is positioned directly below the shoe, and a watch is positioned directly below the screwdriver. The wrench and watch are aligned horizontally, and the shoe is larger than the watch.",
+    "dsl": "(exists ?monitor (exists ?plate (exists ?shoe (exists ?screwdriver (exists ?wrench (exists ?watch (and (Is ?monitor 'monitor') (Is ?plate 'plate') (Is ?shoe 'shoe') (Is ?screwdriver 'screwdriver') (Is ?wrench 'wrench') (Is ?watch 'watch') (AlignedHorizontally ?monitor ?plate) (LargerThan ?monitor ?plate) (Above ?monitor ?shoe) (Above ?plate ?screwdriver) (AlignedHorizontally ?shoe ?screwdriver) (Above ?shoe ?wrench) (Above ?screwdriver ?watch) (OnBottomSide ?wrench) (OnBottomSide ?watch) (AlignedHorizontally ?wrench ?watch) (LargerThan ?shoe ?watch))))))))",
+    "cnf": "(exists ?monitor (exists ?plate (exists ?shoe (exists ?screwdriver (exists ?wrench (exists ?watch (and (Is ?monitor 'monitor') (AlignedHorizontally ?monitor ?plate) (LargerThan ?monitor ?plate) (Is ?plate 'plate') (Above ?monitor ?shoe) (Above ?plate ?screwdriver) (Is ?shoe 'shoe') (AlignedHorizontally ?shoe ?screwdriver) (Is ?screwdriver 'screwdriver') (Above ?shoe ?wrench) (Above ?screwdriver ?watch) (LargerThan ?shoe ?watch) (Is ?wrench 'wrench') (OnBottomSide ?wrench) (Is ?watch 'watch') (OnBottomSide ?watch) (AlignedHorizontally ?wrench ?watch))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "wrench",
+        "watch",
+        "screwdriver",
+        "monitor",
+        "shoe"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every wrench present in the scene, it is located on the bottom side.",
+    "dsl": "(and (forall ?wrench (implies (Is ?wrench 'wrench') (OnBottomSide ?wrench))))",
+    "cnf": "(forall ?wrench (or (not (Is ?wrench 'wrench')) (OnBottomSide ?wrench)))",
+    "k": 1,
+    "object_classes": [
+        "wrench"
+    ]
+}

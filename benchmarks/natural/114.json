@@ -1,0 +1,9 @@
+{
+    "prompt": "Every cat in the scene is sleeping.",
+    "dsl": "(forall ?c (implies (Is ?c 'cat') (HasState ?c 'sleeping')))",
+    "cnf": "(forall ?c (or (not (Is ?c 'cat')) (HasState ?c 'sleeping')))",
+    "k": 1,
+    "object_classes": [
+        "cat"
+    ]
+}

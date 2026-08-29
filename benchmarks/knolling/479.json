@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue pen in the scene, there is a wrench located to its left. Additionally, there is a mouse positioned below the wrench, and the mouse is visually smaller than the wrench.",
+    "dsl": "(forall ?p (implies (and (Is ?p 'pen') (Has ?p 'blue')) (exists ?w (exists ?m (and (Is ?w 'wrench') (Is ?m 'mouse') (LeftOf ?w ?p) (Below ?m ?w) (SmallerThan ?m ?w))))))",
+    "cnf": "(forall ?p (exists ?w (exists ?m (and (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Is ?w 'wrench')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (LeftOf ?w ?p)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Is ?m 'mouse')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Below ?m ?w)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (SmallerThan ?m ?w))))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "mouse",
+        "pen"
+    ]
+}

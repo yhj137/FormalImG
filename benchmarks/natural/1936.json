@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. Arranged on a rug are a shirt next to a teddy bear, a laptop with headphones to its left, and a boat containing all the oranges beside a fish. A round cake also rests on the rug with a knife to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (exists ?s (exists ?t (exists ?l (exists ?h (exists ?b (and (Is ?r 'rug') (Is ?s 'shirt') (Is ?t 'teddy bear') (Is ?l 'laptop') (Is ?h 'headphones') (Is ?b 'boat') (On ?s ?r) (NextTo ?t ?s) (On ?l ?r) (LeftOf ?h ?l) (On ?b ?r) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?f (exists ?c (exists ?k (and (Is ?f 'fish') (Is ?c 'cake') (HasShape ?c 'round') (Is ?k 'knife') (NextTo ?f ?b) (On ?c ?r) (RightOf ?k ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (exists ?s (exists ?t (exists ?l (exists ?h (exists ?b (forall ?o (exists ?f (exists ?c (exists ?k (and (Is ?r 'rug') (On ?s ?r) (On ?l ?r) (Is ?s 'shirt') (NextTo ?t ?s) (On ?b ?r) (Is ?l 'laptop') (LeftOf ?h ?l) (Is ?t 'teddy bear') (On ?c ?r) (Is ?b 'boat') (or (not (Is ?o 'orange')) (In ?o ?b)) (Is ?h 'headphones') (HasShape ?c 'round') (RightOf ?k ?c) (NextTo ?f ?b) (Is ?c 'cake') (Is ?k 'knife') (Is ?f 'fish')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "shirt",
+        "knife",
+        "fish",
+        "laptop",
+        "rug",
+        "cake",
+        "teddy bear",
+        "orange",
+        "boat"
+    ]
+}

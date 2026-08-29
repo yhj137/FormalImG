@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a wooden bench. A plant is located to the left of the bench, and a lamp is to the left of the plant. On the bench, there is a lion holding a hammer and a cup containing all the toy cars.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (exists ?la (exists ?l (exists ?h (exists ?c (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?p 'plant') (LeftOf ?p ?b) (Is ?la 'lamp') (LeftOf ?la ?p) (Is ?l 'lion') (On ?l ?b) (Is ?h 'hammer') (Holding ?l ?h) (Is ?c 'cup') (On ?c ?b) (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?c)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (exists ?la (exists ?l (exists ?h (exists ?c (forall ?tc (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (LeftOf ?p ?b) (On ?l ?b) (Is ?p 'plant') (LeftOf ?la ?p) (On ?c ?b) (Is ?l 'lion') (Holding ?l ?h) (Is ?la 'lamp') (Is ?c 'cup') (or (not (Is ?tc 'toy car')) (In ?tc ?c)) (Is ?h 'hammer'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "plant",
+        "toy car",
+        "lamp",
+        "cup",
+        "hammer",
+        "lion"
+    ]
+}

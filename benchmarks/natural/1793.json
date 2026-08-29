@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A child is holding a pink teddy bear. A plastic basket sits next to the child, containing all the fruit in the scene. To the right of the child is a plant. A toy car is located next to the plant. A pizza is positioned next to the toy car, with a sandwich resting on it. Finally, a square cake is placed next to the sandwich.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?tb (exists ?b (exists ?p (exists ?tc (exists ?pi (exists ?s (exists ?ck (and (Is ?c 'child') (Is ?tb 'teddy bear') (HasColor ?tb 'pink') (Holding ?c ?tb) (Is ?b 'basket') (HasMaterial ?b 'plastic') (NextTo ?b ?c) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))) (Is ?p 'plant') (RightOf ?p ?c) (Is ?tc 'toy car') (NextTo ?tc ?p) (Is ?pi 'pizza') (NextTo ?pi ?tc) (Is ?s 'sandwich') (On ?s ?pi) (Is ?ck 'cake') (HasShape ?ck 'square') (NextTo ?ck ?s)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?tb (exists ?b (exists ?p (exists ?tc (exists ?pi (exists ?s (exists ?ck (forall ?f (and (Is ?c 'child') (Holding ?c ?tb) (NextTo ?b ?c) (HasColor ?tb 'pink') (RightOf ?p ?c) (HasMaterial ?b 'plastic') (or (not (Is ?f 'fruit')) (In ?f ?b)) (Is ?tb 'teddy bear') (Is ?p 'plant') (NextTo ?tc ?p) (Is ?b 'basket') (Is ?tc 'toy car') (NextTo ?pi ?tc) (Is ?pi 'pizza') (On ?s ?pi) (Is ?s 'sandwich') (NextTo ?ck ?s) (HasShape ?ck 'square') (Is ?ck 'cake'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "child",
+        "plant",
+        "cake",
+        "teddy bear",
+        "pizza",
+        "toy car",
+        "sandwich",
+        "basket"
+    ]
+}

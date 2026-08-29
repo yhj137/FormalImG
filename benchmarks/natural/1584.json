@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a blue house with a red ball on it. To the left of the house stands a person wearing glasses and holding a phone. To the right of the person is a basket containing a fork. All buses in the scene are located to the right of the house.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?bl (exists ?p (exists ?g (exists ?ph (exists ?bk (exists ?f (and (Is ?h 'house') (HasColor ?h 'blue') (Is ?bl 'ball') (HasColor ?bl 'red') (On ?bl ?h) (Is ?p 'person') (HasState ?p 'standing') (LeftOf ?p ?h) (Is ?g 'glasses') (On ?g ?p) (Is ?ph 'phone') (Holding ?p ?ph) (Is ?bk 'basket') (RightOf ?bk ?p) (Is ?f 'fork') (In ?f ?bk) (forall ?b (implies (Is ?b 'bus') (RightOf ?b ?h))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?bl (exists ?p (exists ?g (exists ?ph (exists ?bk (exists ?f (forall ?b (and (Is ?h 'house') (HasColor ?h 'blue') (On ?bl ?h) (LeftOf ?p ?h) (HasColor ?bl 'red') (or (not (Is ?b 'bus')) (RightOf ?b ?h)) (HasState ?p 'standing') (On ?g ?p) (Is ?bl 'ball') (Is ?p 'person') (Holding ?p ?ph) (Is ?g 'glasses') (RightOf ?bk ?p) (Is ?ph 'phone') (Is ?bk 'basket') (In ?f ?bk) (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "phone",
+        "person",
+        "fork",
+        "glasses",
+        "ball",
+        "basket",
+        "bus"
+    ]
+}

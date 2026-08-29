@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a laptop and a hammer, both positioned on the top side. For every shoe in the image, there is a remote, a hat, a lemon, and a knife associated with it. The shoe is vertically aligned with the laptop, and the laptop is larger than the shoe. The remote is vertically aligned with the hammer, and the hammer is larger than the remote. The hat and the lemon are located on the bottom side; the hat aligns vertically with the shoe, and the lemon aligns vertically with the remote. Furthermore, the knife is vertically aligned with the hat, and the hat is larger than the knife.",
+    "dsl": "(exists ?laptop (exists ?hammer (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?remote (exists ?hat (exists ?lemon (exists ?knife (and (Is ?laptop 'laptop') (Is ?hammer 'hammer') (Is ?remote 'remote') (Is ?hat 'hat') (Is ?lemon 'lemon') (Is ?knife 'knife') (OnTopSide ?laptop) (OnTopSide ?hammer) (OnBottomSide ?hat) (OnBottomSide ?lemon) (AlignedVertically ?shoe ?laptop) (AlignedVertically ?remote ?hammer) (AlignedVertically ?hat ?shoe) (AlignedVertically ?lemon ?remote) (AlignedVertically ?knife ?hat) (LargerThan ?laptop ?shoe) (LargerThan ?hammer ?remote) (LargerThan ?hat ?knife))))))))))",
+    "cnf": "(exists ?laptop (exists ?hammer (forall ?shoe (exists ?remote (exists ?hat (exists ?lemon (exists ?knife (and (or (not (Is ?shoe 'shoe')) (Is ?laptop 'laptop')) (or (not (Is ?shoe 'shoe')) (OnTopSide ?laptop)) (or (not (Is ?shoe 'shoe')) (Is ?hammer 'hammer')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?laptop)) (or (not (Is ?shoe 'shoe')) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (OnTopSide ?hammer)) (or (not (Is ?shoe 'shoe')) (Is ?remote 'remote')) (or (not (Is ?shoe 'shoe')) (LargerThan ?laptop ?shoe)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?lemon)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?remote ?hammer)) (or (not (Is ?shoe 'shoe')) (Is ?lemon 'lemon')) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?knife ?hat)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (LargerThan ?hammer ?remote)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?lemon ?remote)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?hat ?shoe)) (or (not (Is ?shoe 'shoe')) (LargerThan ?hat ?knife))))))))))",
+    "k": 7,
+    "object_classes": [
+        "hammer",
+        "knife",
+        "shoe",
+        "lemon",
+        "hat",
+        "laptop",
+        "remote"
+    ]
+}

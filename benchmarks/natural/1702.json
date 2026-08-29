@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden bench sits next to a tree. A woman is sitting on the bench, which also holds a backpack containing headphones. An open, round umbrella stands to the left of the bench. Every bird in the scene is perched on the tree. To the right of the tree, a teddy bear sits on a sofa.",
+    "dsl": "(exists ?bn (exists ?t (exists ?w (exists ?bp (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (Is ?t 'tree') (NextTo ?bn ?t) (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?bn) (Is ?bp 'backpack') (On ?bp ?bn) (forall ?br (implies (Is ?br 'bird') (On ?br ?t))) (exists ?hp (and (Is ?hp 'headphones') (In ?hp ?bp))) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (HasShape ?u 'round') (LeftOf ?u ?bn))) (exists ?s (exists ?tb (and (Is ?s 'sofa') (RightOf ?s ?t) (Is ?tb 'teddy bear') (HasState ?tb 'sitting') (On ?tb ?s)))))))))",
+    "cnf": "(exists ?bn (exists ?t (exists ?w (exists ?bp (forall ?br (exists ?hp (exists ?u (exists ?s (exists ?tb (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (NextTo ?bn ?t) (On ?w ?bn) (Is ?t 'tree') (or (not (Is ?br 'bird')) (On ?br ?t)) (On ?bp ?bn) (HasState ?w 'sitting') (RightOf ?s ?t) (LeftOf ?u ?bn) (Is ?bp 'backpack') (In ?hp ?bp) (Is ?w 'woman') (Is ?s 'sofa') (On ?tb ?s) (HasShape ?u 'round') (Is ?hp 'headphones') (HasState ?tb 'sitting') (HasState ?u 'open') (Is ?tb 'teddy bear') (Is ?u 'umbrella')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "sofa",
+        "bench",
+        "backpack",
+        "tree",
+        "woman",
+        "teddy bear",
+        "bird"
+    ]
+}

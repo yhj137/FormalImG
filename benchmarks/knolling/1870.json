@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop located on the top right side. Arranged vertically below the laptop are a keyboard, a bowl, and a calculator, in that order. To the left of the laptop are blue jeans. To the left of the jeans are headphones, and further left is a shoe. A watch is positioned below the headphones and is smaller than them. Below the watch are glasses, which are smaller than the watch. Additionally, every book in the image is red and located below the jeans.",
+    "dsl": "(exists ?laptop (exists ?jeans (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (OnTopSide ?laptop) (Is ?jeans 'jeans') (Has ?jeans 'blue') (LeftOf ?jeans ?laptop) (forall ?book (implies (Is ?book 'book') (and (Has ?book 'red') (Below ?book ?jeans)))) (exists ?headphones (exists ?shoe (exists ?keyboard (exists ?bowl (exists ?calculator (exists ?watch (exists ?glasses (and (Is ?headphones 'headphones') (LeftOf ?headphones ?jeans) (Is ?shoe 'shoe') (LeftOf ?shoe ?headphones) (Is ?keyboard 'keyboard') (Below ?keyboard ?laptop) (Is ?bowl 'bowl') (Below ?bowl ?keyboard) (Is ?calculator 'calculator') (Below ?calculator ?bowl) (Is ?watch 'watch') (Below ?watch ?headphones) (SmallerThan ?watch ?headphones) (Is ?glasses 'glasses') (Below ?glasses ?watch) (SmallerThan ?glasses ?watch))))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (forall ?book (exists ?headphones (exists ?shoe (exists ?keyboard (exists ?bowl (exists ?calculator (exists ?watch (exists ?glasses (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (OnTopSide ?laptop) (LeftOf ?jeans ?laptop) (Below ?keyboard ?laptop) (Has ?jeans 'blue') (or (not (Is ?book 'book')) (Below ?book ?jeans)) (Is ?keyboard 'keyboard') (Below ?bowl ?keyboard) (Is ?jeans 'jeans') (LeftOf ?headphones ?jeans) (or (not (Is ?book 'book')) (Has ?book 'red')) (Is ?bowl 'bowl') (Below ?calculator ?bowl) (Is ?headphones 'headphones') (LeftOf ?shoe ?headphones) (Is ?calculator 'calculator') (Below ?watch ?headphones) (Is ?shoe 'shoe') (SmallerThan ?watch ?headphones) (Is ?watch 'watch') (Below ?glasses ?watch) (SmallerThan ?glasses ?watch) (Is ?glasses 'glasses'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "laptop",
+        "glasses",
+        "keyboard",
+        "watch",
+        "calculator",
+        "jeans",
+        "bowl",
+        "headphones",
+        "shoe"
+    ]
+}

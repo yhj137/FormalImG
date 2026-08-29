@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a yellow bus. Inside the bus, a child holds a sandwich next to a bottle, and a phone rests on a keyboard. A boat is positioned to the left of the bus, while all butterflies are located to the right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bus (exists ?child (exists ?sandwich (exists ?bottle (exists ?keyboard (exists ?phone (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (Is ?child 'child') (In ?child ?bus) (Is ?sandwich 'sandwich') (Holding ?child ?sandwich) (Is ?bottle 'bottle') (NextTo ?bottle ?child) (Is ?keyboard 'keyboard') (In ?keyboard ?bus) (Is ?phone 'phone') (On ?phone ?keyboard) (forall ?bf (implies (Is ?bf 'butterfly') (RightOf ?bf ?bus))) (exists ?bt (and (Is ?bt 'boat') (LeftOf ?bt ?bus)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bus (exists ?child (exists ?sandwich (exists ?bottle (exists ?keyboard (exists ?phone (forall ?bf (exists ?bt (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (In ?child ?bus) (In ?keyboard ?bus) (Is ?child 'child') (Holding ?child ?sandwich) (or (not (Is ?bf 'butterfly')) (RightOf ?bf ?bus)) (Is ?keyboard 'keyboard') (On ?phone ?keyboard) (NextTo ?bottle ?child) (Is ?sandwich 'sandwich') (LeftOf ?bt ?bus) (Is ?phone 'phone') (Is ?bottle 'bottle') (Is ?bt 'boat')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "child",
+        "bottle",
+        "sandwich",
+        "butterfly",
+        "boat",
+        "bus",
+        "keyboard"
+    ]
+}

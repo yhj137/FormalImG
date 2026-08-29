@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a lion on a rock holding a round bowl. Every apple and a keyboard are also on the rock, and a bus is next to the rock.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?r (and (Is ?l 'lion') (Is ?r 'rock') (On ?l ?r) (forall ?a (implies (Is ?a 'apple') (On ?a ?r))) (exists ?b (exists ?k (exists ?bus (and (Is ?b 'bowl') (HasShape ?b 'round') (Holding ?l ?b) (Is ?k 'keyboard') (On ?k ?r) (Is ?bus 'bus') (NextTo ?bus ?r)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?r (forall ?a (exists ?b (exists ?k (exists ?bus (and (Is ?l 'lion') (On ?l ?r) (Holding ?l ?b) (Is ?r 'rock') (or (not (Is ?a 'apple')) (On ?a ?r)) (HasShape ?b 'round') (On ?k ?r) (Is ?b 'bowl') (NextTo ?bus ?r) (Is ?k 'keyboard') (Is ?bus 'bus')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "rock",
+        "lion",
+        "apple",
+        "bus",
+        "keyboard"
+    ]
+}

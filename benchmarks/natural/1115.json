@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a bookshelf with a person to its right. All cups are placed on the bookshelf. A keyboard also sits on the shelf with a screwdriver to its right, alongside an orange-colored orange.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bookshelf') (exists ?p (and (Is ?p 'person') (RightOf ?p ?b) (forall ?c (implies (Is ?c 'cup') (On ?c ?b))) (exists ?k (and (Is ?k 'keyboard') (On ?k ?b) (exists ?s (and (Is ?s 'screwdriver') (RightOf ?s ?k) (exists ?o (and (Is ?o 'orange') (HasColor ?o 'orange') (On ?o ?b))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (forall ?c (exists ?k (exists ?s (exists ?o (and (Is ?b 'bookshelf') (RightOf ?p ?b) (or (not (Is ?c 'cup')) (On ?c ?b)) (Is ?p 'person') (On ?k ?b) (On ?o ?b) (Is ?k 'keyboard') (RightOf ?s ?k) (HasColor ?o 'orange') (Is ?s 'screwdriver') (Is ?o 'orange')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "person",
+        "screwdriver",
+        "cup",
+        "bookshelf",
+        "orange"
+    ]
+}

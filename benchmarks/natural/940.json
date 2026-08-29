@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene depicting a child holding a red toy car. To the right of the child is a chair with a phone lying on it, and every piece of fruit in the scene is located next to the chair.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (exists ?t (and (Is ?c 'child') (Is ?ch 'chair') (Is ?t 'toy car') (HasColor ?t 'red') (Holding ?c ?t) (RightOf ?ch ?c) (forall ?f (implies (Is ?f 'fruit') (NextTo ?f ?ch))) (exists ?p (and (Is ?p 'phone') (On ?p ?ch))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (exists ?t (forall ?f (exists ?p (and (Is ?c 'child') (Holding ?c ?t) (RightOf ?ch ?c) (HasColor ?t 'red') (Is ?ch 'chair') (or (not (Is ?f 'fruit')) (NextTo ?f ?ch)) (Is ?t 'toy car') (On ?p ?ch) (Is ?p 'phone'))))))))",
+    "k": 5,
+    "object_classes": [
+        "toy car",
+        "chair",
+        "phone",
+        "fruit",
+        "child"
+    ]
+}

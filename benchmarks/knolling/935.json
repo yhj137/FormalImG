@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a handbag positioned on the top side, a bowl located to the left of the handbag, and a wrench on the right side which is aligned horizontally with the handbag. Additionally, for every tie in the image, it is placed below the handbag and is accompanied by a pen to its left.",
+    "dsl": "(exists ?handbag (exists ?wrench (exists ?bowl (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?wrench 'wrench') (OnRightSide ?wrench) (AlignedHorizontally ?handbag ?wrench) (Is ?bowl 'bowl') (LeftOf ?bowl ?handbag) (forall ?tie (implies (Is ?tie 'tie') (exists ?pen (and (Is ?pen 'pen') (Below ?tie ?handbag) (LeftOf ?pen ?tie)))))))))",
+    "cnf": "(exists ?handbag (exists ?wrench (exists ?bowl (forall ?tie (exists ?pen (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (AlignedHorizontally ?handbag ?wrench) (LeftOf ?bowl ?handbag) (OnRightSide ?wrench) (or (not (Is ?tie 'tie')) (Below ?tie ?handbag)) (Is ?bowl 'bowl') (Is ?wrench 'wrench') (or (not (Is ?tie 'tie')) (Is ?pen 'pen')) (or (not (Is ?tie 'tie')) (LeftOf ?pen ?tie))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "wrench",
+        "pen",
+        "tie",
+        "handbag"
+    ]
+}

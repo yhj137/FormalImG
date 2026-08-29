@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting an open wardrobe with a hammer inside. Every tree is located to the left of the wardrobe. Beside the wardrobe stands a chair with a teddy bear on it. A book rests on the teddy bear, supporting a round orange, with glasses next to the orange.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?h (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?h 'hammer') (In ?h ?w) (forall ?t (implies (Is ?t 'tree') (LeftOf ?t ?w))) (exists ?c (exists ?tb (exists ?b (exists ?o (exists ?g (and (Is ?c 'chair') (NextTo ?c ?w) (Is ?tb 'teddy bear') (On ?tb ?c) (Is ?b 'book') (On ?b ?tb) (Is ?o 'orange') (HasShape ?o 'round') (On ?o ?b) (Is ?g 'glasses') (NextTo ?g ?o)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?h (forall ?t (exists ?c (exists ?tb (exists ?b (exists ?o (exists ?g (and (Is ?w 'wardrobe') (HasState ?w 'open') (In ?h ?w) (or (not (Is ?t 'tree')) (LeftOf ?t ?w)) (Is ?h 'hammer') (NextTo ?c ?w) (Is ?c 'chair') (On ?tb ?c) (Is ?tb 'teddy bear') (On ?b ?tb) (Is ?b 'book') (On ?o ?b) (HasShape ?o 'round') (NextTo ?g ?o) (Is ?o 'orange') (Is ?g 'glasses')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "chair",
+        "tree",
+        "glasses",
+        "teddy bear",
+        "orange",
+        "hammer",
+        "wardrobe"
+    ]
+}

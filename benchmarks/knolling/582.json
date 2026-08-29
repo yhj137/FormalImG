@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack positioned on the top side. To the right of the backpack is a keyboard, and these two items are aligned horizontally. Additionally, for every fork present in the image, it is located to the right of the keyboard and aligned horizontally with it.",
+    "dsl": "(exists ?backpack (exists ?keyboard (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?backpack) (AlignedHorizontally ?backpack ?keyboard) (forall ?fork (implies (Is ?fork 'fork') (and (RightOf ?fork ?keyboard) (AlignedHorizontally ?keyboard ?fork)))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (forall ?fork (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?keyboard ?backpack) (AlignedHorizontally ?backpack ?keyboard) (Is ?keyboard 'keyboard') (or (not (Is ?fork 'fork')) (RightOf ?fork ?keyboard)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?keyboard ?fork))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "backpack",
+        "keyboard"
+    ]
+}

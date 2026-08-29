@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase positioned on the top side of the image, there is a specific arrangement of seven other items. A hat is located to the left of the suitcase, and the suitcase is located to the left of a drill; these three items are aligned horizontally. Directly below the suitcase is a cutting board, which is visually smaller than the suitcase. Arranged in a horizontal row with the cutting board are a screwdriver, pliers, a watch, and a lemon. Specifically, the screwdriver is to the left of the pliers, the pliers are to the left of the cutting board, the cutting board is to the left of the watch, and the watch is to the left of the lemon. Additionally, the lemon is smaller than the hat.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'suitcase') (OnTopSide ?s)) (exists ?h (exists ?d (exists ?cb (exists ?p (exists ?sd (exists ?w (exists ?l (and (Is ?h 'hat') (Is ?d 'drill') (Is ?cb 'cutting_board') (Is ?p 'pliers') (Is ?sd 'screwdriver') (Is ?w 'watch') (Is ?l 'lemon') (LeftOf ?h ?s) (LeftOf ?s ?d) (AlignedHorizontally ?h ?s) (AlignedHorizontally ?s ?d) (Above ?s ?cb) (LargerThan ?s ?cb) (LeftOf ?sd ?p) (LeftOf ?p ?cb) (LeftOf ?cb ?w) (LeftOf ?w ?l) (AlignedHorizontally ?sd ?p) (AlignedHorizontally ?p ?cb) (AlignedHorizontally ?cb ?w) (AlignedHorizontally ?w ?l) (SmallerThan ?l ?h))))))))))))",
+    "cnf": "(forall ?s (exists ?h (exists ?d (exists ?cb (exists ?p (exists ?sd (exists ?w (exists ?l (and (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?h 'hat')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?d 'drill')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?h ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?cb 'cutting_board')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?s ?d)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?l 'lemon')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?h ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?p 'pliers')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Above ?s ?cb)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?s ?d)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?w 'watch')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?w ?l)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (SmallerThan ?l ?h)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?sd 'screwdriver')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?sd ?p)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LargerThan ?s ?cb)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?cb ?w)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?sd ?p)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?cb ?w)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?w ?l)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LeftOf ?p ?cb)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?p ?cb)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "watch",
+        "cutting_board",
+        "pliers",
+        "drill",
+        "suitcase",
+        "screwdriver",
+        "lemon",
+        "hat"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a keyboard, camera, calculator, phone, remote, pen, pliers, and an apple. The keyboard is positioned on the top left side of the scene. The keyboard is to the left of the camera, the camera is to the left of the calculator, and the calculator is to the left of the phone. The keyboard is located above the remote and is larger than the remote. The remote is to the left of the pen. The pen is positioned below the camera, and the camera is larger than the pen. The pen is to the left of the pliers, which are located below the calculator. The pliers are to the left of the apple, and the apple is positioned below the phone.",
+    "dsl": "(exists ?keyboard (exists ?camera (exists ?calculator (exists ?phone (exists ?remote (exists ?pen (exists ?pliers (exists ?apple (and (Is ?keyboard 'keyboard') (Is ?camera 'camera') (Is ?calculator 'calculator') (Is ?phone 'phone') (Is ?remote 'remote') (Is ?pen 'pen') (Is ?pliers 'pliers') (Is ?apple 'apple') (OnTopSide ?keyboard) (OnLeftSide ?keyboard) (LeftOf ?keyboard ?camera) (LeftOf ?camera ?calculator) (LeftOf ?calculator ?phone) (Above ?keyboard ?remote) (LargerThan ?keyboard ?remote) (LeftOf ?remote ?pen) (Below ?pen ?camera) (LargerThan ?camera ?pen) (LeftOf ?pen ?pliers) (Above ?calculator ?pliers) (LeftOf ?pliers ?apple) (Below ?apple ?phone))))))))))",
+    "cnf": "(exists ?keyboard (exists ?camera (exists ?calculator (exists ?phone (exists ?remote (exists ?pen (exists ?pliers (exists ?apple (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (OnLeftSide ?keyboard) (LeftOf ?keyboard ?camera) (Above ?keyboard ?remote) (Is ?camera 'camera') (LeftOf ?camera ?calculator) (LargerThan ?keyboard ?remote) (Is ?remote 'remote') (Below ?pen ?camera) (Is ?calculator 'calculator') (LeftOf ?calculator ?phone) (LeftOf ?remote ?pen) (LargerThan ?camera ?pen) (Above ?calculator ?pliers) (Is ?phone 'phone') (Below ?apple ?phone) (Is ?pen 'pen') (LeftOf ?pen ?pliers) (LeftOf ?pliers ?apple) (Is ?pliers 'pliers') (Is ?apple 'apple'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "apple",
+        "keyboard",
+        "pen",
+        "phone",
+        "calculator",
+        "camera"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image where all rulers in the scene are yellow.",
+    "dsl": "(and (forall ?r (implies (Is ?r 'ruler') (Has ?r 'yellow'))))",
+    "cnf": "(forall ?r (or (not (Is ?r 'ruler')) (Has ?r 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "ruler"
+    ]
+}

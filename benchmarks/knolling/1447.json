@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans. For every cup in the image, the cup is white, smaller than a pizza, and located above a glove which is positioned above the jeans. Additionally, for each cup, there is a laptop to the right of the jeans, with the pizza positioned above the laptop, a knife to the right of the pizza, and a ruler to the right of the laptop located above a pair of scissors on the right side of the image.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (forall ?cup (implies (Is ?cup 'cup') (exists ?glove (exists ?laptop (exists ?pizza (exists ?knife (exists ?ruler (exists ?scissors (and (Is ?glove 'glove') (Is ?laptop 'laptop') (Is ?pizza 'pizza') (Is ?knife 'knife') (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Has ?cup 'white') (SmallerThan ?cup ?pizza) (Above ?cup ?glove) (Above ?glove ?jeans) (LeftOf ?jeans ?laptop) (Above ?pizza ?laptop) (RightOf ?knife ?pizza) (RightOf ?ruler ?laptop) (Above ?ruler ?scissors) (OnRightSide ?scissors))))))))))))",
+    "cnf": "(exists ?jeans (forall ?cup (exists ?glove (exists ?laptop (exists ?pizza (exists ?knife (exists ?ruler (exists ?scissors (and (Is ?jeans 'jeans') (or (not (Is ?cup 'cup')) (Above ?glove ?jeans)) (or (not (Is ?cup 'cup')) (LeftOf ?jeans ?laptop)) (or (not (Is ?cup 'cup')) (Above ?cup ?glove)) (or (not (Is ?cup 'cup')) (Above ?pizza ?laptop)) (or (not (Is ?cup 'cup')) (Is ?laptop 'laptop')) (or (not (Is ?cup 'cup')) (Is ?glove 'glove')) (or (not (Is ?cup 'cup')) (SmallerThan ?cup ?pizza)) (or (not (Is ?cup 'cup')) (RightOf ?knife ?pizza)) (or (not (Is ?cup 'cup')) (RightOf ?ruler ?laptop)) (or (not (Is ?cup 'cup')) (Is ?pizza 'pizza')) (or (not (Is ?cup 'cup')) (Has ?cup 'white')) (or (not (Is ?cup 'cup')) (Is ?knife 'knife')) (or (not (Is ?cup 'cup')) (Above ?ruler ?scissors)) (or (not (Is ?cup 'cup')) (Is ?ruler 'ruler')) (or (not (Is ?cup 'cup')) (Is ?scissors 'scissors')) (or (not (Is ?cup 'cup')) (OnRightSide ?scissors)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "pizza",
+        "cup",
+        "jeans",
+        "knife",
+        "glove",
+        "scissors"
+    ]
+}

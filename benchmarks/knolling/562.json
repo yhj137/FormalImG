@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a shoe located on the bottom side of the layout. A lemon is positioned to the left of the shoe, and the two are aligned horizontally. Additionally, every ruler present in the image is strictly located to the left of the lemon.",
+    "dsl": "(exists ?shoe (exists ?lemon (and (Is ?shoe 'shoe') (Is ?lemon 'lemon') (OnBottomSide ?shoe) (LeftOf ?lemon ?shoe) (AlignedHorizontally ?shoe ?lemon) (forall ?ruler (implies (Is ?ruler 'ruler') (LeftOf ?ruler ?lemon))))))",
+    "cnf": "(exists ?shoe (exists ?lemon (forall ?ruler (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (LeftOf ?lemon ?shoe) (AlignedHorizontally ?shoe ?lemon) (Is ?lemon 'lemon') (or (not (Is ?ruler 'ruler')) (LeftOf ?ruler ?lemon))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "lemon",
+        "shoe"
+    ]
+}

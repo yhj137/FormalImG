@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Rendered in a pixel art style, the scene features an open wardrobe. To the right of the wardrobe stands a man holding a pan. To the man's right sits a turned-on monitor. Above the monitor is a clock, with a pair of glasses next to it. All screwdrivers in the scene are made of metal and stored inside the wardrobe.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?man (exists ?m (exists ?c (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?man 'man') (RightOf ?man ?w) (Is ?m 'monitor') (HasState ?m 'on') (RightOf ?m ?man) (Is ?c 'clock') (Above ?c ?m) (forall ?s (implies (Is ?s 'screwdriver') (and (HasMaterial ?s 'metal') (In ?s ?w)))) (exists ?p (exists ?g (and (Is ?p 'pan') (Holding ?man ?p) (Is ?g 'glasses') (NextTo ?g ?c))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?man (exists ?m (exists ?c (forall ?s (exists ?p (exists ?g (and (Is ?w 'wardrobe') (HasState ?w 'open') (RightOf ?man ?w) (or (not (Is ?s 'screwdriver')) (In ?s ?w)) (Is ?man 'man') (RightOf ?m ?man) (or (not (Is ?s 'screwdriver')) (HasMaterial ?s 'metal')) (Holding ?man ?p) (HasState ?m 'on') (Above ?c ?m) (Is ?p 'pan') (Is ?m 'monitor') (Is ?c 'clock') (NextTo ?g ?c) (Is ?g 'glasses'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "man",
+        "monitor",
+        "pan",
+        "clock",
+        "screwdriver",
+        "wardrobe"
+    ]
+}

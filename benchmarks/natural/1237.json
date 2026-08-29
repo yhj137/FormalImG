@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene features a cyberpunk style. Next to every lion, on its right, stands a man wearing a shirt. To the left of the man is a sliced pizza next to a book. Beside the book is a hat containing a fluffy teddy bear.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?l (implies (Is ?l 'lion') (exists ?m (exists ?s (exists ?p (exists ?b (exists ?h (exists ?tb (and (Is ?m 'man') (Is ?s 'shirt') (Is ?p 'pizza') (Is ?b 'book') (Is ?h 'hat') (Is ?tb 'teddy bear') (RightOf ?m ?l) (NextTo ?l ?m) (On ?s ?m) (LeftOf ?p ?m) (HasState ?p 'sliced') (NextTo ?b ?p) (NextTo ?h ?b) (In ?tb ?h) (HasMaterial ?tb 'fluffy')))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?l (exists ?m (exists ?s (exists ?p (exists ?b (exists ?h (exists ?tb (and (or (not (Is ?l 'lion')) (Is ?m 'man')) (or (not (Is ?l 'lion')) (Is ?s 'shirt')) (or (not (Is ?l 'lion')) (RightOf ?m ?l)) (or (not (Is ?l 'lion')) (Is ?p 'pizza')) (or (not (Is ?l 'lion')) (On ?s ?m)) (or (not (Is ?l 'lion')) (Is ?tb 'teddy bear')) (or (not (Is ?l 'lion')) (NextTo ?l ?m)) (or (not (Is ?l 'lion')) (Is ?b 'book')) (or (not (Is ?l 'lion')) (LeftOf ?p ?m)) (or (not (Is ?l 'lion')) (Is ?h 'hat')) (or (not (Is ?l 'lion')) (In ?tb ?h)) (or (not (Is ?l 'lion')) (NextTo ?b ?p)) (or (not (Is ?l 'lion')) (HasState ?p 'sliced')) (or (not (Is ?l 'lion')) (NextTo ?h ?b)) (or (not (Is ?l 'lion')) (HasMaterial ?tb 'fluffy')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lion",
+        "book",
+        "hat",
+        "pizza",
+        "man",
+        "shirt",
+        "teddy bear"
+    ]
+}

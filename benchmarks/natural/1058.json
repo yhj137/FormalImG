@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a man sleeping in a bed. To the left of the bed is a sofa, and to the left of the sofa stands a bench with a bottle resting on it. Every plant in the scene is positioned to the left of the bed.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bd (and (Is ?bd 'bed') (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?bd))) (exists ?m (and (Is ?m 'man') (In ?m ?bd) (HasState ?m 'sleeping'))) (exists ?s (and (Is ?s 'sofa') (LeftOf ?s ?bd) (exists ?be (and (Is ?be 'bench') (LeftOf ?be ?s) (exists ?bo (and (Is ?bo 'bottle') (On ?bo ?be))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bd (forall ?p (exists ?m (exists ?s (exists ?be (exists ?bo (and (Is ?bd 'bed') (or (not (Is ?p 'plant')) (LeftOf ?p ?bd)) (In ?m ?bd) (LeftOf ?s ?bd) (Is ?m 'man') (HasState ?m 'sleeping') (Is ?s 'sofa') (LeftOf ?be ?s) (Is ?be 'bench') (On ?bo ?be) (Is ?bo 'bottle')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "bottle",
+        "sofa",
+        "man",
+        "plant",
+        "bed"
+    ]
+}

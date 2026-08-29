@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a brown wallet. For every donut in the scene, which is pink, it is vertically aligned with the wallet. Located to the right of each donut is a pair of black glasses, and to the right of the glasses is a gray remote.",
+    "dsl": "(exists ?w (and (Is ?w 'wallet') (Has ?w 'brown') (forall ?d (implies (Is ?d 'donut') (exists ?g (exists ?r (and (Has ?d 'pink') (Is ?g 'glasses') (Has ?g 'black') (Is ?r 'remote') (Has ?r 'gray') (AlignedVertically ?d ?w) (RightOf ?g ?d) (RightOf ?r ?g))))))))",
+    "cnf": "(exists ?w (forall ?d (exists ?g (exists ?r (and (Is ?w 'wallet') (Has ?w 'brown') (or (not (Is ?d 'donut')) (AlignedVertically ?d ?w)) (or (not (Is ?d 'donut')) (Has ?r 'gray')) (or (not (Is ?d 'donut')) (RightOf ?g ?d)) (or (not (Is ?d 'donut')) (Is ?r 'remote')) (or (not (Is ?d 'donut')) (RightOf ?r ?g)) (or (not (Is ?d 'donut')) (Has ?g 'black')) (or (not (Is ?d 'donut')) (Is ?g 'glasses')) (or (not (Is ?d 'donut')) (Has ?d 'pink')))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "wallet",
+        "donut"
+    ]
+}

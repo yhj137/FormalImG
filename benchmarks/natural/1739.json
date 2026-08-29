@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk setting, a woman wearing headphones stands next to a metal bookshelf, with a cat to her left. To the left of the bookshelf is a purple plant beside a black umbrella. Every bird in the scene flies above the bookshelf. Inside the bookshelf, a glass bottle sits next to an orange.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?w (exists ?h (exists ?p (exists ?u (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'metal') (Is ?w 'woman') (NextTo ?w ?bs) (Is ?h 'headphones') (On ?h ?w) (Is ?p 'plant') (HasColor ?p 'purple') (LeftOf ?p ?bs) (Is ?u 'umbrella') (HasColor ?u 'black') (NextTo ?u ?p) (forall ?b (implies (Is ?b 'bird') (Above ?b ?bs))) (exists ?c (exists ?bt (exists ?o (and (Is ?c 'cat') (LeftOf ?c ?w) (Is ?bt 'bottle') (HasMaterial ?bt 'glass') (In ?bt ?bs) (Is ?o 'orange') (NextTo ?o ?bt))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bs (exists ?w (exists ?h (exists ?p (exists ?u (forall ?b (exists ?c (exists ?bt (exists ?o (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'metal') (NextTo ?w ?bs) (LeftOf ?p ?bs) (Is ?w 'woman') (On ?h ?w) (or (not (Is ?b 'bird')) (Above ?b ?bs)) (HasColor ?p 'purple') (NextTo ?u ?p) (LeftOf ?c ?w) (Is ?h 'headphones') (In ?bt ?bs) (Is ?p 'plant') (HasColor ?u 'black') (Is ?c 'cat') (HasMaterial ?bt 'glass') (NextTo ?o ?bt) (Is ?u 'umbrella') (Is ?bt 'bottle') (Is ?o 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "cat",
+        "headphones",
+        "plant",
+        "woman",
+        "bird",
+        "bookshelf",
+        "orange"
+    ]
+}

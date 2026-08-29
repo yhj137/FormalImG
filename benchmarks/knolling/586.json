@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate and a camera, both positioned on the bottom side of the image. The plate is located to the left of the camera and is visually larger than the camera. Furthermore, for every glove present in the image, it is aligned horizontally with the plate.",
+    "dsl": "(exists ?plate (exists ?camera (and (Is ?plate 'plate') (Is ?camera 'camera') (OnBottomSide ?plate) (OnBottomSide ?camera) (LeftOf ?plate ?camera) (LargerThan ?plate ?camera) (forall ?glove (implies (Is ?glove 'glove') (AlignedHorizontally ?glove ?plate))))))",
+    "cnf": "(exists ?plate (exists ?camera (forall ?glove (and (Is ?plate 'plate') (OnBottomSide ?plate) (LeftOf ?plate ?camera) (LargerThan ?plate ?camera) (OnBottomSide ?camera) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?glove ?plate)) (Is ?camera 'camera')))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "glove",
+        "camera"
+    ]
+}

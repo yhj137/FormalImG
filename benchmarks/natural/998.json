@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person stands next to a man. To the right of the man is a lit lamp, and a plastic ball is next to the lamp. All books are positioned to the right of the lamp.",
+    "dsl": "(exists ?m (exists ?p (exists ?l (exists ?b (and (Is ?m 'man') (Is ?p 'person') (NextTo ?p ?m) (Is ?l 'lamp') (HasState ?l 'on') (RightOf ?l ?m) (Is ?b 'ball') (HasMaterial ?b 'plastic') (NextTo ?b ?l) (forall ?k (implies (Is ?k 'book') (RightOf ?k ?l))))))))",
+    "cnf": "(exists ?m (exists ?p (exists ?l (exists ?b (forall ?k (and (Is ?m 'man') (NextTo ?p ?m) (RightOf ?l ?m) (Is ?p 'person') (HasState ?l 'on') (NextTo ?b ?l) (Is ?l 'lamp') (or (not (Is ?k 'book')) (RightOf ?k ?l)) (HasMaterial ?b 'plastic') (Is ?b 'ball')))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "man",
+        "ball",
+        "lamp",
+        "book"
+    ]
+}

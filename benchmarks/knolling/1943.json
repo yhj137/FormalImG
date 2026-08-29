@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a backpack positioned on the top side of the image. To the right of the backpack are jeans, aligned horizontally. Below the backpack are headphones, and to the right of the headphones is a game controller; these two are also aligned horizontally. Below the headphones is a bottle, and to the right of the bottle is a calculator. The calculator is aligned horizontally with the bottle and is visually smaller than the backpack. For every remote present in the scene, it is positioned to the right of the game controller. Furthermore, below the remote is an apple, to the right of the apple is a spoon, and to the right of the spoon is a knife.",
+    "dsl": "(exists ?backpack (exists ?jeans (exists ?headphones (exists ?game_controller (exists ?bottle (exists ?calculator (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?jeans 'jeans') (Is ?headphones 'headphones') (Is ?game_controller 'game_controller') (Is ?bottle 'bottle') (Is ?calculator 'calculator') (RightOf ?jeans ?backpack) (AlignedHorizontally ?backpack ?jeans) (Below ?headphones ?backpack) (RightOf ?game_controller ?headphones) (AlignedHorizontally ?headphones ?game_controller) (Below ?bottle ?headphones) (RightOf ?calculator ?bottle) (AlignedHorizontally ?bottle ?calculator) (SmallerThan ?calculator ?backpack) (forall ?remote (implies (Is ?remote 'remote') (exists ?apple (exists ?spoon (exists ?knife (and (Is ?apple 'apple') (Is ?spoon 'spoon') (Is ?knife 'knife') (RightOf ?remote ?game_controller) (Below ?apple ?remote) (RightOf ?spoon ?apple) (RightOf ?knife ?spoon))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?jeans (exists ?headphones (exists ?game_controller (exists ?bottle (exists ?calculator (forall ?remote (exists ?apple (exists ?spoon (exists ?knife (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?jeans ?backpack) (AlignedHorizontally ?backpack ?jeans) (Is ?jeans 'jeans') (Below ?headphones ?backpack) (SmallerThan ?calculator ?backpack) (Is ?headphones 'headphones') (RightOf ?game_controller ?headphones) (AlignedHorizontally ?bottle ?calculator) (AlignedHorizontally ?headphones ?game_controller) (Is ?game_controller 'game_controller') (RightOf ?calculator ?bottle) (Below ?bottle ?headphones) (or (not (Is ?remote 'remote')) (RightOf ?remote ?game_controller)) (Is ?calculator 'calculator') (Is ?bottle 'bottle') (or (not (Is ?remote 'remote')) (Is ?knife 'knife')) (or (not (Is ?remote 'remote')) (Below ?apple ?remote)) (or (not (Is ?remote 'remote')) (Is ?spoon 'spoon')) (or (not (Is ?remote 'remote')) (RightOf ?knife ?spoon)) (or (not (Is ?remote 'remote')) (Is ?apple 'apple')) (or (not (Is ?remote 'remote')) (RightOf ?spoon ?apple)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "remote",
+        "apple",
+        "game_controller",
+        "backpack",
+        "jeans",
+        "calculator",
+        "knife",
+        "bottle",
+        "headphones",
+        "spoon"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "An oil painting of a woman holding a red cup.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (and (Is ?w 'woman') (Is ?c 'cup') (HasColor ?c 'red') (Holding ?w ?c)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (and (Is ?w 'woman') (Holding ?w ?c) (HasColor ?c 'red') (Is ?c 'cup')))))",
+    "k": 2,
+    "object_classes": [
+        "cup",
+        "woman"
+    ]
+}

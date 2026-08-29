@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is standing next to a wooden desk. An open laptop and a clock are sitting on the desk. To the right of the desk, there is an open wardrobe containing a black jacket. A refrigerator stands next to the wardrobe, with a basket placed on top of it. All fruit visible in the scene is inside that basket.",
+    "dsl": "(exists ?w (exists ?d (exists ?l (exists ?c (exists ?wr (exists ?j (exists ?r (exists ?b (and (Is ?w 'woman') (HasState ?w 'standing') (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?w ?d) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?d) (Is ?c 'clock') (On ?c ?d) (Is ?wr 'wardrobe') (HasState ?wr 'open') (RightOf ?wr ?d) (Is ?j 'jacket') (HasColor ?j 'black') (In ?j ?wr) (Is ?r 'refrigerator') (NextTo ?r ?wr) (Is ?b 'basket') (On ?b ?r) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))))))))))))",
+    "cnf": "(exists ?w (exists ?d (exists ?l (exists ?c (exists ?wr (exists ?j (exists ?r (exists ?b (forall ?f (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?d) (HasMaterial ?d 'wooden') (On ?l ?d) (Is ?d 'desk') (On ?c ?d) (HasState ?l 'open') (RightOf ?wr ?d) (Is ?c 'clock') (Is ?l 'laptop') (HasState ?wr 'open') (In ?j ?wr) (Is ?wr 'wardrobe') (NextTo ?r ?wr) (HasColor ?j 'black') (Is ?r 'refrigerator') (On ?b ?r) (Is ?j 'jacket') (Is ?b 'basket') (or (not (Is ?f 'fruit')) (In ?f ?b))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "desk",
+        "laptop",
+        "refrigerator",
+        "wardrobe",
+        "basket",
+        "woman",
+        "clock",
+        "fruit"
+    ]
+}

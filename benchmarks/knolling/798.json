@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a black game controller, a white glove, and a red apple. The game controller is aligned horizontally with the glove, and the glove is aligned vertically with the apple. Furthermore, for every watch in the scene, it is gray and aligned horizontally with the apple.",
+    "dsl": "(exists ?gc (exists ?g (exists ?a (and (Is ?gc 'game_controller') (Has ?gc 'black') (Is ?g 'glove') (Has ?g 'white') (Is ?a 'apple') (Has ?a 'red') (AlignedHorizontally ?gc ?g) (AlignedVertically ?g ?a) (forall ?w (implies (Is ?w 'watch') (and (Has ?w 'gray') (AlignedHorizontally ?w ?a))))))))",
+    "cnf": "(exists ?gc (exists ?g (exists ?a (forall ?w (and (Is ?gc 'game_controller') (Has ?gc 'black') (AlignedHorizontally ?gc ?g) (Has ?g 'white') (AlignedVertically ?g ?a) (Is ?g 'glove') (Has ?a 'red') (or (not (Is ?w 'watch')) (AlignedHorizontally ?w ?a)) (Is ?a 'apple') (or (not (Is ?w 'watch')) (Has ?w 'gray')))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "glove",
+        "watch",
+        "game_controller"
+    ]
+}

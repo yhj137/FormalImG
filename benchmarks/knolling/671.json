@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor positioned on the top side of the scene, there is a blue bottle, a white sock, and a black glove arranged in a column beneath it. Specifically, the monitor is above the bottle, the bottle is above the sock, and the sock is above the glove. The monitor is also visually larger than the bottle.",
+    "dsl": "(and (forall ?m (implies (and (Is ?m 'monitor') (OnTopSide ?m)) (exists ?b (exists ?s (exists ?g (and (Is ?b 'bottle') (Has ?b 'blue') (Is ?s 'sock') (Has ?s 'white') (Is ?g 'glove') (Has ?g 'black') (Above ?m ?b) (Above ?b ?s) (Above ?s ?g) (LargerThan ?m ?b))))))))",
+    "cnf": "(forall ?m (exists ?b (exists ?s (exists ?g (and (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Is ?b 'bottle')) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Has ?b 'blue')) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Above ?m ?b)) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Is ?s 'sock')) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Above ?b ?s)) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Has ?g 'black')) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Has ?s 'white')) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (LargerThan ?m ?b)) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Above ?s ?g)) (or (not (Is ?m 'monitor')) (not (OnTopSide ?m)) (Is ?g 'glove')))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "glove",
+        "bottle",
+        "sock"
+    ]
+}

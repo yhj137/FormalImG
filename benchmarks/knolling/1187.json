@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene lies a pair of jeans. A keyboard is positioned below the jeans, and a hammer is placed below the keyboard. To the right of the hammer sits a calculator. This calculator is aligned horizontally with a watch, which is found on the bottom side of the image. Additionally, for any carrot present in the arrangement, it is located to the left of the keyboard.",
+    "dsl": "(exists ?jeans (exists ?keyboard (exists ?hammer (exists ?calculator (exists ?watch (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?keyboard 'keyboard') (Below ?keyboard ?jeans) (Is ?hammer 'hammer') (Below ?hammer ?keyboard) (Is ?calculator 'calculator') (LeftOf ?hammer ?calculator) (Is ?watch 'watch') (OnBottomSide ?watch) (AlignedHorizontally ?calculator ?watch) (forall ?carrot (implies (Is ?carrot 'carrot') (LeftOf ?carrot ?keyboard)))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (exists ?hammer (exists ?calculator (exists ?watch (forall ?carrot (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Below ?keyboard ?jeans) (Is ?keyboard 'keyboard') (Below ?hammer ?keyboard) (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?keyboard)) (Is ?hammer 'hammer') (LeftOf ?hammer ?calculator) (Is ?calculator 'calculator') (AlignedHorizontally ?calculator ?watch) (OnBottomSide ?watch) (Is ?watch 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "carrot",
+        "watch",
+        "hammer",
+        "calculator",
+        "jeans"
+    ]
+}

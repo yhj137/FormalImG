@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This oil painting depicts a child on a rug, holding a round pan. A dog is on the rug to the right of the child, and a hat is to the left of the child. All cups in the scene are inside the pan.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?d (exists ?p (exists ?h (and (Is ?r 'rug') (Is ?c 'child') (Is ?d 'dog') (Is ?p 'pan') (Is ?h 'hat') (On ?c ?r) (On ?d ?r) (RightOf ?d ?c) (Holding ?c ?p) (HasShape ?p 'round') (LeftOf ?h ?c) (forall ?x (implies (Is ?x 'cup') (In ?x ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?c (exists ?d (exists ?p (exists ?h (forall ?x (and (Is ?r 'rug') (On ?c ?r) (On ?d ?r) (Is ?c 'child') (RightOf ?d ?c) (Is ?d 'dog') (Holding ?c ?p) (LeftOf ?h ?c) (Is ?p 'pan') (HasShape ?p 'round') (Is ?h 'hat') (or (not (Is ?x 'cup')) (In ?x ?p))))))))))",
+    "k": 6,
+    "object_classes": [
+        "child",
+        "rug",
+        "pan",
+        "cup",
+        "dog",
+        "hat"
+    ]
+}

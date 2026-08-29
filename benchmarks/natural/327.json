@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style image where every bottle is open and held by a woman.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bottle') (exists ?w (and (Is ?w 'woman') (HasState ?b 'open') (Holding ?w ?b))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?w (and (or (not (Is ?b 'bottle')) (Is ?w 'woman')) (or (not (Is ?b 'bottle')) (Holding ?w ?b)) (or (not (Is ?b 'bottle')) (HasState ?b 'open'))))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "woman"
+    ]
+}

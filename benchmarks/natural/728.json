@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style image featuring an open brown basket containing a bitten sandwich. All books are positioned to the right of the basket, and a gray elephant stands next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?s (and (Is ?b 'basket') (HasState ?b 'open') (HasColor ?b 'brown') (Is ?s 'sandwich') (HasState ?s 'bitten') (In ?s ?b) (forall ?bk (implies (Is ?bk 'book') (RightOf ?bk ?b))) (exists ?e (and (Is ?e 'elephant') (HasColor ?e 'gray') (HasState ?e 'standing') (NextTo ?e ?b)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?s (forall ?bk (exists ?e (and (Is ?b 'basket') (HasState ?b 'open') (HasColor ?b 'brown') (In ?s ?b) (or (not (Is ?bk 'book')) (RightOf ?bk ?b)) (HasState ?s 'bitten') (NextTo ?e ?b) (Is ?s 'sandwich') (HasState ?e 'standing') (HasColor ?e 'gray') (Is ?e 'elephant')))))))",
+    "k": 4,
+    "object_classes": [
+        "elephant",
+        "basket",
+        "book",
+        "sandwich"
+    ]
+}

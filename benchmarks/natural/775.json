@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man holding a phone that is on, positioned to the right of a round table. All glasses in the scene are resting on the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?t (and (Is ?m 'man') (Is ?p 'phone') (HasState ?p 'on') (Is ?t 'table') (HasShape ?t 'round') (Holding ?m ?p) (RightOf ?m ?t) (forall ?g (implies (Is ?g 'glasses') (On ?g ?t))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?t (forall ?g (and (Is ?m 'man') (Holding ?m ?p) (RightOf ?m ?t) (HasState ?p 'on') (HasShape ?t 'round') (or (not (Is ?g 'glasses')) (On ?g ?t)) (Is ?p 'phone') (Is ?t 'table')))))))",
+    "k": 4,
+    "object_classes": [
+        "table",
+        "phone",
+        "glasses",
+        "man"
+    ]
+}

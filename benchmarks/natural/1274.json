@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a red bus. To the right of the bus, every person holds a black umbrella. To the right of each person is a bench with a cake and a book on it, and a rock sits to the right of the bench.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bus (and (Is ?bus 'bus') (HasColor ?bus 'red') (forall ?p (implies (Is ?p 'person') (and (RightOf ?p ?bus) (exists ?u (and (Is ?u 'umbrella') (HasColor ?u 'black') (Holding ?p ?u) (exists ?bn (and (Is ?bn 'bench') (RightOf ?bn ?p) (exists ?c (and (Is ?c 'cake') (On ?c ?bn) (exists ?bk (and (Is ?bk 'book') (On ?bk ?bn) (exists ?r (and (Is ?r 'rock') (RightOf ?r ?bn)))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bus (forall ?p (exists ?u (exists ?bn (exists ?c (exists ?bk (exists ?r (and (Is ?bus 'bus') (HasColor ?bus 'red') (or (not (Is ?p 'person')) (RightOf ?p ?bus)) (or (not (Is ?p 'person')) (Is ?u 'umbrella')) (or (not (Is ?p 'person')) (HasColor ?u 'black')) (or (not (Is ?p 'person')) (Holding ?p ?u)) (or (not (Is ?p 'person')) (Is ?bn 'bench')) (or (not (Is ?p 'person')) (RightOf ?bn ?p)) (or (not (Is ?p 'person')) (Is ?c 'cake')) (or (not (Is ?p 'person')) (On ?c ?bn)) (or (not (Is ?p 'person')) (Is ?bk 'book')) (or (not (Is ?p 'person')) (On ?bk ?bn)) (or (not (Is ?p 'person')) (Is ?r 'rock')) (or (not (Is ?p 'person')) (RightOf ?r ?bn)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "bench",
+        "person",
+        "book",
+        "cake",
+        "rock",
+        "bus"
+    ]
+}

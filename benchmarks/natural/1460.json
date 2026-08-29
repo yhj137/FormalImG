@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a sitting person holding a hat containing all the apples. The person is next to a red sofa. To the left of the sofa is a bed, and a round tree stands to the left of the bed. To the right of the sofa is a laptop with a keyboard next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'hat') (forall ?a (implies (Is ?a 'apple') (In ?a ?h))) (exists ?p (and (Is ?p 'person') (HasState ?p 'sitting') (Holding ?p ?h) (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'red') (NextTo ?p ?s) (exists ?b (and (Is ?b 'bed') (LeftOf ?b ?s) (exists ?t (and (Is ?t 'tree') (HasShape ?t 'round') (LeftOf ?t ?b) (exists ?l (and (Is ?l 'laptop') (RightOf ?l ?s) (exists ?k (and (Is ?k 'keyboard') (NextTo ?k ?l))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?a (exists ?p (exists ?s (exists ?b (exists ?t (exists ?l (exists ?k (and (Is ?h 'hat') (or (not (Is ?a 'apple')) (In ?a ?h)) (Holding ?p ?h) (HasState ?p 'sitting') (NextTo ?p ?s) (Is ?p 'person') (HasColor ?s 'red') (LeftOf ?b ?s) (Is ?s 'sofa') (RightOf ?l ?s) (Is ?b 'bed') (LeftOf ?t ?b) (Is ?l 'laptop') (NextTo ?k ?l) (HasShape ?t 'round') (Is ?k 'keyboard') (Is ?t 'tree')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "person",
+        "bed",
+        "laptop",
+        "tree",
+        "apple",
+        "keyboard",
+        "hat"
+    ]
+}

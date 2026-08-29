@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a metal refrigerator to the right of a red car. A cat holding a rock is on the car. All birds are located to the right of the refrigerator.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?f (exists ?ct (exists ?r (and (Is ?c 'car') (HasColor ?c 'red') (Is ?f 'refrigerator') (HasMaterial ?f 'metal') (RightOf ?f ?c) (Is ?ct 'cat') (On ?ct ?c) (Is ?r 'rock') (Holding ?ct ?r) (forall ?b (implies (Is ?b 'bird') (RightOf ?b ?f)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?f (exists ?ct (exists ?r (forall ?b (and (Is ?c 'car') (HasColor ?c 'red') (RightOf ?f ?c) (On ?ct ?c) (HasMaterial ?f 'metal') (or (not (Is ?b 'bird')) (RightOf ?b ?f)) (Is ?ct 'cat') (Holding ?ct ?r) (Is ?f 'refrigerator') (Is ?r 'rock'))))))))",
+    "k": 5,
+    "object_classes": [
+        "rock",
+        "bird",
+        "refrigerator",
+        "car",
+        "cat"
+    ]
+}

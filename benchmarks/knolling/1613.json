@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat 3x3 grid arrangement of objects. The top row consists of a red apple, a yellow lemon, and a sandwich, ordered from left to right; the apple is positioned on the top side of the image. The middle row contains a black mouse, a white game controller, and a pizza. The mouse is located below the apple, and it is positioned to the left of the game controller, which is in turn to the left of the pizza. The pizza is placed on the right side of the image and is visually larger than the lemon. The bottom row features a pen, a blue tie, and a brown shoe. The pen is located below the mouse. To the right of the pen is the tie, and to the right of the tie is the shoe. The three vertical columns (apple-mouse-pen, lemon-controller-tie, and sandwich-pizza-shoe) are aligned vertically.",
+    "dsl": "(exists ?apple (exists ?lemon (exists ?sandwich (exists ?mouse (exists ?controller (exists ?pizza (exists ?pen (exists ?tie (exists ?shoe (and (Is ?apple 'apple') (Has ?apple 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?sandwich 'sandwich') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?pizza 'pizza') (Is ?pen 'pen') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?shoe 'shoe') (Has ?shoe 'brown') (OnTopSide ?apple) (LeftOf ?apple ?lemon) (LeftOf ?lemon ?sandwich) (Below ?mouse ?apple) (LeftOf ?mouse ?controller) (LeftOf ?controller ?pizza) (OnRightSide ?pizza) (Below ?pen ?mouse) (RightOf ?tie ?pen) (RightOf ?shoe ?tie) (AlignedVertically ?apple ?mouse) (AlignedVertically ?mouse ?pen) (AlignedVertically ?lemon ?controller) (AlignedVertically ?controller ?tie) (AlignedVertically ?sandwich ?pizza) (AlignedVertically ?pizza ?shoe) (SmallerThan ?lemon ?pizza)))))))))))",
+    "cnf": "(exists ?apple (exists ?lemon (exists ?sandwich (exists ?mouse (exists ?controller (exists ?pizza (exists ?pen (exists ?tie (exists ?shoe (and (Is ?apple 'apple') (Has ?apple 'red') (OnTopSide ?apple) (LeftOf ?apple ?lemon) (Below ?mouse ?apple) (Has ?lemon 'yellow') (LeftOf ?lemon ?sandwich) (AlignedVertically ?apple ?mouse) (Has ?mouse 'black') (LeftOf ?mouse ?controller) (Is ?lemon 'lemon') (AlignedVertically ?lemon ?controller) (Is ?sandwich 'sandwich') (AlignedVertically ?sandwich ?pizza) (Below ?pen ?mouse) (AlignedVertically ?mouse ?pen) (Is ?mouse 'mouse') (Has ?controller 'white') (LeftOf ?controller ?pizza) (SmallerThan ?lemon ?pizza) (AlignedVertically ?controller ?tie) (OnRightSide ?pizza) (AlignedVertically ?pizza ?shoe) (Is ?pen 'pen') (RightOf ?tie ?pen) (Is ?controller 'game_controller') (Is ?pizza 'pizza') (RightOf ?shoe ?tie) (Has ?tie 'blue') (Has ?shoe 'brown') (Is ?tie 'tie') (Is ?shoe 'shoe')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "apple",
+        "pen",
+        "lemon",
+        "pizza",
+        "game_controller",
+        "mouse",
+        "sandwich",
+        "shoe"
+    ]
+}

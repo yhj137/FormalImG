@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every game controller in the scene, there is a sock aligned horizontally with it, positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?gc (implies (Is ?gc 'game_controller') (exists ?s (and (Is ?s 'sock') (OnBottomSide ?s) (AlignedHorizontally ?gc ?s))))))",
+    "cnf": "(forall ?gc (exists ?s (and (or (not (Is ?gc 'game_controller')) (Is ?s 'sock')) (or (not (Is ?gc 'game_controller')) (OnBottomSide ?s)) (or (not (Is ?gc 'game_controller')) (AlignedHorizontally ?gc ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "sock",
+        "game_controller"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the right side of the layout. A pair of pliers is placed to the left of the monitor, and the two items are aligned horizontally. Furthermore, for every pair of scissors in the image, it is located to the right of the pliers.",
+    "dsl": "(exists ?monitor (exists ?pliers (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?pliers 'pliers') (LeftOf ?pliers ?monitor) (AlignedHorizontally ?pliers ?monitor) (forall ?scissors (implies (Is ?scissors 'scissors') (RightOf ?scissors ?pliers))))))",
+    "cnf": "(exists ?monitor (exists ?pliers (forall ?scissors (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (LeftOf ?pliers ?monitor) (AlignedHorizontally ?pliers ?monitor) (Is ?pliers 'pliers') (or (not (Is ?scissors 'scissors')) (RightOf ?scissors ?pliers))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "pliers",
+        "scissors"
+    ]
+}

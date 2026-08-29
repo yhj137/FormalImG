@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cartoon style scene, a woman sits on a sofa holding a basket containing all the apples. To the right of the sofa is a table with a round plate and a metal pan. A rock lies inside the pan, with a bird to its right and a butterfly hovering above the bird.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?s (exists ?t (exists ?p (exists ?pn (exists ?b (and (Is ?w 'woman') (HasState ?w 'sitting') (Is ?s 'sofa') (Is ?t 'table') (Is ?p 'plate') (HasShape ?p 'round') (Is ?pn 'pan') (HasMaterial ?pn 'metal') (Is ?b 'basket') (On ?w ?s) (Holding ?w ?b) (RightOf ?t ?s) (On ?p ?t) (On ?pn ?t) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?r (exists ?br (exists ?bf (and (Is ?r 'rock') (Is ?br 'bird') (Is ?bf 'butterfly') (In ?r ?pn) (RightOf ?br ?r) (Above ?bf ?br)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?s (exists ?t (exists ?p (exists ?pn (exists ?b (forall ?a (exists ?r (exists ?br (exists ?bf (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?s) (Holding ?w ?b) (Is ?s 'sofa') (RightOf ?t ?s) (Is ?b 'basket') (or (not (Is ?a 'apple')) (In ?a ?b)) (Is ?t 'table') (On ?p ?t) (On ?pn ?t) (HasShape ?p 'round') (HasMaterial ?pn 'metal') (In ?r ?pn) (Is ?p 'plate') (Is ?pn 'pan') (Is ?r 'rock') (RightOf ?br ?r) (Is ?br 'bird') (Above ?bf ?br) (Is ?bf 'butterfly')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sofa",
+        "plate",
+        "woman",
+        "rock",
+        "table",
+        "bird",
+        "pan",
+        "butterfly",
+        "basket",
+        "apple"
+    ]
+}

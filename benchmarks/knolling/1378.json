@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized arrangement of items. The scene contains a blue hat, a cutting board, and a pizza forming a top row, where the cutting board is to the right of the hat, the pizza is to the right of the cutting board, and they are aligned horizontally. Directly below the hat is a calculator, which starts a bottom row. To the right of the calculator is a yellow lemon, and to the right of the lemon is a pink donut; these three are also aligned horizontally. Additionally, for every carrot in the scene, it is positioned above the pizza.",
+    "dsl": "(exists ?hat (exists ?cutting_board (exists ?pizza (exists ?calculator (exists ?lemon (exists ?donut (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Is ?calculator 'calculator') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?donut 'donut') (Has ?donut 'pink') (RightOf ?cutting_board ?hat) (RightOf ?pizza ?cutting_board) (AlignedHorizontally ?hat ?cutting_board) (AlignedHorizontally ?cutting_board ?pizza) (Above ?hat ?calculator) (RightOf ?lemon ?calculator) (RightOf ?donut ?lemon) (AlignedHorizontally ?calculator ?lemon) (AlignedHorizontally ?lemon ?donut) (forall ?carrot (implies (Is ?carrot 'carrot') (Above ?carrot ?pizza))))))))))",
+    "cnf": "(exists ?hat (exists ?cutting_board (exists ?pizza (exists ?calculator (exists ?lemon (exists ?donut (forall ?carrot (and (Is ?hat 'hat') (Has ?hat 'blue') (RightOf ?cutting_board ?hat) (AlignedHorizontally ?hat ?cutting_board) (Is ?cutting_board 'cutting_board') (RightOf ?pizza ?cutting_board) (Above ?hat ?calculator) (AlignedHorizontally ?cutting_board ?pizza) (Is ?pizza 'pizza') (Is ?calculator 'calculator') (RightOf ?lemon ?calculator) (or (not (Is ?carrot 'carrot')) (Above ?carrot ?pizza)) (AlignedHorizontally ?calculator ?lemon) (Has ?lemon 'yellow') (RightOf ?donut ?lemon) (AlignedHorizontally ?lemon ?donut) (Is ?lemon 'lemon') (Has ?donut 'pink') (Is ?donut 'donut')))))))))",
+    "k": 7,
+    "object_classes": [
+        "lemon",
+        "carrot",
+        "pizza",
+        "cutting_board",
+        "hat",
+        "calculator",
+        "donut"
+    ]
+}

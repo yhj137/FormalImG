@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a woman next to a wooden desk, holding all the apples. A keyboard, a phone, a sandwich, and a fish are on the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?d (and (Is ?w 'woman') (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?w ?d) (forall ?a (implies (Is ?a 'apple') (Holding ?w ?a))) (exists ?k (exists ?p (exists ?s (exists ?f (and (Is ?k 'keyboard') (Is ?p 'phone') (Is ?s 'sandwich') (Is ?f 'fish') (On ?k ?d) (On ?p ?d) (On ?s ?d) (On ?f ?d))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?d (forall ?a (exists ?k (exists ?p (exists ?s (exists ?f (and (Is ?w 'woman') (NextTo ?w ?d) (or (not (Is ?a 'apple')) (Holding ?w ?a)) (HasMaterial ?d 'wooden') (On ?k ?d) (Is ?d 'desk') (On ?p ?d) (Is ?k 'keyboard') (On ?s ?d) (Is ?p 'phone') (On ?f ?d) (Is ?s 'sandwich') (Is ?f 'fish'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "sandwich",
+        "desk",
+        "fish",
+        "phone",
+        "woman",
+        "apple"
+    ]
+}

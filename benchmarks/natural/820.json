@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is sitting on a rug which is located next to a bed. He is holding a screwdriver. Additionally, an empty basket is placed next to the man.",
+    "dsl": "(exists ?m (exists ?r (exists ?b (exists ?s (exists ?k (and (Is ?m 'man') (Is ?r 'rug') (Is ?b 'bed') (Is ?s 'screwdriver') (Is ?k 'basket') (HasState ?m 'sitting') (On ?m ?r) (NextTo ?r ?b) (Holding ?m ?s) (NextTo ?k ?m) (HasState ?k 'empty')))))))",
+    "cnf": "(exists ?m (exists ?r (exists ?b (exists ?s (exists ?k (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?r) (Holding ?m ?s) (Is ?r 'rug') (NextTo ?r ?b) (NextTo ?k ?m) (Is ?s 'screwdriver') (Is ?b 'bed') (Is ?k 'basket') (HasState ?k 'empty')))))))",
+    "k": 5,
+    "object_classes": [
+        "bed",
+        "rug",
+        "man",
+        "basket",
+        "screwdriver"
+    ]
+}

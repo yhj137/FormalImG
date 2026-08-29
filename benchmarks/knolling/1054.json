@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase positioned on the top side of the scene, there is a specific arrangement of five other objects below it. Directly below the suitcase is a game controller. To the left of the game controller are headphones, and these two items are aligned horizontally. Below the headphones lies a stapler. To the left of the stapler is a watch. Finally, a carrot is located below the stapler and is positioned on the bottom side of the image.",
+    "dsl": "(forall ?suitcase (implies (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase)) (exists ?game_controller (exists ?headphones (exists ?stapler (exists ?watch (exists ?carrot (and (Is ?game_controller 'game_controller') (Is ?headphones 'headphones') (Is ?stapler 'stapler') (Is ?watch 'watch') (Is ?carrot 'carrot') (Below ?game_controller ?suitcase) (LeftOf ?headphones ?game_controller) (AlignedHorizontally ?headphones ?game_controller) (Below ?stapler ?headphones) (LeftOf ?watch ?stapler) (Below ?carrot ?stapler) (OnBottomSide ?carrot)))))))))",
+    "cnf": "(forall ?suitcase (exists ?game_controller (exists ?headphones (exists ?stapler (exists ?watch (exists ?carrot (and (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Is ?game_controller 'game_controller')) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Below ?game_controller ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Is ?headphones 'headphones')) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (LeftOf ?headphones ?game_controller)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Is ?carrot 'carrot')) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Is ?stapler 'stapler')) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (AlignedHorizontally ?headphones ?game_controller)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Is ?watch 'watch')) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Below ?carrot ?stapler)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (Below ?stapler ?headphones)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (LeftOf ?watch ?stapler)) (or (not (Is ?suitcase 'suitcase')) (not (OnTopSide ?suitcase)) (OnBottomSide ?carrot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "carrot",
+        "suitcase",
+        "watch",
+        "game_controller",
+        "headphones"
+    ]
+}

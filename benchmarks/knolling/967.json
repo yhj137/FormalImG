@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is located on the left side of the scene. To the right of the backpack, there is a hat, a pair of scissors, and black glasses. The hat, scissors, and glasses are aligned vertically. Furthermore, for every lemon in the image, it is visually smaller than the hat and is positioned to the right of the glasses.",
+    "dsl": "(exists ?backpack (exists ?hat (exists ?scissors (exists ?glasses (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?hat 'hat') (RightOf ?hat ?backpack) (Is ?scissors 'scissors') (RightOf ?scissors ?backpack) (AlignedVertically ?scissors ?hat) (Is ?glasses 'glasses') (Has ?glasses 'black') (RightOf ?glasses ?backpack) (AlignedVertically ?glasses ?scissors) (forall ?lemon (implies (Is ?lemon 'lemon') (and (SmallerThan ?lemon ?hat) (RightOf ?lemon ?glasses)))))))))",
+    "cnf": "(exists ?backpack (exists ?hat (exists ?scissors (exists ?glasses (forall ?lemon (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (RightOf ?hat ?backpack) (RightOf ?scissors ?backpack) (Is ?hat 'hat') (AlignedVertically ?scissors ?hat) (RightOf ?glasses ?backpack) (Is ?scissors 'scissors') (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?hat)) (AlignedVertically ?glasses ?scissors) (Has ?glasses 'black') (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?glasses)) (Is ?glasses 'glasses')))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "lemon",
+        "hat",
+        "backpack",
+        "scissors"
+    ]
+}

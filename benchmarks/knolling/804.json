@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black keyboard, a blue hat, a yellow drill, red pliers, and a yellow lemon. The blue hat is located below the black keyboard. The yellow drill is positioned to the right of the keyboard, lies on the right side of the image, and is visually larger than the red pliers. The red pliers are placed directly below the drill. Finally, the yellow lemon is arranged to the right of the hat.",
+    "dsl": "(exists ?keyboard (exists ?hat (exists ?drill (exists ?pliers (exists ?lemon (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?hat 'hat') (Has ?hat 'blue') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Below ?hat ?keyboard) (RightOf ?drill ?keyboard) (OnRightSide ?drill) (LargerThan ?drill ?pliers) (Below ?pliers ?drill) (RightOf ?lemon ?hat)))))))",
+    "cnf": "(exists ?keyboard (exists ?hat (exists ?drill (exists ?pliers (exists ?lemon (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Below ?hat ?keyboard) (RightOf ?drill ?keyboard) (Has ?hat 'blue') (RightOf ?lemon ?hat) (Has ?drill 'yellow') (OnRightSide ?drill) (Is ?hat 'hat') (Has ?lemon 'yellow') (Is ?drill 'drill') (LargerThan ?drill ?pliers) (Is ?lemon 'lemon') (Below ?pliers ?drill) (Has ?pliers 'red') (Is ?pliers 'pliers')))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "lemon",
+        "drill",
+        "hat"
+    ]
+}

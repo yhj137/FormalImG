@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a boat containing every fish. Next to the boat, a woman holds an umbrella. To the right of the woman is a backpack containing a book next to a round orange.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'boat') (forall ?f (implies (Is ?f 'fish') (In ?f ?b))) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?b) (exists ?u (and (Is ?u 'umbrella') (Holding ?w ?u))) (exists ?bp (and (Is ?bp 'backpack') (RightOf ?bp ?w) (exists ?bk (and (Is ?bk 'book') (In ?bk ?bp) (exists ?o (and (Is ?o 'orange') (HasShape ?o 'round') (NextTo ?o ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?f (exists ?w (exists ?u (exists ?bp (exists ?bk (exists ?o (and (Is ?b 'boat') (or (not (Is ?f 'fish')) (In ?f ?b)) (NextTo ?w ?b) (Is ?w 'woman') (Holding ?w ?u) (RightOf ?bp ?w) (Is ?u 'umbrella') (Is ?bp 'backpack') (In ?bk ?bp) (Is ?bk 'book') (NextTo ?o ?bk) (HasShape ?o 'round') (Is ?o 'orange'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "book",
+        "backpack",
+        "woman",
+        "orange",
+        "boat"
+    ]
+}

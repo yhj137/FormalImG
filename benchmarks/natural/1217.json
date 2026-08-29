@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a standing elephant holding a ball. To the right of the elephant is a sofa with a jacket on it, and inside the jacket is a rock. To the right of the sofa is a bench with a sliced pizza on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?bl (exists ?s (exists ?j (exists ?r (exists ?bn (exists ?p (and (Is ?e 'elephant') (HasState ?e 'standing') (Is ?bl 'ball') (Holding ?e ?bl) (Is ?s 'sofa') (RightOf ?s ?e) (Is ?j 'jacket') (On ?j ?s) (Is ?r 'rock') (In ?r ?j) (Is ?bn 'bench') (RightOf ?bn ?s) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?bn))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?bl (exists ?s (exists ?j (exists ?r (exists ?bn (exists ?p (and (Is ?e 'elephant') (HasState ?e 'standing') (Holding ?e ?bl) (RightOf ?s ?e) (Is ?bl 'ball') (Is ?s 'sofa') (On ?j ?s) (RightOf ?bn ?s) (Is ?j 'jacket') (In ?r ?j) (Is ?bn 'bench') (On ?p ?bn) (Is ?r 'rock') (HasState ?p 'sliced') (Is ?p 'pizza'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "sofa",
+        "bench",
+        "pizza",
+        "jacket",
+        "rock",
+        "ball"
+    ]
+}

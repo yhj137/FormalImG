@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene depicting the interior of a boat. Inside the boat, there is a wooden desk. A monitor sits on the desk, and next to it is an open laptop. To the right of the laptop, there is a bowl resting on the desk that contains a fruit.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bt (exists ?d (exists ?m (exists ?l (exists ?b (exists ?f (and (Is ?bt 'boat') (Is ?d 'desk') (Is ?m 'monitor') (Is ?l 'laptop') (Is ?b 'bowl') (Is ?f 'fruit') (In ?d ?bt) (HasMaterial ?d 'wooden') (On ?m ?d) (On ?l ?d) (HasState ?l 'open') (NextTo ?l ?m) (On ?b ?d) (RightOf ?b ?l) (In ?f ?b)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bt (exists ?d (exists ?m (exists ?l (exists ?b (exists ?f (and (Is ?bt 'boat') (In ?d ?bt) (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?m ?d) (On ?l ?d) (Is ?m 'monitor') (NextTo ?l ?m) (On ?b ?d) (Is ?l 'laptop') (HasState ?l 'open') (RightOf ?b ?l) (Is ?b 'bowl') (In ?f ?b) (Is ?f 'fruit')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "monitor",
+        "desk",
+        "laptop",
+        "boat",
+        "fruit"
+    ]
+}

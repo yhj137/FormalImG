@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a drill positioned on the right side of the frame. Below the drill is a hammer, and to the left of the hammer is a keyboard. A phone is placed above the keyboard. A pan is located to the left of the hammer and is visually larger than the drill. Furthermore, for every spoon in the scene, there is a bowl situated below the pan and a pizza situated above the pan, with the spoon placed to the left of the bowl.",
+    "dsl": "(exists ?drill (exists ?hammer (exists ?keyboard (exists ?phone (exists ?pan (and (Is ?drill 'drill') (OnRightSide ?drill) (Is ?hammer 'hammer') (Below ?hammer ?drill) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?hammer) (Is ?phone 'phone') (Above ?phone ?keyboard) (Is ?pan 'pan') (LeftOf ?pan ?hammer) (LargerThan ?pan ?drill) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bowl (exists ?pizza (and (Is ?bowl 'bowl') (Is ?pizza 'pizza') (Below ?bowl ?pan) (LeftOf ?spoon ?bowl) (Above ?pizza ?pan))))))))))))",
+    "cnf": "(exists ?drill (exists ?hammer (exists ?keyboard (exists ?phone (exists ?pan (forall ?spoon (exists ?bowl (exists ?pizza (and (Is ?drill 'drill') (OnRightSide ?drill) (Below ?hammer ?drill) (LargerThan ?pan ?drill) (Is ?hammer 'hammer') (LeftOf ?keyboard ?hammer) (LeftOf ?pan ?hammer) (or (not (Is ?spoon 'spoon')) (Below ?bowl ?pan)) (Is ?keyboard 'keyboard') (Above ?phone ?keyboard) (Is ?pan 'pan') (or (not (Is ?spoon 'spoon')) (Above ?pizza ?pan)) (or (not (Is ?spoon 'spoon')) (Is ?pizza 'pizza')) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?bowl)) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (Is ?phone 'phone'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "phone",
+        "pizza",
+        "drill",
+        "hammer",
+        "pan",
+        "spoon",
+        "bowl"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every elephant is positioned to the left of a metal pan.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?e (implies (Is ?e 'elephant') (exists ?p (and (Is ?p 'pan') (HasMaterial ?p 'metal') (LeftOf ?e ?p))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?e (exists ?p (and (or (not (Is ?e 'elephant')) (Is ?p 'pan')) (or (not (Is ?e 'elephant')) (HasMaterial ?p 'metal')) (or (not (Is ?e 'elephant')) (LeftOf ?e ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "pan",
+        "elephant"
+    ]
+}

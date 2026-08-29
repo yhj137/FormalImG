@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white glove, a tie, a red apple, a black hammer, and a drill, all aligned horizontally. For every pizza in the image, there exist scissors, keys, a cutting board, and a ruler. The pizza is positioned below the glove, the scissors below the tie, the keys below the apple, the cutting board below the hammer, and the ruler below the drill. These objects (pizza, scissors, keys, cutting board, ruler) are aligned horizontally, and the keys are smaller than the cutting board.",
+    "dsl": "(exists ?glove (exists ?tie (exists ?apple (exists ?hammer (exists ?drill (and (Is ?glove 'glove') (Has ?glove 'white') (Is ?tie 'tie') (Is ?apple 'apple') (Has ?apple 'red') (Is ?hammer 'hammer') (Has ?hammer 'black') (Is ?drill 'drill') (AlignedHorizontally ?glove ?tie) (AlignedHorizontally ?tie ?apple) (AlignedHorizontally ?apple ?hammer) (AlignedHorizontally ?hammer ?drill) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?scissors (exists ?keys (exists ?cutting_board (exists ?ruler (and (Is ?scissors 'scissors') (Is ?keys 'keys') (Is ?cutting_board 'cutting_board') (Is ?ruler 'ruler') (Below ?pizza ?glove) (Below ?scissors ?tie) (Below ?keys ?apple) (Below ?cutting_board ?hammer) (Below ?ruler ?drill) (AlignedHorizontally ?pizza ?scissors) (AlignedHorizontally ?scissors ?keys) (AlignedHorizontally ?keys ?cutting_board) (AlignedHorizontally ?cutting_board ?ruler) (SmallerThan ?keys ?cutting_board))))))))))))))",
+    "cnf": "(exists ?glove (exists ?tie (exists ?apple (exists ?hammer (exists ?drill (forall ?pizza (exists ?scissors (exists ?keys (exists ?cutting_board (exists ?ruler (and (Is ?glove 'glove') (Has ?glove 'white') (AlignedHorizontally ?glove ?tie) (or (not (Is ?pizza 'pizza')) (Below ?pizza ?glove)) (Is ?tie 'tie') (AlignedHorizontally ?tie ?apple) (or (not (Is ?pizza 'pizza')) (Is ?ruler 'ruler')) (or (not (Is ?pizza 'pizza')) (Below ?scissors ?tie)) (Has ?apple 'red') (AlignedHorizontally ?apple ?hammer) (or (not (Is ?pizza 'pizza')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?pizza 'pizza')) (Below ?ruler ?drill)) (or (not (Is ?pizza 'pizza')) (Below ?keys ?apple)) (or (not (Is ?pizza 'pizza')) (Is ?scissors 'scissors')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?scissors)) (Is ?apple 'apple') (Has ?hammer 'black') (AlignedHorizontally ?hammer ?drill) (or (not (Is ?pizza 'pizza')) (Is ?keys 'keys')) (or (not (Is ?pizza 'pizza')) (Below ?cutting_board ?hammer)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?cutting_board ?ruler)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?scissors ?keys)) (Is ?hammer 'hammer') (Is ?drill 'drill') (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?keys ?cutting_board)) (or (not (Is ?pizza 'pizza')) (SmallerThan ?keys ?cutting_board)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "tie",
+        "apple",
+        "pizza",
+        "cutting_board",
+        "hammer",
+        "drill",
+        "scissors",
+        "glove"
+    ]
+}

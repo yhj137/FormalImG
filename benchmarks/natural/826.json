@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style image. A yellow bus is running in the center. To the left of the bus is a clock, and a rusty pan is located next to the clock. To the right of the bus is an open book, with blue headphones positioned next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?p (exists ?k (exists ?h (and (Is ?b 'bus') (HasColor ?b 'yellow') (HasState ?b 'running') (Is ?c 'clock') (LeftOf ?c ?b) (Is ?p 'pan') (HasState ?p 'rusty') (NextTo ?p ?c) (Is ?k 'book') (HasState ?k 'open') (RightOf ?k ?b) (Is ?h 'headphones') (HasColor ?h 'blue') (NextTo ?h ?k))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?p (exists ?k (exists ?h (and (Is ?b 'bus') (HasColor ?b 'yellow') (HasState ?b 'running') (LeftOf ?c ?b) (RightOf ?k ?b) (Is ?c 'clock') (NextTo ?p ?c) (HasState ?k 'open') (NextTo ?h ?k) (HasState ?p 'rusty') (Is ?k 'book') (HasColor ?h 'blue') (Is ?p 'pan') (Is ?h 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "headphones",
+        "bus",
+        "book",
+        "clock"
+    ]
+}

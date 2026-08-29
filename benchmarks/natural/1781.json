@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a bird next to an open refrigerator with a laptop on top. All plates are inside the refrigerator. A mirror stands next to the refrigerator, and a person wearing a red backpack and shoes is next to the mirror.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?r (exists ?l (exists ?m (exists ?p (exists ?bk (exists ?s (and (Is ?w 'woman') (Is ?b 'bird') (Is ?r 'refrigerator') (Is ?l 'laptop') (Is ?m 'mirror') (Is ?p 'person') (Is ?bk 'backpack') (Is ?s 'shoes') (Holding ?w ?b) (NextTo ?w ?r) (HasState ?r 'open') (On ?l ?r) (forall ?pl (implies (Is ?pl 'plate') (In ?pl ?r))) (NextTo ?m ?r) (NextTo ?p ?m) (HasColor ?bk 'red') (On ?bk ?p) (On ?s ?p)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (exists ?r (exists ?l (exists ?m (exists ?p (exists ?bk (exists ?s (forall ?pl (and (Is ?w 'woman') (Holding ?w ?b) (NextTo ?w ?r) (Is ?b 'bird') (Is ?r 'refrigerator') (HasState ?r 'open') (On ?l ?r) (or (not (Is ?pl 'plate')) (In ?pl ?r)) (Is ?l 'laptop') (NextTo ?m ?r) (Is ?m 'mirror') (NextTo ?p ?m) (Is ?p 'person') (On ?bk ?p) (On ?s ?p) (HasColor ?bk 'red') (Is ?s 'shoes') (Is ?bk 'backpack'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "person",
+        "shoes",
+        "backpack",
+        "plate",
+        "laptop",
+        "woman",
+        "bird",
+        "refrigerator",
+        "mirror"
+    ]
+}

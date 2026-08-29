@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a standing horse holding a round fruit. All cars are positioned to the right of the horse. A bicycle is next to the horse, and a backpack rests on the horse. Shoes are located to the left of the bicycle. A plant is to the right of the horse, with a swimming fish above it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'horse') (HasState ?h 'standing') (forall ?c (implies (Is ?c 'car') (RightOf ?c ?h))) (exists ?f (and (Is ?f 'fruit') (HasShape ?f 'round') (Holding ?h ?f) (exists ?b (and (Is ?b 'bicycle') (NextTo ?b ?h) (exists ?bp (and (Is ?bp 'backpack') (On ?bp ?h) (exists ?s (and (Is ?s 'shoes') (LeftOf ?s ?b) (exists ?p (and (Is ?p 'plant') (RightOf ?p ?h) (exists ?fi (and (Is ?fi 'fish') (HasState ?fi 'swimming') (Above ?fi ?p))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?c (exists ?f (exists ?b (exists ?bp (exists ?s (exists ?p (exists ?fi (and (Is ?h 'horse') (HasState ?h 'standing') (or (not (Is ?c 'car')) (RightOf ?c ?h)) (Holding ?h ?f) (NextTo ?b ?h) (HasShape ?f 'round') (On ?bp ?h) (Is ?b 'bicycle') (LeftOf ?s ?b) (Is ?f 'fruit') (RightOf ?p ?h) (Is ?bp 'backpack') (Is ?s 'shoes') (Is ?p 'plant') (Above ?fi ?p) (HasState ?fi 'swimming') (Is ?fi 'fish')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plant",
+        "fish",
+        "backpack",
+        "shoes",
+        "horse",
+        "bicycle",
+        "fruit",
+        "car"
+    ]
+}

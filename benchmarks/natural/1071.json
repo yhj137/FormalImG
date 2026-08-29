@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a metal elephant. To the right of the elephant are all the forks and a bed. A jacket containing a hammer rests on the bed, and a purple umbrella stands to the right of the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (and (Is ?e 'elephant') (HasMaterial ?e 'metal') (forall ?f (implies (Is ?f 'fork') (RightOf ?f ?e))) (exists ?b (exists ?j (exists ?h (exists ?u (and (Is ?b 'bed') (Is ?j 'jacket') (Is ?h 'hammer') (Is ?u 'umbrella') (HasColor ?u 'purple') (RightOf ?b ?e) (On ?j ?b) (In ?h ?j) (RightOf ?u ?b)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (forall ?f (exists ?b (exists ?j (exists ?h (exists ?u (and (Is ?e 'elephant') (HasMaterial ?e 'metal') (or (not (Is ?f 'fork')) (RightOf ?f ?e)) (RightOf ?b ?e) (Is ?b 'bed') (On ?j ?b) (RightOf ?u ?b) (Is ?j 'jacket') (In ?h ?j) (HasColor ?u 'purple') (Is ?h 'hammer') (Is ?u 'umbrella')))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "umbrella",
+        "fork",
+        "hammer",
+        "bed",
+        "elephant"
+    ]
+}

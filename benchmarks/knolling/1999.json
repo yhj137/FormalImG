@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of objects. On the left side of the image, there is a suitcase. Aligned vertically with the suitcase are a backpack and a pan, where the suitcase is larger than the backpack, and the backpack is larger than the pan. Positioned on the bottom side is a shoe. Aligned vertically with the shoe are a tie and a donut; the shoe is smaller than the suitcase, the tie is smaller than the shoe, and the donut is smaller than the tie. Additionally, a fork, a lighter, and a pair of glasses are arranged in a vertical alignment. The fork is smaller than the shoe. Finally, for every watch in the scene, it is aligned vertically with the lighter and is smaller than the glasses.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?pan (exists ?shoe (exists ?tie (exists ?donut (exists ?fork (exists ?lighter (exists ?glasses (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?backpack 'backpack') (Is ?pan 'pan') (Is ?shoe 'shoe') (OnBottomSide ?shoe) (Is ?tie 'tie') (Is ?donut 'donut') (Is ?fork 'fork') (Is ?lighter 'lighter') (Is ?glasses 'glasses') (AlignedVertically ?suitcase ?backpack) (AlignedVertically ?backpack ?pan) (LargerThan ?suitcase ?backpack) (LargerThan ?backpack ?pan) (AlignedVertically ?shoe ?tie) (AlignedVertically ?tie ?donut) (SmallerThan ?shoe ?suitcase) (SmallerThan ?tie ?shoe) (SmallerThan ?donut ?tie) (AlignedVertically ?fork ?lighter) (AlignedVertically ?lighter ?glasses) (SmallerThan ?fork ?shoe) (forall ?watch (implies (Is ?watch 'watch') (and (AlignedVertically ?watch ?lighter) (SmallerThan ?watch ?glasses))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?pan (exists ?shoe (exists ?tie (exists ?donut (exists ?fork (exists ?lighter (exists ?glasses (forall ?watch (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedVertically ?suitcase ?backpack) (LargerThan ?suitcase ?backpack) (Is ?backpack 'backpack') (AlignedVertically ?backpack ?pan) (SmallerThan ?shoe ?suitcase) (LargerThan ?backpack ?pan) (Is ?pan 'pan') (AlignedVertically ?shoe ?tie) (SmallerThan ?tie ?shoe) (OnBottomSide ?shoe) (Is ?tie 'tie') (AlignedVertically ?tie ?donut) (SmallerThan ?fork ?shoe) (SmallerThan ?donut ?tie) (Is ?shoe 'shoe') (Is ?donut 'donut') (AlignedVertically ?fork ?lighter) (Is ?fork 'fork') (Is ?lighter 'lighter') (AlignedVertically ?lighter ?glasses) (or (not (Is ?watch 'watch')) (AlignedVertically ?watch ?lighter)) (Is ?glasses 'glasses') (or (not (Is ?watch 'watch')) (SmallerThan ?watch ?glasses)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "watch",
+        "fork",
+        "pan",
+        "backpack",
+        "lighter",
+        "suitcase",
+        "shoe",
+        "donut"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style image featuring a glass bottle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bottle') (HasMaterial ?b 'glass'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bottle') (HasMaterial ?b 'glass'))))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

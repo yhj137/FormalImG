@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a house with a car next to it. To the left of the house stands a refrigerator with a monitor on top and an apple inside. A dog with a green backpack is next to the car. A teddy bear holding a plastic umbrella sits on the car. Every ball in the scene is red and located next to the dog.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?r (exists ?m (exists ?a (exists ?d (exists ?bp (exists ?tb (exists ?u (and (Is ?h 'house') (Is ?c 'car') (Is ?r 'refrigerator') (Is ?m 'monitor') (Is ?a 'apple') (Is ?d 'dog') (Is ?bp 'backpack') (Is ?tb 'teddy bear') (Is ?u 'umbrella') (NextTo ?c ?h) (LeftOf ?r ?h) (On ?m ?r) (In ?a ?r) (NextTo ?d ?c) (On ?bp ?d) (HasColor ?bp 'green') (On ?tb ?c) (Holding ?tb ?u) (HasMaterial ?u 'plastic') (forall ?b (implies (Is ?b 'ball') (and (HasColor ?b 'red') (NextTo ?b ?d)))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?c (exists ?r (exists ?m (exists ?a (exists ?d (exists ?bp (exists ?tb (exists ?u (forall ?b (and (Is ?h 'house') (NextTo ?c ?h) (LeftOf ?r ?h) (Is ?c 'car') (NextTo ?d ?c) (Is ?r 'refrigerator') (On ?m ?r) (On ?tb ?c) (Is ?d 'dog') (On ?bp ?d) (In ?a ?r) (Is ?m 'monitor') (Is ?tb 'teddy bear') (Holding ?tb ?u) (or (not (Is ?b 'ball')) (NextTo ?b ?d)) (Is ?bp 'backpack') (HasColor ?bp 'green') (Is ?a 'apple') (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (or (not (Is ?b 'ball')) (HasColor ?b 'red'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "backpack",
+        "monitor",
+        "teddy bear",
+        "refrigerator",
+        "car",
+        "ball",
+        "apple",
+        "dog"
+    ]
+}

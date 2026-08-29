@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans located on the top side of the image, there is a keyboard located below it. To the left of the keyboard is a sock, and a tie is positioned to the left of the sock. A wrench is placed above the tie, and a pen is located to the left of the wrench. The keyboard is visually larger than the sock, and the jeans are larger than the tie.",
+    "dsl": "(forall ?jeans (implies (and (Is ?jeans 'jeans') (OnTopSide ?jeans)) (exists ?keyboard (exists ?sock (exists ?tie (exists ?wrench (exists ?pen (and (Is ?keyboard 'keyboard') (Is ?sock 'sock') (Is ?tie 'tie') (Is ?wrench 'wrench') (Is ?pen 'pen') (Above ?jeans ?keyboard) (LeftOf ?sock ?keyboard) (LeftOf ?tie ?sock) (Above ?wrench ?tie) (LeftOf ?pen ?wrench) (LargerThan ?keyboard ?sock) (LargerThan ?jeans ?tie)))))))))",
+    "cnf": "(forall ?jeans (exists ?keyboard (exists ?sock (exists ?tie (exists ?wrench (exists ?pen (and (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Is ?keyboard 'keyboard')) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Is ?sock 'sock')) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Above ?jeans ?keyboard)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Is ?tie 'tie')) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (LeftOf ?sock ?keyboard)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Is ?pen 'pen')) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Is ?wrench 'wrench')) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (LeftOf ?tie ?sock)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (LargerThan ?keyboard ?sock)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (LeftOf ?pen ?wrench)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (Above ?wrench ?tie)) (or (not (Is ?jeans 'jeans')) (not (OnTopSide ?jeans)) (LargerThan ?jeans ?tie)))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "sock",
+        "pen",
+        "keyboard",
+        "wrench",
+        "jeans"
+    ]
+}

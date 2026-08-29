@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pair of blue jeans at the bottom, which is larger than the black keyboard located above it. A blue tie is aligned horizontally with the keyboard. In the upper section, a black remote, a red apple, and a black stapler are arranged in a horizontal row above the keyboard, with the apple being larger than the stapler. Additionally, for every donut in the image, it is smaller than the jeans and situated above the keyboard.",
+    "dsl": "(exists ?jeans (exists ?keyboard (exists ?tie (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?tie 'tie') (Has ?tie 'blue') (LargerThan ?jeans ?keyboard) (Above ?keyboard ?jeans) (AlignedHorizontally ?keyboard ?tie) (forall ?d (implies (Is ?d 'donut') (and (SmallerThan ?d ?jeans) (Above ?d ?keyboard)))) (exists ?remote (exists ?apple (exists ?stapler (and (Is ?remote 'remote') (Has ?remote 'black') (Is ?apple 'apple') (Has ?apple 'red') (Is ?stapler 'stapler') (Has ?stapler 'black') (Above ?remote ?keyboard) (AlignedHorizontally ?remote ?apple) (AlignedHorizontally ?apple ?stapler) (LargerThan ?apple ?stapler)))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (exists ?tie (forall ?d (exists ?remote (exists ?apple (exists ?stapler (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (LargerThan ?jeans ?keyboard) (Above ?keyboard ?jeans) (Has ?keyboard 'black') (or (not (Is ?d 'donut')) (SmallerThan ?d ?jeans)) (AlignedHorizontally ?keyboard ?tie) (Is ?keyboard 'keyboard') (or (not (Is ?d 'donut')) (Above ?d ?keyboard)) (Has ?tie 'blue') (Above ?remote ?keyboard) (Is ?tie 'tie') (Has ?remote 'black') (AlignedHorizontally ?remote ?apple) (Is ?remote 'remote') (Has ?apple 'red') (AlignedHorizontally ?apple ?stapler) (Is ?apple 'apple') (LargerThan ?apple ?stapler) (Has ?stapler 'black') (Is ?stapler 'stapler')))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "remote",
+        "stapler",
+        "apple",
+        "keyboard",
+        "jeans",
+        "donut"
+    ]
+}

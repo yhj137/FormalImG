@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round fruit rests on every toy car.",
+    "dsl": "(forall ?c (implies (Is ?c 'toy car') (exists ?f (and (Is ?f 'fruit') (HasShape ?f 'round') (On ?f ?c)))))",
+    "cnf": "(forall ?c (exists ?f (and (or (not (Is ?c 'toy car')) (Is ?f 'fruit')) (or (not (Is ?c 'toy car')) (HasShape ?f 'round')) (or (not (Is ?c 'toy car')) (On ?f ?c)))))",
+    "k": 2,
+    "object_classes": [
+        "fruit",
+        "toy car"
+    ]
+}

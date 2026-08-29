@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hammer positioned on the right side. For every pair of scissors in the arrangement, there is a stapler located above it and a donut located below it. A bowl is positioned below the donut, and a fork is placed directly below the bowl. Additionally, a mouse is located on the bottom side of the image and is visually smaller than the bowl. The hammer is positioned above the stapler, completing a vertical arrangement.",
+    "dsl": "(exists ?hammer (and (Is ?hammer 'hammer') (OnRightSide ?hammer) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?stapler (exists ?donut (exists ?bowl (exists ?fork (exists ?mouse (and (Is ?stapler 'stapler') (Is ?donut 'donut') (Is ?bowl 'bowl') (Is ?fork 'fork') (Is ?mouse 'mouse') (Above ?stapler ?scissors) (Above ?hammer ?stapler) (Below ?donut ?scissors) (Below ?bowl ?donut) (Below ?fork ?bowl) (OnBottomSide ?mouse) (SmallerThan ?mouse ?bowl)))))))))))",
+    "cnf": "(exists ?hammer (forall ?scissors (exists ?stapler (exists ?donut (exists ?bowl (exists ?fork (exists ?mouse (and (Is ?hammer 'hammer') (OnRightSide ?hammer) (or (not (Is ?scissors 'scissors')) (Above ?hammer ?stapler)) (or (not (Is ?scissors 'scissors')) (Above ?stapler ?scissors)) (or (not (Is ?scissors 'scissors')) (Below ?donut ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?stapler 'stapler')) (or (not (Is ?scissors 'scissors')) (Is ?mouse 'mouse')) (or (not (Is ?scissors 'scissors')) (Below ?bowl ?donut)) (or (not (Is ?scissors 'scissors')) (Is ?donut 'donut')) (or (not (Is ?scissors 'scissors')) (Is ?fork 'fork')) (or (not (Is ?scissors 'scissors')) (OnBottomSide ?mouse)) (or (not (Is ?scissors 'scissors')) (Below ?fork ?bowl)) (or (not (Is ?scissors 'scissors')) (Is ?bowl 'bowl')) (or (not (Is ?scissors 'scissors')) (SmallerThan ?mouse ?bowl))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "hammer",
+        "fork",
+        "mouse",
+        "scissors",
+        "bowl",
+        "donut"
+    ]
+}

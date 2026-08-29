@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where all laptops are rectangular.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'laptop') (HasShape ?x 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'laptop')) (HasShape ?x 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "laptop"
+    ]
+}

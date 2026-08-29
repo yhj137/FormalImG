@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a book located on the top side of the scene. For every pair of glasses in the image, it is aligned horizontally with the book. Additionally, a fork is positioned below the book, and a donut is located below the fork.",
+    "dsl": "(exists ?book (and (Is ?book 'book') (OnTopSide ?book) (forall ?glasses (implies (Is ?glasses 'glasses') (AlignedHorizontally ?glasses ?book))) (exists ?fork (exists ?donut (and (Is ?fork 'fork') (Is ?donut 'donut') (Above ?book ?fork) (Above ?fork ?donut))))))",
+    "cnf": "(exists ?book (forall ?glasses (exists ?fork (exists ?donut (and (Is ?book 'book') (OnTopSide ?book) (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?glasses ?book)) (Above ?book ?fork) (Is ?fork 'fork') (Above ?fork ?donut) (Is ?donut 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "fork",
+        "glasses",
+        "donut"
+    ]
+}

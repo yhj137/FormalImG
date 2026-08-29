@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly organized layout. A backpack is positioned on the top side and right side of the image. Directly below the backpack is a handbag, which is vertically aligned with it; the backpack is physically larger than the handbag. To the left of the backpack lies a pizza, and to the left of the pizza is a pan. For every sock in the scene, it is positioned below the pizza and aligns vertically with it. Below the sock is a calculator, also aligned vertically. To the left of the calculator is a shirt. Positioned above the shirt but below the pan is a mouse, which is aligned vertically with the pan; the pan is larger than the mouse. Finally, a bottle is located below the shirt on the bottom side of the image, and the shirt is larger than the bottle.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?pizza (exists ?pan (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (OnRightSide ?backpack) (Is ?handbag 'handbag') (Below ?handbag ?backpack) (AlignedVertically ?handbag ?backpack) (LargerThan ?backpack ?handbag) (Is ?pizza 'pizza') (LeftOf ?pizza ?backpack) (Is ?pan 'pan') (LeftOf ?pan ?pizza) (forall ?sock (implies (Is ?sock 'sock') (exists ?calc (exists ?shirt (exists ?mouse (exists ?bottle (and (Is ?calc 'calculator') (Below ?sock ?pizza) (AlignedVertically ?sock ?pizza) (Below ?calc ?sock) (AlignedVertically ?calc ?sock) (Is ?shirt 'shirt') (LeftOf ?shirt ?calc) (Is ?mouse 'mouse') (Above ?mouse ?shirt) (Below ?mouse ?pan) (AlignedVertically ?mouse ?pan) (LargerThan ?pan ?mouse) (Is ?bottle 'bottle') (Below ?bottle ?shirt) (OnBottomSide ?bottle) (LargerThan ?shirt ?bottle)))))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?pizza (exists ?pan (forall ?sock (exists ?calc (exists ?shirt (exists ?mouse (exists ?bottle (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (OnRightSide ?backpack) (Below ?handbag ?backpack) (AlignedVertically ?handbag ?backpack) (Is ?handbag 'handbag') (LargerThan ?backpack ?handbag) (LeftOf ?pizza ?backpack) (Is ?pizza 'pizza') (LeftOf ?pan ?pizza) (or (not (Is ?sock 'sock')) (Below ?sock ?pizza)) (Is ?pan 'pan') (or (not (Is ?sock 'sock')) (Below ?mouse ?pan)) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?pizza)) (or (not (Is ?sock 'sock')) (Is ?calc 'calculator')) (or (not (Is ?sock 'sock')) (AlignedVertically ?mouse ?pan)) (or (not (Is ?sock 'sock')) (Above ?mouse ?shirt)) (or (not (Is ?sock 'sock')) (Below ?calc ?sock)) (or (not (Is ?sock 'sock')) (LargerThan ?pan ?mouse)) (or (not (Is ?sock 'sock')) (Is ?mouse 'mouse')) (or (not (Is ?sock 'sock')) (LeftOf ?shirt ?calc)) (or (not (Is ?sock 'sock')) (Below ?bottle ?shirt)) (or (not (Is ?sock 'sock')) (AlignedVertically ?calc ?sock)) (or (not (Is ?sock 'sock')) (Is ?bottle 'bottle')) (or (not (Is ?sock 'sock')) (Is ?shirt 'shirt')) (or (not (Is ?sock 'sock')) (OnBottomSide ?bottle)) (or (not (Is ?sock 'sock')) (LargerThan ?shirt ?bottle))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "backpack",
+        "pizza",
+        "mouse",
+        "pan",
+        "shirt",
+        "calculator",
+        "sock",
+        "bottle",
+        "handbag"
+    ]
+}

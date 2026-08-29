@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a ceramic plate with a cake on it. A ball is placed next to the plate, and all butterflies are located to the right of the plate.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (and (Is ?p 'plate') (HasMaterial ?p 'ceramic') (forall ?bf (implies (Is ?bf 'butterfly') (RightOf ?bf ?p))) (exists ?c (and (Is ?c 'cake') (On ?c ?p))) (exists ?b (and (Is ?b 'ball') (NextTo ?b ?p))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (forall ?bf (exists ?c (exists ?b (and (Is ?p 'plate') (HasMaterial ?p 'ceramic') (or (not (Is ?bf 'butterfly')) (RightOf ?bf ?p)) (On ?c ?p) (NextTo ?b ?p) (Is ?c 'cake') (Is ?b 'ball')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "ball",
+        "cake",
+        "plate"
+    ]
+}

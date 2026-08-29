@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. It features a yellow sock.",
+    "dsl": "(exists ?sock (and (Is ?sock 'sock') (Has ?sock 'yellow')))",
+    "cnf": "(exists ?sock (and (Is ?sock 'sock') (Has ?sock 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "sock"
+    ]
+}

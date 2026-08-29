@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a plant to the left of a wooden bookshelf. Every sandwich is located inside the bookshelf, along with a rectangular phone.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?p 'plant') (LeftOf ?p ?b) (forall ?s (implies (Is ?s 'sandwich') (In ?s ?b))) (exists ?ph (and (Is ?ph 'phone') (HasShape ?ph 'rectangular') (In ?ph ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?p (forall ?s (exists ?ph (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (LeftOf ?p ?b) (or (not (Is ?s 'sandwich')) (In ?s ?b)) (Is ?p 'plant') (In ?ph ?b) (HasShape ?ph 'rectangular') (Is ?ph 'phone')))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "plant",
+        "bookshelf",
+        "sandwich"
+    ]
+}

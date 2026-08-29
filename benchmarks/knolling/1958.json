@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the top side of the image. Aligned horizontally with the suitcase are a shirt and headphones; both the shirt and headphones are visually smaller than the suitcase. Below the suitcase, shirt, and headphones are a bottle, an apple, and a carrot, respectively, forming vertical alignments with the items above them. A pair of scissors is located below the bottle and aligned vertically with it. For every fork present in the scene, it aligns horizontally with the scissors. Additionally, for each fork, there is a pair of glasses above it and a watch below it, with all three items aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?headphones (exists ?bottle (exists ?apple (exists ?carrot (exists ?scissors (and (Is ?suitcase 'suitcase') (Is ?shirt 'shirt') (Is ?headphones 'headphones') (Is ?bottle 'bottle') (Is ?apple 'apple') (Is ?carrot 'carrot') (Is ?scissors 'scissors') (OnTopSide ?suitcase) (AlignedHorizontally ?suitcase ?shirt) (AlignedHorizontally ?shirt ?headphones) (SmallerThan ?shirt ?suitcase) (SmallerThan ?headphones ?suitcase) (Below ?bottle ?suitcase) (AlignedVertically ?suitcase ?bottle) (Below ?apple ?shirt) (AlignedVertically ?shirt ?apple) (Below ?carrot ?headphones) (AlignedVertically ?headphones ?carrot) (Below ?scissors ?bottle) (AlignedVertically ?bottle ?scissors) (forall ?fork (implies (Is ?fork 'fork') (exists ?watch (exists ?glasses (and (Is ?watch 'watch') (Is ?glasses 'glasses') (AlignedHorizontally ?scissors ?fork) (Above ?glasses ?fork) (Below ?watch ?fork) (AlignedVertically ?fork ?glasses) (AlignedVertically ?fork ?watch))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?headphones (exists ?bottle (exists ?apple (exists ?carrot (exists ?scissors (forall ?fork (exists ?watch (exists ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (AlignedHorizontally ?suitcase ?shirt) (SmallerThan ?shirt ?suitcase) (Is ?shirt 'shirt') (AlignedHorizontally ?shirt ?headphones) (SmallerThan ?headphones ?suitcase) (Below ?apple ?shirt) (Is ?headphones 'headphones') (Below ?bottle ?suitcase) (Below ?carrot ?headphones) (AlignedVertically ?shirt ?apple) (Is ?apple 'apple') (AlignedVertically ?suitcase ?bottle) (Is ?bottle 'bottle') (AlignedVertically ?headphones ?carrot) (Is ?carrot 'carrot') (Below ?scissors ?bottle) (AlignedVertically ?bottle ?scissors) (Is ?scissors 'scissors') (or (not (Is ?fork 'fork')) (AlignedHorizontally ?scissors ?fork)) (or (not (Is ?fork 'fork')) (Is ?glasses 'glasses')) (or (not (Is ?fork 'fork')) (Above ?glasses ?fork)) (or (not (Is ?fork 'fork')) (Is ?watch 'watch')) (or (not (Is ?fork 'fork')) (Below ?watch ?fork)) (or (not (Is ?fork 'fork')) (AlignedVertically ?fork ?glasses)) (or (not (Is ?fork 'fork')) (AlignedVertically ?fork ?watch)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "apple",
+        "scissors",
+        "carrot",
+        "suitcase",
+        "watch",
+        "fork",
+        "bottle",
+        "headphones",
+        "shirt"
+    ]
+}

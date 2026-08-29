@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue hat and a black remote. The remote is placed below the hat, and both are aligned vertically. For every pizza in the image, it is positioned below the remote, and there is a white calculator located directly below the pizza. All objects maintain a strict vertical alignment.",
+    "dsl": "(exists ?hat (exists ?remote (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?remote 'remote') (Has ?remote 'black') (Below ?remote ?hat) (AlignedVertically ?hat ?remote) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?calc (and (Is ?calc 'calculator') (Has ?calc 'white') (Below ?pizza ?remote) (Above ?pizza ?calc) (AlignedVertically ?remote ?pizza) (AlignedVertically ?pizza ?calc))))))))",
+    "cnf": "(exists ?hat (exists ?remote (forall ?pizza (exists ?calc (and (Is ?hat 'hat') (Has ?hat 'blue') (Below ?remote ?hat) (AlignedVertically ?hat ?remote) (Has ?remote 'black') (or (not (Is ?pizza 'pizza')) (Below ?pizza ?remote)) (Is ?remote 'remote') (or (not (Is ?pizza 'pizza')) (AlignedVertically ?remote ?pizza)) (or (not (Is ?pizza 'pizza')) (Has ?calc 'white')) (or (not (Is ?pizza 'pizza')) (Above ?pizza ?calc)) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?pizza ?calc)) (or (not (Is ?pizza 'pizza')) (Is ?calc 'calculator')))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "remote",
+        "pizza",
+        "calculator"
+    ]
+}

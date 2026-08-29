@@ -1,0 +1,9 @@
+{
+    "prompt": "All oranges in the image are peeled.",
+    "dsl": "(forall ?o (implies (Is ?o 'orange') (HasState ?o 'peeled')))",
+    "cnf": "(forall ?o (or (not (Is ?o 'orange')) (HasState ?o 'peeled')))",
+    "k": 1,
+    "object_classes": [
+        "orange"
+    ]
+}

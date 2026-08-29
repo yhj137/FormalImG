@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor on the right side and a shirt on the bottom side. A pan is located on the left side, with a plate positioned below it; the pan is larger than the plate. A bottle is arranged such that the pan is to its left, and the bottle is to the left of the monitor. Every set of keys is located below the bottle and has a stapler to its left and a knife below the stapler. The stapler is aligned horizontally with the keys, and the shirt is larger than the knife.",
+    "dsl": "(exists ?monitor (exists ?pan (exists ?shirt (exists ?plate (exists ?bottle (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?pan 'pan') (OnLeftSide ?pan) (Is ?shirt 'shirt') (OnBottomSide ?shirt) (Is ?plate 'plate') (Is ?bottle 'bottle') (Below ?plate ?pan) (LargerThan ?pan ?plate) (LeftOf ?pan ?bottle) (LeftOf ?bottle ?monitor) (forall ?keys (implies (Is ?keys 'keys') (exists ?stapler (exists ?knife (and (Is ?stapler 'stapler') (Is ?knife 'knife') (Below ?keys ?bottle) (LeftOf ?stapler ?keys) (AlignedHorizontally ?stapler ?keys) (Below ?knife ?stapler) (LargerThan ?shirt ?knife))))))))))))",
+    "cnf": "(exists ?monitor (exists ?pan (exists ?shirt (exists ?plate (exists ?bottle (forall ?keys (exists ?stapler (exists ?knife (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (LeftOf ?bottle ?monitor) (LeftOf ?pan ?bottle) (or (not (Is ?keys 'keys')) (Below ?keys ?bottle)) (LargerThan ?pan ?plate) (Is ?bottle 'bottle') (or (not (Is ?keys 'keys')) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (LeftOf ?stapler ?keys)) (Below ?plate ?pan) (or (not (Is ?keys 'keys')) (Is ?stapler 'stapler')) (or (not (Is ?keys 'keys')) (Below ?knife ?stapler)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?stapler ?keys)) (OnLeftSide ?pan) (Is ?plate 'plate') (or (not (Is ?keys 'keys')) (LargerThan ?shirt ?knife)) (Is ?pan 'pan') (OnBottomSide ?shirt) (Is ?shirt 'shirt'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "plate",
+        "shirt",
+        "pan",
+        "knife",
+        "monitor",
+        "stapler",
+        "bottle"
+    ]
+}

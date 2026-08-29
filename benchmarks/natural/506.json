@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a standing cat holding a fish to its right, while every bird is positioned to the left of the cat.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (and (Is ?c 'cat') (HasState ?c 'standing') (forall ?b (implies (Is ?b 'bird') (LeftOf ?b ?c))) (exists ?f (and (Is ?f 'fish') (RightOf ?f ?c) (Holding ?c ?f))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (forall ?b (exists ?f (and (Is ?c 'cat') (HasState ?c 'standing') (or (not (Is ?b 'bird')) (LeftOf ?b ?c)) (RightOf ?f ?c) (Holding ?c ?f) (Is ?f 'fish'))))))",
+    "k": 3,
+    "object_classes": [
+        "fish",
+        "cat",
+        "bird"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown suitcase is positioned on the left side of the image. To the right of the suitcase is a camera, which is smaller than the suitcase. For every spoon in the scene, it is white and is aligned horizontally to the right of the camera. Below the spoon is a bowl. To the right of the bowl is a yellow carrot. To the right of the carrot is a book, which is aligned horizontally with the bowl. Positioned below the book is a black phone. To the left of the phone is a remote, and to the left of the remote are scissors, which are smaller than the remote.",
+    "dsl": "(exists ?suitcase (exists ?camera (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?camera 'camera') (RightOf ?camera ?suitcase) (SmallerThan ?camera ?suitcase) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?bowl (exists ?carrot (exists ?book (exists ?phone (exists ?remote (exists ?scissors (and (Has ?spoon 'white') (RightOf ?spoon ?camera) (AlignedHorizontally ?spoon ?camera) (Is ?bowl 'bowl') (Below ?bowl ?spoon) (Is ?carrot 'carrot') (Has ?carrot 'yellow') (RightOf ?carrot ?bowl) (Is ?book 'book') (RightOf ?book ?carrot) (AlignedHorizontally ?book ?bowl) (Is ?phone 'phone') (Has ?phone 'black') (Below ?phone ?book) (Is ?remote 'remote') (LeftOf ?remote ?phone) (Is ?scissors 'scissors') (LeftOf ?scissors ?remote) (SmallerThan ?scissors ?remote)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?camera (forall ?spoon (exists ?bowl (exists ?carrot (exists ?book (exists ?phone (exists ?remote (exists ?scissors (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (RightOf ?camera ?suitcase) (SmallerThan ?camera ?suitcase) (Is ?camera 'camera') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?camera)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?spoon ?camera)) (or (not (Is ?spoon 'spoon')) (Has ?spoon 'white')) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (Below ?bowl ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?carrot 'carrot')) (or (not (Is ?spoon 'spoon')) (RightOf ?carrot ?bowl)) (or (not (Is ?spoon 'spoon')) (Has ?carrot 'yellow')) (or (not (Is ?spoon 'spoon')) (Is ?book 'book')) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?book ?bowl)) (or (not (Is ?spoon 'spoon')) (RightOf ?book ?carrot)) (or (not (Is ?spoon 'spoon')) (Is ?phone 'phone')) (or (not (Is ?spoon 'spoon')) (Below ?phone ?book)) (or (not (Is ?spoon 'spoon')) (Has ?phone 'black')) (or (not (Is ?spoon 'spoon')) (Is ?remote 'remote')) (or (not (Is ?spoon 'spoon')) (LeftOf ?remote ?phone)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (LeftOf ?scissors ?remote)) (or (not (Is ?spoon 'spoon')) (SmallerThan ?scissors ?remote))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "remote",
+        "carrot",
+        "phone",
+        "camera",
+        "spoon",
+        "bowl",
+        "suitcase",
+        "scissors"
+    ]
+}

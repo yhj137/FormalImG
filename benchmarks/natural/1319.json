@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child holding an umbrella is next to a house, with a toy car next to the child. A round ball and a cat are on the house, and every shoe is next to the house.",
+    "dsl": "(exists ?h (exists ?k (exists ?u (and (Is ?h 'house') (Is ?k 'child') (Is ?u 'umbrella') (NextTo ?k ?h) (Holding ?k ?u) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?h))) (exists ?b (and (Is ?b 'ball') (HasShape ?b 'round') (On ?b ?h))) (exists ?tc (and (Is ?tc 'toy car') (NextTo ?tc ?k))) (exists ?c (and (Is ?c 'cat') (On ?c ?h)))))))",
+    "cnf": "(exists ?h (exists ?k (exists ?u (forall ?s (exists ?b (exists ?tc (exists ?c (and (Is ?h 'house') (NextTo ?k ?h) (or (not (Is ?s 'shoes')) (NextTo ?s ?h)) (Is ?k 'child') (Holding ?k ?u) (On ?b ?h) (NextTo ?tc ?k) (Is ?u 'umbrella') (On ?c ?h) (HasShape ?b 'round') (Is ?tc 'toy car') (Is ?c 'cat') (Is ?b 'ball')))))))))",
+    "k": 7,
+    "object_classes": [
+        "umbrella",
+        "toy car",
+        "cat",
+        "ball",
+        "shoes",
+        "house",
+        "child"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every cup contains a blooming plant, with a peeled banana resting on the cup beside the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?c (implies (Is ?c 'cup') (exists ?p (exists ?b (and (Is ?p 'plant') (Is ?b 'banana') (HasState ?p 'blooming') (HasState ?b 'peeled') (In ?p ?c) (On ?b ?c) (NextTo ?b ?p)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?c (exists ?p (exists ?b (and (or (not (Is ?c 'cup')) (Is ?p 'plant')) (or (not (Is ?c 'cup')) (HasState ?p 'blooming')) (or (not (Is ?c 'cup')) (Is ?b 'banana')) (or (not (Is ?c 'cup')) (In ?p ?c)) (or (not (Is ?c 'cup')) (HasState ?b 'peeled')) (or (not (Is ?c 'cup')) (NextTo ?b ?p)) (or (not (Is ?c 'cup')) (On ?b ?c)))))))",
+    "k": 3,
+    "object_classes": [
+        "banana",
+        "cup",
+        "plant"
+    ]
+}

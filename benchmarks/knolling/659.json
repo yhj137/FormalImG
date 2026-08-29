@@ -1,0 +1,12 @@
+{
+    "prompt": "For every pen in the image, it is located on the bottom side and has a lemon aligned vertically with it. A cup is placed above the lemon. Additionally, there is a handbag positioned on the right side of the scene which is larger than the cup.",
+    "dsl": "(forall ?pen (implies (Is ?pen 'pen') (exists ?lemon (exists ?cup (exists ?handbag (and (OnBottomSide ?pen) (Is ?lemon 'lemon') (AlignedVertically ?pen ?lemon) (Is ?cup 'cup') (Above ?cup ?lemon) (Is ?handbag 'handbag') (OnRightSide ?handbag) (LargerThan ?handbag ?cup)))))))",
+    "cnf": "(forall ?pen (exists ?lemon (exists ?cup (exists ?handbag (and (or (not (Is ?pen 'pen')) (OnBottomSide ?pen)) (or (not (Is ?pen 'pen')) (Is ?lemon 'lemon')) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?lemon)) (or (not (Is ?pen 'pen')) (Is ?cup 'cup')) (or (not (Is ?pen 'pen')) (Above ?cup ?lemon)) (or (not (Is ?pen 'pen')) (Is ?handbag 'handbag')) (or (not (Is ?pen 'pen')) (LargerThan ?handbag ?cup)) (or (not (Is ?pen 'pen')) (OnRightSide ?handbag)))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "handbag",
+        "cup",
+        "pen"
+    ]
+}

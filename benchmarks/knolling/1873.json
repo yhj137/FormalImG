@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with a pan and a hat. For every shoe, the pan is on the left side, larger than the hat, and positioned above and vertically aligned with the hat. The shoe is positioned below and vertically aligned with the hat. Below the shoe is a book, which is smaller than the shoe. Below the book is a plate vertically aligned with the book. The plate is larger than and positioned above a game controller. Below the controller are headphones vertically aligned with the controller. The headphones are positioned above a hammer. A stapler is located below the hammer and above a fork. The fork is on the bottom side and smaller than the stapler.",
+    "dsl": "(exists ?pan (exists ?hat (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?book (exists ?plate (exists ?controller (exists ?headphones (exists ?hammer (exists ?stapler (exists ?fork (and (Is ?pan 'pan') (Is ?hat 'hat') (Is ?book 'book') (Is ?plate 'plate') (Is ?controller 'game_controller') (Is ?headphones 'headphones') (Is ?hammer 'hammer') (Is ?stapler 'stapler') (Is ?fork 'fork') (OnLeftSide ?pan) (Above ?pan ?hat) (AlignedVertically ?pan ?hat) (LargerThan ?pan ?hat) (Below ?shoe ?hat) (AlignedVertically ?shoe ?hat) (Below ?book ?shoe) (SmallerThan ?book ?shoe) (Below ?plate ?book) (AlignedVertically ?plate ?book) (Above ?plate ?controller) (LargerThan ?plate ?controller) (Below ?headphones ?controller) (AlignedVertically ?headphones ?controller) (Above ?headphones ?hammer) (Below ?stapler ?hammer) (Above ?stapler ?fork) (OnBottomSide ?fork) (SmallerThan ?fork ?stapler)))))))))))))",
+    "cnf": "(exists ?pan (exists ?hat (forall ?shoe (exists ?book (exists ?plate (exists ?controller (exists ?headphones (exists ?hammer (exists ?stapler (exists ?fork (and (or (not (Is ?shoe 'shoe')) (Is ?pan 'pan')) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?pan)) (or (not (Is ?shoe 'shoe')) (Is ?book 'book')) (or (not (Is ?shoe 'shoe')) (Above ?pan ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?fork 'fork')) (or (not (Is ?shoe 'shoe')) (Is ?plate 'plate')) (or (not (Is ?shoe 'shoe')) (Below ?book ?shoe)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?pan ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?stapler 'stapler')) (or (not (Is ?shoe 'shoe')) (Above ?stapler ?fork)) (or (not (Is ?shoe 'shoe')) (Is ?controller 'game_controller')) (or (not (Is ?shoe 'shoe')) (Below ?plate ?book)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?hat)) (or (not (Is ?shoe 'shoe')) (SmallerThan ?book ?shoe)) (or (not (Is ?shoe 'shoe')) (LargerThan ?pan ?hat)) (or (not (Is ?shoe 'shoe')) (Is ?hammer 'hammer')) (or (not (Is ?shoe 'shoe')) (Below ?stapler ?hammer)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?fork)) (or (not (Is ?shoe 'shoe')) (SmallerThan ?fork ?stapler)) (or (not (Is ?shoe 'shoe')) (Is ?headphones 'headphones')) (or (not (Is ?shoe 'shoe')) (Above ?plate ?controller)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?plate ?book)) (or (not (Is ?shoe 'shoe')) (Below ?shoe ?hat)) (or (not (Is ?shoe 'shoe')) (Above ?headphones ?hammer)) (or (not (Is ?shoe 'shoe')) (Below ?headphones ?controller)) (or (not (Is ?shoe 'shoe')) (LargerThan ?plate ?controller)) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?headphones ?controller)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "plate",
+        "stapler",
+        "game_controller",
+        "fork",
+        "hat",
+        "pan",
+        "hammer",
+        "headphones",
+        "shoe"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden wardrobe stands next to a rug. To the left of the wardrobe, a child holds a red book. Every flower in the scene is inside the wardrobe, and a bird is next to the rug.",
+    "dsl": "(exists ?w (exists ?r (exists ?c (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?r 'rug') (NextTo ?r ?w) (Is ?c 'child') (LeftOf ?c ?w) (Is ?b 'book') (HasColor ?b 'red') (Holding ?c ?b) (forall ?f (implies (Is ?f 'flower') (In ?f ?w))) (exists ?bd (and (Is ?bd 'bird') (NextTo ?bd ?r))))))))",
+    "cnf": "(exists ?w (exists ?r (exists ?c (exists ?b (forall ?f (exists ?bd (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?r ?w) (LeftOf ?c ?w) (Is ?r 'rug') (NextTo ?bd ?r) (or (not (Is ?f 'flower')) (In ?f ?w)) (Is ?c 'child') (Holding ?c ?b) (Is ?bd 'bird') (HasColor ?b 'red') (Is ?b 'book'))))))))",
+    "k": 6,
+    "object_classes": [
+        "child",
+        "book",
+        "rug",
+        "flower",
+        "bird",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a brown suitcase. Directly below the suitcase is a pan, and these two objects are aligned vertically. To the left of a drill is the suitcase. Below the drill is a hammer, below the hammer is a glove, and below the glove is a cup. To the left of a red apple is the drill, and a spoon is positioned below the apple. The suitcase is visually larger than the apple. Finally, for every watch in the image, it is located on the bottom side and is smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?hammer (exists ?glove (exists ?cup (exists ?apple (exists ?spoon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?pan 'pan') (Below ?pan ?suitcase) (AlignedVertically ?suitcase ?pan) (Is ?drill 'drill') (LeftOf ?suitcase ?drill) (Is ?hammer 'hammer') (Below ?hammer ?drill) (Is ?glove 'glove') (Below ?glove ?hammer) (Is ?cup 'cup') (Below ?cup ?glove) (Is ?apple 'apple') (Has ?apple 'red') (LeftOf ?drill ?apple) (LargerThan ?suitcase ?apple) (Is ?spoon 'spoon') (Below ?spoon ?apple) (forall ?watch (implies (Is ?watch 'watch') (and (OnBottomSide ?watch) (SmallerThan ?watch ?suitcase)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pan (exists ?drill (exists ?hammer (exists ?glove (exists ?cup (exists ?apple (exists ?spoon (forall ?watch (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Below ?pan ?suitcase) (AlignedVertically ?suitcase ?pan) (Is ?pan 'pan') (LeftOf ?suitcase ?drill) (LargerThan ?suitcase ?apple) (Is ?drill 'drill') (Below ?hammer ?drill) (or (not (Is ?watch 'watch')) (SmallerThan ?watch ?suitcase)) (LeftOf ?drill ?apple) (Below ?spoon ?apple) (Is ?hammer 'hammer') (Below ?glove ?hammer) (or (not (Is ?watch 'watch')) (OnBottomSide ?watch)) (Has ?apple 'red') (Is ?spoon 'spoon') (Is ?glove 'glove') (Below ?cup ?glove) (Is ?apple 'apple') (Is ?cup 'cup')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "apple",
+        "watch",
+        "cup",
+        "drill",
+        "pan",
+        "hammer",
+        "spoon",
+        "suitcase",
+        "glove"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a bookshelf. Every phone is located to the left of the bookshelf. A child stands next to the bookshelf, with a teddy bear beside them. A broken clock and a stone rock are also positioned next to the bookshelf.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bookshelf') (forall ?p (implies (Is ?p 'phone') (LeftOf ?p ?b))) (exists ?c (exists ?tb (exists ?cl (exists ?r (and (Is ?c 'child') (Is ?tb 'teddy bear') (Is ?cl 'clock') (Is ?r 'rock') (NextTo ?c ?b) (NextTo ?tb ?c) (HasState ?cl 'broken') (NextTo ?cl ?b) (HasMaterial ?r 'stone') (NextTo ?r ?b)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?p (exists ?c (exists ?tb (exists ?cl (exists ?r (and (Is ?b 'bookshelf') (or (not (Is ?p 'phone')) (LeftOf ?p ?b)) (NextTo ?c ?b) (NextTo ?cl ?b) (Is ?c 'child') (NextTo ?tb ?c) (NextTo ?r ?b) (HasState ?cl 'broken') (Is ?tb 'teddy bear') (HasMaterial ?r 'stone') (Is ?cl 'clock') (Is ?r 'rock')))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "child",
+        "teddy bear",
+        "rock",
+        "clock",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor, a keyboard, and a ruler arranged horizontally. The keyboard is placed to the right of the monitor, and the ruler is to the right of the keyboard. The monitor is visually larger than the keyboard. For every camera in the scene, it is located to the right of the ruler and serves as the anchor for a vertical column of items that includes a spoon, a pizza, a remote, a phone, a sock, and a tie. These six items are aligned vertically with the camera and each other. Within this group, the pizza is larger than the spoon, the monitor is larger than the phone, and the tie is positioned on the right side of the image.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?ruler (and (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (Is ?ruler 'ruler') (RightOf ?keyboard ?monitor) (RightOf ?ruler ?keyboard) (LargerThan ?monitor ?keyboard) (forall ?camera (implies (Is ?camera 'camera') (exists ?spoon (exists ?pizza (exists ?remote (exists ?phone (exists ?sock (exists ?tie (and (Is ?spoon 'spoon') (Is ?pizza 'pizza') (Is ?remote 'remote') (Is ?phone 'phone') (Is ?sock 'sock') (Is ?tie 'tie') (RightOf ?camera ?ruler) (AlignedVertically ?spoon ?camera) (AlignedVertically ?pizza ?spoon) (AlignedVertically ?remote ?pizza) (AlignedVertically ?phone ?remote) (AlignedVertically ?sock ?phone) (AlignedVertically ?tie ?sock) (LargerThan ?pizza ?spoon) (LargerThan ?monitor ?phone) (OnRightSide ?tie))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?ruler (forall ?camera (exists ?spoon (exists ?pizza (exists ?remote (exists ?phone (exists ?sock (exists ?tie (and (Is ?monitor 'monitor') (RightOf ?keyboard ?monitor) (LargerThan ?monitor ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?ruler ?keyboard) (or (not (Is ?camera 'camera')) (LargerThan ?monitor ?phone)) (Is ?ruler 'ruler') (or (not (Is ?camera 'camera')) (RightOf ?camera ?ruler)) (or (not (Is ?camera 'camera')) (LargerThan ?pizza ?spoon)) (or (not (Is ?camera 'camera')) (OnRightSide ?tie)) (or (not (Is ?camera 'camera')) (AlignedVertically ?sock ?phone)) (or (not (Is ?camera 'camera')) (Is ?tie 'tie')) (or (not (Is ?camera 'camera')) (AlignedVertically ?spoon ?camera)) (or (not (Is ?camera 'camera')) (AlignedVertically ?pizza ?spoon)) (or (not (Is ?camera 'camera')) (AlignedVertically ?tie ?sock)) (or (not (Is ?camera 'camera')) (AlignedVertically ?remote ?pizza)) (or (not (Is ?camera 'camera')) (AlignedVertically ?phone ?remote)) (or (not (Is ?camera 'camera')) (Is ?sock 'sock')) (or (not (Is ?camera 'camera')) (Is ?spoon 'spoon')) (or (not (Is ?camera 'camera')) (Is ?pizza 'pizza')) (or (not (Is ?camera 'camera')) (Is ?remote 'remote')) (or (not (Is ?camera 'camera')) (Is ?phone 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "tie",
+        "remote",
+        "sock",
+        "keyboard",
+        "phone",
+        "pizza",
+        "camera",
+        "monitor",
+        "spoon"
+    ]
+}

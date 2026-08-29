@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a keyboard. Below the keyboard sits a bowl. To the left of the bowl is a sock, while the bowl itself is positioned to the left of a stapler. Every screwdriver is located on the right side and has a hammer to its left and a wrench below the hammer. The hammer is larger than the screwdriver, while the wrench is smaller than the screwdriver. Additionally, the stapler is positioned to the left of the hammer.",
+    "dsl": "(exists ?keyboard (exists ?bowl (exists ?sock (exists ?stapler (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Is ?bowl 'bowl') (Below ?bowl ?keyboard) (Is ?sock 'sock') (LeftOf ?sock ?bowl) (Is ?stapler 'stapler') (LeftOf ?bowl ?stapler) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?hammer (exists ?wrench (and (Is ?hammer 'hammer') (Is ?wrench 'wrench') (OnRightSide ?screwdriver) (LeftOf ?hammer ?screwdriver) (LargerThan ?hammer ?screwdriver) (Below ?wrench ?hammer) (SmallerThan ?wrench ?screwdriver) (LeftOf ?stapler ?hammer)))))))))))",
+    "cnf": "(exists ?keyboard (exists ?bowl (exists ?sock (exists ?stapler (forall ?screwdriver (exists ?hammer (exists ?wrench (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Below ?bowl ?keyboard) (Is ?bowl 'bowl') (LeftOf ?sock ?bowl) (LeftOf ?bowl ?stapler) (Is ?sock 'sock') (Is ?stapler 'stapler') (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?stapler ?hammer)) (or (not (Is ?screwdriver 'screwdriver')) (SmallerThan ?wrench ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Below ?wrench ?hammer)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?hammer ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?wrench 'wrench')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?hammer ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?hammer 'hammer')) (or (not (Is ?screwdriver 'screwdriver')) (OnRightSide ?screwdriver))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "sock",
+        "keyboard",
+        "wrench",
+        "screwdriver",
+        "hammer",
+        "bowl"
+    ]
+}

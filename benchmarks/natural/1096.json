@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a lion on a bicycle holding a rectangular phone. A plant containing all the apples stands next to the bicycle, with a keyboard lying nearby.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (exists ?pl (and (Is ?l 'lion') (Is ?pl 'plant') (forall ?a (implies (Is ?a 'apple') (In ?a ?pl))) (exists ?b (exists ?p (exists ?k (and (Is ?b 'bicycle') (Is ?p 'phone') (Is ?k 'keyboard') (On ?l ?b) (NextTo ?b ?pl) (Holding ?l ?p) (HasShape ?p 'rectangular') (NextTo ?k ?pl)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (exists ?pl (forall ?a (exists ?b (exists ?p (exists ?k (and (Is ?l 'lion') (On ?l ?b) (Holding ?l ?p) (Is ?b 'bicycle') (NextTo ?b ?pl) (Is ?p 'phone') (HasShape ?p 'rectangular') (or (not (Is ?a 'apple')) (In ?a ?pl)) (NextTo ?k ?pl) (Is ?pl 'plant') (Is ?k 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "plant",
+        "phone",
+        "bicycle",
+        "apple",
+        "lion"
+    ]
+}

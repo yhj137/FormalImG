@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the left side. For every apple found in the image, the monitor is larger than it. To the left of the apple lies a keyboard. Additionally, there is a pair of headphones aligned horizontally with the keyboard, and a fork that is smaller than the headphones.",
+    "dsl": "(exists ?m (and (Is ?m 'monitor') (OnLeftSide ?m) (forall ?a (implies (Is ?a 'apple') (exists ?k (exists ?h (exists ?f (and (Is ?k 'keyboard') (Is ?h 'headphones') (Is ?f 'fork') (LargerThan ?m ?a) (LeftOf ?k ?a) (AlignedHorizontally ?k ?h) (SmallerThan ?f ?h)))))))))",
+    "cnf": "(exists ?m (forall ?a (exists ?k (exists ?h (exists ?f (and (Is ?m 'monitor') (OnLeftSide ?m) (or (not (Is ?a 'apple')) (LargerThan ?m ?a)) (or (not (Is ?a 'apple')) (Is ?f 'fork')) (or (not (Is ?a 'apple')) (LeftOf ?k ?a)) (or (not (Is ?a 'apple')) (Is ?h 'headphones')) (or (not (Is ?a 'apple')) (SmallerThan ?f ?h)) (or (not (Is ?a 'apple')) (Is ?k 'keyboard')) (or (not (Is ?a 'apple')) (AlignedHorizontally ?k ?h))))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "headphones",
+        "monitor",
+        "fork"
+    ]
+}

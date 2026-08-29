@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the arrangement. For every bottle in the scene, there is a cup located to its right. Positioned to the right of the cup is a backpack, which is physically larger than the suitcase. Continuing the line to the right of the backpack is a keyboard, and finally, a ruler is placed to the right of the keyboard.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?cup (and (Is ?cup 'cup') (RightOf ?cup ?bottle) (exists ?backpack (and (Is ?backpack 'backpack') (LargerThan ?backpack ?suitcase) (RightOf ?backpack ?cup) (exists ?keyboard (and (Is ?keyboard 'keyboard') (RightOf ?keyboard ?backpack) (exists ?ruler (and (Is ?ruler 'ruler') (RightOf ?ruler ?keyboard)))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?bottle (exists ?cup (exists ?backpack (exists ?keyboard (exists ?ruler (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (or (not (Is ?bottle 'bottle')) (LargerThan ?backpack ?suitcase)) (or (not (Is ?bottle 'bottle')) (Is ?backpack 'backpack')) (or (not (Is ?bottle 'bottle')) (RightOf ?backpack ?cup)) (or (not (Is ?bottle 'bottle')) (RightOf ?cup ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?keyboard 'keyboard')) (or (not (Is ?bottle 'bottle')) (RightOf ?keyboard ?backpack)) (or (not (Is ?bottle 'bottle')) (Is ?cup 'cup')) (or (not (Is ?bottle 'bottle')) (Is ?ruler 'ruler')) (or (not (Is ?bottle 'bottle')) (RightOf ?ruler ?keyboard)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "cup",
+        "backpack",
+        "bottle",
+        "suitcase"
+    ]
+}

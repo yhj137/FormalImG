@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every woman has a round plant on her.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?w (implies (Is ?w 'woman') (exists ?p (and (Is ?p 'plant') (HasShape ?p 'round') (On ?p ?w))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?w (exists ?p (and (or (not (Is ?w 'woman')) (Is ?p 'plant')) (or (not (Is ?w 'woman')) (HasShape ?p 'round')) (or (not (Is ?w 'woman')) (On ?p ?w))))))",
+    "k": 2,
+    "object_classes": [
+        "plant",
+        "woman"
+    ]
+}

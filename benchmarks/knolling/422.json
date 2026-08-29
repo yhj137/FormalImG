@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a pair of glasses, a watch, and a wrench. The wrench is placed on the right side of the layout. To its left sits the watch, and the two are aligned horizontally. Positioned directly above the watch is the pair of glasses.",
+    "dsl": "(exists ?glasses (exists ?watch (exists ?wrench (and (Is ?glasses 'glasses') (Is ?watch 'watch') (Is ?wrench 'wrench') (OnRightSide ?wrench) (LeftOf ?watch ?wrench) (AlignedHorizontally ?watch ?wrench) (Above ?glasses ?watch)))))",
+    "cnf": "(exists ?glasses (exists ?watch (exists ?wrench (and (Is ?glasses 'glasses') (Above ?glasses ?watch) (AlignedHorizontally ?watch ?wrench) (LeftOf ?watch ?wrench) (Is ?watch 'watch') (OnRightSide ?wrench) (Is ?wrench 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "glasses",
+        "watch"
+    ]
+}

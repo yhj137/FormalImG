@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a person holding every laptop. To the right of the person stands a refrigerator. A black phone rests on the refrigerator, and to the right of the phone is a cup containing a spoon. A plate with a pizza on it also sits on the refrigerator.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (and (Is ?p 'person') (forall ?l (implies (Is ?l 'laptop') (Holding ?p ?l))) (exists ?r (and (Is ?r 'refrigerator') (RightOf ?r ?p) (exists ?ph (and (Is ?ph 'phone') (HasColor ?ph 'black') (On ?ph ?r) (exists ?c (and (Is ?c 'cup') (RightOf ?c ?ph) (exists ?s (and (Is ?s 'spoon') (In ?s ?c) (exists ?pl (and (Is ?pl 'plate') (On ?pl ?r) (exists ?pz (and (Is ?pz 'pizza') (On ?pz ?pl))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (forall ?l (exists ?r (exists ?ph (exists ?c (exists ?s (exists ?pl (exists ?pz (and (Is ?p 'person') (or (not (Is ?l 'laptop')) (Holding ?p ?l)) (RightOf ?r ?p) (Is ?r 'refrigerator') (On ?ph ?r) (On ?pl ?r) (HasColor ?ph 'black') (RightOf ?c ?ph) (Is ?pl 'plate') (On ?pz ?pl) (Is ?ph 'phone') (Is ?c 'cup') (In ?s ?c) (Is ?pz 'pizza') (Is ?s 'spoon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "phone",
+        "person",
+        "spoon",
+        "plate",
+        "laptop",
+        "pizza",
+        "refrigerator",
+        "cup"
+    ]
+}

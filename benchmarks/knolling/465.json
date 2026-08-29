@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every brown handbag in the scene, there exist white headphones and keys. The white headphones are located to the left of the handbag, and the keys are positioned to the left of the headphones. Additionally, the handbag is visually larger than the headphones, while the keys are smaller than the headphones.",
+    "dsl": "(forall ?bag (implies (and (Is ?bag 'handbag') (Has ?bag 'brown')) (exists ?hp (exists ?k (and (Is ?hp 'headphones') (Has ?hp 'white') (Is ?k 'keys') (LeftOf ?hp ?bag) (LeftOf ?k ?hp) (LargerThan ?bag ?hp) (SmallerThan ?k ?hp))))))",
+    "cnf": "(forall ?bag (exists ?hp (exists ?k (and (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (Is ?hp 'headphones')) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (Has ?hp 'white')) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (Is ?k 'keys')) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (LeftOf ?hp ?bag)) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (LeftOf ?k ?hp)) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (LargerThan ?bag ?hp)) (or (not (Is ?bag 'handbag')) (not (Has ?bag 'brown')) (SmallerThan ?k ?hp))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "handbag",
+        "headphones"
+    ]
+}

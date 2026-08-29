@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the left side of the image. Arranged in a vertical column directly below the backpack are a shirt, a laptop, and a keyboard; these items are aligned vertically. A pan is located to the right of the backpack, a book is to the right of the shirt, headphones are to the right of the laptop, and a phone is to the right of the keyboard. The phone is visually smaller than the laptop. A wrench is placed below the phone. Finally, for every sock in the scene, the sock is white and is positioned to the right of the wrench.",
+    "dsl": "(exists ?backpack (exists ?shirt (exists ?laptop (exists ?keyboard (exists ?pan (exists ?book (exists ?headphones (exists ?phone (exists ?wrench (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?shirt 'shirt') (Below ?shirt ?backpack) (AlignedVertically ?backpack ?shirt) (Is ?laptop 'laptop') (Below ?laptop ?shirt) (AlignedVertically ?shirt ?laptop) (Is ?keyboard 'keyboard') (Below ?keyboard ?laptop) (AlignedVertically ?laptop ?keyboard) (Is ?pan 'pan') (LeftOf ?backpack ?pan) (Is ?book 'book') (LeftOf ?shirt ?book) (Is ?headphones 'headphones') (LeftOf ?laptop ?headphones) (Is ?phone 'phone') (LeftOf ?keyboard ?phone) (SmallerThan ?phone ?laptop) (Is ?wrench 'wrench') (Below ?wrench ?phone) (forall ?sock (implies (Is ?sock 'sock') (and (Has ?sock 'white') (LeftOf ?wrench ?sock))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?shirt (exists ?laptop (exists ?keyboard (exists ?pan (exists ?book (exists ?headphones (exists ?phone (exists ?wrench (forall ?sock (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Below ?shirt ?backpack) (AlignedVertically ?backpack ?shirt) (Is ?shirt 'shirt') (LeftOf ?backpack ?pan) (Below ?laptop ?shirt) (Is ?pan 'pan') (AlignedVertically ?shirt ?laptop) (Is ?laptop 'laptop') (LeftOf ?shirt ?book) (Below ?keyboard ?laptop) (Is ?book 'book') (AlignedVertically ?laptop ?keyboard) (Is ?keyboard 'keyboard') (LeftOf ?laptop ?headphones) (LeftOf ?keyboard ?phone) (SmallerThan ?phone ?laptop) (Is ?headphones 'headphones') (Is ?phone 'phone') (Below ?wrench ?phone) (Is ?wrench 'wrench') (or (not (Is ?sock 'sock')) (LeftOf ?wrench ?sock)) (or (not (Is ?sock 'sock')) (Has ?sock 'white')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "laptop",
+        "sock",
+        "keyboard",
+        "wrench",
+        "phone",
+        "pan",
+        "backpack",
+        "headphones",
+        "shirt"
+    ]
+}

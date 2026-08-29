@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a glove, pliers, a book, and a ruler as the primary elements. The glove is located on the top side of the image and is aligned horizontally with the book. The pliers are positioned on the left side and are aligned vertically with the ruler; the ruler is visually smaller than the book. The layout follows a specific rule regarding food items: for every pizza in the arrangement, there is a corresponding remote and hammer. Specifically, the pizza aligns horizontally with the pliers, the remote aligns vertically with the glove, and the hammer aligns horizontally with the remote while being smaller than the book.",
+    "dsl": "(exists ?glove (exists ?pliers (exists ?book (exists ?ruler (and (Is ?glove 'glove') (OnTopSide ?glove) (Is ?pliers 'pliers') (OnLeftSide ?pliers) (Is ?book 'book') (Is ?ruler 'ruler') (AlignedHorizontally ?glove ?book) (AlignedVertically ?pliers ?ruler) (SmallerThan ?ruler ?book) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?remote (exists ?hammer (and (Is ?remote 'remote') (Is ?hammer 'hammer') (AlignedHorizontally ?pizza ?pliers) (AlignedVertically ?remote ?glove) (AlignedHorizontally ?remote ?hammer) (SmallerThan ?hammer ?book)))))))))))",
+    "cnf": "(exists ?glove (exists ?pliers (exists ?book (exists ?ruler (forall ?pizza (exists ?remote (exists ?hammer (and (Is ?glove 'glove') (OnTopSide ?glove) (AlignedHorizontally ?glove ?book) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?remote ?glove)) (Is ?book 'book') (SmallerThan ?ruler ?book) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?pliers)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?remote ?hammer)) (or (not (Is ?pizza 'pizza')) (Is ?remote 'remote')) (or (not (Is ?pizza 'pizza')) (SmallerThan ?hammer ?book)) (AlignedVertically ?pliers ?ruler) (or (not (Is ?pizza 'pizza')) (Is ?hammer 'hammer')) (OnLeftSide ?pliers) (Is ?ruler 'ruler') (Is ?pliers 'pliers')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "book",
+        "remote",
+        "pliers",
+        "pizza",
+        "hammer",
+        "glove"
+    ]
+}

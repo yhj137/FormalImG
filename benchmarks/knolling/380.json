@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is an apple located on the bottom side of the layout. For every fork present in the image, the apple is positioned vertically below it.",
+    "dsl": "(exists ?apple (and (Is ?apple 'apple') (OnBottomSide ?apple) (forall ?fork (implies (Is ?fork 'fork') (Below ?apple ?fork)))))",
+    "cnf": "(exists ?apple (forall ?fork (and (Is ?apple 'apple') (OnBottomSide ?apple) (or (not (Is ?fork 'fork')) (Below ?apple ?fork)))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "apple"
+    ]
+}

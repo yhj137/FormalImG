@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a neat vertical column. A hat is located on the top side of the image. The hat is above a handbag, and the handbag is above a keyboard. Further down, a pizza is positioned below the keyboard, and a stapler is located below the pizza. All five items\u2014hat, handbag, keyboard, pizza, and stapler\u2014are aligned vertically.",
+    "dsl": "(exists ?hat (exists ?handbag (exists ?keyboard (exists ?pizza (exists ?stapler (and (Is ?hat 'hat') (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?pizza 'pizza') (Is ?stapler 'stapler') (OnTopSide ?hat) (Above ?hat ?handbag) (Above ?handbag ?keyboard) (Below ?pizza ?keyboard) (Below ?stapler ?pizza) (AlignedVertically ?hat ?handbag) (AlignedVertically ?handbag ?keyboard) (AlignedVertically ?keyboard ?pizza) (AlignedVertically ?pizza ?stapler)))))))",
+    "cnf": "(exists ?hat (exists ?handbag (exists ?keyboard (exists ?pizza (exists ?stapler (and (Is ?hat 'hat') (OnTopSide ?hat) (Above ?hat ?handbag) (AlignedVertically ?hat ?handbag) (Is ?handbag 'handbag') (Above ?handbag ?keyboard) (AlignedVertically ?handbag ?keyboard) (Is ?keyboard 'keyboard') (Below ?pizza ?keyboard) (AlignedVertically ?keyboard ?pizza) (Is ?pizza 'pizza') (Below ?stapler ?pizza) (AlignedVertically ?pizza ?stapler) (Is ?stapler 'stapler')))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "keyboard",
+        "pizza",
+        "hat",
+        "handbag"
+    ]
+}

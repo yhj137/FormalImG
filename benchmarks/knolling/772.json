@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a sandwich, a bottle, and headphones. The bottle is placed below the sandwich, while the headphones are positioned below the bottle and lie on the bottom side of the image. For every pair of scissors in the scene, the headphones are visually larger than the scissors.",
+    "dsl": "(exists ?s (exists ?b (exists ?h (and (Is ?s 'sandwich') (Is ?b 'bottle') (Is ?h 'headphones') (Below ?b ?s) (Below ?h ?b) (OnBottomSide ?h) (forall ?sci (implies (Is ?sci 'scissors') (LargerThan ?h ?sci)))))))",
+    "cnf": "(exists ?s (exists ?b (exists ?h (forall ?sci (and (Is ?s 'sandwich') (Below ?b ?s) (Is ?b 'bottle') (Below ?h ?b) (Is ?h 'headphones') (OnBottomSide ?h) (or (not (Is ?sci 'scissors')) (LargerThan ?h ?sci)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "headphones",
+        "sandwich",
+        "scissors"
+    ]
+}

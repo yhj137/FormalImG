@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A brown teddy bear sits on a bicycle and is holding a black phone. A blue shirt is also on the bicycle. Next to the bicycle, there is a red apple, and a gray knife lies next to the apple.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?t (exists ?p (exists ?s (exists ?a (exists ?k (and (Is ?b 'bicycle') (Is ?t 'teddy bear') (HasColor ?t 'brown') (Is ?p 'phone') (HasColor ?p 'black') (Is ?s 'shirt') (HasColor ?s 'blue') (Is ?a 'apple') (HasColor ?a 'red') (Is ?k 'knife') (HasColor ?k 'gray') (On ?t ?b) (Holding ?t ?p) (On ?s ?b) (NextTo ?a ?b) (NextTo ?k ?a)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?t (exists ?p (exists ?s (exists ?a (exists ?k (and (Is ?b 'bicycle') (On ?t ?b) (On ?s ?b) (HasColor ?t 'brown') (Holding ?t ?p) (NextTo ?a ?b) (HasColor ?s 'blue') (Is ?t 'teddy bear') (HasColor ?p 'black') (HasColor ?a 'red') (NextTo ?k ?a) (Is ?s 'shirt') (Is ?p 'phone') (Is ?a 'apple') (HasColor ?k 'gray') (Is ?k 'knife')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "knife",
+        "teddy bear",
+        "bicycle",
+        "apple"
+    ]
+}

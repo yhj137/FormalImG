@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every desk has a man to its right holding the closed laptop inside it.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?d (implies (Is ?d 'desk') (exists ?l (exists ?m (and (Is ?l 'laptop') (Is ?m 'man') (HasState ?l 'closed') (In ?l ?d) (Holding ?m ?l) (LeftOf ?d ?m)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?d (exists ?l (exists ?m (and (or (not (Is ?d 'desk')) (Is ?l 'laptop')) (or (not (Is ?d 'desk')) (HasState ?l 'closed')) (or (not (Is ?d 'desk')) (Is ?m 'man')) (or (not (Is ?d 'desk')) (In ?l ?d)) (or (not (Is ?d 'desk')) (Holding ?m ?l)) (or (not (Is ?d 'desk')) (LeftOf ?d ?m)))))))",
+    "k": 3,
+    "object_classes": [
+        "desk",
+        "laptop",
+        "man"
+    ]
+}

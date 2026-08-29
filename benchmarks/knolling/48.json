@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the bottom side of the frame.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnBottomSide ?monitor)))",
+    "cnf": "(exists ?monitor (and (Is ?monitor 'monitor') (OnBottomSide ?monitor)))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

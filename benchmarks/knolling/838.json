@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black pan in the scene, there is a specific arrangement of items associated with it: a gray spoon, a sandwich, a white sock, and a blue tie. The spoon is smaller than the pan and is placed to the left of the pan. The sandwich is located to the right of the pan. Extending to the right, the white sock is positioned to the right of the sandwich, and the blue tie is located to the right of the sock.",
+    "dsl": "(and (forall ?pan (implies (and (Is ?pan 'pan') (Has ?pan 'black')) (exists ?spoon (exists ?sandwich (exists ?sock (exists ?tie (and (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?sandwich 'sandwich') (Is ?sock 'sock') (Has ?sock 'white') (Is ?tie 'tie') (Has ?tie 'blue') (SmallerThan ?spoon ?pan) (LeftOf ?spoon ?pan) (RightOf ?sandwich ?pan) (RightOf ?sock ?sandwich) (RightOf ?tie ?sock)))))))))",
+    "cnf": "(forall ?pan (exists ?spoon (exists ?sandwich (exists ?sock (exists ?tie (and (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Is ?spoon 'spoon')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Has ?spoon 'gray')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (SmallerThan ?spoon ?pan)) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Is ?sandwich 'sandwich')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (LeftOf ?spoon ?pan)) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Has ?tie 'blue')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Is ?sock 'sock')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (RightOf ?sandwich ?pan)) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Is ?tie 'tie')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (RightOf ?tie ?sock)) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (Has ?sock 'white')) (or (not (Is ?pan 'pan')) (not (Has ?pan 'black')) (RightOf ?sock ?sandwich))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "sock",
+        "pan",
+        "spoon",
+        "sandwich"
+    ]
+}

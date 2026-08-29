@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal lineup of items positioned on the bottom side of the scene. The primary arrangement, ordered from left to right, consists of a shirt, a handbag, a laptop, a camera, a book, and a wallet. These items are strictly aligned horizontally, and the wallet is visually smaller than the laptop. Additionally, the scene includes a specific constraint for stationery: for every pen in the image, there is a stapler located to its right. This stapler is positioned to the left of the shirt, and the pen is smaller than the stapler. The pen and stapler also maintain horizontal alignment with the rest of the row.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?laptop (exists ?camera (exists ?book (exists ?wallet (and (Is ?shirt 'shirt') (Is ?handbag 'handbag') (Is ?laptop 'laptop') (Is ?camera 'camera') (Is ?book 'book') (Is ?wallet 'wallet') (OnBottomSide ?shirt) (LeftOf ?shirt ?handbag) (LeftOf ?handbag ?laptop) (LeftOf ?laptop ?camera) (LeftOf ?camera ?book) (LeftOf ?book ?wallet) (AlignedHorizontally ?shirt ?handbag) (AlignedHorizontally ?handbag ?laptop) (AlignedHorizontally ?laptop ?camera) (AlignedHorizontally ?camera ?book) (AlignedHorizontally ?book ?wallet) (SmallerThan ?wallet ?laptop) (forall ?pen (implies (Is ?pen 'pen') (exists ?stapler (and (Is ?stapler 'stapler') (LeftOf ?pen ?stapler) (LeftOf ?stapler ?shirt) (AlignedHorizontally ?pen ?stapler) (SmallerThan ?pen ?stapler))))))))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?laptop (exists ?camera (exists ?book (exists ?wallet (forall ?pen (exists ?stapler (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (LeftOf ?shirt ?handbag) (AlignedHorizontally ?shirt ?handbag) (Is ?handbag 'handbag') (LeftOf ?handbag ?laptop) (or (not (Is ?pen 'pen')) (LeftOf ?stapler ?shirt)) (AlignedHorizontally ?handbag ?laptop) (Is ?laptop 'laptop') (LeftOf ?laptop ?camera) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?stapler)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?stapler)) (AlignedHorizontally ?laptop ?camera) (Is ?camera 'camera') (LeftOf ?camera ?book) (or (not (Is ?pen 'pen')) (Is ?stapler 'stapler')) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?stapler)) (SmallerThan ?wallet ?laptop) (AlignedHorizontally ?camera ?book) (Is ?book 'book') (LeftOf ?book ?wallet) (AlignedHorizontally ?book ?wallet) (Is ?wallet 'wallet'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "book",
+        "stapler",
+        "pen",
+        "handbag",
+        "wallet",
+        "camera",
+        "shirt"
+    ]
+}

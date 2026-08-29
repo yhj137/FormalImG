@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate positioned on the left side. Aligned horizontally with the plate is a mouse, and the plate is visually larger than the mouse. Furthermore, for every remote in the image, it is smaller than the mouse.",
+    "dsl": "(exists ?plate (exists ?mouse (and (Is ?plate 'plate') (OnLeftSide ?plate) (Is ?mouse 'mouse') (AlignedHorizontally ?plate ?mouse) (LargerThan ?plate ?mouse) (forall ?remote (implies (Is ?remote 'remote') (SmallerThan ?remote ?mouse))))))",
+    "cnf": "(exists ?plate (exists ?mouse (forall ?remote (and (Is ?plate 'plate') (OnLeftSide ?plate) (AlignedHorizontally ?plate ?mouse) (LargerThan ?plate ?mouse) (Is ?mouse 'mouse') (or (not (Is ?remote 'remote')) (SmallerThan ?remote ?mouse))))))",
+    "k": 3,
+    "object_classes": [
+        "plate",
+        "remote",
+        "mouse"
+    ]
+}

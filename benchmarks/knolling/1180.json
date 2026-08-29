@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a brown cutting board. To the right of the cutting board is a white plate, which is larger than the blue cup located to its right. However, the cutting board is larger than the plate. To the right of the cup is a yellow lemon, which is smaller than the cup. To the right of the lemon is a black remote. Finally, for every pair of glasses in the image, it is positioned to the right of the remote and is smaller than the cutting board.",
+    "dsl": "(exists ?cb (exists ?p (exists ?c (exists ?l (exists ?r (and (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?p 'plate') (Has ?p 'white') (Is ?c 'cup') (Has ?c 'blue') (Is ?l 'lemon') (Has ?l 'yellow') (Is ?r 'remote') (Has ?r 'black') (RightOf ?p ?cb) (LargerThan ?cb ?p) (RightOf ?c ?p) (LargerThan ?p ?c) (RightOf ?l ?c) (SmallerThan ?l ?c) (RightOf ?r ?l) (forall ?g (implies (Is ?g 'glasses') (and (RightOf ?g ?r) (SmallerThan ?g ?cb))))))))))",
+    "cnf": "(exists ?cb (exists ?p (exists ?c (exists ?l (exists ?r (forall ?g (and (Is ?cb 'cutting_board') (Has ?cb 'brown') (RightOf ?p ?cb) (LargerThan ?cb ?p) (Has ?p 'white') (or (not (Is ?g 'glasses')) (SmallerThan ?g ?cb)) (RightOf ?c ?p) (Is ?p 'plate') (or (not (Is ?g 'glasses')) (RightOf ?g ?r)) (LargerThan ?p ?c) (Has ?c 'blue') (RightOf ?r ?l) (RightOf ?l ?c) (Is ?c 'cup') (SmallerThan ?l ?c) (Has ?r 'black') (Has ?l 'yellow') (Is ?r 'remote') (Is ?l 'lemon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "plate",
+        "lemon",
+        "cup",
+        "cutting_board"
+    ]
+}

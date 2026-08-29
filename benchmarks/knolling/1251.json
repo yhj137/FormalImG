@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized into two rows with items aligned horizontally. On the bottom side, a hammer, a pair of pliers, and a wallet are arranged from left to right. On the top side, a handbag, a keyboard, and a camera are also arranged from left to right. The handbag in the top row is positioned to the right of the wallet in the bottom row. Additionally, for every screwdriver in the image, it is located on the top side and strictly positioned to the left of the hammer.",
+    "dsl": "(exists ?hammer (and (Is ?hammer 'hammer') (OnBottomSide ?hammer) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (and (OnTopSide ?screwdriver) (LeftOf ?screwdriver ?hammer)))) (exists ?pliers (exists ?wallet (exists ?handbag (exists ?keyboard (exists ?camera (and (Is ?pliers 'pliers') (Is ?wallet 'wallet') (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (Is ?camera 'camera') (OnBottomSide ?pliers) (OnBottomSide ?wallet) (OnTopSide ?handbag) (OnTopSide ?keyboard) (OnTopSide ?camera) (LeftOf ?hammer ?pliers) (LeftOf ?pliers ?wallet) (LeftOf ?wallet ?handbag) (LeftOf ?handbag ?keyboard) (LeftOf ?keyboard ?camera) (AlignedHorizontally ?hammer ?pliers) (AlignedHorizontally ?pliers ?wallet) (AlignedHorizontally ?handbag ?keyboard) (AlignedHorizontally ?keyboard ?camera)))))))))",
+    "cnf": "(exists ?hammer (forall ?screwdriver (exists ?pliers (exists ?wallet (exists ?handbag (exists ?keyboard (exists ?camera (and (Is ?hammer 'hammer') (OnBottomSide ?hammer) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?screwdriver ?hammer)) (LeftOf ?hammer ?pliers) (or (not (Is ?screwdriver 'screwdriver')) (OnTopSide ?screwdriver)) (AlignedHorizontally ?hammer ?pliers) (OnBottomSide ?pliers) (LeftOf ?pliers ?wallet) (AlignedHorizontally ?pliers ?wallet) (Is ?pliers 'pliers') (OnBottomSide ?wallet) (LeftOf ?wallet ?handbag) (Is ?wallet 'wallet') (OnTopSide ?handbag) (LeftOf ?handbag ?keyboard) (Is ?handbag 'handbag') (AlignedHorizontally ?handbag ?keyboard) (OnTopSide ?keyboard) (LeftOf ?keyboard ?camera) (AlignedHorizontally ?keyboard ?camera) (Is ?keyboard 'keyboard') (OnTopSide ?camera) (Is ?camera 'camera')))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "screwdriver",
+        "hammer",
+        "handbag",
+        "wallet",
+        "camera"
+    ]
+}

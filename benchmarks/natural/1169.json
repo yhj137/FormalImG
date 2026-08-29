@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A backpack is next to a bench. To the left of the bench stands a dog holding a fish. To the right of every butterfly is a boat, which is also positioned to the right of the bench.",
+    "dsl": "(exists ?ben (exists ?bag (exists ?dog (exists ?fish (and (Is ?ben 'bench') (Is ?bag 'backpack') (NextTo ?bag ?ben) (Is ?dog 'dog') (HasState ?dog 'standing') (LeftOf ?dog ?ben) (Is ?fish 'fish') (Holding ?dog ?fish) (forall ?bf (implies (Is ?bf 'butterfly') (exists ?bt (and (Is ?bt 'boat') (LeftOf ?bf ?bt) (RightOf ?bt ?ben))))))))))",
+    "cnf": "(exists ?ben (exists ?bag (exists ?dog (exists ?fish (forall ?bf (exists ?bt (and (Is ?ben 'bench') (NextTo ?bag ?ben) (LeftOf ?dog ?ben) (Is ?bag 'backpack') (or (not (Is ?bf 'butterfly')) (RightOf ?bt ?ben)) (HasState ?dog 'standing') (Holding ?dog ?fish) (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?bt)) (Is ?dog 'dog') (Is ?fish 'fish') (or (not (Is ?bf 'butterfly')) (Is ?bt 'boat')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fish",
+        "bench",
+        "backpack",
+        "butterfly",
+        "boat",
+        "dog"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack, a laptop, a pizza, and a hammer arranged neatly. The laptop is placed to the right of the backpack. The pizza is positioned below the backpack. The hammer is located to the right of the pizza and below the laptop, and it is smaller than the laptop. Additionally, for every pair of scissors in the layout, there is a red stapler positioned to its right, which is also located below the hammer.",
+    "dsl": "(exists ?backpack (exists ?laptop (exists ?pizza (exists ?hammer (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?laptop 'laptop') (Is ?pizza 'pizza') (Is ?hammer 'hammer') (RightOf ?laptop ?backpack) (Below ?pizza ?backpack) (RightOf ?hammer ?pizza) (Below ?hammer ?laptop) (SmallerThan ?hammer ?laptop) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?stapler (and (Is ?stapler 'stapler') (Has ?stapler 'red') (RightOf ?stapler ?scissors) (Below ?stapler ?hammer))))))))))",
+    "cnf": "(exists ?backpack (exists ?laptop (exists ?pizza (exists ?hammer (forall ?scissors (exists ?stapler (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (RightOf ?laptop ?backpack) (Below ?pizza ?backpack) (Is ?laptop 'laptop') (Below ?hammer ?laptop) (Is ?pizza 'pizza') (RightOf ?hammer ?pizza) (SmallerThan ?hammer ?laptop) (Is ?hammer 'hammer') (or (not (Is ?scissors 'scissors')) (Below ?stapler ?hammer)) (or (not (Is ?scissors 'scissors')) (RightOf ?stapler ?scissors)) (or (not (Is ?scissors 'scissors')) (Has ?stapler 'red')) (or (not (Is ?scissors 'scissors')) (Is ?stapler 'stapler')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "pizza",
+        "hammer",
+        "backpack",
+        "scissors"
+    ]
+}

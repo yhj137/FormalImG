@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a yellow drill. For every plate present in the image, there is a sequence of objects arranged to its left: a white sandwich, a fork, and a mouse. Specifically, the white sandwich is smaller than the plate and located to its left. The fork is positioned to the left of the sandwich. The mouse is located to the left of the fork. Finally, the yellow drill is positioned to the left of the mouse and is larger than it.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (Has ?drill 'yellow') (forall ?plate (implies (Is ?plate 'plate') (exists ?sandwich (exists ?fork (exists ?mouse (and (Is ?sandwich 'sandwich') (Has ?sandwich 'white') (Is ?fork 'fork') (Is ?mouse 'mouse') (SmallerThan ?sandwich ?plate) (LeftOf ?sandwich ?plate) (LeftOf ?fork ?sandwich) (LeftOf ?mouse ?fork) (LeftOf ?drill ?mouse) (LargerThan ?drill ?mouse)))))))))",
+    "cnf": "(exists ?drill (forall ?plate (exists ?sandwich (exists ?fork (exists ?mouse (and (Is ?drill 'drill') (Has ?drill 'yellow') (or (not (Is ?plate 'plate')) (LeftOf ?drill ?mouse)) (or (not (Is ?plate 'plate')) (LargerThan ?drill ?mouse)) (or (not (Is ?plate 'plate')) (LeftOf ?mouse ?fork)) (or (not (Is ?plate 'plate')) (LeftOf ?fork ?sandwich)) (or (not (Is ?plate 'plate')) (Is ?mouse 'mouse')) (or (not (Is ?plate 'plate')) (LeftOf ?sandwich ?plate)) (or (not (Is ?plate 'plate')) (Is ?fork 'fork')) (or (not (Is ?plate 'plate')) (SmallerThan ?sandwich ?plate)) (or (not (Is ?plate 'plate')) (Has ?sandwich 'white')) (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "drill",
+        "fork",
+        "mouse",
+        "sandwich"
+    ]
+}

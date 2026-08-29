@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where every screwdriver is inside a yellow basket.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?s (implies (Is ?s 'screwdriver') (exists ?b (and (Is ?b 'basket') (HasColor ?b 'yellow') (In ?s ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?s (exists ?b (and (or (not (Is ?s 'screwdriver')) (Is ?b 'basket')) (or (not (Is ?s 'screwdriver')) (HasColor ?b 'yellow')) (or (not (Is ?s 'screwdriver')) (In ?s ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "screwdriver",
+        "basket"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "For every cutting board, it is located on the top side of the layout and has a calculator to its right. The cutting board is larger than the calculator. Additionally, a pair of scissors is aligned vertically with the calculator, and a set of keys is aligned vertically with the scissors.",
+    "dsl": "(forall ?board (implies (Is ?board 'cutting_board') (exists ?calc (exists ?scissors (exists ?keys (and (Is ?calc 'calculator') (Is ?scissors 'scissors') (Is ?keys 'keys') (OnTopSide ?board) (RightOf ?calc ?board) (LargerThan ?board ?calc) (AlignedVertically ?scissors ?calc) (AlignedVertically ?keys ?scissors)))))))",
+    "cnf": "(forall ?board (exists ?calc (exists ?scissors (exists ?keys (and (or (not (Is ?board 'cutting_board')) (Is ?calc 'calculator')) (or (not (Is ?board 'cutting_board')) (Is ?scissors 'scissors')) (or (not (Is ?board 'cutting_board')) (RightOf ?calc ?board)) (or (not (Is ?board 'cutting_board')) (Is ?keys 'keys')) (or (not (Is ?board 'cutting_board')) (AlignedVertically ?scissors ?calc)) (or (not (Is ?board 'cutting_board')) (OnTopSide ?board)) (or (not (Is ?board 'cutting_board')) (LargerThan ?board ?calc)) (or (not (Is ?board 'cutting_board')) (AlignedVertically ?keys ?scissors)))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "cutting_board",
+        "keys",
+        "calculator"
+    ]
+}

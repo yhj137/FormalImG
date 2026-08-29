@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every book positioned on the top side of the frame, there exists a wrench to its left and a pair of scissors to the left of the wrench. The wrench is visually smaller than the book.",
+    "dsl": "(forall ?b (implies (and (Is ?b 'book') (OnTopSide ?b)) (exists ?w (exists ?s (and (Is ?w 'wrench') (Is ?s 'scissors') (LeftOf ?w ?b) (LeftOf ?s ?w) (SmallerThan ?w ?b))))))",
+    "cnf": "(forall ?b (exists ?w (exists ?s (and (or (not (Is ?b 'book')) (not (OnTopSide ?b)) (Is ?w 'wrench')) (or (not (Is ?b 'book')) (not (OnTopSide ?b)) (LeftOf ?w ?b)) (or (not (Is ?b 'book')) (not (OnTopSide ?b)) (Is ?s 'scissors')) (or (not (Is ?b 'book')) (not (OnTopSide ?b)) (LeftOf ?s ?w)) (or (not (Is ?b 'book')) (not (OnTopSide ?b)) (SmallerThan ?w ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "book",
+        "scissors"
+    ]
+}

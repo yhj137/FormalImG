@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pizza is located on the left side, with a drill positioned to its right. For every fork in the scene, it is placed to the right of the drill. To the right of the fork is a lemon, which is also to the left of a mouse. A pair of glasses is located to the right of the mouse and is positioned on the bottom side of the image.",
+    "dsl": "(exists ?pizza (exists ?drill (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (Is ?drill 'drill') (RightOf ?drill ?pizza) (forall ?fork (implies (Is ?fork 'fork') (exists ?lemon (exists ?mouse (exists ?glasses (and (Is ?lemon 'lemon') (Is ?mouse 'mouse') (Is ?glasses 'glasses') (RightOf ?fork ?drill) (RightOf ?lemon ?fork) (LeftOf ?lemon ?mouse) (RightOf ?glasses ?mouse) (OnBottomSide ?glasses))))))))))",
+    "cnf": "(exists ?pizza (exists ?drill (forall ?fork (exists ?lemon (exists ?mouse (exists ?glasses (and (Is ?pizza 'pizza') (OnLeftSide ?pizza) (RightOf ?drill ?pizza) (Is ?drill 'drill') (or (not (Is ?fork 'fork')) (RightOf ?fork ?drill)) (or (not (Is ?fork 'fork')) (Is ?glasses 'glasses')) (or (not (Is ?fork 'fork')) (RightOf ?lemon ?fork)) (or (not (Is ?fork 'fork')) (Is ?mouse 'mouse')) (or (not (Is ?fork 'fork')) (RightOf ?glasses ?mouse)) (or (not (Is ?fork 'fork')) (LeftOf ?lemon ?mouse)) (or (not (Is ?fork 'fork')) (Is ?lemon 'lemon')) (or (not (Is ?fork 'fork')) (OnBottomSide ?glasses)))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "lemon",
+        "pizza",
+        "fork",
+        "drill",
+        "mouse"
+    ]
+}

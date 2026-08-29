@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a sock and a pair of glasses that are aligned vertically. For every pizza in the image, it is aligned horizontally with the sock. Associated with each pizza is a phone aligned vertically with it, and a pair of pliers aligned horizontally with the phone. Additionally, the pliers are positioned on the right side of the image.",
+    "dsl": "(exists ?sock (exists ?glasses (and (Is ?sock 'sock') (Is ?glasses 'glasses') (AlignedVertically ?sock ?glasses) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?phone (exists ?pliers (and (Is ?phone 'phone') (Is ?pliers 'pliers') (AlignedHorizontally ?pizza ?sock) (AlignedVertically ?phone ?pizza) (AlignedHorizontally ?pliers ?phone) (OnRightSide ?pliers)))))))))",
+    "cnf": "(exists ?sock (exists ?glasses (forall ?pizza (exists ?phone (exists ?pliers (and (Is ?sock 'sock') (AlignedVertically ?sock ?glasses) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?sock)) (Is ?glasses 'glasses') (or (not (Is ?pizza 'pizza')) (Is ?pliers 'pliers')) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?phone ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?phone 'phone')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pliers ?phone)) (or (not (Is ?pizza 'pizza')) (OnRightSide ?pliers))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "pliers",
+        "sock",
+        "phone",
+        "pizza"
+    ]
+}

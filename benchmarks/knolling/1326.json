@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hat on the left side, positioned directly above a plate, and they are aligned vertically. On the right side, a game controller is located above a wrench, which are also aligned vertically. The plate is positioned to the left of the wrench. For every spoon in the image, there is a donut and a sock arranged such that the spoon is to the left of the wrench, the donut is above the spoon and vertically aligned with it, and the sock is above the donut. The donut is smaller than the plate, and the sock is smaller than the hat.",
+    "dsl": "(exists ?hat (exists ?plate (exists ?controller (exists ?wrench (and (Is ?hat 'hat') (OnLeftSide ?hat) (Is ?plate 'plate') (Is ?controller 'game_controller') (OnRightSide ?controller) (Is ?wrench 'wrench') (Above ?hat ?plate) (AlignedVertically ?hat ?plate) (Above ?controller ?wrench) (AlignedVertically ?controller ?wrench) (LeftOf ?plate ?wrench) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?donut (exists ?sock (and (Is ?donut 'donut') (Is ?sock 'sock') (LeftOf ?spoon ?wrench) (Above ?donut ?spoon) (Above ?sock ?donut) (AlignedVertically ?donut ?spoon) (SmallerThan ?donut ?plate) (SmallerThan ?sock ?hat)))))))))))",
+    "cnf": "(exists ?hat (exists ?plate (exists ?controller (exists ?wrench (forall ?spoon (exists ?donut (exists ?sock (and (Is ?hat 'hat') (OnLeftSide ?hat) (Above ?hat ?plate) (AlignedVertically ?hat ?plate) (Is ?plate 'plate') (or (not (Is ?spoon 'spoon')) (SmallerThan ?sock ?hat)) (LeftOf ?plate ?wrench) (or (not (Is ?spoon 'spoon')) (SmallerThan ?donut ?plate)) (or (not (Is ?spoon 'spoon')) (Above ?sock ?donut)) (AlignedVertically ?controller ?wrench) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?wrench)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?donut ?spoon)) (or (not (Is ?spoon 'spoon')) (Above ?donut ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?sock 'sock')) (Above ?controller ?wrench) (or (not (Is ?spoon 'spoon')) (Is ?donut 'donut')) (OnRightSide ?controller) (Is ?wrench 'wrench') (Is ?controller 'game_controller')))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "sock",
+        "wrench",
+        "game_controller",
+        "hat",
+        "spoon",
+        "donut"
+    ]
+}

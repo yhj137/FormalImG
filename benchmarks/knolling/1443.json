@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza, it is positioned on the left side of the scene, and there is a structured layout of items around it. A cup is placed directly above the pizza, and a shoe is placed above the cup. The pizza is larger than the cup. To the right of the pizza is a knife, and further to the right of the knife is a spoon; these three items are aligned horizontally. A pen is located above the knife and to the right of the cup, sharing a horizontal alignment with the cup. A wrench is found above the spoon and to the right of the pen, aligned horizontally with the pen. Additionally, a sock is positioned above the pen and to the right of the shoe, aligned horizontally with the shoe.",
+    "dsl": "(forall ?pizza (implies (Is ?pizza 'pizza') (exists ?cup (exists ?shoe (exists ?knife (exists ?spoon (exists ?pen (exists ?wrench (exists ?sock (and (Is ?cup 'cup') (Is ?shoe 'shoe') (Is ?knife 'knife') (Is ?spoon 'spoon') (Is ?pen 'pen') (Is ?wrench 'wrench') (Is ?sock 'sock') (OnLeftSide ?pizza) (LargerThan ?pizza ?cup) (Above ?cup ?pizza) (Above ?shoe ?cup) (RightOf ?knife ?pizza) (AlignedHorizontally ?pizza ?knife) (RightOf ?spoon ?knife) (AlignedHorizontally ?knife ?spoon) (Above ?pen ?knife) (RightOf ?pen ?cup) (AlignedHorizontally ?cup ?pen) (Above ?wrench ?spoon) (RightOf ?wrench ?pen) (AlignedHorizontally ?pen ?wrench) (Above ?sock ?pen) (RightOf ?sock ?shoe) (AlignedHorizontally ?shoe ?sock)))))))))))",
+    "cnf": "(forall ?pizza (exists ?cup (exists ?shoe (exists ?knife (exists ?spoon (exists ?pen (exists ?wrench (exists ?sock (and (or (not (Is ?pizza 'pizza')) (Is ?cup 'cup')) (or (not (Is ?pizza 'pizza')) (Is ?shoe 'shoe')) (or (not (Is ?pizza 'pizza')) (LargerThan ?pizza ?cup)) (or (not (Is ?pizza 'pizza')) (Is ?knife 'knife')) (or (not (Is ?pizza 'pizza')) (Above ?shoe ?cup)) (or (not (Is ?pizza 'pizza')) (OnLeftSide ?pizza)) (or (not (Is ?pizza 'pizza')) (Above ?cup ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?spoon 'spoon')) (or (not (Is ?pizza 'pizza')) (RightOf ?knife ?pizza)) (or (not (Is ?pizza 'pizza')) (RightOf ?pen ?cup)) (or (not (Is ?pizza 'pizza')) (RightOf ?sock ?shoe)) (or (not (Is ?pizza 'pizza')) (Is ?sock 'sock')) (or (not (Is ?pizza 'pizza')) (Is ?pen 'pen')) (or (not (Is ?pizza 'pizza')) (RightOf ?spoon ?knife)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?knife)) (or (not (Is ?pizza 'pizza')) (Above ?pen ?knife)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?cup ?pen)) (or (not (Is ?pizza 'pizza')) (Above ?sock ?pen)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?shoe ?sock)) (or (not (Is ?pizza 'pizza')) (Is ?wrench 'wrench')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?knife ?spoon)) (or (not (Is ?pizza 'pizza')) (Above ?wrench ?spoon)) (or (not (Is ?pizza 'pizza')) (RightOf ?wrench ?pen)) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pen ?wrench)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "pen",
+        "wrench",
+        "pizza",
+        "cup",
+        "knife",
+        "shoe",
+        "spoon"
+    ]
+}

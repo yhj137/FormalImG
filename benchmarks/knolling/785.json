@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a hat, a bowl, and a pair of pliers, all located on the right side of the image and aligned vertically with each other. Additionally, for any apple in the scene, it is visually smaller than the bowl.",
+    "dsl": "(exists ?hat (exists ?bowl (exists ?pliers (and (Is ?hat 'hat') (Is ?bowl 'bowl') (Is ?pliers 'pliers') (OnRightSide ?hat) (OnRightSide ?bowl) (OnRightSide ?pliers) (AlignedVertically ?hat ?bowl) (AlignedVertically ?bowl ?pliers) (forall ?apple (implies (Is ?apple 'apple') (SmallerThan ?apple ?bowl)))))))",
+    "cnf": "(exists ?hat (exists ?bowl (exists ?pliers (forall ?apple (and (Is ?hat 'hat') (OnRightSide ?hat) (AlignedVertically ?hat ?bowl) (OnRightSide ?bowl) (AlignedVertically ?bowl ?pliers) (Is ?bowl 'bowl') (or (not (Is ?apple 'apple')) (SmallerThan ?apple ?bowl)) (OnRightSide ?pliers) (Is ?pliers 'pliers'))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "hat",
+        "pliers",
+        "apple"
+    ]
+}

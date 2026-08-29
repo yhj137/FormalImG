@@ -1,0 +1,14 @@
+{
+    "prompt": "For every camera in the scene, it is black and has a red hammer positioned to its left. To the left of the hammer is a gray wrench, which is smaller than the hammer. To the left of the wrench is a yellow screwdriver, which is smaller than the wrench. To the left of the screwdriver is a gray fork, and to the left of the fork is a white bowl.",
+    "dsl": "(and (forall ?cam (implies (Is ?cam 'camera') (exists ?hammer (exists ?wrench (exists ?driver (exists ?fork (exists ?bowl (and (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?driver 'screwdriver') (Is ?fork 'fork') (Is ?bowl 'bowl') (Has ?cam 'black') (Has ?hammer 'red') (Has ?wrench 'gray') (Has ?driver 'yellow') (Has ?fork 'gray') (Has ?bowl 'white') (LeftOf ?hammer ?cam) (LeftOf ?wrench ?hammer) (LeftOf ?driver ?wrench) (LeftOf ?fork ?driver) (LeftOf ?bowl ?fork) (LargerThan ?hammer ?wrench) (LargerThan ?wrench ?driver))))))))))",
+    "cnf": "(forall ?cam (exists ?hammer (exists ?wrench (exists ?driver (exists ?fork (exists ?bowl (and (or (not (Is ?cam 'camera')) (Is ?hammer 'hammer')) (or (not (Is ?cam 'camera')) (Is ?wrench 'wrench')) (or (not (Is ?cam 'camera')) (Has ?hammer 'red')) (or (not (Is ?cam 'camera')) (Is ?driver 'screwdriver')) (or (not (Is ?cam 'camera')) (Has ?wrench 'gray')) (or (not (Is ?cam 'camera')) (Has ?cam 'black')) (or (not (Is ?cam 'camera')) (LeftOf ?hammer ?cam)) (or (not (Is ?cam 'camera')) (Is ?fork 'fork')) (or (not (Is ?cam 'camera')) (Has ?driver 'yellow')) (or (not (Is ?cam 'camera')) (LeftOf ?wrench ?hammer)) (or (not (Is ?cam 'camera')) (Is ?bowl 'bowl')) (or (not (Is ?cam 'camera')) (Has ?bowl 'white')) (or (not (Is ?cam 'camera')) (Has ?fork 'gray')) (or (not (Is ?cam 'camera')) (LeftOf ?driver ?wrench)) (or (not (Is ?cam 'camera')) (LargerThan ?hammer ?wrench)) (or (not (Is ?cam 'camera')) (LeftOf ?bowl ?fork)) (or (not (Is ?cam 'camera')) (LeftOf ?fork ?driver)) (or (not (Is ?cam 'camera')) (LargerThan ?wrench ?driver)))))))))",
+    "k": 6,
+    "object_classes": [
+        "wrench",
+        "screwdriver",
+        "hammer",
+        "fork",
+        "camera",
+        "bowl"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a round ball positioned to the left of every dog.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'ball') (HasShape ?b 'round') (forall ?d (implies (Is ?d 'dog') (LeftOf ?b ?d))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?d (and (Is ?b 'ball') (HasShape ?b 'round') (or (not (Is ?d 'dog')) (LeftOf ?b ?d))))))",
+    "k": 2,
+    "object_classes": [
+        "dog",
+        "ball"
+    ]
+}

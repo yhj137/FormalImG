@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every tie positioned on the top side of the scene, there is a column of items arranged below it: a monitor is directly below the tie, a plate is located below the monitor, and a handbag is positioned below the plate. All four objects\u2014the tie, monitor, plate, and handbag\u2014are aligned vertically.",
+    "dsl": "(forall ?tie (implies (and (Is ?tie 'tie') (OnTopSide ?tie)) (exists ?monitor (exists ?plate (exists ?handbag (and (Is ?monitor 'monitor') (Is ?plate 'plate') (Is ?handbag 'handbag') (Above ?tie ?monitor) (Above ?monitor ?plate) (Above ?plate ?handbag) (AlignedVertically ?tie ?monitor) (AlignedVertically ?monitor ?plate) (AlignedVertically ?plate ?handbag)))))))",
+    "cnf": "(forall ?tie (exists ?monitor (exists ?plate (exists ?handbag (and (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Is ?monitor 'monitor')) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Is ?plate 'plate')) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Above ?tie ?monitor)) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Is ?handbag 'handbag')) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Above ?monitor ?plate)) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (Above ?plate ?handbag)) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (AlignedVertically ?tie ?monitor)) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (AlignedVertically ?monitor ?plate)) (or (not (Is ?tie 'tie')) (not (OnTopSide ?tie)) (AlignedVertically ?plate ?handbag)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "plate",
+        "handbag",
+        "tie"
+    ]
+}

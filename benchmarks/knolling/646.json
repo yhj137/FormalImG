@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the layout, there is a ruler located above the shoe on the left side of the image. Furthermore, a sock is placed below the shoe, and a pen is positioned below the sock on the bottom side of the scene.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?ruler (exists ?sock (exists ?pen (and (Is ?ruler 'ruler') (Is ?sock 'sock') (Is ?pen 'pen') (Above ?ruler ?shoe) (OnLeftSide ?ruler) (Below ?sock ?shoe) (Below ?pen ?sock) (OnBottomSide ?pen))))))))",
+    "cnf": "(forall ?shoe (exists ?ruler (exists ?sock (exists ?pen (and (or (not (Is ?shoe 'shoe')) (Is ?ruler 'ruler')) (or (not (Is ?shoe 'shoe')) (Is ?sock 'sock')) (or (not (Is ?shoe 'shoe')) (Above ?ruler ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?pen 'pen')) (or (not (Is ?shoe 'shoe')) (Below ?sock ?shoe)) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?ruler)) (or (not (Is ?shoe 'shoe')) (Below ?pen ?sock)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?pen)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "shoe",
+        "sock",
+        "pen"
+    ]
+}

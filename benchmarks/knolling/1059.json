@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is located on the left side of the scene. For every watch present, it is positioned above the handbag and is smaller than the handbag. Additionally, for every watch, the handbag is to the left of a bottle, a screwdriver is located above the bottle, a calculator is located above the screwdriver, and the bottle is to the left of a bowl which is larger than the calculator.",
+    "dsl": "(exists ?h (and (Is ?h 'handbag') (OnLeftSide ?h) (forall ?w (implies (Is ?w 'watch') (exists ?b (exists ?s (exists ?c (exists ?bowl (and (Is ?b 'bottle') (Is ?s 'screwdriver') (Is ?c 'calculator') (Is ?bowl 'bowl') (Above ?w ?h) (SmallerThan ?w ?h) (LeftOf ?h ?b) (Above ?s ?b) (Above ?c ?s) (LeftOf ?b ?bowl) (LargerThan ?bowl ?c))))))))))",
+    "cnf": "(exists ?h (forall ?w (exists ?b (exists ?s (exists ?c (exists ?bowl (and (Is ?h 'handbag') (OnLeftSide ?h) (or (not (Is ?w 'watch')) (Above ?w ?h)) (or (not (Is ?w 'watch')) (SmallerThan ?w ?h)) (or (not (Is ?w 'watch')) (Is ?bowl 'bowl')) (or (not (Is ?w 'watch')) (LeftOf ?h ?b)) (or (not (Is ?w 'watch')) (Is ?c 'calculator')) (or (not (Is ?w 'watch')) (LeftOf ?b ?bowl)) (or (not (Is ?w 'watch')) (Above ?s ?b)) (or (not (Is ?w 'watch')) (Is ?b 'bottle')) (or (not (Is ?w 'watch')) (Is ?s 'screwdriver')) (or (not (Is ?w 'watch')) (Above ?c ?s)) (or (not (Is ?w 'watch')) (LargerThan ?bowl ?c)))))))))",
+    "k": 6,
+    "object_classes": [
+        "watch",
+        "screwdriver",
+        "handbag",
+        "calculator",
+        "bottle",
+        "bowl"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is positioned on the top side of the layout.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnTopSide ?shirt)))",
+    "cnf": "(exists ?shirt (and (Is ?shirt 'shirt') (OnTopSide ?shirt)))",
+    "k": 1,
+    "object_classes": [
+        "shirt"
+    ]
+}

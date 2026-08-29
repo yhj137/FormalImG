@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every bench has a child sitting on it holding a red ball, with an umbrella placed next to the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'bench') (exists ?c (exists ?bl (exists ?u (and (Is ?c 'child') (Is ?bl 'ball') (Is ?u 'umbrella') (On ?c ?b) (Holding ?c ?bl) (HasColor ?bl 'red') (NextTo ?u ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?c (exists ?bl (exists ?u (and (or (not (Is ?b 'bench')) (Is ?c 'child')) (or (not (Is ?b 'bench')) (On ?c ?b)) (or (not (Is ?b 'bench')) (Is ?bl 'ball')) (or (not (Is ?b 'bench')) (Holding ?c ?bl)) (or (not (Is ?b 'bench')) (Is ?u 'umbrella')) (or (not (Is ?b 'bench')) (HasColor ?bl 'red')) (or (not (Is ?b 'bench')) (NextTo ?u ?b))))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "ball",
+        "umbrella",
+        "child"
+    ]
+}

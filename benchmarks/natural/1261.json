@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts an elephant holding a teddy bear on a round rug. A keyboard is also on the rug. Every orange is located next to the elephant, as is a basket. A fabric backpack rests next to the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?e (and (Is ?e 'elephant') (forall ?o (implies (Is ?o 'orange') (NextTo ?o ?e))) (exists ?tb (exists ?r (exists ?k (exists ?bp (exists ?b (and (Is ?tb 'teddy bear') (Is ?r 'rug') (Is ?k 'keyboard') (Is ?bp 'backpack') (Is ?b 'basket') (Holding ?e ?tb) (HasShape ?r 'round') (On ?e ?r) (On ?k ?r) (HasMaterial ?bp 'fabric') (NextTo ?bp ?r) (NextTo ?b ?e))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?e (forall ?o (exists ?tb (exists ?r (exists ?k (exists ?bp (exists ?b (and (Is ?e 'elephant') (or (not (Is ?o 'orange')) (NextTo ?o ?e)) (Holding ?e ?tb) (On ?e ?r) (Is ?tb 'teddy bear') (NextTo ?b ?e) (HasShape ?r 'round') (On ?k ?r) (Is ?b 'basket') (Is ?r 'rug') (NextTo ?bp ?r) (Is ?k 'keyboard') (HasMaterial ?bp 'fabric') (Is ?bp 'backpack'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "backpack",
+        "teddy bear",
+        "basket",
+        "rug",
+        "elephant",
+        "orange"
+    ]
+}

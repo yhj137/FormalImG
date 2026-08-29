@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a keyboard, a knife, and a remote. The keyboard is located on the bottom side of the image and is larger than the remote. The remote is positioned below the knife. Furthermore, for every glove in the image, it is placed below the keyboard.",
+    "dsl": "(exists ?k (exists ?n (exists ?r (and (Is ?k 'keyboard') (Is ?n 'knife') (Is ?r 'remote') (OnBottomSide ?k) (LargerThan ?k ?r) (Below ?r ?n) (forall ?g (implies (Is ?g 'glove') (Below ?g ?k)))))))",
+    "cnf": "(exists ?k (exists ?n (exists ?r (forall ?g (and (Is ?k 'keyboard') (OnBottomSide ?k) (LargerThan ?k ?r) (or (not (Is ?g 'glove')) (Below ?g ?k)) (Is ?r 'remote') (Below ?r ?n) (Is ?n 'knife'))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "remote",
+        "glove",
+        "keyboard"
+    ]
+}

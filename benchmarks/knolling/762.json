@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a monitor located on the right side. To the left of the monitor is a book, and to the left of the book is a hat, with these three objects aligned horizontally. Furthermore, for any apple in the image, it is aligned vertically with the hat and situated on the left side of the scene.",
+    "dsl": "(exists ?m (exists ?b (exists ?h (and (Is ?m 'monitor') (Is ?b 'book') (Is ?h 'hat') (OnRightSide ?m) (LeftOf ?b ?m) (LeftOf ?h ?b) (AlignedHorizontally ?h ?b) (AlignedHorizontally ?b ?m) (forall ?a (implies (Is ?a 'apple') (and (AlignedVertically ?a ?h) (OnLeftSide ?a))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?h (forall ?a (and (Is ?m 'monitor') (OnRightSide ?m) (LeftOf ?b ?m) (AlignedHorizontally ?b ?m) (Is ?b 'book') (LeftOf ?h ?b) (AlignedHorizontally ?h ?b) (Is ?h 'hat') (or (not (Is ?a 'apple')) (AlignedVertically ?a ?h)) (or (not (Is ?a 'apple')) (OnLeftSide ?a)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "book",
+        "hat",
+        "apple"
+    ]
+}

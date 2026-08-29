@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged set of items. A suitcase is positioned on the left side of the scene. Arranged vertically with the suitcase are a tie located above it and a handbag located below it on the bottom side. A green bottle is aligned horizontally with the suitcase, and a sandwich, which is visually smaller than the suitcase, is aligned horizontally with the handbag. Additionally, for every knife in the arrangement, it is aligned horizontally with the tie, and there is a pair of scissors positioned above it and a sock positioned below it, forming a vertical column.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?tie (exists ?bottle (exists ?sandwich (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Below ?handbag ?suitcase) (Is ?tie 'tie') (Above ?tie ?suitcase) (AlignedVertically ?tie ?suitcase) (AlignedVertically ?suitcase ?handbag) (Is ?bottle 'bottle') (Has ?bottle 'green') (AlignedHorizontally ?suitcase ?bottle) (Is ?sandwich 'sandwich') (SmallerThan ?sandwich ?suitcase) (AlignedHorizontally ?handbag ?sandwich) (forall ?knife (implies (Is ?knife 'knife') (exists ?scissors (exists ?sock (and (Is ?scissors 'scissors') (Is ?sock 'sock') (AlignedHorizontally ?tie ?knife) (Above ?scissors ?knife) (Below ?sock ?knife) (AlignedVertically ?scissors ?knife) (AlignedVertically ?knife ?sock))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?tie (exists ?bottle (exists ?sandwich (forall ?knife (exists ?scissors (exists ?sock (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?handbag ?suitcase) (Above ?tie ?suitcase) (OnBottomSide ?handbag) (AlignedVertically ?suitcase ?handbag) (AlignedVertically ?tie ?suitcase) (Is ?tie 'tie') (Is ?handbag 'handbag') (AlignedHorizontally ?suitcase ?bottle) (AlignedHorizontally ?handbag ?sandwich) (or (not (Is ?knife 'knife')) (AlignedHorizontally ?tie ?knife)) (SmallerThan ?sandwich ?suitcase) (Has ?bottle 'green') (or (not (Is ?knife 'knife')) (Is ?sock 'sock')) (or (not (Is ?knife 'knife')) (Above ?scissors ?knife)) (Is ?sandwich 'sandwich') (Is ?bottle 'bottle') (or (not (Is ?knife 'knife')) (Is ?scissors 'scissors')) (or (not (Is ?knife 'knife')) (Below ?sock ?knife)) (or (not (Is ?knife 'knife')) (AlignedVertically ?scissors ?knife)) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?sock)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "sock",
+        "sandwich",
+        "handbag",
+        "bottle",
+        "knife",
+        "suitcase",
+        "scissors"
+    ]
+}

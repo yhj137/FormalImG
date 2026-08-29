@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every camera present in the scene, there corresponds a screwdriver located on the left side of the image that is smaller than the camera.",
+    "dsl": "(and (forall ?cam (implies (Is ?cam 'camera') (exists ?scr (and (Is ?scr 'screwdriver') (OnLeftSide ?scr) (SmallerThan ?scr ?cam))))))",
+    "cnf": "(forall ?cam (exists ?scr (and (or (not (Is ?cam 'camera')) (Is ?scr 'screwdriver')) (or (not (Is ?cam 'camera')) (OnLeftSide ?scr)) (or (not (Is ?cam 'camera')) (SmallerThan ?scr ?cam)))))",
+    "k": 2,
+    "object_classes": [
+        "screwdriver",
+        "camera"
+    ]
+}

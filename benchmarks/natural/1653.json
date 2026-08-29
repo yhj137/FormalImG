@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a gray bench where every person in the image is sitting. An elephant is located to the right of the bench. To the left of the bench, there is a switched-on monitor next to a purple lamp. A round cake sits on the bench next to an empty bottle, with an apple to the left of the cake and an orange to the right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bn (and (Is ?bn 'bench') (HasColor ?bn 'gray') (forall ?p (implies (Is ?p 'person') (On ?p ?bn))) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?bn))) (exists ?m (and (Is ?m 'monitor') (LeftOf ?m ?bn) (HasState ?m 'on') (exists ?l (and (Is ?l 'lamp') (HasColor ?l 'purple') (NextTo ?l ?m))))) (exists ?c (and (Is ?c 'cake') (On ?c ?bn) (HasShape ?c 'round') (exists ?b (and (Is ?b 'bottle') (HasState ?b 'empty') (NextTo ?b ?c))) (exists ?a (and (Is ?a 'apple') (LeftOf ?a ?c))) (exists ?o (and (Is ?o 'orange') (RightOf ?o ?c))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bn (forall ?p (exists ?e (exists ?m (exists ?l (exists ?c (exists ?b (exists ?a (exists ?o (and (Is ?bn 'bench') (HasColor ?bn 'gray') (or (not (Is ?p 'person')) (On ?p ?bn)) (RightOf ?e ?bn) (LeftOf ?m ?bn) (Is ?e 'elephant') (On ?c ?bn) (Is ?m 'monitor') (HasState ?m 'on') (Is ?c 'cake') (HasShape ?c 'round') (NextTo ?l ?m) (NextTo ?b ?c) (HasColor ?l 'purple') (LeftOf ?a ?c) (HasState ?b 'empty') (Is ?l 'lamp') (RightOf ?o ?c) (Is ?a 'apple') (Is ?b 'bottle') (Is ?o 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "bottle",
+        "monitor",
+        "person",
+        "lamp",
+        "cake",
+        "apple",
+        "elephant",
+        "orange"
+    ]
+}

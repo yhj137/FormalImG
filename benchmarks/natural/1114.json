@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman wearing a white hat and leather shoes holds a blue fabric backpack. Inside the backpack, there is an orange and every apple in the scene.",
+    "dsl": "(exists ?p (exists ?b (and (Is ?p 'woman') (Is ?b 'backpack') (HasColor ?b 'blue') (HasMaterial ?b 'fabric') (Holding ?p ?b) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?h (and (Is ?h 'hat') (HasColor ?h 'white') (On ?h ?p))) (exists ?s (and (Is ?s 'shoes') (HasMaterial ?s 'leather') (On ?s ?p))) (exists ?o (and (Is ?o 'orange') (In ?o ?b))))))",
+    "cnf": "(exists ?p (exists ?b (forall ?a (exists ?h (exists ?s (exists ?o (and (Is ?p 'woman') (Holding ?p ?b) (On ?h ?p) (HasMaterial ?b 'fabric') (or (not (Is ?a 'apple')) (In ?a ?b)) (On ?s ?p) (HasColor ?h 'white') (HasColor ?b 'blue') (In ?o ?b) (HasMaterial ?s 'leather') (Is ?h 'hat') (Is ?b 'backpack') (Is ?o 'orange') (Is ?s 'shoes'))))))))",
+    "k": 6,
+    "object_classes": [
+        "hat",
+        "backpack",
+        "shoes",
+        "woman",
+        "apple",
+        "orange"
+    ]
+}

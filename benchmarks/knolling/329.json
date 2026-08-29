@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every apple in the arrangement, there is a black watch positioned to its right.",
+    "dsl": "(and (forall ?a (implies (Is ?a 'apple') (exists ?w (and (Is ?w 'watch') (Has ?w 'black') (RightOf ?w ?a))))))",
+    "cnf": "(forall ?a (exists ?w (and (or (not (Is ?a 'apple')) (Is ?w 'watch')) (or (not (Is ?a 'apple')) (Has ?w 'black')) (or (not (Is ?a 'apple')) (RightOf ?w ?a)))))",
+    "k": 2,
+    "object_classes": [
+        "watch",
+        "apple"
+    ]
+}

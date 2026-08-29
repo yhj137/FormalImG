@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a gray keyboard, a white game controller, and a black phone. The keyboard and the game controller are aligned vertically. The phone is located to the right of the keyboard, and the keyboard is visually larger than the phone.",
+    "dsl": "(exists ?kb (exists ?controller (exists ?phone (and (Is ?kb 'keyboard') (Has ?kb 'gray') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?phone 'phone') (Has ?phone 'black') (AlignedVertically ?kb ?controller) (RightOf ?phone ?kb) (LargerThan ?kb ?phone)))))",
+    "cnf": "(exists ?kb (exists ?controller (exists ?phone (and (Is ?kb 'keyboard') (Has ?kb 'gray') (AlignedVertically ?kb ?controller) (RightOf ?phone ?kb) (Has ?controller 'white') (LargerThan ?kb ?phone) (Has ?phone 'black') (Is ?controller 'game_controller') (Is ?phone 'phone')))))",
+    "k": 3,
+    "object_classes": [
+        "phone",
+        "game_controller",
+        "keyboard"
+    ]
+}

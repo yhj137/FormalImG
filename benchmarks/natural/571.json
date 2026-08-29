@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene depicting a child holding a plastic ball to their left. Every butterfly in the scene is resting on the ball.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?b (and (Is ?c 'child') (Is ?b 'ball') (HasMaterial ?b 'plastic') (Holding ?c ?b) (LeftOf ?b ?c) (forall ?f (implies (Is ?f 'butterfly') (On ?f ?b)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?b (forall ?f (and (Is ?c 'child') (Holding ?c ?b) (LeftOf ?b ?c) (HasMaterial ?b 'plastic') (or (not (Is ?f 'butterfly')) (On ?f ?b)) (Is ?b 'ball'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "child",
+        "ball"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack located on the top side. For every sandwich found in the image, there exists a vertical chain of objects beneath it: a camera, a tie, a shoe, a calculator, and a donut. Specifically, the backpack is positioned above the sandwich and is larger than it. The sandwich is above the camera, which is above the tie. The tie is above the shoe, the shoe is above the calculator, and finally, the calculator is above the donut.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?camera (exists ?tie (exists ?shoe (exists ?calculator (exists ?donut (and (Is ?camera 'camera') (Is ?tie 'tie') (Is ?shoe 'shoe') (Is ?calculator 'calculator') (Is ?donut 'donut') (Above ?backpack ?sandwich) (LargerThan ?backpack ?sandwich) (Above ?sandwich ?camera) (Above ?camera ?tie) (Above ?tie ?shoe) (Above ?shoe ?calculator) (Above ?calculator ?donut)))))))))))",
+    "cnf": "(exists ?backpack (forall ?sandwich (exists ?camera (exists ?tie (exists ?shoe (exists ?calculator (exists ?donut (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (or (not (Is ?sandwich 'sandwich')) (Above ?backpack ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (LargerThan ?backpack ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?donut 'donut')) (or (not (Is ?sandwich 'sandwich')) (Above ?sandwich ?camera)) (or (not (Is ?sandwich 'sandwich')) (Is ?calculator 'calculator')) (or (not (Is ?sandwich 'sandwich')) (Above ?calculator ?donut)) (or (not (Is ?sandwich 'sandwich')) (Above ?camera ?tie)) (or (not (Is ?sandwich 'sandwich')) (Is ?camera 'camera')) (or (not (Is ?sandwich 'sandwich')) (Is ?shoe 'shoe')) (or (not (Is ?sandwich 'sandwich')) (Above ?shoe ?calculator)) (or (not (Is ?sandwich 'sandwich')) (Above ?tie ?shoe)) (or (not (Is ?sandwich 'sandwich')) (Is ?tie 'tie'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "backpack",
+        "calculator",
+        "camera",
+        "sandwich",
+        "shoe",
+        "donut"
+    ]
+}

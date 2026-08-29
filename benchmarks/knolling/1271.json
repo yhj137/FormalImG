@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase positioned on the left side. For every knife in the scene, it is located to the left of the suitcase, with a bowl directly below the knife and a pair of pliers below the bowl; these three items are aligned vertically. Additionally, for every knife, there is a hat positioned below the suitcase, followed by a pair of jeans below the hat, and a book below the jeans, with this column of items vertically aligned with the suitcase.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (forall ?knife (implies (Is ?knife 'knife') (exists ?bowl (exists ?pliers (exists ?hat (exists ?jeans (exists ?book (and (Is ?bowl 'bowl') (Is ?pliers 'pliers') (Is ?hat 'hat') (Is ?jeans 'jeans') (Is ?book 'book') (LeftOf ?knife ?suitcase) (Below ?bowl ?knife) (Below ?pliers ?bowl) (AlignedVertically ?knife ?bowl) (AlignedVertically ?bowl ?pliers) (Below ?hat ?suitcase) (Below ?jeans ?hat) (Below ?book ?jeans) (AlignedVertically ?suitcase ?hat) (AlignedVertically ?hat ?jeans) (AlignedVertically ?jeans ?book)))))))))))",
+    "cnf": "(exists ?suitcase (forall ?knife (exists ?bowl (exists ?pliers (exists ?hat (exists ?jeans (exists ?book (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (or (not (Is ?knife 'knife')) (LeftOf ?knife ?suitcase)) (or (not (Is ?knife 'knife')) (Below ?hat ?suitcase)) (or (not (Is ?knife 'knife')) (Is ?book 'book')) (or (not (Is ?knife 'knife')) (Below ?bowl ?knife)) (or (not (Is ?knife 'knife')) (AlignedVertically ?suitcase ?hat)) (or (not (Is ?knife 'knife')) (AlignedVertically ?bowl ?pliers)) (or (not (Is ?knife 'knife')) (Below ?jeans ?hat)) (or (not (Is ?knife 'knife')) (Is ?hat 'hat')) (or (not (Is ?knife 'knife')) (Is ?jeans 'jeans')) (or (not (Is ?knife 'knife')) (Below ?book ?jeans)) (or (not (Is ?knife 'knife')) (Below ?pliers ?bowl)) (or (not (Is ?knife 'knife')) (Is ?bowl 'bowl')) (or (not (Is ?knife 'knife')) (AlignedVertically ?hat ?jeans)) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?bowl)) (or (not (Is ?knife 'knife')) (Is ?pliers 'pliers')) (or (not (Is ?knife 'knife')) (AlignedVertically ?jeans ?book))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "knife",
+        "pliers",
+        "jeans",
+        "suitcase",
+        "book",
+        "hat"
+    ]
+}

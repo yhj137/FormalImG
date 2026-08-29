@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown suitcase located on the left side. Directly below the suitcase is a black shoe, and below the shoe is a red hat. The suitcase is larger than the shoe. To the right of the suitcase is a black camera, with a white phone positioned below it. The phone is smaller than the camera. For every sock in the image, it is white and located to the right of the phone. Furthermore, for each sock, there is a blue cup directly below it and a green bowl to the right of the cup, with the bowl situated on the right side of the image.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?hat (exists ?camera (exists ?phone (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?shoe 'shoe') (Has ?shoe 'black') (Below ?shoe ?suitcase) (LargerThan ?suitcase ?shoe) (Is ?hat 'hat') (Has ?hat 'red') (Below ?hat ?shoe) (Is ?camera 'camera') (Has ?camera 'black') (RightOf ?camera ?suitcase) (Is ?phone 'phone') (Has ?phone 'white') (Below ?phone ?camera) (SmallerThan ?phone ?camera) (forall ?sock (implies (Is ?sock 'sock') (exists ?cup (exists ?bowl (and (Has ?sock 'white') (RightOf ?sock ?phone) (Is ?cup 'cup') (Has ?cup 'blue') (Below ?cup ?sock) (Is ?bowl 'bowl') (Has ?bowl 'green') (RightOf ?bowl ?cup) (OnRightSide ?bowl))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?hat (exists ?camera (exists ?phone (forall ?sock (exists ?cup (exists ?bowl (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Below ?shoe ?suitcase) (LargerThan ?suitcase ?shoe) (Has ?shoe 'black') (RightOf ?camera ?suitcase) (Below ?hat ?shoe) (Is ?shoe 'shoe') (Has ?camera 'black') (Below ?phone ?camera) (Has ?hat 'red') (Is ?camera 'camera') (SmallerThan ?phone ?camera) (Has ?phone 'white') (Is ?hat 'hat') (or (not (Is ?sock 'sock')) (RightOf ?sock ?phone)) (Is ?phone 'phone') (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (Is ?cup 'cup')) (or (not (Is ?sock 'sock')) (Has ?cup 'blue')) (or (not (Is ?sock 'sock')) (Below ?cup ?sock)) (or (not (Is ?sock 'sock')) (Is ?bowl 'bowl')) (or (not (Is ?sock 'sock')) (RightOf ?bowl ?cup)) (or (not (Is ?sock 'sock')) (Has ?bowl 'green')) (or (not (Is ?sock 'sock')) (OnRightSide ?bowl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "phone",
+        "cup",
+        "hat",
+        "camera",
+        "bowl",
+        "suitcase",
+        "shoe"
+    ]
+}

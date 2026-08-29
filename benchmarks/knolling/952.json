@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical column of clothing items: a hat, a pair of jeans, and a shoe. The hat is positioned on the top side of the layout. The jeans are placed below the hat, and the shoe is located below the jeans; these three objects are aligned vertically. For every pan in the image, it is located on the right side and aligned horizontally with the jeans. Additionally, associated with every pan is a plate situated directly below it, which is smaller than the pan.",
+    "dsl": "(exists ?hat (exists ?jeans (exists ?shoe (and (Is ?hat 'hat') (Is ?jeans 'jeans') (Is ?shoe 'shoe') (OnTopSide ?hat) (Below ?jeans ?hat) (AlignedVertically ?hat ?jeans) (Below ?shoe ?jeans) (AlignedVertically ?jeans ?shoe) (forall ?pan (implies (Is ?pan 'pan') (exists ?plate (and (Is ?plate 'plate') (OnRightSide ?pan) (AlignedHorizontally ?pan ?jeans) (Below ?plate ?pan) (SmallerThan ?plate ?pan)))))))))",
+    "cnf": "(exists ?hat (exists ?jeans (exists ?shoe (forall ?pan (exists ?plate (and (Is ?hat 'hat') (OnTopSide ?hat) (Below ?jeans ?hat) (AlignedVertically ?hat ?jeans) (Is ?jeans 'jeans') (Below ?shoe ?jeans) (AlignedVertically ?jeans ?shoe) (Is ?shoe 'shoe') (or (not (Is ?pan 'pan')) (AlignedHorizontally ?pan ?jeans)) (or (not (Is ?pan 'pan')) (OnRightSide ?pan)) (or (not (Is ?pan 'pan')) (Below ?plate ?pan)) (or (not (Is ?pan 'pan')) (Is ?plate 'plate')) (or (not (Is ?pan 'pan')) (SmallerThan ?plate ?pan))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "pan",
+        "hat",
+        "jeans",
+        "shoe"
+    ]
+}

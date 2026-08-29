@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of glasses in the scene, it is located on the top side of the image.",
+    "dsl": "(and (forall ?g (implies (Is ?g 'glasses') (OnTopSide ?g))))",
+    "cnf": "(forall ?g (or (not (Is ?g 'glasses')) (OnTopSide ?g)))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

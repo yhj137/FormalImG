@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene of an elephant on a rug, holding a yellow banana. To the right of the elephant is a wooden bookshelf with a bowl on it. Inside the bowl, every bird is perched on a paper boat.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?e (exists ?ba (exists ?r (exists ?bs (exists ?bowl (and (Is ?e 'elephant') (Is ?ba 'banana') (Is ?r 'rug') (Is ?bs 'bookshelf') (Is ?bowl 'bowl') (Holding ?e ?ba) (On ?e ?r) (RightOf ?bs ?e) (On ?bowl ?bs) (HasColor ?ba 'yellow') (HasMaterial ?bs 'wooden') (forall ?bi (implies (Is ?bi 'bird') (exists ?bo (and (Is ?bo 'boat') (HasMaterial ?bo 'paper') (In ?bo ?bowl) (On ?bi ?bo))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?e (exists ?ba (exists ?r (exists ?bs (exists ?bowl (forall ?bi (exists ?bo (and (Is ?e 'elephant') (Holding ?e ?ba) (On ?e ?r) (Is ?ba 'banana') (HasColor ?ba 'yellow') (RightOf ?bs ?e) (Is ?r 'rug') (Is ?bs 'bookshelf') (On ?bowl ?bs) (HasMaterial ?bs 'wooden') (Is ?bowl 'bowl') (or (not (Is ?bi 'bird')) (In ?bo ?bowl)) (or (not (Is ?bi 'bird')) (HasMaterial ?bo 'paper')) (or (not (Is ?bi 'bird')) (On ?bi ?bo)) (or (not (Is ?bi 'bird')) (Is ?bo 'boat')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bowl",
+        "banana",
+        "rug",
+        "boat",
+        "bird",
+        "bookshelf",
+        "elephant"
+    ]
+}

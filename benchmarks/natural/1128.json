@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a teddy bear holding a phone. A yellow bus sits next to the bear. All shoes are red and positioned next to the bus. A pan containing a banana rests next to the teddy bear.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?tb (and (Is ?tb 'teddy bear') (exists ?ph (and (Is ?ph 'phone') (Holding ?tb ?ph) (exists ?bu (and (Is ?bu 'bus') (HasColor ?bu 'yellow') (NextTo ?tb ?bu) (forall ?s (implies (Is ?s 'shoes') (and (HasColor ?s 'red') (NextTo ?s ?bu)))) (exists ?pa (and (Is ?pa 'pan') (NextTo ?pa ?tb) (exists ?ba (and (Is ?ba 'banana') (In ?ba ?pa))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?tb (exists ?ph (exists ?bu (forall ?s (exists ?pa (exists ?ba (and (Is ?tb 'teddy bear') (Holding ?tb ?ph) (NextTo ?tb ?bu) (Is ?ph 'phone') (NextTo ?pa ?tb) (HasColor ?bu 'yellow') (or (not (Is ?s 'shoes')) (NextTo ?s ?bu)) (Is ?pa 'pan') (In ?ba ?pa) (Is ?bu 'bus') (or (not (Is ?s 'shoes')) (HasColor ?s 'red')) (Is ?ba 'banana')))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "shoes",
+        "teddy bear",
+        "pan",
+        "bus",
+        "banana"
+    ]
+}

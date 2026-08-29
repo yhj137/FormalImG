@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. In the top left area, there is a hat. To its right, a wallet is placed such that it is aligned horizontally with the hat. A calculator is positioned below the hat. To the right of the calculator is a bottle, which is larger than the calculator. The layout dictates that for any lighter present, it appears below the calculator. Arranged relative to the lighter are a bowl to its right and a tie to the right of the bowl. Furthermore, a pair of scissors lies below the lighter, and a screwdriver is placed to the right of the scissors, occupying the right side of the scene.",
+    "dsl": "(exists ?hat (exists ?wallet (exists ?calculator (exists ?bottle (and (Is ?hat 'hat') (OnTopSide ?hat) (OnLeftSide ?hat) (Is ?wallet 'wallet') (RightOf ?wallet ?hat) (AlignedHorizontally ?wallet ?hat) (Is ?calculator 'calculator') (Below ?calculator ?hat) (Is ?bottle 'bottle') (RightOf ?bottle ?calculator) (LargerThan ?bottle ?calculator) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?bowl (exists ?tie (exists ?scissors (exists ?screwdriver (and (Below ?lighter ?calculator) (Is ?bowl 'bowl') (RightOf ?bowl ?lighter) (Is ?tie 'tie') (RightOf ?tie ?bowl) (Is ?scissors 'scissors') (Below ?scissors ?lighter) (Is ?screwdriver 'screwdriver') (RightOf ?screwdriver ?scissors) (OnRightSide ?screwdriver)))))))))))))",
+    "cnf": "(exists ?hat (exists ?wallet (exists ?calculator (exists ?bottle (forall ?lighter (exists ?bowl (exists ?tie (exists ?scissors (exists ?screwdriver (and (Is ?hat 'hat') (OnTopSide ?hat) (OnLeftSide ?hat) (RightOf ?wallet ?hat) (AlignedHorizontally ?wallet ?hat) (Is ?wallet 'wallet') (Below ?calculator ?hat) (Is ?calculator 'calculator') (RightOf ?bottle ?calculator) (LargerThan ?bottle ?calculator) (Is ?bottle 'bottle') (or (not (Is ?lighter 'lighter')) (Below ?lighter ?calculator)) (or (not (Is ?lighter 'lighter')) (Is ?bowl 'bowl')) (or (not (Is ?lighter 'lighter')) (RightOf ?bowl ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?tie 'tie')) (or (not (Is ?lighter 'lighter')) (RightOf ?tie ?bowl)) (or (not (Is ?lighter 'lighter')) (Is ?scissors 'scissors')) (or (not (Is ?lighter 'lighter')) (Below ?scissors ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?lighter 'lighter')) (RightOf ?screwdriver ?scissors)) (or (not (Is ?lighter 'lighter')) (OnRightSide ?screwdriver))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "screwdriver",
+        "hat",
+        "calculator",
+        "wallet",
+        "lighter",
+        "bottle",
+        "bowl",
+        "scissors"
+    ]
+}

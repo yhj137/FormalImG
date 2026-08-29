@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A tree stands to the left of a wooden bookshelf. Beside the tree is a basket containing a banana. Every book in the scene is placed on the bookshelf, which also holds an open laptop next to a cake. A closed umbrella stands to the right of the bookshelf.",
+    "dsl": "(exists ?t (exists ?bs (exists ?bkt (exists ?ban (and (Is ?t 'tree') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?t ?bs) (Is ?bkt 'basket') (NextTo ?bkt ?t) (Is ?ban 'banana') (In ?ban ?bkt) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bs))) (exists ?l (exists ?c (exists ?u (and (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?bs) (Is ?c 'cake') (On ?c ?bs) (NextTo ?c ?l) (Is ?u 'umbrella') (HasState ?u 'closed') (RightOf ?u ?bs))))))))))",
+    "cnf": "(exists ?t (exists ?bs (exists ?bkt (exists ?ban (forall ?bk (exists ?l (exists ?c (exists ?u (and (Is ?t 'tree') (LeftOf ?t ?bs) (NextTo ?bkt ?t) (HasMaterial ?bs 'wooden') (or (not (Is ?bk 'book')) (On ?bk ?bs)) (Is ?bkt 'basket') (In ?ban ?bkt) (Is ?bs 'bookshelf') (On ?l ?bs) (Is ?ban 'banana') (On ?c ?bs) (HasState ?l 'open') (NextTo ?c ?l) (RightOf ?u ?bs) (Is ?c 'cake') (Is ?l 'laptop') (HasState ?u 'closed') (Is ?u 'umbrella'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "laptop",
+        "banana",
+        "cake",
+        "book",
+        "basket",
+        "tree",
+        "bookshelf"
+    ]
+}

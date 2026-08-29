@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the left side of the scene. For every cup in the image, it is located to the right of the jeans. Arranged horizontally with the cup are a knife and a carrot, such that the cup is to the left of the knife, and the knife is to the left of the carrot. Furthermore, a ruler is found on the top side of the image, positioned above the cup. A calculator is located to the right of the ruler, and is aligned horizontally with it.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (forall ?cup (implies (Is ?cup 'cup') (exists ?knife (exists ?carrot (exists ?ruler (exists ?calculator (and (Is ?knife 'knife') (Is ?carrot 'carrot') (Is ?ruler 'ruler') (Is ?calculator 'calculator') (RightOf ?cup ?jeans) (LeftOf ?cup ?knife) (LeftOf ?knife ?carrot) (AlignedHorizontally ?cup ?knife) (AlignedHorizontally ?knife ?carrot) (OnTopSide ?ruler) (Above ?ruler ?cup) (RightOf ?calculator ?ruler) (AlignedHorizontally ?ruler ?calculator))))))))))",
+    "cnf": "(exists ?jeans (forall ?cup (exists ?knife (exists ?carrot (exists ?ruler (exists ?calculator (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (or (not (Is ?cup 'cup')) (RightOf ?cup ?jeans)) (or (not (Is ?cup 'cup')) (Is ?calculator 'calculator')) (or (not (Is ?cup 'cup')) (LeftOf ?cup ?knife)) (or (not (Is ?cup 'cup')) (Is ?ruler 'ruler')) (or (not (Is ?cup 'cup')) (RightOf ?calculator ?ruler)) (or (not (Is ?cup 'cup')) (Is ?knife 'knife')) (or (not (Is ?cup 'cup')) (LeftOf ?knife ?carrot)) (or (not (Is ?cup 'cup')) (Is ?carrot 'carrot')) (or (not (Is ?cup 'cup')) (OnTopSide ?ruler)) (or (not (Is ?cup 'cup')) (Above ?ruler ?cup)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?ruler ?calculator)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?knife)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?knife ?carrot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "cup",
+        "calculator",
+        "jeans",
+        "knife"
+    ]
+}

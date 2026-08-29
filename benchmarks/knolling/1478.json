@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue shirt is positioned on the left side of the scene. To the right of the shirt is a black pan, which is visually larger than the shirt. For every lighter in the image, there is a yellow drill located to its right; the lighter is smaller than the pan. Continuing the arrangement to the right of the drill is a black camera, which is smaller than the drill. Next to the camera, on the right, are red headphones. To the right of the headphones are gray pliers, positioned on the bottom side of the image. Finally, a white glove is located to the right of the pliers.",
+    "dsl": "(exists ?shirt (exists ?pan (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (Is ?pan 'pan') (Has ?pan 'black') (RightOf ?pan ?shirt) (LargerThan ?pan ?shirt) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?drill (exists ?camera (exists ?headphones (exists ?pliers (exists ?glove (and (SmallerThan ?lighter ?pan) (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?drill ?lighter) (Is ?camera 'camera') (Has ?camera 'black') (RightOf ?camera ?drill) (SmallerThan ?camera ?drill) (Is ?headphones 'headphones') (Has ?headphones 'red') (RightOf ?headphones ?camera) (Is ?pliers 'pliers') (Has ?pliers 'gray') (RightOf ?pliers ?headphones) (OnBottomSide ?pliers) (Is ?glove 'glove') (Has ?glove 'white') (RightOf ?glove ?pliers))))))))))))",
+    "cnf": "(exists ?shirt (exists ?pan (forall ?lighter (exists ?drill (exists ?camera (exists ?headphones (exists ?pliers (exists ?glove (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (RightOf ?pan ?shirt) (LargerThan ?pan ?shirt) (Has ?pan 'black') (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?pan)) (Is ?pan 'pan') (or (not (Is ?lighter 'lighter')) (Is ?drill 'drill')) (or (not (Is ?lighter 'lighter')) (Has ?drill 'yellow')) (or (not (Is ?lighter 'lighter')) (RightOf ?drill ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?camera 'camera')) (or (not (Is ?lighter 'lighter')) (RightOf ?camera ?drill)) (or (not (Is ?lighter 'lighter')) (Has ?camera 'black')) (or (not (Is ?lighter 'lighter')) (SmallerThan ?camera ?drill)) (or (not (Is ?lighter 'lighter')) (Is ?headphones 'headphones')) (or (not (Is ?lighter 'lighter')) (RightOf ?headphones ?camera)) (or (not (Is ?lighter 'lighter')) (Has ?headphones 'red')) (or (not (Is ?lighter 'lighter')) (Is ?pliers 'pliers')) (or (not (Is ?lighter 'lighter')) (RightOf ?pliers ?headphones)) (or (not (Is ?lighter 'lighter')) (Has ?pliers 'gray')) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?pliers)) (or (not (Is ?lighter 'lighter')) (Is ?glove 'glove')) (or (not (Is ?lighter 'lighter')) (RightOf ?glove ?pliers)) (or (not (Is ?lighter 'lighter')) (Has ?glove 'white')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "lighter",
+        "shirt",
+        "pan",
+        "pliers",
+        "headphones",
+        "camera",
+        "drill",
+        "glove"
+    ]
+}

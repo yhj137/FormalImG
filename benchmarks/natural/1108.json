@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene featuring a man with a tree to his left. All fruits in the scene are inside the tree. Next to the man is a round table with a gray laptop on it, and a teddy bear sits next to the laptop.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?tr (and (Is ?m 'man') (Is ?tr 'tree') (LeftOf ?tr ?m) (forall ?f (implies (Is ?f 'fruit') (In ?f ?tr))) (exists ?t (exists ?l (exists ?tb (and (Is ?t 'table') (HasShape ?t 'round') (NextTo ?t ?m) (Is ?l 'laptop') (HasColor ?l 'gray') (On ?l ?t) (Is ?tb 'teddy bear') (NextTo ?tb ?l)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?tr (forall ?f (exists ?t (exists ?l (exists ?tb (and (Is ?m 'man') (LeftOf ?tr ?m) (NextTo ?t ?m) (Is ?tr 'tree') (or (not (Is ?f 'fruit')) (In ?f ?tr)) (HasShape ?t 'round') (On ?l ?t) (Is ?t 'table') (HasColor ?l 'gray') (NextTo ?tb ?l) (Is ?l 'laptop') (Is ?tb 'teddy bear')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "laptop",
+        "tree",
+        "man",
+        "teddy bear",
+        "table"
+    ]
+}

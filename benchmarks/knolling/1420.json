@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in two neat vertical columns. The left column starts with a drill at the top; directly below it is a calculator, followed by a pizza, and a donut at the bottom, all aligned vertically. The right column features a cup at the top, which is positioned on the right side of the image. To the right of the drill is this cup, and they are horizontally aligned. Below the cup are a pair of glasses, followed by a watch, and finally a carrot at the bottom, forming a vertical line. Across the columns, the calculator is to the left of the glasses, the pizza is to the left of the watch, and the donut is to the left of the carrot, with each pair aligned horizontally.",
+    "dsl": "(exists ?drill (exists ?cup (exists ?calc (exists ?glasses (exists ?pizza (exists ?watch (exists ?donut (exists ?carrot (and (Is ?drill 'drill') (Is ?cup 'cup') (Is ?calc 'calculator') (Is ?glasses 'glasses') (Is ?pizza 'pizza') (Is ?watch 'watch') (Is ?donut 'donut') (Is ?carrot 'carrot') (RightOf ?cup ?drill) (AlignedHorizontally ?drill ?cup) (OnRightSide ?cup) (Above ?drill ?calc) (AlignedVertically ?drill ?calc) (Above ?calc ?pizza) (AlignedVertically ?calc ?pizza) (Above ?pizza ?donut) (AlignedVertically ?pizza ?donut) (Above ?cup ?glasses) (AlignedVertically ?cup ?glasses) (Above ?glasses ?watch) (AlignedVertically ?glasses ?watch) (Above ?watch ?carrot) (AlignedVertically ?watch ?carrot) (LeftOf ?calc ?glasses) (AlignedHorizontally ?calc ?glasses) (LeftOf ?pizza ?watch) (AlignedHorizontally ?pizza ?watch) (LeftOf ?donut ?carrot) (AlignedHorizontally ?donut ?carrot))))))))))",
+    "cnf": "(exists ?drill (exists ?cup (exists ?calc (exists ?glasses (exists ?pizza (exists ?watch (exists ?donut (exists ?carrot (and (Is ?drill 'drill') (RightOf ?cup ?drill) (AlignedHorizontally ?drill ?cup) (Is ?cup 'cup') (Above ?drill ?calc) (OnRightSide ?cup) (AlignedVertically ?drill ?calc) (Is ?calc 'calculator') (Above ?cup ?glasses) (Above ?calc ?pizza) (AlignedVertically ?cup ?glasses) (Is ?glasses 'glasses') (AlignedVertically ?calc ?pizza) (Is ?pizza 'pizza') (Above ?glasses ?watch) (LeftOf ?calc ?glasses) (Above ?pizza ?donut) (AlignedVertically ?glasses ?watch) (Is ?watch 'watch') (AlignedHorizontally ?calc ?glasses) (AlignedVertically ?pizza ?donut) (Is ?donut 'donut') (Above ?watch ?carrot) (LeftOf ?pizza ?watch) (LeftOf ?donut ?carrot) (AlignedVertically ?watch ?carrot) (Is ?carrot 'carrot') (AlignedHorizontally ?pizza ?watch) (AlignedHorizontally ?donut ?carrot))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "pizza",
+        "cup",
+        "watch",
+        "drill",
+        "calculator",
+        "donut"
+    ]
+}

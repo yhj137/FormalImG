@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a blue suitcase, a black shoe, a sandwich, a red lighter, and keys. The sandwich is positioned to the left of the shoe, and the shoe is located to the left of the suitcase. The keys are aligned vertically with the sandwich. The lighter is aligned vertically with the shoe and is located on the bottom side of the image. The suitcase is visually larger than the sandwich.",
+    "dsl": "(exists ?suitcase (exists ?shoe (exists ?sandwich (exists ?lighter (exists ?keys (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?sandwich 'sandwich') (Is ?lighter 'lighter') (Has ?lighter 'red') (Is ?keys 'keys') (LeftOf ?sandwich ?shoe) (LeftOf ?shoe ?suitcase) (AlignedVertically ?keys ?sandwich) (AlignedVertically ?lighter ?shoe) (OnBottomSide ?lighter) (LargerThan ?suitcase ?sandwich)))))))",
+    "cnf": "(exists ?suitcase (exists ?shoe (exists ?sandwich (exists ?lighter (exists ?keys (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (LeftOf ?shoe ?suitcase) (LargerThan ?suitcase ?sandwich) (LeftOf ?sandwich ?shoe) (AlignedVertically ?lighter ?shoe) (AlignedVertically ?keys ?sandwich) (Has ?shoe 'black') (Is ?sandwich 'sandwich') (Has ?lighter 'red') (OnBottomSide ?lighter) (Is ?keys 'keys') (Is ?shoe 'shoe') (Is ?lighter 'lighter')))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "suitcase",
+        "lighter",
+        "sandwich",
+        "shoe"
+    ]
+}

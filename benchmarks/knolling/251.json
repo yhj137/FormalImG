@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a suitcase and a donut. The suitcase is positioned on the left side of the image. The donut is aligned horizontally with the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?donut (and (Is ?suitcase 'suitcase') (Is ?donut 'donut') (OnLeftSide ?suitcase) (AlignedHorizontally ?suitcase ?donut))))",
+    "cnf": "(exists ?suitcase (exists ?donut (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedHorizontally ?suitcase ?donut) (Is ?donut 'donut'))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "donut"
+    ]
+}

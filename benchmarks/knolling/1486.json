@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition begins with a black keyboard on the left side. Positioned to the right of the keyboard is a pair of gray scissors. For every phone in the scene, it is located to the right of the scissors. A carrot is aligned vertically with the phone. To the right of the carrot sits a bowl, and to the right of the bowl is a bottle. A watch is aligned vertically with the bottle. To the right of the watch is a cup, which is positioned on the right side of the image. The watch is to the left of the cup. Comparisons show the watch is smaller than the phone, and the bowl is larger than the cup.",
+    "dsl": "(exists ?k (exists ?s (and (Is ?k 'keyboard') (OnLeftSide ?k) (Has ?k 'black') (Is ?s 'scissors') (Has ?s 'gray') (RightOf ?s ?k) (forall ?p (implies (Is ?p 'phone') (exists ?c (exists ?bowl (exists ?bottle (exists ?w (exists ?cup (and (Is ?c 'carrot') (Is ?bowl 'bowl') (Is ?bottle 'bottle') (Is ?w 'watch') (Is ?cup 'cup') (RightOf ?p ?s) (AlignedVertically ?p ?c) (RightOf ?bowl ?c) (RightOf ?bottle ?bowl) (AlignedVertically ?bottle ?w) (LeftOf ?w ?cup) (OnRightSide ?cup) (SmallerThan ?w ?p) (LargerThan ?bowl ?cup))))))))))))",
+    "cnf": "(exists ?k (exists ?s (forall ?p (exists ?c (exists ?bowl (exists ?bottle (exists ?w (exists ?cup (and (Is ?k 'keyboard') (OnLeftSide ?k) (Has ?k 'black') (RightOf ?s ?k) (Has ?s 'gray') (or (not (Is ?p 'phone')) (RightOf ?p ?s)) (Is ?s 'scissors') (or (not (Is ?p 'phone')) (Is ?cup 'cup')) (or (not (Is ?p 'phone')) (AlignedVertically ?p ?c)) (or (not (Is ?p 'phone')) (Is ?w 'watch')) (or (not (Is ?p 'phone')) (LeftOf ?w ?cup)) (or (not (Is ?p 'phone')) (Is ?c 'carrot')) (or (not (Is ?p 'phone')) (RightOf ?bowl ?c)) (or (not (Is ?p 'phone')) (Is ?bottle 'bottle')) (or (not (Is ?p 'phone')) (AlignedVertically ?bottle ?w)) (or (not (Is ?p 'phone')) (OnRightSide ?cup)) (or (not (Is ?p 'phone')) (SmallerThan ?w ?p)) (or (not (Is ?p 'phone')) (Is ?bowl 'bowl')) (or (not (Is ?p 'phone')) (RightOf ?bottle ?bowl)) (or (not (Is ?p 'phone')) (LargerThan ?bowl ?cup)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "carrot",
+        "phone",
+        "watch",
+        "cup",
+        "bottle",
+        "scissors",
+        "bowl"
+    ]
+}

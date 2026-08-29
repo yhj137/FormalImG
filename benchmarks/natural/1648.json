@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A realistic photo of a house, with every bird in the scene located to its left. Inside the house, a person sits on a wooden chair holding a hammer. To the right of the chair is a sleeping cat. Next to the cat is a bowl containing a toy car, and a green plant stands to the right of the cat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (forall ?b (implies (Is ?b 'bird') (LeftOf ?b ?h))) (exists ?p (exists ?c (exists ?ham (exists ?cat (exists ?bowl (exists ?toy (exists ?pl (and (Is ?p 'person') (Is ?c 'chair') (Is ?ham 'hammer') (Is ?cat 'cat') (Is ?bowl 'bowl') (Is ?toy 'toy car') (Is ?pl 'plant') (In ?p ?h) (On ?p ?c) (HasMaterial ?c 'wooden') (Holding ?p ?ham) (RightOf ?cat ?c) (HasState ?cat 'sleeping') (NextTo ?bowl ?cat) (In ?toy ?bowl) (RightOf ?pl ?cat) (HasColor ?pl 'green'))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (forall ?b (exists ?p (exists ?c (exists ?ham (exists ?cat (exists ?bowl (exists ?toy (exists ?pl (and (Is ?h 'house') (or (not (Is ?b 'bird')) (LeftOf ?b ?h)) (In ?p ?h) (Is ?p 'person') (On ?p ?c) (Holding ?p ?ham) (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?ham 'hammer') (RightOf ?cat ?c) (Is ?cat 'cat') (HasState ?cat 'sleeping') (NextTo ?bowl ?cat) (RightOf ?pl ?cat) (Is ?bowl 'bowl') (In ?toy ?bowl) (Is ?pl 'plant') (HasColor ?pl 'green') (Is ?toy 'toy car'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "person",
+        "chair",
+        "plant",
+        "bird",
+        "hammer",
+        "toy car",
+        "bowl",
+        "cat"
+    ]
+}

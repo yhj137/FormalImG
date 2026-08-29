@@ -1,0 +1,16 @@
+{
+    "prompt": "There is a gray laptop and a keyboard positioned to the right of the laptop. For every set of keys located to the right of the keyboard, there exists a red handbag to its right, a pan to the right of the handbag, and a vertically aligned group consisting of a calculator, a ruler, and a fork. The pan is on the right side and larger than the handbag. The calculator is smaller than the laptop and positioned to its left.",
+    "dsl": "(exists ?laptop (exists ?keyboard (forall ?keys (implies (Is ?keys 'keys') (exists ?handbag (exists ?pan (exists ?calc (exists ?ruler (exists ?fork (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?keyboard 'keyboard') (Is ?handbag 'handbag') (Has ?handbag 'red') (Is ?pan 'pan') (Is ?calc 'calculator') (Is ?ruler 'ruler') (Is ?fork 'fork') (AlignedVertically ?calc ?ruler) (AlignedVertically ?ruler ?fork) (LeftOf ?calc ?laptop) (SmallerThan ?calc ?laptop) (LeftOf ?laptop ?keyboard) (RightOf ?keys ?keyboard) (RightOf ?handbag ?keys) (RightOf ?pan ?handbag) (OnRightSide ?pan) (LargerThan ?pan ?handbag)))))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (forall ?keys (exists ?handbag (exists ?pan (exists ?calc (exists ?ruler (exists ?fork (and (or (not (Is ?keys 'keys')) (Is ?laptop 'laptop')) (or (not (Is ?keys 'keys')) (Has ?laptop 'gray')) (or (not (Is ?keys 'keys')) (LeftOf ?calc ?laptop)) (or (not (Is ?keys 'keys')) (Is ?keyboard 'keyboard')) (or (not (Is ?keys 'keys')) (SmallerThan ?calc ?laptop)) (or (not (Is ?keys 'keys')) (AlignedVertically ?ruler ?fork)) (or (not (Is ?keys 'keys')) (AlignedVertically ?calc ?ruler)) (or (not (Is ?keys 'keys')) (Is ?handbag 'handbag')) (or (not (Is ?keys 'keys')) (LeftOf ?laptop ?keyboard)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (Is ?calc 'calculator')) (or (not (Is ?keys 'keys')) (Is ?ruler 'ruler')) (or (not (Is ?keys 'keys')) (Has ?handbag 'red')) (or (not (Is ?keys 'keys')) (RightOf ?keys ?keyboard)) (or (not (Is ?keys 'keys')) (Is ?pan 'pan')) (or (not (Is ?keys 'keys')) (RightOf ?handbag ?keys)) (or (not (Is ?keys 'keys')) (RightOf ?pan ?handbag)) (or (not (Is ?keys 'keys')) (OnRightSide ?pan)) (or (not (Is ?keys 'keys')) (LargerThan ?pan ?handbag)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "keys",
+        "keyboard",
+        "fork",
+        "handbag",
+        "calculator",
+        "pan"
+    ]
+}

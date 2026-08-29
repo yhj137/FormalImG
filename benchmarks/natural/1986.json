@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a tree with a bird inside. An elephant stands next to the tree with an orange on it, while a hammer and an open umbrella are located next to the elephant. To the right of the tree sits a car with a ball on top and a lamp beside it. Additionally, every butterfly in the scene is positioned to the right of the tree.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (exists ?bi (and (Is ?bi 'bird') (In ?bi ?t))) (exists ?e (and (Is ?e 'elephant') (NextTo ?e ?t) (exists ?o (and (Is ?o 'orange') (On ?o ?e))) (exists ?h (and (Is ?h 'hammer') (NextTo ?h ?e))) (exists ?u (and (Is ?u 'umbrella') (NextTo ?u ?e) (HasState ?u 'open'))))) (exists ?c (and (Is ?c 'car') (RightOf ?c ?t) (exists ?ba (and (Is ?ba 'ball') (On ?ba ?c))) (exists ?l (and (Is ?l 'lamp') (NextTo ?l ?c))))) (forall ?bu (implies (Is ?bu 'butterfly') (RightOf ?bu ?t))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?bi (exists ?e (exists ?o (exists ?h (exists ?u (exists ?c (exists ?ba (exists ?l (forall ?bu (and (Is ?t 'tree') (In ?bi ?t) (NextTo ?e ?t) (Is ?bi 'bird') (RightOf ?c ?t) (Is ?e 'elephant') (On ?o ?e) (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?t)) (Is ?c 'car') (On ?ba ?c) (NextTo ?h ?e) (Is ?o 'orange') (NextTo ?l ?c) (Is ?ba 'ball') (NextTo ?u ?e) (Is ?h 'hammer') (Is ?l 'lamp') (Is ?u 'umbrella') (HasState ?u 'open')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "ball",
+        "lamp",
+        "hammer",
+        "butterfly",
+        "tree",
+        "bird",
+        "elephant",
+        "orange",
+        "car"
+    ]
+}

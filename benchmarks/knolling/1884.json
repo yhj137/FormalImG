@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill located above a pan. The pan is larger than a pizza, which is positioned on the bottom side of the image. For every glove, it is located below the drill, and there is a hammer below the glove which is positioned above a wrench that is larger than a ruler situated below it. Additionally, for each glove, there is a remote located above a wallet, the wallet is above a plate, and the plate is positioned below the pizza.",
+    "dsl": "(exists ?drill (exists ?pan (exists ?pizza (and (Is ?drill 'drill') (Is ?pan 'pan') (Is ?pizza 'pizza') (Above ?drill ?pan) (LargerThan ?pan ?pizza) (OnBottomSide ?pizza) (forall ?glove (implies (Is ?glove 'glove') (exists ?hammer (exists ?wrench (exists ?ruler (exists ?remote (exists ?wallet (exists ?plate (and (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Is ?remote 'remote') (Is ?wallet 'wallet') (Is ?plate 'plate') (Below ?glove ?drill) (Below ?hammer ?glove) (Above ?hammer ?wrench) (LargerThan ?wrench ?ruler) (Below ?ruler ?wrench) (Above ?remote ?wallet) (Above ?wallet ?plate) (Below ?plate ?pizza))))))))))))))",
+    "cnf": "(exists ?drill (exists ?pan (exists ?pizza (forall ?glove (exists ?hammer (exists ?wrench (exists ?ruler (exists ?remote (exists ?wallet (exists ?plate (and (Is ?drill 'drill') (Above ?drill ?pan) (or (not (Is ?glove 'glove')) (Below ?glove ?drill)) (Is ?pan 'pan') (LargerThan ?pan ?pizza) (or (not (Is ?glove 'glove')) (Is ?plate 'plate')) (or (not (Is ?glove 'glove')) (Below ?hammer ?glove)) (Is ?pizza 'pizza') (OnBottomSide ?pizza) (or (not (Is ?glove 'glove')) (Is ?wallet 'wallet')) (or (not (Is ?glove 'glove')) (Above ?wallet ?plate)) (or (not (Is ?glove 'glove')) (Above ?hammer ?wrench)) (or (not (Is ?glove 'glove')) (Is ?hammer 'hammer')) (or (not (Is ?glove 'glove')) (Below ?plate ?pizza)) (or (not (Is ?glove 'glove')) (Is ?remote 'remote')) (or (not (Is ?glove 'glove')) (Above ?remote ?wallet)) (or (not (Is ?glove 'glove')) (LargerThan ?wrench ?ruler)) (or (not (Is ?glove 'glove')) (Is ?wrench 'wrench')) (or (not (Is ?glove 'glove')) (Is ?ruler 'ruler')) (or (not (Is ?glove 'glove')) (Below ?ruler ?wrench)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "remote",
+        "wrench",
+        "pizza",
+        "drill",
+        "pan",
+        "hammer",
+        "wallet",
+        "glove"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pan located on the right side of the layout. Furthermore, for every spoon present in the scene, it is aligned vertically with this pan.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnRightSide ?pan) (forall ?spoon (implies (Is ?spoon 'spoon') (AlignedVertically ?pan ?spoon)))))",
+    "cnf": "(exists ?pan (forall ?spoon (and (Is ?pan 'pan') (OnRightSide ?pan) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?pan ?spoon)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "pan"
+    ]
+}

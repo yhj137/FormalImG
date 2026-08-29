@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every knife in the scene, there exists a glove that is visually larger than the knife, and this glove is located on the top side of the image.",
+    "dsl": "(and (forall ?knife (implies (Is ?knife 'knife') (exists ?glove (and (Is ?glove 'glove') (LargerThan ?glove ?knife) (OnTopSide ?glove))))))",
+    "cnf": "(forall ?knife (exists ?glove (and (or (not (Is ?knife 'knife')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (LargerThan ?glove ?knife)) (or (not (Is ?knife 'knife')) (OnTopSide ?glove)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "glove"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a blue shirt, with a black handbag to its left and a white phone to its right; these three items are aligned horizontally. A pair of black glasses is positioned above the shirt, and the shirt is positioned above a pair of red scissors, forming a vertical alignment. A white bowl is located to the left of the handbag and aligned horizontally with it, while a sandwich is placed to the right of the phone and aligned horizontally with it. Furthermore, the scene adheres to a rule: for every red apple present, it is located above the white bowl, and there is a pink donut to the right of the apple, and a green bottle to the right of the donut, with these three items aligned horizontally.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?phone (exists ?glasses (exists ?scissors (exists ?bowl (exists ?sandwich (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?handbag 'handbag') (Has ?handbag 'black') (Is ?phone 'phone') (Has ?phone 'white') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?sandwich 'sandwich') (LeftOf ?handbag ?shirt) (RightOf ?phone ?shirt) (AlignedHorizontally ?handbag ?shirt) (AlignedHorizontally ?shirt ?phone) (Above ?glasses ?shirt) (Above ?shirt ?scissors) (AlignedVertically ?glasses ?shirt) (AlignedVertically ?shirt ?scissors) (LeftOf ?bowl ?handbag) (AlignedHorizontally ?bowl ?handbag) (RightOf ?sandwich ?phone) (AlignedHorizontally ?phone ?sandwich) (forall ?apple (implies (and (Is ?apple 'apple') (Has ?apple 'red')) (exists ?donut (exists ?bottle (and (Is ?donut 'donut') (Has ?donut 'pink') (Is ?bottle 'bottle') (Has ?bottle 'green') (Above ?apple ?bowl) (RightOf ?donut ?apple) (AlignedHorizontally ?apple ?donut) (RightOf ?bottle ?donut) (AlignedHorizontally ?donut ?bottle))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?phone (exists ?glasses (exists ?scissors (exists ?bowl (exists ?sandwich (forall ?apple (exists ?donut (exists ?bottle (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (LeftOf ?handbag ?shirt) (RightOf ?phone ?shirt) (Has ?handbag 'black') (AlignedHorizontally ?handbag ?shirt) (Has ?phone 'white') (AlignedHorizontally ?shirt ?phone) (Is ?handbag 'handbag') (LeftOf ?bowl ?handbag) (Is ?phone 'phone') (Above ?glasses ?shirt) (RightOf ?sandwich ?phone) (AlignedHorizontally ?bowl ?handbag) (Has ?bowl 'white') (Above ?shirt ?scissors) (Has ?glasses 'black') (AlignedVertically ?glasses ?shirt) (AlignedHorizontally ?phone ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Above ?apple ?bowl)) (Is ?bowl 'bowl') (Has ?scissors 'red') (AlignedVertically ?shirt ?scissors) (Is ?glasses 'glasses') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Has ?bottle 'green')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (RightOf ?donut ?apple)) (Is ?scissors 'scissors') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?bottle 'bottle')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (RightOf ?bottle ?donut)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Has ?donut 'pink')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (AlignedHorizontally ?apple ?donut)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (AlignedHorizontally ?donut ?bottle)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?donut 'donut')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "apple",
+        "phone",
+        "donut",
+        "handbag",
+        "bottle",
+        "scissors",
+        "bowl",
+        "sandwich",
+        "shirt"
+    ]
+}

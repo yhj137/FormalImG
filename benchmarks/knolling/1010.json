@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image with six items arranged in a neat grid of two columns. The left column contains a handbag at the top, a knife in the middle, and a set of keys at the bottom; these three are aligned vertically, and the keys are positioned on the bottom side of the image. The right column features a pizza, an apple, and a lemon, arranged from top to bottom. The pizza is to the right of the handbag, the apple is to the right of the knife, and the lemon is to the right of the keys. Each item in the right column is horizontally aligned with its corresponding item in the left column.",
+    "dsl": "(exists ?handbag (exists ?knife (exists ?keys (exists ?pizza (exists ?apple (exists ?lemon (and (Is ?handbag 'handbag') (Is ?knife 'knife') (Is ?keys 'keys') (Is ?pizza 'pizza') (Is ?apple 'apple') (Is ?lemon 'lemon') (OnBottomSide ?keys) (Above ?handbag ?knife) (Above ?knife ?keys) (AlignedVertically ?handbag ?knife) (AlignedVertically ?knife ?keys) (Above ?pizza ?apple) (Above ?apple ?lemon) (AlignedVertically ?pizza ?apple) (AlignedVertically ?apple ?lemon) (RightOf ?pizza ?handbag) (RightOf ?apple ?knife) (RightOf ?lemon ?keys) (AlignedHorizontally ?handbag ?pizza) (AlignedHorizontally ?knife ?apple) (AlignedHorizontally ?keys ?lemon))))))))",
+    "cnf": "(exists ?handbag (exists ?knife (exists ?keys (exists ?pizza (exists ?apple (exists ?lemon (and (Is ?handbag 'handbag') (Above ?handbag ?knife) (AlignedVertically ?handbag ?knife) (Is ?knife 'knife') (Above ?knife ?keys) (RightOf ?pizza ?handbag) (AlignedVertically ?knife ?keys) (OnBottomSide ?keys) (AlignedHorizontally ?handbag ?pizza) (AlignedVertically ?pizza ?apple) (RightOf ?apple ?knife) (RightOf ?lemon ?keys) (Is ?keys 'keys') (Above ?pizza ?apple) (Above ?apple ?lemon) (AlignedVertically ?apple ?lemon) (AlignedHorizontally ?knife ?apple) (AlignedHorizontally ?keys ?lemon) (Is ?pizza 'pizza') (Is ?apple 'apple') (Is ?lemon 'lemon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "pizza",
+        "knife",
+        "apple",
+        "lemon",
+        "handbag"
+    ]
+}

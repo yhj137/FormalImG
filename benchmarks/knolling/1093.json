@@ -1,0 +1,14 @@
+{
+    "prompt": "For every plate in the image, there is a shirt on the top-left side and a cutting board to its right, with the plate positioned below the shirt. To the right of the plate is a sandwich, which is below the cutting board and smaller than it. Additionally, a book is arranged below the plate, and a donut, which is smaller than the book, is placed to the right of the book.",
+    "dsl": "(exists ?shirt (exists ?cutting_board (forall ?plate (implies (Is ?plate 'plate') (exists ?sandwich (exists ?book (exists ?donut (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (OnTopSide ?shirt) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?shirt) (Below ?plate ?shirt) (Is ?sandwich 'sandwich') (RightOf ?sandwich ?plate) (Below ?sandwich ?cutting_board) (SmallerThan ?sandwich ?cutting_board) (Is ?book 'book') (Below ?book ?plate) (Is ?donut 'donut') (RightOf ?donut ?book) (SmallerThan ?donut ?book)))))))))",
+    "cnf": "(exists ?shirt (exists ?cutting_board (forall ?plate (exists ?sandwich (exists ?book (exists ?donut (and (or (not (Is ?plate 'plate')) (Is ?shirt 'shirt')) (or (not (Is ?plate 'plate')) (OnLeftSide ?shirt)) (or (not (Is ?plate 'plate')) (OnTopSide ?shirt)) (or (not (Is ?plate 'plate')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?plate 'plate')) (RightOf ?cutting_board ?shirt)) (or (not (Is ?plate 'plate')) (Below ?plate ?shirt)) (or (not (Is ?plate 'plate')) (Below ?sandwich ?cutting_board)) (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich')) (or (not (Is ?plate 'plate')) (RightOf ?sandwich ?plate)) (or (not (Is ?plate 'plate')) (SmallerThan ?sandwich ?cutting_board)) (or (not (Is ?plate 'plate')) (Is ?book 'book')) (or (not (Is ?plate 'plate')) (Below ?book ?plate)) (or (not (Is ?plate 'plate')) (Is ?donut 'donut')) (or (not (Is ?plate 'plate')) (RightOf ?donut ?book)) (or (not (Is ?plate 'plate')) (SmallerThan ?donut ?book)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "plate",
+        "donut",
+        "cutting_board",
+        "sandwich",
+        "shirt"
+    ]
+}

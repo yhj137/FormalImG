@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the top left side. Directly below it is a handbag, which is smaller than the suitcase, and further down on the bottom side is a hat; these three items are aligned vertically. A central column consists of a calculator, a phone, and a watch: the calculator is aligned horizontally with the suitcase, the phone is aligned horizontally with the handbag and vertically with the calculator, and the watch is aligned horizontally with the hat and vertically with the phone. Additionally, the scene follows a specific rule: for every fork present, there exists a pizza and a pair of scissors such that the pizza is aligned horizontally with the calculator, the scissors are aligned horizontally with the phone, and the pizza, scissors, and fork are all aligned vertically, with the fork being smaller than the pizza.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?calculator (exists ?phone (exists ?watch (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (AlignedVertically ?handbag ?suitcase) (SmallerThan ?handbag ?suitcase) (Is ?hat 'hat') (AlignedVertically ?hat ?handbag) (OnBottomSide ?hat) (Is ?calculator 'calculator') (AlignedHorizontally ?calculator ?suitcase) (Is ?phone 'phone') (AlignedVertically ?phone ?calculator) (AlignedHorizontally ?phone ?handbag) (Is ?watch 'watch') (AlignedVertically ?watch ?phone) (AlignedHorizontally ?watch ?hat) (forall ?fork (implies (Is ?fork 'fork') (exists ?pizza (exists ?scissors (and (Is ?pizza 'pizza') (Is ?scissors 'scissors') (AlignedHorizontally ?pizza ?calculator) (AlignedVertically ?pizza ?scissors) (AlignedHorizontally ?scissors ?phone) (AlignedVertically ?scissors ?fork) (SmallerThan ?fork ?pizza)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?calculator (exists ?phone (exists ?watch (forall ?fork (exists ?pizza (exists ?scissors (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (AlignedVertically ?handbag ?suitcase) (SmallerThan ?handbag ?suitcase) (Is ?handbag 'handbag') (AlignedHorizontally ?calculator ?suitcase) (AlignedVertically ?hat ?handbag) (Is ?calculator 'calculator') (AlignedVertically ?phone ?calculator) (AlignedHorizontally ?phone ?handbag) (Is ?hat 'hat') (OnBottomSide ?hat) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?pizza ?calculator)) (Is ?phone 'phone') (AlignedVertically ?watch ?phone) (AlignedHorizontally ?watch ?hat) (or (not (Is ?fork 'fork')) (Is ?scissors 'scissors')) (or (not (Is ?fork 'fork')) (AlignedVertically ?pizza ?scissors)) (or (not (Is ?fork 'fork')) (Is ?pizza 'pizza')) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?scissors ?phone)) (Is ?watch 'watch') (or (not (Is ?fork 'fork')) (SmallerThan ?fork ?pizza)) (or (not (Is ?fork 'fork')) (AlignedVertically ?scissors ?fork))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "phone",
+        "pizza",
+        "watch",
+        "fork",
+        "hat",
+        "handbag",
+        "calculator",
+        "scissors",
+        "suitcase"
+    ]
+}

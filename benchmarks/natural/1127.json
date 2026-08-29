@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon style scene features a child to the left of a house. To the right of the house sits a round basket containing every book and a fruit, with a knife resting on the fruit.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?b (and (Is ?h 'house') (Is ?c 'child') (LeftOf ?c ?h) (Is ?b 'basket') (HasShape ?b 'round') (RightOf ?b ?h) (forall ?k (implies (Is ?k 'book') (In ?k ?b))) (exists ?f (exists ?n (and (Is ?f 'fruit') (In ?f ?b) (Is ?n 'knife') (On ?n ?f)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?b (forall ?k (exists ?f (exists ?n (and (Is ?h 'house') (LeftOf ?c ?h) (RightOf ?b ?h) (Is ?c 'child') (HasShape ?b 'round') (or (not (Is ?k 'book')) (In ?k ?b)) (Is ?b 'basket') (In ?f ?b) (Is ?f 'fruit') (On ?n ?f) (Is ?n 'knife')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "book",
+        "basket",
+        "house",
+        "fruit",
+        "child"
+    ]
+}

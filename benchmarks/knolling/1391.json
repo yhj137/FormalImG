@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is placed on the top side of the composition. To the right of the backpack is a camera, and to the right of the camera is a handbag. Below the backpack is a glove. To the right of the glove is a pair of glasses, and to the right of the glasses is a hammer. Additionally, for every carrot in the scene, it is positioned below the hammer.",
+    "dsl": "(exists ?backpack (exists ?camera (exists ?handbag (exists ?glove (exists ?glasses (exists ?hammer (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?camera 'camera') (RightOf ?camera ?backpack) (Is ?handbag 'handbag') (RightOf ?handbag ?camera) (Is ?glove 'glove') (Below ?glove ?backpack) (Is ?glasses 'glasses') (RightOf ?glasses ?glove) (Is ?hammer 'hammer') (RightOf ?hammer ?glasses) (forall ?carrot (implies (Is ?carrot 'carrot') (Below ?carrot ?hammer))))))))))",
+    "cnf": "(exists ?backpack (exists ?camera (exists ?handbag (exists ?glove (exists ?glasses (exists ?hammer (forall ?carrot (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?camera ?backpack) (Below ?glove ?backpack) (Is ?camera 'camera') (RightOf ?handbag ?camera) (Is ?glove 'glove') (RightOf ?glasses ?glove) (Is ?handbag 'handbag') (Is ?glasses 'glasses') (RightOf ?hammer ?glasses) (Is ?hammer 'hammer') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?hammer))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "hammer",
+        "handbag",
+        "backpack",
+        "camera",
+        "glove"
+    ]
+}

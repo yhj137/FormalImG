@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a brown wallet and a white mouse that are aligned vertically with each other.",
+    "dsl": "(exists ?w (exists ?m (and (Is ?w 'wallet') (Has ?w 'brown') (Is ?m 'mouse') (Has ?m 'white') (AlignedVertically ?w ?m))))",
+    "cnf": "(exists ?w (exists ?m (and (Is ?w 'wallet') (Has ?w 'brown') (AlignedVertically ?w ?m) (Has ?m 'white') (Is ?m 'mouse'))))",
+    "k": 2,
+    "object_classes": [
+        "wallet",
+        "mouse"
+    ]
+}

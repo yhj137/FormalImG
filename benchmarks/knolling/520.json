@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase positioned on the left side. For every pair of pliers in the composition, the suitcase is located to the left of the pliers, and a hammer is arranged directly below the pliers.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (OnLeftSide ?s) (forall ?p (implies (Is ?p 'pliers') (exists ?h (and (Is ?h 'hammer') (LeftOf ?s ?p) (Below ?h ?p)))))))",
+    "cnf": "(exists ?s (forall ?p (exists ?h (and (Is ?s 'suitcase') (OnLeftSide ?s) (or (not (Is ?p 'pliers')) (LeftOf ?s ?p)) (or (not (Is ?p 'pliers')) (Is ?h 'hammer')) (or (not (Is ?p 'pliers')) (Below ?h ?p))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "suitcase",
+        "pliers"
+    ]
+}

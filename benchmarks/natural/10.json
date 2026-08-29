@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image of a metal woman.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'woman') (HasMaterial ?w 'metal'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'woman') (HasMaterial ?w 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "woman"
+    ]
+}

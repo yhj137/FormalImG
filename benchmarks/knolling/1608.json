@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A white sock is located above a laptop, which is above a watch. To the right of the sock is a wrench, and to the right of the wrench is a knife. To the right of the laptop is a red apple, which is smaller than the laptop, and next to the apple is a yellow lemon. On the bottom side, a lighter is positioned to the right of the watch. A fork is located to the right of the lighter and on the right side of the image. Additionally, the wrench is above the apple, the apple is above the lighter, the knife is above the lemon, and the lemon is above the fork.",
+    "dsl": "(exists ?sock (exists ?laptop (exists ?watch (exists ?wrench (exists ?knife (exists ?apple (exists ?lemon (exists ?lighter (exists ?fork (and (Is ?sock 'sock') (Has ?sock 'white') (Is ?laptop 'laptop') (Is ?watch 'watch') (Is ?wrench 'wrench') (Is ?knife 'knife') (Is ?apple 'apple') (Has ?apple 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?lighter 'lighter') (Is ?fork 'fork') (Above ?sock ?laptop) (Above ?laptop ?watch) (RightOf ?wrench ?sock) (RightOf ?knife ?wrench) (RightOf ?apple ?laptop) (RightOf ?lemon ?apple) (RightOf ?lighter ?watch) (RightOf ?fork ?lighter) (Above ?wrench ?apple) (Above ?apple ?lighter) (Above ?knife ?lemon) (Above ?lemon ?fork) (SmallerThan ?apple ?laptop) (OnBottomSide ?lighter) (OnRightSide ?fork)))))))))))",
+    "cnf": "(exists ?sock (exists ?laptop (exists ?watch (exists ?wrench (exists ?knife (exists ?apple (exists ?lemon (exists ?lighter (exists ?fork (and (Is ?sock 'sock') (Has ?sock 'white') (Above ?sock ?laptop) (RightOf ?wrench ?sock) (Is ?laptop 'laptop') (Above ?laptop ?watch) (Is ?wrench 'wrench') (RightOf ?knife ?wrench) (RightOf ?apple ?laptop) (Is ?watch 'watch') (RightOf ?lighter ?watch) (Above ?wrench ?apple) (Is ?knife 'knife') (Above ?knife ?lemon) (SmallerThan ?apple ?laptop) (Has ?apple 'red') (RightOf ?lemon ?apple) (Is ?lighter 'lighter') (RightOf ?fork ?lighter) (Above ?apple ?lighter) (Above ?lemon ?fork) (Is ?apple 'apple') (Has ?lemon 'yellow') (Is ?fork 'fork') (OnBottomSide ?lighter) (OnRightSide ?fork) (Is ?lemon 'lemon')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "apple",
+        "wrench",
+        "lemon",
+        "watch",
+        "fork",
+        "lighter",
+        "knife"
+    ]
+}

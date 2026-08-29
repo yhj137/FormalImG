@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a hammer on a bus. Next to the hammer is a hat containing a rectangular phone.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?m (exists ?h (exists ?p (and (Is ?b 'bus') (Is ?m 'hammer') (On ?m ?b) (Is ?h 'hat') (NextTo ?h ?m) (Is ?p 'phone') (HasShape ?p 'rectangular') (In ?p ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?m (exists ?h (exists ?p (and (Is ?b 'bus') (On ?m ?b) (Is ?m 'hammer') (NextTo ?h ?m) (Is ?h 'hat') (In ?p ?h) (HasShape ?p 'rectangular') (Is ?p 'phone')))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "bus",
+        "phone",
+        "hammer"
+    ]
+}

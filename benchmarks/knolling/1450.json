@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top side. For every lighter in the image, the monitor is located above it, and the lighter is visually smaller than the monitor. A cup is placed to the left of a pen, and the lighter is to the left of the cup; these three objects are aligned horizontally. A hammer is positioned below the pen. A donut is located to the left of the hammer, and an apple is positioned below the donut. Finally, a tie is on the right side of the image, with the hammer located to its left.",
+    "dsl": "(exists ?m (and (Is ?m 'monitor') (OnTopSide ?m) (forall ?l (implies (Is ?l 'lighter') (exists ?c (exists ?p (exists ?h (exists ?d (exists ?a (exists ?t (and (Is ?c 'cup') (Is ?p 'pen') (Is ?h 'hammer') (Is ?d 'donut') (Is ?a 'apple') (Is ?t 'tie') (Above ?m ?l) (SmallerThan ?l ?m) (LeftOf ?l ?c) (LeftOf ?c ?p) (AlignedHorizontally ?l ?c) (AlignedHorizontally ?c ?p) (Below ?h ?p) (LeftOf ?d ?h) (Below ?a ?d) (OnRightSide ?t) (LeftOf ?h ?t))))))))))))",
+    "cnf": "(exists ?m (forall ?l (exists ?c (exists ?p (exists ?h (exists ?d (exists ?a (exists ?t (and (Is ?m 'monitor') (OnTopSide ?m) (or (not (Is ?l 'lighter')) (Above ?m ?l)) (or (not (Is ?l 'lighter')) (SmallerThan ?l ?m)) (or (not (Is ?l 'lighter')) (Is ?t 'tie')) (or (not (Is ?l 'lighter')) (LeftOf ?l ?c)) (or (not (Is ?l 'lighter')) (Is ?a 'apple')) (or (not (Is ?l 'lighter')) (OnRightSide ?t)) (or (not (Is ?l 'lighter')) (Is ?c 'cup')) (or (not (Is ?l 'lighter')) (LeftOf ?c ?p)) (or (not (Is ?l 'lighter')) (Is ?d 'donut')) (or (not (Is ?l 'lighter')) (Below ?a ?d)) (or (not (Is ?l 'lighter')) (LeftOf ?h ?t)) (or (not (Is ?l 'lighter')) (Is ?p 'pen')) (or (not (Is ?l 'lighter')) (AlignedHorizontally ?l ?c)) (or (not (Is ?l 'lighter')) (AlignedHorizontally ?c ?p)) (or (not (Is ?l 'lighter')) (Is ?h 'hammer')) (or (not (Is ?l 'lighter')) (LeftOf ?d ?h)) (or (not (Is ?l 'lighter')) (Below ?h ?p)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "apple",
+        "pen",
+        "cup",
+        "hammer",
+        "lighter",
+        "monitor",
+        "donut"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a rug to the left of a tree. A bookshelf sits on the rug, with a rusty bicycle next to it. On the bookshelf, a wet hat lies next to a fork. A bus is parked next to the tree.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?t (exists ?bs (exists ?bi (exists ?h (exists ?f (exists ?bu (and (Is ?r 'rug') (Is ?t 'tree') (Is ?bs 'bookshelf') (Is ?bi 'bicycle') (Is ?h 'hat') (Is ?f 'fork') (Is ?bu 'bus') (LeftOf ?r ?t) (On ?bs ?r) (NextTo ?bi ?bs) (HasState ?bi 'rusty') (On ?h ?bs) (HasState ?h 'wet') (NextTo ?f ?h) (NextTo ?bu ?t))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?t (exists ?bs (exists ?bi (exists ?h (exists ?f (exists ?bu (and (Is ?r 'rug') (LeftOf ?r ?t) (On ?bs ?r) (Is ?t 'tree') (NextTo ?bu ?t) (Is ?bs 'bookshelf') (NextTo ?bi ?bs) (Is ?bu 'bus') (On ?h ?bs) (Is ?bi 'bicycle') (HasState ?bi 'rusty') (Is ?h 'hat') (HasState ?h 'wet') (NextTo ?f ?h) (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bus",
+        "fork",
+        "tree",
+        "rug",
+        "bicycle",
+        "bookshelf",
+        "hat"
+    ]
+}

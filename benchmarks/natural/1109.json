@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where a woman stands next to a table, holding a mirror. Every pizza in the image is round and sits on the table, along with a white cake and a pair of headphones.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?t (and (Is ?w 'woman') (Is ?t 'table') (NextTo ?w ?t) (forall ?p (implies (Is ?p 'pizza') (and (HasShape ?p 'round') (On ?p ?t)))) (exists ?m (and (Is ?m 'mirror') (Holding ?w ?m))) (exists ?c (and (Is ?c 'cake') (HasColor ?c 'white') (On ?c ?t))) (exists ?h (and (Is ?h 'headphones') (On ?h ?t)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?t (forall ?p (exists ?m (exists ?c (exists ?h (and (Is ?w 'woman') (NextTo ?w ?t) (Holding ?w ?m) (Is ?t 'table') (or (not (Is ?p 'pizza')) (On ?p ?t)) (Is ?m 'mirror') (On ?c ?t) (or (not (Is ?p 'pizza')) (HasShape ?p 'round')) (On ?h ?t) (HasColor ?c 'white') (Is ?h 'headphones') (Is ?c 'cake')))))))))",
+    "k": 6,
+    "object_classes": [
+        "woman",
+        "headphones",
+        "cake",
+        "pizza",
+        "table",
+        "mirror"
+    ]
+}

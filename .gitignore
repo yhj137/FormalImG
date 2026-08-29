@@ -1,0 +1,22 @@
+# macOS and editor files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local API configuration
+.env
+.env.*
+!.env.example
+
+# Generated experiment artifacts
+responses/
+*.blocked
+*.log

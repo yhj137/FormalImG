@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a stapler positioned on the left side. For every remote in the image, the stapler is located to its left, and there is a drill aligned vertically with that remote.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (forall ?remote (implies (Is ?remote 'remote') (exists ?drill (and (Is ?drill 'drill') (LeftOf ?stapler ?remote) (AlignedVertically ?remote ?drill)))))))",
+    "cnf": "(exists ?stapler (forall ?remote (exists ?drill (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (or (not (Is ?remote 'remote')) (LeftOf ?stapler ?remote)) (or (not (Is ?remote 'remote')) (Is ?drill 'drill')) (or (not (Is ?remote 'remote')) (AlignedVertically ?remote ?drill))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "remote",
+        "stapler"
+    ]
+}

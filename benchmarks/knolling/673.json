@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop positioned on the top side of the image, there are headphones located to its left and aligned horizontally with it. Corresponding to the laptop, there is a bowl located on the bottom side that is aligned vertically with the laptop. Furthermore, a screwdriver is placed to the left of the bowl and aligned horizontally with it.",
+    "dsl": "(and (forall ?laptop (implies (and (Is ?laptop 'laptop') (OnTopSide ?laptop)) (exists ?headphones (exists ?bowl (exists ?screwdriver (and (Is ?headphones 'headphones') (Is ?bowl 'bowl') (Is ?screwdriver 'screwdriver') (LeftOf ?headphones ?laptop) (AlignedHorizontally ?headphones ?laptop) (AlignedVertically ?laptop ?bowl) (OnBottomSide ?bowl) (LeftOf ?screwdriver ?bowl) (AlignedHorizontally ?screwdriver ?bowl))))))))",
+    "cnf": "(forall ?laptop (exists ?headphones (exists ?bowl (exists ?screwdriver (and (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?headphones 'headphones')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?headphones ?laptop)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?bowl 'bowl')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?headphones ?laptop)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedVertically ?laptop ?bowl)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (LeftOf ?screwdriver ?bowl)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (OnBottomSide ?bowl)) (or (not (Is ?laptop 'laptop')) (not (OnTopSide ?laptop)) (AlignedHorizontally ?screwdriver ?bowl)))))))",
+    "k": 4,
+    "object_classes": [
+        "screwdriver",
+        "laptop",
+        "headphones",
+        "bowl"
+    ]
+}

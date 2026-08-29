@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A bookshelf stands to the left of a sofa, and a lit lamp is positioned to the right. A bowl sits on the bookshelf next to a hammer, and every fish in the scene is inside the bowl.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?bs (exists ?l (exists ?b (exists ?h (and (Is ?s 'sofa') (Is ?bs 'bookshelf') (Is ?l 'lamp') (Is ?b 'bowl') (Is ?h 'hammer') (LeftOf ?bs ?s) (RightOf ?l ?s) (HasState ?l 'on') (On ?b ?bs) (NextTo ?h ?b) (forall ?f (implies (Is ?f 'fish') (In ?f ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?bs (exists ?l (exists ?b (exists ?h (forall ?f (and (Is ?s 'sofa') (LeftOf ?bs ?s) (RightOf ?l ?s) (Is ?bs 'bookshelf') (On ?b ?bs) (Is ?l 'lamp') (HasState ?l 'on') (Is ?b 'bowl') (NextTo ?h ?b) (or (not (Is ?f 'fish')) (In ?f ?b)) (Is ?h 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "sofa",
+        "fish",
+        "lamp",
+        "hammer",
+        "bookshelf"
+    ]
+}

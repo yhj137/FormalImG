@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a blue backpack on the right side. A cutting board is located to the left of the backpack, and a pan is positioned above the cutting board. To the left of the pan is a calculator. A mouse, which is smaller than the calculator, is aligned horizontally with it. Additionally, for every bottle in the scene, there is a white spoon located above it, and the bottle is positioned to the left of the cutting board.",
+    "dsl": "(exists ?backpack (exists ?cutting_board (exists ?pan (exists ?calculator (exists ?mouse (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnRightSide ?backpack) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?backpack) (Is ?pan 'pan') (Above ?pan ?cutting_board) (Is ?calculator 'calculator') (LeftOf ?calculator ?pan) (Is ?mouse 'mouse') (AlignedHorizontally ?mouse ?calculator) (SmallerThan ?mouse ?calculator) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?spoon (and (Is ?spoon 'spoon') (Has ?spoon 'white') (Above ?spoon ?bottle) (LeftOf ?bottle ?cutting_board)))))))))))",
+    "cnf": "(exists ?backpack (exists ?cutting_board (exists ?pan (exists ?calculator (exists ?mouse (forall ?bottle (exists ?spoon (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnRightSide ?backpack) (LeftOf ?cutting_board ?backpack) (Is ?cutting_board 'cutting_board') (Above ?pan ?cutting_board) (or (not (Is ?bottle 'bottle')) (LeftOf ?bottle ?cutting_board)) (Is ?pan 'pan') (LeftOf ?calculator ?pan) (or (not (Is ?bottle 'bottle')) (Above ?spoon ?bottle)) (Is ?calculator 'calculator') (AlignedHorizontally ?mouse ?calculator) (or (not (Is ?bottle 'bottle')) (Has ?spoon 'white')) (SmallerThan ?mouse ?calculator) (Is ?mouse 'mouse') (or (not (Is ?bottle 'bottle')) (Is ?spoon 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "cutting_board",
+        "pan",
+        "backpack",
+        "calculator",
+        "mouse",
+        "bottle",
+        "spoon"
+    ]
+}

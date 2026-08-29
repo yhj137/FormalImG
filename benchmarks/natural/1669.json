@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A lion is positioned next to a metal table. All rocks are located to the right of the lion. A dog holding a phone is next to the lion. On the table, there is a monitor next to a bottle, and a cake next to an orange.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?t (and (Is ?l 'lion') (Is ?t 'table') (HasMaterial ?t 'metal') (NextTo ?l ?t) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?l))) (exists ?m (exists ?d (exists ?p (exists ?b (exists ?c (exists ?o (and (Is ?m 'monitor') (On ?m ?t) (Is ?d 'dog') (NextTo ?d ?l) (Is ?p 'phone') (Holding ?d ?p) (Is ?b 'bottle') (NextTo ?b ?m) (Is ?c 'cake') (On ?c ?t) (Is ?o 'orange') (NextTo ?o ?c))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?l (exists ?t (forall ?r (exists ?m (exists ?d (exists ?p (exists ?b (exists ?c (exists ?o (and (Is ?l 'lion') (NextTo ?l ?t) (or (not (Is ?r 'rock')) (RightOf ?r ?l)) (HasMaterial ?t 'metal') (On ?m ?t) (NextTo ?d ?l) (Is ?t 'table') (On ?c ?t) (Is ?m 'monitor') (NextTo ?b ?m) (Is ?d 'dog') (Holding ?d ?p) (Is ?c 'cake') (NextTo ?o ?c) (Is ?b 'bottle') (Is ?p 'phone') (Is ?o 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "phone",
+        "bottle",
+        "cake",
+        "monitor",
+        "orange",
+        "rock",
+        "table",
+        "lion",
+        "dog"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A purple tree containing a butterfly is located to the left of a metal table. All monitors in the scene are placed on the table. A woman stands to the right of the table, holding a dog, and a chair is positioned next to the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (and (Is ?t 'table') (HasMaterial ?t 'metal') (forall ?m (implies (Is ?m 'monitor') (On ?m ?t))) (exists ?tr (and (Is ?tr 'tree') (HasColor ?tr 'purple') (LeftOf ?tr ?t) (exists ?b (and (Is ?b 'butterfly') (In ?b ?tr))))) (exists ?w (and (Is ?w 'woman') (RightOf ?w ?t) (exists ?d (and (Is ?d 'dog') (Holding ?w ?d))))) (exists ?ch (and (Is ?ch 'chair') (NextTo ?ch ?t))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (forall ?m (exists ?tr (exists ?b (exists ?w (exists ?d (exists ?ch (and (Is ?t 'table') (HasMaterial ?t 'metal') (or (not (Is ?m 'monitor')) (On ?m ?t)) (LeftOf ?tr ?t) (RightOf ?w ?t) (HasColor ?tr 'purple') (In ?b ?tr) (NextTo ?ch ?t) (Is ?w 'woman') (Holding ?w ?d) (Is ?tr 'tree') (Is ?b 'butterfly') (Is ?ch 'chair') (Is ?d 'dog'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "table",
+        "butterfly",
+        "tree",
+        "chair",
+        "monitor",
+        "woman",
+        "dog"
+    ]
+}

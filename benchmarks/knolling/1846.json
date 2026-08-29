@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with a black pan on the left side. For every pizza in the image, it is red and located to the right of the pan. Associated with each pizza are: a blue hat above it, gray scissors below it, a red pen to the right of and horizontally aligned with the hat, a pink donut to the right of and horizontally aligned with the scissors, a yellow screwdriver to the right of the pen, and a gray wrench larger than the screwdriver to the right of the donut. Additionally, for every pizza, there is a yellow lemon above the pan and a green book larger than the pan below the pan.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?hat (exists ?scissors (exists ?pen (exists ?donut (exists ?lemon (exists ?book (exists ?screwdriver (exists ?wrench (and (Has ?pizza 'red') (RightOf ?pizza ?pan) (Is ?hat 'hat') (Has ?hat 'blue') (Above ?hat ?pizza) (Is ?scissors 'scissors') (Has ?scissors 'gray') (Below ?scissors ?pizza) (Is ?pen 'pen') (Has ?pen 'red') (RightOf ?pen ?hat) (AlignedHorizontally ?pen ?hat) (Is ?donut 'donut') (Has ?donut 'pink') (RightOf ?donut ?scissors) (AlignedHorizontally ?donut ?scissors) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Above ?lemon ?pan) (Is ?book 'book') (Has ?book 'green') (Below ?book ?pan) (LargerThan ?book ?pan) (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (RightOf ?screwdriver ?pen) (Is ?wrench 'wrench') (Has ?wrench 'gray') (RightOf ?wrench ?donut) (LargerThan ?wrench ?screwdriver))))))))))))))",
+    "cnf": "(exists ?pan (forall ?pizza (exists ?hat (exists ?scissors (exists ?pen (exists ?donut (exists ?lemon (exists ?book (exists ?screwdriver (exists ?wrench (and (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (or (not (Is ?pizza 'pizza')) (RightOf ?pizza ?pan)) (or (not (Is ?pizza 'pizza')) (Above ?lemon ?pan)) (or (not (Is ?pizza 'pizza')) (Has ?pizza 'red')) (or (not (Is ?pizza 'pizza')) (Is ?hat 'hat')) (or (not (Is ?pizza 'pizza')) (Below ?book ?pan)) (or (not (Is ?pizza 'pizza')) (Has ?lemon 'yellow')) (or (not (Is ?pizza 'pizza')) (Is ?book 'book')) (or (not (Is ?pizza 'pizza')) (Has ?hat 'blue')) (or (not (Is ?pizza 'pizza')) (LargerThan ?book ?pan)) (or (not (Is ?pizza 'pizza')) (Has ?book 'green')) (or (not (Is ?pizza 'pizza')) (Is ?lemon 'lemon')) (or (not (Is ?pizza 'pizza')) (Above ?hat ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?donut ?scissors)) (or (not (Is ?pizza 'pizza')) (Is ?scissors 'scissors')) (or (not (Is ?pizza 'pizza')) (RightOf ?pen ?hat)) (or (not (Is ?pizza 'pizza')) (Has ?screwdriver 'yellow')) (or (not (Is ?pizza 'pizza')) (RightOf ?donut ?scissors)) (or (not (Is ?pizza 'pizza')) (RightOf ?wrench ?donut)) (or (not (Is ?pizza 'pizza')) (Has ?scissors 'gray')) (or (not (Is ?pizza 'pizza')) (Has ?pen 'red')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pen ?hat)) (or (not (Is ?pizza 'pizza')) (RightOf ?screwdriver ?pen)) (or (not (Is ?pizza 'pizza')) (Has ?donut 'pink')) (or (not (Is ?pizza 'pizza')) (Below ?scissors ?pizza)) (or (not (Is ?pizza 'pizza')) (Has ?wrench 'gray')) (or (not (Is ?pizza 'pizza')) (LargerThan ?wrench ?screwdriver)) (or (not (Is ?pizza 'pizza')) (Is ?pen 'pen')) (or (not (Is ?pizza 'pizza')) (Is ?donut 'donut')) (or (not (Is ?pizza 'pizza')) (Is ?wrench 'wrench')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "pen",
+        "wrench",
+        "lemon",
+        "pizza",
+        "screwdriver",
+        "hat",
+        "pan",
+        "scissors",
+        "donut"
+    ]
+}

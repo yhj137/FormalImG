@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene featuring a gray elephant next to a wooden chair. All umbrellas in the image are located to the left of the elephant. A cake is placed next to the chair. To the left of the cake is a bottle, and a yellow lamp is situated next to the bottle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?c (and (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?c 'chair') (HasMaterial ?c 'wooden') (NextTo ?c ?e) (forall ?u (implies (Is ?u 'umbrella') (LeftOf ?u ?e))) (exists ?k (exists ?b (exists ?l (and (Is ?k 'cake') (NextTo ?k ?c) (Is ?b 'bottle') (LeftOf ?b ?k) (Is ?l 'lamp') (HasColor ?l 'yellow') (NextTo ?l ?b)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?c (forall ?u (exists ?k (exists ?b (exists ?l (and (Is ?e 'elephant') (HasColor ?e 'gray') (NextTo ?c ?e) (or (not (Is ?u 'umbrella')) (LeftOf ?u ?e)) (HasMaterial ?c 'wooden') (NextTo ?k ?c) (Is ?c 'chair') (Is ?k 'cake') (LeftOf ?b ?k) (Is ?b 'bottle') (NextTo ?l ?b) (HasColor ?l 'yellow') (Is ?l 'lamp')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "umbrella",
+        "bottle",
+        "chair",
+        "cake",
+        "lamp"
+    ]
+}

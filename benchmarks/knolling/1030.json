@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, there exists a specific arrangement of a hammer, a phone, a knife, a donut, and a bowl. The hammer is located to the right of the backpack and is positioned on the right side of the image. The phone is also located to the right of the backpack and is placed on the top side of the image. The phone, knife, donut, and bowl are all aligned vertically. Furthermore, the backpack is larger than the bowl, and the donut is smaller than the phone.",
+    "dsl": "(and (forall ?backpack (implies (Is ?backpack 'backpack') (exists ?hammer (exists ?phone (exists ?knife (exists ?donut (exists ?bowl (and (Is ?hammer 'hammer') (Is ?phone 'phone') (Is ?knife 'knife') (Is ?donut 'donut') (Is ?bowl 'bowl') (RightOf ?hammer ?backpack) (OnRightSide ?hammer) (RightOf ?phone ?backpack) (OnTopSide ?phone) (AlignedVertically ?phone ?knife) (AlignedVertically ?knife ?donut) (AlignedVertically ?donut ?bowl) (LargerThan ?backpack ?bowl) (SmallerThan ?donut ?phone))))))))))",
+    "cnf": "(forall ?backpack (exists ?hammer (exists ?phone (exists ?knife (exists ?donut (exists ?bowl (and (or (not (Is ?backpack 'backpack')) (Is ?hammer 'hammer')) (or (not (Is ?backpack 'backpack')) (Is ?phone 'phone')) (or (not (Is ?backpack 'backpack')) (RightOf ?hammer ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?knife 'knife')) (or (not (Is ?backpack 'backpack')) (RightOf ?phone ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?bowl 'bowl')) (or (not (Is ?backpack 'backpack')) (OnRightSide ?hammer)) (or (not (Is ?backpack 'backpack')) (Is ?donut 'donut')) (or (not (Is ?backpack 'backpack')) (AlignedVertically ?phone ?knife)) (or (not (Is ?backpack 'backpack')) (OnTopSide ?phone)) (or (not (Is ?backpack 'backpack')) (AlignedVertically ?donut ?bowl)) (or (not (Is ?backpack 'backpack')) (AlignedVertically ?knife ?donut)) (or (not (Is ?backpack 'backpack')) (SmallerThan ?donut ?phone)) (or (not (Is ?backpack 'backpack')) (LargerThan ?backpack ?bowl)))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "hammer",
+        "backpack",
+        "knife",
+        "bowl",
+        "donut"
+    ]
+}

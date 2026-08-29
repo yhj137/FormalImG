@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene features a wooden wardrobe. Every teddy bear is positioned to the right of the wardrobe, holding a red apple and placed next to a fluffy rug.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (forall ?t (implies (Is ?t 'teddy bear') (and (RightOf ?t ?w) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (Holding ?t ?a))) (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fluffy') (NextTo ?t ?r)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?t (exists ?a (exists ?r (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (or (not (Is ?t 'teddy bear')) (RightOf ?t ?w)) (or (not (Is ?t 'teddy bear')) (Is ?a 'apple')) (or (not (Is ?t 'teddy bear')) (HasColor ?a 'red')) (or (not (Is ?t 'teddy bear')) (Holding ?t ?a)) (or (not (Is ?t 'teddy bear')) (Is ?r 'rug')) (or (not (Is ?t 'teddy bear')) (HasMaterial ?r 'fluffy')) (or (not (Is ?t 'teddy bear')) (NextTo ?t ?r))))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "teddy bear",
+        "wardrobe",
+        "rug"
+    ]
+}

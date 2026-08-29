@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of jeans on the top side and a handbag located below it. For every drill in the image, it is positioned to the right of the jeans, and there is a screwdriver below it, a shoe to the right of the handbag, and a remote above the shoe on the right side.",
+    "dsl": "(exists ?jeans (exists ?handbag (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Is ?handbag 'handbag') (Below ?handbag ?jeans) (forall ?drill (implies (Is ?drill 'drill') (exists ?screwdriver (exists ?shoe (exists ?remote (and (Is ?screwdriver 'screwdriver') (Is ?shoe 'shoe') (Is ?remote 'remote') (RightOf ?drill ?jeans) (Below ?screwdriver ?drill) (RightOf ?shoe ?handbag) (Above ?remote ?shoe) (OnRightSide ?remote))))))))))",
+    "cnf": "(exists ?jeans (exists ?handbag (forall ?drill (exists ?screwdriver (exists ?shoe (exists ?remote (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?handbag ?jeans) (or (not (Is ?drill 'drill')) (RightOf ?drill ?jeans)) (Is ?handbag 'handbag') (or (not (Is ?drill 'drill')) (RightOf ?shoe ?handbag)) (or (not (Is ?drill 'drill')) (Is ?remote 'remote')) (or (not (Is ?drill 'drill')) (Below ?screwdriver ?drill)) (or (not (Is ?drill 'drill')) (Above ?remote ?shoe)) (or (not (Is ?drill 'drill')) (Is ?shoe 'shoe')) (or (not (Is ?drill 'drill')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?drill 'drill')) (OnRightSide ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "screwdriver",
+        "drill",
+        "handbag",
+        "jeans",
+        "shoe"
+    ]
+}

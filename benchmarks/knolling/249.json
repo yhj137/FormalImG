@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red hat and a pair of blue jeans, where the jeans are visually larger than the hat.",
+    "dsl": "(exists ?h (exists ?j (and (Is ?h 'hat') (Has ?h 'red') (Is ?j 'jeans') (Has ?j 'blue') (LargerThan ?j ?h))))",
+    "cnf": "(exists ?h (exists ?j (and (Is ?h 'hat') (Has ?h 'red') (LargerThan ?j ?h) (Has ?j 'blue') (Is ?j 'jeans'))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "jeans"
+    ]
+}

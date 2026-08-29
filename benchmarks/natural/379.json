@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a closed refrigerator, and every horse is standing next to it.",
+    "dsl": "(exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'closed') (forall ?h (implies (Is ?h 'horse') (and (HasState ?h 'standing') (NextTo ?h ?r))))))",
+    "cnf": "(exists ?r (forall ?h (and (Is ?r 'refrigerator') (HasState ?r 'closed') (or (not (Is ?h 'horse')) (NextTo ?h ?r)) (or (not (Is ?h 'horse')) (HasState ?h 'standing')))))",
+    "k": 2,
+    "object_classes": [
+        "refrigerator",
+        "horse"
+    ]
+}

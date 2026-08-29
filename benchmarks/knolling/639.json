@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a drill, a watch, a cutting board, and a plate. The drill is located on the top side of the image, while the watch is positioned on the left side. In terms of relative placement, the drill is above the watch, the watch is to the left of the cutting board, and the cutting board is placed above the plate.",
+    "dsl": "(exists ?drill (exists ?watch (exists ?cutting_board (exists ?plate (and (Is ?drill 'drill') (Is ?watch 'watch') (Is ?cutting_board 'cutting_board') (Is ?plate 'plate') (OnTopSide ?drill) (OnLeftSide ?watch) (Above ?drill ?watch) (LeftOf ?watch ?cutting_board) (Above ?cutting_board ?plate))))))",
+    "cnf": "(exists ?drill (exists ?watch (exists ?cutting_board (exists ?plate (and (Is ?drill 'drill') (OnTopSide ?drill) (Above ?drill ?watch) (OnLeftSide ?watch) (LeftOf ?watch ?cutting_board) (Is ?watch 'watch') (Is ?cutting_board 'cutting_board') (Above ?cutting_board ?plate) (Is ?plate 'plate'))))))",
+    "k": 4,
+    "object_classes": [
+        "cutting_board",
+        "drill",
+        "plate",
+        "watch"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a camera, a remote, and a black hammer. The camera is positioned on the top side. These three objects\u2014the camera, the remote, and the hammer\u2014are aligned vertically. The hammer is larger than the remote, while the camera is smaller than the hammer. Additionally, any lighter present in the scene is blue and is smaller than the remote.",
+    "dsl": "(exists ?camera (exists ?remote (exists ?hammer (and (Is ?camera 'camera') (Is ?remote 'remote') (Is ?hammer 'hammer') (Has ?hammer 'black') (OnTopSide ?camera) (AlignedVertically ?camera ?remote) (AlignedVertically ?remote ?hammer) (LargerThan ?hammer ?remote) (SmallerThan ?camera ?hammer) (forall ?lighter (implies (Is ?lighter 'lighter') (and (Has ?lighter 'blue') (SmallerThan ?lighter ?remote))))))))",
+    "cnf": "(exists ?camera (exists ?remote (exists ?hammer (forall ?lighter (and (Is ?camera 'camera') (OnTopSide ?camera) (AlignedVertically ?camera ?remote) (SmallerThan ?camera ?hammer) (Is ?remote 'remote') (AlignedVertically ?remote ?hammer) (LargerThan ?hammer ?remote) (Has ?hammer 'black') (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?remote)) (Is ?hammer 'hammer') (or (not (Is ?lighter 'lighter')) (Has ?lighter 'blue')))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "lighter",
+        "remote",
+        "camera"
+    ]
+}

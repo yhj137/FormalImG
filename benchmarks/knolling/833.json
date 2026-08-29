@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat row of objects. The composition includes a black watch, a white phone, a brown sandwich, a gray knife, and a black keyboard. Arranged from left to right, the black watch is to the left of the white phone, the phone is to the left of the brown sandwich, the sandwich is to the left of the gray knife, and the knife is to the left of the black keyboard. The black keyboard is positioned on the bottom side of the image. Visually, the keyboard is larger than the phone, and the sandwich is larger than the watch.",
+    "dsl": "(exists ?watch (exists ?phone (exists ?sandwich (exists ?knife (exists ?keyboard (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?phone 'phone') (Has ?phone 'white') (Is ?sandwich 'sandwich') (Has ?sandwich 'brown') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (LeftOf ?watch ?phone) (LeftOf ?phone ?sandwich) (LeftOf ?sandwich ?knife) (LeftOf ?knife ?keyboard) (OnBottomSide ?keyboard) (LargerThan ?keyboard ?phone) (LargerThan ?sandwich ?watch)))))))",
+    "cnf": "(exists ?watch (exists ?phone (exists ?sandwich (exists ?knife (exists ?keyboard (and (Is ?watch 'watch') (Has ?watch 'black') (LeftOf ?watch ?phone) (LargerThan ?sandwich ?watch) (Has ?phone 'white') (LeftOf ?phone ?sandwich) (LeftOf ?sandwich ?knife) (Is ?phone 'phone') (LargerThan ?keyboard ?phone) (Has ?sandwich 'brown') (Has ?knife 'gray') (LeftOf ?knife ?keyboard) (OnBottomSide ?keyboard) (Is ?sandwich 'sandwich') (Is ?knife 'knife') (Has ?keyboard 'black') (Is ?keyboard 'keyboard')))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "phone",
+        "watch",
+        "knife",
+        "sandwich"
+    ]
+}

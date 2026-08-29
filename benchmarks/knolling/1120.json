@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A watch, a bottle, and a drill are arranged horizontally on the left side of the image; the watch is to the left of the bottle, and the bottle is to the left of the drill. For every sock in the image, there corresponds a plate to its left and a stapler to its right, forming a horizontal alignment. To maintain a continuous sequence, the drill is positioned to the left of the plate, and the stapler is located on the right side of the image.",
+    "dsl": "(exists ?watch (exists ?bottle (exists ?drill (and (Is ?watch 'watch') (Is ?bottle 'bottle') (Is ?drill 'drill') (OnLeftSide ?watch) (LeftOf ?watch ?bottle) (LeftOf ?bottle ?drill) (AlignedHorizontally ?watch ?bottle) (AlignedHorizontally ?bottle ?drill) (forall ?sock (implies (Is ?sock 'sock') (exists ?plate (exists ?stapler (and (Is ?plate 'plate') (Is ?stapler 'stapler') (OnRightSide ?stapler) (LeftOf ?drill ?plate) (LeftOf ?plate ?sock) (LeftOf ?sock ?stapler) (AlignedHorizontally ?drill ?plate) (AlignedHorizontally ?plate ?sock) (AlignedHorizontally ?sock ?stapler))))))))))",
+    "cnf": "(exists ?watch (exists ?bottle (exists ?drill (forall ?sock (exists ?plate (exists ?stapler (and (Is ?watch 'watch') (OnLeftSide ?watch) (LeftOf ?watch ?bottle) (AlignedHorizontally ?watch ?bottle) (Is ?bottle 'bottle') (LeftOf ?bottle ?drill) (AlignedHorizontally ?bottle ?drill) (Is ?drill 'drill') (or (not (Is ?sock 'sock')) (LeftOf ?drill ?plate)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?drill ?plate)) (or (not (Is ?sock 'sock')) (Is ?plate 'plate')) (or (not (Is ?sock 'sock')) (LeftOf ?plate ?sock)) (or (not (Is ?sock 'sock')) (OnRightSide ?stapler)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?plate ?sock)) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?stapler)) (or (not (Is ?sock 'sock')) (Is ?stapler 'stapler')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?stapler)))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "stapler",
+        "sock",
+        "watch",
+        "drill",
+        "bottle"
+    ]
+}

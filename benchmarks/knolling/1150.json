@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a black monitor, a black pan, a white plate, and a yellow ruler. These four objects are aligned horizontally. In terms of size, the monitor is larger than the pan, the pan is larger than the plate, and the plate is larger than the ruler. Additionally, for every pen in the image, there is a blue lighter; the ruler is aligned horizontally with both the pen and the lighter, and the ruler is larger than the lighter.",
+    "dsl": "(exists ?monitor (exists ?pan (exists ?plate (exists ?ruler (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?pan 'pan') (Has ?pan 'black') (Is ?plate 'plate') (Has ?plate 'white') (Is ?ruler 'ruler') (Has ?ruler 'yellow') (AlignedHorizontally ?monitor ?pan) (AlignedHorizontally ?pan ?plate) (AlignedHorizontally ?plate ?ruler) (LargerThan ?monitor ?pan) (LargerThan ?pan ?plate) (LargerThan ?plate ?ruler) (forall ?pen (implies (Is ?pen 'pen') (exists ?lighter (and (Is ?lighter 'lighter') (Has ?lighter 'blue') (AlignedHorizontally ?ruler ?pen) (AlignedHorizontally ?pen ?lighter) (LargerThan ?ruler ?lighter))))))))))",
+    "cnf": "(exists ?monitor (exists ?pan (exists ?plate (exists ?ruler (forall ?pen (exists ?lighter (and (Is ?monitor 'monitor') (Has ?monitor 'black') (AlignedHorizontally ?monitor ?pan) (LargerThan ?monitor ?pan) (Has ?pan 'black') (AlignedHorizontally ?pan ?plate) (LargerThan ?pan ?plate) (Is ?pan 'pan') (Has ?plate 'white') (AlignedHorizontally ?plate ?ruler) (LargerThan ?plate ?ruler) (Is ?plate 'plate') (Has ?ruler 'yellow') (or (not (Is ?pen 'pen')) (AlignedHorizontally ?ruler ?pen)) (Is ?ruler 'ruler') (or (not (Is ?pen 'pen')) (LargerThan ?ruler ?lighter)) (or (not (Is ?pen 'pen')) (Has ?lighter 'blue')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?lighter)) (or (not (Is ?pen 'pen')) (Is ?lighter 'lighter')))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "pen",
+        "pan",
+        "lighter",
+        "monitor"
+    ]
+}

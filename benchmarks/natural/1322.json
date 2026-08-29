@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man standing to the left of a table and an elephant. All monitors are on the table, and for each one, the man holds a black phone, while a plate containing a knife rests on the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?t (exists ?e (and (Is ?m 'man') (Is ?t 'table') (Is ?e 'elephant') (LeftOf ?m ?t) (LeftOf ?m ?e) (forall ?mon (implies (Is ?mon 'monitor') (and (On ?mon ?t) (exists ?p (exists ?pl (exists ?k (and (Is ?p 'phone') (HasColor ?p 'black') (Is ?pl 'plate') (Is ?k 'knife') (Holding ?m ?p) (On ?pl ?t) (In ?k ?pl)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?t (exists ?e (forall ?mon (exists ?p (exists ?pl (exists ?k (and (Is ?m 'man') (LeftOf ?m ?t) (LeftOf ?m ?e) (Is ?t 'table') (or (not (Is ?mon 'monitor')) (On ?mon ?t)) (or (not (Is ?mon 'monitor')) (Holding ?m ?p)) (Is ?e 'elephant') (or (not (Is ?mon 'monitor')) (On ?pl ?t)) (or (not (Is ?mon 'monitor')) (Is ?p 'phone')) (or (not (Is ?mon 'monitor')) (Is ?k 'knife')) (or (not (Is ?mon 'monitor')) (HasColor ?p 'black')) (or (not (Is ?mon 'monitor')) (In ?k ?pl)) (or (not (Is ?mon 'monitor')) (Is ?pl 'plate')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "knife",
+        "plate",
+        "man",
+        "monitor",
+        "table"
+    ]
+}

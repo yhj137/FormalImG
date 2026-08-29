@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every stapler in the scene, there is a suitcase located to its left, and this suitcase is positioned on the top side of the image.",
+    "dsl": "(and (forall ?stapler (implies (Is ?stapler 'stapler') (exists ?suitcase (and (Is ?suitcase 'suitcase') (LeftOf ?suitcase ?stapler) (OnTopSide ?suitcase))))))",
+    "cnf": "(forall ?stapler (exists ?suitcase (and (or (not (Is ?stapler 'stapler')) (Is ?suitcase 'suitcase')) (or (not (Is ?stapler 'stapler')) (LeftOf ?suitcase ?stapler)) (or (not (Is ?stapler 'stapler')) (OnTopSide ?suitcase)))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "stapler"
+    ]
+}

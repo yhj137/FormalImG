@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard present, which is positioned on the top side of the image, there is a vertical arrangement of items beneath it. Specifically, there is a glove below the keyboard, a spoon below the glove, a watch below the spoon, glasses below the watch, and a pen below the glasses. Additionally, the keyboard is visually larger than the glove, and the glove is larger than the watch.",
+    "dsl": "(forall ?k (implies (Is ?k 'keyboard') (exists ?g (exists ?s (exists ?w (exists ?gl (exists ?p (and (Is ?g 'glove') (Is ?s 'spoon') (Is ?w 'watch') (Is ?gl 'glasses') (Is ?p 'pen') (OnTopSide ?k) (Above ?k ?g) (Above ?g ?s) (Above ?s ?w) (Above ?w ?gl) (Above ?gl ?p) (LargerThan ?k ?g) (LargerThan ?g ?w)))))))))",
+    "cnf": "(forall ?k (exists ?g (exists ?s (exists ?w (exists ?gl (exists ?p (and (or (not (Is ?k 'keyboard')) (Is ?g 'glove')) (or (not (Is ?k 'keyboard')) (Is ?s 'spoon')) (or (not (Is ?k 'keyboard')) (Above ?k ?g)) (or (not (Is ?k 'keyboard')) (Is ?w 'watch')) (or (not (Is ?k 'keyboard')) (Above ?g ?s)) (or (not (Is ?k 'keyboard')) (OnTopSide ?k)) (or (not (Is ?k 'keyboard')) (Is ?gl 'glasses')) (or (not (Is ?k 'keyboard')) (Above ?s ?w)) (or (not (Is ?k 'keyboard')) (LargerThan ?k ?g)) (or (not (Is ?k 'keyboard')) (Is ?p 'pen')) (or (not (Is ?k 'keyboard')) (Above ?w ?gl)) (or (not (Is ?k 'keyboard')) (Above ?gl ?p)) (or (not (Is ?k 'keyboard')) (LargerThan ?g ?w)))))))))",
+    "k": 6,
+    "object_classes": [
+        "spoon",
+        "watch",
+        "keyboard",
+        "pen",
+        "glove",
+        "glasses"
+    ]
+}

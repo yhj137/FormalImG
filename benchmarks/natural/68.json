@@ -1,0 +1,9 @@
+{
+    "prompt": "A metal key in a cyberpunk style scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?k (and (Is ?k 'key') (HasMaterial ?k 'metal'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?k (and (Is ?k 'key') (HasMaterial ?k 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "key"
+    ]
+}

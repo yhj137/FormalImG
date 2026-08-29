@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pan located on the left side of the scene. An apple is positioned above the pan, and the two are aligned vertically. Additionally, for every lighter in the image, it is aligned horizontally with the apple.",
+    "dsl": "(exists ?p (exists ?a (and (Is ?p 'pan') (Is ?a 'apple') (OnLeftSide ?p) (Above ?a ?p) (AlignedVertically ?a ?p) (forall ?l (implies (Is ?l 'lighter') (AlignedHorizontally ?l ?a))))))",
+    "cnf": "(exists ?p (exists ?a (forall ?l (and (Is ?p 'pan') (OnLeftSide ?p) (Above ?a ?p) (AlignedVertically ?a ?p) (Is ?a 'apple') (or (not (Is ?l 'lighter')) (AlignedHorizontally ?l ?a))))))",
+    "k": 3,
+    "object_classes": [
+        "pan",
+        "lighter",
+        "apple"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement. On the left side of the image, a pan, a cutting board, a carrot, and a bottle are arranged in a vertical column from top to bottom, with the pan and cutting board explicitly aligned vertically. A wallet is positioned on the right side of the image, located to the right of the pan. Furthermore, for every screwdriver present, there is a pair of glasses located above it. These screwdrivers are positioned to the right of the bottle, and the glasses are aligned vertically with the wallet.",
+    "dsl": "(exists ?pan (exists ?board (exists ?carrot (exists ?bottle (exists ?wallet (and (Is ?pan 'pan') (Is ?board 'cutting_board') (Is ?carrot 'carrot') (Is ?bottle 'bottle') (Is ?wallet 'wallet') (OnLeftSide ?pan) (Above ?pan ?board) (Above ?board ?carrot) (Above ?carrot ?bottle) (AlignedVertically ?pan ?board) (OnRightSide ?wallet) (RightOf ?wallet ?pan) (forall ?driver (implies (Is ?driver 'screwdriver') (exists ?glasses (and (Is ?glasses 'glasses') (Above ?glasses ?driver) (RightOf ?driver ?bottle) (AlignedVertically ?wallet ?glasses)))))))))))",
+    "cnf": "(exists ?pan (exists ?board (exists ?carrot (exists ?bottle (exists ?wallet (forall ?driver (exists ?glasses (and (Is ?pan 'pan') (OnLeftSide ?pan) (Above ?pan ?board) (AlignedVertically ?pan ?board) (Is ?board 'cutting_board') (Above ?board ?carrot) (RightOf ?wallet ?pan) (Is ?carrot 'carrot') (Above ?carrot ?bottle) (OnRightSide ?wallet) (or (not (Is ?driver 'screwdriver')) (AlignedVertically ?wallet ?glasses)) (Is ?bottle 'bottle') (or (not (Is ?driver 'screwdriver')) (RightOf ?driver ?bottle)) (Is ?wallet 'wallet') (or (not (Is ?driver 'screwdriver')) (Above ?glasses ?driver)) (or (not (Is ?driver 'screwdriver')) (Is ?glasses 'glasses'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "carrot",
+        "screwdriver",
+        "cutting_board",
+        "pan",
+        "wallet",
+        "bottle"
+    ]
+}

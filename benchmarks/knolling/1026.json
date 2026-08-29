@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the right side. Aligned vertically with the monitor is a drill. The monitor is located to the right of a mouse and is visually larger than the mouse. Continuing the arrangement leftward, a wallet is placed to the left of the mouse, a pair of scissors is to the left of the wallet, and a spoon is to the left of the scissors.",
+    "dsl": "(exists ?spoon (exists ?scissors (exists ?wallet (exists ?mouse (exists ?monitor (exists ?drill (and (Is ?spoon 'spoon') (Is ?scissors 'scissors') (Is ?wallet 'wallet') (Is ?mouse 'mouse') (Is ?monitor 'monitor') (Is ?drill 'drill') (OnRightSide ?monitor) (AlignedVertically ?drill ?monitor) (RightOf ?monitor ?mouse) (LargerThan ?monitor ?mouse) (LeftOf ?wallet ?mouse) (LeftOf ?scissors ?wallet) (LeftOf ?spoon ?scissors))))))))",
+    "cnf": "(exists ?spoon (exists ?scissors (exists ?wallet (exists ?mouse (exists ?monitor (exists ?drill (and (Is ?spoon 'spoon') (LeftOf ?spoon ?scissors) (LeftOf ?scissors ?wallet) (Is ?scissors 'scissors') (LeftOf ?wallet ?mouse) (Is ?wallet 'wallet') (LargerThan ?monitor ?mouse) (RightOf ?monitor ?mouse) (Is ?mouse 'mouse') (AlignedVertically ?drill ?monitor) (OnRightSide ?monitor) (Is ?drill 'drill') (Is ?monitor 'monitor'))))))))",
+    "k": 6,
+    "object_classes": [
+        "drill",
+        "wallet",
+        "mouse",
+        "spoon",
+        "monitor",
+        "scissors"
+    ]
+}

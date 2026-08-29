@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every fruit sits on a plate to the right of a round rock inside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?f (implies (Is ?f 'fruit') (exists ?p (exists ?r (and (Is ?p 'plate') (Is ?r 'rock') (HasShape ?r 'round') (On ?f ?p) (In ?r ?p) (RightOf ?f ?r)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?f (exists ?p (exists ?r (and (or (not (Is ?f 'fruit')) (Is ?p 'plate')) (or (not (Is ?f 'fruit')) (Is ?r 'rock')) (or (not (Is ?f 'fruit')) (On ?f ?p)) (or (not (Is ?f 'fruit')) (HasShape ?r 'round')) (or (not (Is ?f 'fruit')) (In ?r ?p)) (or (not (Is ?f 'fruit')) (RightOf ?f ?r)))))))",
+    "k": 3,
+    "object_classes": [
+        "fruit",
+        "rock",
+        "plate"
+    ]
+}

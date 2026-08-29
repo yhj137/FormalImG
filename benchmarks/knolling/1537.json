@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the scene, there is a handbag. Directly below the handbag is a bottle, and below the bottle is a black camera; these three items are aligned vertically. To the left of the handbag are glasses, and to the left of the bottle is a remote. Furthermore, for every shoe located on the bottom side to the left of the camera, there is a pan positioned below the shoe and a book located to the right of the pan.",
+    "dsl": "(exists ?handbag (exists ?bottle (exists ?camera (exists ?glasses (exists ?remote (and (Is ?handbag 'handbag') (Is ?bottle 'bottle') (Is ?camera 'camera') (Is ?glasses 'glasses') (Is ?remote 'remote') (OnRightSide ?handbag) (Below ?bottle ?handbag) (Below ?camera ?bottle) (AlignedVertically ?handbag ?bottle) (AlignedVertically ?bottle ?camera) (Has ?camera 'black') (LeftOf ?glasses ?handbag) (LeftOf ?remote ?bottle) (forall ?shoe (implies (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (LeftOf ?shoe ?camera)) (exists ?pan (exists ?book (and (Is ?pan 'pan') (Is ?book 'book') (Below ?pan ?shoe) (RightOf ?book ?pan))))))))))))",
+    "cnf": "(exists ?handbag (exists ?bottle (exists ?camera (exists ?glasses (exists ?remote (forall ?shoe (exists ?pan (exists ?book (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (Below ?bottle ?handbag) (AlignedVertically ?handbag ?bottle) (Is ?bottle 'bottle') (Below ?camera ?bottle) (LeftOf ?glasses ?handbag) (AlignedVertically ?bottle ?camera) (Is ?camera 'camera') (Is ?glasses 'glasses') (LeftOf ?remote ?bottle) (Has ?camera 'black') (Is ?remote 'remote') (or (not (Is ?shoe 'shoe')) (not (OnBottomSide ?shoe)) (not (LeftOf ?shoe ?camera)) (Is ?pan 'pan')) (or (not (Is ?shoe 'shoe')) (not (OnBottomSide ?shoe)) (not (LeftOf ?shoe ?camera)) (Is ?book 'book')) (or (not (Is ?shoe 'shoe')) (not (OnBottomSide ?shoe)) (not (LeftOf ?shoe ?camera)) (Below ?pan ?shoe)) (or (not (Is ?shoe 'shoe')) (not (OnBottomSide ?shoe)) (not (LeftOf ?shoe ?camera)) (RightOf ?book ?pan)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "book",
+        "remote",
+        "handbag",
+        "pan",
+        "camera",
+        "bottle",
+        "shoe"
+    ]
+}

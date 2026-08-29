@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every clock is inside a house containing a wooden chair. A bus is to the left of the house, and a horse holding a sliced pizza stands to the left of the bus.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?c (implies (Is ?c 'clock') (exists ?h (exists ?ch (exists ?b (exists ?hrs (exists ?p (and (Is ?h 'house') (In ?c ?h) (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (In ?ch ?h) (Is ?b 'bus') (LeftOf ?b ?h) (Is ?hrs 'horse') (LeftOf ?hrs ?b) (Is ?p 'pizza') (HasState ?p 'sliced') (Holding ?hrs ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?c (exists ?h (exists ?ch (exists ?b (exists ?hrs (exists ?p (and (or (not (Is ?c 'clock')) (Is ?h 'house')) (or (not (Is ?c 'clock')) (In ?c ?h)) (or (not (Is ?c 'clock')) (In ?ch ?h)) (or (not (Is ?c 'clock')) (Is ?ch 'chair')) (or (not (Is ?c 'clock')) (LeftOf ?b ?h)) (or (not (Is ?c 'clock')) (HasMaterial ?ch 'wooden')) (or (not (Is ?c 'clock')) (Is ?b 'bus')) (or (not (Is ?c 'clock')) (Is ?hrs 'horse')) (or (not (Is ?c 'clock')) (LeftOf ?hrs ?b)) (or (not (Is ?c 'clock')) (Is ?p 'pizza')) (or (not (Is ?c 'clock')) (Holding ?hrs ?p)) (or (not (Is ?c 'clock')) (HasState ?p 'sliced'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "horse",
+        "chair",
+        "pizza",
+        "clock",
+        "bus"
+    ]
+}

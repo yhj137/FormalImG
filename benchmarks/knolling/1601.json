@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring nine objects arranged in a structured layout. A yellow drill is positioned on the left side of the scene. To the right of the drill is a red pair of scissors, which is itself to the left of a blue bottle. A white bowl is located below the drill and above a black suitcase found on the bottom side. To the right of the bowl is a brown wallet, and the wallet is to the left of a green cup. The blue bottle is positioned above this green cup. Finally, the black suitcase is to the left of a yellow lemon, and the lemon is to the left of a gray lighter, which is placed below the green cup.",
+    "dsl": "(exists ?drill (exists ?scissors (exists ?bottle (exists ?bowl (exists ?suitcase (exists ?wallet (exists ?cup (exists ?lighter (exists ?lemon (and (Is ?drill 'drill') (Has ?drill 'yellow') (OnLeftSide ?drill) (Is ?scissors 'scissors') (Has ?scissors 'red') (LeftOf ?drill ?scissors) (Is ?bottle 'bottle') (Has ?bottle 'blue') (LeftOf ?scissors ?bottle) (Is ?bowl 'bowl') (Has ?bowl 'white') (Above ?drill ?bowl) (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (OnBottomSide ?suitcase) (Below ?suitcase ?bowl) (Is ?wallet 'wallet') (Has ?wallet 'brown') (LeftOf ?bowl ?wallet) (Is ?cup 'cup') (Has ?cup 'green') (LeftOf ?wallet ?cup) (Above ?bottle ?cup) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (LeftOf ?suitcase ?lemon) (Is ?lighter 'lighter') (Has ?lighter 'gray') (LeftOf ?lemon ?lighter) (Below ?lighter ?cup)))))))))))",
+    "cnf": "(exists ?drill (exists ?scissors (exists ?bottle (exists ?bowl (exists ?suitcase (exists ?wallet (exists ?cup (exists ?lighter (exists ?lemon (and (Is ?drill 'drill') (Has ?drill 'yellow') (OnLeftSide ?drill) (LeftOf ?drill ?scissors) (Above ?drill ?bowl) (Has ?scissors 'red') (LeftOf ?scissors ?bottle) (Has ?bowl 'white') (Below ?suitcase ?bowl) (Is ?scissors 'scissors') (Has ?bottle 'blue') (Above ?bottle ?cup) (Is ?bowl 'bowl') (LeftOf ?bowl ?wallet) (OnBottomSide ?suitcase) (LeftOf ?suitcase ?lemon) (Is ?bottle 'bottle') (LeftOf ?wallet ?cup) (Below ?lighter ?cup) (Has ?wallet 'brown') (Has ?suitcase 'black') (Has ?lemon 'yellow') (LeftOf ?lemon ?lighter) (Has ?cup 'green') (Is ?wallet 'wallet') (Is ?suitcase 'suitcase') (Is ?lemon 'lemon') (Has ?lighter 'gray') (Is ?cup 'cup') (Is ?lighter 'lighter')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "lighter",
+        "bowl",
+        "scissors",
+        "wallet",
+        "cup",
+        "drill",
+        "suitcase",
+        "lemon",
+        "bottle"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A man stands holding a knife and a key. All trees in the scene are located to the right of the man. A bicycle is also positioned to the right of the man. A jacket is draped on the bicycle, and a square clock also sits on it. A keyboard lies next to the bicycle. Resting on the keyboard are a bitten sandwich and a withered flower.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'man') (forall ?t (implies (Is ?t 'tree') (RightOf ?t ?m))) (exists ?b (exists ?j (exists ?c (exists ?kb (exists ?s (exists ?f (exists ?kn (exists ?k (and (Is ?b 'bicycle') (RightOf ?b ?m) (Is ?j 'jacket') (On ?j ?b) (Is ?c 'clock') (HasShape ?c 'square') (On ?c ?b) (Is ?kb 'keyboard') (NextTo ?kb ?b) (Is ?s 'sandwich') (HasState ?s 'bitten') (On ?s ?kb) (Is ?f 'flower') (HasState ?f 'withered') (On ?f ?kb) (Is ?kn 'knife') (Holding ?m ?kn) (Is ?k 'key') (Holding ?m ?k)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (forall ?t (exists ?b (exists ?j (exists ?c (exists ?kb (exists ?s (exists ?f (exists ?kn (exists ?k (and (Is ?m 'man') (or (not (Is ?t 'tree')) (RightOf ?t ?m)) (RightOf ?b ?m) (Holding ?m ?kn) (Is ?b 'bicycle') (On ?j ?b) (Holding ?m ?k) (Is ?kn 'knife') (On ?c ?b) (Is ?j 'jacket') (Is ?k 'key') (NextTo ?kb ?b) (HasShape ?c 'square') (Is ?kb 'keyboard') (On ?s ?kb) (Is ?c 'clock') (On ?f ?kb) (HasState ?s 'bitten') (HasState ?f 'withered') (Is ?s 'sandwich') (Is ?f 'flower')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "jacket",
+        "man",
+        "knife",
+        "sandwich",
+        "tree",
+        "bicycle",
+        "clock",
+        "flower"
+    ]
+}

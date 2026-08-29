@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene features a table with a blue jacket next to it. To the left of the jacket is an open umbrella. On the table sit a switched-off phone, a pan, and a round plate. A bird stands next to the pan. All the fruit in the scene is placed on the plate, and a knife lies to the right of the plate.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?j (exists ?u (exists ?ph (exists ?pa (exists ?b (exists ?pl (and (Is ?t 'table') (Is ?j 'jacket') (HasColor ?j 'blue') (NextTo ?j ?t) (Is ?u 'umbrella') (HasState ?u 'open') (LeftOf ?u ?j) (Is ?ph 'phone') (HasState ?ph 'off') (On ?ph ?t) (Is ?pa 'pan') (On ?pa ?t) (Is ?b 'bird') (HasState ?b 'standing') (NextTo ?b ?pa) (Is ?pl 'plate') (HasShape ?pl 'round') (On ?pl ?t) (forall ?f (implies (Is ?f 'fruit') (On ?f ?pl))) (exists ?k (and (Is ?k 'knife') (RightOf ?k ?pl))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?j (exists ?u (exists ?ph (exists ?pa (exists ?b (exists ?pl (forall ?f (exists ?k (and (Is ?t 'table') (NextTo ?j ?t) (On ?ph ?t) (HasColor ?j 'blue') (LeftOf ?u ?j) (On ?pa ?t) (HasState ?ph 'off') (Is ?j 'jacket') (HasState ?u 'open') (On ?pl ?t) (Is ?pa 'pan') (NextTo ?b ?pa) (Is ?ph 'phone') (Is ?u 'umbrella') (HasShape ?pl 'round') (or (not (Is ?f 'fruit')) (On ?f ?pl)) (HasState ?b 'standing') (Is ?pl 'plate') (RightOf ?k ?pl) (Is ?b 'bird') (Is ?k 'knife'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "phone",
+        "umbrella",
+        "knife",
+        "plate",
+        "jacket",
+        "table",
+        "bird",
+        "pan"
+    ]
+}

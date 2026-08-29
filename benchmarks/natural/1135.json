@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a man standing to the left of a black monitor, holding a plate with a sandwich on it. A clock is also situated to the left of the monitor, while every apple is positioned to the right of the monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?mon (exists ?p (and (Is ?m 'man') (Is ?mon 'monitor') (HasColor ?mon 'black') (LeftOf ?m ?mon) (Is ?p 'plate') (Holding ?m ?p) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?mon))) (exists ?s (exists ?c (and (Is ?s 'sandwich') (Is ?c 'clock') (On ?s ?p) (LeftOf ?c ?mon)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?mon (exists ?p (forall ?a (exists ?s (exists ?c (and (Is ?m 'man') (LeftOf ?m ?mon) (Holding ?m ?p) (HasColor ?mon 'black') (or (not (Is ?a 'apple')) (RightOf ?a ?mon)) (Is ?p 'plate') (On ?s ?p) (Is ?mon 'monitor') (LeftOf ?c ?mon) (Is ?s 'sandwich') (Is ?c 'clock')))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "man",
+        "sandwich",
+        "clock",
+        "apple",
+        "plate"
+    ]
+}

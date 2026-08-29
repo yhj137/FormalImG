@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a metal house with a running bus next to it. Inside, a plastic desk sits on a rug, with all butterflies positioned to its left. A bookshelf stands beside the desk, holding an open backpack with a teddy bear inside. A cup sits on the desk with a knife next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (HasMaterial ?h 'metal') (exists ?b (and (Is ?b 'bus') (HasState ?b 'running') (NextTo ?b ?h))) (exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'plastic') (In ?d ?h) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?d))) (exists ?r (and (Is ?r 'rug') (On ?d ?r) (exists ?bs (and (Is ?bs 'bookshelf') (NextTo ?bs ?d) (exists ?bp (and (Is ?bp 'backpack') (HasState ?bp 'open') (On ?bp ?bs) (exists ?tb (and (Is ?tb 'teddy bear') (In ?tb ?bp))) (exists ?c (and (Is ?c 'cup') (On ?c ?d) (exists ?k (and (Is ?k 'knife') (NextTo ?k ?c))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (exists ?d (forall ?bf (exists ?r (exists ?bs (exists ?bp (exists ?tb (exists ?c (exists ?k (and (Is ?h 'house') (HasMaterial ?h 'metal') (NextTo ?b ?h) (In ?d ?h) (HasState ?b 'running') (HasMaterial ?d 'plastic') (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?d)) (Is ?b 'bus') (Is ?d 'desk') (On ?d ?r) (NextTo ?bs ?d) (Is ?r 'rug') (On ?c ?d) (Is ?bs 'bookshelf') (On ?bp ?bs) (Is ?c 'cup') (NextTo ?k ?c) (HasState ?bp 'open') (In ?tb ?bp) (Is ?k 'knife') (Is ?bp 'backpack') (Is ?tb 'teddy bear')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "knife",
+        "backpack",
+        "rug",
+        "teddy bear",
+        "desk",
+        "bookshelf",
+        "cup",
+        "butterfly",
+        "bus"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sleeping lion rests on a rock to the left of a brown dog. Next to the rock is an oval mirror positioned to the left of a laptop. A red apple sits on the laptop. Beside the laptop is a black pan containing a spoon, and every fish in the scene is inside the pan.",
+    "dsl": "(exists ?l (exists ?r (exists ?d (exists ?m (exists ?lap (exists ?a (exists ?p (exists ?s (and (Is ?l 'lion') (HasState ?l 'sleeping') (Is ?r 'rock') (On ?l ?r) (Is ?d 'dog') (HasColor ?d 'brown') (LeftOf ?l ?d) (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?m ?r) (Is ?lap 'laptop') (LeftOf ?m ?lap) (Is ?a 'apple') (HasColor ?a 'red') (On ?a ?lap) (Is ?p 'pan') (HasColor ?p 'black') (NextTo ?p ?lap) (Is ?s 'spoon') (In ?s ?p) (forall ?f (implies (Is ?f 'fish') (In ?f ?p))))))))))))",
+    "cnf": "(exists ?l (exists ?r (exists ?d (exists ?m (exists ?lap (exists ?a (exists ?p (exists ?s (forall ?f (and (Is ?l 'lion') (HasState ?l 'sleeping') (On ?l ?r) (LeftOf ?l ?d) (Is ?r 'rock') (NextTo ?m ?r) (HasColor ?d 'brown') (HasShape ?m 'oval') (LeftOf ?m ?lap) (Is ?d 'dog') (Is ?m 'mirror') (Is ?lap 'laptop') (On ?a ?lap) (NextTo ?p ?lap) (HasColor ?a 'red') (HasColor ?p 'black') (In ?s ?p) (Is ?a 'apple') (Is ?p 'pan') (or (not (Is ?f 'fish')) (In ?f ?p)) (Is ?s 'spoon')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pan",
+        "rock",
+        "fish",
+        "laptop",
+        "apple",
+        "mirror",
+        "dog",
+        "lion",
+        "spoon"
+    ]
+}

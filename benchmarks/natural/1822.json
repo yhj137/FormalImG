@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. Every flower is held by a horse positioned next to a stone rock. The rock is to the left of a plant, which is next to a house. Inside the house, a mirror sits next to a keyboard. A boat is located next to the house, containing a blue jacket next to a shirt.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?x1 (implies (Is ?x1 'flower') (exists ?x2 (exists ?x3 (exists ?x4 (exists ?x5 (exists ?x6 (exists ?x7 (exists ?x8 (exists ?x9 (exists ?x10 (and (Is ?x2 'horse') (Holding ?x2 ?x1) (Is ?x3 'rock') (HasMaterial ?x3 'stone') (NextTo ?x2 ?x3) (Is ?x4 'plant') (LeftOf ?x3 ?x4) (Is ?x5 'house') (NextTo ?x4 ?x5) (Is ?x6 'mirror') (In ?x6 ?x5) (Is ?x7 'keyboard') (NextTo ?x6 ?x7) (Is ?x8 'boat') (NextTo ?x8 ?x5) (Is ?x9 'jacket') (HasColor ?x9 'blue') (In ?x9 ?x8) (Is ?x10 'shirt') (NextTo ?x9 ?x10))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?x1 (exists ?x2 (exists ?x3 (exists ?x4 (exists ?x5 (exists ?x6 (exists ?x7 (exists ?x8 (exists ?x9 (exists ?x10 (and (or (not (Is ?x1 'flower')) (Is ?x2 'horse')) (or (not (Is ?x1 'flower')) (Holding ?x2 ?x1)) (or (not (Is ?x1 'flower')) (Is ?x3 'rock')) (or (not (Is ?x1 'flower')) (NextTo ?x2 ?x3)) (or (not (Is ?x1 'flower')) (HasMaterial ?x3 'stone')) (or (not (Is ?x1 'flower')) (Is ?x4 'plant')) (or (not (Is ?x1 'flower')) (LeftOf ?x3 ?x4)) (or (not (Is ?x1 'flower')) (Is ?x5 'house')) (or (not (Is ?x1 'flower')) (NextTo ?x4 ?x5)) (or (not (Is ?x1 'flower')) (Is ?x6 'mirror')) (or (not (Is ?x1 'flower')) (In ?x6 ?x5)) (or (not (Is ?x1 'flower')) (Is ?x7 'keyboard')) (or (not (Is ?x1 'flower')) (NextTo ?x8 ?x5)) (or (not (Is ?x1 'flower')) (NextTo ?x6 ?x7)) (or (not (Is ?x1 'flower')) (Is ?x8 'boat')) (or (not (Is ?x1 'flower')) (Is ?x9 'jacket')) (or (not (Is ?x1 'flower')) (In ?x9 ?x8)) (or (not (Is ?x1 'flower')) (HasColor ?x9 'blue')) (or (not (Is ?x1 'flower')) (Is ?x10 'shirt')) (or (not (Is ?x1 'flower')) (NextTo ?x9 ?x10))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "boat",
+        "keyboard",
+        "mirror",
+        "jacket",
+        "plant",
+        "rock",
+        "horse",
+        "shirt",
+        "flower"
+    ]
+}

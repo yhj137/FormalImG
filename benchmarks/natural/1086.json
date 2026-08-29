@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a white house. Every chair is located next to the house. An elephant holding a spoon stands next to the house. Beside the elephant is a rug with a blue cup on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (HasColor ?h 'white') (forall ?c (implies (Is ?c 'chair') (NextTo ?c ?h))) (exists ?e (exists ?s (exists ?r (exists ?u (and (Is ?e 'elephant') (Is ?s 'spoon') (Is ?r 'rug') (Is ?u 'cup') (NextTo ?e ?h) (Holding ?e ?s) (NextTo ?r ?e) (On ?u ?r) (HasColor ?u 'blue')))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (forall ?c (exists ?e (exists ?s (exists ?r (exists ?u (and (Is ?h 'house') (HasColor ?h 'white') (or (not (Is ?c 'chair')) (NextTo ?c ?h)) (NextTo ?e ?h) (Is ?e 'elephant') (Holding ?e ?s) (NextTo ?r ?e) (Is ?s 'spoon') (Is ?r 'rug') (On ?u ?r) (Is ?u 'cup') (HasColor ?u 'blue')))))))))",
+    "k": 6,
+    "object_classes": [
+        "chair",
+        "cup",
+        "rug",
+        "house",
+        "elephant",
+        "spoon"
+    ]
+}

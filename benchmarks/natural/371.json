@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red car positioned to the left of every book.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'car') (HasColor ?c 'red') (forall ?b (implies (Is ?b 'book') (LeftOf ?c ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (forall ?b (and (Is ?c 'car') (HasColor ?c 'red') (or (not (Is ?b 'book')) (LeftOf ?c ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "car"
+    ]
+}

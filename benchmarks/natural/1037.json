@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside every bus is a man, with a woman to his right. Next to the woman is a sandwich with a metal spoon resting on it, and a key lies next to the spoon.",
+    "dsl": "(forall ?b (implies (Is ?b 'bus') (exists ?m (exists ?w (exists ?s (exists ?sp (exists ?k (and (Is ?m 'man') (In ?m ?b) (Is ?w 'woman') (RightOf ?w ?m) (Is ?s 'sandwich') (NextTo ?s ?w) (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (On ?sp ?s) (Is ?k 'key') (NextTo ?k ?sp)))))))))",
+    "cnf": "(forall ?b (exists ?m (exists ?w (exists ?s (exists ?sp (exists ?k (and (or (not (Is ?b 'bus')) (Is ?m 'man')) (or (not (Is ?b 'bus')) (In ?m ?b)) (or (not (Is ?b 'bus')) (RightOf ?w ?m)) (or (not (Is ?b 'bus')) (Is ?w 'woman')) (or (not (Is ?b 'bus')) (Is ?s 'sandwich')) (or (not (Is ?b 'bus')) (NextTo ?s ?w)) (or (not (Is ?b 'bus')) (Is ?sp 'spoon')) (or (not (Is ?b 'bus')) (On ?sp ?s)) (or (not (Is ?b 'bus')) (HasMaterial ?sp 'metal')) (or (not (Is ?b 'bus')) (Is ?k 'key')) (or (not (Is ?b 'bus')) (NextTo ?k ?sp)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bus",
+        "spoon",
+        "sandwich",
+        "man",
+        "key",
+        "woman"
+    ]
+}

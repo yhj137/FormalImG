@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly organized vertical column of objects. A ruler is positioned on the top side of the layout. Directly below the ruler is a knife, and a carrot is placed below the knife. A mouse is located beneath the carrot, followed by a lighter below the mouse. Finally, a shoe is situated below the lighter. All six items\u2014the ruler, knife, carrot, mouse, lighter, and shoe\u2014are aligned vertically.",
+    "dsl": "(exists ?ruler (exists ?knife (exists ?carrot (exists ?mouse (exists ?lighter (exists ?shoe (and (Is ?ruler 'ruler') (Is ?knife 'knife') (Is ?carrot 'carrot') (Is ?mouse 'mouse') (Is ?lighter 'lighter') (Is ?shoe 'shoe') (OnTopSide ?ruler) (Above ?ruler ?knife) (Above ?knife ?carrot) (Above ?carrot ?mouse) (Above ?mouse ?lighter) (Above ?lighter ?shoe) (AlignedVertically ?ruler ?knife) (AlignedVertically ?knife ?carrot) (AlignedVertically ?carrot ?mouse) (AlignedVertically ?mouse ?lighter) (AlignedVertically ?lighter ?shoe))))))))",
+    "cnf": "(exists ?ruler (exists ?knife (exists ?carrot (exists ?mouse (exists ?lighter (exists ?shoe (and (Is ?ruler 'ruler') (OnTopSide ?ruler) (Above ?ruler ?knife) (AlignedVertically ?ruler ?knife) (Is ?knife 'knife') (Above ?knife ?carrot) (AlignedVertically ?knife ?carrot) (Is ?carrot 'carrot') (Above ?carrot ?mouse) (AlignedVertically ?carrot ?mouse) (Is ?mouse 'mouse') (Above ?mouse ?lighter) (AlignedVertically ?mouse ?lighter) (Is ?lighter 'lighter') (Above ?lighter ?shoe) (AlignedVertically ?lighter ?shoe) (Is ?shoe 'shoe'))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "lighter",
+        "mouse",
+        "knife",
+        "shoe"
+    ]
+}

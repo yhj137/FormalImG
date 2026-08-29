@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a round plant, on which every hat in the scene is placed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'plant') (HasShape ?p 'round') (forall ?h (implies (Is ?h 'hat') (On ?h ?p))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (forall ?h (and (Is ?p 'plant') (HasShape ?p 'round') (or (not (Is ?h 'hat')) (On ?h ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "hat",
+        "plant"
+    ]
+}

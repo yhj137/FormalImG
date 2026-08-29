@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a rug. An open plastic umbrella lies on the rug with every sandwich inside. A fork and black headphones also rest on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'rug') (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (HasMaterial ?u 'plastic') (On ?u ?r) (forall ?s (implies (Is ?s 'sandwich') (In ?s ?u))) (exists ?f (and (Is ?f 'fork') (On ?f ?r))) (exists ?h (and (Is ?h 'headphones') (HasColor ?h 'black') (On ?h ?r))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?u (forall ?s (exists ?f (exists ?h (and (Is ?r 'rug') (On ?u ?r) (On ?f ?r) (HasMaterial ?u 'plastic') (or (not (Is ?s 'sandwich')) (In ?s ?u)) (On ?h ?r) (Is ?f 'fork') (HasState ?u 'open') (HasColor ?h 'black') (Is ?u 'umbrella') (Is ?h 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "fork",
+        "rug",
+        "sandwich"
+    ]
+}

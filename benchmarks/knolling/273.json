@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every calculator in the scene, there is a bottle positioned below it, and the calculator is located on the right side of the image.",
+    "dsl": "(and (forall ?calc (implies (Is ?calc 'calculator') (exists ?bot (and (Is ?bot 'bottle') (Below ?bot ?calc) (OnRightSide ?calc))))))",
+    "cnf": "(forall ?calc (exists ?bot (and (or (not (Is ?calc 'calculator')) (Is ?bot 'bottle')) (or (not (Is ?calc 'calculator')) (Below ?bot ?calc)) (or (not (Is ?calc 'calculator')) (OnRightSide ?calc)))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "calculator"
+    ]
+}

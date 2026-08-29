@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in an oil painting style. A wooden bookshelf stands in the scene. A plant rests on the bookshelf, and every butterfly in the scene is blue and resting on it. A black laptop sits on the bookshelf with a keyboard to its right. To the right of the bookshelf stands a woman holding an umbrella. Additionally, a boat containing a key sits on the bookshelf, along with an apple.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (exists ?p (exists ?l (exists ?w (exists ?b (and (Is ?s 'bookshelf') (HasMaterial ?s 'wooden') (Is ?p 'plant') (On ?p ?s) (Is ?l 'laptop') (HasColor ?l 'black') (On ?l ?s) (Is ?w 'woman') (RightOf ?w ?s) (Is ?b 'boat') (On ?b ?s) (forall ?f (implies (Is ?f 'butterfly') (and (HasColor ?f 'blue') (On ?f ?p)))) (exists ?k (and (Is ?k 'key') (In ?k ?b))) (exists ?a (and (Is ?a 'apple') (On ?a ?s))) (exists ?kb (and (Is ?kb 'keyboard') (RightOf ?kb ?l))) (exists ?u (and (Is ?u 'umbrella') (Holding ?w ?u))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (exists ?p (exists ?l (exists ?w (exists ?b (forall ?f (exists ?k (exists ?a (exists ?kb (exists ?u (and (Is ?s 'bookshelf') (HasMaterial ?s 'wooden') (On ?p ?s) (On ?l ?s) (Is ?p 'plant') (or (not (Is ?f 'butterfly')) (On ?f ?p)) (RightOf ?w ?s) (HasColor ?l 'black') (RightOf ?kb ?l) (or (not (Is ?f 'butterfly')) (HasColor ?f 'blue')) (On ?b ?s) (Is ?w 'woman') (Holding ?w ?u) (Is ?l 'laptop') (Is ?kb 'keyboard') (On ?a ?s) (Is ?b 'boat') (In ?k ?b) (Is ?u 'umbrella') (Is ?a 'apple') (Is ?k 'key')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "umbrella",
+        "plant",
+        "laptop",
+        "butterfly",
+        "woman",
+        "apple",
+        "bookshelf",
+        "boat"
+    ]
+}

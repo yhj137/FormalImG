@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a rusty car. A chair is next to the car. Every jacket is inside the car. A person is sitting on the chair, and a bowl is also on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (and (Is ?c 'car') (HasState ?c 'rusty') (Is ?ch 'chair') (NextTo ?ch ?c) (forall ?j (implies (Is ?j 'jacket') (In ?j ?c))) (exists ?p (exists ?b (and (Is ?p 'person') (HasState ?p 'sitting') (Is ?b 'bowl') (On ?p ?ch) (On ?b ?ch))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (forall ?j (exists ?p (exists ?b (and (Is ?c 'car') (HasState ?c 'rusty') (NextTo ?ch ?c) (or (not (Is ?j 'jacket')) (In ?j ?c)) (Is ?ch 'chair') (On ?p ?ch) (On ?b ?ch) (HasState ?p 'sitting') (Is ?b 'bowl') (Is ?p 'person'))))))))",
+    "k": 5,
+    "object_classes": [
+        "jacket",
+        "bowl",
+        "person",
+        "chair",
+        "car"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden bed is in the scene. To the left of the bed stands a mirror, and to the right is a lit lamp. A sitting teddy bear is next to the bed. A keyboard is positioned next to the lamp, and a turned-off phone lies beside the keyboard. Every cup is located next to the bed and contains a fork. To the right of each cup are headphones, with a plate next to them.",
+    "dsl": "(exists ?bed (exists ?mir (exists ?lmp (exists ?ted (exists ?key (exists ?pho (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?mir 'mirror') (LeftOf ?mir ?bed) (Is ?lmp 'lamp') (HasState ?lmp 'on') (RightOf ?lmp ?bed) (Is ?ted 'teddy bear') (HasState ?ted 'sitting') (NextTo ?ted ?bed) (Is ?key 'keyboard') (NextTo ?key ?lmp) (Is ?pho 'phone') (HasState ?pho 'off') (NextTo ?pho ?key) (forall ?cup (implies (Is ?cup 'cup') (exists ?frk (exists ?hed (exists ?plt (and (NextTo ?cup ?bed) (Is ?frk 'fork') (In ?frk ?cup) (Is ?hed 'headphones') (RightOf ?hed ?cup) (Is ?plt 'plate') (NextTo ?plt ?hed))))))))))))))",
+    "cnf": "(exists ?bed (exists ?mir (exists ?lmp (exists ?ted (exists ?key (exists ?pho (forall ?cup (exists ?frk (exists ?hed (exists ?plt (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (LeftOf ?mir ?bed) (RightOf ?lmp ?bed) (Is ?mir 'mirror') (NextTo ?ted ?bed) (HasState ?lmp 'on') (NextTo ?key ?lmp) (or (not (Is ?cup 'cup')) (NextTo ?cup ?bed)) (HasState ?ted 'sitting') (Is ?lmp 'lamp') (Is ?key 'keyboard') (NextTo ?pho ?key) (or (not (Is ?cup 'cup')) (Is ?frk 'fork')) (Is ?ted 'teddy bear') (HasState ?pho 'off') (or (not (Is ?cup 'cup')) (In ?frk ?cup)) (Is ?pho 'phone') (or (not (Is ?cup 'cup')) (Is ?hed 'headphones')) (or (not (Is ?cup 'cup')) (RightOf ?hed ?cup)) (or (not (Is ?cup 'cup')) (Is ?plt 'plate')) (or (not (Is ?cup 'cup')) (NextTo ?plt ?hed)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "fork",
+        "headphones",
+        "lamp",
+        "teddy bear",
+        "bed",
+        "cup",
+        "phone",
+        "mirror",
+        "plate"
+    ]
+}

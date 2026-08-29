@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a variety of objects. On the left side of the image, there is a laptop, and a pair of black headphones is positioned above it. A keyboard is located to the right of the laptop, with a book placed directly below the keyboard. To the right of the book, there is a hammer located on the bottom side of the image. A ruler is placed above the hammer. To the left of the ruler sits a cup. Finally, for every lighter in the scene, it is red, positioned to the left of the cup, and the book is visually larger than the lighter.",
+    "dsl": "(exists ?laptop (exists ?headphones (exists ?keyboard (exists ?book (exists ?hammer (exists ?ruler (exists ?cup (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?headphones 'headphones') (Has ?headphones 'black') (Above ?headphones ?laptop) (Is ?keyboard 'keyboard') (LeftOf ?laptop ?keyboard) (Is ?book 'book') (Above ?keyboard ?book) (Is ?hammer 'hammer') (OnBottomSide ?hammer) (LeftOf ?book ?hammer) (Is ?ruler 'ruler') (Above ?ruler ?hammer) (Is ?cup 'cup') (LeftOf ?cup ?ruler) (forall ?lighter (implies (Is ?lighter 'lighter') (and (Has ?lighter 'red') (LeftOf ?lighter ?cup) (LargerThan ?book ?lighter))))))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (exists ?keyboard (exists ?book (exists ?hammer (exists ?ruler (exists ?cup (forall ?lighter (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?headphones ?laptop) (LeftOf ?laptop ?keyboard) (Has ?headphones 'black') (Is ?keyboard 'keyboard') (Above ?keyboard ?book) (Is ?headphones 'headphones') (Is ?book 'book') (LeftOf ?book ?hammer) (or (not (Is ?lighter 'lighter')) (LargerThan ?book ?lighter)) (OnBottomSide ?hammer) (Above ?ruler ?hammer) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?cup)) (Is ?hammer 'hammer') (Is ?ruler 'ruler') (LeftOf ?cup ?ruler) (or (not (Is ?lighter 'lighter')) (Has ?lighter 'red')) (Is ?cup 'cup'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "laptop",
+        "keyboard",
+        "cup",
+        "hammer",
+        "lighter",
+        "headphones"
+    ]
+}

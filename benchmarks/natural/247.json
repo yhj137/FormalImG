@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a green tree. A red toy car is located to the right of the tree.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?tc (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?tc 'toy car') (HasColor ?tc 'red') (RightOf ?tc ?t)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?tc (and (Is ?t 'tree') (HasColor ?t 'green') (RightOf ?tc ?t) (HasColor ?tc 'red') (Is ?tc 'toy car')))))",
+    "k": 2,
+    "object_classes": [
+        "toy car",
+        "tree"
+    ]
+}

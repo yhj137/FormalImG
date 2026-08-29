@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement of items. On the left side of the image, there is a backpack. Directly below the backpack is a remote, and below the remote is a tie, which is positioned on the bottom side. A pan is placed to the right of the backpack, and a cutting board is to the right of the pan. A plate is located to the right of the remote and below the pan. A stapler is positioned to the right of the tie and below the plate. Additionally, a wrench is placed to the right of the plate. Finally, for every knife in the scene, it is strictly positioned below the cutting board and above the wrench.",
+    "dsl": "(exists ?backpack (exists ?remote (exists ?tie (exists ?pan (exists ?plate (exists ?stapler (exists ?cb (exists ?wrench (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?remote 'remote') (Above ?backpack ?remote) (Is ?tie 'tie') (Above ?remote ?tie) (OnBottomSide ?tie) (Is ?pan 'pan') (LeftOf ?backpack ?pan) (Is ?cb 'cutting_board') (LeftOf ?pan ?cb) (Is ?plate 'plate') (LeftOf ?remote ?plate) (Above ?pan ?plate) (Is ?stapler 'stapler') (LeftOf ?tie ?stapler) (Above ?plate ?stapler) (Is ?wrench 'wrench') (LeftOf ?plate ?wrench) (forall ?k (implies (Is ?k 'knife') (and (Below ?k ?cb) (Above ?k ?wrench)))))))))))))",
+    "cnf": "(exists ?backpack (exists ?remote (exists ?tie (exists ?pan (exists ?plate (exists ?stapler (exists ?cb (exists ?wrench (forall ?k (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Above ?backpack ?remote) (LeftOf ?backpack ?pan) (Is ?remote 'remote') (Above ?remote ?tie) (Is ?pan 'pan') (LeftOf ?pan ?cb) (LeftOf ?remote ?plate) (Is ?tie 'tie') (OnBottomSide ?tie) (Above ?pan ?plate) (Is ?cb 'cutting_board') (or (not (Is ?k 'knife')) (Below ?k ?cb)) (Is ?plate 'plate') (LeftOf ?tie ?stapler) (Above ?plate ?stapler) (or (not (Is ?k 'knife')) (Above ?k ?wrench)) (Is ?stapler 'stapler') (LeftOf ?plate ?wrench) (Is ?wrench 'wrench')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "remote",
+        "plate",
+        "stapler",
+        "wrench",
+        "cutting_board",
+        "pan",
+        "backpack",
+        "knife"
+    ]
+}

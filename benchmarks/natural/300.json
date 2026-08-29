@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style image where every man is holding a rectangular laptop.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?m (implies (Is ?m 'man') (exists ?l (and (Is ?l 'laptop') (HasShape ?l 'rectangular') (Holding ?m ?l))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?m (exists ?l (and (or (not (Is ?m 'man')) (Is ?l 'laptop')) (or (not (Is ?m 'man')) (HasShape ?l 'rectangular')) (or (not (Is ?m 'man')) (Holding ?m ?l))))))",
+    "k": 2,
+    "object_classes": [
+        "man",
+        "laptop"
+    ]
+}

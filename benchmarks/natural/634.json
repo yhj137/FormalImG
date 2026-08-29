@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round fruit is on a green plant. A brown teddy bear is next to the plant. A black lamp is next to the teddy bear.",
+    "dsl": "(exists ?f (exists ?p (exists ?t (exists ?l (and (Is ?f 'fruit') (HasShape ?f 'round') (Is ?p 'plant') (HasColor ?p 'green') (On ?f ?p) (Is ?t 'teddy bear') (HasColor ?t 'brown') (NextTo ?t ?p) (Is ?l 'lamp') (HasColor ?l 'black') (NextTo ?l ?t))))))",
+    "cnf": "(exists ?f (exists ?p (exists ?t (exists ?l (and (Is ?f 'fruit') (HasShape ?f 'round') (On ?f ?p) (HasColor ?p 'green') (NextTo ?t ?p) (Is ?p 'plant') (HasColor ?t 'brown') (NextTo ?l ?t) (Is ?t 'teddy bear') (HasColor ?l 'black') (Is ?l 'lamp'))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "fruit",
+        "lamp",
+        "plant"
+    ]
+}

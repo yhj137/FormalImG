@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the display, there is a white shirt positioned to its right, where the suitcase is larger than the shirt. Directly below the shirt lies a blue tie. To the left of the tie is a black camera. A white plate is located below the camera. To the right of the plate is a gray sock. Below the sock sits a wrench. Finally, to the left of the wrench is a bottle, which is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?shirt (exists ?tie (exists ?camera (exists ?plate (exists ?sock (exists ?wrench (exists ?bottle (and (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?plate 'plate') (Has ?plate 'white') (Is ?sock 'sock') (Has ?sock 'gray') (Is ?wrench 'wrench') (Is ?bottle 'bottle') (RightOf ?shirt ?suitcase) (LargerThan ?suitcase ?shirt) (Below ?tie ?shirt) (LeftOf ?camera ?tie) (Below ?plate ?camera) (RightOf ?sock ?plate) (Below ?wrench ?sock) (LeftOf ?bottle ?wrench) (OnBottomSide ?bottle))))))))))))",
+    "cnf": "(forall ?suitcase (exists ?shirt (exists ?tie (exists ?camera (exists ?plate (exists ?sock (exists ?wrench (exists ?bottle (and (or (not (Is ?suitcase 'suitcase')) (Is ?shirt 'shirt')) (or (not (Is ?suitcase 'suitcase')) (Has ?shirt 'white')) (or (not (Is ?suitcase 'suitcase')) (RightOf ?shirt ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?tie 'tie')) (or (not (Is ?suitcase 'suitcase')) (LargerThan ?suitcase ?shirt)) (or (not (Is ?suitcase 'suitcase')) (Is ?bottle 'bottle')) (or (not (Is ?suitcase 'suitcase')) (Has ?tie 'blue')) (or (not (Is ?suitcase 'suitcase')) (Below ?tie ?shirt)) (or (not (Is ?suitcase 'suitcase')) (Is ?wrench 'wrench')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?bottle ?wrench)) (or (not (Is ?suitcase 'suitcase')) (Is ?camera 'camera')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?camera ?tie)) (or (not (Is ?suitcase 'suitcase')) (Has ?sock 'gray')) (or (not (Is ?suitcase 'suitcase')) (Below ?wrench ?sock)) (or (not (Is ?suitcase 'suitcase')) (OnBottomSide ?bottle)) (or (not (Is ?suitcase 'suitcase')) (Has ?camera 'black')) (or (not (Is ?suitcase 'suitcase')) (Below ?plate ?camera)) (or (not (Is ?suitcase 'suitcase')) (Is ?sock 'sock')) (or (not (Is ?suitcase 'suitcase')) (RightOf ?sock ?plate)) (or (not (Is ?suitcase 'suitcase')) (Is ?plate 'plate')) (or (not (Is ?suitcase 'suitcase')) (Has ?plate 'white')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "shirt",
+        "wrench",
+        "tie",
+        "camera",
+        "suitcase",
+        "sock",
+        "bottle"
+    ]
+}

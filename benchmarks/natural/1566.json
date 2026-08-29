@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a tree. To the left of the tree is a backpack containing an umbrella and all the forks, with a clock on top. A sleeping dog lies next to the tree, and a wooden bowl is next to the dog. A lamp stands to the right of the tree.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?bp (exists ?u (exists ?c (exists ?d (exists ?l (and (Is ?t 'tree') (Is ?bp 'backpack') (Is ?u 'umbrella') (Is ?c 'clock') (Is ?d 'dog') (Is ?l 'lamp') (LeftOf ?bp ?t) (In ?u ?bp) (On ?c ?bp) (NextTo ?d ?t) (HasState ?d 'sleeping') (RightOf ?l ?t) (forall ?f (implies (Is ?f 'fork') (In ?f ?bp))) (exists ?b (and (Is ?b 'bowl') (HasMaterial ?b 'wooden') (NextTo ?b ?d)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?bp (exists ?u (exists ?c (exists ?d (exists ?l (forall ?f (exists ?b (and (Is ?t 'tree') (LeftOf ?bp ?t) (NextTo ?d ?t) (Is ?bp 'backpack') (In ?u ?bp) (RightOf ?l ?t) (Is ?d 'dog') (HasState ?d 'sleeping') (On ?c ?bp) (Is ?u 'umbrella') (Is ?l 'lamp') (NextTo ?b ?d) (or (not (Is ?f 'fork')) (In ?f ?bp)) (Is ?c 'clock') (HasMaterial ?b 'wooden') (Is ?b 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "backpack",
+        "tree",
+        "lamp",
+        "clock",
+        "bowl",
+        "dog"
+    ]
+}

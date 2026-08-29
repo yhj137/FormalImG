@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a metal desk. A basket containing a sandwich sits on the desk, with glasses to its left. Every toy car is positioned on the desk next to a bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?b (exists ?s (exists ?g (and (Is ?d 'desk') (HasMaterial ?d 'metal') (Is ?b 'basket') (On ?b ?d) (Is ?s 'sandwich') (In ?s ?b) (Is ?g 'glasses') (LeftOf ?g ?b) (forall ?t (implies (Is ?t 'toy car') (exists ?bo (and (Is ?bo 'bottle') (NextTo ?t ?bo) (On ?t ?d)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (exists ?b (exists ?s (exists ?g (forall ?t (exists ?bo (and (Is ?d 'desk') (HasMaterial ?d 'metal') (On ?b ?d) (or (not (Is ?t 'toy car')) (On ?t ?d)) (Is ?b 'basket') (In ?s ?b) (or (not (Is ?t 'toy car')) (NextTo ?t ?bo)) (LeftOf ?g ?b) (Is ?s 'sandwich') (or (not (Is ?t 'toy car')) (Is ?bo 'bottle')) (Is ?g 'glasses')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "glasses",
+        "toy car",
+        "desk",
+        "sandwich",
+        "basket"
+    ]
+}

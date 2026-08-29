@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every rock is inside a brown basket.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?r (implies (Is ?r 'rock') (exists ?b (and (Is ?b 'basket') (HasColor ?b 'brown') (In ?r ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?r (exists ?b (and (or (not (Is ?r 'rock')) (Is ?b 'basket')) (or (not (Is ?r 'rock')) (HasColor ?b 'brown')) (or (not (Is ?r 'rock')) (In ?r ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "rock",
+        "basket"
+    ]
+}

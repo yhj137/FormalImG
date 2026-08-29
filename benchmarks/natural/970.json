@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A basket is placed next to a rectangular monitor. To the right of the basket is a yellow lamp, with a round hat next to it. Every shoe is positioned next to the basket.",
+    "dsl": "(exists ?m (exists ?b (exists ?l (exists ?h (and (Is ?m 'monitor') (HasShape ?m 'rectangular') (Is ?b 'basket') (NextTo ?b ?m) (Is ?l 'lamp') (HasColor ?l 'yellow') (RightOf ?l ?b) (Is ?h 'hat') (HasShape ?h 'round') (NextTo ?h ?l) (forall ?s (implies (Is ?s 'shoes') (NextTo ?s ?b))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?l (exists ?h (forall ?s (and (Is ?m 'monitor') (HasShape ?m 'rectangular') (NextTo ?b ?m) (Is ?b 'basket') (RightOf ?l ?b) (or (not (Is ?s 'shoes')) (NextTo ?s ?b)) (HasColor ?l 'yellow') (NextTo ?h ?l) (Is ?l 'lamp') (HasShape ?h 'round') (Is ?h 'hat')))))))",
+    "k": 5,
+    "object_classes": [
+        "monitor",
+        "hat",
+        "lamp",
+        "shoes",
+        "basket"
+    ]
+}

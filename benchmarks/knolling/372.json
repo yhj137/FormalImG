@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a ruler positioned on the bottom side of the scene. For every hat present in the image, it is aligned vertically with this ruler.",
+    "dsl": "(exists ?r (and (Is ?r 'ruler') (OnBottomSide ?r) (forall ?h (implies (Is ?h 'hat') (AlignedVertically ?h ?r)))))",
+    "cnf": "(exists ?r (forall ?h (and (Is ?r 'ruler') (OnBottomSide ?r) (or (not (Is ?h 'hat')) (AlignedVertically ?h ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "hat"
+    ]
+}

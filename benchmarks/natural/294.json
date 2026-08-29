@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style image where every man holds a yellow screwdriver.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?m (implies (Is ?m 'man') (exists ?s (and (Is ?s 'screwdriver') (HasColor ?s 'yellow') (Holding ?m ?s))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?m (exists ?s (and (or (not (Is ?m 'man')) (Is ?s 'screwdriver')) (or (not (Is ?m 'man')) (HasColor ?s 'yellow')) (or (not (Is ?m 'man')) (Holding ?m ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "screwdriver",
+        "man"
+    ]
+}

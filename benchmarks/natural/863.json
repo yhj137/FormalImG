@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon scene where every person sits on a wooden chair with a phone on it. A butterfly is to the left of each person, and a cat is to the right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?p (implies (Is ?p 'person') (exists ?c (exists ?ph (exists ?b (exists ?cat (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?ph 'phone') (Is ?b 'butterfly') (Is ?cat 'cat') (On ?p ?c) (On ?ph ?c) (LeftOf ?b ?p) (RightOf ?cat ?p)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?p (exists ?c (exists ?ph (exists ?b (exists ?cat (and (or (not (Is ?p 'person')) (Is ?c 'chair')) (or (not (Is ?p 'person')) (HasMaterial ?c 'wooden')) (or (not (Is ?p 'person')) (Is ?ph 'phone')) (or (not (Is ?p 'person')) (On ?p ?c)) (or (not (Is ?p 'person')) (Is ?b 'butterfly')) (or (not (Is ?p 'person')) (On ?ph ?c)) (or (not (Is ?p 'person')) (Is ?cat 'cat')) (or (not (Is ?p 'person')) (LeftOf ?b ?p)) (or (not (Is ?p 'person')) (RightOf ?cat ?p)))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "person",
+        "chair",
+        "butterfly",
+        "cat"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement of objects. The scene includes a white shirt, a black keyboard, a blue tie, a pair of black glasses, a brown wallet, a gray knife, and a yellow drill. The shirt is aligned horizontally with the keyboard. Vertically, the shirt is positioned above the tie, and the keyboard is positioned above the glasses. The tie and the glasses are aligned horizontally. Further down, the tie is above the wallet, and the glasses are above the knife, with the wallet and knife being aligned horizontally. The drill is positioned below the knife. Finally, for every pizza in the image, it is red and is aligned horizontally with the drill.",
+    "dsl": "(exists ?shirt (exists ?keyboard (exists ?tie (exists ?glasses (exists ?wallet (exists ?knife (exists ?drill (and (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?drill 'drill') (Has ?drill 'yellow') (AlignedHorizontally ?shirt ?keyboard) (Above ?shirt ?tie) (Above ?keyboard ?glasses) (AlignedHorizontally ?tie ?glasses) (Above ?tie ?wallet) (Above ?glasses ?knife) (AlignedHorizontally ?wallet ?knife) (Below ?drill ?knife) (forall ?pizza (implies (Is ?pizza 'pizza') (and (Has ?pizza 'red') (AlignedHorizontally ?pizza ?drill))))))))))))",
+    "cnf": "(exists ?shirt (exists ?keyboard (exists ?tie (exists ?glasses (exists ?wallet (exists ?knife (exists ?drill (forall ?pizza (and (Is ?shirt 'shirt') (Has ?shirt 'white') (AlignedHorizontally ?shirt ?keyboard) (Above ?shirt ?tie) (Has ?keyboard 'black') (Above ?keyboard ?glasses) (Has ?tie 'blue') (AlignedHorizontally ?tie ?glasses) (Is ?keyboard 'keyboard') (Has ?glasses 'black') (Is ?tie 'tie') (Above ?tie ?wallet) (Above ?glasses ?knife) (Is ?glasses 'glasses') (Has ?wallet 'brown') (AlignedHorizontally ?wallet ?knife) (Has ?knife 'gray') (Is ?wallet 'wallet') (Below ?drill ?knife) (Is ?knife 'knife') (Has ?drill 'yellow') (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?drill)) (Is ?drill 'drill') (or (not (Is ?pizza 'pizza')) (Has ?pizza 'red')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "keyboard",
+        "pizza",
+        "drill",
+        "wallet",
+        "knife",
+        "shirt"
+    ]
+}

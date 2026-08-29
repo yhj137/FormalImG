@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene where every wooden wardrobe contains a child and a red ball, with a monitor resting on top.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?w (implies (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden')) (exists ?c (exists ?b (exists ?m (and (Is ?c 'child') (Is ?b 'ball') (HasColor ?b 'red') (Is ?m 'monitor') (In ?c ?w) (In ?b ?w) (On ?m ?w))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?w (exists ?c (exists ?b (exists ?m (and (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (Is ?c 'child')) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (Is ?b 'ball')) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (In ?c ?w)) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (HasColor ?b 'red')) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (Is ?m 'monitor')) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (In ?b ?w)) (or (not (Is ?w 'wardrobe')) (not (HasMaterial ?w 'wooden')) (On ?m ?w))))))))",
+    "k": 4,
+    "object_classes": [
+        "child",
+        "monitor",
+        "wardrobe",
+        "ball"
+    ]
+}

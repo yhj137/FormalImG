@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a monitor on the bottom side, which is larger than a keyboard. Arranged vertically above the monitor are a backpack, a hat, and a shoe, leading up to the keyboard. These objects are aligned vertically. For every pen in the image, it is positioned above the keyboard, followed by a ruler above the pen, a fork above the ruler, keys above the fork, and a lemon above the keys, all aligned vertically.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?hat (exists ?shoe (exists ?keyboard (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?hat 'hat') (Is ?shoe 'shoe') (Is ?keyboard 'keyboard') (OnBottomSide ?monitor) (LargerThan ?monitor ?keyboard) (Above ?backpack ?monitor) (Above ?hat ?backpack) (Above ?shoe ?hat) (Above ?keyboard ?shoe) (AlignedVertically ?monitor ?backpack) (AlignedVertically ?backpack ?hat) (AlignedVertically ?hat ?shoe) (AlignedVertically ?shoe ?keyboard) (forall ?pen (implies (Is ?pen 'pen') (exists ?ruler (exists ?fork (exists ?keys (exists ?lemon (and (Is ?ruler 'ruler') (Is ?fork 'fork') (Is ?keys 'keys') (Is ?lemon 'lemon') (Above ?pen ?keyboard) (Above ?ruler ?pen) (Above ?fork ?ruler) (Above ?keys ?fork) (Above ?lemon ?keys) (AlignedVertically ?keyboard ?pen) (AlignedVertically ?pen ?ruler) (AlignedVertically ?ruler ?fork) (AlignedVertically ?fork ?keys) (AlignedVertically ?keys ?lemon))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?hat (exists ?shoe (exists ?keyboard (forall ?pen (exists ?ruler (exists ?fork (exists ?keys (exists ?lemon (and (Is ?monitor 'monitor') (OnBottomSide ?monitor) (LargerThan ?monitor ?keyboard) (Above ?backpack ?monitor) (Is ?keyboard 'keyboard') (Above ?keyboard ?shoe) (AlignedVertically ?monitor ?backpack) (Is ?backpack 'backpack') (Above ?hat ?backpack) (Above ?shoe ?hat) (AlignedVertically ?hat ?shoe) (AlignedVertically ?shoe ?keyboard) (AlignedVertically ?backpack ?hat) (Is ?hat 'hat') (Is ?shoe 'shoe') (or (not (Is ?pen 'pen')) (Above ?pen ?keyboard)) (or (not (Is ?pen 'pen')) (AlignedVertically ?keyboard ?pen)) (or (not (Is ?pen 'pen')) (Is ?lemon 'lemon')) (or (not (Is ?pen 'pen')) (Above ?ruler ?pen)) (or (not (Is ?pen 'pen')) (Above ?lemon ?keys)) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?ruler)) (or (not (Is ?pen 'pen')) (Is ?keys 'keys')) (or (not (Is ?pen 'pen')) (Is ?ruler 'ruler')) (or (not (Is ?pen 'pen')) (Above ?fork ?ruler)) (or (not (Is ?pen 'pen')) (Above ?keys ?fork)) (or (not (Is ?pen 'pen')) (AlignedVertically ?fork ?keys)) (or (not (Is ?pen 'pen')) (AlignedVertically ?keys ?lemon)) (or (not (Is ?pen 'pen')) (AlignedVertically ?ruler ?fork)) (or (not (Is ?pen 'pen')) (Is ?fork 'fork')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "keyboard",
+        "pen",
+        "lemon",
+        "fork",
+        "hat",
+        "backpack",
+        "monitor",
+        "shoe"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, a handbag, a shoe, and a wallet are aligned horizontally from left to right. On the bottom side, a bowl, a calculator, and a pair of glasses are aligned horizontally from left to right. Additionally, a knife, a spoon, and a sock are arranged horizontally, with the sock positioned on the right side of the image; the knife is to the left of the spoon, and the spoon is to the left of the sock. The wallet is smaller than the calculator, and the glasses are smaller than the knife. Furthermore, any pliers present in the image must be located to the left of the handbag.",
+    "dsl": "(exists ?handbag (exists ?shoe (exists ?wallet (exists ?bowl (exists ?calculator (exists ?glasses (exists ?knife (exists ?spoon (exists ?sock (and (Is ?handbag 'handbag') (Is ?shoe 'shoe') (Is ?wallet 'wallet') (Is ?bowl 'bowl') (Is ?calculator 'calculator') (Is ?glasses 'glasses') (Is ?knife 'knife') (Is ?spoon 'spoon') (Is ?sock 'sock') (OnTopSide ?handbag) (LeftOf ?handbag ?shoe) (LeftOf ?shoe ?wallet) (AlignedHorizontally ?handbag ?shoe) (AlignedHorizontally ?shoe ?wallet) (OnBottomSide ?bowl) (LeftOf ?bowl ?calculator) (LeftOf ?calculator ?glasses) (AlignedHorizontally ?bowl ?calculator) (AlignedHorizontally ?calculator ?glasses) (LeftOf ?knife ?spoon) (LeftOf ?spoon ?sock) (AlignedHorizontally ?knife ?spoon) (AlignedHorizontally ?spoon ?sock) (OnRightSide ?sock) (SmallerThan ?wallet ?calculator) (SmallerThan ?glasses ?knife) (forall ?pliers (implies (Is ?pliers 'pliers') (LeftOf ?pliers ?handbag)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?shoe (exists ?wallet (exists ?bowl (exists ?calculator (exists ?glasses (exists ?knife (exists ?spoon (exists ?sock (forall ?pliers (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (LeftOf ?handbag ?shoe) (AlignedHorizontally ?handbag ?shoe) (Is ?shoe 'shoe') (LeftOf ?shoe ?wallet) (or (not (Is ?pliers 'pliers')) (LeftOf ?pliers ?handbag)) (AlignedHorizontally ?shoe ?wallet) (Is ?wallet 'wallet') (SmallerThan ?wallet ?calculator) (AlignedHorizontally ?calculator ?glasses) (AlignedHorizontally ?bowl ?calculator) (LeftOf ?calculator ?glasses) (SmallerThan ?glasses ?knife) (LeftOf ?bowl ?calculator) (Is ?glasses 'glasses') (AlignedHorizontally ?knife ?spoon) (OnBottomSide ?bowl) (Is ?calculator 'calculator') (LeftOf ?knife ?spoon) (LeftOf ?spoon ?sock) (AlignedHorizontally ?spoon ?sock) (Is ?bowl 'bowl') (Is ?knife 'knife') (Is ?spoon 'spoon') (Is ?sock 'sock') (OnRightSide ?sock))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "pliers",
+        "sock",
+        "handbag",
+        "calculator",
+        "wallet",
+        "knife",
+        "bowl",
+        "shoe",
+        "spoon"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene where every car contains a black pan, with a green plant next to the pan.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'car') (exists ?p (exists ?pl (and (Is ?p 'pan') (HasColor ?p 'black') (Is ?pl 'plant') (HasColor ?pl 'green') (In ?p ?c) (NextTo ?pl ?p)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?p (exists ?pl (and (or (not (Is ?c 'car')) (Is ?p 'pan')) (or (not (Is ?c 'car')) (HasColor ?p 'black')) (or (not (Is ?c 'car')) (In ?p ?c)) (or (not (Is ?c 'car')) (Is ?pl 'plant')) (or (not (Is ?c 'car')) (NextTo ?pl ?p)) (or (not (Is ?c 'car')) (HasColor ?pl 'green')))))))",
+    "k": 3,
+    "object_classes": [
+        "plant",
+        "pan",
+        "car"
+    ]
+}

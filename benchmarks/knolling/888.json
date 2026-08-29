@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is placed on the right side of the image. For every mouse in the scene, it is located to the left of the handbag. To the left of the mouse is a remote, and these two are aligned horizontally. Below the remote are headphones, and below the headphones is a ruler, which is positioned on the bottom side of the image.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?remote (exists ?headphones (exists ?ruler (and (Is ?remote 'remote') (Is ?headphones 'headphones') (Is ?ruler 'ruler') (LeftOf ?mouse ?handbag) (LeftOf ?remote ?mouse) (AlignedHorizontally ?remote ?mouse) (Below ?headphones ?remote) (Below ?ruler ?headphones) (OnBottomSide ?ruler)))))))))",
+    "cnf": "(exists ?handbag (forall ?mouse (exists ?remote (exists ?headphones (exists ?ruler (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (or (not (Is ?mouse 'mouse')) (LeftOf ?mouse ?handbag)) (or (not (Is ?mouse 'mouse')) (Is ?ruler 'ruler')) (or (not (Is ?mouse 'mouse')) (LeftOf ?remote ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?headphones 'headphones')) (or (not (Is ?mouse 'mouse')) (Below ?ruler ?headphones)) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?remote ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?remote 'remote')) (or (not (Is ?mouse 'mouse')) (Below ?headphones ?remote)) (or (not (Is ?mouse 'mouse')) (OnBottomSide ?ruler))))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "handbag",
+        "mouse",
+        "headphones"
+    ]
+}

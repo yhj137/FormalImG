@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a brown desk. Every dog is located to the right of the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (and (Is ?d 'desk') (HasColor ?d 'brown') (forall ?g (implies (Is ?g 'dog') (RightOf ?g ?d))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (forall ?g (and (Is ?d 'desk') (HasColor ?d 'brown') (or (not (Is ?g 'dog')) (RightOf ?g ?d))))))",
+    "k": 2,
+    "object_classes": [
+        "desk",
+        "dog"
+    ]
+}

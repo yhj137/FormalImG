@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue shirt. For every white phone in the scene, it is positioned to the left of the shirt, there is a carrot located directly below it and vertically aligned, and there is a pizza positioned below the shirt on the bottom side.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (forall ?phone (implies (and (Is ?phone 'phone') (Has ?phone 'white')) (exists ?carrot (exists ?pizza (and (Is ?carrot 'carrot') (Is ?pizza 'pizza') (LeftOf ?phone ?shirt) (Below ?carrot ?phone) (AlignedVertically ?phone ?carrot) (Below ?pizza ?shirt) (OnBottomSide ?pizza))))))))",
+    "cnf": "(exists ?shirt (forall ?phone (exists ?carrot (exists ?pizza (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (LeftOf ?phone ?shirt)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Below ?pizza ?shirt)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Is ?pizza 'pizza')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Below ?carrot ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (AlignedVertically ?phone ?carrot)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (OnBottomSide ?pizza)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'white')) (Is ?carrot 'carrot')))))))",
+    "k": 4,
+    "object_classes": [
+        "carrot",
+        "phone",
+        "pizza",
+        "shirt"
+    ]
+}

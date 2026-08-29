@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All the handbags in the image are white.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'handbag') (Has ?h 'white'))))",
+    "cnf": "(forall ?h (or (not (Is ?h 'handbag')) (Has ?h 'white')))",
+    "k": 1,
+    "object_classes": [
+        "handbag"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of headphones is neatly arranged on the top side of the surface.",
+    "dsl": "(exists ?h (and (Is ?h 'headphones') (OnTopSide ?h)))",
+    "cnf": "(exists ?h (and (Is ?h 'headphones') (OnTopSide ?h)))",
+    "k": 1,
+    "object_classes": [
+        "headphones"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a cutting board. A knife is placed below the cutting board, and a lighter is placed below the knife, with all three objects aligned vertically. Additionally, for every ruler present in the image, it is aligned horizontally with the lighter and situated on the bottom side.",
+    "dsl": "(exists ?board (exists ?knife (exists ?lighter (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Is ?knife 'knife') (Below ?knife ?board) (AlignedVertically ?knife ?board) (Is ?lighter 'lighter') (Below ?lighter ?knife) (AlignedVertically ?lighter ?knife) (forall ?ruler (implies (Is ?ruler 'ruler') (and (AlignedHorizontally ?ruler ?lighter) (OnBottomSide ?ruler))))))))",
+    "cnf": "(exists ?board (exists ?knife (exists ?lighter (forall ?ruler (and (Is ?board 'cutting_board') (OnLeftSide ?board) (Below ?knife ?board) (AlignedVertically ?knife ?board) (Is ?knife 'knife') (Below ?lighter ?knife) (AlignedVertically ?lighter ?knife) (Is ?lighter 'lighter') (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?ruler ?lighter)) (or (not (Is ?ruler 'ruler')) (OnBottomSide ?ruler)))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "cutting_board",
+        "lighter",
+        "ruler"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a turned-on monitor. To the right of the monitor is a plastic basket containing every screwdriver. A mirror is located to the right of the basket.",
+    "dsl": "(exists ?m (exists ?b (and (Is ?m 'monitor') (HasState ?m 'on') (Is ?b 'basket') (HasMaterial ?b 'plastic') (RightOf ?b ?m) (forall ?s (implies (Is ?s 'screwdriver') (In ?s ?b))) (exists ?mir (and (Is ?mir 'mirror') (RightOf ?mir ?b))))))",
+    "cnf": "(exists ?m (exists ?b (forall ?s (exists ?mir (and (Is ?m 'monitor') (HasState ?m 'on') (RightOf ?b ?m) (HasMaterial ?b 'plastic') (or (not (Is ?s 'screwdriver')) (In ?s ?b)) (Is ?b 'basket') (RightOf ?mir ?b) (Is ?mir 'mirror'))))))",
+    "k": 4,
+    "object_classes": [
+        "basket",
+        "screwdriver",
+        "mirror",
+        "monitor"
+    ]
+}

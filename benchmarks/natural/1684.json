@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red car next to a wooden bench. A desk is to the left of the bench. Every ball is round and placed on the desk. A cat on the bench holds a bitten apple. A book rests on the desk next to an orange, with a fruit to the left of the orange.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'car') (HasColor ?c 'red') (exists ?be (and (Is ?be 'bench') (HasMaterial ?be 'wooden') (NextTo ?c ?be) (exists ?d (and (Is ?d 'desk') (LeftOf ?d ?be) (and (forall ?ba (implies (Is ?ba 'ball') (and (HasShape ?ba 'round') (On ?ba ?d)))) (exists ?ca (and (Is ?ca 'cat') (On ?ca ?be) (exists ?a (and (Is ?a 'apple') (HasState ?a 'bitten') (Holding ?ca ?a) (exists ?bk (and (Is ?bk 'book') (On ?bk ?d) (exists ?o (and (Is ?o 'orange') (NextTo ?o ?bk) (exists ?f (and (Is ?f 'fruit') (LeftOf ?f ?o)))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?be (exists ?d (forall ?ba (exists ?ca (exists ?a (exists ?bk (exists ?o (exists ?f (and (Is ?c 'car') (HasColor ?c 'red') (NextTo ?c ?be) (HasMaterial ?be 'wooden') (LeftOf ?d ?be) (Is ?be 'bench') (On ?ca ?be) (Is ?d 'desk') (or (not (Is ?ba 'ball')) (On ?ba ?d)) (Is ?ca 'cat') (Holding ?ca ?a) (On ?bk ?d) (or (not (Is ?ba 'ball')) (HasShape ?ba 'round')) (HasState ?a 'bitten') (Is ?bk 'book') (NextTo ?o ?bk) (Is ?a 'apple') (Is ?o 'orange') (LeftOf ?f ?o) (Is ?f 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "cat",
+        "desk",
+        "ball",
+        "book",
+        "apple",
+        "fruit",
+        "car",
+        "orange"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a table. Every sandwich is placed on a round plate on the table. A keyboard is also on the table. A lion stands next to the table, holding a brown teddy bear.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (forall ?s (implies (Is ?s 'sandwich') (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (On ?s ?p) (On ?p ?t))))) (exists ?k (exists ?l (exists ?tb (and (Is ?k 'keyboard') (Is ?l 'lion') (Is ?tb 'teddy bear') (On ?k ?t) (NextTo ?l ?t) (Holding ?l ?tb) (HasColor ?tb 'brown'))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?s (exists ?p (exists ?k (exists ?l (exists ?tb (and (Is ?t 'table') (or (not (Is ?s 'sandwich')) (On ?p ?t)) (On ?k ?t) (or (not (Is ?s 'sandwich')) (On ?s ?p)) (NextTo ?l ?t) (Is ?k 'keyboard') (or (not (Is ?s 'sandwich')) (HasShape ?p 'round')) (Is ?l 'lion') (Holding ?l ?tb) (or (not (Is ?s 'sandwich')) (Is ?p 'plate')) (Is ?tb 'teddy bear') (HasColor ?tb 'brown')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "sandwich",
+        "teddy bear",
+        "table",
+        "lion",
+        "plate"
+    ]
+}

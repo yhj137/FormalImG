@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. In the top section, there is a hat, a hammer, and a bottle arranged in a horizontal alignment. For every plate in the scene, it is positioned below the hat. Associated with the plate is a cutting board aligned horizontally with it, where the plate is smaller than the cutting board. Additionally, a sandwich is placed below the plate, and a fork is aligned horizontally with the sandwich; the fork is smaller than the plate. On the bottom side of the image, a game controller is located below the cutting board, and a camera is aligned horizontally with the game controller.",
+    "dsl": "(exists ?hat (exists ?hammer (exists ?bottle (and (Is ?hat 'hat') (Is ?hammer 'hammer') (Is ?bottle 'bottle') (OnTopSide ?hat) (AlignedHorizontally ?hat ?hammer) (AlignedHorizontally ?hammer ?bottle) (forall ?plate (implies (Is ?plate 'plate') (exists ?cutting_board (exists ?sandwich (exists ?fork (exists ?game_controller (exists ?camera (and (Is ?cutting_board 'cutting_board') (Is ?sandwich 'sandwich') (Is ?fork 'fork') (Is ?game_controller 'game_controller') (Is ?camera 'camera') (Below ?plate ?hat) (AlignedHorizontally ?plate ?cutting_board) (SmallerThan ?plate ?cutting_board) (Below ?sandwich ?plate) (AlignedHorizontally ?sandwich ?fork) (SmallerThan ?fork ?plate) (OnBottomSide ?game_controller) (Below ?game_controller ?cutting_board) (AlignedHorizontally ?game_controller ?camera)))))))))))))",
+    "cnf": "(exists ?hat (exists ?hammer (exists ?bottle (forall ?plate (exists ?cutting_board (exists ?sandwich (exists ?fork (exists ?game_controller (exists ?camera (and (Is ?hat 'hat') (OnTopSide ?hat) (AlignedHorizontally ?hat ?hammer) (or (not (Is ?plate 'plate')) (Below ?plate ?hat)) (Is ?hammer 'hammer') (AlignedHorizontally ?hammer ?bottle) (or (not (Is ?plate 'plate')) (Is ?camera 'camera')) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?plate ?cutting_board)) (Is ?bottle 'bottle') (or (not (Is ?plate 'plate')) (Is ?game_controller 'game_controller')) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?game_controller ?camera)) (or (not (Is ?plate 'plate')) (SmallerThan ?plate ?cutting_board)) (or (not (Is ?plate 'plate')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?plate 'plate')) (Is ?fork 'fork')) (or (not (Is ?plate 'plate')) (OnBottomSide ?game_controller)) (or (not (Is ?plate 'plate')) (Below ?game_controller ?cutting_board)) (or (not (Is ?plate 'plate')) (Below ?sandwich ?plate)) (or (not (Is ?plate 'plate')) (Is ?sandwich 'sandwich')) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?sandwich ?fork)) (or (not (Is ?plate 'plate')) (SmallerThan ?fork ?plate))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "game_controller",
+        "hammer",
+        "hat",
+        "cutting_board",
+        "fork",
+        "camera",
+        "bottle",
+        "sandwich"
+    ]
+}

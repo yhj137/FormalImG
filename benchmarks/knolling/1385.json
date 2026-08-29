@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a black pan, a white cup, a gray phone, a red stapler, a carrot, and a wrench. The black pan is aligned horizontally with the white cup and the gray phone. The pan is larger than the cup, and the cup is larger than the phone. The red stapler is aligned vertically with the pan and is smaller than the pan. The carrot is aligned horizontally with the stapler, and the stapler is larger than the carrot. The wrench is aligned vertically with the cup, and the wrench is smaller than the pan. Finally, for every screwdriver in the scene, it is yellow and aligned vertically with the phone.",
+    "dsl": "(exists ?pan (exists ?cup (exists ?phone (exists ?stapler (exists ?carrot (exists ?wrench (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?cup 'cup') (Has ?cup 'white') (Is ?phone 'phone') (Has ?phone 'gray') (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?carrot 'carrot') (Is ?wrench 'wrench') (AlignedHorizontally ?pan ?cup) (AlignedHorizontally ?cup ?phone) (LargerThan ?pan ?cup) (LargerThan ?cup ?phone) (AlignedVertically ?pan ?stapler) (LargerThan ?pan ?stapler) (AlignedHorizontally ?stapler ?carrot) (LargerThan ?stapler ?carrot) (AlignedVertically ?cup ?wrench) (SmallerThan ?wrench ?pan) (forall ?sd (implies (Is ?sd 'screwdriver') (and (Has ?sd 'yellow') (AlignedVertically ?sd ?phone)))))))))))",
+    "cnf": "(exists ?pan (exists ?cup (exists ?phone (exists ?stapler (exists ?carrot (exists ?wrench (forall ?sd (and (Is ?pan 'pan') (Has ?pan 'black') (AlignedHorizontally ?pan ?cup) (LargerThan ?pan ?cup) (Has ?cup 'white') (AlignedHorizontally ?cup ?phone) (AlignedVertically ?pan ?stapler) (LargerThan ?cup ?phone) (Is ?cup 'cup') (Has ?phone 'gray') (LargerThan ?pan ?stapler) (Has ?stapler 'red') (AlignedVertically ?cup ?wrench) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sd ?phone)) (Is ?phone 'phone') (SmallerThan ?wrench ?pan) (AlignedHorizontally ?stapler ?carrot) (Is ?stapler 'stapler') (Is ?wrench 'wrench') (or (not (Is ?sd 'screwdriver')) (Has ?sd 'yellow')) (LargerThan ?stapler ?carrot) (Is ?carrot 'carrot')))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "wrench",
+        "carrot",
+        "phone",
+        "screwdriver",
+        "cup",
+        "pan"
+    ]
+}

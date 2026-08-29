@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the scene, there is a pair of headphones located to its left. Additionally, for each of these groups, there is a donut positioned on the top side of the image that is vertically aligned with the headphones.",
+    "dsl": "(and (forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?headphones (exists ?donut (and (Is ?headphones 'headphones') (Is ?donut 'donut') (LeftOf ?headphones ?suitcase) (OnTopSide ?donut) (AlignedVertically ?donut ?headphones)))))))",
+    "cnf": "(forall ?suitcase (exists ?headphones (exists ?donut (and (or (not (Is ?suitcase 'suitcase')) (Is ?headphones 'headphones')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?headphones ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?donut 'donut')) (or (not (Is ?suitcase 'suitcase')) (AlignedVertically ?donut ?headphones)) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?donut))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "suitcase",
+        "donut"
+    ]
+}

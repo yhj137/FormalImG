@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a camera, a mouse, a sock, and a fork arranged in a specific layout. The camera is positioned on the left side of the image. Located to the right of the camera is a mouse, which is physically smaller than the camera. To the right of the mouse lies a sock. Finally, a fork is placed to the right of the sock, positioned on the bottom side of the scene.",
+    "dsl": "(exists ?camera (exists ?mouse (exists ?sock (exists ?fork (and (Is ?camera 'camera') (Is ?mouse 'mouse') (Is ?sock 'sock') (Is ?fork 'fork') (OnLeftSide ?camera) (RightOf ?mouse ?camera) (SmallerThan ?mouse ?camera) (RightOf ?sock ?mouse) (RightOf ?fork ?sock) (OnBottomSide ?fork))))))",
+    "cnf": "(exists ?camera (exists ?mouse (exists ?sock (exists ?fork (and (Is ?camera 'camera') (OnLeftSide ?camera) (RightOf ?mouse ?camera) (SmallerThan ?mouse ?camera) (Is ?mouse 'mouse') (RightOf ?sock ?mouse) (Is ?sock 'sock') (RightOf ?fork ?sock) (Is ?fork 'fork') (OnBottomSide ?fork))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "mouse",
+        "sock",
+        "camera"
+    ]
+}

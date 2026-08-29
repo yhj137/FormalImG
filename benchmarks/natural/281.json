@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every sandwich is bitten and sits on a keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?s (implies (Is ?s 'sandwich') (exists ?k (and (Is ?k 'keyboard') (HasState ?s 'bitten') (On ?s ?k))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?s (exists ?k (and (or (not (Is ?s 'sandwich')) (Is ?k 'keyboard')) (or (not (Is ?s 'sandwich')) (On ?s ?k)) (or (not (Is ?s 'sandwich')) (HasState ?s 'bitten'))))))",
+    "k": 2,
+    "object_classes": [
+        "keyboard",
+        "sandwich"
+    ]
+}

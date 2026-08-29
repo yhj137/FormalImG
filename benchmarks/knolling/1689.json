@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement begins on the left side with a laptop. To the right of the laptop is a ruler, and to the right of the ruler is a sandwich; these three items are aligned horizontally, with the laptop being larger than the ruler. The scene follows a specific rule: for every tie present, it is positioned to the right of the sandwich. Associated with the tie are pliers, a spoon, a lemon, a glove, and a carrot. Specifically, the pliers are located to the right of the tie and aligned horizontally with it. The spoon is to the right of the pliers, and the lemon is to the right of the spoon. A glove is positioned on the top side of the image and is larger than the lemon. Finally, a carrot is placed to the left of the glove and is aligned horizontally with it.",
+    "dsl": "(exists ?laptop (exists ?ruler (exists ?sandwich (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?ruler 'ruler') (LeftOf ?laptop ?ruler) (AlignedHorizontally ?laptop ?ruler) (LargerThan ?laptop ?ruler) (Is ?sandwich 'sandwich') (LeftOf ?ruler ?sandwich) (AlignedHorizontally ?ruler ?sandwich) (forall ?tie (implies (Is ?tie 'tie') (exists ?pliers (exists ?spoon (exists ?lemon (exists ?glove (exists ?carrot (and (Is ?pliers 'pliers') (Is ?spoon 'spoon') (Is ?lemon 'lemon') (Is ?glove 'glove') (Is ?carrot 'carrot') (LeftOf ?sandwich ?tie) (LeftOf ?tie ?pliers) (AlignedHorizontally ?tie ?pliers) (LeftOf ?pliers ?spoon) (LeftOf ?spoon ?lemon) (OnTopSide ?glove) (LargerThan ?glove ?lemon) (LeftOf ?carrot ?glove) (AlignedHorizontally ?carrot ?glove)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?ruler (exists ?sandwich (forall ?tie (exists ?pliers (exists ?spoon (exists ?lemon (exists ?glove (exists ?carrot (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (LeftOf ?laptop ?ruler) (AlignedHorizontally ?laptop ?ruler) (Is ?ruler 'ruler') (LargerThan ?laptop ?ruler) (LeftOf ?ruler ?sandwich) (AlignedHorizontally ?ruler ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?tie 'tie')) (LeftOf ?sandwich ?tie)) (or (not (Is ?tie 'tie')) (Is ?carrot 'carrot')) (or (not (Is ?tie 'tie')) (LeftOf ?tie ?pliers)) (or (not (Is ?tie 'tie')) (Is ?glove 'glove')) (or (not (Is ?tie 'tie')) (LeftOf ?carrot ?glove)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?tie ?pliers)) (or (not (Is ?tie 'tie')) (Is ?pliers 'pliers')) (or (not (Is ?tie 'tie')) (Is ?lemon 'lemon')) (or (not (Is ?tie 'tie')) (OnTopSide ?glove)) (or (not (Is ?tie 'tie')) (LargerThan ?glove ?lemon)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?carrot ?glove)) (or (not (Is ?tie 'tie')) (LeftOf ?pliers ?spoon)) (or (not (Is ?tie 'tie')) (Is ?spoon 'spoon')) (or (not (Is ?tie 'tie')) (LeftOf ?spoon ?lemon))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "tie",
+        "pliers",
+        "lemon",
+        "carrot",
+        "spoon",
+        "sandwich",
+        "glove"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene featuring a man holding a hammer. A red toy car is next to the man. To the right of the man is a round pan with a fish next to it. All bottles are located to the left of the man.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'man') (forall ?b (implies (Is ?b 'bottle') (LeftOf ?b ?m))) (exists ?h (exists ?tc (exists ?p (exists ?f (and (Is ?h 'hammer') (Holding ?m ?h) (Is ?tc 'toy car') (HasColor ?tc 'red') (NextTo ?tc ?m) (Is ?p 'pan') (HasShape ?p 'round') (RightOf ?p ?m) (Is ?f 'fish') (NextTo ?f ?p)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (forall ?b (exists ?h (exists ?tc (exists ?p (exists ?f (and (Is ?m 'man') (or (not (Is ?b 'bottle')) (LeftOf ?b ?m)) (Holding ?m ?h) (NextTo ?tc ?m) (Is ?h 'hammer') (RightOf ?p ?m) (HasColor ?tc 'red') (HasShape ?p 'round') (NextTo ?f ?p) (Is ?tc 'toy car') (Is ?p 'pan') (Is ?f 'fish')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fish",
+        "bottle",
+        "man",
+        "toy car",
+        "hammer",
+        "pan"
+    ]
+}

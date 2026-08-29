@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This oil painting depicts a wooden boat. Every apple in the scene is inside the boat. Also inside the boat, a person is next to a bed located to the left of a bench. A round cup containing a metal spoon sits on the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?p (exists ?bed (exists ?bench (exists ?c (exists ?s (and (Is ?p 'person') (Is ?bed 'bed') (Is ?bench 'bench') (Is ?c 'cup') (Is ?s 'spoon') (HasShape ?c 'round') (HasMaterial ?s 'metal') (In ?p ?b) (NextTo ?p ?bed) (LeftOf ?bed ?bench) (On ?c ?bench) (In ?s ?c))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?a (exists ?p (exists ?bed (exists ?bench (exists ?c (exists ?s (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (or (not (Is ?a 'apple')) (In ?a ?b)) (In ?p ?b) (Is ?p 'person') (NextTo ?p ?bed) (Is ?bed 'bed') (LeftOf ?bed ?bench) (Is ?bench 'bench') (On ?c ?bench) (HasShape ?c 'round') (In ?s ?c) (Is ?c 'cup') (HasMaterial ?s 'metal') (Is ?s 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "person",
+        "bed",
+        "cup",
+        "boat",
+        "apple",
+        "spoon"
+    ]
+}

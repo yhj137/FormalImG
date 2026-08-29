@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a fork to the left of a rectangular bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?f (exists ?b (and (Is ?f 'fork') (Is ?b 'bed') (LeftOf ?f ?b) (HasShape ?b 'rectangular')))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?f (exists ?b (and (Is ?f 'fork') (LeftOf ?f ?b) (Is ?b 'bed') (HasShape ?b 'rectangular')))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "bed"
+    ]
+}

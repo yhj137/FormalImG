@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a refrigerator with a white bowl and a cup on top. Next to the refrigerator is a dog holding a teddy bear. All flowers are positioned to the left of the refrigerator, while a bird is to the right. A shirt lies to the left of the dog, with a jacket next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (exists ?d (exists ?t (exists ?bo (exists ?c (and (Is ?r 'refrigerator') (Is ?d 'dog') (NextTo ?d ?r) (Is ?t 'teddy bear') (Holding ?d ?t) (Is ?bo 'bowl') (HasColor ?bo 'white') (On ?bo ?r) (Is ?c 'cup') (On ?c ?r) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?r))) (exists ?bi (exists ?s (exists ?j (and (Is ?bi 'bird') (RightOf ?bi ?r) (Is ?s 'shirt') (LeftOf ?s ?d) (Is ?j 'jacket') (NextTo ?j ?s))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (exists ?d (exists ?t (exists ?bo (exists ?c (forall ?f (exists ?bi (exists ?s (exists ?j (and (Is ?r 'refrigerator') (NextTo ?d ?r) (On ?bo ?r) (Is ?d 'dog') (Holding ?d ?t) (On ?c ?r) (HasColor ?bo 'white') (LeftOf ?s ?d) (Is ?t 'teddy bear') (or (not (Is ?f 'flower')) (LeftOf ?f ?r)) (Is ?c 'cup') (Is ?bo 'bowl') (Is ?s 'shirt') (NextTo ?j ?s) (RightOf ?bi ?r) (Is ?j 'jacket') (Is ?bi 'bird'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "bowl",
+        "teddy bear",
+        "refrigerator",
+        "cup",
+        "shirt",
+        "dog",
+        "bird",
+        "flower"
+    ]
+}

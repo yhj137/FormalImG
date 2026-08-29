@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A hat is positioned on the top side of the image. There is a handbag located below the hat, meaning the hat is placed above the handbag. The handbag is visually larger than the hat. Furthermore, for every pen in the scene, it is aligned vertically with the handbag.",
+    "dsl": "(exists ?hat (exists ?handbag (and (Is ?hat 'hat') (Is ?handbag 'handbag') (OnTopSide ?hat) (Above ?hat ?handbag) (LargerThan ?handbag ?hat) (forall ?pen (implies (Is ?pen 'pen') (AlignedVertically ?pen ?handbag))))))",
+    "cnf": "(exists ?hat (exists ?handbag (forall ?pen (and (Is ?hat 'hat') (OnTopSide ?hat) (Above ?hat ?handbag) (LargerThan ?handbag ?hat) (Is ?handbag 'handbag') (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?handbag))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "handbag",
+        "pen"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the bottom side of the layout. For every sandwich present, there is a cutting board located above the backpack and a pizza to the right of the cutting board. The sandwich is placed above the pizza, and the backpack is larger than the sandwich.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?cutting_board (exists ?pizza (and (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Above ?cutting_board ?backpack) (RightOf ?pizza ?cutting_board) (Above ?sandwich ?pizza) (LargerThan ?backpack ?sandwich))))))))",
+    "cnf": "(exists ?backpack (forall ?sandwich (exists ?cutting_board (exists ?pizza (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (or (not (Is ?sandwich 'sandwich')) (Above ?cutting_board ?backpack)) (or (not (Is ?sandwich 'sandwich')) (LargerThan ?backpack ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?pizza ?cutting_board)) (or (not (Is ?sandwich 'sandwich')) (Is ?pizza 'pizza')) (or (not (Is ?sandwich 'sandwich')) (Above ?sandwich ?pizza)))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "cutting_board",
+        "backpack",
+        "pizza"
+    ]
+}

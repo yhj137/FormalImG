@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat and a remote located on the bottom side of the scene. The remote is positioned to the left of the hat, and they are aligned horizontally. Additionally, for every pair of pliers in the image, it is placed to the left of the remote and aligned horizontally with it.",
+    "dsl": "(exists ?hat (exists ?remote (and (Is ?hat 'hat') (Is ?remote 'remote') (OnBottomSide ?hat) (OnBottomSide ?remote) (LeftOf ?remote ?hat) (AlignedHorizontally ?remote ?hat) (forall ?pliers (implies (Is ?pliers 'pliers') (and (LeftOf ?pliers ?remote) (AlignedHorizontally ?pliers ?remote)))))))",
+    "cnf": "(exists ?hat (exists ?remote (forall ?pliers (and (Is ?hat 'hat') (OnBottomSide ?hat) (LeftOf ?remote ?hat) (AlignedHorizontally ?remote ?hat) (OnBottomSide ?remote) (or (not (Is ?pliers 'pliers')) (LeftOf ?pliers ?remote)) (Is ?remote 'remote') (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?pliers ?remote))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "remote",
+        "pliers"
+    ]
+}

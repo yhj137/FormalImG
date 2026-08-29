@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A brown boat is next to a tree. Every plate is round and placed on the boat. To the left of the tree is an elephant with a child riding on it, holding a yellow key. Inside the boat, a lamp is next to an oval mirror.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (exists ?b (and (Is ?b 'boat') (NextTo ?b ?t) (HasColor ?b 'brown') (forall ?p (implies (Is ?p 'plate') (and (HasShape ?p 'round') (On ?p ?b)))) (exists ?e (and (Is ?e 'elephant') (LeftOf ?e ?t) (exists ?c (and (Is ?c 'child') (On ?c ?e) (exists ?k (and (Is ?k 'key') (HasColor ?k 'yellow') (Holding ?c ?k) (exists ?l (and (Is ?l 'lamp') (In ?l ?b) (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?m ?l)))))))))))))))",
+    "cnf": "(exists ?t (exists ?b (forall ?p (exists ?e (exists ?c (exists ?k (exists ?l (exists ?m (and (Is ?t 'tree') (NextTo ?b ?t) (LeftOf ?e ?t) (Is ?b 'boat') (HasColor ?b 'brown') (Is ?e 'elephant') (On ?c ?e) (or (not (Is ?p 'plate')) (On ?p ?b)) (Is ?c 'child') (Holding ?c ?k) (In ?l ?b) (or (not (Is ?p 'plate')) (HasShape ?p 'round')) (HasColor ?k 'yellow') (Is ?l 'lamp') (NextTo ?m ?l) (Is ?k 'key') (HasShape ?m 'oval') (Is ?m 'mirror'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "tree",
+        "lamp",
+        "boat",
+        "mirror",
+        "child",
+        "elephant",
+        "plate"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant stands next to an open wardrobe containing a hammer. To the left of the wardrobe lies a pair of shoes with an orange inside. Every apple is positioned to the right of the hammer, and a piece of fruit sits to the left of the elephant.",
+    "dsl": "(exists ?e (exists ?w (exists ?h (exists ?s (exists ?o (and (Is ?e 'elephant') (Is ?w 'wardrobe') (NextTo ?e ?w) (HasState ?w 'open') (Is ?h 'hammer') (In ?h ?w) (Is ?s 'shoes') (LeftOf ?s ?w) (Is ?o 'orange') (In ?o ?s) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?h))) (exists ?f (and (Is ?f 'fruit') (LeftOf ?f ?e)))))))))",
+    "cnf": "(exists ?e (exists ?w (exists ?h (exists ?s (exists ?o (forall ?a (exists ?f (and (Is ?e 'elephant') (NextTo ?e ?w) (LeftOf ?f ?e) (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?f 'fruit') (In ?h ?w) (LeftOf ?s ?w) (Is ?h 'hammer') (or (not (Is ?a 'apple')) (RightOf ?a ?h)) (Is ?s 'shoes') (In ?o ?s) (Is ?o 'orange')))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "shoes",
+        "orange",
+        "hammer",
+        "apple",
+        "wardrobe"
+    ]
+}

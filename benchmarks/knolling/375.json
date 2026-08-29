@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of pliers located on the bottom side of the composition. Additionally, for every pair of glasses present in the scene, the pliers are visually larger than them.",
+    "dsl": "(exists ?pliers (and (Is ?pliers 'pliers') (OnBottomSide ?pliers) (forall ?glasses (implies (Is ?glasses 'glasses') (LargerThan ?pliers ?glasses)))))",
+    "cnf": "(exists ?pliers (forall ?glasses (and (Is ?pliers 'pliers') (OnBottomSide ?pliers) (or (not (Is ?glasses 'glasses')) (LargerThan ?pliers ?glasses)))))",
+    "k": 2,
+    "object_classes": [
+        "glasses",
+        "pliers"
+    ]
+}

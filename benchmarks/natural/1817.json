@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A man stands to the left of a gray elephant, upon which sits a black cat, with a blue bird to the cat's right. A metal hammer lies to the right of the man. To the man's left is a metal pan containing a red ball topped with an orange. A plastic clock is located to the left of the pan, with a yellow screwdriver placed to the right of the clock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?man (exists ?ele (exists ?hammer (exists ?cat (exists ?bird (exists ?pan (exists ?ball (exists ?org (exists ?clock (exists ?screw (and (Is ?man 'man') (Is ?ele 'elephant') (HasColor ?ele 'gray') (LeftOf ?man ?ele) (Is ?cat 'cat') (HasColor ?cat 'black') (On ?cat ?ele) (Is ?bird 'bird') (HasColor ?bird 'blue') (RightOf ?bird ?cat) (Is ?hammer 'hammer') (HasMaterial ?hammer 'metal') (RightOf ?hammer ?man) (Is ?pan 'pan') (HasMaterial ?pan 'metal') (LeftOf ?pan ?man) (Is ?ball 'ball') (HasColor ?ball 'red') (In ?ball ?pan) (Is ?org 'orange') (HasColor ?org 'orange') (On ?org ?ball) (Is ?clock 'clock') (HasMaterial ?clock 'plastic') (LeftOf ?clock ?pan) (Is ?screw 'screwdriver') (HasColor ?screw 'yellow') (RightOf ?screw ?clock)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?man (exists ?ele (exists ?hammer (exists ?cat (exists ?bird (exists ?pan (exists ?ball (exists ?org (exists ?clock (exists ?screw (and (Is ?man 'man') (LeftOf ?man ?ele) (RightOf ?hammer ?man) (HasColor ?ele 'gray') (On ?cat ?ele) (LeftOf ?pan ?man) (HasMaterial ?hammer 'metal') (Is ?ele 'elephant') (HasColor ?cat 'black') (RightOf ?bird ?cat) (HasMaterial ?pan 'metal') (In ?ball ?pan) (Is ?hammer 'hammer') (Is ?cat 'cat') (HasColor ?bird 'blue') (Is ?pan 'pan') (LeftOf ?clock ?pan) (HasColor ?ball 'red') (On ?org ?ball) (Is ?bird 'bird') (HasMaterial ?clock 'plastic') (RightOf ?screw ?clock) (Is ?ball 'ball') (HasColor ?org 'orange') (Is ?clock 'clock') (HasColor ?screw 'yellow') (Is ?org 'orange') (Is ?screw 'screwdriver')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "man",
+        "orange",
+        "bird",
+        "hammer",
+        "pan",
+        "clock",
+        "ball",
+        "cat",
+        "screwdriver"
+    ]
+}

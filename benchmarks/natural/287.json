@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every white plate has a blue butterfly to its left.",
+    "dsl": "(forall ?p (implies (and (Is ?p 'plate') (HasColor ?p 'white')) (exists ?b (and (Is ?b 'butterfly') (HasColor ?b 'blue') (LeftOf ?b ?p)))))",
+    "cnf": "(forall ?p (exists ?b (and (or (not (Is ?p 'plate')) (not (HasColor ?p 'white')) (Is ?b 'butterfly')) (or (not (Is ?p 'plate')) (not (HasColor ?p 'white')) (HasColor ?b 'blue')) (or (not (Is ?p 'plate')) (not (HasColor ?p 'white')) (LeftOf ?b ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "plate"
+    ]
+}

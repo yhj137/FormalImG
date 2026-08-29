@@ -1,0 +1,9 @@
+{
+    "prompt": "Every bottle in the image is made of glass.",
+    "dsl": "(forall ?b (implies (Is ?b 'bottle') (HasMaterial ?b 'glass')))",
+    "cnf": "(forall ?b (or (not (Is ?b 'bottle')) (HasMaterial ?b 'glass')))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

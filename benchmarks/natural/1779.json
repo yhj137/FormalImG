@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A man holding a hammer stands next to a bicycle with a shirt on it. The bicycle is located to the left of an open refrigerator. A table is positioned to the right of the refrigerator. A clock sits on the table, and every knife in the scene is also placed there. Additionally, there are shoes next to the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?h (exists ?b (exists ?s (exists ?r (exists ?t (exists ?c (and (Is ?m 'man') (Is ?h 'hammer') (Is ?b 'bicycle') (Is ?s 'shirt') (Is ?r 'refrigerator') (Is ?t 'table') (Is ?c 'clock') (Holding ?m ?h) (NextTo ?m ?b) (On ?s ?b) (LeftOf ?b ?r) (HasState ?r 'open') (RightOf ?t ?r) (On ?c ?t) (forall ?k (implies (Is ?k 'knife') (On ?k ?t))) (exists ?z (and (Is ?z 'shoes') (NextTo ?z ?t))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?h (exists ?b (exists ?s (exists ?r (exists ?t (exists ?c (forall ?k (exists ?z (and (Is ?m 'man') (Holding ?m ?h) (NextTo ?m ?b) (Is ?h 'hammer') (Is ?b 'bicycle') (On ?s ?b) (LeftOf ?b ?r) (Is ?s 'shirt') (Is ?r 'refrigerator') (HasState ?r 'open') (RightOf ?t ?r) (Is ?t 'table') (On ?c ?t) (or (not (Is ?k 'knife')) (On ?k ?t)) (Is ?c 'clock') (NextTo ?z ?t) (Is ?z 'shoes'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "knife",
+        "shoes",
+        "man",
+        "table",
+        "hammer",
+        "refrigerator",
+        "bicycle",
+        "clock"
+    ]
+}

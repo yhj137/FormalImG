@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is anchored by a gray laptop. For every sock in the scene, it is white and positioned above the laptop. To the right of the laptop is a sandwich. A wrench is placed above the sandwich. A yellow lemon is located to the right of the sandwich. Further to the right of the lemon is a carrot. Finally, a black lighter is placed above the carrot and is situated on the right side of the image.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (forall ?sock (implies (Is ?sock 'sock') (and (Has ?sock 'white') (Above ?sock ?laptop)))) (exists ?sandwich (exists ?wrench (exists ?lemon (exists ?carrot (exists ?lighter (and (Is ?sandwich 'sandwich') (Is ?wrench 'wrench') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?carrot 'carrot') (Is ?lighter 'lighter') (Has ?lighter 'black') (RightOf ?sandwich ?laptop) (Above ?wrench ?sandwich) (RightOf ?lemon ?sandwich) (RightOf ?carrot ?lemon) (Above ?lighter ?carrot) (OnRightSide ?lighter)))))))))",
+    "cnf": "(exists ?laptop (forall ?sock (exists ?sandwich (exists ?wrench (exists ?lemon (exists ?carrot (exists ?lighter (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (or (not (Is ?sock 'sock')) (Above ?sock ?laptop)) (RightOf ?sandwich ?laptop) (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (Is ?sandwich 'sandwich') (Above ?wrench ?sandwich) (RightOf ?lemon ?sandwich) (Is ?wrench 'wrench') (Has ?lemon 'yellow') (RightOf ?carrot ?lemon) (Is ?lemon 'lemon') (Is ?carrot 'carrot') (Above ?lighter ?carrot) (Has ?lighter 'black') (OnRightSide ?lighter) (Is ?lighter 'lighter')))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "wrench",
+        "lemon",
+        "carrot",
+        "lighter",
+        "sandwich"
+    ]
+}

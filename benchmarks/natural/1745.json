@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a man wearing a round hat and holding a metal screwdriver. To the left of the man is a broken bicycle. Next to the bicycle lies a rug with a basket on it. The basket contains a keyboard and every cake, while a shirt rests next to the basket.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?h (exists ?b (exists ?r (exists ?ba (and (Is ?m 'man') (Is ?sd 'screwdriver') (Is ?h 'hat') (Is ?b 'bicycle') (Is ?r 'rug') (Is ?ba 'basket') (Holding ?m ?sd) (HasMaterial ?sd 'metal') (On ?h ?m) (HasShape ?h 'round') (LeftOf ?b ?m) (HasState ?b 'broken') (NextTo ?r ?b) (On ?ba ?r) (forall ?c (implies (Is ?c 'cake') (In ?c ?ba))) (exists ?k (exists ?s (and (Is ?k 'keyboard') (Is ?s 'shirt') (In ?k ?ba) (NextTo ?s ?ba))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?sd (exists ?h (exists ?b (exists ?r (exists ?ba (forall ?c (exists ?k (exists ?s (and (Is ?m 'man') (Holding ?m ?sd) (On ?h ?m) (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (LeftOf ?b ?m) (Is ?h 'hat') (HasShape ?h 'round') (Is ?b 'bicycle') (HasState ?b 'broken') (NextTo ?r ?b) (Is ?r 'rug') (On ?ba ?r) (Is ?ba 'basket') (or (not (Is ?c 'cake')) (In ?c ?ba)) (In ?k ?ba) (NextTo ?s ?ba) (Is ?k 'keyboard') (Is ?s 'shirt'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "man",
+        "hat",
+        "screwdriver",
+        "cake",
+        "basket",
+        "shirt",
+        "rug",
+        "bicycle"
+    ]
+}

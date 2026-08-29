@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a vertical arrangement starting with a handbag on the bottom side, a game controller above the handbag, and headphones above the controller; these three items are aligned vertically. To the right of the handbag, for every spoon present, there is a specific arrangement next to it: a mouse is located to the right of the spoon (meaning the spoon is left of the mouse), a watch is above the mouse, and a cup is above the watch. The cup is positioned on the right side of the image, and the mouse, watch, and cup are aligned vertically.",
+    "dsl": "(exists ?handbag (exists ?controller (exists ?headphones (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Is ?controller 'game_controller') (Is ?headphones 'headphones') (Above ?controller ?handbag) (Above ?headphones ?controller) (AlignedVertically ?handbag ?controller) (AlignedVertically ?controller ?headphones) (forall ?spoon (implies (and (Is ?spoon 'spoon') (RightOf ?spoon ?handbag)) (exists ?mouse (exists ?watch (exists ?cup (and (Is ?mouse 'mouse') (Is ?watch 'watch') (Is ?cup 'cup') (LeftOf ?spoon ?mouse) (Above ?watch ?mouse) (Above ?cup ?watch) (AlignedVertically ?mouse ?watch) (AlignedVertically ?watch ?cup) (OnRightSide ?cup)))))))))))",
+    "cnf": "(exists ?handbag (exists ?controller (exists ?headphones (forall ?spoon (exists ?mouse (exists ?watch (exists ?cup (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Above ?controller ?handbag) (AlignedVertically ?handbag ?controller) (Is ?controller 'game_controller') (Above ?headphones ?controller) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (Is ?mouse 'mouse')) (AlignedVertically ?controller ?headphones) (Is ?headphones 'headphones') (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (Is ?watch 'watch')) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (LeftOf ?spoon ?mouse)) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (Is ?cup 'cup')) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (Above ?watch ?mouse)) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (Above ?cup ?watch)) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (AlignedVertically ?mouse ?watch)) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (AlignedVertically ?watch ?cup)) (or (not (Is ?spoon 'spoon')) (not (RightOf ?spoon ?handbag)) (OnRightSide ?cup))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "cup",
+        "game_controller",
+        "handbag",
+        "mouse",
+        "spoon",
+        "headphones"
+    ]
+}

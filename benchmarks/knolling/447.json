@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a stapler, a hat, and a shirt. The shirt is located on the bottom side of the layout and is positioned below the hat. The stapler is arranged to the right of the hat. Additionally, the shirt is visually larger than the stapler.",
+    "dsl": "(exists ?stapler (exists ?hat (exists ?shirt (and (Is ?stapler 'stapler') (Is ?hat 'hat') (Is ?shirt 'shirt') (OnBottomSide ?shirt) (Below ?shirt ?hat) (RightOf ?stapler ?hat) (LargerThan ?shirt ?stapler)))))",
+    "cnf": "(exists ?stapler (exists ?hat (exists ?shirt (and (Is ?stapler 'stapler') (RightOf ?stapler ?hat) (LargerThan ?shirt ?stapler) (Below ?shirt ?hat) (Is ?hat 'hat') (OnBottomSide ?shirt) (Is ?shirt 'shirt')))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "stapler",
+        "shirt"
+    ]
+}

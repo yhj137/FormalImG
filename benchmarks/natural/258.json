@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a closed wardrobe to the left of a plate.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?p (and (Is ?w 'wardrobe') (HasState ?w 'closed') (Is ?p 'plate') (LeftOf ?w ?p)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?p (and (Is ?w 'wardrobe') (HasState ?w 'closed') (LeftOf ?w ?p) (Is ?p 'plate')))))",
+    "k": 2,
+    "object_classes": [
+        "wardrobe",
+        "plate"
+    ]
+}

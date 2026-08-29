@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a rusty bus to the left of a horse. The horse is next to a bench adjacent to a table, on which sits a bowl containing a plant.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bus (exists ?horse (exists ?bench (exists ?table (exists ?bowl (exists ?plant (and (Is ?bus 'bus') (Is ?horse 'horse') (Is ?bench 'bench') (Is ?table 'table') (Is ?bowl 'bowl') (Is ?plant 'plant') (HasState ?bus 'rusty') (LeftOf ?bus ?horse) (NextTo ?horse ?bench) (NextTo ?bench ?table) (On ?bowl ?table) (In ?plant ?bowl)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bus (exists ?horse (exists ?bench (exists ?table (exists ?bowl (exists ?plant (and (Is ?bus 'bus') (HasState ?bus 'rusty') (LeftOf ?bus ?horse) (Is ?horse 'horse') (NextTo ?horse ?bench) (Is ?bench 'bench') (NextTo ?bench ?table) (Is ?table 'table') (On ?bowl ?table) (Is ?bowl 'bowl') (In ?plant ?bowl) (Is ?plant 'plant')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "horse",
+        "plant",
+        "table",
+        "bowl",
+        "bus"
+    ]
+}

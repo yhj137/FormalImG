@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene. A person holding a cake stands next to a chair. To the left of the chair is a turned-on lamp, and every flower in the scene is positioned to the left of that lamp. A blue backpack containing a book and a fruit rests next to the chair, with a round ball located beside the backpack.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (exists ?c (exists ?l (exists ?bp (exists ?ck (exists ?b (and (Is ?p 'person') (Is ?c 'chair') (Is ?l 'lamp') (Is ?bp 'backpack') (Is ?ck 'cake') (Is ?b 'ball') (Holding ?p ?ck) (NextTo ?p ?c) (LeftOf ?l ?c) (HasState ?l 'on') (NextTo ?bp ?c) (HasColor ?bp 'blue') (HasShape ?b 'round') (NextTo ?b ?bp) (forall ?fl (implies (Is ?fl 'flower') (LeftOf ?fl ?l))) (exists ?bk (exists ?fr (and (Is ?bk 'book') (Is ?fr 'fruit') (In ?bk ?bp) (In ?fr ?bp))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?c (exists ?l (exists ?bp (exists ?ck (exists ?b (forall ?fl (exists ?bk (exists ?fr (and (Is ?p 'person') (Holding ?p ?ck) (NextTo ?p ?c) (Is ?ck 'cake') (Is ?c 'chair') (LeftOf ?l ?c) (NextTo ?bp ?c) (Is ?l 'lamp') (HasState ?l 'on') (Is ?bp 'backpack') (HasColor ?bp 'blue') (or (not (Is ?fl 'flower')) (LeftOf ?fl ?l)) (NextTo ?b ?bp) (In ?bk ?bp) (HasShape ?b 'round') (In ?fr ?bp) (Is ?bk 'book') (Is ?b 'ball') (Is ?fr 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "person",
+        "ball",
+        "lamp",
+        "backpack",
+        "cake",
+        "fruit",
+        "chair",
+        "book",
+        "flower"
+    ]
+}

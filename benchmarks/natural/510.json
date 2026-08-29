@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a brown bookshelf. Every tree is located to the left of the bookshelf, and an elephant is next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (forall ?t (implies (Is ?t 'tree') (LeftOf ?t ?b))) (exists ?e (and (Is ?e 'elephant') (NextTo ?e ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?t (exists ?e (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (or (not (Is ?t 'tree')) (LeftOf ?t ?b)) (NextTo ?e ?b) (Is ?e 'elephant'))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "bookshelf",
+        "tree"
+    ]
+}

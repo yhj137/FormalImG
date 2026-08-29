@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag on the left side. For every wrench in the display, which is smaller than the handbag, there is a hammer positioned above it and a drill positioned below it. On the right side, there is a pair of pliers that is larger than the wrench. Arranged relative to the pliers are a glove above it and a bowl below it. Furthermore, a carrot is placed above the bowl, being smaller than the bowl, and a sandwich is placed below the bowl.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?hammer (exists ?drill (exists ?pliers (exists ?glove (exists ?bowl (exists ?carrot (exists ?sandwich (and (Is ?hammer 'hammer') (Is ?drill 'drill') (Is ?pliers 'pliers') (Is ?glove 'glove') (Is ?bowl 'bowl') (Is ?carrot 'carrot') (Is ?sandwich 'sandwich') (SmallerThan ?wrench ?handbag) (Above ?hammer ?wrench) (Below ?drill ?wrench) (LargerThan ?pliers ?wrench) (OnRightSide ?pliers) (Above ?glove ?pliers) (Below ?bowl ?pliers) (Above ?carrot ?bowl) (SmallerThan ?carrot ?bowl) (Below ?sandwich ?bowl)))))))))))))",
+    "cnf": "(exists ?handbag (forall ?wrench (exists ?hammer (exists ?drill (exists ?pliers (exists ?glove (exists ?bowl (exists ?carrot (exists ?sandwich (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?handbag)) (or (not (Is ?wrench 'wrench')) (Is ?sandwich 'sandwich')) (or (not (Is ?wrench 'wrench')) (Above ?hammer ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?carrot 'carrot')) (or (not (Is ?wrench 'wrench')) (Below ?sandwich ?bowl)) (or (not (Is ?wrench 'wrench')) (Below ?drill ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?hammer 'hammer')) (or (not (Is ?wrench 'wrench')) (Is ?bowl 'bowl')) (or (not (Is ?wrench 'wrench')) (Above ?carrot ?bowl)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?carrot ?bowl)) (or (not (Is ?wrench 'wrench')) (LargerThan ?pliers ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?drill 'drill')) (or (not (Is ?wrench 'wrench')) (Is ?glove 'glove')) (or (not (Is ?wrench 'wrench')) (Below ?bowl ?pliers)) (or (not (Is ?wrench 'wrench')) (OnRightSide ?pliers)) (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (or (not (Is ?wrench 'wrench')) (Above ?glove ?pliers))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "wrench",
+        "carrot",
+        "hammer",
+        "handbag",
+        "drill",
+        "bowl",
+        "sandwich",
+        "glove"
+    ]
+}

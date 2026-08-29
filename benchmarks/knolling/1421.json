@@ -1,0 +1,16 @@
+{
+    "prompt": "Create a Knolling-style arrangement with eight objects organized into two horizontally aligned rows. The top row contains, from left to right, a watch, a red stapler, a screwdriver, and a pair of glasses. The bottom row consists of a sandwich, a carrot, a remote, and a brown handbag, positioned in that order from left to right. To maintain the grid layout, the sandwich is placed below the watch, the carrot below the stapler, the remote below the screwdriver, and the handbag below the glasses. Additionally, the handbag appears larger than the watch, and the sandwich is larger than the carrot.",
+    "dsl": "(exists ?w (exists ?st (exists ?sc (exists ?g (exists ?sa (exists ?c (exists ?r (exists ?h (and (Is ?w 'watch') (Is ?st 'stapler') (Has ?st 'red') (Is ?sc 'screwdriver') (Is ?g 'glasses') (Is ?sa 'sandwich') (Is ?c 'carrot') (Is ?r 'remote') (Is ?h 'handbag') (Has ?h 'brown') (LeftOf ?w ?st) (LeftOf ?st ?sc) (LeftOf ?sc ?g) (AlignedHorizontally ?w ?st) (AlignedHorizontally ?st ?sc) (AlignedHorizontally ?sc ?g) (LeftOf ?sa ?c) (LeftOf ?c ?r) (LeftOf ?r ?h) (AlignedHorizontally ?sa ?c) (AlignedHorizontally ?c ?r) (AlignedHorizontally ?r ?h) (Below ?sa ?w) (Below ?c ?st) (Below ?r ?sc) (Below ?h ?g) (LargerThan ?h ?w) (LargerThan ?sa ?c))))))))))",
+    "cnf": "(exists ?w (exists ?st (exists ?sc (exists ?g (exists ?sa (exists ?c (exists ?r (exists ?h (and (Is ?w 'watch') (LeftOf ?w ?st) (AlignedHorizontally ?w ?st) (Has ?st 'red') (LeftOf ?st ?sc) (Below ?sa ?w) (AlignedHorizontally ?st ?sc) (Is ?st 'stapler') (Is ?sc 'screwdriver') (LeftOf ?sc ?g) (LargerThan ?h ?w) (AlignedHorizontally ?sa ?c) (LargerThan ?sa ?c) (Below ?c ?st) (AlignedHorizontally ?sc ?g) (Is ?g 'glasses') (Below ?h ?g) (LeftOf ?sa ?c) (LeftOf ?c ?r) (AlignedHorizontally ?c ?r) (Below ?r ?sc) (AlignedHorizontally ?r ?h) (Is ?sa 'sandwich') (Is ?c 'carrot') (Is ?r 'remote') (LeftOf ?r ?h) (Has ?h 'brown') (Is ?h 'handbag'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "stapler",
+        "carrot",
+        "watch",
+        "screwdriver",
+        "handbag",
+        "sandwich"
+    ]
+}

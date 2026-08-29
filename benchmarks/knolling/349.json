@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a wallet located on the left side of the scene. Furthermore, every donut present in the image is aligned vertically with this wallet.",
+    "dsl": "(exists ?w (and (Is ?w 'wallet') (OnLeftSide ?w) (forall ?d (implies (Is ?d 'donut') (AlignedVertically ?d ?w)))))",
+    "cnf": "(exists ?w (forall ?d (and (Is ?w 'wallet') (OnLeftSide ?w) (or (not (Is ?d 'donut')) (AlignedVertically ?d ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "wallet",
+        "donut"
+    ]
+}

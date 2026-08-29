@@ -1,0 +1,10 @@
+{
+    "prompt": "A cyberpunk style scene where every horse is holding a triangular knife.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?h (implies (Is ?h 'horse') (exists ?k (and (Is ?k 'knife') (HasShape ?k 'triangular') (Holding ?h ?k))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?h (exists ?k (and (or (not (Is ?h 'horse')) (Is ?k 'knife')) (or (not (Is ?h 'horse')) (HasShape ?k 'triangular')) (or (not (Is ?h 'horse')) (Holding ?h ?k))))))",
+    "k": 2,
+    "object_classes": [
+        "horse",
+        "knife"
+    ]
+}

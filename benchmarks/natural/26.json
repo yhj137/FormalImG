@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting of a sleeping dog.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (and (Is ?d 'dog') (HasState ?d 'sleeping'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (and (Is ?d 'dog') (HasState ?d 'sleeping'))))",
+    "k": 1,
+    "object_classes": [
+        "dog"
+    ]
+}

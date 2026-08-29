@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a game controller positioned on the top side of the layout. Every ruler present in the scene is smaller than this game controller.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnTopSide ?gc) (forall ?r (implies (Is ?r 'ruler') (SmallerThan ?r ?gc)))))",
+    "cnf": "(exists ?gc (forall ?r (and (Is ?gc 'game_controller') (OnTopSide ?gc) (or (not (Is ?r 'ruler')) (SmallerThan ?r ?gc)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "game_controller"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a monitor, a pen, a ruler, and a knife. The pen is placed below the monitor, and the ruler is positioned below the pen. A knife is located to the right of the ruler. The monitor is visually larger than the pen. Additionally, for every hat in the scene, there is a drill, a lemon, and a suitcase associated with it. The hat is positioned to the right of the monitor. The drill is below the hat, while the lemon is to the right of the drill. The suitcase is situated below the lemon, is located on the right side of the image, and is larger than the drill.",
+    "dsl": "(exists ?monitor (exists ?pen (exists ?ruler (exists ?knife (and (Is ?monitor 'monitor') (Is ?pen 'pen') (Is ?ruler 'ruler') (Is ?knife 'knife') (Below ?pen ?monitor) (Below ?ruler ?pen) (RightOf ?knife ?ruler) (LargerThan ?monitor ?pen) (forall ?hat (implies (Is ?hat 'hat') (exists ?drill (exists ?lemon (exists ?suitcase (and (Is ?drill 'drill') (Is ?lemon 'lemon') (Is ?suitcase 'suitcase') (RightOf ?hat ?monitor) (Below ?drill ?hat) (RightOf ?lemon ?drill) (Below ?suitcase ?lemon) (OnRightSide ?suitcase) (LargerThan ?suitcase ?drill))))))))))))",
+    "cnf": "(exists ?monitor (exists ?pen (exists ?ruler (exists ?knife (forall ?hat (exists ?drill (exists ?lemon (exists ?suitcase (and (Is ?monitor 'monitor') (Below ?pen ?monitor) (LargerThan ?monitor ?pen) (Is ?pen 'pen') (Below ?ruler ?pen) (or (not (Is ?hat 'hat')) (RightOf ?hat ?monitor)) (Is ?ruler 'ruler') (RightOf ?knife ?ruler) (or (not (Is ?hat 'hat')) (Is ?suitcase 'suitcase')) (or (not (Is ?hat 'hat')) (Below ?drill ?hat)) (Is ?knife 'knife') (or (not (Is ?hat 'hat')) (Is ?lemon 'lemon')) (or (not (Is ?hat 'hat')) (Below ?suitcase ?lemon)) (or (not (Is ?hat 'hat')) (Is ?drill 'drill')) (or (not (Is ?hat 'hat')) (RightOf ?lemon ?drill)) (or (not (Is ?hat 'hat')) (OnRightSide ?suitcase)) (or (not (Is ?hat 'hat')) (LargerThan ?suitcase ?drill)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "pen",
+        "lemon",
+        "drill",
+        "hat",
+        "knife",
+        "monitor",
+        "suitcase"
+    ]
+}

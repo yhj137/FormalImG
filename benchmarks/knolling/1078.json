@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white shirt. For every tie in the image, it is red and placed below the shirt. Above the shirt, there is a pair of glasses. To the left of the shirt is a black keyboard. A yellow glove is positioned to the left of the keyboard, and the keyboard is larger than the glove. Finally, a lemon is located below the glove.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'white') (forall ?tie (implies (Is ?tie 'tie') (and (Has ?tie 'red') (Below ?tie ?shirt)))) (exists ?glasses (and (Is ?glasses 'glasses') (Above ?glasses ?shirt))) (exists ?keyboard (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (LeftOf ?keyboard ?shirt) (exists ?glove (and (Is ?glove 'glove') (Has ?glove 'yellow') (LeftOf ?glove ?keyboard) (LargerThan ?keyboard ?glove) (exists ?lemon (and (Is ?lemon 'lemon') (Below ?lemon ?glove)))))))))",
+    "cnf": "(exists ?shirt (forall ?tie (exists ?glasses (exists ?keyboard (exists ?glove (exists ?lemon (and (Is ?shirt 'shirt') (Has ?shirt 'white') (or (not (Is ?tie 'tie')) (Below ?tie ?shirt)) (Above ?glasses ?shirt) (or (not (Is ?tie 'tie')) (Has ?tie 'red')) (LeftOf ?keyboard ?shirt) (Is ?glasses 'glasses') (Has ?keyboard 'black') (LeftOf ?glove ?keyboard) (Is ?keyboard 'keyboard') (LargerThan ?keyboard ?glove) (Has ?glove 'yellow') (Below ?lemon ?glove) (Is ?glove 'glove') (Is ?lemon 'lemon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "keyboard",
+        "lemon",
+        "glove",
+        "shirt"
+    ]
+}

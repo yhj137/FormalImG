@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a tree next to a rock, with a boat beside the rock. All plates in the scene are placed on the rock. To the right of the tree sits a basket. A woman stands next to the basket, holding a turned-on phone. A book rests on the basket, with a pair of glasses on top of the book.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?b (and (Is ?t 'tree') (Is ?r 'rock') (Is ?b 'boat') (NextTo ?r ?t) (NextTo ?b ?r) (forall ?p (implies (Is ?p 'plate') (On ?p ?r))) (exists ?bskt (exists ?w (exists ?ph (exists ?bk (exists ?g (and (Is ?bskt 'basket') (Is ?w 'woman') (Is ?ph 'phone') (Is ?bk 'book') (Is ?g 'glasses') (RightOf ?bskt ?t) (NextTo ?w ?bskt) (Holding ?w ?ph) (HasState ?ph 'on') (On ?bk ?bskt) (On ?g ?bk))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?b (forall ?p (exists ?bskt (exists ?w (exists ?ph (exists ?bk (exists ?g (and (Is ?t 'tree') (NextTo ?r ?t) (RightOf ?bskt ?t) (Is ?r 'rock') (NextTo ?b ?r) (Is ?bskt 'basket') (NextTo ?w ?bskt) (or (not (Is ?p 'plate')) (On ?p ?r)) (Is ?b 'boat') (On ?bk ?bskt) (Is ?w 'woman') (Holding ?w ?ph) (Is ?bk 'book') (On ?g ?bk) (Is ?ph 'phone') (HasState ?ph 'on') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "woman",
+        "glasses",
+        "rock",
+        "tree",
+        "book",
+        "phone",
+        "basket",
+        "boat",
+        "plate"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a metal pan, with every sandwich positioned to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'pan') (HasMaterial ?p 'metal') (forall ?s (implies (Is ?s 'sandwich') (LeftOf ?s ?p))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (forall ?s (and (Is ?p 'pan') (HasMaterial ?p 'metal') (or (not (Is ?s 'sandwich')) (LeftOf ?s ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "pan"
+    ]
+}

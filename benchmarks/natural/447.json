@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of a woman holding an apple, with a round clock next to her.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?a (exists ?c (and (Is ?w 'woman') (Is ?a 'apple') (Is ?c 'clock') (Holding ?w ?a) (NextTo ?c ?w) (HasShape ?c 'round'))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?a (exists ?c (and (Is ?w 'woman') (Holding ?w ?a) (NextTo ?c ?w) (Is ?a 'apple') (Is ?c 'clock') (HasShape ?c 'round'))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "apple",
+        "woman"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a monitor. For every pair of pliers in the image, the pliers are located vertically below the monitor and are positioned on the bottom side of the composition.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (forall ?pliers (implies (Is ?pliers 'pliers') (and (Below ?pliers ?monitor) (OnBottomSide ?pliers))))))",
+    "cnf": "(exists ?monitor (forall ?pliers (and (Is ?monitor 'monitor') (or (not (Is ?pliers 'pliers')) (Below ?pliers ?monitor)) (or (not (Is ?pliers 'pliers')) (OnBottomSide ?pliers)))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "pliers"
+    ]
+}

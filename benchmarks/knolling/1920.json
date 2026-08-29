@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a handbag, which is larger than the wallet located below it. To the right of the handbag is a blue shirt. A red tie is positioned below the shirt, and a hat is above the shirt. For every bottle found to the right of the shirt, there is a bowl below it. To the right of the bowl is a monitor, which is larger than the bowl. Below the monitor is a wrench, and a screwdriver is located to the left of the wrench.",
+    "dsl": "(exists ?handbag (exists ?wallet (exists ?shirt (exists ?tie (exists ?hat (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?wallet 'wallet') (Below ?wallet ?handbag) (LargerThan ?handbag ?wallet) (Is ?shirt 'shirt') (Has ?shirt 'blue') (RightOf ?shirt ?handbag) (Is ?tie 'tie') (Has ?tie 'red') (Below ?tie ?shirt) (Is ?hat 'hat') (Above ?hat ?shirt) (forall ?bottle (implies (and (Is ?bottle 'bottle') (RightOf ?bottle ?shirt)) (exists ?bowl (exists ?monitor (exists ?wrench (exists ?screwdriver (and (Is ?bowl 'bowl') (Below ?bowl ?bottle) (Is ?monitor 'monitor') (RightOf ?monitor ?bowl) (LargerThan ?monitor ?bowl) (Is ?wrench 'wrench') (Below ?wrench ?monitor) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?wrench))))))))))))))",
+    "cnf": "(exists ?handbag (exists ?wallet (exists ?shirt (exists ?tie (exists ?hat (forall ?bottle (exists ?bowl (exists ?monitor (exists ?wrench (exists ?screwdriver (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Below ?wallet ?handbag) (LargerThan ?handbag ?wallet) (Is ?wallet 'wallet') (RightOf ?shirt ?handbag) (Has ?shirt 'blue') (Below ?tie ?shirt) (Is ?shirt 'shirt') (Above ?hat ?shirt) (Has ?tie 'red') (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Is ?bowl 'bowl')) (Is ?hat 'hat') (Is ?tie 'tie') (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Below ?bowl ?bottle)) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Is ?monitor 'monitor')) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (RightOf ?monitor ?bowl)) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (LargerThan ?monitor ?bowl)) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Is ?wrench 'wrench')) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Below ?wrench ?monitor)) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?bottle 'bottle')) (not (RightOf ?bottle ?shirt)) (LeftOf ?screwdriver ?wrench)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "wrench",
+        "screwdriver",
+        "handbag",
+        "hat",
+        "wallet",
+        "bottle",
+        "bowl",
+        "monitor",
+        "shirt"
+    ]
+}

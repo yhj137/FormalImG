@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a single bottle positioned on the right side of the scene.",
+    "dsl": "(exists ?bottle (and (Is ?bottle 'bottle') (OnRightSide ?bottle)))",
+    "cnf": "(exists ?bottle (and (Is ?bottle 'bottle') (OnRightSide ?bottle)))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a cat sleeping on a sofa. A wooden wardrobe stands next to the sofa. Inside the wardrobe is a knife, and every flower in the scene is positioned next to the cat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (exists ?c (exists ?w (and (Is ?s 'sofa') (Is ?c 'cat') (HasState ?c 'sleeping') (On ?c ?s) (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (NextTo ?w ?s) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?c))) (exists ?k (and (Is ?k 'knife') (In ?k ?w))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (exists ?c (exists ?w (forall ?f (exists ?k (and (Is ?s 'sofa') (On ?c ?s) (NextTo ?w ?s) (HasState ?c 'sleeping') (or (not (Is ?f 'flower')) (NextTo ?f ?c)) (HasMaterial ?w 'wooden') (In ?k ?w) (Is ?c 'cat') (Is ?w 'wardrobe') (Is ?k 'knife'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sofa",
+        "knife",
+        "flower",
+        "cat",
+        "wardrobe"
+    ]
+}

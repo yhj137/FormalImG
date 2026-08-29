@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. Every house contains a bed with a sleeping child, a table with a screwdriver, and a desk with dirty shoes.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?h (implies (Is ?h 'house') (exists ?c (exists ?b (exists ?d (exists ?t (exists ?sd (exists ?sh (and (Is ?c 'child') (Is ?b 'bed') (Is ?d 'desk') (Is ?t 'table') (Is ?sd 'screwdriver') (Is ?sh 'shoes') (In ?b ?h) (In ?d ?h) (In ?t ?h) (In ?c ?b) (HasState ?c 'sleeping') (On ?sd ?t) (On ?sh ?d) (HasState ?sh 'dirty')))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?h (exists ?c (exists ?b (exists ?d (exists ?t (exists ?sd (exists ?sh (and (or (not (Is ?h 'house')) (Is ?c 'child')) (or (not (Is ?h 'house')) (Is ?b 'bed')) (or (not (Is ?h 'house')) (In ?c ?b)) (or (not (Is ?h 'house')) (Is ?d 'desk')) (or (not (Is ?h 'house')) (In ?b ?h)) (or (not (Is ?h 'house')) (In ?t ?h)) (or (not (Is ?h 'house')) (HasState ?c 'sleeping')) (or (not (Is ?h 'house')) (Is ?t 'table')) (or (not (Is ?h 'house')) (In ?d ?h)) (or (not (Is ?h 'house')) (Is ?sh 'shoes')) (or (not (Is ?h 'house')) (On ?sd ?t)) (or (not (Is ?h 'house')) (Is ?sd 'screwdriver')) (or (not (Is ?h 'house')) (On ?sh ?d)) (or (not (Is ?h 'house')) (HasState ?sh 'dirty')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "table",
+        "desk",
+        "shoes",
+        "bed",
+        "screwdriver",
+        "house",
+        "child"
+    ]
+}

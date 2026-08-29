@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a dog holding a fruit. A broken bicycle stands next to the dog, and a backpack is positioned to the left of the bicycle. All plants in the scene are located to the left of the backpack. Beside the backpack lies a keyboard with a book resting on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?f (exists ?b (exists ?bp (and (Is ?d 'dog') (Is ?f 'fruit') (Is ?b 'bicycle') (Is ?bp 'backpack') (Holding ?d ?f) (HasState ?b 'broken') (NextTo ?b ?d) (LeftOf ?bp ?b) (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?bp))) (exists ?k (exists ?bk (and (Is ?k 'keyboard') (Is ?bk 'book') (NextTo ?k ?bp) (On ?bk ?k))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?f (exists ?b (exists ?bp (forall ?p (exists ?k (exists ?bk (and (Is ?d 'dog') (Holding ?d ?f) (NextTo ?b ?d) (Is ?f 'fruit') (HasState ?b 'broken') (LeftOf ?bp ?b) (Is ?b 'bicycle') (Is ?bp 'backpack') (or (not (Is ?p 'plant')) (LeftOf ?p ?bp)) (NextTo ?k ?bp) (Is ?k 'keyboard') (On ?bk ?k) (Is ?bk 'book'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "book",
+        "backpack",
+        "plant",
+        "bicycle",
+        "dog",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase positioned on the top side of the frame, there is a set of items arranged horizontally below it: a cutting board, headphones, a remote, and a screwdriver. The suitcase is visually larger than the cutting board. The screwdriver is located on the right side of the image and is smaller than the remote.",
+    "dsl": "(forall ?s (implies (and (Is ?s 'suitcase') (OnTopSide ?s)) (exists ?c (exists ?h (exists ?r (exists ?d (and (Is ?c 'cutting_board') (Is ?h 'headphones') (Is ?r 'remote') (Is ?d 'screwdriver') (Below ?c ?s) (Below ?h ?s) (Below ?r ?s) (Below ?d ?s) (AlignedHorizontally ?c ?h) (AlignedHorizontally ?h ?r) (AlignedHorizontally ?r ?d) (LargerThan ?s ?c) (SmallerThan ?d ?r) (OnRightSide ?d))))))))",
+    "cnf": "(forall ?s (exists ?c (exists ?h (exists ?r (exists ?d (and (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?c 'cutting_board')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Below ?c ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?h 'headphones')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?c ?h)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?d 'screwdriver')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Below ?h ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Is ?r 'remote')) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (LargerThan ?s ?c)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Below ?d ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?h ?r)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (Below ?r ?s)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (AlignedHorizontally ?r ?d)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (SmallerThan ?d ?r)) (or (not (Is ?s 'suitcase')) (not (OnTopSide ?s)) (OnRightSide ?d))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "suitcase",
+        "screwdriver",
+        "cutting_board",
+        "headphones"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill located on the bottom side and a bottle aligned vertically with it. Furthermore, for every apple in the image, it is visually smaller than the drill and is positioned in horizontal alignment with the bottle.",
+    "dsl": "(exists ?d (exists ?b (and (Is ?d 'drill') (OnBottomSide ?d) (Is ?b 'bottle') (AlignedVertically ?b ?d) (forall ?a (implies (Is ?a 'apple') (and (SmallerThan ?a ?d) (AlignedHorizontally ?a ?b)))))))",
+    "cnf": "(exists ?d (exists ?b (forall ?a (and (Is ?d 'drill') (OnBottomSide ?d) (AlignedVertically ?b ?d) (or (not (Is ?a 'apple')) (SmallerThan ?a ?d)) (Is ?b 'bottle') (or (not (Is ?a 'apple')) (AlignedHorizontally ?a ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "drill",
+        "apple"
+    ]
+}

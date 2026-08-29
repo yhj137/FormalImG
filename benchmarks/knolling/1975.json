@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor, headphones, and a game controller are aligned horizontally on the top side of the image, with the monitor being visually larger than the game controller. Arranged below them are a book, a hat, and a black pan; specifically, the book aligns vertically with the headphones, the hat with the monitor, and the pan with the game controller. On the bottom side, a wrench aligns vertically with the hat, and a bowl aligns vertically with the book. Additionally, for every knife in the scene, there is a glove aligned vertically with it, and that glove is also horizontally aligned with the wrench.",
+    "dsl": "(exists ?monitor (exists ?headphones (exists ?controller (exists ?book (exists ?hat (exists ?pan (exists ?bowl (exists ?wrench (and (Is ?monitor 'monitor') (Is ?headphones 'headphones') (Is ?controller 'game_controller') (Is ?book 'book') (Is ?hat 'hat') (Is ?pan 'pan') (Is ?bowl 'bowl') (Is ?wrench 'wrench') (OnTopSide ?monitor) (OnBottomSide ?wrench) (Has ?pan 'black') (LargerThan ?monitor ?controller) (AlignedHorizontally ?monitor ?headphones) (AlignedHorizontally ?monitor ?controller) (AlignedVertically ?headphones ?book) (AlignedVertically ?monitor ?hat) (AlignedVertically ?controller ?pan) (AlignedVertically ?book ?bowl) (AlignedVertically ?hat ?wrench) (forall ?k (implies (Is ?k 'knife') (exists ?g (and (Is ?g 'glove') (AlignedVertically ?g ?k) (AlignedHorizontally ?g ?wrench))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (exists ?controller (exists ?book (exists ?hat (exists ?pan (exists ?bowl (exists ?wrench (forall ?k (exists ?g (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LargerThan ?monitor ?controller) (AlignedHorizontally ?monitor ?headphones) (Is ?controller 'game_controller') (AlignedHorizontally ?monitor ?controller) (Is ?headphones 'headphones') (AlignedVertically ?headphones ?book) (AlignedVertically ?monitor ?hat) (AlignedVertically ?controller ?pan) (Is ?book 'book') (AlignedVertically ?book ?bowl) (Is ?hat 'hat') (AlignedVertically ?hat ?wrench) (Has ?pan 'black') (Is ?bowl 'bowl') (OnBottomSide ?wrench) (or (not (Is ?k 'knife')) (AlignedHorizontally ?g ?wrench)) (Is ?pan 'pan') (Is ?wrench 'wrench') (or (not (Is ?k 'knife')) (AlignedVertically ?g ?k)) (or (not (Is ?k 'knife')) (Is ?g 'glove')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "wrench",
+        "game_controller",
+        "hat",
+        "pan",
+        "knife",
+        "monitor",
+        "bowl",
+        "headphones",
+        "glove"
+    ]
+}

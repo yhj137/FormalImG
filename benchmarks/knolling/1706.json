@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a suitcase positioned on the right side of the image. Below the suitcase is a backpack, below the backpack is a monitor, and below the monitor is a cutting board. The composition follows specific alignment rules: for every glove in the scene, there is a ruler located below it, and the glove is aligned horizontally with the suitcase. Furthermore, a drill is aligned horizontally with the backpack, a pan is aligned horizontally with the monitor, and a pair of black headphones is aligned horizontally with the cutting board. The pan is visually larger than the drill.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?monitor (exists ?cutting_board (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?backpack 'backpack') (Below ?backpack ?suitcase) (Is ?monitor 'monitor') (Below ?monitor ?backpack) (Is ?cutting_board 'cutting_board') (Below ?cutting_board ?monitor) (forall ?g (implies (Is ?g 'glove') (exists ?r (and (Is ?r 'ruler') (Below ?r ?g) (AlignedHorizontally ?g ?suitcase))))) (exists ?drill (exists ?pan (exists ?headphones (and (Is ?drill 'drill') (Is ?pan 'pan') (Is ?headphones 'headphones') (Has ?headphones 'black') (AlignedHorizontally ?drill ?backpack) (AlignedHorizontally ?pan ?monitor) (LargerThan ?pan ?drill) (AlignedHorizontally ?headphones ?cutting_board))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?monitor (exists ?cutting_board (forall ?g (exists ?r (exists ?drill (exists ?pan (exists ?headphones (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Below ?backpack ?suitcase) (or (not (Is ?g 'glove')) (AlignedHorizontally ?g ?suitcase)) (Is ?backpack 'backpack') (Below ?monitor ?backpack) (or (not (Is ?g 'glove')) (Below ?r ?g)) (AlignedHorizontally ?drill ?backpack) (Is ?monitor 'monitor') (Below ?cutting_board ?monitor) (or (not (Is ?g 'glove')) (Is ?r 'ruler')) (Is ?drill 'drill') (LargerThan ?pan ?drill) (AlignedHorizontally ?pan ?monitor) (Is ?cutting_board 'cutting_board') (AlignedHorizontally ?headphones ?cutting_board) (Is ?pan 'pan') (Has ?headphones 'black') (Is ?headphones 'headphones')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "drill",
+        "cutting_board",
+        "backpack",
+        "pan",
+        "monitor",
+        "headphones",
+        "suitcase",
+        "glove"
+    ]
+}

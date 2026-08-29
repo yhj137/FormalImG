@@ -1,0 +1,9 @@
+{
+    "prompt": "A broken chair in pixel art style.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (and (Is ?c 'chair') (HasState ?c 'broken'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (and (Is ?c 'chair') (HasState ?c 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "chair"
+    ]
+}

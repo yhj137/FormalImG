@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a red stapler, and strictly enforces that every sandwich in the scene is positioned vertically below this stapler.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (Has ?stapler 'red') (forall ?sandwich (implies (Is ?sandwich 'sandwich') (Below ?sandwich ?stapler)))))",
+    "cnf": "(exists ?stapler (forall ?sandwich (and (Is ?stapler 'stapler') (Has ?stapler 'red') (or (not (Is ?sandwich 'sandwich')) (Below ?sandwich ?stapler)))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "stapler"
+    ]
+}

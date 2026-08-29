@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, there is a hammer to its right, pliers to the right of the hammer, and a spoon to the right of the pliers; these four objects are aligned horizontally. Additionally, a game controller is positioned above the jeans on the top side of the image, scissors are above the hammer, and a calculator is above the pliers. The spoon is located on the right side of the image.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?hammer (exists ?pliers (exists ?spoon (exists ?gc (exists ?sc (exists ?calc (and (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?spoon 'spoon') (Is ?gc 'game_controller') (Is ?sc 'scissors') (Is ?calc 'calculator') (RightOf ?hammer ?jeans) (RightOf ?pliers ?hammer) (RightOf ?spoon ?pliers) (AlignedHorizontally ?jeans ?hammer) (AlignedHorizontally ?hammer ?pliers) (AlignedHorizontally ?pliers ?spoon) (Above ?gc ?jeans) (Above ?sc ?hammer) (Above ?calc ?pliers) (OnTopSide ?gc) (OnRightSide ?spoon)))))))))))",
+    "cnf": "(forall ?jeans (exists ?hammer (exists ?pliers (exists ?spoon (exists ?gc (exists ?sc (exists ?calc (and (or (not (Is ?jeans 'jeans')) (Is ?hammer 'hammer')) (or (not (Is ?jeans 'jeans')) (RightOf ?hammer ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?pliers 'pliers')) (or (not (Is ?jeans 'jeans')) (RightOf ?pliers ?hammer)) (or (not (Is ?jeans 'jeans')) (Is ?calc 'calculator')) (or (not (Is ?jeans 'jeans')) (Is ?spoon 'spoon')) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?jeans ?hammer)) (or (not (Is ?jeans 'jeans')) (RightOf ?spoon ?pliers)) (or (not (Is ?jeans 'jeans')) (Is ?sc 'scissors')) (or (not (Is ?jeans 'jeans')) (Above ?calc ?pliers)) (or (not (Is ?jeans 'jeans')) (Is ?gc 'game_controller')) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?hammer ?pliers)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?pliers ?spoon)) (or (not (Is ?jeans 'jeans')) (Above ?sc ?hammer)) (or (not (Is ?jeans 'jeans')) (OnTopSide ?gc)) (or (not (Is ?jeans 'jeans')) (Above ?gc ?jeans)) (or (not (Is ?jeans 'jeans')) (OnRightSide ?spoon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "spoon",
+        "hammer",
+        "scissors",
+        "calculator",
+        "pliers",
+        "jeans",
+        "game_controller"
+    ]
+}

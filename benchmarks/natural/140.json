@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo-style image where all backpacks are made of fabric.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'backpack') (HasMaterial ?b 'fabric'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (or (not (Is ?b 'backpack')) (HasMaterial ?b 'fabric'))))",
+    "k": 1,
+    "object_classes": [
+        "backpack"
+    ]
+}

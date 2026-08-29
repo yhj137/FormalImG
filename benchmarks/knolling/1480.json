@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a monitor located on the top side and left side of the image, with a pair of jeans positioned to its right. For every pan present in the scene, it is located below the monitor and is smaller than the monitor. Arranged around the pan are several items: a lighter to the left of the pan, a phone to the right of the pan, and a cup positioned above the pan. Additionally, a wrench is placed below the pan, and a screwdriver lies to the right of the wrench. The screwdriver is visually smaller than the wrench.",
+    "dsl": "(exists ?monitor (exists ?jeans (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (Is ?jeans 'jeans') (RightOf ?jeans ?monitor) (forall ?pan (implies (Is ?pan 'pan') (exists ?lighter (exists ?phone (exists ?cup (exists ?wrench (exists ?screwdriver (and (Is ?lighter 'lighter') (Is ?phone 'phone') (Is ?cup 'cup') (Is ?wrench 'wrench') (Is ?screwdriver 'screwdriver') (Below ?pan ?monitor) (LargerThan ?monitor ?pan) (LeftOf ?lighter ?pan) (RightOf ?phone ?pan) (Above ?cup ?pan) (Below ?wrench ?pan) (RightOf ?screwdriver ?wrench) (SmallerThan ?screwdriver ?wrench))))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (forall ?pan (exists ?lighter (exists ?phone (exists ?cup (exists ?wrench (exists ?screwdriver (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (OnLeftSide ?monitor) (RightOf ?jeans ?monitor) (or (not (Is ?pan 'pan')) (Below ?pan ?monitor)) (Is ?jeans 'jeans') (or (not (Is ?pan 'pan')) (LargerThan ?monitor ?pan)) (or (not (Is ?pan 'pan')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?pan 'pan')) (LeftOf ?lighter ?pan)) (or (not (Is ?pan 'pan')) (Is ?wrench 'wrench')) (or (not (Is ?pan 'pan')) (RightOf ?screwdriver ?wrench)) (or (not (Is ?pan 'pan')) (Is ?lighter 'lighter')) (or (not (Is ?pan 'pan')) (RightOf ?phone ?pan)) (or (not (Is ?pan 'pan')) (Is ?cup 'cup')) (or (not (Is ?pan 'pan')) (Below ?wrench ?pan)) (or (not (Is ?pan 'pan')) (SmallerThan ?screwdriver ?wrench)) (or (not (Is ?pan 'pan')) (Is ?phone 'phone')) (or (not (Is ?pan 'pan')) (Above ?cup ?pan)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "wrench",
+        "phone",
+        "screwdriver",
+        "cup",
+        "pan",
+        "lighter",
+        "jeans",
+        "monitor"
+    ]
+}

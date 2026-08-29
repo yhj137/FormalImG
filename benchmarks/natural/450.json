@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. For every elephant in the scene, there is a metal hammer positioned to its right and an orange located to its left.",
+    "dsl": "(forall ?e (implies (Is ?e 'elephant') (exists ?h (exists ?o (and (Is ?h 'hammer') (HasMaterial ?h 'metal') (Is ?o 'orange') (RightOf ?h ?e) (LeftOf ?o ?e))))))",
+    "cnf": "(forall ?e (exists ?h (exists ?o (and (or (not (Is ?e 'elephant')) (Is ?h 'hammer')) (or (not (Is ?e 'elephant')) (HasMaterial ?h 'metal')) (or (not (Is ?e 'elephant')) (Is ?o 'orange')) (or (not (Is ?e 'elephant')) (RightOf ?h ?e)) (or (not (Is ?e 'elephant')) (LeftOf ?o ?e))))))",
+    "k": 3,
+    "object_classes": [
+        "orange",
+        "hammer",
+        "elephant"
+    ]
+}

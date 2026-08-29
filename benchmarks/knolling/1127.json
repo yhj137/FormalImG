@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the top side. Directly below the suitcase is a handbag, and to the right of the handbag is a screwdriver which is located on the bottom side of the image. For every apple in the arrangement, it is placed to the right of the suitcase, and there is a knife located below the apple, with a bowl positioned to the left of that knife.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?handbag 'handbag') (Below ?handbag ?suitcase) (Is ?screwdriver 'screwdriver') (OnBottomSide ?screwdriver) (RightOf ?screwdriver ?handbag) (forall ?apple (implies (Is ?apple 'apple') (exists ?knife (exists ?bowl (and (Is ?knife 'knife') (Is ?bowl 'bowl') (RightOf ?apple ?suitcase) (Below ?knife ?apple) (LeftOf ?bowl ?knife))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?screwdriver (forall ?apple (exists ?knife (exists ?bowl (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Below ?handbag ?suitcase) (or (not (Is ?apple 'apple')) (RightOf ?apple ?suitcase)) (Is ?handbag 'handbag') (RightOf ?screwdriver ?handbag) (or (not (Is ?apple 'apple')) (Is ?bowl 'bowl')) (or (not (Is ?apple 'apple')) (Below ?knife ?apple)) (OnBottomSide ?screwdriver) (or (not (Is ?apple 'apple')) (Is ?knife 'knife')) (or (not (Is ?apple 'apple')) (LeftOf ?bowl ?knife)) (Is ?screwdriver 'screwdriver'))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "screwdriver",
+        "handbag",
+        "knife",
+        "bowl",
+        "suitcase"
+    ]
+}

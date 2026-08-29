@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase positioned on the bottom side. Every book present in the scene is visually smaller than the suitcase.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (OnBottomSide ?s) (forall ?b (implies (Is ?b 'book') (SmallerThan ?b ?s)))))",
+    "cnf": "(exists ?s (forall ?b (and (Is ?s 'suitcase') (OnBottomSide ?s) (or (not (Is ?b 'book')) (SmallerThan ?b ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "suitcase"
+    ]
+}

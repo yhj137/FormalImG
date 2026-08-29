@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a cutting board located on the bottom side of the image. For every pan in the scene, it is positioned to the left of that cutting board.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (OnBottomSide ?cb) (forall ?p (implies (Is ?p 'pan') (LeftOf ?p ?cb)))))",
+    "cnf": "(exists ?cb (forall ?p (and (Is ?cb 'cutting_board') (OnBottomSide ?cb) (or (not (Is ?p 'pan')) (LeftOf ?p ?cb)))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "pan"
+    ]
+}

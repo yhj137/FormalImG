@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a screwdriver positioned on the right side of the layout.",
+    "dsl": "(exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (OnRightSide ?screwdriver)))",
+    "cnf": "(exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (OnRightSide ?screwdriver)))",
+    "k": 1,
+    "object_classes": [
+        "screwdriver"
+    ]
+}

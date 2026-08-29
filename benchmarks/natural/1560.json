@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Depicted in pixel art style, a standing child holds a round fruit next to a chair. To the right of the child is a cup containing a spoon, with a rusty screwdriver next to it. Every book is positioned to the left of the cup, and a metal key lies to the right of the screwdriver.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?ch (exists ?f (exists ?cu (exists ?s (exists ?sd (and (Is ?c 'child') (HasState ?c 'standing') (Is ?ch 'chair') (Is ?f 'fruit') (HasShape ?f 'round') (Is ?cu 'cup') (Is ?s 'spoon') (Is ?sd 'screwdriver') (HasState ?sd 'rusty') (NextTo ?c ?ch) (Holding ?c ?f) (RightOf ?cu ?c) (In ?s ?cu) (NextTo ?sd ?cu) (forall ?b (implies (Is ?b 'book') (LeftOf ?b ?cu))) (exists ?k (and (Is ?k 'key') (HasMaterial ?k 'metal') (RightOf ?k ?sd)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?ch (exists ?f (exists ?cu (exists ?s (exists ?sd (forall ?b (exists ?k (and (Is ?c 'child') (HasState ?c 'standing') (NextTo ?c ?ch) (Holding ?c ?f) (Is ?ch 'chair') (RightOf ?cu ?c) (HasShape ?f 'round') (Is ?cu 'cup') (In ?s ?cu) (Is ?f 'fruit') (NextTo ?sd ?cu) (Is ?s 'spoon') (or (not (Is ?b 'book')) (LeftOf ?b ?cu)) (HasState ?sd 'rusty') (RightOf ?k ?sd) (Is ?sd 'screwdriver') (HasMaterial ?k 'metal') (Is ?k 'key')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "screwdriver",
+        "chair",
+        "book",
+        "cup",
+        "fruit",
+        "child",
+        "spoon"
+    ]
+}

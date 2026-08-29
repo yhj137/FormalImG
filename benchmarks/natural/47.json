@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image featuring a black monitor.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (and (Is ?m 'monitor') (HasColor ?m 'black'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (and (Is ?m 'monitor') (HasColor ?m 'black'))))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

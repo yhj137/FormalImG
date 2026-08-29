@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style scene where every table is wooden.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'table') (HasMaterial ?t 'wooden'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (or (not (Is ?t 'table')) (HasMaterial ?t 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "table"
+    ]
+}

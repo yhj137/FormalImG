@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the left side of the scene. To the left of the shirt is a cutting board, which is visually larger than the camera positioned to its left. On the bottom side, there is a ruler, and a screwdriver is located to the left of the ruler. The camera is also positioned to the left of the screwdriver. Furthermore, for every fork in the image, there is an apple to its left, and this apple is also located to the left of the camera.",
+    "dsl": "(exists ?shirt (exists ?cutting_board (exists ?camera (exists ?ruler (exists ?screwdriver (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?cutting_board 'cutting_board') (LeftOf ?cutting_board ?shirt) (Is ?camera 'camera') (LeftOf ?camera ?cutting_board) (LargerThan ?cutting_board ?camera) (Is ?ruler 'ruler') (OnBottomSide ?ruler) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?ruler) (LeftOf ?camera ?screwdriver) (forall ?fork (implies (Is ?fork 'fork') (exists ?apple (and (Is ?apple 'apple') (LeftOf ?apple ?fork) (LeftOf ?apple ?camera)))))))))))",
+    "cnf": "(exists ?shirt (exists ?cutting_board (exists ?camera (exists ?ruler (exists ?screwdriver (forall ?fork (exists ?apple (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (LeftOf ?cutting_board ?shirt) (Is ?cutting_board 'cutting_board') (LeftOf ?camera ?cutting_board) (LargerThan ?cutting_board ?camera) (Is ?camera 'camera') (LeftOf ?camera ?screwdriver) (or (not (Is ?fork 'fork')) (LeftOf ?apple ?camera)) (LeftOf ?screwdriver ?ruler) (or (not (Is ?fork 'fork')) (LeftOf ?apple ?fork)) (OnBottomSide ?ruler) (Is ?screwdriver 'screwdriver') (or (not (Is ?fork 'fork')) (Is ?apple 'apple')) (Is ?ruler 'ruler')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "screwdriver",
+        "cutting_board",
+        "fork",
+        "camera",
+        "shirt"
+    ]
+}

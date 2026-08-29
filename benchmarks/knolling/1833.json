@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, there is a white shirt located to its left. Directly below the shirt is a blue tie, and to the right of the tie is a black sock. A brown wallet is positioned below the sock. To the right of the wallet lies a pair of scissors. Above the scissors is a ruler, and above the ruler is a screwdriver. A pizza is located to the right of the screwdriver and is positioned on the right side of the image. Finally, a sandwich is placed below the pizza.",
+    "dsl": "(forall ?backpack (implies (Is ?backpack 'backpack') (exists ?shirt (exists ?tie (exists ?sock (exists ?wallet (exists ?scissors (exists ?ruler (exists ?screwdriver (exists ?pizza (exists ?sandwich (and (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?tie 'tie') (Has ?tie 'blue') (Is ?sock 'sock') (Has ?sock 'black') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?scissors 'scissors') (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (LeftOf ?shirt ?backpack) (Below ?tie ?shirt) (RightOf ?sock ?tie) (Below ?wallet ?sock) (RightOf ?scissors ?wallet) (Above ?ruler ?scissors) (Above ?screwdriver ?ruler) (RightOf ?pizza ?screwdriver) (OnRightSide ?pizza) (Below ?sandwich ?pizza)))))))))))))",
+    "cnf": "(forall ?backpack (exists ?shirt (exists ?tie (exists ?sock (exists ?wallet (exists ?scissors (exists ?ruler (exists ?screwdriver (exists ?pizza (exists ?sandwich (and (or (not (Is ?backpack 'backpack')) (Is ?shirt 'shirt')) (or (not (Is ?backpack 'backpack')) (Has ?shirt 'white')) (or (not (Is ?backpack 'backpack')) (LeftOf ?shirt ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?tie 'tie')) (or (not (Is ?backpack 'backpack')) (Below ?tie ?shirt)) (or (not (Is ?backpack 'backpack')) (Is ?sandwich 'sandwich')) (or (not (Is ?backpack 'backpack')) (Has ?tie 'blue')) (or (not (Is ?backpack 'backpack')) (RightOf ?sock ?tie)) (or (not (Is ?backpack 'backpack')) (Is ?pizza 'pizza')) (or (not (Is ?backpack 'backpack')) (Below ?sandwich ?pizza)) (or (not (Is ?backpack 'backpack')) (Is ?sock 'sock')) (or (not (Is ?backpack 'backpack')) (Below ?wallet ?sock)) (or (not (Is ?backpack 'backpack')) (Has ?sock 'black')) (or (not (Is ?backpack 'backpack')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?backpack 'backpack')) (RightOf ?pizza ?screwdriver)) (or (not (Is ?backpack 'backpack')) (OnRightSide ?pizza)) (or (not (Is ?backpack 'backpack')) (RightOf ?scissors ?wallet)) (or (not (Is ?backpack 'backpack')) (Has ?wallet 'brown')) (or (not (Is ?backpack 'backpack')) (Is ?wallet 'wallet')) (or (not (Is ?backpack 'backpack')) (Is ?ruler 'ruler')) (or (not (Is ?backpack 'backpack')) (Above ?screwdriver ?ruler)) (or (not (Is ?backpack 'backpack')) (Above ?ruler ?scissors)) (or (not (Is ?backpack 'backpack')) (Is ?scissors 'scissors')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "tie",
+        "sock",
+        "pizza",
+        "screwdriver",
+        "backpack",
+        "wallet",
+        "scissors",
+        "sandwich",
+        "shirt"
+    ]
+}

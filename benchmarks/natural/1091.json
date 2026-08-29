@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man positioned next to a chair. Every ball in the scene is located to the left of the chair. The man is holding a bitten sandwich, with an orange to the right of the sandwich and a pair of red headphones next to the orange.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?c (and (Is ?m 'man') (Is ?c 'chair') (NextTo ?m ?c) (forall ?b (implies (Is ?b 'ball') (LeftOf ?b ?c))) (exists ?s (exists ?o (exists ?h (and (Is ?s 'sandwich') (Is ?o 'orange') (Is ?h 'headphones') (Holding ?m ?s) (HasState ?s 'bitten') (RightOf ?o ?s) (NextTo ?h ?o) (HasColor ?h 'red')))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?c (forall ?b (exists ?s (exists ?o (exists ?h (and (Is ?m 'man') (NextTo ?m ?c) (Holding ?m ?s) (Is ?c 'chair') (or (not (Is ?b 'ball')) (LeftOf ?b ?c)) (Is ?s 'sandwich') (HasState ?s 'bitten') (RightOf ?o ?s) (Is ?o 'orange') (NextTo ?h ?o) (Is ?h 'headphones') (HasColor ?h 'red')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "chair",
+        "man",
+        "orange",
+        "sandwich",
+        "ball"
+    ]
+}

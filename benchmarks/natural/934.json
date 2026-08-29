@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is sitting on a sofa to the left of a desk. A fabric rug lies next to the desk on the right. All rocks are inside the desk.",
+    "dsl": "(exists ?m (exists ?s (exists ?d (and (Is ?m 'man') (HasState ?m 'sitting') (Is ?s 'sofa') (Is ?d 'desk') (On ?m ?s) (LeftOf ?s ?d) (forall ?k (implies (Is ?k 'rock') (In ?k ?d))) (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (RightOf ?r ?d) (NextTo ?r ?d)))))))",
+    "cnf": "(exists ?m (exists ?s (exists ?d (forall ?k (exists ?r (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?s) (Is ?s 'sofa') (LeftOf ?s ?d) (Is ?d 'desk') (or (not (Is ?k 'rock')) (In ?k ?d)) (RightOf ?r ?d) (NextTo ?r ?d) (HasMaterial ?r 'fabric') (Is ?r 'rug')))))))",
+    "k": 5,
+    "object_classes": [
+        "sofa",
+        "rock",
+        "man",
+        "desk",
+        "rug"
+    ]
+}

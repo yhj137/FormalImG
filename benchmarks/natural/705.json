@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring an open brown wardrobe with a bird perched on top. A black jacket is located to the left of the wardrobe, while all shoes are positioned to the right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (HasState ?w 'open') (forall ?s (implies (Is ?s 'shoes') (RightOf ?s ?w))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (LeftOf ?j ?w))) (exists ?b (and (Is ?b 'bird') (On ?b ?w))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (forall ?s (exists ?j (exists ?b (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (HasState ?w 'open') (or (not (Is ?s 'shoes')) (RightOf ?s ?w)) (LeftOf ?j ?w) (On ?b ?w) (HasColor ?j 'black') (Is ?b 'bird') (Is ?j 'jacket')))))))",
+    "k": 4,
+    "object_classes": [
+        "jacket",
+        "bird",
+        "wardrobe",
+        "shoes"
+    ]
+}

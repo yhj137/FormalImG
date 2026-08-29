@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pan in the scene, there is a bottle located to its left. Additionally, a calculator is aligned vertically with the bottle, and there is a pair of pliers located on the bottom side of the image that is smaller than the calculator.",
+    "dsl": "(and (forall ?pan (implies (Is ?pan 'pan') (exists ?bottle (exists ?calculator (exists ?pliers (and (Is ?bottle 'bottle') (Is ?calculator 'calculator') (Is ?pliers 'pliers') (LeftOf ?bottle ?pan) (AlignedVertically ?bottle ?calculator) (SmallerThan ?pliers ?calculator) (OnBottomSide ?pliers))))))))",
+    "cnf": "(forall ?pan (exists ?bottle (exists ?calculator (exists ?pliers (and (or (not (Is ?pan 'pan')) (Is ?bottle 'bottle')) (or (not (Is ?pan 'pan')) (LeftOf ?bottle ?pan)) (or (not (Is ?pan 'pan')) (Is ?calculator 'calculator')) (or (not (Is ?pan 'pan')) (AlignedVertically ?bottle ?calculator)) (or (not (Is ?pan 'pan')) (Is ?pliers 'pliers')) (or (not (Is ?pan 'pan')) (SmallerThan ?pliers ?calculator)) (or (not (Is ?pan 'pan')) (OnBottomSide ?pliers)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "pan",
+        "calculator",
+        "pliers"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a lion next to an umbrella. A banana is to the left of the lion, and all oranges are round and located to the right of the lion.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?u (exists ?b (and (Is ?l 'lion') (Is ?u 'umbrella') (Is ?b 'banana') (NextTo ?l ?u) (LeftOf ?b ?l) (forall ?o (implies (Is ?o 'orange') (and (HasShape ?o 'round') (RightOf ?o ?l)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?u (exists ?b (forall ?o (and (Is ?l 'lion') (NextTo ?l ?u) (LeftOf ?b ?l) (Is ?u 'umbrella') (or (not (Is ?o 'orange')) (RightOf ?o ?l)) (Is ?b 'banana') (or (not (Is ?o 'orange')) (HasShape ?o 'round'))))))))",
+    "k": 4,
+    "object_classes": [
+        "umbrella",
+        "lion",
+        "banana",
+        "orange"
+    ]
+}

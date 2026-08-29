@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a horizontal row of six specific items: a backpack, a keyboard, a book, a wrench, a carrot, and a remote. The backpack is to the left of the keyboard, the keyboard is to the left of the book, the book is to the left of the wrench, the wrench is to the left of the carrot, and the carrot is to the left of the remote. All six items are aligned horizontally, with the remote explicitly positioned on the right side of the image. Additionally, for every lemon in the scene, it is located to the left of the backpack.",
+    "dsl": "(exists ?backpack (exists ?keyboard (exists ?book (exists ?wrench (exists ?carrot (exists ?remote (and (Is ?backpack 'backpack') (Is ?keyboard 'keyboard') (Is ?book 'book') (Is ?wrench 'wrench') (Is ?carrot 'carrot') (Is ?remote 'remote') (OnRightSide ?remote) (LeftOf ?backpack ?keyboard) (LeftOf ?keyboard ?book) (LeftOf ?book ?wrench) (LeftOf ?wrench ?carrot) (LeftOf ?carrot ?remote) (AlignedHorizontally ?backpack ?keyboard) (AlignedHorizontally ?keyboard ?book) (AlignedHorizontally ?book ?wrench) (AlignedHorizontally ?wrench ?carrot) (AlignedHorizontally ?carrot ?remote) (forall ?lemon (implies (Is ?lemon 'lemon') (LeftOf ?lemon ?backpack))))))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (exists ?book (exists ?wrench (exists ?carrot (exists ?remote (forall ?lemon (and (Is ?backpack 'backpack') (LeftOf ?backpack ?keyboard) (AlignedHorizontally ?backpack ?keyboard) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?book) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?backpack)) (AlignedHorizontally ?keyboard ?book) (Is ?book 'book') (LeftOf ?book ?wrench) (AlignedHorizontally ?book ?wrench) (Is ?wrench 'wrench') (LeftOf ?wrench ?carrot) (AlignedHorizontally ?wrench ?carrot) (Is ?carrot 'carrot') (LeftOf ?carrot ?remote) (AlignedHorizontally ?carrot ?remote) (OnRightSide ?remote) (Is ?remote 'remote')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "remote",
+        "keyboard",
+        "wrench",
+        "lemon",
+        "carrot",
+        "backpack"
+    ]
+}

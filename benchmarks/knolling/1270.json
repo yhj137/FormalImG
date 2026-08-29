@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a laptop positioned on the left side of the image. For every hat present in the scene, it is located directly below the laptop, is aligned vertically with it, and is visibly smaller than the laptop. Continuing the vertical alignment downwards from the hat, there is a sequence of objects: a camera below the hat, a drill below the camera, a game controller below the drill, a wrench below the game controller, and a ruler below the wrench.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (forall ?hat (implies (Is ?hat 'hat') (exists ?camera (exists ?drill (exists ?controller (exists ?wrench (exists ?ruler (and (Is ?camera 'camera') (Is ?drill 'drill') (Is ?controller 'game_controller') (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Below ?hat ?laptop) (SmallerThan ?hat ?laptop) (AlignedVertically ?hat ?laptop) (Below ?camera ?hat) (AlignedVertically ?camera ?hat) (Below ?drill ?camera) (AlignedVertically ?drill ?camera) (Below ?controller ?drill) (AlignedVertically ?controller ?drill) (Below ?wrench ?controller) (AlignedVertically ?wrench ?controller) (Below ?ruler ?wrench) (AlignedVertically ?ruler ?wrench)))))))))))",
+    "cnf": "(exists ?laptop (forall ?hat (exists ?camera (exists ?drill (exists ?controller (exists ?wrench (exists ?ruler (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (or (not (Is ?hat 'hat')) (Below ?hat ?laptop)) (or (not (Is ?hat 'hat')) (SmallerThan ?hat ?laptop)) (or (not (Is ?hat 'hat')) (Is ?ruler 'ruler')) (or (not (Is ?hat 'hat')) (AlignedVertically ?hat ?laptop)) (or (not (Is ?hat 'hat')) (Is ?wrench 'wrench')) (or (not (Is ?hat 'hat')) (Below ?ruler ?wrench)) (or (not (Is ?hat 'hat')) (Below ?camera ?hat)) (or (not (Is ?hat 'hat')) (Is ?controller 'game_controller')) (or (not (Is ?hat 'hat')) (Below ?wrench ?controller)) (or (not (Is ?hat 'hat')) (AlignedVertically ?wrench ?controller)) (or (not (Is ?hat 'hat')) (AlignedVertically ?ruler ?wrench)) (or (not (Is ?hat 'hat')) (AlignedVertically ?camera ?hat)) (or (not (Is ?hat 'hat')) (Is ?camera 'camera')) (or (not (Is ?hat 'hat')) (Is ?drill 'drill')) (or (not (Is ?hat 'hat')) (Below ?controller ?drill)) (or (not (Is ?hat 'hat')) (AlignedVertically ?controller ?drill)) (or (not (Is ?hat 'hat')) (Below ?drill ?camera)) (or (not (Is ?hat 'hat')) (AlignedVertically ?drill ?camera))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "wrench",
+        "game_controller",
+        "drill",
+        "hat",
+        "camera"
+    ]
+}

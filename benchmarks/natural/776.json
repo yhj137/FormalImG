@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman holding a pan to the left of a red rug, with every bowl inside the pan.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?p (exists ?r (and (Is ?w 'woman') (Is ?p 'pan') (Is ?r 'rug') (HasColor ?r 'red') (Holding ?w ?p) (LeftOf ?p ?r) (forall ?b (implies (Is ?b 'bowl') (In ?b ?p))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?p (exists ?r (forall ?b (and (Is ?w 'woman') (Holding ?w ?p) (Is ?p 'pan') (LeftOf ?p ?r) (or (not (Is ?b 'bowl')) (In ?b ?p)) (HasColor ?r 'red') (Is ?r 'rug')))))))",
+    "k": 4,
+    "object_classes": [
+        "rug",
+        "bowl",
+        "pan",
+        "woman"
+    ]
+}

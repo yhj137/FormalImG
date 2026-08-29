@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a monitor, a white shoe, and a pink donut. These objects are aligned vertically, with the pink donut positioned on the bottom side of the image. The monitor is larger than the shoe, while the donut is smaller than the shoe. Additionally, for any keys found in the scene, they are yellow and smaller than the donut.",
+    "dsl": "(exists ?m (exists ?s (exists ?d (and (Is ?m 'monitor') (Is ?s 'shoe') (Has ?s 'white') (Is ?d 'donut') (Has ?d 'pink') (OnBottomSide ?d) (AlignedVertically ?m ?s) (AlignedVertically ?s ?d) (LargerThan ?m ?s) (SmallerThan ?d ?s) (forall ?k (implies (Is ?k 'keys') (and (Has ?k 'yellow') (SmallerThan ?k ?d))))))))",
+    "cnf": "(exists ?m (exists ?s (exists ?d (forall ?k (and (Is ?m 'monitor') (AlignedVertically ?m ?s) (LargerThan ?m ?s) (Has ?s 'white') (AlignedVertically ?s ?d) (SmallerThan ?d ?s) (Is ?s 'shoe') (OnBottomSide ?d) (or (not (Is ?k 'keys')) (SmallerThan ?k ?d)) (Has ?d 'pink') (or (not (Is ?k 'keys')) (Has ?k 'yellow')) (Is ?d 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "keys",
+        "shoe",
+        "donut"
+    ]
+}

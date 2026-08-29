@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pliers, a keyboard, a bottle, a hat, and a shoe, all located on the left side of the image and arranged in a vertical alignment. Furthermore, for every wrench present in the image, it is vertically aligned with the keyboard and is smaller than the shoe.",
+    "dsl": "(exists ?pliers (exists ?keyboard (exists ?bottle (exists ?hat (exists ?shoe (and (Is ?pliers 'pliers') (Is ?keyboard 'keyboard') (Is ?bottle 'bottle') (Is ?hat 'hat') (Is ?shoe 'shoe') (OnLeftSide ?pliers) (OnLeftSide ?keyboard) (OnLeftSide ?bottle) (OnLeftSide ?hat) (OnLeftSide ?shoe) (AlignedVertically ?pliers ?keyboard) (AlignedVertically ?keyboard ?bottle) (AlignedVertically ?bottle ?hat) (AlignedVertically ?hat ?shoe) (forall ?wrench (implies (Is ?wrench 'wrench') (and (AlignedVertically ?wrench ?keyboard) (SmallerThan ?wrench ?shoe))))))))))",
+    "cnf": "(exists ?pliers (exists ?keyboard (exists ?bottle (exists ?hat (exists ?shoe (forall ?wrench (and (Is ?pliers 'pliers') (OnLeftSide ?pliers) (AlignedVertically ?pliers ?keyboard) (OnLeftSide ?keyboard) (AlignedVertically ?keyboard ?bottle) (Is ?keyboard 'keyboard') (or (not (Is ?wrench 'wrench')) (AlignedVertically ?wrench ?keyboard)) (OnLeftSide ?bottle) (AlignedVertically ?bottle ?hat) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?shoe)) (Is ?bottle 'bottle') (OnLeftSide ?hat) (AlignedVertically ?hat ?shoe) (Is ?hat 'hat') (OnLeftSide ?shoe) (Is ?shoe 'shoe'))))))))",
+    "k": 6,
+    "object_classes": [
+        "pliers",
+        "keyboard",
+        "wrench",
+        "hat",
+        "bottle",
+        "shoe"
+    ]
+}

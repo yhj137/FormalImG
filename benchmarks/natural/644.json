@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every woman is holding a phone, and next to her is a backpack with a rectangular laptop on it.",
+    "dsl": "(forall ?w (implies (Is ?w 'woman') (exists ?p (exists ?b (exists ?l (and (Is ?p 'phone') (Is ?b 'backpack') (Is ?l 'laptop') (Holding ?w ?p) (NextTo ?b ?w) (On ?l ?b) (HasShape ?l 'rectangular')))))))",
+    "cnf": "(forall ?w (exists ?p (exists ?b (exists ?l (and (or (not (Is ?w 'woman')) (Is ?p 'phone')) (or (not (Is ?w 'woman')) (Holding ?w ?p)) (or (not (Is ?w 'woman')) (Is ?b 'backpack')) (or (not (Is ?w 'woman')) (Is ?l 'laptop')) (or (not (Is ?w 'woman')) (NextTo ?b ?w)) (or (not (Is ?w 'woman')) (On ?l ?b)) (or (not (Is ?w 'woman')) (HasShape ?l 'rectangular')))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "backpack",
+        "laptop",
+        "woman"
+    ]
+}

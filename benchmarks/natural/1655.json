@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a metal bookshelf. Every cup in the scene is placed on the bookshelf. A black laptop sits on the shelf beside a rectangular keyboard. A pan containing a fish also rests on the bookshelf, along with a round cake that has a knife next to it. An orange is positioned to the right of the cake.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bs (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'metal') (forall ?c (implies (Is ?c 'cup') (On ?c ?bs))) (exists ?l (exists ?k (exists ?p (exists ?f (exists ?ca (exists ?kn (exists ?o (and (Is ?l 'laptop') (HasColor ?l 'black') (On ?l ?bs) (Is ?k 'keyboard') (HasShape ?k 'rectangular') (NextTo ?k ?l) (Is ?p 'pan') (On ?p ?bs) (Is ?f 'fish') (In ?f ?p) (Is ?ca 'cake') (HasShape ?ca 'round') (On ?ca ?bs) (Is ?kn 'knife') (NextTo ?kn ?ca) (Is ?o 'orange') (RightOf ?o ?ca))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bs (forall ?c (exists ?l (exists ?k (exists ?p (exists ?f (exists ?ca (exists ?kn (exists ?o (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'metal') (or (not (Is ?c 'cup')) (On ?c ?bs)) (On ?l ?bs) (On ?p ?bs) (HasColor ?l 'black') (NextTo ?k ?l) (On ?ca ?bs) (Is ?p 'pan') (In ?f ?p) (Is ?l 'laptop') (HasShape ?k 'rectangular') (HasShape ?ca 'round') (NextTo ?kn ?ca) (Is ?f 'fish') (Is ?k 'keyboard') (Is ?ca 'cake') (RightOf ?o ?ca) (Is ?kn 'knife') (Is ?o 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "pan",
+        "knife",
+        "fish",
+        "laptop",
+        "cake",
+        "cup",
+        "bookshelf",
+        "orange"
+    ]
+}

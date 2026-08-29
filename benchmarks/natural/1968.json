@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. There is a desk with a lamp, a book, and a red apple on it. Inside the desk, there is a toy car. To the right of the desk is a bench, and a man is sitting on it. To the right of the bench is a dog. A ball is located to the right of the dog. All butterflies in the scene are flying above the dog.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?b (exists ?m (exists ?dg (exists ?bl (exists ?l (exists ?bk (exists ?tc (and (Is ?d 'desk') (Is ?b 'bench') (Is ?m 'man') (Is ?dg 'dog') (Is ?bl 'ball') (Is ?l 'lamp') (Is ?bk 'book') (Is ?tc 'toy car') (RightOf ?b ?d) (On ?m ?b) (HasState ?m 'sitting') (RightOf ?dg ?b) (RightOf ?bl ?dg) (On ?l ?d) (On ?bk ?d) (In ?tc ?d) (forall ?bf (implies (Is ?bf 'butterfly') (Above ?bf ?dg))) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (On ?a ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?b (exists ?m (exists ?dg (exists ?bl (exists ?l (exists ?bk (exists ?tc (forall ?bf (exists ?a (and (Is ?d 'desk') (RightOf ?b ?d) (On ?l ?d) (Is ?b 'bench') (On ?m ?b) (On ?bk ?d) (Is ?l 'lamp') (RightOf ?dg ?b) (Is ?m 'man') (HasState ?m 'sitting') (In ?tc ?d) (Is ?bk 'book') (Is ?dg 'dog') (RightOf ?bl ?dg) (On ?a ?d) (Is ?tc 'toy car') (or (not (Is ?bf 'butterfly')) (Above ?bf ?dg)) (Is ?bl 'ball') (HasColor ?a 'red') (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "toy car",
+        "man",
+        "desk",
+        "ball",
+        "lamp",
+        "book",
+        "butterfly",
+        "apple",
+        "dog"
+    ]
+}

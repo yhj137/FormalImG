@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is sitting on a boat, holding a pan that contains every cake. A jacket is also on the boat, with a hammer positioned to its right.",
+    "dsl": "(exists ?b (exists ?m (exists ?p (exists ?j (and (Is ?b 'boat') (Is ?m 'man') (Is ?p 'pan') (Is ?j 'jacket') (On ?m ?b) (HasState ?m 'sitting') (Holding ?m ?p) (On ?j ?b) (forall ?c (implies (Is ?c 'cake') (In ?c ?p))) (exists ?h (and (Is ?h 'hammer') (RightOf ?h ?j))))))))",
+    "cnf": "(exists ?b (exists ?m (exists ?p (exists ?j (forall ?c (exists ?h (and (Is ?b 'boat') (On ?m ?b) (On ?j ?b) (Is ?m 'man') (HasState ?m 'sitting') (Is ?j 'jacket') (RightOf ?h ?j) (Holding ?m ?p) (Is ?h 'hammer') (Is ?p 'pan') (or (not (Is ?c 'cake')) (In ?c ?p)))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "pan",
+        "man",
+        "cake",
+        "hammer",
+        "boat"
+    ]
+}

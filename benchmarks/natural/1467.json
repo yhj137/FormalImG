@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a man. All flowers are positioned to his right. To the left of the man is a dog with a blue butterfly flying above it. Next to the dog, a child holds a sandwich. A green backpack containing black headphones rests next to the man.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (and (Is ?m 'man') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?m))) (exists ?d (and (Is ?d 'dog') (LeftOf ?d ?m) (exists ?b (and (Is ?b 'butterfly') (HasColor ?b 'blue') (Above ?b ?d))) (exists ?c (and (Is ?c 'child') (NextTo ?c ?d) (exists ?s (and (Is ?s 'sandwich') (Holding ?c ?s))))) (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'green') (NextTo ?bp ?m) (exists ?h (and (Is ?h 'headphones') (HasColor ?h 'black') (In ?h ?bp))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (forall ?f (exists ?d (exists ?b (exists ?c (exists ?s (exists ?bp (exists ?h (and (Is ?m 'man') (or (not (Is ?f 'flower')) (RightOf ?f ?m)) (LeftOf ?d ?m) (NextTo ?bp ?m) (Is ?d 'dog') (Above ?b ?d) (HasColor ?bp 'green') (In ?h ?bp) (NextTo ?c ?d) (HasColor ?b 'blue') (Is ?bp 'backpack') (HasColor ?h 'black') (Is ?c 'child') (Holding ?c ?s) (Is ?b 'butterfly') (Is ?h 'headphones') (Is ?s 'sandwich')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "man",
+        "sandwich",
+        "backpack",
+        "butterfly",
+        "dog",
+        "flower",
+        "child"
+    ]
+}

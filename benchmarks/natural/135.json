@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every bottle is cylindrical.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'bottle') (HasShape ?b 'cylindrical'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (or (not (Is ?b 'bottle')) (HasShape ?b 'cylindrical'))))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

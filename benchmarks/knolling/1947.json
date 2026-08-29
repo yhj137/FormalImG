@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is located on the top side of the image. A black pan is positioned to the left of the monitor, while the monitor is to the left of a hammer, and all three are aligned horizontally. The monitor is above a black keyboard, which is vertically aligned with it. To the left of the keyboard is a watch, and the keyboard is to the left of a ruler, maintaining horizontal alignment. The keyboard is also positioned above a gray remote, aligned vertically. For every carrot in the scene, the gray remote is above it and vertically aligned with it; additionally, a pink donut is to the left of the carrot, and the carrot is to the left of a yellow lemon, with the donut, carrot, and lemon aligned horizontally.",
+    "dsl": "(exists ?mon (exists ?pan (exists ?ham (exists ?key (exists ?wat (exists ?rul (exists ?rem (and (Is ?mon 'monitor') (OnTopSide ?mon) (Is ?pan 'pan') (Has ?pan 'black') (Is ?ham 'hammer') (Is ?key 'keyboard') (Has ?key 'black') (Is ?wat 'watch') (Is ?rul 'ruler') (Is ?rem 'remote') (Has ?rem 'gray') (LeftOf ?pan ?mon) (LeftOf ?mon ?ham) (AlignedHorizontally ?pan ?mon) (AlignedHorizontally ?mon ?ham) (Above ?mon ?key) (AlignedVertically ?mon ?key) (LeftOf ?wat ?key) (LeftOf ?key ?rul) (AlignedHorizontally ?wat ?key) (AlignedHorizontally ?key ?rul) (Above ?key ?rem) (AlignedVertically ?key ?rem) (forall ?c (implies (Is ?c 'carrot') (exists ?don (exists ?lem (and (Is ?don 'donut') (Has ?don 'pink') (Is ?lem 'lemon') (Has ?lem 'yellow') (Above ?rem ?c) (AlignedVertically ?rem ?c) (LeftOf ?don ?c) (LeftOf ?c ?lem) (AlignedHorizontally ?don ?c) (AlignedHorizontally ?c ?lem))))))))))))))",
+    "cnf": "(exists ?mon (exists ?pan (exists ?ham (exists ?key (exists ?wat (exists ?rul (exists ?rem (forall ?c (exists ?don (exists ?lem (and (Is ?mon 'monitor') (OnTopSide ?mon) (LeftOf ?pan ?mon) (LeftOf ?mon ?ham) (Has ?pan 'black') (AlignedHorizontally ?pan ?mon) (Is ?ham 'hammer') (AlignedHorizontally ?mon ?ham) (Is ?pan 'pan') (Above ?mon ?key) (AlignedVertically ?mon ?key) (Has ?key 'black') (LeftOf ?wat ?key) (Is ?key 'keyboard') (LeftOf ?key ?rul) (Is ?wat 'watch') (AlignedHorizontally ?wat ?key) (Is ?rul 'ruler') (AlignedHorizontally ?key ?rul) (Above ?key ?rem) (AlignedVertically ?key ?rem) (Has ?rem 'gray') (or (not (Is ?c 'carrot')) (Above ?rem ?c)) (Is ?rem 'remote') (or (not (Is ?c 'carrot')) (AlignedVertically ?rem ?c)) (or (not (Is ?c 'carrot')) (Has ?lem 'yellow')) (or (not (Is ?c 'carrot')) (LeftOf ?don ?c)) (or (not (Is ?c 'carrot')) (Is ?lem 'lemon')) (or (not (Is ?c 'carrot')) (LeftOf ?c ?lem)) (or (not (Is ?c 'carrot')) (Has ?don 'pink')) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?don ?c)) (or (not (Is ?c 'carrot')) (AlignedHorizontally ?c ?lem)) (or (not (Is ?c 'carrot')) (Is ?don 'donut')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "keyboard",
+        "lemon",
+        "carrot",
+        "watch",
+        "hammer",
+        "pan",
+        "monitor",
+        "donut"
+    ]
+}

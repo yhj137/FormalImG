@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a rectangular laptop to the left of a fork.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?l (exists ?f (and (Is ?l 'laptop') (Is ?f 'fork') (HasShape ?l 'rectangular') (LeftOf ?l ?f)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?l (exists ?f (and (Is ?l 'laptop') (HasShape ?l 'rectangular') (LeftOf ?l ?f) (Is ?f 'fork')))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "laptop"
+    ]
+}

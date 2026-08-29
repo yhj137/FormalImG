@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill in the scene, it is positioned on the bottom side. An apple is located above the drill, and the two are aligned vertically. There is also a lighter that is aligned horizontally with the apple. Finally, a fork is placed on the top side of the image, positioned above the apple.",
+    "dsl": "(forall ?d (implies (Is ?d 'drill') (exists ?a (exists ?l (exists ?f (and (Is ?a 'apple') (Is ?l 'lighter') (Is ?f 'fork') (OnBottomSide ?d) (Above ?a ?d) (AlignedVertically ?a ?d) (AlignedHorizontally ?l ?a) (OnTopSide ?f) (Above ?f ?a)))))))",
+    "cnf": "(forall ?d (exists ?a (exists ?l (exists ?f (and (or (not (Is ?d 'drill')) (Is ?a 'apple')) (or (not (Is ?d 'drill')) (Is ?l 'lighter')) (or (not (Is ?d 'drill')) (Above ?a ?d)) (or (not (Is ?d 'drill')) (Is ?f 'fork')) (or (not (Is ?d 'drill')) (AlignedHorizontally ?l ?a)) (or (not (Is ?d 'drill')) (OnBottomSide ?d)) (or (not (Is ?d 'drill')) (AlignedVertically ?a ?d)) (or (not (Is ?d 'drill')) (OnTopSide ?f)) (or (not (Is ?d 'drill')) (Above ?f ?a)))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "lighter",
+        "fork",
+        "apple"
+    ]
+}

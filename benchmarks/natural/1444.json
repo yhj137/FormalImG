@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every woman holds a metal screwdriver, wears a red hat, and stands on a round rug. To her right is a bicycle with a blue jacket on it, to her left is a lamp, and a cylindrical cup rests on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?w (implies (Is ?w 'woman') (exists ?s (exists ?h (exists ?r (exists ?b (exists ?j (exists ?l (exists ?c (and (Is ?s 'screwdriver') (HasMaterial ?s 'metal') (Holding ?w ?s) (Is ?h 'hat') (HasColor ?h 'red') (On ?h ?w) (Is ?r 'rug') (HasShape ?r 'round') (On ?w ?r) (Is ?b 'bicycle') (RightOf ?b ?w) (Is ?j 'jacket') (HasColor ?j 'blue') (On ?j ?b) (Is ?l 'lamp') (LeftOf ?l ?w) (Is ?c 'cup') (HasShape ?c 'cylindrical') (On ?c ?r))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?w (exists ?s (exists ?h (exists ?r (exists ?b (exists ?j (exists ?l (exists ?c (and (or (not (Is ?w 'woman')) (Is ?s 'screwdriver')) (or (not (Is ?w 'woman')) (HasMaterial ?s 'metal')) (or (not (Is ?w 'woman')) (Holding ?w ?s)) (or (not (Is ?w 'woman')) (Is ?h 'hat')) (or (not (Is ?w 'woman')) (HasColor ?h 'red')) (or (not (Is ?w 'woman')) (On ?h ?w)) (or (not (Is ?w 'woman')) (Is ?r 'rug')) (or (not (Is ?w 'woman')) (HasShape ?r 'round')) (or (not (Is ?w 'woman')) (On ?w ?r)) (or (not (Is ?w 'woman')) (Is ?b 'bicycle')) (or (not (Is ?w 'woman')) (On ?c ?r)) (or (not (Is ?w 'woman')) (RightOf ?b ?w)) (or (not (Is ?w 'woman')) (HasShape ?c 'cylindrical')) (or (not (Is ?w 'woman')) (Is ?j 'jacket')) (or (not (Is ?w 'woman')) (On ?j ?b)) (or (not (Is ?w 'woman')) (Is ?c 'cup')) (or (not (Is ?w 'woman')) (HasColor ?j 'blue')) (or (not (Is ?w 'woman')) (Is ?l 'lamp')) (or (not (Is ?w 'woman')) (LeftOf ?l ?w))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "lamp",
+        "screwdriver",
+        "cup",
+        "bicycle",
+        "hat",
+        "jacket",
+        "woman",
+        "rug"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is located on the top side of the image. For every knife found in the composition, it is aligned vertically with that keyboard.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (OnTopSide ?k) (forall ?n (implies (Is ?n 'knife') (AlignedVertically ?n ?k)))))",
+    "cnf": "(exists ?k (forall ?n (and (Is ?k 'keyboard') (OnTopSide ?k) (or (not (Is ?n 'knife')) (AlignedVertically ?n ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "keyboard"
+    ]
+}

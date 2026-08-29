@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. All phones are situated to the left of a rectangular sofa.",
+    "dsl": "(exists ?s (and (Is ?s 'sofa') (HasShape ?s 'rectangular') (forall ?p (implies (Is ?p 'phone') (LeftOf ?p ?s)))))",
+    "cnf": "(exists ?s (forall ?p (and (Is ?s 'sofa') (HasShape ?s 'rectangular') (or (not (Is ?p 'phone')) (LeftOf ?p ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "sofa"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a horse standing next to a green plant, on which every flower in the image is located. A cat is positioned next to the horse, holding an oval fish, with a plastic fork placed next to the fish. A red shirt is on the horse, and a metal key lies on the shirt.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?p (and (Is ?h 'horse') (Is ?p 'plant') (NextTo ?p ?h) (HasColor ?p 'green') (forall ?fl (implies (Is ?fl 'flower') (On ?fl ?p))) (exists ?c (exists ?f (exists ?fo (exists ?s (exists ?k (and (Is ?c 'cat') (NextTo ?c ?h) (Is ?f 'fish') (Holding ?c ?f) (HasShape ?f 'oval') (Is ?fo 'fork') (NextTo ?fo ?f) (HasMaterial ?fo 'plastic') (Is ?s 'shirt') (On ?s ?h) (HasColor ?s 'red') (Is ?k 'key') (On ?k ?s) (HasMaterial ?k 'metal')))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?p (forall ?fl (exists ?c (exists ?f (exists ?fo (exists ?s (exists ?k (and (Is ?h 'horse') (NextTo ?p ?h) (NextTo ?c ?h) (Is ?p 'plant') (HasColor ?p 'green') (On ?s ?h) (Is ?c 'cat') (Holding ?c ?f) (or (not (Is ?fl 'flower')) (On ?fl ?p)) (Is ?s 'shirt') (HasColor ?s 'red') (Is ?f 'fish') (HasShape ?f 'oval') (On ?k ?s) (NextTo ?fo ?f) (Is ?k 'key') (HasMaterial ?k 'metal') (Is ?fo 'fork') (HasMaterial ?fo 'plastic')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "fork",
+        "cat",
+        "plant",
+        "fish",
+        "shirt",
+        "horse",
+        "flower"
+    ]
+}

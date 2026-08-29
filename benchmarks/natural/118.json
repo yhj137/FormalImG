@@ -1,0 +1,9 @@
+{
+    "prompt": "Every desk in the scene is empty.",
+    "dsl": "(forall ?d (implies (Is ?d 'desk') (HasState ?d 'empty')))",
+    "cnf": "(forall ?d (or (not (Is ?d 'desk')) (HasState ?d 'empty')))",
+    "k": 1,
+    "object_classes": [
+        "desk"
+    ]
+}

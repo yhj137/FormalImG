@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in an oil painting style. A green tree stands to the left of an open refrigerator. Inside the refrigerator, a pair of glasses rests next to some headphones. To the right of the refrigerator stands an elephant holding a blue shirt. A horse is positioned next to the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?g (exists ?hp (exists ?e (exists ?s (exists ?h (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?g 'glasses') (Is ?hp 'headphones') (Is ?e 'elephant') (Is ?s 'shirt') (HasColor ?s 'blue') (Is ?h 'horse') (LeftOf ?t ?r) (In ?g ?r) (NextTo ?hp ?g) (RightOf ?e ?r) (Holding ?e ?s) (NextTo ?h ?e))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?r (exists ?g (exists ?hp (exists ?e (exists ?s (exists ?h (and (Is ?t 'tree') (HasColor ?t 'green') (LeftOf ?t ?r) (HasState ?r 'open') (In ?g ?r) (Is ?r 'refrigerator') (RightOf ?e ?r) (Is ?g 'glasses') (NextTo ?hp ?g) (Is ?e 'elephant') (Holding ?e ?s) (Is ?hp 'headphones') (NextTo ?h ?e) (HasColor ?s 'blue') (Is ?h 'horse') (Is ?s 'shirt'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "headphones",
+        "refrigerator",
+        "horse",
+        "shirt",
+        "tree",
+        "elephant"
+    ]
+}

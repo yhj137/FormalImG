@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman standing next to a table, holding a sleeping bird on the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?t (exists ?b (and (Is ?w 'woman') (Is ?t 'table') (Is ?b 'bird') (HasState ?w 'standing') (NextTo ?w ?t) (On ?b ?t) (HasState ?b 'sleeping') (Holding ?w ?b))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?t (exists ?b (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?t) (Holding ?w ?b) (Is ?t 'table') (On ?b ?t) (HasState ?b 'sleeping') (Is ?b 'bird'))))))",
+    "k": 3,
+    "object_classes": [
+        "bird",
+        "table",
+        "woman"
+    ]
+}

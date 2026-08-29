@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of every horse is a woman wearing a red hat, inside a wooden house. To her left sits a laptop with a key on it, and to her right is a cake with a metal spoon in it. A clock is mounted on the house.",
+    "dsl": "(forall ?h (implies (Is ?h 'horse') (exists ?w (exists ?hs (exists ?ht (exists ?l (exists ?k (exists ?c (exists ?s (exists ?cl (and (Is ?w 'woman') (RightOf ?w ?h) (Is ?hs 'house') (HasMaterial ?hs 'wooden') (In ?w ?hs) (Is ?ht 'hat') (HasColor ?ht 'red') (On ?ht ?w) (Is ?l 'laptop') (LeftOf ?l ?w) (Is ?k 'key') (On ?k ?l) (Is ?c 'cake') (RightOf ?c ?w) (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?c) (Is ?cl 'clock') (On ?cl ?hs))))))))))))",
+    "cnf": "(forall ?h (exists ?w (exists ?hs (exists ?ht (exists ?l (exists ?k (exists ?c (exists ?s (exists ?cl (and (or (not (Is ?h 'horse')) (Is ?w 'woman')) (or (not (Is ?h 'horse')) (RightOf ?w ?h)) (or (not (Is ?h 'horse')) (Is ?hs 'house')) (or (not (Is ?h 'horse')) (In ?w ?hs)) (or (not (Is ?h 'horse')) (HasMaterial ?hs 'wooden')) (or (not (Is ?h 'horse')) (Is ?ht 'hat')) (or (not (Is ?h 'horse')) (On ?ht ?w)) (or (not (Is ?h 'horse')) (On ?cl ?hs)) (or (not (Is ?h 'horse')) (HasColor ?ht 'red')) (or (not (Is ?h 'horse')) (Is ?l 'laptop')) (or (not (Is ?h 'horse')) (LeftOf ?l ?w)) (or (not (Is ?h 'horse')) (Is ?cl 'clock')) (or (not (Is ?h 'horse')) (Is ?k 'key')) (or (not (Is ?h 'horse')) (RightOf ?c ?w)) (or (not (Is ?h 'horse')) (On ?k ?l)) (or (not (Is ?h 'horse')) (In ?s ?c)) (or (not (Is ?h 'horse')) (Is ?c 'cake')) (or (not (Is ?h 'horse')) (Is ?s 'spoon')) (or (not (Is ?h 'horse')) (HasMaterial ?s 'metal'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "spoon",
+        "key",
+        "hat",
+        "cake",
+        "laptop",
+        "clock",
+        "woman",
+        "horse"
+    ]
+}

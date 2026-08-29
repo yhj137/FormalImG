@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the composition, there is a calculator. Below the calculator is a wrench, and below the wrench is a fork. These three items are arranged in a vertical line, and the calculator appears larger than the fork. Additionally, for every spoon in the image, it is located below the fork and is aligned vertically with it.",
+    "dsl": "(exists ?c (exists ?w (exists ?f (and (Is ?c 'calculator') (Is ?w 'wrench') (Is ?f 'fork') (OnRightSide ?c) (Below ?w ?c) (Below ?f ?w) (AlignedVertically ?c ?w) (AlignedVertically ?w ?f) (LargerThan ?c ?f) (forall ?s (implies (Is ?s 'spoon') (and (Below ?s ?f) (AlignedVertically ?f ?s))))))))",
+    "cnf": "(exists ?c (exists ?w (exists ?f (forall ?s (and (Is ?c 'calculator') (OnRightSide ?c) (Below ?w ?c) (AlignedVertically ?c ?w) (Is ?w 'wrench') (Below ?f ?w) (LargerThan ?c ?f) (AlignedVertically ?w ?f) (Is ?f 'fork') (or (not (Is ?s 'spoon')) (Below ?s ?f)) (or (not (Is ?s 'spoon')) (AlignedVertically ?f ?s)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "fork",
+        "calculator",
+        "spoon"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "This is a cyberpunk style image. A woman is holding leather shoes.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?s (and (Is ?w 'woman') (Is ?s 'shoes') (HasMaterial ?s 'leather') (Holding ?w ?s)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?s (and (Is ?w 'woman') (Holding ?w ?s) (HasMaterial ?s 'leather') (Is ?s 'shoes')))))",
+    "k": 2,
+    "object_classes": [
+        "shoes",
+        "woman"
+    ]
+}

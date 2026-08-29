@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue suitcase in the scene, there is a specific arrangement of four items located horizontally below it. A white shirt is positioned directly below the suitcase. To the right of the shirt is a hat, to the right of the hat is a camera, and to the right of the camera is a screwdriver. The screwdriver is positioned on the bottom side of the image and is visually smaller than the suitcase. The shirt, hat, camera, and screwdriver are all aligned horizontally.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'suitcase') (Has ?s 'blue')) (exists ?sh (exists ?h (exists ?c (exists ?sc (and (Is ?sh 'shirt') (Has ?sh 'white') (Is ?h 'hat') (Is ?c 'camera') (Is ?sc 'screwdriver') (Below ?sh ?s) (RightOf ?h ?sh) (RightOf ?c ?h) (RightOf ?sc ?c) (AlignedHorizontally ?sh ?h) (AlignedHorizontally ?h ?c) (AlignedHorizontally ?c ?sc) (OnBottomSide ?sc) (SmallerThan ?sc ?s)))))))))",
+    "cnf": "(forall ?s (exists ?sh (exists ?h (exists ?c (exists ?sc (and (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Is ?sh 'shirt')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Has ?sh 'white')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Is ?h 'hat')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Below ?sh ?s)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Is ?c 'camera')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (RightOf ?h ?sh)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (Is ?sc 'screwdriver')) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (RightOf ?c ?h)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (AlignedHorizontally ?sh ?h)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (RightOf ?sc ?c)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (AlignedHorizontally ?h ?c)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (AlignedHorizontally ?c ?sc)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (OnBottomSide ?sc)) (or (not (Is ?s 'suitcase')) (not (Has ?s 'blue')) (SmallerThan ?sc ?s))))))))",
+    "k": 5,
+    "object_classes": [
+        "screwdriver",
+        "hat",
+        "camera",
+        "suitcase",
+        "shirt"
+    ]
+}

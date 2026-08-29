@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a bookshelf with every bottle placed on it. To the left of the bookshelf, a sitting dog holds a pair of shoes.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bs (and (Is ?bs 'bookshelf') (forall ?bo (implies (Is ?bo 'bottle') (On ?bo ?bs))) (exists ?d (exists ?s (and (Is ?d 'dog') (Is ?s 'shoes') (HasState ?d 'sitting') (LeftOf ?d ?bs) (Holding ?d ?s)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bs (forall ?bo (exists ?d (exists ?s (and (Is ?bs 'bookshelf') (or (not (Is ?bo 'bottle')) (On ?bo ?bs)) (LeftOf ?d ?bs) (HasState ?d 'sitting') (Holding ?d ?s) (Is ?d 'dog') (Is ?s 'shoes')))))))",
+    "k": 4,
+    "object_classes": [
+        "shoes",
+        "bottle",
+        "dog",
+        "bookshelf"
+    ]
+}

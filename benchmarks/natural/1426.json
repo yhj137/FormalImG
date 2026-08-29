@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in an oil painting style. To the right of every chair stands a wooden bookshelf containing a round clock. To the right of the bookshelf is a sofa with a man sitting on it, alongside a jacket and a metal knife. A bus is visible to the right of the sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?c (implies (Is ?c 'chair') (exists ?b (exists ?clk (exists ?s (exists ?m (exists ?j (exists ?k (exists ?bu (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (RightOf ?b ?c) (Is ?clk 'clock') (HasShape ?clk 'round') (In ?clk ?b) (Is ?s 'sofa') (RightOf ?s ?b) (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?s) (Is ?j 'jacket') (On ?j ?s) (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?s) (Is ?bu 'bus') (RightOf ?bu ?s))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?c (exists ?b (exists ?clk (exists ?s (exists ?m (exists ?j (exists ?k (exists ?bu (and (or (not (Is ?c 'chair')) (Is ?b 'bookshelf')) (or (not (Is ?c 'chair')) (HasMaterial ?b 'wooden')) (or (not (Is ?c 'chair')) (RightOf ?b ?c)) (or (not (Is ?c 'chair')) (In ?clk ?b)) (or (not (Is ?c 'chair')) (Is ?clk 'clock')) (or (not (Is ?c 'chair')) (RightOf ?s ?b)) (or (not (Is ?c 'chair')) (HasShape ?clk 'round')) (or (not (Is ?c 'chair')) (Is ?s 'sofa')) (or (not (Is ?c 'chair')) (Is ?m 'man')) (or (not (Is ?c 'chair')) (On ?m ?s)) (or (not (Is ?c 'chair')) (HasState ?m 'sitting')) (or (not (Is ?c 'chair')) (Is ?j 'jacket')) (or (not (Is ?c 'chair')) (On ?j ?s)) (or (not (Is ?c 'chair')) (Is ?k 'knife')) (or (not (Is ?c 'chair')) (On ?k ?s)) (or (not (Is ?c 'chair')) (HasMaterial ?k 'metal')) (or (not (Is ?c 'chair')) (Is ?bu 'bus')) (or (not (Is ?c 'chair')) (RightOf ?bu ?s))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bus",
+        "knife",
+        "bookshelf",
+        "jacket",
+        "chair",
+        "clock",
+        "sofa",
+        "man"
+    ]
+}

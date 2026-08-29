@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black suitcase on the bottom side, a blue hat above it, a yellow drill above the hat, and a white game controller at the top. The suitcase and game controller are vertically aligned. There is a black phone on the right side, a red pair of pliers above it, a gray calculator above the pliers, and a white bowl at the top. The phone and bowl are vertically aligned. The suitcase is larger than the phone. Additionally, the items are paired horizontally: the suitcase with the phone, the hat with the pliers, the drill with the calculator, and the game controller with the bowl.",
+    "dsl": "(exists ?suitcase (exists ?hat (exists ?drill (exists ?game_controller (exists ?phone (exists ?pliers (exists ?calculator (exists ?bowl (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (OnBottomSide ?suitcase) (Is ?hat 'hat') (Has ?hat 'blue') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?game_controller 'game_controller') (Has ?game_controller 'white') (Is ?phone 'phone') (Has ?phone 'black') (OnRightSide ?phone) (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?calculator 'calculator') (Has ?calculator 'gray') (Is ?bowl 'bowl') (Has ?bowl 'white') (Above ?hat ?suitcase) (Above ?drill ?hat) (Above ?game_controller ?drill) (Above ?pliers ?phone) (Above ?calculator ?pliers) (Above ?bowl ?calculator) (AlignedVertically ?suitcase ?game_controller) (AlignedVertically ?phone ?bowl) (AlignedHorizontally ?suitcase ?phone) (AlignedHorizontally ?hat ?pliers) (AlignedHorizontally ?drill ?calculator) (AlignedHorizontally ?game_controller ?bowl) (LargerThan ?suitcase ?phone))))))))))",
+    "cnf": "(exists ?suitcase (exists ?hat (exists ?drill (exists ?game_controller (exists ?phone (exists ?pliers (exists ?calculator (exists ?bowl (and (Is ?suitcase 'suitcase') (Has ?suitcase 'black') (OnBottomSide ?suitcase) (Above ?hat ?suitcase) (AlignedVertically ?suitcase ?game_controller) (Has ?hat 'blue') (Above ?drill ?hat) (AlignedHorizontally ?suitcase ?phone) (Above ?game_controller ?drill) (AlignedHorizontally ?game_controller ?bowl) (Is ?hat 'hat') (AlignedHorizontally ?hat ?pliers) (Has ?drill 'yellow') (LargerThan ?suitcase ?phone) (AlignedVertically ?phone ?bowl) (AlignedHorizontally ?drill ?calculator) (Has ?game_controller 'white') (Above ?calculator ?pliers) (Is ?drill 'drill') (Above ?pliers ?phone) (Above ?bowl ?calculator) (Is ?game_controller 'game_controller') (Has ?calculator 'gray') (OnRightSide ?phone) (Has ?pliers 'red') (Has ?bowl 'white') (Is ?calculator 'calculator') (Has ?phone 'black') (Is ?pliers 'pliers') (Is ?bowl 'bowl') (Is ?phone 'phone'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "phone",
+        "game_controller",
+        "drill",
+        "hat",
+        "calculator",
+        "bowl",
+        "suitcase"
+    ]
+}

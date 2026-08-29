@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. A gray elephant stands to the left of a bench, holding a blooming flower. A desk is located to the right of the bench. On the desk, there is a sliced cake and a cup, with a knife inside the cup.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?f (exists ?b (exists ?d (exists ?c (exists ?u (exists ?k (and (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?f 'flower') (HasState ?f 'blooming') (Holding ?e ?f) (Is ?b 'bench') (LeftOf ?e ?b) (Is ?d 'desk') (RightOf ?d ?b) (Is ?c 'cake') (HasState ?c 'sliced') (On ?c ?d) (Is ?u 'cup') (On ?u ?d) (Is ?k 'knife') (In ?k ?u))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?f (exists ?b (exists ?d (exists ?c (exists ?u (exists ?k (and (Is ?e 'elephant') (HasColor ?e 'gray') (Holding ?e ?f) (LeftOf ?e ?b) (HasState ?f 'blooming') (Is ?b 'bench') (RightOf ?d ?b) (Is ?f 'flower') (Is ?d 'desk') (On ?c ?d) (On ?u ?d) (HasState ?c 'sliced') (Is ?u 'cup') (In ?k ?u) (Is ?c 'cake') (Is ?k 'knife'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "knife",
+        "bench",
+        "cake",
+        "flower",
+        "desk",
+        "cup"
+    ]
+}

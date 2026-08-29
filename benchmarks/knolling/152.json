@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image where every pen included in the scene is positioned on the left side.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pen') (OnLeftSide ?p))))",
+    "cnf": "(forall ?p (or (not (Is ?p 'pen')) (OnLeftSide ?p)))",
+    "k": 1,
+    "object_classes": [
+        "pen"
+    ]
+}

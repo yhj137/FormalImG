@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. Inside a boat, a wooden desk stands on a rug. Every key in the scene is on the desk. A sandwich sits on the desk with a banana to its right, alongside a rusty hammer. A sleeping cat rests on the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?r (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?r 'rug') (On ?d ?r) (forall ?k (implies (Is ?k 'key') (On ?k ?d))) (exists ?b (exists ?s (exists ?ba (exists ?h (exists ?c (and (Is ?b 'boat') (In ?d ?b) (Is ?s 'sandwich') (On ?s ?d) (Is ?ba 'banana') (RightOf ?ba ?s) (Is ?h 'hammer') (On ?h ?d) (HasState ?h 'rusty') (Is ?c 'cat') (On ?c ?r) (HasState ?c 'sleeping')))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?r (forall ?k (exists ?b (exists ?s (exists ?ba (exists ?h (exists ?c (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?d ?r) (or (not (Is ?k 'key')) (On ?k ?d)) (Is ?r 'rug') (On ?c ?r) (In ?d ?b) (Is ?c 'cat') (HasState ?c 'sleeping') (On ?s ?d) (Is ?b 'boat') (On ?h ?d) (Is ?s 'sandwich') (RightOf ?ba ?s) (Is ?h 'hammer') (HasState ?h 'rusty') (Is ?ba 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "rug",
+        "desk",
+        "hammer",
+        "sandwich",
+        "boat",
+        "cat",
+        "banana",
+        "key"
+    ]
+}

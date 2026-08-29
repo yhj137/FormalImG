@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the image, there is a monitor. Below the monitor is a book, which is smaller than the monitor. To the right of the book is a mouse, aligned horizontally with the book. Below the book is a phone. For every wrench in the scene, it is located to the right of the phone and aligned horizontally with it. Below the wrench is a lighter. To the right of the lighter is a wallet, aligned horizontally with the lighter. Below the lighter is an apple. To the right of the apple is a stapler, aligned horizontally with the apple. To the right of the stapler is a ruler, which is larger than the stapler, and they are aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?book (exists ?mouse (exists ?phone (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?book 'book') (Below ?book ?monitor) (SmallerThan ?book ?monitor) (Is ?mouse 'mouse') (RightOf ?mouse ?book) (AlignedHorizontally ?book ?mouse) (Is ?phone 'phone') (Below ?phone ?book) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?lighter (exists ?wallet (exists ?apple (exists ?stapler (exists ?ruler (and (Is ?lighter 'lighter') (Is ?wallet 'wallet') (Is ?apple 'apple') (Is ?stapler 'stapler') (Is ?ruler 'ruler') (RightOf ?wrench ?phone) (AlignedHorizontally ?phone ?wrench) (Below ?lighter ?wrench) (RightOf ?wallet ?lighter) (AlignedHorizontally ?lighter ?wallet) (Below ?apple ?lighter) (RightOf ?stapler ?apple) (AlignedHorizontally ?apple ?stapler) (RightOf ?ruler ?stapler) (AlignedHorizontally ?stapler ?ruler) (LargerThan ?ruler ?stapler))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?book (exists ?mouse (exists ?phone (forall ?wrench (exists ?lighter (exists ?wallet (exists ?apple (exists ?stapler (exists ?ruler (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Below ?book ?monitor) (SmallerThan ?book ?monitor) (Is ?book 'book') (RightOf ?mouse ?book) (AlignedHorizontally ?book ?mouse) (Is ?mouse 'mouse') (Below ?phone ?book) (Is ?phone 'phone') (or (not (Is ?wrench 'wrench')) (RightOf ?wrench ?phone)) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?phone ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?ruler 'ruler')) (or (not (Is ?wrench 'wrench')) (Below ?lighter ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?stapler 'stapler')) (or (not (Is ?wrench 'wrench')) (RightOf ?ruler ?stapler)) (or (not (Is ?wrench 'wrench')) (Is ?lighter 'lighter')) (or (not (Is ?wrench 'wrench')) (RightOf ?wallet ?lighter)) (or (not (Is ?wrench 'wrench')) (Is ?apple 'apple')) (or (not (Is ?wrench 'wrench')) (RightOf ?stapler ?apple)) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?apple ?stapler)) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?stapler ?ruler)) (or (not (Is ?wrench 'wrench')) (Is ?wallet 'wallet')) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?lighter ?wallet)) (or (not (Is ?wrench 'wrench')) (Below ?apple ?lighter)) (or (not (Is ?wrench 'wrench')) (LargerThan ?ruler ?stapler)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "book",
+        "stapler",
+        "apple",
+        "wrench",
+        "phone",
+        "lighter",
+        "wallet",
+        "mouse",
+        "monitor"
+    ]
+}

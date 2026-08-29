@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout begins with a monitor, and to its right is a backpack; the monitor is larger than the backpack. Continuing to the right, there is a shoe, and then a sock which is smaller than the shoe. For every pen in the scene, the following arrangement is strictly enforced: the pen is positioned to the right of the sock, and it is followed by a bowl to its right. To the right of the bowl lies a phone, which is smaller than the bowl and situated on the right side of the image. Finally, a pair of pliers is located to the right of the phone and is larger than the phone.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?shoe (exists ?sock (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?shoe 'shoe') (Is ?sock 'sock') (LargerThan ?monitor ?backpack) (RightOf ?backpack ?monitor) (RightOf ?shoe ?backpack) (RightOf ?sock ?shoe) (SmallerThan ?sock ?shoe) (forall ?pen (implies (Is ?pen 'pen') (exists ?bowl (exists ?phone (exists ?pliers (and (Is ?bowl 'bowl') (Is ?phone 'phone') (Is ?pliers 'pliers') (RightOf ?pen ?sock) (RightOf ?bowl ?pen) (RightOf ?phone ?bowl) (SmallerThan ?phone ?bowl) (OnRightSide ?phone) (RightOf ?pliers ?phone) (LargerThan ?pliers ?phone))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?shoe (exists ?sock (forall ?pen (exists ?bowl (exists ?phone (exists ?pliers (and (Is ?monitor 'monitor') (LargerThan ?monitor ?backpack) (RightOf ?backpack ?monitor) (Is ?backpack 'backpack') (RightOf ?shoe ?backpack) (Is ?shoe 'shoe') (RightOf ?sock ?shoe) (SmallerThan ?sock ?shoe) (Is ?sock 'sock') (or (not (Is ?pen 'pen')) (RightOf ?pen ?sock)) (or (not (Is ?pen 'pen')) (Is ?pliers 'pliers')) (or (not (Is ?pen 'pen')) (RightOf ?bowl ?pen)) (or (not (Is ?pen 'pen')) (Is ?phone 'phone')) (or (not (Is ?pen 'pen')) (RightOf ?pliers ?phone)) (or (not (Is ?pen 'pen')) (RightOf ?phone ?bowl)) (or (not (Is ?pen 'pen')) (Is ?bowl 'bowl')) (or (not (Is ?pen 'pen')) (OnRightSide ?phone)) (or (not (Is ?pen 'pen')) (LargerThan ?pliers ?phone)) (or (not (Is ?pen 'pen')) (SmallerThan ?phone ?bowl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "pen",
+        "phone",
+        "backpack",
+        "monitor",
+        "bowl",
+        "shoe"
+    ]
+}

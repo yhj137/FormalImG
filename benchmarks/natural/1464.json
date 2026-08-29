@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a bench. All butterflies are located to the right of the bench. A man sits on the bench holding a leather jacket with a round ball inside. A woman is next to the man. To the left of the bench is a monitor, with a person standing next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?be (and (Is ?be 'bench') (forall ?bu (implies (Is ?bu 'butterfly') (RightOf ?bu ?be))) (exists ?ma (exists ?mo (exists ?pe (exists ?wo (exists ?ja (exists ?ba (and (Is ?ma 'man') (On ?ma ?be) (Is ?mo 'monitor') (LeftOf ?mo ?be) (Is ?pe 'person') (NextTo ?pe ?mo) (Is ?wo 'woman') (NextTo ?wo ?ma) (Is ?ja 'jacket') (HasMaterial ?ja 'leather') (Holding ?ma ?ja) (Is ?ba 'ball') (HasShape ?ba 'round') (In ?ba ?ja)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?be (forall ?bu (exists ?ma (exists ?mo (exists ?pe (exists ?wo (exists ?ja (exists ?ba (and (Is ?be 'bench') (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?be)) (On ?ma ?be) (LeftOf ?mo ?be) (Is ?ma 'man') (NextTo ?wo ?ma) (Is ?mo 'monitor') (NextTo ?pe ?mo) (Holding ?ma ?ja) (Is ?wo 'woman') (Is ?pe 'person') (HasMaterial ?ja 'leather') (In ?ba ?ja) (Is ?ja 'jacket') (HasShape ?ba 'round') (Is ?ba 'ball')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "person",
+        "woman",
+        "man",
+        "monitor",
+        "jacket",
+        "ball",
+        "butterfly"
+    ]
+}

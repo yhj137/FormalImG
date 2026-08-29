@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a white glove, a red lighter, a remote, and headphones. The white glove is positioned on the left side of the image. Located directly below the glove is the red lighter, while the remote is placed to the right of the glove. The headphones are situated below the remote and to the right of the lighter. Additionally, the headphones are visually larger than the lighter.",
+    "dsl": "(exists ?glove (exists ?lighter (exists ?remote (exists ?headphones (and (Is ?glove 'glove') (Has ?glove 'white') (OnLeftSide ?glove) (Is ?lighter 'lighter') (Has ?lighter 'red') (Below ?lighter ?glove) (Is ?remote 'remote') (RightOf ?remote ?glove) (Is ?headphones 'headphones') (Below ?headphones ?remote) (RightOf ?headphones ?lighter) (LargerThan ?headphones ?lighter))))))",
+    "cnf": "(exists ?glove (exists ?lighter (exists ?remote (exists ?headphones (and (Is ?glove 'glove') (Has ?glove 'white') (OnLeftSide ?glove) (Below ?lighter ?glove) (RightOf ?remote ?glove) (Has ?lighter 'red') (RightOf ?headphones ?lighter) (Is ?remote 'remote') (Below ?headphones ?remote) (Is ?lighter 'lighter') (LargerThan ?headphones ?lighter) (Is ?headphones 'headphones'))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "remote",
+        "glove",
+        "lighter"
+    ]
+}

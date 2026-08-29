@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every set of keys in the scene, there is a corresponding pen. Specifically, each set of keys is positioned on the bottom side of the image, and the associated pen is aligned vertically with those keys.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keys') (exists ?p (and (Is ?p 'pen') (OnBottomSide ?k) (AlignedVertically ?k ?p))))))",
+    "cnf": "(forall ?k (exists ?p (and (or (not (Is ?k 'keys')) (Is ?p 'pen')) (or (not (Is ?k 'keys')) (OnBottomSide ?k)) (or (not (Is ?k 'keys')) (AlignedVertically ?k ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "pen"
+    ]
+}

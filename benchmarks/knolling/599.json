@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a black laptop and a carrot, which are aligned horizontally. Furthermore, every sock in the image is white and is visually smaller than the laptop.",
+    "dsl": "(exists ?l (exists ?c (and (Is ?l 'laptop') (Has ?l 'black') (Is ?c 'carrot') (AlignedHorizontally ?l ?c) (forall ?s (implies (Is ?s 'sock') (and (Has ?s 'white') (SmallerThan ?s ?l)))))))",
+    "cnf": "(exists ?l (exists ?c (forall ?s (and (Is ?l 'laptop') (Has ?l 'black') (AlignedHorizontally ?l ?c) (or (not (Is ?s 'sock')) (SmallerThan ?s ?l)) (Is ?c 'carrot') (or (not (Is ?s 'sock')) (Has ?s 'white'))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "carrot",
+        "sock"
+    ]
+}

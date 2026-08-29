@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical arrangement of items. A shirt is positioned on the left side of the scene. Directly above the shirt is a handbag, and above that is a wallet, with the handbag being larger than the wallet. A phone is located above the wallet, and a glove is placed above the phone. For every lemon in the image, it is situated above the glove, and there is a corresponding spoon positioned above the lemon that is larger than the lemon.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?wallet (exists ?phone (exists ?glove (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Is ?handbag 'handbag') (Above ?handbag ?shirt) (Is ?wallet 'wallet') (Above ?wallet ?handbag) (LargerThan ?handbag ?wallet) (Is ?phone 'phone') (Above ?phone ?wallet) (Is ?glove 'glove') (Above ?glove ?phone) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?spoon (and (Is ?spoon 'spoon') (Above ?lemon ?glove) (Above ?spoon ?lemon) (LargerThan ?spoon ?lemon)))))))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?wallet (exists ?phone (exists ?glove (forall ?lemon (exists ?spoon (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Above ?handbag ?shirt) (Is ?handbag 'handbag') (Above ?wallet ?handbag) (LargerThan ?handbag ?wallet) (Is ?wallet 'wallet') (Above ?phone ?wallet) (Is ?phone 'phone') (Above ?glove ?phone) (Is ?glove 'glove') (or (not (Is ?lemon 'lemon')) (Above ?lemon ?glove)) (or (not (Is ?lemon 'lemon')) (Is ?spoon 'spoon')) (or (not (Is ?lemon 'lemon')) (Above ?spoon ?lemon)) (or (not (Is ?lemon 'lemon')) (LargerThan ?spoon ?lemon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lemon",
+        "phone",
+        "handbag",
+        "wallet",
+        "spoon",
+        "glove",
+        "shirt"
+    ]
+}

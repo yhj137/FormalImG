@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a house containing a table. Every laptop is open and rests on the table. To the left of the table, a lion holds a pair of glasses.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (and (Is ?h 'house') (Is ?t 'table') (In ?t ?h) (forall ?lap (implies (Is ?lap 'laptop') (and (On ?lap ?t) (HasState ?lap 'open')))) (exists ?l (exists ?g (and (Is ?l 'lion') (Is ?g 'glasses') (LeftOf ?l ?t) (Holding ?l ?g))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?t (forall ?lap (exists ?l (exists ?g (and (Is ?h 'house') (In ?t ?h) (Is ?t 'table') (or (not (Is ?lap 'laptop')) (On ?lap ?t)) (LeftOf ?l ?t) (or (not (Is ?lap 'laptop')) (HasState ?lap 'open')) (Is ?l 'lion') (Holding ?l ?g) (Is ?g 'glasses'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "laptop",
+        "glasses",
+        "table",
+        "lion"
+    ]
+}

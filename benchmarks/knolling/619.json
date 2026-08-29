@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a blue shirt, a red hat, black headphones, and a gray spoon. The objects are arranged in a line where the red hat is located to the right of the blue shirt, the black headphones are positioned to the right of the red hat, and the gray spoon is to the right of the headphones. All four items are aligned horizontally, and the blue shirt is larger than the gray spoon.",
+    "dsl": "(exists ?shirt (exists ?hat (exists ?headphones (exists ?spoon (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?hat 'hat') (Has ?hat 'red') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?spoon 'spoon') (Has ?spoon 'gray') (RightOf ?hat ?shirt) (RightOf ?headphones ?hat) (RightOf ?spoon ?headphones) (AlignedHorizontally ?shirt ?hat) (AlignedHorizontally ?hat ?headphones) (AlignedHorizontally ?headphones ?spoon) (LargerThan ?shirt ?spoon))))))",
+    "cnf": "(exists ?shirt (exists ?hat (exists ?headphones (exists ?spoon (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (RightOf ?hat ?shirt) (AlignedHorizontally ?shirt ?hat) (Has ?hat 'red') (RightOf ?headphones ?hat) (LargerThan ?shirt ?spoon) (AlignedHorizontally ?hat ?headphones) (Is ?hat 'hat') (Has ?headphones 'black') (RightOf ?spoon ?headphones) (AlignedHorizontally ?headphones ?spoon) (Is ?headphones 'headphones') (Has ?spoon 'gray') (Is ?spoon 'spoon'))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "hat",
+        "headphones",
+        "shirt"
+    ]
+}

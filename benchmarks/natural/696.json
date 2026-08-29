@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden bench. All fruit are positioned next to the bench, alongside a lion holding a round umbrella.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (forall ?f (implies (Is ?f 'fruit') (NextTo ?f ?b))) (exists ?l (exists ?u (and (Is ?l 'lion') (Is ?u 'umbrella') (HasShape ?u 'round') (NextTo ?l ?b) (Holding ?l ?u)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?f (exists ?l (exists ?u (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (or (not (Is ?f 'fruit')) (NextTo ?f ?b)) (NextTo ?l ?b) (Is ?l 'lion') (Holding ?l ?u) (HasShape ?u 'round') (Is ?u 'umbrella')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "umbrella",
+        "lion",
+        "fruit"
+    ]
+}

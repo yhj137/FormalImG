@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands to the right of metal cars, holding the shoes placed on them.",
+    "dsl": "(exists ?m (and (Is ?m 'man') (forall ?s (implies (Is ?s 'shoes') (exists ?c (and (Is ?c 'car') (HasMaterial ?c 'metal') (On ?s ?c) (Holding ?m ?s) (RightOf ?m ?c)))))))",
+    "cnf": "(exists ?m (forall ?s (exists ?c (and (Is ?m 'man') (or (not (Is ?s 'shoes')) (Holding ?m ?s)) (or (not (Is ?s 'shoes')) (RightOf ?m ?c)) (or (not (Is ?s 'shoes')) (On ?s ?c)) (or (not (Is ?s 'shoes')) (HasMaterial ?c 'metal')) (or (not (Is ?s 'shoes')) (Is ?c 'car'))))))",
+    "k": 3,
+    "object_classes": [
+        "shoes",
+        "car",
+        "man"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop and a handbag. For every ruler in the scene, the handbag is on the right side, the laptop is to the left of the handbag, the ruler is to the left of the laptop, and there exist a mouse, a wallet, a sock, and a remote such that the mouse is below the laptop and smaller than it, the wallet is below the handbag and smaller than it, the sock is on the bottom side below the mouse, and the remote is below the wallet with the sock to its left.",
+    "dsl": "(exists ?laptop (exists ?handbag (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?mouse (exists ?wallet (exists ?sock (exists ?remote (and (Is ?laptop 'laptop') (Is ?handbag 'handbag') (Is ?mouse 'mouse') (Is ?wallet 'wallet') (Is ?sock 'sock') (Is ?remote 'remote') (OnRightSide ?handbag) (LeftOf ?laptop ?handbag) (LeftOf ?ruler ?laptop) (LargerThan ?laptop ?mouse) (Below ?mouse ?laptop) (SmallerThan ?wallet ?handbag) (Below ?wallet ?handbag) (OnBottomSide ?sock) (Below ?sock ?mouse) (Below ?remote ?wallet) (LeftOf ?sock ?remote))))))))))",
+    "cnf": "(exists ?laptop (exists ?handbag (forall ?ruler (exists ?mouse (exists ?wallet (exists ?sock (exists ?remote (and (or (not (Is ?ruler 'ruler')) (Is ?laptop 'laptop')) (or (not (Is ?ruler 'ruler')) (Is ?handbag 'handbag')) (or (not (Is ?ruler 'ruler')) (LeftOf ?laptop ?handbag)) (or (not (Is ?ruler 'ruler')) (Is ?mouse 'mouse')) (or (not (Is ?ruler 'ruler')) (OnRightSide ?handbag)) (or (not (Is ?ruler 'ruler')) (LeftOf ?ruler ?laptop)) (or (not (Is ?ruler 'ruler')) (SmallerThan ?wallet ?handbag)) (or (not (Is ?ruler 'ruler')) (Is ?wallet 'wallet')) (or (not (Is ?ruler 'ruler')) (LargerThan ?laptop ?mouse)) (or (not (Is ?ruler 'ruler')) (Is ?remote 'remote')) (or (not (Is ?ruler 'ruler')) (Below ?mouse ?laptop)) (or (not (Is ?ruler 'ruler')) (Below ?wallet ?handbag)) (or (not (Is ?ruler 'ruler')) (Is ?sock 'sock')) (or (not (Is ?ruler 'ruler')) (Below ?remote ?wallet)) (or (not (Is ?ruler 'ruler')) (Below ?sock ?mouse)) (or (not (Is ?ruler 'ruler')) (OnBottomSide ?sock)) (or (not (Is ?ruler 'ruler')) (LeftOf ?sock ?remote))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "remote",
+        "sock",
+        "handbag",
+        "wallet",
+        "mouse"
+    ]
+}

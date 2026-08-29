@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A game controller is positioned on the right side of the scene. For every pen in the image, there exists a shoe and a pair of headphones arranged such that the pen, the shoe, and the headphones are aligned vertically. Additionally, the pen is smaller than the shoe, and the pen is also smaller than the game controller.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnRightSide ?gc) (forall ?p (implies (Is ?p 'pen') (exists ?s (exists ?h (and (Is ?s 'shoe') (Is ?h 'headphones') (AlignedVertically ?p ?s) (AlignedVertically ?s ?h) (SmallerThan ?p ?s) (SmallerThan ?p ?gc))))))))",
+    "cnf": "(exists ?gc (forall ?p (exists ?s (exists ?h (and (Is ?gc 'game_controller') (OnRightSide ?gc) (or (not (Is ?p 'pen')) (SmallerThan ?p ?gc)) (or (not (Is ?p 'pen')) (SmallerThan ?p ?s)) (or (not (Is ?p 'pen')) (AlignedVertically ?s ?h)) (or (not (Is ?p 'pen')) (AlignedVertically ?p ?s)) (or (not (Is ?p 'pen')) (Is ?h 'headphones')) (or (not (Is ?p 'pen')) (Is ?s 'shoe')))))))",
+    "k": 4,
+    "object_classes": [
+        "pen",
+        "headphones",
+        "shoe",
+        "game_controller"
+    ]
+}

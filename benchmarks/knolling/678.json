@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe in the scene, it is red, and there is a pair of black headphones positioned below it, a white hat positioned below the headphones, and a blue pen located on the bottom side of the image, where the headphones are larger than the pen.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?headphones (exists ?hat (exists ?pen (and (Has ?shoe 'red') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?hat 'hat') (Has ?hat 'white') (Is ?pen 'pen') (Has ?pen 'blue') (Below ?headphones ?shoe) (Below ?hat ?headphones) (LargerThan ?headphones ?pen) (OnBottomSide ?pen))))))))",
+    "cnf": "(forall ?shoe (exists ?headphones (exists ?hat (exists ?pen (and (or (not (Is ?shoe 'shoe')) (Has ?shoe 'red')) (or (not (Is ?shoe 'shoe')) (Is ?headphones 'headphones')) (or (not (Is ?shoe 'shoe')) (Has ?headphones 'black')) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (Below ?headphones ?shoe)) (or (not (Is ?shoe 'shoe')) (Has ?hat 'white')) (or (not (Is ?shoe 'shoe')) (Has ?pen 'blue')) (or (not (Is ?shoe 'shoe')) (Below ?hat ?headphones)) (or (not (Is ?shoe 'shoe')) (Is ?pen 'pen')) (or (not (Is ?shoe 'shoe')) (LargerThan ?headphones ?pen)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?pen)))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "headphones",
+        "shoe",
+        "pen"
+    ]
+}

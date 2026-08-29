@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every metal boat has a plastic umbrella next to it, and a toy car on top with headphones beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (and (Is ?b 'boat') (HasMaterial ?b 'metal')) (exists ?u (exists ?t (exists ?h (and (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (NextTo ?u ?b) (Is ?t 'toy car') (On ?t ?b) (Is ?h 'headphones') (NextTo ?h ?t))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?u (exists ?t (exists ?h (and (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (Is ?u 'umbrella')) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (HasMaterial ?u 'plastic')) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (NextTo ?u ?b)) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (Is ?t 'toy car')) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (On ?t ?b)) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (Is ?h 'headphones')) (or (not (Is ?b 'boat')) (not (HasMaterial ?b 'metal')) (NextTo ?h ?t))))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "toy car",
+        "boat"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of black headphones positioned on the top side. A gray remote is aligned horizontally with the headphones, and a brown wallet is aligned horizontally with the remote; the wallet is smaller than the headphones. Additionally, for every red apple in the image, there is a carrot that is smaller than the apple, and the apple is aligned horizontally with the wallet.",
+    "dsl": "(exists ?h (exists ?r (exists ?w (and (Is ?h 'headphones') (Has ?h 'black') (OnTopSide ?h) (Is ?r 'remote') (Has ?r 'gray') (Is ?w 'wallet') (Has ?w 'brown') (AlignedHorizontally ?h ?r) (AlignedHorizontally ?r ?w) (SmallerThan ?w ?h) (forall ?a (implies (and (Is ?a 'apple') (Has ?a 'red')) (exists ?c (and (Is ?c 'carrot') (SmallerThan ?c ?a) (AlignedHorizontally ?a ?w)))))))))",
+    "cnf": "(exists ?h (exists ?r (exists ?w (forall ?a (exists ?c (and (Is ?h 'headphones') (Has ?h 'black') (OnTopSide ?h) (AlignedHorizontally ?h ?r) (SmallerThan ?w ?h) (Has ?r 'gray') (AlignedHorizontally ?r ?w) (or (not (Is ?a 'apple')) (not (Has ?a 'red')) (AlignedHorizontally ?a ?w)) (Is ?r 'remote') (Has ?w 'brown') (or (not (Is ?a 'apple')) (not (Has ?a 'red')) (SmallerThan ?c ?a)) (Is ?w 'wallet') (or (not (Is ?a 'apple')) (not (Has ?a 'red')) (Is ?c 'carrot'))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "apple",
+        "carrot",
+        "wallet",
+        "headphones"
+    ]
+}

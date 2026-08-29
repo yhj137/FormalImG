@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a plant made of plastic.",
+    "dsl": "(exists ?p (and (Is ?p 'plant') (HasMaterial ?p 'plastic')))",
+    "cnf": "(exists ?p (and (Is ?p 'plant') (HasMaterial ?p 'plastic')))",
+    "k": 1,
+    "object_classes": [
+        "plant"
+    ]
+}

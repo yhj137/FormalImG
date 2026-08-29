@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a rectangular wardrobe. Every backpack rests on the wardrobe, with a lion positioned next to each one.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (forall ?b (implies (Is ?b 'backpack') (and (On ?b ?w) (exists ?l (and (Is ?l 'lion') (NextTo ?l ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?b (exists ?l (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (or (not (Is ?b 'backpack')) (On ?b ?w)) (or (not (Is ?b 'backpack')) (Is ?l 'lion')) (or (not (Is ?b 'backpack')) (NextTo ?l ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "lion",
+        "backpack",
+        "wardrobe"
+    ]
+}

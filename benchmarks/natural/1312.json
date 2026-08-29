@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is positioned with a tree to her left and a rock to her right. A lion stands to the left of the tree. Every book in the scene is placed on the rock. The woman is holding a round plate and wears a black hat.",
+    "dsl": "(exists ?w (exists ?t (exists ?r (and (Is ?w 'woman') (Is ?t 'tree') (Is ?r 'rock') (LeftOf ?t ?w) (RightOf ?r ?w) (forall ?b (implies (Is ?b 'book') (On ?b ?r))) (exists ?l (and (Is ?l 'lion') (LeftOf ?l ?t))) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (Holding ?w ?p))) (exists ?h (and (Is ?h 'hat') (HasColor ?h 'black') (On ?h ?w)))))))",
+    "cnf": "(exists ?w (exists ?t (exists ?r (forall ?b (exists ?l (exists ?p (exists ?h (and (Is ?w 'woman') (LeftOf ?t ?w) (RightOf ?r ?w) (Is ?t 'tree') (LeftOf ?l ?t) (Holding ?w ?p) (Is ?r 'rock') (or (not (Is ?b 'book')) (On ?b ?r)) (Is ?l 'lion') (On ?h ?w) (HasShape ?p 'round') (HasColor ?h 'black') (Is ?p 'plate') (Is ?h 'hat')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "plate",
+        "tree",
+        "woman",
+        "rock",
+        "lion",
+        "hat"
+    ]
+}

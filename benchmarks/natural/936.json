@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child sitting in a bed holding a keyboard. All birds are to the left of the bed, and a car is to the right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?b (exists ?k (and (Is ?c 'child') (HasState ?c 'sitting') (Is ?b 'bed') (In ?c ?b) (Is ?k 'keyboard') (Holding ?c ?k) (forall ?bird (implies (Is ?bird 'bird') (LeftOf ?bird ?b))) (exists ?car (and (Is ?car 'car') (RightOf ?car ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?b (exists ?k (forall ?bird (exists ?car (and (Is ?c 'child') (HasState ?c 'sitting') (In ?c ?b) (Holding ?c ?k) (Is ?b 'bed') (or (not (Is ?bird 'bird')) (LeftOf ?bird ?b)) (Is ?k 'keyboard') (RightOf ?car ?b) (Is ?car 'car'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "bed",
+        "bird",
+        "child",
+        "car"
+    ]
+}

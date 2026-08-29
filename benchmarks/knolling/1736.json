@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pan, a pizza, a sandwich, a book, and a lighter. The pizza is located to the right of the pan, the sandwich is to the right of the pizza, the book is to the right of the sandwich, and the lighter is to the right of the book. The layout also follows a specific rule: for every glove in the image, there is a donut, a laptop, and a keyboard. The donut is positioned to the right of the glove and below the lighter. Furthermore, the donut is to the right of the laptop. The laptop is placed above the keyboard, which is situated on the bottom side of the image.",
+    "dsl": "(exists ?pan (exists ?pizza (exists ?sandwich (exists ?book (exists ?lighter (and (Is ?pan 'pan') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (Is ?book 'book') (Is ?lighter 'lighter') (RightOf ?pizza ?pan) (RightOf ?sandwich ?pizza) (RightOf ?book ?sandwich) (RightOf ?lighter ?book) (forall ?glove (implies (Is ?glove 'glove') (exists ?donut (exists ?laptop (exists ?keyboard (and (Is ?donut 'donut') (Is ?laptop 'laptop') (Is ?keyboard 'keyboard') (RightOf ?donut ?glove) (Below ?donut ?lighter) (RightOf ?donut ?laptop) (Above ?laptop ?keyboard) (OnBottomSide ?keyboard)))))))))))))",
+    "cnf": "(exists ?pan (exists ?pizza (exists ?sandwich (exists ?book (exists ?lighter (forall ?glove (exists ?donut (exists ?laptop (exists ?keyboard (and (Is ?pan 'pan') (RightOf ?pizza ?pan) (Is ?pizza 'pizza') (RightOf ?sandwich ?pizza) (Is ?sandwich 'sandwich') (RightOf ?book ?sandwich) (Is ?book 'book') (RightOf ?lighter ?book) (Is ?lighter 'lighter') (or (not (Is ?glove 'glove')) (Below ?donut ?lighter)) (or (not (Is ?glove 'glove')) (RightOf ?donut ?glove)) (or (not (Is ?glove 'glove')) (RightOf ?donut ?laptop)) (or (not (Is ?glove 'glove')) (Is ?donut 'donut')) (or (not (Is ?glove 'glove')) (Is ?keyboard 'keyboard')) (or (not (Is ?glove 'glove')) (Above ?laptop ?keyboard)) (or (not (Is ?glove 'glove')) (Is ?laptop 'laptop')) (or (not (Is ?glove 'glove')) (OnBottomSide ?keyboard))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "laptop",
+        "keyboard",
+        "pizza",
+        "pan",
+        "lighter",
+        "sandwich",
+        "glove",
+        "donut"
+    ]
+}

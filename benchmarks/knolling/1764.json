@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat, grid-like arrangement of objects. The scene is anchored by a black pan positioned on the top side of the image. To the right of the pan lies a brown cutting board, and to the right of the cutting board is a red handbag. Directly below the pan is a gray wrench, while a white keyboard is located to the right of the wrench. Blue scissors are positioned to the right of the keyboard. Vertical alignment is maintained with the cutting board above the keyboard and the handbag above the scissors. To the left of the wrench, there is a carrot. Finally, the scene adheres to a specific rule: for every lemon present, there is a black phone to its right, and the carrot is positioned above the lemon.",
+    "dsl": "(exists ?pan (exists ?cb (exists ?hb (exists ?wr (exists ?kb (exists ?sci (exists ?car (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (Is ?cb 'cutting_board') (Has ?cb 'brown') (Is ?hb 'handbag') (Has ?hb 'red') (Is ?wr 'wrench') (Has ?wr 'gray') (Is ?kb 'keyboard') (Has ?kb 'white') (Is ?sci 'scissors') (Has ?sci 'blue') (Is ?car 'carrot') (RightOf ?cb ?pan) (RightOf ?hb ?cb) (Above ?pan ?wr) (RightOf ?kb ?wr) (RightOf ?sci ?kb) (Above ?cb ?kb) (Above ?hb ?sci) (LeftOf ?car ?wr) (forall ?lem (implies (Is ?lem 'lemon') (exists ?ph (and (Is ?ph 'phone') (Has ?ph 'black') (RightOf ?ph ?lem) (Above ?car ?lem)))))))))))))",
+    "cnf": "(exists ?pan (exists ?cb (exists ?hb (exists ?wr (exists ?kb (exists ?sci (exists ?car (forall ?lem (exists ?ph (and (Is ?pan 'pan') (Has ?pan 'black') (OnTopSide ?pan) (RightOf ?cb ?pan) (Above ?pan ?wr) (Has ?cb 'brown') (RightOf ?hb ?cb) (Has ?wr 'gray') (RightOf ?kb ?wr) (Is ?cb 'cutting_board') (Above ?cb ?kb) (Has ?hb 'red') (Above ?hb ?sci) (Is ?wr 'wrench') (LeftOf ?car ?wr) (Has ?kb 'white') (RightOf ?sci ?kb) (Is ?hb 'handbag') (Is ?car 'carrot') (or (not (Is ?lem 'lemon')) (Above ?car ?lem)) (Is ?kb 'keyboard') (Has ?sci 'blue') (or (not (Is ?lem 'lemon')) (RightOf ?ph ?lem)) (Is ?sci 'scissors') (or (not (Is ?lem 'lemon')) (Has ?ph 'black')) (or (not (Is ?lem 'lemon')) (Is ?ph 'phone'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "wrench",
+        "lemon",
+        "carrot",
+        "phone",
+        "cutting_board",
+        "pan",
+        "handbag",
+        "scissors"
+    ]
+}

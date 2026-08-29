@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a metal bench with a teddy bear next to it. The teddy bear is holding all the headphones, which are positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (and (Is ?b 'bench') (HasMaterial ?b 'metal') (Is ?t 'teddy bear') (NextTo ?t ?b) (forall ?h (implies (Is ?h 'headphones') (and (Holding ?t ?h) (RightOf ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?t (forall ?h (and (Is ?b 'bench') (HasMaterial ?b 'metal') (NextTo ?t ?b) (or (not (Is ?h 'headphones')) (RightOf ?h ?b)) (Is ?t 'teddy bear') (or (not (Is ?h 'headphones')) (Holding ?t ?h)))))))",
+    "k": 3,
+    "object_classes": [
+        "bench",
+        "teddy bear",
+        "headphones"
+    ]
+}

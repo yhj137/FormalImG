@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image of a broken bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bench') (HasState ?b 'broken'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bench') (HasState ?b 'broken'))))",
+    "k": 1,
+    "object_classes": [
+        "bench"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of blue jeans positioned on the left side of the scene, there is a set of four items arranged to its right: a white shirt, a white bowl, a black remote, and red pliers. The jeans are located to the left of the shirt. The shirt, bowl, remote, and pliers are arranged in a column, meaning they are all aligned vertically with one another.",
+    "dsl": "(forall ?j (implies (and (Is ?j 'jeans') (Has ?j 'blue') (OnLeftSide ?j)) (exists ?s (exists ?b (exists ?r (exists ?p (and (Is ?s 'shirt') (Has ?s 'white') (Is ?b 'bowl') (Has ?b 'white') (Is ?r 'remote') (Has ?r 'black') (Is ?p 'pliers') (Has ?p 'red') (LeftOf ?j ?s) (AlignedVertically ?s ?b) (AlignedVertically ?b ?r) (AlignedVertically ?r ?p))))))))",
+    "cnf": "(forall ?j (exists ?s (exists ?b (exists ?r (exists ?p (and (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Is ?s 'shirt')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Has ?s 'white')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (LeftOf ?j ?s)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Is ?b 'bowl')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (AlignedVertically ?s ?b)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Has ?p 'red')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Has ?b 'white')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (AlignedVertically ?b ?r)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Is ?p 'pliers')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (AlignedVertically ?r ?p)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Is ?r 'remote')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (not (OnLeftSide ?j)) (Has ?r 'black'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "shirt",
+        "pliers",
+        "jeans",
+        "remote"
+    ]
+}

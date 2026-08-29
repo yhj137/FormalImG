@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red bicycle and a bed, with the bed positioned to the right of the bicycle. Every plate is located next to the bicycle and to the left of the bed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?d (and (Is ?b 'bicycle') (HasColor ?b 'red') (Is ?d 'bed') (RightOf ?d ?b) (forall ?p (implies (Is ?p 'plate') (and (NextTo ?p ?b) (LeftOf ?p ?d))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?d (forall ?p (and (Is ?b 'bicycle') (HasColor ?b 'red') (RightOf ?d ?b) (or (not (Is ?p 'plate')) (NextTo ?p ?b)) (Is ?d 'bed') (or (not (Is ?p 'plate')) (LeftOf ?p ?d)))))))",
+    "k": 3,
+    "object_classes": [
+        "bicycle",
+        "bed",
+        "plate"
+    ]
+}

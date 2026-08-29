@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase located on the bottom side. Directly above the suitcase is a pair of jeans. To the right of the jeans is a plate, and to the right of the plate is a wallet; the jeans, plate, and wallet are aligned horizontally. For every camera in the image, it is positioned above the wallet. Associated with the camera, there is a hat to its right which is aligned horizontally with the camera, and a hammer is located below the hat.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?plate (exists ?wallet (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?jeans 'jeans') (Is ?plate 'plate') (Is ?wallet 'wallet') (Above ?jeans ?suitcase) (RightOf ?plate ?jeans) (AlignedHorizontally ?plate ?jeans) (RightOf ?wallet ?plate) (AlignedHorizontally ?wallet ?plate) (forall ?camera (implies (Is ?camera 'camera') (exists ?hat (exists ?hammer (and (Is ?hat 'hat') (Is ?hammer 'hammer') (Above ?camera ?wallet) (RightOf ?hat ?camera) (AlignedHorizontally ?hat ?camera) (Below ?hammer ?hat)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?plate (exists ?wallet (forall ?camera (exists ?hat (exists ?hammer (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Above ?jeans ?suitcase) (Is ?jeans 'jeans') (RightOf ?plate ?jeans) (AlignedHorizontally ?plate ?jeans) (Is ?plate 'plate') (RightOf ?wallet ?plate) (AlignedHorizontally ?wallet ?plate) (Is ?wallet 'wallet') (or (not (Is ?camera 'camera')) (Above ?camera ?wallet)) (or (not (Is ?camera 'camera')) (Is ?hammer 'hammer')) (or (not (Is ?camera 'camera')) (RightOf ?hat ?camera)) (or (not (Is ?camera 'camera')) (Is ?hat 'hat')) (or (not (Is ?camera 'camera')) (Below ?hammer ?hat)) (or (not (Is ?camera 'camera')) (AlignedHorizontally ?hat ?camera))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "hammer",
+        "hat",
+        "wallet",
+        "jeans",
+        "camera",
+        "suitcase"
+    ]
+}

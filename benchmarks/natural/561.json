@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a bicycle. To the right of the bicycle are oval-shaped shoes, containing every bird in the scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bicycle') (exists ?s (and (Is ?s 'shoes') (HasShape ?s 'oval') (RightOf ?s ?b) (forall ?br (implies (Is ?br 'bird') (In ?br ?s))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?s (forall ?br (and (Is ?b 'bicycle') (RightOf ?s ?b) (HasShape ?s 'oval') (or (not (Is ?br 'bird')) (In ?br ?s)) (Is ?s 'shoes'))))))",
+    "k": 3,
+    "object_classes": [
+        "shoes",
+        "bird",
+        "bicycle"
+    ]
+}

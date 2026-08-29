@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden wardrobe contains a shirt, and all shoes are placed next to the wardrobe on its right.",
+    "dsl": "(exists ?w (exists ?s (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?s 'shirt') (In ?s ?w) (forall ?sh (implies (Is ?sh 'shoes') (and (RightOf ?sh ?w) (NextTo ?sh ?w)))))))",
+    "cnf": "(exists ?w (exists ?s (forall ?sh (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?s ?w) (or (not (Is ?sh 'shoes')) (RightOf ?sh ?w)) (Is ?s 'shirt') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?w))))))",
+    "k": 3,
+    "object_classes": [
+        "shirt",
+        "wardrobe",
+        "shoes"
+    ]
+}

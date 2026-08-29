@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black phone present in the scene, there corresponds a specific arrangement of items: a camera is positioned directly above the phone and is situated on the left side of the image. A mouse is located to the left of the phone. Additionally, a knife is placed above the mouse, and a fork lies to the left of the knife.",
+    "dsl": "(forall ?phone (implies (and (Is ?phone 'phone') (Has ?phone 'black')) (exists ?camera (exists ?mouse (exists ?knife (exists ?fork (and (Is ?camera 'camera') (Is ?mouse 'mouse') (Is ?knife 'knife') (Is ?fork 'fork') (OnLeftSide ?camera) (Above ?camera ?phone) (LeftOf ?mouse ?phone) (Above ?knife ?mouse) (LeftOf ?fork ?knife))))))))",
+    "cnf": "(forall ?phone (exists ?camera (exists ?mouse (exists ?knife (exists ?fork (and (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?camera 'camera')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (OnLeftSide ?camera)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?mouse 'mouse')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Above ?camera ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?fork 'fork')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Is ?knife 'knife')) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (LeftOf ?mouse ?phone)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (LeftOf ?fork ?knife)) (or (not (Is ?phone 'phone')) (not (Has ?phone 'black')) (Above ?knife ?mouse))))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "camera",
+        "fork",
+        "mouse",
+        "knife"
+    ]
+}

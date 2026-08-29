@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a bird perched on a monitor, holding a metal knife. A bicycle stands next to the monitor, with a jacket resting on it that contains a phone.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?k (exists ?bi (exists ?j (exists ?p (and (Is ?m 'monitor') (Is ?b 'bird') (Is ?k 'knife') (Is ?bi 'bicycle') (Is ?j 'jacket') (Is ?p 'phone') (On ?b ?m) (Holding ?b ?k) (HasMaterial ?k 'metal') (NextTo ?bi ?m) (On ?j ?bi) (In ?p ?j)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?k (exists ?bi (exists ?j (exists ?p (and (Is ?m 'monitor') (On ?b ?m) (NextTo ?bi ?m) (Is ?b 'bird') (Holding ?b ?k) (Is ?bi 'bicycle') (On ?j ?bi) (Is ?k 'knife') (HasMaterial ?k 'metal') (Is ?j 'jacket') (In ?p ?j) (Is ?p 'phone')))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "monitor",
+        "knife",
+        "phone",
+        "bicycle",
+        "bird"
+    ]
+}

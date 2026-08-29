@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt positioned on the top side. A drill, which is smaller than the shirt, is located below it. Below the drill are headphones, and below the headphones is a mouse that is smaller than the headphones. A ruler is positioned below the mouse. For every set of keys present, they are placed below the ruler. Furthermore, a knife is located below the keys, and a fork is located below the knife. The knife is visually larger than the keys, while the fork is smaller than the knife.",
+    "dsl": "(exists ?shirt (exists ?drill (exists ?headphones (exists ?mouse (exists ?ruler (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?drill 'drill') (Below ?drill ?shirt) (SmallerThan ?drill ?shirt) (Is ?headphones 'headphones') (Below ?headphones ?drill) (Is ?mouse 'mouse') (Below ?mouse ?headphones) (SmallerThan ?mouse ?headphones) (Is ?ruler 'ruler') (Below ?ruler ?mouse) (forall ?keys (implies (Is ?keys 'keys') (exists ?knife (exists ?fork (and (Is ?knife 'knife') (Is ?fork 'fork') (Below ?keys ?ruler) (Below ?knife ?keys) (Below ?fork ?knife) (LargerThan ?knife ?keys) (SmallerThan ?fork ?knife))))))))))))",
+    "cnf": "(exists ?shirt (exists ?drill (exists ?headphones (exists ?mouse (exists ?ruler (forall ?keys (exists ?knife (exists ?fork (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Below ?drill ?shirt) (SmallerThan ?drill ?shirt) (Is ?drill 'drill') (Below ?headphones ?drill) (Is ?headphones 'headphones') (Below ?mouse ?headphones) (SmallerThan ?mouse ?headphones) (Is ?mouse 'mouse') (Below ?ruler ?mouse) (Is ?ruler 'ruler') (or (not (Is ?keys 'keys')) (Below ?keys ?ruler)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (Below ?knife ?keys)) (or (not (Is ?keys 'keys')) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (Below ?fork ?knife)) (or (not (Is ?keys 'keys')) (LargerThan ?knife ?keys)) (or (not (Is ?keys 'keys')) (SmallerThan ?fork ?knife)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "drill",
+        "fork",
+        "mouse",
+        "knife",
+        "headphones",
+        "shirt"
+    ]
+}

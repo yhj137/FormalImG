@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a hat, a glove, and a pan aligned horizontally, with the hat positioned to the left of the glove and the glove to the left of the pan. For every lemon in the scene, there is a pizza located to its right. This pizza is visually smaller than the pan. Continuing the layout to the right, there is an apple to the right of the pizza, and a keyboard to the right of the apple. The keyboard, a pair of pliers, and a pen are all located on the bottom side of the image and are aligned horizontally, with the pliers positioned to the right of the keyboard and the pen to the right of the pliers.",
+    "dsl": "(exists ?hat (exists ?glove (exists ?pan (and (Is ?hat 'hat') (Is ?glove 'glove') (Is ?pan 'pan') (LeftOf ?hat ?glove) (LeftOf ?glove ?pan) (AlignedHorizontally ?hat ?glove) (AlignedHorizontally ?glove ?pan) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?pizza (exists ?apple (exists ?keyboard (exists ?pliers (exists ?pen (and (Is ?pizza 'pizza') (Is ?apple 'apple') (Is ?keyboard 'keyboard') (Is ?pliers 'pliers') (Is ?pen 'pen') (RightOf ?pizza ?lemon) (SmallerThan ?pizza ?pan) (RightOf ?apple ?pizza) (RightOf ?keyboard ?apple) (OnBottomSide ?keyboard) (OnBottomSide ?pliers) (OnBottomSide ?pen) (AlignedHorizontally ?keyboard ?pliers) (AlignedHorizontally ?pliers ?pen) (RightOf ?pliers ?keyboard) (RightOf ?pen ?pliers)))))))))))))",
+    "cnf": "(exists ?hat (exists ?glove (exists ?pan (forall ?lemon (exists ?pizza (exists ?apple (exists ?keyboard (exists ?pliers (exists ?pen (and (Is ?hat 'hat') (LeftOf ?hat ?glove) (AlignedHorizontally ?hat ?glove) (Is ?glove 'glove') (LeftOf ?glove ?pan) (AlignedHorizontally ?glove ?pan) (Is ?pan 'pan') (or (not (Is ?lemon 'lemon')) (SmallerThan ?pizza ?pan)) (or (not (Is ?lemon 'lemon')) (RightOf ?pizza ?lemon)) (or (not (Is ?lemon 'lemon')) (RightOf ?apple ?pizza)) (or (not (Is ?lemon 'lemon')) (Is ?pizza 'pizza')) (or (not (Is ?lemon 'lemon')) (Is ?pen 'pen')) (or (not (Is ?lemon 'lemon')) (RightOf ?keyboard ?apple)) (or (not (Is ?lemon 'lemon')) (Is ?apple 'apple')) (or (not (Is ?lemon 'lemon')) (Is ?pliers 'pliers')) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?pen)) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?keyboard)) (or (not (Is ?lemon 'lemon')) (Is ?keyboard 'keyboard')) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?pliers)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?keyboard ?pliers)) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?pliers ?pen)) (or (not (Is ?lemon 'lemon')) (RightOf ?pliers ?keyboard)) (or (not (Is ?lemon 'lemon')) (RightOf ?pen ?pliers))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "apple",
+        "pen",
+        "keyboard",
+        "lemon",
+        "pizza",
+        "pan",
+        "hat",
+        "glove"
+    ]
+}

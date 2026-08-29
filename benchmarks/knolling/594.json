@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a black camera and a pair of red pliers. The camera is positioned to the left of the pliers, and the two objects are aligned horizontally. Furthermore, for every lighter in the scene, it is blue, located to the left of the camera, and also aligned horizontally with the camera.",
+    "dsl": "(exists ?c (exists ?p (and (Is ?c 'camera') (Has ?c 'black') (Is ?p 'pliers') (Has ?p 'red') (LeftOf ?c ?p) (AlignedHorizontally ?c ?p) (forall ?l (implies (Is ?l 'lighter') (and (Has ?l 'blue') (LeftOf ?l ?c) (AlignedHorizontally ?l ?c)))))))",
+    "cnf": "(exists ?c (exists ?p (forall ?l (and (Is ?c 'camera') (Has ?c 'black') (LeftOf ?c ?p) (AlignedHorizontally ?c ?p) (Has ?p 'red') (or (not (Is ?l 'lighter')) (LeftOf ?l ?c)) (Is ?p 'pliers') (or (not (Is ?l 'lighter')) (AlignedHorizontally ?l ?c)) (or (not (Is ?l 'lighter')) (Has ?l 'blue'))))))",
+    "k": 3,
+    "object_classes": [
+        "lighter",
+        "pliers",
+        "camera"
+    ]
+}

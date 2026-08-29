@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cyberpunk style. A man stands next to a desk, holding an apple. A withered plant is next to the desk, and beside the plant sits a cup containing every ball in the scene.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?d (exists ?p (exists ?c (exists ?a (and (Is ?m 'man') (Is ?d 'desk') (Is ?p 'plant') (HasState ?p 'withered') (Is ?c 'cup') (Is ?a 'apple') (NextTo ?m ?d) (Holding ?m ?a) (NextTo ?p ?d) (NextTo ?c ?p) (forall ?b (implies (Is ?b 'ball') (In ?b ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?d (exists ?p (exists ?c (exists ?a (forall ?b (and (Is ?m 'man') (NextTo ?m ?d) (Holding ?m ?a) (Is ?d 'desk') (NextTo ?p ?d) (Is ?a 'apple') (HasState ?p 'withered') (NextTo ?c ?p) (Is ?p 'plant') (Is ?c 'cup') (or (not (Is ?b 'ball')) (In ?b ?c))))))))))",
+    "k": 6,
+    "object_classes": [
+        "man",
+        "plant",
+        "desk",
+        "ball",
+        "cup",
+        "apple"
+    ]
+}

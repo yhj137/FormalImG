@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized with a backpack located to the left of a pan. A pair of jeans is positioned below the backpack. A plate is located below the pan, such that the jeans and the plate are aligned horizontally. To the right of the pan, on the right side of the image, is a sandwich. The backpack is visually larger than the sandwich. Arranged vertically below the sandwich are a carrot, followed by a fork below the carrot, and finally a ruler below the fork.",
+    "dsl": "(exists ?backpack (exists ?pan (exists ?jeans (exists ?plate (exists ?sandwich (exists ?carrot (exists ?fork (exists ?ruler (and (Is ?backpack 'backpack') (Is ?pan 'pan') (Is ?jeans 'jeans') (Is ?plate 'plate') (Is ?sandwich 'sandwich') (Is ?carrot 'carrot') (Is ?fork 'fork') (Is ?ruler 'ruler') (LeftOf ?backpack ?pan) (Below ?jeans ?backpack) (Above ?pan ?plate) (AlignedHorizontally ?jeans ?plate) (LeftOf ?pan ?sandwich) (OnRightSide ?sandwich) (LargerThan ?backpack ?sandwich) (Below ?carrot ?sandwich) (Below ?fork ?carrot) (Below ?ruler ?fork))))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (exists ?jeans (exists ?plate (exists ?sandwich (exists ?carrot (exists ?fork (exists ?ruler (and (Is ?backpack 'backpack') (LeftOf ?backpack ?pan) (Below ?jeans ?backpack) (Is ?pan 'pan') (Above ?pan ?plate) (LargerThan ?backpack ?sandwich) (Is ?jeans 'jeans') (AlignedHorizontally ?jeans ?plate) (LeftOf ?pan ?sandwich) (Is ?plate 'plate') (OnRightSide ?sandwich) (Below ?carrot ?sandwich) (Is ?sandwich 'sandwich') (Is ?carrot 'carrot') (Below ?fork ?carrot) (Is ?fork 'fork') (Below ?ruler ?fork) (Is ?ruler 'ruler'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "carrot",
+        "fork",
+        "pan",
+        "backpack",
+        "jeans",
+        "sandwich"
+    ]
+}

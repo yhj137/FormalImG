@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf acts as the central fixture. Every flower in the scene is located on this bookshelf. To the left of the bookshelf, there is a green sofa. A sleeping dog lies on the sofa, holding a toy car. To the right of the bookshelf, there is a bottle. A pan is positioned next to the bottle, and a knife sits next to the pan.",
+    "dsl": "(exists ?bs (and (Is ?bs 'bookshelf') (forall ?f (implies (Is ?f 'flower') (On ?f ?bs))) (exists ?s (and (Is ?s 'sofa') (LeftOf ?s ?bs) (HasColor ?s 'green') (exists ?d (and (Is ?d 'dog') (On ?d ?s) (HasState ?d 'sleeping') (exists ?tc (and (Is ?tc 'toy car') (Holding ?d ?tc))))))) (exists ?bot (and (Is ?bot 'bottle') (RightOf ?bot ?bs) (exists ?p (and (Is ?p 'pan') (NextTo ?p ?bot) (exists ?k (and (Is ?k 'knife') (NextTo ?k ?p)))))))))",
+    "cnf": "(exists ?bs (forall ?f (exists ?s (exists ?d (exists ?tc (exists ?bot (exists ?p (exists ?k (and (Is ?bs 'bookshelf') (or (not (Is ?f 'flower')) (On ?f ?bs)) (LeftOf ?s ?bs) (RightOf ?bot ?bs) (Is ?s 'sofa') (HasColor ?s 'green') (Is ?bot 'bottle') (NextTo ?p ?bot) (On ?d ?s) (Is ?p 'pan') (NextTo ?k ?p) (Is ?d 'dog') (HasState ?d 'sleeping') (Is ?k 'knife') (Holding ?d ?tc) (Is ?tc 'toy car'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "knife",
+        "bottle",
+        "flower",
+        "dog",
+        "pan",
+        "toy car",
+        "bookshelf"
+    ]
+}

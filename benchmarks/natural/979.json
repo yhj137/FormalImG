@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man holding a black pan. To the right of the man is a basket containing a blooming plant. All headphones in the scene are located next to the basket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?b (exists ?pl (and (Is ?m 'man') (Is ?p 'pan') (Is ?b 'basket') (Is ?pl 'plant') (HasColor ?p 'black') (Holding ?m ?p) (RightOf ?b ?m) (In ?pl ?b) (HasState ?pl 'blooming') (forall ?h (implies (Is ?h 'headphones') (NextTo ?h ?b)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?p (exists ?b (exists ?pl (forall ?h (and (Is ?m 'man') (Holding ?m ?p) (RightOf ?b ?m) (HasColor ?p 'black') (Is ?b 'basket') (In ?pl ?b) (Is ?p 'pan') (or (not (Is ?h 'headphones')) (NextTo ?h ?b)) (Is ?pl 'plant') (HasState ?pl 'blooming'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pan",
+        "headphones",
+        "man",
+        "plant",
+        "basket"
+    ]
+}

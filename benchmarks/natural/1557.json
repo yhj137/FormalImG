@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man wearing a hat sits on a rusty bicycle holding a hammer, located to the left of an elephant with a teddy bear on top. Every fish is inside a cylindrical cup positioned to the right of the elephant.",
+    "dsl": "(exists ?m (exists ?b (exists ?ht (exists ?h (exists ?e (exists ?tb (and (Is ?m 'man') (Is ?b 'bicycle') (Is ?ht 'hat') (Is ?h 'hammer') (Is ?e 'elephant') (Is ?tb 'teddy bear') (On ?m ?b) (HasState ?b 'rusty') (On ?ht ?m) (Holding ?m ?h) (LeftOf ?m ?e) (On ?tb ?e) (forall ?f (implies (Is ?f 'fish') (exists ?c (and (Is ?c 'cup') (HasShape ?c 'cylindrical') (In ?f ?c) (RightOf ?c ?e))))))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?ht (exists ?h (exists ?e (exists ?tb (forall ?f (exists ?c (and (Is ?m 'man') (On ?m ?b) (On ?ht ?m) (Is ?b 'bicycle') (HasState ?b 'rusty') (Holding ?m ?h) (Is ?ht 'hat') (LeftOf ?m ?e) (Is ?h 'hammer') (Is ?e 'elephant') (On ?tb ?e) (or (not (Is ?f 'fish')) (RightOf ?c ?e)) (Is ?tb 'teddy bear') (or (not (Is ?f 'fish')) (In ?f ?c)) (or (not (Is ?f 'fish')) (HasShape ?c 'cylindrical')) (or (not (Is ?f 'fish')) (Is ?c 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "fish",
+        "man",
+        "teddy bear",
+        "hammer",
+        "bicycle",
+        "cup",
+        "hat"
+    ]
+}

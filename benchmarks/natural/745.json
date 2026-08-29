@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a standing horse to the left of a pair of glasses. Every car is positioned to the right of the glasses and contains a round pizza.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?g (and (Is ?h 'horse') (HasState ?h 'standing') (Is ?g 'glasses') (LeftOf ?h ?g) (forall ?c (implies (Is ?c 'car') (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (In ?p ?c) (RightOf ?c ?g)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?g (forall ?c (exists ?p (and (Is ?h 'horse') (HasState ?h 'standing') (LeftOf ?h ?g) (Is ?g 'glasses') (or (not (Is ?c 'car')) (RightOf ?c ?g)) (or (not (Is ?c 'car')) (In ?p ?c)) (or (not (Is ?c 'car')) (HasShape ?p 'round')) (or (not (Is ?c 'car')) (Is ?p 'pizza'))))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "horse",
+        "glasses",
+        "car"
+    ]
+}

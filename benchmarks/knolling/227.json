@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a game controller and a pen. The game controller is positioned on the bottom side of the layout, and the pen appears smaller than the game controller.",
+    "dsl": "(exists ?gc (exists ?p (and (Is ?gc 'game_controller') (Is ?p 'pen') (OnBottomSide ?gc) (SmallerThan ?p ?gc))))",
+    "cnf": "(exists ?gc (exists ?p (and (Is ?gc 'game_controller') (OnBottomSide ?gc) (SmallerThan ?p ?gc) (Is ?p 'pen'))))",
+    "k": 2,
+    "object_classes": [
+        "pen",
+        "game_controller"
+    ]
+}

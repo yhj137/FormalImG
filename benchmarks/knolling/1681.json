@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A red suitcase is positioned on the left side of the scene, with a blue hat placed below it. A yellow drill is located to the right of the suitcase. Every donut is located to the right of the drill, and for each donut, there is a green pen to its right and black glasses below it. A brown wallet, which is physically smaller than the suitcase, is situated such that the glasses are to its left. Below the wallet lies a gray wrench, and to the right of the wrench is a white glove, which is positioned on the right side of the image.",
+    "dsl": "(exists ?suitcase (exists ?hat (exists ?drill (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (OnLeftSide ?suitcase) (Is ?hat 'hat') (Has ?hat 'blue') (Below ?hat ?suitcase) (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?drill ?suitcase) (forall ?donut (implies (Is ?donut 'donut') (exists ?pen (exists ?glasses (exists ?wallet (exists ?wrench (exists ?glove (and (Is ?pen 'pen') (Has ?pen 'green') (Is ?glasses 'glasses') (Has ?glasses 'black') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?glove 'glove') (Has ?glove 'white') (RightOf ?donut ?drill) (RightOf ?pen ?donut) (Below ?glasses ?donut) (LeftOf ?glasses ?wallet) (Below ?wrench ?wallet) (RightOf ?glove ?wrench) (OnRightSide ?glove) (SmallerThan ?wallet ?suitcase)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?hat (exists ?drill (forall ?donut (exists ?pen (exists ?glasses (exists ?wallet (exists ?wrench (exists ?glove (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (OnLeftSide ?suitcase) (Below ?hat ?suitcase) (RightOf ?drill ?suitcase) (Has ?hat 'blue') (or (not (Is ?donut 'donut')) (SmallerThan ?wallet ?suitcase)) (Has ?drill 'yellow') (or (not (Is ?donut 'donut')) (RightOf ?donut ?drill)) (Is ?hat 'hat') (or (not (Is ?donut 'donut')) (OnRightSide ?glove)) (or (not (Is ?donut 'donut')) (Below ?wrench ?wallet)) (Is ?drill 'drill') (or (not (Is ?donut 'donut')) (Has ?glove 'white')) (or (not (Is ?donut 'donut')) (RightOf ?pen ?donut)) (or (not (Is ?donut 'donut')) (RightOf ?glove ?wrench)) (or (not (Is ?donut 'donut')) (LeftOf ?glasses ?wallet)) (or (not (Is ?donut 'donut')) (Has ?wrench 'gray')) (or (not (Is ?donut 'donut')) (Is ?glove 'glove')) (or (not (Is ?donut 'donut')) (Has ?pen 'green')) (or (not (Is ?donut 'donut')) (Below ?glasses ?donut)) (or (not (Is ?donut 'donut')) (Has ?wallet 'brown')) (or (not (Is ?donut 'donut')) (Is ?wrench 'wrench')) (or (not (Is ?donut 'donut')) (Is ?pen 'pen')) (or (not (Is ?donut 'donut')) (Is ?glasses 'glasses')) (or (not (Is ?donut 'donut')) (Has ?glasses 'black')) (or (not (Is ?donut 'donut')) (Is ?wallet 'wallet'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "wrench",
+        "wallet",
+        "pen",
+        "drill",
+        "suitcase",
+        "glove",
+        "glasses",
+        "hat",
+        "donut"
+    ]
+}

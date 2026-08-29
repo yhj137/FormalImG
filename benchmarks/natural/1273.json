@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a horse. All oranges are located to the left of the horse, and a basket is positioned next to it. To the right of the horse sits a laptop with a sandwich on top and a fork next to the sandwich. A yellow screwdriver is placed to the right of the laptop.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (and (Is ?h 'horse') (forall ?o (implies (Is ?o 'orange') (LeftOf ?o ?h))) (exists ?b (exists ?l (exists ?sw (exists ?f (exists ?sd (and (Is ?b 'basket') (Is ?l 'laptop') (Is ?sw 'sandwich') (Is ?f 'fork') (Is ?sd 'screwdriver') (NextTo ?b ?h) (RightOf ?l ?h) (On ?sw ?l) (NextTo ?f ?sw) (HasColor ?sd 'yellow') (RightOf ?sd ?l))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (forall ?o (exists ?b (exists ?l (exists ?sw (exists ?f (exists ?sd (and (Is ?h 'horse') (or (not (Is ?o 'orange')) (LeftOf ?o ?h)) (NextTo ?b ?h) (RightOf ?l ?h) (Is ?b 'basket') (Is ?l 'laptop') (On ?sw ?l) (RightOf ?sd ?l) (Is ?sw 'sandwich') (NextTo ?f ?sw) (HasColor ?sd 'yellow') (Is ?f 'fork') (Is ?sd 'screwdriver'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fork",
+        "sandwich",
+        "laptop",
+        "screwdriver",
+        "horse",
+        "basket",
+        "orange"
+    ]
+}

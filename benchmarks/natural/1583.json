@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A lion is positioned to the right of a tree, while a bicycle with a blue shirt on it rests next to the tree. A toy car containing a key sits beside the lion, and a cake is placed next to the toy car. Every butterfly in the scene is located above the tree.",
+    "dsl": "(exists ?tr (exists ?li (exists ?bi (exists ?sh (exists ?tc (exists ?ky (exists ?ca (and (Is ?tr 'tree') (Is ?li 'lion') (Is ?bi 'bicycle') (Is ?sh 'shirt') (Is ?tc 'toy car') (Is ?ky 'key') (Is ?ca 'cake') (RightOf ?li ?tr) (NextTo ?bi ?tr) (On ?sh ?bi) (HasColor ?sh 'blue') (NextTo ?tc ?li) (In ?ky ?tc) (NextTo ?ca ?tc) (forall ?bu (implies (Is ?bu 'butterfly') (Above ?bu ?tr)))))))))))",
+    "cnf": "(exists ?tr (exists ?li (exists ?bi (exists ?sh (exists ?tc (exists ?ky (exists ?ca (forall ?bu (and (Is ?tr 'tree') (RightOf ?li ?tr) (NextTo ?bi ?tr) (Is ?li 'lion') (NextTo ?tc ?li) (or (not (Is ?bu 'butterfly')) (Above ?bu ?tr)) (Is ?bi 'bicycle') (On ?sh ?bi) (Is ?tc 'toy car') (In ?ky ?tc) (Is ?sh 'shirt') (HasColor ?sh 'blue') (NextTo ?ca ?tc) (Is ?ky 'key') (Is ?ca 'cake'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "tree",
+        "cake",
+        "toy car",
+        "bicycle",
+        "lion",
+        "butterfly",
+        "key"
+    ]
+}

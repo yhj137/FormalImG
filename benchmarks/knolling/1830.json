@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop present, there is a bottle located directly below it and aligned vertically. Below the bottle lies a bowl, which is also aligned vertically with the bottle. To the left of the bowl is a stapler. Directly below the stapler is a pair of pliers, aligned vertically. To the left of the pliers is a hammer. Below the hammer is a wallet, which is positioned on the bottom side of the image. To the left of the wallet is a fork. Directly below the fork is a knife, aligned vertically. Finally, to the left of the knife is a tie; this tie is smaller than the laptop and is situated on the left side of the image.",
+    "dsl": "(forall ?laptop (implies (Is ?laptop 'laptop') (exists ?bottle (exists ?bowl (exists ?stapler (exists ?pliers (exists ?hammer (exists ?wallet (exists ?fork (exists ?knife (exists ?tie (and (Is ?bottle 'bottle') (Is ?bowl 'bowl') (Is ?stapler 'stapler') (Is ?pliers 'pliers') (Is ?hammer 'hammer') (Is ?wallet 'wallet') (Is ?fork 'fork') (Is ?knife 'knife') (Is ?tie 'tie') (Below ?bottle ?laptop) (AlignedVertically ?bottle ?laptop) (Below ?bowl ?bottle) (AlignedVertically ?bowl ?bottle) (LeftOf ?stapler ?bowl) (Below ?pliers ?stapler) (AlignedVertically ?pliers ?stapler) (LeftOf ?hammer ?pliers) (Below ?wallet ?hammer) (OnBottomSide ?wallet) (LeftOf ?fork ?wallet) (Below ?knife ?fork) (AlignedVertically ?knife ?fork) (LeftOf ?tie ?knife) (OnLeftSide ?tie) (SmallerThan ?tie ?laptop)))))))))))))",
+    "cnf": "(forall ?laptop (exists ?bottle (exists ?bowl (exists ?stapler (exists ?pliers (exists ?hammer (exists ?wallet (exists ?fork (exists ?knife (exists ?tie (and (or (not (Is ?laptop 'laptop')) (Is ?bottle 'bottle')) (or (not (Is ?laptop 'laptop')) (Is ?bowl 'bowl')) (or (not (Is ?laptop 'laptop')) (Below ?bottle ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?stapler 'stapler')) (or (not (Is ?laptop 'laptop')) (Below ?bowl ?bottle)) (or (not (Is ?laptop 'laptop')) (Is ?tie 'tie')) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?bottle ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?pliers 'pliers')) (or (not (Is ?laptop 'laptop')) (LeftOf ?stapler ?bowl)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?bowl ?bottle)) (or (not (Is ?laptop 'laptop')) (Is ?knife 'knife')) (or (not (Is ?laptop 'laptop')) (LeftOf ?tie ?knife)) (or (not (Is ?laptop 'laptop')) (Is ?hammer 'hammer')) (or (not (Is ?laptop 'laptop')) (Below ?pliers ?stapler)) (or (not (Is ?laptop 'laptop')) (Is ?fork 'fork')) (or (not (Is ?laptop 'laptop')) (Below ?knife ?fork)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?knife ?fork)) (or (not (Is ?laptop 'laptop')) (OnLeftSide ?tie)) (or (not (Is ?laptop 'laptop')) (Is ?wallet 'wallet')) (or (not (Is ?laptop 'laptop')) (LeftOf ?hammer ?pliers)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?pliers ?stapler)) (or (not (Is ?laptop 'laptop')) (LeftOf ?fork ?wallet)) (or (not (Is ?laptop 'laptop')) (SmallerThan ?tie ?laptop)) (or (not (Is ?laptop 'laptop')) (Below ?wallet ?hammer)) (or (not (Is ?laptop 'laptop')) (OnBottomSide ?wallet)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "hammer",
+        "bowl",
+        "knife",
+        "pliers",
+        "wallet",
+        "tie",
+        "stapler",
+        "fork",
+        "bottle",
+        "laptop"
+    ]
+}

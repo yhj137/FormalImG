@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a red sofa with a teddy bear and a sitting lion holding a metal hammer. To the left of the sofa is a basket containing every bottle, while to the right, a dog sleeps on a wooden chair.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?l (exists ?h (exists ?b (and (Is ?s 'sofa') (HasColor ?s 'red') (Is ?l 'lion') (HasState ?l 'sitting') (On ?l ?s) (Is ?h 'hammer') (HasMaterial ?h 'metal') (Holding ?l ?h) (Is ?b 'basket') (LeftOf ?b ?s) (forall ?bt (implies (Is ?bt 'bottle') (In ?bt ?b))) (exists ?tb (exists ?c (exists ?d (and (Is ?tb 'teddy bear') (On ?tb ?s) (Is ?c 'chair') (HasMaterial ?c 'wooden') (RightOf ?c ?s) (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?c)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?l (exists ?h (exists ?b (forall ?bt (exists ?tb (exists ?c (exists ?d (and (Is ?s 'sofa') (HasColor ?s 'red') (On ?l ?s) (LeftOf ?b ?s) (HasState ?l 'sitting') (Holding ?l ?h) (On ?tb ?s) (Is ?b 'basket') (or (not (Is ?bt 'bottle')) (In ?bt ?b)) (Is ?l 'lion') (HasMaterial ?h 'metal') (RightOf ?c ?s) (Is ?tb 'teddy bear') (Is ?h 'hammer') (HasMaterial ?c 'wooden') (On ?d ?c) (Is ?c 'chair') (HasState ?d 'sleeping') (Is ?d 'dog')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "bottle",
+        "chair",
+        "teddy bear",
+        "hammer",
+        "lion",
+        "basket",
+        "dog"
+    ]
+}

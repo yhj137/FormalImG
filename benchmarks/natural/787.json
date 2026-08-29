@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a smiling child holding a fish. A broken keyboard is located to the right of the child, and every toy car is positioned to the right of the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?f (exists ?k (and (Is ?c 'child') (HasState ?c 'smiling') (Is ?f 'fish') (Is ?k 'keyboard') (HasState ?k 'broken') (Holding ?c ?f) (RightOf ?k ?c) (forall ?t (implies (Is ?t 'toy car') (RightOf ?t ?k))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?f (exists ?k (forall ?t (and (Is ?c 'child') (HasState ?c 'smiling') (Holding ?c ?f) (RightOf ?k ?c) (Is ?f 'fish') (HasState ?k 'broken') (or (not (Is ?t 'toy car')) (RightOf ?t ?k)) (Is ?k 'keyboard')))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "fish",
+        "child",
+        "toy car"
+    ]
+}

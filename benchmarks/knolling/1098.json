@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hat located on the left side, with a cutting board positioned to its right. For every apple present in the image, the cutting board is visually larger than the apple. Below the hat is a ruler, and below the cutting board is a hammer. Furthermore, a watch is placed on the bottom side of the scene, to the right of the ruler.",
+    "dsl": "(exists ?hat (exists ?board (and (Is ?hat 'hat') (OnLeftSide ?hat) (Is ?board 'cutting_board') (RightOf ?board ?hat) (forall ?apple (implies (Is ?apple 'apple') (LargerThan ?board ?apple))) (exists ?ruler (exists ?hammer (exists ?watch (and (Is ?ruler 'ruler') (Below ?ruler ?hat) (Is ?hammer 'hammer') (Below ?hammer ?board) (Is ?watch 'watch') (OnBottomSide ?watch) (RightOf ?watch ?ruler))))))))",
+    "cnf": "(exists ?hat (exists ?board (forall ?apple (exists ?ruler (exists ?hammer (exists ?watch (and (Is ?hat 'hat') (OnLeftSide ?hat) (RightOf ?board ?hat) (Below ?ruler ?hat) (Is ?board 'cutting_board') (or (not (Is ?apple 'apple')) (LargerThan ?board ?apple)) (Is ?ruler 'ruler') (RightOf ?watch ?ruler) (Below ?hammer ?board) (OnBottomSide ?watch) (Is ?hammer 'hammer') (Is ?watch 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "watch",
+        "cutting_board",
+        "hat",
+        "hammer"
+    ]
+}

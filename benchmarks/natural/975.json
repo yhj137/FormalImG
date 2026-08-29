@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style, featuring a dog and a laptop resting on a wooden chair. A banana is located to the left of the chair, and every car in the scene is positioned to the left of the banana.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?d (exists ?l (exists ?b (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (Is ?d 'dog') (On ?d ?c) (Is ?l 'laptop') (On ?l ?c) (Is ?b 'banana') (LeftOf ?b ?c) (forall ?car (implies (Is ?car 'car') (LeftOf ?car ?b)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?d (exists ?l (exists ?b (forall ?car (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?d ?c) (On ?l ?c) (Is ?d 'dog') (LeftOf ?b ?c) (Is ?l 'laptop') (Is ?b 'banana') (or (not (Is ?car 'car')) (LeftOf ?car ?b)))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "banana",
+        "chair",
+        "dog",
+        "car"
+    ]
+}

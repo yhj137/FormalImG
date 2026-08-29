@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in pixel art style. A bookshelf stands to the left of a desk. All cups are placed on the desk. A pan is inside the bookshelf, while a teddy bear and headphones rest on it. A keyboard lies on the desk with a phone to its left. Next to the phone is a cylindrical plastic bottle. A pair of shoes is positioned next to the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?bs (and (Is ?d 'desk') (Is ?bs 'bookshelf') (LeftOf ?bs ?d) (forall ?c (implies (Is ?c 'cup') (On ?c ?d))) (exists ?pn (exists ?tb (exists ?k (exists ?p (exists ?b (exists ?h (exists ?s (and (Is ?pn 'pan') (In ?pn ?bs) (Is ?tb 'teddy bear') (On ?tb ?bs) (Is ?k 'keyboard') (On ?k ?d) (Is ?p 'phone') (LeftOf ?p ?k) (Is ?b 'bottle') (HasMaterial ?b 'plastic') (HasShape ?b 'cylindrical') (NextTo ?b ?p) (Is ?h 'headphones') (On ?h ?bs) (Is ?s 'shoes') (NextTo ?s ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?bs (forall ?c (exists ?pn (exists ?tb (exists ?k (exists ?p (exists ?b (exists ?h (exists ?s (and (Is ?d 'desk') (LeftOf ?bs ?d) (or (not (Is ?c 'cup')) (On ?c ?d)) (Is ?bs 'bookshelf') (In ?pn ?bs) (On ?k ?d) (On ?tb ?bs) (Is ?pn 'pan') (NextTo ?s ?d) (Is ?k 'keyboard') (LeftOf ?p ?k) (On ?h ?bs) (Is ?tb 'teddy bear') (Is ?s 'shoes') (Is ?p 'phone') (NextTo ?b ?p) (Is ?h 'headphones') (HasShape ?b 'cylindrical') (HasMaterial ?b 'plastic') (Is ?b 'bottle')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "shoes",
+        "bottle",
+        "teddy bear",
+        "desk",
+        "cup",
+        "pan",
+        "bookshelf",
+        "keyboard"
+    ]
+}

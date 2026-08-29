@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, it is located on the bottom side. A plate is positioned above the keyboard, a pizza is above the plate, a bottle is above the pizza, and keys are above the bottle. These objects are all aligned vertically. Additionally, the pizza is visibly larger than the keys.",
+    "dsl": "(forall ?k (implies (Is ?k 'keyboard') (exists ?pl (exists ?pi (exists ?bo (exists ?ky (and (Is ?pl 'plate') (Is ?pi 'pizza') (Is ?bo 'bottle') (Is ?ky 'keys') (OnBottomSide ?k) (Above ?pl ?k) (Above ?pi ?pl) (Above ?bo ?pi) (Above ?ky ?bo) (AlignedVertically ?k ?pl) (AlignedVertically ?pl ?pi) (AlignedVertically ?pi ?bo) (AlignedVertically ?bo ?ky) (LargerThan ?pi ?ky))))))))",
+    "cnf": "(forall ?k (exists ?pl (exists ?pi (exists ?bo (exists ?ky (and (or (not (Is ?k 'keyboard')) (Is ?pl 'plate')) (or (not (Is ?k 'keyboard')) (Above ?pl ?k)) (or (not (Is ?k 'keyboard')) (Is ?pi 'pizza')) (or (not (Is ?k 'keyboard')) (Above ?pi ?pl)) (or (not (Is ?k 'keyboard')) (OnBottomSide ?k)) (or (not (Is ?k 'keyboard')) (Is ?bo 'bottle')) (or (not (Is ?k 'keyboard')) (AlignedVertically ?k ?pl)) (or (not (Is ?k 'keyboard')) (Above ?bo ?pi)) (or (not (Is ?k 'keyboard')) (Is ?ky 'keys')) (or (not (Is ?k 'keyboard')) (AlignedVertically ?pl ?pi)) (or (not (Is ?k 'keyboard')) (Above ?ky ?bo)) (or (not (Is ?k 'keyboard')) (AlignedVertically ?pi ?bo)) (or (not (Is ?k 'keyboard')) (AlignedVertically ?bo ?ky)) (or (not (Is ?k 'keyboard')) (LargerThan ?pi ?ky))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "plate",
+        "keyboard",
+        "pizza",
+        "bottle"
+    ]
+}

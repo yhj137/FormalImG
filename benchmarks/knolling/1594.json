@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene centers around a pair of blue jeans. To the left of the jeans is a watch, while a cup is placed above the watch. To the right of the jeans is a wallet, with keys located above the wallet. Below the jeans is a brown handbag. A knife is positioned on the right side of the image, specifically to the right of the handbag. Furthermore, for every pair of scissors in the image, it is aligned horizontally with the jeans.",
+    "dsl": "(exists ?jeans (exists ?handbag (exists ?watch (exists ?wallet (exists ?keys (exists ?cup (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?watch 'watch') (Is ?wallet 'wallet') (Is ?keys 'keys') (Is ?cup 'cup') (Is ?knife 'knife') (LeftOf ?watch ?jeans) (Above ?cup ?watch) (RightOf ?wallet ?jeans) (Above ?keys ?wallet) (Below ?handbag ?jeans) (RightOf ?knife ?handbag) (OnRightSide ?knife) (forall ?scissors (implies (Is ?scissors 'scissors') (AlignedHorizontally ?scissors ?jeans)))))))))))",
+    "cnf": "(exists ?jeans (exists ?handbag (exists ?watch (exists ?wallet (exists ?keys (exists ?cup (exists ?knife (forall ?scissors (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (LeftOf ?watch ?jeans) (RightOf ?wallet ?jeans) (Is ?watch 'watch') (Above ?cup ?watch) (Below ?handbag ?jeans) (Is ?wallet 'wallet') (Above ?keys ?wallet) (Is ?cup 'cup') (or (not (Is ?scissors 'scissors')) (AlignedHorizontally ?scissors ?jeans)) (Has ?handbag 'brown') (RightOf ?knife ?handbag) (Is ?keys 'keys') (Is ?handbag 'handbag') (Is ?knife 'knife') (OnRightSide ?knife))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "watch",
+        "cup",
+        "handbag",
+        "wallet",
+        "jeans",
+        "knife",
+        "scissors"
+    ]
+}

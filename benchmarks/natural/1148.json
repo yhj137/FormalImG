@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person holding a plant has a plastic monitor to their left and a mirror to their right. Every hat is placed next to the mirror, and a red apple sits beside each hat.",
+    "dsl": "(exists ?p (exists ?mon (exists ?m (exists ?pl (and (Is ?p 'person') (Is ?mon 'monitor') (HasMaterial ?mon 'plastic') (LeftOf ?mon ?p) (Is ?m 'mirror') (RightOf ?m ?p) (Is ?pl 'plant') (Holding ?p ?pl) (forall ?h (implies (Is ?h 'hat') (and (NextTo ?h ?m) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?h)))))))))))",
+    "cnf": "(exists ?p (exists ?mon (exists ?m (exists ?pl (forall ?h (exists ?a (and (Is ?p 'person') (LeftOf ?mon ?p) (RightOf ?m ?p) (HasMaterial ?mon 'plastic') (Holding ?p ?pl) (Is ?m 'mirror') (or (not (Is ?h 'hat')) (NextTo ?h ?m)) (Is ?mon 'monitor') (Is ?pl 'plant') (or (not (Is ?h 'hat')) (Is ?a 'apple')) (or (not (Is ?h 'hat')) (HasColor ?a 'red')) (or (not (Is ?h 'hat')) (NextTo ?a ?h)))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "person",
+        "plant",
+        "hat",
+        "mirror",
+        "apple"
+    ]
+}

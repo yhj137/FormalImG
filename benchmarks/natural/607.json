@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features shoes on a horse. To the left of the horse is a square cake, and a fish is positioned to the left of the cake.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?h (exists ?c (exists ?f (and (Is ?s 'shoes') (Is ?h 'horse') (Is ?c 'cake') (HasShape ?c 'square') (Is ?f 'fish') (On ?s ?h) (LeftOf ?c ?h) (LeftOf ?f ?c)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?h (exists ?c (exists ?f (and (Is ?s 'shoes') (On ?s ?h) (Is ?h 'horse') (LeftOf ?c ?h) (HasShape ?c 'square') (LeftOf ?f ?c) (Is ?c 'cake') (Is ?f 'fish')))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "shoes",
+        "fish",
+        "cake"
+    ]
+}

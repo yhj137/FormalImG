@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a pan positioned on the left side of the image. A tie and a game controller are arranged to be vertically aligned with the pan. The pan is visually larger than the game controller. Additionally, for any camera present in the scene, the pan is located to its left.",
+    "dsl": "(exists ?pan (exists ?tie (exists ?controller (and (Is ?pan 'pan') (Is ?tie 'tie') (Is ?controller 'game_controller') (OnLeftSide ?pan) (AlignedVertically ?pan ?tie) (AlignedVertically ?pan ?controller) (LargerThan ?pan ?controller) (forall ?camera (implies (Is ?camera 'camera') (LeftOf ?pan ?camera)))))))",
+    "cnf": "(exists ?pan (exists ?tie (exists ?controller (forall ?camera (and (Is ?pan 'pan') (OnLeftSide ?pan) (AlignedVertically ?pan ?tie) (AlignedVertically ?pan ?controller) (Is ?tie 'tie') (LargerThan ?pan ?controller) (Is ?controller 'game_controller') (or (not (Is ?camera 'camera')) (LeftOf ?pan ?camera)))))))",
+    "k": 4,
+    "object_classes": [
+        "pan",
+        "tie",
+        "camera",
+        "game_controller"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every book positioned on the left side of the scene, there is a bowl located below it. Furthermore, there is a mouse horizontally aligned with the bowl, and the mouse is smaller than the bowl.",
+    "dsl": "(forall ?book (implies (and (Is ?book 'book') (OnLeftSide ?book)) (exists ?bowl (exists ?mouse (and (Is ?bowl 'bowl') (Is ?mouse 'mouse') (Below ?bowl ?book) (AlignedHorizontally ?mouse ?bowl) (SmallerThan ?mouse ?bowl))))))",
+    "cnf": "(forall ?book (exists ?bowl (exists ?mouse (and (or (not (Is ?book 'book')) (not (OnLeftSide ?book)) (Is ?bowl 'bowl')) (or (not (Is ?book 'book')) (not (OnLeftSide ?book)) (Is ?mouse 'mouse')) (or (not (Is ?book 'book')) (not (OnLeftSide ?book)) (Below ?bowl ?book)) (or (not (Is ?book 'book')) (not (OnLeftSide ?book)) (AlignedHorizontally ?mouse ?bowl)) (or (not (Is ?book 'book')) (not (OnLeftSide ?book)) (SmallerThan ?mouse ?bowl))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "bowl",
+        "mouse"
+    ]
+}

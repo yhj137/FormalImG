@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a cutting_board and a glove that are aligned horizontally, with the glove located on the right side of the image. The cutting_board is positioned above a plate. There is also a cup that is aligned horizontally with the plate, and this cup is smaller than the plate. Additionally, for every spoon in the scene, there corresponds a screwdriver placed above it; this screwdriver is aligned horizontally with the cutting_board and is smaller than it.",
+    "dsl": "(exists ?cb (exists ?gl (exists ?pl (exists ?cup (and (Is ?cb 'cutting_board') (Is ?gl 'glove') (Is ?pl 'plate') (Is ?cup 'cup') (AlignedHorizontally ?cb ?gl) (OnRightSide ?gl) (Above ?cb ?pl) (AlignedHorizontally ?pl ?cup) (SmallerThan ?cup ?pl) (forall ?sp (implies (Is ?sp 'spoon') (exists ?sd (and (Is ?sd 'screwdriver') (Above ?sd ?sp) (AlignedHorizontally ?sd ?cb) (SmallerThan ?sd ?cb))))))))))",
+    "cnf": "(exists ?cb (exists ?gl (exists ?pl (exists ?cup (forall ?sp (exists ?sd (and (Is ?cb 'cutting_board') (AlignedHorizontally ?cb ?gl) (Above ?cb ?pl) (Is ?gl 'glove') (OnRightSide ?gl) (or (not (Is ?sp 'spoon')) (AlignedHorizontally ?sd ?cb)) (Is ?pl 'plate') (AlignedHorizontally ?pl ?cup) (or (not (Is ?sp 'spoon')) (SmallerThan ?sd ?cb)) (or (not (Is ?sp 'spoon')) (Above ?sd ?sp)) (SmallerThan ?cup ?pl) (Is ?cup 'cup') (or (not (Is ?sp 'spoon')) (Is ?sd 'screwdriver')))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "cup",
+        "screwdriver",
+        "cutting_board",
+        "spoon",
+        "glove"
+    ]
+}

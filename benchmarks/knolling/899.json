@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a yellow drill. For every spoon in the arrangement, there is a black camera located below it, a red stapler located below the camera, and a blue lighter positioned to the left of the stapler. Additionally, the yellow drill is to the left of the spoon and is larger than the camera.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (Has ?drill 'yellow') (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?camera (exists ?stapler (exists ?lighter (and (Is ?camera 'camera') (Has ?camera 'black') (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?lighter 'lighter') (Has ?lighter 'blue') (LeftOf ?drill ?spoon) (Below ?camera ?spoon) (Below ?stapler ?camera) (LeftOf ?lighter ?stapler) (LargerThan ?drill ?camera)))))))))",
+    "cnf": "(exists ?drill (forall ?spoon (exists ?camera (exists ?stapler (exists ?lighter (and (Is ?drill 'drill') (Has ?drill 'yellow') (or (not (Is ?spoon 'spoon')) (LeftOf ?drill ?spoon)) (or (not (Is ?spoon 'spoon')) (LargerThan ?drill ?camera)) (or (not (Is ?spoon 'spoon')) (Has ?lighter 'blue')) (or (not (Is ?spoon 'spoon')) (Below ?camera ?spoon)) (or (not (Is ?spoon 'spoon')) (LeftOf ?lighter ?stapler)) (or (not (Is ?spoon 'spoon')) (Below ?stapler ?camera)) (or (not (Is ?spoon 'spoon')) (Is ?lighter 'lighter')) (or (not (Is ?spoon 'spoon')) (Has ?camera 'black')) (or (not (Is ?spoon 'spoon')) (Has ?stapler 'red')) (or (not (Is ?spoon 'spoon')) (Is ?camera 'camera')) (or (not (Is ?spoon 'spoon')) (Is ?stapler 'stapler'))))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "lighter",
+        "camera",
+        "drill",
+        "stapler"
+    ]
+}

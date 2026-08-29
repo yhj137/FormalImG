@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image with a strict vertical arrangement. On the right side of the image, there is a book. Directly below the book is a drill, below the drill are headphones, below the headphones is a keyboard, and below the keyboard is a sandwich. The scene also adheres to a universal constraint: for every set of keys, they are positioned below the sandwich, and there is a fork located below the keys.",
+    "dsl": "(exists ?book (exists ?drill (exists ?headphones (exists ?keyboard (exists ?sandwich (and (Is ?book 'book') (OnRightSide ?book) (Is ?drill 'drill') (Is ?headphones 'headphones') (Is ?keyboard 'keyboard') (Is ?sandwich 'sandwich') (Above ?book ?drill) (Above ?drill ?headphones) (Above ?headphones ?keyboard) (Above ?keyboard ?sandwich) (forall ?keys (implies (Is ?keys 'keys') (exists ?fork (and (Is ?fork 'fork') (Below ?keys ?sandwich) (Below ?fork ?keys)))))))))))",
+    "cnf": "(exists ?book (exists ?drill (exists ?headphones (exists ?keyboard (exists ?sandwich (forall ?keys (exists ?fork (and (Is ?book 'book') (OnRightSide ?book) (Above ?book ?drill) (Is ?drill 'drill') (Above ?drill ?headphones) (Is ?headphones 'headphones') (Above ?headphones ?keyboard) (Is ?keyboard 'keyboard') (Above ?keyboard ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?keys 'keys')) (Below ?keys ?sandwich)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (Below ?fork ?keys))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "keys",
+        "keyboard",
+        "sandwich",
+        "drill",
+        "fork",
+        "headphones"
+    ]
+}

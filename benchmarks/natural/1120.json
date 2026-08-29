@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a bus, and a horse stands to the right of it. To the left of the horse, there is a flying bird. Every butterfly in the scene is positioned to the left of the bird. Inside the bus, there is a shirt and a toy car, with the toy car located to the right of the shirt.",
+    "dsl": "(exists ?b (exists ?h (exists ?bird (and (Is ?b 'bus') (Is ?h 'horse') (Is ?bird 'bird') (RightOf ?h ?b) (HasState ?bird 'flying') (LeftOf ?bird ?h) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?bird))) (exists ?s (exists ?tc (and (Is ?s 'shirt') (Is ?tc 'toy car') (In ?s ?b) (In ?tc ?b) (RightOf ?tc ?s))))))))",
+    "cnf": "(exists ?b (exists ?h (exists ?bird (forall ?bf (exists ?s (exists ?tc (and (Is ?b 'bus') (RightOf ?h ?b) (In ?s ?b) (Is ?h 'horse') (LeftOf ?bird ?h) (In ?tc ?b) (Is ?s 'shirt') (RightOf ?tc ?s) (HasState ?bird 'flying') (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?bird)) (Is ?tc 'toy car') (Is ?bird 'bird'))))))))",
+    "k": 6,
+    "object_classes": [
+        "toy car",
+        "bus",
+        "butterfly",
+        "shirt",
+        "horse",
+        "bird"
+    ]
+}

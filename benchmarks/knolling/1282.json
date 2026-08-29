@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop and a pizza, where the laptop is positioned on the left side. For every bottle in the image, there is a calculator, a ruler, a watch, and a fork arranged in relation to it and the other objects. Specifically, the bottle is smaller than the pizza and aligned horizontally with the ruler. The ruler is located on the bottom side. The calculator is aligned horizontally with the pizza, and the laptop is visually larger than the calculator. Additionally, the watch is smaller than the laptop, and the fork is smaller than the pizza.",
+    "dsl": "(exists ?l (exists ?p (and (Is ?l 'laptop') (Is ?p 'pizza') (OnLeftSide ?l) (forall ?b (implies (Is ?b 'bottle') (exists ?c (exists ?r (exists ?w (exists ?f (and (Is ?c 'calculator') (Is ?r 'ruler') (Is ?w 'watch') (Is ?f 'fork') (SmallerThan ?b ?p) (AlignedHorizontally ?b ?r) (OnBottomSide ?r) (AlignedHorizontally ?c ?p) (LargerThan ?l ?c) (SmallerThan ?w ?l) (SmallerThan ?f ?p)))))))))))",
+    "cnf": "(exists ?l (exists ?p (forall ?b (exists ?c (exists ?r (exists ?w (exists ?f (and (Is ?l 'laptop') (OnLeftSide ?l) (or (not (Is ?b 'bottle')) (LargerThan ?l ?c)) (or (not (Is ?b 'bottle')) (SmallerThan ?w ?l)) (or (not (Is ?b 'bottle')) (AlignedHorizontally ?c ?p)) (or (not (Is ?b 'bottle')) (SmallerThan ?f ?p)) (or (not (Is ?b 'bottle')) (Is ?w 'watch')) (or (not (Is ?b 'bottle')) (SmallerThan ?b ?p)) (or (not (Is ?b 'bottle')) (Is ?c 'calculator')) (or (not (Is ?b 'bottle')) (OnBottomSide ?r)) (or (not (Is ?b 'bottle')) (Is ?f 'fork')) (or (not (Is ?b 'bottle')) (Is ?r 'ruler')) (Is ?p 'pizza') (or (not (Is ?b 'bottle')) (AlignedHorizontally ?b ?r))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "watch",
+        "pizza",
+        "fork",
+        "calculator",
+        "bottle"
+    ]
+}

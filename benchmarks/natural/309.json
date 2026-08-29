@@ -1,0 +1,10 @@
+{
+    "prompt": "An oil painting where every plant is held by a smiling woman.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?p (implies (Is ?p 'plant') (exists ?w (and (Is ?w 'woman') (HasState ?w 'smiling') (Holding ?w ?p))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?p (exists ?w (and (or (not (Is ?p 'plant')) (Is ?w 'woman')) (or (not (Is ?p 'plant')) (HasState ?w 'smiling')) (or (not (Is ?p 'plant')) (Holding ?w ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "plant",
+        "woman"
+    ]
+}

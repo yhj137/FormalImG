@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a single brown shoe.",
+    "dsl": "(exists ?shoe (and (Is ?shoe 'shoe') (Has ?shoe 'brown')))",
+    "cnf": "(exists ?shoe (and (Is ?shoe 'shoe') (Has ?shoe 'brown')))",
+    "k": 1,
+    "object_classes": [
+        "shoe"
+    ]
+}

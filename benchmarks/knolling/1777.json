@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a pair of blue jeans positioned on the bottom side of the scene. A black shoe is aligned horizontally with the jeans. Directly above the jeans lies a white shirt, which is visually larger than the watch that is aligned horizontally with it. Above the shirt, there is a sandwich. A bottle and a mouse are both aligned horizontally with the sandwich, and the mouse is smaller than the bottle. Furthermore, for every screwdriver present, there is a knife located above it, with the knife being aligned horizontally with the watch.",
+    "dsl": "(exists ?jeans (exists ?shirt (exists ?shoe (exists ?watch (exists ?sandwich (exists ?bottle (exists ?mouse (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?shirt 'shirt') (Has ?shirt 'white') (Above ?shirt ?jeans) (Is ?shoe 'shoe') (Has ?shoe 'black') (AlignedHorizontally ?shoe ?jeans) (Is ?watch 'watch') (AlignedHorizontally ?watch ?shirt) (LargerThan ?shirt ?watch) (Is ?sandwich 'sandwich') (Above ?sandwich ?shirt) (Is ?bottle 'bottle') (AlignedHorizontally ?bottle ?sandwich) (Is ?mouse 'mouse') (AlignedHorizontally ?mouse ?sandwich) (SmallerThan ?mouse ?bottle) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?knife (and (Is ?knife 'knife') (Above ?knife ?screwdriver) (AlignedHorizontally ?knife ?watch)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?shirt (exists ?shoe (exists ?watch (exists ?sandwich (exists ?bottle (exists ?mouse (forall ?screwdriver (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Above ?shirt ?jeans) (AlignedHorizontally ?shoe ?jeans) (Has ?shirt 'white') (AlignedHorizontally ?watch ?shirt) (Has ?shoe 'black') (Is ?shirt 'shirt') (LargerThan ?shirt ?watch) (Is ?watch 'watch') (Is ?shoe 'shoe') (Above ?sandwich ?shirt) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?knife ?watch)) (Is ?sandwich 'sandwich') (AlignedHorizontally ?bottle ?sandwich) (or (not (Is ?screwdriver 'screwdriver')) (Above ?knife ?screwdriver)) (AlignedHorizontally ?mouse ?sandwich) (Is ?bottle 'bottle') (SmallerThan ?mouse ?bottle) (or (not (Is ?screwdriver 'screwdriver')) (Is ?knife 'knife')) (Is ?mouse 'mouse')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "watch",
+        "screwdriver",
+        "jeans",
+        "knife",
+        "mouse",
+        "bottle",
+        "sandwich",
+        "shoe",
+        "shirt"
+    ]
+}

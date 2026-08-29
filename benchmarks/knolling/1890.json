@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical column of clothing and accessories: a blue shirt is at the top, followed by blue jeans below it, and a shoe below the jeans. Continuing this vertical alignment below the shoe is a bottle, followed by a black watch, and finally keys at the bottom. On the right side of the image, there is a separate vertical arrangement with a laptop at the top, a drill below the laptop, and a book below the drill. The keys are visually smaller than the laptop. Additionally, for every pizza in the scene, it is positioned above the blue shirt and aligned vertically with it.",
+    "dsl": "(exists ?shirt (exists ?jeans (exists ?shoe (and (forall ?pizza (implies (Is ?pizza 'pizza') (and (Above ?pizza ?shirt) (AlignedVertically ?pizza ?shirt)))) (exists ?laptop (exists ?drill (exists ?book (exists ?bottle (exists ?watch (exists ?keys (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?shoe 'shoe') (Is ?laptop 'laptop') (OnRightSide ?laptop) (Is ?drill 'drill') (Is ?book 'book') (Is ?bottle 'bottle') (Is ?watch 'watch') (Has ?watch 'black') (Is ?keys 'keys') (Above ?shirt ?jeans) (Above ?jeans ?shoe) (Above ?shoe ?bottle) (Above ?bottle ?watch) (Above ?watch ?keys) (AlignedVertically ?shirt ?jeans) (AlignedVertically ?jeans ?shoe) (AlignedVertically ?shoe ?bottle) (AlignedVertically ?bottle ?watch) (AlignedVertically ?watch ?keys) (Above ?laptop ?drill) (Above ?drill ?book) (AlignedVertically ?laptop ?drill) (AlignedVertically ?drill ?book) (SmallerThan ?keys ?laptop))))))))))))",
+    "cnf": "(exists ?shirt (exists ?jeans (exists ?shoe (forall ?pizza (exists ?laptop (exists ?drill (exists ?book (exists ?bottle (exists ?watch (exists ?keys (and (or (not (Is ?pizza 'pizza')) (Above ?pizza ?shirt)) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?pizza ?shirt)) (Is ?shirt 'shirt') (Has ?shirt 'blue') (Above ?shirt ?jeans) (AlignedVertically ?shirt ?jeans) (Has ?jeans 'blue') (Above ?jeans ?shoe) (AlignedVertically ?jeans ?shoe) (Is ?jeans 'jeans') (Is ?shoe 'shoe') (Above ?shoe ?bottle) (AlignedVertically ?shoe ?bottle) (Is ?bottle 'bottle') (Above ?bottle ?watch) (AlignedVertically ?bottle ?watch) (Has ?watch 'black') (Above ?watch ?keys) (AlignedVertically ?watch ?keys) (Is ?watch 'watch') (Is ?keys 'keys') (SmallerThan ?keys ?laptop) (AlignedVertically ?laptop ?drill) (Above ?laptop ?drill) (Above ?drill ?book) (AlignedVertically ?drill ?book) (OnRightSide ?laptop) (Is ?drill 'drill') (Is ?book 'book') (Is ?laptop 'laptop'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "keys",
+        "laptop",
+        "pizza",
+        "watch",
+        "drill",
+        "jeans",
+        "bottle",
+        "shoe",
+        "shirt"
+    ]
+}

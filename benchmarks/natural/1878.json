@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man sitting on a wooden bench, with a wardrobe standing to its right. All flowers in the scene are located to the left of the wardrobe. An elephant is positioned to the left of the bench, holding a red ball. A spoon rests on a laptop on the bench, while the man holds a knife and wears glasses.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?bn (exists ?w (and (Is ?m 'man') (Is ?bn 'bench') (Is ?w 'wardrobe') (On ?m ?bn) (HasMaterial ?bn 'wooden') (RightOf ?w ?bn) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?w))) (exists ?e (exists ?l (exists ?bl (exists ?s (exists ?k (exists ?g (and (Is ?e 'elephant') (Is ?l 'laptop') (Is ?bl 'ball') (Is ?s 'spoon') (Is ?k 'knife') (Is ?g 'glasses') (LeftOf ?e ?bn) (Holding ?e ?bl) (HasColor ?bl 'red') (On ?l ?bn) (On ?s ?l) (Holding ?m ?k) (On ?g ?m)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?bn (exists ?w (forall ?f (exists ?e (exists ?l (exists ?bl (exists ?s (exists ?k (exists ?g (and (Is ?m 'man') (On ?m ?bn) (Holding ?m ?k) (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (On ?g ?m) (Is ?k 'knife') (RightOf ?w ?bn) (Is ?g 'glasses') (LeftOf ?e ?bn) (Is ?w 'wardrobe') (or (not (Is ?f 'flower')) (LeftOf ?f ?w)) (On ?l ?bn) (Is ?e 'elephant') (Holding ?e ?bl) (Is ?l 'laptop') (On ?s ?l) (Is ?bl 'ball') (HasColor ?bl 'red') (Is ?s 'spoon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "glasses",
+        "man",
+        "knife",
+        "laptop",
+        "ball",
+        "wardrobe",
+        "flower",
+        "elephant",
+        "spoon"
+    ]
+}

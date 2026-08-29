@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a bed. To the left of the bed stands a wardrobe with a broken mirror on it, and to the right is a plant containing a rock. A jacket lies on the bed, along with a teddy bear holding an apple. A pair of glasses sits next to the teddy bear. All cakes in the scene are located next to the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?be (exists ?wa (exists ?mi (exists ?ja (and (Is ?be 'bed') (Is ?wa 'wardrobe') (LeftOf ?wa ?be) (Is ?mi 'mirror') (On ?mi ?wa) (HasState ?mi 'broken') (Is ?ja 'jacket') (On ?ja ?be) (forall ?ca (implies (Is ?ca 'cake') (NextTo ?ca ?be))) (exists ?te (exists ?ap (exists ?gl (exists ?pl (exists ?ro (and (Is ?te 'teddy bear') (On ?te ?be) (Is ?ap 'apple') (Holding ?te ?ap) (Is ?gl 'glasses') (NextTo ?gl ?te) (Is ?pl 'plant') (RightOf ?pl ?be) (Is ?ro 'rock') (In ?ro ?pl)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?be (exists ?wa (exists ?mi (exists ?ja (forall ?ca (exists ?te (exists ?ap (exists ?gl (exists ?pl (exists ?ro (and (Is ?be 'bed') (LeftOf ?wa ?be) (On ?ja ?be) (Is ?wa 'wardrobe') (On ?mi ?wa) (or (not (Is ?ca 'cake')) (NextTo ?ca ?be)) (Is ?ja 'jacket') (Is ?mi 'mirror') (HasState ?mi 'broken') (On ?te ?be) (RightOf ?pl ?be) (Is ?te 'teddy bear') (Holding ?te ?ap) (Is ?pl 'plant') (In ?ro ?pl) (NextTo ?gl ?te) (Is ?ap 'apple') (Is ?ro 'rock') (Is ?gl 'glasses')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "jacket",
+        "glasses",
+        "rock",
+        "plant",
+        "cake",
+        "teddy bear",
+        "bed",
+        "wardrobe",
+        "mirror",
+        "apple"
+    ]
+}

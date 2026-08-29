@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is found on the left side of the composition, and a hat is positioned above the shirt. The layout follows a rule where for every screwdriver, there is a camera above it and a mouse above the camera. Furthermore, the screwdriver aligns vertically with the shirt, while the camera aligns vertically with the mouse.",
+    "dsl": "(exists ?shirt (exists ?hat (and (Is ?shirt 'shirt') (Is ?hat 'hat') (OnLeftSide ?shirt) (Above ?hat ?shirt) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?cam (exists ?mouse (and (Is ?cam 'camera') (Is ?mouse 'mouse') (Above ?cam ?sd) (Above ?mouse ?cam) (AlignedVertically ?sd ?shirt) (AlignedVertically ?cam ?mouse)))))))))",
+    "cnf": "(exists ?shirt (exists ?hat (forall ?sd (exists ?cam (exists ?mouse (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Above ?hat ?shirt) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sd ?shirt)) (Is ?hat 'hat') (or (not (Is ?sd 'screwdriver')) (Above ?mouse ?cam)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?cam ?mouse)) (or (not (Is ?sd 'screwdriver')) (Above ?cam ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?mouse 'mouse')) (or (not (Is ?sd 'screwdriver')) (Is ?cam 'camera'))))))))",
+    "k": 5,
+    "object_classes": [
+        "screwdriver",
+        "hat",
+        "camera",
+        "mouse",
+        "shirt"
+    ]
+}

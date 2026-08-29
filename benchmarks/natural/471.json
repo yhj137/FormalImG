@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every elephant has a basket resting on its right side containing a rectangular monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?e (implies (Is ?e 'elephant') (exists ?b (exists ?m (and (Is ?b 'basket') (Is ?m 'monitor') (On ?b ?e) (RightOf ?b ?e) (In ?m ?b) (HasShape ?m 'rectangular')))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?e (exists ?b (exists ?m (and (or (not (Is ?e 'elephant')) (Is ?b 'basket')) (or (not (Is ?e 'elephant')) (Is ?m 'monitor')) (or (not (Is ?e 'elephant')) (On ?b ?e)) (or (not (Is ?e 'elephant')) (In ?m ?b)) (or (not (Is ?e 'elephant')) (RightOf ?b ?e)) (or (not (Is ?e 'elephant')) (HasShape ?m 'rectangular')))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "basket",
+        "monitor"
+    ]
+}

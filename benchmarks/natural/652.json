@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every fruit rests on a round ball, with a child holding a gray spoon next to it.",
+    "dsl": "(forall ?f (implies (Is ?f 'fruit') (exists ?c (exists ?s (exists ?b (and (Is ?c 'child') (Is ?s 'spoon') (Is ?b 'ball') (HasColor ?s 'gray') (Holding ?c ?s) (NextTo ?s ?f) (On ?f ?b) (HasShape ?b 'round')))))))",
+    "cnf": "(forall ?f (exists ?c (exists ?s (exists ?b (and (or (not (Is ?f 'fruit')) (Is ?c 'child')) (or (not (Is ?f 'fruit')) (Is ?s 'spoon')) (or (not (Is ?f 'fruit')) (Holding ?c ?s)) (or (not (Is ?f 'fruit')) (Is ?b 'ball')) (or (not (Is ?f 'fruit')) (HasColor ?s 'gray')) (or (not (Is ?f 'fruit')) (NextTo ?s ?f)) (or (not (Is ?f 'fruit')) (On ?f ?b)) (or (not (Is ?f 'fruit')) (HasShape ?b 'round')))))))",
+    "k": 4,
+    "object_classes": [
+        "child",
+        "ball",
+        "spoon",
+        "fruit"
+    ]
+}

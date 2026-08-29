@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a round table.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'table') (HasShape ?t 'round'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'table') (HasShape ?t 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "table"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a screwdriver, a knife, a watch, and headphones. The screwdriver is placed on the left side of the scene. The knife is located to the right of the screwdriver, the watch is to the right of the knife, and the headphones are to the right of the watch. All four objects are aligned horizontally.",
+    "dsl": "(exists ?s (exists ?k (exists ?w (exists ?h (and (Is ?s 'screwdriver') (Is ?k 'knife') (Is ?w 'watch') (Is ?h 'headphones') (OnLeftSide ?s) (RightOf ?k ?s) (RightOf ?w ?k) (RightOf ?h ?w) (AlignedHorizontally ?s ?k) (AlignedHorizontally ?k ?w) (AlignedHorizontally ?w ?h))))))",
+    "cnf": "(exists ?s (exists ?k (exists ?w (exists ?h (and (Is ?s 'screwdriver') (OnLeftSide ?s) (RightOf ?k ?s) (AlignedHorizontally ?s ?k) (Is ?k 'knife') (RightOf ?w ?k) (AlignedHorizontally ?k ?w) (Is ?w 'watch') (RightOf ?h ?w) (AlignedHorizontally ?w ?h) (Is ?h 'headphones'))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "headphones",
+        "watch",
+        "screwdriver"
+    ]
+}

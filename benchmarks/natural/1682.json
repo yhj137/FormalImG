@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a horse sitting on a sofa and holding a spoon. A white cake and a turned-on phone are also on the sofa, with a bottle placed next to the phone. To the right of the sofa is a boat beside a car. Every cup is located to the left of the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?sp (exists ?s (and (Is ?h 'horse') (Is ?sp 'spoon') (Is ?s 'sofa') (HasState ?h 'sitting') (Holding ?h ?sp) (On ?h ?s) (forall ?c (implies (Is ?c 'cup') (LeftOf ?c ?s))) (exists ?b (exists ?cr (exists ?p (exists ?bt (exists ?ck (and (Is ?b 'boat') (Is ?cr 'car') (Is ?p 'phone') (Is ?bt 'bottle') (Is ?ck 'cake') (RightOf ?b ?s) (NextTo ?cr ?b) (On ?p ?s) (HasState ?p 'on') (NextTo ?bt ?p) (On ?ck ?s) (HasColor ?ck 'white'))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?sp (exists ?s (forall ?c (exists ?b (exists ?cr (exists ?p (exists ?bt (exists ?ck (and (Is ?h 'horse') (HasState ?h 'sitting') (Holding ?h ?sp) (On ?h ?s) (Is ?sp 'spoon') (Is ?s 'sofa') (or (not (Is ?c 'cup')) (LeftOf ?c ?s)) (RightOf ?b ?s) (On ?p ?s) (Is ?b 'boat') (NextTo ?cr ?b) (On ?ck ?s) (Is ?p 'phone') (HasState ?p 'on') (Is ?cr 'car') (Is ?ck 'cake') (HasColor ?ck 'white') (NextTo ?bt ?p) (Is ?bt 'bottle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "sofa",
+        "cake",
+        "phone",
+        "horse",
+        "cup",
+        "boat",
+        "car",
+        "spoon"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, it is blue and located on the left side of the image. To the right of the backpack, there is a horizontally aligned sequence of items: a phone, a remote, a game controller, a cup, a glove, a wrench, and finally a pair of pliers. The phone is smaller than the backpack. The chain of objects is arranged such that the backpack is to the left of the phone, the phone is to the left of the remote, the remote is to the left of the game controller, the game controller is to the left of the cup, the cup is to the left of the glove, the glove is to the left of the wrench, and the wrench is to the left of the pliers. The pliers are located on the bottom side of the image, and all adjacent items in this sequence are aligned horizontally.",
+    "dsl": "(and (forall ?bp (implies (Is ?bp 'backpack') (exists ?ph (exists ?rm (exists ?gc (exists ?cp (exists ?gl (exists ?wr (exists ?pl (and (Is ?ph 'phone') (Is ?rm 'remote') (Is ?gc 'game_controller') (Is ?cp 'cup') (Is ?gl 'glove') (Is ?wr 'wrench') (Is ?pl 'pliers') (Has ?bp 'blue') (OnLeftSide ?bp) (OnBottomSide ?pl) (SmallerThan ?ph ?bp) (LeftOf ?bp ?ph) (LeftOf ?ph ?rm) (LeftOf ?rm ?gc) (LeftOf ?gc ?cp) (LeftOf ?cp ?gl) (LeftOf ?gl ?wr) (LeftOf ?wr ?pl) (AlignedHorizontally ?bp ?ph) (AlignedHorizontally ?ph ?rm) (AlignedHorizontally ?rm ?gc) (AlignedHorizontally ?gc ?cp) (AlignedHorizontally ?cp ?gl) (AlignedHorizontally ?gl ?wr) (AlignedHorizontally ?wr ?pl))))))))))))",
+    "cnf": "(forall ?bp (exists ?ph (exists ?rm (exists ?gc (exists ?cp (exists ?gl (exists ?wr (exists ?pl (and (or (not (Is ?bp 'backpack')) (Is ?ph 'phone')) (or (not (Is ?bp 'backpack')) (SmallerThan ?ph ?bp)) (or (not (Is ?bp 'backpack')) (Is ?rm 'remote')) (or (not (Is ?bp 'backpack')) (LeftOf ?bp ?ph)) (or (not (Is ?bp 'backpack')) (OnBottomSide ?pl)) (or (not (Is ?bp 'backpack')) (Is ?gc 'game_controller')) (or (not (Is ?bp 'backpack')) (LeftOf ?ph ?rm)) (or (not (Is ?bp 'backpack')) (OnLeftSide ?bp)) (or (not (Is ?bp 'backpack')) (Is ?pl 'pliers')) (or (not (Is ?bp 'backpack')) (LeftOf ?wr ?pl)) (or (not (Is ?bp 'backpack')) (Is ?cp 'cup')) (or (not (Is ?bp 'backpack')) (LeftOf ?rm ?gc)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?bp ?ph)) (or (not (Is ?bp 'backpack')) (Has ?bp 'blue')) (or (not (Is ?bp 'backpack')) (Is ?wr 'wrench')) (or (not (Is ?bp 'backpack')) (LeftOf ?gl ?wr)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?gl ?wr)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?wr ?pl)) (or (not (Is ?bp 'backpack')) (Is ?gl 'glove')) (or (not (Is ?bp 'backpack')) (LeftOf ?gc ?cp)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?ph ?rm)) (or (not (Is ?bp 'backpack')) (LeftOf ?cp ?gl)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?cp ?gl)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?rm ?gc)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?gc ?cp)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "wrench",
+        "phone",
+        "cup",
+        "game_controller",
+        "backpack",
+        "glove"
+    ]
+}

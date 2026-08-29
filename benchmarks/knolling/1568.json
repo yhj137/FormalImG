@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag positioned on the left side. Arranged in a sequence to the right of the handbag are a cutting board, a bottle, a plate, a hat, and a drill. Additionally, the layout adheres to a specific rule: for every pair of scissors located on the bottom side of the image, there is a pair of glasses positioned to its right. In terms of size, the handbag is larger than the scissors, and the scissors are larger than the glasses.",
+    "dsl": "(exists ?handbag (exists ?cutting_board (exists ?bottle (exists ?plate (exists ?hat (exists ?drill (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?handbag) (Is ?bottle 'bottle') (RightOf ?bottle ?cutting_board) (Is ?plate 'plate') (RightOf ?plate ?bottle) (Is ?hat 'hat') (RightOf ?hat ?plate) (Is ?drill 'drill') (RightOf ?drill ?hat) (forall ?scissors (implies (and (Is ?scissors 'scissors') (OnBottomSide ?scissors)) (exists ?glasses (and (Is ?glasses 'glasses') (LeftOf ?scissors ?glasses) (LargerThan ?handbag ?scissors) (LargerThan ?scissors ?glasses))))))))))))",
+    "cnf": "(exists ?handbag (exists ?cutting_board (exists ?bottle (exists ?plate (exists ?hat (exists ?drill (forall ?scissors (exists ?glasses (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (RightOf ?cutting_board ?handbag) (or (not (Is ?scissors 'scissors')) (not (OnBottomSide ?scissors)) (LargerThan ?handbag ?scissors)) (Is ?cutting_board 'cutting_board') (RightOf ?bottle ?cutting_board) (or (not (Is ?scissors 'scissors')) (not (OnBottomSide ?scissors)) (LeftOf ?scissors ?glasses)) (or (not (Is ?scissors 'scissors')) (not (OnBottomSide ?scissors)) (LargerThan ?scissors ?glasses)) (Is ?bottle 'bottle') (RightOf ?plate ?bottle) (or (not (Is ?scissors 'scissors')) (not (OnBottomSide ?scissors)) (Is ?glasses 'glasses')) (Is ?plate 'plate') (RightOf ?hat ?plate) (Is ?hat 'hat') (RightOf ?drill ?hat) (Is ?drill 'drill'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "cutting_board",
+        "handbag",
+        "hat",
+        "drill",
+        "bottle",
+        "scissors"
+    ]
+}

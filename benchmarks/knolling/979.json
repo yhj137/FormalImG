@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a book located on the left side, with a ruler positioned directly above it in the top side of the frame. To the right of the ruler sits a bowl, which is placed above a pair of headphones. Additionally, for every stapler in the scene, it must be located to the right of the headphones, and the book is visually larger than the stapler.",
+    "dsl": "(exists ?book (exists ?ruler (exists ?bowl (exists ?headphones (and (Is ?book 'book') (OnLeftSide ?book) (Is ?ruler 'ruler') (OnTopSide ?ruler) (Above ?ruler ?book) (Is ?bowl 'bowl') (LeftOf ?ruler ?bowl) (Is ?headphones 'headphones') (Above ?bowl ?headphones) (forall ?stapler (implies (Is ?stapler 'stapler') (and (RightOf ?stapler ?headphones) (LargerThan ?book ?stapler)))))))))",
+    "cnf": "(exists ?book (exists ?ruler (exists ?bowl (exists ?headphones (forall ?stapler (and (Is ?book 'book') (OnLeftSide ?book) (Above ?ruler ?book) (or (not (Is ?stapler 'stapler')) (LargerThan ?book ?stapler)) (OnTopSide ?ruler) (LeftOf ?ruler ?bowl) (or (not (Is ?stapler 'stapler')) (RightOf ?stapler ?headphones)) (Is ?ruler 'ruler') (Is ?bowl 'bowl') (Above ?bowl ?headphones) (Is ?headphones 'headphones')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "book",
+        "stapler",
+        "bowl",
+        "headphones"
+    ]
+}

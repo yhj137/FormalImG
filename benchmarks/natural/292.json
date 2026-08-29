@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every backpack is to the left of a paper book.",
+    "dsl": "(forall ?b (implies (Is ?b 'backpack') (exists ?k (and (Is ?k 'book') (HasMaterial ?k 'paper') (LeftOf ?b ?k)))))",
+    "cnf": "(forall ?b (exists ?k (and (or (not (Is ?b 'backpack')) (Is ?k 'book')) (or (not (Is ?b 'backpack')) (HasMaterial ?k 'paper')) (or (not (Is ?b 'backpack')) (LeftOf ?b ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "backpack"
+    ]
+}

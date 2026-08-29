@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every sofa has a sliced cake on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?s (implies (Is ?s 'sofa') (exists ?c (and (Is ?c 'cake') (HasState ?c 'sliced') (On ?c ?s))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?s (exists ?c (and (or (not (Is ?s 'sofa')) (Is ?c 'cake')) (or (not (Is ?s 'sofa')) (HasState ?c 'sliced')) (or (not (Is ?s 'sofa')) (On ?c ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "cake",
+        "sofa"
+    ]
+}

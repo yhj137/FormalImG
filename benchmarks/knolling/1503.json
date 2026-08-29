@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a monitor on the top side. To its left is a backpack, and below the backpack on the left side is a drill; the backpack is visually larger than the drill. The layout enforces that for every screwdriver, which must be red and located below the drill, there is a plate to its right. Arranged relative to the plate are a sandwich below it, a carrot to the left of the sandwich, and a yellow lemon below the carrot.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?drill (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?backpack 'backpack') (LeftOf ?backpack ?monitor) (Is ?drill 'drill') (OnLeftSide ?drill) (Below ?drill ?backpack) (LargerThan ?backpack ?drill) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?plate (exists ?sandwich (exists ?carrot (exists ?lemon (and (Has ?screwdriver 'red') (Below ?screwdriver ?drill) (Is ?plate 'plate') (RightOf ?plate ?screwdriver) (Is ?sandwich 'sandwich') (Below ?sandwich ?plate) (Is ?carrot 'carrot') (LeftOf ?carrot ?sandwich) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Below ?lemon ?carrot))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?drill (forall ?screwdriver (exists ?plate (exists ?sandwich (exists ?carrot (exists ?lemon (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?backpack ?monitor) (Is ?backpack 'backpack') (Below ?drill ?backpack) (LargerThan ?backpack ?drill) (OnLeftSide ?drill) (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?drill)) (Is ?drill 'drill') (or (not (Is ?screwdriver 'screwdriver')) (Has ?screwdriver 'red')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?plate 'plate')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?plate ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?sandwich 'sandwich')) (or (not (Is ?screwdriver 'screwdriver')) (Below ?sandwich ?plate)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?carrot 'carrot')) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?carrot ?sandwich)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?lemon 'lemon')) (or (not (Is ?screwdriver 'screwdriver')) (Below ?lemon ?carrot)) (or (not (Is ?screwdriver 'screwdriver')) (Has ?lemon 'yellow')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "lemon",
+        "carrot",
+        "screwdriver",
+        "drill",
+        "backpack",
+        "monitor",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every refrigerator has a cylindrical umbrella next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?r (implies (Is ?r 'refrigerator') (exists ?u (and (Is ?u 'umbrella') (HasShape ?u 'cylindrical') (NextTo ?u ?r))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?r (exists ?u (and (or (not (Is ?r 'refrigerator')) (Is ?u 'umbrella')) (or (not (Is ?r 'refrigerator')) (HasShape ?u 'cylindrical')) (or (not (Is ?r 'refrigerator')) (NextTo ?u ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "umbrella",
+        "refrigerator"
+    ]
+}

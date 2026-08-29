@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pink donut and a black camera. The two objects are arranged neatly so that they are aligned vertically.",
+    "dsl": "(exists ?d (exists ?c (and (Is ?d 'donut') (Has ?d 'pink') (Is ?c 'camera') (Has ?c 'black') (AlignedVertically ?d ?c))))",
+    "cnf": "(exists ?d (exists ?c (and (Is ?d 'donut') (Has ?d 'pink') (AlignedVertically ?d ?c) (Has ?c 'black') (Is ?c 'camera'))))",
+    "k": 2,
+    "object_classes": [
+        "donut",
+        "camera"
+    ]
+}

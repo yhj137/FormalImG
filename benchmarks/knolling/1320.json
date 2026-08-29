@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a suitcase located on the left side, with a pair of jeans positioned to its right. A hat is arranged to be aligned vertically with the suitcase. The arrangement includes a set of accessories defined by a universal rule: for every stapler in the image, it is placed on the bottom side to the right of the jeans. Associated with this stapler are a wallet and a phone, which are aligned horizontally with the stapler in a row. Furthermore, a watch is aligned vertically with the phone and is smaller than the wallet.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?hat (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?jeans 'jeans') (Is ?hat 'hat') (LeftOf ?suitcase ?jeans) (AlignedVertically ?suitcase ?hat) (forall ?stapler (implies (Is ?stapler 'stapler') (exists ?wallet (exists ?phone (exists ?watch (and (Is ?wallet 'wallet') (Is ?phone 'phone') (Is ?watch 'watch') (OnBottomSide ?stapler) (LeftOf ?jeans ?stapler) (AlignedHorizontally ?stapler ?wallet) (AlignedHorizontally ?wallet ?phone) (AlignedVertically ?phone ?watch) (SmallerThan ?watch ?wallet)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?hat (forall ?stapler (exists ?wallet (exists ?phone (exists ?watch (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?jeans) (AlignedVertically ?suitcase ?hat) (Is ?jeans 'jeans') (or (not (Is ?stapler 'stapler')) (LeftOf ?jeans ?stapler)) (Is ?hat 'hat') (or (not (Is ?stapler 'stapler')) (OnBottomSide ?stapler)) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?stapler ?wallet)) (or (not (Is ?stapler 'stapler')) (Is ?watch 'watch')) (or (not (Is ?stapler 'stapler')) (Is ?wallet 'wallet')) (or (not (Is ?stapler 'stapler')) (AlignedHorizontally ?wallet ?phone)) (or (not (Is ?stapler 'stapler')) (Is ?phone 'phone')) (or (not (Is ?stapler 'stapler')) (AlignedVertically ?phone ?watch)) (or (not (Is ?stapler 'stapler')) (SmallerThan ?watch ?wallet))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "phone",
+        "watch",
+        "hat",
+        "jeans",
+        "wallet",
+        "suitcase"
+    ]
+}

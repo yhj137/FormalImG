@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a wooden basket containing a keyboard, with every child positioned to the right of the basket.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?k (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (Is ?k 'keyboard') (In ?k ?b) (forall ?c (implies (Is ?c 'child') (RightOf ?c ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?k (forall ?c (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (In ?k ?b) (or (not (Is ?c 'child')) (RightOf ?c ?b)) (Is ?k 'keyboard'))))))",
+    "k": 3,
+    "object_classes": [
+        "keyboard",
+        "child",
+        "basket"
+    ]
+}

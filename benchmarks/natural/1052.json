@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every woman stands next to a desk with a bicycle beside it. A hammer, a peeled banana, and an orange sit on the desk.",
+    "dsl": "(forall ?w (implies (Is ?w 'woman') (exists ?d (exists ?b (exists ?h (exists ?ba (exists ?o (and (Is ?d 'desk') (Is ?b 'bicycle') (Is ?h 'hammer') (Is ?ba 'banana') (Is ?o 'orange') (HasState ?w 'standing') (NextTo ?d ?w) (NextTo ?b ?d) (On ?h ?d) (On ?ba ?d) (HasState ?ba 'peeled') (On ?o ?d)))))))))",
+    "cnf": "(forall ?w (exists ?d (exists ?b (exists ?h (exists ?ba (exists ?o (and (or (not (Is ?w 'woman')) (Is ?d 'desk')) (or (not (Is ?w 'woman')) (Is ?b 'bicycle')) (or (not (Is ?w 'woman')) (NextTo ?d ?w)) (or (not (Is ?w 'woman')) (Is ?h 'hammer')) (or (not (Is ?w 'woman')) (NextTo ?b ?d)) (or (not (Is ?w 'woman')) (HasState ?w 'standing')) (or (not (Is ?w 'woman')) (Is ?ba 'banana')) (or (not (Is ?w 'woman')) (On ?h ?d)) (or (not (Is ?w 'woman')) (Is ?o 'orange')) (or (not (Is ?w 'woman')) (On ?ba ?d)) (or (not (Is ?w 'woman')) (On ?o ?d)) (or (not (Is ?w 'woman')) (HasState ?ba 'peeled')))))))))",
+    "k": 6,
+    "object_classes": [
+        "banana",
+        "desk",
+        "hammer",
+        "bicycle",
+        "orange",
+        "woman"
+    ]
+}

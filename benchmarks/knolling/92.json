@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single monitor positioned on the left side of the layout.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnLeftSide ?monitor)))",
+    "cnf": "(exists ?monitor (and (Is ?monitor 'monitor') (OnLeftSide ?monitor)))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

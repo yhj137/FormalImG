@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where a green bottle rests on every tree.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'tree') (exists ?b (and (Is ?b 'bottle') (HasColor ?b 'green') (On ?b ?t))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (exists ?b (and (or (not (Is ?t 'tree')) (Is ?b 'bottle')) (or (not (Is ?t 'tree')) (HasColor ?b 'green')) (or (not (Is ?t 'tree')) (On ?b ?t))))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "tree"
+    ]
+}

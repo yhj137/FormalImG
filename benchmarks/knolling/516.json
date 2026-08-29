@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a wallet positioned on the left side of the scene. For every watch in the image, the wallet is located below it, and there is a donut placed above the watch. The wallet, the watch, and the donut are all aligned vertically.",
+    "dsl": "(exists ?wallet (and (Is ?wallet 'wallet') (OnLeftSide ?wallet) (forall ?watch (implies (Is ?watch 'watch') (exists ?donut (and (Is ?donut 'donut') (Above ?watch ?wallet) (Below ?wallet ?watch) (Above ?donut ?watch) (AlignedVertically ?wallet ?watch) (AlignedVertically ?watch ?donut)))))))",
+    "cnf": "(exists ?wallet (forall ?watch (exists ?donut (and (Is ?wallet 'wallet') (OnLeftSide ?wallet) (or (not (Is ?watch 'watch')) (Above ?watch ?wallet)) (or (not (Is ?watch 'watch')) (Below ?wallet ?watch)) (or (not (Is ?watch 'watch')) (Is ?donut 'donut')) (or (not (Is ?watch 'watch')) (AlignedVertically ?wallet ?watch)) (or (not (Is ?watch 'watch')) (Above ?donut ?watch)) (or (not (Is ?watch 'watch')) (AlignedVertically ?watch ?donut))))))",
+    "k": 3,
+    "object_classes": [
+        "wallet",
+        "donut",
+        "watch"
+    ]
+}

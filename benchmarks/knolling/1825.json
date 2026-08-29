@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the scene, there is a tie, a glove, and a watch arranged vertically above it, in that order from bottom to top. On the right side of the image, a handbag, a wallet, and a book are arranged vertically from bottom to top, with the handbag being larger than the shirt. Furthermore, a remote, a calculator, and a cup form another vertical arrangement from bottom to top, where the book is visually larger than the remote.",
+    "dsl": "(forall ?shirt (implies (Is ?shirt 'shirt') (exists ?tie (exists ?glove (exists ?watch (exists ?handbag (exists ?wallet (exists ?book (exists ?remote (exists ?calculator (exists ?cup (and (Is ?tie 'tie') (Is ?glove 'glove') (Is ?watch 'watch') (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?book 'book') (Is ?remote 'remote') (Is ?calculator 'calculator') (Is ?cup 'cup') (Above ?tie ?shirt) (Above ?glove ?tie) (Above ?watch ?glove) (AlignedVertically ?shirt ?tie) (AlignedVertically ?tie ?glove) (AlignedVertically ?glove ?watch) (OnRightSide ?handbag) (OnRightSide ?wallet) (OnRightSide ?book) (Above ?wallet ?handbag) (Above ?book ?wallet) (AlignedVertically ?handbag ?wallet) (AlignedVertically ?wallet ?book) (LargerThan ?handbag ?shirt) (Above ?calculator ?remote) (Above ?cup ?calculator) (AlignedVertically ?remote ?calculator) (AlignedVertically ?calculator ?cup) (LargerThan ?book ?remote)))))))))))))",
+    "cnf": "(forall ?shirt (exists ?tie (exists ?glove (exists ?watch (exists ?handbag (exists ?wallet (exists ?book (exists ?remote (exists ?calculator (exists ?cup (and (or (not (Is ?shirt 'shirt')) (Is ?tie 'tie')) (or (not (Is ?shirt 'shirt')) (Above ?tie ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?glove 'glove')) (or (not (Is ?shirt 'shirt')) (Above ?glove ?tie)) (or (not (Is ?shirt 'shirt')) (Is ?cup 'cup')) (or (not (Is ?shirt 'shirt')) (Is ?watch 'watch')) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?shirt ?tie)) (or (not (Is ?shirt 'shirt')) (Above ?watch ?glove)) (or (not (Is ?shirt 'shirt')) (Is ?calculator 'calculator')) (or (not (Is ?shirt 'shirt')) (Above ?cup ?calculator)) (or (not (Is ?shirt 'shirt')) (Is ?handbag 'handbag')) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?tie ?glove)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?glove ?watch)) (or (not (Is ?shirt 'shirt')) (Is ?remote 'remote')) (or (not (Is ?shirt 'shirt')) (Above ?calculator ?remote)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?remote ?calculator)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?calculator ?cup)) (or (not (Is ?shirt 'shirt')) (Is ?wallet 'wallet')) (or (not (Is ?shirt 'shirt')) (OnRightSide ?handbag)) (or (not (Is ?shirt 'shirt')) (Is ?book 'book')) (or (not (Is ?shirt 'shirt')) (LargerThan ?handbag ?shirt)) (or (not (Is ?shirt 'shirt')) (LargerThan ?book ?remote)) (or (not (Is ?shirt 'shirt')) (OnRightSide ?wallet)) (or (not (Is ?shirt 'shirt')) (Above ?wallet ?handbag)) (or (not (Is ?shirt 'shirt')) (OnRightSide ?book)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?wallet ?book)) (or (not (Is ?shirt 'shirt')) (AlignedVertically ?handbag ?wallet)) (or (not (Is ?shirt 'shirt')) (Above ?book ?wallet)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "tie",
+        "remote",
+        "watch",
+        "cup",
+        "handbag",
+        "calculator",
+        "wallet",
+        "glove",
+        "shirt"
+    ]
+}

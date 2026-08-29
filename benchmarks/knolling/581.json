@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a keyboard. Positioned below the keyboard is a wallet, and these two items are aligned vertically. Furthermore, for every mouse in the image, it is placed below the keyboard but above the wallet, while also maintaining vertical alignment with the keyboard.",
+    "dsl": "(exists ?keyboard (exists ?wallet (and (Is ?keyboard 'keyboard') (Is ?wallet 'wallet') (OnLeftSide ?keyboard) (Below ?wallet ?keyboard) (AlignedVertically ?keyboard ?wallet) (forall ?mouse (implies (Is ?mouse 'mouse') (and (Below ?mouse ?keyboard) (Above ?mouse ?wallet) (AlignedVertically ?mouse ?keyboard)))))))",
+    "cnf": "(exists ?keyboard (exists ?wallet (forall ?mouse (and (Is ?keyboard 'keyboard') (OnLeftSide ?keyboard) (Below ?wallet ?keyboard) (AlignedVertically ?keyboard ?wallet) (Is ?wallet 'wallet') (or (not (Is ?mouse 'mouse')) (Below ?mouse ?keyboard)) (or (not (Is ?mouse 'mouse')) (Above ?mouse ?wallet)) (or (not (Is ?mouse 'mouse')) (AlignedVertically ?mouse ?keyboard))))))",
+    "k": 3,
+    "object_classes": [
+        "mouse",
+        "wallet",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "For every backpack, it is located on the bottom left side of the scene, and there is a game controller, a lemon, and a carrot aligned horizontally with it. Additionally, the game controller is smaller than the backpack.",
+    "dsl": "(and (forall ?bp (implies (Is ?bp 'backpack') (exists ?gc (exists ?lm (exists ?cr (and (Is ?gc 'game_controller') (Is ?lm 'lemon') (Is ?cr 'carrot') (OnBottomSide ?bp) (OnLeftSide ?bp) (AlignedHorizontally ?bp ?gc) (AlignedHorizontally ?gc ?lm) (AlignedHorizontally ?lm ?cr) (SmallerThan ?gc ?bp))))))))",
+    "cnf": "(forall ?bp (exists ?gc (exists ?lm (exists ?cr (and (or (not (Is ?bp 'backpack')) (Is ?gc 'game_controller')) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?bp ?gc)) (or (not (Is ?bp 'backpack')) (Is ?lm 'lemon')) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?gc ?lm)) (or (not (Is ?bp 'backpack')) (OnLeftSide ?bp)) (or (not (Is ?bp 'backpack')) (Is ?cr 'carrot')) (or (not (Is ?bp 'backpack')) (SmallerThan ?gc ?bp)) (or (not (Is ?bp 'backpack')) (AlignedHorizontally ?lm ?cr)) (or (not (Is ?bp 'backpack')) (OnBottomSide ?bp)))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "carrot",
+        "backpack",
+        "game_controller"
+    ]
+}

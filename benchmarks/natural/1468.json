@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. A child is holding a round pizza and a bowl. A bus is to the left of the child, and a car is next to the bus. A bed is positioned to the left of the bus, with an oval mirror next to it. All birds in the scene are located to the right of the child.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?p (and (Is ?c 'child') (Is ?p 'pizza') (Holding ?c ?p) (HasShape ?p 'round') (forall ?bi (implies (Is ?bi 'bird') (RightOf ?bi ?c))) (exists ?bu (exists ?ca (exists ?be (exists ?m (exists ?bo (and (Is ?bu 'bus') (LeftOf ?bu ?c) (Is ?ca 'car') (NextTo ?ca ?bu) (Is ?be 'bed') (LeftOf ?be ?bu) (Is ?m 'mirror') (NextTo ?m ?be) (HasShape ?m 'oval') (Is ?bo 'bowl') (Holding ?c ?bo)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?p (forall ?bi (exists ?bu (exists ?ca (exists ?be (exists ?m (exists ?bo (and (Is ?c 'child') (Holding ?c ?p) (or (not (Is ?bi 'bird')) (RightOf ?bi ?c)) (Is ?p 'pizza') (HasShape ?p 'round') (LeftOf ?bu ?c) (Holding ?c ?bo) (Is ?bu 'bus') (NextTo ?ca ?bu) (Is ?bo 'bowl') (LeftOf ?be ?bu) (Is ?ca 'car') (Is ?be 'bed') (NextTo ?m ?be) (Is ?m 'mirror') (HasShape ?m 'oval')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bowl",
+        "bus",
+        "pizza",
+        "bed",
+        "mirror",
+        "bird",
+        "child",
+        "car"
+    ]
+}

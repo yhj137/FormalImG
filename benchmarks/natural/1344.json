@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a standing elephant with a red shirt next to it. To the right of the elephant, a person sits in a chair holding a knife, with a banana placed next to the knife. All fruit in the scene are positioned to the right of the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?c (exists ?k (exists ?e (and (Is ?p 'person') (Is ?c 'chair') (In ?p ?c) (Is ?k 'knife') (Holding ?p ?k) (Is ?e 'elephant') (HasState ?e 'standing') (RightOf ?p ?e) (forall ?f (implies (Is ?f 'fruit') (RightOf ?f ?e))) (exists ?b (and (Is ?b 'banana') (NextTo ?b ?k))) (exists ?s (and (Is ?s 'shirt') (HasColor ?s 'red') (NextTo ?s ?e)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?c (exists ?k (exists ?e (forall ?f (exists ?b (exists ?s (and (Is ?p 'person') (In ?p ?c) (Holding ?p ?k) (Is ?c 'chair') (RightOf ?p ?e) (Is ?k 'knife') (NextTo ?b ?k) (HasState ?e 'standing') (or (not (Is ?f 'fruit')) (RightOf ?f ?e)) (Is ?b 'banana') (Is ?e 'elephant') (NextTo ?s ?e) (HasColor ?s 'red') (Is ?s 'shirt'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "knife",
+        "banana",
+        "chair",
+        "shirt",
+        "fruit",
+        "elephant"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image anchored by a pair of jeans. For every glove present in the scene, there exists a hat above the jeans with a handbag to its right, a watch to the left of the jeans (which is smaller than the jeans), and a drill below the glove. Additionally, for each glove, there is a screwdriver to the right of the drill and to the left of a cutting board, and a pizza below the cutting board (larger than the remote to its left), with the remote positioned on the bottom side.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (forall ?glove (implies (Is ?glove 'glove') (exists ?hat (exists ?handbag (exists ?watch (exists ?drill (exists ?screwdriver (exists ?cutting_board (exists ?pizza (exists ?remote (and (Is ?hat 'hat') (Is ?handbag 'handbag') (Is ?watch 'watch') (Is ?drill 'drill') (Is ?screwdriver 'screwdriver') (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (Is ?remote 'remote') (Below ?jeans ?hat) (LeftOf ?hat ?handbag) (LeftOf ?watch ?jeans) (LargerThan ?jeans ?watch) (Below ?glove ?jeans) (Below ?drill ?glove) (LeftOf ?drill ?screwdriver) (LeftOf ?screwdriver ?cutting_board) (Below ?pizza ?cutting_board) (LeftOf ?remote ?pizza) (LargerThan ?pizza ?remote) (OnBottomSide ?remote))))))))))))))",
+    "cnf": "(exists ?jeans (forall ?glove (exists ?hat (exists ?handbag (exists ?watch (exists ?drill (exists ?screwdriver (exists ?cutting_board (exists ?pizza (exists ?remote (and (Is ?jeans 'jeans') (or (not (Is ?glove 'glove')) (Below ?jeans ?hat)) (or (not (Is ?glove 'glove')) (LeftOf ?watch ?jeans)) (or (not (Is ?glove 'glove')) (Is ?remote 'remote')) (or (not (Is ?glove 'glove')) (LeftOf ?hat ?handbag)) (or (not (Is ?glove 'glove')) (Is ?hat 'hat')) (or (not (Is ?glove 'glove')) (LargerThan ?jeans ?watch)) (or (not (Is ?glove 'glove')) (Is ?watch 'watch')) (or (not (Is ?glove 'glove')) (Is ?pizza 'pizza')) (or (not (Is ?glove 'glove')) (LeftOf ?remote ?pizza)) (or (not (Is ?glove 'glove')) (Is ?handbag 'handbag')) (or (not (Is ?glove 'glove')) (Below ?glove ?jeans)) (or (not (Is ?glove 'glove')) (Is ?drill 'drill')) (or (not (Is ?glove 'glove')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?glove 'glove')) (Below ?pizza ?cutting_board)) (or (not (Is ?glove 'glove')) (LargerThan ?pizza ?remote)) (or (not (Is ?glove 'glove')) (Below ?drill ?glove)) (or (not (Is ?glove 'glove')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?glove 'glove')) (LeftOf ?screwdriver ?cutting_board)) (or (not (Is ?glove 'glove')) (OnBottomSide ?remote)) (or (not (Is ?glove 'glove')) (LeftOf ?drill ?screwdriver)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "remote",
+        "watch",
+        "pizza",
+        "screwdriver",
+        "drill",
+        "hat",
+        "handbag",
+        "jeans",
+        "cutting_board",
+        "glove"
+    ]
+}

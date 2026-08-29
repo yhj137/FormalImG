@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a desk. All apples are positioned to the left of the desk. An open laptop sits to the right of the desk, with a monitor to its left. A piece of fruit is located to the right of the laptop, and a sofa is situated to the right of the fruit.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (and (Is ?d 'desk') (forall ?a (implies (Is ?a 'apple') (LeftOf ?a ?d))) (exists ?l (and (Is ?l 'laptop') (HasState ?l 'open') (RightOf ?l ?d) (exists ?m (and (Is ?m 'monitor') (LeftOf ?m ?l) (exists ?f (and (Is ?f 'fruit') (RightOf ?f ?l) (exists ?s (and (Is ?s 'sofa') (RightOf ?s ?f))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (forall ?a (exists ?l (exists ?m (exists ?f (exists ?s (and (Is ?d 'desk') (or (not (Is ?a 'apple')) (LeftOf ?a ?d)) (RightOf ?l ?d) (HasState ?l 'open') (LeftOf ?m ?l) (Is ?l 'laptop') (RightOf ?f ?l) (Is ?m 'monitor') (Is ?f 'fruit') (RightOf ?s ?f) (Is ?s 'sofa')))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "sofa",
+        "desk",
+        "laptop",
+        "apple",
+        "fruit"
+    ]
+}

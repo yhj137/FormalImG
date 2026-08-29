@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal elephant to the left of a monitor with a pizza on it. The monitor is positioned to the left of a man wearing pink headphones.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?mon (exists ?p (exists ?m (exists ?h (and (Is ?e 'elephant') (HasMaterial ?e 'metal') (Is ?mon 'monitor') (LeftOf ?e ?mon) (Is ?p 'pizza') (On ?p ?mon) (Is ?m 'man') (LeftOf ?mon ?m) (Is ?h 'headphones') (HasColor ?h 'pink') (On ?h ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?mon (exists ?p (exists ?m (exists ?h (and (Is ?e 'elephant') (HasMaterial ?e 'metal') (LeftOf ?e ?mon) (Is ?mon 'monitor') (On ?p ?mon) (LeftOf ?mon ?m) (Is ?p 'pizza') (Is ?m 'man') (On ?h ?m) (HasColor ?h 'pink') (Is ?h 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "monitor",
+        "headphones",
+        "man",
+        "pizza",
+        "elephant"
+    ]
+}

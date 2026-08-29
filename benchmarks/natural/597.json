@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man with a round clock to his right. The man is on every horse.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?c (and (Is ?m 'man') (Is ?c 'clock') (HasShape ?c 'round') (RightOf ?c ?m) (forall ?h (implies (Is ?h 'horse') (On ?m ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?c (forall ?h (and (Is ?m 'man') (RightOf ?c ?m) (or (not (Is ?h 'horse')) (On ?m ?h)) (HasShape ?c 'round') (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "horse",
+        "man"
+    ]
+}

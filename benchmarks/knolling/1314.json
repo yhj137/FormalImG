@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical column of objects. At the base of the arrangement, there is a brown wallet; directly above the wallet is a blue stapler, and above the stapler is a black game controller. These three items are vertically aligned. The composition follows a specific rule: for every pair of glasses in the scene, there is a sequence of items stacked above it. Specifically, the glasses are positioned above the game controller, a gray pair of scissors is above the glasses, a red pen is above the scissors, and a yellow lighter is above the pen. All these items share the same vertical alignment, and the yellow lighter is located on the top side of the image.",
+    "dsl": "(exists ?gc (exists ?st (exists ?wa (and (Is ?gc 'game_controller') (Has ?gc 'black') (Is ?st 'stapler') (Has ?st 'blue') (Is ?wa 'wallet') (Has ?wa 'brown') (Above ?gc ?st) (Above ?st ?wa) (AlignedVertically ?gc ?st) (AlignedVertically ?st ?wa) (forall ?gl (implies (Is ?gl 'glasses') (exists ?sc (exists ?pen (exists ?li (and (Is ?sc 'scissors') (Has ?sc 'gray') (Is ?pen 'pen') (Has ?pen 'red') (Is ?li 'lighter') (Has ?li 'yellow') (Above ?gl ?gc) (Above ?sc ?gl) (Above ?pen ?sc) (Above ?li ?pen) (AlignedVertically ?gl ?gc) (AlignedVertically ?sc ?gl) (AlignedVertically ?pen ?sc) (AlignedVertically ?li ?pen) (OnTopSide ?li)))))))))))",
+    "cnf": "(exists ?gc (exists ?st (exists ?wa (forall ?gl (exists ?sc (exists ?pen (exists ?li (and (Is ?gc 'game_controller') (Has ?gc 'black') (Above ?gc ?st) (AlignedVertically ?gc ?st) (Has ?st 'blue') (Above ?st ?wa) (or (not (Is ?gl 'glasses')) (Above ?gl ?gc)) (AlignedVertically ?st ?wa) (Is ?st 'stapler') (Has ?wa 'brown') (or (not (Is ?gl 'glasses')) (AlignedVertically ?gl ?gc)) (or (not (Is ?gl 'glasses')) (Has ?li 'yellow')) (or (not (Is ?gl 'glasses')) (Above ?sc ?gl)) (Is ?wa 'wallet') (or (not (Is ?gl 'glasses')) (Above ?li ?pen)) (or (not (Is ?gl 'glasses')) (AlignedVertically ?sc ?gl)) (or (not (Is ?gl 'glasses')) (Is ?li 'lighter')) (or (not (Is ?gl 'glasses')) (Has ?sc 'gray')) (or (not (Is ?gl 'glasses')) (Above ?pen ?sc)) (or (not (Is ?gl 'glasses')) (AlignedVertically ?pen ?sc)) (or (not (Is ?gl 'glasses')) (AlignedVertically ?li ?pen)) (or (not (Is ?gl 'glasses')) (Has ?pen 'red')) (or (not (Is ?gl 'glasses')) (Is ?sc 'scissors')) (or (not (Is ?gl 'glasses')) (Is ?pen 'pen')) (or (not (Is ?gl 'glasses')) (OnTopSide ?li))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "pen",
+        "game_controller",
+        "lighter",
+        "wallet",
+        "scissors"
+    ]
+}

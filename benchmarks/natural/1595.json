@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a backpack containing a laptop. A black cat is positioned to the left of the man. To the right of the man stands a woman holding a round plate, and a mirror is located to her right. Every spoon in the scene is sitting on the plate.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?b (exists ?l (exists ?c (exists ?w (exists ?p (exists ?mi (and (Is ?m 'man') (Is ?b 'backpack') (Is ?l 'laptop') (Is ?c 'cat') (Is ?w 'woman') (Is ?p 'plate') (Is ?mi 'mirror') (Holding ?m ?b) (In ?l ?b) (LeftOf ?c ?m) (HasColor ?c 'black') (RightOf ?w ?m) (Holding ?w ?p) (HasShape ?p 'round') (RightOf ?mi ?w) (forall ?s (implies (Is ?s 'spoon') (On ?s ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?b (exists ?l (exists ?c (exists ?w (exists ?p (exists ?mi (forall ?s (and (Is ?m 'man') (Holding ?m ?b) (LeftOf ?c ?m) (Is ?b 'backpack') (In ?l ?b) (RightOf ?w ?m) (Is ?c 'cat') (HasColor ?c 'black') (Is ?l 'laptop') (Is ?w 'woman') (Holding ?w ?p) (RightOf ?mi ?w) (Is ?p 'plate') (HasShape ?p 'round') (Is ?mi 'mirror') (or (not (Is ?s 'spoon')) (On ?s ?p))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "cat",
+        "man",
+        "laptop",
+        "backpack",
+        "spoon",
+        "woman",
+        "mirror",
+        "plate"
+    ]
+}

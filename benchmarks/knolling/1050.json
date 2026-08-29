@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every bottle in the image, it is positioned on the left side, and there is a sequence of objects arranged to its right: a fork is to the right of the bottle, a carrot is to the right of the fork, and a camera is to the right of the carrot. The camera is located to the left of a sock, while a calculator is found to the right of the sock and is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?fork (exists ?carrot (exists ?camera (exists ?sock (exists ?calculator (and (Is ?fork 'fork') (Is ?carrot 'carrot') (Is ?camera 'camera') (Is ?sock 'sock') (Is ?calculator 'calculator') (OnLeftSide ?bottle) (RightOf ?fork ?bottle) (RightOf ?carrot ?fork) (RightOf ?camera ?carrot) (LeftOf ?camera ?sock) (RightOf ?calculator ?sock) (OnBottomSide ?calculator))))))))))",
+    "cnf": "(forall ?bottle (exists ?fork (exists ?carrot (exists ?camera (exists ?sock (exists ?calculator (and (or (not (Is ?bottle 'bottle')) (Is ?fork 'fork')) (or (not (Is ?bottle 'bottle')) (RightOf ?fork ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?carrot 'carrot')) (or (not (Is ?bottle 'bottle')) (RightOf ?carrot ?fork)) (or (not (Is ?bottle 'bottle')) (OnLeftSide ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?camera 'camera')) (or (not (Is ?bottle 'bottle')) (RightOf ?camera ?carrot)) (or (not (Is ?bottle 'bottle')) (Is ?calculator 'calculator')) (or (not (Is ?bottle 'bottle')) (Is ?sock 'sock')) (or (not (Is ?bottle 'bottle')) (LeftOf ?camera ?sock)) (or (not (Is ?bottle 'bottle')) (RightOf ?calculator ?sock)) (or (not (Is ?bottle 'bottle')) (OnBottomSide ?calculator)))))))))",
+    "k": 6,
+    "object_classes": [
+        "sock",
+        "carrot",
+        "fork",
+        "calculator",
+        "camera",
+        "bottle"
+    ]
+}

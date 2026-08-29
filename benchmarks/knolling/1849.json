@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans positioned on the bottom side. Every hammer is located on the top side, is visually smaller than the jeans, and has a screwdriver arranged to its right. Continuing the horizontal alignment to the right of the screwdriver is a sequence of items: a set of keys, a stapler, a bowl, an apple, a lemon, a fork, and finally a pen, which is located on the right side of the image.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?screwdriver (exists ?keys (exists ?stapler (exists ?bowl (exists ?apple (exists ?lemon (exists ?fork (exists ?pen (and (Is ?screwdriver 'screwdriver') (Is ?keys 'keys') (Is ?stapler 'stapler') (Is ?bowl 'bowl') (Is ?apple 'apple') (Is ?lemon 'lemon') (Is ?fork 'fork') (Is ?pen 'pen') (OnTopSide ?hammer) (SmallerThan ?hammer ?jeans) (RightOf ?screwdriver ?hammer) (AlignedHorizontally ?screwdriver ?hammer) (RightOf ?keys ?screwdriver) (AlignedHorizontally ?keys ?screwdriver) (RightOf ?stapler ?keys) (AlignedHorizontally ?stapler ?keys) (RightOf ?bowl ?stapler) (AlignedHorizontally ?bowl ?stapler) (RightOf ?apple ?bowl) (AlignedHorizontally ?apple ?bowl) (RightOf ?lemon ?apple) (AlignedHorizontally ?lemon ?apple) (RightOf ?fork ?lemon) (AlignedHorizontally ?fork ?lemon) (RightOf ?pen ?fork) (AlignedHorizontally ?pen ?fork) (OnRightSide ?pen))))))))))))))",
+    "cnf": "(exists ?jeans (forall ?hammer (exists ?screwdriver (exists ?keys (exists ?stapler (exists ?bowl (exists ?apple (exists ?lemon (exists ?fork (exists ?pen (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (or (not (Is ?hammer 'hammer')) (SmallerThan ?hammer ?jeans)) (or (not (Is ?hammer 'hammer')) (OnTopSide ?hammer)) (or (not (Is ?hammer 'hammer')) (RightOf ?screwdriver ?hammer)) (or (not (Is ?hammer 'hammer')) (Is ?pen 'pen')) (or (not (Is ?hammer 'hammer')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?screwdriver ?hammer)) (or (not (Is ?hammer 'hammer')) (Is ?fork 'fork')) (or (not (Is ?hammer 'hammer')) (RightOf ?pen ?fork)) (or (not (Is ?hammer 'hammer')) (Is ?keys 'keys')) (or (not (Is ?hammer 'hammer')) (RightOf ?keys ?screwdriver)) (or (not (Is ?hammer 'hammer')) (Is ?lemon 'lemon')) (or (not (Is ?hammer 'hammer')) (RightOf ?fork ?lemon)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?fork ?lemon)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?pen ?fork)) (or (not (Is ?hammer 'hammer')) (Is ?stapler 'stapler')) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?keys ?screwdriver)) (or (not (Is ?hammer 'hammer')) (Is ?apple 'apple')) (or (not (Is ?hammer 'hammer')) (RightOf ?lemon ?apple)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?lemon ?apple)) (or (not (Is ?hammer 'hammer')) (OnRightSide ?pen)) (or (not (Is ?hammer 'hammer')) (Is ?bowl 'bowl')) (or (not (Is ?hammer 'hammer')) (RightOf ?stapler ?keys)) (or (not (Is ?hammer 'hammer')) (RightOf ?apple ?bowl)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?apple ?bowl)) (or (not (Is ?hammer 'hammer')) (RightOf ?bowl ?stapler)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?stapler ?keys)) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?bowl ?stapler)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "stapler",
+        "apple",
+        "pen",
+        "lemon",
+        "screwdriver",
+        "fork",
+        "hammer",
+        "jeans",
+        "bowl"
+    ]
+}

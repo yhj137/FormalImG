@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a wardrobe to the left of an open refrigerator. To the right of the refrigerator sits a round table, where every pizza is held by a lion atop it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?r (exists ?t (and (Is ?w 'wardrobe') (Is ?r 'refrigerator') (HasState ?r 'open') (LeftOf ?w ?r) (Is ?t 'table') (HasShape ?t 'round') (RightOf ?t ?r) (forall ?p (implies (Is ?p 'pizza') (exists ?l (and (Is ?l 'lion') (On ?l ?t) (Holding ?l ?p))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?r (exists ?t (forall ?p (exists ?l (and (Is ?w 'wardrobe') (LeftOf ?w ?r) (HasState ?r 'open') (RightOf ?t ?r) (Is ?r 'refrigerator') (HasShape ?t 'round') (or (not (Is ?p 'pizza')) (On ?l ?t)) (Is ?t 'table') (or (not (Is ?p 'pizza')) (Is ?l 'lion')) (or (not (Is ?p 'pizza')) (Holding ?l ?p)))))))))",
+    "k": 5,
+    "object_classes": [
+        "pizza",
+        "refrigerator",
+        "wardrobe",
+        "table",
+        "lion"
+    ]
+}

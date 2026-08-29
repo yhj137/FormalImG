@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene inside a house shows a table. A teddy bear wearing a hat sits on the table, holding a peeled banana. A plate with a sliced cake is also on the table. Every butterfly in the scene is positioned to the right of the teddy bear.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?ho (exists ?t (exists ?tb (exists ?p (exists ?c (exists ?ba (and (Is ?ho 'house') (Is ?t 'table') (In ?t ?ho) (Is ?tb 'teddy bear') (On ?tb ?t) (Is ?p 'plate') (On ?p ?t) (Is ?c 'cake') (On ?c ?p) (Is ?ba 'banana') (Holding ?tb ?ba) (HasState ?ba 'peeled') (HasState ?c 'sliced') (forall ?bu (implies (Is ?bu 'butterfly') (RightOf ?bu ?tb))) (exists ?h (and (Is ?h 'hat') (On ?h ?tb)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?ho (exists ?t (exists ?tb (exists ?p (exists ?c (exists ?ba (forall ?bu (exists ?h (and (Is ?ho 'house') (In ?t ?ho) (Is ?t 'table') (On ?tb ?t) (On ?p ?t) (Is ?tb 'teddy bear') (Holding ?tb ?ba) (Is ?p 'plate') (On ?c ?p) (or (not (Is ?bu 'butterfly')) (RightOf ?bu ?tb)) (Is ?ba 'banana') (HasState ?ba 'peeled') (Is ?c 'cake') (HasState ?c 'sliced') (On ?h ?tb) (Is ?h 'hat')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "hat",
+        "banana",
+        "cake",
+        "butterfly",
+        "teddy bear",
+        "table",
+        "house",
+        "plate"
+    ]
+}

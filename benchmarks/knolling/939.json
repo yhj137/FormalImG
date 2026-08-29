@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is arranged on the top side of the composition. On the left side, there is a stapler, and the shirt is physically larger than the stapler. A watch is positioned such that the stapler is directly above it. Additionally, for every fork in the scene, there is a spoon located below it, and the fork itself is positioned below the shirt.",
+    "dsl": "(exists ?shirt (exists ?stapler (exists ?watch (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?stapler 'stapler') (OnLeftSide ?stapler) (LargerThan ?shirt ?stapler) (Is ?watch 'watch') (Above ?stapler ?watch) (forall ?fork (implies (Is ?fork 'fork') (exists ?spoon (and (Is ?spoon 'spoon') (Below ?spoon ?fork) (Below ?fork ?shirt)))))))))",
+    "cnf": "(exists ?shirt (exists ?stapler (exists ?watch (forall ?fork (exists ?spoon (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LargerThan ?shirt ?stapler) (or (not (Is ?fork 'fork')) (Below ?fork ?shirt)) (OnLeftSide ?stapler) (Above ?stapler ?watch) (or (not (Is ?fork 'fork')) (Below ?spoon ?fork)) (Is ?stapler 'stapler') (Is ?watch 'watch') (or (not (Is ?fork 'fork')) (Is ?spoon 'spoon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "watch",
+        "fork",
+        "spoon",
+        "shirt"
+    ]
+}

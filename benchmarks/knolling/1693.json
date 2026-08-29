@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a red drill. To the right of the drill is a cutting board, and further to the right is a pizza. For every black camera in the image, the drill is positioned above it, and there is a black watch to its right, a white glove to the right of the watch, a blue stapler below the camera, a calculator to the right of the stapler, and a red apple to the right of the calculator.",
+    "dsl": "(exists ?drill (exists ?board (exists ?pizza (and (Is ?drill 'drill') (Has ?drill 'red') (OnLeftSide ?drill) (Is ?board 'cutting_board') (RightOf ?board ?drill) (Is ?pizza 'pizza') (RightOf ?pizza ?board) (forall ?camera (implies (and (Is ?camera 'camera') (Has ?camera 'black')) (exists ?watch (exists ?glove (exists ?stapler (exists ?calc (exists ?apple (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?glove 'glove') (Has ?glove 'white') (Is ?stapler 'stapler') (Has ?stapler 'blue') (Is ?calc 'calculator') (Is ?apple 'apple') (Has ?apple 'red') (Above ?drill ?camera) (RightOf ?watch ?camera) (RightOf ?glove ?watch) (Below ?stapler ?camera) (RightOf ?calc ?stapler) (RightOf ?apple ?calc)))))))))))))",
+    "cnf": "(exists ?drill (exists ?board (exists ?pizza (forall ?camera (exists ?watch (exists ?glove (exists ?stapler (exists ?calc (exists ?apple (and (Is ?drill 'drill') (Has ?drill 'red') (OnLeftSide ?drill) (RightOf ?board ?drill) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Above ?drill ?camera)) (Is ?board 'cutting_board') (RightOf ?pizza ?board) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?apple 'red')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (RightOf ?watch ?camera)) (Is ?pizza 'pizza') (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?apple 'apple')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (RightOf ?apple ?calc)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (RightOf ?glove ?watch)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?watch 'black')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?calc 'calculator')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (RightOf ?calc ?stapler)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Below ?stapler ?camera)) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?glove 'white')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?watch 'watch')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?glove 'glove')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Has ?stapler 'blue')) (or (not (Is ?camera 'camera')) (not (Has ?camera 'black')) (Is ?stapler 'stapler'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "watch",
+        "pizza",
+        "calculator",
+        "apple",
+        "camera",
+        "drill",
+        "stapler",
+        "glove",
+        "cutting_board"
+    ]
+}

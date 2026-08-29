@@ -1,0 +1,18 @@
+{
+    "prompt": "For every lighter in the scene, there is a lemon above it and an apple below it, and the lighter is aligned horizontally with a shirt, while the scene also includes a monitor positioned above the shirt, a drill below the shirt, a stapler, wrench, and knife horizontally aligned with the drill, and a sandwich located below the knife on the right side.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (exists ?shirt (and (Is ?shirt 'shirt') (exists ?drill (and (Is ?drill 'drill') (exists ?stapler (and (Is ?stapler 'stapler') (exists ?wrench (and (Is ?wrench 'wrench') (exists ?knife (and (Is ?knife 'knife') (exists ?sandwich (and (Is ?sandwich 'sandwich') (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?apple (and (Is ?apple 'apple') (exists ?lemon (and (Is ?lemon 'lemon') (Above ?monitor ?shirt) (Above ?shirt ?drill) (AlignedHorizontally ?drill ?stapler) (AlignedHorizontally ?stapler ?wrench) (AlignedHorizontally ?wrench ?knife) (Above ?knife ?sandwich) (OnRightSide ?sandwich) (AlignedHorizontally ?lighter ?shirt) (Above ?lemon ?lighter) (Below ?apple ?lighter)))))))))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (exists ?drill (exists ?stapler (exists ?wrench (exists ?knife (exists ?sandwich (forall ?lighter (exists ?apple (exists ?lemon (and (Is ?monitor 'monitor') (or (not (Is ?lighter 'lighter')) (Above ?monitor ?shirt)) (Is ?shirt 'shirt') (or (not (Is ?lighter 'lighter')) (Above ?shirt ?drill)) (or (not (Is ?lighter 'lighter')) (Is ?lemon 'lemon')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?shirt)) (Is ?drill 'drill') (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?drill ?stapler)) (or (not (Is ?lighter 'lighter')) (Is ?apple 'apple')) (or (not (Is ?lighter 'lighter')) (Above ?lemon ?lighter)) (or (not (Is ?lighter 'lighter')) (OnRightSide ?sandwich)) (Is ?stapler 'stapler') (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?stapler ?wrench)) (or (not (Is ?lighter 'lighter')) (Below ?apple ?lighter)) (or (not (Is ?lighter 'lighter')) (Above ?knife ?sandwich)) (Is ?wrench 'wrench') (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?wrench ?knife)) (Is ?sandwich 'sandwich') (Is ?knife 'knife'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sandwich",
+        "shirt",
+        "lemon",
+        "knife",
+        "drill",
+        "lighter",
+        "monitor",
+        "stapler",
+        "wrench",
+        "apple"
+    ]
+}

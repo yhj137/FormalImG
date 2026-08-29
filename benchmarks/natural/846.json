@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. Every clock is round and located to the left of a man inside a boat. The man is holding a phone, and a pizza is to his right.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'clock') (exists ?b (exists ?m (exists ?p (exists ?z (and (Is ?b 'boat') (Is ?m 'man') (Is ?p 'phone') (Is ?z 'pizza') (HasShape ?c 'round') (In ?m ?b) (Holding ?m ?p) (LeftOf ?c ?m) (RightOf ?z ?m)))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?b (exists ?m (exists ?p (exists ?z (and (or (not (Is ?c 'clock')) (Is ?b 'boat')) (or (not (Is ?c 'clock')) (Is ?m 'man')) (or (not (Is ?c 'clock')) (In ?m ?b)) (or (not (Is ?c 'clock')) (Is ?p 'phone')) (or (not (Is ?c 'clock')) (HasShape ?c 'round')) (or (not (Is ?c 'clock')) (Holding ?m ?p)) (or (not (Is ?c 'clock')) (Is ?z 'pizza')) (or (not (Is ?c 'clock')) (LeftOf ?c ?m)) (or (not (Is ?c 'clock')) (RightOf ?z ?m)))))))))",
+    "k": 5,
+    "object_classes": [
+        "boat",
+        "phone",
+        "man",
+        "pizza",
+        "clock"
+    ]
+}

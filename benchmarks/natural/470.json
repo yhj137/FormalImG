@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo where every bed has a cat inside, with a round bowl on the bed next to the cat.",
+    "dsl": "(and (IsStyle 'photo') (forall ?bed (implies (Is ?bed 'bed') (exists ?cat (exists ?bowl (and (Is ?cat 'cat') (Is ?bowl 'bowl') (HasShape ?bowl 'round') (In ?cat ?bed) (On ?bowl ?bed) (NextTo ?bowl ?cat)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?bed (exists ?cat (exists ?bowl (and (or (not (Is ?bed 'bed')) (Is ?cat 'cat')) (or (not (Is ?bed 'bed')) (In ?cat ?bed)) (or (not (Is ?bed 'bed')) (Is ?bowl 'bowl')) (or (not (Is ?bed 'bed')) (NextTo ?bowl ?cat)) (or (not (Is ?bed 'bed')) (HasShape ?bowl 'round')) (or (not (Is ?bed 'bed')) (On ?bowl ?bed)))))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "bed",
+        "cat"
+    ]
+}

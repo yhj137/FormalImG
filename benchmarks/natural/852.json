@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every book is held by a person who also holds a round ball. To the left of the person is a keyboard with headphones on it.",
+    "dsl": "(forall ?b (implies (Is ?b 'book') (exists ?p (exists ?a (exists ?k (exists ?h (and (Is ?p 'person') (Is ?a 'ball') (Is ?k 'keyboard') (Is ?h 'headphones') (Holding ?p ?b) (Holding ?p ?a) (HasShape ?a 'round') (LeftOf ?k ?p) (On ?h ?k))))))))",
+    "cnf": "(forall ?b (exists ?p (exists ?a (exists ?k (exists ?h (and (or (not (Is ?b 'book')) (Is ?p 'person')) (or (not (Is ?b 'book')) (Holding ?p ?b)) (or (not (Is ?b 'book')) (Is ?a 'ball')) (or (not (Is ?b 'book')) (Holding ?p ?a)) (or (not (Is ?b 'book')) (Is ?h 'headphones')) (or (not (Is ?b 'book')) (Is ?k 'keyboard')) (or (not (Is ?b 'book')) (LeftOf ?k ?p)) (or (not (Is ?b 'book')) (HasShape ?a 'round')) (or (not (Is ?b 'book')) (On ?h ?k))))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "person",
+        "book",
+        "ball",
+        "keyboard"
+    ]
+}

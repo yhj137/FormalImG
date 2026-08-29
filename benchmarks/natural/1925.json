@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A child is holding a book. Next to the child is a monitor with a red bird perched on it. A basket sits next to the monitor, containing all the fruit in the image. A sandwich is placed next to the basket, alongside a round cake. To the left of the child is a dog, with a cat next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?child (exists ?monitor (exists ?book (exists ?bird (exists ?basket (and (Is ?child 'child') (Is ?monitor 'monitor') (Is ?book 'book') (Is ?bird 'bird') (HasColor ?bird 'red') (Is ?basket 'basket') (Holding ?child ?book) (NextTo ?monitor ?child) (On ?bird ?monitor) (NextTo ?basket ?monitor) (forall ?fruit (implies (Is ?fruit 'fruit') (In ?fruit ?basket))) (exists ?sandwich (exists ?cake (exists ?dog (exists ?cat (and (Is ?sandwich 'sandwich') (Is ?cake 'cake') (HasShape ?cake 'round') (Is ?dog 'dog') (Is ?cat 'cat') (NextTo ?sandwich ?basket) (NextTo ?cake ?sandwich) (LeftOf ?dog ?child) (NextTo ?cat ?dog)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?child (exists ?monitor (exists ?book (exists ?bird (exists ?basket (forall ?fruit (exists ?sandwich (exists ?cake (exists ?dog (exists ?cat (and (Is ?child 'child') (Holding ?child ?book) (NextTo ?monitor ?child) (Is ?book 'book') (LeftOf ?dog ?child) (Is ?monitor 'monitor') (On ?bird ?monitor) (Is ?dog 'dog') (NextTo ?cat ?dog) (NextTo ?basket ?monitor) (HasColor ?bird 'red') (Is ?cat 'cat') (Is ?basket 'basket') (or (not (Is ?fruit 'fruit')) (In ?fruit ?basket)) (Is ?bird 'bird') (NextTo ?sandwich ?basket) (Is ?sandwich 'sandwich') (NextTo ?cake ?sandwich) (HasShape ?cake 'round') (Is ?cake 'cake')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "monitor",
+        "cat",
+        "sandwich",
+        "cake",
+        "book",
+        "basket",
+        "dog",
+        "bird",
+        "fruit",
+        "child"
+    ]
+}

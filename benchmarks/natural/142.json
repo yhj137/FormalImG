@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting where every screwdriver is yellow.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?s (implies (Is ?s 'screwdriver') (HasColor ?s 'yellow'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?s (or (not (Is ?s 'screwdriver')) (HasColor ?s 'yellow'))))",
+    "k": 1,
+    "object_classes": [
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A purple, withered tree is positioned to the left of a rock. A bowl sits on the rock, and a bitten apple is inside the bowl. To the right of the rock, there is a chair. A person is sitting on the chair and wearing a green hat. A broken mirror is placed to the right of the chair. A hammer lies to the right of the mirror, with a screwdriver resting on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?r (exists ?b (exists ?a (exists ?c (exists ?p (exists ?h (exists ?m (exists ?hm (exists ?sd (and (Is ?t 'tree') (HasColor ?t 'purple') (HasState ?t 'withered') (Is ?r 'rock') (LeftOf ?t ?r) (Is ?b 'bowl') (On ?b ?r) (Is ?a 'apple') (In ?a ?b) (HasState ?a 'bitten') (Is ?c 'chair') (RightOf ?c ?r) (Is ?p 'person') (On ?p ?c) (HasState ?p 'sitting') (Is ?h 'hat') (HasColor ?h 'green') (On ?h ?p) (Is ?m 'mirror') (HasState ?m 'broken') (RightOf ?m ?c) (Is ?hm 'hammer') (RightOf ?hm ?m) (Is ?sd 'screwdriver') (On ?sd ?hm)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?r (exists ?b (exists ?a (exists ?c (exists ?p (exists ?h (exists ?m (exists ?hm (exists ?sd (and (Is ?t 'tree') (HasColor ?t 'purple') (HasState ?t 'withered') (LeftOf ?t ?r) (Is ?r 'rock') (On ?b ?r) (RightOf ?c ?r) (Is ?b 'bowl') (In ?a ?b) (Is ?c 'chair') (On ?p ?c) (Is ?a 'apple') (HasState ?a 'bitten') (RightOf ?m ?c) (Is ?p 'person') (HasState ?p 'sitting') (HasState ?m 'broken') (RightOf ?hm ?m) (On ?h ?p) (Is ?m 'mirror') (Is ?hm 'hammer') (On ?sd ?hm) (HasColor ?h 'green') (Is ?sd 'screwdriver') (Is ?h 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "person",
+        "chair",
+        "tree",
+        "rock",
+        "hammer",
+        "mirror",
+        "bowl",
+        "apple",
+        "screwdriver",
+        "hat"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image of a running horse.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'horse') (HasState ?h 'running'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'horse') (HasState ?h 'running'))))",
+    "k": 1,
+    "object_classes": [
+        "horse"
+    ]
+}

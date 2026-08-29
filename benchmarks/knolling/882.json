@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of headphones is located on the top side and left side of the scene. For every screwdriver in the image, it is positioned directly below the headphones. Associated with the screwdriver is a camera below it, a lemon below the camera, and a game controller below the lemon. All these objects\u2014headphones, screwdriver, camera, lemon, and game controller\u2014are aligned vertically in a column. The game controller is larger than the lemon.",
+    "dsl": "(exists ?h (and (Is ?h 'headphones') (OnTopSide ?h) (OnLeftSide ?h) (forall ?s (implies (Is ?s 'screwdriver') (exists ?c (exists ?l (exists ?g (and (Is ?c 'camera') (Is ?l 'lemon') (Is ?g 'game_controller') (Below ?s ?h) (Below ?c ?s) (Below ?l ?c) (Below ?g ?l) (AlignedVertically ?h ?s) (AlignedVertically ?s ?c) (AlignedVertically ?c ?l) (AlignedVertically ?l ?g) (LargerThan ?g ?l)))))))))",
+    "cnf": "(exists ?h (forall ?s (exists ?c (exists ?l (exists ?g (and (Is ?h 'headphones') (OnTopSide ?h) (OnLeftSide ?h) (or (not (Is ?s 'screwdriver')) (Below ?s ?h)) (or (not (Is ?s 'screwdriver')) (AlignedVertically ?h ?s)) (or (not (Is ?s 'screwdriver')) (Is ?g 'game_controller')) (or (not (Is ?s 'screwdriver')) (Below ?c ?s)) (or (not (Is ?s 'screwdriver')) (Below ?g ?l)) (or (not (Is ?s 'screwdriver')) (AlignedVertically ?s ?c)) (or (not (Is ?s 'screwdriver')) (Is ?l 'lemon')) (or (not (Is ?s 'screwdriver')) (Is ?c 'camera')) (or (not (Is ?s 'screwdriver')) (Below ?l ?c)) (or (not (Is ?s 'screwdriver')) (AlignedVertically ?c ?l)) (or (not (Is ?s 'screwdriver')) (AlignedVertically ?l ?g)) (or (not (Is ?s 'screwdriver')) (LargerThan ?g ?l))))))))",
+    "k": 5,
+    "object_classes": [
+        "lemon",
+        "screwdriver",
+        "game_controller",
+        "camera",
+        "headphones"
+    ]
+}

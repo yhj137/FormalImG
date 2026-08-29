@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured arrangement of objects. The scene includes black headphones, a pizza, and blue jeans aligned vertically, with the headphones above the pizza and the pizza above the jeans. The jeans are located at the bottom side and are larger than the pizza. A yellow drill, a camera, and a red apple are also aligned vertically, with the drill above the camera and the camera above the apple. The camera is smaller than the drill. A calculator is positioned above a white cup, and they are aligned vertically. The headphones, drill, and calculator form a horizontally aligned row. The pizza, camera, and cup form another horizontally aligned row. The jeans and apple are aligned horizontally. For every watch in the image, it is located below the white cup and aligned vertically with it. Furthermore, a white glove exists for every watch, aligned horizontally with the watch and smaller than it.",
+    "dsl": "(exists ?headphones (exists ?pizza (exists ?jeans (exists ?drill (exists ?camera (exists ?apple (exists ?calculator (exists ?cup (and (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?pizza 'pizza') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?camera 'camera') (Is ?apple 'apple') (Has ?apple 'red') (Is ?calculator 'calculator') (Is ?cup 'cup') (Has ?cup 'white') (Above ?headphones ?pizza) (Above ?pizza ?jeans) (AlignedVertically ?headphones ?pizza) (AlignedVertically ?pizza ?jeans) (OnBottomSide ?jeans) (LargerThan ?jeans ?pizza) (Above ?drill ?camera) (Above ?camera ?apple) (AlignedVertically ?drill ?camera) (AlignedVertically ?camera ?apple) (SmallerThan ?camera ?drill) (Above ?calculator ?cup) (AlignedVertically ?calculator ?cup) (AlignedHorizontally ?headphones ?drill) (AlignedHorizontally ?drill ?calculator) (AlignedHorizontally ?pizza ?camera) (AlignedHorizontally ?camera ?cup) (AlignedHorizontally ?jeans ?apple) (forall ?w (implies (Is ?w 'watch') (exists ?g (and (Is ?g 'glove') (Has ?g 'white') (Above ?cup ?w) (AlignedVertically ?cup ?w) (AlignedHorizontally ?w ?g) (SmallerThan ?g ?w))))))))))))))",
+    "cnf": "(exists ?headphones (exists ?pizza (exists ?jeans (exists ?drill (exists ?camera (exists ?apple (exists ?calculator (exists ?cup (forall ?w (exists ?g (and (Is ?headphones 'headphones') (Has ?headphones 'black') (Above ?headphones ?pizza) (AlignedVertically ?headphones ?pizza) (Is ?pizza 'pizza') (Above ?pizza ?jeans) (AlignedHorizontally ?headphones ?drill) (AlignedVertically ?pizza ?jeans) (Has ?jeans 'blue') (SmallerThan ?camera ?drill) (AlignedHorizontally ?drill ?calculator) (LargerThan ?jeans ?pizza) (OnBottomSide ?jeans) (Is ?jeans 'jeans') (AlignedVertically ?drill ?camera) (AlignedVertically ?camera ?apple) (AlignedHorizontally ?pizza ?camera) (AlignedVertically ?calculator ?cup) (AlignedHorizontally ?jeans ?apple) (Above ?drill ?camera) (Above ?camera ?apple) (AlignedHorizontally ?camera ?cup) (Above ?calculator ?cup) (Has ?drill 'yellow') (Is ?camera 'camera') (Has ?apple 'red') (or (not (Is ?w 'watch')) (Above ?cup ?w)) (Is ?calculator 'calculator') (Has ?cup 'white') (Is ?drill 'drill') (Is ?apple 'apple') (or (not (Is ?w 'watch')) (AlignedVertically ?cup ?w)) (or (not (Is ?w 'watch')) (Has ?g 'white')) (Is ?cup 'cup') (or (not (Is ?w 'watch')) (AlignedHorizontally ?w ?g)) (or (not (Is ?w 'watch')) (Is ?g 'glove')) (or (not (Is ?w 'watch')) (SmallerThan ?g ?w)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "apple",
+        "watch",
+        "pizza",
+        "cup",
+        "drill",
+        "calculator",
+        "jeans",
+        "camera",
+        "headphones",
+        "glove"
+    ]
+}

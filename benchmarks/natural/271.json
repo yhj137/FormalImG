@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every house has a fluffy teddy bear on it.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?h (implies (Is ?h 'house') (exists ?t (and (Is ?t 'teddy bear') (HasMaterial ?t 'fluffy') (On ?t ?h))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?h (exists ?t (and (or (not (Is ?h 'house')) (Is ?t 'teddy bear')) (or (not (Is ?h 'house')) (HasMaterial ?t 'fluffy')) (or (not (Is ?h 'house')) (On ?t ?h))))))",
+    "k": 2,
+    "object_classes": [
+        "house",
+        "teddy bear"
+    ]
+}

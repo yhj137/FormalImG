@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a brown suitcase, which is larger than the white game controller to its left and the pizza to its right. For every green glove in the image, it is located below the suitcase, and there is a white bowl to its right with a black pen to the right of the bowl. Furthermore, below each green glove is a yellow lemon, which has a carrot to its right and a blue cup to the right of the carrot.",
+    "dsl": "(exists ?suitcase (exists ?controller (exists ?pizza (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?pizza 'pizza') (LeftOf ?controller ?suitcase) (RightOf ?pizza ?suitcase) (LargerThan ?suitcase ?controller) (LargerThan ?suitcase ?pizza) (forall ?glove (implies (and (Is ?glove 'glove') (Has ?glove 'green')) (exists ?bowl (exists ?pen (exists ?lemon (exists ?carrot (exists ?cup (and (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?pen 'pen') (Has ?pen 'black') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?carrot 'carrot') (Is ?cup 'cup') (Has ?cup 'blue') (Below ?glove ?suitcase) (RightOf ?bowl ?glove) (RightOf ?pen ?bowl) (Below ?lemon ?glove) (RightOf ?carrot ?lemon) (RightOf ?cup ?carrot)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?controller (exists ?pizza (forall ?glove (exists ?bowl (exists ?pen (exists ?lemon (exists ?carrot (exists ?cup (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (LeftOf ?controller ?suitcase) (RightOf ?pizza ?suitcase) (Has ?controller 'white') (LargerThan ?suitcase ?controller) (Is ?pizza 'pizza') (LargerThan ?suitcase ?pizza) (Is ?controller 'game_controller') (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Below ?glove ?suitcase)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Has ?cup 'blue')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (RightOf ?bowl ?glove)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Is ?cup 'cup')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (RightOf ?cup ?carrot)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (RightOf ?pen ?bowl)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Has ?bowl 'white')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Is ?carrot 'carrot')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (RightOf ?carrot ?lemon)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Below ?lemon ?glove)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Has ?pen 'black')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Is ?bowl 'bowl')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Is ?pen 'pen')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Has ?lemon 'yellow')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'green')) (Is ?lemon 'lemon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pizza",
+        "bowl",
+        "cup",
+        "carrot",
+        "game_controller",
+        "suitcase",
+        "pen",
+        "glove",
+        "lemon"
+    ]
+}

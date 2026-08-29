@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every watch in the scene, there is a red pen aligned horizontally with it.",
+    "dsl": "(and (forall ?watch (implies (Is ?watch 'watch') (exists ?pen (and (Is ?pen 'pen') (Has ?pen 'red') (AlignedHorizontally ?watch ?pen))))))",
+    "cnf": "(forall ?watch (exists ?pen (and (or (not (Is ?watch 'watch')) (Is ?pen 'pen')) (or (not (Is ?watch 'watch')) (Has ?pen 'red')) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?watch ?pen)))))",
+    "k": 2,
+    "object_classes": [
+        "watch",
+        "pen"
+    ]
+}

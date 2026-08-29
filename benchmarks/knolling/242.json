@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor and a cutting board. The monitor is positioned on the top side of the layout, and the cutting board is aligned horizontally with it.",
+    "dsl": "(exists ?monitor (exists ?cutting_board (and (Is ?monitor 'monitor') (Is ?cutting_board 'cutting_board') (OnTopSide ?monitor) (AlignedHorizontally ?monitor ?cutting_board))))",
+    "cnf": "(exists ?monitor (exists ?cutting_board (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (AlignedHorizontally ?monitor ?cutting_board) (Is ?cutting_board 'cutting_board'))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "cutting_board"
+    ]
+}

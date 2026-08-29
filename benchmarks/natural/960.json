@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a car, there is a wooden chair and a stone lion holding a round bowl that contains all the fruit.",
+    "dsl": "(exists ?c (exists ?l (exists ?b (and (Is ?c 'car') (Is ?l 'lion') (HasMaterial ?l 'stone') (In ?l ?c) (Is ?b 'bowl') (HasShape ?b 'round') (Holding ?l ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))) (exists ?ch (and (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (In ?ch ?c)))))))",
+    "cnf": "(exists ?c (exists ?l (exists ?b (forall ?f (exists ?ch (and (Is ?c 'car') (In ?l ?c) (In ?ch ?c) (HasMaterial ?l 'stone') (Holding ?l ?b) (HasMaterial ?ch 'wooden') (Is ?l 'lion') (HasShape ?b 'round') (or (not (Is ?f 'fruit')) (In ?f ?b)) (Is ?ch 'chair') (Is ?b 'bowl')))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "chair",
+        "lion",
+        "fruit",
+        "car"
+    ]
+}

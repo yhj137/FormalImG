@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where all wardrobes are closed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?x (implies (Is ?x 'wardrobe') (HasState ?x 'closed'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?x (or (not (Is ?x 'wardrobe')) (HasState ?x 'closed'))))",
+    "k": 1,
+    "object_classes": [
+        "wardrobe"
+    ]
+}

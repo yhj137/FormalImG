@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a wooden wardrobe containing leather shoes and a black jacket, with a white boat resting on top. To the right of the wardrobe is a turned-on monitor with a bird on it, and to the left is a dog holding a fruit.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?j (exists ?b (exists ?m (exists ?br (exists ?d (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?s 'shoes') (HasMaterial ?s 'leather') (In ?s ?w) (Is ?j 'jacket') (HasColor ?j 'black') (In ?j ?w) (Is ?b 'boat') (HasColor ?b 'white') (On ?b ?w) (Is ?m 'monitor') (HasState ?m 'on') (RightOf ?m ?w) (Is ?br 'bird') (On ?br ?m) (Is ?d 'dog') (LeftOf ?d ?w) (Is ?f 'fruit') (Holding ?d ?f)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (exists ?j (exists ?b (exists ?m (exists ?br (exists ?d (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?s ?w) (In ?j ?w) (HasMaterial ?s 'leather') (On ?b ?w) (HasColor ?j 'black') (Is ?s 'shoes') (RightOf ?m ?w) (HasColor ?b 'white') (Is ?j 'jacket') (LeftOf ?d ?w) (HasState ?m 'on') (On ?br ?m) (Is ?b 'boat') (Is ?d 'dog') (Holding ?d ?f) (Is ?m 'monitor') (Is ?br 'bird') (Is ?f 'fruit')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "shoes",
+        "monitor",
+        "jacket",
+        "bird",
+        "boat",
+        "dog",
+        "wardrobe"
+    ]
+}

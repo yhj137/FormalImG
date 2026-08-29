@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden table with a bench to its right. Every plate is inside a red backpack on the bench.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'table') (HasMaterial ?t 'wooden') (exists ?b (and (Is ?b 'bench') (RightOf ?b ?t) (forall ?p (implies (Is ?p 'plate') (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'red') (On ?bp ?b) (In ?p ?bp))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?b (forall ?p (exists ?bp (and (Is ?t 'table') (HasMaterial ?t 'wooden') (RightOf ?b ?t) (Is ?b 'bench') (or (not (Is ?p 'plate')) (On ?bp ?b)) (or (not (Is ?p 'plate')) (HasColor ?bp 'red')) (or (not (Is ?p 'plate')) (In ?p ?bp)) (or (not (Is ?p 'plate')) (Is ?bp 'backpack'))))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "plate",
+        "backpack",
+        "table"
+    ]
+}

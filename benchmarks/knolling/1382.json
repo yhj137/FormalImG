@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a cutting board centrally located. To the left of the cutting board is a pizza, and to the right is a white game controller. A yellow drill is placed above the cutting board. Positioned on the bottom side of the image is a ruler, located such that the cutting board is above it. A lighter is placed to the left of this ruler. Additionally, for every shoe in the scene, it is located to the right of the game controller.",
+    "dsl": "(exists ?board (exists ?pizza (exists ?controller (exists ?drill (exists ?ruler (exists ?lighter (and (Is ?board 'cutting_board') (Is ?pizza 'pizza') (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?ruler 'ruler') (OnBottomSide ?ruler) (Is ?lighter 'lighter') (LeftOf ?pizza ?board) (RightOf ?controller ?board) (Above ?drill ?board) (Above ?board ?ruler) (LeftOf ?lighter ?ruler) (forall ?shoe (implies (Is ?shoe 'shoe') (RightOf ?shoe ?controller))))))))))",
+    "cnf": "(exists ?board (exists ?pizza (exists ?controller (exists ?drill (exists ?ruler (exists ?lighter (forall ?shoe (and (Is ?board 'cutting_board') (LeftOf ?pizza ?board) (RightOf ?controller ?board) (Is ?pizza 'pizza') (Above ?drill ?board) (Has ?controller 'white') (or (not (Is ?shoe 'shoe')) (RightOf ?shoe ?controller)) (Above ?board ?ruler) (Has ?drill 'yellow') (Is ?controller 'game_controller') (OnBottomSide ?ruler) (LeftOf ?lighter ?ruler) (Is ?drill 'drill') (Is ?ruler 'ruler') (Is ?lighter 'lighter')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "pizza",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "lighter",
+        "shoe"
+    ]
+}

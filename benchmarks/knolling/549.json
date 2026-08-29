@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller positioned on the top side. For every remote in the image, it is placed below the game controller. There is also a carrot situated to the right of the game controller, and these two are aligned horizontally.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnTopSide ?gc) (forall ?r (implies (Is ?r 'remote') (Below ?r ?gc))) (exists ?c (and (Is ?c 'carrot') (RightOf ?c ?gc) (AlignedHorizontally ?c ?gc)))))",
+    "cnf": "(exists ?gc (forall ?r (exists ?c (and (Is ?gc 'game_controller') (OnTopSide ?gc) (or (not (Is ?r 'remote')) (Below ?r ?gc)) (RightOf ?c ?gc) (AlignedHorizontally ?c ?gc) (Is ?c 'carrot')))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "remote",
+        "game_controller"
+    ]
+}

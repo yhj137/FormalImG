@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat present, there is a structured grid of items arranged relative to it. Directly below the hat are glasses, below the glasses is a wallet, and below the wallet is a handbag, which is specifically positioned on the bottom side of the image. To the right of the hat is a donut, aligned horizontally. Below the donut is a calculator, which is located on the right side of the image and horizontally aligned with the glasses. Below the calculator is a hammer horizontally aligned with the wallet, and below the hammer is a screwdriver horizontally aligned with the handbag.",
+    "dsl": "(forall ?hat (implies (Is ?hat 'hat') (exists ?glasses (exists ?wallet (exists ?handbag (exists ?donut (exists ?calculator (exists ?hammer (exists ?screwdriver (and (Is ?glasses 'glasses') (Is ?wallet 'wallet') (Is ?handbag 'handbag') (Is ?donut 'donut') (Is ?calculator 'calculator') (Is ?hammer 'hammer') (Is ?screwdriver 'screwdriver') (Below ?glasses ?hat) (Below ?wallet ?glasses) (Below ?handbag ?wallet) (OnBottomSide ?handbag) (RightOf ?donut ?hat) (AlignedHorizontally ?hat ?donut) (Below ?calculator ?donut) (RightOf ?calculator ?glasses) (AlignedHorizontally ?glasses ?calculator) (OnRightSide ?calculator) (Below ?hammer ?calculator) (RightOf ?hammer ?wallet) (AlignedHorizontally ?wallet ?hammer) (Below ?screwdriver ?hammer) (RightOf ?screwdriver ?handbag) (AlignedHorizontally ?handbag ?screwdriver)))))))))))",
+    "cnf": "(forall ?hat (exists ?glasses (exists ?wallet (exists ?handbag (exists ?donut (exists ?calculator (exists ?hammer (exists ?screwdriver (and (or (not (Is ?hat 'hat')) (Is ?glasses 'glasses')) (or (not (Is ?hat 'hat')) (Is ?wallet 'wallet')) (or (not (Is ?hat 'hat')) (Below ?glasses ?hat)) (or (not (Is ?hat 'hat')) (Is ?handbag 'handbag')) (or (not (Is ?hat 'hat')) (Below ?wallet ?glasses)) (or (not (Is ?hat 'hat')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?hat 'hat')) (Is ?donut 'donut')) (or (not (Is ?hat 'hat')) (Below ?handbag ?wallet)) (or (not (Is ?hat 'hat')) (RightOf ?calculator ?glasses)) (or (not (Is ?hat 'hat')) (Is ?hammer 'hammer')) (or (not (Is ?hat 'hat')) (Below ?screwdriver ?hammer)) (or (not (Is ?hat 'hat')) (Is ?calculator 'calculator')) (or (not (Is ?hat 'hat')) (RightOf ?donut ?hat)) (or (not (Is ?hat 'hat')) (OnBottomSide ?handbag)) (or (not (Is ?hat 'hat')) (RightOf ?hammer ?wallet)) (or (not (Is ?hat 'hat')) (Below ?calculator ?donut)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?glasses ?calculator)) (or (not (Is ?hat 'hat')) (Below ?hammer ?calculator)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?wallet ?hammer)) (or (not (Is ?hat 'hat')) (RightOf ?screwdriver ?handbag)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?hat ?donut)) (or (not (Is ?hat 'hat')) (OnRightSide ?calculator)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?handbag ?screwdriver)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "screwdriver",
+        "hammer",
+        "hat",
+        "handbag",
+        "wallet",
+        "calculator",
+        "donut"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack. For every tie present in the image, it is red and is aligned horizontally with the backpack.",
+    "dsl": "(exists ?b (and (Is ?b 'backpack') (Has ?b 'blue') (forall ?t (implies (Is ?t 'tie') (and (Has ?t 'red') (AlignedHorizontally ?t ?b))))))",
+    "cnf": "(exists ?b (forall ?t (and (Is ?b 'backpack') (Has ?b 'blue') (or (not (Is ?t 'tie')) (AlignedHorizontally ?t ?b)) (or (not (Is ?t 'tie')) (Has ?t 'red')))))",
+    "k": 2,
+    "object_classes": [
+        "tie",
+        "backpack"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every child sits in a chair holding headphones, with a yellow lion next to the chair.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'child') (exists ?ch (exists ?h (exists ?l (and (Is ?ch 'chair') (Is ?h 'headphones') (Is ?l 'lion') (HasState ?c 'sitting') (In ?c ?ch) (Holding ?c ?h) (NextTo ?l ?ch) (HasColor ?l 'yellow'))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?ch (exists ?h (exists ?l (and (or (not (Is ?c 'child')) (Is ?ch 'chair')) (or (not (Is ?c 'child')) (In ?c ?ch)) (or (not (Is ?c 'child')) (Is ?h 'headphones')) (or (not (Is ?c 'child')) (NextTo ?l ?ch)) (or (not (Is ?c 'child')) (HasState ?c 'sitting')) (or (not (Is ?c 'child')) (Holding ?c ?h)) (or (not (Is ?c 'child')) (Is ?l 'lion')) (or (not (Is ?c 'child')) (HasColor ?l 'yellow'))))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "chair",
+        "child",
+        "lion"
+    ]
+}

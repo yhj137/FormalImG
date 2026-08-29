@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the image. Arranged in a horizontal line to the right of the suitcase are a shirt, a keyboard, a plate, a pizza, a glove, pliers, and glasses, all aligned horizontally with one another. The glasses are visually smaller than the suitcase. Additionally, for every remote in the scene, it is located to the right of the glasses and is also aligned horizontally with them.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?keyboard (exists ?plate (exists ?pizza (exists ?glove (exists ?pliers (exists ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?shirt 'shirt') (RightOf ?shirt ?suitcase) (AlignedHorizontally ?suitcase ?shirt) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?shirt) (AlignedHorizontally ?shirt ?keyboard) (Is ?plate 'plate') (RightOf ?plate ?keyboard) (AlignedHorizontally ?keyboard ?plate) (Is ?pizza 'pizza') (RightOf ?pizza ?plate) (AlignedHorizontally ?plate ?pizza) (Is ?glove 'glove') (RightOf ?glove ?pizza) (AlignedHorizontally ?pizza ?glove) (Is ?pliers 'pliers') (RightOf ?pliers ?glove) (AlignedHorizontally ?glove ?pliers) (Is ?glasses 'glasses') (RightOf ?glasses ?pliers) (AlignedHorizontally ?pliers ?glasses) (SmallerThan ?glasses ?suitcase) (forall ?remote (implies (Is ?remote 'remote') (and (RightOf ?remote ?glasses) (AlignedHorizontally ?glasses ?remote)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?keyboard (exists ?plate (exists ?pizza (exists ?glove (exists ?pliers (exists ?glasses (forall ?remote (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?shirt ?suitcase) (AlignedHorizontally ?suitcase ?shirt) (Is ?shirt 'shirt') (SmallerThan ?glasses ?suitcase) (RightOf ?keyboard ?shirt) (AlignedHorizontally ?pliers ?glasses) (or (not (Is ?remote 'remote')) (RightOf ?remote ?glasses)) (AlignedHorizontally ?shirt ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?glasses ?pliers) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?glasses ?remote)) (RightOf ?plate ?keyboard) (AlignedHorizontally ?glove ?pliers) (Is ?glasses 'glasses') (AlignedHorizontally ?keyboard ?plate) (Is ?plate 'plate') (RightOf ?pliers ?glove) (RightOf ?pizza ?plate) (AlignedHorizontally ?pizza ?glove) (Is ?pliers 'pliers') (AlignedHorizontally ?plate ?pizza) (Is ?pizza 'pizza') (RightOf ?glove ?pizza) (Is ?glove 'glove')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "plate",
+        "pliers",
+        "keyboard",
+        "pizza",
+        "suitcase",
+        "glove",
+        "shirt"
+    ]
+}

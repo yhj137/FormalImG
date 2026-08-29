@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop and a drill positioned on the right side. For every blue tie present, there is a pair of headphones above it and a game controller below it. Visually, the laptop is larger than the headphones, while the game controller is smaller than the drill.",
+    "dsl": "(exists ?laptop (exists ?drill (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?drill 'drill') (OnRightSide ?drill) (forall ?tie (implies (and (Is ?tie 'tie') (Has ?tie 'blue')) (exists ?headphones (exists ?controller (and (Is ?headphones 'headphones') (Is ?controller 'game_controller') (Above ?headphones ?tie) (Below ?controller ?tie) (LargerThan ?laptop ?headphones) (SmallerThan ?controller ?drill)))))))))",
+    "cnf": "(exists ?laptop (exists ?drill (forall ?tie (exists ?headphones (exists ?controller (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (LargerThan ?laptop ?headphones)) (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (Below ?controller ?tie)) (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (SmallerThan ?controller ?drill)) (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (Above ?headphones ?tie)) (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (Is ?controller 'game_controller')) (OnRightSide ?drill) (or (not (Is ?tie 'tie')) (not (Has ?tie 'blue')) (Is ?headphones 'headphones')) (Is ?drill 'drill')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "game_controller",
+        "drill",
+        "headphones"
+    ]
+}

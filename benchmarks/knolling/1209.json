@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout is anchored by a pair of headphones located in the top-left section of the image. To the right of the headphones, aligned horizontally, is a pan. Vertically aligned with the headphones is a cutting board. To the right of this cutting board, aligned horizontally, a series of items are arranged in a strict horizontal line: first a knife, then a spoon, followed by a cup, and finally a donut. Specifically, the knife is to the right of the cutting board, the spoon is to the right of the knife, the cup is to the right of the spoon, and the donut is to the right of the cup. Furthermore, the donut is visually smaller than the pan.",
+    "dsl": "(exists ?headphones (exists ?pan (exists ?cutting_board (exists ?knife (exists ?spoon (exists ?cup (exists ?donut (and (Is ?headphones 'headphones') (Is ?pan 'pan') (Is ?cutting_board 'cutting_board') (Is ?knife 'knife') (Is ?spoon 'spoon') (Is ?cup 'cup') (Is ?donut 'donut') (OnTopSide ?headphones) (OnLeftSide ?headphones) (RightOf ?pan ?headphones) (AlignedHorizontally ?pan ?headphones) (AlignedVertically ?cutting_board ?headphones) (RightOf ?knife ?cutting_board) (AlignedHorizontally ?knife ?cutting_board) (RightOf ?spoon ?knife) (AlignedHorizontally ?spoon ?knife) (RightOf ?cup ?spoon) (AlignedHorizontally ?cup ?spoon) (RightOf ?donut ?cup) (AlignedHorizontally ?donut ?cup) (SmallerThan ?donut ?pan)))))))))",
+    "cnf": "(exists ?headphones (exists ?pan (exists ?cutting_board (exists ?knife (exists ?spoon (exists ?cup (exists ?donut (and (Is ?headphones 'headphones') (OnTopSide ?headphones) (OnLeftSide ?headphones) (RightOf ?pan ?headphones) (AlignedHorizontally ?pan ?headphones) (Is ?pan 'pan') (AlignedVertically ?cutting_board ?headphones) (SmallerThan ?donut ?pan) (Is ?cutting_board 'cutting_board') (RightOf ?knife ?cutting_board) (AlignedHorizontally ?donut ?cup) (AlignedHorizontally ?knife ?cutting_board) (Is ?knife 'knife') (RightOf ?donut ?cup) (RightOf ?spoon ?knife) (AlignedHorizontally ?cup ?spoon) (Is ?donut 'donut') (AlignedHorizontally ?spoon ?knife) (Is ?spoon 'spoon') (RightOf ?cup ?spoon) (Is ?cup 'cup')))))))))",
+    "k": 7,
+    "object_classes": [
+        "cup",
+        "cutting_board",
+        "pan",
+        "knife",
+        "headphones",
+        "donut",
+        "spoon"
+    ]
+}

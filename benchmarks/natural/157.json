@@ -1,0 +1,9 @@
+{
+    "prompt": "All balls in the scene are red.",
+    "dsl": "(forall ?b (implies (Is ?b 'ball') (HasColor ?b 'red')))",
+    "cnf": "(forall ?b (or (not (Is ?b 'ball')) (HasColor ?b 'red')))",
+    "k": 1,
+    "object_classes": [
+        "ball"
+    ]
+}

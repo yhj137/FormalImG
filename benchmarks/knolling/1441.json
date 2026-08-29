@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate in the scene, there is a surrounding arrangement of seven other distinct items. A donut, which is smaller than the plate, is positioned above the plate and lies on the top side of the image. A knife is placed to the right of the plate, while a shirt is located to the left of the plate within the left side of the image. Below the plate sits a hat. A ruler is arranged to the left of the hat, and a stapler is arranged to the right of the hat. Finally, a mouse is positioned below the stapler, located on the bottom side of the image.",
+    "dsl": "(and (forall ?plate (implies (Is ?plate 'plate') (exists ?donut (exists ?knife (exists ?shirt (exists ?hat (exists ?stapler (exists ?mouse (exists ?ruler (and (Is ?donut 'donut') (Is ?knife 'knife') (Is ?shirt 'shirt') (Is ?hat 'hat') (Is ?stapler 'stapler') (Is ?mouse 'mouse') (Is ?ruler 'ruler') (SmallerThan ?donut ?plate) (Above ?donut ?plate) (OnTopSide ?donut) (RightOf ?knife ?plate) (LeftOf ?shirt ?plate) (OnLeftSide ?shirt) (Below ?hat ?plate) (LeftOf ?ruler ?hat) (RightOf ?stapler ?hat) (Below ?mouse ?stapler) (OnBottomSide ?mouse))))))))))))",
+    "cnf": "(forall ?plate (exists ?donut (exists ?knife (exists ?shirt (exists ?hat (exists ?stapler (exists ?mouse (exists ?ruler (and (or (not (Is ?plate 'plate')) (Is ?donut 'donut')) (or (not (Is ?plate 'plate')) (Is ?knife 'knife')) (or (not (Is ?plate 'plate')) (SmallerThan ?donut ?plate)) (or (not (Is ?plate 'plate')) (Is ?shirt 'shirt')) (or (not (Is ?plate 'plate')) (RightOf ?knife ?plate)) (or (not (Is ?plate 'plate')) (Is ?ruler 'ruler')) (or (not (Is ?plate 'plate')) (Above ?donut ?plate)) (or (not (Is ?plate 'plate')) (Is ?hat 'hat')) (or (not (Is ?plate 'plate')) (LeftOf ?shirt ?plate)) (or (not (Is ?plate 'plate')) (OnTopSide ?donut)) (or (not (Is ?plate 'plate')) (Is ?mouse 'mouse')) (or (not (Is ?plate 'plate')) (LeftOf ?ruler ?hat)) (or (not (Is ?plate 'plate')) (Is ?stapler 'stapler')) (or (not (Is ?plate 'plate')) (Below ?hat ?plate)) (or (not (Is ?plate 'plate')) (OnLeftSide ?shirt)) (or (not (Is ?plate 'plate')) (Below ?mouse ?stapler)) (or (not (Is ?plate 'plate')) (RightOf ?stapler ?hat)) (or (not (Is ?plate 'plate')) (OnBottomSide ?mouse)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "stapler",
+        "hat",
+        "shirt",
+        "knife",
+        "mouse",
+        "donut"
+    ]
+}

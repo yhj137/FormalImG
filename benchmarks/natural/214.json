@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image featuring a wooden bench, with a book positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?be (exists ?bo (and (Is ?be 'bench') (HasMaterial ?be 'wooden') (Is ?bo 'book') (RightOf ?bo ?be)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?be (exists ?bo (and (Is ?be 'bench') (HasMaterial ?be 'wooden') (RightOf ?bo ?be) (Is ?bo 'book')))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "bench"
+    ]
+}

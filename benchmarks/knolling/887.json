@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a laptop positioned on the left side of the scene. For every pizza in the image, it is located to the right of the laptop. Furthermore, corresponding to each pizza, there is a remote to its right, a bowl aligned vertically with the pizza, and a spoon located on the bottom side of the image that is aligned vertically with the remote.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?remote (exists ?bowl (exists ?spoon (and (Is ?remote 'remote') (Is ?bowl 'bowl') (Is ?spoon 'spoon') (RightOf ?pizza ?laptop) (RightOf ?remote ?pizza) (AlignedVertically ?bowl ?pizza) (AlignedVertically ?spoon ?remote) (OnBottomSide ?spoon)))))))))",
+    "cnf": "(exists ?laptop (forall ?pizza (exists ?remote (exists ?bowl (exists ?spoon (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (or (not (Is ?pizza 'pizza')) (RightOf ?pizza ?laptop)) (or (not (Is ?pizza 'pizza')) (Is ?spoon 'spoon')) (or (not (Is ?pizza 'pizza')) (RightOf ?remote ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?bowl 'bowl')) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?spoon ?remote)) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?bowl ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?remote 'remote')) (or (not (Is ?pizza 'pizza')) (OnBottomSide ?spoon))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "pizza",
+        "spoon",
+        "bowl"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller, a wallet, a stapler, a carrot, a plate, a hammer, and a glove arranged neatly. The game controller is positioned in the top side of the image, while the wallet is on the left side. Spatially, the wallet is located to the left of the game controller and above the stapler. The stapler is positioned to the left of the carrot, and the carrot is above the plate. To the right of the game controller is the hammer, which is placed above the glove. The plate is visually larger than the wallet. Furthermore, a specific rule applies to headphones in the scene: for every pair of headphones, there is a calculator and a drill such that the headphones are above the calculator, the calculator is to the left of the drill, the drill is larger than the hammer, and the drill is located to the left of the plate.",
+    "dsl": "(exists ?gc (exists ?w (exists ?s (exists ?c (exists ?p (exists ?ham (exists ?g (and (Is ?gc 'game_controller') (Is ?w 'wallet') (Is ?s 'stapler') (Is ?c 'carrot') (Is ?p 'plate') (Is ?ham 'hammer') (Is ?g 'glove') (OnTopSide ?gc) (OnLeftSide ?w) (LeftOf ?w ?gc) (Above ?w ?s) (LeftOf ?s ?c) (Above ?c ?p) (LeftOf ?gc ?ham) (Above ?ham ?g) (LargerThan ?p ?w) (forall ?hp (implies (Is ?hp 'headphones') (exists ?calc (exists ?d (and (Is ?calc 'calculator') (Is ?d 'drill') (Above ?hp ?calc) (LeftOf ?calc ?d) (LeftOf ?d ?p) (LargerThan ?d ?ham))))))))))))))",
+    "cnf": "(exists ?gc (exists ?w (exists ?s (exists ?c (exists ?p (exists ?ham (exists ?g (forall ?hp (exists ?calc (exists ?d (and (Is ?gc 'game_controller') (OnTopSide ?gc) (LeftOf ?w ?gc) (LeftOf ?gc ?ham) (OnLeftSide ?w) (Above ?w ?s) (Is ?ham 'hammer') (Above ?ham ?g) (Is ?w 'wallet') (LargerThan ?p ?w) (Is ?s 'stapler') (LeftOf ?s ?c) (or (not (Is ?hp 'headphones')) (LargerThan ?d ?ham)) (Is ?g 'glove') (Above ?c ?p) (or (not (Is ?hp 'headphones')) (LeftOf ?d ?p)) (Is ?c 'carrot') (Is ?p 'plate') (or (not (Is ?hp 'headphones')) (LeftOf ?calc ?d)) (or (not (Is ?hp 'headphones')) (Above ?hp ?calc)) (or (not (Is ?hp 'headphones')) (Is ?d 'drill')) (or (not (Is ?hp 'headphones')) (Is ?calc 'calculator')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "plate",
+        "stapler",
+        "carrot",
+        "game_controller",
+        "hammer",
+        "drill",
+        "calculator",
+        "wallet",
+        "headphones",
+        "glove"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every person stands next to a wooden desk while holding a banana. A laptop sits on the desk, with a book to its left and a pizza to its right. A round cake is also placed on the desk, and a car is located to the right of the desk.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?p (implies (Is ?p 'person') (exists ?d (exists ?l (exists ?b (exists ?z (exists ?k (exists ?n (exists ?c (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?l 'laptop') (Is ?b 'book') (Is ?z 'pizza') (Is ?k 'cake') (HasShape ?k 'round') (Is ?n 'banana') (Is ?c 'car') (NextTo ?p ?d) (Holding ?p ?n) (On ?l ?d) (On ?b ?d) (LeftOf ?b ?l) (On ?z ?d) (RightOf ?z ?l) (On ?k ?d) (RightOf ?c ?d))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?p (exists ?d (exists ?l (exists ?b (exists ?z (exists ?k (exists ?n (exists ?c (and (or (not (Is ?p 'person')) (Is ?d 'desk')) (or (not (Is ?p 'person')) (HasMaterial ?d 'wooden')) (or (not (Is ?p 'person')) (Is ?l 'laptop')) (or (not (Is ?p 'person')) (NextTo ?p ?d)) (or (not (Is ?p 'person')) (Is ?b 'book')) (or (not (Is ?p 'person')) (On ?l ?d)) (or (not (Is ?p 'person')) (Is ?c 'car')) (or (not (Is ?p 'person')) (Holding ?p ?n)) (or (not (Is ?p 'person')) (Is ?z 'pizza')) (or (not (Is ?p 'person')) (On ?b ?d)) (or (not (Is ?p 'person')) (LeftOf ?b ?l)) (or (not (Is ?p 'person')) (Is ?n 'banana')) (or (not (Is ?p 'person')) (RightOf ?c ?d)) (or (not (Is ?p 'person')) (Is ?k 'cake')) (or (not (Is ?p 'person')) (On ?z ?d)) (or (not (Is ?p 'person')) (RightOf ?z ?l)) (or (not (Is ?p 'person')) (HasShape ?k 'round')) (or (not (Is ?p 'person')) (On ?k ?d))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "person",
+        "desk",
+        "laptop",
+        "banana",
+        "cake",
+        "book",
+        "pizza",
+        "car"
+    ]
+}

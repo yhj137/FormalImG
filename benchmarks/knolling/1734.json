@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the image. Arranged in a row directly below the suitcase are headphones, a hammer, pliers, and a sock, all aligned horizontally. Additionally, for every donut in the scene, there corresponds a plate, a pizza, and a bowl; specifically, the plate is located below the sock, the donut is visually smaller than the plate, and the pizza and bowl are aligned horizontally with the plate.",
+    "dsl": "(exists ?suitcase (exists ?headphones (exists ?hammer (exists ?pliers (exists ?sock (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?headphones 'headphones') (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?sock 'sock') (Below ?headphones ?suitcase) (AlignedHorizontally ?headphones ?hammer) (AlignedHorizontally ?hammer ?pliers) (AlignedHorizontally ?pliers ?sock) (forall ?donut (implies (Is ?donut 'donut') (exists ?plate (exists ?pizza (exists ?bowl (and (Is ?plate 'plate') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Below ?plate ?sock) (LargerThan ?plate ?donut) (AlignedHorizontally ?plate ?pizza) (AlignedHorizontally ?pizza ?bowl)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?headphones (exists ?hammer (exists ?pliers (exists ?sock (forall ?donut (exists ?plate (exists ?pizza (exists ?bowl (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Below ?headphones ?suitcase) (Is ?headphones 'headphones') (AlignedHorizontally ?headphones ?hammer) (Is ?hammer 'hammer') (AlignedHorizontally ?hammer ?pliers) (Is ?pliers 'pliers') (AlignedHorizontally ?pliers ?sock) (Is ?sock 'sock') (or (not (Is ?donut 'donut')) (Below ?plate ?sock)) (or (not (Is ?donut 'donut')) (Is ?plate 'plate')) (or (not (Is ?donut 'donut')) (LargerThan ?plate ?donut)) (or (not (Is ?donut 'donut')) (Is ?bowl 'bowl')) (or (not (Is ?donut 'donut')) (Is ?pizza 'pizza')) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?plate ?pizza)) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?pizza ?bowl))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "hammer",
+        "plate",
+        "pizza",
+        "bowl",
+        "pliers",
+        "headphones",
+        "suitcase",
+        "sock",
+        "donut"
+    ]
+}

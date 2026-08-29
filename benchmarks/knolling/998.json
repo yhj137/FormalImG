@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical column of items. A hat is positioned on the top side of the image. Directly below the hat is a game controller, and below the game controller is a calculator. The hat is visually larger than the calculator. A carrot is placed below the calculator. All these specific items are aligned vertically. Furthermore, for every screwdriver present in the scene, it is located below the carrot and positioned on the bottom side of the image, while maintaining vertical alignment with the carrot.",
+    "dsl": "(exists ?hat (exists ?cntrl (exists ?calc (exists ?carrot (and (Is ?hat 'hat') (Is ?cntrl 'game_controller') (Is ?calc 'calculator') (Is ?carrot 'carrot') (OnTopSide ?hat) (Above ?hat ?cntrl) (AlignedVertically ?hat ?cntrl) (Above ?cntrl ?calc) (AlignedVertically ?cntrl ?calc) (Above ?calc ?carrot) (AlignedVertically ?calc ?carrot) (LargerThan ?hat ?calc) (forall ?screw (implies (Is ?screw 'screwdriver') (and (Below ?screw ?carrot) (OnBottomSide ?screw) (AlignedVertically ?carrot ?screw)))))))))",
+    "cnf": "(exists ?hat (exists ?cntrl (exists ?calc (exists ?carrot (forall ?screw (and (Is ?hat 'hat') (OnTopSide ?hat) (Above ?hat ?cntrl) (AlignedVertically ?hat ?cntrl) (Is ?cntrl 'game_controller') (LargerThan ?hat ?calc) (Above ?cntrl ?calc) (AlignedVertically ?calc ?carrot) (AlignedVertically ?cntrl ?calc) (Is ?calc 'calculator') (Above ?calc ?carrot) (or (not (Is ?screw 'screwdriver')) (Below ?screw ?carrot)) (Is ?carrot 'carrot') (or (not (Is ?screw 'screwdriver')) (AlignedVertically ?carrot ?screw)) (or (not (Is ?screw 'screwdriver')) (OnBottomSide ?screw))))))))",
+    "k": 5,
+    "object_classes": [
+        "carrot",
+        "screwdriver",
+        "game_controller",
+        "hat",
+        "calculator"
+    ]
+}

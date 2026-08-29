@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat, grid-like arrangement. A monitor is positioned on the left side of the scene, while a laptop is placed on the right side, and they are aligned horizontally. Below the monitor, for every sock present, there is a shoe aligned horizontally with it. Completing the columns, a sandwich is located below the sock, and a stapler is positioned below the shoe, with the sandwich and stapler also aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?laptop (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?laptop 'laptop') (OnRightSide ?laptop) (AlignedHorizontally ?monitor ?laptop) (forall ?sock (implies (Is ?sock 'sock') (exists ?shoe (exists ?sandwich (exists ?stapler (and (Is ?shoe 'shoe') (Is ?sandwich 'sandwich') (Is ?stapler 'stapler') (Below ?sock ?monitor) (AlignedHorizontally ?sock ?shoe) (Below ?sandwich ?sock) (Below ?stapler ?shoe) (AlignedHorizontally ?sandwich ?stapler))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (forall ?sock (exists ?shoe (exists ?sandwich (exists ?stapler (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (AlignedHorizontally ?monitor ?laptop) (or (not (Is ?sock 'sock')) (Below ?sock ?monitor)) (OnRightSide ?laptop) (or (not (Is ?sock 'sock')) (Is ?stapler 'stapler')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?shoe)) (Is ?laptop 'laptop') (or (not (Is ?sock 'sock')) (Is ?sandwich 'sandwich')) (or (not (Is ?sock 'sock')) (Below ?stapler ?shoe)) (or (not (Is ?sock 'sock')) (Is ?shoe 'shoe')) (or (not (Is ?sock 'sock')) (Below ?sandwich ?sock)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sandwich ?stapler)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "stapler",
+        "sock",
+        "monitor",
+        "sandwich",
+        "shoe"
+    ]
+}

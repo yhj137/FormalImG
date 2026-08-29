@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in an oil painting style. A woman sits on a bench, holding a closed umbrella. There is also a basket placed on the bench. All bottles in the scene are contained inside this basket. A red sofa is positioned to the left of the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?bn (exists ?bk (and (Is ?w 'woman') (Is ?bn 'bench') (Is ?bk 'basket') (On ?w ?bn) (On ?bk ?bn) (forall ?bt (implies (Is ?bt 'bottle') (In ?bt ?bk))) (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'closed') (Holding ?w ?u))) (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'red') (LeftOf ?s ?bn))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?bn (exists ?bk (forall ?bt (exists ?u (exists ?s (and (Is ?w 'woman') (On ?w ?bn) (Holding ?w ?u) (Is ?bn 'bench') (On ?bk ?bn) (HasState ?u 'closed') (LeftOf ?s ?bn) (Is ?bk 'basket') (or (not (Is ?bt 'bottle')) (In ?bt ?bk)) (Is ?u 'umbrella') (HasColor ?s 'red') (Is ?s 'sofa')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "bench",
+        "bottle",
+        "woman",
+        "basket"
+    ]
+}

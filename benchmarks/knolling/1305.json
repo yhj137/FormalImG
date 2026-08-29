@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pan located on the top side. To the left of the pan, there is a drill situated on the left side of the image, and a plate is aligned vertically with the drill. For every fork in the scene, the pan is positioned above it. Furthermore, each fork is accompanied by a sock located above it, a game controller aligned vertically with it, and a phone that is smaller than the fork.",
+    "dsl": "(exists ?pan (exists ?drill (exists ?plate (and (Is ?pan 'pan') (OnTopSide ?pan) (Is ?drill 'drill') (OnLeftSide ?drill) (Is ?plate 'plate') (LeftOf ?drill ?pan) (AlignedVertically ?drill ?plate) (forall ?fork (implies (Is ?fork 'fork') (exists ?sock (exists ?phone (exists ?game_controller (and (Is ?sock 'sock') (Is ?phone 'phone') (Is ?game_controller 'game_controller') (Above ?pan ?fork) (Above ?sock ?fork) (AlignedVertically ?game_controller ?fork) (SmallerThan ?phone ?fork)))))))))))",
+    "cnf": "(exists ?pan (exists ?drill (exists ?plate (forall ?fork (exists ?sock (exists ?phone (exists ?game_controller (and (Is ?pan 'pan') (OnTopSide ?pan) (LeftOf ?drill ?pan) (or (not (Is ?fork 'fork')) (Above ?pan ?fork)) (OnLeftSide ?drill) (AlignedVertically ?drill ?plate) (or (not (Is ?fork 'fork')) (Is ?game_controller 'game_controller')) (or (not (Is ?fork 'fork')) (Above ?sock ?fork)) (Is ?drill 'drill') (Is ?plate 'plate') (or (not (Is ?fork 'fork')) (Is ?phone 'phone')) (or (not (Is ?fork 'fork')) (AlignedVertically ?game_controller ?fork)) (or (not (Is ?fork 'fork')) (Is ?sock 'sock')) (or (not (Is ?fork 'fork')) (SmallerThan ?phone ?fork))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "sock",
+        "phone",
+        "game_controller",
+        "drill",
+        "fork",
+        "pan"
+    ]
+}

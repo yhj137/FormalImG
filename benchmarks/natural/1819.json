@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. For every fish in the scene, a wooden boat is positioned to its left. A lion is inside the boat. Next to the lion, there is a teddy bear holding a screwdriver. To the left of the boat is a chair. A jacket and a round plate are on the chair. A yellow banana is on the plate, and a fork is next to the plate.",
+    "dsl": "(forall ?fi (implies (Is ?fi 'fish') (exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (RightOf ?fi ?b) (exists ?l (and (Is ?l 'lion') (In ?l ?b) (exists ?tb (and (Is ?tb 'teddy bear') (NextTo ?tb ?l) (exists ?sd (and (Is ?sd 'screwdriver') (Holding ?tb ?sd))))))) (exists ?c (and (Is ?c 'chair') (LeftOf ?c ?b) (exists ?j (and (Is ?j 'jacket') (On ?j ?c))) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?c) (exists ?ba (and (Is ?ba 'banana') (HasColor ?ba 'yellow') (On ?ba ?p))) (exists ?fo (and (Is ?fo 'fork') (NextTo ?fo ?p)))))))))))",
+    "cnf": "(forall ?fi (exists ?b (exists ?l (exists ?tb (exists ?sd (exists ?c (exists ?j (exists ?p (exists ?ba (exists ?fo (and (or (not (Is ?fi 'fish')) (Is ?b 'boat')) (or (not (Is ?fi 'fish')) (HasMaterial ?b 'wooden')) (or (not (Is ?fi 'fish')) (RightOf ?fi ?b)) (or (not (Is ?fi 'fish')) (In ?l ?b)) (or (not (Is ?fi 'fish')) (Is ?l 'lion')) (or (not (Is ?fi 'fish')) (LeftOf ?c ?b)) (or (not (Is ?fi 'fish')) (Is ?tb 'teddy bear')) (or (not (Is ?fi 'fish')) (NextTo ?tb ?l)) (or (not (Is ?fi 'fish')) (Is ?c 'chair')) (or (not (Is ?fi 'fish')) (Is ?j 'jacket')) (or (not (Is ?fi 'fish')) (On ?j ?c)) (or (not (Is ?fi 'fish')) (Is ?sd 'screwdriver')) (or (not (Is ?fi 'fish')) (Holding ?tb ?sd)) (or (not (Is ?fi 'fish')) (Is ?p 'plate')) (or (not (Is ?fi 'fish')) (On ?p ?c)) (or (not (Is ?fi 'fish')) (HasShape ?p 'round')) (or (not (Is ?fi 'fish')) (Is ?ba 'banana')) (or (not (Is ?fi 'fish')) (On ?ba ?p)) (or (not (Is ?fi 'fish')) (HasColor ?ba 'yellow')) (or (not (Is ?fi 'fish')) (Is ?fo 'fork')) (or (not (Is ?fi 'fish')) (NextTo ?fo ?p)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "lion",
+        "banana",
+        "fork",
+        "boat",
+        "jacket",
+        "chair",
+        "screwdriver",
+        "teddy bear",
+        "plate"
+    ]
+}

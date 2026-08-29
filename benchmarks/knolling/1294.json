@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black monitor at the top, with a pair of blue jeans positioned below it. For every camera in the image, it is aligned horizontally with the jeans and is physically smaller than the monitor. Below the camera, there is a pan. Aligned horizontally with the pan is a brown wallet. Located directly below the wallet is a remote, and a ruler is aligned horizontally with that remote. Furthermore, the remote is smaller than the ruler.",
+    "dsl": "(exists ?m (exists ?j (and (Is ?m 'monitor') (Has ?m 'black') (Is ?j 'jeans') (Has ?j 'blue') (Below ?j ?m) (forall ?c (implies (Is ?c 'camera') (and (SmallerThan ?c ?m) (AlignedHorizontally ?c ?j) (exists ?p (exists ?w (exists ?rem (exists ?r (and (Is ?p 'pan') (Below ?p ?c) (Is ?w 'wallet') (Has ?w 'brown') (AlignedHorizontally ?w ?p) (Is ?rem 'remote') (Below ?rem ?w) (Is ?r 'ruler') (AlignedHorizontally ?r ?rem) (SmallerThan ?rem ?r))))))))))))",
+    "cnf": "(exists ?m (exists ?j (forall ?c (exists ?p (exists ?w (exists ?rem (exists ?r (and (Is ?m 'monitor') (Has ?m 'black') (Below ?j ?m) (or (not (Is ?c 'camera')) (SmallerThan ?c ?m)) (Has ?j 'blue') (or (not (Is ?c 'camera')) (AlignedHorizontally ?c ?j)) (Is ?j 'jeans') (or (not (Is ?c 'camera')) (Is ?p 'pan')) (or (not (Is ?c 'camera')) (Below ?p ?c)) (or (not (Is ?c 'camera')) (Is ?w 'wallet')) (or (not (Is ?c 'camera')) (AlignedHorizontally ?w ?p)) (or (not (Is ?c 'camera')) (Has ?w 'brown')) (or (not (Is ?c 'camera')) (Is ?rem 'remote')) (or (not (Is ?c 'camera')) (Below ?rem ?w)) (or (not (Is ?c 'camera')) (Is ?r 'ruler')) (or (not (Is ?c 'camera')) (AlignedHorizontally ?r ?rem)) (or (not (Is ?c 'camera')) (SmallerThan ?rem ?r))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "pan",
+        "jeans",
+        "wallet",
+        "camera",
+        "monitor"
+    ]
+}

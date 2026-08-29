@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a refrigerator containing a pizza, with a knife placed next to the pizza. A cat is located next to the refrigerator, beside a round ball. Every toy car is adjacent to a rock that is also positioned next to the ball.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?p (exists ?k (exists ?c (exists ?b (and (Is ?r 'refrigerator') (Is ?p 'pizza') (Is ?k 'knife') (Is ?c 'cat') (Is ?b 'ball') (In ?p ?r) (NextTo ?k ?p) (NextTo ?c ?r) (NextTo ?b ?c) (HasShape ?b 'round') (forall ?t (implies (Is ?t 'toy car') (exists ?rk (and (Is ?rk 'rock') (NextTo ?t ?rk) (NextTo ?rk ?b))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?p (exists ?k (exists ?c (exists ?b (forall ?t (exists ?rk (and (Is ?r 'refrigerator') (In ?p ?r) (NextTo ?c ?r) (Is ?p 'pizza') (NextTo ?k ?p) (Is ?c 'cat') (NextTo ?b ?c) (Is ?k 'knife') (Is ?b 'ball') (HasShape ?b 'round') (or (not (Is ?t 'toy car')) (NextTo ?rk ?b)) (or (not (Is ?t 'toy car')) (NextTo ?t ?rk)) (or (not (Is ?t 'toy car')) (Is ?rk 'rock')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "knife",
+        "pizza",
+        "rock",
+        "toy car",
+        "refrigerator",
+        "ball",
+        "cat"
+    ]
+}

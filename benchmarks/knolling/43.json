@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is positioned on the bottom side of the layout.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnBottomSide ?laptop)))",
+    "cnf": "(exists ?laptop (and (Is ?laptop 'laptop') (OnBottomSide ?laptop)))",
+    "k": 1,
+    "object_classes": [
+        "laptop"
+    ]
+}

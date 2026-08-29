@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a woman sitting on a leather sofa, holding a wooden basket and a pair of glasses. To the right of the sofa are a laptop and a bicycle, while all shoes in the scene are red and positioned to the left of the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (exists ?w (exists ?b (exists ?l (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?w 'woman') (On ?w ?s) (Is ?b 'basket') (HasMaterial ?b 'wooden') (Holding ?w ?b) (Is ?l 'laptop') (RightOf ?l ?s) (forall ?sh (implies (Is ?sh 'shoes') (and (HasColor ?sh 'red') (LeftOf ?sh ?s)))) (exists ?bi (exists ?g (and (Is ?bi 'bicycle') (RightOf ?bi ?s) (Is ?g 'glasses') (Holding ?w ?g))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (exists ?w (exists ?b (exists ?l (forall ?sh (exists ?bi (exists ?g (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?w ?s) (RightOf ?l ?s) (Is ?w 'woman') (Holding ?w ?b) (or (not (Is ?sh 'shoes')) (LeftOf ?sh ?s)) (Is ?l 'laptop') (Holding ?w ?g) (HasMaterial ?b 'wooden') (RightOf ?bi ?s) (or (not (Is ?sh 'shoes')) (HasColor ?sh 'red')) (Is ?g 'glasses') (Is ?b 'basket') (Is ?bi 'bicycle'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "shoes",
+        "glasses",
+        "laptop",
+        "woman",
+        "bicycle",
+        "basket"
+    ]
+}

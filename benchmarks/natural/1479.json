@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden house. A man holding a metal hammer stands next to the house. Every flower in the scene is located next to the house. A standing horse is positioned beside the man, with a round teddy bear on it. A cup containing a cake sits next to the house.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (and (Is ?h 'house') (HasMaterial ?h 'wooden') (exists ?m (and (Is ?m 'man') (NextTo ?m ?h) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?h))) (exists ?hs (and (Is ?hs 'horse') (HasState ?hs 'standing') (NextTo ?hs ?m) (exists ?tb (and (Is ?tb 'teddy bear') (HasShape ?tb 'round') (On ?tb ?hs) (exists ?hm (and (Is ?hm 'hammer') (HasMaterial ?hm 'metal') (Holding ?m ?hm) (exists ?cp (and (Is ?cp 'cup') (NextTo ?cp ?h) (exists ?ck (and (Is ?ck 'cake') (In ?ck ?cp))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?m (forall ?f (exists ?hs (exists ?tb (exists ?hm (exists ?cp (exists ?ck (and (Is ?h 'house') (HasMaterial ?h 'wooden') (NextTo ?m ?h) (or (not (Is ?f 'flower')) (NextTo ?f ?h)) (Is ?m 'man') (NextTo ?hs ?m) (NextTo ?cp ?h) (Holding ?m ?hm) (HasState ?hs 'standing') (On ?tb ?hs) (Is ?cp 'cup') (In ?ck ?cp) (HasMaterial ?hm 'metal') (Is ?hs 'horse') (HasShape ?tb 'round') (Is ?ck 'cake') (Is ?hm 'hammer') (Is ?tb 'teddy bear')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "horse",
+        "man",
+        "cake",
+        "teddy bear",
+        "flower",
+        "hammer",
+        "cup"
+    ]
+}

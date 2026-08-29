@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A woman stands next to a wooden bench, holding a key. A bowl rests on the bench. All fruit visible in the scene are contained within the bowl. A mirror is positioned to the right of the bench, and a rock sits to the right of the mirror.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?bn (exists ?bl (and (Is ?w 'woman') (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (Is ?bl 'bowl') (NextTo ?w ?bn) (On ?bl ?bn) (forall ?f (implies (Is ?f 'fruit') (In ?f ?bl))) (exists ?k (exists ?m (exists ?r (and (Is ?k 'key') (Is ?m 'mirror') (Is ?r 'rock') (Holding ?w ?k) (RightOf ?m ?bn) (RightOf ?r ?m))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?bn (exists ?bl (forall ?f (exists ?k (exists ?m (exists ?r (and (Is ?w 'woman') (NextTo ?w ?bn) (Holding ?w ?k) (HasMaterial ?bn 'wooden') (On ?bl ?bn) (Is ?k 'key') (Is ?bn 'bench') (RightOf ?m ?bn) (Is ?bl 'bowl') (or (not (Is ?f 'fruit')) (In ?f ?bl)) (Is ?m 'mirror') (RightOf ?r ?m) (Is ?r 'rock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "bench",
+        "woman",
+        "rock",
+        "mirror",
+        "bowl",
+        "key"
+    ]
+}

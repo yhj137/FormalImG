@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene displays a metal tree where every lamp is located. To the left of the tree stands a person wearing round glasses and leather shoes, next to a standing horse. A plant with a flower on it is situated next to the tree, and beside the plant sits a cake containing fruit.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (and (Is ?t 'tree') (HasMaterial ?t 'metal') (forall ?l (implies (Is ?l 'lamp') (On ?l ?t))) (exists ?p (exists ?g (exists ?s (exists ?h (exists ?pl (exists ?fl (exists ?c (exists ?fr (and (Is ?p 'person') (LeftOf ?p ?t) (Is ?g 'glasses') (HasShape ?g 'round') (On ?g ?p) (Is ?s 'shoes') (HasMaterial ?s 'leather') (On ?s ?p) (Is ?h 'horse') (HasState ?h 'standing') (NextTo ?h ?p) (Is ?pl 'plant') (NextTo ?pl ?t) (Is ?fl 'flower') (On ?fl ?pl) (Is ?c 'cake') (NextTo ?c ?pl) (Is ?fr 'fruit') (In ?fr ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (forall ?l (exists ?p (exists ?g (exists ?s (exists ?h (exists ?pl (exists ?fl (exists ?c (exists ?fr (and (Is ?t 'tree') (HasMaterial ?t 'metal') (or (not (Is ?l 'lamp')) (On ?l ?t)) (LeftOf ?p ?t) (NextTo ?pl ?t) (Is ?p 'person') (On ?g ?p) (Is ?pl 'plant') (On ?fl ?pl) (On ?s ?p) (HasShape ?g 'round') (NextTo ?c ?pl) (Is ?fl 'flower') (NextTo ?h ?p) (HasMaterial ?s 'leather') (Is ?g 'glasses') (Is ?c 'cake') (In ?fr ?c) (HasState ?h 'standing') (Is ?s 'shoes') (Is ?fr 'fruit') (Is ?h 'horse')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lamp",
+        "shoes",
+        "flower",
+        "horse",
+        "glasses",
+        "tree",
+        "fruit",
+        "cake",
+        "person",
+        "plant"
+    ]
+}

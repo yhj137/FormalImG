@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo featuring an elephant holding a peeled banana and a dirty fork. To the left of the elephant is a horse with a teddy bear on its back. To the right of the elephant, a lion sits on a shirt. Every fish in the scene is positioned to the left of the elephant. A hammer is next to the shirt, and a screwdriver is next to the hammer.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?b (exists ?fo (exists ?h (exists ?t (exists ?l (exists ?s (and (Is ?e 'elephant') (Is ?b 'banana') (Is ?fo 'fork') (Is ?h 'horse') (Is ?t 'teddy bear') (Is ?l 'lion') (Is ?s 'shirt') (Holding ?e ?b) (HasState ?b 'peeled') (Holding ?e ?fo) (HasState ?fo 'dirty') (LeftOf ?h ?e) (On ?t ?h) (RightOf ?l ?e) (On ?l ?s) (forall ?fi (implies (Is ?fi 'fish') (LeftOf ?fi ?e))) (exists ?ha (exists ?sc (and (Is ?ha 'hammer') (Is ?sc 'screwdriver') (NextTo ?ha ?s) (NextTo ?sc ?ha)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?b (exists ?fo (exists ?h (exists ?t (exists ?l (exists ?s (forall ?fi (exists ?ha (exists ?sc (and (Is ?e 'elephant') (Holding ?e ?b) (Holding ?e ?fo) (Is ?b 'banana') (HasState ?b 'peeled') (LeftOf ?h ?e) (Is ?fo 'fork') (HasState ?fo 'dirty') (RightOf ?l ?e) (Is ?h 'horse') (On ?t ?h) (or (not (Is ?fi 'fish')) (LeftOf ?fi ?e)) (Is ?l 'lion') (On ?l ?s) (Is ?t 'teddy bear') (Is ?s 'shirt') (NextTo ?ha ?s) (Is ?ha 'hammer') (NextTo ?sc ?ha) (Is ?sc 'screwdriver')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "shirt",
+        "fish",
+        "fork",
+        "horse",
+        "teddy bear",
+        "hammer",
+        "lion",
+        "screwdriver",
+        "banana"
+    ]
+}

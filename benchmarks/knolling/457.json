@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every camera present in the scene, it is black, and there are a pair of glasses and a white glove arranged with it. Specifically, the glasses are located above the camera, and the camera is aligned horizontally with the white glove.",
+    "dsl": "(and (forall ?c (implies (Is ?c 'camera') (exists ?g (exists ?gl (and (Is ?g 'glasses') (Is ?gl 'glove') (Has ?c 'black') (Has ?gl 'white') (Above ?g ?c) (AlignedHorizontally ?c ?gl)))))))",
+    "cnf": "(forall ?c (exists ?g (exists ?gl (and (or (not (Is ?c 'camera')) (Is ?g 'glasses')) (or (not (Is ?c 'camera')) (Above ?g ?c)) (or (not (Is ?c 'camera')) (Is ?gl 'glove')) (or (not (Is ?c 'camera')) (Has ?gl 'white')) (or (not (Is ?c 'camera')) (AlignedHorizontally ?c ?gl)) (or (not (Is ?c 'camera')) (Has ?c 'black'))))))",
+    "k": 3,
+    "object_classes": [
+        "glasses",
+        "glove",
+        "camera"
+    ]
+}

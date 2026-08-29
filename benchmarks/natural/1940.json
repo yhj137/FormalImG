@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring a sofa inside a house, with a teddy bear holding a hammer sitting on it. An umbrella is next to the sofa, and a wooden bench is located to the right. Every orange rests on a bookshelf next to the bench, and beside each orange is a cup with a spoon inside.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?s (exists ?tb (exists ?hm (exists ?u (exists ?bn (and (Is ?h 'house') (Is ?s 'sofa') (In ?s ?h) (Is ?tb 'teddy bear') (On ?tb ?s) (Is ?hm 'hammer') (Holding ?tb ?hm) (Is ?u 'umbrella') (NextTo ?u ?s) (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (RightOf ?bn ?s) (forall ?o (implies (Is ?o 'orange') (exists ?c (exists ?sp (exists ?bs (and (Is ?c 'cup') (Is ?sp 'spoon') (Is ?bs 'bookshelf') (NextTo ?c ?o) (In ?sp ?c) (On ?o ?bs) (NextTo ?bs ?bn)))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?s (exists ?tb (exists ?hm (exists ?u (exists ?bn (forall ?o (exists ?c (exists ?sp (exists ?bs (and (Is ?h 'house') (In ?s ?h) (Is ?s 'sofa') (On ?tb ?s) (NextTo ?u ?s) (Is ?tb 'teddy bear') (Holding ?tb ?hm) (RightOf ?bn ?s) (Is ?u 'umbrella') (Is ?hm 'hammer') (HasMaterial ?bn 'wooden') (or (not (Is ?o 'orange')) (NextTo ?bs ?bn)) (Is ?bn 'bench') (or (not (Is ?o 'orange')) (On ?o ?bs)) (or (not (Is ?o 'orange')) (In ?sp ?c)) (or (not (Is ?o 'orange')) (Is ?bs 'bookshelf')) (or (not (Is ?o 'orange')) (NextTo ?c ?o)) (or (not (Is ?o 'orange')) (Is ?sp 'spoon')) (or (not (Is ?o 'orange')) (Is ?c 'cup'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "sofa",
+        "bench",
+        "spoon",
+        "teddy bear",
+        "orange",
+        "hammer",
+        "cup",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a brown shoe. A gray hammer is below the shoe. A black camera is below the hammer. A carrot is below the camera. A gray spoon is below the carrot. A yellow lemon is below the spoon. The brown shoe is larger than the yellow lemon.",
+    "dsl": "(exists ?shoe (exists ?hammer (exists ?camera (exists ?carrot (exists ?spoon (exists ?lemon (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (Is ?hammer 'hammer') (Has ?hammer 'gray') (Is ?camera 'camera') (Has ?camera 'black') (Is ?carrot 'carrot') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Below ?hammer ?shoe) (Below ?camera ?hammer) (Below ?carrot ?camera) (Below ?spoon ?carrot) (Below ?lemon ?spoon) (LargerThan ?shoe ?lemon))))))))",
+    "cnf": "(exists ?shoe (exists ?hammer (exists ?camera (exists ?carrot (exists ?spoon (exists ?lemon (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (Below ?hammer ?shoe) (LargerThan ?shoe ?lemon) (Has ?hammer 'gray') (Below ?camera ?hammer) (Below ?lemon ?spoon) (Is ?hammer 'hammer') (Has ?camera 'black') (Below ?carrot ?camera) (Below ?spoon ?carrot) (Has ?lemon 'yellow') (Is ?camera 'camera') (Is ?carrot 'carrot') (Has ?spoon 'gray') (Is ?lemon 'lemon') (Is ?spoon 'spoon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "lemon",
+        "carrot",
+        "hammer",
+        "camera",
+        "spoon",
+        "shoe"
+    ]
+}

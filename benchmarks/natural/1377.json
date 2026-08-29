@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene showing a child and a fabric shirt on a sofa. A clock stands to the right of the sofa. The child holds a metal fork and an umbrella containing every fruit in the scene.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?so (exists ?ch (exists ?cl (exists ?sh (exists ?um (exists ?fo (and (Is ?so 'sofa') (Is ?ch 'child') (Is ?cl 'clock') (Is ?sh 'shirt') (Is ?um 'umbrella') (Is ?fo 'fork') (On ?ch ?so) (RightOf ?cl ?so) (On ?sh ?so) (HasMaterial ?sh 'fabric') (Holding ?ch ?um) (Holding ?ch ?fo) (HasMaterial ?fo 'metal') (forall ?fr (implies (Is ?fr 'fruit') (In ?fr ?um)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?so (exists ?ch (exists ?cl (exists ?sh (exists ?um (exists ?fo (forall ?fr (and (Is ?so 'sofa') (On ?ch ?so) (RightOf ?cl ?so) (Is ?ch 'child') (Holding ?ch ?um) (On ?sh ?so) (Is ?cl 'clock') (Holding ?ch ?fo) (Is ?um 'umbrella') (or (not (Is ?fr 'fruit')) (In ?fr ?um)) (Is ?sh 'shirt') (HasMaterial ?sh 'fabric') (Is ?fo 'fork') (HasMaterial ?fo 'metal'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "umbrella",
+        "shirt",
+        "sofa",
+        "child",
+        "fork",
+        "clock"
+    ]
+}

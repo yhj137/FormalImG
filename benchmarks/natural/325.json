@@ -1,0 +1,10 @@
+{
+    "prompt": "A pixel art image where every person is holding a metal lamp.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?p (implies (Is ?p 'person') (exists ?l (and (Is ?l 'lamp') (HasMaterial ?l 'metal') (Holding ?p ?l))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?p (exists ?l (and (or (not (Is ?p 'person')) (Is ?l 'lamp')) (or (not (Is ?p 'person')) (HasMaterial ?l 'metal')) (or (not (Is ?p 'person')) (Holding ?p ?l))))))",
+    "k": 2,
+    "object_classes": [
+        "lamp",
+        "person"
+    ]
+}

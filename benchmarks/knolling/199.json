@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. All sandwiches in the scene are positioned on the right side of the image.",
+    "dsl": "(forall ?s (implies (Is ?s 'sandwich') (OnRightSide ?s)))",
+    "cnf": "(forall ?s (or (not (Is ?s 'sandwich')) (OnRightSide ?s)))",
+    "k": 1,
+    "object_classes": [
+        "sandwich"
+    ]
+}

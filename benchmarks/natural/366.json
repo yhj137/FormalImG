@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a metal person, and every cake is located next to them.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'person') (HasMaterial ?p 'metal') (forall ?c (implies (Is ?c 'cake') (NextTo ?c ?p))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (forall ?c (and (Is ?p 'person') (HasMaterial ?p 'metal') (or (not (Is ?c 'cake')) (NextTo ?c ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "cake",
+        "person"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is placed at the top of the arrangement. Below it, a bowl and a sandwich are aligned horizontally. On the bottom side of the image, there are scissors and a watch that are aligned horizontally. The scissors are arranged below the bowl and aligned vertically with it, and the watch is arranged below the sandwich and aligned vertically with it. Additionally, for every pen included in the scene, it is smaller than the monitor, located below the monitor, and aligned vertically with it.",
+    "dsl": "(exists ?monitor (exists ?bowl (exists ?sandwich (exists ?scissors (exists ?watch (and (Is ?monitor 'monitor') (Is ?bowl 'bowl') (Is ?sandwich 'sandwich') (Is ?scissors 'scissors') (Is ?watch 'watch') (Below ?bowl ?monitor) (Below ?sandwich ?monitor) (AlignedHorizontally ?bowl ?sandwich) (OnBottomSide ?scissors) (OnBottomSide ?watch) (Below ?scissors ?bowl) (Below ?watch ?sandwich) (AlignedVertically ?scissors ?bowl) (AlignedVertically ?watch ?sandwich) (AlignedHorizontally ?scissors ?watch) (forall ?pen (implies (Is ?pen 'pen') (and (Below ?pen ?monitor) (AlignedVertically ?pen ?monitor) (SmallerThan ?pen ?monitor))))))))))",
+    "cnf": "(exists ?monitor (exists ?bowl (exists ?sandwich (exists ?scissors (exists ?watch (forall ?pen (and (Is ?monitor 'monitor') (Below ?bowl ?monitor) (Below ?sandwich ?monitor) (Is ?bowl 'bowl') (AlignedHorizontally ?bowl ?sandwich) (or (not (Is ?pen 'pen')) (Below ?pen ?monitor)) (Is ?sandwich 'sandwich') (Below ?scissors ?bowl) (Below ?watch ?sandwich) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?monitor)) (AlignedVertically ?scissors ?bowl) (OnBottomSide ?scissors) (AlignedVertically ?watch ?sandwich) (OnBottomSide ?watch) (or (not (Is ?pen 'pen')) (SmallerThan ?pen ?monitor)) (AlignedHorizontally ?scissors ?watch) (Is ?scissors 'scissors') (Is ?watch 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "watch",
+        "bowl",
+        "scissors",
+        "pen",
+        "monitor",
+        "sandwich"
+    ]
+}

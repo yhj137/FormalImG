@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a brown wallet and a pair of gray scissors, where the brown wallet is placed vertically above the gray scissors.",
+    "dsl": "(exists ?wallet (exists ?scissors (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?scissors 'scissors') (Has ?scissors 'gray') (Above ?wallet ?scissors))))",
+    "cnf": "(exists ?wallet (exists ?scissors (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Above ?wallet ?scissors) (Has ?scissors 'gray') (Is ?scissors 'scissors'))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "wallet"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding leather shoes. Every flower in the scene is withered and tucked inside the shoes along with an apple.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'woman') (exists ?s (and (Is ?s 'shoes') (HasMaterial ?s 'leather') (Holding ?w ?s) (forall ?f (implies (Is ?f 'flower') (exists ?a (and (Is ?a 'apple') (HasState ?f 'withered') (In ?f ?s) (In ?a ?s))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?s (forall ?f (exists ?a (and (Is ?w 'woman') (Holding ?w ?s) (HasMaterial ?s 'leather') (or (not (Is ?f 'flower')) (In ?f ?s)) (Is ?s 'shoes') (or (not (Is ?f 'flower')) (In ?a ?s)) (or (not (Is ?f 'flower')) (HasState ?f 'withered')) (or (not (Is ?f 'flower')) (Is ?a 'apple'))))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "shoes",
+        "flower",
+        "woman"
+    ]
+}

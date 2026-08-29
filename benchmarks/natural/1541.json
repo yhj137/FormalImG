@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an elephant holding an open umbrella. An oval mirror is located to the left of the elephant, with a fish to the left of the mirror. A leather jacket is placed to the right of the mirror. To the right of the elephant is an open backpack containing a pair of glasses and all the keys.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?u (exists ?m (exists ?j (exists ?b (and (Is ?e 'elephant') (Is ?u 'umbrella') (Is ?m 'mirror') (Is ?j 'jacket') (Is ?b 'backpack') (HasState ?u 'open') (Holding ?e ?u) (HasShape ?m 'oval') (LeftOf ?m ?e) (HasMaterial ?j 'leather') (RightOf ?j ?m) (HasState ?b 'open') (RightOf ?b ?e) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?f (and (Is ?f 'fish') (LeftOf ?f ?m))) (exists ?g (and (Is ?g 'glasses') (In ?g ?b))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?u (exists ?m (exists ?j (exists ?b (forall ?k (exists ?f (exists ?g (and (Is ?e 'elephant') (Holding ?e ?u) (LeftOf ?m ?e) (HasState ?u 'open') (RightOf ?b ?e) (HasShape ?m 'oval') (RightOf ?j ?m) (Is ?u 'umbrella') (HasState ?b 'open') (or (not (Is ?k 'key')) (In ?k ?b)) (Is ?m 'mirror') (LeftOf ?f ?m) (HasMaterial ?j 'leather') (Is ?b 'backpack') (In ?g ?b) (Is ?f 'fish') (Is ?j 'jacket') (Is ?g 'glasses')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "umbrella",
+        "jacket",
+        "glasses",
+        "fish",
+        "backpack",
+        "mirror",
+        "elephant"
+    ]
+}

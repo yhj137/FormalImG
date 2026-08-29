@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A horse is standing on the left. To the right of the horse, there is a black dog that is sitting. Located to the right of the dog is a keyboard, and a yellow, peeled banana is resting on the keyboard.",
+    "dsl": "(exists ?h (exists ?d (exists ?k (exists ?b (and (Is ?h 'horse') (HasState ?h 'standing') (Is ?d 'dog') (HasColor ?d 'black') (HasState ?d 'sitting') (RightOf ?d ?h) (Is ?k 'keyboard') (RightOf ?k ?d) (Is ?b 'banana') (HasColor ?b 'yellow') (HasState ?b 'peeled') (On ?b ?k))))))",
+    "cnf": "(exists ?h (exists ?d (exists ?k (exists ?b (and (Is ?h 'horse') (HasState ?h 'standing') (RightOf ?d ?h) (HasState ?d 'sitting') (RightOf ?k ?d) (HasColor ?d 'black') (Is ?k 'keyboard') (On ?b ?k) (Is ?d 'dog') (HasState ?b 'peeled') (HasColor ?b 'yellow') (Is ?b 'banana'))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "dog",
+        "horse",
+        "banana"
+    ]
+}

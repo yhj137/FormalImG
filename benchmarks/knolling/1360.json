@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a backpack, a cutting board, a drill, a bottle, and a tie, all of which are positioned on the top side of the image and aligned horizontally. Furthermore, for every game controller in the scene, there is a wallet that is smaller than the game controller. The game controller is aligned horizontally with the backpack, and the wallet is aligned horizontally with the game controller.",
+    "dsl": "(exists ?backpack (exists ?cutting_board (exists ?drill (exists ?bottle (exists ?tie (and (Is ?backpack 'backpack') (Is ?cutting_board 'cutting_board') (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?tie 'tie') (OnTopSide ?backpack) (OnTopSide ?cutting_board) (OnTopSide ?drill) (OnTopSide ?bottle) (OnTopSide ?tie) (AlignedHorizontally ?backpack ?cutting_board) (AlignedHorizontally ?cutting_board ?drill) (AlignedHorizontally ?drill ?bottle) (AlignedHorizontally ?bottle ?tie) (forall ?gc (implies (Is ?gc 'game_controller') (exists ?w (and (Is ?w 'wallet') (SmallerThan ?w ?gc) (AlignedHorizontally ?w ?gc) (AlignedHorizontally ?gc ?backpack)))))))))))",
+    "cnf": "(exists ?backpack (exists ?cutting_board (exists ?drill (exists ?bottle (exists ?tie (forall ?gc (exists ?w (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?cutting_board) (or (not (Is ?gc 'game_controller')) (AlignedHorizontally ?gc ?backpack)) (OnTopSide ?cutting_board) (AlignedHorizontally ?cutting_board ?drill) (or (not (Is ?gc 'game_controller')) (AlignedHorizontally ?w ?gc)) (Is ?cutting_board 'cutting_board') (OnTopSide ?drill) (AlignedHorizontally ?drill ?bottle) (or (not (Is ?gc 'game_controller')) (SmallerThan ?w ?gc)) (Is ?drill 'drill') (OnTopSide ?bottle) (AlignedHorizontally ?bottle ?tie) (or (not (Is ?gc 'game_controller')) (Is ?w 'wallet')) (Is ?bottle 'bottle') (OnTopSide ?tie) (Is ?tie 'tie')))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "backpack",
+        "wallet",
+        "bottle"
+    ]
+}

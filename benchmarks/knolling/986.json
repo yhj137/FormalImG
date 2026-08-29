@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a red suitcase, a gray laptop, a brown cutting board, and blue pliers, which are all aligned horizontally. In terms of size, the suitcase is larger than the laptop, the laptop is larger than the cutting board, and the cutting board is larger than the pliers. Additionally, for any fork in the image, it is aligned horizontally with the pliers and is visually smaller than the pliers.",
+    "dsl": "(exists ?s (exists ?l (exists ?c (exists ?p (and (Is ?s 'suitcase') (Has ?s 'red') (Is ?l 'laptop') (Has ?l 'gray') (Is ?c 'cutting_board') (Has ?c 'brown') (Is ?p 'pliers') (Has ?p 'blue') (AlignedHorizontally ?s ?l) (AlignedHorizontally ?l ?c) (AlignedHorizontally ?c ?p) (LargerThan ?s ?l) (LargerThan ?l ?c) (LargerThan ?c ?p) (forall ?f (implies (Is ?f 'fork') (and (AlignedHorizontally ?p ?f) (LargerThan ?p ?f)))))))))",
+    "cnf": "(exists ?s (exists ?l (exists ?c (exists ?p (forall ?f (and (Is ?s 'suitcase') (Has ?s 'red') (AlignedHorizontally ?s ?l) (LargerThan ?s ?l) (Has ?l 'gray') (AlignedHorizontally ?l ?c) (LargerThan ?l ?c) (Is ?l 'laptop') (Has ?c 'brown') (AlignedHorizontally ?c ?p) (LargerThan ?c ?p) (Is ?c 'cutting_board') (Has ?p 'blue') (or (not (Is ?f 'fork')) (AlignedHorizontally ?p ?f)) (Is ?p 'pliers') (or (not (Is ?f 'fork')) (LargerThan ?p ?f))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "cutting_board",
+        "fork",
+        "suitcase"
+    ]
+}

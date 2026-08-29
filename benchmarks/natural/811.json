@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a white plate to the left of a table. A basket containing a sandwich sits on the table.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?t (exists ?b (exists ?s (and (Is ?w 'woman') (Is ?p 'plate') (Is ?t 'table') (Is ?b 'basket') (Is ?s 'sandwich') (HasColor ?p 'white') (Holding ?w ?p) (LeftOf ?w ?t) (On ?b ?t) (In ?s ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?t (exists ?b (exists ?s (and (Is ?w 'woman') (Holding ?w ?p) (LeftOf ?w ?t) (HasColor ?p 'white') (Is ?t 'table') (On ?b ?t) (Is ?p 'plate') (Is ?b 'basket') (In ?s ?b) (Is ?s 'sandwich'))))))))",
+    "k": 5,
+    "object_classes": [
+        "woman",
+        "sandwich",
+        "basket",
+        "table",
+        "plate"
+    ]
+}

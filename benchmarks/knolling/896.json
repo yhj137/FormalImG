@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A screwdriver is placed on the top side of the layout. For every game controller in the scene, the screwdriver is positioned above it, and they are aligned vertically. A remote lies to the right of the game controller. To the right of the remote is a spoon, which is smaller than the remote. Finally, a white sock is placed above the spoon.",
+    "dsl": "(exists ?sd (and (Is ?sd 'screwdriver') (OnTopSide ?sd) (forall ?gc (implies (Is ?gc 'game_controller') (exists ?rem (exists ?sp (exists ?sock (and (Is ?rem 'remote') (Is ?sp 'spoon') (Is ?sock 'sock') (Has ?sock 'white') (Above ?sd ?gc) (AlignedVertically ?sd ?gc) (RightOf ?rem ?gc) (RightOf ?sp ?rem) (SmallerThan ?sp ?rem) (Above ?sock ?sp)))))))))",
+    "cnf": "(exists ?sd (forall ?gc (exists ?rem (exists ?sp (exists ?sock (and (Is ?sd 'screwdriver') (OnTopSide ?sd) (or (not (Is ?gc 'game_controller')) (Above ?sd ?gc)) (or (not (Is ?gc 'game_controller')) (AlignedVertically ?sd ?gc)) (or (not (Is ?gc 'game_controller')) (Has ?sock 'white')) (or (not (Is ?gc 'game_controller')) (RightOf ?rem ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?sock 'sock')) (or (not (Is ?gc 'game_controller')) (Above ?sock ?sp)) (or (not (Is ?gc 'game_controller')) (Is ?rem 'remote')) (or (not (Is ?gc 'game_controller')) (RightOf ?sp ?rem)) (or (not (Is ?gc 'game_controller')) (Is ?sp 'spoon')) (or (not (Is ?gc 'game_controller')) (SmallerThan ?sp ?rem))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "sock",
+        "screwdriver",
+        "game_controller",
+        "spoon"
+    ]
+}

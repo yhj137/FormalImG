@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown suitcase is located on the left side of the composition. A white plate is placed to the right of the suitcase. Below the suitcase, there is a red screwdriver. To the right of the screwdriver sits a black wallet, and a gray mouse is positioned directly below the wallet.",
+    "dsl": "(exists ?suitcase (exists ?plate (exists ?screwdriver (exists ?wallet (exists ?mouse (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?plate 'plate') (Has ?plate 'white') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?wallet 'wallet') (Has ?wallet 'black') (Is ?mouse 'mouse') (Has ?mouse 'gray') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?plate) (Below ?screwdriver ?suitcase) (LeftOf ?screwdriver ?wallet) (Below ?mouse ?wallet)))))))",
+    "cnf": "(exists ?suitcase (exists ?plate (exists ?screwdriver (exists ?wallet (exists ?mouse (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?plate) (Below ?screwdriver ?suitcase) (Has ?plate 'white') (Has ?screwdriver 'red') (LeftOf ?screwdriver ?wallet) (Is ?plate 'plate') (Is ?screwdriver 'screwdriver') (Has ?wallet 'black') (Below ?mouse ?wallet) (Is ?wallet 'wallet') (Has ?mouse 'gray') (Is ?mouse 'mouse')))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "screwdriver",
+        "wallet",
+        "mouse",
+        "suitcase"
+    ]
+}

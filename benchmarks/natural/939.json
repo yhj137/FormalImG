@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a tree with a cat inside, situated next to a bicycle. Every flower is positioned next to the bicycle, with an oval spoon beside it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?c (and (Is ?t 'tree') (Is ?b 'bicycle') (Is ?c 'cat') (NextTo ?b ?t) (In ?c ?t) (forall ?f (implies (Is ?f 'flower') (exists ?s (and (Is ?s 'spoon') (HasShape ?s 'oval') (NextTo ?f ?b) (NextTo ?s ?f))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (exists ?c (forall ?f (exists ?s (and (Is ?t 'tree') (NextTo ?b ?t) (In ?c ?t) (Is ?b 'bicycle') (or (not (Is ?f 'flower')) (NextTo ?f ?b)) (Is ?c 'cat') (or (not (Is ?f 'flower')) (HasShape ?s 'oval')) (or (not (Is ?f 'flower')) (NextTo ?s ?f)) (or (not (Is ?f 'flower')) (Is ?s 'spoon')))))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "tree",
+        "flower",
+        "bicycle",
+        "cat"
+    ]
+}

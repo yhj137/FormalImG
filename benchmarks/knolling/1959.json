@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue shirt placed above a gray laptop; they are aligned vertically, and the shirt is larger than the laptop. To the right of the shirt is a yellow drill, which is positioned above a black hammer and aligned vertically with it. To the right of the drill is a white plate located above a yellow lemon; these are also aligned vertically, with the plate being larger than the lemon. To the right of the plate is a red stapler. For every pen in the image, it is black and is located below the stapler. Furthermore, for each pen, there is a brown wallet to its right, and a white phone to the right of the wallet. The wallet is larger than the phone.",
+    "dsl": "(exists ?shirt (exists ?laptop (exists ?drill (exists ?hammer (exists ?plate (exists ?lemon (exists ?stapler (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?hammer 'hammer') (Has ?hammer 'black') (Is ?plate 'plate') (Has ?plate 'white') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?stapler 'stapler') (Has ?stapler 'red') (Above ?shirt ?laptop) (AlignedVertically ?shirt ?laptop) (LargerThan ?shirt ?laptop) (RightOf ?drill ?shirt) (Above ?drill ?hammer) (AlignedVertically ?drill ?hammer) (RightOf ?plate ?drill) (Above ?plate ?lemon) (AlignedVertically ?plate ?lemon) (LargerThan ?plate ?lemon) (RightOf ?stapler ?plate) (forall ?pen (implies (Is ?pen 'pen') (exists ?wallet (exists ?phone (and (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?phone 'phone') (Has ?phone 'white') (Has ?pen 'black') (Above ?stapler ?pen) (RightOf ?wallet ?pen) (RightOf ?phone ?wallet) (LargerThan ?wallet ?phone))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?laptop (exists ?drill (exists ?hammer (exists ?plate (exists ?lemon (exists ?stapler (forall ?pen (exists ?wallet (exists ?phone (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Above ?shirt ?laptop) (AlignedVertically ?shirt ?laptop) (Has ?laptop 'gray') (LargerThan ?shirt ?laptop) (Is ?laptop 'laptop') (RightOf ?drill ?shirt) (Has ?drill 'yellow') (Above ?drill ?hammer) (Is ?drill 'drill') (AlignedVertically ?drill ?hammer) (Has ?hammer 'black') (RightOf ?plate ?drill) (Is ?hammer 'hammer') (Has ?plate 'white') (Above ?plate ?lemon) (Is ?plate 'plate') (AlignedVertically ?plate ?lemon) (Has ?lemon 'yellow') (LargerThan ?plate ?lemon) (Is ?lemon 'lemon') (RightOf ?stapler ?plate) (Has ?stapler 'red') (or (not (Is ?pen 'pen')) (Above ?stapler ?pen)) (Is ?stapler 'stapler') (or (not (Is ?pen 'pen')) (Has ?pen 'black')) (or (not (Is ?pen 'pen')) (RightOf ?wallet ?pen)) (or (not (Is ?pen 'pen')) (Has ?phone 'white')) (or (not (Is ?pen 'pen')) (RightOf ?phone ?wallet)) (or (not (Is ?pen 'pen')) (Has ?wallet 'brown')) (or (not (Is ?pen 'pen')) (Is ?phone 'phone')) (or (not (Is ?pen 'pen')) (LargerThan ?wallet ?phone)) (or (not (Is ?pen 'pen')) (Is ?wallet 'wallet')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "stapler",
+        "pen",
+        "lemon",
+        "phone",
+        "drill",
+        "hammer",
+        "wallet",
+        "shirt"
+    ]
+}

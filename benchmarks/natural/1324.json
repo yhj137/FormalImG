@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a man next to a bench. To the left of the bench is a bookshelf containing all the fruit. The man is holding a pizza. Next to the bookshelf is a broken clock, with a metal key to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?bs (and (Is ?m 'man') (Is ?b 'bench') (Is ?bs 'bookshelf') (NextTo ?m ?b) (LeftOf ?bs ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?bs))) (exists ?p (exists ?c (exists ?k (and (Is ?p 'pizza') (Is ?c 'clock') (Is ?k 'key') (Holding ?m ?p) (HasState ?c 'broken') (NextTo ?c ?bs) (HasMaterial ?k 'metal') (LeftOf ?k ?c))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?b (exists ?bs (forall ?f (exists ?p (exists ?c (exists ?k (and (Is ?m 'man') (NextTo ?m ?b) (Holding ?m ?p) (Is ?b 'bench') (LeftOf ?bs ?b) (Is ?p 'pizza') (Is ?bs 'bookshelf') (or (not (Is ?f 'fruit')) (In ?f ?bs)) (NextTo ?c ?bs) (HasState ?c 'broken') (LeftOf ?k ?c) (Is ?c 'clock') (HasMaterial ?k 'metal') (Is ?k 'key'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "bench",
+        "man",
+        "pizza",
+        "clock",
+        "bookshelf",
+        "key"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a drill and a donut. The drill is located on the left side of the image, and it appears visually larger than the donut.",
+    "dsl": "(exists ?drill (exists ?donut (and (Is ?drill 'drill') (Is ?donut 'donut') (OnLeftSide ?drill) (LargerThan ?drill ?donut))))",
+    "cnf": "(exists ?drill (exists ?donut (and (Is ?drill 'drill') (OnLeftSide ?drill) (LargerThan ?drill ?donut) (Is ?donut 'donut'))))",
+    "k": 2,
+    "object_classes": [
+        "drill",
+        "donut"
+    ]
+}

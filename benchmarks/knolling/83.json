@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a donut positioned on the left side of the scene.",
+    "dsl": "(exists ?x (and (Is ?x 'donut') (OnLeftSide ?x)))",
+    "cnf": "(exists ?x (and (Is ?x 'donut') (OnLeftSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "donut"
+    ]
+}

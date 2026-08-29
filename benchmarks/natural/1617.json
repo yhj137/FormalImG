@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A child wearing a round hat sits on a sofa, holding a fluffy teddy bear. A leather jacket lies next to the child. To the right of the child is a plate with a toy car inside. A plant stands next to the sofa, with a butterfly resting on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?s (exists ?h (exists ?tb (exists ?j (exists ?p (exists ?tc (exists ?pl (exists ?b (and (Is ?c 'child') (Is ?s 'sofa') (Is ?h 'hat') (Is ?tb 'teddy bear') (Is ?j 'jacket') (Is ?p 'plate') (Is ?tc 'toy car') (Is ?pl 'plant') (Is ?b 'butterfly') (On ?c ?s) (Holding ?c ?tb) (HasMaterial ?tb 'fluffy') (On ?h ?c) (HasShape ?h 'round') (NextTo ?j ?c) (HasMaterial ?j 'leather') (RightOf ?p ?c) (In ?tc ?p) (NextTo ?pl ?s) (On ?b ?pl))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?s (exists ?h (exists ?tb (exists ?j (exists ?p (exists ?tc (exists ?pl (exists ?b (and (Is ?c 'child') (On ?c ?s) (Holding ?c ?tb) (Is ?s 'sofa') (NextTo ?pl ?s) (On ?h ?c) (Is ?tb 'teddy bear') (HasMaterial ?tb 'fluffy') (Is ?pl 'plant') (On ?b ?pl) (NextTo ?j ?c) (Is ?h 'hat') (HasShape ?h 'round') (Is ?b 'butterfly') (RightOf ?p ?c) (Is ?j 'jacket') (HasMaterial ?j 'leather') (Is ?p 'plate') (In ?tc ?p) (Is ?tc 'toy car'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "jacket",
+        "sofa",
+        "toy car",
+        "plant",
+        "hat",
+        "butterfly",
+        "teddy bear",
+        "child",
+        "plate"
+    ]
+}

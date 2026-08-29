@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a boat with a black pan on it. Every keyboard is located to the right of the pan.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?p (and (Is ?b 'boat') (Is ?p 'pan') (HasColor ?p 'black') (On ?p ?b) (forall ?k (implies (Is ?k 'keyboard') (RightOf ?k ?p)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (forall ?k (and (Is ?b 'boat') (On ?p ?b) (HasColor ?p 'black') (or (not (Is ?k 'keyboard')) (RightOf ?k ?p)) (Is ?p 'pan'))))))",
+    "k": 3,
+    "object_classes": [
+        "boat",
+        "pan",
+        "keyboard"
+    ]
+}

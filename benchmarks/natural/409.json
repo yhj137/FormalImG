@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a bird nestled inside plastic headphones, holding a fork next to the headphones.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?f (and (Is ?b 'bird') (Is ?h 'headphones') (HasMaterial ?h 'plastic') (Is ?f 'fork') (In ?b ?h) (Holding ?b ?f) (NextTo ?f ?h))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (exists ?f (and (Is ?b 'bird') (In ?b ?h) (Holding ?b ?f) (HasMaterial ?h 'plastic') (NextTo ?f ?h) (Is ?f 'fork') (Is ?h 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "bird",
+        "fork",
+        "headphones"
+    ]
+}

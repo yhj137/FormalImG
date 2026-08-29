@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a man on a rug, wearing glasses and a black hat, holding a screwdriver. A bus is located to the right of the rug. A cup sits on the rug next to a pizza. Every fruit in the scene is inside the cup, and an apple is positioned to the left of the pizza.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?r (exists ?b (exists ?h (exists ?g (exists ?sd (exists ?c (exists ?p (and (Is ?m 'man') (Is ?r 'rug') (Is ?b 'bus') (Is ?h 'hat') (Is ?g 'glasses') (Is ?sd 'screwdriver') (Is ?c 'cup') (Is ?p 'pizza') (On ?m ?r) (RightOf ?b ?r) (On ?h ?m) (HasColor ?h 'black') (On ?g ?m) (Holding ?m ?sd) (On ?c ?r) (NextTo ?p ?c) (forall ?f (implies (Is ?f 'fruit') (In ?f ?c))) (exists ?a (and (Is ?a 'apple') (LeftOf ?a ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?r (exists ?b (exists ?h (exists ?g (exists ?sd (exists ?c (exists ?p (forall ?f (exists ?a (and (Is ?m 'man') (On ?m ?r) (On ?h ?m) (Is ?r 'rug') (RightOf ?b ?r) (On ?g ?m) (Is ?h 'hat') (HasColor ?h 'black') (On ?c ?r) (Is ?b 'bus') (Holding ?m ?sd) (Is ?g 'glasses') (Is ?c 'cup') (NextTo ?p ?c) (Is ?sd 'screwdriver') (or (not (Is ?f 'fruit')) (In ?f ?c)) (Is ?p 'pizza') (LeftOf ?a ?p) (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "glasses",
+        "rug",
+        "man",
+        "pizza",
+        "cup",
+        "apple",
+        "screwdriver",
+        "bus",
+        "hat"
+    ]
+}

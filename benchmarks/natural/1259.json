@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a blue house. Every tree stands next to the house. Inside the house, there is a refrigerator containing a bottle and a plate, as well as a lion holding a spoon.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (HasColor ?h 'blue') (forall ?t (implies (Is ?t 'tree') (NextTo ?t ?h))) (exists ?r (exists ?b (exists ?p (exists ?l (exists ?s (and (Is ?r 'refrigerator') (In ?r ?h) (Is ?b 'bottle') (In ?b ?r) (Is ?p 'plate') (In ?p ?r) (Is ?l 'lion') (In ?l ?h) (Is ?s 'spoon') (Holding ?l ?s))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?t (exists ?r (exists ?b (exists ?p (exists ?l (exists ?s (and (Is ?h 'house') (HasColor ?h 'blue') (or (not (Is ?t 'tree')) (NextTo ?t ?h)) (In ?r ?h) (In ?l ?h) (Is ?r 'refrigerator') (In ?b ?r) (Is ?l 'lion') (Holding ?l ?s) (In ?p ?r) (Is ?b 'bottle') (Is ?s 'spoon') (Is ?p 'plate'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "plate",
+        "refrigerator",
+        "tree",
+        "house",
+        "lion",
+        "spoon"
+    ]
+}

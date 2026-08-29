@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every lion holds a backpack containing a shirt and a metal hammer. To the right of each lion is a pan with a cake inside, and a cat is positioned to the right of the pan.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?l (implies (Is ?l 'lion') (exists ?b (exists ?s (exists ?h (exists ?p (exists ?k (exists ?c (and (Is ?b 'backpack') (Is ?s 'shirt') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Is ?p 'pan') (Is ?k 'cake') (Is ?c 'cat') (Holding ?l ?b) (In ?s ?b) (In ?h ?b) (LeftOf ?l ?p) (In ?k ?p) (LeftOf ?p ?c)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?l (exists ?b (exists ?s (exists ?h (exists ?p (exists ?k (exists ?c (and (or (not (Is ?l 'lion')) (Is ?b 'backpack')) (or (not (Is ?l 'lion')) (Is ?s 'shirt')) (or (not (Is ?l 'lion')) (Holding ?l ?b)) (or (not (Is ?l 'lion')) (Is ?h 'hammer')) (or (not (Is ?l 'lion')) (In ?s ?b)) (or (not (Is ?l 'lion')) (Is ?c 'cat')) (or (not (Is ?l 'lion')) (HasMaterial ?h 'metal')) (or (not (Is ?l 'lion')) (In ?h ?b)) (or (not (Is ?l 'lion')) (Is ?k 'cake')) (or (not (Is ?l 'lion')) (LeftOf ?p ?c)) (or (not (Is ?l 'lion')) (Is ?p 'pan')) (or (not (Is ?l 'lion')) (LeftOf ?l ?p)) (or (not (Is ?l 'lion')) (In ?k ?p)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lion",
+        "hammer",
+        "cake",
+        "pan",
+        "shirt",
+        "cat",
+        "backpack"
+    ]
+}

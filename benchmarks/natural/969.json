@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. There is a car positioned next to a flower. A sliced pizza sits on the car, and a metal fork is located to the left of the pizza. Every butterfly in the scene is on the flower.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?fl (exists ?p (exists ?fo (and (Is ?c 'car') (Is ?fl 'flower') (Is ?p 'pizza') (Is ?fo 'fork') (NextTo ?c ?fl) (On ?p ?c) (HasState ?p 'sliced') (HasMaterial ?fo 'metal') (LeftOf ?fo ?p) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?fl)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?fl (exists ?p (exists ?fo (forall ?b (and (Is ?c 'car') (NextTo ?c ?fl) (On ?p ?c) (Is ?fl 'flower') (or (not (Is ?b 'butterfly')) (On ?b ?fl)) (Is ?p 'pizza') (HasState ?p 'sliced') (LeftOf ?fo ?p) (HasMaterial ?fo 'metal') (Is ?fo 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "pizza",
+        "flower",
+        "car",
+        "butterfly"
+    ]
+}

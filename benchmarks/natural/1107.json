@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is on a fluffy rug, holding a basket with a phone inside. All dogs are brown and to the left of the rug. A butterfly is above the person.",
+    "dsl": "(exists ?p (exists ?r (and (Is ?p 'person') (Is ?r 'rug') (HasMaterial ?r 'fluffy') (On ?p ?r) (forall ?d (implies (Is ?d 'dog') (and (HasColor ?d 'brown') (LeftOf ?d ?r)))) (exists ?ba (exists ?ph (exists ?b (and (Is ?ba 'basket') (Is ?ph 'phone') (Is ?b 'butterfly') (Holding ?p ?ba) (In ?ph ?ba) (Above ?b ?p))))))))",
+    "cnf": "(exists ?p (exists ?r (forall ?d (exists ?ba (exists ?ph (exists ?b (and (Is ?p 'person') (On ?p ?r) (Holding ?p ?ba) (HasMaterial ?r 'fluffy') (or (not (Is ?d 'dog')) (LeftOf ?d ?r)) (Above ?b ?p) (Is ?ba 'basket') (In ?ph ?ba) (Is ?r 'rug') (or (not (Is ?d 'dog')) (HasColor ?d 'brown')) (Is ?b 'butterfly') (Is ?ph 'phone'))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "person",
+        "rug",
+        "butterfly",
+        "basket",
+        "dog"
+    ]
+}

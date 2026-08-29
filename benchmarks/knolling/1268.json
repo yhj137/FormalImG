@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a camera positioned on the top side of the scene. For every phone in the image, it is located below the camera. A lemon is placed to the left of the phone, and a pen is placed to the right of the phone. Additionally, a pair of pliers is located below the phone, with a fork to the left of the pliers and a glove to the right of the pliers. The camera is visually larger than the lemon.",
+    "dsl": "(exists ?c (and (Is ?c 'camera') (OnTopSide ?c) (forall ?p (implies (Is ?p 'phone') (exists ?l (exists ?pen (exists ?pl (exists ?f (exists ?g (and (Is ?l 'lemon') (Is ?pen 'pen') (Is ?pl 'pliers') (Is ?f 'fork') (Is ?g 'glove') (Below ?p ?c) (LeftOf ?l ?p) (RightOf ?pen ?p) (Below ?pl ?p) (LeftOf ?f ?pl) (RightOf ?g ?pl) (LargerThan ?c ?l)))))))))))",
+    "cnf": "(exists ?c (forall ?p (exists ?l (exists ?pen (exists ?pl (exists ?f (exists ?g (and (Is ?c 'camera') (OnTopSide ?c) (or (not (Is ?p 'phone')) (Below ?p ?c)) (or (not (Is ?p 'phone')) (LargerThan ?c ?l)) (or (not (Is ?p 'phone')) (Is ?g 'glove')) (or (not (Is ?p 'phone')) (LeftOf ?l ?p)) (or (not (Is ?p 'phone')) (RightOf ?g ?pl)) (or (not (Is ?p 'phone')) (Is ?f 'fork')) (or (not (Is ?p 'phone')) (RightOf ?pen ?p)) (or (not (Is ?p 'phone')) (Is ?l 'lemon')) (or (not (Is ?p 'phone')) (LeftOf ?f ?pl)) (or (not (Is ?p 'phone')) (Is ?pl 'pliers')) (or (not (Is ?p 'phone')) (Below ?pl ?p)) (or (not (Is ?p 'phone')) (Is ?pen 'pen'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "pen",
+        "lemon",
+        "phone",
+        "fork",
+        "camera",
+        "glove"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring an empty bowl, with all pizzas located to its left.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bowl') (HasState ?b 'empty') (forall ?p (implies (Is ?p 'pizza') (LeftOf ?p ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?p (and (Is ?b 'bowl') (HasState ?b 'empty') (or (not (Is ?p 'pizza')) (LeftOf ?p ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "bowl"
+    ]
+}

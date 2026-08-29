@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe present in the scene, there is a ruler located directly below it. Additionally, there is a backpack positioned to the left of that ruler, with the backpack specifically situated on the bottom side of the image.",
+    "dsl": "(and (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?ruler (exists ?backpack (and (Is ?ruler 'ruler') (Is ?backpack 'backpack') (Below ?ruler ?shoe) (LeftOf ?backpack ?ruler) (OnBottomSide ?backpack)))))))",
+    "cnf": "(forall ?shoe (exists ?ruler (exists ?backpack (and (or (not (Is ?shoe 'shoe')) (Is ?ruler 'ruler')) (or (not (Is ?shoe 'shoe')) (Is ?backpack 'backpack')) (or (not (Is ?shoe 'shoe')) (Below ?ruler ?shoe)) (or (not (Is ?shoe 'shoe')) (LeftOf ?backpack ?ruler)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?backpack))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "backpack",
+        "shoe"
+    ]
+}

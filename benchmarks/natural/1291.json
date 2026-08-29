@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk style scene, a wardrobe stands to the right of a rectangular table. A keyboard and every orange in the scene are placed on the table, while a screwdriver is inside the wardrobe. To the right of the wardrobe sits a bench, with a boat next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (and (Is ?t 'table') (HasShape ?t 'rectangular') (Is ?w 'wardrobe') (RightOf ?w ?t) (forall ?o (implies (Is ?o 'orange') (On ?o ?t))) (exists ?s (exists ?k (exists ?bn (exists ?bt (and (Is ?s 'screwdriver') (Is ?k 'keyboard') (Is ?bn 'bench') (Is ?bt 'boat') (In ?s ?w) (On ?k ?t) (RightOf ?bn ?w) (NextTo ?bt ?bn))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?w (forall ?o (exists ?s (exists ?k (exists ?bn (exists ?bt (and (Is ?t 'table') (HasShape ?t 'rectangular') (RightOf ?w ?t) (or (not (Is ?o 'orange')) (On ?o ?t)) (Is ?w 'wardrobe') (In ?s ?w) (On ?k ?t) (RightOf ?bn ?w) (Is ?s 'screwdriver') (Is ?k 'keyboard') (Is ?bn 'bench') (NextTo ?bt ?bn) (Is ?bt 'boat'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "orange",
+        "table",
+        "boat",
+        "screwdriver",
+        "keyboard",
+        "wardrobe"
+    ]
+}

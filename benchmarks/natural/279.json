@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every lamp has a red ball to its left.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?l (implies (Is ?l 'lamp') (exists ?b (and (Is ?b 'ball') (HasColor ?b 'red') (LeftOf ?b ?l))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?l (exists ?b (and (or (not (Is ?l 'lamp')) (Is ?b 'ball')) (or (not (Is ?l 'lamp')) (HasColor ?b 'red')) (or (not (Is ?l 'lamp')) (LeftOf ?b ?l))))))",
+    "k": 2,
+    "object_classes": [
+        "lamp",
+        "ball"
+    ]
+}

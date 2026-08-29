@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting an open refrigerator. To the right sits a monitor with a blooming plant and a flower resting on it. All the fruit in the scene is inside the refrigerator. To the left stands a chair with a black jacket and a shirt on it, positioned beneath a mirror.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (exists ?m (and (Is ?m 'monitor') (RightOf ?m ?r) (exists ?p (and (Is ?p 'plant') (HasState ?p 'blooming') (On ?p ?m))) (exists ?fl (and (Is ?fl 'flower') (On ?fl ?m))))) (forall ?fr (implies (Is ?fr 'fruit') (In ?fr ?r))) (exists ?c (and (Is ?c 'chair') (LeftOf ?c ?r) (exists ?mi (and (Is ?mi 'mirror') (Above ?mi ?c))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (On ?j ?c))) (exists ?s (and (Is ?s 'shirt') (On ?s ?c))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?m (exists ?p (exists ?fl (forall ?fr (exists ?c (exists ?mi (exists ?j (exists ?s (and (Is ?r 'refrigerator') (HasState ?r 'open') (RightOf ?m ?r) (or (not (Is ?fr 'fruit')) (In ?fr ?r)) (Is ?m 'monitor') (On ?p ?m) (LeftOf ?c ?r) (On ?fl ?m) (HasState ?p 'blooming') (Is ?c 'chair') (Above ?mi ?c) (Is ?fl 'flower') (Is ?p 'plant') (On ?j ?c) (Is ?mi 'mirror') (On ?s ?c) (HasColor ?j 'black') (Is ?s 'shirt') (Is ?j 'jacket'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "shirt",
+        "chair",
+        "plant",
+        "monitor",
+        "jacket",
+        "flower",
+        "refrigerator",
+        "mirror"
+    ]
+}

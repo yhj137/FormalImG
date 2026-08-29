@@ -1,0 +1,9 @@
+{
+    "prompt": "All the glasses in the scene are broken.",
+    "dsl": "(forall ?g (implies (Is ?g 'glasses') (HasState ?g 'broken')))",
+    "cnf": "(forall ?g (or (not (Is ?g 'glasses')) (HasState ?g 'broken')))",
+    "k": 1,
+    "object_classes": [
+        "glasses"
+    ]
+}

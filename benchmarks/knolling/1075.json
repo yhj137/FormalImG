@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a gray laptop. For any mouse present, it is aligned horizontally to the right of the laptop. To the right of the mouse, there is a sequence of items also aligned horizontally: a bottle, a pizza, a sandwich, and a white glove. The pizza is visibly larger than the sandwich.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?bottle (exists ?pizza (exists ?sandwich (exists ?glove (and (Is ?bottle 'bottle') (Is ?pizza 'pizza') (Is ?sandwich 'sandwich') (Is ?glove 'glove') (Has ?glove 'white') (RightOf ?mouse ?laptop) (AlignedHorizontally ?mouse ?laptop) (RightOf ?bottle ?mouse) (AlignedHorizontally ?bottle ?mouse) (RightOf ?pizza ?bottle) (AlignedHorizontally ?pizza ?bottle) (RightOf ?sandwich ?pizza) (AlignedHorizontally ?sandwich ?pizza) (RightOf ?glove ?sandwich) (AlignedHorizontally ?glove ?sandwich) (LargerThan ?pizza ?sandwich))))))))))",
+    "cnf": "(exists ?laptop (forall ?mouse (exists ?bottle (exists ?pizza (exists ?sandwich (exists ?glove (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (or (not (Is ?mouse 'mouse')) (RightOf ?mouse ?laptop)) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?mouse ?laptop)) (or (not (Is ?mouse 'mouse')) (Has ?glove 'white')) (or (not (Is ?mouse 'mouse')) (RightOf ?bottle ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?glove 'glove')) (or (not (Is ?mouse 'mouse')) (RightOf ?glove ?sandwich)) (or (not (Is ?mouse 'mouse')) (Is ?bottle 'bottle')) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?bottle ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?sandwich 'sandwich')) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?sandwich ?pizza)) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?glove ?sandwich)) (or (not (Is ?mouse 'mouse')) (Is ?pizza 'pizza')) (or (not (Is ?mouse 'mouse')) (RightOf ?pizza ?bottle)) (or (not (Is ?mouse 'mouse')) (RightOf ?sandwich ?pizza)) (or (not (Is ?mouse 'mouse')) (LargerThan ?pizza ?sandwich)) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?pizza ?bottle)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "pizza",
+        "mouse",
+        "bottle",
+        "sandwich",
+        "glove"
+    ]
+}

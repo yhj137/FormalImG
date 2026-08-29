@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the image, there are jeans, a wallet, and a pan. The shirt and the jeans are aligned horizontally. The jeans are larger than the wallet. The wallet is positioned on the right side of the scene and is smaller than the pan.",
+    "dsl": "(forall ?s (implies (Is ?s 'shirt') (exists ?j (exists ?w (exists ?p (and (Is ?j 'jeans') (Is ?w 'wallet') (Is ?p 'pan') (AlignedHorizontally ?s ?j) (LargerThan ?j ?w) (OnRightSide ?w) (SmallerThan ?w ?p)))))))",
+    "cnf": "(forall ?s (exists ?j (exists ?w (exists ?p (and (or (not (Is ?s 'shirt')) (Is ?j 'jeans')) (or (not (Is ?s 'shirt')) (AlignedHorizontally ?s ?j)) (or (not (Is ?s 'shirt')) (Is ?w 'wallet')) (or (not (Is ?s 'shirt')) (LargerThan ?j ?w)) (or (not (Is ?s 'shirt')) (Is ?p 'pan')) (or (not (Is ?s 'shirt')) (OnRightSide ?w)) (or (not (Is ?s 'shirt')) (SmallerThan ?w ?p)))))))",
+    "k": 4,
+    "object_classes": [
+        "wallet",
+        "pan",
+        "jeans",
+        "shirt"
+    ]
+}

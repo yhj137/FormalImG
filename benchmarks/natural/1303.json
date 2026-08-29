@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a bench in the center. To the left of the bench is a bed with a turned-on monitor on it. To the right of the bench stands a horse. All flowers in the scene are red and rest on the bench, alongside a cup containing a banana.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?be (exists ?b (exists ?h (and (Is ?be 'bench') (Is ?b 'bed') (LeftOf ?b ?be) (Is ?h 'horse') (RightOf ?h ?be) (HasState ?h 'standing') (forall ?f (implies (Is ?f 'flower') (and (HasColor ?f 'red') (On ?f ?be)))) (exists ?m (exists ?c (exists ?ba (and (Is ?m 'monitor') (HasState ?m 'on') (On ?m ?b) (Is ?c 'cup') (On ?c ?be) (Is ?ba 'banana') (In ?ba ?c))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?be (exists ?b (exists ?h (forall ?f (exists ?m (exists ?c (exists ?ba (and (Is ?be 'bench') (LeftOf ?b ?be) (RightOf ?h ?be) (Is ?b 'bed') (On ?m ?b) (or (not (Is ?f 'flower')) (On ?f ?be)) (Is ?h 'horse') (HasState ?h 'standing') (HasState ?m 'on') (On ?c ?be) (or (not (Is ?f 'flower')) (HasColor ?f 'red')) (Is ?m 'monitor') (Is ?c 'cup') (In ?ba ?c) (Is ?ba 'banana'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "horse",
+        "bed",
+        "monitor",
+        "flower",
+        "cup",
+        "banana"
+    ]
+}

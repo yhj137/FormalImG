@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every key is inside a house. Inside the house, there is a wooden desk with an open laptop and a flower on it. Next to the desk stands a person wearing a hat and holding a black pan.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?k (implies (Is ?k 'key') (exists ?h (exists ?d (exists ?l (exists ?f (exists ?p (exists ?ht (exists ?pn (and (Is ?h 'house') (Is ?d 'desk') (HasMaterial ?d 'wooden') (In ?k ?h) (In ?d ?h) (Is ?l 'laptop') (On ?l ?d) (HasState ?l 'open') (Is ?f 'flower') (On ?f ?d) (Is ?p 'person') (NextTo ?p ?d) (Is ?ht 'hat') (On ?ht ?p) (Is ?pn 'pan') (Holding ?p ?pn) (HasColor ?pn 'black'))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?k (exists ?h (exists ?d (exists ?l (exists ?f (exists ?p (exists ?ht (exists ?pn (and (or (not (Is ?k 'key')) (Is ?h 'house')) (or (not (Is ?k 'key')) (Is ?d 'desk')) (or (not (Is ?k 'key')) (In ?k ?h)) (or (not (Is ?k 'key')) (HasMaterial ?d 'wooden')) (or (not (Is ?k 'key')) (In ?d ?h)) (or (not (Is ?k 'key')) (Is ?l 'laptop')) (or (not (Is ?k 'key')) (On ?l ?d)) (or (not (Is ?k 'key')) (HasState ?l 'open')) (or (not (Is ?k 'key')) (On ?f ?d)) (or (not (Is ?k 'key')) (Is ?f 'flower')) (or (not (Is ?k 'key')) (Is ?p 'person')) (or (not (Is ?k 'key')) (NextTo ?p ?d)) (or (not (Is ?k 'key')) (Is ?ht 'hat')) (or (not (Is ?k 'key')) (On ?ht ?p)) (or (not (Is ?k 'key')) (Is ?pn 'pan')) (or (not (Is ?k 'key')) (Holding ?p ?pn)) (or (not (Is ?k 'key')) (HasColor ?pn 'black'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "hat",
+        "person",
+        "laptop",
+        "flower",
+        "desk",
+        "pan",
+        "key"
+    ]
+}

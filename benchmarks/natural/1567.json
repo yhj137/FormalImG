@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bench with a dirty shirt on it is located next to a house. To the right of the bench is a table where a round cake sits next to a metal hammer. All rocks are positioned to the left of the house, and there are glasses inside the house.",
+    "dsl": "(exists ?h (exists ?b (exists ?s (exists ?t (exists ?c (exists ?m (and (Is ?h 'house') (Is ?b 'bench') (NextTo ?b ?h) (Is ?s 'shirt') (On ?s ?b) (HasState ?s 'dirty') (Is ?t 'table') (RightOf ?t ?b) (Is ?c 'cake') (On ?c ?t) (HasShape ?c 'round') (Is ?m 'hammer') (NextTo ?m ?c) (HasMaterial ?m 'metal') (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?h))) (exists ?g (and (Is ?g 'glasses') (In ?g ?h))))))))))",
+    "cnf": "(exists ?h (exists ?b (exists ?s (exists ?t (exists ?c (exists ?m (forall ?r (exists ?g (and (Is ?h 'house') (NextTo ?b ?h) (or (not (Is ?r 'rock')) (LeftOf ?r ?h)) (Is ?b 'bench') (On ?s ?b) (In ?g ?h) (RightOf ?t ?b) (Is ?s 'shirt') (HasState ?s 'dirty') (Is ?g 'glasses') (Is ?t 'table') (On ?c ?t) (Is ?c 'cake') (HasShape ?c 'round') (NextTo ?m ?c) (Is ?m 'hammer') (HasMaterial ?m 'metal'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "glasses",
+        "rock",
+        "cake",
+        "hammer",
+        "shirt",
+        "table",
+        "house"
+    ]
+}

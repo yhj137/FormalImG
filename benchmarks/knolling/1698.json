@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features blue jeans, a white game controller, and black headphones. The blue jeans are positioned on the right side of the image, and the headphones are aligned vertically with the jeans. For every white bowl present in the layout, the bowl is aligned horizontally with the jeans, and the game controller is aligned vertically with the bowl. Associated with the bowl are several other items: a gray spoon, a carrot, a green bottle, a red tie, and a brown wallet. Specifically, the spoon is aligned vertically with the bowl and is smaller than it. The carrot aligns horizontally with the bowl. The green bottle aligns vertically with the carrot. The red tie aligns horizontally with the game controller. Finally, the brown wallet aligns horizontally with the headphones and is smaller than the jeans.",
+    "dsl": "(exists ?j (exists ?gc (exists ?hp (and (Is ?j 'jeans') (Has ?j 'blue') (OnRightSide ?j) (Is ?gc 'game_controller') (Has ?gc 'white') (Is ?hp 'headphones') (Has ?hp 'black') (AlignedVertically ?hp ?j) (forall ?b (implies (and (Is ?b 'bowl') (Has ?b 'white')) (exists ?s (exists ?c (exists ?bot (exists ?t (exists ?w (and (Is ?s 'spoon') (Has ?s 'gray') (Is ?c 'carrot') (Is ?bot 'bottle') (Has ?bot 'green') (Is ?t 'tie') (Has ?t 'red') (Is ?w 'wallet') (Has ?w 'brown') (AlignedHorizontally ?b ?j) (AlignedVertically ?gc ?b) (SmallerThan ?s ?b) (AlignedVertically ?s ?b) (AlignedHorizontally ?c ?b) (AlignedVertically ?bot ?c) (AlignedHorizontally ?t ?gc) (AlignedHorizontally ?w ?hp) (SmallerThan ?w ?j)))))))))))))",
+    "cnf": "(exists ?j (exists ?gc (exists ?hp (forall ?b (exists ?s (exists ?c (exists ?bot (exists ?t (exists ?w (and (Is ?j 'jeans') (Has ?j 'blue') (OnRightSide ?j) (AlignedVertically ?hp ?j) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedHorizontally ?b ?j)) (Has ?hp 'black') (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedHorizontally ?w ?hp)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (SmallerThan ?w ?j)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Has ?w 'brown')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedVertically ?gc ?b)) (Is ?hp 'headphones') (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedHorizontally ?t ?gc)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Is ?w 'wallet')) (Has ?gc 'white') (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (SmallerThan ?s ?b)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedVertically ?bot ?c)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Has ?t 'red')) (Is ?gc 'game_controller') (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Has ?s 'gray')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedVertically ?s ?b)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (AlignedHorizontally ?c ?b)) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Has ?bot 'green')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Is ?t 'tie')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Is ?s 'spoon')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Is ?c 'carrot')) (or (not (Is ?b 'bowl')) (not (Has ?b 'white')) (Is ?bot 'bottle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "carrot",
+        "game_controller",
+        "wallet",
+        "jeans",
+        "bottle",
+        "spoon",
+        "bowl",
+        "headphones"
+    ]
+}

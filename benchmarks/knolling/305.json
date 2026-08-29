@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black keyboard in the scene, there corresponds a white cup that is visually smaller than the keyboard.",
+    "dsl": "(and (forall ?k (implies (and (Is ?k 'keyboard') (Has ?k 'black')) (exists ?c (and (Is ?c 'cup') (Has ?c 'white') (SmallerThan ?c ?k))))))",
+    "cnf": "(forall ?k (exists ?c (and (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (Is ?c 'cup')) (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (Has ?c 'white')) (or (not (Is ?k 'keyboard')) (not (Has ?k 'black')) (SmallerThan ?c ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "cup",
+        "keyboard"
+    ]
+}

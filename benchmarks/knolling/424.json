@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a tie, a calculator, and a carrot. The tie is positioned on the bottom side of the layout and is physically larger than the calculator. The carrot is smaller than the calculator.",
+    "dsl": "(exists ?tie (exists ?calc (exists ?carrot (and (Is ?tie 'tie') (Is ?calc 'calculator') (Is ?carrot 'carrot') (OnBottomSide ?tie) (LargerThan ?tie ?calc) (SmallerThan ?carrot ?calc)))))",
+    "cnf": "(exists ?tie (exists ?calc (exists ?carrot (and (Is ?tie 'tie') (OnBottomSide ?tie) (LargerThan ?tie ?calc) (Is ?calc 'calculator') (SmallerThan ?carrot ?calc) (Is ?carrot 'carrot')))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "tie",
+        "calculator"
+    ]
+}

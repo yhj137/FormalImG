@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting. A lion holding a metal hammer stands to the left of a house. A clock is situated next to the house, and every book in the scene is placed next to the clock. A black jacket lies next to the lion, with a red apple beside the jacket. A toy car is also located next to the house.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (exists ?ho (exists ?c (exists ?h (exists ?j (and (Is ?l 'lion') (Is ?ho 'house') (Is ?c 'clock') (Is ?h 'hammer') (Is ?j 'jacket') (Holding ?l ?h) (HasMaterial ?h 'metal') (LeftOf ?l ?ho) (NextTo ?c ?ho) (NextTo ?j ?l) (HasColor ?j 'black') (forall ?b (implies (Is ?b 'book') (NextTo ?b ?c))) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?j))) (exists ?tc (and (Is ?tc 'toy car') (NextTo ?tc ?ho))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?ho (exists ?c (exists ?h (exists ?j (forall ?b (exists ?a (exists ?tc (and (Is ?l 'lion') (Holding ?l ?h) (LeftOf ?l ?ho) (Is ?h 'hammer') (HasMaterial ?h 'metal') (NextTo ?j ?l) (Is ?ho 'house') (NextTo ?c ?ho) (Is ?j 'jacket') (HasColor ?j 'black') (NextTo ?tc ?ho) (Is ?c 'clock') (or (not (Is ?b 'book')) (NextTo ?b ?c)) (NextTo ?a ?j) (Is ?tc 'toy car') (HasColor ?a 'red') (Is ?a 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "book",
+        "jacket",
+        "toy car",
+        "hammer",
+        "clock",
+        "lion",
+        "apple"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of scissors located on the left side of the scene, there is a phone positioned to its right, and a sock is placed directly below the phone.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'scissors') (OnLeftSide ?s)) (exists ?p (exists ?k (and (Is ?p 'phone') (Is ?k 'sock') (LeftOf ?s ?p) (Above ?p ?k)))))))",
+    "cnf": "(forall ?s (exists ?p (exists ?k (and (or (not (Is ?s 'scissors')) (not (OnLeftSide ?s)) (Is ?p 'phone')) (or (not (Is ?s 'scissors')) (not (OnLeftSide ?s)) (Is ?k 'sock')) (or (not (Is ?s 'scissors')) (not (OnLeftSide ?s)) (LeftOf ?s ?p)) (or (not (Is ?s 'scissors')) (not (OnLeftSide ?s)) (Above ?p ?k))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "phone",
+        "sock"
+    ]
+}

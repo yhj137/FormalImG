@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a red screwdriver and a black wallet. The screwdriver is arranged directly above the wallet.",
+    "dsl": "(exists ?screwdriver (exists ?wallet (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?wallet 'wallet') (Has ?wallet 'black') (Above ?screwdriver ?wallet))))",
+    "cnf": "(exists ?screwdriver (exists ?wallet (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Above ?screwdriver ?wallet) (Has ?wallet 'black') (Is ?wallet 'wallet'))))",
+    "k": 2,
+    "object_classes": [
+        "wallet",
+        "screwdriver"
+    ]
+}

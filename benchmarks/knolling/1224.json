@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two neat vertical columns of objects. On the left side of the image, a pan is placed at the top. Directly below the pan is a shoe, followed by a sock below the shoe, and a wallet at the bottom. These four items are aligned vertically, and the wallet is visually smaller than the shoe. On the right side of the image, a bottle is positioned at the top, with a phone below it and a donut at the bottom, forming another vertically aligned group. The pan on the left is visually larger than the bottle on the right.",
+    "dsl": "(exists ?pan (exists ?shoe (exists ?sock (exists ?wallet (exists ?bottle (exists ?phone (exists ?donut (and (Is ?pan 'pan') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?wallet 'wallet') (Is ?bottle 'bottle') (Is ?phone 'phone') (Is ?donut 'donut') (OnLeftSide ?pan) (Above ?pan ?shoe) (Above ?shoe ?sock) (Above ?sock ?wallet) (AlignedVertically ?pan ?shoe) (AlignedVertically ?shoe ?sock) (AlignedVertically ?sock ?wallet) (SmallerThan ?wallet ?shoe) (OnRightSide ?bottle) (Above ?bottle ?phone) (Above ?phone ?donut) (AlignedVertically ?bottle ?phone) (AlignedVertically ?phone ?donut) (LargerThan ?pan ?bottle)))))))))",
+    "cnf": "(exists ?pan (exists ?shoe (exists ?sock (exists ?wallet (exists ?bottle (exists ?phone (exists ?donut (and (Is ?pan 'pan') (OnLeftSide ?pan) (Above ?pan ?shoe) (AlignedVertically ?pan ?shoe) (Is ?shoe 'shoe') (Above ?shoe ?sock) (LargerThan ?pan ?bottle) (AlignedVertically ?shoe ?sock) (Is ?sock 'sock') (Above ?sock ?wallet) (AlignedVertically ?bottle ?phone) (SmallerThan ?wallet ?shoe) (AlignedVertically ?sock ?wallet) (Is ?wallet 'wallet') (Above ?bottle ?phone) (Above ?phone ?donut) (AlignedVertically ?phone ?donut) (OnRightSide ?bottle) (Is ?phone 'phone') (Is ?donut 'donut') (Is ?bottle 'bottle')))))))))",
+    "k": 7,
+    "object_classes": [
+        "sock",
+        "phone",
+        "pan",
+        "wallet",
+        "bottle",
+        "shoe",
+        "donut"
+    ]
+}

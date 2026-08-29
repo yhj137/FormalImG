@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene. A wooden table stands to the left of a bed, and an elephant is located next to the bed. Every apple is round and rests on the table. A horse is on the bed, with a teddy bear next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?b (exists ?e (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?b 'bed') (Is ?e 'elephant') (LeftOf ?t ?b) (NextTo ?e ?b) (forall ?a (implies (Is ?a 'apple') (and (HasShape ?a 'round') (On ?a ?t)))) (exists ?h (exists ?tb (and (Is ?h 'horse') (Is ?tb 'teddy bear') (On ?h ?b) (NextTo ?tb ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?b (exists ?e (forall ?a (exists ?h (exists ?tb (and (Is ?t 'table') (HasMaterial ?t 'wooden') (LeftOf ?t ?b) (or (not (Is ?a 'apple')) (On ?a ?t)) (Is ?b 'bed') (NextTo ?e ?b) (or (not (Is ?a 'apple')) (HasShape ?a 'round')) (On ?h ?b) (Is ?e 'elephant') (Is ?h 'horse') (NextTo ?tb ?h) (Is ?tb 'teddy bear')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "horse",
+        "bed",
+        "teddy bear",
+        "table",
+        "apple"
+    ]
+}

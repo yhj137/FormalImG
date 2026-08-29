@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue backpack located on the bottom side of the image, there is a laptop aligned vertically with it, and the backpack is visually larger than the laptop. A drill is aligned horizontally with the backpack. A red tie is aligned horizontally with the laptop. Additionally, a wallet is aligned vertically with the drill, a glove is aligned horizontally with the wallet, and a watch is aligned vertically with the glove while being smaller than the wallet.",
+    "dsl": "(and (forall ?bp (implies (and (Is ?bp 'backpack') (Has ?bp 'blue') (OnBottomSide ?bp)) (exists ?lp (exists ?dr (exists ?ti (exists ?wa (exists ?gl (exists ?wt (and (Is ?lp 'laptop') (Is ?dr 'drill') (Is ?ti 'tie') (Has ?ti 'red') (Is ?wa 'wallet') (Is ?gl 'glove') (Is ?wt 'watch') (AlignedVertically ?bp ?lp) (LargerThan ?bp ?lp) (AlignedHorizontally ?bp ?dr) (AlignedHorizontally ?lp ?ti) (AlignedVertically ?wa ?dr) (AlignedHorizontally ?gl ?wa) (AlignedVertically ?wt ?gl) (SmallerThan ?wt ?wa)))))))))))",
+    "cnf": "(forall ?bp (exists ?lp (exists ?dr (exists ?ti (exists ?wa (exists ?gl (exists ?wt (and (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?lp 'laptop')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?dr 'drill')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedVertically ?bp ?lp)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?ti 'tie')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedHorizontally ?bp ?dr)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?wt 'watch')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (LargerThan ?bp ?lp)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Has ?ti 'red')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedHorizontally ?lp ?ti)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedVertically ?wa ?dr)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?gl 'glove')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedVertically ?wt ?gl)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (Is ?wa 'wallet')) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (AlignedHorizontally ?gl ?wa)) (or (not (Is ?bp 'backpack')) (not (Has ?bp 'blue')) (not (OnBottomSide ?bp)) (SmallerThan ?wt ?wa))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "backpack",
+        "wallet",
+        "tie",
+        "drill",
+        "glove",
+        "laptop"
+    ]
+}

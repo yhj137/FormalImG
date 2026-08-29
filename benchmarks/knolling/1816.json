@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical arrangement of ten items. At the top is a red suitcase. Directly below the suitcase are blue jeans, which are positioned above a white shirt. The shirt is located above a handbag. A yellow drill is placed below the handbag but above a book. Further down, there is a bowl situated above a black mouse. The mouse is positioned above a pen, and a fork is located below the pen. In terms of size comparisons, the jeans and the book are smaller than the suitcase, the mouse is smaller than the bowl, and the fork is smaller than the drill.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?shirt (exists ?handbag (exists ?drill (exists ?book (exists ?bowl (exists ?mouse (exists ?pen (exists ?fork (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?handbag 'handbag') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?book 'book') (Is ?bowl 'bowl') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?pen 'pen') (Is ?fork 'fork') (Above ?suitcase ?jeans) (Above ?jeans ?shirt) (Below ?handbag ?shirt) (Above ?handbag ?drill) (Above ?drill ?book) (Below ?bowl ?book) (Above ?bowl ?mouse) (Above ?mouse ?pen) (Below ?fork ?pen) (SmallerThan ?jeans ?suitcase) (SmallerThan ?book ?suitcase) (SmallerThan ?mouse ?bowl) (SmallerThan ?fork ?drill))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?shirt (exists ?handbag (exists ?drill (exists ?book (exists ?bowl (exists ?mouse (exists ?pen (exists ?fork (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (Above ?suitcase ?jeans) (SmallerThan ?jeans ?suitcase) (Has ?jeans 'blue') (Above ?jeans ?shirt) (SmallerThan ?book ?suitcase) (Is ?jeans 'jeans') (Has ?shirt 'white') (Below ?handbag ?shirt) (Below ?bowl ?book) (Is ?shirt 'shirt') (Is ?handbag 'handbag') (Above ?handbag ?drill) (Above ?drill ?book) (Is ?bowl 'bowl') (Above ?bowl ?mouse) (Has ?drill 'yellow') (SmallerThan ?fork ?drill) (Is ?book 'book') (SmallerThan ?mouse ?bowl) (Has ?mouse 'black') (Above ?mouse ?pen) (Is ?drill 'drill') (Below ?fork ?pen) (Is ?mouse 'mouse') (Is ?pen 'pen') (Is ?fork 'fork'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "pen",
+        "drill",
+        "handbag",
+        "fork",
+        "jeans",
+        "mouse",
+        "bowl",
+        "suitcase",
+        "shirt"
+    ]
+}

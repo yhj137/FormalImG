@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring an oval mirror. To the right of the mirror is an open wardrobe containing all the shoes. A bench stands next to the wardrobe. A black backpack with a teddy bear inside sits on the bench. A child stands next to the bench, holding a yellow key.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'oval') (exists ?w (and (Is ?w 'wardrobe') (HasState ?w 'open') (RightOf ?w ?m) (forall ?s (implies (Is ?s 'shoes') (In ?s ?w))) (exists ?b (and (Is ?b 'bench') (NextTo ?b ?w) (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'black') (On ?bp ?b) (exists ?tb (and (Is ?tb 'teddy bear') (In ?tb ?bp))))) (exists ?c (and (Is ?c 'child') (NextTo ?c ?b) (exists ?k (and (Is ?k 'key') (HasColor ?k 'yellow') (Holding ?c ?k))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?w (forall ?s (exists ?b (exists ?bp (exists ?tb (exists ?c (exists ?k (and (Is ?m 'mirror') (HasShape ?m 'oval') (RightOf ?w ?m) (HasState ?w 'open') (or (not (Is ?s 'shoes')) (In ?s ?w)) (Is ?w 'wardrobe') (NextTo ?b ?w) (Is ?b 'bench') (On ?bp ?b) (NextTo ?c ?b) (HasColor ?bp 'black') (In ?tb ?bp) (Is ?c 'child') (Holding ?c ?k) (Is ?bp 'backpack') (Is ?tb 'teddy bear') (HasColor ?k 'yellow') (Is ?k 'key')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "bench",
+        "shoes",
+        "backpack",
+        "teddy bear",
+        "mirror",
+        "key",
+        "wardrobe"
+    ]
+}

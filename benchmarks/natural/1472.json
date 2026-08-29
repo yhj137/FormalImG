@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman holding a spoon to the left of a wardrobe. All fruit in the scene are located to the right of the woman. A backpack sits next to the wardrobe with a bird beside it, while a bottle is placed to the right of the wardrobe next to a round cup.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?wd (and (Is ?w 'woman') (Is ?wd 'wardrobe') (LeftOf ?w ?wd) (forall ?f (implies (Is ?f 'fruit') (RightOf ?f ?w))) (exists ?sp (and (Is ?sp 'spoon') (Holding ?w ?sp))) (exists ?bp (exists ?bi (and (Is ?bp 'backpack') (Is ?bi 'bird') (NextTo ?bp ?wd) (NextTo ?bi ?bp)))) (exists ?bo (exists ?c (and (Is ?bo 'bottle') (Is ?c 'cup') (HasShape ?c 'round') (RightOf ?bo ?wd) (NextTo ?c ?bo))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?wd (forall ?f (exists ?sp (exists ?bp (exists ?bi (exists ?bo (exists ?c (and (Is ?w 'woman') (LeftOf ?w ?wd) (or (not (Is ?f 'fruit')) (RightOf ?f ?w)) (Is ?wd 'wardrobe') (NextTo ?bp ?wd) (Holding ?w ?sp) (RightOf ?bo ?wd) (Is ?bp 'backpack') (NextTo ?bi ?bp) (Is ?sp 'spoon') (Is ?bo 'bottle') (NextTo ?c ?bo) (Is ?bi 'bird') (HasShape ?c 'round') (Is ?c 'cup')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "spoon",
+        "bottle",
+        "backpack",
+        "woman",
+        "bird",
+        "cup",
+        "wardrobe"
+    ]
+}

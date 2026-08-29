@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a structured layout. A suitcase is positioned in the top-left area of the image. A handbag is placed to the right of the suitcase. Directly below the suitcase is a keyboard, which is smaller than the suitcase. The composition includes a specific sequence starting with any book present: the book is located below the handbag and has a calculator to its right, with both items aligned horizontally. Below the calculator sits a ruler, and below the ruler is a wrench. To the left of the wrench are pliers, and to the left of the pliers is a carrot. The carrot is situated on the bottom side of the scene and is smaller than the handbag.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?keyboard (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (LeftOf ?suitcase ?handbag) (Is ?keyboard 'keyboard') (Below ?keyboard ?suitcase) (SmallerThan ?keyboard ?suitcase) (forall ?book (implies (Is ?book 'book') (exists ?calculator (exists ?ruler (exists ?wrench (exists ?pliers (exists ?carrot (and (Is ?calculator 'calculator') (Is ?ruler 'ruler') (Is ?wrench 'wrench') (Is ?pliers 'pliers') (Is ?carrot 'carrot') (Below ?book ?handbag) (LeftOf ?book ?calculator) (AlignedHorizontally ?book ?calculator) (Below ?ruler ?calculator) (Below ?wrench ?ruler) (LeftOf ?pliers ?wrench) (LeftOf ?carrot ?pliers) (OnBottomSide ?carrot) (SmallerThan ?carrot ?handbag)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?keyboard (forall ?book (exists ?calculator (exists ?ruler (exists ?wrench (exists ?pliers (exists ?carrot (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (OnLeftSide ?suitcase) (LeftOf ?suitcase ?handbag) (Below ?keyboard ?suitcase) (Is ?handbag 'handbag') (or (not (Is ?book 'book')) (Below ?book ?handbag)) (SmallerThan ?keyboard ?suitcase) (Is ?keyboard 'keyboard') (or (not (Is ?book 'book')) (SmallerThan ?carrot ?handbag)) (or (not (Is ?book 'book')) (Is ?carrot 'carrot')) (or (not (Is ?book 'book')) (LeftOf ?book ?calculator)) (or (not (Is ?book 'book')) (OnBottomSide ?carrot)) (or (not (Is ?book 'book')) (Is ?pliers 'pliers')) (or (not (Is ?book 'book')) (LeftOf ?carrot ?pliers)) (or (not (Is ?book 'book')) (Is ?calculator 'calculator')) (or (not (Is ?book 'book')) (AlignedHorizontally ?book ?calculator)) (or (not (Is ?book 'book')) (Is ?wrench 'wrench')) (or (not (Is ?book 'book')) (LeftOf ?pliers ?wrench)) (or (not (Is ?book 'book')) (Is ?ruler 'ruler')) (or (not (Is ?book 'book')) (Below ?ruler ?calculator)) (or (not (Is ?book 'book')) (Below ?wrench ?ruler))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "book",
+        "pliers",
+        "keyboard",
+        "wrench",
+        "carrot",
+        "handbag",
+        "calculator",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged set of items. On the bottom left side, there is a black keyboard. Directly above the keyboard is a black pan, and positioned above the pan is a white bowl. A black watch is aligned horizontally with the keyboard. Keys are aligned horizontally with the pan, and a screwdriver is aligned horizontally with the bowl. A donut is placed above the screwdriver. Furthermore, for every pen in the scene, there exists a carrot located directly above it, such that the carrot is also positioned below the donut.",
+    "dsl": "(exists ?k (exists ?p (exists ?b (exists ?w (exists ?ky (exists ?sd (exists ?d (and (Is ?k 'keyboard') (Has ?k 'black') (OnBottomSide ?k) (OnLeftSide ?k) (Is ?p 'pan') (Has ?p 'black') (Above ?p ?k) (Is ?b 'bowl') (Has ?b 'white') (Above ?b ?p) (Is ?w 'watch') (Has ?w 'black') (AlignedHorizontally ?w ?k) (Is ?ky 'keys') (AlignedHorizontally ?ky ?p) (Is ?sd 'screwdriver') (AlignedHorizontally ?sd ?b) (Is ?d 'donut') (Above ?d ?sd) (forall ?pen (implies (Is ?pen 'pen') (exists ?c (and (Is ?c 'carrot') (Above ?c ?pen) (Below ?c ?d)))))))))))))",
+    "cnf": "(exists ?k (exists ?p (exists ?b (exists ?w (exists ?ky (exists ?sd (exists ?d (forall ?pen (exists ?c (and (Is ?k 'keyboard') (Has ?k 'black') (OnBottomSide ?k) (OnLeftSide ?k) (Above ?p ?k) (AlignedHorizontally ?w ?k) (Has ?p 'black') (Above ?b ?p) (Has ?w 'black') (Is ?p 'pan') (AlignedHorizontally ?ky ?p) (Has ?b 'white') (AlignedHorizontally ?sd ?b) (Is ?w 'watch') (Is ?ky 'keys') (Is ?b 'bowl') (Is ?sd 'screwdriver') (Above ?d ?sd) (Is ?d 'donut') (or (not (Is ?pen 'pen')) (Below ?c ?d)) (or (not (Is ?pen 'pen')) (Above ?c ?pen)) (or (not (Is ?pen 'pen')) (Is ?c 'carrot'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "keyboard",
+        "pen",
+        "carrot",
+        "watch",
+        "screwdriver",
+        "pan",
+        "bowl",
+        "donut"
+    ]
+}

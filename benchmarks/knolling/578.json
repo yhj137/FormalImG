@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a bottle positioned on the top side of the layout. A tie is placed below the bottle. Additionally, for every lemon in the image, it is located to the left of the tie, such that the bottle is also to the right of the lemon.",
+    "dsl": "(exists ?b (exists ?t (and (Is ?b 'bottle') (OnTopSide ?b) (Is ?t 'tie') (Above ?b ?t) (forall ?l (implies (Is ?l 'lemon') (and (LeftOf ?l ?t) (RightOf ?b ?l)))))))",
+    "cnf": "(exists ?b (exists ?t (forall ?l (and (Is ?b 'bottle') (OnTopSide ?b) (Above ?b ?t) (or (not (Is ?l 'lemon')) (RightOf ?b ?l)) (Is ?t 'tie') (or (not (Is ?l 'lemon')) (LeftOf ?l ?t))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "lemon",
+        "tie"
+    ]
+}

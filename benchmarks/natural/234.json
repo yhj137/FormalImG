@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene with a metal knife resting on a woman.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?k (and (Is ?w 'woman') (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?w)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?k (and (Is ?w 'woman') (On ?k ?w) (HasMaterial ?k 'metal') (Is ?k 'knife')))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "woman"
+    ]
+}

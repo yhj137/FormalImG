@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bookshelf containing a rectangular laptop, a round hat, and every cup in the scene. An umbrella stands to the left of the bookshelf, with a horse further to the left. A cat holding a fish is next to the bookshelf, and a car is located to the right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?l (exists ?h (and (Is ?b 'bookshelf') (Is ?l 'laptop') (HasShape ?l 'rectangular') (On ?l ?b) (Is ?h 'hat') (HasShape ?h 'round') (On ?h ?b) (forall ?c (implies (Is ?c 'cup') (On ?c ?b))) (exists ?cat (exists ?f (exists ?u (exists ?horse (exists ?car (and (Is ?cat 'cat') (NextTo ?cat ?b) (Is ?f 'fish') (Holding ?cat ?f) (Is ?u 'umbrella') (LeftOf ?u ?b) (Is ?horse 'horse') (LeftOf ?horse ?u) (Is ?car 'car') (RightOf ?car ?b))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?l (exists ?h (forall ?c (exists ?cat (exists ?f (exists ?u (exists ?horse (exists ?car (and (Is ?b 'bookshelf') (On ?l ?b) (On ?h ?b) (HasShape ?l 'rectangular') (or (not (Is ?c 'cup')) (On ?c ?b)) (HasShape ?h 'round') (Is ?l 'laptop') (NextTo ?cat ?b) (Is ?h 'hat') (LeftOf ?u ?b) (Is ?cat 'cat') (Holding ?cat ?f) (RightOf ?car ?b) (Is ?u 'umbrella') (LeftOf ?horse ?u) (Is ?f 'fish') (Is ?car 'car') (Is ?horse 'horse'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "cat",
+        "fish",
+        "hat",
+        "laptop",
+        "cup",
+        "horse",
+        "bookshelf",
+        "car"
+    ]
+}

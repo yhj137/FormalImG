@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a sofa. All butterflies are located to the left of the sofa, while to the right stands an open refrigerator with a sleeping cat inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (and (Is ?s 'sofa') (forall ?b (implies (Is ?b 'butterfly') (LeftOf ?b ?s))) (exists ?r (and (Is ?r 'refrigerator') (RightOf ?r ?s) (HasState ?r 'open') (exists ?c (and (Is ?c 'cat') (HasState ?c 'sleeping') (In ?c ?r))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (forall ?b (exists ?r (exists ?c (and (Is ?s 'sofa') (or (not (Is ?b 'butterfly')) (LeftOf ?b ?s)) (RightOf ?r ?s) (Is ?r 'refrigerator') (HasState ?r 'open') (In ?c ?r) (HasState ?c 'sleeping') (Is ?c 'cat')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "refrigerator",
+        "sofa",
+        "cat"
+    ]
+}

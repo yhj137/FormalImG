@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A plastic clock sits on a rectangular rug. Every toy car is located next to the clock, with a banana placed beside each car.",
+    "dsl": "(exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (exists ?c (and (Is ?c 'clock') (HasMaterial ?c 'plastic') (On ?c ?r) (forall ?t (implies (Is ?t 'toy car') (exists ?b (and (Is ?b 'banana') (NextTo ?t ?c) (NextTo ?b ?t)))))))))",
+    "cnf": "(exists ?r (exists ?c (forall ?t (exists ?b (and (Is ?r 'rug') (HasShape ?r 'rectangular') (On ?c ?r) (HasMaterial ?c 'plastic') (or (not (Is ?t 'toy car')) (NextTo ?t ?c)) (Is ?c 'clock') (or (not (Is ?t 'toy car')) (Is ?b 'banana')) (or (not (Is ?t 'toy car')) (NextTo ?b ?t)))))))",
+    "k": 4,
+    "object_classes": [
+        "clock",
+        "toy car",
+        "banana",
+        "rug"
+    ]
+}

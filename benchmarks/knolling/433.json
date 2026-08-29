@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor, a camera, and a wrench. The wrench is placed on the bottom side of the layout. The camera is located above the wrench. The monitor and the camera are aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?camera (exists ?wrench (and (Is ?monitor 'monitor') (Is ?camera 'camera') (Is ?wrench 'wrench') (OnBottomSide ?wrench) (Above ?camera ?wrench) (AlignedHorizontally ?monitor ?camera)))))",
+    "cnf": "(exists ?monitor (exists ?camera (exists ?wrench (and (Is ?monitor 'monitor') (AlignedHorizontally ?monitor ?camera) (Above ?camera ?wrench) (Is ?camera 'camera') (OnBottomSide ?wrench) (Is ?wrench 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "wrench",
+        "camera"
+    ]
+}

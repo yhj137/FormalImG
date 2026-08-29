@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style image. A boat contains a lion. A wooden basket sits on the boat to the left of the lion. Every teddy bear is inside the basket and holding a plastic umbrella.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?l (exists ?k (and (Is ?b 'boat') (Is ?l 'lion') (In ?l ?b) (Is ?k 'basket') (HasMaterial ?k 'wooden') (On ?k ?b) (LeftOf ?k ?l) (forall ?t (implies (Is ?t 'teddy bear') (exists ?u (and (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (In ?t ?k) (Holding ?t ?u))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?l (exists ?k (forall ?t (exists ?u (and (Is ?b 'boat') (In ?l ?b) (On ?k ?b) (Is ?l 'lion') (LeftOf ?k ?l) (HasMaterial ?k 'wooden') (or (not (Is ?t 'teddy bear')) (In ?t ?k)) (Is ?k 'basket') (or (not (Is ?t 'teddy bear')) (HasMaterial ?u 'plastic')) (or (not (Is ?t 'teddy bear')) (Holding ?t ?u)) (or (not (Is ?t 'teddy bear')) (Is ?u 'umbrella')))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "teddy bear",
+        "basket",
+        "lion",
+        "boat"
+    ]
+}

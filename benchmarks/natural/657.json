@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image where every bus contains a man holding a metal hammer and plastic glasses.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bus') (exists ?m (exists ?h (exists ?g (and (Is ?m 'man') (Is ?h 'hammer') (Is ?g 'glasses') (In ?m ?b) (Holding ?m ?h) (HasMaterial ?h 'metal') (Holding ?m ?g) (HasMaterial ?g 'plastic'))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?m (exists ?h (exists ?g (and (or (not (Is ?b 'bus')) (Is ?m 'man')) (or (not (Is ?b 'bus')) (In ?m ?b)) (or (not (Is ?b 'bus')) (Is ?h 'hammer')) (or (not (Is ?b 'bus')) (Holding ?m ?h)) (or (not (Is ?b 'bus')) (Is ?g 'glasses')) (or (not (Is ?b 'bus')) (Holding ?m ?g)) (or (not (Is ?b 'bus')) (HasMaterial ?h 'metal')) (or (not (Is ?b 'bus')) (HasMaterial ?g 'plastic'))))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "bus",
+        "man",
+        "glasses"
+    ]
+}

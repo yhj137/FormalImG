@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertically arranged sequence of ten objects. A pair of jeans is located at the top side. Below the jeans is a pizza, and a keyboard is positioned below the pizza; the keyboard is visually smaller than the jeans. A drill is located below the keyboard. A shoe is placed below the drill. Below the shoe is a wrench, and beneath that is a calculator. A pair of scissors is located below the calculator. Below the scissors is an apple; the pizza is larger than the apple. Finally, every lighter in the image is positioned at the bottom side, directly below the apple, and all objects in the chain are aligned vertically.",
+    "dsl": "(exists ?jeans (exists ?pizza (exists ?keyboard (exists ?drill (exists ?shoe (exists ?wrench (exists ?calculator (exists ?scissors (exists ?apple (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Is ?pizza 'pizza') (Below ?pizza ?jeans) (AlignedVertically ?jeans ?pizza) (Is ?keyboard 'keyboard') (Above ?pizza ?keyboard) (AlignedVertically ?pizza ?keyboard) (SmallerThan ?keyboard ?jeans) (Is ?drill 'drill') (Below ?drill ?keyboard) (AlignedVertically ?keyboard ?drill) (Is ?shoe 'shoe') (Above ?drill ?shoe) (AlignedVertically ?drill ?shoe) (Is ?wrench 'wrench') (Below ?wrench ?shoe) (AlignedVertically ?shoe ?wrench) (Is ?calculator 'calculator') (Above ?wrench ?calculator) (AlignedVertically ?wrench ?calculator) (Is ?scissors 'scissors') (Below ?scissors ?calculator) (AlignedVertically ?calculator ?scissors) (Is ?apple 'apple') (Above ?scissors ?apple) (AlignedVertically ?scissors ?apple) (LargerThan ?pizza ?apple) (forall ?lighter (implies (Is ?lighter 'lighter') (and (OnBottomSide ?lighter) (Below ?lighter ?apple) (AlignedVertically ?apple ?lighter))))))))))))))",
+    "cnf": "(exists ?jeans (exists ?pizza (exists ?keyboard (exists ?drill (exists ?shoe (exists ?wrench (exists ?calculator (exists ?scissors (exists ?apple (forall ?lighter (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?pizza ?jeans) (AlignedVertically ?jeans ?pizza) (Is ?pizza 'pizza') (SmallerThan ?keyboard ?jeans) (Above ?pizza ?keyboard) (AlignedVertically ?pizza ?keyboard) (Below ?drill ?keyboard) (Is ?keyboard 'keyboard') (LargerThan ?pizza ?apple) (AlignedVertically ?keyboard ?drill) (Is ?drill 'drill') (AlignedVertically ?scissors ?apple) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?apple)) (Above ?drill ?shoe) (Above ?scissors ?apple) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?apple ?lighter)) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?lighter)) (AlignedVertically ?drill ?shoe) (Is ?shoe 'shoe') (AlignedVertically ?calculator ?scissors) (Is ?apple 'apple') (Below ?wrench ?shoe) (Below ?scissors ?calculator) (AlignedVertically ?shoe ?wrench) (Is ?wrench 'wrench') (AlignedVertically ?wrench ?calculator) (Is ?scissors 'scissors') (Above ?wrench ?calculator) (Is ?calculator 'calculator'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "wrench",
+        "pizza",
+        "drill",
+        "lighter",
+        "jeans",
+        "calculator",
+        "scissors",
+        "shoe"
+    ]
+}

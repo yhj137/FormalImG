@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack positioned on the top side of the scene, there is a structured arrangement of items around it: a hat is placed directly below the backpack, and a keyboard is situated below the hat. To the right of the backpack is a handbag, and below the handbag is a drill which is positioned above a screwdriver. To the right of the drill is a bottle located on the right side of the image. Additionally, a tie is placed to the right of the keyboard; to the right of the tie are glasses that are smaller than the keyboard, and a watch is placed below the glasses.",
+    "dsl": "(forall ?backpack (implies (and (Is ?backpack 'backpack') (OnTopSide ?backpack)) (exists ?hat (exists ?keyboard (exists ?handbag (exists ?drill (exists ?screwdriver (exists ?bottle (exists ?tie (exists ?glasses (exists ?watch (and (Is ?hat 'hat') (Is ?keyboard 'keyboard') (Is ?handbag 'handbag') (Is ?drill 'drill') (Is ?screwdriver 'screwdriver') (Is ?bottle 'bottle') (Is ?tie 'tie') (Is ?glasses 'glasses') (Is ?watch 'watch') (Below ?hat ?backpack) (Below ?keyboard ?hat) (RightOf ?handbag ?backpack) (Below ?drill ?handbag) (Above ?drill ?screwdriver) (RightOf ?bottle ?drill) (OnRightSide ?bottle) (RightOf ?tie ?keyboard) (RightOf ?glasses ?tie) (SmallerThan ?glasses ?keyboard) (Below ?watch ?glasses)))))))))))))",
+    "cnf": "(forall ?backpack (exists ?hat (exists ?keyboard (exists ?handbag (exists ?drill (exists ?screwdriver (exists ?bottle (exists ?tie (exists ?glasses (exists ?watch (and (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?hat 'hat')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?keyboard 'keyboard')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Below ?hat ?backpack)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?handbag 'handbag')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Below ?keyboard ?hat)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?watch 'watch')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?drill 'drill')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (RightOf ?handbag ?backpack)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (RightOf ?tie ?keyboard)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?glasses 'glasses')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Below ?watch ?glasses)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Below ?drill ?handbag)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (OnRightSide ?bottle)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (RightOf ?glasses ?tie)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (SmallerThan ?glasses ?keyboard)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?tie 'tie')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Is ?bottle 'bottle')) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (Above ?drill ?screwdriver)) (or (not (Is ?backpack 'backpack')) (not (OnTopSide ?backpack)) (RightOf ?bottle ?drill)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "keyboard",
+        "watch",
+        "screwdriver",
+        "drill",
+        "hat",
+        "backpack",
+        "handbag",
+        "bottle"
+    ]
+}

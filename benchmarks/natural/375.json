@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a standing bicycle. Every pan is located to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bicycle') (HasState ?b 'standing') (forall ?p (implies (Is ?p 'pan') (RightOf ?p ?b))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?p (and (Is ?b 'bicycle') (HasState ?b 'standing') (or (not (Is ?p 'pan')) (RightOf ?p ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bicycle",
+        "pan"
+    ]
+}

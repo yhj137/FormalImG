@@ -1,0 +1,12 @@
+{
+    "prompt": "For every laptop, it is located on the left side of the scene, and there is a game controller aligned vertically with it, a cutting board aligned horizontally with it, and a bottle that aligns horizontally with the game controller and vertically with the cutting board.",
+    "dsl": "(and (forall ?laptop (implies (Is ?laptop 'laptop') (exists ?controller (exists ?board (exists ?bottle (and (Is ?controller 'game_controller') (Is ?board 'cutting_board') (Is ?bottle 'bottle') (OnLeftSide ?laptop) (AlignedVertically ?laptop ?controller) (AlignedHorizontally ?laptop ?board) (AlignedHorizontally ?controller ?bottle) (AlignedVertically ?board ?bottle))))))))",
+    "cnf": "(forall ?laptop (exists ?controller (exists ?board (exists ?bottle (and (or (not (Is ?laptop 'laptop')) (Is ?controller 'game_controller')) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?laptop ?controller)) (or (not (Is ?laptop 'laptop')) (Is ?board 'cutting_board')) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?controller ?bottle)) (or (not (Is ?laptop 'laptop')) (OnLeftSide ?laptop)) (or (not (Is ?laptop 'laptop')) (AlignedHorizontally ?laptop ?board)) (or (not (Is ?laptop 'laptop')) (Is ?bottle 'bottle')) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?board ?bottle)))))))",
+    "k": 4,
+    "object_classes": [
+        "cutting_board",
+        "laptop",
+        "bottle",
+        "game_controller"
+    ]
+}

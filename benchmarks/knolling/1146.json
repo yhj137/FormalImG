@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a glove positioned on the left side. Located below the glove are headphones, and below the headphones is a watch. A cup is placed on the bottom side of the arrangement, and the watch is situated to the left of the cup. Additionally, for every shoe in the image, there is a screwdriver above it that is smaller than the glove.",
+    "dsl": "(exists ?g (exists ?h (exists ?w (exists ?c (and (Is ?g 'glove') (OnLeftSide ?g) (Is ?h 'headphones') (Below ?h ?g) (Is ?w 'watch') (Below ?w ?h) (Is ?c 'cup') (OnBottomSide ?c) (LeftOf ?w ?c) (forall ?s (implies (Is ?s 'shoe') (exists ?d (and (Is ?d 'screwdriver') (Above ?d ?s) (SmallerThan ?d ?g))))))))))",
+    "cnf": "(exists ?g (exists ?h (exists ?w (exists ?c (forall ?s (exists ?d (and (Is ?g 'glove') (OnLeftSide ?g) (Below ?h ?g) (or (not (Is ?s 'shoe')) (SmallerThan ?d ?g)) (Is ?h 'headphones') (Below ?w ?h) (or (not (Is ?s 'shoe')) (Above ?d ?s)) (Is ?w 'watch') (LeftOf ?w ?c) (or (not (Is ?s 'shoe')) (Is ?d 'screwdriver')) (OnBottomSide ?c) (Is ?c 'cup'))))))))",
+    "k": 6,
+    "object_classes": [
+        "watch",
+        "screwdriver",
+        "headphones",
+        "cup",
+        "glove",
+        "shoe"
+    ]
+}

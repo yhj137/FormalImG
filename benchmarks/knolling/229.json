@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a cutting board and a shirt. These two items are aligned vertically, and the shirt is positioned on the bottom side of the image.",
+    "dsl": "(exists ?board (exists ?shirt (and (Is ?board 'cutting_board') (Is ?shirt 'shirt') (AlignedVertically ?board ?shirt) (OnBottomSide ?shirt))))",
+    "cnf": "(exists ?board (exists ?shirt (and (Is ?board 'cutting_board') (AlignedVertically ?board ?shirt) (Is ?shirt 'shirt') (OnBottomSide ?shirt))))",
+    "k": 2,
+    "object_classes": [
+        "cutting_board",
+        "shirt"
+    ]
+}

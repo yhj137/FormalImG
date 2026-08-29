@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every bookshelf contains a closed book.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?x (implies (Is ?x 'bookshelf') (exists ?y (and (Is ?y 'book') (In ?y ?x) (HasState ?y 'closed'))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?x (exists ?y (and (or (not (Is ?x 'bookshelf')) (Is ?y 'book')) (or (not (Is ?x 'bookshelf')) (In ?y ?x)) (or (not (Is ?x 'bookshelf')) (HasState ?y 'closed'))))))",
+    "k": 2,
+    "object_classes": [
+        "bookshelf",
+        "book"
+    ]
+}

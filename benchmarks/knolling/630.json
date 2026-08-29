@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image containing a monitor, a hammer, a pen, and keys. The monitor is located on the left side and is positioned above the hammer. The hammer is positioned above the keys, which are located on the bottom side of the image. Furthermore, the pen is aligned horizontally with the hammer.",
+    "dsl": "(exists ?m (exists ?h (exists ?k (exists ?p (and (Is ?m 'monitor') (Is ?h 'hammer') (Is ?k 'keys') (Is ?p 'pen') (OnLeftSide ?m) (OnBottomSide ?k) (Above ?m ?h) (Above ?h ?k) (AlignedHorizontally ?p ?h))))))",
+    "cnf": "(exists ?m (exists ?h (exists ?k (exists ?p (and (Is ?m 'monitor') (OnLeftSide ?m) (Above ?m ?h) (Is ?h 'hammer') (Above ?h ?k) (AlignedHorizontally ?p ?h) (OnBottomSide ?k) (Is ?p 'pen') (Is ?k 'keys'))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "hammer",
+        "keys",
+        "pen"
+    ]
+}

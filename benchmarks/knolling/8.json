@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pair of blue jeans.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (Has ?jeans 'blue')))",
+    "cnf": "(exists ?jeans (and (Is ?jeans 'jeans') (Has ?jeans 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "jeans"
+    ]
+}

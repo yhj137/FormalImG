@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the left side, and a suitcase is located on the bottom side. For every remote, which is placed to the right of the monitor, there is a screwdriver to its left, a pizza to its right, and a pair of pliers below it. Additionally, a stapler is placed below the screwdriver, and the suitcase is positioned to the right of the stapler.",
+    "dsl": "(exists ?m (exists ?s (and (Is ?m 'monitor') (OnLeftSide ?m) (Is ?s 'suitcase') (OnBottomSide ?s) (forall ?r (implies (Is ?r 'remote') (exists ?sc (exists ?p (exists ?pl (exists ?st (and (Is ?sc 'screwdriver') (Is ?p 'pizza') (Is ?pl 'pliers') (Is ?st 'stapler') (RightOf ?r ?m) (LeftOf ?sc ?r) (RightOf ?p ?r) (Below ?pl ?r) (Below ?st ?sc) (RightOf ?s ?st)))))))))))",
+    "cnf": "(exists ?m (exists ?s (forall ?r (exists ?sc (exists ?p (exists ?pl (exists ?st (and (Is ?m 'monitor') (OnLeftSide ?m) (or (not (Is ?r 'remote')) (RightOf ?r ?m)) (or (not (Is ?r 'remote')) (Is ?st 'stapler')) (or (not (Is ?r 'remote')) (LeftOf ?sc ?r)) (or (not (Is ?r 'remote')) (Is ?pl 'pliers')) (or (not (Is ?r 'remote')) (Below ?st ?sc)) (or (not (Is ?r 'remote')) (Is ?sc 'screwdriver')) (or (not (Is ?r 'remote')) (RightOf ?p ?r)) (or (not (Is ?r 'remote')) (Is ?p 'pizza')) (or (not (Is ?r 'remote')) (Below ?pl ?r)) (or (not (Is ?r 'remote')) (RightOf ?s ?st)) (OnBottomSide ?s) (Is ?s 'suitcase')))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "stapler",
+        "pizza",
+        "screwdriver",
+        "monitor",
+        "suitcase"
+    ]
+}

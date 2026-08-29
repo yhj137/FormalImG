@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a bus with a wooden bench next to it. To the right of the bench is a table with a black pan on top. A book sits next to the pan, and every butterfly in the scene is positioned above the table.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?v0 (exists ?v1 (exists ?v2 (exists ?v3 (and (Is ?v0 'bus') (Is ?v1 'bench') (HasMaterial ?v1 'wooden') (NextTo ?v1 ?v0) (Is ?v2 'table') (RightOf ?v2 ?v1) (Is ?v3 'pan') (HasColor ?v3 'black') (On ?v3 ?v2) (forall ?v4 (implies (Is ?v4 'butterfly') (Above ?v4 ?v2))) (exists ?v5 (and (Is ?v5 'book') (NextTo ?v5 ?v3)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?v0 (exists ?v1 (exists ?v2 (exists ?v3 (forall ?v4 (exists ?v5 (and (Is ?v0 'bus') (NextTo ?v1 ?v0) (HasMaterial ?v1 'wooden') (RightOf ?v2 ?v1) (Is ?v1 'bench') (Is ?v2 'table') (On ?v3 ?v2) (or (not (Is ?v4 'butterfly')) (Above ?v4 ?v2)) (HasColor ?v3 'black') (NextTo ?v5 ?v3) (Is ?v3 'pan') (Is ?v5 'book')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "pan",
+        "bus",
+        "book",
+        "butterfly",
+        "table"
+    ]
+}

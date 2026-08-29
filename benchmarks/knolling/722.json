@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pair of blue jeans and a hat. The hat is positioned on the left side of the image, while the jeans are placed to the left of the hat. For every pair of pliers present, there is a calculator to its left, and the pliers are visually smaller than the hat.",
+    "dsl": "(exists ?jeans (exists ?hat (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?hat 'hat') (OnLeftSide ?hat) (LeftOf ?jeans ?hat) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?calculator (and (Is ?calculator 'calculator') (LeftOf ?calculator ?pliers) (SmallerThan ?pliers ?hat))))))))",
+    "cnf": "(exists ?jeans (exists ?hat (forall ?pliers (exists ?calculator (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (LeftOf ?jeans ?hat) (OnLeftSide ?hat) (or (not (Is ?pliers 'pliers')) (SmallerThan ?pliers ?hat)) (Is ?hat 'hat') (or (not (Is ?pliers 'pliers')) (LeftOf ?calculator ?pliers)) (or (not (Is ?pliers 'pliers')) (Is ?calculator 'calculator')))))))",
+    "k": 4,
+    "object_classes": [
+        "pliers",
+        "hat",
+        "calculator",
+        "jeans"
+    ]
+}

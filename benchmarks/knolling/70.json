@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a single plate located on the right side of the scene.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnRightSide ?plate)))",
+    "cnf": "(exists ?plate (and (Is ?plate 'plate') (OnRightSide ?plate)))",
+    "k": 1,
+    "object_classes": [
+        "plate"
+    ]
+}

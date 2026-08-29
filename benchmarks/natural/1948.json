@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden house. Next to the house stands a person holding a bowl containing a red apple. To the left of the person is a brown horse, and to the right is a chair with a jacket on it. Every monitor in the scene is placed next to the chair, with a clock positioned above it and a rusty screwdriver lying nearby.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?hrs (exists ?c (exists ?j (exists ?b (exists ?a (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?p 'person') (NextTo ?p ?h) (Is ?hrs 'horse') (HasColor ?hrs 'brown') (LeftOf ?hrs ?p) (Is ?c 'chair') (RightOf ?c ?p) (Is ?j 'jacket') (On ?j ?c) (Is ?b 'bowl') (Holding ?p ?b) (Is ?a 'apple') (HasColor ?a 'red') (In ?a ?b) (forall ?m (implies (Is ?m 'monitor') (exists ?clk (exists ?sd (and (NextTo ?m ?c) (Is ?clk 'clock') (Above ?clk ?m) (Is ?sd 'screwdriver') (HasState ?sd 'rusty') (NextTo ?sd ?m)))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (exists ?hrs (exists ?c (exists ?j (exists ?b (exists ?a (forall ?m (exists ?clk (exists ?sd (and (Is ?h 'house') (HasMaterial ?h 'wooden') (NextTo ?p ?h) (Is ?p 'person') (LeftOf ?hrs ?p) (RightOf ?c ?p) (HasColor ?hrs 'brown') (Holding ?p ?b) (Is ?c 'chair') (On ?j ?c) (Is ?hrs 'horse') (Is ?b 'bowl') (In ?a ?b) (or (not (Is ?m 'monitor')) (NextTo ?m ?c)) (Is ?j 'jacket') (HasColor ?a 'red') (or (not (Is ?m 'monitor')) (Is ?clk 'clock')) (Is ?a 'apple') (or (not (Is ?m 'monitor')) (Above ?clk ?m)) (or (not (Is ?m 'monitor')) (Is ?sd 'screwdriver')) (or (not (Is ?m 'monitor')) (HasState ?sd 'rusty')) (or (not (Is ?m 'monitor')) (NextTo ?sd ?m))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "person",
+        "horse",
+        "chair",
+        "monitor",
+        "jacket",
+        "clock",
+        "bowl",
+        "apple",
+        "screwdriver"
+    ]
+}

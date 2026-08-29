@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image. A bicycle stands to the left of a bench, which is positioned to the left of a sofa. An open basket containing all the fruit in the scene sits on the bench, and a fork lies on the sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bicycle (exists ?bench (exists ?sofa (exists ?basket (exists ?fork (and (Is ?bicycle 'bicycle') (Is ?bench 'bench') (Is ?sofa 'sofa') (Is ?basket 'basket') (Is ?fork 'fork') (LeftOf ?bicycle ?bench) (LeftOf ?bench ?sofa) (On ?basket ?bench) (HasState ?basket 'open') (On ?fork ?sofa) (forall ?fruit (implies (Is ?fruit 'fruit') (In ?fruit ?basket))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bicycle (exists ?bench (exists ?sofa (exists ?basket (exists ?fork (forall ?fruit (and (Is ?bicycle 'bicycle') (LeftOf ?bicycle ?bench) (Is ?bench 'bench') (LeftOf ?bench ?sofa) (On ?basket ?bench) (Is ?sofa 'sofa') (On ?fork ?sofa) (Is ?basket 'basket') (HasState ?basket 'open') (Is ?fork 'fork') (or (not (Is ?fruit 'fruit')) (In ?fruit ?basket))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "fork",
+        "sofa",
+        "basket",
+        "bicycle",
+        "fruit"
+    ]
+}

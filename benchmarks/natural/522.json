@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a wooden chair is positioned to the left of every wardrobe.",
+    "dsl": "(exists ?w (and (Is ?w 'woman') (forall ?wd (implies (Is ?wd 'wardrobe') (LeftOf ?w ?wd))) (exists ?c (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (Holding ?w ?c)))))",
+    "cnf": "(exists ?w (forall ?wd (exists ?c (and (Is ?w 'woman') (or (not (Is ?wd 'wardrobe')) (LeftOf ?w ?wd)) (Holding ?w ?c) (HasMaterial ?c 'wooden') (Is ?c 'chair')))))",
+    "k": 3,
+    "object_classes": [
+        "chair",
+        "woman",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child holding a dog next to a turned-on monitor. Every ball is plastic and positioned to the left of the monitor.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?m (and (Is ?c 'child') (Is ?m 'monitor') (HasState ?m 'on') (NextTo ?c ?m) (forall ?b (implies (Is ?b 'ball') (and (HasMaterial ?b 'plastic') (LeftOf ?b ?m)))) (exists ?d (and (Is ?d 'dog') (Holding ?c ?d)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?m (forall ?b (exists ?d (and (Is ?c 'child') (NextTo ?c ?m) (Holding ?c ?d) (HasState ?m 'on') (or (not (Is ?b 'ball')) (LeftOf ?b ?m)) (Is ?d 'dog') (Is ?m 'monitor') (or (not (Is ?b 'ball')) (HasMaterial ?b 'plastic'))))))))",
+    "k": 4,
+    "object_classes": [
+        "dog",
+        "ball",
+        "monitor",
+        "child"
+    ]
+}

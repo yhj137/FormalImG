@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene of a child holding a round fruit, with a key next to the child on the left.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?k (and (Is ?c 'child') (Is ?f 'fruit') (Is ?k 'key') (HasShape ?f 'round') (Holding ?c ?f) (LeftOf ?k ?c) (NextTo ?k ?c))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?k (and (Is ?c 'child') (Holding ?c ?f) (LeftOf ?k ?c) (HasShape ?f 'round') (NextTo ?k ?c) (Is ?k 'key') (Is ?f 'fruit'))))))",
+    "k": 3,
+    "object_classes": [
+        "key",
+        "fruit",
+        "child"
+    ]
+}

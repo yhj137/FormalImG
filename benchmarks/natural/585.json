@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a tree with a blue bowl to its right. Every bird is perched on the tree, located to the left of the bowl.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (exists ?b (and (Is ?b 'bowl') (HasColor ?b 'blue') (RightOf ?b ?t) (forall ?z (implies (Is ?z 'bird') (and (On ?z ?t) (LeftOf ?z ?b)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?b (forall ?z (and (Is ?t 'tree') (RightOf ?b ?t) (or (not (Is ?z 'bird')) (On ?z ?t)) (HasColor ?b 'blue') (or (not (Is ?z 'bird')) (LeftOf ?z ?b)) (Is ?b 'bowl'))))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "bird",
+        "tree"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a bench with every book placed on it. A round bowl containing a yellow banana also rests on the bench. A mirror, a gray rock, and a brown horse are located next to the bench.",
+    "dsl": "(exists ?bench (and (Is ?bench 'bench') (forall ?book (implies (Is ?book 'book') (On ?book ?bench))) (exists ?bowl (exists ?banana (exists ?mirror (exists ?rock (exists ?horse (and (Is ?bowl 'bowl') (HasShape ?bowl 'round') (On ?bowl ?bench) (Is ?banana 'banana') (HasColor ?banana 'yellow') (In ?banana ?bowl) (Is ?mirror 'mirror') (NextTo ?mirror ?bench) (Is ?rock 'rock') (HasColor ?rock 'gray') (NextTo ?rock ?bench) (Is ?horse 'horse') (HasColor ?horse 'brown') (NextTo ?horse ?bench)))))))))",
+    "cnf": "(exists ?bench (forall ?book (exists ?bowl (exists ?banana (exists ?mirror (exists ?rock (exists ?horse (and (Is ?bench 'bench') (or (not (Is ?book 'book')) (On ?book ?bench)) (On ?bowl ?bench) (NextTo ?mirror ?bench) (HasShape ?bowl 'round') (In ?banana ?bowl) (NextTo ?rock ?bench) (Is ?mirror 'mirror') (Is ?bowl 'bowl') (HasColor ?banana 'yellow') (NextTo ?horse ?bench) (HasColor ?rock 'gray') (Is ?banana 'banana') (HasColor ?horse 'brown') (Is ?rock 'rock') (Is ?horse 'horse')))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "horse",
+        "book",
+        "rock",
+        "mirror",
+        "bowl",
+        "banana"
+    ]
+}

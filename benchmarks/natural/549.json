@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A fabric shirt contains a pair of metal glasses, and all apples are positioned to the right of the shirt.",
+    "dsl": "(exists ?s (and (Is ?s 'shirt') (HasMaterial ?s 'fabric') (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?s))) (exists ?g (and (Is ?g 'glasses') (HasMaterial ?g 'metal') (In ?g ?s)))))",
+    "cnf": "(exists ?s (forall ?a (exists ?g (and (Is ?s 'shirt') (HasMaterial ?s 'fabric') (or (not (Is ?a 'apple')) (RightOf ?a ?s)) (In ?g ?s) (HasMaterial ?g 'metal') (Is ?g 'glasses')))))",
+    "k": 3,
+    "object_classes": [
+        "apple",
+        "glasses",
+        "shirt"
+    ]
+}

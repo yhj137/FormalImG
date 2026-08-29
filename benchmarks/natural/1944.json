@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A child holding a metal fork is in a wooden bed. To the left of the child is a blue shirt. A chair is next to the bed, and a monitor sits next to the chair. Every teddy bear in the scene is positioned next to the monitor. To the left of the monitor is a lamp. Next to the lamp is a round hat with a red apple inside it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?c (exists ?f (exists ?s (exists ?ch (exists ?m (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?c 'child') (In ?c ?b) (Is ?f 'fork') (HasMaterial ?f 'metal') (Holding ?c ?f) (Is ?s 'shirt') (HasColor ?s 'blue') (LeftOf ?s ?c) (Is ?ch 'chair') (NextTo ?ch ?b) (Is ?m 'monitor') (NextTo ?m ?ch) (forall ?t (implies (Is ?t 'teddy bear') (NextTo ?t ?m))) (exists ?l (exists ?h (exists ?a (and (Is ?l 'lamp') (LeftOf ?l ?m) (Is ?h 'hat') (HasShape ?h 'round') (NextTo ?h ?l) (Is ?a 'apple') (HasColor ?a 'red') (In ?a ?h)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?c (exists ?f (exists ?s (exists ?ch (exists ?m (forall ?t (exists ?l (exists ?h (exists ?a (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (In ?c ?b) (NextTo ?ch ?b) (Is ?c 'child') (Holding ?c ?f) (Is ?ch 'chair') (NextTo ?m ?ch) (LeftOf ?s ?c) (HasMaterial ?f 'metal') (Is ?m 'monitor') (or (not (Is ?t 'teddy bear')) (NextTo ?t ?m)) (HasColor ?s 'blue') (Is ?f 'fork') (LeftOf ?l ?m) (Is ?s 'shirt') (Is ?l 'lamp') (NextTo ?h ?l) (HasShape ?h 'round') (In ?a ?h) (Is ?h 'hat') (HasColor ?a 'red') (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "child",
+        "fork",
+        "bed",
+        "chair",
+        "monitor",
+        "teddy bear",
+        "lamp",
+        "apple",
+        "hat"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a cylindrical bottle, with every banana located to the left of the bottle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (forall ?ba (implies (Is ?ba 'banana') (LeftOf ?ba ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?ba (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (or (not (Is ?ba 'banana')) (LeftOf ?ba ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "banana"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone positioned on the left side of the scene, there is a vertical arrangement of items beneath it consisting of a yellow ruler, a gray knife, and a white bowl. Specifically, the phone is above the ruler, the ruler is above the knife, and the knife is above the bowl, with all four objects aligned vertically.",
+    "dsl": "(forall ?phone (implies (and (Is ?phone 'phone') (OnLeftSide ?phone)) (exists ?ruler (exists ?knife (exists ?bowl (and (Is ?ruler 'ruler') (Has ?ruler 'yellow') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?bowl 'bowl') (Has ?bowl 'white') (Above ?phone ?ruler) (Above ?ruler ?knife) (Above ?knife ?bowl) (AlignedVertically ?phone ?ruler) (AlignedVertically ?ruler ?knife) (AlignedVertically ?knife ?bowl)))))))",
+    "cnf": "(forall ?phone (exists ?ruler (exists ?knife (exists ?bowl (and (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Is ?ruler 'ruler')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Has ?ruler 'yellow')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Above ?phone ?ruler)) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Is ?knife 'knife')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Above ?ruler ?knife)) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Has ?bowl 'white')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Has ?knife 'gray')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (AlignedVertically ?phone ?ruler)) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Above ?knife ?bowl)) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (Is ?bowl 'bowl')) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (AlignedVertically ?ruler ?knife)) (or (not (Is ?phone 'phone')) (not (OnLeftSide ?phone)) (AlignedVertically ?knife ?bowl)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "bowl",
+        "phone",
+        "knife"
+    ]
+}

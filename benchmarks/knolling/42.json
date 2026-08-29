@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single bowl positioned on the top side of the layout.",
+    "dsl": "(exists ?bowl (and (Is ?bowl 'bowl') (OnTopSide ?bowl)))",
+    "cnf": "(exists ?bowl (and (Is ?bowl 'bowl') (OnTopSide ?bowl)))",
+    "k": 1,
+    "object_classes": [
+        "bowl"
+    ]
+}

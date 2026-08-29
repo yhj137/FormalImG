@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a plate positioned on the bottom side. For every spoon in the image, there is a mouse that aligns vertically with it. Additionally, the plate is visually larger than the mouse.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnBottomSide ?plate) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?mouse (and (Is ?mouse 'mouse') (AlignedVertically ?mouse ?spoon) (LargerThan ?plate ?mouse)))))))",
+    "cnf": "(exists ?plate (forall ?spoon (exists ?mouse (and (Is ?plate 'plate') (OnBottomSide ?plate) (or (not (Is ?spoon 'spoon')) (LargerThan ?plate ?mouse)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?mouse ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse'))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "plate",
+        "mouse"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a drill, headphones, a wallet, a keyboard, and a calculator. The drill is positioned on the top side of the layout. The headphones are placed to the right of the drill, and they are aligned horizontally. The drill is located above the keyboard. In the lower section, the wallet is to the left of the keyboard, and the calculator is to the right of the keyboard; the wallet, keyboard, and calculator are aligned horizontally. Furthermore, the calculator is situated on the right side of the image.",
+    "dsl": "(exists ?d (exists ?h (exists ?w (exists ?k (exists ?c (and (Is ?d 'drill') (Is ?h 'headphones') (Is ?w 'wallet') (Is ?k 'keyboard') (Is ?c 'calculator') (OnTopSide ?d) (RightOf ?h ?d) (AlignedHorizontally ?d ?h) (Above ?d ?k) (LeftOf ?w ?k) (RightOf ?c ?k) (AlignedHorizontally ?w ?k) (AlignedHorizontally ?k ?c) (OnRightSide ?c)))))))",
+    "cnf": "(exists ?d (exists ?h (exists ?w (exists ?k (exists ?c (and (Is ?d 'drill') (OnTopSide ?d) (RightOf ?h ?d) (AlignedHorizontally ?d ?h) (Is ?h 'headphones') (Above ?d ?k) (Is ?k 'keyboard') (LeftOf ?w ?k) (Is ?w 'wallet') (AlignedHorizontally ?w ?k) (RightOf ?c ?k) (AlignedHorizontally ?k ?c) (Is ?c 'calculator') (OnRightSide ?c)))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "drill",
+        "calculator",
+        "wallet",
+        "headphones"
+    ]
+}

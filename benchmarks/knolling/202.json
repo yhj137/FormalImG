@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image showing a suitcase and a tie. The suitcase is located on the right side of the image and is positioned above the tie.",
+    "dsl": "(exists ?s (exists ?t (and (Is ?s 'suitcase') (Is ?t 'tie') (OnRightSide ?s) (Above ?s ?t))))",
+    "cnf": "(exists ?s (exists ?t (and (Is ?s 'suitcase') (OnRightSide ?s) (Above ?s ?t) (Is ?t 'tie'))))",
+    "k": 2,
+    "object_classes": [
+        "tie",
+        "suitcase"
+    ]
+}

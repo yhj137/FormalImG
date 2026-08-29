@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A book is placed on the right side of the composition. To the left of the book lies a pair of pliers, and a calculator is positioned to the left of the pliers. A black phone is located below the calculator. Additionally, for every white shirt in the scene, it is positioned below the book and has a pair of glasses to its right that is larger than the phone.",
+    "dsl": "(exists ?b (exists ?pl (exists ?c (exists ?ph (and (Is ?b 'book') (OnRightSide ?b) (Is ?pl 'pliers') (LeftOf ?pl ?b) (Is ?c 'calculator') (LeftOf ?c ?pl) (Is ?ph 'phone') (Has ?ph 'black') (Below ?ph ?c) (forall ?s (implies (and (Is ?s 'shirt') (Has ?s 'white')) (exists ?g (and (Is ?g 'glasses') (Below ?s ?b) (RightOf ?g ?s) (LargerThan ?g ?ph))))))))))",
+    "cnf": "(exists ?b (exists ?pl (exists ?c (exists ?ph (forall ?s (exists ?g (and (Is ?b 'book') (OnRightSide ?b) (LeftOf ?pl ?b) (or (not (Is ?s 'shirt')) (not (Has ?s 'white')) (Below ?s ?b)) (Is ?pl 'pliers') (LeftOf ?c ?pl) (or (not (Is ?s 'shirt')) (not (Has ?s 'white')) (Is ?g 'glasses')) (or (not (Is ?s 'shirt')) (not (Has ?s 'white')) (RightOf ?g ?s)) (Is ?c 'calculator') (Below ?ph ?c) (or (not (Is ?s 'shirt')) (not (Has ?s 'white')) (LargerThan ?g ?ph)) (Has ?ph 'black') (Is ?ph 'phone'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "glasses",
+        "pliers",
+        "phone",
+        "calculator",
+        "shirt"
+    ]
+}

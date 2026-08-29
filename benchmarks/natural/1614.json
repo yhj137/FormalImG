@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a woman standing next to a house with a red bird perched on it. The woman is holding a key. A lamp sits next to the woman, to the right of a rug. A blue backpack containing an empty bottle and an orange rests on the rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?h (exists ?b (exists ?k (exists ?l (exists ?r (exists ?bp (exists ?bt (exists ?o (and (Is ?w 'woman') (Is ?h 'house') (NextTo ?w ?h) (Is ?b 'bird') (HasColor ?b 'red') (On ?b ?h) (Is ?k 'key') (Holding ?w ?k) (Is ?l 'lamp') (NextTo ?l ?w) (Is ?r 'rug') (RightOf ?l ?r) (Is ?bp 'backpack') (HasColor ?bp 'blue') (On ?bp ?r) (Is ?bt 'bottle') (HasState ?bt 'empty') (In ?bt ?bp) (Is ?o 'orange') (In ?o ?bp))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?h (exists ?b (exists ?k (exists ?l (exists ?r (exists ?bp (exists ?bt (exists ?o (and (Is ?w 'woman') (NextTo ?w ?h) (Holding ?w ?k) (Is ?h 'house') (On ?b ?h) (NextTo ?l ?w) (Is ?k 'key') (HasColor ?b 'red') (Is ?l 'lamp') (RightOf ?l ?r) (Is ?b 'bird') (Is ?r 'rug') (On ?bp ?r) (HasColor ?bp 'blue') (In ?bt ?bp) (Is ?bp 'backpack') (In ?o ?bp) (HasState ?bt 'empty') (Is ?o 'orange') (Is ?bt 'bottle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "bottle",
+        "backpack",
+        "woman",
+        "rug",
+        "orange",
+        "bird",
+        "lamp",
+        "key"
+    ]
+}

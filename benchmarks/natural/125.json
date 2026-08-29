@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting style scene where all buses are red.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?x (implies (Is ?x 'bus') (HasColor ?x 'red'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?x (or (not (Is ?x 'bus')) (HasColor ?x 'red'))))",
+    "k": 1,
+    "object_classes": [
+        "bus"
+    ]
+}

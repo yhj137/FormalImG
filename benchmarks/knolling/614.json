@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is positioned on the left side of the image, with a shoe placed directly below it; these two items are aligned vertically. On the right side of the image, there is a phone, and a lemon is located below the phone, also aligned vertically. To contrast the items across the layout, the shirt is visually larger than the phone.",
+    "dsl": "(exists ?shirt (exists ?shoe (exists ?phone (exists ?lemon (and (Is ?shirt 'shirt') (Is ?shoe 'shoe') (Is ?phone 'phone') (Is ?lemon 'lemon') (OnLeftSide ?shirt) (Below ?shoe ?shirt) (AlignedVertically ?shirt ?shoe) (OnRightSide ?phone) (Below ?lemon ?phone) (AlignedVertically ?phone ?lemon) (LargerThan ?shirt ?phone))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (exists ?phone (exists ?lemon (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Below ?shoe ?shirt) (AlignedVertically ?shirt ?shoe) (Is ?shoe 'shoe') (LargerThan ?shirt ?phone) (AlignedVertically ?phone ?lemon) (Below ?lemon ?phone) (OnRightSide ?phone) (Is ?lemon 'lemon') (Is ?phone 'phone'))))))",
+    "k": 4,
+    "object_classes": [
+        "lemon",
+        "phone",
+        "shoe",
+        "shirt"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of blue jeans is located on the left side of the scene. To the right of the jeans is a black camera. A keyboard is positioned below the jeans. To the right of the keyboard lies a knife, and the two are aligned horizontally. A hammer is placed below the camera. A spoon is located below the knife. Additionally, a red lighter is present and is smaller than the camera. Finally, for every glove in the image, it is positioned below the spoon.",
+    "dsl": "(exists ?jeans (forall ?glove (exists ?camera (exists ?keyboard (exists ?hammer (exists ?knife (exists ?spoon (exists ?lighter (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (implies (Is ?glove 'glove') (Below ?glove ?spoon)) (Is ?camera 'camera') (Has ?camera 'black') (RightOf ?camera ?jeans) (Is ?keyboard 'keyboard') (Below ?keyboard ?jeans) (Is ?hammer 'hammer') (Below ?hammer ?camera) (Is ?knife 'knife') (RightOf ?knife ?keyboard) (AlignedHorizontally ?keyboard ?knife) (Is ?spoon 'spoon') (Below ?spoon ?knife) (Is ?lighter 'lighter') (Has ?lighter 'red') (SmallerThan ?lighter ?camera))))))))))",
+    "cnf": "(exists ?jeans (forall ?glove (exists ?camera (exists ?keyboard (exists ?hammer (exists ?knife (exists ?spoon (exists ?lighter (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (RightOf ?camera ?jeans) (Below ?keyboard ?jeans) (Has ?camera 'black') (Below ?hammer ?camera) (Is ?keyboard 'keyboard') (RightOf ?knife ?keyboard) (Is ?camera 'camera') (SmallerThan ?lighter ?camera) (Is ?hammer 'hammer') (AlignedHorizontally ?keyboard ?knife) (Is ?knife 'knife') (Has ?lighter 'red') (Below ?spoon ?knife) (Is ?lighter 'lighter') (Is ?spoon 'spoon') (or (not (Is ?glove 'glove')) (Below ?glove ?spoon)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "hammer",
+        "lighter",
+        "jeans",
+        "camera",
+        "knife",
+        "glove",
+        "spoon"
+    ]
+}

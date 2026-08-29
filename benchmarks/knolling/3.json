@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a single cup, which is positioned on the left side of the image.",
+    "dsl": "(exists ?cup (and (Is ?cup 'cup') (OnLeftSide ?cup)))",
+    "cnf": "(exists ?cup (and (Is ?cup 'cup') (OnLeftSide ?cup)))",
+    "k": 1,
+    "object_classes": [
+        "cup"
+    ]
+}

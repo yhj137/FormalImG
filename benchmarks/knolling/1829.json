@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt in the image, there is a pair of jeans located below it. To the left of the jeans is a sock, and to the right of the jeans is a shoe; these three items are aligned horizontally. Below the jeans, there is a horizontally aligned row consisting of a calculator, a remote, a mouse, and a lighter, arranged in that order from left to right. Finally, on the bottom side of the image and below the calculator, there is a bowl, which is larger than the fork located to its right.",
+    "dsl": "(forall ?shirt (implies (Is ?shirt 'shirt') (exists ?jeans (exists ?sock (exists ?shoe (exists ?calculator (exists ?remote (exists ?mouse (exists ?lighter (exists ?bowl (exists ?fork (and (Is ?jeans 'jeans') (Is ?sock 'sock') (Is ?shoe 'shoe') (Is ?calculator 'calculator') (Is ?remote 'remote') (Is ?mouse 'mouse') (Is ?lighter 'lighter') (Is ?bowl 'bowl') (Is ?fork 'fork') (Below ?jeans ?shirt) (LeftOf ?sock ?jeans) (RightOf ?shoe ?jeans) (AlignedHorizontally ?sock ?jeans) (AlignedHorizontally ?jeans ?shoe) (Below ?calculator ?jeans) (RightOf ?remote ?calculator) (RightOf ?mouse ?remote) (RightOf ?lighter ?mouse) (AlignedHorizontally ?calculator ?remote) (AlignedHorizontally ?remote ?mouse) (AlignedHorizontally ?mouse ?lighter) (OnBottomSide ?bowl) (Below ?bowl ?calculator) (RightOf ?fork ?bowl) (LargerThan ?bowl ?fork)))))))))))))",
+    "cnf": "(forall ?shirt (exists ?jeans (exists ?sock (exists ?shoe (exists ?calculator (exists ?remote (exists ?mouse (exists ?lighter (exists ?bowl (exists ?fork (and (or (not (Is ?shirt 'shirt')) (Is ?jeans 'jeans')) (or (not (Is ?shirt 'shirt')) (Below ?jeans ?shirt)) (or (not (Is ?shirt 'shirt')) (Is ?sock 'sock')) (or (not (Is ?shirt 'shirt')) (LeftOf ?sock ?jeans)) (or (not (Is ?shirt 'shirt')) (Is ?fork 'fork')) (or (not (Is ?shirt 'shirt')) (Is ?shoe 'shoe')) (or (not (Is ?shirt 'shirt')) (RightOf ?shoe ?jeans)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?sock ?jeans)) (or (not (Is ?shirt 'shirt')) (Is ?bowl 'bowl')) (or (not (Is ?shirt 'shirt')) (RightOf ?fork ?bowl)) (or (not (Is ?shirt 'shirt')) (Is ?calculator 'calculator')) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?jeans ?shoe)) (or (not (Is ?shirt 'shirt')) (Is ?lighter 'lighter')) (or (not (Is ?shirt 'shirt')) (OnBottomSide ?bowl)) (or (not (Is ?shirt 'shirt')) (Below ?bowl ?calculator)) (or (not (Is ?shirt 'shirt')) (LargerThan ?bowl ?fork)) (or (not (Is ?shirt 'shirt')) (Is ?remote 'remote')) (or (not (Is ?shirt 'shirt')) (Below ?calculator ?jeans)) (or (not (Is ?shirt 'shirt')) (Is ?mouse 'mouse')) (or (not (Is ?shirt 'shirt')) (RightOf ?lighter ?mouse)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?mouse ?lighter)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?calculator ?remote)) (or (not (Is ?shirt 'shirt')) (RightOf ?remote ?calculator)) (or (not (Is ?shirt 'shirt')) (RightOf ?mouse ?remote)) (or (not (Is ?shirt 'shirt')) (AlignedHorizontally ?remote ?mouse)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "remote",
+        "sock",
+        "fork",
+        "calculator",
+        "jeans",
+        "lighter",
+        "mouse",
+        "bowl",
+        "shoe",
+        "shirt"
+    ]
+}

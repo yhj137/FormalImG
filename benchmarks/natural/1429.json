@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene where every bus has a horse to its left. A jacket containing a phone, with glasses resting on it, is draped over the horse. To the left of the horse sits a boat holding an orange and an open umbrella.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'bus') (exists ?h (exists ?j (exists ?p (exists ?g (exists ?bt (exists ?o (exists ?u (and (Is ?h 'horse') (LeftOf ?h ?b) (Is ?j 'jacket') (On ?j ?h) (Is ?p 'phone') (In ?p ?j) (Is ?g 'glasses') (On ?g ?j) (Is ?bt 'boat') (LeftOf ?bt ?h) (Is ?o 'orange') (In ?o ?bt) (Is ?u 'umbrella') (On ?u ?bt) (HasState ?u 'open'))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?h (exists ?j (exists ?p (exists ?g (exists ?bt (exists ?o (exists ?u (and (or (not (Is ?b 'bus')) (Is ?h 'horse')) (or (not (Is ?b 'bus')) (LeftOf ?h ?b)) (or (not (Is ?b 'bus')) (Is ?j 'jacket')) (or (not (Is ?b 'bus')) (On ?j ?h)) (or (not (Is ?b 'bus')) (Is ?p 'phone')) (or (not (Is ?b 'bus')) (LeftOf ?bt ?h)) (or (not (Is ?b 'bus')) (In ?p ?j)) (or (not (Is ?b 'bus')) (Is ?bt 'boat')) (or (not (Is ?b 'bus')) (Is ?o 'orange')) (or (not (Is ?b 'bus')) (In ?o ?bt)) (or (not (Is ?b 'bus')) (Is ?g 'glasses')) (or (not (Is ?b 'bus')) (On ?g ?j)) (or (not (Is ?b 'bus')) (Is ?u 'umbrella')) (or (not (Is ?b 'bus')) (On ?u ?bt)) (or (not (Is ?b 'bus')) (HasState ?u 'open'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bus",
+        "boat",
+        "glasses",
+        "jacket",
+        "orange",
+        "horse",
+        "phone",
+        "umbrella"
+    ]
+}

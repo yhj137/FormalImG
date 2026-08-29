@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of pliers positioned on the top side of the layout. For every bowl present in the image, it is located vertically below the pliers.",
+    "dsl": "(exists ?pliers (and (Is ?pliers 'pliers') (OnTopSide ?pliers) (forall ?bowl (implies (Is ?bowl 'bowl') (Below ?bowl ?pliers)))))",
+    "cnf": "(exists ?pliers (forall ?bowl (and (Is ?pliers 'pliers') (OnTopSide ?pliers) (or (not (Is ?bowl 'bowl')) (Below ?bowl ?pliers)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "pliers"
+    ]
+}

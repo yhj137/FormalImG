@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is positioned on the right side of the scene, and a keyboard is located to the left of the handbag. The arrangement dictates that for every phone in the image, it is placed below the keyboard. Additionally, for each phone, there is a mouse to its left that is aligned horizontally with it, and a pair of headphones is situated below that mouse.",
+    "dsl": "(exists ?handbag (exists ?keyboard (and (Is ?handbag 'handbag') (Is ?keyboard 'keyboard') (OnRightSide ?handbag) (LeftOf ?keyboard ?handbag) (forall ?phone (implies (Is ?phone 'phone') (exists ?mouse (exists ?headphones (and (Is ?mouse 'mouse') (Is ?headphones 'headphones') (Below ?phone ?keyboard) (LeftOf ?mouse ?phone) (AlignedHorizontally ?mouse ?phone) (Below ?headphones ?mouse)))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (forall ?phone (exists ?mouse (exists ?headphones (and (Is ?handbag 'handbag') (OnRightSide ?handbag) (LeftOf ?keyboard ?handbag) (Is ?keyboard 'keyboard') (or (not (Is ?phone 'phone')) (Below ?phone ?keyboard)) (or (not (Is ?phone 'phone')) (Is ?headphones 'headphones')) (or (not (Is ?phone 'phone')) (LeftOf ?mouse ?phone)) (or (not (Is ?phone 'phone')) (Is ?mouse 'mouse')) (or (not (Is ?phone 'phone')) (Below ?headphones ?mouse)) (or (not (Is ?phone 'phone')) (AlignedHorizontally ?mouse ?phone))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "phone",
+        "handbag",
+        "mouse",
+        "headphones"
+    ]
+}

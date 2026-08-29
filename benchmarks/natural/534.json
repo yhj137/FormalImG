@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a gray elephant positioned to the left of every tree, and a man standing to the right of the elephant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (and (Is ?e 'elephant') (HasColor ?e 'gray') (forall ?t (implies (Is ?t 'tree') (LeftOf ?e ?t))) (exists ?m (and (Is ?m 'man') (RightOf ?m ?e))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (forall ?t (exists ?m (and (Is ?e 'elephant') (HasColor ?e 'gray') (or (not (Is ?t 'tree')) (LeftOf ?e ?t)) (RightOf ?m ?e) (Is ?m 'man'))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "tree",
+        "man"
+    ]
+}

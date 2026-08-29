@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement starts with a black monitor and a gray laptop aligned horizontally, where the monitor is larger than the laptop. Below the monitor is a red shoe, which is aligned horizontally with a hammer that is smaller than the shoe. Further down, below the shoe, lies a pizza aligned horizontally with a white plate, with the pizza being larger than the plate. The scene imposes a constraint on tools: for every pair of pliers, it is located below the white plate. Furthermore, for each pair of pliers, there exists a ruler and blue scissors such that the ruler is on the right side of the image, the ruler is smaller than the scissors, and the pliers, ruler, and scissors are all aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?shoe (exists ?hammer (exists ?pizza (exists ?plate (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?laptop 'laptop') (Has ?laptop 'gray') (AlignedHorizontally ?monitor ?laptop) (LargerThan ?monitor ?laptop) (Is ?shoe 'shoe') (Has ?shoe 'red') (Below ?shoe ?monitor) (Is ?hammer 'hammer') (AlignedHorizontally ?shoe ?hammer) (SmallerThan ?hammer ?shoe) (Is ?pizza 'pizza') (Below ?pizza ?shoe) (Is ?plate 'plate') (Has ?plate 'white') (AlignedHorizontally ?pizza ?plate) (LargerThan ?pizza ?plate) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?ruler (exists ?scissors (and (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Has ?scissors 'blue') (Below ?pliers ?plate) (OnRightSide ?ruler) (AlignedHorizontally ?pliers ?ruler) (AlignedHorizontally ?ruler ?scissors) (SmallerThan ?ruler ?scissors)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?shoe (exists ?hammer (exists ?pizza (exists ?plate (forall ?pliers (exists ?ruler (exists ?scissors (and (Is ?monitor 'monitor') (Has ?monitor 'black') (AlignedHorizontally ?monitor ?laptop) (LargerThan ?monitor ?laptop) (Has ?laptop 'gray') (Below ?shoe ?monitor) (Is ?laptop 'laptop') (Has ?shoe 'red') (AlignedHorizontally ?shoe ?hammer) (Is ?shoe 'shoe') (SmallerThan ?hammer ?shoe) (Is ?hammer 'hammer') (Below ?pizza ?shoe) (Is ?pizza 'pizza') (AlignedHorizontally ?pizza ?plate) (LargerThan ?pizza ?plate) (Has ?plate 'white') (or (not (Is ?pliers 'pliers')) (Below ?pliers ?plate)) (Is ?plate 'plate') (or (not (Is ?pliers 'pliers')) (Has ?scissors 'blue')) (or (not (Is ?pliers 'pliers')) (OnRightSide ?ruler)) (or (not (Is ?pliers 'pliers')) (Is ?scissors 'scissors')) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?ruler ?scissors)) (or (not (Is ?pliers 'pliers')) (Is ?ruler 'ruler')) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?pliers ?ruler)) (or (not (Is ?pliers 'pliers')) (SmallerThan ?ruler ?scissors))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "plate",
+        "pliers",
+        "pizza",
+        "hammer",
+        "monitor",
+        "shoe",
+        "scissors"
+    ]
+}

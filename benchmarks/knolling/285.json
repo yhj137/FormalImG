@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the layout, it is located on the top side of the image, and there exists a book that is smaller than the suitcase.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'suitcase') (exists ?b (and (Is ?b 'book') (OnTopSide ?s) (SmallerThan ?b ?s))))))",
+    "cnf": "(forall ?s (exists ?b (and (or (not (Is ?s 'suitcase')) (Is ?b 'book')) (or (not (Is ?s 'suitcase')) (OnTopSide ?s)) (or (not (Is ?s 'suitcase')) (SmallerThan ?b ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "suitcase"
+    ]
+}

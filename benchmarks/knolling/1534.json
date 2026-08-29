@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical column on the left side containing a suitcase, a pizza, a book, a calculator, and a watch, arranged such that the suitcase is the largest, followed by the pizza, the book, the calculator, and the watch in decreasing size. Additionally, for every stapler in the image, there is a remote and a pen aligned vertically with it. This group is positioned to the right of the suitcase, with the stapler being larger than the remote, and the remote larger than the pen.",
+    "dsl": "(exists ?s (exists ?pi (exists ?b (exists ?c (exists ?w (and (Is ?s 'suitcase') (OnLeftSide ?s) (Is ?pi 'pizza') (AlignedVertically ?pi ?s) (LargerThan ?s ?pi) (Is ?b 'book') (AlignedVertically ?b ?s) (LargerThan ?pi ?b) (Is ?c 'calculator') (AlignedVertically ?c ?s) (LargerThan ?b ?c) (Is ?w 'watch') (AlignedVertically ?w ?s) (LargerThan ?c ?w) (forall ?st (implies (Is ?st 'stapler') (exists ?r (exists ?p (and (Is ?r 'remote') (Is ?p 'pen') (RightOf ?st ?s) (AlignedVertically ?r ?st) (AlignedVertically ?p ?r) (LargerThan ?st ?r) (LargerThan ?r ?p))))))))))))",
+    "cnf": "(exists ?s (exists ?pi (exists ?b (exists ?c (exists ?w (forall ?st (exists ?r (exists ?p (and (Is ?s 'suitcase') (OnLeftSide ?s) (AlignedVertically ?pi ?s) (LargerThan ?s ?pi) (Is ?pi 'pizza') (AlignedVertically ?b ?s) (LargerThan ?pi ?b) (AlignedVertically ?c ?s) (Is ?b 'book') (LargerThan ?b ?c) (AlignedVertically ?w ?s) (Is ?c 'calculator') (LargerThan ?c ?w) (or (not (Is ?st 'stapler')) (RightOf ?st ?s)) (Is ?w 'watch') (or (not (Is ?st 'stapler')) (Is ?p 'pen')) (or (not (Is ?st 'stapler')) (AlignedVertically ?r ?st)) (or (not (Is ?st 'stapler')) (Is ?r 'remote')) (or (not (Is ?st 'stapler')) (AlignedVertically ?p ?r)) (or (not (Is ?st 'stapler')) (LargerThan ?st ?r)) (or (not (Is ?st 'stapler')) (LargerThan ?r ?p)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "remote",
+        "stapler",
+        "pen",
+        "pizza",
+        "watch",
+        "calculator",
+        "suitcase"
+    ]
+}

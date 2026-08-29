@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the bottom side of the scene. A shoe is located above the jeans, and the jeans are larger than the shoe. For every mouse in the image, there is a remote to its left, which is also situated below the shoe. A hammer is placed to the left of the shoe, with a glove arranged above the hammer. The shoe is positioned to the left of a bowl. Furthermore, a cup is placed above the bowl, being smaller than the bowl, and a fork is located above the cup.",
+    "dsl": "(exists ?jeans (exists ?shoe (and (Is ?jeans 'jeans') (Is ?shoe 'shoe') (OnBottomSide ?jeans) (Above ?shoe ?jeans) (LargerThan ?jeans ?shoe) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?remote (and (Is ?remote 'remote') (LeftOf ?remote ?mouse) (Below ?remote ?shoe))))) (exists ?hammer (exists ?glove (exists ?bowl (exists ?cup (exists ?fork (and (Is ?hammer 'hammer') (Is ?glove 'glove') (Is ?bowl 'bowl') (Is ?cup 'cup') (Is ?fork 'fork') (LeftOf ?hammer ?shoe) (Above ?glove ?hammer) (LeftOf ?shoe ?bowl) (SmallerThan ?cup ?bowl) (Above ?cup ?bowl) (Above ?fork ?cup))))))))))",
+    "cnf": "(exists ?jeans (exists ?shoe (forall ?mouse (exists ?remote (exists ?hammer (exists ?glove (exists ?bowl (exists ?cup (exists ?fork (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (Above ?shoe ?jeans) (LargerThan ?jeans ?shoe) (Is ?shoe 'shoe') (or (not (Is ?mouse 'mouse')) (Below ?remote ?shoe)) (LeftOf ?hammer ?shoe) (or (not (Is ?mouse 'mouse')) (LeftOf ?remote ?mouse)) (LeftOf ?shoe ?bowl) (Is ?hammer 'hammer') (Above ?glove ?hammer) (or (not (Is ?mouse 'mouse')) (Is ?remote 'remote')) (Is ?bowl 'bowl') (SmallerThan ?cup ?bowl) (Is ?glove 'glove') (Above ?cup ?bowl) (Is ?cup 'cup') (Above ?fork ?cup) (Is ?fork 'fork')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "cup",
+        "hammer",
+        "fork",
+        "jeans",
+        "mouse",
+        "bowl",
+        "glove",
+        "shoe"
+    ]
+}

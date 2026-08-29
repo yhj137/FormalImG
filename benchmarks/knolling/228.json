@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays headphones and a stapler. Both items are positioned on the bottom side of the image and are aligned horizontally with one another.",
+    "dsl": "(exists ?h (exists ?s (and (Is ?h 'headphones') (Is ?s 'stapler') (OnBottomSide ?h) (OnBottomSide ?s) (AlignedHorizontally ?h ?s))))",
+    "cnf": "(exists ?h (exists ?s (and (Is ?h 'headphones') (OnBottomSide ?h) (AlignedHorizontally ?h ?s) (OnBottomSide ?s) (Is ?s 'stapler'))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "stapler"
+    ]
+}

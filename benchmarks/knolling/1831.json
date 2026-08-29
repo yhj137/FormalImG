@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, there is a structured arrangement of nine other objects. A pair of headphones is positioned below the keyboard, a bottle is below the headphones, a sandwich is below the bottle, and a spoon is below the sandwich; these five items form a column where each is aligned vertically with the one above it. To the left of these items are corresponding objects: a wallet is to the left of the keyboard, a shoe is to the left of the headphones, a sock is to the left of the bottle, a glove is to the left of the sandwich, and a stapler is to the left of the spoon. The stapler is located on the bottom side of the image.",
+    "dsl": "(forall ?kb (implies (Is ?kb 'keyboard') (exists ?hp (exists ?bot (exists ?sdw (exists ?spn (exists ?wal (exists ?shoe (exists ?sock (exists ?glove (exists ?stp (and (Is ?hp 'headphones') (Is ?bot 'bottle') (Is ?sdw 'sandwich') (Is ?spn 'spoon') (Is ?wal 'wallet') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?glove 'glove') (Is ?stp 'stapler') (Below ?hp ?kb) (AlignedVertically ?hp ?kb) (Below ?bot ?hp) (AlignedVertically ?bot ?hp) (Below ?sdw ?bot) (AlignedVertically ?sdw ?bot) (Below ?spn ?sdw) (AlignedVertically ?spn ?sdw) (LeftOf ?wal ?kb) (LeftOf ?shoe ?hp) (LeftOf ?sock ?bot) (LeftOf ?glove ?sdw) (LeftOf ?stp ?spn) (OnBottomSide ?stp)))))))))))))",
+    "cnf": "(forall ?kb (exists ?hp (exists ?bot (exists ?sdw (exists ?spn (exists ?wal (exists ?shoe (exists ?sock (exists ?glove (exists ?stp (and (or (not (Is ?kb 'keyboard')) (Is ?hp 'headphones')) (or (not (Is ?kb 'keyboard')) (Is ?bot 'bottle')) (or (not (Is ?kb 'keyboard')) (Below ?hp ?kb)) (or (not (Is ?kb 'keyboard')) (Is ?sdw 'sandwich')) (or (not (Is ?kb 'keyboard')) (Below ?bot ?hp)) (or (not (Is ?kb 'keyboard')) (Is ?stp 'stapler')) (or (not (Is ?kb 'keyboard')) (AlignedVertically ?hp ?kb)) (or (not (Is ?kb 'keyboard')) (Is ?spn 'spoon')) (or (not (Is ?kb 'keyboard')) (Below ?sdw ?bot)) (or (not (Is ?kb 'keyboard')) (AlignedVertically ?bot ?hp)) (or (not (Is ?kb 'keyboard')) (Is ?glove 'glove')) (or (not (Is ?kb 'keyboard')) (LeftOf ?stp ?spn)) (or (not (Is ?kb 'keyboard')) (Is ?wal 'wallet')) (or (not (Is ?kb 'keyboard')) (Below ?spn ?sdw)) (or (not (Is ?kb 'keyboard')) (AlignedVertically ?sdw ?bot)) (or (not (Is ?kb 'keyboard')) (LeftOf ?shoe ?hp)) (or (not (Is ?kb 'keyboard')) (Is ?sock 'sock')) (or (not (Is ?kb 'keyboard')) (LeftOf ?glove ?sdw)) (or (not (Is ?kb 'keyboard')) (OnBottomSide ?stp)) (or (not (Is ?kb 'keyboard')) (AlignedVertically ?spn ?sdw)) (or (not (Is ?kb 'keyboard')) (Is ?shoe 'shoe')) (or (not (Is ?kb 'keyboard')) (LeftOf ?wal ?kb)) (or (not (Is ?kb 'keyboard')) (LeftOf ?sock ?bot)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "stapler",
+        "sock",
+        "keyboard",
+        "sandwich",
+        "wallet",
+        "bottle",
+        "headphones",
+        "glove",
+        "shoe",
+        "spoon"
+    ]
+}

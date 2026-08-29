@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a shoe and a pair of scissors. The scissors are positioned on the right side of the image and are located to the right of the shoe. The shoe is visually larger than the scissors. Furthermore, for every watch in the scene, it is smaller than the scissors and positioned to the right of the scissors.",
+    "dsl": "(exists ?shoe (exists ?scissors (and (Is ?shoe 'shoe') (Is ?scissors 'scissors') (OnRightSide ?scissors) (RightOf ?scissors ?shoe) (LargerThan ?shoe ?scissors) (forall ?watch (implies (Is ?watch 'watch') (and (SmallerThan ?watch ?scissors) (RightOf ?watch ?scissors)))))))",
+    "cnf": "(exists ?shoe (exists ?scissors (forall ?watch (and (Is ?shoe 'shoe') (RightOf ?scissors ?shoe) (LargerThan ?shoe ?scissors) (OnRightSide ?scissors) (or (not (Is ?watch 'watch')) (SmallerThan ?watch ?scissors)) (Is ?scissors 'scissors') (or (not (Is ?watch 'watch')) (RightOf ?watch ?scissors))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "watch",
+        "shoe"
+    ]
+}

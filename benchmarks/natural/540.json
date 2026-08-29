@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon scene features a wooden tree with a woman sitting on it, while all the fish are located to the left of the tree.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (HasMaterial ?t 'wooden') (forall ?f (implies (Is ?f 'fish') (LeftOf ?f ?t))) (exists ?w (and (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?t))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?f (exists ?w (and (Is ?t 'tree') (HasMaterial ?t 'wooden') (or (not (Is ?f 'fish')) (LeftOf ?f ?t)) (On ?w ?t) (HasState ?w 'sitting') (Is ?w 'woman'))))))",
+    "k": 3,
+    "object_classes": [
+        "woman",
+        "fish",
+        "tree"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A wooden desk supports a leather jacket and a round pan. All bananas in the scene are placed on the pan. To the right of the desk, there is a woman wearing a hat. A horse is located to the right of the woman.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?j (exists ?p (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?j 'jacket') (HasMaterial ?j 'leather') (On ?j ?d) (Is ?p 'pan') (HasShape ?p 'round') (On ?p ?d) (forall ?b (implies (Is ?b 'banana') (On ?b ?p))) (exists ?w (exists ?ht (exists ?h (and (Is ?w 'woman') (RightOf ?w ?d) (Is ?ht 'hat') (On ?ht ?w) (Is ?h 'horse') (RightOf ?h ?w))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?j (exists ?p (forall ?b (exists ?w (exists ?ht (exists ?h (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?j ?d) (On ?p ?d) (HasMaterial ?j 'leather') (RightOf ?w ?d) (HasShape ?p 'round') (or (not (Is ?b 'banana')) (On ?b ?p)) (Is ?j 'jacket') (Is ?w 'woman') (On ?ht ?w) (Is ?p 'pan') (RightOf ?h ?w) (Is ?ht 'hat') (Is ?h 'horse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "jacket",
+        "pan",
+        "desk",
+        "hat",
+        "banana",
+        "horse",
+        "woman"
+    ]
+}

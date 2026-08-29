@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a standing elephant with a bird on it. To the left of the elephant is a basket containing every ball in the scene, all of which are red. A shirt lies on the basket, with a jacket next to it. To the right of the elephant is a backpack containing a screwdriver, next to a broken clock.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?bk (exists ?bi (and (Is ?e 'elephant') (HasState ?e 'standing') (Is ?bk 'basket') (LeftOf ?bk ?e) (Is ?bi 'bird') (On ?bi ?e) (forall ?ba (implies (Is ?ba 'ball') (and (HasColor ?ba 'red') (In ?ba ?bk)))) (exists ?s (exists ?j (exists ?bp (exists ?sd (exists ?c (and (Is ?s 'shirt') (On ?s ?bk) (Is ?j 'jacket') (NextTo ?j ?s) (Is ?bp 'backpack') (RightOf ?bp ?e) (Is ?sd 'screwdriver') (In ?sd ?bp) (Is ?c 'clock') (HasState ?c 'broken') (NextTo ?c ?bp))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?bk (exists ?bi (forall ?ba (exists ?s (exists ?j (exists ?bp (exists ?sd (exists ?c (and (Is ?e 'elephant') (HasState ?e 'standing') (LeftOf ?bk ?e) (On ?bi ?e) (Is ?bk 'basket') (or (not (Is ?ba 'ball')) (In ?ba ?bk)) (RightOf ?bp ?e) (Is ?bi 'bird') (On ?s ?bk) (or (not (Is ?ba 'ball')) (HasColor ?ba 'red')) (Is ?bp 'backpack') (In ?sd ?bp) (Is ?s 'shirt') (NextTo ?j ?s) (NextTo ?c ?bp) (Is ?sd 'screwdriver') (Is ?j 'jacket') (HasState ?c 'broken') (Is ?c 'clock'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "elephant",
+        "shirt",
+        "backpack",
+        "jacket",
+        "bird",
+        "clock",
+        "ball",
+        "basket",
+        "screwdriver"
+    ]
+}

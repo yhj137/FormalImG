@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a person sitting next to a brown desk. All books are located to the right of the desk. Glasses sit on the desk next to a clock, alongside a basket containing an orange fish.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (and (Is ?d 'desk') (HasColor ?d 'brown') (Is ?p 'person') (HasState ?p 'sitting') (NextTo ?p ?d) (forall ?bk (implies (Is ?bk 'book') (RightOf ?bk ?d))) (exists ?g (exists ?c (exists ?b (exists ?f (and (Is ?g 'glasses') (On ?g ?d) (Is ?c 'clock') (NextTo ?c ?g) (Is ?b 'basket') (On ?b ?d) (Is ?f 'fish') (In ?f ?b) (HasColor ?f 'orange'))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?p (forall ?bk (exists ?g (exists ?c (exists ?b (exists ?f (and (Is ?d 'desk') (HasColor ?d 'brown') (NextTo ?p ?d) (or (not (Is ?bk 'book')) (RightOf ?bk ?d)) (HasState ?p 'sitting') (On ?g ?d) (Is ?p 'person') (On ?b ?d) (Is ?g 'glasses') (NextTo ?c ?g) (Is ?b 'basket') (In ?f ?b) (Is ?c 'clock') (Is ?f 'fish') (HasColor ?f 'orange'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fish",
+        "person",
+        "book",
+        "glasses",
+        "desk",
+        "clock",
+        "basket"
+    ]
+}

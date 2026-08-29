@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a man inside a house, and he is wearing headphones. A metal refrigerator is located next to the man. Inside the refrigerator, there is a pan. A mirror is positioned to the right of the refrigerator. Additionally, all balls in the scene are located next to the mirror.",
+    "dsl": "(exists ?h (exists ?m (exists ?hp (exists ?r (exists ?p (exists ?mr (and (Is ?h 'house') (Is ?m 'man') (In ?m ?h) (Is ?hp 'headphones') (On ?hp ?m) (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (NextTo ?r ?m) (Is ?p 'pan') (In ?p ?r) (Is ?mr 'mirror') (RightOf ?mr ?r) (forall ?b (implies (Is ?b 'ball') (NextTo ?b ?mr))))))))))",
+    "cnf": "(exists ?h (exists ?m (exists ?hp (exists ?r (exists ?p (exists ?mr (forall ?b (and (Is ?h 'house') (In ?m ?h) (Is ?m 'man') (On ?hp ?m) (NextTo ?r ?m) (Is ?hp 'headphones') (HasMaterial ?r 'metal') (In ?p ?r) (Is ?r 'refrigerator') (RightOf ?mr ?r) (Is ?p 'pan') (Is ?mr 'mirror') (or (not (Is ?b 'ball')) (NextTo ?b ?mr))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pan",
+        "headphones",
+        "man",
+        "ball",
+        "refrigerator",
+        "mirror",
+        "house"
+    ]
+}

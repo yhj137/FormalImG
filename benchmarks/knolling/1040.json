@@ -1,0 +1,14 @@
+{
+    "prompt": "For every pair of jeans, it is located on the top side of the scene and has a group of five objects arranged below it: a wallet, a mouse, an apple, a tie, and a remote. The wallet is located on the bottom side of the image. All five items are positioned below the jeans and are aligned horizontally.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?wallet (exists ?mouse (exists ?apple (exists ?tie (exists ?remote (and (Is ?wallet 'wallet') (Is ?mouse 'mouse') (Is ?apple 'apple') (Is ?tie 'tie') (Is ?remote 'remote') (OnTopSide ?jeans) (OnBottomSide ?wallet) (Below ?wallet ?jeans) (Below ?mouse ?jeans) (Below ?apple ?jeans) (Below ?tie ?jeans) (Below ?remote ?jeans) (AlignedHorizontally ?wallet ?mouse) (AlignedHorizontally ?mouse ?apple) (AlignedHorizontally ?apple ?tie) (AlignedHorizontally ?tie ?remote))))))))))",
+    "cnf": "(forall ?jeans (exists ?wallet (exists ?mouse (exists ?apple (exists ?tie (exists ?remote (and (or (not (Is ?jeans 'jeans')) (Is ?wallet 'wallet')) (or (not (Is ?jeans 'jeans')) (Is ?mouse 'mouse')) (or (not (Is ?jeans 'jeans')) (OnBottomSide ?wallet)) (or (not (Is ?jeans 'jeans')) (Is ?apple 'apple')) (or (not (Is ?jeans 'jeans')) (Below ?mouse ?jeans)) (or (not (Is ?jeans 'jeans')) (OnTopSide ?jeans)) (or (not (Is ?jeans 'jeans')) (Below ?wallet ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?tie 'tie')) (or (not (Is ?jeans 'jeans')) (Below ?apple ?jeans)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?wallet ?mouse)) (or (not (Is ?jeans 'jeans')) (Is ?remote 'remote')) (or (not (Is ?jeans 'jeans')) (Below ?tie ?jeans)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?mouse ?apple)) (or (not (Is ?jeans 'jeans')) (Below ?remote ?jeans)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?apple ?tie)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?tie ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "remote",
+        "apple",
+        "wallet",
+        "jeans",
+        "mouse"
+    ]
+}

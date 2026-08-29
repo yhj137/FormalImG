@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned to the left of a backpack. The backpack is aligned vertically with a pair of scissors, and the backpack is larger than the scissors. To the right of the backpack is a gray laptop, which is vertically aligned with a watch that is smaller than the laptop. Further to the right of the laptop sits a cutting board, which is aligned vertically with a carrot. On the right side of the image, a book is placed to the right of the cutting board. A yellow lemon is aligned vertically with the book and is smaller than it.",
+    "dsl": "(exists ?drill (exists ?backpack (exists ?scissors (exists ?laptop (exists ?watch (exists ?cutting_board (exists ?carrot (exists ?book (exists ?lemon (and (Is ?drill 'drill') (Is ?backpack 'backpack') (Is ?scissors 'scissors') (Is ?laptop 'laptop') (Is ?watch 'watch') (Is ?cutting_board 'cutting_board') (Is ?carrot 'carrot') (Is ?book 'book') (Is ?lemon 'lemon') (LeftOf ?drill ?backpack) (AlignedVertically ?backpack ?scissors) (LargerThan ?backpack ?scissors) (RightOf ?laptop ?backpack) (Has ?laptop 'gray') (AlignedVertically ?laptop ?watch) (SmallerThan ?watch ?laptop) (RightOf ?cutting_board ?laptop) (AlignedVertically ?cutting_board ?carrot) (RightOf ?book ?cutting_board) (OnRightSide ?book) (AlignedVertically ?book ?lemon) (Has ?lemon 'yellow') (SmallerThan ?lemon ?book)))))))))))",
+    "cnf": "(exists ?drill (exists ?backpack (exists ?scissors (exists ?laptop (exists ?watch (exists ?cutting_board (exists ?carrot (exists ?book (exists ?lemon (and (Is ?drill 'drill') (LeftOf ?drill ?backpack) (Is ?backpack 'backpack') (AlignedVertically ?backpack ?scissors) (LargerThan ?backpack ?scissors) (Is ?scissors 'scissors') (RightOf ?laptop ?backpack) (Is ?laptop 'laptop') (Has ?laptop 'gray') (AlignedVertically ?laptop ?watch) (SmallerThan ?watch ?laptop) (Is ?watch 'watch') (RightOf ?cutting_board ?laptop) (Is ?cutting_board 'cutting_board') (AlignedVertically ?cutting_board ?carrot) (RightOf ?book ?cutting_board) (Is ?carrot 'carrot') (Is ?book 'book') (OnRightSide ?book) (AlignedVertically ?book ?lemon) (SmallerThan ?lemon ?book) (Is ?lemon 'lemon') (Has ?lemon 'yellow')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "book",
+        "lemon",
+        "carrot",
+        "watch",
+        "drill",
+        "cutting_board",
+        "backpack",
+        "scissors"
+    ]
+}

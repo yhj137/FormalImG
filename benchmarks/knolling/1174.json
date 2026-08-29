@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the right side of the layout. To the left of the suitcase, there is a pair of pliers. A pen is located directly below the pliers, and a spoon is placed below the pen. To the left of the spoon sits a donut. Furthermore, for every set of keys in the scene, it is located on the left side of the image and is strictly smaller than the donut.",
+    "dsl": "(exists ?suitcase (exists ?pliers (exists ?pen (exists ?spoon (exists ?donut (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?pliers 'pliers') (LeftOf ?pliers ?suitcase) (Is ?pen 'pen') (Below ?pen ?pliers) (Is ?spoon 'spoon') (Below ?spoon ?pen) (Is ?donut 'donut') (LeftOf ?donut ?spoon) (forall ?keys (implies (Is ?keys 'keys') (and (OnLeftSide ?keys) (SmallerThan ?keys ?donut))))))))))",
+    "cnf": "(exists ?suitcase (exists ?pliers (exists ?pen (exists ?spoon (exists ?donut (forall ?keys (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?pliers ?suitcase) (Is ?pliers 'pliers') (Below ?pen ?pliers) (Is ?pen 'pen') (Below ?spoon ?pen) (Is ?spoon 'spoon') (LeftOf ?donut ?spoon) (Is ?donut 'donut') (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?donut)) (or (not (Is ?keys 'keys')) (OnLeftSide ?keys)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "pen",
+        "spoon",
+        "suitcase",
+        "donut"
+    ]
+}

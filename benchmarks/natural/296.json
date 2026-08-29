@@ -1,0 +1,10 @@
+{
+    "prompt": "A pixel art scene where every teddy bear holds a fluffy rug.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'teddy bear') (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fluffy') (Holding ?t ?r))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (exists ?r (and (or (not (Is ?t 'teddy bear')) (Is ?r 'rug')) (or (not (Is ?t 'teddy bear')) (HasMaterial ?r 'fluffy')) (or (not (Is ?t 'teddy bear')) (Holding ?t ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "teddy bear",
+        "rug"
+    ]
+}

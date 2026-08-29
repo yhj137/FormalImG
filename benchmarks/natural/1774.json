@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a yellow bus. To the left of the bus is a round rock with every hammer sitting on it. To the right of the bus sits a wooden bench with a cat on top. Next to the bench stands a wardrobe containing a blue shirt and a pan, with a bicycle placed beside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bus (exists ?bench (exists ?cat (exists ?w (exists ?s (exists ?r (exists ?bike (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (Is ?bench 'bench') (HasMaterial ?bench 'wooden') (RightOf ?bench ?bus) (Is ?cat 'cat') (On ?cat ?bench) (Is ?w 'wardrobe') (NextTo ?w ?bench) (Is ?s 'shirt') (HasColor ?s 'blue') (In ?s ?w) (Is ?r 'rock') (HasShape ?r 'round') (LeftOf ?r ?bus) (Is ?bike 'bicycle') (NextTo ?bike ?w) (forall ?h (implies (Is ?h 'hammer') (On ?h ?r))) (exists ?p (and (Is ?p 'pan') (In ?p ?w))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bus (exists ?bench (exists ?cat (exists ?w (exists ?s (exists ?r (exists ?bike (forall ?h (exists ?p (and (Is ?bus 'bus') (HasColor ?bus 'yellow') (RightOf ?bench ?bus) (LeftOf ?r ?bus) (HasMaterial ?bench 'wooden') (On ?cat ?bench) (HasShape ?r 'round') (or (not (Is ?h 'hammer')) (On ?h ?r)) (Is ?bench 'bench') (NextTo ?w ?bench) (Is ?cat 'cat') (Is ?r 'rock') (Is ?w 'wardrobe') (In ?s ?w) (NextTo ?bike ?w) (HasColor ?s 'blue') (In ?p ?w) (Is ?bike 'bicycle') (Is ?s 'shirt') (Is ?p 'pan'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "pan",
+        "rock",
+        "cat",
+        "bus",
+        "hammer",
+        "wardrobe",
+        "shirt",
+        "bicycle"
+    ]
+}

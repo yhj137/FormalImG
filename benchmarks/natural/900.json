@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a refrigerator containing a clock. All children are located to the right of the refrigerator. A wooden bench stands next to the refrigerator with a monitor resting on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'refrigerator') (forall ?c (implies (Is ?c 'child') (RightOf ?c ?r))) (exists ?b (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (NextTo ?b ?r) (exists ?m (and (Is ?m 'monitor') (On ?m ?b) (exists ?k (and (Is ?k 'clock') (In ?k ?r))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (forall ?c (exists ?b (exists ?m (exists ?k (and (Is ?r 'refrigerator') (or (not (Is ?c 'child')) (RightOf ?c ?r)) (NextTo ?b ?r) (In ?k ?r) (HasMaterial ?b 'wooden') (On ?m ?b) (Is ?k 'clock') (Is ?b 'bench') (Is ?m 'monitor'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "child",
+        "monitor",
+        "refrigerator",
+        "clock"
+    ]
+}

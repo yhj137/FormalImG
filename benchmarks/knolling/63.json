@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a shoe, which is positioned on the bottom side of the image.",
+    "dsl": "(exists ?shoe (and (Is ?shoe 'shoe') (OnBottomSide ?shoe)))",
+    "cnf": "(exists ?shoe (and (Is ?shoe 'shoe') (OnBottomSide ?shoe)))",
+    "k": 1,
+    "object_classes": [
+        "shoe"
+    ]
+}

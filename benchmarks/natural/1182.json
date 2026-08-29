@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Depicted in an oil painting style, the scene features a woman next to a wooden wardrobe, with a pair of leather shoes next to it. An open book is positioned to the left of the woman beside a fruit, and every apple in the scene is located to the left of that fruit.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?wd (exists ?s (exists ?b (exists ?f (and (Is ?w 'woman') (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (NextTo ?w ?wd) (Is ?s 'shoes') (HasMaterial ?s 'leather') (NextTo ?s ?wd) (Is ?b 'book') (HasState ?b 'open') (LeftOf ?b ?w) (Is ?f 'fruit') (NextTo ?f ?b) (forall ?a (implies (Is ?a 'apple') (LeftOf ?a ?f))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?wd (exists ?s (exists ?b (exists ?f (forall ?a (and (Is ?w 'woman') (NextTo ?w ?wd) (LeftOf ?b ?w) (HasMaterial ?wd 'wooden') (NextTo ?s ?wd) (HasState ?b 'open') (NextTo ?f ?b) (Is ?wd 'wardrobe') (HasMaterial ?s 'leather') (Is ?b 'book') (Is ?f 'fruit') (or (not (Is ?a 'apple')) (LeftOf ?a ?f)) (Is ?s 'shoes')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shoes",
+        "book",
+        "wardrobe",
+        "woman",
+        "apple",
+        "fruit"
+    ]
+}

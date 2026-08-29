@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a house with a bench to its left. A person sits on the bench holding a pizza topped with all the fruit in the scene. A cup is also on the bench, with a knife to its right. A dog sits to the right of the bench. To the right of the house is a car with a boat on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?bn (exists ?p (exists ?pz (exists ?cp (exists ?k (exists ?d (exists ?c (exists ?bt (and (Is ?h 'house') (Is ?bn 'bench') (Is ?p 'person') (Is ?pz 'pizza') (Is ?cp 'cup') (Is ?k 'knife') (Is ?d 'dog') (Is ?c 'car') (Is ?bt 'boat') (LeftOf ?bn ?h) (On ?p ?bn) (HasState ?p 'sitting') (Holding ?p ?pz) (forall ?f (implies (Is ?f 'fruit') (On ?f ?pz))) (On ?cp ?bn) (RightOf ?k ?cp) (RightOf ?d ?bn) (HasState ?d 'sitting') (RightOf ?c ?h) (On ?bt ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?bn (exists ?p (exists ?pz (exists ?cp (exists ?k (exists ?d (exists ?c (exists ?bt (forall ?f (and (Is ?h 'house') (LeftOf ?bn ?h) (RightOf ?c ?h) (Is ?bn 'bench') (On ?p ?bn) (Is ?c 'car') (On ?bt ?c) (On ?cp ?bn) (Is ?p 'person') (HasState ?p 'sitting') (Is ?bt 'boat') (RightOf ?d ?bn) (Is ?cp 'cup') (RightOf ?k ?cp) (Holding ?p ?pz) (Is ?d 'dog') (HasState ?d 'sitting') (Is ?k 'knife') (Is ?pz 'pizza') (or (not (Is ?f 'fruit')) (On ?f ?pz))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "fruit",
+        "knife",
+        "bench",
+        "person",
+        "pizza",
+        "car",
+        "cup",
+        "boat",
+        "dog"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans positioned on the left side. On the right side, there is a drill. Arranged in a vertical column directly below the drill are a wrench, pliers, a phone, and a bowl, in that descending order; these five objects are aligned vertically. The drill is located to the right of the jeans. Furthermore, for every lemon present in the scene, there is a lighter positioned above it, and the lemon is located to the left of the bowl.",
+    "dsl": "(exists ?jeans (exists ?drill (exists ?wrench (exists ?pliers (exists ?phone (exists ?bowl (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?drill 'drill') (OnRightSide ?drill) (RightOf ?drill ?jeans) (Is ?wrench 'wrench') (Above ?drill ?wrench) (AlignedVertically ?drill ?wrench) (Is ?pliers 'pliers') (Above ?wrench ?pliers) (AlignedVertically ?wrench ?pliers) (Is ?phone 'phone') (Above ?pliers ?phone) (AlignedVertically ?pliers ?phone) (Is ?bowl 'bowl') (Above ?phone ?bowl) (AlignedVertically ?phone ?bowl) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?lighter (and (Is ?lighter 'lighter') (Above ?lighter ?lemon) (LeftOf ?lemon ?bowl))))))))))))",
+    "cnf": "(exists ?jeans (exists ?drill (exists ?wrench (exists ?pliers (exists ?phone (exists ?bowl (forall ?lemon (exists ?lighter (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (RightOf ?drill ?jeans) (OnRightSide ?drill) (Above ?drill ?wrench) (Is ?drill 'drill') (AlignedVertically ?drill ?wrench) (Is ?wrench 'wrench') (Above ?wrench ?pliers) (AlignedVertically ?wrench ?pliers) (Is ?pliers 'pliers') (Above ?pliers ?phone) (AlignedVertically ?pliers ?phone) (Is ?phone 'phone') (Above ?phone ?bowl) (AlignedVertically ?phone ?bowl) (Is ?bowl 'bowl') (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?bowl)) (or (not (Is ?lemon 'lemon')) (Above ?lighter ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?lighter 'lighter')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "wrench",
+        "lemon",
+        "phone",
+        "drill",
+        "lighter",
+        "jeans",
+        "bowl"
+    ]
+}

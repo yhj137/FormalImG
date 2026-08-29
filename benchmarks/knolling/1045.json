@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every knife in the scene, it is located on the top side. A stapler is positioned to the right of the knife, a glove to the right of the stapler, and a lighter to the right of the glove. To the left of the knife, there is a camera, and a hammer is located to the left of the camera. Additionally, the lighter is smaller than the hammer.",
+    "dsl": "(and (forall ?knife (implies (Is ?knife 'knife') (exists ?stapler (exists ?glove (exists ?lighter (exists ?camera (exists ?hammer (and (Is ?stapler 'stapler') (Is ?glove 'glove') (Is ?lighter 'lighter') (Is ?camera 'camera') (Is ?hammer 'hammer') (OnTopSide ?knife) (RightOf ?stapler ?knife) (RightOf ?glove ?stapler) (RightOf ?lighter ?glove) (LeftOf ?camera ?knife) (LeftOf ?hammer ?camera) (SmallerThan ?lighter ?hammer))))))))))",
+    "cnf": "(forall ?knife (exists ?stapler (exists ?glove (exists ?lighter (exists ?camera (exists ?hammer (and (or (not (Is ?knife 'knife')) (Is ?stapler 'stapler')) (or (not (Is ?knife 'knife')) (Is ?glove 'glove')) (or (not (Is ?knife 'knife')) (RightOf ?stapler ?knife)) (or (not (Is ?knife 'knife')) (Is ?lighter 'lighter')) (or (not (Is ?knife 'knife')) (RightOf ?glove ?stapler)) (or (not (Is ?knife 'knife')) (OnTopSide ?knife)) (or (not (Is ?knife 'knife')) (Is ?camera 'camera')) (or (not (Is ?knife 'knife')) (RightOf ?lighter ?glove)) (or (not (Is ?knife 'knife')) (Is ?hammer 'hammer')) (or (not (Is ?knife 'knife')) (LeftOf ?camera ?knife)) (or (not (Is ?knife 'knife')) (SmallerThan ?lighter ?hammer)) (or (not (Is ?knife 'knife')) (LeftOf ?hammer ?camera)))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "hammer",
+        "lighter",
+        "camera",
+        "knife",
+        "glove"
+    ]
+}

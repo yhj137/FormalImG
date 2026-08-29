@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a person inside a house, holding a bitten sandwich. Leather shoes are next to the person. Beside the shoes is a cup containing a ball. All books in the scene are located to the right of the person.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?p (exists ?s (and (Is ?h 'house') (Is ?p 'person') (In ?p ?h) (Is ?s 'sandwich') (HasState ?s 'bitten') (Holding ?p ?s) (forall ?b (implies (Is ?b 'book') (RightOf ?b ?p))) (exists ?sh (exists ?c (exists ?ba (and (Is ?sh 'shoes') (HasMaterial ?sh 'leather') (NextTo ?sh ?p) (Is ?c 'cup') (NextTo ?c ?sh) (Is ?ba 'ball') (In ?ba ?c))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?p (exists ?s (forall ?b (exists ?sh (exists ?c (exists ?ba (and (Is ?h 'house') (In ?p ?h) (Is ?p 'person') (Holding ?p ?s) (or (not (Is ?b 'book')) (RightOf ?b ?p)) (HasState ?s 'bitten') (NextTo ?sh ?p) (Is ?s 'sandwich') (HasMaterial ?sh 'leather') (NextTo ?c ?sh) (Is ?sh 'shoes') (Is ?c 'cup') (In ?ba ?c) (Is ?ba 'ball'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "sandwich",
+        "ball",
+        "shoes",
+        "book",
+        "cup",
+        "house"
+    ]
+}

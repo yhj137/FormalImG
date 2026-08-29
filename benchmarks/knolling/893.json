@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the right side of the layout. For every sandwich in the scene, it is arranged to the left of the backpack and aligned horizontally with it, with the backpack being visually larger than the sandwich. Associated with the sandwich is a donut placed to its left and aligned horizontally. Additionally, a fork and a knife are included in the arrangement, both aligned vertically with the sandwich.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?donut (exists ?fork (exists ?knife (and (Is ?donut 'donut') (Is ?fork 'fork') (Is ?knife 'knife') (LeftOf ?sandwich ?backpack) (AlignedHorizontally ?sandwich ?backpack) (LargerThan ?backpack ?sandwich) (LeftOf ?donut ?sandwich) (AlignedHorizontally ?donut ?sandwich) (AlignedVertically ?fork ?sandwich) (AlignedVertically ?knife ?sandwich)))))))))",
+    "cnf": "(exists ?backpack (forall ?sandwich (exists ?donut (exists ?fork (exists ?knife (and (Is ?backpack 'backpack') (OnRightSide ?backpack) (or (not (Is ?sandwich 'sandwich')) (LeftOf ?sandwich ?backpack)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?sandwich ?backpack)) (or (not (Is ?sandwich 'sandwich')) (Is ?knife 'knife')) (or (not (Is ?sandwich 'sandwich')) (LargerThan ?backpack ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?fork 'fork')) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?knife ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (LeftOf ?donut ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?donut 'donut')) (or (not (Is ?sandwich 'sandwich')) (AlignedVertically ?fork ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?donut ?sandwich))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "backpack",
+        "knife",
+        "sandwich",
+        "donut"
+    ]
+}

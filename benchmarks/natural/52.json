@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a rectangular sofa.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'sofa') (HasShape ?s 'rectangular'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'sofa') (HasShape ?s 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "sofa"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a sitting child on a bed, with a rug located beneath the bed. To the left of the child is a plate, with a keyboard next to it. All books are positioned to the right of the child; each book has a flower next to it, a hammer to its left, and turned-on headphones resting on top.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?bd (exists ?r (exists ?p (exists ?k (and (Is ?c 'child') (HasState ?c 'sitting') (Is ?bd 'bed') (Is ?r 'rug') (Is ?p 'plate') (Is ?k 'keyboard') (On ?c ?bd) (Below ?r ?bd) (LeftOf ?p ?c) (NextTo ?k ?p) (forall ?b (implies (Is ?b 'book') (and (RightOf ?b ?c) (exists ?f (exists ?hm (exists ?hp (and (Is ?f 'flower') (Is ?hm 'hammer') (Is ?hp 'headphones') (NextTo ?f ?b) (LeftOf ?hm ?b) (On ?hp ?b) (HasState ?hp 'on')))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?bd (exists ?r (exists ?p (exists ?k (forall ?b (exists ?f (exists ?hm (exists ?hp (and (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?bd) (LeftOf ?p ?c) (Is ?bd 'bed') (Below ?r ?bd) (or (not (Is ?b 'book')) (RightOf ?b ?c)) (Is ?p 'plate') (NextTo ?k ?p) (Is ?r 'rug') (or (not (Is ?b 'book')) (Is ?f 'flower')) (Is ?k 'keyboard') (or (not (Is ?b 'book')) (Is ?hm 'hammer')) (or (not (Is ?b 'book')) (NextTo ?f ?b)) (or (not (Is ?b 'book')) (Is ?hp 'headphones')) (or (not (Is ?b 'book')) (LeftOf ?hm ?b)) (or (not (Is ?b 'book')) (On ?hp ?b)) (or (not (Is ?b 'book')) (HasState ?hp 'on')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "headphones",
+        "hammer",
+        "book",
+        "bed",
+        "rug",
+        "flower",
+        "child",
+        "plate"
+    ]
+}

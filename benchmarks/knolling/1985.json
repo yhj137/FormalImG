@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat grid arrangement of items. The scene is organized into three vertical columns. The first column on the left contains a suitcase, a backpack, and a laptop arranged from top to bottom and aligned vertically. The middle column features a hammer, a wrench, and a pair of glasses, also arranged from top to bottom; each item is to the right of and horizontally aligned with the corresponding item in the first column. The third column, located on the right side of the image, consists of a bowl, a lemon, and a knife arranged vertically from top to bottom. The suitcase is visually larger than the glasses. Additionally, for every spoon present in the scene, it is positioned directly below the knife and aligned vertically with it.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?laptop (exists ?hammer (exists ?wrench (exists ?glasses (exists ?bowl (exists ?lemon (exists ?knife (and (Is ?suitcase 'suitcase') (Is ?backpack 'backpack') (Is ?laptop 'laptop') (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?glasses 'glasses') (Is ?bowl 'bowl') (Is ?lemon 'lemon') (Is ?knife 'knife') (AlignedVertically ?suitcase ?backpack) (AlignedVertically ?backpack ?laptop) (Below ?backpack ?suitcase) (Below ?laptop ?backpack) (AlignedVertically ?hammer ?wrench) (AlignedVertically ?wrench ?glasses) (Below ?wrench ?hammer) (Below ?glasses ?wrench) (AlignedVertically ?bowl ?lemon) (AlignedVertically ?lemon ?knife) (Below ?lemon ?bowl) (Below ?knife ?lemon) (RightOf ?hammer ?suitcase) (RightOf ?wrench ?backpack) (RightOf ?glasses ?laptop) (RightOf ?bowl ?hammer) (RightOf ?lemon ?wrench) (RightOf ?knife ?glasses) (AlignedHorizontally ?suitcase ?hammer) (AlignedHorizontally ?hammer ?bowl) (AlignedHorizontally ?backpack ?wrench) (AlignedHorizontally ?wrench ?lemon) (AlignedHorizontally ?laptop ?glasses) (AlignedHorizontally ?glasses ?knife) (LargerThan ?suitcase ?glasses) (OnRightSide ?bowl) (OnRightSide ?lemon) (OnRightSide ?knife) (forall ?spoon (implies (Is ?spoon 'spoon') (and (Below ?spoon ?knife) (AlignedVertically ?spoon ?knife))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?laptop (exists ?hammer (exists ?wrench (exists ?glasses (exists ?bowl (exists ?lemon (exists ?knife (forall ?spoon (and (Is ?suitcase 'suitcase') (AlignedVertically ?suitcase ?backpack) (Below ?backpack ?suitcase) (Is ?backpack 'backpack') (AlignedVertically ?backpack ?laptop) (RightOf ?hammer ?suitcase) (Below ?laptop ?backpack) (Is ?laptop 'laptop') (AlignedHorizontally ?suitcase ?hammer) (Below ?wrench ?hammer) (RightOf ?bowl ?hammer) (RightOf ?wrench ?backpack) (RightOf ?glasses ?laptop) (LargerThan ?suitcase ?glasses) (AlignedHorizontally ?hammer ?bowl) (AlignedVertically ?hammer ?wrench) (AlignedVertically ?wrench ?glasses) (Below ?glasses ?wrench) (Below ?lemon ?bowl) (AlignedHorizontally ?backpack ?wrench) (RightOf ?lemon ?wrench) (AlignedHorizontally ?laptop ?glasses) (RightOf ?knife ?glasses) (AlignedHorizontally ?glasses ?knife) (OnRightSide ?bowl) (Is ?hammer 'hammer') (Is ?wrench 'wrench') (Is ?glasses 'glasses') (AlignedVertically ?bowl ?lemon) (AlignedVertically ?lemon ?knife) (Below ?knife ?lemon) (AlignedHorizontally ?wrench ?lemon) (OnRightSide ?knife) (Is ?bowl 'bowl') (Is ?lemon 'lemon') (Is ?knife 'knife') (OnRightSide ?lemon) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?knife)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?knife)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "wrench",
+        "lemon",
+        "hammer",
+        "backpack",
+        "knife",
+        "bowl",
+        "suitcase",
+        "spoon"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the bottom side of the layout. For every bowl in the scene, it is arranged above the shirt, and specifically, there is a stapler positioned below that bowl.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?stapler (and (Is ?stapler 'stapler') (Above ?bowl ?shirt) (Below ?stapler ?bowl)))))))",
+    "cnf": "(exists ?shirt (forall ?bowl (exists ?stapler (and (Is ?shirt 'shirt') (OnBottomSide ?shirt) (or (not (Is ?bowl 'bowl')) (Above ?bowl ?shirt)) (or (not (Is ?bowl 'bowl')) (Is ?stapler 'stapler')) (or (not (Is ?bowl 'bowl')) (Below ?stapler ?bowl))))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "stapler",
+        "shirt"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a horizontally aligned row of objects starting with a book on the bottom side, which is larger than the game controller located to its right. To the right of the game controller are headphones, followed by a carrot, and then a sock. All these five items are aligned horizontally. Furthermore, for every spoon present in the image, it is positioned to the right of the sock.",
+    "dsl": "(exists ?b (exists ?gc (exists ?hp (exists ?c (exists ?s (and (Is ?b 'book') (Is ?gc 'game_controller') (Is ?hp 'headphones') (Is ?c 'carrot') (Is ?s 'sock') (OnBottomSide ?b) (LargerThan ?b ?gc) (AlignedHorizontally ?b ?gc) (AlignedHorizontally ?gc ?hp) (AlignedHorizontally ?hp ?c) (AlignedHorizontally ?c ?s) (RightOf ?gc ?b) (RightOf ?hp ?gc) (RightOf ?c ?hp) (RightOf ?s ?c) (forall ?sp (implies (Is ?sp 'spoon') (RightOf ?sp ?s)))))))))",
+    "cnf": "(exists ?b (exists ?gc (exists ?hp (exists ?c (exists ?s (forall ?sp (and (Is ?b 'book') (OnBottomSide ?b) (LargerThan ?b ?gc) (AlignedHorizontally ?b ?gc) (Is ?gc 'game_controller') (RightOf ?gc ?b) (AlignedHorizontally ?gc ?hp) (RightOf ?hp ?gc) (Is ?hp 'headphones') (AlignedHorizontally ?hp ?c) (RightOf ?c ?hp) (Is ?c 'carrot') (AlignedHorizontally ?c ?s) (RightOf ?s ?c) (Is ?s 'sock') (or (not (Is ?sp 'spoon')) (RightOf ?sp ?s)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "sock",
+        "carrot",
+        "game_controller",
+        "spoon",
+        "headphones"
+    ]
+}

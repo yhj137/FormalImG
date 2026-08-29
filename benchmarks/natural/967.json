@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting featuring a glass bottle with a brown lion to its left and a dog to its right. A plastic keyboard sits to the right of the dog, and all bananas are inside the glass bottle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bt (exists ?l (exists ?d (exists ?k (and (Is ?bt 'bottle') (HasMaterial ?bt 'glass') (Is ?l 'lion') (HasColor ?l 'brown') (LeftOf ?l ?bt) (Is ?d 'dog') (RightOf ?d ?bt) (Is ?k 'keyboard') (HasMaterial ?k 'plastic') (RightOf ?k ?d) (forall ?bn (implies (Is ?bn 'banana') (In ?bn ?bt)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bt (exists ?l (exists ?d (exists ?k (forall ?bn (and (Is ?bt 'bottle') (HasMaterial ?bt 'glass') (LeftOf ?l ?bt) (RightOf ?d ?bt) (HasColor ?l 'brown') (or (not (Is ?bn 'banana')) (In ?bn ?bt)) (Is ?d 'dog') (RightOf ?k ?d) (Is ?l 'lion') (HasMaterial ?k 'plastic') (Is ?k 'keyboard'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bottle",
+        "keyboard",
+        "banana",
+        "dog",
+        "lion"
+    ]
+}

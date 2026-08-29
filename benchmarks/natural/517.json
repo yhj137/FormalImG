@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene featuring a rectangular rug. Every pizza rests on the rug, with a monitor embedded in the rug to its left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (forall ?p (implies (Is ?p 'pizza') (and (On ?p ?r) (exists ?m (and (Is ?m 'monitor') (LeftOf ?m ?p) (In ?m ?r)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (forall ?p (exists ?m (and (Is ?r 'rug') (HasShape ?r 'rectangular') (or (not (Is ?p 'pizza')) (On ?p ?r)) (or (not (Is ?p 'pizza')) (In ?m ?r)) (or (not (Is ?p 'pizza')) (Is ?m 'monitor')) (or (not (Is ?p 'pizza')) (LeftOf ?m ?p)))))))",
+    "k": 3,
+    "object_classes": [
+        "pizza",
+        "rug",
+        "monitor"
+    ]
+}

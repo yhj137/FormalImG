@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bus to the left of a rug. Every key is located on the rug. A man wearing a hat stands next to the rug. A round bowl is also on the rug, and a black pan is to the right of the bowl. The man is next to a horse, and a bicycle is to the right of the horse.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?r (and (Is ?b 'bus') (Is ?r 'rug') (LeftOf ?b ?r) (forall ?k (implies (Is ?k 'key') (On ?k ?r))) (exists ?m (exists ?bo (exists ?p (exists ?h (exists ?bi (exists ?ha (and (Is ?m 'man') (Is ?bo 'bowl') (Is ?p 'pan') (Is ?h 'horse') (Is ?bi 'bicycle') (Is ?ha 'hat') (NextTo ?r ?m) (On ?ha ?m) (On ?bo ?r) (HasShape ?bo 'round') (RightOf ?p ?bo) (HasColor ?p 'black') (NextTo ?m ?h) (RightOf ?bi ?h))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?r (forall ?k (exists ?m (exists ?bo (exists ?p (exists ?h (exists ?bi (exists ?ha (and (Is ?b 'bus') (LeftOf ?b ?r) (Is ?r 'rug') (or (not (Is ?k 'key')) (On ?k ?r)) (NextTo ?r ?m) (On ?bo ?r) (Is ?m 'man') (On ?ha ?m) (Is ?bo 'bowl') (HasShape ?bo 'round') (NextTo ?m ?h) (Is ?ha 'hat') (RightOf ?p ?bo) (Is ?h 'horse') (RightOf ?bi ?h) (Is ?p 'pan') (HasColor ?p 'black') (Is ?bi 'bicycle'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "bowl",
+        "pan",
+        "man",
+        "bus",
+        "hat",
+        "horse",
+        "rug",
+        "bicycle"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. There is a tree, and to the left of it stands a plant. A sitting teddy bear is located to the left of the plant, with headphones resting on it. To the right of the tree, there is a lamp that is turned on. Further to the right of the lamp is a rusty hammer, and a plate is positioned to the right of the hammer. Finally, all balls in the scene are on the plate.",
+    "dsl": "(exists ?t (exists ?p (exists ?tb (exists ?hp (exists ?l (exists ?hm (exists ?pl (and (Is ?t 'tree') (Is ?p 'plant') (LeftOf ?p ?t) (Is ?tb 'teddy bear') (HasState ?tb 'sitting') (LeftOf ?tb ?p) (Is ?hp 'headphones') (On ?hp ?tb) (Is ?l 'lamp') (HasState ?l 'on') (RightOf ?l ?t) (Is ?hm 'hammer') (HasState ?hm 'rusty') (RightOf ?hm ?l) (Is ?pl 'plate') (RightOf ?pl ?hm) (forall ?b (implies (Is ?b 'ball') (On ?b ?pl)))))))))))",
+    "cnf": "(exists ?t (exists ?p (exists ?tb (exists ?hp (exists ?l (exists ?hm (exists ?pl (forall ?b (and (Is ?t 'tree') (LeftOf ?p ?t) (RightOf ?l ?t) (Is ?p 'plant') (LeftOf ?tb ?p) (HasState ?l 'on') (RightOf ?hm ?l) (HasState ?tb 'sitting') (On ?hp ?tb) (Is ?l 'lamp') (HasState ?hm 'rusty') (RightOf ?pl ?hm) (Is ?tb 'teddy bear') (Is ?hp 'headphones') (Is ?hm 'hammer') (Is ?pl 'plate') (or (not (Is ?b 'ball')) (On ?b ?pl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "plant",
+        "ball",
+        "lamp",
+        "hammer",
+        "teddy bear",
+        "tree",
+        "plate"
+    ]
+}

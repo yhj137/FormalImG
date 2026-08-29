@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shoe and a wrench. The wrench is located on the bottom side of the image and is positioned below the shoe; the two objects are aligned vertically. Additionally, every hammer in the image is aligned horizontally with the shoe.",
+    "dsl": "(exists ?s (exists ?w (and (Is ?s 'shoe') (Is ?w 'wrench') (OnBottomSide ?w) (Below ?w ?s) (AlignedVertically ?w ?s) (forall ?h (implies (Is ?h 'hammer') (AlignedHorizontally ?h ?s))))))",
+    "cnf": "(exists ?s (exists ?w (forall ?h (and (Is ?s 'shoe') (Below ?w ?s) (AlignedVertically ?w ?s) (OnBottomSide ?w) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?h ?s)) (Is ?w 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "hammer",
+        "shoe"
+    ]
+}

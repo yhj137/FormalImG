@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every tie in the image, there is a specific arrangement of seven other objects surrounding it. A drill is located on the left side of the scene, with a wrench placed above it. On the right side of the scene, there is a glove, and a pair of pliers is positioned below the glove. A cup is located above the tie. To the right of the cup is a spoon, which is to the left of a watch. The watch is visually smaller than the drill and is located to the left of the pliers.",
+    "dsl": "(and (forall ?t (implies (Is ?t 'tie') (exists ?d (exists ?w (exists ?g (exists ?p (exists ?c (exists ?s (exists ?wa (and (Is ?d 'drill') (Is ?w 'wrench') (Is ?g 'glove') (Is ?p 'pliers') (Is ?c 'cup') (Is ?s 'spoon') (Is ?wa 'watch') (OnLeftSide ?d) (Above ?w ?d) (OnRightSide ?g) (Below ?p ?g) (Above ?c ?t) (LeftOf ?c ?s) (LeftOf ?s ?wa) (LeftOf ?wa ?p) (SmallerThan ?wa ?d))))))))))))",
+    "cnf": "(forall ?t (exists ?d (exists ?w (exists ?g (exists ?p (exists ?c (exists ?s (exists ?wa (and (or (not (Is ?t 'tie')) (Is ?d 'drill')) (or (not (Is ?t 'tie')) (OnLeftSide ?d)) (or (not (Is ?t 'tie')) (Is ?w 'wrench')) (or (not (Is ?t 'tie')) (Above ?w ?d)) (or (not (Is ?t 'tie')) (Is ?wa 'watch')) (or (not (Is ?t 'tie')) (Is ?g 'glove')) (or (not (Is ?t 'tie')) (SmallerThan ?wa ?d)) (or (not (Is ?t 'tie')) (OnRightSide ?g)) (or (not (Is ?t 'tie')) (Is ?s 'spoon')) (or (not (Is ?t 'tie')) (LeftOf ?s ?wa)) (or (not (Is ?t 'tie')) (Is ?p 'pliers')) (or (not (Is ?t 'tie')) (LeftOf ?wa ?p)) (or (not (Is ?t 'tie')) (Below ?p ?g)) (or (not (Is ?t 'tie')) (Is ?c 'cup')) (or (not (Is ?t 'tie')) (LeftOf ?c ?s)) (or (not (Is ?t 'tie')) (Above ?c ?t)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "wrench",
+        "watch",
+        "cup",
+        "drill",
+        "spoon",
+        "glove"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style image. A man is positioned to the right of a white plate.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?p (and (Is ?m 'man') (Is ?p 'plate') (HasColor ?p 'white') (RightOf ?m ?p)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?p (and (Is ?m 'man') (RightOf ?m ?p) (HasColor ?p 'white') (Is ?p 'plate')))))",
+    "k": 2,
+    "object_classes": [
+        "man",
+        "plate"
+    ]
+}

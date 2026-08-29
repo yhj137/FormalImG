@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A leather sofa is placed on a rug, where a woman sits holding a red umbrella. To the right of the sofa is a tree adorned with every flower in the scene. A round plate with a banana inside sits on the rug, flanked by a metal fork on the right and a cup on the left.",
+    "dsl": "(exists ?s (exists ?r (exists ?w (exists ?u (exists ?t (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (Is ?r 'rug') (On ?s ?r) (Is ?w 'woman') (On ?w ?s) (Is ?u 'umbrella') (HasColor ?u 'red') (Holding ?w ?u) (Is ?t 'tree') (RightOf ?t ?s) (forall ?fl (implies (Is ?fl 'flower') (On ?fl ?t))) (exists ?p (exists ?b (exists ?fo (exists ?c (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?r) (Is ?b 'banana') (In ?b ?p) (Is ?fo 'fork') (HasMaterial ?fo 'metal') (RightOf ?fo ?p) (Is ?c 'cup') (LeftOf ?c ?p))))))))))))",
+    "cnf": "(exists ?s (exists ?r (exists ?w (exists ?u (exists ?t (forall ?fl (exists ?p (exists ?b (exists ?fo (exists ?c (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (On ?s ?r) (On ?w ?s) (Is ?r 'rug') (On ?p ?r) (RightOf ?t ?s) (Is ?w 'woman') (Holding ?w ?u) (HasShape ?p 'round') (In ?b ?p) (Is ?t 'tree') (or (not (Is ?fl 'flower')) (On ?fl ?t)) (HasColor ?u 'red') (Is ?p 'plate') (RightOf ?fo ?p) (Is ?b 'banana') (Is ?u 'umbrella') (LeftOf ?c ?p) (HasMaterial ?fo 'metal') (Is ?c 'cup') (Is ?fo 'fork'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "tree",
+        "sofa",
+        "rug",
+        "banana",
+        "cup",
+        "woman",
+        "flower",
+        "plate"
+    ]
+}

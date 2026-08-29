@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden bench on the left, with a car to its right. Inside the car, a dog holds a bottle. To the right of the car stands a house containing a sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?d (exists ?bot (exists ?h (exists ?s (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (Is ?c 'car') (RightOf ?c ?b) (Is ?d 'dog') (In ?d ?c) (Is ?bot 'bottle') (Holding ?d ?bot) (Is ?h 'house') (RightOf ?h ?c) (Is ?s 'sofa') (In ?s ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?d (exists ?bot (exists ?h (exists ?s (and (Is ?b 'bench') (HasMaterial ?b 'wooden') (RightOf ?c ?b) (Is ?c 'car') (In ?d ?c) (RightOf ?h ?c) (Is ?d 'dog') (Holding ?d ?bot) (Is ?h 'house') (In ?s ?h) (Is ?bot 'bottle') (Is ?s 'sofa')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "sofa",
+        "bench",
+        "bottle",
+        "car",
+        "dog"
+    ]
+}

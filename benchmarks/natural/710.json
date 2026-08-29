@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a rectangular fabric rug. Next to every keyboard near the rug, there is a bird holding a pair of leather shoes.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (HasShape ?r 'rectangular') (forall ?k (implies (and (Is ?k 'keyboard') (NextTo ?k ?r)) (exists ?b (and (Is ?b 'bird') (NextTo ?b ?k) (exists ?s (and (Is ?s 'shoes') (HasMaterial ?s 'leather') (Holding ?b ?s))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (forall ?k (exists ?b (exists ?s (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (HasShape ?r 'rectangular') (or (not (Is ?k 'keyboard')) (not (NextTo ?k ?r)) (Is ?b 'bird')) (or (not (Is ?k 'keyboard')) (not (NextTo ?k ?r)) (NextTo ?b ?k)) (or (not (Is ?k 'keyboard')) (not (NextTo ?k ?r)) (Is ?s 'shoes')) (or (not (Is ?k 'keyboard')) (not (NextTo ?k ?r)) (Holding ?b ?s)) (or (not (Is ?k 'keyboard')) (not (NextTo ?k ?r)) (HasMaterial ?s 'leather'))))))))",
+    "k": 4,
+    "object_classes": [
+        "keyboard",
+        "bird",
+        "shoes",
+        "rug"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the bottom side of the image. For every carrot present, there is a corresponding set of objects including keys, a bottle, a ruler, and a sandwich that form a horizontal alignment. Specifically, the carrot aligns horizontally with the jeans, the keys align with the carrot, the bottle aligns with the keys, the ruler aligns with the bottle, and the sandwich aligns with the ruler. Additionally, the jeans are visually larger than the sandwich.",
+    "dsl": "(exists ?jeans (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?keys (exists ?bottle (exists ?ruler (exists ?sandwich (and (Is ?keys 'keys') (Is ?bottle 'bottle') (Is ?ruler 'ruler') (Is ?sandwich 'sandwich') (AlignedHorizontally ?carrot ?jeans) (AlignedHorizontally ?keys ?carrot) (AlignedHorizontally ?bottle ?keys) (AlignedHorizontally ?ruler ?bottle) (AlignedHorizontally ?sandwich ?ruler) (LargerThan ?jeans ?sandwich))))))))))",
+    "cnf": "(exists ?jeans (forall ?carrot (exists ?keys (exists ?bottle (exists ?ruler (exists ?sandwich (and (Is ?jeans 'jeans') (OnBottomSide ?jeans) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?carrot ?jeans)) (or (not (Is ?carrot 'carrot')) (LargerThan ?jeans ?sandwich)) (or (not (Is ?carrot 'carrot')) (Is ?sandwich 'sandwich')) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?keys ?carrot)) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?sandwich ?ruler)) (or (not (Is ?carrot 'carrot')) (Is ?ruler 'ruler')) (or (not (Is ?carrot 'carrot')) (Is ?keys 'keys')) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?bottle ?keys)) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?ruler ?bottle)) (or (not (Is ?carrot 'carrot')) (Is ?bottle 'bottle')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "bottle",
+        "ruler",
+        "carrot",
+        "jeans",
+        "sandwich"
+    ]
+}

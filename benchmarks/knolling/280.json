@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black shoe present in the layout, there exists a white bowl that is vertically aligned with it.",
+    "dsl": "(and (forall ?s (implies (and (Is ?s 'shoe') (Has ?s 'black')) (exists ?b (and (Is ?b 'bowl') (Has ?b 'white') (AlignedVertically ?s ?b))))))",
+    "cnf": "(forall ?s (exists ?b (and (or (not (Is ?s 'shoe')) (not (Has ?s 'black')) (Is ?b 'bowl')) (or (not (Is ?s 'shoe')) (not (Has ?s 'black')) (Has ?b 'white')) (or (not (Is ?s 'shoe')) (not (Has ?s 'black')) (AlignedVertically ?s ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "shoe"
+    ]
+}

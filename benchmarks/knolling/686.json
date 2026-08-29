@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top side. For every hat in the image, it is aligned horizontally to the right of the monitor. Additionally, for each hat, there is a white sock to its right and a mouse to the right of the sock, with all these items maintaining horizontal alignment.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?hat (implies (Is ?hat 'hat') (exists ?sock (exists ?mouse (and (Is ?sock 'sock') (Has ?sock 'white') (Is ?mouse 'mouse') (RightOf ?hat ?monitor) (AlignedHorizontally ?monitor ?hat) (RightOf ?sock ?hat) (AlignedHorizontally ?hat ?sock) (RightOf ?mouse ?sock) (AlignedHorizontally ?sock ?mouse))))))))",
+    "cnf": "(exists ?monitor (forall ?hat (exists ?sock (exists ?mouse (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?hat 'hat')) (RightOf ?hat ?monitor)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?monitor ?hat)) (or (not (Is ?hat 'hat')) (Is ?mouse 'mouse')) (or (not (Is ?hat 'hat')) (RightOf ?sock ?hat)) (or (not (Is ?hat 'hat')) (Has ?sock 'white')) (or (not (Is ?hat 'hat')) (RightOf ?mouse ?sock)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?hat ?sock)) (or (not (Is ?hat 'hat')) (Is ?sock 'sock')) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?sock ?mouse)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "hat",
+        "sock",
+        "mouse"
+    ]
+}

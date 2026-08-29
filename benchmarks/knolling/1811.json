@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, there is a pair of blue jeans. Directly below the jeans are a red tie and a book, forming a vertical line; the jeans are larger than the tie. To the right of the jeans is a sandwich. Below the sandwich is a white bowl, and below the bowl is a black remote, all aligned vertically. To the right of the remote sits a gray mouse which is smaller than the remote. A wrench is positioned above the mouse. To the right of the wrench, on the right side of the image, is a pair of scissors. Finally, a knife is placed directly below the scissors and aligned vertically with them.",
+    "dsl": "(exists ?jeans (exists ?tie (exists ?book (exists ?sandwich (exists ?bowl (exists ?remote (exists ?mouse (exists ?wrench (exists ?scissors (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Is ?tie 'tie') (Has ?tie 'red') (Is ?book 'book') (Above ?jeans ?tie) (Above ?tie ?book) (AlignedVertically ?jeans ?tie) (AlignedVertically ?tie ?book) (LargerThan ?jeans ?tie) (Is ?sandwich 'sandwich') (LeftOf ?jeans ?sandwich) (Is ?bowl 'bowl') (Has ?bowl 'white') (Above ?sandwich ?bowl) (Is ?remote 'remote') (Has ?remote 'black') (Above ?bowl ?remote) (AlignedVertically ?sandwich ?bowl) (AlignedVertically ?bowl ?remote) (Is ?mouse 'mouse') (Has ?mouse 'gray') (LeftOf ?remote ?mouse) (SmallerThan ?mouse ?remote) (Is ?wrench 'wrench') (Above ?wrench ?mouse) (Is ?scissors 'scissors') (OnRightSide ?scissors) (LeftOf ?wrench ?scissors) (Is ?knife 'knife') (Above ?scissors ?knife) (AlignedVertically ?scissors ?knife))))))))))))",
+    "cnf": "(exists ?jeans (exists ?tie (exists ?book (exists ?sandwich (exists ?bowl (exists ?remote (exists ?mouse (exists ?wrench (exists ?scissors (exists ?knife (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Above ?jeans ?tie) (AlignedVertically ?jeans ?tie) (Has ?tie 'red') (Above ?tie ?book) (LargerThan ?jeans ?tie) (AlignedVertically ?tie ?book) (Is ?tie 'tie') (Is ?book 'book') (LeftOf ?jeans ?sandwich) (Is ?sandwich 'sandwich') (Above ?sandwich ?bowl) (AlignedVertically ?sandwich ?bowl) (Has ?bowl 'white') (Above ?bowl ?remote) (AlignedVertically ?bowl ?remote) (Is ?bowl 'bowl') (Has ?remote 'black') (LeftOf ?remote ?mouse) (Is ?remote 'remote') (SmallerThan ?mouse ?remote) (Has ?mouse 'gray') (Above ?wrench ?mouse) (Is ?mouse 'mouse') (Is ?wrench 'wrench') (LeftOf ?wrench ?scissors) (OnRightSide ?scissors) (Above ?scissors ?knife) (Is ?scissors 'scissors') (AlignedVertically ?scissors ?knife) (Is ?knife 'knife'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "mouse",
+        "bowl",
+        "scissors",
+        "wrench",
+        "knife",
+        "tie",
+        "jeans",
+        "book",
+        "sandwich",
+        "remote"
+    ]
+}

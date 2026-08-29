@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with objects arranged in a neat grid structure. The top row begins with a black pan on the left side of the image. To the right of the pan is a gray laptop, and to the right of the laptop are black headphones; these three items are aligned horizontally. In the middle row, there is a black camera below the pan, a blue cup below the laptop, and a pink donut below the headphones; these are also aligned horizontally. The bottom row consists of a gray fork located below the camera, red scissors below the cup, and a white sock below the donut. The fork is to the left of the scissors, and the sock is to the right of the scissors and positioned on the right side of the image; this row is aligned horizontally as well. Additionally, for every watch present in the scene, it is black, located to the right of the headphones, and aligned horizontally with them.",
+    "dsl": "(exists ?pan (exists ?laptop (exists ?headphones (exists ?camera (exists ?cup (exists ?donut (exists ?fork (exists ?scissors (exists ?sock (and (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?camera 'camera') (Has ?camera 'black') (Is ?cup 'cup') (Has ?cup 'blue') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?fork 'fork') (Has ?fork 'gray') (Is ?scissors 'scissors') (Has ?scissors 'red') (Is ?sock 'sock') (Has ?sock 'white') (OnRightSide ?sock) (LeftOf ?pan ?laptop) (RightOf ?headphones ?laptop) (AlignedHorizontally ?pan ?laptop) (AlignedHorizontally ?laptop ?headphones) (Above ?pan ?camera) (Above ?laptop ?cup) (Above ?headphones ?donut) (LeftOf ?camera ?cup) (RightOf ?donut ?cup) (AlignedHorizontally ?camera ?cup) (AlignedHorizontally ?cup ?donut) (Above ?camera ?fork) (Above ?cup ?scissors) (Above ?donut ?sock) (LeftOf ?fork ?scissors) (RightOf ?sock ?scissors) (AlignedHorizontally ?fork ?scissors) (AlignedHorizontally ?scissors ?sock) (forall ?watch (implies (Is ?watch 'watch') (and (Has ?watch 'black') (RightOf ?watch ?headphones) (AlignedHorizontally ?headphones ?watch))))))))))))))",
+    "cnf": "(exists ?pan (exists ?laptop (exists ?headphones (exists ?camera (exists ?cup (exists ?donut (exists ?fork (exists ?scissors (exists ?sock (forall ?watch (and (Is ?pan 'pan') (Has ?pan 'black') (OnLeftSide ?pan) (LeftOf ?pan ?laptop) (AlignedHorizontally ?pan ?laptop) (Has ?laptop 'gray') (RightOf ?headphones ?laptop) (Above ?pan ?camera) (AlignedHorizontally ?laptop ?headphones) (Is ?laptop 'laptop') (Has ?headphones 'black') (Has ?camera 'black') (LeftOf ?camera ?cup) (Above ?laptop ?cup) (Above ?headphones ?donut) (Is ?headphones 'headphones') (Is ?camera 'camera') (AlignedHorizontally ?camera ?cup) (RightOf ?donut ?cup) (Has ?cup 'blue') (or (not (Is ?watch 'watch')) (RightOf ?watch ?headphones)) (Has ?donut 'pink') (Above ?camera ?fork) (AlignedHorizontally ?cup ?donut) (Is ?cup 'cup') (or (not (Is ?watch 'watch')) (AlignedHorizontally ?headphones ?watch)) (or (not (Is ?watch 'watch')) (Has ?watch 'black')) (Is ?donut 'donut') (Has ?fork 'gray') (LeftOf ?fork ?scissors) (Above ?cup ?scissors) (Above ?donut ?sock) (Is ?fork 'fork') (AlignedHorizontally ?fork ?scissors) (RightOf ?sock ?scissors) (Has ?scissors 'red') (OnRightSide ?sock) (AlignedHorizontally ?scissors ?sock) (Is ?scissors 'scissors') (Has ?sock 'white') (Is ?sock 'sock'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "watch",
+        "cup",
+        "fork",
+        "pan",
+        "camera",
+        "scissors",
+        "headphones",
+        "donut"
+    ]
+}

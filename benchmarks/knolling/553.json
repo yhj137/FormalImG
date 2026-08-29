@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a brown shoe and a black calculator. The shoe is larger than the calculator. Additionally, for every carrot in the image, it is yellow and aligned vertically with the shoe.",
+    "dsl": "(exists ?shoe (exists ?calc (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (Is ?calc 'calculator') (Has ?calc 'black') (LargerThan ?shoe ?calc) (forall ?carrot (implies (Is ?carrot 'carrot') (and (Has ?carrot 'yellow') (AlignedVertically ?carrot ?shoe)))))))",
+    "cnf": "(exists ?shoe (exists ?calc (forall ?carrot (and (Is ?shoe 'shoe') (Has ?shoe 'brown') (LargerThan ?shoe ?calc) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?carrot ?shoe)) (Has ?calc 'black') (or (not (Is ?carrot 'carrot')) (Has ?carrot 'yellow')) (Is ?calc 'calculator')))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "calculator",
+        "shoe"
+    ]
+}

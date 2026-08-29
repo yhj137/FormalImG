@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. Every man wears black glasses and sits on a wooden bench that also holds a pizza. A brown wardrobe with a red clock on top stands next to the bench. A blue backpack containing a screwdriver rests beside the man, and a yellow bus with a toy car inside is positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?man (implies (Is ?man 'man') (exists ?glasses (exists ?bench (exists ?wardrobe (exists ?clock (exists ?pizza (exists ?backpack (exists ?screwdriver (exists ?bus (exists ?toycar (and (Is ?glasses 'glasses') (HasColor ?glasses 'black') (On ?glasses ?man) (Is ?bench 'bench') (HasMaterial ?bench 'wooden') (On ?man ?bench) (Is ?wardrobe 'wardrobe') (HasColor ?wardrobe 'brown') (NextTo ?wardrobe ?bench) (Is ?clock 'clock') (HasColor ?clock 'red') (On ?clock ?wardrobe) (Is ?pizza 'pizza') (On ?pizza ?bench) (Is ?backpack 'backpack') (HasColor ?backpack 'blue') (NextTo ?backpack ?man) (Is ?screwdriver 'screwdriver') (In ?screwdriver ?backpack) (Is ?bus 'bus') (HasColor ?bus 'yellow') (RightOf ?bus ?bench) (Is ?toycar 'toy car') (In ?toycar ?bus))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?man (exists ?glasses (exists ?bench (exists ?wardrobe (exists ?clock (exists ?pizza (exists ?backpack (exists ?screwdriver (exists ?bus (exists ?toycar (and (or (not (Is ?man 'man')) (Is ?glasses 'glasses')) (or (not (Is ?man 'man')) (HasColor ?glasses 'black')) (or (not (Is ?man 'man')) (On ?glasses ?man)) (or (not (Is ?man 'man')) (Is ?bench 'bench')) (or (not (Is ?man 'man')) (HasMaterial ?bench 'wooden')) (or (not (Is ?man 'man')) (On ?man ?bench)) (or (not (Is ?man 'man')) (Is ?wardrobe 'wardrobe')) (or (not (Is ?man 'man')) (NextTo ?wardrobe ?bench)) (or (not (Is ?man 'man')) (HasColor ?wardrobe 'brown')) (or (not (Is ?man 'man')) (Is ?clock 'clock')) (or (not (Is ?man 'man')) (On ?pizza ?bench)) (or (not (Is ?man 'man')) (On ?clock ?wardrobe)) (or (not (Is ?man 'man')) (HasColor ?clock 'red')) (or (not (Is ?man 'man')) (Is ?pizza 'pizza')) (or (not (Is ?man 'man')) (Is ?backpack 'backpack')) (or (not (Is ?man 'man')) (RightOf ?bus ?bench)) (or (not (Is ?man 'man')) (HasColor ?backpack 'blue')) (or (not (Is ?man 'man')) (HasColor ?bus 'yellow')) (or (not (Is ?man 'man')) (Is ?toycar 'toy car')) (or (not (Is ?man 'man')) (In ?toycar ?bus)) (or (not (Is ?man 'man')) (NextTo ?backpack ?man)) (or (not (Is ?man 'man')) (Is ?bus 'bus')) (or (not (Is ?man 'man')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?man 'man')) (In ?screwdriver ?backpack))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "backpack",
+        "glasses",
+        "man",
+        "pizza",
+        "toy car",
+        "clock",
+        "screwdriver",
+        "bus",
+        "wardrobe"
+    ]
+}

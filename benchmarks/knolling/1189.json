@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection. A handbag is positioned on the left side of the scene. To the right of the handbag is a keyboard. Below the handbag is a calculator. A cutting board is located to the right of the calculator and is visibly larger than it. A book is arranged below the keyboard. Additionally, every apple present in the scene is red and is smaller than the calculator.",
+    "dsl": "(exists ?handbag (exists ?keyboard (exists ?calculator (exists ?cutting_board (exists ?book (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?handbag) (Is ?calculator 'calculator') (Below ?calculator ?handbag) (Is ?cutting_board 'cutting_board') (RightOf ?cutting_board ?calculator) (LargerThan ?cutting_board ?calculator) (Is ?book 'book') (Below ?book ?keyboard) (forall ?apple (implies (Is ?apple 'apple') (and (Has ?apple 'red') (SmallerThan ?apple ?calculator))))))))))",
+    "cnf": "(exists ?handbag (exists ?keyboard (exists ?calculator (exists ?cutting_board (exists ?book (forall ?apple (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (RightOf ?keyboard ?handbag) (Below ?calculator ?handbag) (Is ?keyboard 'keyboard') (Below ?book ?keyboard) (Is ?calculator 'calculator') (RightOf ?cutting_board ?calculator) (Is ?book 'book') (LargerThan ?cutting_board ?calculator) (Is ?cutting_board 'cutting_board') (or (not (Is ?apple 'apple')) (SmallerThan ?apple ?calculator)) (or (not (Is ?apple 'apple')) (Has ?apple 'red')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "apple",
+        "keyboard",
+        "cutting_board",
+        "handbag",
+        "calculator"
+    ]
+}

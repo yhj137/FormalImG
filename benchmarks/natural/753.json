@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene showing a dirty shirt with a fish next to it. Every lion holds a banana and is located to the left of the shirt.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (exists ?f (and (Is ?s 'shirt') (HasState ?s 'dirty') (Is ?f 'fish') (NextTo ?f ?s) (forall ?l (implies (Is ?l 'lion') (exists ?b (and (Is ?b 'banana') (Holding ?l ?b) (LeftOf ?l ?s)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (exists ?f (forall ?l (exists ?b (and (Is ?s 'shirt') (HasState ?s 'dirty') (NextTo ?f ?s) (or (not (Is ?l 'lion')) (LeftOf ?l ?s)) (Is ?f 'fish') (or (not (Is ?l 'lion')) (Holding ?l ?b)) (or (not (Is ?l 'lion')) (Is ?b 'banana'))))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "fish",
+        "lion",
+        "shirt"
+    ]
+}

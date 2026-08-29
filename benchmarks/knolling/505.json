@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop located on the right side. For every lighter in the image, it is positioned to the left of the laptop. Furthermore, for each lighter, there is a spoon placed directly below it, and the lighter and the spoon are aligned vertically.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?spoon (and (Is ?spoon 'spoon') (LeftOf ?lighter ?laptop) (Below ?spoon ?lighter) (AlignedVertically ?lighter ?spoon)))))))",
+    "cnf": "(exists ?laptop (forall ?lighter (exists ?spoon (and (Is ?laptop 'laptop') (OnRightSide ?laptop) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?laptop)) (or (not (Is ?lighter 'lighter')) (Is ?spoon 'spoon')) (or (not (Is ?lighter 'lighter')) (Below ?spoon ?lighter)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?spoon))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "laptop",
+        "lighter"
+    ]
+}

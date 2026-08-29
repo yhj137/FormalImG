@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is placed on the top side of the image. To the left of the shirt is a stapler, and positioned below the shirt is a pair of jeans.",
+    "dsl": "(exists ?shirt (exists ?stapler (exists ?jeans (and (Is ?shirt 'shirt') (Is ?stapler 'stapler') (Is ?jeans 'jeans') (OnTopSide ?shirt) (LeftOf ?stapler ?shirt) (Below ?jeans ?shirt)))))",
+    "cnf": "(exists ?shirt (exists ?stapler (exists ?jeans (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LeftOf ?stapler ?shirt) (Below ?jeans ?shirt) (Is ?stapler 'stapler') (Is ?jeans 'jeans')))))",
+    "k": 3,
+    "object_classes": [
+        "jeans",
+        "stapler",
+        "shirt"
+    ]
+}

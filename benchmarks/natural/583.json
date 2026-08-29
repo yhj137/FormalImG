@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a gray elephant with a backpack on it. Every clock is located next to and to the left of the elephant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (exists ?b (and (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?b 'backpack') (On ?b ?e) (forall ?c (implies (Is ?c 'clock') (and (LeftOf ?c ?e) (NextTo ?c ?e))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (exists ?b (forall ?c (and (Is ?e 'elephant') (HasColor ?e 'gray') (On ?b ?e) (or (not (Is ?c 'clock')) (LeftOf ?c ?e)) (Is ?b 'backpack') (or (not (Is ?c 'clock')) (NextTo ?c ?e)))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "backpack",
+        "elephant"
+    ]
+}

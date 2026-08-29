@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged with geometric precision. The layout features a suitcase as the central anchor. To the left of the suitcase is a drill, and to the right is a pan. A plate is positioned below the suitcase, and a remote is placed directly below the plate. Below the drill, there is a pair of glasses, which is visually smaller than the drill. Regarding the upper section: for every pair of scissors in the scene, it is located on the top side of the image and aligned vertically with the suitcase; furthermore, a pen is placed to the left of the scissors, and a spoon is placed to the right of the scissors.",
+    "dsl": "(exists ?suitcase (exists ?drill (exists ?pan (exists ?plate (exists ?remote (exists ?glasses (and (Is ?suitcase 'suitcase') (Is ?drill 'drill') (Is ?pan 'pan') (Is ?plate 'plate') (Is ?remote 'remote') (Is ?glasses 'glasses') (LeftOf ?drill ?suitcase) (RightOf ?pan ?suitcase) (Below ?plate ?suitcase) (Below ?remote ?plate) (Below ?glasses ?drill) (SmallerThan ?glasses ?drill) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?spoon (exists ?pen (and (Is ?spoon 'spoon') (Is ?pen 'pen') (OnTopSide ?scissors) (AlignedVertically ?scissors ?suitcase) (LeftOf ?pen ?scissors) (RightOf ?spoon ?scissors)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?drill (exists ?pan (exists ?plate (exists ?remote (exists ?glasses (forall ?scissors (exists ?spoon (exists ?pen (and (Is ?suitcase 'suitcase') (LeftOf ?drill ?suitcase) (RightOf ?pan ?suitcase) (Is ?drill 'drill') (Below ?glasses ?drill) (Below ?plate ?suitcase) (Is ?pan 'pan') (SmallerThan ?glasses ?drill) (Is ?glasses 'glasses') (or (not (Is ?scissors 'scissors')) (AlignedVertically ?scissors ?suitcase)) (Is ?plate 'plate') (Below ?remote ?plate) (or (not (Is ?scissors 'scissors')) (OnTopSide ?scissors)) (or (not (Is ?scissors 'scissors')) (LeftOf ?pen ?scissors)) (Is ?remote 'remote') (or (not (Is ?scissors 'scissors')) (Is ?pen 'pen')) (or (not (Is ?scissors 'scissors')) (RightOf ?spoon ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?spoon 'spoon'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "remote",
+        "pen",
+        "drill",
+        "pan",
+        "scissors",
+        "suitcase",
+        "spoon"
+    ]
+}

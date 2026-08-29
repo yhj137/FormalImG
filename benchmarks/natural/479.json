@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every bird is perched on a desk, holding a yellow flower inside the desk.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'bird') (exists ?d (exists ?f (and (Is ?d 'desk') (Is ?f 'flower') (HasColor ?f 'yellow') (On ?b ?d) (In ?f ?d) (Holding ?b ?f)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?d (exists ?f (and (or (not (Is ?b 'bird')) (Is ?d 'desk')) (or (not (Is ?b 'bird')) (On ?b ?d)) (or (not (Is ?b 'bird')) (Is ?f 'flower')) (or (not (Is ?b 'bird')) (In ?f ?d)) (or (not (Is ?b 'bird')) (HasColor ?f 'yellow')) (or (not (Is ?b 'bird')) (Holding ?b ?f)))))))",
+    "k": 3,
+    "object_classes": [
+        "flower",
+        "bird",
+        "desk"
+    ]
+}

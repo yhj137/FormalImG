@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the right side of the scene. For every sock present, it is located to the left of the drill, and there is a pair of scissors located to the left of the sock, and a watch located to the left of the scissors. The drill, sock, scissors, and watch are arranged in a row, aligned horizontally.",
+    "dsl": "(exists ?drill (and (Is ?drill 'drill') (OnRightSide ?drill) (forall ?sock (implies (Is ?sock 'sock') (exists ?scissors (exists ?watch (and (Is ?scissors 'scissors') (Is ?watch 'watch') (LeftOf ?sock ?drill) (LeftOf ?scissors ?sock) (LeftOf ?watch ?scissors) (AlignedHorizontally ?drill ?sock) (AlignedHorizontally ?sock ?scissors) (AlignedHorizontally ?scissors ?watch))))))))",
+    "cnf": "(exists ?drill (forall ?sock (exists ?scissors (exists ?watch (and (Is ?drill 'drill') (OnRightSide ?drill) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?drill)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?drill ?sock)) (or (not (Is ?sock 'sock')) (Is ?watch 'watch')) (or (not (Is ?sock 'sock')) (LeftOf ?scissors ?sock)) (or (not (Is ?sock 'sock')) (LeftOf ?watch ?scissors)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?sock ?scissors)) (or (not (Is ?sock 'sock')) (Is ?scissors 'scissors')) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?scissors ?watch)))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "drill",
+        "watch",
+        "sock"
+    ]
+}

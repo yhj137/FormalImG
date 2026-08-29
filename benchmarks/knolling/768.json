@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a stapler, a calculator, and a wrench. The calculator is positioned to the right of the stapler, and the wrench is to the right of the calculator, with all three objects aligned horizontally. The stapler is positioned on the top side of the image. Furthermore, every hat in the image is located on the right side and is smaller than the wrench.",
+    "dsl": "(exists ?stapler (exists ?calculator (exists ?wrench (and (Is ?stapler 'stapler') (Is ?calculator 'calculator') (Is ?wrench 'wrench') (RightOf ?calculator ?stapler) (RightOf ?wrench ?calculator) (AlignedHorizontally ?stapler ?calculator) (AlignedHorizontally ?calculator ?wrench) (OnTopSide ?stapler) (forall ?hat (implies (Is ?hat 'hat') (and (OnRightSide ?hat) (SmallerThan ?hat ?wrench))))))))",
+    "cnf": "(exists ?stapler (exists ?calculator (exists ?wrench (forall ?hat (and (Is ?stapler 'stapler') (RightOf ?calculator ?stapler) (AlignedHorizontally ?stapler ?calculator) (Is ?calculator 'calculator') (RightOf ?wrench ?calculator) (OnTopSide ?stapler) (AlignedHorizontally ?calculator ?wrench) (Is ?wrench 'wrench') (or (not (Is ?hat 'hat')) (SmallerThan ?hat ?wrench)) (or (not (Is ?hat 'hat')) (OnRightSide ?hat)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "hat",
+        "calculator",
+        "stapler"
+    ]
+}

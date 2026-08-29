@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a spoon, a set of keys, and a calculator. All three objects are aligned horizontally across the image. The calculator is positioned on the right side and is visually larger than the keys.",
+    "dsl": "(exists ?spoon (exists ?keys (exists ?calculator (and (Is ?spoon 'spoon') (Is ?keys 'keys') (Is ?calculator 'calculator') (OnRightSide ?calculator) (AlignedHorizontally ?spoon ?keys) (AlignedHorizontally ?keys ?calculator) (LargerThan ?calculator ?keys)))))",
+    "cnf": "(exists ?spoon (exists ?keys (exists ?calculator (and (Is ?spoon 'spoon') (AlignedHorizontally ?spoon ?keys) (Is ?keys 'keys') (AlignedHorizontally ?keys ?calculator) (LargerThan ?calculator ?keys) (OnRightSide ?calculator) (Is ?calculator 'calculator')))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "keys",
+        "calculator"
+    ]
+}

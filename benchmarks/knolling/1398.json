@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a black monitor, white headphones, a red shoe, a sandwich, a brown wallet, and a black phone. All these items are arranged in a horizontal line, meaning they are aligned horizontally. In terms of physical size, the monitor is larger than the shoe, the shoe is larger than the headphones, the headphones are larger than the sandwich, the sandwich is larger than the wallet, and the wallet is larger than the phone. Additionally, for every wrench present in the image, it is gray, aligned horizontally with the monitor, and smaller than the monitor.",
+    "dsl": "(exists ?monitor (exists ?headphones (exists ?shoe (exists ?sandwich (exists ?wallet (exists ?phone (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?headphones 'headphones') (Has ?headphones 'white') (Is ?shoe 'shoe') (Has ?shoe 'red') (Is ?sandwich 'sandwich') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?phone 'phone') (Has ?phone 'black') (AlignedHorizontally ?monitor ?headphones) (AlignedHorizontally ?headphones ?shoe) (AlignedHorizontally ?shoe ?sandwich) (AlignedHorizontally ?sandwich ?wallet) (AlignedHorizontally ?wallet ?phone) (LargerThan ?monitor ?shoe) (LargerThan ?shoe ?headphones) (LargerThan ?headphones ?sandwich) (LargerThan ?sandwich ?wallet) (LargerThan ?wallet ?phone) (forall ?w (implies (Is ?w 'wrench') (and (Has ?w 'gray') (AlignedHorizontally ?w ?monitor) (LargerThan ?monitor ?w)))))))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (exists ?shoe (exists ?sandwich (exists ?wallet (exists ?phone (forall ?w (and (Is ?monitor 'monitor') (Has ?monitor 'black') (AlignedHorizontally ?monitor ?headphones) (LargerThan ?monitor ?shoe) (Has ?headphones 'white') (AlignedHorizontally ?headphones ?shoe) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?w ?monitor)) (AlignedHorizontally ?shoe ?sandwich) (LargerThan ?shoe ?headphones) (Is ?headphones 'headphones') (Has ?shoe 'red') (or (not (Is ?w 'wrench')) (LargerThan ?monitor ?w)) (or (not (Is ?w 'wrench')) (Has ?w 'gray')) (Is ?sandwich 'sandwich') (AlignedHorizontally ?sandwich ?wallet) (LargerThan ?headphones ?sandwich) (Is ?shoe 'shoe') (Has ?wallet 'brown') (AlignedHorizontally ?wallet ?phone) (LargerThan ?sandwich ?wallet) (Is ?wallet 'wallet') (Has ?phone 'black') (LargerThan ?wallet ?phone) (Is ?phone 'phone')))))))))",
+    "k": 7,
+    "object_classes": [
+        "wrench",
+        "headphones",
+        "wallet",
+        "monitor",
+        "phone",
+        "sandwich",
+        "shoe"
+    ]
+}

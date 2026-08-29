@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a drill located on the bottom side of the scene. To the right of the drill, there is a book, and they are aligned horizontally. Furthermore, for every plate in the image, it is placed to the right of the book and aligned horizontally with it.",
+    "dsl": "(exists ?drill (exists ?book (and (Is ?drill 'drill') (OnBottomSide ?drill) (Is ?book 'book') (RightOf ?book ?drill) (AlignedHorizontally ?drill ?book) (forall ?plate (implies (Is ?plate 'plate') (and (RightOf ?plate ?book) (AlignedHorizontally ?book ?plate)))))))",
+    "cnf": "(exists ?drill (exists ?book (forall ?plate (and (Is ?drill 'drill') (OnBottomSide ?drill) (RightOf ?book ?drill) (AlignedHorizontally ?drill ?book) (Is ?book 'book') (or (not (Is ?plate 'plate')) (RightOf ?plate ?book)) (or (not (Is ?plate 'plate')) (AlignedHorizontally ?book ?plate))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "drill",
+        "plate"
+    ]
+}

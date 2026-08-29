@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a person holding a blue toy car and a pair of glasses. Every elephant in the scene is positioned next to the person, as is a green tree. A red bicycle stands next to the tree, with a mirror placed beside the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'person') (forall ?e (implies (Is ?e 'elephant') (NextTo ?e ?p))) (exists ?t (exists ?b (exists ?m (exists ?tc (exists ?g (and (Is ?t 'tree') (HasColor ?t 'green') (NextTo ?p ?t) (Is ?b 'bicycle') (HasColor ?b 'red') (NextTo ?b ?t) (Is ?m 'mirror') (NextTo ?m ?b) (Is ?tc 'toy car') (HasColor ?tc 'blue') (Holding ?p ?tc) (Is ?g 'glasses') (Holding ?p ?g))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (forall ?e (exists ?t (exists ?b (exists ?m (exists ?tc (exists ?g (and (Is ?p 'person') (or (not (Is ?e 'elephant')) (NextTo ?e ?p)) (NextTo ?p ?t) (Holding ?p ?tc) (HasColor ?t 'green') (NextTo ?b ?t) (Holding ?p ?g) (HasColor ?tc 'blue') (Is ?t 'tree') (HasColor ?b 'red') (NextTo ?m ?b) (Is ?g 'glasses') (Is ?tc 'toy car') (Is ?b 'bicycle') (Is ?m 'mirror'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "toy car",
+        "person",
+        "mirror",
+        "tree",
+        "bicycle",
+        "elephant"
+    ]
+}

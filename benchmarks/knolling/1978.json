@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged horizontal sequence of items. The sequence begins with a drill located on the top side of the scene. A hammer is placed to the right of the drill, and the drill is visually larger than the hammer. Continuing the row to the right, there are pliers, a game controller, headphones, a sock, and a carrot. A pen is positioned to the right of the carrot, with the pen being smaller than the carrot. The arrangement includes a specific constraint: for every ruler present, it is located to the right of the pen, and there is a bowl positioned such that the ruler is to the left of the bowl.",
+    "dsl": "(exists ?d (exists ?hm (exists ?p (exists ?gc (exists ?h (exists ?s (exists ?c (exists ?pen (and (Is ?d 'drill') (Is ?hm 'hammer') (Is ?p 'pliers') (Is ?gc 'game_controller') (Is ?h 'headphones') (Is ?s 'sock') (Is ?c 'carrot') (Is ?pen 'pen') (OnTopSide ?d) (LargerThan ?d ?hm) (RightOf ?hm ?d) (RightOf ?p ?hm) (RightOf ?gc ?p) (RightOf ?h ?gc) (RightOf ?s ?h) (RightOf ?c ?s) (RightOf ?pen ?c) (SmallerThan ?pen ?c) (forall ?r (implies (Is ?r 'ruler') (exists ?b (and (Is ?b 'bowl') (RightOf ?r ?pen) (LeftOf ?r ?b))))))))))))))",
+    "cnf": "(exists ?d (exists ?hm (exists ?p (exists ?gc (exists ?h (exists ?s (exists ?c (exists ?pen (forall ?r (exists ?b (and (Is ?d 'drill') (OnTopSide ?d) (LargerThan ?d ?hm) (RightOf ?hm ?d) (Is ?hm 'hammer') (RightOf ?p ?hm) (Is ?p 'pliers') (RightOf ?gc ?p) (Is ?gc 'game_controller') (RightOf ?h ?gc) (Is ?h 'headphones') (RightOf ?s ?h) (Is ?s 'sock') (RightOf ?c ?s) (Is ?c 'carrot') (RightOf ?pen ?c) (SmallerThan ?pen ?c) (Is ?pen 'pen') (or (not (Is ?r 'ruler')) (RightOf ?r ?pen)) (or (not (Is ?r 'ruler')) (Is ?b 'bowl')) (or (not (Is ?r 'ruler')) (LeftOf ?r ?b)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "pliers",
+        "sock",
+        "pen",
+        "carrot",
+        "game_controller",
+        "drill",
+        "hammer",
+        "bowl",
+        "headphones"
+    ]
+}

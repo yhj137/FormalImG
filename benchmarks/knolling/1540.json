@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical column of objects positioned on the left side: a monitor is at the top, followed underneath by a drill, a calculator, and a wallet, with a sock located on the bottom side; these five items are all aligned vertically. The layout also adheres to a specific rule: for every donut present in the scene, it is aligned horizontally with the monitor, and there is a cup located below the donut, with a lighter positioned below the cup, maintaining vertical alignment for these items as well.",
+    "dsl": "(exists ?monitor (exists ?drill (exists ?calc (exists ?wallet (exists ?sock (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?drill 'drill') (Below ?drill ?monitor) (AlignedVertically ?monitor ?drill) (Is ?calc 'calculator') (Below ?calc ?drill) (AlignedVertically ?drill ?calc) (Is ?wallet 'wallet') (Below ?wallet ?calc) (AlignedVertically ?calc ?wallet) (Is ?sock 'sock') (Below ?sock ?wallet) (AlignedVertically ?wallet ?sock) (OnBottomSide ?sock) (forall ?donut (implies (Is ?donut 'donut') (exists ?cup (exists ?lighter (and (Is ?cup 'cup') (Is ?lighter 'lighter') (AlignedHorizontally ?donut ?monitor) (Below ?cup ?donut) (AlignedVertically ?donut ?cup) (Below ?lighter ?cup) (AlignedVertically ?cup ?lighter))))))))))))",
+    "cnf": "(exists ?monitor (exists ?drill (exists ?calc (exists ?wallet (exists ?sock (forall ?donut (exists ?cup (exists ?lighter (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Below ?drill ?monitor) (AlignedVertically ?monitor ?drill) (Is ?drill 'drill') (or (not (Is ?donut 'donut')) (AlignedHorizontally ?donut ?monitor)) (Below ?calc ?drill) (or (not (Is ?donut 'donut')) (Is ?lighter 'lighter')) (or (not (Is ?donut 'donut')) (Below ?cup ?donut)) (AlignedVertically ?drill ?calc) (Is ?calc 'calculator') (or (not (Is ?donut 'donut')) (Is ?cup 'cup')) (or (not (Is ?donut 'donut')) (Below ?lighter ?cup)) (or (not (Is ?donut 'donut')) (AlignedVertically ?donut ?cup)) (Below ?wallet ?calc) (or (not (Is ?donut 'donut')) (AlignedVertically ?cup ?lighter)) (AlignedVertically ?calc ?wallet) (Is ?wallet 'wallet') (Below ?sock ?wallet) (AlignedVertically ?wallet ?sock) (Is ?sock 'sock') (OnBottomSide ?sock))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "cup",
+        "drill",
+        "lighter",
+        "calculator",
+        "wallet",
+        "monitor",
+        "donut"
+    ]
+}

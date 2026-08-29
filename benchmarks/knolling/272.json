@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every watch in the scene, there exist keys that are smaller than the watch and positioned on the right side of the image.",
+    "dsl": "(and (forall ?w (implies (Is ?w 'watch') (exists ?k (and (Is ?k 'keys') (OnRightSide ?k) (SmallerThan ?k ?w))))))",
+    "cnf": "(forall ?w (exists ?k (and (or (not (Is ?w 'watch')) (Is ?k 'keys')) (or (not (Is ?w 'watch')) (OnRightSide ?k)) (or (not (Is ?w 'watch')) (SmallerThan ?k ?w)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "watch"
+    ]
+}

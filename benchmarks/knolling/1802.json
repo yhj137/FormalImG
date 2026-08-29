@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten items arranged in two parallel vertical columns. On the left side of the scene, there is a blue suitcase at the top. Directly below the suitcase is a black backpack, followed by blue jeans, a white hat, and a red tie at the bottom. On the right side of the scene, a yellow drill is positioned at the top. Below the drill is a red screwdriver, followed by a green bottle, a white bowl, and a black phone at the bottom. The items in the two columns are aligned horizontally row by row: the suitcase aligns with the drill, the backpack with the screwdriver, the jeans with the bottle, the hat with the bowl, and the tie with the phone. Additionally, the phone is smaller than the suitcase, and the screwdriver is smaller than the drill.",
+    "dsl": "(exists ?suitcase (exists ?drill (exists ?backpack (exists ?screwdriver (exists ?jeans (exists ?bottle (exists ?hat (exists ?bowl (exists ?tie (exists ?phone (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnLeftSide ?suitcase) (Is ?drill 'drill') (Has ?drill 'yellow') (OnRightSide ?drill) (Is ?backpack 'backpack') (Has ?backpack 'black') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?bottle 'bottle') (Has ?bottle 'green') (Is ?hat 'hat') (Has ?hat 'white') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?tie 'tie') (Has ?tie 'red') (Is ?phone 'phone') (Has ?phone 'black') (Above ?suitcase ?backpack) (Above ?backpack ?jeans) (Above ?jeans ?hat) (Above ?hat ?tie) (Above ?drill ?screwdriver) (Above ?screwdriver ?bottle) (Above ?bottle ?bowl) (Above ?bowl ?phone) (AlignedHorizontally ?suitcase ?drill) (AlignedHorizontally ?backpack ?screwdriver) (AlignedHorizontally ?jeans ?bottle) (AlignedHorizontally ?hat ?bowl) (AlignedHorizontally ?tie ?phone) (SmallerThan ?phone ?suitcase) (SmallerThan ?screwdriver ?drill))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?drill (exists ?backpack (exists ?screwdriver (exists ?jeans (exists ?bottle (exists ?hat (exists ?bowl (exists ?tie (exists ?phone (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnLeftSide ?suitcase) (Above ?suitcase ?backpack) (AlignedHorizontally ?suitcase ?drill) (Has ?backpack 'black') (Above ?backpack ?jeans) (SmallerThan ?phone ?suitcase) (Above ?drill ?screwdriver) (SmallerThan ?screwdriver ?drill) (Is ?backpack 'backpack') (AlignedHorizontally ?backpack ?screwdriver) (Has ?jeans 'blue') (Above ?jeans ?hat) (AlignedHorizontally ?tie ?phone) (OnRightSide ?drill) (Has ?screwdriver 'red') (Above ?screwdriver ?bottle) (Is ?jeans 'jeans') (AlignedHorizontally ?jeans ?bottle) (Has ?hat 'white') (Above ?hat ?tie) (Above ?bowl ?phone) (Has ?drill 'yellow') (Is ?screwdriver 'screwdriver') (Has ?bottle 'green') (Above ?bottle ?bowl) (Is ?hat 'hat') (AlignedHorizontally ?hat ?bowl) (Has ?tie 'red') (Has ?phone 'black') (Is ?drill 'drill') (Is ?bottle 'bottle') (Has ?bowl 'white') (Is ?tie 'tie') (Is ?phone 'phone') (Is ?bowl 'bowl'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "phone",
+        "screwdriver",
+        "drill",
+        "hat",
+        "backpack",
+        "jeans",
+        "bottle",
+        "bowl",
+        "suitcase"
+    ]
+}

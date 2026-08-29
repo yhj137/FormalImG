@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a book, a laptop, and a bottle aligned horizontally along the top side; the book is positioned to the left of the laptop, and the laptop is to the left of the bottle, which is on the right side. The laptop is visually larger than the book. Beneath the laptop lies a drill, and a game controller is placed to the left of the drill. A sandwich is located below the bottle. To the left of the sandwich, on the bottom side, is a wallet that is smaller than the sandwich. Furthermore, for any carrot in the scene, there is a lemon to its left and a fork situated below it; the carrot itself is positioned below the game controller.",
+    "dsl": "(exists ?book (exists ?laptop (exists ?bottle (exists ?drill (exists ?game_controller (exists ?sandwich (exists ?wallet (and (Is ?book 'book') (OnTopSide ?book) (Is ?laptop 'laptop') (Is ?bottle 'bottle') (OnRightSide ?bottle) (LeftOf ?book ?laptop) (LeftOf ?laptop ?bottle) (AlignedHorizontally ?book ?laptop) (AlignedHorizontally ?laptop ?bottle) (LargerThan ?laptop ?book) (Is ?drill 'drill') (Below ?drill ?laptop) (Is ?game_controller 'game_controller') (LeftOf ?game_controller ?drill) (Is ?sandwich 'sandwich') (Below ?sandwich ?bottle) (Is ?wallet 'wallet') (OnBottomSide ?wallet) (LeftOf ?wallet ?sandwich) (SmallerThan ?wallet ?sandwich) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?lemon (exists ?fork (and (Is ?lemon 'lemon') (Is ?fork 'fork') (Below ?carrot ?game_controller) (LeftOf ?lemon ?carrot) (Below ?fork ?carrot))))))))))))))",
+    "cnf": "(exists ?book (exists ?laptop (exists ?bottle (exists ?drill (exists ?game_controller (exists ?sandwich (exists ?wallet (forall ?carrot (exists ?lemon (exists ?fork (and (Is ?book 'book') (OnTopSide ?book) (LeftOf ?book ?laptop) (AlignedHorizontally ?book ?laptop) (Is ?laptop 'laptop') (LeftOf ?laptop ?bottle) (LargerThan ?laptop ?book) (AlignedHorizontally ?laptop ?bottle) (OnRightSide ?bottle) (Below ?drill ?laptop) (Below ?sandwich ?bottle) (Is ?bottle 'bottle') (Is ?drill 'drill') (LeftOf ?game_controller ?drill) (Is ?sandwich 'sandwich') (LeftOf ?wallet ?sandwich) (Is ?game_controller 'game_controller') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?game_controller)) (SmallerThan ?wallet ?sandwich) (OnBottomSide ?wallet) (or (not (Is ?carrot 'carrot')) (Is ?fork 'fork')) (or (not (Is ?carrot 'carrot')) (LeftOf ?lemon ?carrot)) (Is ?wallet 'wallet') (or (not (Is ?carrot 'carrot')) (Is ?lemon 'lemon')) (or (not (Is ?carrot 'carrot')) (Below ?fork ?carrot)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "laptop",
+        "lemon",
+        "carrot",
+        "game_controller",
+        "drill",
+        "fork",
+        "wallet",
+        "bottle",
+        "sandwich"
+    ]
+}

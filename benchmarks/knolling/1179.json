@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical arrangement. A pair of jeans is positioned on the top side of the image. Directly below the jeans is a sandwich, followed by a remote, then a stapler, and finally a mouse, forming a vertically aligned column. The jeans are visually larger than the mouse. Furthermore, for every donut in the scene, it is placed below the mouse and is also aligned vertically with it.",
+    "dsl": "(exists ?jeans (exists ?sandwich (exists ?remote (exists ?stapler (exists ?mouse (and (Is ?jeans 'jeans') (Is ?sandwich 'sandwich') (Is ?remote 'remote') (Is ?stapler 'stapler') (Is ?mouse 'mouse') (OnTopSide ?jeans) (Below ?sandwich ?jeans) (Below ?remote ?sandwich) (Below ?stapler ?remote) (Below ?mouse ?stapler) (AlignedVertically ?jeans ?sandwich) (AlignedVertically ?sandwich ?remote) (AlignedVertically ?remote ?stapler) (AlignedVertically ?stapler ?mouse) (LargerThan ?jeans ?mouse) (forall ?donut (implies (Is ?donut 'donut') (and (Below ?donut ?mouse) (AlignedVertically ?mouse ?donut))))))))))",
+    "cnf": "(exists ?jeans (exists ?sandwich (exists ?remote (exists ?stapler (exists ?mouse (forall ?donut (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?sandwich ?jeans) (AlignedVertically ?jeans ?sandwich) (Is ?sandwich 'sandwich') (Below ?remote ?sandwich) (LargerThan ?jeans ?mouse) (AlignedVertically ?sandwich ?remote) (Is ?remote 'remote') (Below ?stapler ?remote) (AlignedVertically ?stapler ?mouse) (or (not (Is ?donut 'donut')) (Below ?donut ?mouse)) (AlignedVertically ?remote ?stapler) (Is ?stapler 'stapler') (Below ?mouse ?stapler) (or (not (Is ?donut 'donut')) (AlignedVertically ?mouse ?donut)) (Is ?mouse 'mouse'))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "stapler",
+        "jeans",
+        "mouse",
+        "sandwich",
+        "donut"
+    ]
+}

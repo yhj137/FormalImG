@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A shirt is located on the right side of the image, and every apple is placed to the right of the shirt.",
+    "dsl": "(exists ?s (and (Is ?s 'shirt') (OnRightSide ?s) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?s)))))",
+    "cnf": "(exists ?s (forall ?a (and (Is ?s 'shirt') (OnRightSide ?s) (or (not (Is ?a 'apple')) (RightOf ?a ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "apple",
+        "shirt"
+    ]
+}

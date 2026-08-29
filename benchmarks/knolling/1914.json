@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor on the top side. Headphones are placed to the right of the monitor, and a bottle is to the right of the headphones. A cup is located above the bottle. On the right side, there is an apple that is smaller than the monitor. For every knife in the scene, there is a calculator positioned above it, a lighter to its right, and a ruler aligned vertically with it. The headphones are also located above the calculator, which is larger than a watch.",
+    "dsl": "(exists ?monitor (exists ?headphones (exists ?bottle (exists ?cup (exists ?apple (and (Is ?monitor 'monitor') (Is ?headphones 'headphones') (Is ?bottle 'bottle') (Is ?cup 'cup') (Is ?apple 'apple') (OnTopSide ?monitor) (RightOf ?headphones ?monitor) (RightOf ?bottle ?headphones) (Above ?cup ?bottle) (OnRightSide ?apple) (SmallerThan ?apple ?monitor) (forall ?knife (implies (Is ?knife 'knife') (exists ?calculator (exists ?lighter (exists ?ruler (exists ?watch (and (Is ?calculator 'calculator') (Is ?lighter 'lighter') (Is ?ruler 'ruler') (Is ?watch 'watch') (Above ?calculator ?knife) (RightOf ?lighter ?knife) (AlignedVertically ?ruler ?knife) (Above ?headphones ?calculator) (LargerThan ?calculator ?watch))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (exists ?bottle (exists ?cup (exists ?apple (forall ?knife (exists ?calculator (exists ?lighter (exists ?ruler (exists ?watch (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (RightOf ?headphones ?monitor) (SmallerThan ?apple ?monitor) (Is ?headphones 'headphones') (RightOf ?bottle ?headphones) (OnRightSide ?apple) (or (not (Is ?knife 'knife')) (Above ?headphones ?calculator)) (Is ?bottle 'bottle') (Above ?cup ?bottle) (Is ?apple 'apple') (or (not (Is ?knife 'knife')) (Above ?calculator ?knife)) (or (not (Is ?knife 'knife')) (LargerThan ?calculator ?watch)) (or (not (Is ?knife 'knife')) (AlignedVertically ?ruler ?knife)) (Is ?cup 'cup') (or (not (Is ?knife 'knife')) (Is ?calculator 'calculator')) (or (not (Is ?knife 'knife')) (Is ?watch 'watch')) (or (not (Is ?knife 'knife')) (RightOf ?lighter ?knife)) (or (not (Is ?knife 'knife')) (Is ?ruler 'ruler')) (or (not (Is ?knife 'knife')) (Is ?lighter 'lighter')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "apple",
+        "watch",
+        "cup",
+        "calculator",
+        "lighter",
+        "bottle",
+        "knife",
+        "monitor",
+        "headphones"
+    ]
+}

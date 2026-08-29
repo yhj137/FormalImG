@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical arrangement. A brown suitcase is positioned on the top side of the scene. Directly below the suitcase is a white shirt. Every carrot in the image is located below the shirt and has a black shoe positioned below it. Continuing the chain, a gray pan is located below the shoe, and a screwdriver is placed below the pan. Visually, the screwdriver is smaller than the pan.",
+    "dsl": "(exists ?suitcase (exists ?shirt (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (Is ?shirt 'shirt') (Has ?shirt 'white') (Below ?shirt ?suitcase) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?shoe (exists ?pan (exists ?screwdriver (and (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?pan 'pan') (Has ?pan 'gray') (Is ?screwdriver 'screwdriver') (Below ?carrot ?shirt) (Above ?carrot ?shoe) (Below ?pan ?shoe) (Below ?screwdriver ?pan) (SmallerThan ?screwdriver ?pan))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (forall ?carrot (exists ?shoe (exists ?pan (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (Below ?shirt ?suitcase) (Has ?shirt 'white') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?shirt)) (Is ?shirt 'shirt') (or (not (Is ?carrot 'carrot')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?carrot 'carrot')) (Above ?carrot ?shoe)) (or (not (Is ?carrot 'carrot')) (Has ?pan 'gray')) (or (not (Is ?carrot 'carrot')) (Below ?screwdriver ?pan)) (or (not (Is ?carrot 'carrot')) (Below ?pan ?shoe)) (or (not (Is ?carrot 'carrot')) (Has ?shoe 'black')) (or (not (Is ?carrot 'carrot')) (Is ?pan 'pan')) (or (not (Is ?carrot 'carrot')) (SmallerThan ?screwdriver ?pan)) (or (not (Is ?carrot 'carrot')) (Is ?shoe 'shoe')))))))))",
+    "k": 6,
+    "object_classes": [
+        "carrot",
+        "screwdriver",
+        "pan",
+        "suitcase",
+        "shoe",
+        "shirt"
+    ]
+}

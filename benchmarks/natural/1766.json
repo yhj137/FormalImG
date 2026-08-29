@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a black umbrella stands on a boat. The boat is to the left of a gray elephant, which is to the left of a bed. A cat and a laptop are on the bed. All fruit in the scene is on the boat. A blue butterfly is to the left of the man.",
+    "dsl": "(exists ?m (exists ?u (exists ?bo (exists ?e (exists ?be (exists ?c (exists ?l (and (Is ?m 'man') (Is ?u 'umbrella') (Is ?bo 'boat') (Is ?e 'elephant') (Is ?be 'bed') (Is ?c 'cat') (Is ?l 'laptop') (Holding ?m ?u) (HasColor ?u 'black') (On ?m ?bo) (LeftOf ?bo ?e) (HasColor ?e 'gray') (LeftOf ?e ?be) (On ?c ?be) (On ?l ?be) (forall ?f (implies (Is ?f 'fruit') (On ?f ?bo))) (exists ?bu (and (Is ?bu 'butterfly') (HasColor ?bu 'blue') (LeftOf ?bu ?m)))))))))))",
+    "cnf": "(exists ?m (exists ?u (exists ?bo (exists ?e (exists ?be (exists ?c (exists ?l (forall ?f (exists ?bu (and (Is ?m 'man') (Holding ?m ?u) (On ?m ?bo) (Is ?u 'umbrella') (HasColor ?u 'black') (LeftOf ?bu ?m) (Is ?bo 'boat') (LeftOf ?bo ?e) (HasColor ?bu 'blue') (or (not (Is ?f 'fruit')) (On ?f ?bo)) (Is ?e 'elephant') (HasColor ?e 'gray') (Is ?bu 'butterfly') (LeftOf ?e ?be) (Is ?be 'bed') (On ?c ?be) (On ?l ?be) (Is ?c 'cat') (Is ?l 'laptop')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "cat",
+        "man",
+        "laptop",
+        "butterfly",
+        "bed",
+        "boat",
+        "fruit",
+        "elephant"
+    ]
+}

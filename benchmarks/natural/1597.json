@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bus to the left of an elephant holding a hammer. The elephant is next to a bench, and a wardrobe stands to the right of the bench. An open laptop and a white plate sit on the bench, with every orange in the scene placed on the white plate.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bu (exists ?e (exists ?h (exists ?bn (exists ?w (exists ?l (exists ?p (and (Is ?bu 'bus') (Is ?e 'elephant') (Is ?h 'hammer') (Is ?bn 'bench') (Is ?w 'wardrobe') (Is ?l 'laptop') (Is ?p 'plate') (LeftOf ?bu ?e) (Holding ?e ?h) (NextTo ?e ?bn) (RightOf ?w ?bn) (HasState ?l 'open') (On ?l ?bn) (HasColor ?p 'white') (On ?p ?bn) (forall ?o (implies (Is ?o 'orange') (On ?o ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bu (exists ?e (exists ?h (exists ?bn (exists ?w (exists ?l (exists ?p (forall ?o (and (Is ?bu 'bus') (LeftOf ?bu ?e) (Is ?e 'elephant') (Holding ?e ?h) (NextTo ?e ?bn) (Is ?h 'hammer') (Is ?bn 'bench') (RightOf ?w ?bn) (On ?l ?bn) (Is ?w 'wardrobe') (On ?p ?bn) (HasState ?l 'open') (HasColor ?p 'white') (or (not (Is ?o 'orange')) (On ?o ?p)) (Is ?l 'laptop') (Is ?p 'plate')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "bus",
+        "laptop",
+        "hammer",
+        "wardrobe",
+        "elephant",
+        "orange",
+        "plate"
+    ]
+}

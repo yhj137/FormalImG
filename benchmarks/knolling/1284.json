@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a book located on the top side of the scene and a sock located on the bottom side. For every screwdriver present, it is positioned to the left of the book. Associated with the screwdriver is a pair of glasses to its left, and a calculator to the left of the glasses. The scene also contains a sandwich on the top side that is physically larger than the calculator, and a game controller on the bottom side that is larger than the sandwich and positioned to the left of the sock.",
+    "dsl": "(exists ?book (exists ?sock (and (Is ?book 'book') (OnTopSide ?book) (Is ?sock 'sock') (OnBottomSide ?sock) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?gl (exists ?calc (exists ?sand (exists ?gc (and (Is ?gl 'glasses') (Is ?calc 'calculator') (Is ?sand 'sandwich') (Is ?gc 'game_controller') (LeftOf ?sd ?book) (LeftOf ?gl ?sd) (LeftOf ?calc ?gl) (LargerThan ?sand ?calc) (OnTopSide ?sand) (LargerThan ?gc ?sand) (OnBottomSide ?gc) (LeftOf ?gc ?sock)))))))))))",
+    "cnf": "(exists ?book (exists ?sock (forall ?sd (exists ?gl (exists ?calc (exists ?sand (exists ?gc (and (Is ?book 'book') (OnTopSide ?book) (or (not (Is ?sd 'screwdriver')) (LeftOf ?sd ?book)) (or (not (Is ?sd 'screwdriver')) (Is ?gc 'game_controller')) (or (not (Is ?sd 'screwdriver')) (LeftOf ?gl ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?sand 'sandwich')) (or (not (Is ?sd 'screwdriver')) (LargerThan ?gc ?sand)) (or (not (Is ?sd 'screwdriver')) (Is ?gl 'glasses')) (or (not (Is ?sd 'screwdriver')) (LeftOf ?calc ?gl)) (or (not (Is ?sd 'screwdriver')) (Is ?calc 'calculator')) (or (not (Is ?sd 'screwdriver')) (LargerThan ?sand ?calc)) (or (not (Is ?sd 'screwdriver')) (OnTopSide ?sand)) (or (not (Is ?sd 'screwdriver')) (OnBottomSide ?gc)) (or (not (Is ?sd 'screwdriver')) (LeftOf ?gc ?sock)) (OnBottomSide ?sock) (Is ?sock 'sock')))))))))",
+    "k": 7,
+    "object_classes": [
+        "calculator",
+        "game_controller",
+        "book",
+        "screwdriver",
+        "glasses",
+        "sock",
+        "sandwich"
+    ]
+}

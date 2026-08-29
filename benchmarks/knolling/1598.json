@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in two main columns. On the left side of the image, there is a cutting board. Positioned above the cutting board is a pan, and positioned below the cutting board is a bowl; the bowl is visually smaller than the pan. A ruler is placed further below the bowl. On the right side of the image, there is a handbag, which is larger than the cutting board. A bottle is placed above the handbag, and a white shoe is located below the handbag. Finally, for every sock in the scene, it is positioned below the white shoe.",
+    "dsl": "(exists ?cb (exists ?pan (exists ?bowl (exists ?ruler (exists ?bag (exists ?shoe (exists ?bottle (and (Is ?cb 'cutting_board') (Is ?pan 'pan') (Is ?bowl 'bowl') (Is ?ruler 'ruler') (Is ?bag 'handbag') (Is ?shoe 'shoe') (Is ?bottle 'bottle') (OnLeftSide ?cb) (Above ?pan ?cb) (Below ?bowl ?cb) (SmallerThan ?bowl ?pan) (Below ?ruler ?bowl) (OnRightSide ?bag) (LargerThan ?bag ?cb) (Above ?bottle ?bag) (Below ?shoe ?bag) (Has ?shoe 'white') (forall ?s (implies (Is ?s 'sock') (Below ?s ?shoe)))))))))))",
+    "cnf": "(exists ?cb (exists ?pan (exists ?bowl (exists ?ruler (exists ?bag (exists ?shoe (exists ?bottle (forall ?s (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Above ?pan ?cb) (Below ?bowl ?cb) (Is ?pan 'pan') (SmallerThan ?bowl ?pan) (LargerThan ?bag ?cb) (Is ?bowl 'bowl') (Below ?ruler ?bowl) (OnRightSide ?bag) (Above ?bottle ?bag) (Is ?ruler 'ruler') (Is ?bag 'handbag') (Below ?shoe ?bag) (Is ?bottle 'bottle') (Is ?shoe 'shoe') (Has ?shoe 'white') (or (not (Is ?s 'sock')) (Below ?s ?shoe)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "sock",
+        "cutting_board",
+        "pan",
+        "handbag",
+        "bottle",
+        "bowl",
+        "shoe"
+    ]
+}

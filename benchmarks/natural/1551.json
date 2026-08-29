@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a wooden bed in the center. To the left of the bed, a lion holds an umbrella. An elephant is on the bed, holding a teddy bear. To the right of the bed stands a refrigerator containing a bottle. Every pizza in the scene is inside the refrigerator.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bed (exists ?l (exists ?u (exists ?e (exists ?r (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?l 'lion') (LeftOf ?l ?bed) (Is ?u 'umbrella') (Holding ?l ?u) (Is ?e 'elephant') (On ?e ?bed) (Is ?r 'refrigerator') (RightOf ?r ?bed) (forall ?p (implies (Is ?p 'pizza') (In ?p ?r))) (exists ?bo (exists ?t (and (Is ?bo 'bottle') (In ?bo ?r) (Is ?t 'teddy bear') (Holding ?e ?t)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bed (exists ?l (exists ?u (exists ?e (exists ?r (forall ?p (exists ?bo (exists ?t (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (LeftOf ?l ?bed) (On ?e ?bed) (Is ?l 'lion') (Holding ?l ?u) (RightOf ?r ?bed) (Is ?e 'elephant') (Holding ?e ?t) (Is ?u 'umbrella') (Is ?r 'refrigerator') (or (not (Is ?p 'pizza')) (In ?p ?r)) (Is ?t 'teddy bear') (In ?bo ?r) (Is ?bo 'bottle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "umbrella",
+        "pizza",
+        "teddy bear",
+        "refrigerator",
+        "bed",
+        "lion",
+        "elephant"
+    ]
+}

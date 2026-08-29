@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child holding a toy car is next to a chair with a round bowl on it.",
+    "dsl": "(exists ?c (exists ?t (exists ?ch (exists ?b (and (Is ?c 'child') (Is ?t 'toy car') (Is ?ch 'chair') (Is ?b 'bowl') (Holding ?c ?t) (NextTo ?c ?ch) (On ?b ?ch) (HasShape ?b 'round'))))))",
+    "cnf": "(exists ?c (exists ?t (exists ?ch (exists ?b (and (Is ?c 'child') (Holding ?c ?t) (NextTo ?c ?ch) (Is ?t 'toy car') (Is ?ch 'chair') (On ?b ?ch) (Is ?b 'bowl') (HasShape ?b 'round'))))))",
+    "k": 4,
+    "object_classes": [
+        "chair",
+        "toy car",
+        "bowl",
+        "child"
+    ]
+}

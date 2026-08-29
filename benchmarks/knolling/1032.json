@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans, it is blue and positioned on the right side of the layout. There is a white shirt to its left. A bowl is positioned below the jeans, and a lighter is placed below the bowl; the bowl is larger than the lighter. Additionally, a pizza is located below the shirt, and a red apple is positioned below the pizza, with the pizza being larger than the apple.",
+    "dsl": "(forall ?jeans (implies (Is ?jeans 'jeans') (exists ?shirt (exists ?bowl (exists ?lighter (exists ?pizza (exists ?apple (and (Has ?jeans 'blue') (OnRightSide ?jeans) (Is ?shirt 'shirt') (Has ?shirt 'white') (LeftOf ?shirt ?jeans) (Is ?bowl 'bowl') (Below ?bowl ?jeans) (Is ?lighter 'lighter') (Below ?lighter ?bowl) (LargerThan ?bowl ?lighter) (Is ?pizza 'pizza') (Below ?pizza ?shirt) (Is ?apple 'apple') (Has ?apple 'red') (Below ?apple ?pizza) (LargerThan ?pizza ?apple)))))))))",
+    "cnf": "(forall ?jeans (exists ?shirt (exists ?bowl (exists ?lighter (exists ?pizza (exists ?apple (and (or (not (Is ?jeans 'jeans')) (Has ?jeans 'blue')) (or (not (Is ?jeans 'jeans')) (OnRightSide ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?shirt 'shirt')) (or (not (Is ?jeans 'jeans')) (Has ?shirt 'white')) (or (not (Is ?jeans 'jeans')) (LeftOf ?shirt ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?bowl 'bowl')) (or (not (Is ?jeans 'jeans')) (Below ?pizza ?shirt)) (or (not (Is ?jeans 'jeans')) (Below ?bowl ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?pizza 'pizza')) (or (not (Is ?jeans 'jeans')) (Is ?apple 'apple')) (or (not (Is ?jeans 'jeans')) (Below ?apple ?pizza)) (or (not (Is ?jeans 'jeans')) (Is ?lighter 'lighter')) (or (not (Is ?jeans 'jeans')) (Below ?lighter ?bowl)) (or (not (Is ?jeans 'jeans')) (LargerThan ?bowl ?lighter)) (or (not (Is ?jeans 'jeans')) (Has ?apple 'red')) (or (not (Is ?jeans 'jeans')) (LargerThan ?pizza ?apple)))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "pizza",
+        "lighter",
+        "jeans",
+        "bowl",
+        "shirt"
+    ]
+}

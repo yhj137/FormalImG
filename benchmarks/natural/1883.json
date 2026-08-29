@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a house containing a metal bench. A woman sits on the bench, holding a pair of glasses. Every apple in the scene rests on the bench, alongside a blue lamp and a laptop. Headphones and a sandwich lie next to the laptop, and a round mirror stands to the left of the bench.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (exists ?b (and (Is ?b 'bench') (In ?b ?h) (HasMaterial ?b 'metal') (exists ?w (and (Is ?w 'woman') (On ?w ?b) (forall ?a (implies (Is ?a 'apple') (On ?a ?b))) (exists ?l (and (Is ?l 'laptop') (On ?l ?b) (exists ?hp (and (Is ?hp 'headphones') (NextTo ?hp ?l) (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'round') (LeftOf ?m ?b) (exists ?s (and (Is ?s 'sandwich') (NextTo ?s ?l) (exists ?g (and (Is ?g 'glasses') (Holding ?w ?g) (exists ?lp (and (Is ?lp 'lamp') (HasColor ?lp 'blue') (On ?lp ?b))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (exists ?w (forall ?a (exists ?l (exists ?hp (exists ?m (exists ?s (exists ?g (exists ?lp (and (Is ?h 'house') (In ?b ?h) (Is ?b 'bench') (HasMaterial ?b 'metal') (On ?w ?b) (or (not (Is ?a 'apple')) (On ?a ?b)) (Is ?w 'woman') (Holding ?w ?g) (On ?l ?b) (Is ?g 'glasses') (LeftOf ?m ?b) (Is ?l 'laptop') (NextTo ?hp ?l) (On ?lp ?b) (HasShape ?m 'round') (NextTo ?s ?l) (Is ?hp 'headphones') (HasColor ?lp 'blue') (Is ?m 'mirror') (Is ?s 'sandwich') (Is ?lp 'lamp')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "glasses",
+        "headphones",
+        "sandwich",
+        "laptop",
+        "lamp",
+        "woman",
+        "mirror",
+        "house",
+        "apple"
+    ]
+}

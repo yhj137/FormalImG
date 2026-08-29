@@ -1,0 +1,9 @@
+{
+    "prompt": "A rectangular toy car in a cartoon style.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'toy car') (HasShape ?t 'rectangular'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'toy car') (HasShape ?t 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "toy car"
+    ]
+}

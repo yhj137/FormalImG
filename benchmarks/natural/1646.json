@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene features a tree, with every horse positioned next to it. A desk and a boat are also located next to the tree. On the desk sit a green book and a cup containing a fruit. Beside the desk is a bed with a red ball on top.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (and (Is ?t 'tree') (forall ?h (implies (Is ?h 'horse') (NextTo ?h ?t))) (exists ?d (and (Is ?d 'desk') (NextTo ?d ?t) (exists ?bd (and (Is ?bd 'bed') (NextTo ?bd ?d) (exists ?bt (and (Is ?bt 'boat') (NextTo ?bt ?t) (exists ?bk (and (Is ?bk 'book') (On ?bk ?d) (HasColor ?bk 'green') (exists ?c (and (Is ?c 'cup') (On ?c ?d) (exists ?f (and (Is ?f 'fruit') (In ?f ?c) (exists ?bl (and (Is ?bl 'ball') (On ?bl ?bd) (HasColor ?bl 'red'))))))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (forall ?h (exists ?d (exists ?bd (exists ?bt (exists ?bk (exists ?c (exists ?f (exists ?bl (and (Is ?t 'tree') (or (not (Is ?h 'horse')) (NextTo ?h ?t)) (NextTo ?d ?t) (NextTo ?bt ?t) (Is ?d 'desk') (NextTo ?bd ?d) (Is ?bt 'boat') (On ?bk ?d) (Is ?bd 'bed') (On ?bl ?bd) (On ?c ?d) (Is ?bk 'book') (HasColor ?bk 'green') (Is ?bl 'ball') (HasColor ?bl 'red') (Is ?c 'cup') (In ?f ?c) (Is ?f 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tree",
+        "desk",
+        "ball",
+        "book",
+        "bed",
+        "horse",
+        "cup",
+        "boat",
+        "fruit"
+    ]
+}

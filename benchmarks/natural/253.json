@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A metal hammer is resting on top of a car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (and (Is ?c 'car') (Is ?h 'hammer') (HasMaterial ?h 'metal') (On ?h ?c)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (and (Is ?c 'car') (On ?h ?c) (HasMaterial ?h 'metal') (Is ?h 'hammer')))))",
+    "k": 2,
+    "object_classes": [
+        "hammer",
+        "car"
+    ]
+}

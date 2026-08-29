@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A woman is holding an apple. Next to the woman, there is a metal lamp.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?a (exists ?l (and (Is ?w 'woman') (Is ?a 'apple') (Is ?l 'lamp') (Holding ?w ?a) (NextTo ?l ?w) (HasMaterial ?l 'metal'))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?a (exists ?l (and (Is ?w 'woman') (Holding ?w ?a) (NextTo ?l ?w) (Is ?a 'apple') (Is ?l 'lamp') (HasMaterial ?l 'metal'))))))",
+    "k": 3,
+    "object_classes": [
+        "apple",
+        "lamp",
+        "woman"
+    ]
+}

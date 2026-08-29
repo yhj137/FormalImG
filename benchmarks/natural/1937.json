@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a metal table with a bowl, a round plate, and headphones resting on it. To the left of the table lies a backpack next to a pair of shoes. All keys in the scene are contained inside the bowl. A man holding a screwdriver stands to the left of the table, while a child is positioned to the right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (and (Is ?t 'table') (HasMaterial ?t 'metal') (exists ?b (and (Is ?b 'bowl') (On ?b ?t) (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?t) (exists ?h (and (Is ?h 'headphones') (On ?h ?t) (exists ?bp (and (Is ?bp 'backpack') (LeftOf ?bp ?t) (exists ?sh (and (Is ?sh 'shoes') (NextTo ?sh ?bp) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?m (and (Is ?m 'man') (LeftOf ?m ?t) (exists ?sd (and (Is ?sd 'screwdriver') (Holding ?m ?sd) (exists ?c (and (Is ?c 'child') (RightOf ?c ?t))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?b (exists ?p (exists ?h (exists ?bp (exists ?sh (forall ?k (exists ?m (exists ?sd (exists ?c (and (Is ?t 'table') (HasMaterial ?t 'metal') (On ?b ?t) (On ?p ?t) (Is ?b 'bowl') (or (not (Is ?k 'key')) (In ?k ?b)) (On ?h ?t) (HasShape ?p 'round') (LeftOf ?bp ?t) (Is ?h 'headphones') (Is ?p 'plate') (LeftOf ?m ?t) (Is ?bp 'backpack') (NextTo ?sh ?bp) (RightOf ?c ?t) (Is ?m 'man') (Holding ?m ?sd) (Is ?sh 'shoes') (Is ?c 'child') (Is ?sd 'screwdriver')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "child",
+        "shoes",
+        "backpack",
+        "plate",
+        "man",
+        "table",
+        "bowl",
+        "screwdriver",
+        "key"
+    ]
+}

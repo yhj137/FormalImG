@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the right side. The suitcase is located to the right of a calculator, and they are aligned horizontally. A game controller is aligned vertically with the calculator. Additionally, for any remote present, it is aligned horizontally with the game controller and located to the right of it.",
+    "dsl": "(exists ?s (exists ?c (exists ?g (and (Is ?s 'suitcase') (Is ?c 'calculator') (Is ?g 'game_controller') (OnRightSide ?s) (RightOf ?s ?c) (AlignedHorizontally ?s ?c) (AlignedVertically ?c ?g) (forall ?r (implies (Is ?r 'remote') (and (AlignedHorizontally ?r ?g) (RightOf ?r ?g))))))))",
+    "cnf": "(exists ?s (exists ?c (exists ?g (forall ?r (and (Is ?s 'suitcase') (OnRightSide ?s) (RightOf ?s ?c) (AlignedHorizontally ?s ?c) (Is ?c 'calculator') (AlignedVertically ?c ?g) (Is ?g 'game_controller') (or (not (Is ?r 'remote')) (AlignedHorizontally ?r ?g)) (or (not (Is ?r 'remote')) (RightOf ?r ?g)))))))",
+    "k": 4,
+    "object_classes": [
+        "suitcase",
+        "remote",
+        "calculator",
+        "game_controller"
+    ]
+}

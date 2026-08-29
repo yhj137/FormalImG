@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a cutting board, a tie, and a ruler. The cutting board and the tie are aligned horizontally. The ruler is placed below the tie and rests on the bottom side of the image. Additionally, for any apple present in the scene, it is positioned below the cutting board.",
+    "dsl": "(exists ?board (exists ?tie (exists ?ruler (and (Is ?board 'cutting_board') (Is ?tie 'tie') (Is ?ruler 'ruler') (AlignedHorizontally ?board ?tie) (Below ?ruler ?tie) (OnBottomSide ?ruler) (forall ?apple (implies (Is ?apple 'apple') (Below ?apple ?board)))))))",
+    "cnf": "(exists ?board (exists ?tie (exists ?ruler (forall ?apple (and (Is ?board 'cutting_board') (AlignedHorizontally ?board ?tie) (or (not (Is ?apple 'apple')) (Below ?apple ?board)) (Is ?tie 'tie') (Below ?ruler ?tie) (Is ?ruler 'ruler') (OnBottomSide ?ruler))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "cutting_board",
+        "tie",
+        "apple"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A child is on a brown sofa, holding a teddy bear. A white wardrobe stands next to the sofa; inside it is a jacket containing a key. A bookshelf is located next to the wardrobe with a cup on it. Every butterfly in the scene is on the cup, and a pair of headphones is next to the cup.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?s (exists ?tb (exists ?w (exists ?j (exists ?k (exists ?bs (exists ?cup (and (Is ?c 'child') (Is ?s 'sofa') (HasColor ?s 'brown') (Is ?tb 'teddy bear') (Is ?w 'wardrobe') (HasColor ?w 'white') (Is ?j 'jacket') (Is ?k 'key') (Is ?bs 'bookshelf') (Is ?cup 'cup') (On ?c ?s) (Holding ?c ?tb) (NextTo ?w ?s) (In ?j ?w) (In ?k ?j) (NextTo ?bs ?w) (On ?cup ?bs) (forall ?bf (implies (Is ?bf 'butterfly') (On ?bf ?cup))) (exists ?hp (and (Is ?hp 'headphones') (NextTo ?hp ?cup)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?s (exists ?tb (exists ?w (exists ?j (exists ?k (exists ?bs (exists ?cup (forall ?bf (exists ?hp (and (Is ?c 'child') (On ?c ?s) (Holding ?c ?tb) (HasColor ?s 'brown') (NextTo ?w ?s) (Is ?tb 'teddy bear') (Is ?s 'sofa') (HasColor ?w 'white') (In ?j ?w) (Is ?w 'wardrobe') (NextTo ?bs ?w) (Is ?j 'jacket') (In ?k ?j) (Is ?bs 'bookshelf') (On ?cup ?bs) (Is ?k 'key') (Is ?cup 'cup') (or (not (Is ?bf 'butterfly')) (On ?bf ?cup)) (NextTo ?hp ?cup) (Is ?hp 'headphones')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "sofa",
+        "child",
+        "teddy bear",
+        "jacket",
+        "cup",
+        "butterfly",
+        "bookshelf",
+        "key",
+        "wardrobe"
+    ]
+}

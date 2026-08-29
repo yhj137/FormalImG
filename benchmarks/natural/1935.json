@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman next to a desk. She wears a blue hat and holds a bitten pizza. On the desk, there is a plate with an orange, and to the left of the plate sits a book. A phone is on the book, and headphones are next to it. All balls in the scene are red and located below the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?d (exists ?pl (exists ?bk (exists ?hp (exists ?ph (and (Is ?w 'woman') (Is ?d 'desk') (Is ?pl 'plate') (Is ?bk 'book') (Is ?hp 'headphones') (Is ?ph 'phone') (NextTo ?w ?d) (On ?pl ?d) (On ?bk ?d) (LeftOf ?bk ?pl) (NextTo ?hp ?bk) (On ?ph ?bk) (forall ?ba (implies (Is ?ba 'ball') (and (HasColor ?ba 'red') (Below ?ba ?d)))) (exists ?pi (exists ?o (exists ?ht (and (Is ?pi 'pizza') (Is ?o 'orange') (Is ?ht 'hat') (Holding ?w ?pi) (HasState ?pi 'bitten') (On ?o ?pl) (HasColor ?ht 'blue') (On ?ht ?w)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?d (exists ?pl (exists ?bk (exists ?hp (exists ?ph (forall ?ba (exists ?pi (exists ?o (exists ?ht (and (Is ?w 'woman') (NextTo ?w ?d) (Holding ?w ?pi) (Is ?d 'desk') (On ?pl ?d) (On ?ht ?w) (Is ?pi 'pizza') (HasState ?pi 'bitten') (On ?bk ?d) (Is ?pl 'plate') (LeftOf ?bk ?pl) (HasColor ?ht 'blue') (or (not (Is ?ba 'ball')) (Below ?ba ?d)) (Is ?bk 'book') (On ?o ?pl) (NextTo ?hp ?bk) (Is ?ht 'hat') (or (not (Is ?ba 'ball')) (HasColor ?ba 'red')) (Is ?o 'orange') (On ?ph ?bk) (Is ?hp 'headphones') (Is ?ph 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "phone",
+        "book",
+        "plate",
+        "woman",
+        "pizza",
+        "orange",
+        "desk",
+        "ball",
+        "hat"
+    ]
+}

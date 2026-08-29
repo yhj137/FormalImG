@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bench to the left of a desk that contains a spoon. A table stands next to the desk, holding an open laptop and a round clock. A plant is placed beside the table, and every butterfly in the scene rests on it. An orange fish lies on the bench.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?be (exists ?d (exists ?t (exists ?s (exists ?l (exists ?c (exists ?p (and (Is ?be 'bench') (Is ?d 'desk') (Is ?t 'table') (Is ?s 'spoon') (Is ?l 'laptop') (Is ?c 'clock') (Is ?p 'plant') (LeftOf ?be ?d) (NextTo ?t ?d) (In ?s ?d) (On ?l ?t) (HasState ?l 'open') (On ?c ?t) (HasShape ?c 'round') (NextTo ?p ?t) (forall ?bu (implies (Is ?bu 'butterfly') (On ?bu ?p))) (exists ?f (and (Is ?f 'fish') (HasColor ?f 'orange') (On ?f ?be))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?be (exists ?d (exists ?t (exists ?s (exists ?l (exists ?c (exists ?p (forall ?bu (exists ?f (and (Is ?be 'bench') (LeftOf ?be ?d) (On ?f ?be) (Is ?d 'desk') (NextTo ?t ?d) (HasColor ?f 'orange') (In ?s ?d) (Is ?t 'table') (On ?l ?t) (Is ?f 'fish') (Is ?s 'spoon') (On ?c ?t) (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?p ?t) (Is ?c 'clock') (HasShape ?c 'round') (Is ?p 'plant') (or (not (Is ?bu 'butterfly')) (On ?bu ?p)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fish",
+        "bench",
+        "spoon",
+        "laptop",
+        "plant",
+        "table",
+        "desk",
+        "clock",
+        "butterfly"
+    ]
+}

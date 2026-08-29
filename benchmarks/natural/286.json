@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene where every jacket is inside a brown wardrobe.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?j (implies (Is ?j 'jacket') (exists ?w (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (In ?j ?w))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?j (exists ?w (and (or (not (Is ?j 'jacket')) (Is ?w 'wardrobe')) (or (not (Is ?j 'jacket')) (HasColor ?w 'brown')) (or (not (Is ?j 'jacket')) (In ?j ?w))))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "wardrobe"
+    ]
+}

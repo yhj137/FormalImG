@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a sitting person. Every flower in the scene is positioned to the right of the person. A teddy bear is next to the person. To the left of the teddy bear is a toy car, and an orange is next to the toy car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (and (Is ?p 'person') (HasState ?p 'sitting') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?p))) (exists ?tb (exists ?tc (exists ?o (and (Is ?tb 'teddy bear') (Is ?tc 'toy car') (Is ?o 'orange') (NextTo ?tb ?p) (LeftOf ?tc ?tb) (NextTo ?o ?tc))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (forall ?f (exists ?tb (exists ?tc (exists ?o (and (Is ?p 'person') (HasState ?p 'sitting') (or (not (Is ?f 'flower')) (RightOf ?f ?p)) (NextTo ?tb ?p) (Is ?tb 'teddy bear') (LeftOf ?tc ?tb) (Is ?tc 'toy car') (NextTo ?o ?tc) (Is ?o 'orange'))))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "teddy bear",
+        "orange",
+        "flower",
+        "toy car"
+    ]
+}

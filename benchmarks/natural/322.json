@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a metal spoon inside every bowl.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bowl') (exists ?s (and (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?s (and (or (not (Is ?b 'bowl')) (Is ?s 'spoon')) (or (not (Is ?b 'bowl')) (HasMaterial ?s 'metal')) (or (not (Is ?b 'bowl')) (In ?s ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "spoon"
+    ]
+}

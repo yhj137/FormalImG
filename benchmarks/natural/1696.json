@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image of a person holding a backpack, with shoes next to them. Every rock is next to the shoes. A child is to the right of the person, and a sitting cat is next to the child. A bookshelf stands to the right of the cat with a ceramic bowl resting on it, and a dirty car is located to the right of the bookshelf.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (exists ?bp (exists ?sh (and (Is ?p 'person') (Is ?bp 'backpack') (Is ?sh 'shoes') (Holding ?p ?bp) (NextTo ?sh ?p) (forall ?r (implies (Is ?r 'rock') (NextTo ?r ?sh))) (exists ?ch (exists ?ca (exists ?bs (exists ?bo (exists ?cr (and (Is ?ch 'child') (Is ?ca 'cat') (Is ?bs 'bookshelf') (Is ?bo 'bowl') (Is ?cr 'car') (RightOf ?ch ?p) (NextTo ?ca ?ch) (HasState ?ca 'sitting') (RightOf ?bs ?ca) (On ?bo ?bs) (HasMaterial ?bo 'ceramic') (RightOf ?cr ?bs) (HasState ?cr 'dirty'))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (exists ?bp (exists ?sh (forall ?r (exists ?ch (exists ?ca (exists ?bs (exists ?bo (exists ?cr (and (Is ?p 'person') (Holding ?p ?bp) (NextTo ?sh ?p) (Is ?bp 'backpack') (RightOf ?ch ?p) (Is ?sh 'shoes') (or (not (Is ?r 'rock')) (NextTo ?r ?sh)) (Is ?ch 'child') (NextTo ?ca ?ch) (Is ?ca 'cat') (HasState ?ca 'sitting') (RightOf ?bs ?ca) (Is ?bs 'bookshelf') (On ?bo ?bs) (RightOf ?cr ?bs) (Is ?bo 'bowl') (HasMaterial ?bo 'ceramic') (Is ?cr 'car') (HasState ?cr 'dirty'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "child",
+        "person",
+        "shoes",
+        "backpack",
+        "rock",
+        "car",
+        "bowl",
+        "cat",
+        "bookshelf"
+    ]
+}

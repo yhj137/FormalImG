@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every jacket is draped on a person holding a key. The person stands next to a brown horse located to the right of a wooden wardrobe. Adjacent to the wardrobe is a bookshelf holding a clock and an empty bowl.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?j (implies (Is ?j 'jacket') (exists ?p (exists ?k (exists ?h (exists ?w (exists ?b (exists ?c (exists ?bowl (and (Is ?p 'person') (Is ?k 'key') (Is ?h 'horse') (Is ?w 'wardrobe') (Is ?b 'bookshelf') (Is ?c 'clock') (Is ?bowl 'bowl') (On ?j ?p) (Holding ?p ?k) (NextTo ?p ?h) (HasColor ?h 'brown') (RightOf ?h ?w) (HasMaterial ?w 'wooden') (NextTo ?b ?w) (On ?c ?b) (On ?bowl ?b) (HasState ?bowl 'empty'))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?j (exists ?p (exists ?k (exists ?h (exists ?w (exists ?b (exists ?c (exists ?bowl (and (or (not (Is ?j 'jacket')) (Is ?p 'person')) (or (not (Is ?j 'jacket')) (On ?j ?p)) (or (not (Is ?j 'jacket')) (Is ?k 'key')) (or (not (Is ?j 'jacket')) (Holding ?p ?k)) (or (not (Is ?j 'jacket')) (Is ?bowl 'bowl')) (or (not (Is ?j 'jacket')) (Is ?h 'horse')) (or (not (Is ?j 'jacket')) (NextTo ?p ?h)) (or (not (Is ?j 'jacket')) (Is ?c 'clock')) (or (not (Is ?j 'jacket')) (On ?bowl ?b)) (or (not (Is ?j 'jacket')) (Is ?w 'wardrobe')) (or (not (Is ?j 'jacket')) (HasColor ?h 'brown')) (or (not (Is ?j 'jacket')) (Is ?b 'bookshelf')) (or (not (Is ?j 'jacket')) (On ?c ?b)) (or (not (Is ?j 'jacket')) (HasState ?bowl 'empty')) (or (not (Is ?j 'jacket')) (RightOf ?h ?w)) (or (not (Is ?j 'jacket')) (NextTo ?b ?w)) (or (not (Is ?j 'jacket')) (HasMaterial ?w 'wooden'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "person",
+        "horse",
+        "jacket",
+        "clock",
+        "bowl",
+        "bookshelf",
+        "key",
+        "wardrobe"
+    ]
+}

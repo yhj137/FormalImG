@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a suitcase, a bottle, a cup, and a pair of pliers arranged in a horizontal row within the top half of the image. The suitcase is positioned to the left of the bottle, the bottle is to the left of the cup, and the cup is to the left of the pliers. All four items are aligned horizontally. Additionally, the suitcase is visually larger than the pliers.",
+    "dsl": "(exists ?suitcase (exists ?bottle (exists ?cup (exists ?pliers (and (Is ?suitcase 'suitcase') (Is ?bottle 'bottle') (Is ?cup 'cup') (Is ?pliers 'pliers') (OnTopSide ?suitcase) (LeftOf ?suitcase ?bottle) (LeftOf ?bottle ?cup) (LeftOf ?cup ?pliers) (AlignedHorizontally ?suitcase ?bottle) (AlignedHorizontally ?bottle ?cup) (AlignedHorizontally ?cup ?pliers) (LargerThan ?suitcase ?pliers))))))",
+    "cnf": "(exists ?suitcase (exists ?bottle (exists ?cup (exists ?pliers (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LeftOf ?suitcase ?bottle) (AlignedHorizontally ?suitcase ?bottle) (Is ?bottle 'bottle') (LeftOf ?bottle ?cup) (LargerThan ?suitcase ?pliers) (AlignedHorizontally ?bottle ?cup) (Is ?cup 'cup') (LeftOf ?cup ?pliers) (AlignedHorizontally ?cup ?pliers) (Is ?pliers 'pliers'))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "suitcase",
+        "pliers",
+        "cup"
+    ]
+}

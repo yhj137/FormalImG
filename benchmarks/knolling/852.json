@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hat in the image, it is positioned on the left side. Directly below the hat, there exist a cutting board, a set of keys, a stapler, and a screwdriver. The cutting board is located on the bottom side of the image. The cutting board, keys, stapler, and screwdriver are all aligned horizontally with each other.",
+    "dsl": "(forall ?hat (implies (Is ?hat 'hat') (exists ?board (exists ?keys (exists ?stapler (exists ?driver (and (Is ?board 'cutting_board') (Is ?keys 'keys') (Is ?stapler 'stapler') (Is ?driver 'screwdriver') (OnLeftSide ?hat) (Below ?board ?hat) (Below ?keys ?hat) (Below ?stapler ?hat) (Below ?driver ?hat) (OnBottomSide ?board) (AlignedHorizontally ?board ?keys) (AlignedHorizontally ?keys ?stapler) (AlignedHorizontally ?stapler ?driver))))))))",
+    "cnf": "(forall ?hat (exists ?board (exists ?keys (exists ?stapler (exists ?driver (and (or (not (Is ?hat 'hat')) (Is ?board 'cutting_board')) (or (not (Is ?hat 'hat')) (Below ?board ?hat)) (or (not (Is ?hat 'hat')) (Is ?keys 'keys')) (or (not (Is ?hat 'hat')) (OnBottomSide ?board)) (or (not (Is ?hat 'hat')) (OnLeftSide ?hat)) (or (not (Is ?hat 'hat')) (Below ?keys ?hat)) (or (not (Is ?hat 'hat')) (Is ?stapler 'stapler')) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?board ?keys)) (or (not (Is ?hat 'hat')) (Below ?driver ?hat)) (or (not (Is ?hat 'hat')) (Is ?driver 'screwdriver')) (or (not (Is ?hat 'hat')) (Below ?stapler ?hat)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?keys ?stapler)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?stapler ?driver))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "stapler",
+        "screwdriver",
+        "cutting_board",
+        "hat"
+    ]
+}

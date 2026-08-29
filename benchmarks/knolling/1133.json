@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a vertical column on the left containing blue jeans, a laptop, and a pan, where the jeans are physically larger than the laptop. The arrangement follows a specific rule: for every brown glove present, it is located to the right of the jeans. Extending from the glove is a horizontal row containing a sandwich to the right of the glove, and a pair of glasses to the right of the sandwich.",
+    "dsl": "(exists ?jeans (exists ?laptop (exists ?pan (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?laptop 'laptop') (Is ?pan 'pan') (AlignedVertically ?jeans ?laptop) (AlignedVertically ?laptop ?pan) (LargerThan ?jeans ?laptop) (forall ?glove (implies (and (Is ?glove 'glove') (Has ?glove 'brown')) (exists ?sandwich (exists ?glasses (and (Is ?sandwich 'sandwich') (Is ?glasses 'glasses') (RightOf ?glove ?jeans) (RightOf ?sandwich ?glove) (RightOf ?glasses ?sandwich) (AlignedHorizontally ?glove ?sandwich) (AlignedHorizontally ?sandwich ?glasses))))))))))",
+    "cnf": "(exists ?jeans (exists ?laptop (exists ?pan (forall ?glove (exists ?sandwich (exists ?glasses (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (AlignedVertically ?jeans ?laptop) (LargerThan ?jeans ?laptop) (Is ?laptop 'laptop') (AlignedVertically ?laptop ?pan) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (RightOf ?glove ?jeans)) (Is ?pan 'pan') (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (Is ?glasses 'glasses')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (RightOf ?sandwich ?glove)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (Is ?sandwich 'sandwich')) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (RightOf ?glasses ?sandwich)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (AlignedHorizontally ?glove ?sandwich)) (or (not (Is ?glove 'glove')) (not (Has ?glove 'brown')) (AlignedHorizontally ?sandwich ?glasses)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "pan",
+        "jeans",
+        "sandwich",
+        "glove"
+    ]
+}

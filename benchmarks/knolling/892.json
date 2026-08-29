@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the top side of the image. For every game controller in the scene, the monitor is located above it. To the left of the game controller is a pink donut. A wallet is placed above the donut. Finally, a hat, which is larger than the game controller, is located to the left of the wallet.",
+    "dsl": "(exists ?m (and (Is ?m 'monitor') (OnTopSide ?m) (forall ?gc (implies (Is ?gc 'game_controller') (exists ?d (exists ?w (exists ?h (and (Is ?d 'donut') (Has ?d 'pink') (Is ?w 'wallet') (Is ?h 'hat') (Above ?m ?gc) (LeftOf ?d ?gc) (Above ?w ?d) (LeftOf ?h ?w) (LargerThan ?h ?gc)))))))))",
+    "cnf": "(exists ?m (forall ?gc (exists ?d (exists ?w (exists ?h (and (Is ?m 'monitor') (OnTopSide ?m) (or (not (Is ?gc 'game_controller')) (Above ?m ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?h 'hat')) (or (not (Is ?gc 'game_controller')) (LeftOf ?d ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?w 'wallet')) (or (not (Is ?gc 'game_controller')) (LeftOf ?h ?w)) (or (not (Is ?gc 'game_controller')) (Has ?d 'pink')) (or (not (Is ?gc 'game_controller')) (Above ?w ?d)) (or (not (Is ?gc 'game_controller')) (LargerThan ?h ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?d 'donut'))))))))",
+    "k": 5,
+    "object_classes": [
+        "game_controller",
+        "hat",
+        "wallet",
+        "monitor",
+        "donut"
+    ]
+}

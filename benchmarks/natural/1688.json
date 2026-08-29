@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A dirty house contains a sofa. Next to the sofa is a black chair; all the apples in the scene are on this chair. A round basket is positioned to the left of the chair. A sliced pizza sits on the sofa. A bowl containing a fork is next to the pizza, and a blue cup is placed to the left of the bowl.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?c (and (Is ?h 'house') (HasState ?h 'dirty') (Is ?s 'sofa') (In ?s ?h) (Is ?c 'chair') (HasColor ?c 'black') (NextTo ?c ?s) (forall ?a (implies (Is ?a 'apple') (On ?a ?c))) (exists ?b (exists ?p (exists ?bo (exists ?f (exists ?cu (and (Is ?b 'basket') (HasShape ?b 'round') (LeftOf ?b ?c) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?s) (Is ?bo 'bowl') (NextTo ?bo ?p) (Is ?f 'fork') (In ?f ?bo) (Is ?cu 'cup') (HasColor ?cu 'blue') (LeftOf ?cu ?bo))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?s (exists ?c (forall ?a (exists ?b (exists ?p (exists ?bo (exists ?f (exists ?cu (and (Is ?h 'house') (HasState ?h 'dirty') (In ?s ?h) (Is ?s 'sofa') (NextTo ?c ?s) (On ?p ?s) (HasColor ?c 'black') (or (not (Is ?a 'apple')) (On ?a ?c)) (HasState ?p 'sliced') (NextTo ?bo ?p) (Is ?c 'chair') (LeftOf ?b ?c) (Is ?p 'pizza') (Is ?bo 'bowl') (In ?f ?bo) (HasShape ?b 'round') (LeftOf ?cu ?bo) (Is ?f 'fork') (Is ?b 'basket') (HasColor ?cu 'blue') (Is ?cu 'cup'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "sofa",
+        "bowl",
+        "fork",
+        "chair",
+        "pizza",
+        "basket",
+        "cup",
+        "apple"
+    ]
+}

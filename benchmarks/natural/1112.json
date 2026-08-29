@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a child holding a full basket containing every orange in the scene. To the left of the child is a cake with a peeled banana on top, and a toy car next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (and (Is ?c 'child') (Is ?b 'basket') (HasState ?b 'full') (Holding ?c ?b) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?ba (exists ?ck (exists ?tc (and (Is ?ba 'banana') (Is ?ck 'cake') (Is ?tc 'toy car') (HasState ?ba 'peeled') (LeftOf ?ck ?c) (On ?ba ?ck) (NextTo ?tc ?ck)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (forall ?o (exists ?ba (exists ?ck (exists ?tc (and (Is ?c 'child') (Holding ?c ?b) (LeftOf ?ck ?c) (HasState ?b 'full') (or (not (Is ?o 'orange')) (In ?o ?b)) (Is ?ck 'cake') (On ?ba ?ck) (Is ?b 'basket') (HasState ?ba 'peeled') (NextTo ?tc ?ck) (Is ?ba 'banana') (Is ?tc 'toy car')))))))))",
+    "k": 6,
+    "object_classes": [
+        "child",
+        "cake",
+        "orange",
+        "toy car",
+        "basket",
+        "banana"
+    ]
+}

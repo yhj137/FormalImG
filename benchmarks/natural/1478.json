@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk-style scene features a boat with an elephant inside. The elephant has glasses on and holds a switched-on phone. All plants are located to the left of the elephant. To the right of the elephant stands a wardrobe with a jacket on top and a peeled banana inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bt (exists ?e (and (Is ?bt 'boat') (Is ?e 'elephant') (In ?e ?bt) (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?e))) (exists ?ph (exists ?w (exists ?j (exists ?g (exists ?ba (and (Is ?ph 'phone') (Is ?w 'wardrobe') (Is ?j 'jacket') (Is ?g 'glasses') (Is ?ba 'banana') (HasState ?ph 'on') (Holding ?e ?ph) (RightOf ?w ?e) (On ?j ?w) (On ?g ?e) (HasState ?ba 'peeled') (In ?ba ?w)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bt (exists ?e (forall ?p (exists ?ph (exists ?w (exists ?j (exists ?g (exists ?ba (and (Is ?bt 'boat') (In ?e ?bt) (Is ?e 'elephant') (or (not (Is ?p 'plant')) (LeftOf ?p ?e)) (Holding ?e ?ph) (RightOf ?w ?e) (HasState ?ph 'on') (On ?g ?e) (Is ?w 'wardrobe') (On ?j ?w) (Is ?ph 'phone') (Is ?g 'glasses') (In ?ba ?w) (Is ?j 'jacket') (HasState ?ba 'peeled') (Is ?ba 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "phone",
+        "glasses",
+        "plant",
+        "jacket",
+        "boat",
+        "banana",
+        "wardrobe"
+    ]
+}

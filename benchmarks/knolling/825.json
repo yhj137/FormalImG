@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image displaying a shoe, a bottle, a tie, a wrench, and a lemon. All five items are aligned horizontally across the view. The shoe and the bottle are positioned on the left side of the scene. The shoe appears larger than the lemon, and the bottle appears larger than the wrench.",
+    "dsl": "(exists ?shoe (exists ?bottle (exists ?tie (exists ?wrench (exists ?lemon (and (Is ?shoe 'shoe') (Is ?bottle 'bottle') (Is ?tie 'tie') (Is ?wrench 'wrench') (Is ?lemon 'lemon') (AlignedHorizontally ?shoe ?bottle) (AlignedHorizontally ?bottle ?tie) (AlignedHorizontally ?tie ?wrench) (AlignedHorizontally ?wrench ?lemon) (OnLeftSide ?shoe) (OnLeftSide ?bottle) (LargerThan ?shoe ?lemon) (LargerThan ?bottle ?wrench)))))))",
+    "cnf": "(exists ?shoe (exists ?bottle (exists ?tie (exists ?wrench (exists ?lemon (and (Is ?shoe 'shoe') (AlignedHorizontally ?shoe ?bottle) (OnLeftSide ?shoe) (Is ?bottle 'bottle') (AlignedHorizontally ?bottle ?tie) (LargerThan ?shoe ?lemon) (OnLeftSide ?bottle) (Is ?tie 'tie') (AlignedHorizontally ?tie ?wrench) (AlignedHorizontally ?wrench ?lemon) (LargerThan ?bottle ?wrench) (Is ?wrench 'wrench') (Is ?lemon 'lemon')))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "wrench",
+        "lemon",
+        "bottle",
+        "shoe"
+    ]
+}

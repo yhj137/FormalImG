@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop in the scene, there is a handbag located below it and aligned vertically. Below the handbag corresponds a game controller, which is aligned vertically and is smaller than the handbag. A bottle is positioned below the game controller and aligned vertically. Below the bottle is a sock, which is smaller than the bottle. Finally, a carrot is located below the sock, aligned vertically, and positioned on the bottom side of the image.",
+    "dsl": "(forall ?laptop (implies (Is ?laptop 'laptop') (exists ?handbag (exists ?gc (exists ?bottle (exists ?sock (exists ?carrot (and (Is ?handbag 'handbag') (Is ?gc 'game_controller') (Is ?bottle 'bottle') (Is ?sock 'sock') (Is ?carrot 'carrot') (Below ?handbag ?laptop) (AlignedVertically ?handbag ?laptop) (Below ?gc ?handbag) (AlignedVertically ?gc ?handbag) (SmallerThan ?gc ?handbag) (Below ?bottle ?gc) (AlignedVertically ?bottle ?gc) (Below ?sock ?bottle) (SmallerThan ?sock ?bottle) (Below ?carrot ?sock) (AlignedVertically ?carrot ?sock) (OnBottomSide ?carrot)))))))))",
+    "cnf": "(forall ?laptop (exists ?handbag (exists ?gc (exists ?bottle (exists ?sock (exists ?carrot (and (or (not (Is ?laptop 'laptop')) (Is ?handbag 'handbag')) (or (not (Is ?laptop 'laptop')) (Below ?handbag ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?gc 'game_controller')) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?handbag ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?carrot 'carrot')) (or (not (Is ?laptop 'laptop')) (Is ?bottle 'bottle')) (or (not (Is ?laptop 'laptop')) (Below ?gc ?handbag)) (or (not (Is ?laptop 'laptop')) (Is ?sock 'sock')) (or (not (Is ?laptop 'laptop')) (Below ?carrot ?sock)) (or (not (Is ?laptop 'laptop')) (Below ?bottle ?gc)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?gc ?handbag)) (or (not (Is ?laptop 'laptop')) (Below ?sock ?bottle)) (or (not (Is ?laptop 'laptop')) (SmallerThan ?sock ?bottle)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?carrot ?sock)) (or (not (Is ?laptop 'laptop')) (SmallerThan ?gc ?handbag)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?bottle ?gc)) (or (not (Is ?laptop 'laptop')) (OnBottomSide ?carrot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "carrot",
+        "game_controller",
+        "handbag",
+        "bottle"
+    ]
+}

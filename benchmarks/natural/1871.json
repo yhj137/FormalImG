@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene. A man sits on a wooden chair holding a fish, with a lamp next to the chair. The chair is positioned to the left of a plant. All balls in the scene are located next to the chair. The plant is to the left of a car, and a woman holding an umbrella and an apple stands next to the car.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?c (and (Is ?m 'man') (Is ?c 'chair') (On ?m ?c) (HasState ?m 'sitting') (HasMaterial ?c 'wooden') (forall ?b (implies (Is ?b 'ball') (NextTo ?b ?c))) (exists ?p (exists ?u (exists ?f (exists ?w (exists ?car (exists ?a (exists ?l (and (Is ?p 'plant') (Is ?u 'umbrella') (Is ?f 'fish') (Is ?w 'woman') (Is ?car 'car') (Is ?a 'apple') (Is ?l 'lamp') (LeftOf ?c ?p) (LeftOf ?p ?car) (Holding ?m ?f) (Holding ?w ?u) (Holding ?w ?a) (NextTo ?w ?car) (NextTo ?l ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?c (forall ?b (exists ?p (exists ?u (exists ?f (exists ?w (exists ?car (exists ?a (exists ?l (and (Is ?m 'man') (On ?m ?c) (HasState ?m 'sitting') (Is ?c 'chair') (HasMaterial ?c 'wooden') (Holding ?m ?f) (or (not (Is ?b 'ball')) (NextTo ?b ?c)) (Is ?f 'fish') (LeftOf ?c ?p) (NextTo ?l ?c) (Is ?p 'plant') (LeftOf ?p ?car) (Is ?l 'lamp') (Is ?car 'car') (NextTo ?w ?car) (Holding ?w ?a) (Holding ?w ?u) (Is ?a 'apple') (Is ?u 'umbrella') (Is ?w 'woman')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "chair",
+        "plant",
+        "man",
+        "woman",
+        "lamp",
+        "car",
+        "ball",
+        "apple"
+    ]
+}

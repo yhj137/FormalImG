@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the right side. To the left of the suitcase is a keyboard. Below the keyboard is a pizza, and below the pizza is a remote; these three items are aligned vertically. Additionally, for every pair of scissors located to the left of the remote, there is a yellow screwdriver positioned below it, which is smaller than the scissors.",
+    "dsl": "(exists ?suitcase (exists ?keyboard (exists ?pizza (exists ?remote (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?suitcase) (Is ?pizza 'pizza') (Below ?pizza ?keyboard) (AlignedVertically ?keyboard ?pizza) (Is ?remote 'remote') (Below ?remote ?pizza) (AlignedVertically ?pizza ?remote) (forall ?scissors (implies (and (Is ?scissors 'scissors') (LeftOf ?scissors ?remote)) (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (Below ?screwdriver ?scissors) (SmallerThan ?screwdriver ?scissors))))))))))",
+    "cnf": "(exists ?suitcase (exists ?keyboard (exists ?pizza (exists ?remote (forall ?scissors (exists ?screwdriver (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (LeftOf ?keyboard ?suitcase) (Is ?keyboard 'keyboard') (Below ?pizza ?keyboard) (AlignedVertically ?keyboard ?pizza) (Is ?pizza 'pizza') (Below ?remote ?pizza) (AlignedVertically ?pizza ?remote) (Is ?remote 'remote') (or (not (Is ?scissors 'scissors')) (not (LeftOf ?scissors ?remote)) (Is ?screwdriver 'screwdriver')) (or (not (Is ?scissors 'scissors')) (not (LeftOf ?scissors ?remote)) (Has ?screwdriver 'yellow')) (or (not (Is ?scissors 'scissors')) (not (LeftOf ?scissors ?remote)) (Below ?screwdriver ?scissors)) (or (not (Is ?scissors 'scissors')) (not (LeftOf ?scissors ?remote)) (SmallerThan ?screwdriver ?scissors)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "keyboard",
+        "pizza",
+        "screwdriver",
+        "scissors",
+        "suitcase"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a gray laptop with a calculator positioned directly below it. For every set of keys in the scene, it is located to the right of the laptop and has a black mouse to its right. A sandwich is arranged below the mouse, and a red apple is positioned to the right of the sandwich. Finally, a white shoe is located below the apple on the bottom side of the image. The mouse is visually smaller than the laptop.",
+    "dsl": "(exists ?laptop (exists ?calculator (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?calculator 'calculator') (Below ?calculator ?laptop) (forall ?keys (implies (Is ?keys 'keys') (exists ?mouse (exists ?sandwich (exists ?apple (exists ?shoe (and (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?sandwich 'sandwich') (Is ?apple 'apple') (Has ?apple 'red') (Is ?shoe 'shoe') (Has ?shoe 'white') (RightOf ?keys ?laptop) (RightOf ?mouse ?keys) (Below ?sandwich ?mouse) (RightOf ?apple ?sandwich) (Below ?shoe ?apple) (OnBottomSide ?shoe) (SmallerThan ?mouse ?laptop)))))))))))",
+    "cnf": "(exists ?laptop (exists ?calculator (forall ?keys (exists ?mouse (exists ?sandwich (exists ?apple (exists ?shoe (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Below ?calculator ?laptop) (or (not (Is ?keys 'keys')) (RightOf ?keys ?laptop)) (Is ?calculator 'calculator') (or (not (Is ?keys 'keys')) (SmallerThan ?mouse ?laptop)) (or (not (Is ?keys 'keys')) (Has ?shoe 'white')) (or (not (Is ?keys 'keys')) (RightOf ?mouse ?keys)) (or (not (Is ?keys 'keys')) (Below ?sandwich ?mouse)) (or (not (Is ?keys 'keys')) (OnBottomSide ?shoe)) (or (not (Is ?keys 'keys')) (Is ?shoe 'shoe')) (or (not (Is ?keys 'keys')) (Below ?shoe ?apple)) (or (not (Is ?keys 'keys')) (Has ?mouse 'black')) (or (not (Is ?keys 'keys')) (RightOf ?apple ?sandwich)) (or (not (Is ?keys 'keys')) (Is ?sandwich 'sandwich')) (or (not (Is ?keys 'keys')) (Has ?apple 'red')) (or (not (Is ?keys 'keys')) (Is ?mouse 'mouse')) (or (not (Is ?keys 'keys')) (Is ?apple 'apple'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "keys",
+        "apple",
+        "calculator",
+        "mouse",
+        "sandwich",
+        "shoe"
+    ]
+}

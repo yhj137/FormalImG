@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art image of a rectangular bus.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasShape ?b 'rectangular'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bus') (HasShape ?b 'rectangular'))))",
+    "k": 1,
+    "object_classes": [
+        "bus"
+    ]
+}

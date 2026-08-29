@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene with a knife to the left of a rectangular monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?k (exists ?m (and (Is ?k 'knife') (Is ?m 'monitor') (HasShape ?m 'rectangular') (LeftOf ?k ?m)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?k (exists ?m (and (Is ?k 'knife') (LeftOf ?k ?m) (HasShape ?m 'rectangular') (Is ?m 'monitor')))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "monitor"
+    ]
+}

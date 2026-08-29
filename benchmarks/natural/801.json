@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is rendered in a pixel art style. To the left of a wooden table stands a person. A red toy car is placed on the table. A bowl sits on the table to the right of the toy car, and a hammer lies further to the right of the bowl.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (exists ?t (exists ?c (exists ?b (exists ?h (and (Is ?p 'person') (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?c 'toy car') (HasColor ?c 'red') (Is ?b 'bowl') (Is ?h 'hammer') (LeftOf ?p ?t) (On ?c ?t) (On ?b ?t) (RightOf ?b ?c) (RightOf ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?t (exists ?c (exists ?b (exists ?h (and (Is ?p 'person') (LeftOf ?p ?t) (HasMaterial ?t 'wooden') (On ?c ?t) (Is ?t 'table') (On ?b ?t) (HasColor ?c 'red') (RightOf ?b ?c) (Is ?b 'bowl') (Is ?c 'toy car') (RightOf ?h ?b) (Is ?h 'hammer'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bowl",
+        "toy car",
+        "person",
+        "hammer",
+        "table"
+    ]
+}

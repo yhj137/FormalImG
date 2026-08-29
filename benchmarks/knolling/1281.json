@@ -1,0 +1,15 @@
+{
+    "prompt": "For every pair of jeans, there exist a mouse, a watch, a remote, and pliers. The jeans are located below a shared carrot on the top side, and a shared fork on the left side is to the left of the jeans. The jeans are larger than the mouse. The mouse is positioned below the fork and is aligned horizontally with the watch. The remote is placed below the jeans, and the pliers are located to the left of the remote. The pliers are larger than the watch.",
+    "dsl": "(exists ?carrot (exists ?fork (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?mouse (exists ?watch (exists ?remote (exists ?pliers (and (Is ?carrot 'carrot') (OnTopSide ?carrot) (Is ?fork 'fork') (OnLeftSide ?fork) (Is ?mouse 'mouse') (Is ?watch 'watch') (Is ?remote 'remote') (Is ?pliers 'pliers') (Below ?jeans ?carrot) (LeftOf ?fork ?jeans) (LargerThan ?jeans ?mouse) (Below ?mouse ?fork) (AlignedHorizontally ?mouse ?watch) (Below ?remote ?jeans) (LeftOf ?pliers ?remote) (LargerThan ?pliers ?watch))))))))))",
+    "cnf": "(exists ?carrot (exists ?fork (forall ?jeans (exists ?mouse (exists ?watch (exists ?remote (exists ?pliers (and (or (not (Is ?jeans 'jeans')) (Is ?carrot 'carrot')) (or (not (Is ?jeans 'jeans')) (OnTopSide ?carrot)) (or (not (Is ?jeans 'jeans')) (Is ?fork 'fork')) (or (not (Is ?jeans 'jeans')) (Below ?jeans ?carrot)) (or (not (Is ?jeans 'jeans')) (OnLeftSide ?fork)) (or (not (Is ?jeans 'jeans')) (Is ?pliers 'pliers')) (or (not (Is ?jeans 'jeans')) (LeftOf ?fork ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?mouse 'mouse')) (or (not (Is ?jeans 'jeans')) (Is ?remote 'remote')) (or (not (Is ?jeans 'jeans')) (LeftOf ?pliers ?remote)) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?mouse)) (or (not (Is ?jeans 'jeans')) (Below ?mouse ?fork)) (or (not (Is ?jeans 'jeans')) (Is ?watch 'watch')) (or (not (Is ?jeans 'jeans')) (Below ?remote ?jeans)) (or (not (Is ?jeans 'jeans')) (LargerThan ?pliers ?watch)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?mouse ?watch))))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "carrot",
+        "watch",
+        "fork",
+        "jeans",
+        "mouse"
+    ]
+}

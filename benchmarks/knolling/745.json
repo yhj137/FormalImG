@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A shoe is located on the left side of the scene. Directly below the shoe is a stapler, and these two objects are aligned vertically. Furthermore, for every lighter present, which is positioned to the right of the shoe, there is a fork located directly below it, and the lighter and fork are aligned vertically.",
+    "dsl": "(exists ?shoe (exists ?stapler (and (Is ?shoe 'shoe') (OnLeftSide ?shoe) (Is ?stapler 'stapler') (Below ?stapler ?shoe) (AlignedVertically ?stapler ?shoe) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?fork (and (Is ?fork 'fork') (RightOf ?lighter ?shoe) (Below ?fork ?lighter) (AlignedVertically ?fork ?lighter))))))))",
+    "cnf": "(exists ?shoe (exists ?stapler (forall ?lighter (exists ?fork (and (Is ?shoe 'shoe') (OnLeftSide ?shoe) (Below ?stapler ?shoe) (AlignedVertically ?stapler ?shoe) (Is ?stapler 'stapler') (or (not (Is ?lighter 'lighter')) (RightOf ?lighter ?shoe)) (or (not (Is ?lighter 'lighter')) (Is ?fork 'fork')) (or (not (Is ?lighter 'lighter')) (Below ?fork ?lighter)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?fork ?lighter)))))))",
+    "k": 4,
+    "object_classes": [
+        "stapler",
+        "fork",
+        "lighter",
+        "shoe"
+    ]
+}

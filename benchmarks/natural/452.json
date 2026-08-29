@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every woman is holding a round pan with a phone inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?w (implies (Is ?w 'woman') (exists ?p (exists ?ph (and (Is ?p 'pan') (HasShape ?p 'round') (Is ?ph 'phone') (Holding ?w ?p) (In ?ph ?p)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?w (exists ?p (exists ?ph (and (or (not (Is ?w 'woman')) (Is ?p 'pan')) (or (not (Is ?w 'woman')) (HasShape ?p 'round')) (or (not (Is ?w 'woman')) (Holding ?w ?p)) (or (not (Is ?w 'woman')) (Is ?ph 'phone')) (or (not (Is ?w 'woman')) (In ?ph ?p)))))))",
+    "k": 3,
+    "object_classes": [
+        "phone",
+        "pan",
+        "woman"
+    ]
+}

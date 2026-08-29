@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman holding a red umbrella next to a desk on a blue rug. A keyboard and a yellow banana rest on the desk, while a key is inside it. Every book in the scene is positioned to the right of the keyboard.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?u (exists ?d (exists ?r (exists ?kb (and (Is ?w 'woman') (Is ?u 'umbrella') (HasColor ?u 'red') (Holding ?w ?u) (Is ?d 'desk') (NextTo ?w ?d) (Is ?r 'rug') (HasColor ?r 'blue') (On ?d ?r) (Is ?kb 'keyboard') (On ?kb ?d) (forall ?b (implies (Is ?b 'book') (RightOf ?b ?kb))) (exists ?k (exists ?bn (and (Is ?k 'key') (In ?k ?d) (Is ?bn 'banana') (HasColor ?bn 'yellow') (On ?bn ?d)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?u (exists ?d (exists ?r (exists ?kb (forall ?b (exists ?k (exists ?bn (and (Is ?w 'woman') (Holding ?w ?u) (NextTo ?w ?d) (HasColor ?u 'red') (Is ?d 'desk') (On ?d ?r) (Is ?u 'umbrella') (On ?kb ?d) (HasColor ?r 'blue') (In ?k ?d) (Is ?kb 'keyboard') (or (not (Is ?b 'book')) (RightOf ?b ?kb)) (Is ?r 'rug') (On ?bn ?d) (Is ?k 'key') (HasColor ?bn 'yellow') (Is ?bn 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "umbrella",
+        "rug",
+        "desk",
+        "banana",
+        "book",
+        "woman"
+    ]
+}

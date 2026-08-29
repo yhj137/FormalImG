@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every spoon in the scene, there is a cutting board positioned directly below it. Furthermore, each of these cutting boards is located on the right side of the image.",
+    "dsl": "(and (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?board (and (Is ?board 'cutting_board') (Below ?board ?spoon) (OnRightSide ?board))))))",
+    "cnf": "(forall ?spoon (exists ?board (and (or (not (Is ?spoon 'spoon')) (Is ?board 'cutting_board')) (or (not (Is ?spoon 'spoon')) (Below ?board ?spoon)) (or (not (Is ?spoon 'spoon')) (OnRightSide ?board)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "cutting_board"
+    ]
+}

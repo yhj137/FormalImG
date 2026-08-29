@@ -1,0 +1,15 @@
+{
+    "prompt": "For every glove in the image, there is a monitor on the right side and a shirt to its left (horizontally aligned) which is vertically aligned with the glove. Additionally, there is a lemon to the left of the glove, a pair of headphones vertically aligned with the glove, a calculator (smaller than the monitor) to the left of the headphones, and a donut on the bottom side to the left of the calculator.",
+    "dsl": "(exists ?monitor (exists ?shirt (forall ?glove (implies (Is ?glove 'glove') (exists ?headphones (exists ?calculator (exists ?lemon (exists ?donut (and (Is ?monitor 'monitor') (OnRightSide ?monitor) (Is ?shirt 'shirt') (LeftOf ?shirt ?monitor) (AlignedHorizontally ?shirt ?monitor) (AlignedVertically ?glove ?shirt) (Is ?lemon 'lemon') (LeftOf ?lemon ?glove) (Is ?headphones 'headphones') (AlignedVertically ?headphones ?glove) (Is ?calculator 'calculator') (LargerThan ?monitor ?calculator) (LeftOf ?calculator ?headphones) (Is ?donut 'donut') (OnBottomSide ?donut) (LeftOf ?donut ?calculator))))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (forall ?glove (exists ?headphones (exists ?calculator (exists ?lemon (exists ?donut (and (or (not (Is ?glove 'glove')) (Is ?monitor 'monitor')) (or (not (Is ?glove 'glove')) (OnRightSide ?monitor)) (or (not (Is ?glove 'glove')) (LeftOf ?shirt ?monitor)) (or (not (Is ?glove 'glove')) (Is ?shirt 'shirt')) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?shirt ?monitor)) (or (not (Is ?glove 'glove')) (LargerThan ?monitor ?calculator)) (or (not (Is ?glove 'glove')) (AlignedVertically ?glove ?shirt)) (or (not (Is ?glove 'glove')) (Is ?calculator 'calculator')) (or (not (Is ?glove 'glove')) (LeftOf ?calculator ?headphones)) (or (not (Is ?glove 'glove')) (Is ?lemon 'lemon')) (or (not (Is ?glove 'glove')) (AlignedVertically ?headphones ?glove)) (or (not (Is ?glove 'glove')) (Is ?donut 'donut')) (or (not (Is ?glove 'glove')) (LeftOf ?donut ?calculator)) (or (not (Is ?glove 'glove')) (LeftOf ?lemon ?glove)) (or (not (Is ?glove 'glove')) (Is ?headphones 'headphones')) (or (not (Is ?glove 'glove')) (OnBottomSide ?donut))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lemon",
+        "donut",
+        "calculator",
+        "monitor",
+        "headphones",
+        "glove",
+        "shirt"
+    ]
+}

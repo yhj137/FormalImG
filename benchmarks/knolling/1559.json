@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor, a keyboard, a shoe, and a tie arranged in a vertical column, aligned vertically with one another. The keyboard is positioned below the monitor, the shoe is below the keyboard, and the tie is below the shoe. To the left of the monitor are scissors, and to the left of the keyboard is a wallet. Additionally, for every bowl in the image, it is located on the bottom side of the scene below the tie, and there is a handbag positioned to its left.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?shoe (exists ?tie (exists ?scissors (exists ?wallet (and (Is ?monitor 'monitor') (Is ?keyboard 'keyboard') (Is ?shoe 'shoe') (Is ?tie 'tie') (Is ?scissors 'scissors') (Is ?wallet 'wallet') (AlignedVertically ?monitor ?keyboard) (AlignedVertically ?keyboard ?shoe) (AlignedVertically ?shoe ?tie) (Below ?keyboard ?monitor) (Below ?shoe ?keyboard) (Below ?tie ?shoe) (LeftOf ?scissors ?monitor) (LeftOf ?wallet ?keyboard) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?handbag (and (Is ?handbag 'handbag') (OnBottomSide ?bowl) (Below ?bowl ?tie) (LeftOf ?handbag ?bowl))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?shoe (exists ?tie (exists ?scissors (exists ?wallet (forall ?bowl (exists ?handbag (and (Is ?monitor 'monitor') (AlignedVertically ?monitor ?keyboard) (Below ?keyboard ?monitor) (Is ?keyboard 'keyboard') (AlignedVertically ?keyboard ?shoe) (LeftOf ?scissors ?monitor) (Below ?shoe ?keyboard) (Is ?shoe 'shoe') (AlignedVertically ?shoe ?tie) (Is ?scissors 'scissors') (LeftOf ?wallet ?keyboard) (Below ?tie ?shoe) (Is ?tie 'tie') (Is ?wallet 'wallet') (or (not (Is ?bowl 'bowl')) (Below ?bowl ?tie)) (or (not (Is ?bowl 'bowl')) (OnBottomSide ?bowl)) (or (not (Is ?bowl 'bowl')) (LeftOf ?handbag ?bowl)) (or (not (Is ?bowl 'bowl')) (Is ?handbag 'handbag')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "keyboard",
+        "handbag",
+        "wallet",
+        "monitor",
+        "bowl",
+        "shoe",
+        "scissors"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a bowl located on the right side of the image, with a gray fork aligned vertically with the bowl. For every wrench in the scene, it is visually smaller than the bowl, and there is a set of keys aligned horizontally with that wrench.",
+    "dsl": "(exists ?bowl (exists ?fork (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (Is ?fork 'fork') (Has ?fork 'gray') (AlignedVertically ?bowl ?fork) (forall ?w (implies (Is ?w 'wrench') (exists ?k (and (Is ?k 'keys') (SmallerThan ?w ?bowl) (AlignedHorizontally ?w ?k))))))))",
+    "cnf": "(exists ?bowl (exists ?fork (forall ?w (exists ?k (and (Is ?bowl 'bowl') (OnRightSide ?bowl) (AlignedVertically ?bowl ?fork) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?bowl)) (Has ?fork 'gray') (or (not (Is ?w 'wrench')) (Is ?k 'keys')) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?w ?k)) (Is ?fork 'fork'))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "bowl",
+        "keys",
+        "fork"
+    ]
+}

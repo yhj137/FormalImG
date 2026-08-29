@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cyberpunk style. A man wearing glasses is holding a rusty hammer. To his left stands a bookshelf containing a glass bottle, with a person standing to the left of the bookshelf. To the right of the man are a plant and all the flowers in the scene. Next to the plant lies a broken toy car, with an apple situated to its left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?h (exists ?g (exists ?bs (exists ?b (and (Is ?m 'man') (Is ?h 'hammer') (Is ?g 'glasses') (Is ?bs 'bookshelf') (Is ?b 'bottle') (Holding ?m ?h) (HasState ?h 'rusty') (On ?g ?m) (LeftOf ?bs ?m) (In ?b ?bs) (HasMaterial ?b 'glass') (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?m))) (exists ?p (exists ?tc (exists ?a (exists ?per (and (Is ?p 'plant') (Is ?tc 'toy car') (Is ?a 'apple') (Is ?per 'person') (RightOf ?p ?m) (NextTo ?tc ?p) (HasState ?tc 'broken') (LeftOf ?a ?tc) (LeftOf ?per ?bs)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?h (exists ?g (exists ?bs (exists ?b (forall ?f (exists ?p (exists ?tc (exists ?a (exists ?per (and (Is ?m 'man') (Holding ?m ?h) (On ?g ?m) (Is ?h 'hammer') (HasState ?h 'rusty') (LeftOf ?bs ?m) (Is ?g 'glasses') (or (not (Is ?f 'flower')) (RightOf ?f ?m)) (Is ?bs 'bookshelf') (In ?b ?bs) (RightOf ?p ?m) (LeftOf ?per ?bs) (Is ?b 'bottle') (HasMaterial ?b 'glass') (Is ?p 'plant') (NextTo ?tc ?p) (Is ?per 'person') (Is ?tc 'toy car') (HasState ?tc 'broken') (LeftOf ?a ?tc) (Is ?a 'apple')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "person",
+        "bottle",
+        "glasses",
+        "man",
+        "plant",
+        "flower",
+        "hammer",
+        "toy car",
+        "apple",
+        "bookshelf"
+    ]
+}

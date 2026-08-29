@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene featuring a tree with a wooden chair next to it. A bowl containing a red toy car sits to the left of the chair, while a book rests to the right. Every bird in the scene is located inside the tree.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?w (and (Is ?t 'tree') (Is ?c 'chair') (HasMaterial ?c 'wooden') (NextTo ?c ?t) (Is ?w 'bowl') (LeftOf ?w ?c) (forall ?b (implies (Is ?b 'bird') (In ?b ?t))) (exists ?k (exists ?tc (and (Is ?k 'book') (RightOf ?k ?c) (Is ?tc 'toy car') (HasColor ?tc 'red') (In ?tc ?w)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?w (forall ?b (exists ?k (exists ?tc (and (Is ?t 'tree') (NextTo ?c ?t) (or (not (Is ?b 'bird')) (In ?b ?t)) (HasMaterial ?c 'wooden') (LeftOf ?w ?c) (Is ?c 'chair') (RightOf ?k ?c) (Is ?w 'bowl') (In ?tc ?w) (Is ?k 'book') (HasColor ?tc 'red') (Is ?tc 'toy car')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "chair",
+        "tree",
+        "bird",
+        "toy car",
+        "bowl"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. Every elephant is positioned to the right of a bus. To the left of the bus stands a wooden wardrobe containing a pair of shoes, with a basket holding a ceramic plate resting on top.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?e (implies (Is ?e 'elephant') (exists ?b (exists ?w (exists ?s (exists ?bk (exists ?p (and (Is ?b 'bus') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?s 'shoes') (Is ?bk 'basket') (Is ?p 'plate') (HasMaterial ?p 'ceramic') (RightOf ?e ?b) (LeftOf ?w ?b) (In ?s ?w) (On ?bk ?w) (In ?p ?bk))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?e (exists ?b (exists ?w (exists ?s (exists ?bk (exists ?p (and (or (not (Is ?e 'elephant')) (Is ?b 'bus')) (or (not (Is ?e 'elephant')) (Is ?w 'wardrobe')) (or (not (Is ?e 'elephant')) (RightOf ?e ?b)) (or (not (Is ?e 'elephant')) (HasMaterial ?w 'wooden')) (or (not (Is ?e 'elephant')) (HasMaterial ?p 'ceramic')) (or (not (Is ?e 'elephant')) (LeftOf ?w ?b)) (or (not (Is ?e 'elephant')) (Is ?s 'shoes')) (or (not (Is ?e 'elephant')) (Is ?p 'plate')) (or (not (Is ?e 'elephant')) (In ?p ?bk)) (or (not (Is ?e 'elephant')) (In ?s ?w)) (or (not (Is ?e 'elephant')) (Is ?bk 'basket')) (or (not (Is ?e 'elephant')) (On ?bk ?w))))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "shoes",
+        "plate",
+        "basket",
+        "bus",
+        "wardrobe"
+    ]
+}

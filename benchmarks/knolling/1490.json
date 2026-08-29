@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition starts with a drill, a sock, and a shirt. The sock is positioned to the right of the drill. The shirt is placed above the sock and appears larger than the drill. A specific arrangement applies to any pizza in the scene: for every pizza, there is a watch located below it. This watch is also positioned to the right of the shirt. A pair of headphones is placed above the watch. To the right of the headphones is a bowl. Finally, a knife is arranged to the right of the bowl; the knife is smaller than the bowl and is located on the right side of the image.",
+    "dsl": "(exists ?drill (exists ?sock (exists ?shirt (and (Is ?drill 'drill') (Is ?sock 'sock') (Is ?shirt 'shirt') (RightOf ?sock ?drill) (Above ?shirt ?sock) (LargerThan ?shirt ?drill) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?watch (exists ?headphones (exists ?bowl (exists ?knife (and (Is ?watch 'watch') (Is ?headphones 'headphones') (Is ?bowl 'bowl') (Is ?knife 'knife') (Above ?pizza ?watch) (RightOf ?watch ?shirt) (Above ?headphones ?watch) (RightOf ?bowl ?headphones) (RightOf ?knife ?bowl) (SmallerThan ?knife ?bowl) (OnRightSide ?knife))))))))))))",
+    "cnf": "(exists ?drill (exists ?sock (exists ?shirt (forall ?pizza (exists ?watch (exists ?headphones (exists ?bowl (exists ?knife (and (Is ?drill 'drill') (RightOf ?sock ?drill) (LargerThan ?shirt ?drill) (Is ?sock 'sock') (Above ?shirt ?sock) (or (not (Is ?pizza 'pizza')) (RightOf ?watch ?shirt)) (Is ?shirt 'shirt') (or (not (Is ?pizza 'pizza')) (Above ?pizza ?watch)) (or (not (Is ?pizza 'pizza')) (Above ?headphones ?watch)) (or (not (Is ?pizza 'pizza')) (Is ?knife 'knife')) (or (not (Is ?pizza 'pizza')) (Is ?watch 'watch')) (or (not (Is ?pizza 'pizza')) (RightOf ?bowl ?headphones)) (or (not (Is ?pizza 'pizza')) (Is ?headphones 'headphones')) (or (not (Is ?pizza 'pizza')) (Is ?bowl 'bowl')) (or (not (Is ?pizza 'pizza')) (RightOf ?knife ?bowl)) (or (not (Is ?pizza 'pizza')) (SmallerThan ?knife ?bowl)) (or (not (Is ?pizza 'pizza')) (OnRightSide ?knife)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "pizza",
+        "watch",
+        "drill",
+        "knife",
+        "bowl",
+        "headphones",
+        "shirt"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "For every book in the image, the scene contains a suitcase on the top side aligned horizontally with a handbag that is smaller than the suitcase, a wallet below the suitcase aligned horizontally with a tie and a mouse, and a wrench below the tie. The book aligns horizontally with the wrench and is larger than the mouse. Additionally, for every book, there is a fork situated below the wrench and aligned horizontally with a spoon.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (exists ?handbag (and (Is ?handbag 'handbag') (exists ?wallet (and (Is ?wallet 'wallet') (exists ?tie (and (Is ?tie 'tie') (exists ?mouse (and (Is ?mouse 'mouse') (exists ?wrench (and (Is ?wrench 'wrench') (forall ?book (implies (Is ?book 'book') (exists ?fork (and (Is ?fork 'fork') (exists ?spoon (and (Is ?spoon 'spoon') (OnTopSide ?suitcase) (AlignedHorizontally ?suitcase ?handbag) (LargerThan ?suitcase ?handbag) (Above ?suitcase ?wallet) (AlignedHorizontally ?wallet ?tie) (AlignedHorizontally ?tie ?mouse) (Above ?tie ?wrench) (AlignedHorizontally ?wrench ?book) (LargerThan ?book ?mouse) (Above ?wrench ?fork) (AlignedHorizontally ?fork ?spoon)))))))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?wallet (exists ?tie (exists ?mouse (exists ?wrench (forall ?book (exists ?fork (exists ?spoon (and (Is ?suitcase 'suitcase') (or (not (Is ?book 'book')) (OnTopSide ?suitcase)) (or (not (Is ?book 'book')) (AlignedHorizontally ?suitcase ?handbag)) (or (not (Is ?book 'book')) (Is ?spoon 'spoon')) (or (not (Is ?book 'book')) (LargerThan ?suitcase ?handbag)) (Is ?handbag 'handbag') (or (not (Is ?book 'book')) (Is ?fork 'fork')) (or (not (Is ?book 'book')) (AlignedHorizontally ?fork ?spoon)) (or (not (Is ?book 'book')) (Above ?suitcase ?wallet)) (or (not (Is ?book 'book')) (Above ?wrench ?fork)) (Is ?wallet 'wallet') (or (not (Is ?book 'book')) (AlignedHorizontally ?wallet ?tie)) (or (not (Is ?book 'book')) (AlignedHorizontally ?wrench ?book)) (or (not (Is ?book 'book')) (LargerThan ?book ?mouse)) (Is ?tie 'tie') (or (not (Is ?book 'book')) (AlignedHorizontally ?tie ?mouse)) (or (not (Is ?book 'book')) (Above ?tie ?wrench)) (Is ?mouse 'mouse') (Is ?wrench 'wrench')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fork",
+        "mouse",
+        "handbag",
+        "spoon",
+        "wrench",
+        "book",
+        "wallet",
+        "tie",
+        "suitcase"
+    ]
+}

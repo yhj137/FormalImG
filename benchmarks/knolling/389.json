@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sock positioned on the bottom side of the layout. Every watch present in the scene is placed above this sock.",
+    "dsl": "(exists ?s (and (Is ?s 'sock') (OnBottomSide ?s) (forall ?w (implies (Is ?w 'watch') (Above ?w ?s)))))",
+    "cnf": "(exists ?s (forall ?w (and (Is ?s 'sock') (OnBottomSide ?s) (or (not (Is ?w 'watch')) (Above ?w ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "watch",
+        "sock"
+    ]
+}

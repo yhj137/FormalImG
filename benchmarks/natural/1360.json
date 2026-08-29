@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a table with an open laptop, a keyboard, and a plant. A sitting cat is also on the table, holding a phone. Every toy car in the scene is red and placed on the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?l (exists ?k (exists ?p (exists ?c (and (Is ?t 'table') (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?t) (Is ?k 'keyboard') (On ?k ?t) (Is ?p 'plant') (On ?p ?t) (Is ?c 'cat') (HasState ?c 'sitting') (On ?c ?t) (forall ?tc (implies (Is ?tc 'toy car') (and (HasColor ?tc 'red') (On ?tc ?t)))) (exists ?ph (and (Is ?ph 'phone') (Holding ?c ?ph))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?l (exists ?k (exists ?p (exists ?c (forall ?tc (exists ?ph (and (Is ?t 'table') (On ?l ?t) (On ?k ?t) (HasState ?l 'open') (On ?p ?t) (Is ?k 'keyboard') (Is ?l 'laptop') (On ?c ?t) (Is ?p 'plant') (or (not (Is ?tc 'toy car')) (On ?tc ?t)) (HasState ?c 'sitting') (Holding ?c ?ph) (or (not (Is ?tc 'toy car')) (HasColor ?tc 'red')) (Is ?c 'cat') (Is ?ph 'phone'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "toy car",
+        "cat",
+        "plant",
+        "laptop",
+        "phone",
+        "table"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone situated on the top side of the image, there is a neatly arranged collection of objects associated with it. A pair of headphones is placed to the left of the phone, and a ruler is located to the left of the headphones. A wrench aligns vertically with the headphones, while a drill aligns vertically with the ruler; notably, the drill is larger than the wrench. Further extending the arrangement, a bottle is positioned to the left of the drill, and a donut is placed to the left of the bottle. The donut is located on the left side of the image and is smaller than the bottle.",
+    "dsl": "(forall ?phone (implies (and (Is ?phone 'phone') (OnTopSide ?phone)) (exists ?headphones (exists ?ruler (exists ?wrench (exists ?drill (exists ?bottle (exists ?donut (and (Is ?headphones 'headphones') (Is ?ruler 'ruler') (Is ?wrench 'wrench') (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?donut 'donut') (LeftOf ?headphones ?phone) (LeftOf ?ruler ?headphones) (AlignedVertically ?wrench ?headphones) (AlignedVertically ?drill ?ruler) (LargerThan ?drill ?wrench) (LeftOf ?bottle ?drill) (LeftOf ?donut ?bottle) (SmallerThan ?donut ?bottle) (OnLeftSide ?donut))))))))))",
+    "cnf": "(forall ?phone (exists ?headphones (exists ?ruler (exists ?wrench (exists ?drill (exists ?bottle (exists ?donut (and (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?headphones 'headphones')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (LeftOf ?headphones ?phone)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?ruler 'ruler')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (LeftOf ?ruler ?headphones)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?donut 'donut')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?wrench 'wrench')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (AlignedVertically ?wrench ?headphones)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (AlignedVertically ?drill ?ruler)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?bottle 'bottle')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (LeftOf ?donut ?bottle)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (Is ?drill 'drill')) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (LargerThan ?drill ?wrench)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (LeftOf ?bottle ?drill)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (SmallerThan ?donut ?bottle)) (or (not (Is ?phone 'phone')) (not (OnTopSide ?phone)) (OnLeftSide ?donut))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "wrench",
+        "phone",
+        "drill",
+        "bottle",
+        "headphones",
+        "donut"
+    ]
+}

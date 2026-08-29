@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene depicts every shoe inside a wooden wardrobe. An oval mirror stands next to the wardrobe, with a spoon beside it. To the right of the wardrobe is a bicycle where a cat rests next to a screwdriver. An elephant holding an apple stands next to the bicycle.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?sh (implies (Is ?sh 'shoes') (exists ?w (exists ?m (exists ?sp (exists ?b (exists ?c (exists ?sd (exists ?e (exists ?a (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?sh ?w) (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?m ?w) (Is ?sp 'spoon') (NextTo ?sp ?m) (Is ?b 'bicycle') (RightOf ?b ?w) (Is ?c 'cat') (On ?c ?b) (Is ?sd 'screwdriver') (NextTo ?sd ?c) (Is ?e 'elephant') (NextTo ?e ?b) (Is ?a 'apple') (Holding ?e ?a)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?sh (exists ?w (exists ?m (exists ?sp (exists ?b (exists ?c (exists ?sd (exists ?e (exists ?a (and (or (not (Is ?sh 'shoes')) (Is ?w 'wardrobe')) (or (not (Is ?sh 'shoes')) (HasMaterial ?w 'wooden')) (or (not (Is ?sh 'shoes')) (In ?sh ?w)) (or (not (Is ?sh 'shoes')) (Is ?m 'mirror')) (or (not (Is ?sh 'shoes')) (NextTo ?m ?w)) (or (not (Is ?sh 'shoes')) (HasShape ?m 'oval')) (or (not (Is ?sh 'shoes')) (Is ?sp 'spoon')) (or (not (Is ?sh 'shoes')) (RightOf ?b ?w)) (or (not (Is ?sh 'shoes')) (NextTo ?sp ?m)) (or (not (Is ?sh 'shoes')) (Is ?b 'bicycle')) (or (not (Is ?sh 'shoes')) (Is ?c 'cat')) (or (not (Is ?sh 'shoes')) (On ?c ?b)) (or (not (Is ?sh 'shoes')) (Is ?sd 'screwdriver')) (or (not (Is ?sh 'shoes')) (NextTo ?e ?b)) (or (not (Is ?sh 'shoes')) (NextTo ?sd ?c)) (or (not (Is ?sh 'shoes')) (Is ?e 'elephant')) (or (not (Is ?sh 'shoes')) (Is ?a 'apple')) (or (not (Is ?sh 'shoes')) (Holding ?e ?a)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "apple",
+        "mirror",
+        "wardrobe",
+        "bicycle",
+        "shoes",
+        "elephant",
+        "cat",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pan positioned on the top left side. A specific arrangement rule applies to the books in the image: for every book, it is located to the right of the pan. Furthermore, accompanying each book is a hammer placed above it, and a game controller positioned to the right of that hammer.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnTopSide ?pan) (OnLeftSide ?pan) (forall ?book (implies (Is ?book 'book') (exists ?hammer (exists ?controller (and (Is ?hammer 'hammer') (Is ?controller 'game_controller') (RightOf ?book ?pan) (Above ?hammer ?book) (RightOf ?controller ?hammer))))))))",
+    "cnf": "(exists ?pan (forall ?book (exists ?hammer (exists ?controller (and (Is ?pan 'pan') (OnTopSide ?pan) (OnLeftSide ?pan) (or (not (Is ?book 'book')) (RightOf ?book ?pan)) (or (not (Is ?book 'book')) (Is ?controller 'game_controller')) (or (not (Is ?book 'book')) (Above ?hammer ?book)) (or (not (Is ?book 'book')) (Is ?hammer 'hammer')) (or (not (Is ?book 'book')) (RightOf ?controller ?hammer)))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "pan",
+        "hammer",
+        "game_controller"
+    ]
+}

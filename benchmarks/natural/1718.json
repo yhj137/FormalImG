@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene. A sleeping cat rests on a bed, with a shirt lying on the bed to its left. An oval mirror hangs above the bed. To the right of the bed is a sofa, where a child sits holding a toy car. A turned-off phone lies on the sofa to the left of the child. All cups in the scene are also located to the right of the bed.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?s (exists ?m (and (Is ?b 'bed') (Is ?c 'cat') (Is ?s 'shirt') (Is ?m 'mirror') (HasState ?c 'sleeping') (On ?c ?b) (On ?s ?b) (LeftOf ?s ?c) (Above ?m ?b) (HasShape ?m 'oval') (forall ?cp (implies (Is ?cp 'cup') (RightOf ?cp ?b))) (exists ?sf (exists ?ch (exists ?tc (exists ?p (and (Is ?sf 'sofa') (Is ?ch 'child') (Is ?tc 'toy car') (Is ?p 'phone') (RightOf ?sf ?b) (On ?ch ?sf) (Holding ?ch ?tc) (On ?p ?sf) (LeftOf ?p ?ch) (HasState ?p 'off'))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?c (exists ?s (exists ?m (forall ?cp (exists ?sf (exists ?ch (exists ?tc (exists ?p (and (Is ?b 'bed') (On ?c ?b) (On ?s ?b) (HasState ?c 'sleeping') (LeftOf ?s ?c) (Above ?m ?b) (Is ?s 'shirt') (Is ?c 'cat') (or (not (Is ?cp 'cup')) (RightOf ?cp ?b)) (Is ?m 'mirror') (HasShape ?m 'oval') (RightOf ?sf ?b) (Is ?sf 'sofa') (On ?ch ?sf) (On ?p ?sf) (Is ?ch 'child') (Holding ?ch ?tc) (Is ?p 'phone') (LeftOf ?p ?ch) (Is ?tc 'toy car') (HasState ?p 'off'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "phone",
+        "sofa",
+        "child",
+        "bed",
+        "toy car",
+        "cup",
+        "mirror",
+        "cat"
+    ]
+}

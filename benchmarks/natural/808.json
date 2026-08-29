@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a child wearing a hat, holding a bitten sandwich with a spoon on it. To the left of the child is a peeled orange.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?h (exists ?s (exists ?sp (exists ?o (and (Is ?c 'child') (Is ?h 'hat') (Is ?s 'sandwich') (Is ?sp 'spoon') (Is ?o 'orange') (On ?h ?c) (Holding ?c ?s) (HasState ?s 'bitten') (On ?sp ?s) (LeftOf ?o ?c) (HasState ?o 'peeled'))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?h (exists ?s (exists ?sp (exists ?o (and (Is ?c 'child') (On ?h ?c) (Holding ?c ?s) (Is ?h 'hat') (LeftOf ?o ?c) (Is ?s 'sandwich') (HasState ?s 'bitten') (Is ?o 'orange') (HasState ?o 'peeled') (On ?sp ?s) (Is ?sp 'spoon'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sandwich",
+        "hat",
+        "child",
+        "orange",
+        "spoon"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout includes a laptop positioned on the bottom side. A watch is placed to the right of the laptop. Additionally, every pair of headphones in the scene is aligned vertically with the laptop.",
+    "dsl": "(exists ?laptop (exists ?watch (and (Is ?laptop 'laptop') (OnBottomSide ?laptop) (Is ?watch 'watch') (RightOf ?watch ?laptop) (forall ?headphones (implies (Is ?headphones 'headphones') (AlignedVertically ?headphones ?laptop))))))",
+    "cnf": "(exists ?laptop (exists ?watch (forall ?headphones (and (Is ?laptop 'laptop') (OnBottomSide ?laptop) (RightOf ?watch ?laptop) (or (not (Is ?headphones 'headphones')) (AlignedVertically ?headphones ?laptop)) (Is ?watch 'watch')))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "headphones",
+        "watch"
+    ]
+}

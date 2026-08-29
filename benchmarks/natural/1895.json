@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo of a woman holding a gray fork, standing to the left of a table. A round pizza, an empty bowl, a brown teddy bear, a mirror, a phone, and all the keys are placed on the table. An elephant stands to the right of the table.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?t (exists ?p (exists ?f (and (Is ?w 'woman') (Is ?t 'table') (Is ?p 'pizza') (Is ?f 'fork') (Holding ?w ?f) (LeftOf ?w ?t) (HasColor ?f 'gray') (HasShape ?p 'round') (On ?p ?t) (forall ?k (implies (Is ?k 'key') (On ?k ?t))) (exists ?b (exists ?tb (exists ?e (exists ?m (exists ?ph (and (Is ?b 'bowl') (Is ?tb 'teddy bear') (Is ?e 'elephant') (Is ?m 'mirror') (Is ?ph 'phone') (HasState ?b 'empty') (On ?b ?t) (HasColor ?tb 'brown') (On ?tb ?t) (RightOf ?e ?t) (On ?m ?t) (On ?ph ?t)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?t (exists ?p (exists ?f (forall ?k (exists ?b (exists ?tb (exists ?e (exists ?m (exists ?ph (and (Is ?w 'woman') (Holding ?w ?f) (LeftOf ?w ?t) (Is ?f 'fork') (HasColor ?f 'gray') (Is ?t 'table') (On ?p ?t) (or (not (Is ?k 'key')) (On ?k ?t)) (HasShape ?p 'round') (On ?b ?t) (Is ?p 'pizza') (On ?tb ?t) (HasState ?b 'empty') (RightOf ?e ?t) (HasColor ?tb 'brown') (Is ?b 'bowl') (On ?m ?t) (Is ?e 'elephant') (Is ?tb 'teddy bear') (On ?ph ?t) (Is ?m 'mirror') (Is ?ph 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "woman",
+        "key",
+        "bowl",
+        "fork",
+        "pizza",
+        "teddy bear",
+        "phone",
+        "table",
+        "mirror",
+        "elephant"
+    ]
+}

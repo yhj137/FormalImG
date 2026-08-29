@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every laptop, which is located on the right side of the scene, there is a surrounding arrangement of items. A plate is positioned to the left of the laptop, and the laptop is visually larger than the plate. A calculator is placed above the laptop, and a stapler is found to the right of the calculator. Furthermore, a pair of pliers is located above the plate, while a lighter is positioned to the left of the plate.",
+    "dsl": "(and (forall ?laptop (implies (Is ?laptop 'laptop') (exists ?plate (exists ?calculator (exists ?stapler (exists ?pliers (exists ?lighter (and (Is ?plate 'plate') (Is ?calculator 'calculator') (Is ?stapler 'stapler') (Is ?pliers 'pliers') (Is ?lighter 'lighter') (OnRightSide ?laptop) (LeftOf ?plate ?laptop) (LargerThan ?laptop ?plate) (Above ?calculator ?laptop) (RightOf ?stapler ?calculator) (Above ?pliers ?plate) (LeftOf ?lighter ?plate))))))))))",
+    "cnf": "(forall ?laptop (exists ?plate (exists ?calculator (exists ?stapler (exists ?pliers (exists ?lighter (and (or (not (Is ?laptop 'laptop')) (Is ?plate 'plate')) (or (not (Is ?laptop 'laptop')) (LeftOf ?plate ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?calculator 'calculator')) (or (not (Is ?laptop 'laptop')) (LargerThan ?laptop ?plate)) (or (not (Is ?laptop 'laptop')) (OnRightSide ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?stapler 'stapler')) (or (not (Is ?laptop 'laptop')) (Above ?calculator ?laptop)) (or (not (Is ?laptop 'laptop')) (Above ?pliers ?plate)) (or (not (Is ?laptop 'laptop')) (Is ?lighter 'lighter')) (or (not (Is ?laptop 'laptop')) (Is ?pliers 'pliers')) (or (not (Is ?laptop 'laptop')) (RightOf ?stapler ?calculator)) (or (not (Is ?laptop 'laptop')) (LeftOf ?lighter ?plate)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "pliers",
+        "stapler",
+        "calculator",
+        "lighter"
+    ]
+}

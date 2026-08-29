@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a refrigerator. Every cake is round and inside the refrigerator. A woman is next to the refrigerator, and a cat is on top of it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'refrigerator') (forall ?ck (implies (Is ?ck 'cake') (and (HasShape ?ck 'round') (In ?ck ?r)))) (exists ?w (and (Is ?w 'woman') (NextTo ?w ?r))) (exists ?c (and (Is ?c 'cat') (On ?c ?r))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (forall ?ck (exists ?w (exists ?c (and (Is ?r 'refrigerator') (or (not (Is ?ck 'cake')) (In ?ck ?r)) (NextTo ?w ?r) (or (not (Is ?ck 'cake')) (HasShape ?ck 'round')) (On ?c ?r) (Is ?w 'woman') (Is ?c 'cat')))))))",
+    "k": 4,
+    "object_classes": [
+        "cat",
+        "refrigerator",
+        "cake",
+        "woman"
+    ]
+}

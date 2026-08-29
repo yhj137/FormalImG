@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is located on the top side of the arrangement, and a shoe is positioned on the left side. For every sock in the display, there is a phone and a watch arranged such that the phone is below the keyboard and the watch is below the phone, forming a vertical alignment with the keyboard. The sock is aligned horizontally with the shoe. Spatially, the shoe is located below the keyboard. In terms of size, the shoe is larger than the sock, and the keyboard is larger than the phone.",
+    "dsl": "(exists ?keyboard (exists ?shoe (forall ?sock (implies (Is ?sock 'sock') (exists ?phone (exists ?watch (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (Is ?shoe 'shoe') (OnLeftSide ?shoe) (Is ?phone 'phone') (Is ?watch 'watch') (Below ?shoe ?keyboard) (Below ?phone ?keyboard) (Below ?watch ?phone) (AlignedVertically ?keyboard ?phone) (AlignedVertically ?phone ?watch) (AlignedHorizontally ?shoe ?sock) (LargerThan ?shoe ?sock) (LargerThan ?keyboard ?phone))))))))",
+    "cnf": "(exists ?keyboard (exists ?shoe (forall ?sock (exists ?phone (exists ?watch (and (or (not (Is ?sock 'sock')) (Is ?keyboard 'keyboard')) (or (not (Is ?sock 'sock')) (OnTopSide ?keyboard)) (or (not (Is ?sock 'sock')) (Is ?shoe 'shoe')) (or (not (Is ?sock 'sock')) (Below ?shoe ?keyboard)) (or (not (Is ?sock 'sock')) (OnLeftSide ?shoe)) (or (not (Is ?sock 'sock')) (Is ?watch 'watch')) (or (not (Is ?sock 'sock')) (Below ?phone ?keyboard)) (or (not (Is ?sock 'sock')) (AlignedHorizontally ?shoe ?sock)) (or (not (Is ?sock 'sock')) (Is ?phone 'phone')) (or (not (Is ?sock 'sock')) (Below ?watch ?phone)) (or (not (Is ?sock 'sock')) (AlignedVertically ?keyboard ?phone)) (or (not (Is ?sock 'sock')) (AlignedVertically ?phone ?watch)) (or (not (Is ?sock 'sock')) (LargerThan ?shoe ?sock)) (or (not (Is ?sock 'sock')) (LargerThan ?keyboard ?phone))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "phone",
+        "watch",
+        "shoe"
+    ]
+}

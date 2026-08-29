@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every rug is dirty.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?r (implies (Is ?r 'rug') (HasState ?r 'dirty'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?r (or (not (Is ?r 'rug')) (HasState ?r 'dirty'))))",
+    "k": 1,
+    "object_classes": [
+        "rug"
+    ]
+}

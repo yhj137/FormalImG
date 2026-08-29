@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features an orange fish holding a phone. To the left of the fish is a blue pan containing all the fruit. To the right of the fish is an umbrella with a pair of shoes on it. To the right of the umbrella stands a lamp with a ball on top.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?fi (and (Is ?fi 'fish') (HasColor ?fi 'orange') (exists ?ph (and (Is ?ph 'phone') (Holding ?fi ?ph))) (exists ?pn (and (Is ?pn 'pan') (HasColor ?pn 'blue') (LeftOf ?pn ?fi) (forall ?fr (implies (Is ?fr 'fruit') (In ?fr ?pn))))) (exists ?um (and (Is ?um 'umbrella') (RightOf ?um ?fi) (exists ?sh (and (Is ?sh 'shoes') (On ?sh ?um))) (exists ?la (and (Is ?la 'lamp') (RightOf ?la ?um) (exists ?ba (and (Is ?ba 'ball') (On ?ba ?la))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?fi (exists ?ph (exists ?pn (forall ?fr (exists ?um (exists ?sh (exists ?la (exists ?ba (and (Is ?fi 'fish') (HasColor ?fi 'orange') (Holding ?fi ?ph) (LeftOf ?pn ?fi) (Is ?ph 'phone') (RightOf ?um ?fi) (HasColor ?pn 'blue') (or (not (Is ?fr 'fruit')) (In ?fr ?pn)) (Is ?um 'umbrella') (On ?sh ?um) (Is ?pn 'pan') (RightOf ?la ?um) (Is ?sh 'shoes') (Is ?la 'lamp') (On ?ba ?la) (Is ?ba 'ball')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "shoes",
+        "phone",
+        "fruit",
+        "pan",
+        "ball",
+        "fish",
+        "lamp"
+    ]
+}

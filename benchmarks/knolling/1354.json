@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side of the frame. Below the suitcase, there is a handbag, a hammer, and a tie, all of which are aligned horizontally. A calculator is placed below the handbag and is smaller than the suitcase. Additionally, for every sandwich in the scene, there is a lighter located above it, and the lighter is smaller than the sandwich. The sandwich itself is positioned below the calculator.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?hammer (exists ?tie (exists ?calculator (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?handbag 'handbag') (Below ?handbag ?suitcase) (Is ?hammer 'hammer') (AlignedHorizontally ?handbag ?hammer) (Is ?tie 'tie') (AlignedHorizontally ?hammer ?tie) (Is ?calculator 'calculator') (Below ?calculator ?handbag) (SmallerThan ?calculator ?suitcase) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?lighter (and (Is ?lighter 'lighter') (Above ?lighter ?sandwich) (SmallerThan ?lighter ?sandwich) (Below ?sandwich ?calculator)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?hammer (exists ?tie (exists ?calculator (forall ?sandwich (exists ?lighter (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Below ?handbag ?suitcase) (SmallerThan ?calculator ?suitcase) (Is ?handbag 'handbag') (AlignedHorizontally ?handbag ?hammer) (Below ?calculator ?handbag) (or (not (Is ?sandwich 'sandwich')) (Below ?sandwich ?calculator)) (Is ?hammer 'hammer') (AlignedHorizontally ?hammer ?tie) (Is ?calculator 'calculator') (or (not (Is ?sandwich 'sandwich')) (SmallerThan ?lighter ?sandwich)) (Is ?tie 'tie') (or (not (Is ?sandwich 'sandwich')) (Above ?lighter ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (Is ?lighter 'lighter'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "suitcase",
+        "hammer",
+        "handbag",
+        "calculator",
+        "lighter",
+        "sandwich"
+    ]
+}

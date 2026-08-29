@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the top side of the scene. A bottle is aligned horizontally with the backpack. A book is located below the backpack and aligned vertically with it, and the backpack is visually larger than the book. A plate is positioned below the book and aligned vertically with it. A donut is aligned horizontally with the plate, where the plate is larger than the donut. A phone is aligned horizontally with the book. A hammer is located below the phone and aligned vertically with it. For every pair of pliers in the scene, it is positioned below the hammer and aligned vertically with it. Associated with the pliers is a fork aligned horizontally with them, and a set of keys positioned below the fork and aligned vertically.",
+    "dsl": "(exists ?backpack (exists ?bottle (exists ?book (exists ?plate (exists ?donut (exists ?phone (exists ?hammer (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?bottle 'bottle') (AlignedHorizontally ?bottle ?backpack) (Is ?book 'book') (Below ?book ?backpack) (AlignedVertically ?book ?backpack) (LargerThan ?backpack ?book) (Is ?plate 'plate') (Below ?plate ?book) (AlignedVertically ?plate ?book) (Is ?donut 'donut') (AlignedHorizontally ?donut ?plate) (LargerThan ?plate ?donut) (Is ?phone 'phone') (AlignedHorizontally ?phone ?book) (Is ?hammer 'hammer') (Below ?hammer ?phone) (AlignedVertically ?hammer ?phone) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?fork (exists ?keys (and (Is ?fork 'fork') (Is ?keys 'keys') (Below ?pliers ?hammer) (AlignedVertically ?pliers ?hammer) (AlignedHorizontally ?fork ?pliers) (Below ?keys ?fork) (AlignedVertically ?keys ?fork))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?bottle (exists ?book (exists ?plate (exists ?donut (exists ?phone (exists ?hammer (forall ?pliers (exists ?fork (exists ?keys (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (AlignedHorizontally ?bottle ?backpack) (Below ?book ?backpack) (Is ?bottle 'bottle') (AlignedVertically ?book ?backpack) (Is ?book 'book') (LargerThan ?backpack ?book) (Below ?plate ?book) (AlignedVertically ?plate ?book) (Is ?plate 'plate') (AlignedHorizontally ?phone ?book) (AlignedHorizontally ?donut ?plate) (Is ?phone 'phone') (Below ?hammer ?phone) (LargerThan ?plate ?donut) (Is ?donut 'donut') (AlignedVertically ?hammer ?phone) (Is ?hammer 'hammer') (or (not (Is ?pliers 'pliers')) (Below ?pliers ?hammer)) (or (not (Is ?pliers 'pliers')) (AlignedVertically ?pliers ?hammer)) (or (not (Is ?pliers 'pliers')) (Is ?keys 'keys')) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?fork ?pliers)) (or (not (Is ?pliers 'pliers')) (Is ?fork 'fork')) (or (not (Is ?pliers 'pliers')) (Below ?keys ?fork)) (or (not (Is ?pliers 'pliers')) (AlignedVertically ?keys ?fork)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "keys",
+        "plate",
+        "pliers",
+        "phone",
+        "hammer",
+        "fork",
+        "backpack",
+        "bottle",
+        "donut"
+    ]
+}

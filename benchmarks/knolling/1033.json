@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue shirt located on the bottom side of the scene, there exists a row of items aligned horizontally with it, consisting of a hammer, a watch, a red apple, a sandwich, and a fork. In this arrangement, the shirt is physically larger than the watch, and the hammer is larger than the fork.",
+    "dsl": "(and (forall ?shirt (implies (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnBottomSide ?shirt)) (exists ?hammer (exists ?watch (exists ?apple (exists ?sandwich (exists ?fork (and (Is ?hammer 'hammer') (Is ?watch 'watch') (Is ?apple 'apple') (Has ?apple 'red') (Is ?sandwich 'sandwich') (Is ?fork 'fork') (AlignedHorizontally ?shirt ?hammer) (AlignedHorizontally ?hammer ?watch) (AlignedHorizontally ?watch ?apple) (AlignedHorizontally ?apple ?sandwich) (AlignedHorizontally ?sandwich ?fork) (LargerThan ?shirt ?watch) (LargerThan ?hammer ?fork))))))))))",
+    "cnf": "(forall ?shirt (exists ?hammer (exists ?watch (exists ?apple (exists ?sandwich (exists ?fork (and (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Is ?hammer 'hammer')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Is ?watch 'watch')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (AlignedHorizontally ?shirt ?hammer)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Is ?apple 'apple')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (AlignedHorizontally ?hammer ?watch)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Is ?fork 'fork')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Has ?apple 'red')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (AlignedHorizontally ?watch ?apple)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (LargerThan ?hammer ?fork)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (Is ?sandwich 'sandwich')) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (AlignedHorizontally ?sandwich ?fork)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (AlignedHorizontally ?apple ?sandwich)) (or (not (Is ?shirt 'shirt')) (not (Has ?shirt 'blue')) (not (OnBottomSide ?shirt)) (LargerThan ?shirt ?watch)))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "watch",
+        "fork",
+        "hammer",
+        "sandwich",
+        "shirt"
+    ]
+}

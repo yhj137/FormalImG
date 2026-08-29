@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal arrangement of seven items. The scene contains a white shoe and a sandwich, where the shoe is positioned to the left of the sandwich. For every bottle present in the image, there is a sequence of objects arranged to its right: a stapler, a pizza, a spoon, and a lighter. Specifically, the bottle is located to the right of the sandwich, the stapler is to the right of the bottle, the pizza is to the right of the stapler, the spoon is to the right of the pizza, and the lighter is to the right of the spoon. Additionally, the pizza is larger than the stapler, and all items in this sequence are aligned horizontally with the shoe and sandwich.",
+    "dsl": "(exists ?shoe (exists ?sandwich (and (Is ?shoe 'shoe') (Has ?shoe 'white') (Is ?sandwich 'sandwich') (LeftOf ?shoe ?sandwich) (AlignedHorizontally ?shoe ?sandwich) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?stapler (exists ?pizza (exists ?spoon (exists ?lighter (and (Is ?stapler 'stapler') (Is ?pizza 'pizza') (Is ?spoon 'spoon') (Is ?lighter 'lighter') (RightOf ?bottle ?sandwich) (AlignedHorizontally ?sandwich ?bottle) (RightOf ?stapler ?bottle) (AlignedHorizontally ?bottle ?stapler) (LargerThan ?pizza ?stapler) (RightOf ?pizza ?stapler) (AlignedHorizontally ?stapler ?pizza) (RightOf ?spoon ?pizza) (AlignedHorizontally ?pizza ?spoon) (RightOf ?lighter ?spoon) (AlignedHorizontally ?spoon ?lighter)))))))))))",
+    "cnf": "(exists ?shoe (exists ?sandwich (forall ?bottle (exists ?stapler (exists ?pizza (exists ?spoon (exists ?lighter (and (Is ?shoe 'shoe') (Has ?shoe 'white') (LeftOf ?shoe ?sandwich) (AlignedHorizontally ?shoe ?sandwich) (Is ?sandwich 'sandwich') (or (not (Is ?bottle 'bottle')) (RightOf ?bottle ?sandwich)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?sandwich ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?lighter 'lighter')) (or (not (Is ?bottle 'bottle')) (RightOf ?stapler ?bottle)) (or (not (Is ?bottle 'bottle')) (Is ?spoon 'spoon')) (or (not (Is ?bottle 'bottle')) (RightOf ?lighter ?spoon)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?bottle ?stapler)) (or (not (Is ?bottle 'bottle')) (Is ?stapler 'stapler')) (or (not (Is ?bottle 'bottle')) (Is ?pizza 'pizza')) (or (not (Is ?bottle 'bottle')) (RightOf ?spoon ?pizza)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?pizza ?spoon)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?spoon ?lighter)) (or (not (Is ?bottle 'bottle')) (LargerThan ?pizza ?stapler)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?stapler ?pizza)) (or (not (Is ?bottle 'bottle')) (RightOf ?pizza ?stapler))))))))))",
+    "k": 7,
+    "object_classes": [
+        "stapler",
+        "pizza",
+        "lighter",
+        "bottle",
+        "sandwich",
+        "shoe",
+        "spoon"
+    ]
+}

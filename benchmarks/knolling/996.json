@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a backpack, a wallet, an apple, and a knife. The backpack is arranged with a wallet directly below it. An apple is placed to the right of the backpack, aligned horizontally. A knife is positioned on the bottom side of the image, to the right of the wallet. Any wrench present in the scene is located below the apple, aligned vertically with the apple, and aligned horizontally with the knife.",
+    "dsl": "(exists ?backpack (exists ?wallet (exists ?apple (exists ?knife (and (Is ?backpack 'backpack') (Is ?wallet 'wallet') (Is ?apple 'apple') (Is ?knife 'knife') (Below ?wallet ?backpack) (RightOf ?apple ?backpack) (AlignedHorizontally ?apple ?backpack) (OnBottomSide ?knife) (RightOf ?knife ?wallet) (forall ?wrench (implies (Is ?wrench 'wrench') (and (Below ?wrench ?apple) (AlignedVertically ?wrench ?apple) (AlignedHorizontally ?wrench ?knife)))))))))",
+    "cnf": "(exists ?backpack (exists ?wallet (exists ?apple (exists ?knife (forall ?wrench (and (Is ?backpack 'backpack') (Below ?wallet ?backpack) (RightOf ?apple ?backpack) (Is ?wallet 'wallet') (RightOf ?knife ?wallet) (AlignedHorizontally ?apple ?backpack) (Is ?apple 'apple') (OnBottomSide ?knife) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?wrench ?knife)) (or (not (Is ?wrench 'wrench')) (Below ?wrench ?apple)) (Is ?knife 'knife') (or (not (Is ?wrench 'wrench')) (AlignedVertically ?wrench ?apple))))))))",
+    "k": 5,
+    "object_classes": [
+        "apple",
+        "wrench",
+        "backpack",
+        "wallet",
+        "knife"
+    ]
+}

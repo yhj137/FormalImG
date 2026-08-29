@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style image where every elephant is sleeping.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?e (implies (Is ?e 'elephant') (HasState ?e 'sleeping'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?e (or (not (Is ?e 'elephant')) (HasState ?e 'sleeping'))))",
+    "k": 1,
+    "object_classes": [
+        "elephant"
+    ]
+}

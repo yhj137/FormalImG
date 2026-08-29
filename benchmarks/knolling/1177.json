@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop located on the top side. Directly below the laptop is a keyboard, and to the right of the keyboard is a pen. A bottle is positioned to the right of the laptop. A pizza is placed on the right side of the image, located below the bottle. Furthermore, for every lemon present in the scene, it is arranged above the pizza.",
+    "dsl": "(exists ?laptop (exists ?keyboard (exists ?pen (exists ?bottle (exists ?pizza (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?keyboard 'keyboard') (Below ?keyboard ?laptop) (Is ?pen 'pen') (RightOf ?pen ?keyboard) (Is ?bottle 'bottle') (RightOf ?bottle ?laptop) (Is ?pizza 'pizza') (OnRightSide ?pizza) (Below ?pizza ?bottle) (forall ?lemon (implies (Is ?lemon 'lemon') (Above ?lemon ?pizza)))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (exists ?pen (exists ?bottle (exists ?pizza (forall ?lemon (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Below ?keyboard ?laptop) (RightOf ?bottle ?laptop) (Is ?keyboard 'keyboard') (RightOf ?pen ?keyboard) (Is ?bottle 'bottle') (Below ?pizza ?bottle) (Is ?pen 'pen') (OnRightSide ?pizza) (or (not (Is ?lemon 'lemon')) (Above ?lemon ?pizza)) (Is ?pizza 'pizza'))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "pen",
+        "keyboard",
+        "lemon",
+        "pizza",
+        "bottle"
+    ]
+}

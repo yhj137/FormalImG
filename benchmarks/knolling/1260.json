@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a cutting board; for every knife in the scene, it is positioned to the left of the cutting board. The cutting board is located to the left of a backpack, and they are aligned horizontally. A sandwich is placed directly below the cutting board. The backpack is positioned to the left of a drill, which is located on the right side of the image. Below the backpack is a game controller, and below the game controller is a remote, which is situated on the bottom side of the image.",
+    "dsl": "(exists ?cutting_board (and (Is ?cutting_board 'cutting_board') (forall ?knife (implies (Is ?knife 'knife') (LeftOf ?knife ?cutting_board))) (exists ?backpack (exists ?sandwich (exists ?drill (exists ?game_controller (exists ?remote (and (Is ?backpack 'backpack') (Is ?sandwich 'sandwich') (Is ?drill 'drill') (Is ?game_controller 'game_controller') (Is ?remote 'remote') (LeftOf ?cutting_board ?backpack) (AlignedHorizontally ?cutting_board ?backpack) (Below ?sandwich ?cutting_board) (LeftOf ?backpack ?drill) (OnRightSide ?drill) (Below ?game_controller ?backpack) (Below ?remote ?game_controller) (OnBottomSide ?remote)))))))))",
+    "cnf": "(exists ?cutting_board (forall ?knife (exists ?backpack (exists ?sandwich (exists ?drill (exists ?game_controller (exists ?remote (and (Is ?cutting_board 'cutting_board') (or (not (Is ?knife 'knife')) (LeftOf ?knife ?cutting_board)) (LeftOf ?cutting_board ?backpack) (AlignedHorizontally ?cutting_board ?backpack) (Is ?backpack 'backpack') (Below ?sandwich ?cutting_board) (LeftOf ?backpack ?drill) (Is ?sandwich 'sandwich') (Below ?game_controller ?backpack) (Is ?drill 'drill') (OnRightSide ?drill) (Is ?game_controller 'game_controller') (Below ?remote ?game_controller) (Is ?remote 'remote') (OnBottomSide ?remote)))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "game_controller",
+        "cutting_board",
+        "drill",
+        "backpack",
+        "knife",
+        "sandwich"
+    ]
+}

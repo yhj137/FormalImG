@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A rectangular table stands on a rug, with a boat to its left. All headphones are placed on the table, alongside a hammer. A sleeping dog rests on the rug.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?r (exists ?b (and (Is ?t 'table') (HasShape ?t 'rectangular') (Is ?r 'rug') (Is ?b 'boat') (On ?t ?r) (LeftOf ?b ?t) (forall ?hp (implies (Is ?hp 'headphones') (On ?hp ?t))) (exists ?d (exists ?h (and (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?r) (Is ?h 'hammer') (On ?h ?t)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (exists ?r (exists ?b (forall ?hp (exists ?d (exists ?h (and (Is ?t 'table') (HasShape ?t 'rectangular') (On ?t ?r) (LeftOf ?b ?t) (Is ?r 'rug') (On ?d ?r) (or (not (Is ?hp 'headphones')) (On ?hp ?t)) (Is ?b 'boat') (HasState ?d 'sleeping') (On ?h ?t) (Is ?d 'dog') (Is ?h 'hammer')))))))))",
+    "k": 6,
+    "object_classes": [
+        "headphones",
+        "rug",
+        "table",
+        "hammer",
+        "boat",
+        "dog"
+    ]
+}

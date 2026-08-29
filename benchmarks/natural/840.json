@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every child wears a hat. A dog is positioned to the left of each child, while a wooden basket sits to their right, with a blue car located to the right of the basket.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?child (implies (Is ?child 'child') (exists ?hat (exists ?dog (exists ?basket (exists ?car (and (Is ?hat 'hat') (On ?hat ?child) (Is ?dog 'dog') (LeftOf ?dog ?child) (Is ?basket 'basket') (HasMaterial ?basket 'wooden') (RightOf ?basket ?child) (Is ?car 'car') (HasColor ?car 'blue') (RightOf ?car ?basket)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?child (exists ?hat (exists ?dog (exists ?basket (exists ?car (and (or (not (Is ?child 'child')) (Is ?hat 'hat')) (or (not (Is ?child 'child')) (On ?hat ?child)) (or (not (Is ?child 'child')) (Is ?dog 'dog')) (or (not (Is ?child 'child')) (LeftOf ?dog ?child)) (or (not (Is ?child 'child')) (Is ?basket 'basket')) (or (not (Is ?child 'child')) (HasMaterial ?basket 'wooden')) (or (not (Is ?child 'child')) (RightOf ?basket ?child)) (or (not (Is ?child 'child')) (Is ?car 'car')) (or (not (Is ?child 'child')) (RightOf ?car ?basket)) (or (not (Is ?child 'child')) (HasColor ?car 'blue')))))))))",
+    "k": 5,
+    "object_classes": [
+        "hat",
+        "basket",
+        "dog",
+        "child",
+        "car"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a woman holding a metal knife next to a refrigerator. A plastic bowl containing every key sits on the refrigerator. To the right of the refrigerator stands a bottle with a butterfly on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?kn (exists ?r (exists ?bl (exists ?bo (and (Is ?w 'woman') (Is ?kn 'knife') (HasMaterial ?kn 'metal') (Holding ?w ?kn) (Is ?r 'refrigerator') (NextTo ?w ?r) (Is ?bl 'bowl') (HasMaterial ?bl 'plastic') (On ?bl ?r) (Is ?bo 'bottle') (RightOf ?bo ?r) (forall ?k (implies (Is ?k 'key') (In ?k ?bl))) (exists ?bu (and (Is ?bu 'butterfly') (On ?bu ?bo))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?kn (exists ?r (exists ?bl (exists ?bo (forall ?k (exists ?bu (and (Is ?w 'woman') (Holding ?w ?kn) (NextTo ?w ?r) (HasMaterial ?kn 'metal') (Is ?r 'refrigerator') (On ?bl ?r) (Is ?kn 'knife') (RightOf ?bo ?r) (HasMaterial ?bl 'plastic') (or (not (Is ?k 'key')) (In ?k ?bl)) (Is ?bo 'bottle') (On ?bu ?bo) (Is ?bl 'bowl') (Is ?bu 'butterfly'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "key",
+        "bowl",
+        "knife",
+        "butterfly",
+        "refrigerator",
+        "woman"
+    ]
+}

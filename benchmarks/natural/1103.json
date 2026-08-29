@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a child sitting on a wooden chair, with every book in the scene also placed on the chair. An open refrigerator stands next to the chair, with a monitor beside the refrigerator and a lamp next to the monitor.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (and (Is ?c 'child') (Is ?ch 'chair') (HasMaterial ?ch 'wooden') (HasState ?c 'sitting') (On ?c ?ch) (forall ?b (implies (Is ?b 'book') (On ?b ?ch))) (exists ?r (exists ?m (exists ?l (and (Is ?r 'refrigerator') (Is ?m 'monitor') (Is ?l 'lamp') (HasState ?r 'open') (NextTo ?r ?ch) (NextTo ?m ?r) (NextTo ?l ?m)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?ch (forall ?b (exists ?r (exists ?m (exists ?l (and (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?ch) (HasMaterial ?ch 'wooden') (or (not (Is ?b 'book')) (On ?b ?ch)) (Is ?ch 'chair') (NextTo ?r ?ch) (HasState ?r 'open') (NextTo ?m ?r) (Is ?r 'refrigerator') (Is ?m 'monitor') (NextTo ?l ?m) (Is ?l 'lamp')))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "lamp",
+        "chair",
+        "book",
+        "refrigerator",
+        "child"
+    ]
+}

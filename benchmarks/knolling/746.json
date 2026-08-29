@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a bottle positioned on the left side and a stapler on the right side, which are aligned horizontally. For every bowl in the image, it is placed to the left of the bottle, and there is a watch placed to the left of the stapler.",
+    "dsl": "(exists ?bottle (exists ?stapler (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (Is ?stapler 'stapler') (OnRightSide ?stapler) (AlignedHorizontally ?bottle ?stapler) (forall ?bowl (implies (Is ?bowl 'bowl') (exists ?watch (and (Is ?watch 'watch') (LeftOf ?bowl ?bottle) (LeftOf ?watch ?stapler))))))))",
+    "cnf": "(exists ?bottle (exists ?stapler (forall ?bowl (exists ?watch (and (Is ?bottle 'bottle') (OnLeftSide ?bottle) (AlignedHorizontally ?bottle ?stapler) (or (not (Is ?bowl 'bowl')) (LeftOf ?bowl ?bottle)) (OnRightSide ?stapler) (or (not (Is ?bowl 'bowl')) (LeftOf ?watch ?stapler)) (or (not (Is ?bowl 'bowl')) (Is ?watch 'watch')) (Is ?stapler 'stapler'))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "bowl",
+        "watch",
+        "stapler"
+    ]
+}

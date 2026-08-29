@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a pizza and a knife. The pizza is positioned on the top side of the image, and it is visually larger than the knife.",
+    "dsl": "(exists ?pizza (exists ?knife (and (Is ?pizza 'pizza') (Is ?knife 'knife') (OnTopSide ?pizza) (LargerThan ?pizza ?knife))))",
+    "cnf": "(exists ?pizza (exists ?knife (and (Is ?pizza 'pizza') (OnTopSide ?pizza) (LargerThan ?pizza ?knife) (Is ?knife 'knife'))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "pizza"
+    ]
+}

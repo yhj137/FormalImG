@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene with a pair of plastic headphones on every elephant.",
+    "dsl": "(and (IsStyle 'photo') (forall ?e (implies (Is ?e 'elephant') (exists ?h (and (Is ?h 'headphones') (HasMaterial ?h 'plastic') (On ?h ?e))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?e (exists ?h (and (or (not (Is ?e 'elephant')) (Is ?h 'headphones')) (or (not (Is ?e 'elephant')) (HasMaterial ?h 'plastic')) (or (not (Is ?e 'elephant')) (On ?h ?e))))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "headphones"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A green tree stands next to a house. To the right of the tree, there is a blue car. Inside the car, there is a sliced cake with a fruit on it. Inside the house, there is an open wooden wardrobe with a glass mirror on it. A backpack containing dirty shoes is positioned to the left of the wardrobe, and a plastic toy car is next to the backpack.",
+    "dsl": "(exists ?t (exists ?h (exists ?c (exists ?ck (exists ?f (exists ?w (exists ?m (exists ?b (exists ?s (exists ?tc (and (Is ?t 'tree') (HasColor ?t 'green') (Is ?h 'house') (NextTo ?t ?h) (Is ?c 'car') (HasColor ?c 'blue') (RightOf ?c ?t) (Is ?ck 'cake') (HasState ?ck 'sliced') (In ?ck ?c) (Is ?f 'fruit') (On ?f ?ck) (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (HasState ?w 'open') (In ?w ?h) (Is ?m 'mirror') (HasMaterial ?m 'glass') (On ?m ?w) (Is ?b 'backpack') (LeftOf ?b ?w) (Is ?s 'shoes') (HasState ?s 'dirty') (In ?s ?b) (Is ?tc 'toy car') (HasMaterial ?tc 'plastic') (NextTo ?tc ?b))))))))))))",
+    "cnf": "(exists ?t (exists ?h (exists ?c (exists ?ck (exists ?f (exists ?w (exists ?m (exists ?b (exists ?s (exists ?tc (and (Is ?t 'tree') (HasColor ?t 'green') (NextTo ?t ?h) (RightOf ?c ?t) (Is ?h 'house') (In ?w ?h) (HasColor ?c 'blue') (In ?ck ?c) (HasState ?w 'open') (On ?m ?w) (Is ?c 'car') (HasState ?ck 'sliced') (On ?f ?ck) (HasMaterial ?w 'wooden') (LeftOf ?b ?w) (HasMaterial ?m 'glass') (Is ?ck 'cake') (Is ?f 'fruit') (Is ?w 'wardrobe') (Is ?b 'backpack') (In ?s ?b) (Is ?m 'mirror') (NextTo ?tc ?b) (HasState ?s 'dirty') (HasMaterial ?tc 'plastic') (Is ?s 'shoes') (Is ?tc 'toy car'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "toy car",
+        "backpack",
+        "cake",
+        "shoes",
+        "wardrobe",
+        "tree",
+        "mirror",
+        "house",
+        "fruit",
+        "car"
+    ]
+}

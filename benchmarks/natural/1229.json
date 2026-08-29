@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every car has a man wearing black headphones to its left. Next to the man is a keyboard with a phone beside it, along with a white cat. A bird is positioned to the man's right.",
+    "dsl": "(forall ?c (implies (Is ?c 'car') (exists ?m (exists ?h (exists ?k (exists ?p (exists ?cat (exists ?b (and (Is ?m 'man') (LeftOf ?m ?c) (Is ?h 'headphones') (HasColor ?h 'black') (On ?h ?m) (Is ?k 'keyboard') (NextTo ?k ?m) (Is ?p 'phone') (NextTo ?p ?k) (Is ?cat 'cat') (HasColor ?cat 'white') (NextTo ?cat ?m) (Is ?b 'bird') (RightOf ?b ?m))))))))))",
+    "cnf": "(forall ?c (exists ?m (exists ?h (exists ?k (exists ?p (exists ?cat (exists ?b (and (or (not (Is ?c 'car')) (Is ?m 'man')) (or (not (Is ?c 'car')) (LeftOf ?m ?c)) (or (not (Is ?c 'car')) (On ?h ?m)) (or (not (Is ?c 'car')) (Is ?h 'headphones')) (or (not (Is ?c 'car')) (NextTo ?k ?m)) (or (not (Is ?c 'car')) (HasColor ?h 'black')) (or (not (Is ?c 'car')) (Is ?k 'keyboard')) (or (not (Is ?c 'car')) (NextTo ?cat ?m)) (or (not (Is ?c 'car')) (Is ?p 'phone')) (or (not (Is ?c 'car')) (NextTo ?p ?k)) (or (not (Is ?c 'car')) (RightOf ?b ?m)) (or (not (Is ?c 'car')) (HasColor ?cat 'white')) (or (not (Is ?c 'car')) (Is ?b 'bird')) (or (not (Is ?c 'car')) (Is ?cat 'cat'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "man",
+        "car",
+        "bird",
+        "cat",
+        "keyboard",
+        "headphones"
+    ]
+}

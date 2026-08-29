@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where inside every bus lies a pizza, with a spoon and red headphones next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bus') (exists ?p (exists ?s (exists ?h (and (Is ?p 'pizza') (Is ?s 'spoon') (Is ?h 'headphones') (In ?p ?b) (NextTo ?s ?p) (HasColor ?h 'red') (NextTo ?h ?p))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?p (exists ?s (exists ?h (and (or (not (Is ?b 'bus')) (Is ?p 'pizza')) (or (not (Is ?b 'bus')) (In ?p ?b)) (or (not (Is ?b 'bus')) (Is ?s 'spoon')) (or (not (Is ?b 'bus')) (NextTo ?s ?p)) (or (not (Is ?b 'bus')) (Is ?h 'headphones')) (or (not (Is ?b 'bus')) (NextTo ?h ?p)) (or (not (Is ?b 'bus')) (HasColor ?h 'red'))))))))",
+    "k": 4,
+    "object_classes": [
+        "pizza",
+        "spoon",
+        "headphones",
+        "bus"
+    ]
+}

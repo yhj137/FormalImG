@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo depicting a person visible inside a mirror. To the right of the mirror is a lit lamp. All flowers in the scene are positioned to the right of the person, and a flying bird is located to the right of the lamp.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?p (exists ?l (and (Is ?m 'mirror') (Is ?p 'person') (In ?p ?m) (Is ?l 'lamp') (HasState ?l 'on') (RightOf ?l ?m) (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?p))) (exists ?b (and (Is ?b 'bird') (HasState ?b 'flying') (RightOf ?b ?l))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?p (exists ?l (forall ?f (exists ?b (and (Is ?m 'mirror') (In ?p ?m) (RightOf ?l ?m) (Is ?p 'person') (or (not (Is ?f 'flower')) (RightOf ?f ?p)) (HasState ?l 'on') (RightOf ?b ?l) (Is ?l 'lamp') (HasState ?b 'flying') (Is ?b 'bird'))))))))",
+    "k": 5,
+    "object_classes": [
+        "person",
+        "lamp",
+        "mirror",
+        "bird",
+        "flower"
+    ]
+}

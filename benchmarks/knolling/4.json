@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image displays a single fork which is positioned on the bottom side of the scene.",
+    "dsl": "(exists ?fork (and (Is ?fork 'fork') (OnBottomSide ?fork)))",
+    "cnf": "(exists ?fork (and (Is ?fork 'fork') (OnBottomSide ?fork)))",
+    "k": 1,
+    "object_classes": [
+        "fork"
+    ]
+}

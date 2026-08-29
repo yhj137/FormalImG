@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a row of items on the top side of the image, starting with a red book positioned on the left side. Arranged sequentially to the right of the book are a black keyboard, white headphones, a brown shoe, a gray stapler, a blue bowl, and a white spoon. Among these, the brown shoe is visually larger than the stapler. Furthermore, the scene adheres to a specific constraint for remotes: for every black remote present, it must be smaller than the keyboard and positioned between a gray mouse to its left and a yellow lemon to its right.",
+    "dsl": "(exists ?book (exists ?keyboard (exists ?headphones (exists ?shoe (exists ?stapler (exists ?bowl (exists ?spoon (and (Is ?book 'book') (Has ?book 'red') (OnTopSide ?book) (OnLeftSide ?book) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (RightOf ?keyboard ?book) (Is ?headphones 'headphones') (Has ?headphones 'white') (RightOf ?headphones ?keyboard) (Is ?shoe 'shoe') (Has ?shoe 'brown') (RightOf ?shoe ?headphones) (Is ?stapler 'stapler') (Has ?stapler 'gray') (RightOf ?stapler ?shoe) (LargerThan ?shoe ?stapler) (Is ?bowl 'bowl') (Has ?bowl 'blue') (RightOf ?bowl ?stapler) (Is ?spoon 'spoon') (Has ?spoon 'white') (RightOf ?spoon ?bowl) (forall ?remote (implies (and (Is ?remote 'remote') (Has ?remote 'black')) (exists ?mouse (exists ?lemon (and (Is ?mouse 'mouse') (Has ?mouse 'gray') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (LeftOf ?mouse ?remote) (RightOf ?lemon ?remote) (SmallerThan ?remote ?keyboard))))))))))))))",
+    "cnf": "(exists ?book (exists ?keyboard (exists ?headphones (exists ?shoe (exists ?stapler (exists ?bowl (exists ?spoon (forall ?remote (exists ?mouse (exists ?lemon (and (Is ?book 'book') (Has ?book 'red') (OnTopSide ?book) (OnLeftSide ?book) (RightOf ?keyboard ?book) (Has ?keyboard 'black') (RightOf ?headphones ?keyboard) (Is ?keyboard 'keyboard') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (SmallerThan ?remote ?keyboard)) (Has ?headphones 'white') (RightOf ?shoe ?headphones) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (RightOf ?lemon ?remote)) (Is ?headphones 'headphones') (Has ?shoe 'brown') (RightOf ?stapler ?shoe) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (LeftOf ?mouse ?remote)) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?lemon 'yellow')) (Is ?shoe 'shoe') (LargerThan ?shoe ?stapler) (Has ?stapler 'gray') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Has ?mouse 'gray')) (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?lemon 'lemon')) (RightOf ?bowl ?stapler) (Is ?stapler 'stapler') (or (not (Is ?remote 'remote')) (not (Has ?remote 'black')) (Is ?mouse 'mouse')) (Has ?bowl 'blue') (RightOf ?spoon ?bowl) (Is ?bowl 'bowl') (Has ?spoon 'white') (Is ?spoon 'spoon'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "remote",
+        "stapler",
+        "keyboard",
+        "lemon",
+        "mouse",
+        "spoon",
+        "bowl",
+        "headphones",
+        "shoe"
+    ]
+}

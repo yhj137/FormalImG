@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person holding an umbrella and wearing a fabric hat is located to the right of a red bicycle. A monitor is next to the bicycle, with a rectangular keyboard and a plastic bottle beside it. Every flower is inside a bowl next to the bottle.",
+    "dsl": "(exists ?b (exists ?p (exists ?u (exists ?h (exists ?m (exists ?k (exists ?bot (and (Is ?b 'bicycle') (HasColor ?b 'red') (Is ?p 'person') (RightOf ?p ?b) (Is ?u 'umbrella') (Holding ?p ?u) (Is ?h 'hat') (HasMaterial ?h 'fabric') (On ?h ?p) (Is ?m 'monitor') (NextTo ?m ?b) (Is ?k 'keyboard') (HasShape ?k 'rectangular') (NextTo ?k ?m) (Is ?bot 'bottle') (HasMaterial ?bot 'plastic') (NextTo ?bot ?m) (forall ?f (implies (Is ?f 'flower') (exists ?bowl (and (Is ?bowl 'bowl') (In ?f ?bowl) (NextTo ?bowl ?bot)))))))))))))",
+    "cnf": "(exists ?b (exists ?p (exists ?u (exists ?h (exists ?m (exists ?k (exists ?bot (forall ?f (exists ?bowl (and (Is ?b 'bicycle') (HasColor ?b 'red') (RightOf ?p ?b) (NextTo ?m ?b) (Is ?p 'person') (Holding ?p ?u) (Is ?m 'monitor') (NextTo ?k ?m) (On ?h ?p) (Is ?u 'umbrella') (NextTo ?bot ?m) (HasShape ?k 'rectangular') (HasMaterial ?h 'fabric') (HasMaterial ?bot 'plastic') (or (not (Is ?f 'flower')) (NextTo ?bowl ?bot)) (Is ?k 'keyboard') (Is ?h 'hat') (Is ?bot 'bottle') (or (not (Is ?f 'flower')) (In ?f ?bowl)) (or (not (Is ?f 'flower')) (Is ?bowl 'bowl'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "hat",
+        "person",
+        "bottle",
+        "monitor",
+        "flower",
+        "bicycle",
+        "bowl",
+        "keyboard"
+    ]
+}

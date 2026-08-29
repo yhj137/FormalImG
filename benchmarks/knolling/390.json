@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of headphones positioned on the top side of the scene. For every spoon in the image, it is aligned horizontally with the headphones.",
+    "dsl": "(exists ?h (and (Is ?h 'headphones') (OnTopSide ?h) (forall ?s (implies (Is ?s 'spoon') (AlignedHorizontally ?s ?h)))))",
+    "cnf": "(exists ?h (forall ?s (and (Is ?h 'headphones') (OnTopSide ?h) (or (not (Is ?s 'spoon')) (AlignedHorizontally ?s ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "headphones"
+    ]
+}

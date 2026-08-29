@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene with every bowl positioned to the left of a black monitor.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'monitor') (HasColor ?m 'black') (forall ?b (implies (Is ?b 'bowl') (LeftOf ?b ?m))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (forall ?b (and (Is ?m 'monitor') (HasColor ?m 'black') (or (not (Is ?b 'bowl')) (LeftOf ?b ?m))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "monitor"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A switched-on monitor and a sliced pizza sit on a wooden desk. Every piece of fruit in the scene rests on the pizza, and a cat is positioned nearby. To the right of the desk stands a tree with a bird perched on it, located next to a car. To the right of the car, a stone lion holds a round mirror.",
+    "dsl": "(exists ?d (exists ?m (exists ?p (exists ?c (exists ?t (exists ?b (exists ?car (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?m 'monitor') (HasState ?m 'on') (On ?m ?d) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?d) (Is ?c 'cat') (NextTo ?c ?p) (Is ?t 'tree') (RightOf ?t ?d) (Is ?b 'bird') (On ?b ?t) (Is ?car 'car') (NextTo ?car ?t) (forall ?f (implies (Is ?f 'fruit') (On ?f ?p))) (exists ?l (exists ?mir (and (Is ?l 'lion') (HasMaterial ?l 'stone') (RightOf ?l ?car) (Is ?mir 'mirror') (HasShape ?mir 'round') (Holding ?l ?mir))))))))))))",
+    "cnf": "(exists ?d (exists ?m (exists ?p (exists ?c (exists ?t (exists ?b (exists ?car (forall ?f (exists ?l (exists ?mir (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?m ?d) (On ?p ?d) (HasState ?m 'on') (RightOf ?t ?d) (HasState ?p 'sliced') (NextTo ?c ?p) (Is ?m 'monitor') (Is ?t 'tree') (On ?b ?t) (Is ?p 'pizza') (or (not (Is ?f 'fruit')) (On ?f ?p)) (Is ?c 'cat') (NextTo ?car ?t) (Is ?b 'bird') (Is ?car 'car') (RightOf ?l ?car) (HasMaterial ?l 'stone') (Holding ?l ?mir) (Is ?l 'lion') (HasShape ?mir 'round') (Is ?mir 'mirror'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "monitor",
+        "cat",
+        "desk",
+        "pizza",
+        "lion",
+        "tree",
+        "mirror",
+        "bird",
+        "fruit",
+        "car"
+    ]
+}

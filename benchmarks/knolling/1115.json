@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There exist two objects. For every gray spoon in the image, one object is a black monitor and the other is white headphones positioned to its right, and the spoon is located below the monitor. Additionally, for every gray spoon, there is a gray knife to its right, a pink donut to the right of the knife, and a blue tie below the donut, with the spoon, knife, and donut aligned horizontally.",
+    "dsl": "(exists ?monitor (exists ?headphones (forall ?spoon (implies (and (Is ?spoon 'spoon') (Has ?spoon 'gray')) (exists ?knife (exists ?donut (exists ?tie (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?headphones 'headphones') (Has ?headphones 'white') (RightOf ?headphones ?monitor) (Is ?knife 'knife') (Has ?knife 'gray') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?tie 'tie') (Has ?tie 'blue') (Below ?spoon ?monitor) (RightOf ?knife ?spoon) (RightOf ?donut ?knife) (Below ?tie ?donut) (AlignedHorizontally ?spoon ?knife) (AlignedHorizontally ?knife ?donut)))))))))",
+    "cnf": "(exists ?monitor (exists ?headphones (forall ?spoon (exists ?knife (exists ?donut (exists ?tie (and (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?monitor 'monitor')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?monitor 'black')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?headphones 'headphones')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?headphones ?monitor)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?headphones 'white')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?knife 'knife')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Below ?spoon ?monitor)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?knife 'gray')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?tie 'blue')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?donut 'donut')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Is ?tie 'tie')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Below ?tie ?donut)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (RightOf ?donut ?knife)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (Has ?donut 'pink')) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?spoon ?knife)) (or (not (Is ?spoon 'spoon')) (not (Has ?spoon 'gray')) (AlignedHorizontally ?knife ?donut)))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "knife",
+        "spoon",
+        "headphones",
+        "monitor",
+        "donut"
+    ]
+}

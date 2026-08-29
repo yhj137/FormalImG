@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rusty car with every man in the scene sitting on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'car') (HasState ?c 'rusty') (forall ?m (implies (Is ?m 'man') (and (HasState ?m 'sitting') (On ?m ?c)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (forall ?m (and (Is ?c 'car') (HasState ?c 'rusty') (or (not (Is ?m 'man')) (On ?m ?c)) (or (not (Is ?m 'man')) (HasState ?m 'sitting'))))))",
+    "k": 2,
+    "object_classes": [
+        "man",
+        "car"
+    ]
+}

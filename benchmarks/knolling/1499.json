@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is placed on the top side of the layout. A laptop is located below the monitor, and a pan is positioned below the laptop; these three objects are aligned vertically. For every glove in the scene, it is placed to the left of the laptop. Above the glove is an apple, which is smaller than the monitor. Below the glove is a hammer, which is aligned vertically with the glove. A hat is located below the hammer and is on the bottom side of the image. Finally, a cutting board is situated to the left of the hammer, and the hammer is visually smaller than the cutting board.",
+    "dsl": "(exists ?mon (exists ?lap (exists ?pan (and (Is ?mon 'monitor') (OnTopSide ?mon) (Is ?lap 'laptop') (Below ?lap ?mon) (AlignedVertically ?mon ?lap) (Is ?pan 'pan') (Below ?pan ?lap) (AlignedVertically ?lap ?pan) (forall ?g (implies (Is ?g 'glove') (exists ?ham (exists ?app (exists ?hat (exists ?cb (and (Is ?ham 'hammer') (Is ?app 'apple') (Is ?hat 'hat') (Is ?cb 'cutting_board') (LeftOf ?g ?lap) (Above ?app ?g) (SmallerThan ?app ?mon) (Below ?ham ?g) (AlignedVertically ?g ?ham) (Below ?hat ?ham) (OnBottomSide ?hat) (LeftOf ?cb ?ham) (SmallerThan ?ham ?cb))))))))))))",
+    "cnf": "(exists ?mon (exists ?lap (exists ?pan (forall ?g (exists ?ham (exists ?app (exists ?hat (exists ?cb (and (Is ?mon 'monitor') (OnTopSide ?mon) (Below ?lap ?mon) (AlignedVertically ?mon ?lap) (Is ?lap 'laptop') (or (not (Is ?g 'glove')) (SmallerThan ?app ?mon)) (Below ?pan ?lap) (or (not (Is ?g 'glove')) (Above ?app ?g)) (or (not (Is ?g 'glove')) (Below ?ham ?g)) (AlignedVertically ?lap ?pan) (Is ?pan 'pan') (or (not (Is ?g 'glove')) (LeftOf ?g ?lap)) (or (not (Is ?g 'glove')) (Is ?app 'apple')) (or (not (Is ?g 'glove')) (AlignedVertically ?g ?ham)) (or (not (Is ?g 'glove')) (Is ?ham 'hammer')) (or (not (Is ?g 'glove')) (Is ?cb 'cutting_board')) (or (not (Is ?g 'glove')) (Is ?hat 'hat')) (or (not (Is ?g 'glove')) (Below ?hat ?ham)) (or (not (Is ?g 'glove')) (LeftOf ?cb ?ham)) (or (not (Is ?g 'glove')) (OnBottomSide ?hat)) (or (not (Is ?g 'glove')) (SmallerThan ?ham ?cb)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "hammer",
+        "pan",
+        "cutting_board",
+        "hat",
+        "monitor",
+        "glove"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man wearing a shirt is on a boat, holding a knife. To his left is a pan containing all the fruit, and to his right sits an open bottle.",
+    "dsl": "(exists ?b (exists ?m (exists ?p (exists ?bt (exists ?k (and (Is ?b 'boat') (Is ?m 'man') (Is ?p 'pan') (Is ?bt 'bottle') (Is ?k 'knife') (On ?m ?b) (Holding ?m ?k) (LeftOf ?p ?m) (RightOf ?bt ?m) (HasState ?bt 'open') (forall ?f (implies (Is ?f 'fruit') (In ?f ?p))) (exists ?s (and (Is ?s 'shirt') (On ?s ?m)))))))))",
+    "cnf": "(exists ?b (exists ?m (exists ?p (exists ?bt (exists ?k (forall ?f (exists ?s (and (Is ?b 'boat') (On ?m ?b) (Is ?m 'man') (Holding ?m ?k) (LeftOf ?p ?m) (Is ?k 'knife') (RightOf ?bt ?m) (Is ?p 'pan') (or (not (Is ?f 'fruit')) (In ?f ?p)) (On ?s ?m) (Is ?bt 'bottle') (HasState ?bt 'open') (Is ?s 'shirt')))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "pan",
+        "man",
+        "knife",
+        "shirt",
+        "boat",
+        "fruit"
+    ]
+}

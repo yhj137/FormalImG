@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman sitting on a green sofa, holding an open bottle containing every fork. A plant is located to the right of the sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bottle') (HasState ?b 'open') (forall ?f (implies (Is ?f 'fork') (In ?f ?b))) (exists ?w (and (Is ?w 'woman') (Holding ?w ?b) (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'green') (On ?w ?s) (exists ?p (and (Is ?p 'plant') (LeftOf ?s ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?f (exists ?w (exists ?s (exists ?p (and (Is ?b 'bottle') (HasState ?b 'open') (or (not (Is ?f 'fork')) (In ?f ?b)) (Holding ?w ?b) (Is ?w 'woman') (On ?w ?s) (HasColor ?s 'green') (LeftOf ?s ?p) (Is ?s 'sofa') (Is ?p 'plant'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bottle",
+        "fork",
+        "sofa",
+        "plant",
+        "woman"
+    ]
+}

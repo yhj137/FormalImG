@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man holding a stone rock. Every shirt in the scene is next to the man.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?r (and (Is ?m 'man') (Is ?r 'rock') (HasMaterial ?r 'stone') (Holding ?m ?r) (forall ?s (implies (Is ?s 'shirt') (NextTo ?s ?m)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?r (forall ?s (and (Is ?m 'man') (Holding ?m ?r) (or (not (Is ?s 'shirt')) (NextTo ?s ?m)) (HasMaterial ?r 'stone') (Is ?r 'rock'))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "shirt",
+        "rock"
+    ]
+}

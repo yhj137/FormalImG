@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a blue bed with a sleeping cat nearby. A child stands next to the bed holding an open laptop, with a bowl positioned beside it. All elephants are gray and located to the left of the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?cat (and (Is ?bed 'bed') (HasColor ?bed 'blue') (Is ?child 'child') (HasState ?child 'standing') (NextTo ?child ?bed) (Is ?cat 'cat') (HasState ?cat 'sleeping') (NextTo ?cat ?bed) (forall ?e (implies (Is ?e 'elephant') (and (HasColor ?e 'gray') (LeftOf ?e ?bed)))) (exists ?laptop (exists ?bowl (and (Is ?laptop 'laptop') (HasState ?laptop 'open') (Is ?bowl 'bowl') (Holding ?child ?laptop) (NextTo ?bowl ?laptop)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?cat (forall ?e (exists ?laptop (exists ?bowl (and (Is ?bed 'bed') (HasColor ?bed 'blue') (NextTo ?child ?bed) (NextTo ?cat ?bed) (HasState ?child 'standing') (Holding ?child ?laptop) (or (not (Is ?e 'elephant')) (LeftOf ?e ?bed)) (HasState ?cat 'sleeping') (Is ?child 'child') (HasState ?laptop 'open') (NextTo ?bowl ?laptop) (or (not (Is ?e 'elephant')) (HasColor ?e 'gray')) (Is ?cat 'cat') (Is ?laptop 'laptop') (Is ?bowl 'bowl')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "child",
+        "bed",
+        "laptop",
+        "bowl",
+        "cat"
+    ]
+}

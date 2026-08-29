@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This pixel art scene features a wooden desk inside a house. A laptop sits on the desk next to a keyboard, with a round lamp positioned to the left of the laptop. A spoon and every flower in the scene are also on the desk. Beside the desk stands a horse wearing a jacket and holding a sandwich.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?d (exists ?lap (exists ?k (exists ?l (and (Is ?h 'house') (Is ?d 'desk') (HasMaterial ?d 'wooden') (In ?d ?h) (Is ?lap 'laptop') (On ?lap ?d) (Is ?k 'keyboard') (NextTo ?k ?lap) (Is ?l 'lamp') (HasShape ?l 'round') (On ?l ?d) (LeftOf ?l ?lap) (forall ?f (implies (Is ?f 'flower') (On ?f ?d))) (exists ?ho (exists ?j (exists ?s (exists ?sp (and (Is ?ho 'horse') (NextTo ?ho ?d) (Is ?j 'jacket') (On ?j ?ho) (Is ?s 'sandwich') (Holding ?ho ?s) (Is ?sp 'spoon') (On ?sp ?d)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?d (exists ?lap (exists ?k (exists ?l (forall ?f (exists ?ho (exists ?j (exists ?s (exists ?sp (and (Is ?h 'house') (In ?d ?h) (HasMaterial ?d 'wooden') (On ?lap ?d) (Is ?d 'desk') (On ?l ?d) (Is ?lap 'laptop') (NextTo ?k ?lap) (or (not (Is ?f 'flower')) (On ?f ?d)) (HasShape ?l 'round') (LeftOf ?l ?lap) (Is ?k 'keyboard') (NextTo ?ho ?d) (Is ?l 'lamp') (On ?sp ?d) (Is ?ho 'horse') (On ?j ?ho) (Is ?sp 'spoon') (Holding ?ho ?s) (Is ?j 'jacket') (Is ?s 'sandwich')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "spoon",
+        "horse",
+        "laptop",
+        "jacket",
+        "flower",
+        "desk",
+        "lamp",
+        "sandwich",
+        "keyboard"
+    ]
+}

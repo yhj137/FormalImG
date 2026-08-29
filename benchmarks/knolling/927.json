@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image containing a suitcase and a camera. The camera is smaller than the suitcase, located to the right of the suitcase, and is positioned on the right side of the frame. For every glove in the scene, there is a lighter above it and a wallet to its right. Additionally, the lighter is visually smaller than the camera.",
+    "dsl": "(exists ?s (exists ?c (and (Is ?s 'suitcase') (Is ?c 'camera') (RightOf ?c ?s) (OnRightSide ?c) (SmallerThan ?c ?s) (forall ?g (implies (Is ?g 'glove') (exists ?l (exists ?w (and (Is ?l 'lighter') (Is ?w 'wallet') (Above ?l ?g) (RightOf ?w ?g) (SmallerThan ?l ?c)))))))))",
+    "cnf": "(exists ?s (exists ?c (forall ?g (exists ?l (exists ?w (and (Is ?s 'suitcase') (RightOf ?c ?s) (SmallerThan ?c ?s) (Is ?c 'camera') (OnRightSide ?c) (or (not (Is ?g 'glove')) (SmallerThan ?l ?c)) (or (not (Is ?g 'glove')) (RightOf ?w ?g)) (or (not (Is ?g 'glove')) (Above ?l ?g)) (or (not (Is ?g 'glove')) (Is ?w 'wallet')) (or (not (Is ?g 'glove')) (Is ?l 'lighter'))))))))",
+    "k": 5,
+    "object_classes": [
+        "lighter",
+        "wallet",
+        "camera",
+        "suitcase",
+        "glove"
+    ]
+}

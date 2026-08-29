@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man holding a wooden basket with a cat inside. An elephant stands to the right of the man, while every phone in the scene is located to his left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (and (Is ?m 'man') (forall ?p (implies (Is ?p 'phone') (LeftOf ?p ?m))) (exists ?e (exists ?c (exists ?b (and (Is ?e 'elephant') (Is ?c 'cat') (Is ?b 'basket') (HasMaterial ?b 'wooden') (Holding ?m ?b) (In ?c ?b) (LeftOf ?m ?e))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (forall ?p (exists ?e (exists ?c (exists ?b (and (Is ?m 'man') (or (not (Is ?p 'phone')) (LeftOf ?p ?m)) (Holding ?m ?b) (LeftOf ?m ?e) (HasMaterial ?b 'wooden') (In ?c ?b) (Is ?e 'elephant') (Is ?b 'basket') (Is ?c 'cat'))))))))",
+    "k": 5,
+    "object_classes": [
+        "cat",
+        "man",
+        "phone",
+        "basket",
+        "elephant"
+    ]
+}

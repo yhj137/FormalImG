@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop and headphones. The headphones are positioned to the right of the laptop, and they are aligned horizontally. For every screwdriver present, it is positioned on the bottom side of the image; there is a plate to its left, a calculator to its right, and a pizza to the right of the calculator. The plate, screwdriver, and calculator are aligned horizontally. Spatially, the headphones are located to the left of the plate.",
+    "dsl": "(exists ?laptop (exists ?headphones (and (Is ?laptop 'laptop') (Is ?headphones 'headphones') (RightOf ?headphones ?laptop) (AlignedHorizontally ?laptop ?headphones) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?plate (exists ?calculator (exists ?pizza (and (Is ?plate 'plate') (Is ?calculator 'calculator') (Is ?pizza 'pizza') (OnBottomSide ?screwdriver) (LeftOf ?plate ?screwdriver) (RightOf ?calculator ?screwdriver) (RightOf ?pizza ?calculator) (LeftOf ?headphones ?plate) (AlignedHorizontally ?plate ?screwdriver) (AlignedHorizontally ?screwdriver ?calculator))))))))))",
+    "cnf": "(exists ?laptop (exists ?headphones (forall ?screwdriver (exists ?plate (exists ?calculator (exists ?pizza (and (Is ?laptop 'laptop') (RightOf ?headphones ?laptop) (AlignedHorizontally ?laptop ?headphones) (Is ?headphones 'headphones') (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?headphones ?plate)) (or (not (Is ?screwdriver 'screwdriver')) (LeftOf ?plate ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?plate ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?pizza ?calculator)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?plate 'plate')) (or (not (Is ?screwdriver 'screwdriver')) (OnBottomSide ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?calculator ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?screwdriver ?calculator)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?pizza 'pizza')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?calculator 'calculator')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "pizza",
+        "screwdriver",
+        "calculator",
+        "headphones"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a cutting board positioned on the left side of the scene and a white sock. For every blue pen present, it is located directly below the cutting board and aligned vertically with it. The pen is also positioned to the right of the white sock. Furthermore, associated with the pen, there is a red pair of scissors to its left and a fork to its right.",
+    "dsl": "(exists ?cb (exists ?s (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?s 'sock') (Has ?s 'white') (forall ?p (implies (and (Is ?p 'pen') (Has ?p 'blue')) (exists ?sc (exists ?f (and (Is ?sc 'scissors') (Has ?sc 'red') (Is ?f 'fork') (Below ?p ?cb) (AlignedVertically ?p ?cb) (RightOf ?p ?s) (LeftOf ?sc ?p) (RightOf ?f ?p)))))))))",
+    "cnf": "(exists ?cb (exists ?s (forall ?p (exists ?sc (exists ?f (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Below ?p ?cb)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (AlignedVertically ?p ?cb)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Is ?f 'fork')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (RightOf ?p ?s)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Has ?sc 'red')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (RightOf ?f ?p)) (Has ?s 'white') (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (LeftOf ?sc ?p)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Is ?sc 'scissors')) (Is ?s 'sock')))))))",
+    "k": 5,
+    "object_classes": [
+        "scissors",
+        "cutting_board",
+        "pen",
+        "fork",
+        "sock"
+    ]
+}

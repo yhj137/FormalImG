@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the top side of the scene, with a game controller located below it. For every shoe in the image, there is a corresponding set of items arranged relative to it: the shoe is placed below the game controller; a glove is to the right of the shoe, and a pair of pliers is to the right of the glove. Below the glove is a phone, while a pair of glasses is located below the pliers on the right side of the image. Additionally, a carrot is situated below the shoe, with a bowl to its right and a fork to the right of the bowl. The bowl is positioned on the bottom side of the image, and the fork is smaller than the backpack.",
+    "dsl": "(exists ?backpack (exists ?game_controller (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?game_controller 'game_controller') (Below ?game_controller ?backpack) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?glove (exists ?pliers (exists ?glasses (exists ?phone (exists ?carrot (exists ?bowl (exists ?fork (and (Is ?glove 'glove') (Is ?pliers 'pliers') (Is ?glasses 'glasses') (Is ?phone 'phone') (Is ?carrot 'carrot') (Is ?bowl 'bowl') (Is ?fork 'fork') (Below ?shoe ?game_controller) (RightOf ?glove ?shoe) (RightOf ?pliers ?glove) (Below ?phone ?glove) (Below ?glasses ?pliers) (OnRightSide ?glasses) (Below ?carrot ?shoe) (RightOf ?bowl ?carrot) (RightOf ?fork ?bowl) (OnBottomSide ?bowl) (SmallerThan ?fork ?backpack))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?game_controller (forall ?shoe (exists ?glove (exists ?pliers (exists ?glasses (exists ?phone (exists ?carrot (exists ?bowl (exists ?fork (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Below ?game_controller ?backpack) (or (not (Is ?shoe 'shoe')) (SmallerThan ?fork ?backpack)) (Is ?game_controller 'game_controller') (or (not (Is ?shoe 'shoe')) (Below ?shoe ?game_controller)) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?bowl)) (or (not (Is ?shoe 'shoe')) (RightOf ?fork ?bowl)) (or (not (Is ?shoe 'shoe')) (Is ?fork 'fork')) (or (not (Is ?shoe 'shoe')) (RightOf ?glove ?shoe)) (or (not (Is ?shoe 'shoe')) (RightOf ?bowl ?carrot)) (or (not (Is ?shoe 'shoe')) (Is ?bowl 'bowl')) (or (not (Is ?shoe 'shoe')) (Is ?glove 'glove')) (or (not (Is ?shoe 'shoe')) (RightOf ?pliers ?glove)) (or (not (Is ?shoe 'shoe')) (Below ?carrot ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?carrot 'carrot')) (or (not (Is ?shoe 'shoe')) (Is ?pliers 'pliers')) (or (not (Is ?shoe 'shoe')) (Below ?phone ?glove)) (or (not (Is ?shoe 'shoe')) (Below ?glasses ?pliers)) (or (not (Is ?shoe 'shoe')) (OnRightSide ?glasses)) (or (not (Is ?shoe 'shoe')) (Is ?phone 'phone')) (or (not (Is ?shoe 'shoe')) (Is ?glasses 'glasses')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "backpack",
+        "bowl",
+        "pliers",
+        "carrot",
+        "game_controller",
+        "glove",
+        "fork",
+        "phone",
+        "shoe",
+        "glasses"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a red backpack. A camera is aligned horizontally with the backpack, and a hammer is aligned horizontally with the camera. Below the backpack is a blue shirt, and below the shirt is a mouse; the backpack, shirt, and mouse are aligned vertically, with the mouse being smaller than the shirt. Below the camera is a book, and below the book is a pizza; the camera, book, and pizza are aligned vertically. The shirt and the book are aligned horizontally. Finally, for every wrench in the image, it is positioned below the hammer, aligned vertically with it, and is smaller than the hammer.",
+    "dsl": "(exists ?backpack (exists ?camera (exists ?hammer (exists ?shirt (and (forall ?wrench (implies (Is ?wrench 'wrench') (and (Below ?wrench ?hammer) (AlignedVertically ?wrench ?hammer) (SmallerThan ?wrench ?hammer)))) (exists ?book (exists ?pizza (exists ?mouse (and (Is ?backpack 'backpack') (Has ?backpack 'red') (OnLeftSide ?backpack) (Is ?camera 'camera') (Is ?hammer 'hammer') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?book 'book') (Is ?pizza 'pizza') (Is ?mouse 'mouse') (AlignedHorizontally ?backpack ?camera) (AlignedHorizontally ?camera ?hammer) (Below ?shirt ?backpack) (AlignedVertically ?backpack ?shirt) (Below ?book ?camera) (AlignedVertically ?camera ?book) (AlignedHorizontally ?shirt ?book) (Below ?pizza ?book) (AlignedVertically ?book ?pizza) (Below ?mouse ?shirt) (AlignedVertically ?shirt ?mouse) (SmallerThan ?mouse ?shirt))))))))))",
+    "cnf": "(exists ?backpack (exists ?camera (exists ?hammer (exists ?shirt (forall ?wrench (exists ?book (exists ?pizza (exists ?mouse (and (or (not (Is ?wrench 'wrench')) (Below ?wrench ?hammer)) (or (not (Is ?wrench 'wrench')) (AlignedVertically ?wrench ?hammer)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?hammer)) (Is ?hammer 'hammer') (AlignedHorizontally ?camera ?hammer) (AlignedHorizontally ?backpack ?camera) (Below ?book ?camera) (OnLeftSide ?backpack) (Below ?shirt ?backpack) (Is ?camera 'camera') (AlignedVertically ?camera ?book) (Is ?book 'book') (Has ?backpack 'red') (AlignedVertically ?backpack ?shirt) (Has ?shirt 'blue') (AlignedHorizontally ?shirt ?book) (Is ?backpack 'backpack') (Is ?shirt 'shirt') (Below ?mouse ?shirt) (Below ?pizza ?book) (AlignedVertically ?shirt ?mouse) (Is ?mouse 'mouse') (AlignedVertically ?book ?pizza) (Is ?pizza 'pizza') (SmallerThan ?mouse ?shirt))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "wrench",
+        "pizza",
+        "hammer",
+        "backpack",
+        "camera",
+        "mouse",
+        "shirt"
+    ]
+}

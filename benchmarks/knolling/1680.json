@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a strict vertical alignment on the left side of the scene. The layout begins at the top with a cutting board, which is visually larger than the pan positioned directly below it. Below the pan is a shoe. For every screwdriver present, it is located vertically below the shoe, and implies the existence of a wrench positioned directly below the screwdriver. Continuing the vertical chain downwards from the wrench, there is a stapler, followed by a bottle that is larger than the stapler. A pair of scissors is located below the bottle, and the arrangement concludes with a fork at the bottom.",
+    "dsl": "(exists ?cb (exists ?pan (exists ?shoe (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Is ?pan 'pan') (Below ?pan ?cb) (AlignedVertically ?pan ?cb) (LargerThan ?cb ?pan) (Is ?shoe 'shoe') (Below ?shoe ?pan) (AlignedVertically ?shoe ?pan) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?wr (exists ?st (exists ?bt (exists ?sc (exists ?fk (and (Is ?wr 'wrench') (Below ?sd ?shoe) (AlignedVertically ?sd ?shoe) (Below ?wr ?sd) (AlignedVertically ?wr ?sd) (Is ?st 'stapler') (Below ?st ?wr) (AlignedVertically ?st ?wr) (Is ?bt 'bottle') (Below ?bt ?st) (AlignedVertically ?bt ?st) (LargerThan ?bt ?st) (Is ?sc 'scissors') (Below ?sc ?bt) (AlignedVertically ?sc ?bt) (Is ?fk 'fork') (Below ?fk ?sc) (AlignedVertically ?fk ?sc)))))))))))))",
+    "cnf": "(exists ?cb (exists ?pan (exists ?shoe (forall ?sd (exists ?wr (exists ?st (exists ?bt (exists ?sc (exists ?fk (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (Below ?pan ?cb) (AlignedVertically ?pan ?cb) (Is ?pan 'pan') (LargerThan ?cb ?pan) (Below ?shoe ?pan) (AlignedVertically ?shoe ?pan) (Is ?shoe 'shoe') (or (not (Is ?sd 'screwdriver')) (Below ?sd ?shoe)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sd ?shoe)) (or (not (Is ?sd 'screwdriver')) (Is ?wr 'wrench')) (or (not (Is ?sd 'screwdriver')) (Below ?wr ?sd)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?wr ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?st 'stapler')) (or (not (Is ?sd 'screwdriver')) (Below ?st ?wr)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?st ?wr)) (or (not (Is ?sd 'screwdriver')) (Is ?bt 'bottle')) (or (not (Is ?sd 'screwdriver')) (Below ?bt ?st)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?bt ?st)) (or (not (Is ?sd 'screwdriver')) (LargerThan ?bt ?st)) (or (not (Is ?sd 'screwdriver')) (Is ?sc 'scissors')) (or (not (Is ?sd 'screwdriver')) (Below ?sc ?bt)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sc ?bt)) (or (not (Is ?sd 'screwdriver')) (Is ?fk 'fork')) (or (not (Is ?sd 'screwdriver')) (Below ?fk ?sc)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?fk ?sc))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "wrench",
+        "screwdriver",
+        "cutting_board",
+        "pan",
+        "fork",
+        "bottle",
+        "shoe",
+        "scissors"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every man holds a yellow cup with a butterfly resting on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?m (implies (Is ?m 'man') (exists ?c (exists ?b (and (Is ?c 'cup') (HasColor ?c 'yellow') (Is ?b 'butterfly') (Holding ?m ?c) (On ?b ?c)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?m (exists ?c (exists ?b (and (or (not (Is ?m 'man')) (Is ?c 'cup')) (or (not (Is ?m 'man')) (HasColor ?c 'yellow')) (or (not (Is ?m 'man')) (Holding ?m ?c)) (or (not (Is ?m 'man')) (Is ?b 'butterfly')) (or (not (Is ?m 'man')) (On ?b ?c)))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "butterfly",
+        "cup"
+    ]
+}

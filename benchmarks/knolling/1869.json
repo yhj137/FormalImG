@@ -1,0 +1,18 @@
+{
+    "prompt": "There are two objects in the scene. For every shoe present, the following conditions apply: the shoe is black; the two objects are a pair of blue jeans on the left and a yellow drill to its right; and the shoe is to the right of the drill. Additionally, for each shoe, there is a white shirt and a red hat above the jeans (hat above shirt), a black hammer and a smaller gray knife above the drill (knife above hammer), and a vertical stack of a black calculator, a black mouse, and gray keys above the shoe, with the keys being smaller than the mouse.",
+    "dsl": "(exists ?jeans (exists ?drill (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?hat (exists ?shirt (exists ?knife (exists ?hammer (exists ?keys (exists ?mouse (exists ?calc (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (Is ?drill 'drill') (Has ?drill 'yellow') (RightOf ?drill ?jeans) (Has ?shoe 'black') (RightOf ?shoe ?drill) (Is ?hat 'hat') (Has ?hat 'red') (Is ?shirt 'shirt') (Has ?shirt 'white') (Above ?shirt ?jeans) (Above ?hat ?shirt) (Is ?knife 'knife') (Has ?knife 'gray') (Is ?hammer 'hammer') (Has ?hammer 'black') (Above ?hammer ?drill) (Above ?knife ?hammer) (SmallerThan ?knife ?hammer) (Is ?keys 'keys') (Has ?keys 'gray') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?calc 'calculator') (Has ?calc 'black') (Above ?calc ?shoe) (Above ?mouse ?calc) (Above ?keys ?mouse) (SmallerThan ?keys ?mouse)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?drill (forall ?shoe (exists ?hat (exists ?shirt (exists ?knife (exists ?hammer (exists ?keys (exists ?mouse (exists ?calc (and (or (not (Is ?shoe 'shoe')) (Is ?jeans 'jeans')) (or (not (Is ?shoe 'shoe')) (Has ?jeans 'blue')) (or (not (Is ?shoe 'shoe')) (OnLeftSide ?jeans)) (or (not (Is ?shoe 'shoe')) (Is ?drill 'drill')) (or (not (Is ?shoe 'shoe')) (RightOf ?drill ?jeans)) (or (not (Is ?shoe 'shoe')) (Has ?drill 'yellow')) (or (not (Is ?shoe 'shoe')) (Has ?shoe 'black')) (or (not (Is ?shoe 'shoe')) (Above ?shirt ?jeans)) (or (not (Is ?shoe 'shoe')) (RightOf ?shoe ?drill)) (or (not (Is ?shoe 'shoe')) (Has ?shirt 'white')) (or (not (Is ?shoe 'shoe')) (Above ?hat ?shirt)) (or (not (Is ?shoe 'shoe')) (Is ?hat 'hat')) (or (not (Is ?shoe 'shoe')) (Above ?hammer ?drill)) (or (not (Is ?shoe 'shoe')) (Is ?shirt 'shirt')) (or (not (Is ?shoe 'shoe')) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (Has ?hat 'red')) (or (not (Is ?shoe 'shoe')) (Has ?hammer 'black')) (or (not (Is ?shoe 'shoe')) (Above ?knife ?hammer)) (or (not (Is ?shoe 'shoe')) (Has ?knife 'gray')) (or (not (Is ?shoe 'shoe')) (Is ?hammer 'hammer')) (or (not (Is ?shoe 'shoe')) (SmallerThan ?knife ?hammer)) (or (not (Is ?shoe 'shoe')) (Is ?keys 'keys')) (or (not (Is ?shoe 'shoe')) (Has ?keys 'gray')) (or (not (Is ?shoe 'shoe')) (Is ?mouse 'mouse')) (or (not (Is ?shoe 'shoe')) (Above ?keys ?mouse)) (or (not (Is ?shoe 'shoe')) (Has ?mouse 'black')) (or (not (Is ?shoe 'shoe')) (Above ?mouse ?calc)) (or (not (Is ?shoe 'shoe')) (SmallerThan ?keys ?mouse)) (or (not (Is ?shoe 'shoe')) (Is ?calc 'calculator')) (or (not (Is ?shoe 'shoe')) (Above ?calc ?shoe)) (or (not (Is ?shoe 'shoe')) (Has ?calc 'black')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "drill",
+        "hat",
+        "hammer",
+        "jeans",
+        "calculator",
+        "mouse",
+        "knife",
+        "shoe",
+        "shirt"
+    ]
+}

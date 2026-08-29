@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a suitcase on the left side. Positioned to the right of the suitcase is a camera, which is physically smaller than the suitcase. A shoe is located below the suitcase, and a sock is placed to the right of the shoe. A screwdriver is found on the right side of the image, positioned to the right of the camera. Additionally, for every donut present in the scene, it must be located to the left of the screwdriver.",
+    "dsl": "(exists ?suitcase (exists ?camera (exists ?shoe (exists ?sock (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Is ?camera 'camera') (Is ?shoe 'shoe') (Is ?sock 'sock') (Is ?screwdriver 'screwdriver') (OnLeftSide ?suitcase) (RightOf ?camera ?suitcase) (SmallerThan ?camera ?suitcase) (Below ?shoe ?suitcase) (RightOf ?sock ?shoe) (OnRightSide ?screwdriver) (RightOf ?screwdriver ?camera) (forall ?donut (implies (Is ?donut 'donut') (LeftOf ?donut ?screwdriver)))))))))",
+    "cnf": "(exists ?suitcase (exists ?camera (exists ?shoe (exists ?sock (exists ?screwdriver (forall ?donut (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (RightOf ?camera ?suitcase) (SmallerThan ?camera ?suitcase) (Is ?camera 'camera') (Below ?shoe ?suitcase) (RightOf ?screwdriver ?camera) (Is ?shoe 'shoe') (RightOf ?sock ?shoe) (OnRightSide ?screwdriver) (or (not (Is ?donut 'donut')) (LeftOf ?donut ?screwdriver)) (Is ?sock 'sock') (Is ?screwdriver 'screwdriver'))))))))",
+    "k": 6,
+    "object_classes": [
+        "camera",
+        "suitcase",
+        "screwdriver",
+        "sock",
+        "shoe",
+        "donut"
+    ]
+}

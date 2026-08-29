@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a backpack, a handbag, and a hat aligned horizontally, with the backpack located on the top side. Below the backpack lies a keyboard, which is physically larger than the scissors positioned below the handbag. The hat is placed above a fork. A donut is situated below the keyboard. Finally, any sock in the image is placed below the donut.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?hat (exists ?keyboard (exists ?scissors (exists ?fork (exists ?donut (and (Is ?backpack 'backpack') (Is ?handbag 'handbag') (Is ?hat 'hat') (Is ?keyboard 'keyboard') (Is ?scissors 'scissors') (Is ?fork 'fork') (Is ?donut 'donut') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?handbag) (AlignedHorizontally ?handbag ?hat) (Below ?keyboard ?backpack) (Below ?scissors ?handbag) (Above ?hat ?fork) (LargerThan ?keyboard ?scissors) (Below ?donut ?keyboard) (forall ?sock (implies (Is ?sock 'sock') (Below ?sock ?donut)))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?hat (exists ?keyboard (exists ?scissors (exists ?fork (exists ?donut (forall ?sock (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?handbag) (Below ?keyboard ?backpack) (Is ?handbag 'handbag') (AlignedHorizontally ?handbag ?hat) (Is ?keyboard 'keyboard') (LargerThan ?keyboard ?scissors) (Below ?scissors ?handbag) (Is ?hat 'hat') (Above ?hat ?fork) (Below ?donut ?keyboard) (Is ?scissors 'scissors') (Is ?fork 'fork') (Is ?donut 'donut') (or (not (Is ?sock 'sock')) (Below ?sock ?donut)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "fork",
+        "hat",
+        "handbag",
+        "backpack",
+        "scissors",
+        "donut"
+    ]
+}

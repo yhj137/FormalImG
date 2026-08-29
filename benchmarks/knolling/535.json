@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is placed on the right side of the scene. For every bowl that is to the left of the drill, there is a camera positioned above it, and the camera is smaller than the bowl.",
+    "dsl": "(exists ?d (and (Is ?d 'drill') (OnRightSide ?d) (forall ?b (implies (and (Is ?b 'bowl') (LeftOf ?b ?d)) (exists ?c (and (Is ?c 'camera') (Above ?c ?b) (SmallerThan ?c ?b)))))))",
+    "cnf": "(exists ?d (forall ?b (exists ?c (and (Is ?d 'drill') (OnRightSide ?d) (or (not (Is ?b 'bowl')) (not (LeftOf ?b ?d)) (Is ?c 'camera')) (or (not (Is ?b 'bowl')) (not (LeftOf ?b ?d)) (Above ?c ?b)) (or (not (Is ?b 'bowl')) (not (LeftOf ?b ?d)) (SmallerThan ?c ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "bowl",
+        "camera"
+    ]
+}

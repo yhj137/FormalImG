@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is positioned on the bottom side of the layout. For every lighter in the scene, there is a red book and a cutting board arranged such that the lighter is placed below the book, the book is located to the left of the cutting board, and the cutting board is positioned above the keyboard.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?book (exists ?cutting_board (and (Is ?book 'book') (Has ?book 'red') (Is ?cutting_board 'cutting_board') (Below ?lighter ?book) (LeftOf ?book ?cutting_board) (Above ?cutting_board ?keyboard))))))))",
+    "cnf": "(exists ?keyboard (forall ?lighter (exists ?book (exists ?cutting_board (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (or (not (Is ?lighter 'lighter')) (Above ?cutting_board ?keyboard)) (or (not (Is ?lighter 'lighter')) (LeftOf ?book ?cutting_board)) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?book)) (or (not (Is ?lighter 'lighter')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?lighter 'lighter')) (Has ?book 'red')) (or (not (Is ?lighter 'lighter')) (Is ?book 'book')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "cutting_board",
+        "lighter",
+        "keyboard"
+    ]
+}

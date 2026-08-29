@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring an organized array of items. There is a cutting board. To the right of the cutting board is a pan, which is situated on the right side of the image. A hat is placed below the cutting board, while a shoe is located below the pan. Headphones are arranged to the left of the cutting board. A game controller is found to the left of the hat, and a phone lies below the game controller. A tie is positioned to the right of the shoe, and a donut sits below the shoe. The cutting board is visually larger than the phone, and the donut is smaller than the pan. Additionally, every carrot included in the scene is located to the left of the headphones.",
+    "dsl": "(exists ?cutting_board (exists ?pan (exists ?hat (exists ?shoe (exists ?headphones (exists ?game_controller (exists ?phone (exists ?tie (exists ?donut (and (Is ?cutting_board 'cutting_board') (Is ?pan 'pan') (Is ?hat 'hat') (Is ?shoe 'shoe') (Is ?headphones 'headphones') (Is ?game_controller 'game_controller') (Is ?phone 'phone') (Is ?tie 'tie') (Is ?donut 'donut') (RightOf ?pan ?cutting_board) (OnRightSide ?pan) (Below ?hat ?cutting_board) (Below ?shoe ?pan) (LeftOf ?headphones ?cutting_board) (LeftOf ?game_controller ?hat) (Below ?phone ?game_controller) (RightOf ?tie ?shoe) (Below ?donut ?shoe) (LargerThan ?cutting_board ?phone) (SmallerThan ?donut ?pan) (forall ?carrot (implies (Is ?carrot 'carrot') (LeftOf ?carrot ?headphones)))))))))))))",
+    "cnf": "(exists ?cutting_board (exists ?pan (exists ?hat (exists ?shoe (exists ?headphones (exists ?game_controller (exists ?phone (exists ?tie (exists ?donut (forall ?carrot (and (Is ?cutting_board 'cutting_board') (RightOf ?pan ?cutting_board) (Below ?hat ?cutting_board) (Is ?pan 'pan') (OnRightSide ?pan) (LeftOf ?headphones ?cutting_board) (Is ?hat 'hat') (LeftOf ?game_controller ?hat) (Below ?shoe ?pan) (LargerThan ?cutting_board ?phone) (Is ?headphones 'headphones') (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?headphones)) (Is ?game_controller 'game_controller') (Below ?phone ?game_controller) (SmallerThan ?donut ?pan) (Is ?shoe 'shoe') (RightOf ?tie ?shoe) (Is ?phone 'phone') (Below ?donut ?shoe) (Is ?tie 'tie') (Is ?donut 'donut'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "carrot",
+        "phone",
+        "game_controller",
+        "cutting_board",
+        "hat",
+        "pan",
+        "headphones",
+        "shoe",
+        "donut"
+    ]
+}

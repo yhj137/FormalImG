@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sandwich located on the left side of the scene.",
+    "dsl": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich)))",
+    "cnf": "(exists ?sandwich (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich)))",
+    "k": 1,
+    "object_classes": [
+        "sandwich"
+    ]
+}

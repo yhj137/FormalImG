@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack, a hat, a sandwich, and a donut arranged in a grid. The backpack is positioned on the top side of the image. The hat is aligned horizontally with the backpack. The sandwich is aligned vertically with the backpack. Finally, the donut is aligned horizontally with the sandwich and vertically with the hat.",
+    "dsl": "(exists ?backpack (exists ?hat (exists ?sandwich (exists ?donut (and (Is ?backpack 'backpack') (Is ?hat 'hat') (Is ?sandwich 'sandwich') (Is ?donut 'donut') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?hat) (AlignedVertically ?backpack ?sandwich) (AlignedHorizontally ?sandwich ?donut) (AlignedVertically ?hat ?donut))))))",
+    "cnf": "(exists ?backpack (exists ?hat (exists ?sandwich (exists ?donut (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (AlignedHorizontally ?backpack ?hat) (AlignedVertically ?backpack ?sandwich) (Is ?hat 'hat') (AlignedVertically ?hat ?donut) (Is ?sandwich 'sandwich') (AlignedHorizontally ?sandwich ?donut) (Is ?donut 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "hat",
+        "backpack",
+        "donut"
+    ]
+}

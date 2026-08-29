@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a neat grid. The top row begins with a black monitor; to the right of the monitor is a game controller, and to the right of the game controller are glasses. The bottom row starts with a red shoe positioned directly below the monitor. To the right of the shoe is a pink donut, which is also located below the game controller. Finally, scissors are placed to the right of the donut and directly below the glasses.",
+    "dsl": "(exists ?monitor (exists ?controller (exists ?glasses (exists ?shoe (exists ?donut (exists ?scissors (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?controller 'game_controller') (Is ?glasses 'glasses') (Is ?shoe 'shoe') (Has ?shoe 'red') (Is ?donut 'donut') (Has ?donut 'pink') (Is ?scissors 'scissors') (RightOf ?controller ?monitor) (RightOf ?glasses ?controller) (Below ?shoe ?monitor) (RightOf ?donut ?shoe) (Below ?donut ?controller) (RightOf ?scissors ?donut) (Below ?scissors ?glasses))))))))",
+    "cnf": "(exists ?monitor (exists ?controller (exists ?glasses (exists ?shoe (exists ?donut (exists ?scissors (and (Is ?monitor 'monitor') (Has ?monitor 'black') (RightOf ?controller ?monitor) (Below ?shoe ?monitor) (Is ?controller 'game_controller') (RightOf ?glasses ?controller) (Has ?shoe 'red') (RightOf ?donut ?shoe) (Below ?donut ?controller) (Is ?glasses 'glasses') (Below ?scissors ?glasses) (Is ?shoe 'shoe') (Has ?donut 'pink') (RightOf ?scissors ?donut) (Is ?donut 'donut') (Is ?scissors 'scissors'))))))))",
+    "k": 6,
+    "object_classes": [
+        "scissors",
+        "game_controller",
+        "monitor",
+        "glasses",
+        "shoe",
+        "donut"
+    ]
+}

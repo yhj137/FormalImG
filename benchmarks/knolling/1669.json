@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the top side, and a red handbag is located below the suitcase. For every set of keys in the image, they are placed below the handbag, and there is a wallet below the keys, a keyboard below the wallet, a black mouse aligned horizontally with the keyboard, a sandwich below the mouse, a screwdriver above the sandwich, and a backpack on the right side that is larger than the handbag.",
+    "dsl": "(exists ?s (exists ?hb (and (Is ?s 'suitcase') (OnTopSide ?s) (Is ?hb 'handbag') (Has ?hb 'red') (Below ?hb ?s) (forall ?k (implies (Is ?k 'keys') (exists ?w (exists ?kb (exists ?m (exists ?bp (exists ?sand (exists ?sd (and (Is ?w 'wallet') (Is ?kb 'keyboard') (Is ?m 'mouse') (Has ?m 'black') (Is ?bp 'backpack') (Is ?sand 'sandwich') (Is ?sd 'screwdriver') (Below ?k ?hb) (Below ?w ?k) (Below ?kb ?w) (AlignedHorizontally ?kb ?m) (OnRightSide ?bp) (LargerThan ?bp ?hb) (Below ?sand ?m) (Above ?sd ?sand)))))))))))))",
+    "cnf": "(exists ?s (exists ?hb (forall ?k (exists ?w (exists ?kb (exists ?m (exists ?bp (exists ?sand (exists ?sd (and (Is ?s 'suitcase') (OnTopSide ?s) (Below ?hb ?s) (Has ?hb 'red') (or (not (Is ?k 'keys')) (Below ?k ?hb)) (Is ?hb 'handbag') (or (not (Is ?k 'keys')) (LargerThan ?bp ?hb)) (or (not (Is ?k 'keys')) (Is ?sd 'screwdriver')) (or (not (Is ?k 'keys')) (Below ?w ?k)) (or (not (Is ?k 'keys')) (OnRightSide ?bp)) (or (not (Is ?k 'keys')) (Below ?sand ?m)) (or (not (Is ?k 'keys')) (Is ?sand 'sandwich')) (or (not (Is ?k 'keys')) (Above ?sd ?sand)) (or (not (Is ?k 'keys')) (Below ?kb ?w)) (or (not (Is ?k 'keys')) (Is ?w 'wallet')) (or (not (Is ?k 'keys')) (AlignedHorizontally ?kb ?m)) (or (not (Is ?k 'keys')) (Is ?bp 'backpack')) (or (not (Is ?k 'keys')) (Is ?kb 'keyboard')) (or (not (Is ?k 'keys')) (Has ?m 'black')) (or (not (Is ?k 'keys')) (Is ?m 'mouse'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "backpack",
+        "mouse",
+        "wallet",
+        "keyboard",
+        "suitcase",
+        "screwdriver",
+        "sandwich",
+        "handbag"
+    ]
+}

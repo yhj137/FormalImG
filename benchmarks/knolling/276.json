@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every ruler in the scene, there corresponds a tie located to its right. Furthermore, each of these ties is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?r (implies (Is ?r 'ruler') (exists ?t (and (Is ?t 'tie') (RightOf ?t ?r) (OnBottomSide ?t))))))",
+    "cnf": "(forall ?r (exists ?t (and (or (not (Is ?r 'ruler')) (Is ?t 'tie')) (or (not (Is ?r 'ruler')) (RightOf ?t ?r)) (or (not (Is ?r 'ruler')) (OnBottomSide ?t)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "tie"
+    ]
+}

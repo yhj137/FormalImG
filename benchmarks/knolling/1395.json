@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged horizontal row of objects. The sequence begins with a blue backpack, followed to its right by a red handbag, then a black camera, a yellow drill, a brown cutting board, and finally a pair of black glasses at the end of the line. All these items are aligned horizontally. Furthermore, for every donut in the scene, it is pink and positioned to the left of the backpack, maintaining the same horizontal alignment with the rest of the items.",
+    "dsl": "(exists ?backpack (exists ?handbag (exists ?camera (exists ?drill (exists ?board (exists ?glasses (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?handbag 'handbag') (Has ?handbag 'red') (Is ?camera 'camera') (Has ?camera 'black') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?board 'cutting_board') (Has ?board 'brown') (Is ?glasses 'glasses') (Has ?glasses 'black') (RightOf ?handbag ?backpack) (RightOf ?camera ?handbag) (RightOf ?drill ?camera) (RightOf ?board ?drill) (RightOf ?glasses ?board) (AlignedHorizontally ?backpack ?handbag) (AlignedHorizontally ?handbag ?camera) (AlignedHorizontally ?camera ?drill) (AlignedHorizontally ?drill ?board) (AlignedHorizontally ?board ?glasses) (forall ?donut (implies (Is ?donut 'donut') (and (Has ?donut 'pink') (LeftOf ?donut ?backpack) (AlignedHorizontally ?donut ?backpack)))))))))))",
+    "cnf": "(exists ?backpack (exists ?handbag (exists ?camera (exists ?drill (exists ?board (exists ?glasses (forall ?donut (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (RightOf ?handbag ?backpack) (AlignedHorizontally ?backpack ?handbag) (Has ?handbag 'red') (RightOf ?camera ?handbag) (or (not (Is ?donut 'donut')) (LeftOf ?donut ?backpack)) (AlignedHorizontally ?handbag ?camera) (Is ?handbag 'handbag') (Has ?camera 'black') (RightOf ?drill ?camera) (or (not (Is ?donut 'donut')) (AlignedHorizontally ?donut ?backpack)) (or (not (Is ?donut 'donut')) (Has ?donut 'pink')) (AlignedHorizontally ?camera ?drill) (Is ?camera 'camera') (Has ?drill 'yellow') (RightOf ?board ?drill) (AlignedHorizontally ?drill ?board) (Is ?drill 'drill') (Has ?board 'brown') (RightOf ?glasses ?board) (AlignedHorizontally ?board ?glasses) (Is ?board 'cutting_board') (Has ?glasses 'black') (Is ?glasses 'glasses')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "drill",
+        "handbag",
+        "backpack",
+        "cutting_board",
+        "camera",
+        "donut"
+    ]
+}

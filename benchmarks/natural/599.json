@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden basket located to the left of an elephant. All apples in the scene are inside the wooden basket.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?b) (LeftOf ?b ?e) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?e (forall ?a (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (RightOf ?e ?b) (LeftOf ?b ?e) (Is ?e 'elephant') (or (not (Is ?a 'apple')) (In ?a ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "elephant",
+        "basket",
+        "apple"
+    ]
+}

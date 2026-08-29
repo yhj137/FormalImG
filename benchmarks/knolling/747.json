@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the left side. A pan is located to the right of the cutting board, and the two are aligned horizontally. Additionally, for every wrench in the image, it is aligned vertically with the cutting board, and there is a plate situated to the right of that wrench.",
+    "dsl": "(exists ?cb (exists ?pan (and (Is ?cb 'cutting_board') (Is ?pan 'pan') (OnLeftSide ?cb) (RightOf ?pan ?cb) (AlignedHorizontally ?cb ?pan) (forall ?w (implies (Is ?w 'wrench') (exists ?pl (and (Is ?pl 'plate') (AlignedVertically ?w ?cb) (RightOf ?pl ?w))))))))",
+    "cnf": "(exists ?cb (exists ?pan (forall ?w (exists ?pl (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (RightOf ?pan ?cb) (AlignedHorizontally ?cb ?pan) (Is ?pan 'pan') (or (not (Is ?w 'wrench')) (AlignedVertically ?w ?cb)) (or (not (Is ?w 'wrench')) (Is ?pl 'plate')) (or (not (Is ?w 'wrench')) (RightOf ?pl ?w)))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "cutting_board",
+        "pan",
+        "plate"
+    ]
+}

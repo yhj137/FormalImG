@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image organized in a structured layout. On the top left side, there is a backpack, and on the top right side, there is a monitor. The backpack is to the left of the monitor. Below the backpack is a shirt, and below the shirt is a sock; these three are aligned vertically. Correspondingly, below the monitor is a book, and below the book is a bowl; these three are also aligned vertically. The scene also follows a specific rule: for every apple in the image, there is a lemon to its left, a pair of scissors below the lemon, and a stapler below the apple. Each apple is positioned to the left of the bowl.",
+    "dsl": "(exists ?backpack (exists ?monitor (exists ?shirt (exists ?book (exists ?sock (exists ?bowl (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (OnTopSide ?backpack) (Is ?monitor 'monitor') (OnRightSide ?monitor) (OnTopSide ?monitor) (LeftOf ?backpack ?monitor) (Is ?shirt 'shirt') (Below ?shirt ?backpack) (AlignedVertically ?shirt ?backpack) (Is ?book 'book') (Below ?book ?monitor) (AlignedVertically ?book ?monitor) (Is ?sock 'sock') (Below ?sock ?shirt) (AlignedVertically ?sock ?shirt) (Is ?bowl 'bowl') (Below ?bowl ?book) (AlignedVertically ?bowl ?book) (forall ?apple (implies (Is ?apple 'apple') (exists ?lemon (exists ?scissors (exists ?stapler (and (Is ?lemon 'lemon') (Is ?scissors 'scissors') (Is ?stapler 'stapler') (LeftOf ?lemon ?apple) (Below ?scissors ?lemon) (Below ?stapler ?apple) (LeftOf ?apple ?bowl))))))))))))))",
+    "cnf": "(exists ?backpack (exists ?monitor (exists ?shirt (exists ?book (exists ?sock (exists ?bowl (forall ?apple (exists ?lemon (exists ?scissors (exists ?stapler (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (OnTopSide ?backpack) (LeftOf ?backpack ?monitor) (Below ?shirt ?backpack) (OnTopSide ?monitor) (Below ?book ?monitor) (AlignedVertically ?shirt ?backpack) (Is ?shirt 'shirt') (OnRightSide ?monitor) (AlignedVertically ?book ?monitor) (Is ?book 'book') (Below ?sock ?shirt) (Is ?monitor 'monitor') (Below ?bowl ?book) (AlignedVertically ?sock ?shirt) (Is ?sock 'sock') (AlignedVertically ?bowl ?book) (Is ?bowl 'bowl') (or (not (Is ?apple 'apple')) (LeftOf ?apple ?bowl)) (or (not (Is ?apple 'apple')) (Below ?stapler ?apple)) (or (not (Is ?apple 'apple')) (Below ?scissors ?lemon)) (or (not (Is ?apple 'apple')) (Is ?stapler 'stapler')) (or (not (Is ?apple 'apple')) (LeftOf ?lemon ?apple)) (or (not (Is ?apple 'apple')) (Is ?scissors 'scissors')) (or (not (Is ?apple 'apple')) (Is ?lemon 'lemon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "stapler",
+        "sock",
+        "apple",
+        "scissors",
+        "lemon",
+        "backpack",
+        "monitor",
+        "bowl",
+        "shirt"
+    ]
+}

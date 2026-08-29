@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. Every hammer is located to the left of a round plant.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?h (implies (Is ?h 'hammer') (exists ?p (and (Is ?p 'plant') (HasShape ?p 'round') (LeftOf ?h ?p))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?h (exists ?p (and (or (not (Is ?h 'hammer')) (Is ?p 'plant')) (or (not (Is ?h 'hammer')) (HasShape ?p 'round')) (or (not (Is ?h 'hammer')) (LeftOf ?h ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "hammer",
+        "plant"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A sandwich is positioned on the left side of the scene. Directly below the sandwich are scissors, and a pen is placed to the left of the scissors. Furthermore, for every hat in the image, it is located on the right side and is larger than the sandwich; there is also a glove positioned below each hat that is horizontally aligned with the scissors.",
+    "dsl": "(exists ?sandwich (exists ?scissors (exists ?pen (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (Is ?scissors 'scissors') (Below ?scissors ?sandwich) (Is ?pen 'pen') (LeftOf ?pen ?scissors) (forall ?hat (implies (Is ?hat 'hat') (exists ?glove (and (Is ?glove 'glove') (OnRightSide ?hat) (LargerThan ?hat ?sandwich) (Below ?glove ?hat) (AlignedHorizontally ?glove ?scissors)))))))))",
+    "cnf": "(exists ?sandwich (exists ?scissors (exists ?pen (forall ?hat (exists ?glove (and (Is ?sandwich 'sandwich') (OnLeftSide ?sandwich) (Below ?scissors ?sandwich) (or (not (Is ?hat 'hat')) (LargerThan ?hat ?sandwich)) (Is ?scissors 'scissors') (LeftOf ?pen ?scissors) (or (not (Is ?hat 'hat')) (OnRightSide ?hat)) (or (not (Is ?hat 'hat')) (Below ?glove ?hat)) (or (not (Is ?hat 'hat')) (AlignedHorizontally ?glove ?scissors)) (Is ?pen 'pen') (or (not (Is ?hat 'hat')) (Is ?glove 'glove'))))))))",
+    "k": 5,
+    "object_classes": [
+        "pen",
+        "hat",
+        "scissors",
+        "sandwich",
+        "glove"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an elephant holding a round ball next to a wooden table with a phone on it. To the right of the table is a chair with a blue shirt on it, and a bookshelf stands next to the table with a red hat inside and a green plant on top.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?b (exists ?t (exists ?p (exists ?c (exists ?s (exists ?bs (exists ?h (exists ?pl (and (Is ?e 'elephant') (Is ?b 'ball') (HasShape ?b 'round') (Holding ?e ?b) (NextTo ?e ?t) (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?p 'phone') (On ?p ?t) (Is ?c 'chair') (RightOf ?c ?t) (Is ?s 'shirt') (HasColor ?s 'blue') (On ?s ?c) (Is ?bs 'bookshelf') (NextTo ?bs ?t) (Is ?h 'hat') (HasColor ?h 'red') (In ?h ?bs) (Is ?pl 'plant') (HasColor ?pl 'green') (On ?pl ?bs))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?b (exists ?t (exists ?p (exists ?c (exists ?s (exists ?bs (exists ?h (exists ?pl (and (Is ?e 'elephant') (Holding ?e ?b) (NextTo ?e ?t) (HasShape ?b 'round') (Is ?t 'table') (Is ?b 'ball') (HasMaterial ?t 'wooden') (On ?p ?t) (RightOf ?c ?t) (Is ?p 'phone') (NextTo ?bs ?t) (Is ?c 'chair') (On ?s ?c) (Is ?bs 'bookshelf') (In ?h ?bs) (HasColor ?s 'blue') (On ?pl ?bs) (HasColor ?h 'red') (Is ?s 'shirt') (HasColor ?pl 'green') (Is ?h 'hat') (Is ?pl 'plant'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plant",
+        "ball",
+        "hat",
+        "chair",
+        "phone",
+        "shirt",
+        "table",
+        "bookshelf",
+        "elephant"
+    ]
+}

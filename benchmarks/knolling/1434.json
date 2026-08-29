@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate, it is positioned on the top side of the image. To the right of the plate is a spoon, and to the right of the spoon is a lemon; both the spoon and the lemon are visually smaller than the plate. Directly below the plate is a remote, and below the remote is a calculator. To the right of the remote lies a pair of pliers, with scissors located further to the right of the pliers. Additionally, a wrench is positioned below the pliers.",
+    "dsl": "(forall ?plate (implies (Is ?plate 'plate') (exists ?spoon (exists ?lemon (exists ?remote (exists ?calculator (exists ?pliers (exists ?scissors (exists ?wrench (and (OnTopSide ?plate) (Is ?spoon 'spoon') (Is ?lemon 'lemon') (Is ?remote 'remote') (Is ?calculator 'calculator') (Is ?pliers 'pliers') (Is ?scissors 'scissors') (Is ?wrench 'wrench') (RightOf ?spoon ?plate) (RightOf ?lemon ?spoon) (SmallerThan ?spoon ?plate) (SmallerThan ?lemon ?plate) (Above ?plate ?remote) (Above ?remote ?calculator) (RightOf ?pliers ?remote) (RightOf ?scissors ?pliers) (Above ?pliers ?wrench)))))))))))",
+    "cnf": "(forall ?plate (exists ?spoon (exists ?lemon (exists ?remote (exists ?calculator (exists ?pliers (exists ?scissors (exists ?wrench (and (or (not (Is ?plate 'plate')) (OnTopSide ?plate)) (or (not (Is ?plate 'plate')) (Is ?spoon 'spoon')) (or (not (Is ?plate 'plate')) (Is ?lemon 'lemon')) (or (not (Is ?plate 'plate')) (RightOf ?spoon ?plate)) (or (not (Is ?plate 'plate')) (Is ?remote 'remote')) (or (not (Is ?plate 'plate')) (RightOf ?lemon ?spoon)) (or (not (Is ?plate 'plate')) (Is ?wrench 'wrench')) (or (not (Is ?plate 'plate')) (Is ?calculator 'calculator')) (or (not (Is ?plate 'plate')) (Above ?plate ?remote)) (or (not (Is ?plate 'plate')) (SmallerThan ?spoon ?plate)) (or (not (Is ?plate 'plate')) (SmallerThan ?lemon ?plate)) (or (not (Is ?plate 'plate')) (Is ?scissors 'scissors')) (or (not (Is ?plate 'plate')) (Above ?pliers ?wrench)) (or (not (Is ?plate 'plate')) (Is ?pliers 'pliers')) (or (not (Is ?plate 'plate')) (Above ?remote ?calculator)) (or (not (Is ?plate 'plate')) (RightOf ?scissors ?pliers)) (or (not (Is ?plate 'plate')) (RightOf ?pliers ?remote)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "remote",
+        "pliers",
+        "wrench",
+        "lemon",
+        "calculator",
+        "spoon",
+        "scissors"
+    ]
+}

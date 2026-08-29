@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the scene, there is a hat, and to its right is a glove; these two are aligned horizontally. Below the hat sits a plate, and to the right of the plate is a sandwich positioned on the right side. Every lighter in the image is located below the sandwich and has a pen to its left and a pair of pliers to its right, with the pen and lighter aligned horizontally. Additionally, a book is positioned on the bottom side below each lighter, and this book is larger than the camera located to its right.",
+    "dsl": "(exists ?hat (exists ?glove (exists ?plate (exists ?sandwich (and (Is ?hat 'hat') (OnTopSide ?hat) (Is ?glove 'glove') (RightOf ?glove ?hat) (AlignedHorizontally ?hat ?glove) (Is ?plate 'plate') (Below ?plate ?hat) (Is ?sandwich 'sandwich') (RightOf ?sandwich ?plate) (OnRightSide ?sandwich) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?pen (exists ?pliers (exists ?book (exists ?camera (and (Is ?pen 'pen') (Is ?pliers 'pliers') (Is ?book 'book') (Is ?camera 'camera') (Below ?lighter ?sandwich) (LeftOf ?pen ?lighter) (RightOf ?pliers ?lighter) (AlignedHorizontally ?pen ?lighter) (Below ?book ?lighter) (OnBottomSide ?book) (LargerThan ?book ?camera) (RightOf ?camera ?book)))))))))))))",
+    "cnf": "(exists ?hat (exists ?glove (exists ?plate (exists ?sandwich (forall ?lighter (exists ?pen (exists ?pliers (exists ?book (exists ?camera (and (Is ?hat 'hat') (OnTopSide ?hat) (RightOf ?glove ?hat) (AlignedHorizontally ?hat ?glove) (Is ?glove 'glove') (Below ?plate ?hat) (Is ?plate 'plate') (RightOf ?sandwich ?plate) (Is ?sandwich 'sandwich') (OnRightSide ?sandwich) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?sandwich)) (or (not (Is ?lighter 'lighter')) (Is ?camera 'camera')) (or (not (Is ?lighter 'lighter')) (LeftOf ?pen ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?book 'book')) (or (not (Is ?lighter 'lighter')) (LargerThan ?book ?camera)) (or (not (Is ?lighter 'lighter')) (Is ?pen 'pen')) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?pen ?lighter)) (or (not (Is ?lighter 'lighter')) (RightOf ?pliers ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?pliers 'pliers')) (or (not (Is ?lighter 'lighter')) (Below ?book ?lighter)) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?book)) (or (not (Is ?lighter 'lighter')) (RightOf ?camera ?book))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "lighter",
+        "plate",
+        "pliers",
+        "pen",
+        "camera",
+        "book",
+        "glove",
+        "hat",
+        "sandwich"
+    ]
+}

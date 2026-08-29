@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene depicts a man holding a sandwich next to a wooden desk. A bicycle is also positioned next to the desk. Resting on the desk are a monitor, a plant, and a cup. A pair of glasses is placed to the right of the monitor, and a toy car sits next to the plant. Every orange in the scene is located next to the cup.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?d (exists ?b (exists ?mo (exists ?p (exists ?c (exists ?g (exists ?t (and (Is ?m 'man') (Is ?s 'sandwich') (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?b 'bicycle') (Is ?mo 'monitor') (Is ?p 'plant') (Is ?c 'cup') (Is ?g 'glasses') (Is ?t 'toy car') (Holding ?m ?s) (NextTo ?m ?d) (NextTo ?b ?d) (On ?mo ?d) (On ?p ?d) (On ?c ?d) (RightOf ?g ?mo) (NextTo ?t ?p) (forall ?o (implies (Is ?o 'orange') (NextTo ?o ?c))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?d (exists ?b (exists ?mo (exists ?p (exists ?c (exists ?g (exists ?t (forall ?o (and (Is ?m 'man') (Holding ?m ?s) (NextTo ?m ?d) (Is ?s 'sandwich') (HasMaterial ?d 'wooden') (NextTo ?b ?d) (Is ?d 'desk') (On ?mo ?d) (Is ?b 'bicycle') (On ?p ?d) (Is ?mo 'monitor') (RightOf ?g ?mo) (On ?c ?d) (Is ?p 'plant') (NextTo ?t ?p) (Is ?g 'glasses') (Is ?c 'cup') (or (not (Is ?o 'orange')) (NextTo ?o ?c)) (Is ?t 'toy car')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "toy car",
+        "man",
+        "sandwich",
+        "desk",
+        "plant",
+        "cup",
+        "bicycle",
+        "orange"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the right side, and a laptop is to its left, aligned horizontally. For every lighter in the image, it is located below the laptop and has a wallet to its right, and the backpack is larger than the wallet. Additionally, for each lighter, there is a hat below the backpack, a game controller to the left of the hat (aligned horizontally), a wrench below the game controller, and pliers to the right of the wrench.",
+    "dsl": "(exists ?bp (exists ?lap (and (Is ?bp 'backpack') (OnRightSide ?bp) (Is ?lap 'laptop') (LeftOf ?lap ?bp) (AlignedHorizontally ?lap ?bp) (forall ?lig (implies (Is ?lig 'lighter') (exists ?wal (exists ?hat (exists ?gc (exists ?wr (exists ?pl (and (Is ?wal 'wallet') (Is ?hat 'hat') (Is ?gc 'game_controller') (Is ?wr 'wrench') (Is ?pl 'pliers') (Below ?lig ?lap) (RightOf ?wal ?lig) (LargerThan ?bp ?wal) (Below ?hat ?bp) (LeftOf ?gc ?hat) (AlignedHorizontally ?gc ?hat) (Below ?wr ?gc) (RightOf ?pl ?wr))))))))))))",
+    "cnf": "(exists ?bp (exists ?lap (forall ?lig (exists ?wal (exists ?hat (exists ?gc (exists ?wr (exists ?pl (and (Is ?bp 'backpack') (OnRightSide ?bp) (LeftOf ?lap ?bp) (AlignedHorizontally ?lap ?bp) (Is ?lap 'laptop') (or (not (Is ?lig 'lighter')) (LargerThan ?bp ?wal)) (or (not (Is ?lig 'lighter')) (Below ?lig ?lap)) (or (not (Is ?lig 'lighter')) (Below ?hat ?bp)) (or (not (Is ?lig 'lighter')) (RightOf ?wal ?lig)) (or (not (Is ?lig 'lighter')) (Is ?pl 'pliers')) (or (not (Is ?lig 'lighter')) (LeftOf ?gc ?hat)) (or (not (Is ?lig 'lighter')) (Is ?hat 'hat')) (or (not (Is ?lig 'lighter')) (Is ?wal 'wallet')) (or (not (Is ?lig 'lighter')) (Is ?wr 'wrench')) (or (not (Is ?lig 'lighter')) (RightOf ?pl ?wr)) (or (not (Is ?lig 'lighter')) (AlignedHorizontally ?gc ?hat)) (or (not (Is ?lig 'lighter')) (Is ?gc 'game_controller')) (or (not (Is ?lig 'lighter')) (Below ?wr ?gc)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "wrench",
+        "game_controller",
+        "hat",
+        "backpack",
+        "lighter",
+        "wallet"
+    ]
+}

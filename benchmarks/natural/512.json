@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a child holding a full bottle, with every ball positioned next to the child.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (and (Is ?c 'child') (forall ?b (implies (Is ?b 'ball') (NextTo ?b ?c))) (exists ?bot (and (Is ?bot 'bottle') (HasState ?bot 'full') (Holding ?c ?bot))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (forall ?b (exists ?bot (and (Is ?c 'child') (or (not (Is ?b 'ball')) (NextTo ?b ?c)) (Holding ?c ?bot) (HasState ?bot 'full') (Is ?bot 'bottle'))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "child",
+        "ball"
+    ]
+}

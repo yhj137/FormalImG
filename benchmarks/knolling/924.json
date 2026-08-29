@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard positioned on the left side and a stapler positioned on the right side. Every pair of scissors in the image is located to the left of the stapler and has a screwdriver positioned below it, with a pair of glasses positioned below the screwdriver. Additionally, the screwdriver is aligned horizontally with the keyboard, and the keyboard is visually larger than the glasses.",
+    "dsl": "(exists ?k (exists ?st (and (Is ?k 'keyboard') (OnLeftSide ?k) (Is ?st 'stapler') (OnRightSide ?st) (forall ?sc (implies (Is ?sc 'scissors') (exists ?sd (exists ?g (and (Is ?sd 'screwdriver') (Is ?g 'glasses') (LeftOf ?sc ?st) (Below ?sd ?sc) (Below ?g ?sd) (AlignedHorizontally ?k ?sd) (LargerThan ?k ?g)))))))))",
+    "cnf": "(exists ?k (exists ?st (forall ?sc (exists ?sd (exists ?g (and (Is ?k 'keyboard') (OnLeftSide ?k) (or (not (Is ?sc 'scissors')) (AlignedHorizontally ?k ?sd)) (or (not (Is ?sc 'scissors')) (LargerThan ?k ?g)) (or (not (Is ?sc 'scissors')) (Below ?g ?sd)) (or (not (Is ?sc 'scissors')) (Below ?sd ?sc)) (or (not (Is ?sc 'scissors')) (Is ?g 'glasses')) (or (not (Is ?sc 'scissors')) (LeftOf ?sc ?st)) (or (not (Is ?sc 'scissors')) (Is ?sd 'screwdriver')) (OnRightSide ?st) (Is ?st 'stapler')))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "keyboard",
+        "screwdriver",
+        "scissors"
+    ]
+}

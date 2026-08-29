@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a backpack, a pizza, a camera, and a pair of pliers. The backpack is visually larger than the pizza. The camera is smaller than the pizza, while being larger than the pliers. The pliers are positioned on the right side of the image.",
+    "dsl": "(exists ?backpack (exists ?pizza (exists ?camera (exists ?pliers (and (Is ?backpack 'backpack') (Is ?pizza 'pizza') (Is ?camera 'camera') (Is ?pliers 'pliers') (LargerThan ?backpack ?pizza) (SmallerThan ?camera ?pizza) (LargerThan ?camera ?pliers) (OnRightSide ?pliers))))))",
+    "cnf": "(exists ?backpack (exists ?pizza (exists ?camera (exists ?pliers (and (Is ?backpack 'backpack') (LargerThan ?backpack ?pizza) (Is ?pizza 'pizza') (SmallerThan ?camera ?pizza) (Is ?camera 'camera') (LargerThan ?camera ?pliers) (Is ?pliers 'pliers') (OnRightSide ?pliers))))))",
+    "k": 4,
+    "object_classes": [
+        "pliers",
+        "backpack",
+        "pizza",
+        "camera"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a backpack, a book, and glasses. The backpack is positioned on the left side of the image. The book is placed above the backpack, and the glasses are placed above the book. The backpack is larger than the book. Additionally, for every fork in the scene, there is a sandwich below it, a donut below the sandwich, and a mouse below the donut. The backpack is visually larger than the sandwich, and the sandwich is larger than the donut.",
+    "dsl": "(exists ?backpack (exists ?book (exists ?glasses (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?book 'book') (Is ?glasses 'glasses') (Above ?glasses ?book) (Above ?book ?backpack) (LargerThan ?backpack ?book) (forall ?fork (implies (Is ?fork 'fork') (exists ?sandwich (exists ?donut (exists ?mouse (and (Is ?sandwich 'sandwich') (Is ?donut 'donut') (Is ?mouse 'mouse') (Above ?fork ?sandwich) (Above ?sandwich ?donut) (Above ?donut ?mouse) (LargerThan ?backpack ?sandwich) (LargerThan ?sandwich ?donut)))))))))))",
+    "cnf": "(exists ?backpack (exists ?book (exists ?glasses (forall ?fork (exists ?sandwich (exists ?donut (exists ?mouse (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Above ?book ?backpack) (LargerThan ?backpack ?book) (Above ?glasses ?book) (or (not (Is ?fork 'fork')) (LargerThan ?backpack ?sandwich)) (Is ?book 'book') (Is ?glasses 'glasses') (or (not (Is ?fork 'fork')) (Above ?donut ?mouse)) (or (not (Is ?fork 'fork')) (LargerThan ?sandwich ?donut)) (or (not (Is ?fork 'fork')) (Above ?sandwich ?donut)) (or (not (Is ?fork 'fork')) (Is ?mouse 'mouse')) (or (not (Is ?fork 'fork')) (Above ?fork ?sandwich)) (or (not (Is ?fork 'fork')) (Is ?donut 'donut')) (or (not (Is ?fork 'fork')) (Is ?sandwich 'sandwich'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "glasses",
+        "fork",
+        "backpack",
+        "mouse",
+        "sandwich",
+        "donut"
+    ]
+}

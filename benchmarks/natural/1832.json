@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every bus is positioned to the right of an elephant. A lion is next to the elephant, and a boat is next to the lion. Inside the boat, a child holds a hammer and a metal knife. A backpack is next to the child, containing a plate with a fruit inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?x0 (implies (Is ?x0 'bus') (exists ?x1 (and (Is ?x1 'elephant') (RightOf ?x0 ?x1) (exists ?x2 (and (Is ?x2 'lion') (NextTo ?x1 ?x2) (exists ?x3 (and (Is ?x3 'boat') (NextTo ?x2 ?x3) (exists ?x4 (and (Is ?x4 'child') (In ?x4 ?x3) (exists ?x5 (and (Is ?x5 'backpack') (NextTo ?x4 ?x5) (exists ?x6 (and (Is ?x6 'plate') (In ?x6 ?x5) (exists ?x7 (and (Is ?x7 'fruit') (In ?x7 ?x6) (exists ?x8 (and (Is ?x8 'hammer') (Holding ?x4 ?x8) (exists ?x9 (and (Is ?x9 'knife') (HasMaterial ?x9 'metal') (Holding ?x4 ?x9))))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?x0 (exists ?x1 (exists ?x2 (exists ?x3 (exists ?x4 (exists ?x5 (exists ?x6 (exists ?x7 (exists ?x8 (exists ?x9 (and (or (not (Is ?x0 'bus')) (Is ?x1 'elephant')) (or (not (Is ?x0 'bus')) (RightOf ?x0 ?x1)) (or (not (Is ?x0 'bus')) (Is ?x2 'lion')) (or (not (Is ?x0 'bus')) (NextTo ?x1 ?x2)) (or (not (Is ?x0 'bus')) (Is ?x3 'boat')) (or (not (Is ?x0 'bus')) (NextTo ?x2 ?x3)) (or (not (Is ?x0 'bus')) (Is ?x4 'child')) (or (not (Is ?x0 'bus')) (In ?x4 ?x3)) (or (not (Is ?x0 'bus')) (Is ?x5 'backpack')) (or (not (Is ?x0 'bus')) (NextTo ?x4 ?x5)) (or (not (Is ?x0 'bus')) (Is ?x6 'plate')) (or (not (Is ?x0 'bus')) (Holding ?x4 ?x8)) (or (not (Is ?x0 'bus')) (In ?x6 ?x5)) (or (not (Is ?x0 'bus')) (Is ?x8 'hammer')) (or (not (Is ?x0 'bus')) (Is ?x9 'knife')) (or (not (Is ?x0 'bus')) (Holding ?x4 ?x9)) (or (not (Is ?x0 'bus')) (Is ?x7 'fruit')) (or (not (Is ?x0 'bus')) (In ?x7 ?x6)) (or (not (Is ?x0 'bus')) (HasMaterial ?x9 'metal'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "knife",
+        "bus",
+        "boat",
+        "lion",
+        "hammer",
+        "fruit",
+        "elephant",
+        "plate",
+        "child",
+        "backpack"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. An open wooden wardrobe stands in the scene, containing a shirt. Additionally, all keys in the image are located inside this wardrobe. Next to the wardrobe is an open laptop, with a cup positioned to its right. To the left of the wardrobe sits a pizza. Perched on the pizza is a toy car, which is next to a cake. Finally, a bus is located to the left of the pizza.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (HasState ?w 'open') (exists ?s (and (Is ?s 'shirt') (In ?s ?w) (forall ?k (implies (Is ?k 'key') (In ?k ?w))) (exists ?l (and (Is ?l 'laptop') (HasState ?l 'open') (NextTo ?l ?w) (exists ?c (and (Is ?c 'cup') (RightOf ?c ?l) (exists ?p (and (Is ?p 'pizza') (LeftOf ?p ?w) (exists ?t (and (Is ?t 'toy car') (On ?t ?p) (exists ?ck (and (Is ?ck 'cake') (NextTo ?ck ?t) (exists ?b (and (Is ?b 'bus') (LeftOf ?b ?p))))))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?s (forall ?k (exists ?l (exists ?c (exists ?p (exists ?t (exists ?ck (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (HasState ?w 'open') (In ?s ?w) (or (not (Is ?k 'key')) (In ?k ?w)) (Is ?s 'shirt') (NextTo ?l ?w) (LeftOf ?p ?w) (HasState ?l 'open') (RightOf ?c ?l) (Is ?p 'pizza') (On ?t ?p) (Is ?l 'laptop') (Is ?c 'cup') (LeftOf ?b ?p) (Is ?t 'toy car') (NextTo ?ck ?t) (Is ?b 'bus') (Is ?ck 'cake'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "laptop",
+        "cake",
+        "pizza",
+        "toy car",
+        "cup",
+        "bus",
+        "key",
+        "wardrobe"
+    ]
+}

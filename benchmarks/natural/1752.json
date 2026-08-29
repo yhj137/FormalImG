@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a man sitting on a metal bench, holding a key. A screwdriver is located to his left. To his right lies a gray jacket, on which all the flowers in the scene are placed. A pair of dirty shoes is next to the bench, and a fork sits on the bench with a spoon beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?j (exists ?s (exists ?k (exists ?sd (and (Is ?b 'bench') (HasMaterial ?b 'metal') (Is ?m 'man') (On ?m ?b) (Is ?j 'jacket') (HasColor ?j 'gray') (RightOf ?j ?m) (Is ?s 'shoes') (HasState ?s 'dirty') (NextTo ?s ?b) (Is ?k 'key') (Holding ?m ?k) (Is ?sd 'screwdriver') (LeftOf ?sd ?m) (forall ?f (implies (Is ?f 'flower') (On ?f ?j))) (exists ?fk (exists ?sp (and (Is ?fk 'fork') (On ?fk ?b) (Is ?sp 'spoon') (NextTo ?sp ?fk))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?j (exists ?s (exists ?k (exists ?sd (forall ?f (exists ?fk (exists ?sp (and (Is ?b 'bench') (HasMaterial ?b 'metal') (On ?m ?b) (NextTo ?s ?b) (Is ?m 'man') (RightOf ?j ?m) (On ?fk ?b) (HasState ?s 'dirty') (Holding ?m ?k) (HasColor ?j 'gray') (or (not (Is ?f 'flower')) (On ?f ?j)) (Is ?fk 'fork') (NextTo ?sp ?fk) (Is ?s 'shoes') (LeftOf ?sd ?m) (Is ?k 'key') (Is ?j 'jacket') (Is ?sp 'spoon') (Is ?sd 'screwdriver'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "fork",
+        "spoon",
+        "shoes",
+        "man",
+        "jacket",
+        "flower",
+        "screwdriver",
+        "key"
+    ]
+}

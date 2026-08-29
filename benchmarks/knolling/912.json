@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a cutting board and a game controller. The cutting board is visually larger than the game controller, and they are aligned vertically. For every mouse in the scene, there is a glove and a fork associated with it. The mouse is aligned vertically with the game controller, and the game controller is larger than the mouse. The glove is aligned vertically with the mouse, and the fork is aligned vertically with the glove. The fork is positioned on the bottom side of the image.",
+    "dsl": "(exists ?board (exists ?controller (and (Is ?board 'cutting_board') (Is ?controller 'game_controller') (LargerThan ?board ?controller) (AlignedVertically ?board ?controller) (forall ?m (implies (Is ?m 'mouse') (exists ?glove (exists ?fork (and (Is ?glove 'glove') (Is ?fork 'fork') (LargerThan ?controller ?m) (AlignedVertically ?m ?controller) (AlignedVertically ?glove ?m) (AlignedVertically ?fork ?glove) (OnBottomSide ?fork)))))))))",
+    "cnf": "(exists ?board (exists ?controller (forall ?m (exists ?glove (exists ?fork (and (Is ?board 'cutting_board') (LargerThan ?board ?controller) (AlignedVertically ?board ?controller) (Is ?controller 'game_controller') (or (not (Is ?m 'mouse')) (LargerThan ?controller ?m)) (or (not (Is ?m 'mouse')) (AlignedVertically ?m ?controller)) (or (not (Is ?m 'mouse')) (Is ?fork 'fork')) (or (not (Is ?m 'mouse')) (AlignedVertically ?glove ?m)) (or (not (Is ?m 'mouse')) (Is ?glove 'glove')) (or (not (Is ?m 'mouse')) (AlignedVertically ?fork ?glove)) (or (not (Is ?m 'mouse')) (OnBottomSide ?fork))))))))",
+    "k": 5,
+    "object_classes": [
+        "game_controller",
+        "cutting_board",
+        "fork",
+        "mouse",
+        "glove"
+    ]
+}

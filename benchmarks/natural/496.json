@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every lamp is contained inside a cylindrical hat resting on it, with a round cake positioned to its right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?l (implies (Is ?l 'lamp') (exists ?h (exists ?c (and (Is ?h 'hat') (HasShape ?h 'cylindrical') (Is ?c 'cake') (HasShape ?c 'round') (On ?h ?l) (In ?l ?h) (RightOf ?c ?l)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?l (exists ?h (exists ?c (and (or (not (Is ?l 'lamp')) (Is ?h 'hat')) (or (not (Is ?l 'lamp')) (HasShape ?h 'cylindrical')) (or (not (Is ?l 'lamp')) (Is ?c 'cake')) (or (not (Is ?l 'lamp')) (On ?h ?l)) (or (not (Is ?l 'lamp')) (HasShape ?c 'round')) (or (not (Is ?l 'lamp')) (In ?l ?h)) (or (not (Is ?l 'lamp')) (RightOf ?c ?l)))))))",
+    "k": 3,
+    "object_classes": [
+        "cake",
+        "lamp",
+        "hat"
+    ]
+}

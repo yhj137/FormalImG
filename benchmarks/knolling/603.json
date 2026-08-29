@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A hat is positioned on the left side of the layout. The hat is placed above a phone, and the phone is visibly smaller than the hat. A mouse is aligned horizontally with the phone. Furthermore, the mouse is positioned above a donut.",
+    "dsl": "(exists ?hat (exists ?phone (exists ?mouse (exists ?donut (and (Is ?hat 'hat') (Is ?phone 'phone') (Is ?mouse 'mouse') (Is ?donut 'donut') (OnLeftSide ?hat) (Above ?hat ?phone) (SmallerThan ?phone ?hat) (AlignedHorizontally ?phone ?mouse) (Above ?mouse ?donut))))))",
+    "cnf": "(exists ?hat (exists ?phone (exists ?mouse (exists ?donut (and (Is ?hat 'hat') (OnLeftSide ?hat) (Above ?hat ?phone) (SmallerThan ?phone ?hat) (Is ?phone 'phone') (AlignedHorizontally ?phone ?mouse) (Is ?mouse 'mouse') (Above ?mouse ?donut) (Is ?donut 'donut'))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "phone",
+        "donut",
+        "mouse"
+    ]
+}

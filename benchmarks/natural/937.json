@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a sofa with a rug lying next to it. A round cake is placed on the rug, with a cup positioned to the left of the cake. Every bird in the scene is on the sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?r (exists ?k (and (Is ?s 'sofa') (Is ?r 'rug') (Is ?k 'cake') (HasShape ?k 'round') (NextTo ?r ?s) (On ?k ?r) (forall ?b (implies (Is ?b 'bird') (On ?b ?s))) (exists ?c (and (Is ?c 'cup') (LeftOf ?c ?k))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?r (exists ?k (forall ?b (exists ?c (and (Is ?s 'sofa') (NextTo ?r ?s) (or (not (Is ?b 'bird')) (On ?b ?s)) (Is ?r 'rug') (On ?k ?r) (HasShape ?k 'round') (LeftOf ?c ?k) (Is ?k 'cake') (Is ?c 'cup'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sofa",
+        "cake",
+        "cup",
+        "rug",
+        "bird"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. A standing child is located next to a bus and is holding an open umbrella. Any butterflies present in the scene are flying above this umbrella. To the left of the child stands a wardrobe. Resting on the wardrobe are a monitor that is turned off and a lamp that is turned on. A cup sits next to the monitor, with a spoon lying on the cup. Additionally, a sleeping cat is positioned next to the wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?u (exists ?w (exists ?m (exists ?l (exists ?cp (exists ?s (exists ?ct (and (Is ?b 'bus') (Is ?c 'child') (Is ?u 'umbrella') (Is ?w 'wardrobe') (Is ?m 'monitor') (Is ?l 'lamp') (Is ?cp 'cup') (Is ?s 'spoon') (Is ?ct 'cat') (NextTo ?c ?b) (HasState ?c 'standing') (Holding ?c ?u) (HasState ?u 'open') (LeftOf ?w ?c) (On ?m ?w) (HasState ?m 'off') (On ?l ?w) (HasState ?l 'on') (NextTo ?cp ?m) (On ?s ?cp) (NextTo ?ct ?w) (HasState ?ct 'sleeping') (forall ?bt (implies (Is ?bt 'butterfly') (Above ?bt ?u))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?u (exists ?w (exists ?m (exists ?l (exists ?cp (exists ?s (exists ?ct (forall ?bt (and (Is ?b 'bus') (NextTo ?c ?b) (Is ?c 'child') (HasState ?c 'standing') (Holding ?c ?u) (LeftOf ?w ?c) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?w 'wardrobe') (On ?m ?w) (or (not (Is ?bt 'butterfly')) (Above ?bt ?u)) (On ?l ?w) (Is ?m 'monitor') (HasState ?m 'off') (NextTo ?ct ?w) (Is ?l 'lamp') (HasState ?l 'on') (NextTo ?cp ?m) (Is ?ct 'cat') (HasState ?ct 'sleeping') (Is ?cp 'cup') (On ?s ?cp) (Is ?s 'spoon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "child",
+        "spoon",
+        "monitor",
+        "lamp",
+        "cup",
+        "butterfly",
+        "cat",
+        "bus",
+        "wardrobe"
+    ]
+}

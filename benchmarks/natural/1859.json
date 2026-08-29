@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo of an outdoor scene featuring a bus with a car next to it. All trees are positioned to the right of the bus, while a desk sits to the left. A dirty pan containing a spoon and a fork rests on the desk. A bird is above the desk holding a plant, and a sleeping lion lies next to the bus.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bus') (exists ?c (and (Is ?c 'car') (NextTo ?c ?b))) (forall ?t (implies (Is ?t 'tree') (RightOf ?t ?b))) (exists ?d (and (Is ?d 'desk') (LeftOf ?d ?b) (exists ?p (and (Is ?p 'pan') (HasState ?p 'dirty') (On ?p ?d) (exists ?s (and (Is ?s 'spoon') (In ?s ?p))) (exists ?f (and (Is ?f 'fork') (In ?f ?p))))) (exists ?bi (and (Is ?bi 'bird') (Above ?bi ?d) (exists ?pl (and (Is ?pl 'plant') (Holding ?bi ?pl))))))) (exists ?l (and (Is ?l 'lion') (NextTo ?l ?b) (HasState ?l 'sleeping'))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?c (forall ?t (exists ?d (exists ?p (exists ?s (exists ?f (exists ?bi (exists ?pl (exists ?l (and (Is ?b 'bus') (NextTo ?c ?b) (or (not (Is ?t 'tree')) (RightOf ?t ?b)) (Is ?c 'car') (LeftOf ?d ?b) (NextTo ?l ?b) (Is ?d 'desk') (On ?p ?d) (Is ?l 'lion') (HasState ?l 'sleeping') (Above ?bi ?d) (HasState ?p 'dirty') (In ?s ?p) (Is ?bi 'bird') (Holding ?bi ?pl) (Is ?p 'pan') (In ?f ?p) (Is ?s 'spoon') (Is ?pl 'plant') (Is ?f 'fork')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "fork",
+        "tree",
+        "plant",
+        "bird",
+        "desk",
+        "car",
+        "pan",
+        "lion",
+        "bus"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a white cat, with every bicycle positioned to her right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?c (and (Is ?w 'woman') (Is ?c 'cat') (HasColor ?c 'white') (Holding ?w ?c) (forall ?b (implies (Is ?b 'bicycle') (RightOf ?b ?w)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?c (forall ?b (and (Is ?w 'woman') (Holding ?w ?c) (or (not (Is ?b 'bicycle')) (RightOf ?b ?w)) (HasColor ?c 'white') (Is ?c 'cat'))))))",
+    "k": 3,
+    "object_classes": [
+        "cat",
+        "bicycle",
+        "woman"
+    ]
+}

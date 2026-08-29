@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A plastic phone is located to the left of a metal hammer, which is positioned to the left of a man. The man is to the left of a dog with a butterfly resting on it.",
+    "dsl": "(exists ?p (exists ?h (exists ?m (exists ?d (exists ?b (and (Is ?p 'phone') (HasMaterial ?p 'plastic') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Is ?m 'man') (Is ?d 'dog') (Is ?b 'butterfly') (LeftOf ?p ?h) (LeftOf ?h ?m) (LeftOf ?m ?d) (On ?b ?d)))))))",
+    "cnf": "(exists ?p (exists ?h (exists ?m (exists ?d (exists ?b (and (Is ?p 'phone') (HasMaterial ?p 'plastic') (LeftOf ?p ?h) (HasMaterial ?h 'metal') (LeftOf ?h ?m) (Is ?h 'hammer') (Is ?m 'man') (LeftOf ?m ?d) (Is ?d 'dog') (On ?b ?d) (Is ?b 'butterfly')))))))",
+    "k": 5,
+    "object_classes": [
+        "phone",
+        "man",
+        "hammer",
+        "butterfly",
+        "dog"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a woman holding a metal spoon next to a bench. To the left of the woman is a red hat containing a phone, and all refrigerators are positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?s (exists ?b (exists ?h (exists ?p (and (Is ?w 'woman') (Is ?s 'spoon') (HasMaterial ?s 'metal') (Holding ?w ?s) (Is ?b 'bench') (NextTo ?w ?b) (Is ?h 'hat') (HasColor ?h 'red') (LeftOf ?h ?w) (Is ?p 'phone') (In ?p ?h) (forall ?r (implies (Is ?r 'refrigerator') (RightOf ?r ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?s (exists ?b (exists ?h (exists ?p (forall ?r (and (Is ?w 'woman') (Holding ?w ?s) (NextTo ?w ?b) (HasMaterial ?s 'metal') (LeftOf ?h ?w) (Is ?b 'bench') (or (not (Is ?r 'refrigerator')) (RightOf ?r ?b)) (Is ?s 'spoon') (HasColor ?h 'red') (In ?p ?h) (Is ?h 'hat') (Is ?p 'phone')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "hat",
+        "refrigerator",
+        "phone",
+        "woman",
+        "spoon"
+    ]
+}

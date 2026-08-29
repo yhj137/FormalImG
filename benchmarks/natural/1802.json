@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. To the left of a sofa stands a bookshelf. A bowl containing a fish sits on the bookshelf. There is a dirty shirt lying on the sofa. A rug is placed next to the sofa, with a sleeping dog resting on it. A ball is located next to the dog. To the right of the sofa, a person is holding a bitten sandwich.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (exists ?s (exists ?b (exists ?f (exists ?sh (exists ?r (exists ?d (exists ?ball (exists ?p (exists ?sw (and (Is ?bs 'bookshelf') (Is ?s 'sofa') (LeftOf ?bs ?s) (Is ?b 'bowl') (On ?b ?bs) (Is ?f 'fish') (In ?f ?b) (Is ?sh 'shirt') (HasState ?sh 'dirty') (On ?sh ?s) (Is ?r 'rug') (NextTo ?r ?s) (Is ?d 'dog') (HasState ?d 'sleeping') (On ?d ?r) (Is ?ball 'ball') (NextTo ?ball ?d) (Is ?p 'person') (RightOf ?p ?s) (Is ?sw 'sandwich') (HasState ?sw 'bitten') (Holding ?p ?sw)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (exists ?s (exists ?b (exists ?f (exists ?sh (exists ?r (exists ?d (exists ?ball (exists ?p (exists ?sw (and (Is ?bs 'bookshelf') (LeftOf ?bs ?s) (On ?b ?bs) (Is ?s 'sofa') (On ?sh ?s) (Is ?b 'bowl') (In ?f ?b) (NextTo ?r ?s) (HasState ?sh 'dirty') (Is ?f 'fish') (RightOf ?p ?s) (Is ?r 'rug') (On ?d ?r) (Is ?sh 'shirt') (Is ?p 'person') (Holding ?p ?sw) (HasState ?d 'sleeping') (NextTo ?ball ?d) (HasState ?sw 'bitten') (Is ?d 'dog') (Is ?ball 'ball') (Is ?sw 'sandwich')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "fish",
+        "sofa",
+        "person",
+        "rug",
+        "dog",
+        "sandwich",
+        "ball",
+        "bowl",
+        "bookshelf"
+    ]
+}

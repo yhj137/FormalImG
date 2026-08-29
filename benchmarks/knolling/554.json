@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a blue shirt and a pizza. The shirt is larger than the pizza, and they are aligned vertically. Furthermore, every laptop in the image is vertically aligned with the pizza.",
+    "dsl": "(exists ?shirt (exists ?pizza (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?pizza 'pizza') (LargerThan ?shirt ?pizza) (AlignedVertically ?shirt ?pizza) (forall ?laptop (implies (Is ?laptop 'laptop') (AlignedVertically ?laptop ?pizza))))))",
+    "cnf": "(exists ?shirt (exists ?pizza (forall ?laptop (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (LargerThan ?shirt ?pizza) (AlignedVertically ?shirt ?pizza) (Is ?pizza 'pizza') (or (not (Is ?laptop 'laptop')) (AlignedVertically ?laptop ?pizza))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "pizza",
+        "shirt"
+    ]
+}

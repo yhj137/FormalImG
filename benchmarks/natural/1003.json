@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring an elephant holding a screwdriver next to a closed wardrobe. The wardrobe is to the left of a bookshelf. A rug lies next to the bookshelf, and a bowl sits next to the rug.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?w (exists ?bs (exists ?r (exists ?b (and (Is ?e 'elephant') (Is ?s 'screwdriver') (Is ?w 'wardrobe') (Is ?bs 'bookshelf') (Is ?r 'rug') (Is ?b 'bowl') (Holding ?e ?s) (NextTo ?e ?w) (HasState ?w 'closed') (LeftOf ?w ?bs) (NextTo ?r ?bs) (NextTo ?b ?r)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?w (exists ?bs (exists ?r (exists ?b (and (Is ?e 'elephant') (Holding ?e ?s) (NextTo ?e ?w) (Is ?s 'screwdriver') (Is ?w 'wardrobe') (HasState ?w 'closed') (LeftOf ?w ?bs) (Is ?bs 'bookshelf') (NextTo ?r ?bs) (Is ?r 'rug') (NextTo ?b ?r) (Is ?b 'bowl')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "rug",
+        "bowl",
+        "screwdriver",
+        "bookshelf",
+        "wardrobe"
+    ]
+}

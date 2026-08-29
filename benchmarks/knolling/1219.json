@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical arrangement of seven objects. A black monitor is located at the top, positioned above a blue shirt. The shirt is placed above a drill, and the drill is above a gray spoon. Further down, the spoon is above a red apple, the apple is above a yellow lemon, and the lemon is above a carrot. The carrot is situated on the bottom side of the image. All seven items\u2014the monitor, shirt, drill, spoon, apple, lemon, and carrot\u2014are aligned vertically.",
+    "dsl": "(exists ?monitor (exists ?shirt (exists ?drill (exists ?spoon (exists ?apple (exists ?lemon (exists ?carrot (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?drill 'drill') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?apple 'apple') (Has ?apple 'red') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Is ?carrot 'carrot') (Above ?monitor ?shirt) (Above ?shirt ?drill) (Above ?drill ?spoon) (Above ?spoon ?apple) (Above ?apple ?lemon) (Above ?lemon ?carrot) (AlignedVertically ?monitor ?shirt) (AlignedVertically ?shirt ?drill) (AlignedVertically ?drill ?spoon) (AlignedVertically ?spoon ?apple) (AlignedVertically ?apple ?lemon) (AlignedVertically ?lemon ?carrot) (OnBottomSide ?carrot)))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (exists ?drill (exists ?spoon (exists ?apple (exists ?lemon (exists ?carrot (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Above ?monitor ?shirt) (AlignedVertically ?monitor ?shirt) (Has ?shirt 'blue') (Above ?shirt ?drill) (AlignedVertically ?shirt ?drill) (Is ?shirt 'shirt') (Is ?drill 'drill') (Above ?drill ?spoon) (AlignedVertically ?drill ?spoon) (Has ?spoon 'gray') (Above ?spoon ?apple) (AlignedVertically ?spoon ?apple) (Is ?spoon 'spoon') (Has ?apple 'red') (Above ?apple ?lemon) (AlignedVertically ?apple ?lemon) (Is ?apple 'apple') (Has ?lemon 'yellow') (Above ?lemon ?carrot) (AlignedVertically ?lemon ?carrot) (Is ?lemon 'lemon') (Is ?carrot 'carrot') (OnBottomSide ?carrot)))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "lemon",
+        "carrot",
+        "drill",
+        "monitor",
+        "shirt",
+        "spoon"
+    ]
+}

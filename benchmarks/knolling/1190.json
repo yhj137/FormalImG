@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a white shirt, a black shoe, a ruler, a pair of scissors, and a mouse arranged neatly. The ruler is positioned in the top half of the image. All five of these objects\u2014the shirt, shoe, ruler, scissors, and mouse\u2014are aligned vertically along the same axis. Furthermore, for every lighter in the image, it is aligned vertically with the mouse and is smaller than the mouse.",
+    "dsl": "(exists ?shirt (exists ?shoe (exists ?ruler (exists ?scissors (exists ?mouse (and (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?ruler 'ruler') (OnTopSide ?ruler) (Is ?scissors 'scissors') (Is ?mouse 'mouse') (AlignedVertically ?shirt ?shoe) (AlignedVertically ?shoe ?ruler) (AlignedVertically ?ruler ?scissors) (AlignedVertically ?scissors ?mouse) (forall ?lighter (implies (Is ?lighter 'lighter') (and (AlignedVertically ?lighter ?mouse) (SmallerThan ?lighter ?mouse))))))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (exists ?ruler (exists ?scissors (exists ?mouse (forall ?lighter (and (Is ?shirt 'shirt') (Has ?shirt 'white') (AlignedVertically ?shirt ?shoe) (Has ?shoe 'black') (AlignedVertically ?shoe ?ruler) (Is ?shoe 'shoe') (OnTopSide ?ruler) (AlignedVertically ?ruler ?scissors) (Is ?ruler 'ruler') (Is ?scissors 'scissors') (AlignedVertically ?scissors ?mouse) (Is ?mouse 'mouse') (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?mouse)) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?mouse)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "lighter",
+        "mouse",
+        "scissors",
+        "shoe",
+        "shirt"
+    ]
+}

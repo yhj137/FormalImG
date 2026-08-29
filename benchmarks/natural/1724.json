@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene is rendered as an oil painting. A man, wearing an open jacket, is holding a knife and stands to the left of a bus. There is a plant next to the bus, and every butterfly in the scene is resting on the plant. Additionally, a book lies on the bus, supporting a sliced apple, with a banana placed next to the apple.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?j (exists ?k (exists ?bu (exists ?p (and (Is ?m 'man') (Is ?j 'jacket') (Is ?k 'knife') (Is ?bu 'bus') (Is ?p 'plant') (On ?j ?m) (HasState ?j 'open') (Holding ?m ?k) (LeftOf ?m ?bu) (NextTo ?p ?bu) (forall ?bf (implies (Is ?bf 'butterfly') (On ?bf ?p))) (exists ?bk (exists ?a (exists ?ba (and (Is ?bk 'book') (Is ?a 'apple') (Is ?ba 'banana') (On ?bk ?bu) (On ?a ?bk) (HasState ?a 'sliced') (NextTo ?ba ?a))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?j (exists ?k (exists ?bu (exists ?p (forall ?bf (exists ?bk (exists ?a (exists ?ba (and (Is ?m 'man') (On ?j ?m) (Holding ?m ?k) (Is ?j 'jacket') (HasState ?j 'open') (LeftOf ?m ?bu) (Is ?k 'knife') (Is ?bu 'bus') (NextTo ?p ?bu) (On ?bk ?bu) (Is ?p 'plant') (or (not (Is ?bf 'butterfly')) (On ?bf ?p)) (Is ?bk 'book') (On ?a ?bk) (Is ?a 'apple') (HasState ?a 'sliced') (NextTo ?ba ?a) (Is ?ba 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "knife",
+        "book",
+        "plant",
+        "man",
+        "jacket",
+        "butterfly",
+        "apple",
+        "bus",
+        "banana"
+    ]
+}

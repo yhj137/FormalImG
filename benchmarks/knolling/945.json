@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown handbag is placed on the top side of the frame. A keyboard is aligned vertically with the handbag, and a mouse is positioned to the right of the keyboard. For every pen in the image, there is a white sock located to its left; each pen is aligned vertically with the mouse, and the sock is physically smaller than the handbag.",
+    "dsl": "(exists ?h (exists ?k (exists ?m (and (Is ?h 'handbag') (Has ?h 'brown') (OnTopSide ?h) (Is ?k 'keyboard') (Is ?m 'mouse') (AlignedVertically ?h ?k) (LeftOf ?k ?m) (forall ?p (implies (Is ?p 'pen') (exists ?s (and (Is ?s 'sock') (Has ?s 'white') (LeftOf ?s ?p) (AlignedVertically ?p ?m) (SmallerThan ?s ?h)))))))))",
+    "cnf": "(exists ?h (exists ?k (exists ?m (forall ?p (exists ?s (and (Is ?h 'handbag') (Has ?h 'brown') (OnTopSide ?h) (AlignedVertically ?h ?k) (or (not (Is ?p 'pen')) (SmallerThan ?s ?h)) (Is ?k 'keyboard') (LeftOf ?k ?m) (or (not (Is ?p 'pen')) (LeftOf ?s ?p)) (or (not (Is ?p 'pen')) (AlignedVertically ?p ?m)) (Is ?m 'mouse') (or (not (Is ?p 'pen')) (Has ?s 'white')) (or (not (Is ?p 'pen')) (Is ?s 'sock'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "keyboard",
+        "pen",
+        "handbag",
+        "mouse"
+    ]
+}

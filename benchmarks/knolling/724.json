@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is positioned on the top side of the layout. To the right of the camera is a black phone, and the camera is visually larger than the phone. The arrangement includes a specific constraint: for every red apple in the scene, there exists a wallet located to the right of the phone, and this wallet is smaller than the apple.",
+    "dsl": "(exists ?camera (exists ?phone (and (Is ?camera 'camera') (OnTopSide ?camera) (Is ?phone 'phone') (Has ?phone 'black') (RightOf ?phone ?camera) (LargerThan ?camera ?phone) (forall ?apple (implies (and (Is ?apple 'apple') (Has ?apple 'red')) (exists ?wallet (and (Is ?wallet 'wallet') (RightOf ?wallet ?phone) (SmallerThan ?wallet ?apple))))))))",
+    "cnf": "(exists ?camera (exists ?phone (forall ?apple (exists ?wallet (and (Is ?camera 'camera') (OnTopSide ?camera) (RightOf ?phone ?camera) (LargerThan ?camera ?phone) (Has ?phone 'black') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (RightOf ?wallet ?phone)) (Is ?phone 'phone') (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?wallet 'wallet')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (SmallerThan ?wallet ?apple)))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "wallet",
+        "apple",
+        "camera"
+    ]
+}

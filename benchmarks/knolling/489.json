@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, there corresponds a book and a glove. The book is positioned on the right side of the image. Visually, the pair of jeans is larger than the book, while the glove is smaller than the book.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?book (exists ?glove (and (Is ?book 'book') (Is ?glove 'glove') (OnRightSide ?book) (LargerThan ?jeans ?book) (SmallerThan ?glove ?book)))))))",
+    "cnf": "(forall ?jeans (exists ?book (exists ?glove (and (or (not (Is ?jeans 'jeans')) (Is ?book 'book')) (or (not (Is ?jeans 'jeans')) (Is ?glove 'glove')) (or (not (Is ?jeans 'jeans')) (OnRightSide ?book)) (or (not (Is ?jeans 'jeans')) (SmallerThan ?glove ?book)) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?book))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "jeans",
+        "glove"
+    ]
+}

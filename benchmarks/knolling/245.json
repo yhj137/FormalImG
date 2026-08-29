@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a camera and a pair of scissors. The camera is positioned on the left side of the composition, and the scissors are aligned vertically with the camera.",
+    "dsl": "(exists ?camera (exists ?scissors (and (Is ?camera 'camera') (Is ?scissors 'scissors') (OnLeftSide ?camera) (AlignedVertically ?camera ?scissors))))",
+    "cnf": "(exists ?camera (exists ?scissors (and (Is ?camera 'camera') (OnLeftSide ?camera) (AlignedVertically ?camera ?scissors) (Is ?scissors 'scissors'))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "camera"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image featuring a house. Every flower is positioned to the left of the house. To the right of the house is an elephant wearing headphones and holding a round key. Next to the house sits a bus with a toy car on it, and a bicycle is located to the right of the bus. A butterfly is next to the elephant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'house') (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?h))) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?h) (exists ?k (and (Is ?k 'key') (HasShape ?k 'round') (Holding ?e ?k) (exists ?b (and (Is ?b 'bus') (NextTo ?b ?h) (exists ?tc (and (Is ?tc 'toy car') (On ?tc ?b) (exists ?hp (and (Is ?hp 'headphones') (On ?hp ?e) (exists ?bi (and (Is ?bi 'bicycle') (RightOf ?bi ?b) (exists ?bu (and (Is ?bu 'butterfly') (NextTo ?bu ?e))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (forall ?f (exists ?e (exists ?k (exists ?b (exists ?tc (exists ?hp (exists ?bi (exists ?bu (and (Is ?h 'house') (or (not (Is ?f 'flower')) (LeftOf ?f ?h)) (RightOf ?e ?h) (NextTo ?b ?h) (Is ?e 'elephant') (Holding ?e ?k) (Is ?b 'bus') (On ?tc ?b) (On ?hp ?e) (HasShape ?k 'round') (RightOf ?bi ?b) (Is ?tc 'toy car') (NextTo ?bu ?e) (Is ?hp 'headphones') (Is ?k 'key') (Is ?bi 'bicycle') (Is ?bu 'butterfly'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "key",
+        "toy car",
+        "headphones",
+        "bus",
+        "butterfly",
+        "bicycle",
+        "house",
+        "flower",
+        "elephant"
+    ]
+}

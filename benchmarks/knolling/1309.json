@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement starts on the left side with a stapler. To the right of the stapler is a pair of pliers, and positioned above the pliers is a glove. For every lighter in the scene, it is placed to the right of the glove. Furthermore, associated with each lighter is a vertical and horizontal sequence: a carrot is located above the lighter, a knife is positioned to the right of the carrot, and a wrench is placed above the knife.",
+    "dsl": "(exists ?s (exists ?p (exists ?g (and (Is ?s 'stapler') (Is ?p 'pliers') (Is ?g 'glove') (OnLeftSide ?s) (RightOf ?p ?s) (Above ?g ?p) (forall ?l (implies (Is ?l 'lighter') (exists ?c (exists ?k (exists ?w (and (Is ?c 'carrot') (Is ?k 'knife') (Is ?w 'wrench') (RightOf ?l ?g) (Above ?c ?l) (RightOf ?k ?c) (Above ?w ?k)))))))))))",
+    "cnf": "(exists ?s (exists ?p (exists ?g (forall ?l (exists ?c (exists ?k (exists ?w (and (Is ?s 'stapler') (OnLeftSide ?s) (RightOf ?p ?s) (Is ?p 'pliers') (Above ?g ?p) (Is ?g 'glove') (or (not (Is ?l 'lighter')) (RightOf ?l ?g)) (or (not (Is ?l 'lighter')) (Is ?w 'wrench')) (or (not (Is ?l 'lighter')) (Above ?c ?l)) (or (not (Is ?l 'lighter')) (Is ?k 'knife')) (or (not (Is ?l 'lighter')) (Above ?w ?k)) (or (not (Is ?l 'lighter')) (Is ?c 'carrot')) (or (not (Is ?l 'lighter')) (RightOf ?k ?c))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "stapler",
+        "wrench",
+        "carrot",
+        "lighter",
+        "knife",
+        "glove"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "There exist three objects in the image. For every set of keys, these objects are a stapler on the left side positioned above a pair of black headphones, and a pizza. Additionally, for every set of keys, there is a wrench located above it aligned horizontally with the headphones, a fork aligned vertically with the wrench, a carrot larger than the fork, and a donut on the bottom side aligned horizontally with the carrot and smaller than the pizza.",
+    "dsl": "(exists ?stapler (exists ?headphones (exists ?pizza (forall ?keys (implies (Is ?keys 'keys') (exists ?wrench (exists ?fork (exists ?carrot (exists ?donut (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?pizza 'pizza') (Above ?stapler ?headphones) (Is ?wrench 'wrench') (Above ?wrench ?keys) (AlignedHorizontally ?wrench ?headphones) (Is ?fork 'fork') (AlignedVertically ?fork ?wrench) (Is ?carrot 'carrot') (LargerThan ?carrot ?fork) (Is ?donut 'donut') (OnBottomSide ?donut) (SmallerThan ?donut ?pizza) (AlignedHorizontally ?donut ?carrot)))))))))))",
+    "cnf": "(exists ?stapler (exists ?headphones (exists ?pizza (forall ?keys (exists ?wrench (exists ?fork (exists ?carrot (exists ?donut (and (or (not (Is ?keys 'keys')) (Is ?stapler 'stapler')) (or (not (Is ?keys 'keys')) (OnLeftSide ?stapler)) (or (not (Is ?keys 'keys')) (Above ?stapler ?headphones)) (or (not (Is ?keys 'keys')) (Is ?headphones 'headphones')) (or (not (Is ?keys 'keys')) (Is ?pizza 'pizza')) (or (not (Is ?keys 'keys')) (Is ?wrench 'wrench')) (or (not (Is ?keys 'keys')) (Has ?headphones 'black')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?wrench ?headphones)) (or (not (Is ?keys 'keys')) (SmallerThan ?donut ?pizza)) (or (not (Is ?keys 'keys')) (Above ?wrench ?keys)) (or (not (Is ?keys 'keys')) (Is ?fork 'fork')) (or (not (Is ?keys 'keys')) (AlignedVertically ?fork ?wrench)) (or (not (Is ?keys 'keys')) (OnBottomSide ?donut)) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?donut ?carrot)) (or (not (Is ?keys 'keys')) (Is ?carrot 'carrot')) (or (not (Is ?keys 'keys')) (LargerThan ?carrot ?fork)) (or (not (Is ?keys 'keys')) (Is ?donut 'donut')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "stapler",
+        "wrench",
+        "carrot",
+        "pizza",
+        "fork",
+        "headphones",
+        "donut"
+    ]
+}

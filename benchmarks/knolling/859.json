@@ -1,0 +1,13 @@
+{
+    "prompt": "For every suitcase in the image, it is located on the left side of the scene, and there exist a mouse, a bottle, a plate, and a camera positioned on the right side. The suitcase is larger than the mouse, the bottle, the plate, and the camera. Additionally, the mouse, bottle, plate, and camera are all aligned vertically.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'suitcase') (exists ?m (exists ?b (exists ?p (exists ?c (and (Is ?m 'mouse') (Is ?b 'bottle') (Is ?p 'plate') (Is ?c 'camera') (OnLeftSide ?s) (OnRightSide ?m) (OnRightSide ?b) (OnRightSide ?p) (OnRightSide ?c) (LargerThan ?s ?m) (LargerThan ?s ?b) (LargerThan ?s ?p) (LargerThan ?s ?c) (AlignedVertically ?m ?b) (AlignedVertically ?b ?p) (AlignedVertically ?p ?c)))))))))",
+    "cnf": "(forall ?s (exists ?m (exists ?b (exists ?p (exists ?c (and (or (not (Is ?s 'suitcase')) (Is ?m 'mouse')) (or (not (Is ?s 'suitcase')) (Is ?b 'bottle')) (or (not (Is ?s 'suitcase')) (OnRightSide ?m)) (or (not (Is ?s 'suitcase')) (Is ?p 'plate')) (or (not (Is ?s 'suitcase')) (OnRightSide ?b)) (or (not (Is ?s 'suitcase')) (OnLeftSide ?s)) (or (not (Is ?s 'suitcase')) (LargerThan ?s ?m)) (or (not (Is ?s 'suitcase')) (Is ?c 'camera')) (or (not (Is ?s 'suitcase')) (OnRightSide ?p)) (or (not (Is ?s 'suitcase')) (LargerThan ?s ?b)) (or (not (Is ?s 'suitcase')) (OnRightSide ?c)) (or (not (Is ?s 'suitcase')) (AlignedVertically ?m ?b)) (or (not (Is ?s 'suitcase')) (LargerThan ?s ?p)) (or (not (Is ?s 'suitcase')) (LargerThan ?s ?c)) (or (not (Is ?s 'suitcase')) (AlignedVertically ?b ?p)) (or (not (Is ?s 'suitcase')) (AlignedVertically ?p ?c))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "mouse",
+        "camera",
+        "suitcase",
+        "bottle"
+    ]
+}

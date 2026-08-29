@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a black keyboard and a red screwdriver arranged neatly. The red screwdriver is positioned to the left of the black keyboard.",
+    "dsl": "(exists ?k (exists ?s (and (Is ?k 'keyboard') (Has ?k 'black') (Is ?s 'screwdriver') (Has ?s 'red') (LeftOf ?s ?k))))",
+    "cnf": "(exists ?k (exists ?s (and (Is ?k 'keyboard') (Has ?k 'black') (LeftOf ?s ?k) (Has ?s 'red') (Is ?s 'screwdriver'))))",
+    "k": 2,
+    "object_classes": [
+        "screwdriver",
+        "keyboard"
+    ]
+}

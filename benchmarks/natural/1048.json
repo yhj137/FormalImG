@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a pixel art style. Every lamp is positioned next to a desk. To the left of the desk is a horse holding a blue jacket, with a rock next to the horse. A broken clock is located to the right of the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?l (implies (Is ?l 'lamp') (exists ?d (exists ?h (exists ?j (exists ?r (exists ?c (and (Is ?d 'desk') (Is ?h 'horse') (Is ?j 'jacket') (Is ?r 'rock') (Is ?c 'clock') (NextTo ?l ?d) (LeftOf ?h ?d) (Holding ?h ?j) (HasColor ?j 'blue') (NextTo ?r ?h) (RightOf ?c ?d) (HasState ?c 'broken'))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?l (exists ?d (exists ?h (exists ?j (exists ?r (exists ?c (and (or (not (Is ?l 'lamp')) (Is ?d 'desk')) (or (not (Is ?l 'lamp')) (Is ?h 'horse')) (or (not (Is ?l 'lamp')) (NextTo ?l ?d)) (or (not (Is ?l 'lamp')) (Is ?j 'jacket')) (or (not (Is ?l 'lamp')) (LeftOf ?h ?d)) (or (not (Is ?l 'lamp')) (Is ?c 'clock')) (or (not (Is ?l 'lamp')) (Is ?r 'rock')) (or (not (Is ?l 'lamp')) (Holding ?h ?j)) (or (not (Is ?l 'lamp')) (RightOf ?c ?d)) (or (not (Is ?l 'lamp')) (NextTo ?r ?h)) (or (not (Is ?l 'lamp')) (HasColor ?j 'blue')) (or (not (Is ?l 'lamp')) (HasState ?c 'broken'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "horse",
+        "desk",
+        "rock",
+        "clock",
+        "jacket",
+        "lamp"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a bowl and a pair of headphones. The bowl is located on the top side of the image, and the headphones are aligned horizontally with the bowl.",
+    "dsl": "(exists ?bowl (exists ?headphones (and (Is ?bowl 'bowl') (Is ?headphones 'headphones') (OnTopSide ?bowl) (AlignedHorizontally ?bowl ?headphones))))",
+    "cnf": "(exists ?bowl (exists ?headphones (and (Is ?bowl 'bowl') (OnTopSide ?bowl) (AlignedHorizontally ?bowl ?headphones) (Is ?headphones 'headphones'))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "headphones"
+    ]
+}

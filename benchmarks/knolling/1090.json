@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the top side of the image. To the left of the suitcase is a handbag, and they are aligned horizontally. For every book in the scene, it is smaller than the suitcase and aligned vertically with the handbag. Associated with the book are a wallet, a glove, and a pair of glasses arranged in a horizontal row: the wallet is to the left of the book, the book is to the left of the glove, and the glove is to the left of the glasses. Additionally, the glasses are aligned vertically with the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?handbag (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?handbag 'handbag') (LeftOf ?handbag ?suitcase) (AlignedHorizontally ?handbag ?suitcase) (forall ?book (implies (Is ?book 'book') (exists ?wallet (exists ?glove (exists ?glasses (and (Is ?wallet 'wallet') (Is ?glove 'glove') (Is ?glasses 'glasses') (SmallerThan ?book ?suitcase) (AlignedVertically ?handbag ?book) (LeftOf ?wallet ?book) (AlignedHorizontally ?wallet ?book) (LeftOf ?book ?glove) (AlignedHorizontally ?book ?glove) (LeftOf ?glove ?glasses) (AlignedHorizontally ?glove ?glasses) (AlignedVertically ?suitcase ?glasses))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (forall ?book (exists ?wallet (exists ?glove (exists ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (LeftOf ?handbag ?suitcase) (AlignedHorizontally ?handbag ?suitcase) (Is ?handbag 'handbag') (or (not (Is ?book 'book')) (SmallerThan ?book ?suitcase)) (or (not (Is ?book 'book')) (AlignedVertically ?handbag ?book)) (or (not (Is ?book 'book')) (AlignedVertically ?suitcase ?glasses)) (or (not (Is ?book 'book')) (Is ?glasses 'glasses')) (or (not (Is ?book 'book')) (LeftOf ?wallet ?book)) (or (not (Is ?book 'book')) (AlignedHorizontally ?glove ?glasses)) (or (not (Is ?book 'book')) (Is ?glove 'glove')) (or (not (Is ?book 'book')) (LeftOf ?glove ?glasses)) (or (not (Is ?book 'book')) (Is ?wallet 'wallet')) (or (not (Is ?book 'book')) (AlignedHorizontally ?wallet ?book)) (or (not (Is ?book 'book')) (LeftOf ?book ?glove)) (or (not (Is ?book 'book')) (AlignedHorizontally ?book ?glove)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "glasses",
+        "handbag",
+        "wallet",
+        "suitcase",
+        "glove"
+    ]
+}

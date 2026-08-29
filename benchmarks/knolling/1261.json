@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A pan is positioned on the left side of the scene. Every screwdriver is located to the right of the pan and has a bottle placed above it. To the right of the bottle is a carrot, which is positioned above a phone. A sock is placed to the right of the phone, and a pair of jeans is located above the sock. The pan is visually larger than the bottle, and the jeans are larger than the sock.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnLeftSide ?pan) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?bottle (exists ?carrot (exists ?phone (exists ?sock (exists ?jeans (and (Is ?bottle 'bottle') (Is ?carrot 'carrot') (Is ?phone 'phone') (Is ?sock 'sock') (Is ?jeans 'jeans') (RightOf ?screwdriver ?pan) (Above ?bottle ?screwdriver) (LargerThan ?pan ?bottle) (RightOf ?carrot ?bottle) (Above ?carrot ?phone) (RightOf ?sock ?phone) (Above ?jeans ?sock) (LargerThan ?jeans ?sock)))))))))))",
+    "cnf": "(exists ?pan (forall ?screwdriver (exists ?bottle (exists ?carrot (exists ?phone (exists ?sock (exists ?jeans (and (Is ?pan 'pan') (OnLeftSide ?pan) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?screwdriver ?pan)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?pan ?bottle)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?jeans 'jeans')) (or (not (Is ?screwdriver 'screwdriver')) (Above ?bottle ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?carrot ?bottle)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?sock 'sock')) (or (not (Is ?screwdriver 'screwdriver')) (Above ?jeans ?sock)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?bottle 'bottle')) (or (not (Is ?screwdriver 'screwdriver')) (Above ?carrot ?phone)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?carrot 'carrot')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?phone 'phone')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?sock ?phone)) (or (not (Is ?screwdriver 'screwdriver')) (LargerThan ?jeans ?sock))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sock",
+        "carrot",
+        "phone",
+        "screwdriver",
+        "pan",
+        "jeans",
+        "bottle"
+    ]
+}

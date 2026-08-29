@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a gray laptop. For every hammer in the image, it is positioned to the left of the laptop and is smaller than the laptop. Furthermore, for each hammer, there is a black keyboard located to its right.",
+    "dsl": "(exists ?l (and (Is ?l 'laptop') (Has ?l 'gray') (forall ?h (implies (Is ?h 'hammer') (exists ?k (and (Is ?k 'keyboard') (Has ?k 'black') (LeftOf ?h ?l) (SmallerThan ?h ?l) (RightOf ?k ?h)))))))",
+    "cnf": "(exists ?l (forall ?h (exists ?k (and (Is ?l 'laptop') (Has ?l 'gray') (or (not (Is ?h 'hammer')) (LeftOf ?h ?l)) (or (not (Is ?h 'hammer')) (SmallerThan ?h ?l)) (or (not (Is ?h 'hammer')) (Has ?k 'black')) (or (not (Is ?h 'hammer')) (RightOf ?k ?h)) (or (not (Is ?h 'hammer')) (Is ?k 'keyboard'))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "hammer",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene where every wardrobe stands open, containing a hat and a dog holding a rectangular keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?w (implies (Is ?w 'wardrobe') (exists ?d (exists ?k (exists ?h (and (Is ?d 'dog') (Is ?k 'keyboard') (Is ?h 'hat') (HasState ?w 'open') (In ?d ?w) (Holding ?d ?k) (HasShape ?k 'rectangular') (In ?h ?w))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?w (exists ?d (exists ?k (exists ?h (and (or (not (Is ?w 'wardrobe')) (Is ?d 'dog')) (or (not (Is ?w 'wardrobe')) (Is ?k 'keyboard')) (or (not (Is ?w 'wardrobe')) (In ?d ?w)) (or (not (Is ?w 'wardrobe')) (Is ?h 'hat')) (or (not (Is ?w 'wardrobe')) (Holding ?d ?k)) (or (not (Is ?w 'wardrobe')) (HasState ?w 'open')) (or (not (Is ?w 'wardrobe')) (In ?h ?w)) (or (not (Is ?w 'wardrobe')) (HasShape ?k 'rectangular'))))))))",
+    "k": 4,
+    "object_classes": [
+        "dog",
+        "keyboard",
+        "hat",
+        "wardrobe"
+    ]
+}

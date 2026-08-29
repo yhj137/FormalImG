@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where a child on a sofa holds a wooden basket containing every fruit. A green shirt also lies on the sofa, and a bicycle is positioned to the left of the sofa.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))) (exists ?c (and (Is ?c 'child') (Holding ?c ?b) (exists ?s (and (Is ?s 'sofa') (On ?c ?s) (exists ?sh (and (Is ?sh 'shirt') (HasColor ?sh 'green') (On ?sh ?s) (exists ?bi (and (Is ?bi 'bicycle') (LeftOf ?bi ?s))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?f (exists ?c (exists ?s (exists ?sh (exists ?bi (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (or (not (Is ?f 'fruit')) (In ?f ?b)) (Holding ?c ?b) (Is ?c 'child') (On ?c ?s) (Is ?s 'sofa') (On ?sh ?s) (LeftOf ?bi ?s) (HasColor ?sh 'green') (Is ?bi 'bicycle') (Is ?sh 'shirt')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "shirt",
+        "sofa",
+        "child",
+        "bicycle",
+        "basket"
+    ]
+}

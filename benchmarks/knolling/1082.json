@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is positioned on the bottom side of the scene. For every bottle present in the image, there is a corresponding group of items consisting of a handbag, a set of keys, a spoon, and a backpack. These objects (bottle, handbag, keys, spoon, backpack) are all aligned horizontally relative to each other and are located above the suitcase. Additionally, the backpack is visually larger than the keys.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?handbag (exists ?keys (exists ?spoon (exists ?backpack (and (Is ?handbag 'handbag') (Is ?keys 'keys') (Is ?spoon 'spoon') (Is ?backpack 'backpack') (Above ?bottle ?suitcase) (Above ?handbag ?suitcase) (Above ?keys ?suitcase) (Above ?spoon ?suitcase) (Above ?backpack ?suitcase) (AlignedHorizontally ?bottle ?handbag) (AlignedHorizontally ?handbag ?keys) (AlignedHorizontally ?keys ?spoon) (AlignedHorizontally ?spoon ?backpack) (LargerThan ?backpack ?keys))))))))))",
+    "cnf": "(exists ?suitcase (forall ?bottle (exists ?handbag (exists ?keys (exists ?spoon (exists ?backpack (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (or (not (Is ?bottle 'bottle')) (Above ?bottle ?suitcase)) (or (not (Is ?bottle 'bottle')) (Above ?handbag ?suitcase)) (or (not (Is ?bottle 'bottle')) (Is ?backpack 'backpack')) (or (not (Is ?bottle 'bottle')) (Above ?keys ?suitcase)) (or (not (Is ?bottle 'bottle')) (Is ?handbag 'handbag')) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?bottle ?handbag)) (or (not (Is ?bottle 'bottle')) (Is ?spoon 'spoon')) (or (not (Is ?bottle 'bottle')) (Above ?backpack ?suitcase)) (or (not (Is ?bottle 'bottle')) (Above ?spoon ?suitcase)) (or (not (Is ?bottle 'bottle')) (Is ?keys 'keys')) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?handbag ?keys)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?spoon ?backpack)) (or (not (Is ?bottle 'bottle')) (AlignedHorizontally ?keys ?spoon)) (or (not (Is ?bottle 'bottle')) (LargerThan ?backpack ?keys)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "handbag",
+        "backpack",
+        "bottle",
+        "suitcase",
+        "spoon"
+    ]
+}

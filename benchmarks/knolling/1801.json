@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring ten neatly arranged items. On the left side, there is a blue tie. Below the tie is a black keyboard, and to the right of the keyboard is a white mouse. A phone is placed below the mouse, with a watch located to the left of the phone. To the right of the phone is a pan, which is on the right side of the image and is larger than the phone. A spoon is placed above the pan, while pliers are to its right. A screwdriver is positioned below the pan, and a red lighter is located below the screwdriver.",
+    "dsl": "(exists ?tie (exists ?keyboard (exists ?mouse (exists ?phone (exists ?watch (exists ?pan (exists ?spoon (exists ?pliers (exists ?screwdriver (exists ?lighter (and (Is ?tie 'tie') (Has ?tie 'blue') (OnLeftSide ?tie) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?mouse 'mouse') (Has ?mouse 'white') (Is ?phone 'phone') (Is ?watch 'watch') (Is ?pan 'pan') (OnRightSide ?pan) (Is ?spoon 'spoon') (Is ?pliers 'pliers') (Is ?screwdriver 'screwdriver') (Is ?lighter 'lighter') (Has ?lighter 'red') (Below ?keyboard ?tie) (RightOf ?mouse ?keyboard) (Below ?phone ?mouse) (LeftOf ?watch ?phone) (LeftOf ?phone ?pan) (LargerThan ?pan ?phone) (Above ?spoon ?pan) (RightOf ?pliers ?pan) (Below ?screwdriver ?pan) (Below ?lighter ?screwdriver))))))))))))",
+    "cnf": "(exists ?tie (exists ?keyboard (exists ?mouse (exists ?phone (exists ?watch (exists ?pan (exists ?spoon (exists ?pliers (exists ?screwdriver (exists ?lighter (and (Is ?tie 'tie') (Has ?tie 'blue') (OnLeftSide ?tie) (Below ?keyboard ?tie) (Has ?keyboard 'black') (RightOf ?mouse ?keyboard) (Is ?keyboard 'keyboard') (Has ?mouse 'white') (Below ?phone ?mouse) (Is ?mouse 'mouse') (Is ?phone 'phone') (LeftOf ?watch ?phone) (LeftOf ?phone ?pan) (Is ?watch 'watch') (LargerThan ?pan ?phone) (OnRightSide ?pan) (Above ?spoon ?pan) (Is ?pan 'pan') (RightOf ?pliers ?pan) (Is ?spoon 'spoon') (Below ?screwdriver ?pan) (Is ?pliers 'pliers') (Is ?screwdriver 'screwdriver') (Below ?lighter ?screwdriver) (Has ?lighter 'red') (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "keyboard",
+        "phone",
+        "watch",
+        "screwdriver",
+        "pan",
+        "lighter",
+        "mouse",
+        "spoon"
+    ]
+}

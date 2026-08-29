@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a sleeping lion, where every pizza is located next to the lion.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (and (Is ?l 'lion') (HasState ?l 'sleeping') (forall ?p (implies (Is ?p 'pizza') (NextTo ?p ?l))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (forall ?p (and (Is ?l 'lion') (HasState ?l 'sleeping') (or (not (Is ?p 'pizza')) (NextTo ?p ?l))))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "lion"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every black jacket has a bed to its right. A woman sits on the bed, holding a bitten sandwich.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?j (implies (and (Is ?j 'jacket') (HasColor ?j 'black')) (exists ?b (exists ?w (exists ?s (and (Is ?b 'bed') (Is ?w 'woman') (Is ?s 'sandwich') (LeftOf ?j ?b) (On ?w ?b) (HasState ?w 'sitting') (Holding ?w ?s) (HasState ?s 'bitten'))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?j (exists ?b (exists ?w (exists ?s (and (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (Is ?b 'bed')) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (Is ?w 'woman')) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (LeftOf ?j ?b)) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (Is ?s 'sandwich')) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (On ?w ?b)) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (Holding ?w ?s)) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (HasState ?w 'sitting')) (or (not (Is ?j 'jacket')) (not (HasColor ?j 'black')) (HasState ?s 'bitten'))))))))",
+    "k": 4,
+    "object_classes": [
+        "bed",
+        "jacket",
+        "woman",
+        "sandwich"
+    ]
+}

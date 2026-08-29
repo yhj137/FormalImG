@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a red bus. Every car is positioned to the right of the bus. An elephant stands next to the bus, holding a black jacket. Adjacent to the elephant is a lion holding a pan with a fish inside.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bus') (HasColor ?b 'red') (forall ?c (implies (Is ?c 'car') (RightOf ?c ?b))) (exists ?e (and (Is ?e 'elephant') (NextTo ?e ?b) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'black') (Holding ?e ?j))) (exists ?l (and (Is ?l 'lion') (NextTo ?l ?e) (exists ?p (and (Is ?p 'pan') (Holding ?l ?p) (exists ?f (and (Is ?f 'fish') (In ?f ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?c (exists ?e (exists ?j (exists ?l (exists ?p (exists ?f (and (Is ?b 'bus') (HasColor ?b 'red') (or (not (Is ?c 'car')) (RightOf ?c ?b)) (NextTo ?e ?b) (Is ?e 'elephant') (Holding ?e ?j) (NextTo ?l ?e) (HasColor ?j 'black') (Is ?l 'lion') (Holding ?l ?p) (Is ?j 'jacket') (Is ?p 'pan') (In ?f ?p) (Is ?f 'fish'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "fish",
+        "jacket",
+        "car",
+        "pan",
+        "lion",
+        "bus"
+    ]
+}

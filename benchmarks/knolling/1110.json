@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a brown suitcase positioned on the left side, with a white hat located above it. For every pen in the image, there is a specific chain of objects related to it: the pen is placed to the right of the suitcase, a black calculator is positioned above the pen, a gray pan is located to the right of the calculator, and a carrot is found above the pan.",
+    "dsl": "(exists ?suitcase (exists ?hat (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Is ?hat 'hat') (Has ?hat 'white') (Above ?hat ?suitcase) (forall ?pen (implies (Is ?pen 'pen') (exists ?calculator (exists ?pan (exists ?carrot (and (Is ?calculator 'calculator') (Has ?calculator 'black') (Is ?pan 'pan') (Has ?pan 'gray') (Is ?carrot 'carrot') (RightOf ?pen ?suitcase) (Above ?calculator ?pen) (RightOf ?pan ?calculator) (Above ?carrot ?pan))))))))))",
+    "cnf": "(exists ?suitcase (exists ?hat (forall ?pen (exists ?calculator (exists ?pan (exists ?carrot (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnLeftSide ?suitcase) (Above ?hat ?suitcase) (or (not (Is ?pen 'pen')) (RightOf ?pen ?suitcase)) (Has ?hat 'white') (or (not (Is ?pen 'pen')) (Is ?carrot 'carrot')) (or (not (Is ?pen 'pen')) (Above ?calculator ?pen)) (Is ?hat 'hat') (or (not (Is ?pen 'pen')) (Has ?pan 'gray')) (or (not (Is ?pen 'pen')) (Above ?carrot ?pan)) (or (not (Is ?pen 'pen')) (RightOf ?pan ?calculator)) (or (not (Is ?pen 'pen')) (Has ?calculator 'black')) (or (not (Is ?pen 'pen')) (Is ?pan 'pan')) (or (not (Is ?pen 'pen')) (Is ?calculator 'calculator')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pen",
+        "carrot",
+        "hat",
+        "pan",
+        "calculator",
+        "suitcase"
+    ]
+}

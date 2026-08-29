@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a rectangular rug with a lamp and a backpack resting on it. An oval mirror stands next to the rug, while a tree is located next to the mirror. Every bicycle and a horse are positioned next to the tree. Inside the backpack sits a keyboard with a fork next to it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?rug (exists ?lamp (exists ?mirror (exists ?backpack (exists ?keyboard (exists ?tree (and (Is ?rug 'rug') (HasShape ?rug 'rectangular') (Is ?lamp 'lamp') (On ?lamp ?rug) (Is ?mirror 'mirror') (HasShape ?mirror 'oval') (NextTo ?mirror ?rug) (Is ?backpack 'backpack') (On ?backpack ?rug) (Is ?keyboard 'keyboard') (In ?keyboard ?backpack) (Is ?tree 'tree') (NextTo ?tree ?mirror) (forall ?bicycle (implies (Is ?bicycle 'bicycle') (NextTo ?bicycle ?tree))) (exists ?horse (exists ?fork (and (Is ?horse 'horse') (NextTo ?horse ?tree) (Is ?fork 'fork') (NextTo ?fork ?keyboard))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?rug (exists ?lamp (exists ?mirror (exists ?backpack (exists ?keyboard (exists ?tree (forall ?bicycle (exists ?horse (exists ?fork (and (Is ?rug 'rug') (HasShape ?rug 'rectangular') (On ?lamp ?rug) (NextTo ?mirror ?rug) (Is ?lamp 'lamp') (On ?backpack ?rug) (HasShape ?mirror 'oval') (NextTo ?tree ?mirror) (Is ?backpack 'backpack') (In ?keyboard ?backpack) (Is ?mirror 'mirror') (Is ?tree 'tree') (or (not (Is ?bicycle 'bicycle')) (NextTo ?bicycle ?tree)) (Is ?keyboard 'keyboard') (NextTo ?fork ?keyboard) (NextTo ?horse ?tree) (Is ?fork 'fork') (Is ?horse 'horse'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fork",
+        "horse",
+        "backpack",
+        "tree",
+        "rug",
+        "lamp",
+        "mirror",
+        "bicycle",
+        "keyboard"
+    ]
+}

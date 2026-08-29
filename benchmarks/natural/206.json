@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a person to the left of a round tree.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (exists ?t (and (Is ?p 'person') (Is ?t 'tree') (HasShape ?t 'round') (LeftOf ?p ?t)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (exists ?t (and (Is ?p 'person') (LeftOf ?p ?t) (HasShape ?t 'round') (Is ?t 'tree')))))",
+    "k": 2,
+    "object_classes": [
+        "tree",
+        "person"
+    ]
+}

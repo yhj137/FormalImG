@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cartoon style. A rectangular phone is placed to the left of a lion. The lion is positioned to the left of a plant. On the other side, a round lamp stands to the right of the plant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?ph (exists ?li (exists ?pl (exists ?la (and (Is ?ph 'phone') (HasShape ?ph 'rectangular') (Is ?li 'lion') (Is ?pl 'plant') (Is ?la 'lamp') (HasShape ?la 'round') (LeftOf ?ph ?li) (LeftOf ?li ?pl) (RightOf ?la ?pl)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?ph (exists ?li (exists ?pl (exists ?la (and (Is ?ph 'phone') (HasShape ?ph 'rectangular') (LeftOf ?ph ?li) (Is ?li 'lion') (LeftOf ?li ?pl) (Is ?pl 'plant') (RightOf ?la ?pl) (HasShape ?la 'round') (Is ?la 'lamp')))))))",
+    "k": 4,
+    "object_classes": [
+        "lamp",
+        "plant",
+        "lion",
+        "phone"
+    ]
+}

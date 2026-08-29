@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo. A man is holding a black hammer and stands to the left of a wooden desk. A laptop sits on the desk. Furthermore, all keys in the scene are located inside the desk.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?d (and (Is ?m 'man') (Is ?d 'desk') (HasMaterial ?d 'wooden') (LeftOf ?m ?d) (forall ?k (implies (Is ?k 'key') (In ?k ?d))) (exists ?l (and (Is ?l 'laptop') (On ?l ?d))) (exists ?h (and (Is ?h 'hammer') (HasColor ?h 'black') (Holding ?m ?h)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?d (forall ?k (exists ?l (exists ?h (and (Is ?m 'man') (LeftOf ?m ?d) (Holding ?m ?h) (HasMaterial ?d 'wooden') (or (not (Is ?k 'key')) (In ?k ?d)) (HasColor ?h 'black') (Is ?d 'desk') (On ?l ?d) (Is ?h 'hammer') (Is ?l 'laptop'))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "man",
+        "hammer",
+        "desk",
+        "key"
+    ]
+}

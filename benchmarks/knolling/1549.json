@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is positioned on the top side of the frame, located to the left of a pair of blue jeans, with both items aligned horizontally. Below the monitor sits a brown wallet, and the monitor is visually larger than this wallet. To the right of the wallet is a glove, and to the right of the glove is a lighter; these three objects are arranged in a horizontally aligned row. Additionally, the scene follows a specific rule for produce: for every carrot present, it is positioned below the lighter and has a cutting board directly below it. Finally, a bowl is placed to the right of that cutting board.",
+    "dsl": "(exists ?monitor (exists ?jeans (exists ?wallet (exists ?glove (exists ?lighter (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?jeans 'jeans') (Has ?jeans 'blue') (LeftOf ?monitor ?jeans) (AlignedHorizontally ?monitor ?jeans) (Is ?wallet 'wallet') (Has ?wallet 'brown') (Below ?wallet ?monitor) (LargerThan ?monitor ?wallet) (Is ?glove 'glove') (Is ?lighter 'lighter') (RightOf ?glove ?wallet) (RightOf ?lighter ?glove) (AlignedHorizontally ?wallet ?glove) (AlignedHorizontally ?glove ?lighter) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?board (exists ?bowl (and (Is ?board 'cutting_board') (Is ?bowl 'bowl') (Below ?carrot ?lighter) (Below ?board ?carrot) (RightOf ?bowl ?board))))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (exists ?wallet (exists ?glove (exists ?lighter (forall ?carrot (exists ?board (exists ?bowl (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?monitor ?jeans) (AlignedHorizontally ?monitor ?jeans) (Has ?jeans 'blue') (Below ?wallet ?monitor) (Is ?jeans 'jeans') (LargerThan ?monitor ?wallet) (Has ?wallet 'brown') (RightOf ?glove ?wallet) (Is ?wallet 'wallet') (AlignedHorizontally ?wallet ?glove) (Is ?glove 'glove') (RightOf ?lighter ?glove) (AlignedHorizontally ?glove ?lighter) (Is ?lighter 'lighter') (or (not (Is ?carrot 'carrot')) (Below ?carrot ?lighter)) (or (not (Is ?carrot 'carrot')) (Is ?bowl 'bowl')) (or (not (Is ?carrot 'carrot')) (Below ?board ?carrot)) (or (not (Is ?carrot 'carrot')) (Is ?board 'cutting_board')) (or (not (Is ?carrot 'carrot')) (RightOf ?bowl ?board)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "carrot",
+        "cutting_board",
+        "lighter",
+        "jeans",
+        "wallet",
+        "monitor",
+        "bowl",
+        "glove"
+    ]
+}

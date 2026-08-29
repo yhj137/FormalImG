@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a black sofa. A blue shirt lies on the sofa next to a sandwich. All books in the scene are placed on the sofa, and a ball sits next to the sofa.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?sh (exists ?sa (and (Is ?s 'sofa') (HasColor ?s 'black') (Is ?sh 'shirt') (HasColor ?sh 'blue') (On ?sh ?s) (Is ?sa 'sandwich') (NextTo ?sa ?sh) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?s))) (exists ?b (and (Is ?b 'ball') (NextTo ?b ?s))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?s (exists ?sh (exists ?sa (forall ?bk (exists ?b (and (Is ?s 'sofa') (HasColor ?s 'black') (On ?sh ?s) (or (not (Is ?bk 'book')) (On ?bk ?s)) (HasColor ?sh 'blue') (NextTo ?sa ?sh) (NextTo ?b ?s) (Is ?sh 'shirt') (Is ?sa 'sandwich') (Is ?b 'ball'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sofa",
+        "sandwich",
+        "ball",
+        "book",
+        "shirt"
+    ]
+}

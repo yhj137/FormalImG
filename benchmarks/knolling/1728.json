@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a black monitor. Below the monitor is a gray laptop, vertically aligned with it. Below the laptop is a hammer, vertically aligned with it. On the right side of the image, there is a glove aligned horizontally with the monitor. Below the glove is a white cup, vertically aligned with it, and the monitor is larger than the cup. For every spoon, there is a watch, a pair of glasses, and a pen. The watch is below the white cup and vertically aligned with it. The spoon is below the watch and vertically aligned with it. The glasses are below the spoon and vertically aligned with it. The pen is on the bottom side of the image, aligned horizontally with the glasses, and the glasses are smaller than the laptop.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?hammer (exists ?glove (exists ?cup (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?hammer 'hammer') (Is ?glove 'glove') (Is ?cup 'cup') (Has ?cup 'white') (Below ?laptop ?monitor) (AlignedVertically ?laptop ?monitor) (Below ?hammer ?laptop) (AlignedVertically ?hammer ?laptop) (OnRightSide ?glove) (AlignedHorizontally ?glove ?monitor) (Below ?cup ?glove) (AlignedVertically ?cup ?glove) (LargerThan ?monitor ?cup) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?watch (exists ?glasses (exists ?pen (and (Is ?watch 'watch') (Is ?glasses 'glasses') (Is ?pen 'pen') (Below ?watch ?cup) (AlignedVertically ?watch ?cup) (Below ?spoon ?watch) (AlignedVertically ?spoon ?watch) (Below ?glasses ?spoon) (AlignedVertically ?glasses ?spoon) (OnBottomSide ?pen) (AlignedHorizontally ?pen ?glasses) (SmallerThan ?glasses ?laptop)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?hammer (exists ?glove (exists ?cup (forall ?spoon (exists ?watch (exists ?glasses (exists ?pen (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Below ?laptop ?monitor) (AlignedVertically ?laptop ?monitor) (Has ?laptop 'gray') (AlignedHorizontally ?glove ?monitor) (Below ?hammer ?laptop) (Is ?laptop 'laptop') (LargerThan ?monitor ?cup) (OnRightSide ?glove) (Below ?cup ?glove) (AlignedVertically ?hammer ?laptop) (Is ?hammer 'hammer') (AlignedVertically ?cup ?glove) (or (not (Is ?spoon 'spoon')) (Below ?watch ?cup)) (Is ?glove 'glove') (Has ?cup 'white') (or (not (Is ?spoon 'spoon')) (SmallerThan ?glasses ?laptop)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?watch ?cup)) (or (not (Is ?spoon 'spoon')) (Is ?pen 'pen')) (or (not (Is ?spoon 'spoon')) (Is ?watch 'watch')) (Is ?cup 'cup') (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?pen ?glasses)) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?watch)) (or (not (Is ?spoon 'spoon')) (Is ?glasses 'glasses')) (or (not (Is ?spoon 'spoon')) (OnBottomSide ?pen)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?glasses ?spoon)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?watch)) (or (not (Is ?spoon 'spoon')) (Below ?glasses ?spoon))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "pen",
+        "watch",
+        "cup",
+        "hammer",
+        "monitor",
+        "glove",
+        "spoon"
+    ]
+}

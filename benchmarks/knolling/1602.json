@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly organized vertical column of nine objects. At the very top is a lighter, which is positioned above a ruler. The ruler is above a pair of scissors, and the scissors are above a fork. Below the fork is a sandwich, which is placed above a cutting board. Further down, a hammer is located below the cutting board, and a drill is found below the hammer. At the bottom of the arrangement, a suitcase is positioned below the drill and resides on the bottom side of the image. All items share a common vertical alignment axis.",
+    "dsl": "(exists ?lighter (exists ?ruler (exists ?scissors (exists ?fork (exists ?sandwich (exists ?cutting_board (exists ?hammer (exists ?drill (exists ?suitcase (and (Is ?lighter 'lighter') (Is ?ruler 'ruler') (Is ?scissors 'scissors') (Is ?fork 'fork') (Is ?sandwich 'sandwich') (Is ?cutting_board 'cutting_board') (Is ?hammer 'hammer') (Is ?drill 'drill') (Is ?suitcase 'suitcase') (Above ?lighter ?ruler) (Above ?ruler ?scissors) (Above ?scissors ?fork) (Below ?sandwich ?fork) (Above ?sandwich ?cutting_board) (Below ?hammer ?cutting_board) (Below ?drill ?hammer) (Below ?suitcase ?drill) (OnBottomSide ?suitcase) (AlignedVertically ?lighter ?ruler) (AlignedVertically ?ruler ?scissors) (AlignedVertically ?scissors ?fork) (AlignedVertically ?fork ?sandwich) (AlignedVertically ?sandwich ?cutting_board) (AlignedVertically ?cutting_board ?hammer) (AlignedVertically ?hammer ?drill) (AlignedVertically ?drill ?suitcase)))))))))))",
+    "cnf": "(exists ?lighter (exists ?ruler (exists ?scissors (exists ?fork (exists ?sandwich (exists ?cutting_board (exists ?hammer (exists ?drill (exists ?suitcase (and (Is ?lighter 'lighter') (Above ?lighter ?ruler) (AlignedVertically ?lighter ?ruler) (Is ?ruler 'ruler') (Above ?ruler ?scissors) (AlignedVertically ?ruler ?scissors) (Is ?scissors 'scissors') (Above ?scissors ?fork) (AlignedVertically ?scissors ?fork) (Is ?fork 'fork') (Below ?sandwich ?fork) (AlignedVertically ?fork ?sandwich) (Is ?sandwich 'sandwich') (Above ?sandwich ?cutting_board) (AlignedVertically ?sandwich ?cutting_board) (Is ?cutting_board 'cutting_board') (Below ?hammer ?cutting_board) (AlignedVertically ?cutting_board ?hammer) (Is ?hammer 'hammer') (Below ?drill ?hammer) (AlignedVertically ?hammer ?drill) (Is ?drill 'drill') (Below ?suitcase ?drill) (AlignedVertically ?drill ?suitcase) (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase)))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "suitcase",
+        "fork",
+        "cutting_board",
+        "lighter",
+        "hammer",
+        "drill",
+        "scissors",
+        "sandwich"
+    ]
+}

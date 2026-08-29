@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene featuring a brick house. Located to the right of the house is a sliced pizza.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (and (Is ?h 'house') (HasMaterial ?h 'brick') (Is ?p 'pizza') (HasState ?p 'sliced') (RightOf ?p ?h)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?p (and (Is ?h 'house') (HasMaterial ?h 'brick') (RightOf ?p ?h) (HasState ?p 'sliced') (Is ?p 'pizza')))))",
+    "k": 2,
+    "object_classes": [
+        "house",
+        "pizza"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene inside a house, where a man holds a keyboard next to a metal horse. To the right of the horse is a round clock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?ho (exists ?k (exists ?c (and (Is ?h 'house') (Is ?m 'man') (Is ?ho 'horse') (Is ?k 'keyboard') (Is ?c 'clock') (In ?m ?h) (Holding ?m ?k) (NextTo ?m ?ho) (HasMaterial ?ho 'metal') (RightOf ?c ?ho) (HasShape ?c 'round'))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?ho (exists ?k (exists ?c (and (Is ?h 'house') (In ?m ?h) (Is ?m 'man') (Holding ?m ?k) (NextTo ?m ?ho) (Is ?k 'keyboard') (Is ?ho 'horse') (HasMaterial ?ho 'metal') (RightOf ?c ?ho) (Is ?c 'clock') (HasShape ?c 'round'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "horse",
+        "man",
+        "clock",
+        "keyboard"
+    ]
+}

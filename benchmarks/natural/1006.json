@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands next to a wooden bookshelf. He is holding a basket that contains a yellow fruit. A monitor and a mirror are both placed on the bookshelf.",
+    "dsl": "(exists ?m (exists ?bs (exists ?b (exists ?f (exists ?mon (exists ?mir (and (Is ?m 'man') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?b 'basket') (Is ?f 'fruit') (HasColor ?f 'yellow') (Is ?mon 'monitor') (Is ?mir 'mirror') (NextTo ?m ?bs) (Holding ?m ?b) (In ?f ?b) (On ?mon ?bs) (On ?mir ?bs))))))))",
+    "cnf": "(exists ?m (exists ?bs (exists ?b (exists ?f (exists ?mon (exists ?mir (and (Is ?m 'man') (NextTo ?m ?bs) (Holding ?m ?b) (HasMaterial ?bs 'wooden') (On ?mon ?bs) (Is ?b 'basket') (In ?f ?b) (Is ?bs 'bookshelf') (On ?mir ?bs) (Is ?mon 'monitor') (HasColor ?f 'yellow') (Is ?mir 'mirror') (Is ?f 'fruit'))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "man",
+        "monitor",
+        "mirror",
+        "basket",
+        "bookshelf"
+    ]
+}

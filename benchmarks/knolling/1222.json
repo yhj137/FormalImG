@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a hat, glasses, a plate, an apple, a lemon, a wallet, and a mouse. The glasses are placed to the right of the hat. A plate is positioned below the hat. To the left of the plate is an apple, while a lemon is located to the right of the plate. A wallet is arranged below the plate. To the right of the wallet is a mouse, which is specifically located on the right side of the scene.",
+    "dsl": "(exists ?hat (exists ?glasses (exists ?plate (exists ?apple (exists ?lemon (exists ?wallet (exists ?mouse (and (Is ?hat 'hat') (Is ?glasses 'glasses') (Is ?plate 'plate') (Is ?apple 'apple') (Is ?lemon 'lemon') (Is ?wallet 'wallet') (Is ?mouse 'mouse') (RightOf ?glasses ?hat) (Below ?plate ?hat) (LeftOf ?apple ?plate) (RightOf ?lemon ?plate) (Below ?wallet ?plate) (RightOf ?mouse ?wallet) (OnRightSide ?mouse)))))))))",
+    "cnf": "(exists ?hat (exists ?glasses (exists ?plate (exists ?apple (exists ?lemon (exists ?wallet (exists ?mouse (and (Is ?hat 'hat') (RightOf ?glasses ?hat) (Below ?plate ?hat) (Is ?glasses 'glasses') (Is ?plate 'plate') (LeftOf ?apple ?plate) (RightOf ?lemon ?plate) (Is ?apple 'apple') (Below ?wallet ?plate) (Is ?lemon 'lemon') (Is ?wallet 'wallet') (RightOf ?mouse ?wallet) (Is ?mouse 'mouse') (OnRightSide ?mouse)))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "apple",
+        "lemon",
+        "hat",
+        "wallet",
+        "mouse"
+    ]
+}

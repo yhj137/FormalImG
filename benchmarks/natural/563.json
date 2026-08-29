@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a child and a jacket next to them. Every screwdriver in the scene is cylindrical, inside the jacket, and positioned to the right of the child.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?j (and (Is ?c 'child') (Is ?j 'jacket') (NextTo ?j ?c) (forall ?s (implies (Is ?s 'screwdriver') (and (HasShape ?s 'cylindrical') (In ?s ?j) (RightOf ?s ?c))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?j (forall ?s (and (Is ?c 'child') (NextTo ?j ?c) (or (not (Is ?s 'screwdriver')) (RightOf ?s ?c)) (Is ?j 'jacket') (or (not (Is ?s 'screwdriver')) (In ?s ?j)) (or (not (Is ?s 'screwdriver')) (HasShape ?s 'cylindrical')))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "screwdriver",
+        "child"
+    ]
+}

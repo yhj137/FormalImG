@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The image contains a green bottle.",
+    "dsl": "(exists ?bottle (and (Is ?bottle 'bottle') (Has ?bottle 'green')))",
+    "cnf": "(exists ?bottle (and (Is ?bottle 'bottle') (Has ?bottle 'green')))",
+    "k": 1,
+    "object_classes": [
+        "bottle"
+    ]
+}

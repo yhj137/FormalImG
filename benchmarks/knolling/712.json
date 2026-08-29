@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A game controller is positioned on the top side of the scene. Below the game controller is a book, and below the book is an apple; these three items are aligned vertically. Furthermore, for every screwdriver in the image, it is aligned vertically with the game controller and is visually smaller than the game controller.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnTopSide ?gc) (forall ?sd (implies (Is ?sd 'screwdriver') (and (AlignedVertically ?sd ?gc) (SmallerThan ?sd ?gc)))) (exists ?bk (exists ?ap (and (Is ?bk 'book') (Is ?ap 'apple') (Above ?gc ?bk) (Above ?bk ?ap) (AlignedVertically ?gc ?bk) (AlignedVertically ?bk ?ap))))))",
+    "cnf": "(exists ?gc (forall ?sd (exists ?bk (exists ?ap (and (Is ?gc 'game_controller') (OnTopSide ?gc) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sd ?gc)) (or (not (Is ?sd 'screwdriver')) (SmallerThan ?sd ?gc)) (Above ?gc ?bk) (AlignedVertically ?gc ?bk) (Is ?bk 'book') (Above ?bk ?ap) (AlignedVertically ?bk ?ap) (Is ?ap 'apple'))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "screwdriver",
+        "apple",
+        "game_controller"
+    ]
+}

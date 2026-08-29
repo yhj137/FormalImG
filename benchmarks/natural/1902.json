@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden desk with a person and a backpack next to it. A phone sits on the desk, with a keyboard placed to its right. All keys in the scene are inside the backpack. A clock hangs above the desk. To the left of the desk is a stone rock, where a sleeping lion rests next to a round ball.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?p (exists ?b (exists ?ph (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?p 'person') (NextTo ?p ?d) (Is ?b 'backpack') (NextTo ?b ?d) (Is ?ph 'phone') (On ?ph ?d) (forall ?k (implies (Is ?k 'key') (In ?k ?b))) (exists ?kb (exists ?c (exists ?r (exists ?l (exists ?ba (and (Is ?kb 'keyboard') (On ?kb ?d) (RightOf ?kb ?ph) (Is ?c 'clock') (Above ?c ?d) (Is ?r 'rock') (HasMaterial ?r 'stone') (LeftOf ?r ?d) (Is ?l 'lion') (HasState ?l 'sleeping') (On ?l ?r) (Is ?ba 'ball') (HasShape ?ba 'round') (NextTo ?ba ?l)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?p (exists ?b (exists ?ph (forall ?k (exists ?kb (exists ?c (exists ?r (exists ?l (exists ?ba (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?p ?d) (NextTo ?b ?d) (Is ?p 'person') (On ?ph ?d) (Is ?b 'backpack') (or (not (Is ?k 'key')) (In ?k ?b)) (On ?kb ?d) (Is ?ph 'phone') (RightOf ?kb ?ph) (Above ?c ?d) (Is ?kb 'keyboard') (LeftOf ?r ?d) (Is ?c 'clock') (HasMaterial ?r 'stone') (On ?l ?r) (Is ?r 'rock') (HasState ?l 'sleeping') (NextTo ?ba ?l) (Is ?l 'lion') (HasShape ?ba 'round') (Is ?ba 'ball')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "key",
+        "person",
+        "rock",
+        "desk",
+        "ball",
+        "backpack",
+        "phone",
+        "clock",
+        "lion"
+    ]
+}

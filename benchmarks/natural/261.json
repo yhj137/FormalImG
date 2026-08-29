@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is located next to an orange fish.",
+    "dsl": "(exists ?m (exists ?f (and (Is ?m 'man') (Is ?f 'fish') (HasColor ?f 'orange') (NextTo ?m ?f))))",
+    "cnf": "(exists ?m (exists ?f (and (Is ?m 'man') (NextTo ?m ?f) (HasColor ?f 'orange') (Is ?f 'fish'))))",
+    "k": 2,
+    "object_classes": [
+        "fish",
+        "man"
+    ]
+}

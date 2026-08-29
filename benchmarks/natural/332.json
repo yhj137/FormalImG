@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every shoe in the scene is made of leather, and there is a phone inside each of them.",
+    "dsl": "(forall ?s (implies (Is ?s 'shoes') (and (HasMaterial ?s 'leather') (exists ?p (and (Is ?p 'phone') (In ?p ?s))))))",
+    "cnf": "(forall ?s (exists ?p (and (or (not (Is ?s 'shoes')) (HasMaterial ?s 'leather')) (or (not (Is ?s 'shoes')) (Is ?p 'phone')) (or (not (Is ?s 'shoes')) (In ?p ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "shoes"
+    ]
+}

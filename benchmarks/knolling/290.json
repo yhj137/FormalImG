@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase found in the scene, it is positioned on the bottom side of the image, and there is a donut located above it.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'suitcase') (exists ?d (and (Is ?d 'donut') (OnBottomSide ?s) (Above ?d ?s))))))",
+    "cnf": "(forall ?s (exists ?d (and (or (not (Is ?s 'suitcase')) (Is ?d 'donut')) (or (not (Is ?s 'suitcase')) (Above ?d ?s)) (or (not (Is ?s 'suitcase')) (OnBottomSide ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "donut"
+    ]
+}

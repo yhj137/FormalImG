@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands next to and to the left of a boat, holding a black jacket. A key is inside the boat, and every orange in the scene is also inside the boat.",
+    "dsl": "(exists ?m (exists ?b (exists ?j (exists ?k (and (Is ?m 'man') (Is ?b 'boat') (Is ?j 'jacket') (Is ?k 'key') (NextTo ?m ?b) (LeftOf ?m ?b) (Holding ?m ?j) (HasColor ?j 'black') (In ?k ?b) (forall ?o (implies (Is ?o 'orange') (In ?o ?b))))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?j (exists ?k (forall ?o (and (Is ?m 'man') (NextTo ?m ?b) (LeftOf ?m ?b) (Is ?b 'boat') (Holding ?m ?j) (In ?k ?b) (Is ?j 'jacket') (HasColor ?j 'black') (or (not (Is ?o 'orange')) (In ?o ?b)) (Is ?k 'key')))))))",
+    "k": 5,
+    "object_classes": [
+        "boat",
+        "key",
+        "man",
+        "orange",
+        "jacket"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every butterfly in the scene is resting on a tree. To the right of the tree stands a woman holding a rectangular phone, wearing a backpack with a hammer and a screwdriver on it.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (forall ?b (implies (Is ?b 'butterfly') (On ?b ?t))) (exists ?w (and (Is ?w 'woman') (RightOf ?w ?t) (exists ?p (and (Is ?p 'phone') (HasShape ?p 'rectangular') (Holding ?w ?p))) (exists ?bp (and (Is ?bp 'backpack') (On ?bp ?w) (exists ?h (exists ?s (and (Is ?h 'hammer') (Is ?s 'screwdriver') (On ?h ?bp) (On ?s ?bp))))))))))",
+    "cnf": "(exists ?t (forall ?b (exists ?w (exists ?p (exists ?bp (exists ?h (exists ?s (and (Is ?t 'tree') (or (not (Is ?b 'butterfly')) (On ?b ?t)) (RightOf ?w ?t) (Is ?w 'woman') (Holding ?w ?p) (On ?bp ?w) (HasShape ?p 'rectangular') (Is ?bp 'backpack') (On ?h ?bp) (Is ?p 'phone') (On ?s ?bp) (Is ?h 'hammer') (Is ?s 'screwdriver')))))))))",
+    "k": 7,
+    "object_classes": [
+        "tree",
+        "backpack",
+        "screwdriver",
+        "hammer",
+        "butterfly",
+        "phone",
+        "woman"
+    ]
+}

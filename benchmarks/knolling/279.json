@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every set of keys in the layout, there is a blue pen located above it.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keys') (exists ?p (and (Is ?p 'pen') (Has ?p 'blue') (Above ?p ?k))))))",
+    "cnf": "(forall ?k (exists ?p (and (or (not (Is ?k 'keys')) (Is ?p 'pen')) (or (not (Is ?k 'keys')) (Has ?p 'blue')) (or (not (Is ?k 'keys')) (Above ?p ?k)))))",
+    "k": 2,
+    "object_classes": [
+        "keys",
+        "pen"
+    ]
+}

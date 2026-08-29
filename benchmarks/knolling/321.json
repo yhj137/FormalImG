@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard in the scene, there corresponds a black remote, such that the keyboard is visually larger than the remote.",
+    "dsl": "(and (forall ?k (implies (Is ?k 'keyboard') (exists ?r (and (Is ?r 'remote') (Has ?r 'black') (LargerThan ?k ?r))))))",
+    "cnf": "(forall ?k (exists ?r (and (or (not (Is ?k 'keyboard')) (Is ?r 'remote')) (or (not (Is ?k 'keyboard')) (Has ?r 'black')) (or (not (Is ?k 'keyboard')) (LargerThan ?k ?r)))))",
+    "k": 2,
+    "object_classes": [
+        "remote",
+        "keyboard"
+    ]
+}

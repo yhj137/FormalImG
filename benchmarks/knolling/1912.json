@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a handbag positioned on the top side of the frame. Directly above a hat is the handbag, and the hat is positioned above a game controller. The game controller is located above a pair of headphones. These headphones are positioned above a cutting board, which is located on the bottom side and is larger than the headphones. For every lemon in the image, it is smaller than the cutting board. Additionally, there is a sandwich positioned above the lemon, a tie above the sandwich, a glove above the tie, and a screwdriver above the glove. The screwdriver is located on the right side of the image.",
+    "dsl": "(exists ?handbag (exists ?hat (exists ?controller (exists ?headphones (exists ?board (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Is ?hat 'hat') (Above ?handbag ?hat) (Is ?controller 'game_controller') (Above ?hat ?controller) (Is ?headphones 'headphones') (Above ?controller ?headphones) (Is ?board 'cutting_board') (OnBottomSide ?board) (Above ?headphones ?board) (LargerThan ?board ?headphones) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?sandwich (exists ?tie (exists ?glove (exists ?screwdriver (and (Is ?sandwich 'sandwich') (Is ?tie 'tie') (Is ?glove 'glove') (Is ?screwdriver 'screwdriver') (SmallerThan ?lemon ?board) (Above ?sandwich ?lemon) (Above ?tie ?sandwich) (Above ?glove ?tie) (Above ?screwdriver ?glove) (OnRightSide ?screwdriver))))))))))))))",
+    "cnf": "(exists ?handbag (exists ?hat (exists ?controller (exists ?headphones (exists ?board (forall ?lemon (exists ?sandwich (exists ?tie (exists ?glove (exists ?screwdriver (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (Above ?handbag ?hat) (Is ?hat 'hat') (Above ?hat ?controller) (Is ?controller 'game_controller') (Above ?controller ?headphones) (Is ?headphones 'headphones') (Above ?headphones ?board) (LargerThan ?board ?headphones) (OnBottomSide ?board) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?board)) (Is ?board 'cutting_board') (or (not (Is ?lemon 'lemon')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?lemon 'lemon')) (Above ?sandwich ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?glove 'glove')) (or (not (Is ?lemon 'lemon')) (Above ?screwdriver ?glove)) (or (not (Is ?lemon 'lemon')) (Above ?tie ?sandwich)) (or (not (Is ?lemon 'lemon')) (Is ?sandwich 'sandwich')) (or (not (Is ?lemon 'lemon')) (Is ?tie 'tie')) (or (not (Is ?lemon 'lemon')) (Above ?glove ?tie)) (or (not (Is ?lemon 'lemon')) (OnRightSide ?screwdriver)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "lemon",
+        "screwdriver",
+        "game_controller",
+        "sandwich",
+        "cutting_board",
+        "hat",
+        "handbag",
+        "headphones",
+        "glove"
+    ]
+}

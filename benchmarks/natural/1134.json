@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a cat holding a red ball. A backpack is located to the left of the cat. Every plant in the scene is positioned to the left of the backpack. A round plate is also to the left of the backpack, with a phone located to the left of the plate.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?bp (and (Is ?c 'cat') (Is ?b 'ball') (HasColor ?b 'red') (Holding ?c ?b) (Is ?bp 'backpack') (LeftOf ?bp ?c) (forall ?p (implies (Is ?p 'plant') (LeftOf ?p ?bp))) (exists ?pl (exists ?ph (and (Is ?pl 'plate') (HasShape ?pl 'round') (LeftOf ?pl ?bp) (Is ?ph 'phone') (LeftOf ?ph ?pl)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?bp (forall ?p (exists ?pl (exists ?ph (and (Is ?c 'cat') (Holding ?c ?b) (LeftOf ?bp ?c) (HasColor ?b 'red') (Is ?bp 'backpack') (or (not (Is ?p 'plant')) (LeftOf ?p ?bp)) (Is ?b 'ball') (LeftOf ?pl ?bp) (HasShape ?pl 'round') (LeftOf ?ph ?pl) (Is ?pl 'plate') (Is ?ph 'phone')))))))))",
+    "k": 6,
+    "object_classes": [
+        "cat",
+        "plant",
+        "ball",
+        "backpack",
+        "phone",
+        "plate"
+    ]
+}

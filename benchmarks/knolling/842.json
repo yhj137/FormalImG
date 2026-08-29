@@ -1,0 +1,13 @@
+{
+    "prompt": "For every cutting board, it is positioned on the top side of the scene and has a camera to its right, followed by a wrench to the right of the camera, with these three items aligned horizontally. Additionally, for each cutting board, there is a spoon located on the bottom side of the scene with a pen to its right, aligned horizontally, and the cutting board is visually larger than the spoon.",
+    "dsl": "(forall ?cb (implies (Is ?cb 'cutting_board') (exists ?cam (exists ?wr (exists ?sp (exists ?pen (and (Is ?cam 'camera') (Is ?wr 'wrench') (Is ?sp 'spoon') (Is ?pen 'pen') (OnTopSide ?cb) (RightOf ?cam ?cb) (RightOf ?wr ?cam) (AlignedHorizontally ?cb ?cam) (AlignedHorizontally ?cam ?wr) (OnBottomSide ?sp) (RightOf ?pen ?sp) (AlignedHorizontally ?sp ?pen) (LargerThan ?cb ?sp))))))))",
+    "cnf": "(forall ?cb (exists ?cam (exists ?wr (exists ?sp (exists ?pen (and (or (not (Is ?cb 'cutting_board')) (Is ?cam 'camera')) (or (not (Is ?cb 'cutting_board')) (RightOf ?cam ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?wr 'wrench')) (or (not (Is ?cb 'cutting_board')) (RightOf ?wr ?cam)) (or (not (Is ?cb 'cutting_board')) (OnTopSide ?cb)) (or (not (Is ?cb 'cutting_board')) (Is ?sp 'spoon')) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?cb ?cam)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?cam ?wr)) (or (not (Is ?cb 'cutting_board')) (Is ?pen 'pen')) (or (not (Is ?cb 'cutting_board')) (OnBottomSide ?sp)) (or (not (Is ?cb 'cutting_board')) (RightOf ?pen ?sp)) (or (not (Is ?cb 'cutting_board')) (AlignedHorizontally ?sp ?pen)) (or (not (Is ?cb 'cutting_board')) (LargerThan ?cb ?sp))))))))",
+    "k": 5,
+    "object_classes": [
+        "pen",
+        "wrench",
+        "cutting_board",
+        "camera",
+        "spoon"
+    ]
+}

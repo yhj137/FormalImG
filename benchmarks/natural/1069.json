@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a gray monitor. Every key is next to the monitor. A child holding a rectangular toy car is next to the monitor. To the right of the monitor is a cylindrical bottle containing a spoon.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (and (Is ?m 'monitor') (HasColor ?m 'gray') (forall ?k (implies (Is ?k 'key') (NextTo ?k ?m))) (exists ?c (exists ?tc (exists ?b (exists ?s (and (Is ?c 'child') (NextTo ?c ?m) (Is ?tc 'toy car') (HasShape ?tc 'rectangular') (Holding ?c ?tc) (Is ?b 'bottle') (HasShape ?b 'cylindrical') (RightOf ?b ?m) (Is ?s 'spoon') (In ?s ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (forall ?k (exists ?c (exists ?tc (exists ?b (exists ?s (and (Is ?m 'monitor') (HasColor ?m 'gray') (or (not (Is ?k 'key')) (NextTo ?k ?m)) (NextTo ?c ?m) (RightOf ?b ?m) (Is ?c 'child') (Holding ?c ?tc) (HasShape ?b 'cylindrical') (In ?s ?b) (HasShape ?tc 'rectangular') (Is ?b 'bottle') (Is ?s 'spoon') (Is ?tc 'toy car')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "key",
+        "monitor",
+        "toy car",
+        "child",
+        "spoon"
+    ]
+}

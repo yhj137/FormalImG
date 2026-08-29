@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a fabric rug. On the rug, there is a brown cake, a basket containing all the apples, and a child holding a fork.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (exists ?c (exists ?k (exists ?f (exists ?b (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?c 'child') (On ?c ?r) (Is ?k 'cake') (HasColor ?k 'brown') (On ?k ?r) (Is ?f 'fork') (Holding ?c ?f) (Is ?b 'basket') (On ?b ?r) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (exists ?c (exists ?k (exists ?f (exists ?b (forall ?a (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?c ?r) (On ?k ?r) (Is ?c 'child') (Holding ?c ?f) (On ?b ?r) (HasColor ?k 'brown') (Is ?f 'fork') (Is ?b 'basket') (or (not (Is ?a 'apple')) (In ?a ?b)) (Is ?k 'cake')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fork",
+        "cake",
+        "basket",
+        "rug",
+        "apple",
+        "child"
+    ]
+}

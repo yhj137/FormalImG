@@ -1,0 +1,10 @@
+{
+    "prompt": "An oil painting where every bird holds a round cake.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'bird') (exists ?c (and (Is ?c 'cake') (HasShape ?c 'round') (Holding ?b ?c))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?c (and (or (not (Is ?b 'bird')) (Is ?c 'cake')) (or (not (Is ?b 'bird')) (HasShape ?c 'round')) (or (not (Is ?b 'bird')) (Holding ?b ?c))))))",
+    "k": 2,
+    "object_classes": [
+        "bird",
+        "cake"
+    ]
+}

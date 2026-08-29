@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf holds every book in the scene. A white boat sits on the bookshelf next to a dirty cup, and a mirror stands beside the bookshelf. To the right of the bookshelf is a chair. A bitten sandwich rests on the chair next to a gray fork. Wet shoes are next to the chair, with a red toy car adjacent to them.",
+    "dsl": "(exists ?s (and (Is ?s 'bookshelf') (forall ?b (implies (Is ?b 'book') (On ?b ?s))) (exists ?bt (and (Is ?bt 'boat') (HasColor ?bt 'white') (On ?bt ?s) (exists ?cp (and (Is ?cp 'cup') (HasState ?cp 'dirty') (NextTo ?cp ?bt))))) (exists ?m (and (Is ?m 'mirror') (NextTo ?m ?s))) (exists ?c (and (Is ?c 'chair') (RightOf ?c ?s) (exists ?sw (and (Is ?sw 'sandwich') (HasState ?sw 'bitten') (On ?sw ?c) (exists ?f (and (Is ?f 'fork') (HasColor ?f 'gray') (NextTo ?f ?sw))))) (exists ?sh (and (Is ?sh 'shoes') (HasState ?sh 'wet') (NextTo ?sh ?c) (exists ?tc (and (Is ?tc 'toy car') (HasColor ?tc 'red') (NextTo ?tc ?sh)))))))))",
+    "cnf": "(exists ?s (forall ?b (exists ?bt (exists ?cp (exists ?m (exists ?c (exists ?sw (exists ?f (exists ?sh (exists ?tc (and (Is ?s 'bookshelf') (or (not (Is ?b 'book')) (On ?b ?s)) (On ?bt ?s) (NextTo ?m ?s) (HasColor ?bt 'white') (NextTo ?cp ?bt) (RightOf ?c ?s) (Is ?m 'mirror') (Is ?bt 'boat') (HasState ?cp 'dirty') (Is ?c 'chair') (On ?sw ?c) (Is ?cp 'cup') (NextTo ?sh ?c) (HasState ?sw 'bitten') (NextTo ?f ?sw) (HasState ?sh 'wet') (NextTo ?tc ?sh) (Is ?sw 'sandwich') (HasColor ?f 'gray') (Is ?sh 'shoes') (HasColor ?tc 'red') (Is ?f 'fork') (Is ?tc 'toy car'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "boat",
+        "shoes",
+        "sandwich",
+        "mirror",
+        "fork",
+        "cup",
+        "bookshelf",
+        "toy car",
+        "chair",
+        "book"
+    ]
+}

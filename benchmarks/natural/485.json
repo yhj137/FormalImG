@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every tree has a metal hammer to its right and a fruit on it to the left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'tree') (exists ?h (exists ?f (and (Is ?h 'hammer') (Is ?f 'fruit') (HasMaterial ?h 'metal') (RightOf ?h ?t) (LeftOf ?f ?t) (On ?f ?t)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (exists ?h (exists ?f (and (or (not (Is ?t 'tree')) (Is ?h 'hammer')) (or (not (Is ?t 'tree')) (Is ?f 'fruit')) (or (not (Is ?t 'tree')) (HasMaterial ?h 'metal')) (or (not (Is ?t 'tree')) (LeftOf ?f ?t)) (or (not (Is ?t 'tree')) (RightOf ?h ?t)) (or (not (Is ?t 'tree')) (On ?f ?t)))))))",
+    "k": 3,
+    "object_classes": [
+        "fruit",
+        "hammer",
+        "tree"
+    ]
+}

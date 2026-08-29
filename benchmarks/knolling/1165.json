@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the bottom side of the image. Above the backpack is a keyboard, and above the keyboard is a bowl. A stapler is located to the right of the bowl. Additionally, for every remote in the scene, there is a spoon to its right, and that remote is positioned above the stapler.",
+    "dsl": "(exists ?backpack (exists ?keyboard (exists ?bowl (exists ?stapler (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (Is ?keyboard 'keyboard') (Above ?keyboard ?backpack) (Is ?bowl 'bowl') (Above ?bowl ?keyboard) (Is ?stapler 'stapler') (RightOf ?stapler ?bowl) (forall ?remote (implies (Is ?remote 'remote') (exists ?spoon (and (Is ?spoon 'spoon') (RightOf ?spoon ?remote) (Above ?remote ?stapler))))))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (exists ?bowl (exists ?stapler (forall ?remote (exists ?spoon (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (Above ?keyboard ?backpack) (Is ?keyboard 'keyboard') (Above ?bowl ?keyboard) (Is ?bowl 'bowl') (RightOf ?stapler ?bowl) (Is ?stapler 'stapler') (or (not (Is ?remote 'remote')) (Above ?remote ?stapler)) (or (not (Is ?remote 'remote')) (RightOf ?spoon ?remote)) (or (not (Is ?remote 'remote')) (Is ?spoon 'spoon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "stapler",
+        "keyboard",
+        "backpack",
+        "spoon",
+        "bowl"
+    ]
+}

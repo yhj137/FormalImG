@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a glass mirror. A dirty jacket lies next to the mirror, and beside the jacket is a laptop with a blue cup on top. A sandwich sits next to the cup, and a lamp stands next to the laptop. A ball is also next to the mirror. To the right of the mirror, a cat is holding a banana, while all buses are positioned to the left of the mirror.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?j (exists ?lap (exists ?cup (and (Is ?m 'mirror') (HasMaterial ?m 'glass') (Is ?j 'jacket') (HasState ?j 'dirty') (NextTo ?j ?m) (Is ?lap 'laptop') (NextTo ?lap ?j) (Is ?cup 'cup') (HasColor ?cup 'blue') (On ?cup ?lap) (forall ?b (implies (Is ?b 'bus') (LeftOf ?b ?m))) (exists ?s (exists ?l (exists ?bal (exists ?c (exists ?ban (and (Is ?s 'sandwich') (NextTo ?s ?cup) (Is ?l 'lamp') (NextTo ?l ?lap) (Is ?bal 'ball') (NextTo ?bal ?m) (Is ?c 'cat') (RightOf ?c ?m) (Is ?ban 'banana') (Holding ?c ?ban)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?j (exists ?lap (exists ?cup (forall ?b (exists ?s (exists ?l (exists ?bal (exists ?c (exists ?ban (and (Is ?m 'mirror') (HasMaterial ?m 'glass') (NextTo ?j ?m) (or (not (Is ?b 'bus')) (LeftOf ?b ?m)) (HasState ?j 'dirty') (NextTo ?lap ?j) (NextTo ?bal ?m) (Is ?j 'jacket') (Is ?lap 'laptop') (On ?cup ?lap) (RightOf ?c ?m) (Is ?bal 'ball') (NextTo ?l ?lap) (HasColor ?cup 'blue') (NextTo ?s ?cup) (Is ?c 'cat') (Holding ?c ?ban) (Is ?l 'lamp') (Is ?cup 'cup') (Is ?s 'sandwich') (Is ?ban 'banana')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "jacket",
+        "lamp",
+        "mirror",
+        "cup",
+        "ball",
+        "sandwich",
+        "cat",
+        "bus",
+        "banana"
+    ]
+}

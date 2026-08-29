@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of a tree stands a dog holding a backpack that contains every key. Next to the dog is a plate with a bottle on it, beside a bowl containing a cup. A round mirror sits next to the tree.",
+    "dsl": "(exists ?t (exists ?d (exists ?bp (and (Is ?t 'tree') (Is ?d 'dog') (Is ?bp 'backpack') (RightOf ?d ?t) (Holding ?d ?bp) (forall ?k (implies (Is ?k 'key') (In ?k ?bp))) (exists ?p (exists ?bt (exists ?bo (exists ?c (exists ?m (and (Is ?p 'plate') (Is ?bt 'bottle') (Is ?bo 'bowl') (Is ?c 'cup') (Is ?m 'mirror') (NextTo ?p ?d) (On ?bt ?p) (NextTo ?bo ?p) (In ?c ?bo) (NextTo ?m ?t) (HasShape ?m 'round')))))))))))",
+    "cnf": "(exists ?t (exists ?d (exists ?bp (forall ?k (exists ?p (exists ?bt (exists ?bo (exists ?c (exists ?m (and (Is ?t 'tree') (RightOf ?d ?t) (NextTo ?m ?t) (Is ?d 'dog') (Holding ?d ?bp) (Is ?m 'mirror') (HasShape ?m 'round') (NextTo ?p ?d) (Is ?bp 'backpack') (or (not (Is ?k 'key')) (In ?k ?bp)) (Is ?p 'plate') (On ?bt ?p) (NextTo ?bo ?p) (Is ?bt 'bottle') (Is ?bo 'bowl') (In ?c ?bo) (Is ?c 'cup')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "backpack",
+        "plate",
+        "tree",
+        "mirror",
+        "cup",
+        "bowl",
+        "dog",
+        "key"
+    ]
+}

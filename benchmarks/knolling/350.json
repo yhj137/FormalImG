@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a stapler positioned on the left side of the layout. Additionally, for every sock present in the scene, the stapler is located to the left of that sock.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (forall ?sock (implies (Is ?sock 'sock') (LeftOf ?stapler ?sock)))))",
+    "cnf": "(exists ?stapler (forall ?sock (and (Is ?stapler 'stapler') (OnLeftSide ?stapler) (or (not (Is ?sock 'sock')) (LeftOf ?stapler ?sock)))))",
+    "k": 2,
+    "object_classes": [
+        "stapler",
+        "sock"
+    ]
+}

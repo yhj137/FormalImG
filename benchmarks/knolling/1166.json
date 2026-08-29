@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a remote, and a tie is located below it on the bottom side. The remote is positioned to the left of a phone, which has a pair of pliers below it. Furthermore, for every pair of headphones, there is a handbag to its left that is larger than the pliers.",
+    "dsl": "(exists ?remote (exists ?phone (exists ?tie (exists ?pliers (and (Is ?remote 'remote') (Is ?phone 'phone') (Is ?tie 'tie') (Is ?pliers 'pliers') (OnLeftSide ?remote) (OnBottomSide ?tie) (Below ?tie ?remote) (LeftOf ?remote ?phone) (Below ?pliers ?phone) (forall ?hp (implies (Is ?hp 'headphones') (exists ?hb (and (Is ?hb 'handbag') (LeftOf ?hb ?hp) (LargerThan ?hb ?pliers))))))))))",
+    "cnf": "(exists ?remote (exists ?phone (exists ?tie (exists ?pliers (forall ?hp (exists ?hb (and (Is ?remote 'remote') (OnLeftSide ?remote) (Below ?tie ?remote) (LeftOf ?remote ?phone) (OnBottomSide ?tie) (Is ?phone 'phone') (Below ?pliers ?phone) (Is ?tie 'tie') (Is ?pliers 'pliers') (or (not (Is ?hp 'headphones')) (LargerThan ?hb ?pliers)) (or (not (Is ?hp 'headphones')) (LeftOf ?hb ?hp)) (or (not (Is ?hp 'headphones')) (Is ?hb 'handbag')))))))))",
+    "k": 6,
+    "object_classes": [
+        "pliers",
+        "headphones",
+        "tie",
+        "phone",
+        "handbag",
+        "remote"
+    ]
+}

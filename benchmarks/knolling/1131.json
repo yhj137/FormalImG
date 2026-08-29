@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image with a vertical arrangement of items. The scene features a black pan positioned above a red hammer, which in turn is above a camera. For every knife in the image, it is placed below the camera and above a book. Furthermore, there is a set of white keys located below the book.",
+    "dsl": "(exists ?pan (exists ?hammer (exists ?camera (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?hammer 'hammer') (Has ?hammer 'red') (Is ?camera 'camera') (Above ?pan ?hammer) (Above ?hammer ?camera) (forall ?knife (implies (Is ?knife 'knife') (exists ?book (exists ?keys (and (Is ?book 'book') (Is ?keys 'keys') (Has ?keys 'white') (Below ?knife ?camera) (Above ?knife ?book) (Below ?keys ?book))))))))))",
+    "cnf": "(exists ?pan (exists ?hammer (exists ?camera (forall ?knife (exists ?book (exists ?keys (and (Is ?pan 'pan') (Has ?pan 'black') (Above ?pan ?hammer) (Has ?hammer 'red') (Above ?hammer ?camera) (Is ?hammer 'hammer') (Is ?camera 'camera') (or (not (Is ?knife 'knife')) (Below ?knife ?camera)) (or (not (Is ?knife 'knife')) (Has ?keys 'white')) (or (not (Is ?knife 'knife')) (Above ?knife ?book)) (or (not (Is ?knife 'knife')) (Is ?keys 'keys')) (or (not (Is ?knife 'knife')) (Below ?keys ?book)) (or (not (Is ?knife 'knife')) (Is ?book 'book')))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "keys",
+        "hammer",
+        "pan",
+        "camera",
+        "knife"
+    ]
+}

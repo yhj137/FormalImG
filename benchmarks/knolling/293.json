@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a pair of scissors located to its left, and the scissors are specifically positioned on the left side of the image.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?scissors (and (Is ?scissors 'scissors') (LeftOf ?scissors ?monitor) (OnLeftSide ?scissors))))))",
+    "cnf": "(forall ?monitor (exists ?scissors (and (or (not (Is ?monitor 'monitor')) (Is ?scissors 'scissors')) (or (not (Is ?monitor 'monitor')) (LeftOf ?scissors ?monitor)) (or (not (Is ?monitor 'monitor')) (OnLeftSide ?scissors)))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "scissors"
+    ]
+}

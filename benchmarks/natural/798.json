@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bowl with a metal spoon inside. A pair of glasses is located next to the bowl, and every flower in the scene is also positioned next to the bowl.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bowl') (exists ?s (and (Is ?s 'spoon') (HasMaterial ?s 'metal') (In ?s ?b) (exists ?g (and (Is ?g 'glasses') (NextTo ?g ?b) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?b))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?s (exists ?g (forall ?f (and (Is ?b 'bowl') (In ?s ?b) (NextTo ?g ?b) (HasMaterial ?s 'metal') (or (not (Is ?f 'flower')) (NextTo ?f ?b)) (Is ?g 'glasses') (Is ?s 'spoon')))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "bowl",
+        "flower",
+        "glasses"
+    ]
+}

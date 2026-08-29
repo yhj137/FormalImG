@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden table with a blooming plant on it, and a butterfly inside the plant. To the right of the table, a person is holding a knife. All bananas are located to the left of the plant, and a metal spoon rests on the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?pl (exists ?per (exists ?k (exists ?bu (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?pl 'plant') (HasState ?pl 'blooming') (On ?pl ?t) (Is ?per 'person') (RightOf ?per ?t) (Is ?k 'knife') (Holding ?per ?k) (Is ?bu 'butterfly') (In ?bu ?pl) (forall ?ba (implies (Is ?ba 'banana') (LeftOf ?ba ?pl))) (exists ?s (and (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?s ?t))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?pl (exists ?per (exists ?k (exists ?bu (forall ?ba (exists ?s (and (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?pl ?t) (RightOf ?per ?t) (HasState ?pl 'blooming') (In ?bu ?pl) (On ?s ?t) (Is ?per 'person') (Holding ?per ?k) (Is ?pl 'plant') (or (not (Is ?ba 'banana')) (LeftOf ?ba ?pl)) (Is ?bu 'butterfly') (HasMaterial ?s 'metal') (Is ?k 'knife') (Is ?s 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "person",
+        "knife",
+        "plant",
+        "banana",
+        "butterfly",
+        "table",
+        "spoon"
+    ]
+}

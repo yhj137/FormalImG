@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical arrangement of nine objects. The scene includes a brown suitcase, blue jeans, a laptop, a black shoe, a hat, a book, a calculator, a remote, and a screwdriver. These items are organized in a specific vertical sequence: the screwdriver is positioned above the hat. The hat is above the book, which is placed above the laptop. Below the laptop is the calculator, and the remote is positioned below the calculator. The blue jeans are located below the remote and above the brown suitcase, while the black shoe is below the suitcase. Additionally, any lighter present in the scene is red and is located above the screwdriver. The hat and the suitcase are aligned vertically, as are the laptop and the shoe. Visually, the suitcase is larger than both the laptop and the shoe, and the laptop is larger than the book.",
+    "dsl": "(exists ?suitcase (forall ?lighter (exists ?jeans (exists ?laptop (exists ?shoe (exists ?hat (exists ?book (exists ?calculator (exists ?remote (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?laptop 'laptop') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?hat 'hat') (Is ?book 'book') (Is ?calculator 'calculator') (Is ?remote 'remote') (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?hat) (Above ?hat ?book) (Above ?book ?laptop) (Above ?laptop ?calculator) (Below ?remote ?calculator) (Above ?remote ?jeans) (Above ?jeans ?suitcase) (Below ?shoe ?suitcase) (AlignedVertically ?hat ?suitcase) (AlignedVertically ?laptop ?shoe) (LargerThan ?suitcase ?laptop) (LargerThan ?suitcase ?shoe) (LargerThan ?laptop ?book) (implies (Is ?lighter 'lighter') (and (Has ?lighter 'red') (Above ?lighter ?screwdriver))))))))))))))",
+    "cnf": "(exists ?suitcase (forall ?lighter (exists ?jeans (exists ?laptop (exists ?shoe (exists ?hat (exists ?book (exists ?calculator (exists ?remote (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Above ?jeans ?suitcase) (Below ?shoe ?suitcase) (Above ?remote ?jeans) (AlignedVertically ?hat ?suitcase) (Has ?shoe 'black') (AlignedVertically ?laptop ?shoe) (Has ?jeans 'blue') (Below ?remote ?calculator) (LargerThan ?suitcase ?laptop) (Above ?hat ?book) (Is ?shoe 'shoe') (Above ?laptop ?calculator) (LargerThan ?suitcase ?shoe) (Is ?jeans 'jeans') (Is ?remote 'remote') (LargerThan ?laptop ?book) (Above ?screwdriver ?hat) (Is ?book 'book') (Above ?book ?laptop) (Is ?calculator 'calculator') (Is ?hat 'hat') (Is ?screwdriver 'screwdriver') (or (not (Is ?lighter 'lighter')) (Above ?lighter ?screwdriver)) (Is ?laptop 'laptop') (or (not (Is ?lighter 'lighter')) (Has ?lighter 'red')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "laptop",
+        "remote",
+        "screwdriver",
+        "hat",
+        "calculator",
+        "jeans",
+        "lighter",
+        "suitcase",
+        "shoe"
+    ]
+}

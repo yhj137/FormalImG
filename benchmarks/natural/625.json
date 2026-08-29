@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round mirror is next to a blue backpack with a fruit on it, while a flower is positioned to the right of the mirror.",
+    "dsl": "(exists ?m (exists ?b (exists ?fr (exists ?fl (and (Is ?m 'mirror') (HasShape ?m 'round') (Is ?b 'backpack') (HasColor ?b 'blue') (Is ?fr 'fruit') (Is ?fl 'flower') (NextTo ?b ?m) (On ?fr ?b) (RightOf ?fl ?m))))))",
+    "cnf": "(exists ?m (exists ?b (exists ?fr (exists ?fl (and (Is ?m 'mirror') (HasShape ?m 'round') (NextTo ?b ?m) (RightOf ?fl ?m) (HasColor ?b 'blue') (On ?fr ?b) (Is ?fl 'flower') (Is ?b 'backpack') (Is ?fr 'fruit'))))))",
+    "k": 4,
+    "object_classes": [
+        "backpack",
+        "flower",
+        "mirror",
+        "fruit"
+    ]
+}

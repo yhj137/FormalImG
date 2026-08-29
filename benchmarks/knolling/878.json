@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a keyboard. For every pair of headphones, they are placed to the right of the keyboard, and there is a remote located below them, a tie positioned on the right side of the image which is larger than the remote, and a bottle located on the bottom side of the image that is positioned below the keyboard.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (forall ?headphones (implies (Is ?headphones 'headphones') (exists ?remote (exists ?tie (exists ?bottle (and (Is ?remote 'remote') (Is ?tie 'tie') (Is ?bottle 'bottle') (RightOf ?headphones ?keyboard) (Below ?remote ?headphones) (OnRightSide ?tie) (LargerThan ?tie ?remote) (OnBottomSide ?bottle) (Below ?bottle ?keyboard)))))))))",
+    "cnf": "(exists ?keyboard (forall ?headphones (exists ?remote (exists ?tie (exists ?bottle (and (Is ?keyboard 'keyboard') (or (not (Is ?headphones 'headphones')) (RightOf ?headphones ?keyboard)) (or (not (Is ?headphones 'headphones')) (Below ?bottle ?keyboard)) (or (not (Is ?headphones 'headphones')) (Is ?bottle 'bottle')) (or (not (Is ?headphones 'headphones')) (Below ?remote ?headphones)) (or (not (Is ?headphones 'headphones')) (OnBottomSide ?bottle)) (or (not (Is ?headphones 'headphones')) (Is ?tie 'tie')) (or (not (Is ?headphones 'headphones')) (OnRightSide ?tie)) (or (not (Is ?headphones 'headphones')) (Is ?remote 'remote')) (or (not (Is ?headphones 'headphones')) (LargerThan ?tie ?remote))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "remote",
+        "keyboard",
+        "bottle",
+        "headphones"
+    ]
+}

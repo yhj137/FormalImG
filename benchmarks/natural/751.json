@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a blue backpack containing every laptop in the scene, with a rectangular rug next to her.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'backpack') (HasColor ?b 'blue') (Holding ?w ?b) (forall ?l (implies (Is ?l 'laptop') (In ?l ?b))) (exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (NextTo ?r ?w)))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (forall ?l (exists ?r (and (Is ?w 'woman') (Holding ?w ?b) (NextTo ?r ?w) (HasColor ?b 'blue') (or (not (Is ?l 'laptop')) (In ?l ?b)) (HasShape ?r 'rectangular') (Is ?b 'backpack') (Is ?r 'rug')))))))",
+    "k": 4,
+    "object_classes": [
+        "rug",
+        "backpack",
+        "laptop",
+        "woman"
+    ]
+}

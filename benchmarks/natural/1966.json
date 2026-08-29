@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden desk with a mirror, where a laptop sits to the right of a book. To the left of the desk is a tree with a horse standing next to it. A woman stands beside the desk holding a hat containing a red fruit. All cats in the scene are located to the right of the horse.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?l (exists ?b (exists ?m (exists ?t (exists ?h (exists ?w (exists ?ht (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?l 'laptop') (On ?l ?d) (Is ?b 'book') (On ?b ?d) (RightOf ?l ?b) (Is ?m 'mirror') (On ?m ?d) (Is ?t 'tree') (LeftOf ?t ?d) (Is ?h 'horse') (NextTo ?h ?t) (Is ?w 'woman') (NextTo ?w ?d) (Holding ?w ?ht) (Is ?ht 'hat') (forall ?c (implies (Is ?c 'cat') (RightOf ?c ?h))) (exists ?f (and (Is ?f 'fruit') (HasColor ?f 'red') (In ?f ?ht)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?l (exists ?b (exists ?m (exists ?t (exists ?h (exists ?w (exists ?ht (forall ?c (exists ?f (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?l ?d) (On ?b ?d) (Is ?l 'laptop') (RightOf ?l ?b) (On ?m ?d) (Is ?b 'book') (LeftOf ?t ?d) (Is ?m 'mirror') (NextTo ?w ?d) (Is ?t 'tree') (NextTo ?h ?t) (Is ?w 'woman') (Holding ?w ?ht) (Is ?h 'horse') (or (not (Is ?c 'cat')) (RightOf ?c ?h)) (Is ?ht 'hat') (In ?f ?ht) (HasColor ?f 'red') (Is ?f 'fruit')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "horse",
+        "book",
+        "laptop",
+        "tree",
+        "woman",
+        "desk",
+        "mirror",
+        "cat",
+        "hat"
+    ]
+}

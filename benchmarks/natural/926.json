@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man stands to the left of a table, while a woman stands to its right holding a green fish. Every key is inside the table.",
+    "dsl": "(exists ?t (exists ?w (and (Is ?t 'table') (Is ?w 'woman') (RightOf ?w ?t) (forall ?k (implies (Is ?k 'key') (In ?k ?t))) (exists ?m (and (Is ?m 'man') (LeftOf ?m ?t))) (exists ?f (and (Is ?f 'fish') (Holding ?w ?f) (HasColor ?f 'green'))))))",
+    "cnf": "(exists ?t (exists ?w (forall ?k (exists ?m (exists ?f (and (Is ?t 'table') (RightOf ?w ?t) (or (not (Is ?k 'key')) (In ?k ?t)) (Is ?w 'woman') (Holding ?w ?f) (LeftOf ?m ?t) (Is ?f 'fish') (HasColor ?f 'green') (Is ?m 'man')))))))",
+    "k": 5,
+    "object_classes": [
+        "key",
+        "man",
+        "fish",
+        "woman",
+        "table"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue suitcase located on the left side. To the right of the suitcase is a laptop, and they are aligned horizontally. The suitcase is physically larger than the laptop. A game controller and a pair of scissors are aligned vertically with the laptop. Additionally, a pair of red pliers is positioned to the right of the scissors, sharing a horizontal alignment with them.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?game_controller (exists ?scissors (exists ?pliers (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (Is ?laptop 'laptop') (Is ?game_controller 'game_controller') (Is ?scissors 'scissors') (Is ?pliers 'pliers') (Has ?pliers 'red') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?laptop) (AlignedHorizontally ?suitcase ?laptop) (LargerThan ?suitcase ?laptop) (AlignedVertically ?laptop ?game_controller) (AlignedVertically ?game_controller ?scissors) (LeftOf ?scissors ?pliers) (AlignedHorizontally ?scissors ?pliers)))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?game_controller (exists ?scissors (exists ?pliers (and (Is ?suitcase 'suitcase') (Has ?suitcase 'blue') (OnLeftSide ?suitcase) (LeftOf ?suitcase ?laptop) (AlignedHorizontally ?suitcase ?laptop) (Is ?laptop 'laptop') (LargerThan ?suitcase ?laptop) (AlignedVertically ?laptop ?game_controller) (Is ?game_controller 'game_controller') (AlignedVertically ?game_controller ?scissors) (Is ?scissors 'scissors') (LeftOf ?scissors ?pliers) (AlignedHorizontally ?scissors ?pliers) (Has ?pliers 'red') (Is ?pliers 'pliers')))))))",
+    "k": 5,
+    "object_classes": [
+        "scissors",
+        "pliers",
+        "game_controller",
+        "suitcase",
+        "laptop"
+    ]
+}

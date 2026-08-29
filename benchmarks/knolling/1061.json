@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a stapler located on the top side. For every apple present, there is a knife positioned above it and to the left of the stapler, a cup placed to the left of the apple with a set of keys located above the cup, and a pizza on the right side of the image, positioned such that the stapler is to its left.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (forall ?apple (implies (Is ?apple 'apple') (exists ?knife (exists ?cup (exists ?keys (exists ?pizza (and (Is ?knife 'knife') (Is ?cup 'cup') (Is ?keys 'keys') (Is ?pizza 'pizza') (Above ?knife ?apple) (LeftOf ?knife ?stapler) (LeftOf ?cup ?apple) (Above ?keys ?cup) (OnRightSide ?pizza) (LeftOf ?stapler ?pizza))))))))))",
+    "cnf": "(exists ?stapler (forall ?apple (exists ?knife (exists ?cup (exists ?keys (exists ?pizza (and (Is ?stapler 'stapler') (OnTopSide ?stapler) (or (not (Is ?apple 'apple')) (LeftOf ?knife ?stapler)) (or (not (Is ?apple 'apple')) (LeftOf ?stapler ?pizza)) (or (not (Is ?apple 'apple')) (Above ?knife ?apple)) (or (not (Is ?apple 'apple')) (LeftOf ?cup ?apple)) (or (not (Is ?apple 'apple')) (OnRightSide ?pizza)) (or (not (Is ?apple 'apple')) (Is ?knife 'knife')) (or (not (Is ?apple 'apple')) (Is ?pizza 'pizza')) (or (not (Is ?apple 'apple')) (Above ?keys ?cup)) (or (not (Is ?apple 'apple')) (Is ?cup 'cup')) (or (not (Is ?apple 'apple')) (Is ?keys 'keys')))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "stapler",
+        "apple",
+        "pizza",
+        "cup",
+        "knife"
+    ]
+}

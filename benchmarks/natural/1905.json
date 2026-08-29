@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man standing next to a refrigerator containing a yellow banana. The man wears black headphones and holds a plate with a pizza. To the left of the man sits a chair with a red jacket draped over it, and a lamp is positioned above the chair. All shoes in the scene are located to the left of the chair.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?r (exists ?c (exists ?j (and (Is ?m 'man') (Is ?r 'refrigerator') (Is ?c 'chair') (Is ?j 'jacket') (HasColor ?j 'red') (RightOf ?m ?c) (NextTo ?m ?r) (On ?j ?c) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?c))) (exists ?h (exists ?p (exists ?z (exists ?b (exists ?l (and (Is ?h 'headphones') (HasColor ?h 'black') (On ?h ?m) (Is ?p 'plate') (Is ?z 'pizza') (Is ?b 'banana') (HasColor ?b 'yellow') (Is ?l 'lamp') (Holding ?m ?p) (On ?z ?p) (In ?b ?r) (Above ?l ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?r (exists ?c (exists ?j (forall ?s (exists ?h (exists ?p (exists ?z (exists ?b (exists ?l (and (Is ?m 'man') (RightOf ?m ?c) (NextTo ?m ?r) (Is ?c 'chair') (On ?j ?c) (On ?h ?m) (Is ?r 'refrigerator') (In ?b ?r) (or (not (Is ?s 'shoes')) (LeftOf ?s ?c)) (HasColor ?j 'red') (Holding ?m ?p) (HasColor ?h 'black') (HasColor ?b 'yellow') (Above ?l ?c) (Is ?j 'jacket') (Is ?p 'plate') (On ?z ?p) (Is ?h 'headphones') (Is ?b 'banana') (Is ?l 'lamp') (Is ?z 'pizza')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "jacket",
+        "headphones",
+        "man",
+        "lamp",
+        "banana",
+        "shoes",
+        "chair",
+        "pizza",
+        "refrigerator",
+        "plate"
+    ]
+}

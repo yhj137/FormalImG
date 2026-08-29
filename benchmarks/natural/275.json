@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where every screwdriver is inside a green plant.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?s (implies (Is ?s 'screwdriver') (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green') (In ?s ?p))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?s (exists ?p (and (or (not (Is ?s 'screwdriver')) (Is ?p 'plant')) (or (not (Is ?s 'screwdriver')) (HasColor ?p 'green')) (or (not (Is ?s 'screwdriver')) (In ?s ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "plant",
+        "screwdriver"
+    ]
+}

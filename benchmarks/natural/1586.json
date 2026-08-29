@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A child holding a key stands next to a desk with a sliced pizza on it. To the right of the desk is a bed, and a horse is next to the bed. A rock is positioned next to the horse, and all flowers are located to the right of the rock.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?k (exists ?d (exists ?p (exists ?b (exists ?h (exists ?r (and (Is ?c 'child') (Is ?k 'key') (Is ?d 'desk') (Is ?p 'pizza') (Is ?b 'bed') (Is ?h 'horse') (Is ?r 'rock') (Holding ?c ?k) (NextTo ?c ?d) (On ?p ?d) (HasState ?p 'sliced') (RightOf ?b ?d) (NextTo ?h ?b) (NextTo ?r ?h) (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?r))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?k (exists ?d (exists ?p (exists ?b (exists ?h (exists ?r (forall ?f (and (Is ?c 'child') (Holding ?c ?k) (NextTo ?c ?d) (Is ?k 'key') (Is ?d 'desk') (On ?p ?d) (RightOf ?b ?d) (Is ?p 'pizza') (HasState ?p 'sliced') (Is ?b 'bed') (NextTo ?h ?b) (Is ?h 'horse') (NextTo ?r ?h) (Is ?r 'rock') (or (not (Is ?f 'flower')) (RightOf ?f ?r))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "child",
+        "horse",
+        "bed",
+        "pizza",
+        "rock",
+        "flower",
+        "desk",
+        "key"
+    ]
+}

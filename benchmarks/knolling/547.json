@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is arranged on the bottom side of the layout. For every carrot present in the scene, it is positioned above the handbag, and there is a wrench located to the left of that carrot. Additionally, the handbag is visually larger than the wrench.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?wrench (and (Is ?wrench 'wrench') (Above ?carrot ?handbag) (LeftOf ?wrench ?carrot) (LargerThan ?handbag ?wrench)))))))",
+    "cnf": "(exists ?handbag (forall ?carrot (exists ?wrench (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (or (not (Is ?carrot 'carrot')) (Above ?carrot ?handbag)) (or (not (Is ?carrot 'carrot')) (LargerThan ?handbag ?wrench)) (or (not (Is ?carrot 'carrot')) (Is ?wrench 'wrench')) (or (not (Is ?carrot 'carrot')) (LeftOf ?wrench ?carrot))))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "handbag",
+        "carrot"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shirt found on the top side of the image, there is a set of arranged items: a handbag is placed below the shirt, and a pair of headphones is to the right of the shirt. Below the headphones, there is a pair of glasses. To the right of the handbag, there is a sock, followed by a pair of scissors to the right of the sock, and a knife to the right of the scissors. The shirt is visibly larger than the sock.",
+    "dsl": "(forall ?shirt (implies (and (Is ?shirt 'shirt') (OnTopSide ?shirt)) (exists ?handbag (exists ?headphones (exists ?glasses (exists ?sock (exists ?scissors (exists ?knife (and (Is ?handbag 'handbag') (Is ?headphones 'headphones') (Is ?glasses 'glasses') (Is ?sock 'sock') (Is ?scissors 'scissors') (Is ?knife 'knife') (Below ?handbag ?shirt) (RightOf ?headphones ?shirt) (Below ?glasses ?headphones) (RightOf ?sock ?handbag) (RightOf ?scissors ?sock) (RightOf ?knife ?scissors) (LargerThan ?shirt ?sock))))))))))",
+    "cnf": "(forall ?shirt (exists ?handbag (exists ?headphones (exists ?glasses (exists ?sock (exists ?scissors (exists ?knife (and (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?handbag 'handbag')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?headphones 'headphones')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Below ?handbag ?shirt)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?glasses 'glasses')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (RightOf ?headphones ?shirt)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?knife 'knife')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (RightOf ?sock ?handbag)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?sock 'sock')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Below ?glasses ?headphones)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (Is ?scissors 'scissors')) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (RightOf ?knife ?scissors)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (RightOf ?scissors ?sock)) (or (not (Is ?shirt 'shirt')) (not (OnTopSide ?shirt)) (LargerThan ?shirt ?sock))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "sock",
+        "scissors",
+        "handbag",
+        "knife",
+        "headphones",
+        "shirt"
+    ]
+}

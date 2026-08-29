@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene inside a house features a wooden bed to the left of a desk. A dog is on the bed holding a red jacket, and all glasses are on the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?k (exists ?d (exists ?j (and (Is ?h 'house') (Is ?b 'bed') (Is ?k 'desk') (Is ?d 'dog') (Is ?j 'jacket') (In ?b ?h) (In ?k ?h) (HasMaterial ?b 'wooden') (LeftOf ?b ?k) (On ?d ?b) (HasColor ?j 'red') (Holding ?d ?j) (forall ?g (implies (Is ?g 'glasses') (On ?g ?k))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?k (exists ?d (exists ?j (forall ?g (and (Is ?h 'house') (In ?b ?h) (In ?k ?h) (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?k 'desk') (LeftOf ?b ?k) (On ?d ?b) (or (not (Is ?g 'glasses')) (On ?g ?k)) (Is ?d 'dog') (Holding ?d ?j) (HasColor ?j 'red') (Is ?j 'jacket')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "bed",
+        "glasses",
+        "jacket",
+        "desk",
+        "dog"
+    ]
+}

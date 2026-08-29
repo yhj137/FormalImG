@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a black hat. For every remote in the scene, there exists a specific arrangement of items extending to its left: the remote is positioned to the left of the black hat, a lighter is located to the left of the remote, a watch is to the left of the lighter, and a pair of red glasses is to the left of the watch. Additionally, the black hat is visually larger than the red glasses.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (Has ?hat 'black') (forall ?remote (implies (Is ?remote 'remote') (exists ?lighter (exists ?watch (exists ?glasses (and (Is ?lighter 'lighter') (Is ?watch 'watch') (Is ?glasses 'glasses') (Has ?glasses 'red') (LeftOf ?remote ?hat) (LeftOf ?lighter ?remote) (LeftOf ?watch ?lighter) (LeftOf ?glasses ?watch) (LargerThan ?hat ?glasses)))))))))",
+    "cnf": "(exists ?hat (forall ?remote (exists ?lighter (exists ?watch (exists ?glasses (and (Is ?hat 'hat') (Has ?hat 'black') (or (not (Is ?remote 'remote')) (LeftOf ?remote ?hat)) (or (not (Is ?remote 'remote')) (LargerThan ?hat ?glasses)) (or (not (Is ?remote 'remote')) (Has ?glasses 'red')) (or (not (Is ?remote 'remote')) (LeftOf ?lighter ?remote)) (or (not (Is ?remote 'remote')) (LeftOf ?glasses ?watch)) (or (not (Is ?remote 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?remote 'remote')) (Is ?lighter 'lighter')) (or (not (Is ?remote 'remote')) (LeftOf ?watch ?lighter)) (or (not (Is ?remote 'remote')) (Is ?watch 'watch'))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "watch",
+        "hat",
+        "lighter"
+    ]
+}

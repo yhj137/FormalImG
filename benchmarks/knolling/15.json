@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue cup is present in the layout.",
+    "dsl": "(exists ?c (and (Is ?c 'cup') (Has ?c 'blue')))",
+    "cnf": "(exists ?c (and (Is ?c 'cup') (Has ?c 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "cup"
+    ]
+}

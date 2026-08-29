@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a green rug with a sofa on it. A closed wardrobe stands to the left of the sofa, while a plant is located to the right. A woman wearing a yellow hat sits on the sofa, holding a blooming flower. A basket on the rug contains every apple in the scene.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?s (exists ?w (exists ?p (exists ?wm (exists ?h (exists ?f (exists ?b (and (Is ?r 'rug') (HasColor ?r 'green') (Is ?s 'sofa') (On ?s ?r) (Is ?w 'wardrobe') (LeftOf ?w ?s) (HasState ?w 'closed') (Is ?p 'plant') (RightOf ?p ?s) (Is ?wm 'woman') (On ?wm ?s) (Is ?h 'hat') (HasColor ?h 'yellow') (On ?h ?wm) (Is ?f 'flower') (HasState ?f 'blooming') (Holding ?wm ?f) (Is ?b 'basket') (On ?b ?r) (forall ?a (implies (Is ?a 'apple') (In ?a ?b)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?s (exists ?w (exists ?p (exists ?wm (exists ?h (exists ?f (exists ?b (forall ?a (and (Is ?r 'rug') (HasColor ?r 'green') (On ?s ?r) (On ?b ?r) (Is ?s 'sofa') (LeftOf ?w ?s) (Is ?b 'basket') (or (not (Is ?a 'apple')) (In ?a ?b)) (RightOf ?p ?s) (Is ?w 'wardrobe') (HasState ?w 'closed') (On ?wm ?s) (Is ?p 'plant') (Is ?wm 'woman') (On ?h ?wm) (Holding ?wm ?f) (HasColor ?h 'yellow') (HasState ?f 'blooming') (Is ?h 'hat') (Is ?f 'flower'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "rug",
+        "plant",
+        "woman",
+        "flower",
+        "basket",
+        "apple",
+        "hat",
+        "wardrobe"
+    ]
+}

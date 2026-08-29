@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a pair of jeans positioned on the top side of the image. Directly below the jeans lies a camera. To the right of the camera is a game controller, and to the right of the controller is a remote. Further to the right of the remote is a wallet, which is visually smaller than the jeans. Located below the camera is a bowl, and a carrot is placed to the left of that bowl.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?controller (exists ?remote (exists ?wallet (exists ?bowl (exists ?carrot (and (Is ?jeans 'jeans') (Is ?camera 'camera') (Is ?controller 'game_controller') (Is ?remote 'remote') (Is ?wallet 'wallet') (Is ?bowl 'bowl') (Is ?carrot 'carrot') (OnTopSide ?jeans) (Below ?camera ?jeans) (RightOf ?controller ?camera) (RightOf ?remote ?controller) (RightOf ?wallet ?remote) (SmallerThan ?wallet ?jeans) (Below ?bowl ?camera) (LeftOf ?carrot ?bowl)))))))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?controller (exists ?remote (exists ?wallet (exists ?bowl (exists ?carrot (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?camera ?jeans) (SmallerThan ?wallet ?jeans) (Is ?camera 'camera') (RightOf ?controller ?camera) (RightOf ?wallet ?remote) (Below ?bowl ?camera) (Is ?controller 'game_controller') (RightOf ?remote ?controller) (Is ?wallet 'wallet') (Is ?bowl 'bowl') (LeftOf ?carrot ?bowl) (Is ?remote 'remote') (Is ?carrot 'carrot')))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "carrot",
+        "game_controller",
+        "wallet",
+        "jeans",
+        "camera",
+        "bowl"
+    ]
+}

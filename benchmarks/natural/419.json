@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden house stands in the scene. Next to the house on the left lies a shirt, with a metal hammer resting on it.",
+    "dsl": "(exists ?h (exists ?s (exists ?hm (and (Is ?h 'house') (HasMaterial ?h 'wooden') (Is ?s 'shirt') (NextTo ?s ?h) (LeftOf ?s ?h) (Is ?hm 'hammer') (HasMaterial ?hm 'metal') (On ?hm ?s)))))",
+    "cnf": "(exists ?h (exists ?s (exists ?hm (and (Is ?h 'house') (HasMaterial ?h 'wooden') (NextTo ?s ?h) (LeftOf ?s ?h) (Is ?s 'shirt') (On ?hm ?s) (HasMaterial ?hm 'metal') (Is ?hm 'hammer')))))",
+    "k": 3,
+    "object_classes": [
+        "house",
+        "shirt",
+        "hammer"
+    ]
+}

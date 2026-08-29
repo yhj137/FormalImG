@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a monitor located on the right side, which is positioned above a mouse found on the bottom side. To the left of the monitor is a pair of jeans, and a cutting board is arranged above the jeans. Additionally, every stapler present in the image is situated to the left of the cutting board and is smaller than the monitor.",
+    "dsl": "(exists ?mon (exists ?jeans (exists ?board (exists ?mouse (and (Is ?mon 'monitor') (Is ?jeans 'jeans') (Is ?board 'cutting_board') (Is ?mouse 'mouse') (OnRightSide ?mon) (OnBottomSide ?mouse) (Above ?mon ?mouse) (LeftOf ?jeans ?mon) (Above ?board ?jeans) (forall ?st (implies (Is ?st 'stapler') (and (LeftOf ?st ?board) (SmallerThan ?st ?mon)))))))))",
+    "cnf": "(exists ?mon (exists ?jeans (exists ?board (exists ?mouse (forall ?st (and (Is ?mon 'monitor') (OnRightSide ?mon) (Above ?mon ?mouse) (LeftOf ?jeans ?mon) (OnBottomSide ?mouse) (or (not (Is ?st 'stapler')) (SmallerThan ?st ?mon)) (Is ?jeans 'jeans') (Above ?board ?jeans) (Is ?mouse 'mouse') (or (not (Is ?st 'stapler')) (LeftOf ?st ?board)) (Is ?board 'cutting_board')))))))",
+    "k": 5,
+    "object_classes": [
+        "stapler",
+        "cutting_board",
+        "jeans",
+        "mouse",
+        "monitor"
+    ]
+}

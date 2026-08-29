@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the display, there exists a shoe. The shoe is located on the bottom side of the image and is smaller than the jeans.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?shoe (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (SmallerThan ?shoe ?jeans))))))",
+    "cnf": "(forall ?jeans (exists ?shoe (and (or (not (Is ?jeans 'jeans')) (Is ?shoe 'shoe')) (or (not (Is ?jeans 'jeans')) (OnBottomSide ?shoe)) (or (not (Is ?jeans 'jeans')) (SmallerThan ?shoe ?jeans)))))",
+    "k": 2,
+    "object_classes": [
+        "jeans",
+        "shoe"
+    ]
+}

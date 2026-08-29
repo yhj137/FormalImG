@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a man holding a hammer next to a wooden wardrobe. A clock is beside the wardrobe, and a lamp is to its right. All shirts in the scene are positioned to the right of the wardrobe. To the right of the lamp, there is a plate with a sandwich on it and a knife next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?w (exists ?c (exists ?l (exists ?h (and (Is ?m 'man') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?c 'clock') (Is ?l 'lamp') (Is ?h 'hammer') (NextTo ?m ?w) (Holding ?m ?h) (NextTo ?c ?w) (RightOf ?l ?w) (forall ?s (implies (Is ?s 'shirt') (RightOf ?s ?w))) (exists ?p (exists ?sd (exists ?k (and (Is ?p 'plate') (Is ?sd 'sandwich') (Is ?k 'knife') (RightOf ?p ?l) (On ?sd ?p) (NextTo ?k ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?w (exists ?c (exists ?l (exists ?h (forall ?s (exists ?p (exists ?sd (exists ?k (and (Is ?m 'man') (NextTo ?m ?w) (Holding ?m ?h) (HasMaterial ?w 'wooden') (NextTo ?c ?w) (Is ?h 'hammer') (Is ?w 'wardrobe') (RightOf ?l ?w) (Is ?c 'clock') (or (not (Is ?s 'shirt')) (RightOf ?s ?w)) (Is ?l 'lamp') (RightOf ?p ?l) (Is ?p 'plate') (On ?sd ?p) (NextTo ?k ?p) (Is ?sd 'sandwich') (Is ?k 'knife'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "shirt",
+        "knife",
+        "plate",
+        "man",
+        "hammer",
+        "lamp",
+        "clock",
+        "sandwich",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden boat located to the left of a clock. A red hat is positioned next to the clock, and all headphones in the scene are placed next to the hat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?h (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (Is ?c 'clock') (Is ?h 'hat') (HasColor ?h 'red') (LeftOf ?b ?c) (NextTo ?h ?c) (forall ?hp (implies (Is ?hp 'headphones') (NextTo ?hp ?h))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?h (forall ?hp (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (LeftOf ?b ?c) (Is ?c 'clock') (NextTo ?h ?c) (HasColor ?h 'red') (or (not (Is ?hp 'headphones')) (NextTo ?hp ?h)) (Is ?h 'hat')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "clock",
+        "hat",
+        "boat"
+    ]
+}

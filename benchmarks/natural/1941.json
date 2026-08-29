@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant holding a screwdriver stands next to a closed refrigerator. A sofa and the refrigerator are both positioned next to a table. A tree stands next to the sofa, with a plant beside it. A lamp and a red apple sit on the table. All fruit in the scene are red and placed on the table.",
+    "dsl": "(exists ?e (exists ?s (exists ?t (exists ?r (exists ?tr (exists ?p (and (Is ?e 'elephant') (Is ?s 'sofa') (Is ?t 'table') (Is ?r 'refrigerator') (Is ?tr 'tree') (Is ?p 'plant') (HasState ?r 'closed') (NextTo ?e ?r) (NextTo ?s ?t) (NextTo ?r ?t) (NextTo ?tr ?s) (NextTo ?p ?tr) (forall ?f (implies (Is ?f 'fruit') (and (HasColor ?f 'red') (On ?f ?t)))) (exists ?l (exists ?a (exists ?sd (and (Is ?l 'lamp') (Is ?a 'apple') (Is ?a 'fruit') (Is ?sd 'screwdriver') (On ?l ?t) (On ?a ?t) (HasColor ?a 'red') (Holding ?e ?sd))))))))))))",
+    "cnf": "(exists ?e (exists ?s (exists ?t (exists ?r (exists ?tr (exists ?p (forall ?f (exists ?l (exists ?a (exists ?sd (and (Is ?e 'elephant') (NextTo ?e ?r) (Holding ?e ?sd) (HasState ?r 'closed') (NextTo ?r ?t) (Is ?sd 'screwdriver') (Is ?r 'refrigerator') (NextTo ?s ?t) (or (not (Is ?f 'fruit')) (On ?f ?t)) (Is ?s 'sofa') (NextTo ?tr ?s) (Is ?t 'table') (On ?l ?t) (or (not (Is ?f 'fruit')) (HasColor ?f 'red')) (Is ?tr 'tree') (NextTo ?p ?tr) (On ?a ?t) (Is ?l 'lamp') (Is ?p 'plant') (Is ?a 'fruit') (HasColor ?a 'red') (Is ?a 'apple'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "sofa",
+        "tree",
+        "plant",
+        "table",
+        "lamp",
+        "refrigerator",
+        "apple",
+        "screwdriver"
+    ]
+}

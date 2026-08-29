@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill positioned on the left side and a keyboard on the right side, with the keyboard being visually larger than the drill. A wallet is arranged above the drill, and a phone is arranged above the keyboard; the wallet is also located to the left of the phone. Furthermore, for every cup in the image, it is positioned on the top side and above the drill. Extending from the cup is a chain of items: the cup is to the left of a carrot, the carrot is to the left of a knife, the knife is placed above a ruler, the ruler is above a wrench, and the wrench is to the left of a screwdriver.",
+    "dsl": "(exists ?drill (exists ?keyboard (exists ?wallet (exists ?phone (and (Is ?drill 'drill') (OnLeftSide ?drill) (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (LargerThan ?keyboard ?drill) (Is ?wallet 'wallet') (Above ?wallet ?drill) (Is ?phone 'phone') (Above ?phone ?keyboard) (LeftOf ?wallet ?phone) (forall ?cup (implies (Is ?cup 'cup') (exists ?carrot (exists ?knife (exists ?ruler (exists ?wrench (exists ?screwdriver (and (Is ?carrot 'carrot') (Is ?knife 'knife') (Is ?ruler 'ruler') (Is ?wrench 'wrench') (Is ?screwdriver 'screwdriver') (OnTopSide ?cup) (Above ?cup ?drill) (LeftOf ?cup ?carrot) (LeftOf ?carrot ?knife) (Above ?knife ?ruler) (Above ?ruler ?wrench) (LeftOf ?wrench ?screwdriver))))))))))))))",
+    "cnf": "(exists ?drill (exists ?keyboard (exists ?wallet (exists ?phone (forall ?cup (exists ?carrot (exists ?knife (exists ?ruler (exists ?wrench (exists ?screwdriver (and (Is ?drill 'drill') (OnLeftSide ?drill) (LargerThan ?keyboard ?drill) (Above ?wallet ?drill) (OnRightSide ?keyboard) (Above ?phone ?keyboard) (or (not (Is ?cup 'cup')) (Above ?cup ?drill)) (Is ?wallet 'wallet') (LeftOf ?wallet ?phone) (Is ?keyboard 'keyboard') (Is ?phone 'phone') (or (not (Is ?cup 'cup')) (OnTopSide ?cup)) (or (not (Is ?cup 'cup')) (LeftOf ?cup ?carrot)) (or (not (Is ?cup 'cup')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?cup 'cup')) (Is ?carrot 'carrot')) (or (not (Is ?cup 'cup')) (LeftOf ?carrot ?knife)) (or (not (Is ?cup 'cup')) (Is ?wrench 'wrench')) (or (not (Is ?cup 'cup')) (LeftOf ?wrench ?screwdriver)) (or (not (Is ?cup 'cup')) (Is ?knife 'knife')) (or (not (Is ?cup 'cup')) (Above ?knife ?ruler)) (or (not (Is ?cup 'cup')) (Is ?ruler 'ruler')) (or (not (Is ?cup 'cup')) (Above ?ruler ?wrench)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "wrench",
+        "carrot",
+        "phone",
+        "cup",
+        "screwdriver",
+        "drill",
+        "wallet",
+        "knife"
+    ]
+}

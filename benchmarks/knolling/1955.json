@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image showing a neat arrangement of objects. A suitcase is positioned on the left side of the image. Directly below the suitcase is a handbag. To the right of the suitcase is a shirt, and to the right of the shirt is a book; these three items (suitcase, shirt, book) are aligned horizontally. Arranged around the book are a calculator above it, a ruler below it, and a cup to its right. The scene adheres to a specific layout rule: for every set of keys located below the cup, there exists a glove to the right of the keys and a sock to the right of the glove. Furthermore, the keys are visually smaller than the suitcase, and the keys, glove, and sock are aligned horizontally.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?shirt (exists ?book (exists ?calc (exists ?ruler (exists ?cup (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?handbag 'handbag') (Below ?handbag ?suitcase) (Is ?shirt 'shirt') (RightOf ?shirt ?suitcase) (AlignedHorizontally ?suitcase ?shirt) (Is ?book 'book') (RightOf ?book ?shirt) (AlignedHorizontally ?shirt ?book) (Is ?calc 'calculator') (Above ?calc ?book) (Is ?ruler 'ruler') (Below ?ruler ?book) (Is ?cup 'cup') (RightOf ?cup ?book) (forall ?keys (implies (and (Is ?keys 'keys') (Below ?keys ?cup)) (exists ?glove (exists ?sock (and (Is ?glove 'glove') (Is ?sock 'sock') (RightOf ?glove ?keys) (AlignedHorizontally ?keys ?glove) (RightOf ?sock ?glove) (AlignedHorizontally ?glove ?sock) (SmallerThan ?keys ?suitcase))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?shirt (exists ?book (exists ?calc (exists ?ruler (exists ?cup (forall ?keys (exists ?glove (exists ?sock (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?handbag ?suitcase) (RightOf ?shirt ?suitcase) (Is ?handbag 'handbag') (AlignedHorizontally ?suitcase ?shirt) (Is ?shirt 'shirt') (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (SmallerThan ?keys ?suitcase)) (RightOf ?book ?shirt) (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (AlignedHorizontally ?glove ?sock)) (AlignedHorizontally ?shirt ?book) (Is ?book 'book') (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (RightOf ?sock ?glove)) (Above ?calc ?book) (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (AlignedHorizontally ?keys ?glove)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (Is ?sock 'sock')) (Below ?ruler ?book) (Is ?calc 'calculator') (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (RightOf ?glove ?keys)) (or (not (Is ?keys 'keys')) (not (Below ?keys ?cup)) (Is ?glove 'glove')) (RightOf ?cup ?book) (Is ?ruler 'ruler') (Is ?cup 'cup'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "ruler",
+        "book",
+        "keys",
+        "sock",
+        "cup",
+        "handbag",
+        "calculator",
+        "suitcase",
+        "glove",
+        "shirt"
+    ]
+}

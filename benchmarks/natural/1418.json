@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a house with a bus next to it. An empty bottle sits on the bus. An elephant stands next to the bus holding a bitten apple, while a child rides the elephant holding a basket containing a banana.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?bus (exists ?bot (exists ?e (exists ?a (exists ?c (exists ?bask (exists ?ban (and (Is ?h 'house') (Is ?bus 'bus') (NextTo ?bus ?h) (Is ?bot 'bottle') (HasState ?bot 'empty') (On ?bot ?bus) (Is ?e 'elephant') (NextTo ?e ?bus) (Is ?a 'apple') (HasState ?a 'bitten') (Holding ?e ?a) (Is ?c 'child') (On ?c ?e) (Is ?bask 'basket') (Holding ?c ?bask) (Is ?ban 'banana') (In ?ban ?bask)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?bus (exists ?bot (exists ?e (exists ?a (exists ?c (exists ?bask (exists ?ban (and (Is ?h 'house') (NextTo ?bus ?h) (Is ?bus 'bus') (On ?bot ?bus) (NextTo ?e ?bus) (HasState ?bot 'empty') (Is ?e 'elephant') (Holding ?e ?a) (Is ?bot 'bottle') (On ?c ?e) (HasState ?a 'bitten') (Is ?c 'child') (Holding ?c ?bask) (Is ?a 'apple') (Is ?bask 'basket') (In ?ban ?bask) (Is ?ban 'banana')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "bus",
+        "banana",
+        "basket",
+        "elephant",
+        "house",
+        "apple",
+        "child"
+    ]
+}

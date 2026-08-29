@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where a man is holding a bottle containing a rusty key.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?k (and (Is ?m 'man') (Is ?b 'bottle') (Is ?k 'key') (Holding ?m ?b) (In ?k ?b) (HasState ?k 'rusty'))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (exists ?k (and (Is ?m 'man') (Holding ?m ?b) (Is ?b 'bottle') (In ?k ?b) (Is ?k 'key') (HasState ?k 'rusty'))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "key",
+        "man"
+    ]
+}

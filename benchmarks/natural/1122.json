@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a house, a stone rock sits on a desk. All toy cars are positioned to the right of the rock. A hammer also lies on the desk, with a butterfly resting on it.",
+    "dsl": "(exists ?h (exists ?d (exists ?r (and (Is ?h 'house') (Is ?d 'desk') (In ?d ?h) (Is ?r 'rock') (HasMaterial ?r 'stone') (On ?r ?d) (forall ?tc (implies (Is ?tc 'toy car') (RightOf ?tc ?r))) (exists ?hm (exists ?bf (and (Is ?hm 'hammer') (Is ?bf 'butterfly') (On ?hm ?d) (On ?bf ?hm))))))))",
+    "cnf": "(exists ?h (exists ?d (exists ?r (forall ?tc (exists ?hm (exists ?bf (and (Is ?h 'house') (In ?d ?h) (Is ?d 'desk') (On ?r ?d) (On ?hm ?d) (HasMaterial ?r 'stone') (or (not (Is ?tc 'toy car')) (RightOf ?tc ?r)) (Is ?hm 'hammer') (On ?bf ?hm) (Is ?r 'rock') (Is ?bf 'butterfly'))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "rock",
+        "toy car",
+        "hammer",
+        "desk",
+        "butterfly"
+    ]
+}

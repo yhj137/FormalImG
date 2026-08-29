@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly organized grid of items. A brown suitcase is positioned on the top side of the scene. Directly below the suitcase is a pair of blue jeans, and below the jeans is a yellow drill; these three items are aligned vertically. To the right of the suitcase lies a red tie, with a black stapler situated directly below it and aligned vertically. Further to the right of the tie is a brown wallet, beneath which a pair of black glasses is aligned vertically. A gray spoon is placed to the right of the wallet, with a yellow lemon located directly below the spoon and aligned vertically with it. Additionally, for every remote control present in the scene, it must be positioned to the right of the drill and be smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?drill (exists ?tie (exists ?stapler (exists ?wallet (exists ?glasses (exists ?spoon (exists ?lemon (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?suitcase) (AlignedVertically ?jeans ?suitcase) (Is ?drill 'drill') (Has ?drill 'yellow') (Below ?drill ?jeans) (AlignedVertically ?drill ?jeans) (Is ?tie 'tie') (Has ?tie 'red') (RightOf ?tie ?suitcase) (Is ?stapler 'stapler') (Has ?stapler 'black') (Below ?stapler ?tie) (AlignedVertically ?stapler ?tie) (Is ?wallet 'wallet') (Has ?wallet 'brown') (RightOf ?wallet ?tie) (Is ?glasses 'glasses') (Has ?glasses 'black') (Below ?glasses ?wallet) (AlignedVertically ?glasses ?wallet) (Is ?spoon 'spoon') (Has ?spoon 'gray') (RightOf ?spoon ?wallet) (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Below ?lemon ?spoon) (AlignedVertically ?lemon ?spoon) (forall ?r (implies (Is ?r 'remote') (and (RightOf ?r ?drill) (SmallerThan ?r ?suitcase))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?drill (exists ?tie (exists ?stapler (exists ?wallet (exists ?glasses (exists ?spoon (exists ?lemon (forall ?r (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (OnTopSide ?suitcase) (Below ?jeans ?suitcase) (AlignedVertically ?jeans ?suitcase) (Has ?jeans 'blue') (RightOf ?tie ?suitcase) (Below ?drill ?jeans) (Is ?jeans 'jeans') (or (not (Is ?r 'remote')) (SmallerThan ?r ?suitcase)) (Has ?tie 'red') (Below ?stapler ?tie) (AlignedVertically ?drill ?jeans) (Has ?drill 'yellow') (or (not (Is ?r 'remote')) (RightOf ?r ?drill)) (Is ?tie 'tie') (AlignedVertically ?stapler ?tie) (Has ?stapler 'black') (Is ?drill 'drill') (RightOf ?wallet ?tie) (Is ?stapler 'stapler') (Has ?wallet 'brown') (Below ?glasses ?wallet) (Is ?wallet 'wallet') (AlignedVertically ?glasses ?wallet) (Has ?glasses 'black') (RightOf ?spoon ?wallet) (Is ?glasses 'glasses') (Has ?spoon 'gray') (Below ?lemon ?spoon) (Is ?spoon 'spoon') (AlignedVertically ?lemon ?spoon) (Has ?lemon 'yellow') (Is ?lemon 'lemon'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "lemon",
+        "wallet",
+        "tie",
+        "jeans",
+        "drill",
+        "suitcase",
+        "stapler",
+        "glasses",
+        "remote"
+    ]
+}

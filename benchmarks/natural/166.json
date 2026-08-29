@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every mirror is gray.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?m (implies (Is ?m 'mirror') (HasColor ?m 'gray'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?m (or (not (Is ?m 'mirror')) (HasColor ?m 'gray'))))",
+    "k": 1,
+    "object_classes": [
+        "mirror"
+    ]
+}

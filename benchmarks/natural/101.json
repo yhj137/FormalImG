@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every teddy bear is round.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?t (implies (Is ?t 'teddy bear') (HasShape ?t 'round'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?t (or (not (Is ?t 'teddy bear')) (HasShape ?t 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "teddy bear"
+    ]
+}

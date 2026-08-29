@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene depicts an elephant with glasses resting on it, next to an open wardrobe containing a hammer. To the right of the elephant is a cup containing every fish. Further to the right of the cup is a plate with a triangular sandwich and a banana.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (exists ?w (exists ?c (and (Is ?e 'elephant') (Is ?w 'wardrobe') (Is ?c 'cup') (NextTo ?w ?e) (HasState ?w 'open') (RightOf ?c ?e) (forall ?f (implies (Is ?f 'fish') (In ?f ?c))) (exists ?h (exists ?g (exists ?p (exists ?s (exists ?b (and (Is ?h 'hammer') (Is ?g 'glasses') (Is ?p 'plate') (Is ?s 'sandwich') (Is ?b 'banana') (In ?h ?w) (On ?g ?e) (RightOf ?p ?c) (On ?s ?p) (HasShape ?s 'triangular') (On ?b ?p))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (exists ?w (exists ?c (forall ?f (exists ?h (exists ?g (exists ?p (exists ?s (exists ?b (and (Is ?e 'elephant') (NextTo ?w ?e) (RightOf ?c ?e) (Is ?w 'wardrobe') (HasState ?w 'open') (On ?g ?e) (Is ?c 'cup') (or (not (Is ?f 'fish')) (In ?f ?c)) (In ?h ?w) (Is ?g 'glasses') (RightOf ?p ?c) (Is ?h 'hammer') (Is ?p 'plate') (On ?s ?p) (On ?b ?p) (Is ?s 'sandwich') (HasShape ?s 'triangular') (Is ?b 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "sandwich",
+        "fish",
+        "banana",
+        "hammer",
+        "wardrobe",
+        "cup",
+        "elephant",
+        "plate"
+    ]
+}

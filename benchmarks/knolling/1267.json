@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a blue shirt positioned on the top side of the image. For every watch present, it is located to the left of the shirt and aligned horizontally with it, and there is a set of keys positioned directly below the watch, aligned vertically. To the right of the shirt is a red apple (meaning the shirt is to the left of the apple), and they are aligned horizontally. Below the shirt is a pair of glasses, aligned vertically. Below the apple is a bowl, aligned vertically with the apple. Finally, a wrench is placed below the glasses, aligned vertically.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (forall ?watch (implies (Is ?watch 'watch') (exists ?keys (and (Is ?keys 'keys') (LeftOf ?watch ?shirt) (AlignedHorizontally ?watch ?shirt) (Below ?keys ?watch) (AlignedVertically ?keys ?watch))))) (exists ?apple (exists ?glasses (exists ?bowl (exists ?wrench (and (Is ?apple 'apple') (Has ?apple 'red') (Is ?glasses 'glasses') (Is ?bowl 'bowl') (Is ?wrench 'wrench') (LeftOf ?shirt ?apple) (AlignedHorizontally ?shirt ?apple) (Below ?glasses ?shirt) (AlignedVertically ?glasses ?shirt) (Below ?bowl ?apple) (AlignedVertically ?bowl ?apple) (Below ?wrench ?glasses) (AlignedVertically ?wrench ?glasses))))))))",
+    "cnf": "(exists ?shirt (forall ?watch (exists ?keys (exists ?apple (exists ?glasses (exists ?bowl (exists ?wrench (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (or (not (Is ?watch 'watch')) (LeftOf ?watch ?shirt)) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?watch ?shirt)) (or (not (Is ?watch 'watch')) (Is ?keys 'keys')) (LeftOf ?shirt ?apple) (or (not (Is ?watch 'watch')) (Below ?keys ?watch)) (AlignedHorizontally ?shirt ?apple) (Has ?apple 'red') (or (not (Is ?watch 'watch')) (AlignedVertically ?keys ?watch)) (Below ?glasses ?shirt) (Below ?bowl ?apple) (Is ?apple 'apple') (AlignedVertically ?glasses ?shirt) (Is ?glasses 'glasses') (AlignedVertically ?bowl ?apple) (Is ?bowl 'bowl') (Below ?wrench ?glasses) (AlignedVertically ?wrench ?glasses) (Is ?wrench 'wrench')))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "keys",
+        "apple",
+        "wrench",
+        "watch",
+        "bowl",
+        "shirt"
+    ]
+}

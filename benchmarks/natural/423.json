@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman next to a rectangular refrigerator containing a pair of headphones.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?r (exists ?h (and (Is ?w 'woman') (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (NextTo ?w ?r) (Is ?h 'headphones') (In ?h ?r))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?r (exists ?h (and (Is ?w 'woman') (NextTo ?w ?r) (HasShape ?r 'rectangular') (In ?h ?r) (Is ?r 'refrigerator') (Is ?h 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "refrigerator",
+        "woman"
+    ]
+}

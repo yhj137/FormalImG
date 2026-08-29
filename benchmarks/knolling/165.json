@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that every book is positioned on the top side of the image.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'book') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'book')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "book"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a horse holding a metal pan. The horse wears a hat, and all glasses in the scene are on it. To the right of the horse is a rusty bicycle, with a mirror next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'horse') (forall ?g (implies (Is ?g 'glasses') (On ?g ?h))) (exists ?hat (exists ?p (exists ?b (exists ?m (and (Is ?hat 'hat') (Is ?p 'pan') (Is ?b 'bicycle') (Is ?m 'mirror') (On ?hat ?h) (Holding ?h ?p) (HasMaterial ?p 'metal') (RightOf ?b ?h) (HasState ?b 'rusty') (NextTo ?m ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?g (exists ?hat (exists ?p (exists ?b (exists ?m (and (Is ?h 'horse') (or (not (Is ?g 'glasses')) (On ?g ?h)) (On ?hat ?h) (Holding ?h ?p) (Is ?hat 'hat') (RightOf ?b ?h) (Is ?p 'pan') (HasMaterial ?p 'metal') (Is ?b 'bicycle') (HasState ?b 'rusty') (NextTo ?m ?b) (Is ?m 'mirror')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "pan",
+        "mirror",
+        "hat",
+        "horse",
+        "bicycle"
+    ]
+}

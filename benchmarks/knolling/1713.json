@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a blue pair of jeans positioned on the bottom side and a black hat on the top side, with the two items aligned vertically. To the right of the hat is a white glove, and to the right of the jeans is a red phone; the jeans are visually larger than the phone. Additionally, the scene follows a specific arrangement for tools: for every screwdriver, it is located below the hat and serves as the starting point for a horizontally aligned row of items extending to its right, comprising a wrench, a knife, a stapler, and a set of keys, in that order.",
+    "dsl": "(exists ?jeans (exists ?hat (exists ?glove (exists ?phone (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?hat 'hat') (Has ?hat 'black') (OnTopSide ?hat) (Is ?glove 'glove') (Has ?glove 'white') (Is ?phone 'phone') (Has ?phone 'red') (AlignedVertically ?hat ?jeans) (RightOf ?glove ?hat) (RightOf ?phone ?jeans) (LargerThan ?jeans ?phone) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?wrench (exists ?knife (exists ?stapler (exists ?keys (and (Is ?wrench 'wrench') (Is ?knife 'knife') (Is ?stapler 'stapler') (Is ?keys 'keys') (Below ?screwdriver ?hat) (RightOf ?wrench ?screwdriver) (RightOf ?knife ?wrench) (RightOf ?stapler ?knife) (RightOf ?keys ?stapler) (AlignedHorizontally ?screwdriver ?wrench) (AlignedHorizontally ?wrench ?knife) (AlignedHorizontally ?knife ?stapler) (AlignedHorizontally ?stapler ?keys)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?hat (exists ?glove (exists ?phone (forall ?screwdriver (exists ?wrench (exists ?knife (exists ?stapler (exists ?keys (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (AlignedVertically ?hat ?jeans) (RightOf ?phone ?jeans) (OnTopSide ?hat) (RightOf ?glove ?hat) (LargerThan ?jeans ?phone) (Has ?phone 'red') (Has ?hat 'black') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?hat)) (Has ?glove 'white') (Is ?phone 'phone') (Is ?hat 'hat') (or (not (Is ?screwdriver 'screwdriver')) (Is ?keys 'keys')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?wrench ?screwdriver)) (Is ?glove 'glove') (or (not (Is ?screwdriver 'screwdriver')) (Is ?stapler 'stapler')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?keys ?stapler)) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?knife ?wrench)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?wrench 'wrench')) (or (not (Is ?screwdriver 'screwdriver')) (Is ?knife 'knife')) (or (not (Is ?screwdriver 'screwdriver')) (RightOf ?stapler ?knife)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?screwdriver ?wrench)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?knife ?stapler)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?stapler ?keys)) (or (not (Is ?screwdriver 'screwdriver')) (AlignedHorizontally ?wrench ?knife))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "hat",
+        "keys",
+        "wrench",
+        "knife",
+        "glove",
+        "jeans",
+        "stapler",
+        "screwdriver",
+        "phone"
+    ]
+}

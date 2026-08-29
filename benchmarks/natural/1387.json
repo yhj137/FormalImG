@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A wooden boat is positioned to the right of a horse. Next to the boat is a backpack, with a pair of headphones beside the backpack. To the right of the boat is a plant, and a plastic basket sits next to the plant. Every flower in the image is located next to the basket.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?b (exists ?bp (exists ?hp (exists ?p (exists ?bk (and (Is ?h 'horse') (Is ?b 'boat') (HasMaterial ?b 'wooden') (RightOf ?b ?h) (Is ?bp 'backpack') (NextTo ?bp ?b) (Is ?hp 'headphones') (NextTo ?hp ?bp) (Is ?p 'plant') (RightOf ?p ?b) (Is ?bk 'basket') (HasMaterial ?bk 'plastic') (NextTo ?bk ?p) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?bk)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?b (exists ?bp (exists ?hp (exists ?p (exists ?bk (forall ?f (and (Is ?h 'horse') (RightOf ?b ?h) (HasMaterial ?b 'wooden') (NextTo ?bp ?b) (Is ?b 'boat') (RightOf ?p ?b) (Is ?bp 'backpack') (NextTo ?hp ?bp) (Is ?p 'plant') (NextTo ?bk ?p) (Is ?hp 'headphones') (HasMaterial ?bk 'plastic') (or (not (Is ?f 'flower')) (NextTo ?f ?bk)) (Is ?bk 'basket'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "horse",
+        "backpack",
+        "plant",
+        "basket",
+        "flower",
+        "boat"
+    ]
+}

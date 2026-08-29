@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a metal wardrobe to the left of a black chair. A hammer is inside the wardrobe, and a cake sits on the chair. Every bottle is positioned to the right of the chair.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?ch (exists ?h (exists ?c (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (Is ?ch 'chair') (HasColor ?ch 'black') (Is ?h 'hammer') (Is ?c 'cake') (LeftOf ?w ?ch) (In ?h ?w) (On ?c ?ch) (forall ?b (implies (Is ?b 'bottle') (RightOf ?b ?ch)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?ch (exists ?h (exists ?c (forall ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (LeftOf ?w ?ch) (In ?h ?w) (HasColor ?ch 'black') (On ?c ?ch) (Is ?h 'hammer') (Is ?ch 'chair') (or (not (Is ?b 'bottle')) (RightOf ?b ?ch)) (Is ?c 'cake'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bottle",
+        "cake",
+        "hammer",
+        "chair",
+        "wardrobe"
+    ]
+}

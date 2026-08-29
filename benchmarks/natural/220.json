@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A pair of headphones is located to the left of a round fruit.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?f (and (Is ?h 'headphones') (Is ?f 'fruit') (HasShape ?f 'round') (LeftOf ?h ?f)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?f (and (Is ?h 'headphones') (LeftOf ?h ?f) (HasShape ?f 'round') (Is ?f 'fruit')))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "fruit"
+    ]
+}

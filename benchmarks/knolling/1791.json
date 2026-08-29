@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a vertical hierarchy anchored by a backpack, with a pizza positioned below the backpack, and a glove positioned below the pizza. The backpack is visually larger than the pizza. On the bottom side of the image, there is a group of items consisting of a calculator, a mouse, a spoon, pliers, and a tie; all five of these items are aligned horizontally. To connect the arrangements, the glove is positioned above the calculator. Furthermore, for every remote present in the layout, the backpack is located above it.",
+    "dsl": "(exists ?backpack (exists ?pizza (exists ?glove (exists ?calculator (exists ?mouse (exists ?spoon (exists ?pliers (exists ?tie (and (Is ?backpack 'backpack') (Is ?pizza 'pizza') (Is ?glove 'glove') (Is ?calculator 'calculator') (Is ?mouse 'mouse') (Is ?spoon 'spoon') (Is ?pliers 'pliers') (Is ?tie 'tie') (LargerThan ?backpack ?pizza) (Above ?backpack ?pizza) (Above ?pizza ?glove) (Above ?glove ?calculator) (OnBottomSide ?calculator) (OnBottomSide ?mouse) (OnBottomSide ?spoon) (OnBottomSide ?pliers) (OnBottomSide ?tie) (AlignedHorizontally ?calculator ?mouse) (AlignedHorizontally ?mouse ?spoon) (AlignedHorizontally ?spoon ?pliers) (AlignedHorizontally ?pliers ?tie) (forall ?remote (implies (Is ?remote 'remote') (Above ?backpack ?remote))))))))))))",
+    "cnf": "(exists ?backpack (exists ?pizza (exists ?glove (exists ?calculator (exists ?mouse (exists ?spoon (exists ?pliers (exists ?tie (forall ?remote (and (Is ?backpack 'backpack') (LargerThan ?backpack ?pizza) (Above ?backpack ?pizza) (Is ?pizza 'pizza') (or (not (Is ?remote 'remote')) (Above ?backpack ?remote)) (Above ?pizza ?glove) (Is ?glove 'glove') (Above ?glove ?calculator) (Is ?calculator 'calculator') (OnBottomSide ?calculator) (AlignedHorizontally ?calculator ?mouse) (OnBottomSide ?mouse) (AlignedHorizontally ?mouse ?spoon) (Is ?mouse 'mouse') (OnBottomSide ?spoon) (AlignedHorizontally ?spoon ?pliers) (Is ?spoon 'spoon') (OnBottomSide ?pliers) (AlignedHorizontally ?pliers ?tie) (Is ?pliers 'pliers') (OnBottomSide ?tie) (Is ?tie 'tie')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "tie",
+        "pizza",
+        "backpack",
+        "calculator",
+        "mouse",
+        "spoon",
+        "glove"
+    ]
+}

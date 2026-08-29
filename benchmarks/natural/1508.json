@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a yellow house next to a bench. A dog sits on the bench holding a banana. Also on the bench are all the pizzas in the scene, which are round. To the right of the bench stands a horse wearing glasses and holding a sandwich.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?d (and (Is ?h 'house') (HasColor ?h 'yellow') (Is ?b 'bench') (NextTo ?b ?h) (Is ?d 'dog') (On ?d ?b) (HasState ?d 'sitting') (forall ?p (implies (Is ?p 'pizza') (and (HasShape ?p 'round') (On ?p ?b)))) (exists ?ba (exists ?ho (exists ?g (exists ?s (and (Is ?ba 'banana') (Holding ?d ?ba) (Is ?ho 'horse') (RightOf ?ho ?b) (Is ?g 'glasses') (On ?g ?ho) (Is ?s 'sandwich') (Holding ?ho ?s)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?b (exists ?d (forall ?p (exists ?ba (exists ?ho (exists ?g (exists ?s (and (Is ?h 'house') (HasColor ?h 'yellow') (NextTo ?b ?h) (Is ?b 'bench') (On ?d ?b) (or (not (Is ?p 'pizza')) (On ?p ?b)) (Is ?d 'dog') (HasState ?d 'sitting') (RightOf ?ho ?b) (or (not (Is ?p 'pizza')) (HasShape ?p 'round')) (Holding ?d ?ba) (Is ?ho 'horse') (On ?g ?ho) (Is ?ba 'banana') (Holding ?ho ?s) (Is ?g 'glasses') (Is ?s 'sandwich')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "bench",
+        "horse",
+        "glasses",
+        "pizza",
+        "sandwich",
+        "dog",
+        "banana"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is positioned to the right of an open book he is holding, and every key in the scene is inside the book.",
+    "dsl": "(exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'book') (HasState ?b 'open') (RightOf ?m ?b) (Holding ?m ?b) (forall ?k (implies (Is ?k 'key') (In ?k ?b))))))",
+    "cnf": "(exists ?m (exists ?b (forall ?k (and (Is ?m 'man') (RightOf ?m ?b) (Holding ?m ?b) (HasState ?b 'open') (or (not (Is ?k 'key')) (In ?k ?b)) (Is ?b 'book')))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "key",
+        "man"
+    ]
+}

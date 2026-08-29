@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is holding a cylindrical screwdriver to their left, and every butterfly in the scene is resting on it.",
+    "dsl": "(exists ?c (exists ?s (and (Is ?c 'child') (Is ?s 'screwdriver') (HasShape ?s 'cylindrical') (Holding ?c ?s) (LeftOf ?s ?c) (forall ?b (implies (Is ?b 'butterfly') (On ?b ?s))))))",
+    "cnf": "(exists ?c (exists ?s (forall ?b (and (Is ?c 'child') (Holding ?c ?s) (LeftOf ?s ?c) (HasShape ?s 'cylindrical') (or (not (Is ?b 'butterfly')) (On ?b ?s)) (Is ?s 'screwdriver')))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "screwdriver",
+        "child"
+    ]
+}

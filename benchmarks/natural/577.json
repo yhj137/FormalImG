@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a wooden bed with a fork lying on it. All shoes are located to the right of the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?f (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?f 'fork') (On ?f ?b) (forall ?s (implies (Is ?s 'shoes') (RightOf ?s ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?f (forall ?s (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (On ?f ?b) (or (not (Is ?s 'shoes')) (RightOf ?s ?b)) (Is ?f 'fork'))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "shoes",
+        "bed"
+    ]
+}

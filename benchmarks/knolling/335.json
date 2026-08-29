@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sandwich positioned on the right side of the layout. For every knife in the scene, it is aligned horizontally with that sandwich.",
+    "dsl": "(exists ?s (and (Is ?s 'sandwich') (OnRightSide ?s) (forall ?k (implies (Is ?k 'knife') (AlignedHorizontally ?k ?s)))))",
+    "cnf": "(exists ?s (forall ?k (and (Is ?s 'sandwich') (OnRightSide ?s) (or (not (Is ?k 'knife')) (AlignedHorizontally ?k ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "sandwich"
+    ]
+}

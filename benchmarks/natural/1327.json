@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person sits on a chair to the left of a desk, holding an open umbrella. A round cake rests on the desk, with headphones positioned to its right. All glasses in the scene are placed on the desk.",
+    "dsl": "(exists ?p (exists ?c (exists ?d (exists ?ca (and (Is ?p 'person') (Is ?c 'chair') (Is ?d 'desk') (Is ?ca 'cake') (On ?p ?c) (LeftOf ?c ?d) (On ?ca ?d) (HasShape ?ca 'round') (forall ?g (implies (Is ?g 'glasses') (On ?g ?d))) (exists ?u (and (Is ?u 'umbrella') (Holding ?p ?u) (HasState ?u 'open'))) (exists ?h (and (Is ?h 'headphones') (RightOf ?h ?ca))))))))",
+    "cnf": "(exists ?p (exists ?c (exists ?d (exists ?ca (forall ?g (exists ?u (exists ?h (and (Is ?p 'person') (On ?p ?c) (Holding ?p ?u) (Is ?c 'chair') (LeftOf ?c ?d) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?d 'desk') (On ?ca ?d) (or (not (Is ?g 'glasses')) (On ?g ?d)) (Is ?ca 'cake') (HasShape ?ca 'round') (RightOf ?h ?ca) (Is ?h 'headphones')))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "umbrella",
+        "person",
+        "chair",
+        "glasses",
+        "cake",
+        "desk"
+    ]
+}

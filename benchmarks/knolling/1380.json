@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a suitcase on the left side. A ruler is on the top side and positioned above the suitcase, with a sock that is smaller than the ruler. A laptop is smaller than the suitcase. A pan is located above the laptop, and a pizza is larger than the pan. Finally, for every donut in the scene, it is positioned above the pizza.",
+    "dsl": "(exists ?suitcase (exists ?ruler (exists ?sock (exists ?laptop (exists ?pan (exists ?pizza (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?ruler 'ruler') (OnTopSide ?ruler) (Above ?ruler ?suitcase) (Is ?sock 'sock') (SmallerThan ?sock ?ruler) (Is ?laptop 'laptop') (SmallerThan ?laptop ?suitcase) (Is ?pan 'pan') (Above ?pan ?laptop) (Is ?pizza 'pizza') (LargerThan ?pizza ?pan) (forall ?donut (implies (Is ?donut 'donut') (Above ?donut ?pizza))))))))))",
+    "cnf": "(exists ?suitcase (exists ?ruler (exists ?sock (exists ?laptop (exists ?pan (exists ?pizza (forall ?donut (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?ruler ?suitcase) (SmallerThan ?laptop ?suitcase) (OnTopSide ?ruler) (SmallerThan ?sock ?ruler) (Is ?laptop 'laptop') (Above ?pan ?laptop) (Is ?ruler 'ruler') (Is ?sock 'sock') (Is ?pan 'pan') (LargerThan ?pizza ?pan) (Is ?pizza 'pizza') (or (not (Is ?donut 'donut')) (Above ?donut ?pizza))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "sock",
+        "pizza",
+        "pan",
+        "suitcase",
+        "donut"
+    ]
+}

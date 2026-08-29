@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every camera located on the bottom side of the scene, there is a cutting board arranged above it. Above the cutting board are headphones, followed by a tie above the headphones, and a fork above the tie. Additionally, the fork is smaller than the cutting board.",
+    "dsl": "(and (forall ?camera (implies (and (Is ?camera 'camera') (OnBottomSide ?camera)) (exists ?cutting_board (exists ?headphones (exists ?tie (exists ?fork (and (Is ?cutting_board 'cutting_board') (Is ?headphones 'headphones') (Is ?tie 'tie') (Is ?fork 'fork') (Above ?cutting_board ?camera) (Above ?headphones ?cutting_board) (Above ?tie ?headphones) (Above ?fork ?tie) (SmallerThan ?fork ?cutting_board)))))))))",
+    "cnf": "(forall ?camera (exists ?cutting_board (exists ?headphones (exists ?tie (exists ?fork (and (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Is ?cutting_board 'cutting_board')) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Above ?cutting_board ?camera)) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Is ?headphones 'headphones')) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Above ?headphones ?cutting_board)) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Is ?fork 'fork')) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Is ?tie 'tie')) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (SmallerThan ?fork ?cutting_board)) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Above ?tie ?headphones)) (or (not (Is ?camera 'camera')) (not (OnBottomSide ?camera)) (Above ?fork ?tie))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "cutting_board",
+        "fork",
+        "camera",
+        "headphones"
+    ]
+}

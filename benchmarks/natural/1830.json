@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every car contains an orange and is positioned to the left of a person holding a screwdriver. To the right of the person stands a wooden bench with a black jacket, followed by a table with a mirror and a chair with an apple.",
+    "dsl": "(forall ?c (implies (Is ?c 'car') (exists ?o (exists ?p (exists ?s (exists ?b (exists ?j (exists ?t (exists ?m (exists ?ch (exists ?a (and (Is ?o 'orange') (In ?o ?c) (Is ?p 'person') (LeftOf ?c ?p) (Is ?s 'screwdriver') (Holding ?p ?s) (Is ?b 'bench') (HasMaterial ?b 'wooden') (LeftOf ?p ?b) (Is ?j 'jacket') (HasColor ?j 'black') (On ?j ?b) (Is ?t 'table') (LeftOf ?b ?t) (Is ?m 'mirror') (On ?m ?t) (Is ?ch 'chair') (LeftOf ?t ?ch) (Is ?a 'apple') (On ?a ?ch)))))))))))))",
+    "cnf": "(forall ?c (exists ?o (exists ?p (exists ?s (exists ?b (exists ?j (exists ?t (exists ?m (exists ?ch (exists ?a (and (or (not (Is ?c 'car')) (Is ?o 'orange')) (or (not (Is ?c 'car')) (In ?o ?c)) (or (not (Is ?c 'car')) (Is ?p 'person')) (or (not (Is ?c 'car')) (LeftOf ?c ?p)) (or (not (Is ?c 'car')) (Is ?s 'screwdriver')) (or (not (Is ?c 'car')) (Holding ?p ?s)) (or (not (Is ?c 'car')) (Is ?b 'bench')) (or (not (Is ?c 'car')) (LeftOf ?p ?b)) (or (not (Is ?c 'car')) (HasMaterial ?b 'wooden')) (or (not (Is ?c 'car')) (Is ?j 'jacket')) (or (not (Is ?c 'car')) (On ?j ?b)) (or (not (Is ?c 'car')) (HasColor ?j 'black')) (or (not (Is ?c 'car')) (Is ?t 'table')) (or (not (Is ?c 'car')) (LeftOf ?b ?t)) (or (not (Is ?c 'car')) (Is ?m 'mirror')) (or (not (Is ?c 'car')) (On ?m ?t)) (or (not (Is ?c 'car')) (Is ?ch 'chair')) (or (not (Is ?c 'car')) (LeftOf ?t ?ch)) (or (not (Is ?c 'car')) (Is ?a 'apple')) (or (not (Is ?c 'car')) (On ?a ?ch)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "person",
+        "chair",
+        "orange",
+        "jacket",
+        "table",
+        "car",
+        "mirror",
+        "apple",
+        "screwdriver"
+    ]
+}

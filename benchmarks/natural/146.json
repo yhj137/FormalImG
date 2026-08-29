@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style scene where every keyboard is made of plastic.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'keyboard') (HasMaterial ?x 'plastic'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'keyboard')) (HasMaterial ?x 'plastic'))))",
+    "k": 1,
+    "object_classes": [
+        "keyboard"
+    ]
+}

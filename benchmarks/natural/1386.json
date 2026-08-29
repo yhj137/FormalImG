@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bicycle with a hat on it, inside which is a toy car. To the left of the bicycle is a plate with a bitten sandwich, and headphones are positioned to the right. Every bird in the scene is located to the right of the bicycle.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (exists ?t (exists ?p (exists ?s (exists ?hp (and (Is ?b 'bicycle') (Is ?h 'hat') (On ?h ?b) (Is ?t 'toy car') (In ?t ?h) (Is ?p 'plate') (LeftOf ?p ?b) (Is ?s 'sandwich') (On ?s ?p) (HasState ?s 'bitten') (Is ?hp 'headphones') (RightOf ?hp ?b) (forall ?bird (implies (Is ?bird 'bird') (RightOf ?bird ?b)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (exists ?t (exists ?p (exists ?s (exists ?hp (forall ?bird (and (Is ?b 'bicycle') (On ?h ?b) (LeftOf ?p ?b) (Is ?h 'hat') (In ?t ?h) (RightOf ?hp ?b) (Is ?p 'plate') (On ?s ?p) (Is ?t 'toy car') (or (not (Is ?bird 'bird')) (RightOf ?bird ?b)) (Is ?hp 'headphones') (Is ?s 'sandwich') (HasState ?s 'bitten'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sandwich",
+        "bird",
+        "plate",
+        "bicycle",
+        "hat",
+        "headphones",
+        "toy car"
+    ]
+}

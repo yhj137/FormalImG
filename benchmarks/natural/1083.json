@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A blooming tree stands in the scene, and every dog is located to its right. Next to the tree is a backpack containing a ball and a plastic spoon, with a hat resting on top.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming') (forall ?d (implies (Is ?d 'dog') (RightOf ?d ?t))) (exists ?bp (exists ?ball (exists ?s (exists ?h (and (Is ?bp 'backpack') (NextTo ?bp ?t) (Is ?ball 'ball') (In ?ball ?bp) (Is ?s 'spoon') (HasMaterial ?s 'plastic') (In ?s ?bp) (Is ?h 'hat') (On ?h ?bp))))))))",
+    "cnf": "(exists ?t (forall ?d (exists ?bp (exists ?ball (exists ?s (exists ?h (and (Is ?t 'tree') (HasState ?t 'blooming') (or (not (Is ?d 'dog')) (RightOf ?d ?t)) (NextTo ?bp ?t) (Is ?bp 'backpack') (In ?ball ?bp) (In ?s ?bp) (Is ?ball 'ball') (On ?h ?bp) (HasMaterial ?s 'plastic') (Is ?h 'hat') (Is ?s 'spoon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "hat",
+        "ball",
+        "backpack",
+        "tree",
+        "dog",
+        "spoon"
+    ]
+}

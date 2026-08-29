@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bird to the left of a dog holding a key. All bananas are positioned to the left of the bird. A jacket lies next to the dog, with a pair of headphones beside it. To the right of the dog is a round clock, next to a cup containing a spoon, with a knife placed nearby.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?bi (and (Is ?d 'dog') (Is ?bi 'bird') (LeftOf ?bi ?d) (forall ?ba (implies (Is ?ba 'banana') (LeftOf ?ba ?bi))) (exists ?ky (exists ?j (exists ?h (exists ?cl (exists ?cu (exists ?sp (exists ?kn (and (Is ?ky 'key') (Holding ?d ?ky) (Is ?j 'jacket') (NextTo ?j ?d) (Is ?h 'headphones') (NextTo ?h ?j) (Is ?cl 'clock') (HasShape ?cl 'round') (RightOf ?cl ?d) (Is ?cu 'cup') (NextTo ?cu ?cl) (Is ?sp 'spoon') (In ?sp ?cu) (Is ?kn 'knife') (NextTo ?kn ?cu)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?bi (forall ?ba (exists ?ky (exists ?j (exists ?h (exists ?cl (exists ?cu (exists ?sp (exists ?kn (and (Is ?d 'dog') (LeftOf ?bi ?d) (Holding ?d ?ky) (Is ?bi 'bird') (or (not (Is ?ba 'banana')) (LeftOf ?ba ?bi)) (NextTo ?j ?d) (Is ?ky 'key') (RightOf ?cl ?d) (Is ?j 'jacket') (NextTo ?h ?j) (HasShape ?cl 'round') (NextTo ?cu ?cl) (Is ?h 'headphones') (Is ?cl 'clock') (Is ?cu 'cup') (In ?sp ?cu) (NextTo ?kn ?cu) (Is ?sp 'spoon') (Is ?kn 'knife')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "jacket",
+        "headphones",
+        "knife",
+        "banana",
+        "cup",
+        "clock",
+        "dog",
+        "bird",
+        "spoon"
+    ]
+}

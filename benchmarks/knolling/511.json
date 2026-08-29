@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a ruler located on the bottom side of the layout. For every wallet in the image, it is placed to the right of the ruler, and accompanying each wallet is a pair of scissors located directly below it.",
+    "dsl": "(exists ?r (and (Is ?r 'ruler') (OnBottomSide ?r) (forall ?w (implies (Is ?w 'wallet') (exists ?s (and (Is ?s 'scissors') (RightOf ?w ?r) (Below ?s ?w)))))))",
+    "cnf": "(exists ?r (forall ?w (exists ?s (and (Is ?r 'ruler') (OnBottomSide ?r) (or (not (Is ?w 'wallet')) (RightOf ?w ?r)) (or (not (Is ?w 'wallet')) (Is ?s 'scissors')) (or (not (Is ?w 'wallet')) (Below ?s ?w))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "wallet",
+        "scissors"
+    ]
+}

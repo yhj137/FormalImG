@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a man. Black headphones are next to him, and a gray knife is beside the headphones. All keys are yellow and located to the right of the man.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (and (Is ?m 'man') (forall ?k (implies (Is ?k 'key') (and (HasColor ?k 'yellow') (RightOf ?k ?m)))) (exists ?h (exists ?kn (and (Is ?h 'headphones') (HasColor ?h 'black') (NextTo ?h ?m) (Is ?kn 'knife') (HasColor ?kn 'gray') (NextTo ?kn ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (forall ?k (exists ?h (exists ?kn (and (Is ?m 'man') (or (not (Is ?k 'key')) (RightOf ?k ?m)) (NextTo ?h ?m) (or (not (Is ?k 'key')) (HasColor ?k 'yellow')) (HasColor ?h 'black') (NextTo ?kn ?h) (Is ?h 'headphones') (HasColor ?kn 'gray') (Is ?kn 'knife')))))))",
+    "k": 4,
+    "object_classes": [
+        "man",
+        "key",
+        "knife",
+        "headphones"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene depicting a man next to a brown horse on his right, with a red car to his left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?h (exists ?c (and (Is ?m 'man') (Is ?h 'horse') (HasColor ?h 'brown') (Is ?c 'car') (HasColor ?c 'red') (NextTo ?m ?h) (RightOf ?h ?m) (LeftOf ?c ?m))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?h (exists ?c (and (Is ?m 'man') (NextTo ?m ?h) (RightOf ?h ?m) (HasColor ?h 'brown') (LeftOf ?c ?m) (Is ?h 'horse') (HasColor ?c 'red') (Is ?c 'car'))))))",
+    "k": 3,
+    "object_classes": [
+        "horse",
+        "car",
+        "man"
+    ]
+}

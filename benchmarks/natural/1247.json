@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of every bird stands a wooden house. Inside the house, a bookshelf stands on a rug. A clock is to the left of the bookshelf, which holds a cake and a sandwich.",
+    "dsl": "(forall ?b (implies (Is ?b 'bird') (exists ?h (exists ?r (exists ?bs (exists ?cl (exists ?ck (exists ?s (and (Is ?h 'house') (HasMaterial ?h 'wooden') (RightOf ?h ?b) (Is ?r 'rug') (In ?r ?h) (Is ?bs 'bookshelf') (On ?bs ?r) (Is ?cl 'clock') (LeftOf ?cl ?bs) (Is ?ck 'cake') (On ?ck ?bs) (Is ?s 'sandwich') (On ?s ?bs))))))))))",
+    "cnf": "(forall ?b (exists ?h (exists ?r (exists ?bs (exists ?cl (exists ?ck (exists ?s (and (or (not (Is ?b 'bird')) (Is ?h 'house')) (or (not (Is ?b 'bird')) (HasMaterial ?h 'wooden')) (or (not (Is ?b 'bird')) (RightOf ?h ?b)) (or (not (Is ?b 'bird')) (Is ?r 'rug')) (or (not (Is ?b 'bird')) (In ?r ?h)) (or (not (Is ?b 'bird')) (Is ?bs 'bookshelf')) (or (not (Is ?b 'bird')) (On ?bs ?r)) (or (not (Is ?b 'bird')) (Is ?cl 'clock')) (or (not (Is ?b 'bird')) (LeftOf ?cl ?bs)) (or (not (Is ?b 'bird')) (Is ?ck 'cake')) (or (not (Is ?b 'bird')) (On ?ck ?bs)) (or (not (Is ?b 'bird')) (Is ?s 'sandwich')) (or (not (Is ?b 'bird')) (On ?s ?bs))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bird",
+        "house",
+        "sandwich",
+        "bookshelf",
+        "cake",
+        "clock",
+        "rug"
+    ]
+}

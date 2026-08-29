@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene depicts a wooden bookshelf with a plant to its left. An open backpack sits next to the bookshelf, containing every plate. On the bookshelf rest a laptop and a mirror, with a bird perched atop the mirror.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bs (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (exists ?p (and (Is ?p 'plant') (LeftOf ?p ?bs) (exists ?bp (and (Is ?bp 'backpack') (NextTo ?bp ?bs) (HasState ?bp 'open') (forall ?pl (implies (Is ?pl 'plate') (In ?pl ?bp))) (exists ?l (and (Is ?l 'laptop') (On ?l ?bs) (exists ?m (and (Is ?m 'mirror') (On ?m ?bs) (exists ?bi (and (Is ?bi 'bird') (On ?bi ?m))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bs (exists ?p (exists ?bp (forall ?pl (exists ?l (exists ?m (exists ?bi (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (LeftOf ?p ?bs) (NextTo ?bp ?bs) (Is ?p 'plant') (On ?l ?bs) (Is ?bp 'backpack') (HasState ?bp 'open') (On ?m ?bs) (Is ?l 'laptop') (or (not (Is ?pl 'plate')) (In ?pl ?bp)) (Is ?m 'mirror') (On ?bi ?m) (Is ?bi 'bird'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plant",
+        "laptop",
+        "backpack",
+        "mirror",
+        "bird",
+        "bookshelf",
+        "plate"
+    ]
+}

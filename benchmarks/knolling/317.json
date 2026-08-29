@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every cutting board in the scene, there is a gray wrench associated with it, such that the cutting board is visually larger than the wrench.",
+    "dsl": "(and (forall ?board (implies (Is ?board 'cutting_board') (exists ?wrench (and (Is ?wrench 'wrench') (Has ?wrench 'gray') (LargerThan ?board ?wrench))))))",
+    "cnf": "(forall ?board (exists ?wrench (and (or (not (Is ?board 'cutting_board')) (Is ?wrench 'wrench')) (or (not (Is ?board 'cutting_board')) (Has ?wrench 'gray')) (or (not (Is ?board 'cutting_board')) (LargerThan ?board ?wrench)))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "cutting_board"
+    ]
+}

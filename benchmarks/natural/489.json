@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing every fruit being held by a child, with a rectangular backpack to the right of the child.",
+    "dsl": "(and (IsStyle 'photo') (forall ?f (implies (Is ?f 'fruit') (exists ?c (and (Is ?c 'child') (Holding ?c ?f) (exists ?b (and (Is ?b 'backpack') (HasShape ?b 'rectangular') (RightOf ?b ?c))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?f (exists ?c (exists ?b (and (or (not (Is ?f 'fruit')) (Is ?c 'child')) (or (not (Is ?f 'fruit')) (Holding ?c ?f)) (or (not (Is ?f 'fruit')) (RightOf ?b ?c)) (or (not (Is ?f 'fruit')) (Is ?b 'backpack')) (or (not (Is ?f 'fruit')) (HasShape ?b 'rectangular')))))))",
+    "k": 3,
+    "object_classes": [
+        "child",
+        "fruit",
+        "backpack"
+    ]
+}

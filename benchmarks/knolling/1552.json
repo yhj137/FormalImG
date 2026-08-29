@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side, there is a suitcase and a shirt, which are aligned vertically. On the right side, there is a book aligned horizontally with the suitcase, and a remote aligned vertically with the book. The remote is visually smaller than the book. A glove is located on the bottom side of the image and is aligned vertically with the suitcase. Furthermore, for every lighter present in the scene, there are pliers and scissors associated with it; specifically, the lighter aligns horizontally with the glove, while both the pliers and the scissors align vertically with the lighter.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?book (exists ?glove (exists ?remote (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?shirt 'shirt') (OnLeftSide ?shirt) (AlignedVertically ?shirt ?suitcase) (Is ?book 'book') (OnRightSide ?book) (AlignedHorizontally ?book ?suitcase) (Is ?glove 'glove') (OnBottomSide ?glove) (AlignedVertically ?glove ?suitcase) (Is ?remote 'remote') (OnRightSide ?remote) (AlignedVertically ?remote ?book) (SmallerThan ?remote ?book) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?pliers (exists ?scissors (and (Is ?pliers 'pliers') (Is ?scissors 'scissors') (AlignedHorizontally ?lighter ?glove) (AlignedVertically ?pliers ?lighter) (AlignedVertically ?scissors ?lighter))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?book (exists ?glove (exists ?remote (forall ?lighter (exists ?pliers (exists ?scissors (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedVertically ?shirt ?suitcase) (AlignedHorizontally ?book ?suitcase) (OnLeftSide ?shirt) (AlignedVertically ?glove ?suitcase) (OnRightSide ?book) (AlignedVertically ?remote ?book) (Is ?shirt 'shirt') (OnBottomSide ?glove) (or (not (Is ?lighter 'lighter')) (AlignedHorizontally ?lighter ?glove)) (Is ?book 'book') (SmallerThan ?remote ?book) (OnRightSide ?remote) (Is ?glove 'glove') (or (not (Is ?lighter 'lighter')) (Is ?scissors 'scissors')) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?pliers ?lighter)) (Is ?remote 'remote') (or (not (Is ?lighter 'lighter')) (Is ?pliers 'pliers')) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?scissors ?lighter)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "remote",
+        "pliers",
+        "lighter",
+        "scissors",
+        "suitcase",
+        "glove",
+        "shirt"
+    ]
+}

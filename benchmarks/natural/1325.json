@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a bus on the left. To the right of the bus is a basket containing a sitting teddy bear with headphones on. All bottles in the scene are empty and inside the basket. A key lies to the right of the basket, and a fork is positioned to the right of the key.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bus (exists ?bask (exists ?bear (exists ?head (and (Is ?bus 'bus') (Is ?bask 'basket') (RightOf ?bask ?bus) (Is ?bear 'teddy bear') (In ?bear ?bask) (HasState ?bear 'sitting') (Is ?head 'headphones') (On ?head ?bear) (forall ?bot (implies (Is ?bot 'bottle') (and (In ?bot ?bask) (HasState ?bot 'empty')))) (exists ?key (exists ?fork (and (Is ?key 'key') (RightOf ?key ?bask) (Is ?fork 'fork') (RightOf ?fork ?key))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bus (exists ?bask (exists ?bear (exists ?head (forall ?bot (exists ?key (exists ?fork (and (Is ?bus 'bus') (RightOf ?bask ?bus) (Is ?bask 'basket') (In ?bear ?bask) (or (not (Is ?bot 'bottle')) (In ?bot ?bask)) (Is ?bear 'teddy bear') (HasState ?bear 'sitting') (RightOf ?key ?bask) (or (not (Is ?bot 'bottle')) (HasState ?bot 'empty')) (On ?head ?bear) (Is ?key 'key') (RightOf ?fork ?key) (Is ?head 'headphones') (Is ?fork 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "fork",
+        "bottle",
+        "teddy bear",
+        "basket",
+        "bus",
+        "key"
+    ]
+}

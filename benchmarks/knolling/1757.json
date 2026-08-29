@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features blue jeans located on the bottom side. Positioned vertically below a black mouse is a black remote, and the jeans are located below this remote. On the top side of the image, there is a row containing a red stapler, the black mouse, a brown donut, and a white cup, all aligned horizontally. The stapler is to the left of the mouse, the mouse is to the left of the donut, and the donut is to the left of the cup. Additionally, for every set of keys in the image, the keys are located to the left of the remote, have a black watch positioned below them, and correspond to a blue pen that is visually smaller than the keys.",
+    "dsl": "(exists ?jeans (exists ?remote (exists ?stapler (exists ?mouse (exists ?cup (exists ?donut (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Is ?remote 'remote') (Has ?remote 'black') (Is ?stapler 'stapler') (Has ?stapler 'red') (OnTopSide ?stapler) (Is ?mouse 'mouse') (Has ?mouse 'black') (OnTopSide ?mouse) (Is ?cup 'cup') (Has ?cup 'white') (OnTopSide ?cup) (Is ?donut 'donut') (Has ?donut 'brown') (OnTopSide ?donut) (AlignedHorizontally ?stapler ?mouse) (AlignedHorizontally ?mouse ?cup) (LeftOf ?stapler ?mouse) (LeftOf ?mouse ?donut) (LeftOf ?donut ?cup) (Below ?remote ?mouse) (Below ?jeans ?remote) (forall ?keys (implies (Is ?keys 'keys') (exists ?watch (exists ?pen (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?pen 'pen') (Has ?pen 'blue') (LeftOf ?keys ?remote) (Below ?watch ?keys) (SmallerThan ?pen ?keys)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?remote (exists ?stapler (exists ?mouse (exists ?cup (exists ?donut (forall ?keys (exists ?watch (exists ?pen (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnBottomSide ?jeans) (Below ?jeans ?remote) (Below ?remote ?mouse) (or (not (Is ?keys 'keys')) (LeftOf ?keys ?remote)) (Has ?remote 'black') (LeftOf ?mouse ?donut) (or (not (Is ?keys 'keys')) (Has ?pen 'blue')) (or (not (Is ?keys 'keys')) (Below ?watch ?keys)) (Is ?remote 'remote') (LeftOf ?stapler ?mouse) (OnTopSide ?donut) (LeftOf ?donut ?cup) (or (not (Is ?keys 'keys')) (Is ?pen 'pen')) (or (not (Is ?keys 'keys')) (SmallerThan ?pen ?keys)) (or (not (Is ?keys 'keys')) (Has ?watch 'black')) (AlignedHorizontally ?stapler ?mouse) (AlignedHorizontally ?mouse ?cup) (Has ?donut 'brown') (or (not (Is ?keys 'keys')) (Is ?watch 'watch')) (OnTopSide ?stapler) (OnTopSide ?mouse) (OnTopSide ?cup) (Is ?donut 'donut') (Has ?stapler 'red') (Has ?mouse 'black') (Has ?cup 'white') (Is ?stapler 'stapler') (Is ?mouse 'mouse') (Is ?cup 'cup')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "remote",
+        "stapler",
+        "pen",
+        "watch",
+        "cup",
+        "jeans",
+        "mouse",
+        "donut"
+    ]
+}

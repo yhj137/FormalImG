@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This photo-style scene features a desk holding an open, rectangular laptop and a pair of glasses. A round pizza topped with a fish is also on the desk, with a spoon lying to its left. To the right of the desk sits a backpack containing a toy car. To the left of the desk are a car and every bus in the scene.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?bp (and (Is ?d 'desk') (Is ?bp 'backpack') (RightOf ?bp ?d) (forall ?b (implies (Is ?b 'bus') (LeftOf ?b ?d))) (exists ?c (exists ?l (exists ?tc (exists ?p (exists ?f (exists ?g (exists ?s (and (Is ?c 'car') (LeftOf ?c ?d) (Is ?l 'laptop') (HasShape ?l 'rectangular') (HasState ?l 'open') (On ?l ?d) (Is ?tc 'toy car') (In ?tc ?bp) (Is ?p 'pizza') (HasShape ?p 'round') (On ?p ?d) (Is ?f 'fish') (On ?f ?p) (Is ?g 'glasses') (On ?g ?d) (Is ?s 'spoon') (LeftOf ?s ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?bp (forall ?b (exists ?c (exists ?l (exists ?tc (exists ?p (exists ?f (exists ?g (exists ?s (and (Is ?d 'desk') (RightOf ?bp ?d) (or (not (Is ?b 'bus')) (LeftOf ?b ?d)) (Is ?bp 'backpack') (In ?tc ?bp) (LeftOf ?c ?d) (Is ?tc 'toy car') (On ?l ?d) (Is ?c 'car') (On ?p ?d) (HasState ?l 'open') (On ?g ?d) (HasShape ?p 'round') (On ?f ?p) (HasShape ?l 'rectangular') (Is ?g 'glasses') (Is ?p 'pizza') (LeftOf ?s ?p) (Is ?f 'fish') (Is ?l 'laptop') (Is ?s 'spoon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "toy car",
+        "desk",
+        "bus",
+        "backpack",
+        "fish",
+        "laptop",
+        "pizza",
+        "car",
+        "spoon"
+    ]
+}

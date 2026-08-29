@@ -1,0 +1,9 @@
+{
+    "prompt": "A ceramic plate.",
+    "dsl": "(exists ?p (and (Is ?p 'plate') (HasMaterial ?p 'ceramic')))",
+    "cnf": "(exists ?p (and (Is ?p 'plate') (HasMaterial ?p 'ceramic')))",
+    "k": 1,
+    "object_classes": [
+        "plate"
+    ]
+}

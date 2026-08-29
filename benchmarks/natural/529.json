@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman wearing plastic glasses, holding every fish to her left.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'woman') (forall ?f (implies (Is ?f 'fish') (and (Holding ?w ?f) (LeftOf ?f ?w)))) (exists ?g (and (Is ?g 'glasses') (HasMaterial ?g 'plastic') (On ?g ?w))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?f (exists ?g (and (Is ?w 'woman') (or (not (Is ?f 'fish')) (Holding ?w ?f)) (or (not (Is ?f 'fish')) (LeftOf ?f ?w)) (On ?g ?w) (HasMaterial ?g 'plastic') (Is ?g 'glasses'))))))",
+    "k": 3,
+    "object_classes": [
+        "fish",
+        "woman",
+        "glasses"
+    ]
+}

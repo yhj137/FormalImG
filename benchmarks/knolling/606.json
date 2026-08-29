@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a monitor, a blue shirt, a white bowl, and a sandwich. These four items are arranged in a row, aligned horizontally with each other. The sandwich is located on the right side of the image and appears smaller than the monitor.",
+    "dsl": "(exists ?monitor (exists ?shirt (exists ?bowl (exists ?sandwich (and (Is ?monitor 'monitor') (Is ?shirt 'shirt') (Has ?shirt 'blue') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?sandwich 'sandwich') (AlignedHorizontally ?monitor ?shirt) (AlignedHorizontally ?shirt ?bowl) (AlignedHorizontally ?bowl ?sandwich) (OnRightSide ?sandwich) (SmallerThan ?sandwich ?monitor))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (exists ?bowl (exists ?sandwich (and (Is ?monitor 'monitor') (AlignedHorizontally ?monitor ?shirt) (SmallerThan ?sandwich ?monitor) (Has ?shirt 'blue') (AlignedHorizontally ?shirt ?bowl) (OnRightSide ?sandwich) (Is ?shirt 'shirt') (Has ?bowl 'white') (AlignedHorizontally ?bowl ?sandwich) (Is ?bowl 'bowl') (Is ?sandwich 'sandwich'))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "bowl",
+        "sandwich",
+        "shirt"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a wooden boat. All men are on the boat, and a dog is located to its left. A round plate rests on the boat with a bottle standing on it, and a key lies to the left of the bottle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (forall ?m (implies (Is ?m 'man') (On ?m ?b))) (exists ?d (and (Is ?d 'dog') (LeftOf ?d ?b))) (exists ?p (exists ?bo (exists ?k (and (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?b) (Is ?bo 'bottle') (On ?bo ?p) (Is ?k 'key') (LeftOf ?k ?bo))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (forall ?m (exists ?d (exists ?p (exists ?bo (exists ?k (and (Is ?b 'boat') (HasMaterial ?b 'wooden') (or (not (Is ?m 'man')) (On ?m ?b)) (LeftOf ?d ?b) (On ?p ?b) (Is ?d 'dog') (HasShape ?p 'round') (On ?bo ?p) (Is ?p 'plate') (Is ?bo 'bottle') (LeftOf ?k ?bo) (Is ?k 'key')))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "key",
+        "man",
+        "boat",
+        "dog",
+        "plate"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. Every child is wearing a green shirt and sitting on a bench that also holds a sliced cake. Beside the bench is a gray rock supporting a turned-off monitor, upon which a bird is perched.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?child (implies (Is ?child 'child') (exists ?shirt (exists ?bench (exists ?cake (exists ?rock (exists ?monitor (exists ?bird (and (Is ?shirt 'shirt') (Is ?bench 'bench') (Is ?cake 'cake') (Is ?rock 'rock') (Is ?monitor 'monitor') (Is ?bird 'bird') (HasColor ?shirt 'green') (On ?shirt ?child) (On ?child ?bench) (HasState ?cake 'sliced') (On ?cake ?bench) (HasColor ?rock 'gray') (NextTo ?rock ?bench) (HasState ?monitor 'off') (On ?monitor ?rock) (On ?bird ?monitor)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?child (exists ?shirt (exists ?bench (exists ?cake (exists ?rock (exists ?monitor (exists ?bird (and (or (not (Is ?child 'child')) (Is ?shirt 'shirt')) (or (not (Is ?child 'child')) (Is ?bench 'bench')) (or (not (Is ?child 'child')) (HasColor ?shirt 'green')) (or (not (Is ?child 'child')) (Is ?cake 'cake')) (or (not (Is ?child 'child')) (On ?child ?bench)) (or (not (Is ?child 'child')) (Is ?bird 'bird')) (or (not (Is ?child 'child')) (On ?shirt ?child)) (or (not (Is ?child 'child')) (Is ?rock 'rock')) (or (not (Is ?child 'child')) (HasState ?cake 'sliced')) (or (not (Is ?child 'child')) (On ?cake ?bench)) (or (not (Is ?child 'child')) (Is ?monitor 'monitor')) (or (not (Is ?child 'child')) (On ?bird ?monitor)) (or (not (Is ?child 'child')) (HasColor ?rock 'gray')) (or (not (Is ?child 'child')) (NextTo ?rock ?bench)) (or (not (Is ?child 'child')) (HasState ?monitor 'off')) (or (not (Is ?child 'child')) (On ?monitor ?rock)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bird",
+        "cake",
+        "rock",
+        "monitor",
+        "shirt",
+        "child",
+        "bench"
+    ]
+}

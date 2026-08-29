@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with a structured layout. The scene features a monitor positioned on the left side. To the left of a laptop is the monitor, and they are aligned horizontally. Above the monitor is a camera. To the right of the camera is a watch, which is physically smaller than the camera, and a lighter is placed to the right of the watch. For every wrench in the scene, the monitor is located above it; additionally, there is a pair of pliers to the right of the wrench and aligned horizontally with it. The wrench is also positioned above a bowl. To the right of the bowl is a tie, and to the right of the tie is a lemon.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?camera (exists ?watch (exists ?lighter (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?laptop 'laptop') (LeftOf ?monitor ?laptop) (AlignedHorizontally ?monitor ?laptop) (Is ?camera 'camera') (Above ?camera ?monitor) (Is ?watch 'watch') (RightOf ?watch ?camera) (SmallerThan ?watch ?camera) (Is ?lighter 'lighter') (RightOf ?lighter ?watch) (forall ?w (implies (Is ?w 'wrench') (exists ?pliers (exists ?bowl (exists ?tie (exists ?lemon (and (Is ?pliers 'pliers') (Is ?bowl 'bowl') (Is ?tie 'tie') (Is ?lemon 'lemon') (Above ?monitor ?w) (RightOf ?pliers ?w) (AlignedHorizontally ?w ?pliers) (Above ?w ?bowl) (RightOf ?tie ?bowl) (RightOf ?lemon ?tie))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?camera (exists ?watch (exists ?lighter (forall ?w (exists ?pliers (exists ?bowl (exists ?tie (exists ?lemon (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (LeftOf ?monitor ?laptop) (AlignedHorizontally ?monitor ?laptop) (Is ?laptop 'laptop') (Above ?camera ?monitor) (or (not (Is ?w 'wrench')) (Above ?monitor ?w)) (Is ?camera 'camera') (RightOf ?watch ?camera) (or (not (Is ?w 'wrench')) (Is ?lemon 'lemon')) (or (not (Is ?w 'wrench')) (RightOf ?pliers ?w)) (SmallerThan ?watch ?camera) (Is ?watch 'watch') (or (not (Is ?w 'wrench')) (Is ?tie 'tie')) (or (not (Is ?w 'wrench')) (RightOf ?lemon ?tie)) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?w ?pliers)) (or (not (Is ?w 'wrench')) (Is ?pliers 'pliers')) (RightOf ?lighter ?watch) (or (not (Is ?w 'wrench')) (Is ?bowl 'bowl')) (or (not (Is ?w 'wrench')) (RightOf ?tie ?bowl)) (or (not (Is ?w 'wrench')) (Above ?w ?bowl)) (Is ?lighter 'lighter'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "pliers",
+        "wrench",
+        "lemon",
+        "watch",
+        "lighter",
+        "camera",
+        "monitor",
+        "bowl"
+    ]
+}

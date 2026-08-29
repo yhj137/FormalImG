@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A man wearing glasses is in a wooden bed. A laptop sits on the bed. Every cup in the scene is placed on the laptop. To the left of the bed is a cat, and a round ball is to the left of the cat. To the right of the bed is a horse, and an elephant stands to the right of the horse.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?be (and (Is ?be 'bed') (HasMaterial ?be 'wooden') (exists ?m (and (Is ?m 'man') (In ?m ?be) (exists ?g (and (Is ?g 'glasses') (On ?g ?m))))) (exists ?l (and (Is ?l 'laptop') (On ?l ?be) (forall ?cu (implies (Is ?cu 'cup') (On ?cu ?l))))) (exists ?c (and (Is ?c 'cat') (LeftOf ?c ?be) (exists ?ba (and (Is ?ba 'ball') (HasShape ?ba 'round') (LeftOf ?ba ?c))))) (exists ?h (and (Is ?h 'horse') (RightOf ?h ?be) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?h))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?be (exists ?m (exists ?g (exists ?l (forall ?cu (exists ?c (exists ?ba (exists ?h (exists ?e (and (Is ?be 'bed') (HasMaterial ?be 'wooden') (In ?m ?be) (On ?l ?be) (Is ?m 'man') (On ?g ?m) (LeftOf ?c ?be) (Is ?l 'laptop') (or (not (Is ?cu 'cup')) (On ?cu ?l)) (Is ?g 'glasses') (RightOf ?h ?be) (Is ?c 'cat') (LeftOf ?ba ?c) (Is ?h 'horse') (RightOf ?e ?h) (HasShape ?ba 'round') (Is ?e 'elephant') (Is ?ba 'ball'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "horse",
+        "glasses",
+        "man",
+        "bed",
+        "cup",
+        "elephant",
+        "ball",
+        "cat"
+    ]
+}

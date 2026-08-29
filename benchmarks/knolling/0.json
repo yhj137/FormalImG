@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. One pair of scissors is located on the top side of the image.",
+    "dsl": "(exists ?x (and (Is ?x 'scissors') (OnTopSide ?x)))",
+    "cnf": "(exists ?x (and (Is ?x 'scissors') (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "scissors"
+    ]
+}

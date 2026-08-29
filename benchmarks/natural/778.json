@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cyberpunk style. A woman holding a knife stands to the left of a rectangular metal table. All keyboards are positioned to the right of the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?k (exists ?t (and (Is ?w 'woman') (Is ?k 'knife') (Is ?t 'table') (HasShape ?t 'rectangular') (HasMaterial ?t 'metal') (Holding ?w ?k) (LeftOf ?w ?t) (forall ?kb (implies (Is ?kb 'keyboard') (RightOf ?kb ?t))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?k (exists ?t (forall ?kb (and (Is ?w 'woman') (Holding ?w ?k) (LeftOf ?w ?t) (Is ?k 'knife') (HasMaterial ?t 'metal') (or (not (Is ?kb 'keyboard')) (RightOf ?kb ?t)) (HasShape ?t 'rectangular') (Is ?t 'table')))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "keyboard",
+        "table",
+        "woman"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "All clocks in the image are round.",
+    "dsl": "(forall ?c (implies (Is ?c 'clock') (HasShape ?c 'round')))",
+    "cnf": "(forall ?c (or (not (Is ?c 'clock')) (HasShape ?c 'round')))",
+    "k": 1,
+    "object_classes": [
+        "clock"
+    ]
+}

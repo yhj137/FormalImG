@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a book located on the top-left side. For every fork in the layout, it is placed below the book and aligned vertically with it. To the right of the book lies a pair of scissors, which is smaller than the book. Further to the right of the scissors is a cup, followed by an apple to the right of the cup. A pair of glasses is positioned below the scissors and is vertically aligned with them.",
+    "dsl": "(exists ?book (and (Is ?book 'book') (OnTopSide ?book) (OnLeftSide ?book) (forall ?fork (implies (Is ?fork 'fork') (and (Below ?fork ?book) (AlignedVertically ?fork ?book)))) (exists ?scissors (exists ?cup (exists ?apple (exists ?glasses (and (Is ?scissors 'scissors') (Is ?cup 'cup') (Is ?apple 'apple') (Is ?glasses 'glasses') (RightOf ?scissors ?book) (LargerThan ?book ?scissors) (RightOf ?cup ?scissors) (RightOf ?apple ?cup) (Below ?glasses ?scissors) (AlignedVertically ?scissors ?glasses))))))))",
+    "cnf": "(exists ?book (forall ?fork (exists ?scissors (exists ?cup (exists ?apple (exists ?glasses (and (Is ?book 'book') (OnTopSide ?book) (OnLeftSide ?book) (or (not (Is ?fork 'fork')) (Below ?fork ?book)) (or (not (Is ?fork 'fork')) (AlignedVertically ?fork ?book)) (RightOf ?scissors ?book) (LargerThan ?book ?scissors) (Is ?scissors 'scissors') (RightOf ?cup ?scissors) (Below ?glasses ?scissors) (Is ?cup 'cup') (RightOf ?apple ?cup) (AlignedVertically ?scissors ?glasses) (Is ?glasses 'glasses') (Is ?apple 'apple'))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "glasses",
+        "apple",
+        "cup",
+        "fork",
+        "scissors"
+    ]
+}

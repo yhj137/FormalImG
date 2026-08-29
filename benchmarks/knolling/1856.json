@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a shirt and a backpack on the top side, with the shirt located to the left of the backpack. For every remote in the scene, there is a specific sequence of objects to its right: a phone, a pan, a knife, a glove, pliers, a lemon, and a carrot. The phone is to the right of the remote, the pan is right of the phone, the knife is right of the pan, the glove is right of the knife, the pliers are right of the glove, the lemon is right of the pliers, and the carrot is right of the lemon. Furthermore, the remote is aligned horizontally with the shirt, and the carrot is positioned on the right side of the image.",
+    "dsl": "(exists ?shirt (exists ?backpack (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?backpack 'backpack') (OnTopSide ?backpack) (LeftOf ?shirt ?backpack) (forall ?remote (implies (Is ?remote 'remote') (exists ?phone (exists ?pan (exists ?knife (exists ?glove (exists ?pliers (exists ?lemon (exists ?carrot (and (Is ?phone 'phone') (Is ?pan 'pan') (Is ?knife 'knife') (Is ?glove 'glove') (Is ?pliers 'pliers') (Is ?lemon 'lemon') (Is ?carrot 'carrot') (RightOf ?phone ?remote) (RightOf ?pan ?phone) (RightOf ?knife ?pan) (RightOf ?glove ?knife) (RightOf ?pliers ?glove) (RightOf ?lemon ?pliers) (RightOf ?carrot ?lemon) (AlignedHorizontally ?remote ?shirt) (OnRightSide ?carrot))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?backpack (forall ?remote (exists ?phone (exists ?pan (exists ?knife (exists ?glove (exists ?pliers (exists ?lemon (exists ?carrot (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (LeftOf ?shirt ?backpack) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?shirt)) (OnTopSide ?backpack) (or (not (Is ?remote 'remote')) (RightOf ?carrot ?lemon)) (or (not (Is ?remote 'remote')) (OnRightSide ?carrot)) (Is ?backpack 'backpack') (or (not (Is ?remote 'remote')) (RightOf ?lemon ?pliers)) (or (not (Is ?remote 'remote')) (Is ?carrot 'carrot')) (or (not (Is ?remote 'remote')) (RightOf ?pliers ?glove)) (or (not (Is ?remote 'remote')) (Is ?lemon 'lemon')) (or (not (Is ?remote 'remote')) (RightOf ?phone ?remote)) (or (not (Is ?remote 'remote')) (RightOf ?glove ?knife)) (or (not (Is ?remote 'remote')) (Is ?pliers 'pliers')) (or (not (Is ?remote 'remote')) (Is ?phone 'phone')) (or (not (Is ?remote 'remote')) (RightOf ?pan ?phone)) (or (not (Is ?remote 'remote')) (RightOf ?knife ?pan)) (or (not (Is ?remote 'remote')) (Is ?glove 'glove')) (or (not (Is ?remote 'remote')) (Is ?pan 'pan')) (or (not (Is ?remote 'remote')) (Is ?knife 'knife')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "lemon",
+        "carrot",
+        "phone",
+        "pan",
+        "backpack",
+        "knife",
+        "glove",
+        "shirt"
+    ]
+}

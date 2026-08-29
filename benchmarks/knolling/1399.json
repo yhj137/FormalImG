@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A series of items are arranged in a horizontal line across the top side of the image. The sequence, moving from left to right, consists of a plate, scissors, a calculator, a book, a phone, and a sock. Furthermore, any cup present in the scene is located to the right of the sock and is aligned horizontally with the rest of the row.",
+    "dsl": "(exists ?plate (exists ?scissors (exists ?calculator (exists ?book (exists ?phone (exists ?sock (and (Is ?plate 'plate') (Is ?scissors 'scissors') (Is ?calculator 'calculator') (Is ?book 'book') (Is ?phone 'phone') (Is ?sock 'sock') (OnTopSide ?plate) (RightOf ?scissors ?plate) (RightOf ?calculator ?scissors) (RightOf ?book ?calculator) (RightOf ?phone ?book) (RightOf ?sock ?phone) (AlignedHorizontally ?plate ?scissors) (AlignedHorizontally ?scissors ?calculator) (AlignedHorizontally ?calculator ?book) (AlignedHorizontally ?book ?phone) (AlignedHorizontally ?phone ?sock) (forall ?cup (implies (Is ?cup 'cup') (and (RightOf ?cup ?sock) (AlignedHorizontally ?cup ?sock)))))))))))",
+    "cnf": "(exists ?plate (exists ?scissors (exists ?calculator (exists ?book (exists ?phone (exists ?sock (forall ?cup (and (Is ?plate 'plate') (OnTopSide ?plate) (RightOf ?scissors ?plate) (AlignedHorizontally ?plate ?scissors) (Is ?scissors 'scissors') (RightOf ?calculator ?scissors) (AlignedHorizontally ?scissors ?calculator) (Is ?calculator 'calculator') (RightOf ?book ?calculator) (AlignedHorizontally ?calculator ?book) (Is ?book 'book') (RightOf ?phone ?book) (AlignedHorizontally ?book ?phone) (Is ?phone 'phone') (RightOf ?sock ?phone) (AlignedHorizontally ?phone ?sock) (Is ?sock 'sock') (or (not (Is ?cup 'cup')) (RightOf ?cup ?sock)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?sock))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "plate",
+        "sock",
+        "phone",
+        "cup",
+        "calculator",
+        "scissors"
+    ]
+}

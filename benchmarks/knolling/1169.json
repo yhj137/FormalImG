@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pair of jeans and a set of keys positioned on the top side of the image; the jeans are to the right of the keys, and they are aligned horizontally. A calculator is placed below the keys, and a cutting board is placed below the jeans, with the calculator and cutting board also being aligned horizontally. Furthermore, for every fork in the scene, there is a lemon located above it, and the fork is positioned to the right of the cutting board.",
+    "dsl": "(exists ?jeans (exists ?keys (exists ?calculator (exists ?cb (and (Is ?jeans 'jeans') (Is ?keys 'keys') (Is ?calculator 'calculator') (Is ?cb 'cutting_board') (OnTopSide ?jeans) (OnTopSide ?keys) (AlignedHorizontally ?keys ?jeans) (RightOf ?jeans ?keys) (Below ?calculator ?keys) (Below ?cb ?jeans) (AlignedHorizontally ?calculator ?cb) (forall ?fork (implies (Is ?fork 'fork') (exists ?lemon (and (Is ?lemon 'lemon') (RightOf ?fork ?cb) (Above ?lemon ?fork))))))))))",
+    "cnf": "(exists ?jeans (exists ?keys (exists ?calculator (exists ?cb (forall ?fork (exists ?lemon (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (AlignedHorizontally ?keys ?jeans) (RightOf ?jeans ?keys) (OnTopSide ?keys) (Below ?cb ?jeans) (Below ?calculator ?keys) (Is ?keys 'keys') (Is ?cb 'cutting_board') (AlignedHorizontally ?calculator ?cb) (Is ?calculator 'calculator') (or (not (Is ?fork 'fork')) (RightOf ?fork ?cb)) (or (not (Is ?fork 'fork')) (Is ?lemon 'lemon')) (or (not (Is ?fork 'fork')) (Above ?lemon ?fork)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "lemon",
+        "fork",
+        "cutting_board",
+        "calculator",
+        "jeans"
+    ]
+}

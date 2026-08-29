@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a wooden bookshelf with headphones to the left. Every fruit in the scene, as well as a shirt, is inside the bookshelf.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?h 'headphones') (LeftOf ?h ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))) (exists ?s (and (Is ?s 'shirt') (In ?s ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (forall ?f (exists ?s (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (LeftOf ?h ?b) (or (not (Is ?f 'fruit')) (In ?f ?b)) (Is ?h 'headphones') (In ?s ?b) (Is ?s 'shirt')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "fruit",
+        "shirt",
+        "bookshelf"
+    ]
+}

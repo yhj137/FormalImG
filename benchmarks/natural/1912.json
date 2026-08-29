@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene inside a house features an open refrigerator. A person holding a metal knife stands to the left of the refrigerator. To the left of the person is a clock with a screwdriver next to it. Inside the refrigerator are a round bowl containing a cake, an orange, and every apple in the scene.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (exists ?r (exists ?p (exists ?k (exists ?cl (and (Is ?h 'house') (Is ?r 'refrigerator') (Is ?p 'person') (Is ?k 'knife') (Is ?cl 'clock') (In ?r ?h) (HasState ?r 'open') (LeftOf ?p ?r) (Holding ?p ?k) (HasMaterial ?k 'metal') (LeftOf ?cl ?p) (forall ?a (implies (Is ?a 'apple') (In ?a ?r))) (exists ?s (exists ?b (exists ?c (exists ?o (and (Is ?s 'screwdriver') (Is ?b 'bowl') (Is ?c 'cake') (Is ?o 'orange') (NextTo ?s ?cl) (In ?b ?r) (HasShape ?b 'round') (In ?c ?b) (In ?o ?r)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (exists ?r (exists ?p (exists ?k (exists ?cl (forall ?a (exists ?s (exists ?b (exists ?c (exists ?o (and (Is ?h 'house') (In ?r ?h) (Is ?r 'refrigerator') (HasState ?r 'open') (LeftOf ?p ?r) (or (not (Is ?a 'apple')) (In ?a ?r)) (Is ?p 'person') (Holding ?p ?k) (In ?b ?r) (LeftOf ?cl ?p) (Is ?k 'knife') (HasMaterial ?k 'metal') (In ?o ?r) (Is ?b 'bowl') (HasShape ?b 'round') (Is ?cl 'clock') (NextTo ?s ?cl) (Is ?o 'orange') (In ?c ?b) (Is ?s 'screwdriver') (Is ?c 'cake')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "knife",
+        "bowl",
+        "person",
+        "cake",
+        "orange",
+        "refrigerator",
+        "clock",
+        "apple",
+        "screwdriver"
+    ]
+}

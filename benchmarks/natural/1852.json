@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a red sofa with every butterfly flying above it. A person wearing a round hat and holding a yellow umbrella sits on the sofa, with a black jacket placed nearby. To the right of the sofa, a lion holds a teddy bear next to a blue car, which has a round pan beside it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'red') (forall ?b (implies (Is ?b 'butterfly') (Above ?b ?s))) (exists ?p (exists ?l (exists ?h (exists ?u (exists ?j (exists ?t (exists ?c (exists ?pn (and (Is ?p 'person') (On ?p ?s) (Is ?l 'lion') (RightOf ?l ?s) (Is ?h 'hat') (HasShape ?h 'round') (On ?h ?p) (Is ?u 'umbrella') (HasColor ?u 'yellow') (Holding ?p ?u) (Is ?j 'jacket') (HasColor ?j 'black') (NextTo ?j ?p) (Is ?t 'teddy bear') (Holding ?l ?t) (Is ?c 'car') (HasColor ?c 'blue') (NextTo ?c ?l) (Is ?pn 'pan') (HasShape ?pn 'round') (NextTo ?pn ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (forall ?b (exists ?p (exists ?l (exists ?h (exists ?u (exists ?j (exists ?t (exists ?c (exists ?pn (and (Is ?s 'sofa') (HasColor ?s 'red') (or (not (Is ?b 'butterfly')) (Above ?b ?s)) (On ?p ?s) (RightOf ?l ?s) (Is ?p 'person') (On ?h ?p) (Is ?l 'lion') (Holding ?l ?t) (Holding ?p ?u) (HasShape ?h 'round') (NextTo ?c ?l) (Is ?t 'teddy bear') (NextTo ?j ?p) (HasColor ?u 'yellow') (Is ?h 'hat') (HasColor ?c 'blue') (NextTo ?pn ?c) (HasColor ?j 'black') (Is ?u 'umbrella') (Is ?c 'car') (HasShape ?pn 'round') (Is ?j 'jacket') (Is ?pn 'pan')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "person",
+        "teddy bear",
+        "jacket",
+        "car",
+        "pan",
+        "lion",
+        "butterfly",
+        "hat"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every tree has a red bus to its left and a woman to its right. The woman holds a toy car, and a blue bird is perched on the tree. Next to the woman is a table with a round plate with a sandwich on it, and a knife and fork are placed beside the plate.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'tree') (exists ?bus (exists ?w (exists ?tc (exists ?b (exists ?tbl (exists ?p (exists ?s (exists ?k (exists ?f (and (Is ?bus 'bus') (HasColor ?bus 'red') (LeftOf ?bus ?t) (Is ?w 'woman') (RightOf ?w ?t) (Is ?tc 'toy car') (Holding ?w ?tc) (Is ?b 'bird') (HasColor ?b 'blue') (On ?b ?t) (Is ?tbl 'table') (NextTo ?tbl ?w) (Is ?p 'plate') (HasShape ?p 'round') (On ?p ?tbl) (Is ?s 'sandwich') (On ?s ?p) (Is ?k 'knife') (NextTo ?k ?p) (Is ?f 'fork') (NextTo ?f ?p))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (exists ?bus (exists ?w (exists ?tc (exists ?b (exists ?tbl (exists ?p (exists ?s (exists ?k (exists ?f (and (or (not (Is ?t 'tree')) (Is ?bus 'bus')) (or (not (Is ?t 'tree')) (HasColor ?bus 'red')) (or (not (Is ?t 'tree')) (LeftOf ?bus ?t)) (or (not (Is ?t 'tree')) (Is ?w 'woman')) (or (not (Is ?t 'tree')) (RightOf ?w ?t)) (or (not (Is ?t 'tree')) (Is ?tc 'toy car')) (or (not (Is ?t 'tree')) (Holding ?w ?tc)) (or (not (Is ?t 'tree')) (Is ?b 'bird')) (or (not (Is ?t 'tree')) (NextTo ?tbl ?w)) (or (not (Is ?t 'tree')) (HasColor ?b 'blue')) (or (not (Is ?t 'tree')) (Is ?tbl 'table')) (or (not (Is ?t 'tree')) (Is ?p 'plate')) (or (not (Is ?t 'tree')) (On ?p ?tbl)) (or (not (Is ?t 'tree')) (On ?b ?t)) (or (not (Is ?t 'tree')) (HasShape ?p 'round')) (or (not (Is ?t 'tree')) (Is ?s 'sandwich')) (or (not (Is ?t 'tree')) (On ?s ?p)) (or (not (Is ?t 'tree')) (Is ?k 'knife')) (or (not (Is ?t 'tree')) (NextTo ?k ?p)) (or (not (Is ?t 'tree')) (Is ?f 'fork')) (or (not (Is ?t 'tree')) (NextTo ?f ?p))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bird",
+        "sandwich",
+        "table",
+        "bus",
+        "fork",
+        "toy car",
+        "tree",
+        "woman",
+        "knife",
+        "plate"
+    ]
+}

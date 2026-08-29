@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a blue horse. A bicycle is located to the right of the horse. A red backpack sits on the horse, with an umbrella tucked inside. All shoes are positioned to the left of the bicycle. A keyboard is placed next to the horse, with a bowl resting on it containing a pair of glasses. A clock floats above the horse.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'horse') (HasColor ?h 'blue') (exists ?bi (and (Is ?bi 'bicycle') (RightOf ?bi ?h) (exists ?bp (and (Is ?bp 'backpack') (HasColor ?bp 'red') (On ?bp ?h) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?bi))) (exists ?u (and (Is ?u 'umbrella') (In ?u ?bp) (exists ?k (and (Is ?k 'keyboard') (NextTo ?k ?h) (exists ?bo (and (Is ?bo 'bowl') (On ?bo ?k) (exists ?g (and (Is ?g 'glasses') (In ?g ?bo) (exists ?c (and (Is ?c 'clock') (Above ?c ?h))))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?bi (exists ?bp (forall ?s (exists ?u (exists ?k (exists ?bo (exists ?g (exists ?c (and (Is ?h 'horse') (HasColor ?h 'blue') (RightOf ?bi ?h) (On ?bp ?h) (Is ?bi 'bicycle') (or (not (Is ?s 'shoes')) (LeftOf ?s ?bi)) (NextTo ?k ?h) (HasColor ?bp 'red') (In ?u ?bp) (Above ?c ?h) (Is ?k 'keyboard') (On ?bo ?k) (Is ?bp 'backpack') (Is ?u 'umbrella') (Is ?c 'clock') (Is ?bo 'bowl') (In ?g ?bo) (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "horse",
+        "shoes",
+        "backpack",
+        "glasses",
+        "bicycle",
+        "clock",
+        "bowl",
+        "keyboard"
+    ]
+}

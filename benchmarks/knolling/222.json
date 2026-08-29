@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a wrench and a lemon. The lemon is positioned on the right side of the image, and it is visually smaller than the wrench.",
+    "dsl": "(exists ?l (exists ?w (and (Is ?l 'lemon') (Is ?w 'wrench') (OnRightSide ?l) (SmallerThan ?l ?w))))",
+    "cnf": "(exists ?l (exists ?w (and (Is ?l 'lemon') (OnRightSide ?l) (SmallerThan ?l ?w) (Is ?w 'wrench'))))",
+    "k": 2,
+    "object_classes": [
+        "wrench",
+        "lemon"
+    ]
+}

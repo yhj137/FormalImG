@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image featuring an open refrigerator that contains all the fruit. To the right of the refrigerator is an elephant holding a ball. A wooden table stands to the right of the elephant, and next to the table is a chair with a jacket on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (forall ?f (implies (Is ?f 'fruit') (In ?f ?r))) (exists ?e (exists ?b (exists ?t (exists ?c (exists ?j (and (Is ?e 'elephant') (Is ?b 'ball') (Is ?t 'table') (Is ?c 'chair') (Is ?j 'jacket') (RightOf ?e ?r) (Holding ?e ?b) (RightOf ?t ?e) (HasMaterial ?t 'wooden') (NextTo ?c ?t) (On ?j ?c))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (forall ?f (exists ?e (exists ?b (exists ?t (exists ?c (exists ?j (and (Is ?r 'refrigerator') (HasState ?r 'open') (or (not (Is ?f 'fruit')) (In ?f ?r)) (RightOf ?e ?r) (Is ?e 'elephant') (Holding ?e ?b) (RightOf ?t ?e) (Is ?b 'ball') (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?c ?t) (Is ?c 'chair') (On ?j ?c) (Is ?j 'jacket'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "jacket",
+        "ball",
+        "chair",
+        "refrigerator",
+        "table",
+        "fruit",
+        "elephant"
+    ]
+}

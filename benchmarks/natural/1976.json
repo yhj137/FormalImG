@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon-style scene. A child is in a blue bed, holding a pizza. To the right of the bed is a wooden desk. A round mirror hangs above the desk. A clock sits on the desk, with a phone to its left and a broken boat next to it. All cakes are placed on the desk, and an umbrella is located below the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?desk (exists ?mirror (exists ?clock (exists ?phone (exists ?boat (exists ?pizza (and (Is ?bed 'bed') (HasColor ?bed 'blue') (Is ?child 'child') (In ?child ?bed) (Is ?desk 'desk') (HasMaterial ?desk 'wooden') (RightOf ?desk ?bed) (Is ?mirror 'mirror') (HasShape ?mirror 'round') (Above ?mirror ?desk) (Is ?clock 'clock') (On ?clock ?desk) (Is ?phone 'phone') (LeftOf ?phone ?clock) (Is ?boat 'boat') (HasState ?boat 'broken') (NextTo ?boat ?clock) (Is ?pizza 'pizza') (Holding ?child ?pizza) (forall ?cake (implies (Is ?cake 'cake') (On ?cake ?desk))) (exists ?umbrella (and (Is ?umbrella 'umbrella') (Below ?umbrella ?desk)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bed (exists ?child (exists ?desk (exists ?mirror (exists ?clock (exists ?phone (exists ?boat (exists ?pizza (forall ?cake (exists ?umbrella (and (Is ?bed 'bed') (HasColor ?bed 'blue') (In ?child ?bed) (RightOf ?desk ?bed) (Is ?child 'child') (Holding ?child ?pizza) (HasMaterial ?desk 'wooden') (Above ?mirror ?desk) (Is ?pizza 'pizza') (Is ?desk 'desk') (On ?clock ?desk) (HasShape ?mirror 'round') (or (not (Is ?cake 'cake')) (On ?cake ?desk)) (Is ?clock 'clock') (LeftOf ?phone ?clock) (Is ?mirror 'mirror') (Below ?umbrella ?desk) (NextTo ?boat ?clock) (Is ?phone 'phone') (Is ?umbrella 'umbrella') (HasState ?boat 'broken') (Is ?boat 'boat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "umbrella",
+        "child",
+        "bed",
+        "cake",
+        "pizza",
+        "desk",
+        "mirror",
+        "clock",
+        "boat"
+    ]
+}

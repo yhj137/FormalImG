@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A wooden basket contains all the apples. A bird holding a triangular sandwich is perched on the basket.",
+    "dsl": "(exists ?b (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?bird (exists ?s (and (Is ?bird 'bird') (Is ?s 'sandwich') (HasShape ?s 'triangular') (On ?bird ?b) (Holding ?bird ?s))))))",
+    "cnf": "(exists ?b (forall ?a (exists ?bird (exists ?s (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (or (not (Is ?a 'apple')) (In ?a ?b)) (On ?bird ?b) (Is ?bird 'bird') (Holding ?bird ?s) (HasShape ?s 'triangular') (Is ?s 'sandwich'))))))",
+    "k": 4,
+    "object_classes": [
+        "basket",
+        "apple",
+        "bird",
+        "sandwich"
+    ]
+}

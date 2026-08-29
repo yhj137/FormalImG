@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a man in a red shirt standing to the left of a refrigerator containing a lion. The man is holding a round hat, and every bird in the scene is perched on the refrigerator.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?r (and (Is ?m 'man') (Is ?r 'refrigerator') (LeftOf ?m ?r) (forall ?b (implies (Is ?b 'bird') (On ?b ?r))) (exists ?l (and (Is ?l 'lion') (In ?l ?r))) (exists ?h (and (Is ?h 'hat') (HasShape ?h 'round') (Holding ?m ?h))) (exists ?s (and (Is ?s 'shirt') (HasColor ?s 'red') (On ?s ?m)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?r (forall ?b (exists ?l (exists ?h (exists ?s (and (Is ?m 'man') (LeftOf ?m ?r) (Holding ?m ?h) (Is ?r 'refrigerator') (or (not (Is ?b 'bird')) (On ?b ?r)) (On ?s ?m) (HasShape ?h 'round') (In ?l ?r) (HasColor ?s 'red') (Is ?h 'hat') (Is ?l 'lion') (Is ?s 'shirt')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shirt",
+        "man",
+        "bird",
+        "refrigerator",
+        "lion",
+        "hat"
+    ]
+}

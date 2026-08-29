@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every book present in the image, it is green.",
+    "dsl": "(forall ?b (implies (Is ?b 'book') (Has ?b 'green')))",
+    "cnf": "(forall ?b (or (not (Is ?b 'book')) (Has ?b 'green')))",
+    "k": 1,
+    "object_classes": [
+        "book"
+    ]
+}

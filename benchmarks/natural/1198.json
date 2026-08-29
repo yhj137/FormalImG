@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style image. A person holding a black laptop is positioned next to a red sofa. An elephant is located to the left of the person, with a chair next to it. Every lion in the scene is positioned to the right of the person.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (and (Is ?p 'person') (exists ?lap (and (Is ?lap 'laptop') (HasColor ?lap 'black') (Holding ?p ?lap))) (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'red') (NextTo ?p ?s))) (exists ?e (and (Is ?e 'elephant') (LeftOf ?e ?p) (exists ?c (and (Is ?c 'chair') (NextTo ?c ?e))))) (forall ?l (implies (Is ?l 'lion') (RightOf ?l ?p))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?lap (exists ?s (exists ?e (exists ?c (forall ?l (and (Is ?p 'person') (Holding ?p ?lap) (NextTo ?p ?s) (HasColor ?lap 'black') (LeftOf ?e ?p) (HasColor ?s 'red') (Is ?lap 'laptop') (or (not (Is ?l 'lion')) (RightOf ?l ?p)) (Is ?e 'elephant') (NextTo ?c ?e) (Is ?s 'sofa') (Is ?c 'chair')))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "sofa",
+        "person",
+        "laptop",
+        "chair",
+        "lion"
+    ]
+}

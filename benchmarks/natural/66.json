@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of oval shoes.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'shoes') (HasShape ?s 'oval'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'shoes') (HasShape ?s 'oval'))))",
+    "k": 1,
+    "object_classes": [
+        "shoes"
+    ]
+}

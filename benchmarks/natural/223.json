@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a round fruit inside a bus.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?f (and (Is ?b 'bus') (Is ?f 'fruit') (HasShape ?f 'round') (In ?f ?b)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?f (and (Is ?b 'bus') (In ?f ?b) (HasShape ?f 'round') (Is ?f 'fruit')))))",
+    "k": 2,
+    "object_classes": [
+        "bus",
+        "fruit"
+    ]
+}

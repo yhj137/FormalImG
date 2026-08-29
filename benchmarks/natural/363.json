@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a full bookshelf, where every bowl is positioned next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?s (and (Is ?s 'bookshelf') (HasState ?s 'full') (forall ?b (implies (Is ?b 'bowl') (NextTo ?b ?s))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?s (forall ?b (and (Is ?s 'bookshelf') (HasState ?s 'full') (or (not (Is ?b 'bowl')) (NextTo ?b ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "bowl",
+        "bookshelf"
+    ]
+}

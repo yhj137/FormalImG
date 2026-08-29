@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a closed wardrobe standing next to a tree. Beside the tree sits a rectangular monitor that is turned off. A basket and a pan rest on top of the wardrobe, with a plate positioned next to the pan. All bananas are inside the basket, and a key lies in the plate.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?t (exists ?m (exists ?bk (exists ?pn (exists ?pl (and (Is ?w 'wardrobe') (HasState ?w 'closed') (Is ?t 'tree') (NextTo ?t ?w) (Is ?m 'monitor') (HasShape ?m 'rectangular') (HasState ?m 'off') (NextTo ?m ?t) (Is ?bk 'basket') (On ?bk ?w) (Is ?pn 'pan') (On ?pn ?w) (Is ?pl 'plate') (NextTo ?pl ?pn) (forall ?bn (implies (Is ?bn 'banana') (In ?bn ?bk))) (exists ?k (and (Is ?k 'key') (In ?k ?pl)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?t (exists ?m (exists ?bk (exists ?pn (exists ?pl (forall ?bn (exists ?k (and (Is ?w 'wardrobe') (HasState ?w 'closed') (NextTo ?t ?w) (On ?bk ?w) (Is ?t 'tree') (NextTo ?m ?t) (On ?pn ?w) (Is ?bk 'basket') (or (not (Is ?bn 'banana')) (In ?bn ?bk)) (HasState ?m 'off') (Is ?pn 'pan') (NextTo ?pl ?pn) (HasShape ?m 'rectangular') (Is ?pl 'plate') (In ?k ?pl) (Is ?m 'monitor') (Is ?k 'key')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "pan",
+        "monitor",
+        "banana",
+        "basket",
+        "wardrobe",
+        "tree",
+        "plate"
+    ]
+}

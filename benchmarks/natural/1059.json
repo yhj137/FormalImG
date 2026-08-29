@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cat is on a stone rock. Every fish in the scene is located to the left of the cat. A banana is to the left of the rock, while a keyboard is to the right. A flower is positioned to the right of the keyboard.",
+    "dsl": "(exists ?c (and (Is ?c 'cat') (forall ?f (implies (Is ?f 'fish') (LeftOf ?f ?c))) (exists ?r (and (Is ?r 'rock') (HasMaterial ?r 'stone') (On ?c ?r) (exists ?k (and (Is ?k 'keyboard') (RightOf ?k ?r) (exists ?b (and (Is ?b 'banana') (LeftOf ?b ?r) (exists ?fl (and (Is ?fl 'flower') (RightOf ?fl ?k)))))))))))",
+    "cnf": "(exists ?c (forall ?f (exists ?r (exists ?k (exists ?b (exists ?fl (and (Is ?c 'cat') (or (not (Is ?f 'fish')) (LeftOf ?f ?c)) (On ?c ?r) (HasMaterial ?r 'stone') (RightOf ?k ?r) (Is ?r 'rock') (LeftOf ?b ?r) (Is ?k 'keyboard') (RightOf ?fl ?k) (Is ?b 'banana') (Is ?fl 'flower'))))))))",
+    "k": 6,
+    "object_classes": [
+        "fish",
+        "rock",
+        "flower",
+        "keyboard",
+        "cat",
+        "banana"
+    ]
+}

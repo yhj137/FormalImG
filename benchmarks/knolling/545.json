@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a tie positioned on the right side. For every carrot in the image, it is placed to the left of the tie, and there is a donut located above that carrot.",
+    "dsl": "(exists ?tie (and (Is ?tie 'tie') (OnRightSide ?tie) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?donut (and (Is ?donut 'donut') (LeftOf ?carrot ?tie) (Above ?donut ?carrot)))))))",
+    "cnf": "(exists ?tie (forall ?carrot (exists ?donut (and (Is ?tie 'tie') (OnRightSide ?tie) (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?tie)) (or (not (Is ?carrot 'carrot')) (Is ?donut 'donut')) (or (not (Is ?carrot 'carrot')) (Above ?donut ?carrot))))))",
+    "k": 3,
+    "object_classes": [
+        "carrot",
+        "tie",
+        "donut"
+    ]
+}

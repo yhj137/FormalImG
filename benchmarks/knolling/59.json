@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single black camera.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (Has ?camera 'black')))",
+    "cnf": "(exists ?camera (and (Is ?camera 'camera') (Has ?camera 'black')))",
+    "k": 1,
+    "object_classes": [
+        "camera"
+    ]
+}

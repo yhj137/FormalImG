@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a bed with a closed book inside it. All fish are positioned to the right of the bed, and a toy car sits next to the book.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?bk (and (Is ?b 'bed') (Is ?bk 'book') (In ?bk ?b) (HasState ?bk 'closed') (forall ?f (implies (Is ?f 'fish') (RightOf ?f ?b))) (exists ?tc (and (Is ?tc 'toy car') (NextTo ?tc ?bk)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?bk (forall ?f (exists ?tc (and (Is ?b 'bed') (In ?bk ?b) (or (not (Is ?f 'fish')) (RightOf ?f ?b)) (Is ?bk 'book') (HasState ?bk 'closed') (NextTo ?tc ?bk) (Is ?tc 'toy car')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "bed",
+        "fish",
+        "toy car"
+    ]
+}

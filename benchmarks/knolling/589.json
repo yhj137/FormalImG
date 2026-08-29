@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a pair of jeans located on the top side of the layout. A pair of glasses is positioned below the jeans, and the jeans are visually larger than the glasses. Furthermore, for every apple in the scene, it is placed below the glasses.",
+    "dsl": "(exists ?j (exists ?g (and (Is ?j 'jeans') (OnTopSide ?j) (Is ?g 'glasses') (Below ?g ?j) (LargerThan ?j ?g) (forall ?a (implies (Is ?a 'apple') (Below ?a ?g))))))",
+    "cnf": "(exists ?j (exists ?g (forall ?a (and (Is ?j 'jeans') (OnTopSide ?j) (Below ?g ?j) (LargerThan ?j ?g) (Is ?g 'glasses') (or (not (Is ?a 'apple')) (Below ?a ?g))))))",
+    "k": 3,
+    "object_classes": [
+        "glasses",
+        "jeans",
+        "apple"
+    ]
+}

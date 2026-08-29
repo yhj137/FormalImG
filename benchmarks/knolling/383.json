@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. A drill is positioned on the top side of the scene, and it is larger than every hammer in the image.",
+    "dsl": "(exists ?d (and (Is ?d 'drill') (OnTopSide ?d) (forall ?h (implies (Is ?h 'hammer') (LargerThan ?d ?h)))))",
+    "cnf": "(exists ?d (forall ?h (and (Is ?d 'drill') (OnTopSide ?d) (or (not (Is ?h 'hammer')) (LargerThan ?d ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "drill",
+        "hammer"
+    ]
+}

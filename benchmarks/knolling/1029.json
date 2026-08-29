@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every gray laptop situated on the left side of the scene, there exists a structured vertical arrangement of objects to its right. Specifically, a mouse is positioned to the right of the laptop. Directly above the mouse is a book, above the book is a hat, above the hat is a lemon, and at the top of this column is a blue pen. The mouse, book, hat, lemon, and pen are all aligned vertically.",
+    "dsl": "(and (forall ?l (implies (and (Is ?l 'laptop') (Has ?l 'gray') (OnLeftSide ?l)) (exists ?m (exists ?b (exists ?h (exists ?le (exists ?p (and (Is ?m 'mouse') (Is ?b 'book') (Is ?h 'hat') (Is ?le 'lemon') (Is ?p 'pen') (Has ?p 'blue') (RightOf ?m ?l) (Above ?b ?m) (Above ?h ?b) (Above ?le ?h) (Above ?p ?le) (AlignedVertically ?m ?b) (AlignedVertically ?b ?h) (AlignedVertically ?h ?le) (AlignedVertically ?le ?p))))))))))",
+    "cnf": "(forall ?l (exists ?m (exists ?b (exists ?h (exists ?le (exists ?p (and (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Is ?m 'mouse')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Is ?b 'book')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (RightOf ?m ?l)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Is ?h 'hat')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Above ?b ?m)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Has ?p 'blue')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Is ?le 'lemon')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Above ?h ?b)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (AlignedVertically ?m ?b)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Is ?p 'pen')) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Above ?p ?le)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (Above ?le ?h)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (AlignedVertically ?b ?h)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (AlignedVertically ?h ?le)) (or (not (Is ?l 'laptop')) (not (Has ?l 'gray')) (not (OnLeftSide ?l)) (AlignedVertically ?le ?p)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "laptop",
+        "pen",
+        "lemon",
+        "hat",
+        "mouse"
+    ]
+}

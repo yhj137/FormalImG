@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A black cat wearing a fabric hat holds a metal spoon. A cylindrical bottle stands to the left of the cat, with glasses positioned to the left of the bottle. A plant is located to the right of the cat, and a red toy car sits to the right of the plant. All flowers are inside the plant, with a screwdriver to the right of each flower.",
+    "dsl": "(exists ?c (exists ?h (exists ?s (exists ?p (exists ?b (exists ?g (exists ?tc (and (Is ?c 'cat') (HasColor ?c 'black') (Is ?h 'hat') (HasMaterial ?h 'fabric') (On ?h ?c) (Is ?s 'spoon') (HasMaterial ?s 'metal') (Holding ?c ?s) (Is ?p 'plant') (RightOf ?p ?c) (Is ?b 'bottle') (HasShape ?b 'cylindrical') (LeftOf ?b ?c) (Is ?g 'glasses') (LeftOf ?g ?b) (Is ?tc 'toy car') (HasColor ?tc 'red') (RightOf ?tc ?p) (forall ?f (implies (Is ?f 'flower') (and (In ?f ?p) (exists ?sd (and (Is ?sd 'screwdriver') (RightOf ?sd ?f))))))))))))))",
+    "cnf": "(exists ?c (exists ?h (exists ?s (exists ?p (exists ?b (exists ?g (exists ?tc (forall ?f (exists ?sd (and (Is ?c 'cat') (HasColor ?c 'black') (On ?h ?c) (Holding ?c ?s) (HasMaterial ?h 'fabric') (RightOf ?p ?c) (HasMaterial ?s 'metal') (Is ?h 'hat') (LeftOf ?b ?c) (Is ?p 'plant') (RightOf ?tc ?p) (Is ?s 'spoon') (HasShape ?b 'cylindrical') (LeftOf ?g ?b) (or (not (Is ?f 'flower')) (In ?f ?p)) (HasColor ?tc 'red') (Is ?b 'bottle') (Is ?g 'glasses') (or (not (Is ?f 'flower')) (Is ?sd 'screwdriver')) (Is ?tc 'toy car') (or (not (Is ?f 'flower')) (RightOf ?sd ?f))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "bottle",
+        "glasses",
+        "plant",
+        "flower",
+        "toy car",
+        "cat",
+        "screwdriver",
+        "hat"
+    ]
+}

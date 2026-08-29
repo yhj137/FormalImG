@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a brown wardrobe with a lion inside. A round cake sits to the left of the wardrobe, while every banana is positioned to the right of the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?l (exists ?c (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (Is ?l 'lion') (In ?l ?w) (Is ?c 'cake') (HasShape ?c 'round') (LeftOf ?c ?w) (forall ?b (implies (Is ?b 'banana') (RightOf ?b ?w))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?l (exists ?c (forall ?b (and (Is ?w 'wardrobe') (HasColor ?w 'brown') (In ?l ?w) (LeftOf ?c ?w) (Is ?l 'lion') (or (not (Is ?b 'banana')) (RightOf ?b ?w)) (HasShape ?c 'round') (Is ?c 'cake')))))))",
+    "k": 4,
+    "object_classes": [
+        "banana",
+        "lion",
+        "cake",
+        "wardrobe"
+    ]
+}

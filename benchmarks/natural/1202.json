@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is sitting on a blue sofa and holding a sandwich. To the left of the sofa, there is a laptop resting on a desk. To the right of the sofa, a green cylindrical bottle stands on a round table.",
+    "dsl": "(exists ?w (exists ?s (exists ?sf (exists ?l (exists ?d (exists ?b (exists ?t (and (Is ?w 'woman') (Is ?s 'sandwich') (Holding ?w ?s) (Is ?sf 'sofa') (HasColor ?sf 'blue') (On ?w ?sf) (Is ?l 'laptop') (Is ?d 'desk') (On ?l ?d) (LeftOf ?d ?sf) (Is ?b 'bottle') (HasColor ?b 'green') (HasShape ?b 'cylindrical') (Is ?t 'table') (HasShape ?t 'round') (On ?b ?t) (RightOf ?t ?sf)))))))))",
+    "cnf": "(exists ?w (exists ?s (exists ?sf (exists ?l (exists ?d (exists ?b (exists ?t (and (Is ?w 'woman') (Holding ?w ?s) (On ?w ?sf) (Is ?s 'sandwich') (HasColor ?sf 'blue') (LeftOf ?d ?sf) (Is ?sf 'sofa') (RightOf ?t ?sf) (On ?l ?d) (On ?b ?t) (Is ?l 'laptop') (Is ?d 'desk') (HasShape ?b 'cylindrical') (HasShape ?t 'round') (HasColor ?b 'green') (Is ?t 'table') (Is ?b 'bottle')))))))))",
+    "k": 7,
+    "object_classes": [
+        "sofa",
+        "bottle",
+        "laptop",
+        "woman",
+        "table",
+        "desk",
+        "sandwich"
+    ]
+}

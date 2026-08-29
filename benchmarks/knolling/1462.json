@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag positioned on the left side. Every pair of black glasses is located to the right of the handbag and has a vertical arrangement of tools and items associated with it: a drill is below the glasses, and a bottle is to the left of the drill. Below the drill is a wrench, which is aligned horizontally with a plate. Below the wrench are scissors. Finally, a pan is located on the bottom side of the image, positioned below the scissors; the pan is larger than the plate, and the plate is smaller than the pan.",
+    "dsl": "(exists ?handbag (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (forall ?glasses (implies (and (Is ?glasses 'glasses') (Has ?glasses 'black')) (exists ?drill (exists ?bottle (exists ?wrench (exists ?plate (exists ?scissors (exists ?pan (and (Is ?drill 'drill') (Is ?bottle 'bottle') (Is ?wrench 'wrench') (Is ?plate 'plate') (Is ?scissors 'scissors') (Is ?pan 'pan') (LeftOf ?handbag ?glasses) (Below ?drill ?glasses) (LeftOf ?bottle ?drill) (Below ?wrench ?drill) (AlignedHorizontally ?plate ?wrench) (Below ?scissors ?wrench) (Below ?pan ?scissors) (OnBottomSide ?pan) (LargerThan ?pan ?plate) (SmallerThan ?plate ?pan))))))))))))",
+    "cnf": "(exists ?handbag (forall ?glasses (exists ?drill (exists ?bottle (exists ?wrench (exists ?plate (exists ?scissors (exists ?pan (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnLeftSide ?handbag) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (LeftOf ?handbag ?glasses)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?pan 'pan')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Below ?drill ?glasses)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?scissors 'scissors')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Below ?pan ?scissors)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?drill 'drill')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (LeftOf ?bottle ?drill)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?plate 'plate')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Below ?scissors ?wrench)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (OnBottomSide ?pan)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?bottle 'bottle')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Below ?wrench ?drill)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (Is ?wrench 'wrench')) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (AlignedHorizontally ?plate ?wrench)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (LargerThan ?pan ?plate)) (or (not (Is ?glasses 'glasses')) (not (Has ?glasses 'black')) (SmallerThan ?plate ?pan)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "plate",
+        "wrench",
+        "drill",
+        "pan",
+        "handbag",
+        "bottle",
+        "scissors"
+    ]
+}

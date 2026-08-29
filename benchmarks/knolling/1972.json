@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image with a neatly organized vertical arrangement. At the top, there is a suitcase. Located below the suitcase are jeans, and the suitcase is larger than the jeans. Below the jeans is a hat, followed by a keyboard below the hat. A mouse is positioned below the keyboard and is located on the right side of the image. Below the mouse is a game controller, and below that is a pizza. The pizza is positioned above a plate and is larger than the plate. Finally, for every screwdriver in the scene, it is located below the plate, and there is a cup positioned directly below the screwdriver.",
+    "dsl": "(exists ?suitcase (exists ?jeans (exists ?hat (exists ?keyboard (exists ?mouse (exists ?game_controller (exists ?pizza (exists ?plate (and (Is ?suitcase 'suitcase') (Is ?jeans 'jeans') (Is ?hat 'hat') (Is ?keyboard 'keyboard') (Is ?mouse 'mouse') (Is ?game_controller 'game_controller') (Is ?pizza 'pizza') (Is ?plate 'plate') (Below ?jeans ?suitcase) (LargerThan ?suitcase ?jeans) (Above ?jeans ?hat) (Above ?hat ?keyboard) (Above ?keyboard ?mouse) (OnRightSide ?mouse) (Above ?mouse ?game_controller) (Above ?game_controller ?pizza) (Above ?pizza ?plate) (LargerThan ?pizza ?plate) (forall ?screwdriver (implies (Is ?screwdriver 'screwdriver') (exists ?cup (and (Is ?cup 'cup') (Below ?screwdriver ?plate) (Below ?cup ?screwdriver))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?jeans (exists ?hat (exists ?keyboard (exists ?mouse (exists ?game_controller (exists ?pizza (exists ?plate (forall ?screwdriver (exists ?cup (and (Is ?suitcase 'suitcase') (Below ?jeans ?suitcase) (LargerThan ?suitcase ?jeans) (Is ?jeans 'jeans') (Above ?jeans ?hat) (Is ?hat 'hat') (Above ?hat ?keyboard) (Is ?keyboard 'keyboard') (Above ?keyboard ?mouse) (Is ?mouse 'mouse') (OnRightSide ?mouse) (Above ?mouse ?game_controller) (Is ?game_controller 'game_controller') (Above ?game_controller ?pizza) (Is ?pizza 'pizza') (Above ?pizza ?plate) (LargerThan ?pizza ?plate) (Is ?plate 'plate') (or (not (Is ?screwdriver 'screwdriver')) (Below ?screwdriver ?plate)) (or (not (Is ?screwdriver 'screwdriver')) (Is ?cup 'cup')) (or (not (Is ?screwdriver 'screwdriver')) (Below ?cup ?screwdriver)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "mouse",
+        "pizza",
+        "plate",
+        "keyboard",
+        "cup",
+        "jeans",
+        "suitcase",
+        "game_controller",
+        "screwdriver",
+        "hat"
+    ]
+}

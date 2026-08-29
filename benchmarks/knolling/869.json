@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board. For every hammer present in the layout, it is located below the cutting board and is visually smaller than the cutting board. To the right of the hammer lies a plate. Directly below the plate is a keyboard, which appears larger than the plate. Finally, there is a bottle positioned to the right of the keyboard, located on the right side of the image.",
+    "dsl": "(exists ?board (and (Is ?board 'cutting_board') (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?plate (exists ?keyboard (exists ?bottle (and (Is ?plate 'plate') (Is ?keyboard 'keyboard') (Is ?bottle 'bottle') (Below ?hammer ?board) (SmallerThan ?hammer ?board) (LeftOf ?hammer ?plate) (Below ?keyboard ?plate) (LargerThan ?keyboard ?plate) (LeftOf ?keyboard ?bottle) (OnRightSide ?bottle)))))))))",
+    "cnf": "(exists ?board (forall ?hammer (exists ?plate (exists ?keyboard (exists ?bottle (and (Is ?board 'cutting_board') (or (not (Is ?hammer 'hammer')) (Below ?hammer ?board)) (or (not (Is ?hammer 'hammer')) (SmallerThan ?hammer ?board)) (or (not (Is ?hammer 'hammer')) (Is ?bottle 'bottle')) (or (not (Is ?hammer 'hammer')) (LeftOf ?hammer ?plate)) (or (not (Is ?hammer 'hammer')) (Is ?keyboard 'keyboard')) (or (not (Is ?hammer 'hammer')) (LeftOf ?keyboard ?bottle)) (or (not (Is ?hammer 'hammer')) (Is ?plate 'plate')) (or (not (Is ?hammer 'hammer')) (Below ?keyboard ?plate)) (or (not (Is ?hammer 'hammer')) (LargerThan ?keyboard ?plate)) (or (not (Is ?hammer 'hammer')) (OnRightSide ?bottle))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "keyboard",
+        "cutting_board",
+        "hammer",
+        "bottle"
+    ]
+}

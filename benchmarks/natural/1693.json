@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man holding a jacket stands next to a horse and a table. A tree is positioned to the left of the man. On the table sits an open laptop and a cup containing every fork, with a cylindrical bottle placed next to the cup.",
+    "dsl": "(exists ?m (exists ?t (exists ?c (and (Is ?m 'man') (Is ?t 'table') (Is ?c 'cup') (NextTo ?m ?t) (On ?c ?t) (forall ?f (implies (Is ?f 'fork') (In ?f ?c))) (exists ?b (exists ?l (exists ?j (exists ?h (exists ?tr (and (Is ?b 'bottle') (HasShape ?b 'cylindrical') (NextTo ?b ?c) (Is ?l 'laptop') (HasState ?l 'open') (On ?l ?t) (Is ?j 'jacket') (Holding ?m ?j) (Is ?h 'horse') (NextTo ?m ?h) (Is ?tr 'tree') (LeftOf ?tr ?m)))))))))))",
+    "cnf": "(exists ?m (exists ?t (exists ?c (forall ?f (exists ?b (exists ?l (exists ?j (exists ?h (exists ?tr (and (Is ?m 'man') (NextTo ?m ?t) (Holding ?m ?j) (Is ?t 'table') (On ?c ?t) (NextTo ?m ?h) (Is ?j 'jacket') (On ?l ?t) (Is ?c 'cup') (or (not (Is ?f 'fork')) (In ?f ?c)) (LeftOf ?tr ?m) (Is ?h 'horse') (HasState ?l 'open') (NextTo ?b ?c) (Is ?tr 'tree') (Is ?l 'laptop') (HasShape ?b 'cylindrical') (Is ?b 'bottle')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "fork",
+        "tree",
+        "man",
+        "laptop",
+        "cup",
+        "horse",
+        "table"
+    ]
+}

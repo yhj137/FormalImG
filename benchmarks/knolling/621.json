@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a bottle, a hammer, pliers, and a pizza. The bottle is arranged above the hammer, and the two are aligned vertically. The hammer is aligned horizontally with the pliers, which are situated on the bottom side of the image. The pizza is located on the right side of the image, positioned above the pliers and aligned vertically with them.",
+    "dsl": "(exists ?bottle (exists ?hammer (exists ?pliers (exists ?pizza (and (Is ?bottle 'bottle') (Is ?hammer 'hammer') (Is ?pliers 'pliers') (Is ?pizza 'pizza') (Above ?bottle ?hammer) (AlignedVertically ?bottle ?hammer) (AlignedHorizontally ?hammer ?pliers) (OnBottomSide ?pliers) (Above ?pizza ?pliers) (AlignedVertically ?pizza ?pliers) (OnRightSide ?pizza))))))",
+    "cnf": "(exists ?bottle (exists ?hammer (exists ?pliers (exists ?pizza (and (Is ?bottle 'bottle') (Above ?bottle ?hammer) (AlignedVertically ?bottle ?hammer) (Is ?hammer 'hammer') (AlignedHorizontally ?hammer ?pliers) (Is ?pliers 'pliers') (OnBottomSide ?pliers) (Above ?pizza ?pliers) (AlignedVertically ?pizza ?pliers) (Is ?pizza 'pizza') (OnRightSide ?pizza))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "hammer",
+        "pliers",
+        "pizza"
+    ]
+}

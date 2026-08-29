@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of jeans on the top side of the layout, with a plate positioned below them. A book is located to the left of the plate. On the right side of the scene is a wrench, and the plate is to the left of this wrench. For every set of keys in the image, they are positioned below the wrench. Furthermore, there is a pair of headphones below the keys, and a carrot is located to the left of the headphones.",
+    "dsl": "(exists ?jeans (exists ?plate (exists ?book (exists ?wrench (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Is ?plate 'plate') (Below ?plate ?jeans) (Is ?book 'book') (LeftOf ?book ?plate) (Is ?wrench 'wrench') (OnRightSide ?wrench) (LeftOf ?plate ?wrench) (forall ?keys (implies (Is ?keys 'keys') (exists ?headphones (exists ?carrot (and (Is ?headphones 'headphones') (Is ?carrot 'carrot') (Below ?keys ?wrench) (Below ?headphones ?keys) (LeftOf ?carrot ?headphones)))))))))))",
+    "cnf": "(exists ?jeans (exists ?plate (exists ?book (exists ?wrench (forall ?keys (exists ?headphones (exists ?carrot (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?plate ?jeans) (Is ?plate 'plate') (LeftOf ?book ?plate) (LeftOf ?plate ?wrench) (Is ?book 'book') (OnRightSide ?wrench) (or (not (Is ?keys 'keys')) (Below ?keys ?wrench)) (Is ?wrench 'wrench') (or (not (Is ?keys 'keys')) (Is ?carrot 'carrot')) (or (not (Is ?keys 'keys')) (Below ?headphones ?keys)) (or (not (Is ?keys 'keys')) (Is ?headphones 'headphones')) (or (not (Is ?keys 'keys')) (LeftOf ?carrot ?headphones))))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "keys",
+        "plate",
+        "wrench",
+        "carrot",
+        "jeans",
+        "headphones"
+    ]
+}

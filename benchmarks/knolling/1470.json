@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a red hammer positioned on the top side and a blue hat on the right side. For every calculator present, there exists a specific arrangement of items: a green lighter is found to the right of the calculator, positioned below the hammer and aligned vertically with it. A white plate is placed below the lighter. To the left of the plate is a gray knife, which is located above a black sock. Finally, a black mouse sits to the right of the sock, positioned below the blue hat and aligned vertically with it.",
+    "dsl": "(exists ?hammer (exists ?hat (and (Is ?hammer 'hammer') (Has ?hammer 'red') (OnTopSide ?hammer) (Is ?hat 'hat') (Has ?hat 'blue') (OnRightSide ?hat) (forall ?calculator (implies (Is ?calculator 'calculator') (exists ?lighter (exists ?plate (exists ?knife (exists ?sock (exists ?mouse (and (Is ?lighter 'lighter') (Has ?lighter 'green') (Is ?plate 'plate') (Has ?plate 'white') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?sock 'sock') (Has ?sock 'black') (Is ?mouse 'mouse') (Has ?mouse 'black') (RightOf ?lighter ?calculator) (Below ?lighter ?hammer) (AlignedVertically ?hammer ?lighter) (Below ?plate ?lighter) (LeftOf ?knife ?plate) (Above ?knife ?sock) (RightOf ?mouse ?sock) (Below ?mouse ?hat) (AlignedVertically ?mouse ?hat))))))))))))",
+    "cnf": "(exists ?hammer (exists ?hat (forall ?calculator (exists ?lighter (exists ?plate (exists ?knife (exists ?sock (exists ?mouse (and (Is ?hammer 'hammer') (Has ?hammer 'red') (OnTopSide ?hammer) (or (not (Is ?calculator 'calculator')) (Below ?lighter ?hammer)) (or (not (Is ?calculator 'calculator')) (AlignedVertically ?hammer ?lighter)) (or (not (Is ?calculator 'calculator')) (RightOf ?lighter ?calculator)) (or (not (Is ?calculator 'calculator')) (Below ?plate ?lighter)) (or (not (Is ?calculator 'calculator')) (Has ?mouse 'black')) (or (not (Is ?calculator 'calculator')) (Has ?lighter 'green')) (or (not (Is ?calculator 'calculator')) (LeftOf ?knife ?plate)) (or (not (Is ?calculator 'calculator')) (Has ?plate 'white')) (or (not (Is ?calculator 'calculator')) (Is ?mouse 'mouse')) (or (not (Is ?calculator 'calculator')) (RightOf ?mouse ?sock)) (or (not (Is ?calculator 'calculator')) (Is ?lighter 'lighter')) (or (not (Is ?calculator 'calculator')) (Is ?plate 'plate')) (or (not (Is ?calculator 'calculator')) (Above ?knife ?sock)) (or (not (Is ?calculator 'calculator')) (Has ?knife 'gray')) (or (not (Is ?calculator 'calculator')) (Is ?knife 'knife')) (or (not (Is ?calculator 'calculator')) (Has ?sock 'black')) (or (not (Is ?calculator 'calculator')) (Below ?mouse ?hat)) (or (not (Is ?calculator 'calculator')) (Is ?sock 'sock')) (OnRightSide ?hat) (or (not (Is ?calculator 'calculator')) (AlignedVertically ?mouse ?hat)) (Has ?hat 'blue') (Is ?hat 'hat'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "sock",
+        "hammer",
+        "hat",
+        "lighter",
+        "calculator",
+        "mouse",
+        "knife"
+    ]
+}

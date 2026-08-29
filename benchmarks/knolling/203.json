@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a pizza and a sock. The sock is positioned on the bottom side of the layout, and the pizza is aligned vertically with the sock.",
+    "dsl": "(exists ?pizza (exists ?sock (and (Is ?pizza 'pizza') (Is ?sock 'sock') (OnBottomSide ?sock) (AlignedVertically ?pizza ?sock))))",
+    "cnf": "(exists ?pizza (exists ?sock (and (Is ?pizza 'pizza') (AlignedVertically ?pizza ?sock) (OnBottomSide ?sock) (Is ?sock 'sock'))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "sock"
+    ]
+}

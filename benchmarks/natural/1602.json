@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. A blue bus is located to the left of a rug. A mirror stands next to the bus. A person is on the rug, wearing a hat and holding a yellow banana. There is also a fruit on the rug. To the right of the person is a backpack, and a red apple is next to the backpack.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?m (exists ?p (exists ?h (exists ?ba (exists ?f (exists ?bp (exists ?a (and (Is ?b 'bus') (HasColor ?b 'blue') (Is ?r 'rug') (LeftOf ?b ?r) (Is ?m 'mirror') (NextTo ?m ?b) (Is ?p 'person') (On ?p ?r) (Is ?h 'hat') (On ?h ?p) (Is ?ba 'banana') (HasColor ?ba 'yellow') (Holding ?p ?ba) (Is ?f 'fruit') (On ?f ?r) (Is ?bp 'backpack') (RightOf ?bp ?p) (Is ?a 'apple') (HasColor ?a 'red') (NextTo ?a ?bp))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?r (exists ?m (exists ?p (exists ?h (exists ?ba (exists ?f (exists ?bp (exists ?a (and (Is ?b 'bus') (HasColor ?b 'blue') (LeftOf ?b ?r) (NextTo ?m ?b) (Is ?r 'rug') (On ?p ?r) (Is ?m 'mirror') (On ?f ?r) (Is ?p 'person') (On ?h ?p) (Is ?f 'fruit') (Holding ?p ?ba) (Is ?h 'hat') (RightOf ?bp ?p) (HasColor ?ba 'yellow') (Is ?bp 'backpack') (NextTo ?a ?bp) (Is ?ba 'banana') (HasColor ?a 'red') (Is ?a 'apple'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "person",
+        "backpack",
+        "rug",
+        "mirror",
+        "apple",
+        "banana",
+        "bus",
+        "hat"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a handbag, a pan, a sandwich, a wallet, a ruler, a screwdriver, and a tie. The items are arranged such that the handbag is above the pan, and the pan is positioned above the sandwich. The handbag is visually larger than the wallet. The wallet is located on the right side of the image and is placed above the ruler. Continuing the vertical arrangement, the ruler is above the screwdriver, and the screwdriver is above the tie. Finally, the tie is located on the bottom side of the scene.",
+    "dsl": "(exists ?handbag (exists ?pan (exists ?sandwich (exists ?wallet (exists ?ruler (exists ?screwdriver (exists ?tie (and (Is ?handbag 'handbag') (Is ?pan 'pan') (Is ?sandwich 'sandwich') (Is ?wallet 'wallet') (Is ?ruler 'ruler') (Is ?screwdriver 'screwdriver') (Is ?tie 'tie') (Above ?handbag ?pan) (Above ?pan ?sandwich) (LargerThan ?handbag ?wallet) (OnRightSide ?wallet) (Above ?wallet ?ruler) (Above ?ruler ?screwdriver) (Above ?screwdriver ?tie) (OnBottomSide ?tie)))))))))",
+    "cnf": "(exists ?handbag (exists ?pan (exists ?sandwich (exists ?wallet (exists ?ruler (exists ?screwdriver (exists ?tie (and (Is ?handbag 'handbag') (Above ?handbag ?pan) (LargerThan ?handbag ?wallet) (Is ?pan 'pan') (Above ?pan ?sandwich) (Is ?wallet 'wallet') (OnRightSide ?wallet) (Is ?sandwich 'sandwich') (Above ?wallet ?ruler) (Is ?ruler 'ruler') (Above ?ruler ?screwdriver) (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?tie) (Is ?tie 'tie') (OnBottomSide ?tie)))))))))",
+    "k": 7,
+    "object_classes": [
+        "pan",
+        "wallet",
+        "ruler",
+        "tie",
+        "screwdriver",
+        "sandwich",
+        "handbag"
+    ]
+}

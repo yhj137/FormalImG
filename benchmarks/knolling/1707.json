@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white plate located on the top left side. Arranged vertically below the plate are a blue cup, gray keys, and a black watch, all aligned with the plate. Additionally, for every bottle in the image, it is green and positioned to the right of the plate. Associated with this bottle is a vertical arrangement below it consisting of a white bowl, red pliers, a yellow book, and a brown wallet, in that order, all aligned vertically with the bottle.",
+    "dsl": "(exists ?plate (exists ?cup (exists ?keys (exists ?watch (and (Is ?plate 'plate') (Has ?plate 'white') (OnTopSide ?plate) (OnLeftSide ?plate) (Is ?cup 'cup') (Has ?cup 'blue') (Is ?keys 'keys') (Has ?keys 'gray') (Is ?watch 'watch') (Has ?watch 'black') (Above ?plate ?cup) (Above ?cup ?keys) (Above ?keys ?watch) (AlignedVertically ?plate ?cup) (AlignedVertically ?cup ?keys) (AlignedVertically ?keys ?watch) (forall ?bottle (implies (Is ?bottle 'bottle') (exists ?bowl (exists ?pliers (exists ?book (exists ?wallet (and (Has ?bottle 'green') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?book 'book') (Has ?book 'yellow') (Is ?wallet 'wallet') (Has ?wallet 'brown') (RightOf ?bottle ?plate) (Above ?bottle ?bowl) (Above ?bowl ?pliers) (Above ?pliers ?book) (Above ?book ?wallet) (AlignedVertically ?bottle ?bowl) (AlignedVertically ?bowl ?pliers) (AlignedVertically ?pliers ?book) (AlignedVertically ?book ?wallet)))))))))))))",
+    "cnf": "(exists ?plate (exists ?cup (exists ?keys (exists ?watch (forall ?bottle (exists ?bowl (exists ?pliers (exists ?book (exists ?wallet (and (Is ?plate 'plate') (Has ?plate 'white') (OnTopSide ?plate) (OnLeftSide ?plate) (Above ?plate ?cup) (AlignedVertically ?plate ?cup) (Has ?cup 'blue') (Above ?cup ?keys) (or (not (Is ?bottle 'bottle')) (RightOf ?bottle ?plate)) (AlignedVertically ?cup ?keys) (Is ?cup 'cup') (Has ?keys 'gray') (Above ?keys ?watch) (or (not (Is ?bottle 'bottle')) (Has ?wallet 'brown')) (or (not (Is ?bottle 'bottle')) (Above ?bottle ?bowl)) (AlignedVertically ?keys ?watch) (Is ?keys 'keys') (Has ?watch 'black') (or (not (Is ?bottle 'bottle')) (Is ?wallet 'wallet')) (or (not (Is ?bottle 'bottle')) (Above ?book ?wallet)) (or (not (Is ?bottle 'bottle')) (Above ?bowl ?pliers)) (or (not (Is ?bottle 'bottle')) (Has ?bowl 'white')) (Is ?watch 'watch') (or (not (Is ?bottle 'bottle')) (Has ?book 'yellow')) (or (not (Is ?bottle 'bottle')) (Above ?pliers ?book)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?bottle ?bowl)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?pliers ?book)) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?book ?wallet)) (or (not (Is ?bottle 'bottle')) (Has ?pliers 'red')) (or (not (Is ?bottle 'bottle')) (Is ?bowl 'bowl')) (or (not (Is ?bottle 'bottle')) (Is ?pliers 'pliers')) (or (not (Is ?bottle 'bottle')) (Is ?book 'book')) (or (not (Is ?bottle 'bottle')) (AlignedVertically ?bowl ?pliers)) (or (not (Is ?bottle 'bottle')) (Has ?bottle 'green'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keys",
+        "plate",
+        "pliers",
+        "watch",
+        "cup",
+        "wallet",
+        "bottle",
+        "bowl"
+    ]
+}

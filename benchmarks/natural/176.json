@@ -1,0 +1,9 @@
+{
+    "prompt": "Every refrigerator in the scene is closed.",
+    "dsl": "(forall ?r (implies (Is ?r 'refrigerator') (HasState ?r 'closed')))",
+    "cnf": "(forall ?r (or (not (Is ?r 'refrigerator')) (HasState ?r 'closed')))",
+    "k": 1,
+    "object_classes": [
+        "refrigerator"
+    ]
+}

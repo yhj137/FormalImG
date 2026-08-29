@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a single gray fork.",
+    "dsl": "(exists ?f (and (Is ?f 'fork') (Has ?f 'gray')))",
+    "cnf": "(exists ?f (and (Is ?f 'fork') (Has ?f 'gray')))",
+    "k": 1,
+    "object_classes": [
+        "fork"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of blue jeans positioned on the left side. To the right of the jeans is a camera, and further right is a monitor. A keyboard is placed below the monitor, and a book is to the right of the monitor. The layout follows a specific rule: for every spoon, there is a donut to its right, a pan above it, and a hammer to the left of the pan. Additionally, the pan is visually larger than the camera.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?monitor (exists ?keyboard (exists ?book (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (Is ?camera 'camera') (RightOf ?camera ?jeans) (Is ?monitor 'monitor') (RightOf ?monitor ?camera) (Is ?keyboard 'keyboard') (Above ?monitor ?keyboard) (Is ?book 'book') (RightOf ?book ?monitor) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?donut (exists ?pan (exists ?hammer (and (Is ?donut 'donut') (RightOf ?donut ?spoon) (Is ?pan 'pan') (Above ?pan ?spoon) (LargerThan ?pan ?camera) (Is ?hammer 'hammer') (LeftOf ?hammer ?pan)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?monitor (exists ?keyboard (exists ?book (forall ?spoon (exists ?donut (exists ?pan (exists ?hammer (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnLeftSide ?jeans) (RightOf ?camera ?jeans) (Is ?camera 'camera') (RightOf ?monitor ?camera) (or (not (Is ?spoon 'spoon')) (LargerThan ?pan ?camera)) (Is ?monitor 'monitor') (Above ?monitor ?keyboard) (or (not (Is ?spoon 'spoon')) (Above ?pan ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?hammer 'hammer')) (or (not (Is ?spoon 'spoon')) (LeftOf ?hammer ?pan)) (RightOf ?book ?monitor) (Is ?keyboard 'keyboard') (or (not (Is ?spoon 'spoon')) (Is ?pan 'pan')) (Is ?book 'book') (or (not (Is ?spoon 'spoon')) (RightOf ?donut ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?donut 'donut'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "keyboard",
+        "hammer",
+        "pan",
+        "jeans",
+        "camera",
+        "spoon",
+        "monitor",
+        "donut"
+    ]
+}

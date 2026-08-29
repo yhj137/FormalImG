@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a desk positioned to the left of a sofa. All spoons are contained inside the desk. A child is on the sofa, while to the right of the sofa, a person holds a sleeping cat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?d (and (Is ?d 'desk') (forall ?s (implies (Is ?s 'spoon') (In ?s ?d))) (exists ?sf (and (Is ?sf 'sofa') (LeftOf ?d ?sf) (exists ?k (and (Is ?k 'child') (On ?k ?sf) (exists ?p (and (Is ?p 'person') (RightOf ?p ?sf) (exists ?c (and (Is ?c 'cat') (HasState ?c 'sleeping') (Holding ?p ?c))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?d (forall ?s (exists ?sf (exists ?k (exists ?p (exists ?c (and (Is ?d 'desk') (or (not (Is ?s 'spoon')) (In ?s ?d)) (LeftOf ?d ?sf) (Is ?sf 'sofa') (On ?k ?sf) (RightOf ?p ?sf) (Is ?k 'child') (Is ?p 'person') (Holding ?p ?c) (HasState ?c 'sleeping') (Is ?c 'cat')))))))))",
+    "k": 6,
+    "object_classes": [
+        "person",
+        "sofa",
+        "cat",
+        "desk",
+        "child",
+        "spoon"
+    ]
+}

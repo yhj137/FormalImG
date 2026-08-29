@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A gray laptop is positioned on the top side of the image. To the right of the laptop is a black mouse, and they are aligned horizontally. Situated directly below the laptop is a brown wallet, while a yellow ruler is placed directly below the mouse.",
+    "dsl": "(exists ?l (exists ?m (exists ?w (exists ?r (and (Is ?l 'laptop') (Has ?l 'gray') (OnTopSide ?l) (Is ?m 'mouse') (Has ?m 'black') (Is ?w 'wallet') (Has ?w 'brown') (Is ?r 'ruler') (Has ?r 'yellow') (RightOf ?m ?l) (AlignedHorizontally ?l ?m) (Below ?w ?l) (Below ?r ?m))))))",
+    "cnf": "(exists ?l (exists ?m (exists ?w (exists ?r (and (Is ?l 'laptop') (Has ?l 'gray') (OnTopSide ?l) (RightOf ?m ?l) (AlignedHorizontally ?l ?m) (Has ?m 'black') (Below ?w ?l) (Below ?r ?m) (Is ?m 'mouse') (Has ?w 'brown') (Has ?r 'yellow') (Is ?w 'wallet') (Is ?r 'ruler'))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "wallet",
+        "mouse"
+    ]
+}

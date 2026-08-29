@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene. To the right of every lamp stands a horse. A man on the horse holds a rectangular book, and a dog is to the right of the horse.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?l (implies (Is ?l 'lamp') (exists ?h (exists ?m (exists ?b (exists ?d (and (Is ?h 'horse') (Is ?m 'man') (Is ?b 'book') (Is ?d 'dog') (RightOf ?h ?l) (On ?m ?h) (Holding ?m ?b) (HasShape ?b 'rectangular') (RightOf ?d ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?l (exists ?h (exists ?m (exists ?b (exists ?d (and (or (not (Is ?l 'lamp')) (Is ?h 'horse')) (or (not (Is ?l 'lamp')) (Is ?m 'man')) (or (not (Is ?l 'lamp')) (RightOf ?h ?l)) (or (not (Is ?l 'lamp')) (Is ?b 'book')) (or (not (Is ?l 'lamp')) (On ?m ?h)) (or (not (Is ?l 'lamp')) (Is ?d 'dog')) (or (not (Is ?l 'lamp')) (Holding ?m ?b)) (or (not (Is ?l 'lamp')) (RightOf ?d ?h)) (or (not (Is ?l 'lamp')) (HasShape ?b 'rectangular')))))))))",
+    "k": 5,
+    "object_classes": [
+        "horse",
+        "book",
+        "man",
+        "lamp",
+        "dog"
+    ]
+}

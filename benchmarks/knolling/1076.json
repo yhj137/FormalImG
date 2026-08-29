@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a neat vertical arrangement positioned on the right side of the image. At the top of this column is a plate. For every spoon present in the scene, it is vertically aligned with and located below the plate. Associated with the spoon is a sequence of objects continuing the column downwards: a game controller is below the spoon, a bottle is below the game controller, a set of keys is below the bottle, and a pair of scissors is below the keys. All these items share a vertical alignment. Additionally, the keys are visually smaller than the plate.",
+    "dsl": "(exists ?plate (and (Is ?plate 'plate') (OnRightSide ?plate) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?controller (exists ?bottle (exists ?keys (exists ?scissors (and (Is ?controller 'game_controller') (Is ?bottle 'bottle') (Is ?keys 'keys') (Is ?scissors 'scissors') (AlignedVertically ?spoon ?plate) (Below ?spoon ?plate) (AlignedVertically ?controller ?spoon) (Below ?controller ?spoon) (AlignedVertically ?bottle ?controller) (Below ?bottle ?controller) (AlignedVertically ?keys ?bottle) (Below ?keys ?bottle) (AlignedVertically ?scissors ?keys) (Below ?scissors ?keys) (SmallerThan ?keys ?plate))))))))))",
+    "cnf": "(exists ?plate (forall ?spoon (exists ?controller (exists ?bottle (exists ?keys (exists ?scissors (and (Is ?plate 'plate') (OnRightSide ?plate) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?plate)) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?plate)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (SmallerThan ?keys ?plate)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?controller ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?keys 'keys')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?scissors ?keys)) (or (not (Is ?spoon 'spoon')) (Below ?scissors ?keys)) (or (not (Is ?spoon 'spoon')) (Below ?controller ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?controller 'game_controller')) (or (not (Is ?spoon 'spoon')) (Is ?bottle 'bottle')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?keys ?bottle)) (or (not (Is ?spoon 'spoon')) (Below ?keys ?bottle)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?bottle ?controller)) (or (not (Is ?spoon 'spoon')) (Below ?bottle ?controller)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "plate",
+        "game_controller",
+        "bottle",
+        "spoon",
+        "scissors"
+    ]
+}

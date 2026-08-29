@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the top side. Arranged in a horizontal line to the right of the suitcase, from left to right, are a shirt, a tie, a hat, and headphones. For every wrench in the image, there is a sequence of objects aligned horizontally to its right: pliers, a book, and a sandwich. Furthermore, the wrench is smaller than the suitcase.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?tie (exists ?hat (exists ?headphones (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?hat 'hat') (Is ?headphones 'headphones') (RightOf ?shirt ?suitcase) (AlignedHorizontally ?shirt ?suitcase) (RightOf ?tie ?shirt) (AlignedHorizontally ?tie ?shirt) (RightOf ?hat ?tie) (AlignedHorizontally ?hat ?tie) (RightOf ?headphones ?hat) (AlignedHorizontally ?headphones ?hat) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?pliers (exists ?book (exists ?sandwich (and (Is ?pliers 'pliers') (Is ?book 'book') (Is ?sandwich 'sandwich') (RightOf ?pliers ?wrench) (AlignedHorizontally ?pliers ?wrench) (RightOf ?book ?pliers) (AlignedHorizontally ?book ?pliers) (RightOf ?sandwich ?book) (AlignedHorizontally ?sandwich ?book) (SmallerThan ?wrench ?suitcase)))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?tie (exists ?hat (exists ?headphones (forall ?wrench (exists ?pliers (exists ?book (exists ?sandwich (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?shirt ?suitcase) (AlignedHorizontally ?shirt ?suitcase) (Is ?shirt 'shirt') (or (not (Is ?wrench 'wrench')) (SmallerThan ?wrench ?suitcase)) (RightOf ?tie ?shirt) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?sandwich ?book)) (AlignedHorizontally ?tie ?shirt) (Is ?tie 'tie') (or (not (Is ?wrench 'wrench')) (RightOf ?sandwich ?book)) (RightOf ?hat ?tie) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?book ?pliers)) (or (not (Is ?wrench 'wrench')) (Is ?sandwich 'sandwich')) (AlignedHorizontally ?hat ?tie) (Is ?hat 'hat') (or (not (Is ?wrench 'wrench')) (RightOf ?book ?pliers)) (or (not (Is ?wrench 'wrench')) (Is ?book 'book')) (or (not (Is ?wrench 'wrench')) (RightOf ?pliers ?wrench)) (RightOf ?headphones ?hat) (or (not (Is ?wrench 'wrench')) (AlignedHorizontally ?pliers ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (AlignedHorizontally ?headphones ?hat) (Is ?headphones 'headphones')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "tie",
+        "pliers",
+        "wrench",
+        "sandwich",
+        "hat",
+        "headphones",
+        "suitcase",
+        "shirt"
+    ]
+}

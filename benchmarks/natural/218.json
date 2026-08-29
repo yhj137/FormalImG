@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene with a wooden bed to the left of an elephant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?e (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (Is ?e 'elephant') (LeftOf ?b ?e)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?e (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (LeftOf ?b ?e) (Is ?e 'elephant')))))",
+    "k": 2,
+    "object_classes": [
+        "elephant",
+        "bed"
+    ]
+}

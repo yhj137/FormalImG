@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is placed on the left side of the scene. For every pair of blue jeans present, there is a white shirt located directly above it, and the two items are aligned vertically. The jeans are positioned to the right of the handbag. Furthermore, a pair of glasses is located to the right of the shirt.",
+    "dsl": "(exists ?h (and (Is ?h 'handbag') (OnLeftSide ?h) (forall ?j (implies (and (Is ?j 'jeans') (Has ?j 'blue')) (exists ?s (exists ?g (and (Is ?s 'shirt') (Has ?s 'white') (Is ?g 'glasses') (RightOf ?j ?h) (Above ?s ?j) (AlignedVertically ?s ?j) (RightOf ?g ?s))))))))",
+    "cnf": "(exists ?h (forall ?j (exists ?s (exists ?g (and (Is ?h 'handbag') (OnLeftSide ?h) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (RightOf ?j ?h)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Is ?g 'glasses')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Above ?s ?j)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Has ?s 'white')) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (RightOf ?g ?s)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (AlignedVertically ?s ?j)) (or (not (Is ?j 'jeans')) (not (Has ?j 'blue')) (Is ?s 'shirt')))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "handbag",
+        "jeans",
+        "shirt"
+    ]
+}

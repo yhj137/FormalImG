@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a bus, a bookshelf stands next to a wooden desk. A laptop rests on the desk next to a pair of headphones. A round cake is also on the desk, with a round orange beside it. All the apples in the scene are located on the bookshelf.",
+    "dsl": "(exists ?b (and (Is ?b 'bus') (exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (In ?d ?b) (exists ?bs (and (Is ?bs 'bookshelf') (In ?bs ?b) (NextTo ?bs ?d) (exists ?l (and (Is ?l 'laptop') (On ?l ?d) (and (forall ?a (implies (Is ?a 'apple') (On ?a ?bs))) (exists ?h (and (Is ?h 'headphones') (NextTo ?h ?l) (exists ?c (and (Is ?c 'cake') (HasShape ?c 'round') (On ?c ?d) (exists ?o (and (Is ?o 'orange') (HasShape ?o 'round') (NextTo ?o ?c))))))))))))))))",
+    "cnf": "(exists ?b (exists ?d (exists ?bs (exists ?l (forall ?a (exists ?h (exists ?c (exists ?o (and (Is ?b 'bus') (In ?d ?b) (In ?bs ?b) (HasMaterial ?d 'wooden') (NextTo ?bs ?d) (Is ?bs 'bookshelf') (Is ?d 'desk') (On ?l ?d) (or (not (Is ?a 'apple')) (On ?a ?bs)) (On ?c ?d) (Is ?l 'laptop') (NextTo ?h ?l) (HasShape ?c 'round') (NextTo ?o ?c) (Is ?h 'headphones') (Is ?c 'cake') (HasShape ?o 'round') (Is ?o 'orange'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "bus",
+        "laptop",
+        "cake",
+        "orange",
+        "desk",
+        "apple",
+        "bookshelf"
+    ]
+}

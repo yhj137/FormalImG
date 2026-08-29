@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat 3x3 grid arrangement. The central vertical axis consists of a cutting board at the top, a plate in the middle, and a tie at the bottom; these three are aligned vertically. The tie is specifically located on the bottom side of the image. The cutting board is visually larger than the sandwich. In the top row, the cutting board is to the right of a sandwich and to the left of a bowl (meaning the bowl is to the right of the cutting board). In the middle row, the plate is to the right of a fork and to the left of a phone (meaning the phone is to the right of the plate). In the bottom row, the tie is to the right of a pen and to the left of a stapler (meaning the stapler is to the right of the tie). All items in each respective row are aligned horizontally.",
+    "dsl": "(exists ?board (exists ?plate (exists ?tie (exists ?sandwich (exists ?bowl (exists ?fork (exists ?phone (exists ?pen (exists ?stapler (and (Is ?board 'cutting_board') (Is ?plate 'plate') (Is ?tie 'tie') (Is ?sandwich 'sandwich') (Is ?bowl 'bowl') (Is ?fork 'fork') (Is ?phone 'phone') (Is ?pen 'pen') (Is ?stapler 'stapler') (Above ?board ?plate) (Above ?plate ?tie) (AlignedVertically ?board ?plate) (AlignedVertically ?plate ?tie) (RightOf ?board ?sandwich) (RightOf ?bowl ?board) (AlignedHorizontally ?sandwich ?board) (AlignedHorizontally ?board ?bowl) (RightOf ?plate ?fork) (RightOf ?phone ?plate) (AlignedHorizontally ?fork ?plate) (AlignedHorizontally ?plate ?phone) (RightOf ?tie ?pen) (RightOf ?stapler ?tie) (AlignedHorizontally ?pen ?tie) (AlignedHorizontally ?tie ?stapler) (LargerThan ?board ?sandwich) (OnBottomSide ?tie)))))))))))",
+    "cnf": "(exists ?board (exists ?plate (exists ?tie (exists ?sandwich (exists ?bowl (exists ?fork (exists ?phone (exists ?pen (exists ?stapler (and (Is ?board 'cutting_board') (Above ?board ?plate) (AlignedVertically ?board ?plate) (Is ?plate 'plate') (Above ?plate ?tie) (RightOf ?board ?sandwich) (AlignedVertically ?plate ?tie) (Is ?tie 'tie') (RightOf ?bowl ?board) (Is ?sandwich 'sandwich') (AlignedHorizontally ?sandwich ?board) (RightOf ?plate ?fork) (RightOf ?tie ?pen) (Is ?bowl 'bowl') (AlignedHorizontally ?board ?bowl) (LargerThan ?board ?sandwich) (RightOf ?phone ?plate) (Is ?fork 'fork') (AlignedHorizontally ?fork ?plate) (RightOf ?stapler ?tie) (Is ?pen 'pen') (AlignedHorizontally ?pen ?tie) (Is ?phone 'phone') (AlignedHorizontally ?plate ?phone) (Is ?stapler 'stapler') (AlignedHorizontally ?tie ?stapler) (OnBottomSide ?tie)))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "tie",
+        "stapler",
+        "pen",
+        "phone",
+        "cutting_board",
+        "fork",
+        "bowl",
+        "sandwich"
+    ]
+}

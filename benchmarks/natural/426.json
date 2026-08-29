@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man holding a black hammer, with a bookshelf standing next to him on the right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?h (exists ?b (and (Is ?m 'man') (Is ?h 'hammer') (Is ?b 'bookshelf') (HasColor ?h 'black') (Holding ?m ?h) (NextTo ?m ?b) (RightOf ?b ?m))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?h (exists ?b (and (Is ?m 'man') (Holding ?m ?h) (NextTo ?m ?b) (HasColor ?h 'black') (RightOf ?b ?m) (Is ?b 'bookshelf') (Is ?h 'hammer'))))))",
+    "k": 3,
+    "object_classes": [
+        "hammer",
+        "bookshelf",
+        "man"
+    ]
+}

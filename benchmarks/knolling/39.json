@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single knife positioned on the top side of the arrangement.",
+    "dsl": "(exists ?k (and (Is ?k 'knife') (OnTopSide ?k)))",
+    "cnf": "(exists ?k (and (Is ?k 'knife') (OnTopSide ?k)))",
+    "k": 1,
+    "object_classes": [
+        "knife"
+    ]
+}

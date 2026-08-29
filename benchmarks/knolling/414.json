@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a lemon, a tie, and a pizza. The tie and the pizza are arranged on the bottom side of the image and are aligned horizontally. Additionally, the lemon is placed above the tie.",
+    "dsl": "(exists ?lemon (exists ?tie (exists ?pizza (and (Is ?lemon 'lemon') (Is ?tie 'tie') (Is ?pizza 'pizza') (OnBottomSide ?tie) (OnBottomSide ?pizza) (AlignedHorizontally ?tie ?pizza) (Above ?lemon ?tie)))))",
+    "cnf": "(exists ?lemon (exists ?tie (exists ?pizza (and (Is ?lemon 'lemon') (Above ?lemon ?tie) (AlignedHorizontally ?tie ?pizza) (OnBottomSide ?tie) (OnBottomSide ?pizza) (Is ?tie 'tie') (Is ?pizza 'pizza')))))",
+    "k": 3,
+    "object_classes": [
+        "lemon",
+        "tie",
+        "pizza"
+    ]
+}

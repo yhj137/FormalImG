@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue backpack located on the top side of the frame. Below the backpack is a yellow drill, and below the drill is a pair of headphones; these three objects are arranged in a vertical line. The backpack appears larger than the drill. Additionally, for every plate in the image, it is white and positioned below the headphones, continuing the vertical alignment.",
+    "dsl": "(exists ?b (exists ?d (exists ?h (and (Is ?b 'backpack') (Has ?b 'blue') (OnTopSide ?b) (Is ?d 'drill') (Has ?d 'yellow') (Is ?h 'headphones') (Above ?b ?d) (Above ?d ?h) (AlignedVertically ?b ?d) (AlignedVertically ?d ?h) (LargerThan ?b ?d) (forall ?p (implies (Is ?p 'plate') (and (Has ?p 'white') (Above ?h ?p) (AlignedVertically ?h ?p))))))))",
+    "cnf": "(exists ?b (exists ?d (exists ?h (forall ?p (and (Is ?b 'backpack') (Has ?b 'blue') (OnTopSide ?b) (Above ?b ?d) (AlignedVertically ?b ?d) (Has ?d 'yellow') (Above ?d ?h) (LargerThan ?b ?d) (AlignedVertically ?d ?h) (Is ?d 'drill') (Is ?h 'headphones') (or (not (Is ?p 'plate')) (Above ?h ?p)) (or (not (Is ?p 'plate')) (AlignedVertically ?h ?p)) (or (not (Is ?p 'plate')) (Has ?p 'white')))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "headphones",
+        "backpack",
+        "plate"
+    ]
+}

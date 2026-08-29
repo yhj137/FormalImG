@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is an oil painting style scene. There is a refrigerator, and a rug is located to its left. All chairs in the scene are wooden and are positioned on the rug. A woman stands to the left of the refrigerator, holding a rock. Additionally, there is a pizza inside the refrigerator.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?u (and (Is ?r 'refrigerator') (Is ?u 'rug') (LeftOf ?u ?r) (forall ?c (implies (Is ?c 'chair') (and (HasMaterial ?c 'wooden') (On ?c ?u)))) (exists ?w (exists ?k (exists ?p (and (Is ?w 'woman') (Is ?k 'rock') (Is ?p 'pizza') (LeftOf ?w ?r) (Holding ?w ?k) (In ?p ?r)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?u (forall ?c (exists ?w (exists ?k (exists ?p (and (Is ?r 'refrigerator') (LeftOf ?u ?r) (LeftOf ?w ?r) (Is ?u 'rug') (or (not (Is ?c 'chair')) (On ?c ?u)) (In ?p ?r) (Is ?w 'woman') (Holding ?w ?k) (or (not (Is ?c 'chair')) (HasMaterial ?c 'wooden')) (Is ?p 'pizza') (Is ?k 'rock')))))))))",
+    "k": 6,
+    "object_classes": [
+        "rock",
+        "rug",
+        "chair",
+        "pizza",
+        "refrigerator",
+        "woman"
+    ]
+}

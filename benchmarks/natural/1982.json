@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A bed is located to the left of a woman. A mirror hangs above the bed. A laptop and a jacket are lying on the bed. The woman is holding a bird. To the right of the woman stands an open refrigerator. Inside the refrigerator, there is a plate with a sandwich on it. Additionally, all butterflies in the scene are located to the right of the refrigerator.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bd (exists ?w (exists ?m (exists ?l (exists ?j (exists ?br (exists ?r (exists ?p (exists ?s (and (Is ?bd 'bed') (Is ?w 'woman') (Is ?m 'mirror') (Is ?l 'laptop') (Is ?j 'jacket') (Is ?br 'bird') (Is ?r 'refrigerator') (Is ?p 'plate') (Is ?s 'sandwich') (LeftOf ?bd ?w) (Above ?m ?bd) (On ?l ?bd) (On ?j ?bd) (Holding ?w ?br) (RightOf ?r ?w) (HasState ?r 'open') (In ?p ?r) (On ?s ?p) (forall ?bf (implies (Is ?bf 'butterfly') (RightOf ?bf ?r))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bd (exists ?w (exists ?m (exists ?l (exists ?j (exists ?br (exists ?r (exists ?p (exists ?s (forall ?bf (and (Is ?bd 'bed') (LeftOf ?bd ?w) (Above ?m ?bd) (Is ?w 'woman') (Holding ?w ?br) (On ?l ?bd) (Is ?m 'mirror') (RightOf ?r ?w) (Is ?br 'bird') (On ?j ?bd) (Is ?l 'laptop') (Is ?r 'refrigerator') (HasState ?r 'open') (Is ?j 'jacket') (In ?p ?r) (or (not (Is ?bf 'butterfly')) (RightOf ?bf ?r)) (Is ?p 'plate') (On ?s ?p) (Is ?s 'sandwich')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "sandwich",
+        "mirror",
+        "bed",
+        "bird",
+        "refrigerator",
+        "butterfly",
+        "plate",
+        "jacket",
+        "woman"
+    ]
+}

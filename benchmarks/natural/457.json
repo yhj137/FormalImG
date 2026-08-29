@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every toy car rests on a brown bench situated to the left of a house.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?t (implies (Is ?t 'toy car') (exists ?b (exists ?h (and (Is ?b 'bench') (Is ?h 'house') (HasColor ?b 'brown') (On ?t ?b) (LeftOf ?b ?h)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?t (exists ?b (exists ?h (and (or (not (Is ?t 'toy car')) (Is ?b 'bench')) (or (not (Is ?t 'toy car')) (HasColor ?b 'brown')) (or (not (Is ?t 'toy car')) (Is ?h 'house')) (or (not (Is ?t 'toy car')) (On ?t ?b)) (or (not (Is ?t 'toy car')) (LeftOf ?b ?h)))))))",
+    "k": 3,
+    "object_classes": [
+        "house",
+        "bench",
+        "toy car"
+    ]
+}

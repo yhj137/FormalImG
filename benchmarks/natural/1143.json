@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a woman next to a monitor, holding a green fruit. A lion holding an apple is also positioned next to the monitor. Every toy car is blue and located next to the lion.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?l (and (Is ?w 'woman') (Is ?m 'monitor') (Is ?l 'lion') (NextTo ?w ?m) (NextTo ?l ?m) (forall ?tc (implies (Is ?tc 'toy car') (and (HasColor ?tc 'blue') (NextTo ?tc ?l)))) (exists ?a (exists ?f (and (Is ?a 'apple') (Is ?f 'fruit') (Holding ?l ?a) (Holding ?w ?f) (HasColor ?f 'green')))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?l (forall ?tc (exists ?a (exists ?f (and (Is ?w 'woman') (NextTo ?w ?m) (Holding ?w ?f) (Is ?m 'monitor') (NextTo ?l ?m) (Is ?f 'fruit') (HasColor ?f 'green') (Is ?l 'lion') (or (not (Is ?tc 'toy car')) (NextTo ?tc ?l)) (Holding ?l ?a) (or (not (Is ?tc 'toy car')) (HasColor ?tc 'blue')) (Is ?a 'apple')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fruit",
+        "woman",
+        "monitor",
+        "toy car",
+        "lion",
+        "apple"
+    ]
+}

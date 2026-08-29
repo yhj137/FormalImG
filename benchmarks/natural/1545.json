@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a pixel art style scene, a lion sits on a sofa holding a round ball, while shoes lie next to the sofa. To the left of the sofa stands a lamp, upon which every bird in the scene is perched. Beside the lamp is a rock with a plate on top.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?so (and (Is ?so 'sofa') (exists ?l (and (Is ?l 'lion') (On ?l ?so) (exists ?b (and (Is ?b 'ball') (HasShape ?b 'round') (Holding ?l ?b))))) (exists ?s (and (Is ?s 'shoes') (NextTo ?s ?so))) (exists ?la (and (Is ?la 'lamp') (LeftOf ?la ?so) (forall ?bi (implies (Is ?bi 'bird') (On ?bi ?la))) (exists ?r (and (Is ?r 'rock') (NextTo ?r ?la) (exists ?p (and (Is ?p 'plate') (On ?p ?r))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?so (exists ?l (exists ?b (exists ?s (exists ?la (forall ?bi (exists ?r (exists ?p (and (Is ?so 'sofa') (On ?l ?so) (NextTo ?s ?so) (Is ?l 'lion') (Holding ?l ?b) (LeftOf ?la ?so) (Is ?s 'shoes') (HasShape ?b 'round') (Is ?la 'lamp') (or (not (Is ?bi 'bird')) (On ?bi ?la)) (Is ?b 'ball') (NextTo ?r ?la) (Is ?r 'rock') (On ?p ?r) (Is ?p 'plate')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "shoes",
+        "ball",
+        "plate",
+        "rock",
+        "bird",
+        "lamp",
+        "lion"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans and a plate. The jeans are located on the left side of the image, and the plate is aligned vertically with the jeans. For every set of keys in the scene, they are aligned horizontally with the jeans. Furthermore, for each set of keys, there exists a pan, a phone, and a knife arranged as follows: the pan is aligned horizontally with the plate and is visually larger than the phone; the phone is aligned vertically with the pan; and the knife is aligned horizontally with the phone and is smaller than the plate.",
+    "dsl": "(exists ?jeans (exists ?plate (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (Is ?plate 'plate') (AlignedVertically ?jeans ?plate) (forall ?keys (implies (Is ?keys 'keys') (exists ?pan (exists ?phone (exists ?knife (and (Is ?pan 'pan') (Is ?phone 'phone') (Is ?knife 'knife') (AlignedHorizontally ?jeans ?keys) (AlignedHorizontally ?plate ?pan) (AlignedVertically ?pan ?phone) (AlignedHorizontally ?phone ?knife) (LargerThan ?pan ?phone) (SmallerThan ?knife ?plate))))))))))",
+    "cnf": "(exists ?jeans (exists ?plate (forall ?keys (exists ?pan (exists ?phone (exists ?knife (and (Is ?jeans 'jeans') (OnLeftSide ?jeans) (AlignedVertically ?jeans ?plate) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?jeans ?keys)) (Is ?plate 'plate') (or (not (Is ?keys 'keys')) (AlignedHorizontally ?plate ?pan)) (or (not (Is ?keys 'keys')) (Is ?knife 'knife')) (or (not (Is ?keys 'keys')) (SmallerThan ?knife ?plate)) (or (not (Is ?keys 'keys')) (AlignedVertically ?pan ?phone)) (or (not (Is ?keys 'keys')) (Is ?pan 'pan')) (or (not (Is ?keys 'keys')) (Is ?phone 'phone')) (or (not (Is ?keys 'keys')) (AlignedHorizontally ?phone ?knife)) (or (not (Is ?keys 'keys')) (LargerThan ?pan ?phone)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "plate",
+        "phone",
+        "pan",
+        "jeans",
+        "knife"
+    ]
+}

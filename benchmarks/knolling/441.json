@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a suitcase, a monitor, and a fork arranged neatly. The suitcase is positioned on the left side of the image. All three objects\u2014the suitcase, the monitor, and the fork\u2014are aligned horizontally. Visually, the suitcase is larger than the monitor, while the fork is smaller than the monitor.",
+    "dsl": "(exists ?suitcase (exists ?monitor (exists ?fork (and (Is ?suitcase 'suitcase') (Is ?monitor 'monitor') (Is ?fork 'fork') (OnLeftSide ?suitcase) (AlignedHorizontally ?suitcase ?monitor) (AlignedHorizontally ?monitor ?fork) (LargerThan ?suitcase ?monitor) (SmallerThan ?fork ?monitor)))))",
+    "cnf": "(exists ?suitcase (exists ?monitor (exists ?fork (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (AlignedHorizontally ?suitcase ?monitor) (LargerThan ?suitcase ?monitor) (Is ?monitor 'monitor') (AlignedHorizontally ?monitor ?fork) (SmallerThan ?fork ?monitor) (Is ?fork 'fork')))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "fork",
+        "suitcase"
+    ]
+}

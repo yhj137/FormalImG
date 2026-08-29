@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every tie in the scene, there is a phone positioned to its left. Additionally, there is a pair of scissors aligned vertically with the phone, and the scissors are located on the bottom side of the image.",
+    "dsl": "(and (forall ?tie (implies (Is ?tie 'tie') (exists ?phone (exists ?scissors (and (Is ?phone 'phone') (Is ?scissors 'scissors') (LeftOf ?phone ?tie) (AlignedVertically ?scissors ?phone) (OnBottomSide ?scissors)))))))",
+    "cnf": "(forall ?tie (exists ?phone (exists ?scissors (and (or (not (Is ?tie 'tie')) (Is ?phone 'phone')) (or (not (Is ?tie 'tie')) (Is ?scissors 'scissors')) (or (not (Is ?tie 'tie')) (LeftOf ?phone ?tie)) (or (not (Is ?tie 'tie')) (AlignedVertically ?scissors ?phone)) (or (not (Is ?tie 'tie')) (OnBottomSide ?scissors))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "tie",
+        "phone"
+    ]
+}

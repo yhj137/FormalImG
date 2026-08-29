@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a dog holding a metal hammer. Next to the dog is a red backpack containing a fork, with every toy car resting on the backpack.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (exists ?h (exists ?b (exists ?f (and (Is ?d 'dog') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Holding ?d ?h) (Is ?b 'backpack') (HasColor ?b 'red') (NextTo ?d ?b) (Is ?f 'fork') (In ?f ?b) (forall ?t (implies (Is ?t 'toy car') (On ?t ?b)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?h (exists ?b (exists ?f (forall ?t (and (Is ?d 'dog') (Holding ?d ?h) (NextTo ?d ?b) (HasMaterial ?h 'metal') (HasColor ?b 'red') (In ?f ?b) (Is ?h 'hammer') (Is ?b 'backpack') (or (not (Is ?t 'toy car')) (On ?t ?b)) (Is ?f 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fork",
+        "toy car",
+        "backpack",
+        "hammer",
+        "dog"
+    ]
+}

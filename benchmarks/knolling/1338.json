@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout begins with a cutting board positioned on the left side. A watch is placed to the right of the cutting board, a wallet to the right of the watch, and a mouse to the right of the wallet; these objects are all aligned horizontally. The arrangement follows a constraint where every lemon is horizontally aligned to the right of the mouse, with a bowl horizontally aligned to the right of the lemon, and a game controller horizontally aligned to the right of the bowl, ending with the game controller on the right side of the image.",
+    "dsl": "(exists ?cb (exists ?w (exists ?wl (exists ?m (and (Is ?cb 'cutting_board') (Is ?w 'watch') (Is ?wl 'wallet') (Is ?m 'mouse') (OnLeftSide ?cb) (RightOf ?w ?cb) (RightOf ?wl ?w) (RightOf ?m ?wl) (AlignedHorizontally ?cb ?w) (AlignedHorizontally ?w ?wl) (AlignedHorizontally ?wl ?m) (forall ?l (implies (Is ?l 'lemon') (exists ?b (exists ?gc (and (Is ?b 'bowl') (Is ?gc 'game_controller') (RightOf ?l ?m) (RightOf ?b ?l) (RightOf ?gc ?b) (AlignedHorizontally ?m ?l) (AlignedHorizontally ?l ?b) (AlignedHorizontally ?b ?gc) (OnRightSide ?gc)))))))))))",
+    "cnf": "(exists ?cb (exists ?w (exists ?wl (exists ?m (forall ?l (exists ?b (exists ?gc (and (Is ?cb 'cutting_board') (OnLeftSide ?cb) (RightOf ?w ?cb) (AlignedHorizontally ?cb ?w) (Is ?w 'watch') (RightOf ?wl ?w) (AlignedHorizontally ?w ?wl) (Is ?wl 'wallet') (RightOf ?m ?wl) (AlignedHorizontally ?wl ?m) (Is ?m 'mouse') (or (not (Is ?l 'lemon')) (RightOf ?l ?m)) (or (not (Is ?l 'lemon')) (AlignedHorizontally ?m ?l)) (or (not (Is ?l 'lemon')) (Is ?gc 'game_controller')) (or (not (Is ?l 'lemon')) (RightOf ?b ?l)) (or (not (Is ?l 'lemon')) (RightOf ?gc ?b)) (or (not (Is ?l 'lemon')) (AlignedHorizontally ?l ?b)) (or (not (Is ?l 'lemon')) (Is ?b 'bowl')) (or (not (Is ?l 'lemon')) (AlignedHorizontally ?b ?gc)) (or (not (Is ?l 'lemon')) (OnRightSide ?gc))))))))))",
+    "k": 7,
+    "object_classes": [
+        "lemon",
+        "watch",
+        "game_controller",
+        "cutting_board",
+        "wallet",
+        "mouse",
+        "bowl"
+    ]
+}

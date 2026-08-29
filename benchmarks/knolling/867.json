@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, it is positioned on the bottom side. A pan is located to the left of the backpack, a camera is located to the left of the pan, a pair of glasses is located to the left of the camera, and a fork is located to the left of the glasses. All five items are aligned horizontally. Furthermore, the camera is smaller than the backpack, and the glasses are smaller than the camera.",
+    "dsl": "(forall ?backpack (implies (Is ?backpack 'backpack') (exists ?pan (exists ?camera (exists ?glasses (exists ?fork (and (Is ?pan 'pan') (Is ?camera 'camera') (Is ?glasses 'glasses') (Is ?fork 'fork') (OnBottomSide ?backpack) (LeftOf ?pan ?backpack) (LeftOf ?camera ?pan) (LeftOf ?glasses ?camera) (LeftOf ?fork ?glasses) (AlignedHorizontally ?backpack ?pan) (AlignedHorizontally ?pan ?camera) (AlignedHorizontally ?camera ?glasses) (AlignedHorizontally ?glasses ?fork) (SmallerThan ?camera ?backpack) (SmallerThan ?glasses ?camera))))))))",
+    "cnf": "(forall ?backpack (exists ?pan (exists ?camera (exists ?glasses (exists ?fork (and (or (not (Is ?backpack 'backpack')) (Is ?pan 'pan')) (or (not (Is ?backpack 'backpack')) (LeftOf ?pan ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?camera 'camera')) (or (not (Is ?backpack 'backpack')) (LeftOf ?camera ?pan)) (or (not (Is ?backpack 'backpack')) (OnBottomSide ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?glasses 'glasses')) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?backpack ?pan)) (or (not (Is ?backpack 'backpack')) (LeftOf ?glasses ?camera)) (or (not (Is ?backpack 'backpack')) (Is ?fork 'fork')) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?pan ?camera)) (or (not (Is ?backpack 'backpack')) (LeftOf ?fork ?glasses)) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?camera ?glasses)) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?glasses ?fork)) (or (not (Is ?backpack 'backpack')) (SmallerThan ?camera ?backpack)) (or (not (Is ?backpack 'backpack')) (SmallerThan ?glasses ?camera))))))))",
+    "k": 5,
+    "object_classes": [
+        "backpack",
+        "pan",
+        "camera",
+        "fork",
+        "glasses"
+    ]
+}

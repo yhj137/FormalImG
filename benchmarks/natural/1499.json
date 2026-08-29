@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a person inside a bus, wearing a hat and holding an open laptop. A rectangular monitor is next to the laptop, and a cat is next to the person. To the left of the bus is a horse, with every butterfly in the scene resting on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?p (exists ?b (exists ?ho (and (Is ?p 'person') (Is ?b 'bus') (Is ?ho 'horse') (In ?p ?b) (LeftOf ?ho ?b) (forall ?bf (implies (Is ?bf 'butterfly') (On ?bf ?ho))) (exists ?h (exists ?l (exists ?m (exists ?c (and (Is ?h 'hat') (On ?h ?p) (Is ?l 'laptop') (Holding ?p ?l) (HasState ?l 'open') (Is ?m 'monitor') (NextTo ?m ?l) (HasShape ?m 'rectangular') (Is ?c 'cat') (NextTo ?c ?p)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?p (exists ?b (exists ?ho (forall ?bf (exists ?h (exists ?l (exists ?m (exists ?c (and (Is ?p 'person') (In ?p ?b) (On ?h ?p) (Is ?b 'bus') (LeftOf ?ho ?b) (Holding ?p ?l) (Is ?h 'hat') (Is ?ho 'horse') (or (not (Is ?bf 'butterfly')) (On ?bf ?ho)) (NextTo ?c ?p) (Is ?l 'laptop') (HasState ?l 'open') (Is ?c 'cat') (NextTo ?m ?l) (Is ?m 'monitor') (HasShape ?m 'rectangular')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "person",
+        "horse",
+        "laptop",
+        "monitor",
+        "butterfly",
+        "cat",
+        "bus",
+        "hat"
+    ]
+}

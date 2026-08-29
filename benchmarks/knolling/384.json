@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a stapler positioned on the left side of the scene. Furthermore, for every mouse present in the image, the stapler is located to the left of that mouse.",
+    "dsl": "(exists ?s (and (Is ?s 'stapler') (OnLeftSide ?s) (forall ?m (implies (Is ?m 'mouse') (LeftOf ?s ?m)))))",
+    "cnf": "(exists ?s (forall ?m (and (Is ?s 'stapler') (OnLeftSide ?s) (or (not (Is ?m 'mouse')) (LeftOf ?s ?m)))))",
+    "k": 2,
+    "object_classes": [
+        "stapler",
+        "mouse"
+    ]
+}

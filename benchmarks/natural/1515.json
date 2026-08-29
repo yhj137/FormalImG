@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a woman wearing oval glasses. A monitor is next to the woman, and a metal lamp sits beside the monitor. A butterfly is positioned next to the lamp. The woman is holding a spoon in a cake. All boats are located to the right of the woman.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?g (exists ?m (exists ?l (and (Is ?w 'woman') (Is ?g 'glasses') (HasShape ?g 'oval') (On ?g ?w) (Is ?m 'monitor') (NextTo ?m ?w) (Is ?l 'lamp') (HasMaterial ?l 'metal') (NextTo ?l ?m) (forall ?b (implies (Is ?b 'boat') (RightOf ?b ?w))) (exists ?c (exists ?s (exists ?bf (and (Is ?c 'cake') (Is ?s 'spoon') (Is ?bf 'butterfly') (In ?s ?c) (Holding ?w ?s) (NextTo ?bf ?l)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?g (exists ?m (exists ?l (forall ?b (exists ?c (exists ?s (exists ?bf (and (Is ?w 'woman') (On ?g ?w) (NextTo ?m ?w) (HasShape ?g 'oval') (or (not (Is ?b 'boat')) (RightOf ?b ?w)) (Is ?m 'monitor') (NextTo ?l ?m) (Is ?g 'glasses') (Holding ?w ?s) (HasMaterial ?l 'metal') (NextTo ?bf ?l) (In ?s ?c) (Is ?l 'lamp') (Is ?bf 'butterfly') (Is ?c 'cake') (Is ?s 'spoon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "woman",
+        "glasses",
+        "monitor",
+        "lamp",
+        "cake",
+        "butterfly",
+        "boat",
+        "spoon"
+    ]
+}

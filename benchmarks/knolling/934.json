@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout is anchored by a cutting_board located on the top side of the scene. Positioned below the cutting_board is a tie, and below the tie is a glove; these three objects are arranged in a vertical column and are aligned vertically. The glove is visually smaller than the cutting_board. Additionally, the scene adheres to a constraint: for every pen present, there is a mouse located above it, and that mouse is also vertically aligned with the glove.",
+    "dsl": "(exists ?cb (exists ?t (exists ?g (and (Is ?cb 'cutting_board') (Is ?t 'tie') (Is ?g 'glove') (OnTopSide ?cb) (Above ?cb ?t) (Above ?t ?g) (AlignedVertically ?cb ?t) (AlignedVertically ?t ?g) (SmallerThan ?g ?cb) (forall ?p (implies (Is ?p 'pen') (exists ?m (and (Is ?m 'mouse') (Above ?m ?p) (AlignedVertically ?m ?g)))))))))",
+    "cnf": "(exists ?cb (exists ?t (exists ?g (forall ?p (exists ?m (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (Above ?cb ?t) (AlignedVertically ?cb ?t) (Is ?t 'tie') (Above ?t ?g) (SmallerThan ?g ?cb) (AlignedVertically ?t ?g) (Is ?g 'glove') (or (not (Is ?p 'pen')) (AlignedVertically ?m ?g)) (or (not (Is ?p 'pen')) (Above ?m ?p)) (or (not (Is ?p 'pen')) (Is ?m 'mouse'))))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "pen",
+        "cutting_board",
+        "mouse",
+        "glove"
+    ]
+}

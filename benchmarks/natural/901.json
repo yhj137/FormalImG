@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene where a man sits on a bicycle holding a bitten sandwich. A house stands to the left of the bicycle, while every tree is positioned to the right.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'bicycle') (On ?m ?b) (HasState ?m 'sitting') (forall ?t (implies (Is ?t 'tree') (RightOf ?t ?b))) (exists ?s (exists ?h (and (Is ?s 'sandwich') (Is ?h 'house') (Holding ?m ?s) (HasState ?s 'bitten') (LeftOf ?h ?b))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?b (forall ?t (exists ?s (exists ?h (and (Is ?m 'man') (On ?m ?b) (HasState ?m 'sitting') (Is ?b 'bicycle') (or (not (Is ?t 'tree')) (RightOf ?t ?b)) (Holding ?m ?s) (LeftOf ?h ?b) (Is ?s 'sandwich') (HasState ?s 'bitten') (Is ?h 'house'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "tree",
+        "man",
+        "bicycle",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag and a green bottle that are aligned vertically. For every carrot, it is aligned horizontally with the handbag. There is a black pan positioned below the carrot, which is aligned horizontally with the bottle. Additionally, a sandwich is positioned below the pan and aligned vertically with the pan.",
+    "dsl": "(exists ?handbag (exists ?bottle (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (Is ?bottle 'bottle') (Has ?bottle 'green') (AlignedVertically ?handbag ?bottle) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?pan (exists ?sandwich (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?sandwich 'sandwich') (AlignedHorizontally ?carrot ?handbag) (Below ?pan ?carrot) (AlignedHorizontally ?pan ?bottle) (Below ?sandwich ?pan) (AlignedVertically ?sandwich ?pan)))))))))",
+    "cnf": "(exists ?handbag (exists ?bottle (forall ?carrot (exists ?pan (exists ?sandwich (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (AlignedVertically ?handbag ?bottle) (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?carrot ?handbag)) (Has ?bottle 'green') (or (not (Is ?carrot 'carrot')) (AlignedHorizontally ?pan ?bottle)) (or (not (Is ?carrot 'carrot')) (Is ?sandwich 'sandwich')) (or (not (Is ?carrot 'carrot')) (Below ?pan ?carrot)) (Is ?bottle 'bottle') (or (not (Is ?carrot 'carrot')) (Below ?sandwich ?pan)) (or (not (Is ?carrot 'carrot')) (Has ?pan 'black')) (or (not (Is ?carrot 'carrot')) (AlignedVertically ?sandwich ?pan)) (or (not (Is ?carrot 'carrot')) (Is ?pan 'pan'))))))))",
+    "k": 5,
+    "object_classes": [
+        "carrot",
+        "handbag",
+        "pan",
+        "bottle",
+        "sandwich"
+    ]
+}

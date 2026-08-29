@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image with a structured layout. The scene contains a backpack, a book, and a game controller positioned on the top side of the image. The book is placed to the right of the backpack, and the game controller is to the right of the book. On the bottom side, there is a drill, a hammer, and a sandwich. The drill is aligned vertically with the backpack, the hammer is aligned vertically with the book, and the sandwich is aligned vertically with the game controller. Additionally, for every knife in the scene, there is an apple aligned vertically with it, with the knife positioned to the right of the sandwich. The backpack is visually larger than the apple.",
+    "dsl": "(exists ?backpack (exists ?book (exists ?controller (exists ?drill (exists ?hammer (exists ?sandwich (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (Is ?book 'book') (OnTopSide ?book) (RightOf ?book ?backpack) (Is ?controller 'game_controller') (OnTopSide ?controller) (RightOf ?controller ?book) (Is ?drill 'drill') (OnBottomSide ?drill) (AlignedVertically ?drill ?backpack) (Is ?hammer 'hammer') (OnBottomSide ?hammer) (AlignedVertically ?hammer ?book) (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich) (AlignedVertically ?sandwich ?controller) (forall ?knife (implies (Is ?knife 'knife') (exists ?apple (and (Is ?apple 'apple') (RightOf ?knife ?sandwich) (AlignedVertically ?knife ?apple) (LargerThan ?backpack ?apple))))))))))))",
+    "cnf": "(exists ?backpack (exists ?book (exists ?controller (exists ?drill (exists ?hammer (exists ?sandwich (forall ?knife (exists ?apple (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (RightOf ?book ?backpack) (AlignedVertically ?drill ?backpack) (OnTopSide ?book) (RightOf ?controller ?book) (or (not (Is ?knife 'knife')) (LargerThan ?backpack ?apple)) (OnBottomSide ?drill) (Is ?book 'book') (AlignedVertically ?hammer ?book) (OnTopSide ?controller) (AlignedVertically ?sandwich ?controller) (or (not (Is ?knife 'knife')) (AlignedVertically ?knife ?apple)) (Is ?drill 'drill') (OnBottomSide ?hammer) (Is ?controller 'game_controller') (OnBottomSide ?sandwich) (or (not (Is ?knife 'knife')) (RightOf ?knife ?sandwich)) (or (not (Is ?knife 'knife')) (Is ?apple 'apple')) (Is ?hammer 'hammer') (Is ?sandwich 'sandwich'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "hammer",
+        "backpack",
+        "knife",
+        "apple",
+        "game_controller",
+        "drill",
+        "book",
+        "sandwich"
+    ]
+}

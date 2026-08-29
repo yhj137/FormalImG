@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a sequence of objects arranged in a neat horizontal row within the top side of the image. Starting from the left, there is a shoe, followed by headphones, a keyboard, a calculator, a stapler, a bowl, a sandwich, and finally a knife. All these items are aligned horizontally with each other. The keyboard appears larger than the calculator. Furthermore, any cup present in the scene is located to the right of the knife and maintains horizontal alignment with the row.",
+    "dsl": "(exists ?shoe (exists ?headphones (exists ?keyboard (exists ?calculator (exists ?stapler (exists ?bowl (exists ?sandwich (exists ?knife (and (Is ?shoe 'shoe') (Is ?headphones 'headphones') (Is ?keyboard 'keyboard') (Is ?calculator 'calculator') (Is ?stapler 'stapler') (Is ?bowl 'bowl') (Is ?sandwich 'sandwich') (Is ?knife 'knife') (OnTopSide ?shoe) (RightOf ?headphones ?shoe) (AlignedHorizontally ?shoe ?headphones) (RightOf ?keyboard ?headphones) (AlignedHorizontally ?headphones ?keyboard) (RightOf ?calculator ?keyboard) (AlignedHorizontally ?keyboard ?calculator) (LargerThan ?keyboard ?calculator) (RightOf ?stapler ?calculator) (AlignedHorizontally ?calculator ?stapler) (RightOf ?bowl ?stapler) (AlignedHorizontally ?stapler ?bowl) (RightOf ?sandwich ?bowl) (AlignedHorizontally ?bowl ?sandwich) (RightOf ?knife ?sandwich) (AlignedHorizontally ?sandwich ?knife) (forall ?cup (implies (Is ?cup 'cup') (and (RightOf ?cup ?knife) (AlignedHorizontally ?cup ?knife)))))))))))))",
+    "cnf": "(exists ?shoe (exists ?headphones (exists ?keyboard (exists ?calculator (exists ?stapler (exists ?bowl (exists ?sandwich (exists ?knife (forall ?cup (and (Is ?shoe 'shoe') (OnTopSide ?shoe) (RightOf ?headphones ?shoe) (AlignedHorizontally ?shoe ?headphones) (Is ?headphones 'headphones') (RightOf ?keyboard ?headphones) (AlignedHorizontally ?headphones ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?calculator ?keyboard) (AlignedHorizontally ?keyboard ?calculator) (Is ?calculator 'calculator') (LargerThan ?keyboard ?calculator) (RightOf ?stapler ?calculator) (AlignedHorizontally ?calculator ?stapler) (Is ?stapler 'stapler') (RightOf ?bowl ?stapler) (AlignedHorizontally ?stapler ?bowl) (Is ?bowl 'bowl') (RightOf ?sandwich ?bowl) (AlignedHorizontally ?bowl ?sandwich) (Is ?sandwich 'sandwich') (RightOf ?knife ?sandwich) (AlignedHorizontally ?sandwich ?knife) (Is ?knife 'knife') (or (not (Is ?cup 'cup')) (RightOf ?cup ?knife)) (or (not (Is ?cup 'cup')) (AlignedHorizontally ?cup ?knife))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "calculator",
+        "knife",
+        "headphones",
+        "keyboard",
+        "cup",
+        "stapler",
+        "sandwich",
+        "shoe"
+    ]
+}

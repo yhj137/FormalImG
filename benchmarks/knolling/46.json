@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue tie.",
+    "dsl": "(exists ?tie (and (Is ?tie 'tie') (Has ?tie 'blue')))",
+    "cnf": "(exists ?tie (and (Is ?tie 'tie') (Has ?tie 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "tie"
+    ]
+}

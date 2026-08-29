@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman holding a switched-on phone next to a table. On the table, a round mirror is positioned to the left of a basket containing a knife.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?t (exists ?m (exists ?b (exists ?k (and (Is ?w 'woman') (Is ?p 'phone') (Is ?t 'table') (Is ?m 'mirror') (Is ?b 'basket') (Is ?k 'knife') (Holding ?w ?p) (HasState ?p 'on') (NextTo ?w ?t) (On ?m ?t) (HasShape ?m 'round') (On ?b ?t) (LeftOf ?m ?b) (In ?k ?b)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?p (exists ?t (exists ?m (exists ?b (exists ?k (and (Is ?w 'woman') (Holding ?w ?p) (NextTo ?w ?t) (Is ?p 'phone') (HasState ?p 'on') (Is ?t 'table') (On ?m ?t) (On ?b ?t) (Is ?m 'mirror') (HasShape ?m 'round') (Is ?b 'basket') (LeftOf ?m ?b) (In ?k ?b) (Is ?k 'knife')))))))))",
+    "k": 6,
+    "object_classes": [
+        "woman",
+        "knife",
+        "phone",
+        "basket",
+        "table",
+        "mirror"
+    ]
+}

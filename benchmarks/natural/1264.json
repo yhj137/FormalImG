@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a sofa where every cat in the scene is sitting, along with a pizza. A hat containing an apple rests next to the sofa. To the right of the sofa is a monitor, with a round clock positioned next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'sofa') (forall ?c (implies (Is ?c 'cat') (On ?c ?s))) (exists ?h (exists ?a (exists ?p (exists ?m (exists ?clk (and (Is ?h 'hat') (Is ?a 'apple') (Is ?p 'pizza') (Is ?m 'monitor') (Is ?clk 'clock') (NextTo ?h ?s) (In ?a ?h) (On ?p ?s) (RightOf ?m ?s) (HasShape ?clk 'round') (NextTo ?clk ?m))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (forall ?c (exists ?h (exists ?a (exists ?p (exists ?m (exists ?clk (and (Is ?s 'sofa') (or (not (Is ?c 'cat')) (On ?c ?s)) (NextTo ?h ?s) (On ?p ?s) (Is ?h 'hat') (In ?a ?h) (RightOf ?m ?s) (Is ?p 'pizza') (Is ?a 'apple') (Is ?m 'monitor') (NextTo ?clk ?m) (HasShape ?clk 'round') (Is ?clk 'clock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "monitor",
+        "sofa",
+        "cat",
+        "hat",
+        "pizza",
+        "clock",
+        "apple"
+    ]
+}

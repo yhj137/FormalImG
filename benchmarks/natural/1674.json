@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in an oil painting style. A lion is holding a hammer. Located to the right of the lion is a wardrobe. On the wardrobe, there sits an oval mirror, a round pizza, and a laptop. A bottle is placed to the left of the pizza. A key is resting on top of the laptop. Furthermore, all butterflies in the image are positioned above the lion.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (and (Is ?l 'lion') (exists ?w (and (Is ?w 'wardrobe') (RightOf ?w ?l) (forall ?b (implies (Is ?b 'butterfly') (Above ?b ?l))) (exists ?h (and (Is ?h 'hammer') (Holding ?l ?h) (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'oval') (On ?m ?w) (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (On ?p ?w) (exists ?lap (and (Is ?lap 'laptop') (On ?lap ?w) (exists ?bot (and (Is ?bot 'bottle') (LeftOf ?bot ?p) (exists ?k (and (Is ?k 'key') (On ?k ?lap))))))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?w (forall ?b (exists ?h (exists ?m (exists ?p (exists ?lap (exists ?bot (exists ?k (and (Is ?l 'lion') (RightOf ?w ?l) (or (not (Is ?b 'butterfly')) (Above ?b ?l)) (Is ?w 'wardrobe') (On ?m ?w) (Holding ?l ?h) (On ?p ?w) (HasShape ?m 'oval') (Is ?h 'hammer') (On ?lap ?w) (HasShape ?p 'round') (LeftOf ?bot ?p) (Is ?m 'mirror') (Is ?lap 'laptop') (On ?k ?lap) (Is ?p 'pizza') (Is ?bot 'bottle') (Is ?k 'key'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "laptop",
+        "pizza",
+        "hammer",
+        "mirror",
+        "lion",
+        "butterfly",
+        "key",
+        "wardrobe"
+    ]
+}

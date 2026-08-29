@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a sequence of objects arranged from left to right. A pair of headphones is positioned on the top side of the image and is located to the left of a hammer. The hammer is to the left of a remote, which is strictly smaller than the jeans. The remote is to the left of a phone. The phone is visually smaller than the keyboard and is located to the left of said keyboard. The keyboard is positioned to the left of a bowl, which is, in turn, to the left of a pair of jeans situated on the right side of the image.",
+    "dsl": "(exists ?headphones (exists ?hammer (exists ?remote (exists ?phone (exists ?keyboard (exists ?bowl (exists ?jeans (and (Is ?headphones 'headphones') (Is ?hammer 'hammer') (Is ?remote 'remote') (Is ?phone 'phone') (Is ?keyboard 'keyboard') (Is ?bowl 'bowl') (Is ?jeans 'jeans') (OnTopSide ?headphones) (LeftOf ?headphones ?hammer) (LeftOf ?hammer ?remote) (SmallerThan ?remote ?jeans) (LeftOf ?remote ?phone) (SmallerThan ?phone ?keyboard) (LeftOf ?phone ?keyboard) (LeftOf ?keyboard ?bowl) (LeftOf ?bowl ?jeans) (OnRightSide ?jeans)))))))))",
+    "cnf": "(exists ?headphones (exists ?hammer (exists ?remote (exists ?phone (exists ?keyboard (exists ?bowl (exists ?jeans (and (Is ?headphones 'headphones') (OnTopSide ?headphones) (LeftOf ?headphones ?hammer) (Is ?hammer 'hammer') (LeftOf ?hammer ?remote) (Is ?remote 'remote') (SmallerThan ?remote ?jeans) (LeftOf ?remote ?phone) (Is ?jeans 'jeans') (LeftOf ?bowl ?jeans) (Is ?phone 'phone') (SmallerThan ?phone ?keyboard) (LeftOf ?keyboard ?bowl) (OnRightSide ?jeans) (LeftOf ?phone ?keyboard) (Is ?keyboard 'keyboard') (Is ?bowl 'bowl')))))))))",
+    "k": 7,
+    "object_classes": [
+        "hammer",
+        "bowl",
+        "headphones",
+        "keyboard",
+        "jeans",
+        "phone",
+        "remote"
+    ]
+}

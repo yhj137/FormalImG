@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue backpack is positioned on the bottom side of the layout. There is a wallet that is smaller than the backpack. For every remote in the scene, there is a wrench aligned horizontally with it, and that wrench is visually larger than the wallet.",
+    "dsl": "(exists ?backpack (exists ?wallet (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnBottomSide ?backpack) (Is ?wallet 'wallet') (SmallerThan ?wallet ?backpack) (forall ?remote (implies (Is ?remote 'remote') (exists ?wrench (and (Is ?wrench 'wrench') (AlignedHorizontally ?remote ?wrench) (LargerThan ?wrench ?wallet))))))))",
+    "cnf": "(exists ?backpack (exists ?wallet (forall ?remote (exists ?wrench (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnBottomSide ?backpack) (SmallerThan ?wallet ?backpack) (Is ?wallet 'wallet') (or (not (Is ?remote 'remote')) (LargerThan ?wrench ?wallet)) (or (not (Is ?remote 'remote')) (AlignedHorizontally ?remote ?wrench)) (or (not (Is ?remote 'remote')) (Is ?wrench 'wrench')))))))",
+    "k": 4,
+    "object_classes": [
+        "wrench",
+        "backpack",
+        "wallet",
+        "remote"
+    ]
+}

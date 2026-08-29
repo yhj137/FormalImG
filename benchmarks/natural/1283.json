@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant holding a banana stands next to a car. Every shoe in the scene is made of leather and positioned next to the car. A plastic laptop sits on the car with an apple on top. A toy car is to the left of the elephant.",
+    "dsl": "(exists ?e (exists ?c (and (Is ?e 'elephant') (Is ?c 'car') (NextTo ?e ?c) (forall ?s (implies (Is ?s 'shoes') (and (HasMaterial ?s 'leather') (NextTo ?s ?c)))) (exists ?l (exists ?a (exists ?tc (exists ?b (and (Is ?l 'laptop') (HasMaterial ?l 'plastic') (Is ?a 'apple') (Is ?tc 'toy car') (Is ?b 'banana') (On ?l ?c) (On ?a ?l) (LeftOf ?tc ?e) (Holding ?e ?b)))))))))",
+    "cnf": "(exists ?e (exists ?c (forall ?s (exists ?l (exists ?a (exists ?tc (exists ?b (and (Is ?e 'elephant') (NextTo ?e ?c) (LeftOf ?tc ?e) (Is ?c 'car') (or (not (Is ?s 'shoes')) (NextTo ?s ?c)) (Holding ?e ?b) (Is ?tc 'toy car') (On ?l ?c) (or (not (Is ?s 'shoes')) (HasMaterial ?s 'leather')) (Is ?b 'banana') (HasMaterial ?l 'plastic') (On ?a ?l) (Is ?l 'laptop') (Is ?a 'apple')))))))))",
+    "k": 7,
+    "object_classes": [
+        "toy car",
+        "laptop",
+        "banana",
+        "shoes",
+        "apple",
+        "elephant",
+        "car"
+    ]
+}

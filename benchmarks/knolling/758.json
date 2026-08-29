@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a handbag located on the bottom side of the image and a pizza situated on the right side, with the two objects aligned horizontally. Additionally, for every fork in the scene, there is a game controller positioned below it, and the pizza is visually larger than the game controller.",
+    "dsl": "(exists ?h (exists ?p (and (Is ?h 'handbag') (OnBottomSide ?h) (Is ?p 'pizza') (OnRightSide ?p) (AlignedHorizontally ?h ?p) (forall ?f (implies (Is ?f 'fork') (exists ?g (and (Is ?g 'game_controller') (Below ?g ?f) (LargerThan ?p ?g))))))))",
+    "cnf": "(exists ?h (exists ?p (forall ?f (exists ?g (and (Is ?h 'handbag') (OnBottomSide ?h) (AlignedHorizontally ?h ?p) (OnRightSide ?p) (or (not (Is ?f 'fork')) (LargerThan ?p ?g)) (Is ?p 'pizza') (or (not (Is ?f 'fork')) (Below ?g ?f)) (or (not (Is ?f 'fork')) (Is ?g 'game_controller')))))))",
+    "k": 4,
+    "object_classes": [
+        "fork",
+        "handbag",
+        "pizza",
+        "game_controller"
+    ]
+}

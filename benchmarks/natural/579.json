@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a dog. A round pan is placed to the right of the dog, while all headphones are located to the left of the dog.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (and (Is ?d 'dog') (exists ?p (and (Is ?p 'pan') (HasShape ?p 'round') (RightOf ?p ?d))) (forall ?h (implies (Is ?h 'headphones') (LeftOf ?h ?d))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (exists ?p (forall ?h (and (Is ?d 'dog') (RightOf ?p ?d) (or (not (Is ?h 'headphones')) (LeftOf ?h ?d)) (HasShape ?p 'round') (Is ?p 'pan'))))))",
+    "k": 3,
+    "object_classes": [
+        "dog",
+        "pan",
+        "headphones"
+    ]
+}

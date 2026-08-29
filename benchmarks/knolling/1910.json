@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a monitor on the top side. Directly below the monitor and aligned vertically are a pair of jeans. To the left of the monitor is a book, which is visually smaller than the monitor. The monitor is positioned to the left of a game controller. A stapler is located on the bottom side of the image, to the left of the jeans. For every screwdriver in the scene (positioned on the left side and to the left of the book), there is a ruler below it and a remote below the ruler; these three objects are aligned vertically. Additionally, a calculator is located to the left of the ruler, and a spoon is positioned below the calculator. The spoon is smaller than the ruler.",
+    "dsl": "(exists ?monitor (exists ?jeans (exists ?controller (exists ?book (exists ?stapler (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?jeans 'jeans') (Below ?jeans ?monitor) (AlignedVertically ?monitor ?jeans) (Is ?controller 'game_controller') (LeftOf ?monitor ?controller) (Is ?book 'book') (LeftOf ?book ?monitor) (LargerThan ?monitor ?book) (Is ?stapler 'stapler') (OnBottomSide ?stapler) (LeftOf ?stapler ?jeans) (forall ?driver (implies (Is ?driver 'screwdriver') (exists ?ruler (exists ?remote (exists ?calc (exists ?spoon (and (Is ?ruler 'ruler') (Is ?remote 'remote') (Is ?calc 'calculator') (Is ?spoon 'spoon') (OnLeftSide ?driver) (LeftOf ?driver ?book) (Below ?ruler ?driver) (Below ?remote ?ruler) (AlignedVertically ?driver ?ruler) (AlignedVertically ?ruler ?remote) (LeftOf ?calc ?ruler) (Below ?spoon ?calc) (SmallerThan ?spoon ?ruler))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?jeans (exists ?controller (exists ?book (exists ?stapler (forall ?driver (exists ?ruler (exists ?remote (exists ?calc (exists ?spoon (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Below ?jeans ?monitor) (AlignedVertically ?monitor ?jeans) (Is ?jeans 'jeans') (LeftOf ?monitor ?controller) (LeftOf ?stapler ?jeans) (LeftOf ?book ?monitor) (Is ?controller 'game_controller') (OnBottomSide ?stapler) (LargerThan ?monitor ?book) (Is ?book 'book') (Is ?stapler 'stapler') (or (not (Is ?driver 'screwdriver')) (LeftOf ?driver ?book)) (or (not (Is ?driver 'screwdriver')) (OnLeftSide ?driver)) (or (not (Is ?driver 'screwdriver')) (Below ?ruler ?driver)) (or (not (Is ?driver 'screwdriver')) (Is ?spoon 'spoon')) (or (not (Is ?driver 'screwdriver')) (Is ?ruler 'ruler')) (or (not (Is ?driver 'screwdriver')) (Below ?remote ?ruler)) (or (not (Is ?driver 'screwdriver')) (Is ?calc 'calculator')) (or (not (Is ?driver 'screwdriver')) (Below ?spoon ?calc)) (or (not (Is ?driver 'screwdriver')) (Is ?remote 'remote')) (or (not (Is ?driver 'screwdriver')) (AlignedVertically ?driver ?ruler)) (or (not (Is ?driver 'screwdriver')) (AlignedVertically ?ruler ?remote)) (or (not (Is ?driver 'screwdriver')) (LeftOf ?calc ?ruler)) (or (not (Is ?driver 'screwdriver')) (SmallerThan ?spoon ?ruler)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "stapler",
+        "calculator",
+        "ruler",
+        "jeans",
+        "game_controller",
+        "monitor",
+        "book",
+        "screwdriver",
+        "remote"
+    ]
+}

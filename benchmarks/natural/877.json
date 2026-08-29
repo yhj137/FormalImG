@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a house. All fruit in the scene is inside the house. A bench is next to the house, and to the left of the bench is a sitting man holding a pair of headphones.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (and (Is ?h 'house') (forall ?f (implies (Is ?f 'fruit') (In ?f ?h))) (exists ?b (exists ?m (exists ?hp (and (Is ?b 'bench') (Is ?m 'man') (Is ?hp 'headphones') (NextTo ?b ?h) (LeftOf ?m ?b) (HasState ?m 'sitting') (Holding ?m ?hp))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (forall ?f (exists ?b (exists ?m (exists ?hp (and (Is ?h 'house') (or (not (Is ?f 'fruit')) (In ?f ?h)) (NextTo ?b ?h) (Is ?b 'bench') (LeftOf ?m ?b) (Is ?m 'man') (HasState ?m 'sitting') (Holding ?m ?hp) (Is ?hp 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "house",
+        "fruit",
+        "headphones",
+        "bench",
+        "man"
+    ]
+}

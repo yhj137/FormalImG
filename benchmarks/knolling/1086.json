@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a blue shirt positioned on the left side of the scene. For every black shoe present in the image, the shoe is aligned horizontally with the shirt, and the shirt is visually larger than the shoe. Furthermore, arranged vertically above each shoe is a specific sequence of items: a white glove is located above the shoe, a yellow bowl is above the glove, a gray remote is above the bowl, and a black camera is positioned above the remote.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (forall ?shoe (implies (and (Is ?shoe 'shoe') (Has ?shoe 'black')) (exists ?glove (exists ?bowl (exists ?remote (exists ?camera (and (Is ?glove 'glove') (Has ?glove 'white') (Is ?bowl 'bowl') (Has ?bowl 'yellow') (Is ?remote 'remote') (Has ?remote 'gray') (Is ?camera 'camera') (Has ?camera 'black') (AlignedHorizontally ?shoe ?shirt) (LargerThan ?shirt ?shoe) (Above ?glove ?shoe) (Above ?bowl ?glove) (Above ?remote ?bowl) (Above ?camera ?remote))))))))))",
+    "cnf": "(exists ?shirt (forall ?shoe (exists ?glove (exists ?bowl (exists ?remote (exists ?camera (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnLeftSide ?shirt) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (AlignedHorizontally ?shoe ?shirt)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (LargerThan ?shirt ?shoe)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Has ?camera 'black')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Above ?glove ?shoe)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Is ?camera 'camera')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Above ?camera ?remote)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Above ?bowl ?glove)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Has ?glove 'white')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Has ?remote 'gray')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Above ?remote ?bowl)) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Has ?bowl 'yellow')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Is ?glove 'glove')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Is ?bowl 'bowl')) (or (not (Is ?shoe 'shoe')) (not (Has ?shoe 'black')) (Is ?remote 'remote')))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "camera",
+        "bowl",
+        "glove",
+        "shoe",
+        "shirt"
+    ]
+}

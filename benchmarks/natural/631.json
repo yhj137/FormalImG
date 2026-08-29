@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A round rock is located next to a house. A blue jacket is lying on the rock, and there are headphones inside the jacket.",
+    "dsl": "(exists ?h (exists ?r (exists ?j (exists ?hp (and (Is ?h 'house') (Is ?r 'rock') (HasShape ?r 'round') (NextTo ?r ?h) (Is ?j 'jacket') (HasColor ?j 'blue') (On ?j ?r) (Is ?hp 'headphones') (In ?hp ?j))))))",
+    "cnf": "(exists ?h (exists ?r (exists ?j (exists ?hp (and (Is ?h 'house') (NextTo ?r ?h) (HasShape ?r 'round') (On ?j ?r) (Is ?r 'rock') (HasColor ?j 'blue') (In ?hp ?j) (Is ?j 'jacket') (Is ?hp 'headphones'))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "rock",
+        "jacket",
+        "headphones"
+    ]
+}

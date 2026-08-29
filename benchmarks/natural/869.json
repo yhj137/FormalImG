@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene. A yellow hat is to the right of a mirror. All the fruit is inside the hat. A woman holding a bottle is to the right of the hat.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'hat') (HasColor ?h 'yellow') (forall ?f (implies (Is ?f 'fruit') (In ?f ?h))) (exists ?w (and (Is ?w 'woman') (RightOf ?w ?h) (exists ?b (and (Is ?b 'bottle') (Holding ?w ?b))))) (exists ?m (and (Is ?m 'mirror') (RightOf ?h ?m))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (forall ?f (exists ?w (exists ?b (exists ?m (and (Is ?h 'hat') (HasColor ?h 'yellow') (or (not (Is ?f 'fruit')) (In ?f ?h)) (RightOf ?w ?h) (RightOf ?h ?m) (Is ?w 'woman') (Holding ?w ?b) (Is ?m 'mirror') (Is ?b 'bottle'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fruit",
+        "bottle",
+        "woman",
+        "mirror",
+        "hat"
+    ]
+}

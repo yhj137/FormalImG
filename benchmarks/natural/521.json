@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a lion with every butterfly resting on it. A cylindrical screwdriver lies next to the lion.",
+    "dsl": "(and (IsStyle 'photo') (exists ?l (and (Is ?l 'lion') (forall ?b (implies (Is ?b 'butterfly') (On ?b ?l))) (exists ?s (and (Is ?s 'screwdriver') (HasShape ?s 'cylindrical') (NextTo ?s ?l))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?l (forall ?b (exists ?s (and (Is ?l 'lion') (or (not (Is ?b 'butterfly')) (On ?b ?l)) (NextTo ?s ?l) (HasShape ?s 'cylindrical') (Is ?s 'screwdriver'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "screwdriver",
+        "lion"
+    ]
+}

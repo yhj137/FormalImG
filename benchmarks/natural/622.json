@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a sleeping child lying on a bed. To the left of the bed sits a red backpack, which contains a bowl inside it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (exists ?p (exists ?o (and (Is ?c 'child') (Is ?b 'bed') (Is ?p 'backpack') (Is ?o 'bowl') (HasState ?c 'sleeping') (On ?c ?b) (LeftOf ?p ?b) (HasColor ?p 'red') (In ?o ?p)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?b (exists ?p (exists ?o (and (Is ?c 'child') (HasState ?c 'sleeping') (On ?c ?b) (Is ?b 'bed') (LeftOf ?p ?b) (Is ?p 'backpack') (HasColor ?p 'red') (In ?o ?p) (Is ?o 'bowl')))))))",
+    "k": 4,
+    "object_classes": [
+        "backpack",
+        "bed",
+        "bowl",
+        "child"
+    ]
+}

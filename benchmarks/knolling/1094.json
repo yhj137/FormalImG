@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. On the right side of the image, there is a keyboard. To the left of the keyboard is a drill. The arrangement follows a rule for every wrench in the scene: the drill is visually larger than the wrench, and the wrench is positioned to the left of the drill. Extending the sequence to the left of the wrench, there is a lighter, followed by a pen to the left of the lighter, and finally a watch to the left of the pen.",
+    "dsl": "(exists ?keyboard (exists ?drill (and (Is ?keyboard 'keyboard') (Is ?drill 'drill') (OnRightSide ?keyboard) (LeftOf ?drill ?keyboard) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?lighter (exists ?pen (exists ?watch (and (Is ?lighter 'lighter') (Is ?pen 'pen') (Is ?watch 'watch') (LargerThan ?drill ?wrench) (LeftOf ?wrench ?drill) (LeftOf ?lighter ?wrench) (LeftOf ?pen ?lighter) (LeftOf ?watch ?pen))))))))))",
+    "cnf": "(exists ?keyboard (exists ?drill (forall ?wrench (exists ?lighter (exists ?pen (exists ?watch (and (Is ?keyboard 'keyboard') (OnRightSide ?keyboard) (LeftOf ?drill ?keyboard) (Is ?drill 'drill') (or (not (Is ?wrench 'wrench')) (LargerThan ?drill ?wrench)) (or (not (Is ?wrench 'wrench')) (LeftOf ?wrench ?drill)) (or (not (Is ?wrench 'wrench')) (Is ?watch 'watch')) (or (not (Is ?wrench 'wrench')) (LeftOf ?lighter ?wrench)) (or (not (Is ?wrench 'wrench')) (Is ?pen 'pen')) (or (not (Is ?wrench 'wrench')) (LeftOf ?watch ?pen)) (or (not (Is ?wrench 'wrench')) (Is ?lighter 'lighter')) (or (not (Is ?wrench 'wrench')) (LeftOf ?pen ?lighter)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pen",
+        "wrench",
+        "keyboard",
+        "watch",
+        "drill",
+        "lighter"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack and a pan positioned on the left side and aligned vertically. On the right side, there is a book, a pair of glasses, and a hammer, which are also aligned vertically with each other. The backpack is larger than the book. Additionally, for every sock in the image, there is a carrot aligned vertically with it. The socks are aligned vertically with the pan, and the pan is larger than the carrot. The carrots are also located on the left side.",
+    "dsl": "(exists ?backpack (exists ?pan (exists ?book (exists ?glasses (exists ?hammer (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?pan 'pan') (OnLeftSide ?pan) (AlignedVertically ?backpack ?pan) (Is ?book 'book') (OnRightSide ?book) (Is ?glasses 'glasses') (OnRightSide ?glasses) (Is ?hammer 'hammer') (OnRightSide ?hammer) (AlignedVertically ?book ?glasses) (AlignedVertically ?glasses ?hammer) (LargerThan ?backpack ?book) (forall ?sock (implies (Is ?sock 'sock') (exists ?carrot (and (Is ?carrot 'carrot') (OnLeftSide ?carrot) (AlignedVertically ?sock ?pan) (AlignedVertically ?sock ?carrot) (LargerThan ?pan ?carrot)))))))))))",
+    "cnf": "(exists ?backpack (exists ?pan (exists ?book (exists ?glasses (exists ?hammer (forall ?sock (exists ?carrot (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (AlignedVertically ?backpack ?pan) (LargerThan ?backpack ?book) (OnLeftSide ?pan) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?pan)) (AlignedVertically ?book ?glasses) (Is ?pan 'pan') (or (not (Is ?sock 'sock')) (LargerThan ?pan ?carrot)) (or (not (Is ?sock 'sock')) (OnLeftSide ?carrot)) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?carrot)) (OnRightSide ?book) (OnRightSide ?glasses) (AlignedVertically ?glasses ?hammer) (or (not (Is ?sock 'sock')) (Is ?carrot 'carrot')) (Is ?book 'book') (Is ?glasses 'glasses') (OnRightSide ?hammer) (Is ?hammer 'hammer')))))))))",
+    "k": 7,
+    "object_classes": [
+        "hammer",
+        "backpack",
+        "pan",
+        "carrot",
+        "book",
+        "glasses",
+        "sock"
+    ]
+}

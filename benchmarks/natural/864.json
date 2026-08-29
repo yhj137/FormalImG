@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style image. Next to every car is an open wardrobe. To the right of the wardrobe sits a teddy bear holding a book, with a flower next to the teddy bear.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?c (implies (Is ?c 'car') (exists ?w (exists ?t (exists ?b (exists ?f (and (Is ?w 'wardrobe') (HasState ?w 'open') (NextTo ?w ?c) (Is ?t 'teddy bear') (HasState ?t 'sitting') (RightOf ?t ?w) (Is ?b 'book') (Holding ?t ?b) (Is ?f 'flower') (NextTo ?f ?t)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?c (exists ?w (exists ?t (exists ?b (exists ?f (and (or (not (Is ?c 'car')) (Is ?w 'wardrobe')) (or (not (Is ?c 'car')) (HasState ?w 'open')) (or (not (Is ?c 'car')) (NextTo ?w ?c)) (or (not (Is ?c 'car')) (RightOf ?t ?w)) (or (not (Is ?c 'car')) (Is ?t 'teddy bear')) (or (not (Is ?c 'car')) (HasState ?t 'sitting')) (or (not (Is ?c 'car')) (Is ?b 'book')) (or (not (Is ?c 'car')) (Holding ?t ?b)) (or (not (Is ?c 'car')) (Is ?f 'flower')) (or (not (Is ?c 'car')) (NextTo ?f ?t)))))))))",
+    "k": 5,
+    "object_classes": [
+        "teddy bear",
+        "flower",
+        "wardrobe",
+        "car",
+        "book"
+    ]
+}

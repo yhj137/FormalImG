@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the top side. The monitor is above a drill, and pliers are located to the right of the drill. For every carrot present, it is positioned to the left of the monitor. Below the drill is a wallet, and glasses are to the right of the wallet. A ruler is placed below the wallet on the bottom side, and keys are to the right of the ruler.",
+    "dsl": "(exists ?monitor (exists ?drill (exists ?pliers (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?drill 'drill') (Above ?monitor ?drill) (Is ?pliers 'pliers') (RightOf ?pliers ?drill) (forall ?carrot (implies (Is ?carrot 'carrot') (LeftOf ?carrot ?monitor))) (exists ?wallet (exists ?glasses (exists ?ruler (exists ?keys (and (Is ?wallet 'wallet') (Below ?wallet ?drill) (Is ?glasses 'glasses') (RightOf ?glasses ?wallet) (Is ?ruler 'ruler') (Below ?ruler ?wallet) (OnBottomSide ?ruler) (Is ?keys 'keys') (RightOf ?keys ?ruler))))))))))",
+    "cnf": "(exists ?monitor (exists ?drill (exists ?pliers (forall ?carrot (exists ?wallet (exists ?glasses (exists ?ruler (exists ?keys (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Above ?monitor ?drill) (or (not (Is ?carrot 'carrot')) (LeftOf ?carrot ?monitor)) (Is ?drill 'drill') (RightOf ?pliers ?drill) (Below ?wallet ?drill) (Is ?pliers 'pliers') (Is ?wallet 'wallet') (RightOf ?glasses ?wallet) (Below ?ruler ?wallet) (Is ?glasses 'glasses') (Is ?ruler 'ruler') (OnBottomSide ?ruler) (RightOf ?keys ?ruler) (Is ?keys 'keys'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "keys",
+        "pliers",
+        "carrot",
+        "drill",
+        "wallet",
+        "monitor"
+    ]
+}

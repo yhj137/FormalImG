@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This oil painting depicts every ball being held by a horse next to a red bus. Resting on the bus is a plate containing a dirty spoon.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?b (implies (Is ?b 'ball') (exists ?h (exists ?bus (exists ?p (exists ?s (and (Is ?h 'horse') (Is ?bus 'bus') (Is ?p 'plate') (Is ?s 'spoon') (Holding ?h ?b) (NextTo ?h ?bus) (HasColor ?bus 'red') (On ?p ?bus) (In ?s ?p) (HasState ?s 'dirty')))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?b (exists ?h (exists ?bus (exists ?p (exists ?s (and (or (not (Is ?b 'ball')) (Is ?h 'horse')) (or (not (Is ?b 'ball')) (Holding ?h ?b)) (or (not (Is ?b 'ball')) (Is ?bus 'bus')) (or (not (Is ?b 'ball')) (NextTo ?h ?bus)) (or (not (Is ?b 'ball')) (Is ?s 'spoon')) (or (not (Is ?b 'ball')) (Is ?p 'plate')) (or (not (Is ?b 'ball')) (HasColor ?bus 'red')) (or (not (Is ?b 'ball')) (In ?s ?p)) (or (not (Is ?b 'ball')) (On ?p ?bus)) (or (not (Is ?b 'ball')) (HasState ?s 'dirty')))))))))",
+    "k": 5,
+    "object_classes": [
+        "bus",
+        "horse",
+        "spoon",
+        "ball",
+        "plate"
+    ]
+}

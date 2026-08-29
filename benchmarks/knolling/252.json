@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a book and a set of keys. The book is positioned on the top side of the frame and appears larger than the keys.",
+    "dsl": "(exists ?b (exists ?k (and (Is ?b 'book') (Is ?k 'keys') (OnTopSide ?b) (LargerThan ?b ?k))))",
+    "cnf": "(exists ?b (exists ?k (and (Is ?b 'book') (OnTopSide ?b) (LargerThan ?b ?k) (Is ?k 'keys'))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "keys"
+    ]
+}

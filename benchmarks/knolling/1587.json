@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board located on the top side. Below the cutting board is a black keyboard, and they are aligned vertically. Below the keyboard is a drill, also aligned vertically with the keyboard. Further down in this column is a hammer, aligned vertically with the drill. On the left side of the image, there is a game controller located to the left of the cutting board. Below the game controller is a stapler, which is aligned vertically with the controller and positioned to the left of the keyboard. Below the stapler is a phone, which is aligned vertically with the stapler, situated to the left of the drill, and is visually smaller than the drill. Finally, for every sock in the image, it is white and positioned to the left of the hammer.",
+    "dsl": "(exists ?cb (exists ?kb (exists ?dr (exists ?hm (exists ?gc (exists ?st (exists ?ph (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (Is ?kb 'keyboard') (Has ?kb 'black') (Below ?kb ?cb) (AlignedVertically ?kb ?cb) (Is ?dr 'drill') (Below ?dr ?kb) (AlignedVertically ?dr ?kb) (Is ?hm 'hammer') (Below ?hm ?dr) (AlignedVertically ?hm ?dr) (Is ?gc 'game_controller') (OnLeftSide ?gc) (LeftOf ?gc ?cb) (Is ?st 'stapler') (Below ?st ?gc) (AlignedVertically ?st ?gc) (LeftOf ?st ?kb) (Is ?ph 'phone') (Below ?ph ?st) (AlignedVertically ?ph ?st) (LeftOf ?ph ?dr) (SmallerThan ?ph ?dr) (forall ?sk (implies (Is ?sk 'sock') (and (Has ?sk 'white') (LeftOf ?sk ?hm))))))))))))",
+    "cnf": "(exists ?cb (exists ?kb (exists ?dr (exists ?hm (exists ?gc (exists ?st (exists ?ph (forall ?sk (and (Is ?cb 'cutting_board') (OnTopSide ?cb) (Below ?kb ?cb) (AlignedVertically ?kb ?cb) (Has ?kb 'black') (LeftOf ?gc ?cb) (Below ?dr ?kb) (Is ?kb 'keyboard') (OnLeftSide ?gc) (Below ?st ?gc) (AlignedVertically ?dr ?kb) (Is ?dr 'drill') (Is ?gc 'game_controller') (AlignedVertically ?st ?gc) (Is ?st 'stapler') (LeftOf ?st ?kb) (Below ?hm ?dr) (Below ?ph ?st) (AlignedVertically ?hm ?dr) (Is ?hm 'hammer') (AlignedVertically ?ph ?st) (Is ?ph 'phone') (LeftOf ?ph ?dr) (or (not (Is ?sk 'sock')) (LeftOf ?sk ?hm)) (SmallerThan ?ph ?dr) (or (not (Is ?sk 'sock')) (Has ?sk 'white')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "stapler",
+        "sock",
+        "keyboard",
+        "phone",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "hammer"
+    ]
+}

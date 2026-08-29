@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, there is a screwdriver positioned above it, and that screwdriver is located on the right side of the image.",
+    "dsl": "(and (forall ?backpack (implies (Is ?backpack 'backpack') (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?backpack) (OnRightSide ?screwdriver))))))",
+    "cnf": "(forall ?backpack (exists ?screwdriver (and (or (not (Is ?backpack 'backpack')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?backpack 'backpack')) (Above ?screwdriver ?backpack)) (or (not (Is ?backpack 'backpack')) (OnRightSide ?screwdriver)))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "screwdriver"
+    ]
+}

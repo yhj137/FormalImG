@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal lineup of objects. The arrangement consists of a shirt, a handbag, a sandwich, a remote, a pair of glasses, a carrot, and a bottle, ordered from left to right. The bottle is specifically located on the right side of the image. The items are aligned horizontally. In terms of size, the handbag is larger than the sandwich, while the remote is smaller than the handbag. Additionally, for every lighter in the scene, it is positioned to the left of the shirt and is smaller than the glasses.",
+    "dsl": "(exists ?shirt (exists ?handbag (exists ?sandwich (exists ?remote (exists ?glasses (exists ?carrot (exists ?bottle (and (Is ?shirt 'shirt') (Is ?handbag 'handbag') (Is ?sandwich 'sandwich') (Is ?remote 'remote') (Is ?glasses 'glasses') (Is ?carrot 'carrot') (Is ?bottle 'bottle') (LeftOf ?shirt ?handbag) (LeftOf ?handbag ?sandwich) (LeftOf ?sandwich ?remote) (LeftOf ?remote ?glasses) (LeftOf ?glasses ?carrot) (LeftOf ?carrot ?bottle) (OnRightSide ?bottle) (AlignedHorizontally ?shirt ?bottle) (AlignedHorizontally ?handbag ?glasses) (LargerThan ?handbag ?sandwich) (SmallerThan ?remote ?handbag) (forall ?lighter (implies (Is ?lighter 'lighter') (and (LeftOf ?lighter ?shirt) (SmallerThan ?lighter ?glasses))))))))))))",
+    "cnf": "(exists ?shirt (exists ?handbag (exists ?sandwich (exists ?remote (exists ?glasses (exists ?carrot (exists ?bottle (forall ?lighter (and (Is ?shirt 'shirt') (LeftOf ?shirt ?handbag) (AlignedHorizontally ?shirt ?bottle) (Is ?handbag 'handbag') (LeftOf ?handbag ?sandwich) (or (not (Is ?lighter 'lighter')) (LeftOf ?lighter ?shirt)) (OnRightSide ?bottle) (AlignedHorizontally ?handbag ?glasses) (Is ?sandwich 'sandwich') (LeftOf ?sandwich ?remote) (or (not (Is ?lighter 'lighter')) (SmallerThan ?lighter ?glasses)) (LeftOf ?carrot ?bottle) (LargerThan ?handbag ?sandwich) (LeftOf ?glasses ?carrot) (Is ?remote 'remote') (LeftOf ?remote ?glasses) (Is ?bottle 'bottle') (SmallerThan ?remote ?handbag) (Is ?carrot 'carrot') (Is ?glasses 'glasses'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "carrot",
+        "handbag",
+        "lighter",
+        "bottle",
+        "sandwich",
+        "shirt"
+    ]
+}

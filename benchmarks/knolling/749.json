@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a red stapler and a blue mouse, with the stapler being larger than the mouse. For every game controller in the scene, there is a white hat aligned horizontally with it, and that hat is larger than the stapler.",
+    "dsl": "(exists ?stapler (exists ?mouse (and (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?mouse 'mouse') (Has ?mouse 'blue') (LargerThan ?stapler ?mouse) (forall ?gc (implies (Is ?gc 'game_controller') (exists ?hat (and (Is ?hat 'hat') (Has ?hat 'white') (AlignedHorizontally ?gc ?hat) (LargerThan ?hat ?stapler))))))))",
+    "cnf": "(exists ?stapler (exists ?mouse (forall ?gc (exists ?hat (and (Is ?stapler 'stapler') (Has ?stapler 'red') (LargerThan ?stapler ?mouse) (or (not (Is ?gc 'game_controller')) (LargerThan ?hat ?stapler)) (Has ?mouse 'blue') (or (not (Is ?gc 'game_controller')) (AlignedHorizontally ?gc ?hat)) (Is ?mouse 'mouse') (or (not (Is ?gc 'game_controller')) (Has ?hat 'white')) (or (not (Is ?gc 'game_controller')) (Is ?hat 'hat')))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "mouse",
+        "stapler",
+        "game_controller"
+    ]
+}

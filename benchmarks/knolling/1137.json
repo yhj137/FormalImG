@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged vertical column of objects. A handbag is positioned on the bottom side of the image. Directly above the handbag is a stapler, and directly above the stapler is a mouse; these three items are aligned vertically. For every set of keys in the scene, the keys are visually smaller than the handbag, are located above the mouse, and share the same vertical alignment. Continuing the column, an apple is positioned above the keys, and a lemon is located above the apple, with all items maintaining the vertical alignment.",
+    "dsl": "(exists ?handbag (exists ?stapler (exists ?mouse (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Is ?stapler 'stapler') (Above ?stapler ?handbag) (AlignedVertically ?stapler ?handbag) (Is ?mouse 'mouse') (Above ?mouse ?stapler) (AlignedVertically ?mouse ?stapler) (forall ?keys (implies (Is ?keys 'keys') (exists ?apple (exists ?lemon (and (Is ?apple 'apple') (Is ?lemon 'lemon') (SmallerThan ?keys ?handbag) (Above ?keys ?mouse) (AlignedVertically ?keys ?mouse) (Above ?apple ?keys) (AlignedVertically ?apple ?keys) (Above ?lemon ?apple) (AlignedVertically ?lemon ?apple))))))))))",
+    "cnf": "(exists ?handbag (exists ?stapler (exists ?mouse (forall ?keys (exists ?apple (exists ?lemon (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Above ?stapler ?handbag) (AlignedVertically ?stapler ?handbag) (Is ?stapler 'stapler') (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?handbag)) (Above ?mouse ?stapler) (or (not (Is ?keys 'keys')) (Is ?lemon 'lemon')) (or (not (Is ?keys 'keys')) (Above ?keys ?mouse)) (AlignedVertically ?mouse ?stapler) (Is ?mouse 'mouse') (or (not (Is ?keys 'keys')) (Is ?apple 'apple')) (or (not (Is ?keys 'keys')) (Above ?lemon ?apple)) (or (not (Is ?keys 'keys')) (AlignedVertically ?keys ?mouse)) (or (not (Is ?keys 'keys')) (Above ?apple ?keys)) (or (not (Is ?keys 'keys')) (AlignedVertically ?apple ?keys)) (or (not (Is ?keys 'keys')) (AlignedVertically ?lemon ?apple)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "mouse",
+        "apple",
+        "stapler",
+        "lemon",
+        "handbag"
+    ]
+}

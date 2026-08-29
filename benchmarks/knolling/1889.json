@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical column of objects. A laptop is placed on the top side. Below the laptop are blue jeans, and below the jeans is a pan. For every tie in the scene, it is red and positioned below the pan. Directly below the tie is a mouse, which is visually smaller than the laptop. A cup is placed below the mouse. Below the cup is a donut, which is smaller than the pan. A wrench is located below the donut, and scissors are below the wrench. Finally, a shoe is located on the bottom side, with the scissors positioned above it.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?pan (forall ?tie (implies (Is ?tie 'tie') (exists ?mouse (exists ?cup (exists ?donut (exists ?wrench (exists ?scissors (exists ?shoe (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?laptop) (Is ?pan 'pan') (Below ?pan ?jeans) (Has ?tie 'red') (Below ?tie ?pan) (Is ?mouse 'mouse') (Below ?mouse ?tie) (SmallerThan ?mouse ?laptop) (Is ?cup 'cup') (Below ?cup ?mouse) (Is ?donut 'donut') (Below ?donut ?cup) (SmallerThan ?donut ?pan) (Is ?wrench 'wrench') (Below ?wrench ?donut) (Is ?scissors 'scissors') (Below ?scissors ?wrench) (Is ?shoe 'shoe') (Above ?scissors ?shoe) (OnBottomSide ?shoe)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?pan (forall ?tie (exists ?mouse (exists ?cup (exists ?donut (exists ?wrench (exists ?scissors (exists ?shoe (and (or (not (Is ?tie 'tie')) (Is ?laptop 'laptop')) (or (not (Is ?tie 'tie')) (OnTopSide ?laptop)) (or (not (Is ?tie 'tie')) (Is ?jeans 'jeans')) (or (not (Is ?tie 'tie')) (Below ?jeans ?laptop)) (or (not (Is ?tie 'tie')) (Has ?jeans 'blue')) (or (not (Is ?tie 'tie')) (Is ?pan 'pan')) (or (not (Is ?tie 'tie')) (SmallerThan ?mouse ?laptop)) (or (not (Is ?tie 'tie')) (Below ?pan ?jeans)) (or (not (Is ?tie 'tie')) (Below ?mouse ?tie)) (or (not (Is ?tie 'tie')) (Is ?cup 'cup')) (or (not (Is ?tie 'tie')) (Below ?cup ?mouse)) (or (not (Is ?tie 'tie')) (Has ?tie 'red')) (or (not (Is ?tie 'tie')) (Below ?tie ?pan)) (or (not (Is ?tie 'tie')) (Is ?mouse 'mouse')) (or (not (Is ?tie 'tie')) (Is ?donut 'donut')) (or (not (Is ?tie 'tie')) (Below ?donut ?cup)) (or (not (Is ?tie 'tie')) (SmallerThan ?donut ?pan)) (or (not (Is ?tie 'tie')) (Is ?wrench 'wrench')) (or (not (Is ?tie 'tie')) (Below ?wrench ?donut)) (or (not (Is ?tie 'tie')) (Is ?scissors 'scissors')) (or (not (Is ?tie 'tie')) (Below ?scissors ?wrench)) (or (not (Is ?tie 'tie')) (Is ?shoe 'shoe')) (or (not (Is ?tie 'tie')) (Above ?scissors ?shoe)) (or (not (Is ?tie 'tie')) (OnBottomSide ?shoe)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "wrench",
+        "cup",
+        "pan",
+        "jeans",
+        "mouse",
+        "scissors",
+        "shoe",
+        "donut"
+    ]
+}

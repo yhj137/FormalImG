@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a backpack positioned on the left side of the scene. To the left of a hat lies the backpack, and these two objects are aligned horizontally. A cutting board is placed below the backpack. A game controller is located on the bottom side of the arrangement. Furthermore, for every lemon in the image, the cutting board is larger than the lemon, and the lemon is positioned to the left of the game controller.",
+    "dsl": "(exists ?backpack (exists ?hat (exists ?board (exists ?controller (and (Is ?backpack 'backpack') (Is ?hat 'hat') (Is ?board 'cutting_board') (Is ?controller 'game_controller') (OnLeftSide ?backpack) (LeftOf ?backpack ?hat) (AlignedHorizontally ?backpack ?hat) (Below ?board ?backpack) (OnBottomSide ?controller) (forall ?lemon (implies (Is ?lemon 'lemon') (and (LargerThan ?board ?lemon) (LeftOf ?lemon ?controller)))))))))",
+    "cnf": "(exists ?backpack (exists ?hat (exists ?board (exists ?controller (forall ?lemon (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (LeftOf ?backpack ?hat) (AlignedHorizontally ?backpack ?hat) (Is ?hat 'hat') (Below ?board ?backpack) (Is ?board 'cutting_board') (or (not (Is ?lemon 'lemon')) (LargerThan ?board ?lemon)) (or (not (Is ?lemon 'lemon')) (LeftOf ?lemon ?controller)) (OnBottomSide ?controller) (Is ?controller 'game_controller')))))))",
+    "k": 5,
+    "object_classes": [
+        "lemon",
+        "game_controller",
+        "cutting_board",
+        "hat",
+        "backpack"
+    ]
+}

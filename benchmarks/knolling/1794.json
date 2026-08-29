@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a neat arrangement. A pair of jeans is positioned on the top side of the scene. Directly below the jeans is a keyboard, and below the keyboard is a handbag; these three items are aligned vertically. To the left of the jeans is a pizza, and the jeans are larger than the pizza. To the left of the keyboard is a drill, and a wrench is placed to the left of the drill. To the left of the handbag sits a stapler, with a pair of scissors located to the left of the stapler. The handbag is visibly larger than the stapler. Furthermore, for every apple in the image, it is placed to the left of the scissors.",
+    "dsl": "(exists ?jeans (exists ?keyboard (exists ?handbag (exists ?pizza (exists ?drill (exists ?wrench (exists ?stapler (exists ?scissors (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Is ?keyboard 'keyboard') (Is ?handbag 'handbag') (Is ?pizza 'pizza') (Is ?drill 'drill') (Is ?wrench 'wrench') (Is ?stapler 'stapler') (Is ?scissors 'scissors') (Below ?keyboard ?jeans) (Below ?handbag ?keyboard) (AlignedVertically ?jeans ?keyboard) (AlignedVertically ?keyboard ?handbag) (LeftOf ?pizza ?jeans) (LargerThan ?jeans ?pizza) (LeftOf ?drill ?keyboard) (LeftOf ?wrench ?drill) (LeftOf ?stapler ?handbag) (LargerThan ?handbag ?stapler) (LeftOf ?scissors ?stapler) (forall ?apple (implies (Is ?apple 'apple') (LeftOf ?apple ?scissors))))))))))))",
+    "cnf": "(exists ?jeans (exists ?keyboard (exists ?handbag (exists ?pizza (exists ?drill (exists ?wrench (exists ?stapler (exists ?scissors (forall ?apple (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?keyboard ?jeans) (AlignedVertically ?jeans ?keyboard) (Is ?keyboard 'keyboard') (Below ?handbag ?keyboard) (LeftOf ?pizza ?jeans) (AlignedVertically ?keyboard ?handbag) (Is ?handbag 'handbag') (LargerThan ?jeans ?pizza) (Is ?pizza 'pizza') (LeftOf ?drill ?keyboard) (LeftOf ?stapler ?handbag) (Is ?drill 'drill') (LeftOf ?wrench ?drill) (LargerThan ?handbag ?stapler) (Is ?stapler 'stapler') (Is ?wrench 'wrench') (LeftOf ?scissors ?stapler) (Is ?scissors 'scissors') (or (not (Is ?apple 'apple')) (LeftOf ?apple ?scissors))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "apple",
+        "keyboard",
+        "wrench",
+        "pizza",
+        "drill",
+        "handbag",
+        "jeans",
+        "scissors"
+    ]
+}

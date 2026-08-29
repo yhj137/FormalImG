@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman sitting in a metal chair. She is holding every basket, all of which are located next to the chair.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (and (Is ?w 'woman') (Is ?c 'chair') (HasMaterial ?c 'metal') (In ?w ?c) (forall ?b (implies (Is ?b 'basket') (and (Holding ?w ?b) (NextTo ?b ?c))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?c (forall ?b (and (Is ?w 'woman') (In ?w ?c) (or (not (Is ?b 'basket')) (Holding ?w ?b)) (HasMaterial ?c 'metal') (or (not (Is ?b 'basket')) (NextTo ?b ?c)) (Is ?c 'chair'))))))",
+    "k": 3,
+    "object_classes": [
+        "chair",
+        "basket",
+        "woman"
+    ]
+}

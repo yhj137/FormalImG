@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a monitor. Directly below the monitor is a drill, and below the drill is a plate, with all three objects aligned vertically. On the right side, for every laptop present, there is a mouse located below it and a lemon located below the mouse; these form a vertical column aligned with the laptop. Additionally, there is an apple positioned to the left of the lemon. The monitor is spatially located to the left of the laptop.",
+    "dsl": "(exists ?monitor (exists ?drill (exists ?plate (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?drill 'drill') (Below ?drill ?monitor) (AlignedVertically ?drill ?monitor) (Is ?plate 'plate') (Below ?plate ?drill) (AlignedVertically ?plate ?drill) (forall ?laptop (implies (Is ?laptop 'laptop') (exists ?mouse (exists ?lemon (exists ?apple (and (OnRightSide ?laptop) (LeftOf ?monitor ?laptop) (Is ?mouse 'mouse') (Below ?mouse ?laptop) (AlignedVertically ?mouse ?laptop) (Is ?lemon 'lemon') (Below ?lemon ?mouse) (AlignedVertically ?lemon ?mouse) (Is ?apple 'apple') (LeftOf ?apple ?lemon)))))))))))",
+    "cnf": "(exists ?monitor (exists ?drill (exists ?plate (forall ?laptop (exists ?mouse (exists ?lemon (exists ?apple (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Below ?drill ?monitor) (AlignedVertically ?drill ?monitor) (Is ?drill 'drill') (or (not (Is ?laptop 'laptop')) (LeftOf ?monitor ?laptop)) (Below ?plate ?drill) (or (not (Is ?laptop 'laptop')) (OnRightSide ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?mouse 'mouse')) (AlignedVertically ?plate ?drill) (Is ?plate 'plate') (or (not (Is ?laptop 'laptop')) (Below ?mouse ?laptop)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?mouse ?laptop)) (or (not (Is ?laptop 'laptop')) (Is ?lemon 'lemon')) (or (not (Is ?laptop 'laptop')) (Below ?lemon ?mouse)) (or (not (Is ?laptop 'laptop')) (AlignedVertically ?lemon ?mouse)) (or (not (Is ?laptop 'laptop')) (Is ?apple 'apple')) (or (not (Is ?laptop 'laptop')) (LeftOf ?apple ?lemon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "apple",
+        "lemon",
+        "drill",
+        "mouse",
+        "monitor"
+    ]
+}

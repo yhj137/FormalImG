@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a pan. A book is located above the pan, and a watch is located above the book; these three objects are aligned vertically. Additionally, for every mouse in the image, it is placed to the right of the watch, and a donut is placed to the right of that mouse.",
+    "dsl": "(exists ?pan (exists ?book (exists ?watch (and (Is ?pan 'pan') (Is ?book 'book') (Is ?watch 'watch') (OnLeftSide ?pan) (Above ?book ?pan) (Above ?watch ?book) (AlignedVertically ?pan ?book) (AlignedVertically ?book ?watch) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?donut (and (Is ?donut 'donut') (RightOf ?mouse ?watch) (RightOf ?donut ?mouse)))))))))",
+    "cnf": "(exists ?pan (exists ?book (exists ?watch (forall ?mouse (exists ?donut (and (Is ?pan 'pan') (OnLeftSide ?pan) (Above ?book ?pan) (AlignedVertically ?pan ?book) (Is ?book 'book') (Above ?watch ?book) (AlignedVertically ?book ?watch) (Is ?watch 'watch') (or (not (Is ?mouse 'mouse')) (RightOf ?mouse ?watch)) (or (not (Is ?mouse 'mouse')) (Is ?donut 'donut')) (or (not (Is ?mouse 'mouse')) (RightOf ?donut ?mouse))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "watch",
+        "pan",
+        "mouse",
+        "donut"
+    ]
+}

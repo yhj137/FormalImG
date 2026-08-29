@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman holding a square mirror. A desk is located to the left of the mirror, and every apple is positioned to the left of the woman.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (and (Is ?w 'woman') (forall ?a (implies (Is ?a 'apple') (LeftOf ?a ?w))) (exists ?m (and (Is ?m 'mirror') (HasShape ?m 'square') (Holding ?w ?m) (exists ?d (and (Is ?d 'desk') (LeftOf ?d ?m))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (forall ?a (exists ?m (exists ?d (and (Is ?w 'woman') (or (not (Is ?a 'apple')) (LeftOf ?a ?w)) (Holding ?w ?m) (HasShape ?m 'square') (LeftOf ?d ?m) (Is ?m 'mirror') (Is ?d 'desk')))))))",
+    "k": 4,
+    "object_classes": [
+        "apple",
+        "desk",
+        "mirror",
+        "woman"
+    ]
+}

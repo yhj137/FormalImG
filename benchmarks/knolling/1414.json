@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a single horizontal row of items arranged along the bottom of the scene. Starting from the left side, the sequence consists of a blue backpack, a black monitor, a pizza, a white bowl, a red apple, a pair of gray scissors, a white sock, and a yellow lighter. All eight objects are aligned horizontally. The backpack is positioned on the left and bottom side of the image. Additionally, the monitor is larger than the bowl, and the lighter is smaller than the apple.",
+    "dsl": "(exists ?backpack (exists ?monitor (exists ?pizza (exists ?bowl (exists ?apple (exists ?scissors (exists ?sock (exists ?lighter (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?apple 'apple') (Has ?apple 'red') (Is ?scissors 'scissors') (Has ?scissors 'gray') (Is ?sock 'sock') (Has ?sock 'white') (Is ?lighter 'lighter') (Has ?lighter 'yellow') (OnLeftSide ?backpack) (OnBottomSide ?backpack) (LeftOf ?backpack ?monitor) (LeftOf ?monitor ?pizza) (LeftOf ?pizza ?bowl) (LeftOf ?bowl ?apple) (LeftOf ?apple ?scissors) (LeftOf ?scissors ?sock) (LeftOf ?sock ?lighter) (AlignedHorizontally ?backpack ?monitor) (AlignedHorizontally ?monitor ?pizza) (AlignedHorizontally ?pizza ?bowl) (AlignedHorizontally ?bowl ?apple) (AlignedHorizontally ?apple ?scissors) (AlignedHorizontally ?scissors ?sock) (AlignedHorizontally ?sock ?lighter) (LargerThan ?monitor ?bowl) (SmallerThan ?lighter ?apple))))))))))",
+    "cnf": "(exists ?backpack (exists ?monitor (exists ?pizza (exists ?bowl (exists ?apple (exists ?scissors (exists ?sock (exists ?lighter (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (OnBottomSide ?backpack) (LeftOf ?backpack ?monitor) (AlignedHorizontally ?backpack ?monitor) (Has ?monitor 'black') (LeftOf ?monitor ?pizza) (AlignedHorizontally ?monitor ?pizza) (Is ?monitor 'monitor') (Is ?pizza 'pizza') (LeftOf ?pizza ?bowl) (LargerThan ?monitor ?bowl) (AlignedHorizontally ?pizza ?bowl) (Has ?bowl 'white') (LeftOf ?bowl ?apple) (AlignedHorizontally ?bowl ?apple) (Is ?bowl 'bowl') (Has ?apple 'red') (LeftOf ?apple ?scissors) (AlignedHorizontally ?apple ?scissors) (Is ?apple 'apple') (Has ?scissors 'gray') (LeftOf ?scissors ?sock) (SmallerThan ?lighter ?apple) (AlignedHorizontally ?scissors ?sock) (Is ?scissors 'scissors') (Has ?sock 'white') (LeftOf ?sock ?lighter) (AlignedHorizontally ?sock ?lighter) (Is ?sock 'sock') (Has ?lighter 'yellow') (Is ?lighter 'lighter'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "apple",
+        "sock",
+        "pizza",
+        "backpack",
+        "lighter",
+        "monitor",
+        "bowl",
+        "scissors"
+    ]
+}

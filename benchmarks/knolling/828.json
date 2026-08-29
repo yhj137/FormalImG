@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a wrench, a ruler, a tie, a pair of glasses, and a sock. The wrench is located in the top area of the image. The ruler is vertically aligned with the wrench. Positioned to the right of the ruler is the tie, and to the right of the tie are the glasses, with these three items arranged in a horizontal line. The sock is placed on the right side of the image and is aligned vertically with the glasses.",
+    "dsl": "(exists ?wrench (exists ?ruler (exists ?tie (exists ?glasses (exists ?sock (and (Is ?wrench 'wrench') (Is ?ruler 'ruler') (Is ?tie 'tie') (Is ?glasses 'glasses') (Is ?sock 'sock') (OnTopSide ?wrench) (AlignedVertically ?wrench ?ruler) (RightOf ?tie ?ruler) (AlignedHorizontally ?ruler ?tie) (RightOf ?glasses ?tie) (AlignedHorizontally ?tie ?glasses) (OnRightSide ?sock) (AlignedVertically ?glasses ?sock)))))))",
+    "cnf": "(exists ?wrench (exists ?ruler (exists ?tie (exists ?glasses (exists ?sock (and (Is ?wrench 'wrench') (OnTopSide ?wrench) (AlignedVertically ?wrench ?ruler) (Is ?ruler 'ruler') (RightOf ?tie ?ruler) (AlignedHorizontally ?ruler ?tie) (Is ?tie 'tie') (RightOf ?glasses ?tie) (AlignedHorizontally ?tie ?glasses) (Is ?glasses 'glasses') (AlignedVertically ?glasses ?sock) (OnRightSide ?sock) (Is ?sock 'sock')))))))",
+    "k": 5,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "tie",
+        "sock",
+        "wrench"
+    ]
+}

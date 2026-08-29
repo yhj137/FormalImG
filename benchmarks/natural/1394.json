@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features an elephant holding a sandwich. Next to the elephant is a bicycle with a red jacket lying on it. A plant sits on the jacket, and a fruit rests on the plant. Every tree in the scene is located to the left of the elephant.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?b (exists ?j (exists ?p (exists ?f (and (Is ?e 'elephant') (Is ?s 'sandwich') (Is ?b 'bicycle') (Is ?j 'jacket') (Is ?p 'plant') (Is ?f 'fruit') (Holding ?e ?s) (NextTo ?b ?e) (On ?j ?b) (HasColor ?j 'red') (On ?p ?j) (On ?f ?p) (forall ?t (implies (Is ?t 'tree') (LeftOf ?t ?e)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?s (exists ?b (exists ?j (exists ?p (exists ?f (forall ?t (and (Is ?e 'elephant') (Holding ?e ?s) (NextTo ?b ?e) (Is ?s 'sandwich') (or (not (Is ?t 'tree')) (LeftOf ?t ?e)) (Is ?b 'bicycle') (On ?j ?b) (Is ?j 'jacket') (HasColor ?j 'red') (On ?p ?j) (Is ?p 'plant') (On ?f ?p) (Is ?f 'fruit'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "tree",
+        "plant",
+        "jacket",
+        "bicycle",
+        "sandwich"
+    ]
+}

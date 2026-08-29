@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a black tie positioned below it, a white plate positioned below the tie, and a mouse that is aligned horizontally with the plate and located on the right side of the image.",
+    "dsl": "(and (forall ?m (implies (Is ?m 'monitor') (exists ?t (exists ?p (exists ?mo (and (Is ?t 'tie') (Has ?t 'black') (Is ?p 'plate') (Has ?p 'white') (Is ?mo 'mouse') (Below ?t ?m) (Below ?p ?t) (AlignedHorizontally ?mo ?p) (OnRightSide ?mo))))))))",
+    "cnf": "(forall ?m (exists ?t (exists ?p (exists ?mo (and (or (not (Is ?m 'monitor')) (Is ?t 'tie')) (or (not (Is ?m 'monitor')) (Has ?t 'black')) (or (not (Is ?m 'monitor')) (Below ?t ?m)) (or (not (Is ?m 'monitor')) (Is ?p 'plate')) (or (not (Is ?m 'monitor')) (Below ?p ?t)) (or (not (Is ?m 'monitor')) (Is ?mo 'mouse')) (or (not (Is ?m 'monitor')) (Has ?p 'white')) (or (not (Is ?m 'monitor')) (AlignedHorizontally ?mo ?p)) (or (not (Is ?m 'monitor')) (OnRightSide ?mo)))))))",
+    "k": 4,
+    "object_classes": [
+        "monitor",
+        "plate",
+        "tie",
+        "mouse"
+    ]
+}

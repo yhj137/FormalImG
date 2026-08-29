@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene features a tree in the center. To the left of the tree is a bed where a lion lies holding a bitten apple. Next to the bed stands a chair with a cake on it. Every bird in the scene is perched on the tree, and a standing horse is to the right of the tree.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (and (Is ?t 'tree') (exists ?bd (and (Is ?bd 'bed') (LeftOf ?bd ?t) (forall ?b (implies (Is ?b 'bird') (On ?b ?t))) (exists ?l (and (Is ?l 'lion') (HasState ?l 'lying') (On ?l ?bd) (exists ?a (and (Is ?a 'apple') (HasState ?a 'bitten') (Holding ?l ?a))))) (exists ?c (and (Is ?c 'chair') (NextTo ?c ?bd) (exists ?ck (and (Is ?ck 'cake') (On ?ck ?c))))) (exists ?h (and (Is ?h 'horse') (HasState ?h 'standing') (RightOf ?h ?t))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?bd (forall ?b (exists ?l (exists ?a (exists ?c (exists ?ck (exists ?h (and (Is ?t 'tree') (LeftOf ?bd ?t) (or (not (Is ?b 'bird')) (On ?b ?t)) (Is ?bd 'bed') (On ?l ?bd) (RightOf ?h ?t) (NextTo ?c ?bd) (HasState ?l 'lying') (Holding ?l ?a) (HasState ?h 'standing') (Is ?c 'chair') (On ?ck ?c) (Is ?l 'lion') (HasState ?a 'bitten') (Is ?h 'horse') (Is ?ck 'cake') (Is ?a 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bird",
+        "cake",
+        "chair",
+        "bed",
+        "horse",
+        "tree",
+        "apple",
+        "lion"
+    ]
+}

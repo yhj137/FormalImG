@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a child holding a pan, with all plants positioned to the right. A bench is next to the child, and a sofa sits to the right of the bench. Dirty shoes are located next to the sofa, with a toy car beside them. A bed is positioned to the right of the sofa, and a car is next to the bed.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (exists ?p (and (Is ?c 'child') (Is ?p 'pan') (Holding ?c ?p) (forall ?pl (implies (Is ?pl 'plant') (RightOf ?pl ?c))) (exists ?b (exists ?s (exists ?sh (exists ?tc (exists ?bd (exists ?car (and (Is ?b 'bench') (Is ?s 'sofa') (Is ?sh 'shoes') (Is ?tc 'toy car') (Is ?bd 'bed') (Is ?car 'car') (NextTo ?b ?c) (RightOf ?s ?b) (NextTo ?sh ?s) (HasState ?sh 'dirty') (NextTo ?tc ?sh) (RightOf ?bd ?s) (NextTo ?car ?bd))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (exists ?p (forall ?pl (exists ?b (exists ?s (exists ?sh (exists ?tc (exists ?bd (exists ?car (and (Is ?c 'child') (Holding ?c ?p) (or (not (Is ?pl 'plant')) (RightOf ?pl ?c)) (Is ?p 'pan') (NextTo ?b ?c) (Is ?b 'bench') (RightOf ?s ?b) (Is ?s 'sofa') (NextTo ?sh ?s) (RightOf ?bd ?s) (Is ?sh 'shoes') (HasState ?sh 'dirty') (Is ?bd 'bed') (NextTo ?car ?bd) (NextTo ?tc ?sh) (Is ?car 'car') (Is ?tc 'toy car'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "child",
+        "bench",
+        "shoes",
+        "bed",
+        "plant",
+        "toy car",
+        "pan",
+        "car"
+    ]
+}

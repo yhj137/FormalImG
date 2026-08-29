@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a hammer, a screwdriver, a plate, a brown wallet, and a black watch. Arranged in a horizontal row, the hammer is to the left of the screwdriver, the screwdriver is to the left of the plate, and the plate is to the left of the wallet; all four items are aligned horizontally. The watch is visually smaller than the plate. Additionally, for any shirt present in the scene, it must be blue and positioned below the hammer.",
+    "dsl": "(exists ?hammer (exists ?screwdriver (exists ?plate (exists ?wallet (exists ?watch (and (Is ?hammer 'hammer') (Is ?screwdriver 'screwdriver') (Is ?plate 'plate') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?watch 'watch') (Has ?watch 'black') (LeftOf ?hammer ?screwdriver) (LeftOf ?screwdriver ?plate) (LeftOf ?plate ?wallet) (AlignedHorizontally ?hammer ?screwdriver) (AlignedHorizontally ?screwdriver ?plate) (AlignedHorizontally ?plate ?wallet) (SmallerThan ?watch ?plate) (forall ?shirt (implies (Is ?shirt 'shirt') (and (Has ?shirt 'blue') (Below ?shirt ?hammer))))))))))",
+    "cnf": "(exists ?hammer (exists ?screwdriver (exists ?plate (exists ?wallet (exists ?watch (forall ?shirt (and (Is ?hammer 'hammer') (LeftOf ?hammer ?screwdriver) (AlignedHorizontally ?hammer ?screwdriver) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?plate) (or (not (Is ?shirt 'shirt')) (Below ?shirt ?hammer)) (AlignedHorizontally ?screwdriver ?plate) (Is ?plate 'plate') (LeftOf ?plate ?wallet) (or (not (Is ?shirt 'shirt')) (Has ?shirt 'blue')) (AlignedHorizontally ?plate ?wallet) (Has ?wallet 'brown') (SmallerThan ?watch ?plate) (Is ?wallet 'wallet') (Has ?watch 'black') (Is ?watch 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "plate",
+        "watch",
+        "screwdriver",
+        "hammer",
+        "wallet",
+        "shirt"
+    ]
+}

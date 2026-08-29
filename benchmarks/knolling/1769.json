@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is positioned on the left side of the scene. To the right of the handbag, a book, a bottle, and a cup are arranged in a horizontal row, with the book horizontally aligned with the handbag. Positioned above the book are glasses, above the bottle are pliers, and above the cup is a spoon. Additionally, for every lemon located on the right side of the image, there is a bowl to its left; this bowl is positioned to the right of the cup, and the lemon is smaller than the bowl.",
+    "dsl": "(exists ?handbag (exists ?book (exists ?bottle (exists ?cup (exists ?glasses (exists ?pliers (exists ?spoon (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (Is ?book 'book') (RightOf ?book ?handbag) (AlignedHorizontally ?handbag ?book) (Is ?bottle 'bottle') (RightOf ?bottle ?book) (AlignedHorizontally ?book ?bottle) (Is ?cup 'cup') (RightOf ?cup ?bottle) (AlignedHorizontally ?bottle ?cup) (Is ?glasses 'glasses') (Above ?glasses ?book) (Is ?pliers 'pliers') (Above ?pliers ?bottle) (Is ?spoon 'spoon') (Above ?spoon ?cup) (forall ?lemon (implies (and (Is ?lemon 'lemon') (OnRightSide ?lemon)) (exists ?bowl (and (Is ?bowl 'bowl') (LeftOf ?bowl ?lemon) (RightOf ?bowl ?cup) (SmallerThan ?lemon ?bowl)))))))))))))",
+    "cnf": "(exists ?handbag (exists ?book (exists ?bottle (exists ?cup (exists ?glasses (exists ?pliers (exists ?spoon (forall ?lemon (exists ?bowl (and (Is ?handbag 'handbag') (OnLeftSide ?handbag) (RightOf ?book ?handbag) (AlignedHorizontally ?handbag ?book) (Is ?book 'book') (RightOf ?bottle ?book) (AlignedHorizontally ?book ?bottle) (Is ?bottle 'bottle') (Above ?glasses ?book) (RightOf ?cup ?bottle) (Is ?glasses 'glasses') (AlignedHorizontally ?bottle ?cup) (Is ?cup 'cup') (Above ?pliers ?bottle) (Above ?spoon ?cup) (Is ?pliers 'pliers') (or (not (Is ?lemon 'lemon')) (not (OnRightSide ?lemon)) (RightOf ?bowl ?cup)) (Is ?spoon 'spoon') (or (not (Is ?lemon 'lemon')) (not (OnRightSide ?lemon)) (LeftOf ?bowl ?lemon)) (or (not (Is ?lemon 'lemon')) (not (OnRightSide ?lemon)) (SmallerThan ?lemon ?bowl)) (or (not (Is ?lemon 'lemon')) (not (OnRightSide ?lemon)) (Is ?bowl 'bowl'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "glasses",
+        "pliers",
+        "lemon",
+        "cup",
+        "handbag",
+        "bottle",
+        "bowl",
+        "spoon"
+    ]
+}

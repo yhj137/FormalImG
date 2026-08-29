@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a person to the left of every fish, holding round headphones that rest on them.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'person') (forall ?f (implies (Is ?f 'fish') (LeftOf ?p ?f))) (exists ?h (and (Is ?h 'headphones') (HasShape ?h 'round') (Holding ?p ?h) (On ?h ?p))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (forall ?f (exists ?h (and (Is ?p 'person') (or (not (Is ?f 'fish')) (LeftOf ?p ?f)) (Holding ?p ?h) (On ?h ?p) (HasShape ?h 'round') (Is ?h 'headphones'))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "fish",
+        "person"
+    ]
+}

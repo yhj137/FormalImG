@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene featuring a wooden table in the center with a cup, a lamp, and a pizza on it. Every toy car is inside the cup. To the left of the table, a child wearing a shirt sits on a chair. To the right of the table is a person, with a sleeping lion positioned to their right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (exists ?cp (exists ?l (exists ?p (exists ?ch (exists ?c (exists ?s (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?cp 'cup') (On ?cp ?t) (Is ?l 'lamp') (On ?l ?t) (Is ?p 'pizza') (On ?p ?t) (Is ?ch 'chair') (LeftOf ?ch ?t) (Is ?c 'child') (On ?c ?ch) (Is ?s 'shirt') (On ?s ?c) (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?cp))) (exists ?per (exists ?li (and (Is ?per 'person') (RightOf ?per ?t) (Is ?li 'lion') (RightOf ?li ?per) (HasState ?li 'sleeping')))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (exists ?cp (exists ?l (exists ?p (exists ?ch (exists ?c (exists ?s (forall ?tc (exists ?per (exists ?li (and (Is ?t 'table') (HasMaterial ?t 'wooden') (On ?cp ?t) (On ?l ?t) (Is ?cp 'cup') (or (not (Is ?tc 'toy car')) (In ?tc ?cp)) (On ?p ?t) (Is ?l 'lamp') (LeftOf ?ch ?t) (Is ?p 'pizza') (RightOf ?per ?t) (Is ?ch 'chair') (On ?c ?ch) (Is ?per 'person') (RightOf ?li ?per) (Is ?c 'child') (On ?s ?c) (Is ?li 'lion') (HasState ?li 'sleeping') (Is ?s 'shirt')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shirt",
+        "child",
+        "person",
+        "chair",
+        "pizza",
+        "table",
+        "toy car",
+        "lamp",
+        "cup",
+        "lion"
+    ]
+}

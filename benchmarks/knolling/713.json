@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a keyboard located on the top side of the scene. For every pen in the image, it is positioned to the left of the keyboard. Additionally, for every pen, there is a calculator to its left and a hammer to the left of the calculator. The hammer, calculator, pen, and keyboard are all aligned horizontally.",
+    "dsl": "(exists ?keyboard (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (forall ?pen (implies (Is ?pen 'pen') (exists ?calculator (exists ?hammer (and (Is ?calculator 'calculator') (Is ?hammer 'hammer') (LeftOf ?pen ?keyboard) (LeftOf ?calculator ?pen) (LeftOf ?hammer ?calculator) (AlignedHorizontally ?pen ?keyboard) (AlignedHorizontally ?calculator ?pen) (AlignedHorizontally ?hammer ?calculator))))))))",
+    "cnf": "(exists ?keyboard (forall ?pen (exists ?calculator (exists ?hammer (and (Is ?keyboard 'keyboard') (OnTopSide ?keyboard) (or (not (Is ?pen 'pen')) (LeftOf ?pen ?keyboard)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?keyboard)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (LeftOf ?calculator ?pen)) (or (not (Is ?pen 'pen')) (LeftOf ?hammer ?calculator)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?calculator ?pen)) (or (not (Is ?pen 'pen')) (Is ?calculator 'calculator')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?hammer ?calculator)))))))",
+    "k": 4,
+    "object_classes": [
+        "pen",
+        "hammer",
+        "calculator",
+        "keyboard"
+    ]
+}

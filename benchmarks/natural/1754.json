@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is an oil painting featuring a car parked next to a house. Inside the house stands a white refrigerator with a dirty pan on top. A mirror sits to the left of the pan, and a keyboard to the right. All butterflies hover above the house. A key is inside the pan, and headphones lie next to the keyboard.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?h (exists ?c (exists ?r (exists ?p (exists ?m (exists ?k (and (Is ?h 'house') (Is ?c 'car') (NextTo ?c ?h) (Is ?r 'refrigerator') (HasColor ?r 'white') (In ?r ?h) (Is ?p 'pan') (HasState ?p 'dirty') (On ?p ?r) (Is ?m 'mirror') (LeftOf ?m ?p) (Is ?k 'keyboard') (RightOf ?k ?p) (forall ?b (implies (Is ?b 'butterfly') (Above ?b ?h))) (exists ?key (exists ?hp (and (Is ?key 'key') (In ?key ?p) (Is ?hp 'headphones') (NextTo ?hp ?k))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?h (exists ?c (exists ?r (exists ?p (exists ?m (exists ?k (forall ?b (exists ?key (exists ?hp (and (Is ?h 'house') (NextTo ?c ?h) (In ?r ?h) (Is ?c 'car') (or (not (Is ?b 'butterfly')) (Above ?b ?h)) (HasColor ?r 'white') (On ?p ?r) (Is ?r 'refrigerator') (HasState ?p 'dirty') (LeftOf ?m ?p) (Is ?p 'pan') (RightOf ?k ?p) (Is ?m 'mirror') (In ?key ?p) (Is ?k 'keyboard') (NextTo ?hp ?k) (Is ?key 'key') (Is ?hp 'headphones'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "headphones",
+        "refrigerator",
+        "car",
+        "pan",
+        "butterfly",
+        "mirror",
+        "key",
+        "keyboard"
+    ]
+}

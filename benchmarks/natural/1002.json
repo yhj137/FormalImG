@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a red bus with a woman inside. A bicycle is next to the bus and a table. A white plate sits on the table, while a black cat is next to the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?w (exists ?bi (exists ?t (exists ?p (exists ?c (and (Is ?b 'bus') (HasColor ?b 'red') (Is ?w 'woman') (In ?w ?b) (Is ?bi 'bicycle') (NextTo ?bi ?b) (Is ?t 'table') (NextTo ?bi ?t) (Is ?p 'plate') (HasColor ?p 'white') (On ?p ?t) (Is ?c 'cat') (HasColor ?c 'black') (NextTo ?c ?t)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?w (exists ?bi (exists ?t (exists ?p (exists ?c (and (Is ?b 'bus') (HasColor ?b 'red') (In ?w ?b) (NextTo ?bi ?b) (Is ?w 'woman') (Is ?bi 'bicycle') (NextTo ?bi ?t) (Is ?t 'table') (On ?p ?t) (NextTo ?c ?t) (HasColor ?p 'white') (HasColor ?c 'black') (Is ?p 'plate') (Is ?c 'cat')))))))))",
+    "k": 6,
+    "object_classes": [
+        "woman",
+        "cat",
+        "bus",
+        "table",
+        "bicycle",
+        "plate"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every black umbrella is held by a man who is positioned next to a bench. To the right of the man sits a laptop, and a banana is placed to the right of the laptop. To the left of the bench stands a metal wardrobe containing a toy car and a round apple, with a plant located next to the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?u (implies (Is ?u 'umbrella') (and (HasColor ?u 'black') (exists ?m (exists ?b (exists ?l (exists ?w (exists ?t (exists ?a (exists ?p (exists ?ban (and (Is ?m 'man') (Is ?b 'bench') (Is ?l 'laptop') (Is ?w 'wardrobe') (Is ?t 'toy car') (Is ?a 'apple') (Is ?p 'plant') (Is ?ban 'banana') (Holding ?m ?u) (NextTo ?m ?b) (RightOf ?l ?m) (LeftOf ?w ?b) (HasMaterial ?w 'metal') (In ?t ?w) (In ?a ?w) (HasShape ?a 'round') (NextTo ?p ?w) (RightOf ?ban ?l))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?u (exists ?m (exists ?b (exists ?l (exists ?w (exists ?t (exists ?a (exists ?p (exists ?ban (and (or (not (Is ?u 'umbrella')) (HasColor ?u 'black')) (or (not (Is ?u 'umbrella')) (Is ?m 'man')) (or (not (Is ?u 'umbrella')) (Is ?b 'bench')) (or (not (Is ?u 'umbrella')) (Holding ?m ?u)) (or (not (Is ?u 'umbrella')) (Is ?l 'laptop')) (or (not (Is ?u 'umbrella')) (NextTo ?m ?b)) (or (not (Is ?u 'umbrella')) (Is ?ban 'banana')) (or (not (Is ?u 'umbrella')) (Is ?w 'wardrobe')) (or (not (Is ?u 'umbrella')) (RightOf ?l ?m)) (or (not (Is ?u 'umbrella')) (LeftOf ?w ?b)) (or (not (Is ?u 'umbrella')) (Is ?p 'plant')) (or (not (Is ?u 'umbrella')) (RightOf ?ban ?l)) (or (not (Is ?u 'umbrella')) (Is ?t 'toy car')) (or (not (Is ?u 'umbrella')) (HasMaterial ?w 'metal')) (or (not (Is ?u 'umbrella')) (Is ?a 'apple')) (or (not (Is ?u 'umbrella')) (NextTo ?p ?w)) (or (not (Is ?u 'umbrella')) (In ?t ?w)) (or (not (Is ?u 'umbrella')) (In ?a ?w)) (or (not (Is ?u 'umbrella')) (HasShape ?a 'round')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "banana",
+        "apple",
+        "wardrobe",
+        "plant",
+        "toy car",
+        "laptop",
+        "man",
+        "umbrella",
+        "bench"
+    ]
+}

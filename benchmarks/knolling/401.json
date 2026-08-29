@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a mouse, a fork, and a wrench. The mouse is positioned on the left side of the image. Spatially, the mouse is above the fork, and the fork is above the wrench. Additionally, the wrench is larger than the mouse.",
+    "dsl": "(exists ?mouse (exists ?fork (exists ?wrench (and (Is ?mouse 'mouse') (Is ?fork 'fork') (Is ?wrench 'wrench') (OnLeftSide ?mouse) (Above ?mouse ?fork) (Above ?fork ?wrench) (LargerThan ?wrench ?mouse)))))",
+    "cnf": "(exists ?mouse (exists ?fork (exists ?wrench (and (Is ?mouse 'mouse') (OnLeftSide ?mouse) (Above ?mouse ?fork) (LargerThan ?wrench ?mouse) (Is ?fork 'fork') (Above ?fork ?wrench) (Is ?wrench 'wrench')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "fork",
+        "mouse"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a screwdriver, a mouse, and a glove. The screwdriver is placed on the right side of the composition. The glove is aligned vertically with the screwdriver. To the left of the glove is a mouse, which is smaller in size than the glove.",
+    "dsl": "(exists ?screwdriver (exists ?mouse (exists ?glove (and (Is ?screwdriver 'screwdriver') (Is ?mouse 'mouse') (Is ?glove 'glove') (OnRightSide ?screwdriver) (AlignedVertically ?screwdriver ?glove) (LeftOf ?mouse ?glove) (SmallerThan ?mouse ?glove)))))",
+    "cnf": "(exists ?screwdriver (exists ?mouse (exists ?glove (and (Is ?screwdriver 'screwdriver') (OnRightSide ?screwdriver) (AlignedVertically ?screwdriver ?glove) (Is ?glove 'glove') (LeftOf ?mouse ?glove) (Is ?mouse 'mouse') (SmallerThan ?mouse ?glove)))))",
+    "k": 3,
+    "object_classes": [
+        "glove",
+        "screwdriver",
+        "mouse"
+    ]
+}

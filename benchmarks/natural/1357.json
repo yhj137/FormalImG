@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a bus with a person inside holding a screwdriver. To the left of the bus stands a table where a leather jacket rests, with a bird perched on it. All bottles in the scene are cylindrical and sit on the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (exists ?p (exists ?j (exists ?bird (and (Is ?b 'bus') (Is ?t 'table') (LeftOf ?t ?b) (Is ?p 'person') (In ?p ?b) (Is ?j 'jacket') (On ?j ?t) (HasMaterial ?j 'leather') (Is ?bird 'bird') (On ?bird ?j) (forall ?bot (implies (Is ?bot 'bottle') (and (On ?bot ?t) (HasShape ?bot 'cylindrical')))) (exists ?s (and (Is ?s 'screwdriver') (Holding ?p ?s))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?t (exists ?p (exists ?j (exists ?bird (forall ?bot (exists ?s (and (Is ?b 'bus') (LeftOf ?t ?b) (In ?p ?b) (Is ?t 'table') (On ?j ?t) (Is ?p 'person') (Holding ?p ?s) (or (not (Is ?bot 'bottle')) (On ?bot ?t)) (Is ?j 'jacket') (HasMaterial ?j 'leather') (Is ?s 'screwdriver') (or (not (Is ?bot 'bottle')) (HasShape ?bot 'cylindrical')) (On ?bird ?j) (Is ?bird 'bird'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bottle",
+        "jacket",
+        "person",
+        "bus",
+        "screwdriver",
+        "table",
+        "bird"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene depicts a woman holding a knife. Next to her is a turned-on monitor. Every apple is located to the right of the monitor. A blue lamp is positioned above the monitor, with a pair of glasses next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?k (exists ?m (and (Is ?w 'woman') (Is ?k 'knife') (Holding ?w ?k) (Is ?m 'monitor') (HasState ?m 'on') (NextTo ?m ?w) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?m))) (exists ?l (exists ?g (and (Is ?l 'lamp') (HasColor ?l 'blue') (Above ?l ?m) (Is ?g 'glasses') (NextTo ?g ?l)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?k (exists ?m (forall ?a (exists ?l (exists ?g (and (Is ?w 'woman') (Holding ?w ?k) (NextTo ?m ?w) (Is ?k 'knife') (HasState ?m 'on') (or (not (Is ?a 'apple')) (RightOf ?a ?m)) (Is ?m 'monitor') (Above ?l ?m) (HasColor ?l 'blue') (NextTo ?g ?l) (Is ?l 'lamp') (Is ?g 'glasses')))))))))",
+    "k": 6,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "knife",
+        "lamp",
+        "woman",
+        "apple"
+    ]
+}

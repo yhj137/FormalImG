@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular phone is tucked inside a sofa. A bench stands next to the sofa. Every bird sits on the bench, and to the left of each bird lies a fish with a fork resting on it.",
+    "dsl": "(exists ?s (exists ?b (exists ?p (and (Is ?s 'sofa') (Is ?b 'bench') (Is ?p 'phone') (HasShape ?p 'rectangular') (In ?p ?s) (NextTo ?b ?s) (forall ?bird (implies (Is ?bird 'bird') (exists ?f (exists ?fork (and (Is ?f 'fish') (Is ?fork 'fork') (On ?bird ?b) (LeftOf ?f ?bird) (On ?fork ?f))))))))))",
+    "cnf": "(exists ?s (exists ?b (exists ?p (forall ?bird (exists ?f (exists ?fork (and (Is ?s 'sofa') (In ?p ?s) (NextTo ?b ?s) (HasShape ?p 'rectangular') (Is ?b 'bench') (or (not (Is ?bird 'bird')) (On ?bird ?b)) (Is ?p 'phone') (or (not (Is ?bird 'bird')) (Is ?fork 'fork')) (or (not (Is ?bird 'bird')) (LeftOf ?f ?bird)) (or (not (Is ?bird 'bird')) (Is ?f 'fish')) (or (not (Is ?bird 'bird')) (On ?fork ?f)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "fork",
+        "sofa",
+        "fish",
+        "phone",
+        "bird"
+    ]
+}

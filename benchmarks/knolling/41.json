@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a single pan positioned on the right side of the layout.",
+    "dsl": "(exists ?pan (and (Is ?pan 'pan') (OnRightSide ?pan)))",
+    "cnf": "(exists ?pan (and (Is ?pan 'pan') (OnRightSide ?pan)))",
+    "k": 1,
+    "object_classes": [
+        "pan"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a cartoon style. A bed is located on the left side. To the right of the bed is a sofa, where a sleeping cat is resting. Further to the right stands a wooden table. A woman stands next to the table, holding every hat in the scene.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?t (exists ?w (exists ?c (and (Is ?b 'bed') (Is ?s 'sofa') (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?w 'woman') (Is ?c 'cat') (HasState ?c 'sleeping') (RightOf ?s ?b) (RightOf ?t ?s) (On ?c ?s) (NextTo ?w ?t) (forall ?h (implies (Is ?h 'hat') (Holding ?w ?h))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (exists ?t (exists ?w (exists ?c (forall ?h (and (Is ?b 'bed') (RightOf ?s ?b) (Is ?s 'sofa') (RightOf ?t ?s) (On ?c ?s) (HasMaterial ?t 'wooden') (NextTo ?w ?t) (HasState ?c 'sleeping') (Is ?t 'table') (Is ?w 'woman') (or (not (Is ?h 'hat')) (Holding ?w ?h)) (Is ?c 'cat')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "bed",
+        "woman",
+        "table",
+        "cat",
+        "hat"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden wardrobe standing in the center with a jacket inside. To the left of the wardrobe is a basket containing a cake and all the glasses; a fork is placed to the right of the cake. To the right of the wardrobe, a sitting dog holds a ball.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?b 'basket') (LeftOf ?b ?w) (forall ?g (implies (Is ?g 'glasses') (In ?g ?b))) (exists ?d (exists ?ball (exists ?j (exists ?c (exists ?f (and (Is ?d 'dog') (HasState ?d 'sitting') (RightOf ?d ?w) (Is ?ball 'ball') (Holding ?d ?ball) (Is ?j 'jacket') (In ?j ?w) (Is ?c 'cake') (In ?c ?b) (Is ?f 'fork') (RightOf ?f ?c)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (forall ?g (exists ?d (exists ?ball (exists ?j (exists ?c (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (LeftOf ?b ?w) (RightOf ?d ?w) (Is ?b 'basket') (or (not (Is ?g 'glasses')) (In ?g ?b)) (In ?j ?w) (HasState ?d 'sitting') (Holding ?d ?ball) (In ?c ?b) (Is ?j 'jacket') (Is ?d 'dog') (Is ?ball 'ball') (Is ?c 'cake') (RightOf ?f ?c) (Is ?f 'fork')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "glasses",
+        "cake",
+        "jacket",
+        "ball",
+        "basket",
+        "dog",
+        "wardrobe"
+    ]
+}

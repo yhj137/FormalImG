@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the scene, it is positioned on the left side of the image and serves as the base for a vertical arrangement of items. Directly above the suitcase is a mouse, and the suitcase is larger than the mouse. Above the mouse is a watch, above the watch is a cup, and a knife is located above the cup, with the knife being positioned on the top side of the image.",
+    "dsl": "(and (forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?knife (exists ?cup (exists ?watch (exists ?mouse (and (Is ?knife 'knife') (Is ?cup 'cup') (Is ?watch 'watch') (Is ?mouse 'mouse') (OnLeftSide ?suitcase) (OnTopSide ?knife) (Above ?knife ?cup) (Above ?cup ?watch) (Above ?watch ?mouse) (Above ?mouse ?suitcase) (LargerThan ?suitcase ?mouse)))))))))",
+    "cnf": "(forall ?suitcase (exists ?knife (exists ?cup (exists ?watch (exists ?mouse (and (or (not (Is ?suitcase 'suitcase')) (Is ?knife 'knife')) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?knife)) (or (not (Is ?suitcase 'suitcase')) (Is ?cup 'cup')) (or (not (Is ?suitcase 'suitcase')) (Above ?knife ?cup)) (or (not (Is ?suitcase 'suitcase')) (OnLeftSide ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?watch 'watch')) (or (not (Is ?suitcase 'suitcase')) (Above ?cup ?watch)) (or (not (Is ?suitcase 'suitcase')) (Is ?mouse 'mouse')) (or (not (Is ?suitcase 'suitcase')) (Above ?watch ?mouse)) (or (not (Is ?suitcase 'suitcase')) (Above ?mouse ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (LargerThan ?suitcase ?mouse))))))))",
+    "k": 5,
+    "object_classes": [
+        "watch",
+        "cup",
+        "mouse",
+        "knife",
+        "suitcase"
+    ]
+}

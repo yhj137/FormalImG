@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. There is an open wooden wardrobe. All cups in the scene are on the wardrobe. There is also an orange on the wardrobe. A person is located to the right of the wardrobe, and a bicycle is to the right of the person.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (HasState ?w 'open') (forall ?c (implies (Is ?c 'cup') (On ?c ?w))) (exists ?o (and (Is ?o 'orange') (On ?o ?w))) (exists ?p (and (Is ?p 'person') (RightOf ?p ?w) (exists ?b (and (Is ?b 'bicycle') (RightOf ?b ?p))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (forall ?c (exists ?o (exists ?p (exists ?b (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (HasState ?w 'open') (or (not (Is ?c 'cup')) (On ?c ?w)) (On ?o ?w) (RightOf ?p ?w) (Is ?o 'orange') (Is ?p 'person') (RightOf ?b ?p) (Is ?b 'bicycle'))))))))",
+    "k": 5,
+    "object_classes": [
+        "wardrobe",
+        "cup",
+        "person",
+        "bicycle",
+        "orange"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A house stands in the center. All rocks are located to the left of the house. To the right of the house sits a bench. A hat is placed on the bench, and an open jacket lies next to it. Inside the house is a rectangular desk. A rusty knife and a banana sit on the desk. A piece of fruit is located to the left of the banana, and a fish is positioned to the right of the fruit.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'house') (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?h))) (exists ?bn (exists ?ht (exists ?j (exists ?d (exists ?k (exists ?ba (exists ?fr (exists ?fi (and (Is ?bn 'bench') (RightOf ?bn ?h) (Is ?ht 'hat') (On ?ht ?bn) (Is ?j 'jacket') (NextTo ?j ?ht) (HasState ?j 'open') (Is ?d 'desk') (In ?d ?h) (HasShape ?d 'rectangular') (Is ?k 'knife') (On ?k ?d) (HasState ?k 'rusty') (Is ?ba 'banana') (On ?ba ?d) (Is ?fr 'fruit') (LeftOf ?fr ?ba) (Is ?fi 'fish') (RightOf ?fi ?fr)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?r (exists ?bn (exists ?ht (exists ?j (exists ?d (exists ?k (exists ?ba (exists ?fr (exists ?fi (and (Is ?h 'house') (or (not (Is ?r 'rock')) (LeftOf ?r ?h)) (RightOf ?bn ?h) (In ?d ?h) (Is ?bn 'bench') (On ?ht ?bn) (Is ?d 'desk') (HasShape ?d 'rectangular') (Is ?ht 'hat') (NextTo ?j ?ht) (On ?k ?d) (Is ?j 'jacket') (HasState ?j 'open') (On ?ba ?d) (Is ?k 'knife') (HasState ?k 'rusty') (Is ?ba 'banana') (LeftOf ?fr ?ba) (Is ?fr 'fruit') (RightOf ?fi ?fr) (Is ?fi 'fish')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "house",
+        "fruit",
+        "knife",
+        "bench",
+        "fish",
+        "rock",
+        "jacket",
+        "desk",
+        "banana",
+        "hat"
+    ]
+}

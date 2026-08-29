@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the top side of the layout, and a drill is aligned horizontally with it. The scene adheres to a specific organization for every tie: the tie is smaller than the cutting board and has a stapler aligned horizontally with it. Directly above the tie is a glove. A bowl is aligned horizontally with the glove, while a watch is positioned above the glove. A pair of glasses is aligned horizontally with the watch. Additionally, a donut, which is smaller than the bowl, is located above the stapler, and a fork is placed above the donut.",
+    "dsl": "(exists ?board (exists ?drill (forall ?tie (implies (Is ?tie 'tie') (exists ?glove (exists ?stapler (exists ?watch (exists ?glasses (exists ?bowl (exists ?donut (exists ?fork (and (Is ?board 'cutting_board') (OnTopSide ?board) (Is ?drill 'drill') (AlignedHorizontally ?drill ?board) (SmallerThan ?tie ?board) (Is ?glove 'glove') (Above ?glove ?tie) (Is ?stapler 'stapler') (AlignedHorizontally ?stapler ?tie) (Is ?watch 'watch') (Above ?watch ?glove) (Is ?glasses 'glasses') (AlignedHorizontally ?glasses ?watch) (Is ?bowl 'bowl') (AlignedHorizontally ?bowl ?glove) (Is ?donut 'donut') (SmallerThan ?donut ?bowl) (Above ?donut ?stapler) (Is ?fork 'fork') (Above ?fork ?donut)))))))))))))",
+    "cnf": "(exists ?board (exists ?drill (forall ?tie (exists ?glove (exists ?stapler (exists ?watch (exists ?glasses (exists ?bowl (exists ?donut (exists ?fork (and (or (not (Is ?tie 'tie')) (Is ?board 'cutting_board')) (or (not (Is ?tie 'tie')) (OnTopSide ?board)) (or (not (Is ?tie 'tie')) (Is ?drill 'drill')) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?drill ?board)) (or (not (Is ?tie 'tie')) (SmallerThan ?tie ?board)) (or (not (Is ?tie 'tie')) (Is ?glove 'glove')) (or (not (Is ?tie 'tie')) (Above ?glove ?tie)) (or (not (Is ?tie 'tie')) (Is ?stapler 'stapler')) (or (not (Is ?tie 'tie')) (Above ?watch ?glove)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?stapler ?tie)) (or (not (Is ?tie 'tie')) (Is ?watch 'watch')) (or (not (Is ?tie 'tie')) (Is ?glasses 'glasses')) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?bowl ?glove)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?glasses ?watch)) (or (not (Is ?tie 'tie')) (Above ?donut ?stapler)) (or (not (Is ?tie 'tie')) (Is ?bowl 'bowl')) (or (not (Is ?tie 'tie')) (Is ?donut 'donut')) (or (not (Is ?tie 'tie')) (SmallerThan ?donut ?bowl)) (or (not (Is ?tie 'tie')) (Is ?fork 'fork')) (or (not (Is ?tie 'tie')) (Above ?fork ?donut)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "tie",
+        "stapler",
+        "watch",
+        "drill",
+        "cutting_board",
+        "fork",
+        "bowl",
+        "glove",
+        "donut"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring nine items arranged in a neat 3x3 grid. The top row contains a suitcase, a handbag, and a hat aligned horizontally, where the suitcase is to the left of the handbag, the handbag is to the left of the hat, and the handbag is positioned on the top side of the image. Directly below these, the middle row comprises a cutting board, a plate, and a bowl aligned horizontally; the cutting board is vertically aligned below the suitcase, the plate below the handbag, and the bowl below the hat. The bottom row consists of a drill, a wrench, and a donut; these are also aligned horizontally, with the drill located below the cutting board, the wrench below the plate, and the donut below the bowl, maintaining vertical alignment with the respective items above.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?cutting_board (exists ?plate (exists ?bowl (exists ?drill (exists ?wrench (exists ?donut (and (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (Is ?hat 'hat') (Is ?cutting_board 'cutting_board') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?drill 'drill') (Is ?wrench 'wrench') (Is ?donut 'donut') (OnTopSide ?handbag) (LeftOf ?suitcase ?handbag) (LeftOf ?handbag ?hat) (AlignedHorizontally ?suitcase ?handbag) (AlignedHorizontally ?handbag ?hat) (Below ?cutting_board ?suitcase) (Below ?plate ?handbag) (Below ?bowl ?hat) (AlignedVertically ?suitcase ?cutting_board) (AlignedVertically ?handbag ?plate) (AlignedVertically ?hat ?bowl) (LeftOf ?cutting_board ?plate) (LeftOf ?plate ?bowl) (AlignedHorizontally ?cutting_board ?plate) (AlignedHorizontally ?plate ?bowl) (Below ?drill ?cutting_board) (Below ?wrench ?plate) (Below ?donut ?bowl) (AlignedVertically ?cutting_board ?drill) (AlignedVertically ?plate ?wrench) (AlignedVertically ?bowl ?donut) (LeftOf ?drill ?wrench) (LeftOf ?wrench ?donut) (AlignedHorizontally ?drill ?wrench) (AlignedHorizontally ?wrench ?donut)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?hat (exists ?cutting_board (exists ?plate (exists ?bowl (exists ?drill (exists ?wrench (exists ?donut (and (Is ?suitcase 'suitcase') (LeftOf ?suitcase ?handbag) (AlignedHorizontally ?suitcase ?handbag) (OnTopSide ?handbag) (LeftOf ?handbag ?hat) (Below ?cutting_board ?suitcase) (AlignedHorizontally ?handbag ?hat) (Is ?handbag 'handbag') (Is ?hat 'hat') (AlignedVertically ?suitcase ?cutting_board) (Is ?cutting_board 'cutting_board') (Below ?plate ?handbag) (Below ?bowl ?hat) (LeftOf ?cutting_board ?plate) (AlignedVertically ?handbag ?plate) (Is ?plate 'plate') (AlignedVertically ?hat ?bowl) (Is ?bowl 'bowl') (AlignedHorizontally ?cutting_board ?plate) (LeftOf ?plate ?bowl) (Below ?drill ?cutting_board) (AlignedHorizontally ?plate ?bowl) (AlignedVertically ?cutting_board ?drill) (Is ?drill 'drill') (Below ?wrench ?plate) (Below ?donut ?bowl) (LeftOf ?drill ?wrench) (AlignedVertically ?plate ?wrench) (Is ?wrench 'wrench') (AlignedVertically ?bowl ?donut) (Is ?donut 'donut') (AlignedHorizontally ?drill ?wrench) (LeftOf ?wrench ?donut) (AlignedHorizontally ?wrench ?donut)))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "wrench",
+        "cutting_board",
+        "hat",
+        "handbag",
+        "drill",
+        "bowl",
+        "suitcase",
+        "donut"
+    ]
+}

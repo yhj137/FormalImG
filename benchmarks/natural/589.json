@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image featuring a shirt with an umbrella resting on it. Every phone in the scene is rectangular and located inside the shirt, next to the umbrella.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?u (and (Is ?s 'shirt') (Is ?u 'umbrella') (On ?u ?s) (forall ?p (implies (Is ?p 'phone') (and (HasShape ?p 'rectangular') (In ?p ?s) (NextTo ?p ?u))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?u (forall ?p (and (Is ?s 'shirt') (On ?u ?s) (or (not (Is ?p 'phone')) (In ?p ?s)) (Is ?u 'umbrella') (or (not (Is ?p 'phone')) (NextTo ?p ?u)) (or (not (Is ?p 'phone')) (HasShape ?p 'rectangular')))))))",
+    "k": 3,
+    "object_classes": [
+        "umbrella",
+        "phone",
+        "shirt"
+    ]
+}

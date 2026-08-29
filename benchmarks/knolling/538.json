@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A bowl is positioned on the left side of the image. For every sandwich in the scene, it is located to the right of the bowl, and there is a spoon positioned to the right of the sandwich. Furthermore, the sandwich and the spoon are aligned horizontally.",
+    "dsl": "(exists ?bowl (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (exists ?spoon (and (Is ?spoon 'spoon') (RightOf ?sandwich ?bowl) (RightOf ?spoon ?sandwich) (AlignedHorizontally ?sandwich ?spoon)))))))",
+    "cnf": "(exists ?bowl (forall ?sandwich (exists ?spoon (and (Is ?bowl 'bowl') (OnLeftSide ?bowl) (or (not (Is ?sandwich 'sandwich')) (RightOf ?sandwich ?bowl)) (or (not (Is ?sandwich 'sandwich')) (Is ?spoon 'spoon')) (or (not (Is ?sandwich 'sandwich')) (RightOf ?spoon ?sandwich)) (or (not (Is ?sandwich 'sandwich')) (AlignedHorizontally ?sandwich ?spoon))))))",
+    "k": 3,
+    "object_classes": [
+        "spoon",
+        "bowl",
+        "sandwich"
+    ]
+}

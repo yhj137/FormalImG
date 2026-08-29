@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition includes a backpack. For every fork in the scene, a knife is positioned directly above it. Above the knife is a white shirt that is larger than the backpack, followed by blue jeans that are smaller than the shirt and located above it. On the right side of the image, there is a laptop positioned above the jeans. A brown wallet, which is smaller than the laptop, is placed above the laptop. Continuing the vertical arrangement above the wallet are a black glove, a red tie above the glove, and a wrench above the tie.",
+    "dsl": "(exists ?backpack (forall ?fork (implies (Is ?fork 'fork') (exists ?knife (exists ?shirt (exists ?jeans (exists ?laptop (exists ?wallet (exists ?glove (exists ?tie (exists ?wrench (and (Is ?backpack 'backpack') (Is ?knife 'knife') (Above ?knife ?fork) (Is ?shirt 'shirt') (Has ?shirt 'white') (LargerThan ?shirt ?backpack) (Above ?shirt ?knife) (Is ?jeans 'jeans') (Has ?jeans 'blue') (SmallerThan ?jeans ?shirt) (Above ?jeans ?shirt) (Is ?laptop 'laptop') (OnRightSide ?laptop) (Above ?laptop ?jeans) (Is ?wallet 'wallet') (Has ?wallet 'brown') (SmallerThan ?wallet ?laptop) (Above ?wallet ?laptop) (Is ?glove 'glove') (Has ?glove 'black') (Above ?glove ?wallet) (Is ?tie 'tie') (Has ?tie 'red') (Above ?tie ?glove) (Is ?wrench 'wrench') (Above ?wrench ?tie)))))))))))))",
+    "cnf": "(exists ?backpack (forall ?fork (exists ?knife (exists ?shirt (exists ?jeans (exists ?laptop (exists ?wallet (exists ?glove (exists ?tie (exists ?wrench (and (or (not (Is ?fork 'fork')) (Is ?backpack 'backpack')) (or (not (Is ?fork 'fork')) (Is ?knife 'knife')) (or (not (Is ?fork 'fork')) (LargerThan ?shirt ?backpack)) (or (not (Is ?fork 'fork')) (Above ?knife ?fork)) (or (not (Is ?fork 'fork')) (Has ?shirt 'white')) (or (not (Is ?fork 'fork')) (Above ?shirt ?knife)) (or (not (Is ?fork 'fork')) (Is ?shirt 'shirt')) (or (not (Is ?fork 'fork')) (Is ?jeans 'jeans')) (or (not (Is ?fork 'fork')) (SmallerThan ?jeans ?shirt)) (or (not (Is ?fork 'fork')) (Has ?jeans 'blue')) (or (not (Is ?fork 'fork')) (Above ?jeans ?shirt)) (or (not (Is ?fork 'fork')) (Is ?laptop 'laptop')) (or (not (Is ?fork 'fork')) (Above ?laptop ?jeans)) (or (not (Is ?fork 'fork')) (OnRightSide ?laptop)) (or (not (Is ?fork 'fork')) (Is ?wallet 'wallet')) (or (not (Is ?fork 'fork')) (SmallerThan ?wallet ?laptop)) (or (not (Is ?fork 'fork')) (Has ?wallet 'brown')) (or (not (Is ?fork 'fork')) (Above ?wallet ?laptop)) (or (not (Is ?fork 'fork')) (Is ?glove 'glove')) (or (not (Is ?fork 'fork')) (Above ?glove ?wallet)) (or (not (Is ?fork 'fork')) (Has ?glove 'black')) (or (not (Is ?fork 'fork')) (Is ?tie 'tie')) (or (not (Is ?fork 'fork')) (Above ?tie ?glove)) (or (not (Is ?fork 'fork')) (Has ?tie 'red')) (or (not (Is ?fork 'fork')) (Is ?wrench 'wrench')) (or (not (Is ?fork 'fork')) (Above ?wrench ?tie)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "wrench",
+        "fork",
+        "backpack",
+        "jeans",
+        "wallet",
+        "knife",
+        "glove",
+        "shirt"
+    ]
+}

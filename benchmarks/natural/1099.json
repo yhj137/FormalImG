@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting featuring a rectangular bed with a round basket placed on it. The basket contains a gray knife and every cake in the scene. A yellow lion rests on the bed, and a brown boat is positioned next to it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bed (and (Is ?bed 'bed') (HasShape ?bed 'rectangular') (exists ?basket (and (Is ?basket 'basket') (HasShape ?basket 'round') (On ?basket ?bed) (forall ?cake (implies (Is ?cake 'cake') (In ?cake ?basket))) (exists ?knife (and (Is ?knife 'knife') (HasColor ?knife 'gray') (In ?knife ?basket))))) (exists ?lion (and (Is ?lion 'lion') (HasColor ?lion 'yellow') (On ?lion ?bed))) (exists ?boat (and (Is ?boat 'boat') (HasColor ?boat 'brown') (NextTo ?boat ?bed))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bed (exists ?basket (forall ?cake (exists ?knife (exists ?lion (exists ?boat (and (Is ?bed 'bed') (HasShape ?bed 'rectangular') (On ?basket ?bed) (On ?lion ?bed) (HasShape ?basket 'round') (or (not (Is ?cake 'cake')) (In ?cake ?basket)) (NextTo ?boat ?bed) (HasColor ?lion 'yellow') (Is ?basket 'basket') (In ?knife ?basket) (HasColor ?boat 'brown') (Is ?lion 'lion') (HasColor ?knife 'gray') (Is ?boat 'boat') (Is ?knife 'knife')))))))))",
+    "k": 6,
+    "object_classes": [
+        "knife",
+        "bed",
+        "cake",
+        "boat",
+        "lion",
+        "basket"
+    ]
+}

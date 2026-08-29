@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every fluffy dog has a pizza to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?d (implies (and (Is ?d 'dog') (HasMaterial ?d 'fluffy')) (exists ?p (and (Is ?p 'pizza') (RightOf ?p ?d))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?d (exists ?p (and (or (not (Is ?d 'dog')) (not (HasMaterial ?d 'fluffy')) (Is ?p 'pizza')) (or (not (Is ?d 'dog')) (not (HasMaterial ?d 'fluffy')) (RightOf ?p ?d))))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "dog"
+    ]
+}

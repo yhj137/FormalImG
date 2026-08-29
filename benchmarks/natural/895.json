@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every jacket, a lamp, and a woman holding a round metal pan are on a wooden bed.",
+    "dsl": "(exists ?b (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (forall ?j (implies (Is ?j 'jacket') (On ?j ?b))) (exists ?w (and (Is ?w 'woman') (On ?w ?b) (exists ?p (and (Is ?p 'pan') (HasShape ?p 'round') (HasMaterial ?p 'metal') (Holding ?w ?p))))) (exists ?l (and (Is ?l 'lamp') (On ?l ?b)))))",
+    "cnf": "(exists ?b (forall ?j (exists ?w (exists ?p (exists ?l (and (Is ?b 'bed') (HasMaterial ?b 'wooden') (or (not (Is ?j 'jacket')) (On ?j ?b)) (On ?w ?b) (On ?l ?b) (Is ?w 'woman') (Holding ?w ?p) (Is ?l 'lamp') (HasMaterial ?p 'metal') (HasShape ?p 'round') (Is ?p 'pan')))))))",
+    "k": 5,
+    "object_classes": [
+        "bed",
+        "woman",
+        "jacket",
+        "lamp",
+        "pan"
+    ]
+}

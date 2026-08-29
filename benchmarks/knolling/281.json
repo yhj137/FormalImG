@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza in the scene, there is a black monitor aligned horizontally with it.",
+    "dsl": "(and (forall ?p (implies (Is ?p 'pizza') (exists ?m (and (Is ?m 'monitor') (Has ?m 'black') (AlignedHorizontally ?p ?m))))))",
+    "cnf": "(forall ?p (exists ?m (and (or (not (Is ?p 'pizza')) (Is ?m 'monitor')) (or (not (Is ?p 'pizza')) (Has ?m 'black')) (or (not (Is ?p 'pizza')) (AlignedHorizontally ?p ?m)))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "pizza"
+    ]
+}

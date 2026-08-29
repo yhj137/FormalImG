@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a rectangular bench, with every chair placed next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (and (Is ?b 'bench') (HasShape ?b 'rectangular') (forall ?c (implies (Is ?c 'chair') (NextTo ?c ?b))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (forall ?c (and (Is ?b 'bench') (HasShape ?b 'rectangular') (or (not (Is ?c 'chair')) (NextTo ?c ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "bench"
+    ]
+}

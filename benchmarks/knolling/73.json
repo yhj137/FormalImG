@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A phone is located on the left side of the image.",
+    "dsl": "(exists ?phone (and (Is ?phone 'phone') (OnLeftSide ?phone)))",
+    "cnf": "(exists ?phone (and (Is ?phone 'phone') (OnLeftSide ?phone)))",
+    "k": 1,
+    "object_classes": [
+        "phone"
+    ]
+}

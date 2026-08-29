@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene centers around a monitor, with a backpack positioned to its left and headphones to its right. The monitor is larger than the phone in the scene. A hat is situated on the right side of the image, specifically to the right of the headphones. Furthermore, for every fork in the arrangement, there is a knife positioned to its right, and that knife is smaller than the phone.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?headphones (exists ?phone (exists ?hat (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?headphones 'headphones') (Is ?phone 'phone') (Is ?hat 'hat') (LeftOf ?backpack ?monitor) (RightOf ?headphones ?monitor) (LargerThan ?monitor ?phone) (OnRightSide ?hat) (RightOf ?hat ?headphones) (forall ?fork (implies (Is ?fork 'fork') (exists ?knife (and (Is ?knife 'knife') (RightOf ?knife ?fork) (SmallerThan ?knife ?phone)))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?headphones (exists ?phone (exists ?hat (forall ?fork (exists ?knife (and (Is ?monitor 'monitor') (LeftOf ?backpack ?monitor) (RightOf ?headphones ?monitor) (Is ?backpack 'backpack') (LargerThan ?monitor ?phone) (Is ?headphones 'headphones') (RightOf ?hat ?headphones) (Is ?phone 'phone') (or (not (Is ?fork 'fork')) (SmallerThan ?knife ?phone)) (OnRightSide ?hat) (or (not (Is ?fork 'fork')) (RightOf ?knife ?fork)) (Is ?hat 'hat') (or (not (Is ?fork 'fork')) (Is ?knife 'knife'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "fork",
+        "hat",
+        "backpack",
+        "knife",
+        "monitor",
+        "headphones"
+    ]
+}

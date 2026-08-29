@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged vertical column of nine objects. The arrangement is positioned on the right side of the image. From top to bottom, the objects are ordered as follows: a suitcase, a shirt, a pan, a stapler, a phone, a screwdriver, a carrot, an apple, and a watch. Specifically, the suitcase is above the shirt, the shirt is above the pan, the pan is above the stapler, the stapler is above the phone, the phone is above the screwdriver, the screwdriver is above the carrot, the carrot is above the apple, and the apple is above the watch. The suitcase is located on the right side, and the watch is located on the bottom side. All objects in this sequence are aligned vertically. Additionally, the apple is visually smaller than the pan.",
+    "dsl": "(exists ?suitcase (exists ?shirt (exists ?pan (exists ?stapler (exists ?phone (exists ?screwdriver (exists ?carrot (exists ?apple (exists ?watch (and (Is ?suitcase 'suitcase') (Is ?shirt 'shirt') (Is ?pan 'pan') (Is ?stapler 'stapler') (Is ?phone 'phone') (Is ?screwdriver 'screwdriver') (Is ?carrot 'carrot') (Is ?apple 'apple') (Is ?watch 'watch') (OnRightSide ?suitcase) (OnBottomSide ?watch) (Above ?suitcase ?shirt) (Above ?shirt ?pan) (Above ?pan ?stapler) (Above ?stapler ?phone) (Above ?phone ?screwdriver) (Above ?screwdriver ?carrot) (Above ?carrot ?apple) (Above ?apple ?watch) (AlignedVertically ?suitcase ?shirt) (AlignedVertically ?shirt ?pan) (AlignedVertically ?pan ?stapler) (AlignedVertically ?stapler ?phone) (AlignedVertically ?phone ?screwdriver) (AlignedVertically ?screwdriver ?carrot) (AlignedVertically ?carrot ?apple) (AlignedVertically ?apple ?watch) (SmallerThan ?apple ?pan)))))))))))",
+    "cnf": "(exists ?suitcase (exists ?shirt (exists ?pan (exists ?stapler (exists ?phone (exists ?screwdriver (exists ?carrot (exists ?apple (exists ?watch (and (Is ?suitcase 'suitcase') (OnRightSide ?suitcase) (Above ?suitcase ?shirt) (AlignedVertically ?suitcase ?shirt) (Is ?shirt 'shirt') (Above ?shirt ?pan) (AlignedVertically ?shirt ?pan) (Is ?pan 'pan') (Above ?pan ?stapler) (AlignedVertically ?pan ?stapler) (Is ?stapler 'stapler') (Above ?stapler ?phone) (SmallerThan ?apple ?pan) (AlignedVertically ?stapler ?phone) (Is ?phone 'phone') (Above ?phone ?screwdriver) (AlignedVertically ?apple ?watch) (AlignedVertically ?phone ?screwdriver) (Is ?screwdriver 'screwdriver') (Above ?screwdriver ?carrot) (AlignedVertically ?carrot ?apple) (Above ?apple ?watch) (AlignedVertically ?screwdriver ?carrot) (Is ?carrot 'carrot') (Above ?carrot ?apple) (OnBottomSide ?watch) (Is ?apple 'apple') (Is ?watch 'watch')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "stapler",
+        "apple",
+        "carrot",
+        "phone",
+        "watch",
+        "screwdriver",
+        "pan",
+        "suitcase",
+        "shirt"
+    ]
+}

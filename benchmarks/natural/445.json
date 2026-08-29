@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden wardrobe with a ceramic elephant sitting on top, holding a fork.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?e (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (Is ?e 'elephant') (HasMaterial ?e 'ceramic') (Is ?f 'fork') (On ?e ?w) (Holding ?e ?f))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?e (exists ?f (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (On ?e ?w) (HasMaterial ?e 'ceramic') (Holding ?e ?f) (Is ?e 'elephant') (Is ?f 'fork'))))))",
+    "k": 3,
+    "object_classes": [
+        "fork",
+        "wardrobe",
+        "elephant"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. There are headphones and a bottle positioned on the top side of the frame, where the headphones are to the left of the bottle. For every spoon present, there exists a carrot and a handbag such that the spoon is vertically aligned with the headphones, the carrot is vertically aligned with the bottle, the spoon is to the left of the carrot, and the carrot is to the left of the handbag.",
+    "dsl": "(exists ?h (exists ?b (and (Is ?h 'headphones') (Is ?b 'bottle') (OnTopSide ?h) (OnTopSide ?b) (LeftOf ?h ?b) (forall ?s (implies (Is ?s 'spoon') (exists ?c (exists ?hb (and (Is ?c 'carrot') (Is ?hb 'handbag') (AlignedVertically ?s ?h) (AlignedVertically ?c ?b) (LeftOf ?s ?c) (LeftOf ?c ?hb)))))))))",
+    "cnf": "(exists ?h (exists ?b (forall ?s (exists ?c (exists ?hb (and (Is ?h 'headphones') (OnTopSide ?h) (LeftOf ?h ?b) (or (not (Is ?s 'spoon')) (AlignedVertically ?s ?h)) (OnTopSide ?b) (or (not (Is ?s 'spoon')) (AlignedVertically ?c ?b)) (or (not (Is ?s 'spoon')) (Is ?hb 'handbag')) (Is ?b 'bottle') (or (not (Is ?s 'spoon')) (Is ?c 'carrot')) (or (not (Is ?s 'spoon')) (LeftOf ?s ?c)) (or (not (Is ?s 'spoon')) (LeftOf ?c ?hb))))))))",
+    "k": 5,
+    "object_classes": [
+        "carrot",
+        "handbag",
+        "bottle",
+        "spoon",
+        "headphones"
+    ]
+}

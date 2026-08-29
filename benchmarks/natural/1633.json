@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene features every round ball resting on a wooden table. A bowl containing a key also sits on the table. To the left of the table, a man holds a screwdriver, while to the right stands a chair supporting a broken mirror with a butterfly resting on it.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'ball') (exists ?t (exists ?bo (exists ?k (exists ?m (exists ?sd (exists ?c (exists ?mi (exists ?bu (and (HasShape ?b 'round') (On ?b ?t) (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?bo 'bowl') (On ?bo ?t) (Is ?k 'key') (In ?k ?bo) (Is ?m 'man') (LeftOf ?m ?t) (Is ?sd 'screwdriver') (Holding ?m ?sd) (Is ?c 'chair') (RightOf ?c ?t) (Is ?mi 'mirror') (On ?mi ?c) (HasState ?mi 'broken') (Is ?bu 'butterfly') (On ?bu ?mi)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (exists ?t (exists ?bo (exists ?k (exists ?m (exists ?sd (exists ?c (exists ?mi (exists ?bu (and (or (not (Is ?b 'ball')) (HasShape ?b 'round')) (or (not (Is ?b 'ball')) (On ?b ?t)) (or (not (Is ?b 'ball')) (Is ?t 'table')) (or (not (Is ?b 'ball')) (HasMaterial ?t 'wooden')) (or (not (Is ?b 'ball')) (Is ?bo 'bowl')) (or (not (Is ?b 'ball')) (On ?bo ?t)) (or (not (Is ?b 'ball')) (Is ?k 'key')) (or (not (Is ?b 'ball')) (LeftOf ?m ?t)) (or (not (Is ?b 'ball')) (In ?k ?bo)) (or (not (Is ?b 'ball')) (Is ?m 'man')) (or (not (Is ?b 'ball')) (Is ?sd 'screwdriver')) (or (not (Is ?b 'ball')) (RightOf ?c ?t)) (or (not (Is ?b 'ball')) (Holding ?m ?sd)) (or (not (Is ?b 'ball')) (Is ?c 'chair')) (or (not (Is ?b 'ball')) (Is ?mi 'mirror')) (or (not (Is ?b 'ball')) (On ?mi ?c)) (or (not (Is ?b 'ball')) (HasState ?mi 'broken')) (or (not (Is ?b 'ball')) (Is ?bu 'butterfly')) (or (not (Is ?b 'ball')) (On ?bu ?mi)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "table",
+        "key",
+        "ball",
+        "mirror",
+        "butterfly",
+        "chair",
+        "man",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown handbag and a cutting board, both located on the bottom side and aligned horizontally. There is also a blue tie, a white cup, and a set of keys. The tie and keys are smaller than the handbag, while the cup is smaller than the cutting board. For every pair of blue jeans in the image, there is a ruler and a pair of scissors. The jeans are aligned horizontally with the cutting board. Additionally, the ruler and scissors are aligned horizontally with the jeans, with the jeans being larger than the ruler and the scissors being smaller than the ruler.",
+    "dsl": "(exists ?handbag (exists ?cb (exists ?tie (exists ?cup (exists ?keys (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (Is ?cb 'cutting_board') (OnBottomSide ?cb) (AlignedHorizontally ?handbag ?cb) (Is ?tie 'tie') (Has ?tie 'blue') (SmallerThan ?tie ?handbag) (Is ?cup 'cup') (Has ?cup 'white') (SmallerThan ?cup ?cb) (Is ?keys 'keys') (SmallerThan ?keys ?handbag) (forall ?jeans (implies (and (Is ?jeans 'jeans') (Has ?jeans 'blue')) (exists ?ruler (exists ?scissors (and (Is ?ruler 'ruler') (Is ?scissors 'scissors') (AlignedHorizontally ?jeans ?cb) (AlignedHorizontally ?jeans ?ruler) (AlignedHorizontally ?ruler ?scissors) (LargerThan ?jeans ?ruler) (SmallerThan ?scissors ?ruler))))))))))))",
+    "cnf": "(exists ?handbag (exists ?cb (exists ?tie (exists ?cup (exists ?keys (forall ?jeans (exists ?ruler (exists ?scissors (and (Is ?handbag 'handbag') (Has ?handbag 'brown') (OnBottomSide ?handbag) (AlignedHorizontally ?handbag ?cb) (SmallerThan ?tie ?handbag) (OnBottomSide ?cb) (SmallerThan ?cup ?cb) (SmallerThan ?keys ?handbag) (Has ?tie 'blue') (Is ?cb 'cutting_board') (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (AlignedHorizontally ?jeans ?cb)) (Has ?cup 'white') (Is ?keys 'keys') (Is ?tie 'tie') (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (Is ?scissors 'scissors')) (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (AlignedHorizontally ?jeans ?ruler)) (Is ?cup 'cup') (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (Is ?ruler 'ruler')) (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (AlignedHorizontally ?ruler ?scissors)) (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (LargerThan ?jeans ?ruler)) (or (not (Is ?jeans 'jeans')) (not (Has ?jeans 'blue')) (SmallerThan ?scissors ?ruler)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "keys",
+        "tie",
+        "cup",
+        "cutting_board",
+        "handbag",
+        "jeans",
+        "scissors"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image of a metal laptop next to a flower, with a plastic toy car to the right of the flower.",
+    "dsl": "(and (IsStyle 'photo') (exists ?l (exists ?f (exists ?t (and (Is ?l 'laptop') (HasMaterial ?l 'metal') (Is ?f 'flower') (Is ?t 'toy car') (HasMaterial ?t 'plastic') (NextTo ?l ?f) (RightOf ?t ?f))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?l (exists ?f (exists ?t (and (Is ?l 'laptop') (HasMaterial ?l 'metal') (NextTo ?l ?f) (Is ?f 'flower') (RightOf ?t ?f) (HasMaterial ?t 'plastic') (Is ?t 'toy car'))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "flower",
+        "toy car"
+    ]
+}

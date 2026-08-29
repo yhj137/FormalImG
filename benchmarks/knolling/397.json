@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sock positioned on the left side of the scene. For every lemon present in the image, it is visually smaller than that sock.",
+    "dsl": "(exists ?s (and (Is ?s 'sock') (OnLeftSide ?s) (forall ?l (implies (Is ?l 'lemon') (SmallerThan ?l ?s)))))",
+    "cnf": "(exists ?s (forall ?l (and (Is ?s 'sock') (OnLeftSide ?s) (or (not (Is ?l 'lemon')) (SmallerThan ?l ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "lemon",
+        "sock"
+    ]
+}

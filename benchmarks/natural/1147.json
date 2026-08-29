@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene displaying a woman holding a hammer. To the right of the woman is an open laptop, followed by a shirt to the right of the laptop. All rocks in the image, along with a fork, are positioned to the right of the shirt.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?h (exists ?l (exists ?s (and (Is ?w 'woman') (Is ?h 'hammer') (Is ?l 'laptop') (Is ?s 'shirt') (Holding ?w ?h) (RightOf ?l ?w) (HasState ?l 'open') (RightOf ?s ?l) (forall ?r (implies (Is ?r 'rock') (RightOf ?r ?s))) (exists ?f (and (Is ?f 'fork') (RightOf ?f ?s)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?h (exists ?l (exists ?s (forall ?r (exists ?f (and (Is ?w 'woman') (Holding ?w ?h) (RightOf ?l ?w) (Is ?h 'hammer') (Is ?l 'laptop') (HasState ?l 'open') (RightOf ?s ?l) (Is ?s 'shirt') (or (not (Is ?r 'rock')) (RightOf ?r ?s)) (RightOf ?f ?s) (Is ?f 'fork')))))))))",
+    "k": 6,
+    "object_classes": [
+        "shirt",
+        "fork",
+        "laptop",
+        "woman",
+        "rock",
+        "hammer"
+    ]
+}

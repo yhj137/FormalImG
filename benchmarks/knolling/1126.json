@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement begins with a blue bottle positioned on the bottom side of the scene. To the right of the bottle is a phone, which is visually larger than the bottle. A white sock is placed to the right of the phone and is smaller than the phone. For every spoon, it is gray and located to the right of the white sock. Furthermore, corresponding to each spoon, there is a knife to its right, and a red apple positioned to the right of the knife. The apple is smaller than the knife.",
+    "dsl": "(exists ?bottle (exists ?phone (exists ?sock (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnBottomSide ?bottle) (Is ?phone 'phone') (RightOf ?phone ?bottle) (LargerThan ?phone ?bottle) (Is ?sock 'sock') (Has ?sock 'white') (RightOf ?sock ?phone) (SmallerThan ?sock ?phone) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?knife (exists ?apple (and (Has ?spoon 'gray') (Is ?knife 'knife') (Is ?apple 'apple') (Has ?apple 'red') (RightOf ?spoon ?sock) (RightOf ?knife ?spoon) (RightOf ?apple ?knife) (SmallerThan ?apple ?knife))))))))))",
+    "cnf": "(exists ?bottle (exists ?phone (exists ?sock (forall ?spoon (exists ?knife (exists ?apple (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnBottomSide ?bottle) (RightOf ?phone ?bottle) (LargerThan ?phone ?bottle) (Is ?phone 'phone') (RightOf ?sock ?phone) (SmallerThan ?sock ?phone) (Has ?sock 'white') (or (not (Is ?spoon 'spoon')) (RightOf ?spoon ?sock)) (Is ?sock 'sock') (or (not (Is ?spoon 'spoon')) (Has ?apple 'red')) (or (not (Is ?spoon 'spoon')) (RightOf ?knife ?spoon)) (or (not (Is ?spoon 'spoon')) (Is ?apple 'apple')) (or (not (Is ?spoon 'spoon')) (RightOf ?apple ?knife)) (or (not (Is ?spoon 'spoon')) (Is ?knife 'knife')) (or (not (Is ?spoon 'spoon')) (SmallerThan ?apple ?knife)) (or (not (Is ?spoon 'spoon')) (Has ?spoon 'gray')))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "sock",
+        "phone",
+        "knife",
+        "bottle",
+        "spoon"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the display, there is a specific arrangement involving a cup and a shoe: the cup is aligned vertically with the monitor, and the shoe is positioned on the left side of the image, placed to the left of the cup while maintaining horizontal alignment with it.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?cup (exists ?shoe (and (Is ?cup 'cup') (Is ?shoe 'shoe') (AlignedVertically ?cup ?monitor) (OnLeftSide ?shoe) (LeftOf ?shoe ?cup) (AlignedHorizontally ?shoe ?cup)))))))",
+    "cnf": "(forall ?monitor (exists ?cup (exists ?shoe (and (or (not (Is ?monitor 'monitor')) (Is ?cup 'cup')) (or (not (Is ?monitor 'monitor')) (Is ?shoe 'shoe')) (or (not (Is ?monitor 'monitor')) (AlignedVertically ?cup ?monitor)) (or (not (Is ?monitor 'monitor')) (OnLeftSide ?shoe)) (or (not (Is ?monitor 'monitor')) (LeftOf ?shoe ?cup)) (or (not (Is ?monitor 'monitor')) (AlignedHorizontally ?shoe ?cup))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "shoe",
+        "cup"
+    ]
+}

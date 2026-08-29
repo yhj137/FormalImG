@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a man holding an open umbrella. A banana is to the left of the man, who is positioned to the left of every car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (and (Is ?m 'man') (exists ?u (and (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?m ?u))) (forall ?c (implies (Is ?c 'car') (LeftOf ?m ?c))) (exists ?b (and (Is ?b 'banana') (LeftOf ?b ?m))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (exists ?u (forall ?c (exists ?b (and (Is ?m 'man') (Holding ?m ?u) (or (not (Is ?c 'car')) (LeftOf ?m ?c)) (HasState ?u 'open') (LeftOf ?b ?m) (Is ?u 'umbrella') (Is ?b 'banana')))))))",
+    "k": 4,
+    "object_classes": [
+        "umbrella",
+        "banana",
+        "car",
+        "man"
+    ]
+}

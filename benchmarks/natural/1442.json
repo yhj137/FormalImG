@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every hammer is held by a woman. To her right stands a chair with a bowl containing a fruit on it, and a pair of glasses lies next to the bowl. A closed umbrella sits next to the chair, while a horse stands to the woman's left.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?h (implies (Is ?h 'hammer') (exists ?w (exists ?c (exists ?ho (exists ?u (exists ?b (exists ?f (exists ?g (and (Is ?w 'woman') (Is ?c 'chair') (Is ?ho 'horse') (Is ?u 'umbrella') (Is ?b 'bowl') (Is ?f 'fruit') (Is ?g 'glasses') (Holding ?w ?h) (RightOf ?c ?w) (LeftOf ?ho ?w) (NextTo ?u ?c) (HasState ?u 'closed') (On ?b ?c) (In ?f ?b) (NextTo ?g ?b))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?h (exists ?w (exists ?c (exists ?ho (exists ?u (exists ?b (exists ?f (exists ?g (and (or (not (Is ?h 'hammer')) (Is ?w 'woman')) (or (not (Is ?h 'hammer')) (Is ?c 'chair')) (or (not (Is ?h 'hammer')) (Holding ?w ?h)) (or (not (Is ?h 'hammer')) (Is ?ho 'horse')) (or (not (Is ?h 'hammer')) (RightOf ?c ?w)) (or (not (Is ?h 'hammer')) (Is ?g 'glasses')) (or (not (Is ?h 'hammer')) (Is ?u 'umbrella')) (or (not (Is ?h 'hammer')) (LeftOf ?ho ?w)) (or (not (Is ?h 'hammer')) (NextTo ?u ?c)) (or (not (Is ?h 'hammer')) (Is ?f 'fruit')) (or (not (Is ?h 'hammer')) (NextTo ?g ?b)) (or (not (Is ?h 'hammer')) (Is ?b 'bowl')) (or (not (Is ?h 'hammer')) (HasState ?u 'closed')) (or (not (Is ?h 'hammer')) (On ?b ?c)) (or (not (Is ?h 'hammer')) (In ?f ?b))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "umbrella",
+        "horse",
+        "chair",
+        "glasses",
+        "woman",
+        "hammer",
+        "bowl"
+    ]
+}

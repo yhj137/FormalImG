@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A plant is to the left of a metal car, and every rock is to the left of the plant. To the right of the car is an elephant with a teddy bear on it. A tree is to the right of the elephant, and to the right of the tree is a metal pan containing a cup with a fish inside.",
+    "dsl": "(exists ?c (exists ?pl (exists ?e (exists ?tb (exists ?t (exists ?pa (exists ?cu (exists ?f (and (Is ?c 'car') (HasMaterial ?c 'metal') (Is ?pl 'plant') (LeftOf ?pl ?c) (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?pl))) (Is ?e 'elephant') (RightOf ?e ?c) (Is ?tb 'teddy bear') (On ?tb ?e) (Is ?t 'tree') (RightOf ?t ?e) (Is ?pa 'pan') (HasMaterial ?pa 'metal') (RightOf ?pa ?t) (Is ?cu 'cup') (In ?cu ?pa) (Is ?f 'fish') (In ?f ?cu))))))))))",
+    "cnf": "(exists ?c (exists ?pl (exists ?e (exists ?tb (exists ?t (exists ?pa (exists ?cu (exists ?f (forall ?r (and (Is ?c 'car') (HasMaterial ?c 'metal') (LeftOf ?pl ?c) (RightOf ?e ?c) (Is ?pl 'plant') (or (not (Is ?r 'rock')) (LeftOf ?r ?pl)) (Is ?e 'elephant') (On ?tb ?e) (RightOf ?t ?e) (Is ?tb 'teddy bear') (Is ?t 'tree') (RightOf ?pa ?t) (HasMaterial ?pa 'metal') (In ?cu ?pa) (Is ?pa 'pan') (Is ?cu 'cup') (In ?f ?cu) (Is ?f 'fish')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fish",
+        "cup",
+        "plant",
+        "tree",
+        "rock",
+        "elephant",
+        "teddy bear",
+        "pan",
+        "car"
+    ]
+}

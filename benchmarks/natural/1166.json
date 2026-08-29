@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a broken boat next to a tree and a man holding a screwdriver. Every bowl in the scene rests on a wooden basket on the boat.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?bt (exists ?sd (exists ?t (and (Is ?m 'man') (Is ?bt 'boat') (HasState ?bt 'broken') (Is ?sd 'screwdriver') (Holding ?m ?sd) (NextTo ?m ?bt) (Is ?t 'tree') (NextTo ?t ?bt) (forall ?bw (implies (Is ?bw 'bowl') (exists ?bk (and (Is ?bk 'basket') (HasMaterial ?bk 'wooden') (On ?bk ?bt) (On ?bw ?bk)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?bt (exists ?sd (exists ?t (forall ?bw (exists ?bk (and (Is ?m 'man') (Holding ?m ?sd) (NextTo ?m ?bt) (Is ?sd 'screwdriver') (HasState ?bt 'broken') (NextTo ?t ?bt) (Is ?bt 'boat') (or (not (Is ?bw 'bowl')) (On ?bk ?bt)) (Is ?t 'tree') (or (not (Is ?bw 'bowl')) (HasMaterial ?bk 'wooden')) (or (not (Is ?bw 'bowl')) (On ?bw ?bk)) (or (not (Is ?bw 'bowl')) (Is ?bk 'basket'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bowl",
+        "man",
+        "screwdriver",
+        "basket",
+        "tree",
+        "boat"
+    ]
+}

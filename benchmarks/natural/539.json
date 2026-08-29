@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a bicycle, with all butterflies to its left and a cylindrical cup to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bicycle') (forall ?f (implies (Is ?f 'butterfly') (LeftOf ?f ?b))) (exists ?c (and (Is ?c 'cup') (HasShape ?c 'cylindrical') (RightOf ?c ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?f (exists ?c (and (Is ?b 'bicycle') (or (not (Is ?f 'butterfly')) (LeftOf ?f ?b)) (RightOf ?c ?b) (HasShape ?c 'cylindrical') (Is ?c 'cup'))))))",
+    "k": 3,
+    "object_classes": [
+        "butterfly",
+        "bicycle",
+        "cup"
+    ]
+}

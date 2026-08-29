@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene with a bitten sandwich on every sofa.",
+    "dsl": "(and (IsStyle 'photo') (forall ?s (implies (Is ?s 'sofa') (exists ?w (and (Is ?w 'sandwich') (HasState ?w 'bitten') (On ?w ?s))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?s (exists ?w (and (or (not (Is ?s 'sofa')) (Is ?w 'sandwich')) (or (not (Is ?s 'sofa')) (HasState ?w 'bitten')) (or (not (Is ?s 'sofa')) (On ?w ?s))))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "sofa"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a dog on a boat holding an umbrella, with a shirt next to it. A lamp sits to the left of the dog, and a basket is to the right of the lamp. Every laptop is positioned next to the basket; on each laptop is a phone, and to the right of each laptop is a round pizza with a cup next to it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bt (exists ?d (exists ?s (exists ?u (exists ?l (exists ?bk (and (Is ?bt 'boat') (Is ?d 'dog') (Is ?s 'shirt') (Is ?u 'umbrella') (Is ?l 'lamp') (Is ?bk 'basket') (On ?d ?bt) (NextTo ?s ?d) (Holding ?d ?u) (LeftOf ?l ?d) (RightOf ?bk ?l) (forall ?lp (implies (Is ?lp 'laptop') (and (NextTo ?lp ?bk) (exists ?ph (exists ?pz (exists ?cp (and (Is ?ph 'phone') (Is ?pz 'pizza') (Is ?cp 'cup') (On ?ph ?lp) (HasShape ?pz 'round') (RightOf ?pz ?lp) (NextTo ?cp ?pz))))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bt (exists ?d (exists ?s (exists ?u (exists ?l (exists ?bk (forall ?lp (exists ?ph (exists ?pz (exists ?cp (and (Is ?bt 'boat') (On ?d ?bt) (Is ?d 'dog') (NextTo ?s ?d) (Holding ?d ?u) (Is ?s 'shirt') (LeftOf ?l ?d) (Is ?u 'umbrella') (Is ?l 'lamp') (RightOf ?bk ?l) (Is ?bk 'basket') (or (not (Is ?lp 'laptop')) (NextTo ?lp ?bk)) (or (not (Is ?lp 'laptop')) (Is ?ph 'phone')) (or (not (Is ?lp 'laptop')) (Is ?pz 'pizza')) (or (not (Is ?lp 'laptop')) (On ?ph ?lp)) (or (not (Is ?lp 'laptop')) (Is ?cp 'cup')) (or (not (Is ?lp 'laptop')) (HasShape ?pz 'round')) (or (not (Is ?lp 'laptop')) (NextTo ?cp ?pz)) (or (not (Is ?lp 'laptop')) (RightOf ?pz ?lp))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "umbrella",
+        "laptop",
+        "lamp",
+        "pizza",
+        "phone",
+        "shirt",
+        "basket",
+        "boat",
+        "cup",
+        "dog"
+    ]
+}

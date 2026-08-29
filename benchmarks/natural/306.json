@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every bus contains a broken clock.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bus') (exists ?c (and (Is ?c 'clock') (HasState ?c 'broken') (In ?c ?b))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?c (and (or (not (Is ?b 'bus')) (Is ?c 'clock')) (or (not (Is ?b 'bus')) (HasState ?c 'broken')) (or (not (Is ?b 'bus')) (In ?c ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "clock",
+        "bus"
+    ]
+}

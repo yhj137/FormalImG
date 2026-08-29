@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pizza located on the right side. For every spoon in the image, there corresponds a blue tie and a screwdriver. Specifically, the spoon is positioned to the left of the pizza, the blue tie is to the left of the spoon, and the screwdriver is to the left of the tie. Furthermore, the screwdriver is visually smaller than the tie.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnRightSide ?pizza) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?tie (exists ?screwdriver (and (Is ?tie 'tie') (Has ?tie 'blue') (Is ?screwdriver 'screwdriver') (LeftOf ?spoon ?pizza) (LeftOf ?tie ?spoon) (LeftOf ?screwdriver ?tie) (SmallerThan ?screwdriver ?tie))))))))",
+    "cnf": "(exists ?pizza (forall ?spoon (exists ?tie (exists ?screwdriver (and (Is ?pizza 'pizza') (OnRightSide ?pizza) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?pizza)) (or (not (Is ?spoon 'spoon')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?spoon 'spoon')) (LeftOf ?tie ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?tie 'blue')) (or (not (Is ?spoon 'spoon')) (LeftOf ?screwdriver ?tie)) (or (not (Is ?spoon 'spoon')) (Is ?tie 'tie')) (or (not (Is ?spoon 'spoon')) (SmallerThan ?screwdriver ?tie)))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "tie",
+        "pizza",
+        "screwdriver"
+    ]
+}

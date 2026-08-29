@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A standing woman holding a spoon is next to a wooden bookshelf. A rectangular monitor sits on the bookshelf to the right of a lit lamp, accompanied by a cake, an orange, and a piece of fruit. A shirt and all shoes are placed next to the bookshelf.",
+    "dsl": "(exists ?w (exists ?bs (exists ?m (exists ?l (exists ?ck (exists ?sp (and (Is ?w 'woman') (HasState ?w 'standing') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (NextTo ?w ?bs) (Is ?sp 'spoon') (Holding ?w ?sp) (Is ?m 'monitor') (HasShape ?m 'rectangular') (On ?m ?bs) (Is ?l 'lamp') (HasState ?l 'on') (On ?l ?bs) (RightOf ?m ?l) (Is ?ck 'cake') (On ?ck ?bs) (forall ?sh (implies (Is ?sh 'shoes') (NextTo ?sh ?bs))) (exists ?st (exists ?o (exists ?f (and (Is ?st 'shirt') (NextTo ?st ?bs) (Is ?o 'orange') (On ?o ?bs) (Is ?f 'fruit') (On ?f ?bs))))))))))))",
+    "cnf": "(exists ?w (exists ?bs (exists ?m (exists ?l (exists ?ck (exists ?sp (forall ?sh (exists ?st (exists ?o (exists ?f (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?bs) (Holding ?w ?sp) (HasMaterial ?bs 'wooden') (On ?m ?bs) (Is ?sp 'spoon') (Is ?bs 'bookshelf') (On ?l ?bs) (HasShape ?m 'rectangular') (RightOf ?m ?l) (On ?ck ?bs) (HasState ?l 'on') (Is ?m 'monitor') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?bs)) (Is ?ck 'cake') (Is ?l 'lamp') (NextTo ?st ?bs) (On ?o ?bs) (Is ?st 'shirt') (On ?f ?bs) (Is ?o 'orange') (Is ?f 'fruit'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "monitor",
+        "fruit",
+        "lamp",
+        "cake",
+        "shoes",
+        "shirt",
+        "woman",
+        "bookshelf",
+        "orange",
+        "spoon"
+    ]
+}

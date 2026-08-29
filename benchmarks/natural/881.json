@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A leather sofa sits in the scene. Every lion is located to the left of the sofa, while a horse stands to the right. Next to the sofa is a backpack containing a round fruit.",
+    "dsl": "(exists ?s (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (forall ?l (implies (Is ?l 'lion') (LeftOf ?l ?s))) (exists ?h (exists ?b (exists ?f (and (Is ?h 'horse') (RightOf ?h ?s) (Is ?b 'backpack') (NextTo ?b ?s) (Is ?f 'fruit') (HasShape ?f 'round') (In ?f ?b)))))))",
+    "cnf": "(exists ?s (forall ?l (exists ?h (exists ?b (exists ?f (and (Is ?s 'sofa') (HasMaterial ?s 'leather') (or (not (Is ?l 'lion')) (LeftOf ?l ?s)) (RightOf ?h ?s) (NextTo ?b ?s) (Is ?h 'horse') (Is ?b 'backpack') (In ?f ?b) (HasShape ?f 'round') (Is ?f 'fruit')))))))",
+    "k": 5,
+    "object_classes": [
+        "sofa",
+        "backpack",
+        "horse",
+        "lion",
+        "fruit"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a lemon positioned on the bottom side of the frame.",
+    "dsl": "(exists ?lemon (and (Is ?lemon 'lemon') (OnBottomSide ?lemon)))",
+    "cnf": "(exists ?lemon (and (Is ?lemon 'lemon') (OnBottomSide ?lemon)))",
+    "k": 1,
+    "object_classes": [
+        "lemon"
+    ]
+}

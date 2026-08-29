@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the top side of the layout. For every plate present in the scene, it is aligned vertically with the jeans. Furthermore, corresponding to each plate, there is a bottle located to its right, with the plate and bottle being aligned horizontally.",
+    "dsl": "(exists ?j (and (Is ?j 'jeans') (OnTopSide ?j) (forall ?p (implies (Is ?p 'plate') (exists ?b (and (Is ?b 'bottle') (AlignedVertically ?j ?p) (RightOf ?b ?p) (AlignedHorizontally ?p ?b)))))))",
+    "cnf": "(exists ?j (forall ?p (exists ?b (and (Is ?j 'jeans') (OnTopSide ?j) (or (not (Is ?p 'plate')) (AlignedVertically ?j ?p)) (or (not (Is ?p 'plate')) (Is ?b 'bottle')) (or (not (Is ?p 'plate')) (RightOf ?b ?p)) (or (not (Is ?p 'plate')) (AlignedHorizontally ?p ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "plate",
+        "jeans"
+    ]
+}

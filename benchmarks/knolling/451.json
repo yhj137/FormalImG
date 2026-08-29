@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every phone in the scene, there exists a bowl and a lighter. The phone is positioned to the right of the bowl, and the bowl is larger than the phone. The lighter is located to the right of the phone, is smaller than the phone, and is positioned on the right side of the image.",
+    "dsl": "(forall ?phone (implies (Is ?phone 'phone') (exists ?bowl (exists ?lighter (and (Is ?bowl 'bowl') (Is ?lighter 'lighter') (RightOf ?phone ?bowl) (LargerThan ?bowl ?phone) (RightOf ?lighter ?phone) (SmallerThan ?lighter ?phone) (OnRightSide ?lighter))))))",
+    "cnf": "(forall ?phone (exists ?bowl (exists ?lighter (and (or (not (Is ?phone 'phone')) (Is ?bowl 'bowl')) (or (not (Is ?phone 'phone')) (RightOf ?phone ?bowl)) (or (not (Is ?phone 'phone')) (Is ?lighter 'lighter')) (or (not (Is ?phone 'phone')) (LargerThan ?bowl ?phone)) (or (not (Is ?phone 'phone')) (RightOf ?lighter ?phone)) (or (not (Is ?phone 'phone')) (SmallerThan ?lighter ?phone)) (or (not (Is ?phone 'phone')) (OnRightSide ?lighter))))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "phone",
+        "lighter"
+    ]
+}

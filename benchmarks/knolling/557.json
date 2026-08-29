@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill positioned on the right side. A hammer is aligned vertically with the drill. Furthermore, for every mouse in the image, it is located to the left of the drill.",
+    "dsl": "(exists ?drill (exists ?hammer (and (Is ?drill 'drill') (Is ?hammer 'hammer') (OnRightSide ?drill) (AlignedVertically ?drill ?hammer) (forall ?mouse (implies (Is ?mouse 'mouse') (LeftOf ?mouse ?drill))))))",
+    "cnf": "(exists ?drill (exists ?hammer (forall ?mouse (and (Is ?drill 'drill') (OnRightSide ?drill) (AlignedVertically ?drill ?hammer) (or (not (Is ?mouse 'mouse')) (LeftOf ?mouse ?drill)) (Is ?hammer 'hammer')))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "hammer",
+        "mouse"
+    ]
+}

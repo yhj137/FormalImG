@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a horse standing to the left of a house. Inside the house, every child sits on a bed holding a rectangular phone; the bed is to the left of a table with a spoon on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?ho (and (Is ?h 'house') (Is ?ho 'horse') (LeftOf ?ho ?h) (forall ?c (implies (Is ?c 'child') (exists ?p (exists ?b (exists ?t (exists ?s (and (Is ?p 'phone') (HasShape ?p 'rectangular') (Is ?b 'bed') (Is ?t 'table') (Is ?s 'spoon') (In ?c ?h) (HasState ?c 'sitting') (Holding ?c ?p) (On ?c ?b) (LeftOf ?b ?t) (On ?s ?t))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?ho (forall ?c (exists ?p (exists ?b (exists ?t (exists ?s (and (Is ?h 'house') (LeftOf ?ho ?h) (or (not (Is ?c 'child')) (In ?c ?h)) (Is ?ho 'horse') (or (not (Is ?c 'child')) (Is ?s 'spoon')) (or (not (Is ?c 'child')) (HasState ?c 'sitting')) (or (not (Is ?c 'child')) (Is ?t 'table')) (or (not (Is ?c 'child')) (On ?s ?t)) (or (not (Is ?c 'child')) (Holding ?c ?p)) (or (not (Is ?c 'child')) (Is ?b 'bed')) (or (not (Is ?c 'child')) (LeftOf ?b ?t)) (or (not (Is ?c 'child')) (HasShape ?p 'rectangular')) (or (not (Is ?c 'child')) (On ?c ?b)) (or (not (Is ?c 'child')) (Is ?p 'phone')))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "phone",
+        "child",
+        "spoon",
+        "horse",
+        "bed",
+        "table"
+    ]
+}

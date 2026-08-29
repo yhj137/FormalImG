@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a gray laptop. Directly above the laptop is a game controller, while a pair of blue jeans is positioned below it. To the right of the laptop is a bowl. The scene follows a rule where every lemon included is located to the right of the bowl and is physically smaller than the bowl. Above the bowl is a calculator, and to the right of the game controller is a watch. Additionally, a cutting board is placed below the bowl. A ruler is located on the bottom side of the image, positioned below the jeans.",
+    "dsl": "(exists ?laptop (exists ?game_controller (exists ?jeans (exists ?bowl (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (Is ?game_controller 'game_controller') (Above ?game_controller ?laptop) (Is ?jeans 'jeans') (Has ?jeans 'blue') (Below ?jeans ?laptop) (Is ?bowl 'bowl') (RightOf ?bowl ?laptop) (forall ?lemon (implies (Is ?lemon 'lemon') (and (RightOf ?lemon ?bowl) (SmallerThan ?lemon ?bowl)))) (exists ?calculator (exists ?watch (exists ?cutting_board (exists ?ruler (and (Is ?calculator 'calculator') (Above ?calculator ?bowl) (Is ?watch 'watch') (RightOf ?watch ?game_controller) (Is ?cutting_board 'cutting_board') (Below ?cutting_board ?bowl) (Is ?ruler 'ruler') (OnBottomSide ?ruler) (Below ?ruler ?jeans)))))))))))",
+    "cnf": "(exists ?laptop (exists ?game_controller (exists ?jeans (exists ?bowl (forall ?lemon (exists ?calculator (exists ?watch (exists ?cutting_board (exists ?ruler (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (OnLeftSide ?laptop) (Above ?game_controller ?laptop) (Below ?jeans ?laptop) (Is ?game_controller 'game_controller') (RightOf ?watch ?game_controller) (RightOf ?bowl ?laptop) (Has ?jeans 'blue') (Below ?ruler ?jeans) (Is ?watch 'watch') (Is ?bowl 'bowl') (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?bowl)) (Is ?jeans 'jeans') (OnBottomSide ?ruler) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?bowl)) (Is ?ruler 'ruler') (Above ?calculator ?bowl) (Below ?cutting_board ?bowl) (Is ?calculator 'calculator') (Is ?cutting_board 'cutting_board')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "lemon",
+        "watch",
+        "game_controller",
+        "cutting_board",
+        "calculator",
+        "jeans",
+        "bowl"
+    ]
+}

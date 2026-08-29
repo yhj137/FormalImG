@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A man is holding an open umbrella. A red bicycle is located to the left of the man, carrying a basket filled with fruit. All cars in the scene are positioned to the right of the bicycle; on each car sits a monitor, with a metal laptop next to it and a clock placed above.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?u (exists ?b (exists ?bk (exists ?f (and (Is ?m 'man') (Is ?u 'umbrella') (Is ?b 'bicycle') (Is ?bk 'basket') (Is ?f 'fruit') (Holding ?m ?u) (HasState ?u 'open') (LeftOf ?b ?m) (HasColor ?b 'red') (On ?bk ?b) (In ?f ?bk) (forall ?c (implies (Is ?c 'car') (and (RightOf ?c ?b) (exists ?mo (exists ?l (exists ?ck (and (Is ?mo 'monitor') (Is ?l 'laptop') (Is ?ck 'clock') (On ?mo ?c) (NextTo ?l ?mo) (HasMaterial ?l 'metal') (Above ?ck ?mo)))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?u (exists ?b (exists ?bk (exists ?f (forall ?c (exists ?mo (exists ?l (exists ?ck (and (Is ?m 'man') (Holding ?m ?u) (LeftOf ?b ?m) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?b 'bicycle') (HasColor ?b 'red') (On ?bk ?b) (or (not (Is ?c 'car')) (RightOf ?c ?b)) (Is ?bk 'basket') (In ?f ?bk) (or (not (Is ?c 'car')) (Is ?mo 'monitor')) (Is ?f 'fruit') (or (not (Is ?c 'car')) (Is ?l 'laptop')) (or (not (Is ?c 'car')) (On ?mo ?c)) (or (not (Is ?c 'car')) (Is ?ck 'clock')) (or (not (Is ?c 'car')) (NextTo ?l ?mo)) (or (not (Is ?c 'car')) (Above ?ck ?mo)) (or (not (Is ?c 'car')) (HasMaterial ?l 'metal')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "umbrella",
+        "laptop",
+        "man",
+        "monitor",
+        "car",
+        "bicycle",
+        "clock",
+        "basket"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a wooden basket containing a clock, with all glasses positioned to the left of the basket.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (Is ?c 'clock') (In ?c ?b) (forall ?g (implies (Is ?g 'glasses') (LeftOf ?g ?b)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (forall ?g (and (Is ?b 'basket') (HasMaterial ?b 'wooden') (In ?c ?b) (or (not (Is ?g 'glasses')) (LeftOf ?g ?b)) (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "basket",
+        "glasses",
+        "clock"
+    ]
+}

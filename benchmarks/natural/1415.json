@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sitting dog holding a sandwich is next to a wooden bookshelf. Inside the bookshelf are headphones. On the bookshelf, a spoon lies to the right of glasses, and an apple sits next to an orange.",
+    "dsl": "(exists ?b (exists ?d (exists ?s (exists ?h (exists ?g (exists ?sp (exists ?a (exists ?o (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?d 'dog') (HasState ?d 'sitting') (NextTo ?d ?b) (Is ?s 'sandwich') (Holding ?d ?s) (Is ?h 'headphones') (In ?h ?b) (Is ?g 'glasses') (On ?g ?b) (Is ?sp 'spoon') (On ?sp ?b) (RightOf ?sp ?g) (Is ?a 'apple') (On ?a ?b) (Is ?o 'orange') (NextTo ?o ?a))))))))))",
+    "cnf": "(exists ?b (exists ?d (exists ?s (exists ?h (exists ?g (exists ?sp (exists ?a (exists ?o (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (NextTo ?d ?b) (In ?h ?b) (HasState ?d 'sitting') (Holding ?d ?s) (On ?g ?b) (Is ?h 'headphones') (Is ?d 'dog') (Is ?s 'sandwich') (On ?sp ?b) (Is ?g 'glasses') (RightOf ?sp ?g) (On ?a ?b) (Is ?sp 'spoon') (Is ?a 'apple') (NextTo ?o ?a) (Is ?o 'orange'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "headphones",
+        "spoon",
+        "glasses",
+        "orange",
+        "bookshelf",
+        "sandwich",
+        "apple",
+        "dog"
+    ]
+}

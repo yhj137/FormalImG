@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a camera, a tie, a watch, a pair of scissors, and a fork. The camera is positioned on the top side of the image. Directly below the camera is the tie. A watch is located above the scissors. The camera and the watch are aligned horizontally, as are the tie and the scissors. The fork is placed below the scissors. Furthermore, for every lemon present in the scene, it is aligned horizontally with the fork and is physically smaller than the camera.",
+    "dsl": "(exists ?camera (exists ?tie (exists ?watch (exists ?scissors (exists ?fork (and (Is ?camera 'camera') (Is ?tie 'tie') (Is ?watch 'watch') (Is ?scissors 'scissors') (Is ?fork 'fork') (OnTopSide ?camera) (Above ?camera ?tie) (Above ?watch ?scissors) (AlignedHorizontally ?camera ?watch) (AlignedHorizontally ?tie ?scissors) (Below ?fork ?scissors) (forall ?lemon (implies (Is ?lemon 'lemon') (and (AlignedHorizontally ?lemon ?fork) (SmallerThan ?lemon ?camera))))))))))",
+    "cnf": "(exists ?camera (exists ?tie (exists ?watch (exists ?scissors (exists ?fork (forall ?lemon (and (Is ?camera 'camera') (OnTopSide ?camera) (Above ?camera ?tie) (AlignedHorizontally ?camera ?watch) (Is ?tie 'tie') (AlignedHorizontally ?tie ?scissors) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?camera)) (Above ?watch ?scissors) (Below ?fork ?scissors) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?lemon ?fork)) (Is ?watch 'watch') (Is ?scissors 'scissors') (Is ?fork 'fork'))))))))",
+    "k": 6,
+    "object_classes": [
+        "tie",
+        "lemon",
+        "watch",
+        "fork",
+        "camera",
+        "scissors"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shirt, a shoe, a hammer, and an apple arranged precisely. The shirt is positioned on the right side of the layout, while the shoe is located to the left of the shirt. The hammer is placed above the shoe, and the apple is situated to the left of the hammer. Additionally, the scene follows a specific rule for donuts: for every donut present, there is a mouse to its left and a wallet directly above it. Furthermore, every donut is visually smaller than the hammer.",
+    "dsl": "(exists ?shirt (exists ?shoe (exists ?hammer (exists ?apple (and (Is ?shirt 'shirt') (Is ?shoe 'shoe') (Is ?hammer 'hammer') (Is ?apple 'apple') (OnRightSide ?shirt) (LeftOf ?shoe ?shirt) (Above ?hammer ?shoe) (LeftOf ?apple ?hammer) (forall ?donut (implies (Is ?donut 'donut') (exists ?mouse (exists ?wallet (and (Is ?mouse 'mouse') (Is ?wallet 'wallet') (LeftOf ?mouse ?donut) (Above ?wallet ?donut) (SmallerThan ?donut ?hammer)))))))))))",
+    "cnf": "(exists ?shirt (exists ?shoe (exists ?hammer (exists ?apple (forall ?donut (exists ?mouse (exists ?wallet (and (Is ?shirt 'shirt') (OnRightSide ?shirt) (LeftOf ?shoe ?shirt) (Is ?shoe 'shoe') (Above ?hammer ?shoe) (Is ?hammer 'hammer') (LeftOf ?apple ?hammer) (or (not (Is ?donut 'donut')) (SmallerThan ?donut ?hammer)) (Is ?apple 'apple') (or (not (Is ?donut 'donut')) (Above ?wallet ?donut)) (or (not (Is ?donut 'donut')) (LeftOf ?mouse ?donut)) (or (not (Is ?donut 'donut')) (Is ?wallet 'wallet')) (or (not (Is ?donut 'donut')) (Is ?mouse 'mouse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "donut",
+        "hammer",
+        "wallet",
+        "mouse",
+        "shoe",
+        "shirt"
+    ]
+}

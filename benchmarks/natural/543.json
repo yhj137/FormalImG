@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a desk with every pan placed on it, and a closed refrigerator standing to the left of the desk.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?d (and (Is ?d 'desk') (forall ?p (implies (Is ?p 'pan') (On ?p ?d))) (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'closed') (LeftOf ?r ?d))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?d (forall ?p (exists ?r (and (Is ?d 'desk') (or (not (Is ?p 'pan')) (On ?p ?d)) (LeftOf ?r ?d) (HasState ?r 'closed') (Is ?r 'refrigerator'))))))",
+    "k": 3,
+    "object_classes": [
+        "refrigerator",
+        "desk",
+        "pan"
+    ]
+}

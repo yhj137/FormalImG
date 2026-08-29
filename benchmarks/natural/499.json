@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child is on a blue bed next to a brown wardrobe.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?b (exists ?w (and (Is ?b 'bed') (HasColor ?b 'blue') (Is ?w 'wardrobe') (HasColor ?w 'brown') (On ?c ?b) (NextTo ?w ?b))))))",
+    "cnf": "(forall ?c (exists ?b (exists ?w (and (or (not (Is ?c 'child')) (Is ?b 'bed')) (or (not (Is ?c 'child')) (HasColor ?b 'blue')) (or (not (Is ?c 'child')) (On ?c ?b)) (or (not (Is ?c 'child')) (Is ?w 'wardrobe')) (or (not (Is ?c 'child')) (NextTo ?w ?b)) (or (not (Is ?c 'child')) (HasColor ?w 'brown'))))))",
+    "k": 3,
+    "object_classes": [
+        "wardrobe",
+        "bed",
+        "child"
+    ]
+}

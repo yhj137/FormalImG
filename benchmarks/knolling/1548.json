@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A red handbag is placed on the top side. A blue hat is aligned horizontally with the handbag. A white shirt lies below the handbag and is visibly larger than the hat. On the left side, a black phone is positioned above the shirt, while a gray mouse is located below the phone. For every spoon in the scene, there is a black stapler aligned horizontally with it and a yellow lemon located below the stapler; furthermore, the spoon is visibly smaller than the mouse.",
+    "dsl": "(exists ?handbag (exists ?hat (exists ?shirt (exists ?phone (exists ?mouse (and (Is ?handbag 'handbag') (Has ?handbag 'red') (OnTopSide ?handbag) (Is ?hat 'hat') (Has ?hat 'blue') (AlignedHorizontally ?hat ?handbag) (Is ?shirt 'shirt') (Has ?shirt 'white') (Below ?shirt ?handbag) (LargerThan ?shirt ?hat) (Is ?phone 'phone') (Has ?phone 'black') (OnLeftSide ?phone) (Above ?phone ?shirt) (Is ?mouse 'mouse') (Has ?mouse 'gray') (Below ?mouse ?phone) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?stapler (exists ?lemon (and (Is ?stapler 'stapler') (Has ?stapler 'black') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (AlignedHorizontally ?stapler ?spoon) (Below ?lemon ?stapler) (SmallerThan ?spoon ?mouse))))))))))))",
+    "cnf": "(exists ?handbag (exists ?hat (exists ?shirt (exists ?phone (exists ?mouse (forall ?spoon (exists ?stapler (exists ?lemon (and (Is ?handbag 'handbag') (Has ?handbag 'red') (OnTopSide ?handbag) (AlignedHorizontally ?hat ?handbag) (Below ?shirt ?handbag) (Has ?hat 'blue') (LargerThan ?shirt ?hat) (Has ?shirt 'white') (Is ?hat 'hat') (Above ?phone ?shirt) (Is ?shirt 'shirt') (OnLeftSide ?phone) (Below ?mouse ?phone) (Has ?phone 'black') (Has ?mouse 'gray') (or (not (Is ?spoon 'spoon')) (SmallerThan ?spoon ?mouse)) (Is ?phone 'phone') (Is ?mouse 'mouse') (or (not (Is ?spoon 'spoon')) (Below ?lemon ?stapler)) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?stapler ?spoon)) (or (not (Is ?spoon 'spoon')) (Has ?lemon 'yellow')) (or (not (Is ?spoon 'spoon')) (Has ?stapler 'black')) (or (not (Is ?spoon 'spoon')) (Is ?lemon 'lemon')) (or (not (Is ?spoon 'spoon')) (Is ?stapler 'stapler')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "stapler",
+        "lemon",
+        "phone",
+        "hat",
+        "handbag",
+        "mouse",
+        "spoon",
+        "shirt"
+    ]
+}

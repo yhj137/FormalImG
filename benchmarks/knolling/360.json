@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cutting board positioned on the top side of the layout. Additionally, for every book present in the image, it is visually smaller than the cutting board.",
+    "dsl": "(exists ?c (and (Is ?c 'cutting_board') (OnTopSide ?c) (forall ?b (implies (Is ?b 'book') (SmallerThan ?b ?c)))))",
+    "cnf": "(exists ?c (forall ?b (and (Is ?c 'cutting_board') (OnTopSide ?c) (or (not (Is ?b 'book')) (SmallerThan ?b ?c)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "cutting_board"
+    ]
+}

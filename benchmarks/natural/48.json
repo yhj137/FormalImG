@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting of a round clock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'clock') (HasShape ?c 'round'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'clock') (HasShape ?c 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "clock"
+    ]
+}

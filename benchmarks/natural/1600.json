@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene of a man on a broken bed holding a metal hammer. A basket of fruit is on the bed, with a clock positioned above. A bicycle is to the left of the bed. To the right of the bed is a car, and a bus is to the right of the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?bd (exists ?ba (exists ?f (exists ?cl (exists ?bi (exists ?c (exists ?bu (and (Is ?m 'man') (Is ?h 'hammer') (HasMaterial ?h 'metal') (Holding ?m ?h) (Is ?bd 'bed') (HasState ?bd 'broken') (On ?m ?bd) (Is ?ba 'basket') (On ?ba ?bd) (Is ?f 'fruit') (In ?f ?ba) (Is ?cl 'clock') (Above ?cl ?bd) (Is ?bi 'bicycle') (LeftOf ?bi ?bd) (Is ?c 'car') (RightOf ?c ?bd) (Is ?bu 'bus') (RightOf ?bu ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?h (exists ?bd (exists ?ba (exists ?f (exists ?cl (exists ?bi (exists ?c (exists ?bu (and (Is ?m 'man') (Holding ?m ?h) (On ?m ?bd) (HasMaterial ?h 'metal') (HasState ?bd 'broken') (On ?ba ?bd) (Is ?h 'hammer') (Is ?bd 'bed') (Above ?cl ?bd) (Is ?ba 'basket') (In ?f ?ba) (LeftOf ?bi ?bd) (Is ?cl 'clock') (Is ?f 'fruit') (RightOf ?c ?bd) (Is ?bi 'bicycle') (Is ?c 'car') (RightOf ?bu ?c) (Is ?bu 'bus'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "bed",
+        "man",
+        "hammer",
+        "bicycle",
+        "clock",
+        "car",
+        "basket",
+        "bus"
+    ]
+}

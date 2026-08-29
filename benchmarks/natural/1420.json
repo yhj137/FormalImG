@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a smiling person holding a yellow key. A blooming plant is next to the person, with a red flower and a blue toy car beside the plant. A sliced cake topped with an orange fruit sits next to the person, with a fork next to the cake.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?p (exists ?k (exists ?pl (exists ?fl (exists ?tc (exists ?c (exists ?fr (exists ?fo (and (Is ?p 'person') (HasState ?p 'smiling') (Is ?k 'key') (HasColor ?k 'yellow') (Holding ?p ?k) (Is ?pl 'plant') (HasState ?pl 'blooming') (NextTo ?p ?pl) (Is ?fl 'flower') (HasColor ?fl 'red') (NextTo ?pl ?fl) (Is ?tc 'toy car') (HasColor ?tc 'blue') (NextTo ?pl ?tc) (Is ?c 'cake') (HasState ?c 'sliced') (NextTo ?p ?c) (Is ?fr 'fruit') (HasColor ?fr 'orange') (On ?fr ?c) (Is ?fo 'fork') (NextTo ?c ?fo)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?p (exists ?k (exists ?pl (exists ?fl (exists ?tc (exists ?c (exists ?fr (exists ?fo (and (Is ?p 'person') (HasState ?p 'smiling') (Holding ?p ?k) (NextTo ?p ?pl) (HasColor ?k 'yellow') (NextTo ?p ?c) (HasState ?pl 'blooming') (NextTo ?pl ?fl) (Is ?k 'key') (HasState ?c 'sliced') (On ?fr ?c) (Is ?pl 'plant') (NextTo ?pl ?tc) (HasColor ?fl 'red') (Is ?c 'cake') (NextTo ?c ?fo) (HasColor ?fr 'orange') (HasColor ?tc 'blue') (Is ?fl 'flower') (Is ?fo 'fork') (Is ?fr 'fruit') (Is ?tc 'toy car')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "key",
+        "fork",
+        "person",
+        "toy car",
+        "plant",
+        "fruit",
+        "cake",
+        "flower"
+    ]
+}

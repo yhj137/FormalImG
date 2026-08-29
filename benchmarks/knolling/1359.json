@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene consists of a laptop, a game controller, a phone, a pair of glasses, and a hammer arranged in a horizontally aligned row from left to right. Furthermore, for every lemon present in the image, the hammer is positioned to its left, and there is a bowl located directly below the lemon on the bottom side of the image.",
+    "dsl": "(exists ?laptop (exists ?controller (exists ?phone (exists ?glasses (exists ?hammer (and (Is ?laptop 'laptop') (Is ?controller 'game_controller') (Is ?phone 'phone') (Is ?glasses 'glasses') (Is ?hammer 'hammer') (LeftOf ?laptop ?controller) (LeftOf ?controller ?phone) (LeftOf ?phone ?glasses) (LeftOf ?glasses ?hammer) (AlignedHorizontally ?laptop ?controller) (AlignedHorizontally ?controller ?phone) (AlignedHorizontally ?phone ?glasses) (AlignedHorizontally ?glasses ?hammer) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?bowl (and (Is ?bowl 'bowl') (LeftOf ?hammer ?lemon) (Below ?bowl ?lemon) (OnBottomSide ?bowl)))))))))))",
+    "cnf": "(exists ?laptop (exists ?controller (exists ?phone (exists ?glasses (exists ?hammer (forall ?lemon (exists ?bowl (and (Is ?laptop 'laptop') (LeftOf ?laptop ?controller) (AlignedHorizontally ?laptop ?controller) (Is ?controller 'game_controller') (LeftOf ?controller ?phone) (AlignedHorizontally ?controller ?phone) (Is ?phone 'phone') (LeftOf ?phone ?glasses) (AlignedHorizontally ?phone ?glasses) (Is ?glasses 'glasses') (LeftOf ?glasses ?hammer) (AlignedHorizontally ?glasses ?hammer) (Is ?hammer 'hammer') (or (not (Is ?lemon 'lemon')) (LeftOf ?hammer ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?bowl 'bowl')) (or (not (Is ?lemon 'lemon')) (Below ?bowl ?lemon)) (or (not (Is ?lemon 'lemon')) (OnBottomSide ?bowl))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "glasses",
+        "lemon",
+        "phone",
+        "game_controller",
+        "hammer",
+        "bowl"
+    ]
+}

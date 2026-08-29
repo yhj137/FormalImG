@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a flying car. Inside the car, a man holds a screwdriver, and there is a sandwich with a spoon on it. All flowers are positioned to the right of the car.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?m (and (Is ?c 'car') (HasState ?c 'flying') (Is ?m 'man') (In ?m ?c) (forall ?f (implies (Is ?f 'flower') (RightOf ?f ?c))) (exists ?sa (exists ?sp (exists ?sd (and (Is ?sa 'sandwich') (In ?sa ?c) (Is ?sp 'spoon') (On ?sp ?sa) (Is ?sd 'screwdriver') (Holding ?m ?sd)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?m (forall ?f (exists ?sa (exists ?sp (exists ?sd (and (Is ?c 'car') (HasState ?c 'flying') (In ?m ?c) (or (not (Is ?f 'flower')) (RightOf ?f ?c)) (Is ?m 'man') (Holding ?m ?sd) (In ?sa ?c) (Is ?sd 'screwdriver') (Is ?sa 'sandwich') (On ?sp ?sa) (Is ?sp 'spoon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "man",
+        "sandwich",
+        "screwdriver",
+        "flower",
+        "car",
+        "spoon"
+    ]
+}

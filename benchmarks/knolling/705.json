@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller positioned on the left side. For every pair of pliers in the image, the game controller is larger than the pliers. Furthermore, there exists a donut and a bottle associated with the scene, such that the donut is smaller than the pliers, and the bottle, which is located on the top side, is larger than the donut.",
+    "dsl": "(exists ?gc (and (Is ?gc 'game_controller') (OnLeftSide ?gc) (forall ?p (implies (Is ?p 'pliers') (exists ?d (exists ?b (and (Is ?d 'donut') (Is ?b 'bottle') (LargerThan ?gc ?p) (SmallerThan ?d ?p) (LargerThan ?b ?d) (OnTopSide ?b))))))))",
+    "cnf": "(exists ?gc (forall ?p (exists ?d (exists ?b (and (Is ?gc 'game_controller') (OnLeftSide ?gc) (or (not (Is ?p 'pliers')) (LargerThan ?gc ?p)) (or (not (Is ?p 'pliers')) (Is ?b 'bottle')) (or (not (Is ?p 'pliers')) (SmallerThan ?d ?p)) (or (not (Is ?p 'pliers')) (Is ?d 'donut')) (or (not (Is ?p 'pliers')) (LargerThan ?b ?d)) (or (not (Is ?p 'pliers')) (OnTopSide ?b)))))))",
+    "k": 4,
+    "object_classes": [
+        "bottle",
+        "pliers",
+        "donut",
+        "game_controller"
+    ]
+}

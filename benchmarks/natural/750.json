@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a bed next to a desk. Every cat sits to the left of the desk, holding an orange fish.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?d (and (Is ?b 'bed') (Is ?d 'desk') (NextTo ?b ?d) (forall ?c (implies (Is ?c 'cat') (exists ?f (and (Is ?f 'fish') (HasColor ?f 'orange') (HasState ?c 'sitting') (LeftOf ?c ?d) (Holding ?c ?f)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?d (forall ?c (exists ?f (and (Is ?b 'bed') (NextTo ?b ?d) (Is ?d 'desk') (or (not (Is ?c 'cat')) (LeftOf ?c ?d)) (or (not (Is ?c 'cat')) (HasState ?c 'sitting')) (or (not (Is ?c 'cat')) (Holding ?c ?f)) (or (not (Is ?c 'cat')) (HasColor ?f 'orange')) (or (not (Is ?c 'cat')) (Is ?f 'fish'))))))))",
+    "k": 4,
+    "object_classes": [
+        "desk",
+        "bed",
+        "cat",
+        "fish"
+    ]
+}

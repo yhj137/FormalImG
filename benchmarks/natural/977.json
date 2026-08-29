@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman holding an open umbrella next to a blue bed. A tree is positioned to the right of the bed, and every fork is located to the right of the tree.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?u (exists ?b (exists ?t (and (Is ?w 'woman') (Is ?u 'umbrella') (Is ?b 'bed') (Is ?t 'tree') (Holding ?w ?u) (HasState ?u 'open') (NextTo ?w ?b) (HasColor ?b 'blue') (RightOf ?t ?b) (forall ?f (implies (Is ?f 'fork') (RightOf ?f ?t)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?u (exists ?b (exists ?t (forall ?f (and (Is ?w 'woman') (Holding ?w ?u) (NextTo ?w ?b) (Is ?u 'umbrella') (HasState ?u 'open') (Is ?b 'bed') (HasColor ?b 'blue') (RightOf ?t ?b) (Is ?t 'tree') (or (not (Is ?f 'fork')) (RightOf ?f ?t)))))))))",
+    "k": 5,
+    "object_classes": [
+        "umbrella",
+        "fork",
+        "bed",
+        "tree",
+        "woman"
+    ]
+}

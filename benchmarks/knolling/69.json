@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a brown spoon.",
+    "dsl": "(exists ?spoon (and (Is ?spoon 'spoon') (Has ?spoon 'brown')))",
+    "cnf": "(exists ?spoon (and (Is ?spoon 'spoon') (Has ?spoon 'brown')))",
+    "k": 1,
+    "object_classes": [
+        "spoon"
+    ]
+}

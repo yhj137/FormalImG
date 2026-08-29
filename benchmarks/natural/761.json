@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular rug is laid out, and a plate rests on it. To the right of the rug, there is a horse. Furthermore, all knives in the scene are placed on the plate.",
+    "dsl": "(exists ?r (and (Is ?r 'rug') (HasShape ?r 'rectangular') (exists ?p (and (Is ?p 'plate') (On ?p ?r) (exists ?h (and (Is ?h 'horse') (RightOf ?h ?r) (forall ?k (implies (Is ?k 'knife') (On ?k ?p)))))))))",
+    "cnf": "(exists ?r (exists ?p (exists ?h (forall ?k (and (Is ?r 'rug') (HasShape ?r 'rectangular') (On ?p ?r) (RightOf ?h ?r) (Is ?p 'plate') (or (not (Is ?k 'knife')) (On ?k ?p)) (Is ?h 'horse'))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "plate",
+        "knife",
+        "rug"
+    ]
+}

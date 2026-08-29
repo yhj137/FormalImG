@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a pair of jeans located on the top side of the frame. Directly below the jeans is a hammer, and these two objects are vertically aligned. To the left of the hammer is a screwdriver, while to the right of the hammer lies a sock. Additionally, for every carrot in the image, it is positioned to the right of the jeans.",
+    "dsl": "(exists ?jeans (exists ?hammer (exists ?screwdriver (exists ?sock (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Is ?hammer 'hammer') (Below ?hammer ?jeans) (AlignedVertically ?jeans ?hammer) (Is ?screwdriver 'screwdriver') (LeftOf ?screwdriver ?hammer) (Is ?sock 'sock') (RightOf ?sock ?hammer) (forall ?carrot (implies (Is ?carrot 'carrot') (RightOf ?carrot ?jeans))))))))",
+    "cnf": "(exists ?jeans (exists ?hammer (exists ?screwdriver (exists ?sock (forall ?carrot (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (Below ?hammer ?jeans) (AlignedVertically ?jeans ?hammer) (Is ?hammer 'hammer') (or (not (Is ?carrot 'carrot')) (RightOf ?carrot ?jeans)) (LeftOf ?screwdriver ?hammer) (RightOf ?sock ?hammer) (Is ?screwdriver 'screwdriver') (Is ?sock 'sock')))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "carrot",
+        "screwdriver",
+        "hammer",
+        "jeans"
+    ]
+}

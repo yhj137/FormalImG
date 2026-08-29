@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a plate positioned on the top side. Below the plate is a wallet, and below the wallet is a calculator, which is situated on the bottom side of the image. Furthermore, for every wrench present in the scene, there is a pair of scissors located above it, with the scissors being visually smaller than the wallet.",
+    "dsl": "(exists ?plate (exists ?wallet (exists ?calc (and (Is ?plate 'plate') (Is ?wallet 'wallet') (Is ?calc 'calculator') (OnTopSide ?plate) (Below ?wallet ?plate) (Below ?calc ?wallet) (OnBottomSide ?calc) (forall ?w (implies (Is ?w 'wrench') (exists ?s (and (Is ?s 'scissors') (Above ?s ?w) (SmallerThan ?s ?wallet)))))))))",
+    "cnf": "(exists ?plate (exists ?wallet (exists ?calc (forall ?w (exists ?s (and (Is ?plate 'plate') (OnTopSide ?plate) (Below ?wallet ?plate) (Is ?wallet 'wallet') (Below ?calc ?wallet) (or (not (Is ?w 'wrench')) (SmallerThan ?s ?wallet)) (Is ?calc 'calculator') (OnBottomSide ?calc) (or (not (Is ?w 'wrench')) (Above ?s ?w)) (or (not (Is ?w 'wrench')) (Is ?s 'scissors'))))))))",
+    "k": 5,
+    "object_classes": [
+        "plate",
+        "wrench",
+        "calculator",
+        "wallet",
+        "scissors"
+    ]
+}

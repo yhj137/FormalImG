@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A red jacket rests on a wardrobe. A green plant stands to the left of the wardrobe. To the right of the wardrobe, a dog is holding a pair of black glasses. Every car is blue, located to the right of the dog, and has a white plate with a green bottle on it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'wardrobe') (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'red') (On ?j ?w))) (exists ?p (and (Is ?p 'plant') (HasColor ?p 'green') (LeftOf ?p ?w))) (exists ?d (and (Is ?d 'dog') (RightOf ?d ?w) (exists ?g (and (Is ?g 'glasses') (HasColor ?g 'black') (Holding ?d ?g))) (forall ?c (implies (Is ?c 'car') (and (HasColor ?c 'blue') (RightOf ?c ?d) (exists ?pl (and (Is ?pl 'plate') (HasColor ?pl 'white') (On ?pl ?c) (exists ?b (and (Is ?b 'bottle') (HasColor ?b 'green') (On ?b ?pl)))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?j (exists ?p (exists ?d (exists ?g (forall ?c (exists ?pl (exists ?b (and (Is ?w 'wardrobe') (On ?j ?w) (LeftOf ?p ?w) (HasColor ?j 'red') (RightOf ?d ?w) (HasColor ?p 'green') (Is ?j 'jacket') (Is ?d 'dog') (Holding ?d ?g) (Is ?p 'plant') (or (not (Is ?c 'car')) (RightOf ?c ?d)) (HasColor ?g 'black') (or (not (Is ?c 'car')) (HasColor ?c 'blue')) (or (not (Is ?c 'car')) (Is ?pl 'plate')) (Is ?g 'glasses') (or (not (Is ?c 'car')) (HasColor ?pl 'white')) (or (not (Is ?c 'car')) (On ?pl ?c)) (or (not (Is ?c 'car')) (Is ?b 'bottle')) (or (not (Is ?c 'car')) (On ?b ?pl)) (or (not (Is ?c 'car')) (HasColor ?b 'green'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bottle",
+        "glasses",
+        "jacket",
+        "wardrobe",
+        "plant",
+        "plate",
+        "dog",
+        "car"
+    ]
+}

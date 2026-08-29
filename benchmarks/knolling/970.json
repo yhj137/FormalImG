@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a laptop, a white shirt, a watch, and a red apple. The laptop is positioned to the left of the shirt. Directly below the laptop is a watch, and below the watch is a red apple; the laptop, watch, and apple are all aligned vertically. Additionally, for every tie present in the image, it is located below the shirt and aligned vertically with it.",
+    "dsl": "(exists ?laptop (exists ?shirt (exists ?watch (exists ?apple (and (Is ?laptop 'laptop') (Is ?shirt 'shirt') (Has ?shirt 'white') (Is ?watch 'watch') (Is ?apple 'apple') (Has ?apple 'red') (LeftOf ?laptop ?shirt) (Below ?watch ?laptop) (AlignedVertically ?watch ?laptop) (Below ?apple ?watch) (AlignedVertically ?apple ?watch) (forall ?tie (implies (Is ?tie 'tie') (and (Below ?tie ?shirt) (AlignedVertically ?tie ?shirt)))))))))",
+    "cnf": "(exists ?laptop (exists ?shirt (exists ?watch (exists ?apple (forall ?tie (and (Is ?laptop 'laptop') (LeftOf ?laptop ?shirt) (Below ?watch ?laptop) (Has ?shirt 'white') (or (not (Is ?tie 'tie')) (Below ?tie ?shirt)) (AlignedVertically ?watch ?laptop) (Is ?watch 'watch') (Is ?shirt 'shirt') (or (not (Is ?tie 'tie')) (AlignedVertically ?tie ?shirt)) (Below ?apple ?watch) (AlignedVertically ?apple ?watch) (Has ?apple 'red') (Is ?apple 'apple')))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "apple",
+        "watch",
+        "shirt"
+    ]
+}

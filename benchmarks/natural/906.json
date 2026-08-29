@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a child next to a bench. A red jacket is to the left of the child. Every spoon is positioned next to a cake held by the child.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?ch (and (Is ?ch 'child') (exists ?b (and (Is ?b 'bench') (NextTo ?ch ?b) (forall ?s (implies (Is ?s 'spoon') (exists ?c (and (Is ?c 'cake') (NextTo ?s ?c) (Holding ?ch ?c))))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'red') (LeftOf ?j ?ch))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?ch (exists ?b (forall ?s (exists ?c (exists ?j (and (Is ?ch 'child') (NextTo ?ch ?b) (or (not (Is ?s 'spoon')) (Holding ?ch ?c)) (Is ?b 'bench') (LeftOf ?j ?ch) (or (not (Is ?s 'spoon')) (NextTo ?s ?c)) (HasColor ?j 'red') (or (not (Is ?s 'spoon')) (Is ?c 'cake')) (Is ?j 'jacket'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "cake",
+        "child",
+        "spoon"
+    ]
+}

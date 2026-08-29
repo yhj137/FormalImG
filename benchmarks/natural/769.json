@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene of an elephant holding a glass bottle next to a yellow lion. All the fruit is inside the bottle.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?e (exists ?l (exists ?b (and (Is ?e 'elephant') (Is ?l 'lion') (Is ?b 'bottle') (HasMaterial ?b 'glass') (Holding ?e ?b) (HasColor ?l 'yellow') (NextTo ?l ?e) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?e (exists ?l (exists ?b (forall ?f (and (Is ?e 'elephant') (Holding ?e ?b) (NextTo ?l ?e) (HasMaterial ?b 'glass') (or (not (Is ?f 'fruit')) (In ?f ?b)) (HasColor ?l 'yellow') (Is ?b 'bottle') (Is ?l 'lion')))))))",
+    "k": 4,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "bottle",
+        "lion"
+    ]
+}

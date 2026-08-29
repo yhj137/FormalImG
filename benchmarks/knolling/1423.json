@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill present in the scene, there is a structured arrangement of items around it. A red hammer is positioned to the right of the drill, while a blue hat is located below the drill. The hat is placed to the left of a white glove. Directly below the hat is a green book, which is visually larger than the black mouse situated to its right. Furthermore, a gray remote is located below the book on the bottom side of the image, and a fork is placed to the right of the remote.",
+    "dsl": "(forall ?drill (implies (Is ?drill 'drill') (exists ?hammer (exists ?hat (exists ?glove (exists ?book (exists ?mouse (exists ?remote (exists ?fork (and (Is ?hammer 'hammer') (Has ?hammer 'red') (Is ?hat 'hat') (Has ?hat 'blue') (Is ?glove 'glove') (Has ?glove 'white') (Is ?book 'book') (Has ?book 'green') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?remote 'remote') (Has ?remote 'gray') (Is ?fork 'fork') (RightOf ?hammer ?drill) (Below ?hat ?drill) (LeftOf ?hat ?glove) (Below ?book ?hat) (RightOf ?mouse ?book) (LargerThan ?book ?mouse) (Below ?remote ?book) (OnBottomSide ?remote) (RightOf ?fork ?remote)))))))))))",
+    "cnf": "(forall ?drill (exists ?hammer (exists ?hat (exists ?glove (exists ?book (exists ?mouse (exists ?remote (exists ?fork (and (or (not (Is ?drill 'drill')) (Is ?hammer 'hammer')) (or (not (Is ?drill 'drill')) (Has ?hammer 'red')) (or (not (Is ?drill 'drill')) (Is ?hat 'hat')) (or (not (Is ?drill 'drill')) (RightOf ?hammer ?drill)) (or (not (Is ?drill 'drill')) (Has ?hat 'blue')) (or (not (Is ?drill 'drill')) (Is ?fork 'fork')) (or (not (Is ?drill 'drill')) (Below ?hat ?drill)) (or (not (Is ?drill 'drill')) (Is ?glove 'glove')) (or (not (Is ?drill 'drill')) (Has ?remote 'gray')) (or (not (Is ?drill 'drill')) (RightOf ?fork ?remote)) (or (not (Is ?drill 'drill')) (LeftOf ?hat ?glove)) (or (not (Is ?drill 'drill')) (Has ?glove 'white')) (or (not (Is ?drill 'drill')) (Is ?remote 'remote')) (or (not (Is ?drill 'drill')) (Below ?remote ?book)) (or (not (Is ?drill 'drill')) (OnBottomSide ?remote)) (or (not (Is ?drill 'drill')) (Below ?book ?hat)) (or (not (Is ?drill 'drill')) (Is ?book 'book')) (or (not (Is ?drill 'drill')) (Has ?mouse 'black')) (or (not (Is ?drill 'drill')) (LargerThan ?book ?mouse)) (or (not (Is ?drill 'drill')) (RightOf ?mouse ?book)) (or (not (Is ?drill 'drill')) (Has ?book 'green')) (or (not (Is ?drill 'drill')) (Is ?mouse 'mouse')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "remote",
+        "drill",
+        "hat",
+        "hammer",
+        "fork",
+        "mouse",
+        "glove"
+    ]
+}

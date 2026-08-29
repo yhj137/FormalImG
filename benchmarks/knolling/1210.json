@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene contains a blue hat, a camera, a book, a white glove, a black shoe, a pizza, and a pair of pliers. Arranged in a neat layout, the blue hat is positioned to the left of the camera, while the camera is to the left of the book. The camera is notably smaller than the book. In the row below, the white glove is placed below the hat, the black shoe is below the camera, and the pizza is below the book. Finally, the pliers are located below the pizza and are smaller than it.",
+    "dsl": "(exists ?hat (exists ?camera (exists ?book (exists ?glove (exists ?shoe (exists ?pizza (exists ?pliers (and (Is ?hat 'hat') (Has ?hat 'blue') (Is ?camera 'camera') (Is ?book 'book') (Is ?glove 'glove') (Has ?glove 'white') (Is ?shoe 'shoe') (Has ?shoe 'black') (Is ?pizza 'pizza') (Is ?pliers 'pliers') (LeftOf ?hat ?camera) (LeftOf ?camera ?book) (SmallerThan ?camera ?book) (Below ?glove ?hat) (Below ?shoe ?camera) (Below ?pizza ?book) (Below ?pliers ?pizza) (SmallerThan ?pliers ?pizza)))))))))",
+    "cnf": "(exists ?hat (exists ?camera (exists ?book (exists ?glove (exists ?shoe (exists ?pizza (exists ?pliers (and (Is ?hat 'hat') (Has ?hat 'blue') (LeftOf ?hat ?camera) (Below ?glove ?hat) (Is ?camera 'camera') (LeftOf ?camera ?book) (Has ?glove 'white') (SmallerThan ?camera ?book) (Is ?book 'book') (Is ?glove 'glove') (Below ?shoe ?camera) (Below ?pizza ?book) (Has ?shoe 'black') (Is ?pizza 'pizza') (Below ?pliers ?pizza) (Is ?shoe 'shoe') (SmallerThan ?pliers ?pizza) (Is ?pliers 'pliers')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "pliers",
+        "pizza",
+        "hat",
+        "camera",
+        "glove",
+        "shoe"
+    ]
+}

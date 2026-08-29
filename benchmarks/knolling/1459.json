@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a white cutting board. For every screwdriver present, it is positioned to the left of the cutting board and is physically smaller than it. A sandwich is placed below the cutting board. A gray knife is located to the left of the cutting board, and a blue bottle is located to the left of the knife; the bottle, knife, and cutting board are aligned horizontally. A black remote is situated below the sandwich, and red pliers are placed below the remote. A green book is located on the right side of the scene, with the cutting board positioned to its left.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (Has ?cb 'white') (forall ?sd (implies (Is ?sd 'screwdriver') (and (LeftOf ?sd ?cb) (SmallerThan ?sd ?cb)))) (exists ?sw (exists ?kn (exists ?bot (exists ?rem (exists ?pl (exists ?bk (and (Is ?sw 'sandwich') (Below ?sw ?cb) (Is ?kn 'knife') (Has ?kn 'gray') (LeftOf ?kn ?cb) (AlignedHorizontally ?kn ?cb) (Is ?bot 'bottle') (Has ?bot 'blue') (LeftOf ?bot ?kn) (AlignedHorizontally ?bot ?kn) (Is ?rem 'remote') (Has ?rem 'black') (Below ?rem ?sw) (Is ?pl 'pliers') (Has ?pl 'red') (Below ?pl ?rem) (Is ?bk 'book') (Has ?bk 'green') (OnRightSide ?bk) (LeftOf ?cb ?bk))))))))))",
+    "cnf": "(exists ?cb (forall ?sd (exists ?sw (exists ?kn (exists ?bot (exists ?rem (exists ?pl (exists ?bk (and (Is ?cb 'cutting_board') (Has ?cb 'white') (or (not (Is ?sd 'screwdriver')) (LeftOf ?sd ?cb)) (or (not (Is ?sd 'screwdriver')) (SmallerThan ?sd ?cb)) (Below ?sw ?cb) (LeftOf ?kn ?cb) (Is ?sw 'sandwich') (Below ?rem ?sw) (AlignedHorizontally ?kn ?cb) (Has ?kn 'gray') (Has ?rem 'black') (Below ?pl ?rem) (LeftOf ?cb ?bk) (LeftOf ?bot ?kn) (Is ?kn 'knife') (Is ?rem 'remote') (Has ?pl 'red') (OnRightSide ?bk) (AlignedHorizontally ?bot ?kn) (Has ?bot 'blue') (Is ?pl 'pliers') (Has ?bk 'green') (Is ?bot 'bottle') (Is ?bk 'book'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "book",
+        "remote",
+        "pliers",
+        "screwdriver",
+        "cutting_board",
+        "bottle",
+        "knife",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a metal refrigerator containing a pair of headphones, with a monitor resting on top. To the left of the refrigerator stands an elephant holding a peeled banana, with a lamp located to the left of the elephant.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (exists ?h (exists ?m (exists ?e (exists ?b (exists ?l (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (Is ?h 'headphones') (In ?h ?r) (Is ?m 'monitor') (On ?m ?r) (Is ?e 'elephant') (LeftOf ?e ?r) (Is ?b 'banana') (Holding ?e ?b) (HasState ?b 'peeled') (Is ?l 'lamp') (LeftOf ?l ?e)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (exists ?h (exists ?m (exists ?e (exists ?b (exists ?l (and (Is ?r 'refrigerator') (HasMaterial ?r 'metal') (In ?h ?r) (On ?m ?r) (Is ?h 'headphones') (LeftOf ?e ?r) (Is ?m 'monitor') (Is ?e 'elephant') (Holding ?e ?b) (LeftOf ?l ?e) (Is ?b 'banana') (HasState ?b 'peeled') (Is ?l 'lamp')))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "headphones",
+        "lamp",
+        "banana",
+        "refrigerator",
+        "elephant"
+    ]
+}

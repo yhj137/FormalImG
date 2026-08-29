@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular book is placed to the left of a hammer, while every fish is positioned to the right of the hammer.",
+    "dsl": "(exists ?b (exists ?h (and (Is ?b 'book') (Is ?h 'hammer') (HasShape ?b 'rectangular') (LeftOf ?b ?h) (forall ?f (implies (Is ?f 'fish') (RightOf ?f ?h))))))",
+    "cnf": "(exists ?b (exists ?h (forall ?f (and (Is ?b 'book') (HasShape ?b 'rectangular') (LeftOf ?b ?h) (Is ?h 'hammer') (or (not (Is ?f 'fish')) (RightOf ?f ?h))))))",
+    "k": 3,
+    "object_classes": [
+        "fish",
+        "book",
+        "hammer"
+    ]
+}

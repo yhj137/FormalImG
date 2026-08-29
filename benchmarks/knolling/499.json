@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every drill in the scene, there corresponds an apple and a pair of pliers. The drill is located on the top side of the image and is aligned vertically with the apple. The apple, in turn, is aligned horizontally with the pliers.",
+    "dsl": "(and (forall ?drill (implies (Is ?drill 'drill') (exists ?apple (exists ?pliers (and (Is ?apple 'apple') (Is ?pliers 'pliers') (OnTopSide ?drill) (AlignedVertically ?drill ?apple) (AlignedHorizontally ?apple ?pliers)))))))",
+    "cnf": "(forall ?drill (exists ?apple (exists ?pliers (and (or (not (Is ?drill 'drill')) (Is ?apple 'apple')) (or (not (Is ?drill 'drill')) (Is ?pliers 'pliers')) (or (not (Is ?drill 'drill')) (AlignedVertically ?drill ?apple)) (or (not (Is ?drill 'drill')) (OnTopSide ?drill)) (or (not (Is ?drill 'drill')) (AlignedHorizontally ?apple ?pliers))))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "pliers",
+        "apple"
+    ]
+}

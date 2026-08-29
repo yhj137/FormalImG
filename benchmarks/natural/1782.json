@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a running blue bus. Next to the bus, a man holds a bitten fruit. A bed stands next to the man. A cat is sleeping on the bed next to a fish. A turned-on monitor and a ball are also on the bed. Every shirt in the scene is green and lying on the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?fr (exists ?bed (exists ?c (exists ?f (exists ?mon (exists ?ball (and (Is ?b 'bus') (HasColor ?b 'blue') (HasState ?b 'running') (Is ?m 'man') (NextTo ?m ?b) (Is ?fr 'fruit') (HasState ?fr 'bitten') (Holding ?m ?fr) (Is ?bed 'bed') (NextTo ?bed ?m) (Is ?c 'cat') (HasState ?c 'sleeping') (On ?c ?bed) (Is ?f 'fish') (NextTo ?f ?c) (Is ?mon 'monitor') (HasState ?mon 'on') (On ?mon ?bed) (Is ?ball 'ball') (On ?ball ?bed) (forall ?s (implies (Is ?s 'shirt') (and (HasColor ?s 'green') (On ?s ?bed))))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?b (exists ?m (exists ?fr (exists ?bed (exists ?c (exists ?f (exists ?mon (exists ?ball (forall ?s (and (Is ?b 'bus') (HasColor ?b 'blue') (HasState ?b 'running') (NextTo ?m ?b) (Is ?m 'man') (Holding ?m ?fr) (NextTo ?bed ?m) (HasState ?fr 'bitten') (Is ?bed 'bed') (On ?c ?bed) (Is ?fr 'fruit') (On ?mon ?bed) (HasState ?c 'sleeping') (NextTo ?f ?c) (On ?ball ?bed) (HasState ?mon 'on') (Is ?c 'cat') (Is ?f 'fish') (or (not (Is ?s 'shirt')) (On ?s ?bed)) (Is ?ball 'ball') (Is ?mon 'monitor') (or (not (Is ?s 'shirt')) (HasColor ?s 'green')))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bus",
+        "monitor",
+        "man",
+        "bed",
+        "fruit",
+        "ball",
+        "shirt",
+        "cat",
+        "fish"
+    ]
+}

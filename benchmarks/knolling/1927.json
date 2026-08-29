@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The top side features a monitor on the left and a game controller on the right. The monitor is positioned to the left of the game controller, and the controller is physically smaller than the monitor. Below the monitor is a yellow drill. On the bottom side of the image, there is a black shoe positioned below the drill, and a pair of pliers; the shoe is to the left of the pliers, and they are aligned horizontally. For every pen in the image (which is located below the game controller), there is a blue tie positioned below it, a calculator to the left of the tie, a cutting board located below the drill on the bottom side, and a knife below the cutting board. The cutting board is larger than the knife.",
+    "dsl": "(exists ?monitor (exists ?controller (exists ?drill (exists ?shoe (exists ?pliers (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?controller 'game_controller') (OnTopSide ?controller) (LeftOf ?monitor ?controller) (SmallerThan ?controller ?monitor) (Is ?drill 'drill') (Has ?drill 'yellow') (Below ?drill ?monitor) (Is ?shoe 'shoe') (Has ?shoe 'black') (OnBottomSide ?shoe) (Below ?shoe ?drill) (Is ?pliers 'pliers') (OnBottomSide ?pliers) (LeftOf ?shoe ?pliers) (AlignedHorizontally ?shoe ?pliers) (forall ?pen (implies (Is ?pen 'pen') (exists ?tie (exists ?calculator (exists ?cutting_board (exists ?knife (and (Is ?tie 'tie') (Has ?tie 'blue') (Is ?calculator 'calculator') (Is ?cutting_board 'cutting_board') (Is ?knife 'knife') (Below ?pen ?controller) (Below ?tie ?pen) (LeftOf ?calculator ?tie) (Below ?cutting_board ?drill) (OnBottomSide ?cutting_board) (LargerThan ?cutting_board ?knife) (Below ?knife ?cutting_board))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?controller (exists ?drill (exists ?shoe (exists ?pliers (forall ?pen (exists ?tie (exists ?calculator (exists ?cutting_board (exists ?knife (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?monitor ?controller) (SmallerThan ?controller ?monitor) (OnTopSide ?controller) (Below ?drill ?monitor) (or (not (Is ?pen 'pen')) (Below ?pen ?controller)) (Is ?controller 'game_controller') (Has ?drill 'yellow') (Below ?shoe ?drill) (or (not (Is ?pen 'pen')) (Is ?knife 'knife')) (or (not (Is ?pen 'pen')) (Below ?tie ?pen)) (Is ?drill 'drill') (or (not (Is ?pen 'pen')) (Below ?cutting_board ?drill)) (OnBottomSide ?shoe) (LeftOf ?shoe ?pliers) (or (not (Is ?pen 'pen')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?pen 'pen')) (LargerThan ?cutting_board ?knife)) (or (not (Is ?pen 'pen')) (Has ?tie 'blue')) (or (not (Is ?pen 'pen')) (LeftOf ?calculator ?tie)) (or (not (Is ?pen 'pen')) (OnBottomSide ?cutting_board)) (Has ?shoe 'black') (AlignedHorizontally ?shoe ?pliers) (OnBottomSide ?pliers) (or (not (Is ?pen 'pen')) (Is ?calculator 'calculator')) (or (not (Is ?pen 'pen')) (Below ?knife ?cutting_board)) (or (not (Is ?pen 'pen')) (Is ?tie 'tie')) (Is ?shoe 'shoe') (Is ?pliers 'pliers'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "pen",
+        "game_controller",
+        "drill",
+        "cutting_board",
+        "calculator",
+        "knife",
+        "monitor",
+        "shoe"
+    ]
+}

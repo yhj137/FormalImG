@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every man is holding a book and is located next to a wooden bench with a jacket lying on it. Beside the bench is a table with a round bowl containing a sandwich.",
+    "dsl": "(forall ?m (implies (Is ?m 'man') (exists ?bk (exists ?bn (exists ?j (exists ?t (exists ?bo (exists ?s (and (Is ?bk 'book') (Is ?bn 'bench') (Is ?j 'jacket') (Is ?t 'table') (Is ?bo 'bowl') (Is ?s 'sandwich') (Holding ?m ?bk) (NextTo ?m ?bn) (HasMaterial ?bn 'wooden') (On ?j ?bn) (NextTo ?bn ?t) (On ?bo ?t) (HasShape ?bo 'round') (In ?s ?bo))))))))))",
+    "cnf": "(forall ?m (exists ?bk (exists ?bn (exists ?j (exists ?t (exists ?bo (exists ?s (and (or (not (Is ?m 'man')) (Is ?bk 'book')) (or (not (Is ?m 'man')) (Holding ?m ?bk)) (or (not (Is ?m 'man')) (Is ?bn 'bench')) (or (not (Is ?m 'man')) (Is ?s 'sandwich')) (or (not (Is ?m 'man')) (NextTo ?m ?bn)) (or (not (Is ?m 'man')) (Is ?j 'jacket')) (or (not (Is ?m 'man')) (Is ?bo 'bowl')) (or (not (Is ?m 'man')) (In ?s ?bo)) (or (not (Is ?m 'man')) (HasMaterial ?bn 'wooden')) (or (not (Is ?m 'man')) (Is ?t 'table')) (or (not (Is ?m 'man')) (On ?j ?bn)) (or (not (Is ?m 'man')) (On ?bo ?t)) (or (not (Is ?m 'man')) (HasShape ?bo 'round')) (or (not (Is ?m 'man')) (NextTo ?bn ?t))))))))))",
+    "k": 7,
+    "object_classes": [
+        "sandwich",
+        "bowl",
+        "book",
+        "table",
+        "jacket",
+        "man",
+        "bench"
+    ]
+}

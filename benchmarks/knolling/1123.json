@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a sandwich, a gray knife, and scissors. The knife is located to the left of the sandwich, while the scissors are positioned below the sandwich. Every apple in the image is red and is placed below the knife. Additionally, a glove is situated on the bottom side of the image below the scissors, and a watch is placed to the left of the glove. The watch is visually smaller than the glove.",
+    "dsl": "(exists ?sandwich (exists ?knife (exists ?scissors (and (Is ?sandwich 'sandwich') (Is ?knife 'knife') (Has ?knife 'gray') (Is ?scissors 'scissors') (LeftOf ?knife ?sandwich) (Below ?scissors ?sandwich) (forall ?apple (implies (Is ?apple 'apple') (and (Has ?apple 'red') (Below ?apple ?knife)))) (exists ?glove (exists ?watch (and (Is ?glove 'glove') (OnBottomSide ?glove) (Is ?watch 'watch') (Below ?glove ?scissors) (LeftOf ?watch ?glove) (SmallerThan ?watch ?glove))))))))",
+    "cnf": "(exists ?sandwich (exists ?knife (exists ?scissors (forall ?apple (exists ?glove (exists ?watch (and (Is ?sandwich 'sandwich') (LeftOf ?knife ?sandwich) (Below ?scissors ?sandwich) (Has ?knife 'gray') (or (not (Is ?apple 'apple')) (Below ?apple ?knife)) (Is ?scissors 'scissors') (Below ?glove ?scissors) (Is ?knife 'knife') (or (not (Is ?apple 'apple')) (Has ?apple 'red')) (OnBottomSide ?glove) (LeftOf ?watch ?glove) (Is ?glove 'glove') (SmallerThan ?watch ?glove) (Is ?watch 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "apple",
+        "watch",
+        "knife",
+        "scissors",
+        "sandwich",
+        "glove"
+    ]
+}

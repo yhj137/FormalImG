@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a man holding an umbrella next to a tree. To the man's left is a pizza beside a cake, and next to him lies a book with a key on it. Every car in the scene is blue and located to the right of the tree.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?u (exists ?t (exists ?p (exists ?ck (exists ?b (exists ?k (and (Is ?m 'man') (Is ?u 'umbrella') (Is ?t 'tree') (Is ?p 'pizza') (Is ?ck 'cake') (Is ?b 'book') (Is ?k 'key') (Holding ?m ?u) (NextTo ?m ?t) (LeftOf ?p ?m) (NextTo ?ck ?p) (NextTo ?b ?m) (On ?k ?b) (forall ?c (implies (Is ?c 'car') (and (HasColor ?c 'blue') (RightOf ?c ?t)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?u (exists ?t (exists ?p (exists ?ck (exists ?b (exists ?k (forall ?c (and (Is ?m 'man') (Holding ?m ?u) (NextTo ?m ?t) (Is ?u 'umbrella') (LeftOf ?p ?m) (Is ?t 'tree') (or (not (Is ?c 'car')) (RightOf ?c ?t)) (NextTo ?b ?m) (Is ?p 'pizza') (NextTo ?ck ?p) (or (not (Is ?c 'car')) (HasColor ?c 'blue')) (Is ?b 'book') (On ?k ?b) (Is ?ck 'cake') (Is ?k 'key')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "man",
+        "key",
+        "car",
+        "tree",
+        "cake",
+        "pizza",
+        "book"
+    ]
+}

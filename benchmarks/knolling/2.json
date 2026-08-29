@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A stapler is located on the right side of the scene.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnRightSide ?stapler)))",
+    "cnf": "(exists ?stapler (and (Is ?stapler 'stapler') (OnRightSide ?stapler)))",
+    "k": 1,
+    "object_classes": [
+        "stapler"
+    ]
+}

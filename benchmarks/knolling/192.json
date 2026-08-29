@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every stapler present in the layout is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?stapler (implies (Is ?stapler 'stapler') (OnBottomSide ?stapler))))",
+    "cnf": "(forall ?stapler (or (not (Is ?stapler 'stapler')) (OnBottomSide ?stapler)))",
+    "k": 1,
+    "object_classes": [
+        "stapler"
+    ]
+}

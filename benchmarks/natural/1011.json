@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk style scene inside a house, a man holding a black umbrella stands next to a chair. A pair of round glasses rests on the chair, and a toy car sits beside it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?c (exists ?u (exists ?g (exists ?t (and (Is ?h 'house') (Is ?m 'man') (Is ?c 'chair') (Is ?u 'umbrella') (Is ?g 'glasses') (Is ?t 'toy car') (In ?c ?h) (NextTo ?m ?c) (Holding ?m ?u) (HasColor ?u 'black') (On ?g ?c) (HasShape ?g 'round') (NextTo ?t ?c)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?m (exists ?c (exists ?u (exists ?g (exists ?t (and (Is ?h 'house') (In ?c ?h) (Is ?c 'chair') (NextTo ?m ?c) (Is ?m 'man') (Holding ?m ?u) (On ?g ?c) (Is ?u 'umbrella') (HasColor ?u 'black') (NextTo ?t ?c) (Is ?g 'glasses') (HasShape ?g 'round') (Is ?t 'toy car')))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "umbrella",
+        "chair",
+        "glasses",
+        "man",
+        "toy car"
+    ]
+}

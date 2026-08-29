@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a cup which is located on the top side of the layout.",
+    "dsl": "(exists ?c (and (Is ?c 'cup') (OnTopSide ?c)))",
+    "cnf": "(exists ?c (and (Is ?c 'cup') (OnTopSide ?c)))",
+    "k": 1,
+    "object_classes": [
+        "cup"
+    ]
+}

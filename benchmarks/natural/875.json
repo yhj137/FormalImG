@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene featuring a bed. Every rock in the scene is placed on the bed, along with a bowl. There is also a broken mirror on the bed being held by a child.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bed') (forall ?r (implies (Is ?r 'rock') (On ?r ?b))) (exists ?bo (and (Is ?bo 'bowl') (On ?bo ?b))) (exists ?m (exists ?c (and (Is ?m 'mirror') (HasState ?m 'broken') (On ?m ?b) (Is ?c 'child') (Holding ?c ?m)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?r (exists ?bo (exists ?m (exists ?c (and (Is ?b 'bed') (or (not (Is ?r 'rock')) (On ?r ?b)) (On ?bo ?b) (On ?m ?b) (Is ?bo 'bowl') (HasState ?m 'broken') (Holding ?c ?m) (Is ?m 'mirror') (Is ?c 'child'))))))))",
+    "k": 5,
+    "object_classes": [
+        "child",
+        "bed",
+        "rock",
+        "mirror",
+        "bowl"
+    ]
+}

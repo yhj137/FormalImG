@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a hammer inside a wooden bookshelf.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (Is ?h 'hammer') (In ?h ?b)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?h (and (Is ?b 'bookshelf') (HasMaterial ?b 'wooden') (In ?h ?b) (Is ?h 'hammer')))))",
+    "k": 2,
+    "object_classes": [
+        "bookshelf",
+        "hammer"
+    ]
+}

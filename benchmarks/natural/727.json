@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a woman holding a pan. A metal bowl is placed to the right of the woman, and all fruits are located to the right of the pan.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?p (and (Is ?w 'woman') (Is ?p 'pan') (Holding ?w ?p) (forall ?f (implies (Is ?f 'fruit') (RightOf ?f ?p))) (exists ?b (and (Is ?b 'bowl') (HasMaterial ?b 'metal') (RightOf ?b ?w)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?p (forall ?f (exists ?b (and (Is ?w 'woman') (Holding ?w ?p) (RightOf ?b ?w) (Is ?p 'pan') (or (not (Is ?f 'fruit')) (RightOf ?f ?p)) (HasMaterial ?b 'metal') (Is ?b 'bowl')))))))",
+    "k": 4,
+    "object_classes": [
+        "bowl",
+        "pan",
+        "fruit",
+        "woman"
+    ]
+}

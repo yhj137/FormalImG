@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every blue backpack in the scene, there is a gray laptop and a white shoe. The laptop is positioned to the right of the backpack, and the two items are aligned horizontally. The shoe is aligned vertically with the laptop and is also located to the right of the backpack.",
+    "dsl": "(and (forall ?b (implies (and (Is ?b 'backpack') (Has ?b 'blue')) (exists ?l (exists ?s (and (Is ?l 'laptop') (Has ?l 'gray') (Is ?s 'shoe') (Has ?s 'white') (RightOf ?l ?b) (AlignedHorizontally ?b ?l) (AlignedVertically ?l ?s) (RightOf ?s ?b)))))))",
+    "cnf": "(forall ?b (exists ?l (exists ?s (and (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (Is ?l 'laptop')) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (Has ?l 'gray')) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (RightOf ?l ?b)) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (Is ?s 'shoe')) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (AlignedHorizontally ?b ?l)) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (Has ?s 'white')) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (AlignedVertically ?l ?s)) (or (not (Is ?b 'backpack')) (not (Has ?b 'blue')) (RightOf ?s ?b))))))",
+    "k": 3,
+    "object_classes": [
+        "laptop",
+        "backpack",
+        "shoe"
+    ]
+}

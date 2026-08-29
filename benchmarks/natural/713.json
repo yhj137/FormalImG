@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene with a wooden tree. All knives are located to the right of the tree. A red shirt is on the tree, and a clock is to the right of the shirt.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'tree') (HasMaterial ?t 'wooden') (forall ?k (implies (Is ?k 'knife') (RightOf ?k ?t))) (exists ?s (and (Is ?s 'shirt') (HasColor ?s 'red') (On ?s ?t) (exists ?c (and (Is ?c 'clock') (RightOf ?c ?s))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?k (exists ?s (exists ?c (and (Is ?t 'tree') (HasMaterial ?t 'wooden') (or (not (Is ?k 'knife')) (RightOf ?k ?t)) (On ?s ?t) (HasColor ?s 'red') (RightOf ?c ?s) (Is ?s 'shirt') (Is ?c 'clock')))))))",
+    "k": 4,
+    "object_classes": [
+        "shirt",
+        "knife",
+        "tree",
+        "clock"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A boat is positioned with a rusty bus to its right. Every car in the scene is located inside the boat. A mirror is inside the boat, and a sofa rests on it. A woman sits on the sofa, holding a blue jacket and a round bowl, with shoes also placed on the sofa.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bt (exists ?bs (and (Is ?bt 'boat') (Is ?bs 'bus') (RightOf ?bs ?bt) (HasState ?bs 'rusty') (forall ?c (implies (Is ?c 'car') (In ?c ?bt))) (exists ?s (exists ?m (exists ?w (exists ?j (exists ?b (exists ?sh (and (Is ?s 'sofa') (On ?s ?bt) (Is ?m 'mirror') (In ?m ?bt) (Is ?w 'woman') (On ?w ?s) (HasState ?w 'sitting') (Is ?j 'jacket') (HasColor ?j 'blue') (Holding ?w ?j) (Is ?b 'bowl') (HasShape ?b 'round') (Holding ?w ?b) (Is ?sh 'shoes') (On ?sh ?s))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bt (exists ?bs (forall ?c (exists ?s (exists ?m (exists ?w (exists ?j (exists ?b (exists ?sh (and (Is ?bt 'boat') (RightOf ?bs ?bt) (or (not (Is ?c 'car')) (In ?c ?bt)) (Is ?bs 'bus') (HasState ?bs 'rusty') (On ?s ?bt) (In ?m ?bt) (Is ?s 'sofa') (On ?w ?s) (Is ?m 'mirror') (On ?sh ?s) (Is ?w 'woman') (HasState ?w 'sitting') (Is ?sh 'shoes') (Holding ?w ?j) (Holding ?w ?b) (HasColor ?j 'blue') (HasShape ?b 'round') (Is ?j 'jacket') (Is ?b 'bowl'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "bowl",
+        "shoes",
+        "woman",
+        "jacket",
+        "car",
+        "mirror",
+        "boat",
+        "bus"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a cup positioned on the top side of the scene, which is horizontally aligned with a bowl. A knife is located below the cup and shares a vertical alignment with it. A mouse is placed on the right side of the image, appearing visually smaller than the bowl. Finally, every donut in the scene is aligned vertically with the mouse.",
+    "dsl": "(exists ?cup (exists ?bowl (exists ?knife (exists ?mouse (and (Is ?cup 'cup') (Is ?bowl 'bowl') (Is ?knife 'knife') (Is ?mouse 'mouse') (OnTopSide ?cup) (AlignedHorizontally ?cup ?bowl) (Above ?cup ?knife) (AlignedVertically ?cup ?knife) (OnRightSide ?mouse) (LargerThan ?bowl ?mouse) (forall ?donut (implies (Is ?donut 'donut') (AlignedVertically ?donut ?mouse))))))))",
+    "cnf": "(exists ?cup (exists ?bowl (exists ?knife (exists ?mouse (forall ?donut (and (Is ?cup 'cup') (OnTopSide ?cup) (AlignedHorizontally ?cup ?bowl) (Above ?cup ?knife) (Is ?bowl 'bowl') (LargerThan ?bowl ?mouse) (AlignedVertically ?cup ?knife) (Is ?knife 'knife') (OnRightSide ?mouse) (or (not (Is ?donut 'donut')) (AlignedVertically ?donut ?mouse)) (Is ?mouse 'mouse')))))))",
+    "k": 5,
+    "object_classes": [
+        "cup",
+        "mouse",
+        "knife",
+        "bowl",
+        "donut"
+    ]
+}

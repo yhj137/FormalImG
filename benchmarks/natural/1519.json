@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a white house containing a bookshelf. Inside, a woman holding glasses stands next to the bookshelf; every person in the scene is located inside the house. Outside, a bench with a red apple on it sits next to the house, and a rock is positioned next to the bench.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?bs (exists ?w (exists ?g (and (Is ?h 'house') (HasColor ?h 'white') (Is ?bs 'bookshelf') (In ?bs ?h) (Is ?w 'woman') (In ?w ?h) (NextTo ?w ?bs) (Is ?g 'glasses') (Holding ?w ?g) (forall ?p (implies (Is ?p 'person') (In ?p ?h))) (exists ?b (exists ?r (exists ?a (and (Is ?b 'bench') (NextTo ?b ?h) (Is ?r 'rock') (NextTo ?r ?b) (Is ?a 'apple') (HasColor ?a 'red') (On ?a ?b)))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?bs (exists ?w (exists ?g (forall ?p (exists ?b (exists ?r (exists ?a (and (Is ?h 'house') (HasColor ?h 'white') (In ?bs ?h) (In ?w ?h) (Is ?bs 'bookshelf') (NextTo ?w ?bs) (or (not (Is ?p 'person')) (In ?p ?h)) (Is ?w 'woman') (Holding ?w ?g) (NextTo ?b ?h) (Is ?g 'glasses') (Is ?b 'bench') (NextTo ?r ?b) (On ?a ?b) (Is ?r 'rock') (HasColor ?a 'red') (Is ?a 'apple')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "bench",
+        "person",
+        "glasses",
+        "woman",
+        "rock",
+        "apple",
+        "bookshelf"
+    ]
+}

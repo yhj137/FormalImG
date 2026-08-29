@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image arranged in a neat vertical column. A pair of headphones is located on the right side of the image. Positioned directly above a pair of scissors is the headphones. The keys are placed below the scissors. Finally, a sock is located below the keys and resides on the bottom side of the layout.",
+    "dsl": "(exists ?headphones (exists ?scissors (exists ?keys (exists ?sock (and (Is ?headphones 'headphones') (Is ?scissors 'scissors') (Is ?keys 'keys') (Is ?sock 'sock') (OnRightSide ?headphones) (Above ?headphones ?scissors) (Below ?keys ?scissors) (Below ?sock ?keys) (OnBottomSide ?sock))))))",
+    "cnf": "(exists ?headphones (exists ?scissors (exists ?keys (exists ?sock (and (Is ?headphones 'headphones') (OnRightSide ?headphones) (Above ?headphones ?scissors) (Is ?scissors 'scissors') (Below ?keys ?scissors) (Is ?keys 'keys') (Below ?sock ?keys) (Is ?sock 'sock') (OnBottomSide ?sock))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "keys",
+        "headphones",
+        "sock"
+    ]
+}

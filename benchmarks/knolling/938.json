@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop located on the left side, with a keyboard positioned directly above it. A drill is placed on the right side of the image. For every watch present in the scene, there is a cutting board that is larger than the watch and is located above the drill. Additionally, the laptop is visually larger than this cutting board.",
+    "dsl": "(exists ?laptop (exists ?keyboard (exists ?drill (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?keyboard 'keyboard') (Above ?keyboard ?laptop) (Is ?drill 'drill') (OnRightSide ?drill) (forall ?watch (implies (Is ?watch 'watch') (exists ?cutting_board (and (Is ?cutting_board 'cutting_board') (LargerThan ?cutting_board ?watch) (Above ?cutting_board ?drill) (LargerThan ?laptop ?cutting_board)))))))))",
+    "cnf": "(exists ?laptop (exists ?keyboard (exists ?drill (forall ?watch (exists ?cutting_board (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Above ?keyboard ?laptop) (or (not (Is ?watch 'watch')) (LargerThan ?laptop ?cutting_board)) (Is ?keyboard 'keyboard') (or (not (Is ?watch 'watch')) (Above ?cutting_board ?drill)) (OnRightSide ?drill) (or (not (Is ?watch 'watch')) (LargerThan ?cutting_board ?watch)) (Is ?drill 'drill') (or (not (Is ?watch 'watch')) (Is ?cutting_board 'cutting_board'))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "keyboard",
+        "watch",
+        "drill",
+        "cutting_board"
+    ]
+}

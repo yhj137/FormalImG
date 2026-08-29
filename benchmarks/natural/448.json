@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A rusty bicycle is positioned to the right of a plate. A bowl is resting on the plate.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?p (exists ?w (and (Is ?b 'bicycle') (Is ?p 'plate') (Is ?w 'bowl') (HasState ?b 'rusty') (RightOf ?b ?p) (On ?w ?p))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (exists ?w (and (Is ?b 'bicycle') (HasState ?b 'rusty') (RightOf ?b ?p) (Is ?p 'plate') (On ?w ?p) (Is ?w 'bowl'))))))",
+    "k": 3,
+    "object_classes": [
+        "bicycle",
+        "bowl",
+        "plate"
+    ]
+}

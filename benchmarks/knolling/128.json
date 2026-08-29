@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, it is positioned on the top side of the layout.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'jeans') (OnTopSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'jeans')) (OnTopSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "jeans"
+    ]
+}

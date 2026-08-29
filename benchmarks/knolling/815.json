@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image displaying a neatly organized vertical column of five objects. A drill is located on the right side of the image and is positioned above a pair of pliers. The drill is visibly larger than the pliers. The pliers are placed above a pair of scissors, the scissors are above a cup, and the cup is situated above a fork. Furthermore, the fork is smaller than the scissors.",
+    "dsl": "(exists ?d (exists ?p (exists ?s (exists ?c (exists ?f (and (Is ?d 'drill') (Is ?p 'pliers') (Is ?s 'scissors') (Is ?c 'cup') (Is ?f 'fork') (OnRightSide ?d) (Above ?d ?p) (Above ?p ?s) (Above ?s ?c) (Above ?c ?f) (LargerThan ?d ?p) (SmallerThan ?f ?s)))))))",
+    "cnf": "(exists ?d (exists ?p (exists ?s (exists ?c (exists ?f (and (Is ?d 'drill') (OnRightSide ?d) (Above ?d ?p) (LargerThan ?d ?p) (Is ?p 'pliers') (Above ?p ?s) (Is ?s 'scissors') (Above ?s ?c) (SmallerThan ?f ?s) (Is ?c 'cup') (Above ?c ?f) (Is ?f 'fork')))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "cup",
+        "drill",
+        "fork",
+        "scissors"
+    ]
+}

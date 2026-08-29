@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop, a drill, and a plate. The laptop is positioned on the top side of the layout and is visually larger than the drill. Additionally, the plate is smaller than the drill.",
+    "dsl": "(exists ?laptop (exists ?drill (exists ?plate (and (Is ?laptop 'laptop') (Is ?drill 'drill') (Is ?plate 'plate') (OnTopSide ?laptop) (LargerThan ?laptop ?drill) (SmallerThan ?plate ?drill)))))",
+    "cnf": "(exists ?laptop (exists ?drill (exists ?plate (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (LargerThan ?laptop ?drill) (Is ?drill 'drill') (SmallerThan ?plate ?drill) (Is ?plate 'plate')))))",
+    "k": 3,
+    "object_classes": [
+        "drill",
+        "laptop",
+        "plate"
+    ]
+}

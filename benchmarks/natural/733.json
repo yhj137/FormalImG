@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a woman standing on a rug. All monitors are rectangular and located to her left, and for each monitor, the woman holds a red apple.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?r (and (Is ?w 'woman') (Is ?r 'rug') (On ?w ?r) (forall ?m (implies (Is ?m 'monitor') (and (HasShape ?m 'rectangular') (LeftOf ?m ?w) (exists ?a (and (Is ?a 'apple') (HasColor ?a 'red') (Holding ?w ?a))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?r (forall ?m (exists ?a (and (Is ?w 'woman') (On ?w ?r) (or (not (Is ?m 'monitor')) (LeftOf ?m ?w)) (Is ?r 'rug') (or (not (Is ?m 'monitor')) (Holding ?w ?a)) (or (not (Is ?m 'monitor')) (HasShape ?m 'rectangular')) (or (not (Is ?m 'monitor')) (Is ?a 'apple')) (or (not (Is ?m 'monitor')) (HasColor ?a 'red'))))))))",
+    "k": 4,
+    "object_classes": [
+        "rug",
+        "apple",
+        "woman",
+        "monitor"
+    ]
+}

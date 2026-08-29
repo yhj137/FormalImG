@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This scene, rendered in an oil painting style, features a round lamp. Next to the lamp lies a rectangular keyboard with a fork resting on it, and all apples are positioned to the right of the fork. To the right of the lamp stands an elephant with a bird on its back, while a person holding a spoon stands next to the elephant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (and (Is ?l 'lamp') (HasShape ?l 'round') (exists ?k (and (Is ?k 'keyboard') (HasShape ?k 'rectangular') (NextTo ?k ?l) (exists ?f (and (Is ?f 'fork') (On ?f ?k) (forall ?a (implies (Is ?a 'apple') (RightOf ?a ?f))))))) (exists ?e (and (Is ?e 'elephant') (RightOf ?e ?l) (exists ?b (and (Is ?b 'bird') (On ?b ?e))) (exists ?p (and (Is ?p 'person') (NextTo ?p ?e) (exists ?s (and (Is ?s 'spoon') (Holding ?p ?s))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?k (exists ?f (forall ?a (exists ?e (exists ?b (exists ?p (exists ?s (and (Is ?l 'lamp') (HasShape ?l 'round') (NextTo ?k ?l) (RightOf ?e ?l) (HasShape ?k 'rectangular') (On ?f ?k) (Is ?e 'elephant') (On ?b ?e) (Is ?k 'keyboard') (Is ?f 'fork') (or (not (Is ?a 'apple')) (RightOf ?a ?f)) (NextTo ?p ?e) (Is ?b 'bird') (Is ?p 'person') (Holding ?p ?s) (Is ?s 'spoon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "fork",
+        "person",
+        "lamp",
+        "apple",
+        "bird",
+        "elephant",
+        "spoon"
+    ]
+}

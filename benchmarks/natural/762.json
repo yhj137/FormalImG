@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman holding a red apple to the left of a wooden bookshelf. All books in the scene are placed on the bookshelf.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?bs (exists ?a (and (Is ?w 'woman') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (Is ?a 'apple') (HasColor ?a 'red') (Holding ?w ?a) (LeftOf ?w ?bs) (forall ?bk (implies (Is ?bk 'book') (On ?bk ?bs))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?bs (exists ?a (forall ?bk (and (Is ?w 'woman') (Holding ?w ?a) (LeftOf ?w ?bs) (HasColor ?a 'red') (HasMaterial ?bs 'wooden') (or (not (Is ?bk 'book')) (On ?bk ?bs)) (Is ?a 'apple') (Is ?bs 'bookshelf')))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "apple",
+        "bookshelf",
+        "woman"
+    ]
+}

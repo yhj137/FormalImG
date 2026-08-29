@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue handbag is placed on the top side of the scene. Directly below the handbag, a cutting board, a black wallet, and a calculator are arranged in a vertical column, aligned vertically with the handbag. The handbag is visually larger than the wallet. On the right side, a phone is positioned below the level of the handbag. Below the phone is a mouse, aligned vertically with it. Furthermore, for every screwdriver in the image, it is located below the mouse, and a pair of glasses is located below the screwdriver, with both objects aligned vertically to the mouse.",
+    "dsl": "(exists ?hb (exists ?cb (exists ?w (exists ?calc (exists ?ph (exists ?m (and (Is ?hb 'handbag') (Has ?hb 'blue') (OnTopSide ?hb) (Is ?cb 'cutting_board') (Below ?cb ?hb) (AlignedVertically ?hb ?cb) (Is ?w 'wallet') (Has ?w 'black') (Below ?w ?cb) (AlignedVertically ?cb ?w) (LargerThan ?hb ?w) (Is ?calc 'calculator') (Below ?calc ?w) (AlignedVertically ?w ?calc) (Is ?ph 'phone') (OnRightSide ?ph) (Below ?ph ?hb) (Is ?m 'mouse') (Below ?m ?ph) (AlignedVertically ?ph ?m) (forall ?sd (implies (Is ?sd 'screwdriver') (exists ?gl (and (Is ?gl 'glasses') (Below ?sd ?m) (AlignedVertically ?m ?sd) (Below ?gl ?sd) (AlignedVertically ?sd ?gl))))))))))))",
+    "cnf": "(exists ?hb (exists ?cb (exists ?w (exists ?calc (exists ?ph (exists ?m (forall ?sd (exists ?gl (and (Is ?hb 'handbag') (Has ?hb 'blue') (OnTopSide ?hb) (Below ?cb ?hb) (AlignedVertically ?hb ?cb) (Is ?cb 'cutting_board') (LargerThan ?hb ?w) (Below ?w ?cb) (Below ?ph ?hb) (AlignedVertically ?cb ?w) (Below ?calc ?w) (Has ?w 'black') (OnRightSide ?ph) (Below ?m ?ph) (AlignedVertically ?w ?calc) (Is ?calc 'calculator') (Is ?w 'wallet') (Is ?ph 'phone') (AlignedVertically ?ph ?m) (Is ?m 'mouse') (or (not (Is ?sd 'screwdriver')) (Below ?sd ?m)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?m ?sd)) (or (not (Is ?sd 'screwdriver')) (Is ?gl 'glasses')) (or (not (Is ?sd 'screwdriver')) (Below ?gl ?sd)) (or (not (Is ?sd 'screwdriver')) (AlignedVertically ?sd ?gl)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "phone",
+        "screwdriver",
+        "cutting_board",
+        "handbag",
+        "calculator",
+        "wallet",
+        "mouse"
+    ]
+}

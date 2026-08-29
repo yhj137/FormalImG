@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a monitor located on the top side. Arranged to the left of the monitor is a red drill, followed by a pair of jeans which appear visually larger than the drill. Directly below the monitor sits a calculator, which is smaller than the monitor; a stapler is placed to the left of the calculator, maintaining horizontal alignment. Further down, a wrench is positioned below the calculator, with pliers to its left. On the right side of the arrangement, a bowl is placed below the monitor. The composition is completed by a rule: for every fork present, there are keys located to its left, with the fork positioned below the bowl.",
+    "dsl": "(exists ?monitor (exists ?drill (exists ?jeans (exists ?calc (exists ?stapler (exists ?wrench (exists ?pliers (exists ?bowl (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?drill 'drill') (Has ?drill 'red') (LeftOf ?drill ?monitor) (Is ?jeans 'jeans') (LeftOf ?jeans ?drill) (LargerThan ?jeans ?drill) (Is ?calc 'calculator') (Below ?calc ?monitor) (SmallerThan ?calc ?monitor) (Is ?stapler 'stapler') (LeftOf ?stapler ?calc) (AlignedHorizontally ?stapler ?calc) (Is ?wrench 'wrench') (Below ?wrench ?calc) (Is ?pliers 'pliers') (LeftOf ?pliers ?wrench) (Is ?bowl 'bowl') (OnRightSide ?bowl) (Below ?bowl ?monitor) (forall ?fork (implies (Is ?fork 'fork') (exists ?keys (and (Is ?keys 'keys') (LeftOf ?keys ?fork) (Below ?fork ?bowl))))))))))))))",
+    "cnf": "(exists ?monitor (exists ?drill (exists ?jeans (exists ?calc (exists ?stapler (exists ?wrench (exists ?pliers (exists ?bowl (forall ?fork (exists ?keys (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LeftOf ?drill ?monitor) (Below ?calc ?monitor) (Has ?drill 'red') (LeftOf ?jeans ?drill) (SmallerThan ?calc ?monitor) (Is ?calc 'calculator') (Is ?drill 'drill') (LargerThan ?jeans ?drill) (Is ?jeans 'jeans') (Below ?bowl ?monitor) (LeftOf ?stapler ?calc) (OnRightSide ?bowl) (or (not (Is ?fork 'fork')) (Below ?fork ?bowl)) (AlignedHorizontally ?stapler ?calc) (Is ?stapler 'stapler') (Is ?bowl 'bowl') (or (not (Is ?fork 'fork')) (LeftOf ?keys ?fork)) (Below ?wrench ?calc) (or (not (Is ?fork 'fork')) (Is ?keys 'keys')) (Is ?wrench 'wrench') (LeftOf ?pliers ?wrench) (Is ?pliers 'pliers'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "stapler",
+        "wrench",
+        "drill",
+        "fork",
+        "calculator",
+        "jeans",
+        "monitor",
+        "bowl"
+    ]
+}

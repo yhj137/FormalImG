@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art scene featuring a round mirror. A leather jacket is placed to the left of the mirror, and a wooden basket sits to the right. A fabric backpack is located to the left of the basket, while a metal pan is positioned to the right of the backpack. Additionally, every ball in the scene is round and situated to the left of the jacket.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?j (exists ?b (exists ?bp (exists ?p (and (Is ?m 'mirror') (HasShape ?m 'round') (Is ?j 'jacket') (HasMaterial ?j 'leather') (LeftOf ?j ?m) (Is ?b 'basket') (HasMaterial ?b 'wooden') (RightOf ?b ?m) (Is ?bp 'backpack') (HasMaterial ?bp 'fabric') (LeftOf ?bp ?b) (Is ?p 'pan') (HasMaterial ?p 'metal') (RightOf ?p ?bp) (forall ?x (implies (Is ?x 'ball') (and (HasShape ?x 'round') (LeftOf ?x ?j)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?j (exists ?b (exists ?bp (exists ?p (forall ?x (and (Is ?m 'mirror') (HasShape ?m 'round') (LeftOf ?j ?m) (RightOf ?b ?m) (HasMaterial ?j 'leather') (or (not (Is ?x 'ball')) (LeftOf ?x ?j)) (HasMaterial ?b 'wooden') (LeftOf ?bp ?b) (Is ?j 'jacket') (or (not (Is ?x 'ball')) (HasShape ?x 'round')) (Is ?b 'basket') (HasMaterial ?bp 'fabric') (RightOf ?p ?bp) (Is ?bp 'backpack') (HasMaterial ?p 'metal') (Is ?p 'pan')))))))))",
+    "k": 6,
+    "object_classes": [
+        "backpack",
+        "jacket",
+        "mirror",
+        "pan",
+        "ball",
+        "basket"
+    ]
+}

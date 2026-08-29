@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A person sits on a rusty bicycle next to a sleeping elephant. The person holds a red jacket and wears black shoes. Every cup in the scene is placed on the bicycle and contains a white spoon.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'person') (exists ?b (and (Is ?b 'bicycle') (On ?p ?b) (HasState ?b 'rusty') (forall ?c (implies (Is ?c 'cup') (and (On ?c ?b) (exists ?s (and (Is ?s 'spoon') (HasColor ?s 'white') (In ?s ?c)))))) (exists ?j (and (Is ?j 'jacket') (HasColor ?j 'red') (Holding ?p ?j))) (exists ?sh (and (Is ?sh 'shoes') (HasColor ?sh 'black') (On ?sh ?p))) (exists ?e (and (Is ?e 'elephant') (HasState ?e 'sleeping') (NextTo ?e ?p))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?b (forall ?c (exists ?s (exists ?j (exists ?sh (exists ?e (and (Is ?p 'person') (On ?p ?b) (Holding ?p ?j) (Is ?b 'bicycle') (HasState ?b 'rusty') (On ?sh ?p) (HasColor ?j 'red') (or (not (Is ?c 'cup')) (On ?c ?b)) (NextTo ?e ?p) (HasColor ?sh 'black') (Is ?j 'jacket') (or (not (Is ?c 'cup')) (Is ?s 'spoon')) (HasState ?e 'sleeping') (Is ?sh 'shoes') (or (not (Is ?c 'cup')) (HasColor ?s 'white')) (Is ?e 'elephant') (or (not (Is ?c 'cup')) (In ?s ?c)))))))))))",
+    "k": 7,
+    "object_classes": [
+        "jacket",
+        "person",
+        "shoes",
+        "cup",
+        "bicycle",
+        "elephant",
+        "spoon"
+    ]
+}

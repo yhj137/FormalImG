@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image showing a neat collection of items. In the top area, there is a white shoe. To the right of the shoe is a game controller, and to the right of that is a watch. A black keyboard, which is larger than the game controller, is placed below the shoe. A glove sits below the game controller, and a pizza is below the watch. Further down, glasses are positioned with a book to their right; the book is strictly on the right side of the image. Additionally, for every stapler in the scene, there is a gray calculator to its right which is also positioned below the book.",
+    "dsl": "(exists ?shoe (exists ?controller (exists ?watch (exists ?keyboard (exists ?glove (exists ?pizza (exists ?glasses (exists ?book (and (Is ?shoe 'shoe') (Has ?shoe 'white') (OnTopSide ?shoe) (Is ?controller 'game_controller') (RightOf ?controller ?shoe) (Is ?watch 'watch') (RightOf ?watch ?controller) (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Below ?keyboard ?shoe) (LargerThan ?keyboard ?controller) (Is ?glove 'glove') (Below ?glove ?controller) (Is ?pizza 'pizza') (Below ?pizza ?watch) (Is ?glasses 'glasses') (Below ?glasses ?keyboard) (Is ?book 'book') (RightOf ?book ?glasses) (OnRightSide ?book) (forall ?stapler (implies (Is ?stapler 'stapler') (exists ?calculator (and (Is ?calculator 'calculator') (Has ?calculator 'gray') (RightOf ?calculator ?stapler) (Below ?calculator ?book))))))))))))))",
+    "cnf": "(exists ?shoe (exists ?controller (exists ?watch (exists ?keyboard (exists ?glove (exists ?pizza (exists ?glasses (exists ?book (forall ?stapler (exists ?calculator (and (Is ?shoe 'shoe') (Has ?shoe 'white') (OnTopSide ?shoe) (RightOf ?controller ?shoe) (Below ?keyboard ?shoe) (Is ?controller 'game_controller') (RightOf ?watch ?controller) (Has ?keyboard 'black') (LargerThan ?keyboard ?controller) (Is ?watch 'watch') (Below ?pizza ?watch) (Is ?keyboard 'keyboard') (Below ?glove ?controller) (Below ?glasses ?keyboard) (Is ?pizza 'pizza') (Is ?glove 'glove') (Is ?glasses 'glasses') (RightOf ?book ?glasses) (Is ?book 'book') (OnRightSide ?book) (or (not (Is ?stapler 'stapler')) (Below ?calculator ?book)) (or (not (Is ?stapler 'stapler')) (RightOf ?calculator ?stapler)) (or (not (Is ?stapler 'stapler')) (Has ?calculator 'gray')) (or (not (Is ?stapler 'stapler')) (Is ?calculator 'calculator')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "glasses",
+        "book",
+        "stapler",
+        "keyboard",
+        "pizza",
+        "watch",
+        "game_controller",
+        "calculator",
+        "glove",
+        "shoe"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pizza present in the scene, it is positioned on the bottom side of the layout.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'pizza') (OnBottomSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'pizza')) (OnBottomSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "pizza"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every monitor in the scene, there is a corresponding collection of items: a shirt, a tie, a knife, and a donut. The monitor is larger than the shirt, the shirt is larger than the tie, and the tie is larger than the knife. The donut is smaller than the knife and is located on the bottom side of the layout.",
+    "dsl": "(and (forall ?monitor (implies (Is ?monitor 'monitor') (exists ?shirt (exists ?tie (exists ?knife (exists ?donut (and (Is ?shirt 'shirt') (Is ?tie 'tie') (Is ?knife 'knife') (Is ?donut 'donut') (LargerThan ?monitor ?shirt) (LargerThan ?shirt ?tie) (LargerThan ?tie ?knife) (SmallerThan ?donut ?knife) (OnBottomSide ?donut)))))))))",
+    "cnf": "(forall ?monitor (exists ?shirt (exists ?tie (exists ?knife (exists ?donut (and (or (not (Is ?monitor 'monitor')) (Is ?shirt 'shirt')) (or (not (Is ?monitor 'monitor')) (LargerThan ?monitor ?shirt)) (or (not (Is ?monitor 'monitor')) (Is ?tie 'tie')) (or (not (Is ?monitor 'monitor')) (LargerThan ?shirt ?tie)) (or (not (Is ?monitor 'monitor')) (Is ?donut 'donut')) (or (not (Is ?monitor 'monitor')) (Is ?knife 'knife')) (or (not (Is ?monitor 'monitor')) (LargerThan ?tie ?knife)) (or (not (Is ?monitor 'monitor')) (SmallerThan ?donut ?knife)) (or (not (Is ?monitor 'monitor')) (OnBottomSide ?donut))))))))",
+    "k": 5,
+    "object_classes": [
+        "shirt",
+        "knife",
+        "tie",
+        "monitor",
+        "donut"
+    ]
+}

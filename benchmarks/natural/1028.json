@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene showing the interior of a house. Inside the house, a closed wardrobe is located to the left of a sofa. A rectangular desk stands next to the wardrobe. There is a knife lying on the desk. Additionally, a sleeping cat is resting on the sofa.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?w (exists ?s (exists ?d (exists ?k (exists ?c (and (Is ?h 'house') (Is ?w 'wardrobe') (Is ?s 'sofa') (Is ?d 'desk') (Is ?k 'knife') (Is ?c 'cat') (In ?w ?h) (In ?s ?h) (HasState ?w 'closed') (LeftOf ?w ?s) (NextTo ?d ?w) (HasShape ?d 'rectangular') (On ?k ?d) (HasState ?c 'sleeping') (On ?c ?s)))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?w (exists ?s (exists ?d (exists ?k (exists ?c (and (Is ?h 'house') (In ?w ?h) (In ?s ?h) (Is ?w 'wardrobe') (HasState ?w 'closed') (Is ?s 'sofa') (LeftOf ?w ?s) (NextTo ?d ?w) (On ?c ?s) (Is ?d 'desk') (HasShape ?d 'rectangular') (HasState ?c 'sleeping') (On ?k ?d) (Is ?c 'cat') (Is ?k 'knife')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "cat",
+        "knife",
+        "desk",
+        "wardrobe",
+        "house"
+    ]
+}

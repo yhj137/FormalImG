@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A sofa is positioned to the left of a white bed. An oval mirror is located above the sofa. A backpack is on the sofa, and a sandwich is inside the backpack. To the right of the bed, there is a brown horse. An open umbrella is next to the horse. A keyboard is on the bed. All apples in the scene are next to the keyboard. Additionally, a cup is on the bed to the left of the keyboard.",
+    "dsl": "(exists ?bed (exists ?sofa (exists ?mirror (exists ?horse (exists ?bp (exists ?sw (exists ?u (exists ?kb (and (Is ?bed 'bed') (HasColor ?bed 'white') (Is ?sofa 'sofa') (LeftOf ?sofa ?bed) (Is ?mirror 'mirror') (HasShape ?mirror 'oval') (Above ?mirror ?sofa) (Is ?horse 'horse') (HasColor ?horse 'brown') (RightOf ?horse ?bed) (Is ?bp 'backpack') (On ?bp ?sofa) (Is ?sw 'sandwich') (In ?sw ?bp) (Is ?u 'umbrella') (HasState ?u 'open') (NextTo ?u ?horse) (Is ?kb 'keyboard') (On ?kb ?bed) (forall ?app (implies (Is ?app 'apple') (NextTo ?app ?kb))) (exists ?cup (and (Is ?cup 'cup') (On ?cup ?bed) (LeftOf ?cup ?kb))))))))))))",
+    "cnf": "(exists ?bed (exists ?sofa (exists ?mirror (exists ?horse (exists ?bp (exists ?sw (exists ?u (exists ?kb (forall ?app (exists ?cup (and (Is ?bed 'bed') (HasColor ?bed 'white') (LeftOf ?sofa ?bed) (RightOf ?horse ?bed) (Is ?sofa 'sofa') (Above ?mirror ?sofa) (On ?kb ?bed) (HasColor ?horse 'brown') (NextTo ?u ?horse) (On ?bp ?sofa) (HasShape ?mirror 'oval') (On ?cup ?bed) (Is ?kb 'keyboard') (or (not (Is ?app 'apple')) (NextTo ?app ?kb)) (Is ?horse 'horse') (HasState ?u 'open') (Is ?bp 'backpack') (In ?sw ?bp) (Is ?mirror 'mirror') (Is ?cup 'cup') (LeftOf ?cup ?kb) (Is ?u 'umbrella') (Is ?sw 'sandwich'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "umbrella",
+        "sofa",
+        "sandwich",
+        "backpack",
+        "bed",
+        "horse",
+        "cup",
+        "mirror",
+        "apple"
+    ]
+}

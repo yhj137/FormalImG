@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is located on the top side of the arrangement. To the right of the suitcase is a laptop, and to the right of the laptop is a hammer. A pizza is placed to the right of the hammer, followed by a knife to the right of the pizza. A ruler is situated on the right side of the image, positioned to the right of the knife. Finally, for every pair of glasses in the scene, it is smaller than the ruler.",
+    "dsl": "(exists ?suitcase (exists ?laptop (exists ?hammer (exists ?pizza (exists ?knife (exists ?ruler (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Is ?laptop 'laptop') (RightOf ?laptop ?suitcase) (Is ?hammer 'hammer') (RightOf ?hammer ?laptop) (Is ?pizza 'pizza') (RightOf ?pizza ?hammer) (Is ?knife 'knife') (RightOf ?knife ?pizza) (Is ?ruler 'ruler') (OnRightSide ?ruler) (RightOf ?ruler ?knife) (forall ?glasses (implies (Is ?glasses 'glasses') (SmallerThan ?glasses ?ruler))))))))))",
+    "cnf": "(exists ?suitcase (exists ?laptop (exists ?hammer (exists ?pizza (exists ?knife (exists ?ruler (forall ?glasses (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?laptop ?suitcase) (Is ?laptop 'laptop') (RightOf ?hammer ?laptop) (Is ?hammer 'hammer') (RightOf ?pizza ?hammer) (Is ?pizza 'pizza') (RightOf ?knife ?pizza) (Is ?knife 'knife') (RightOf ?ruler ?knife) (OnRightSide ?ruler) (or (not (Is ?glasses 'glasses')) (SmallerThan ?glasses ?ruler)) (Is ?ruler 'ruler')))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "glasses",
+        "pizza",
+        "hammer",
+        "knife",
+        "suitcase"
+    ]
+}

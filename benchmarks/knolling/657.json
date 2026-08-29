@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every white game controller positioned on the top side, there is a pink donut to its right, followed by a pair of black glasses to the right of the donut, and finally a screwdriver to the right of the glasses. These four objects are arranged in a horizontally aligned row.",
+    "dsl": "(and (forall ?gc (implies (and (Is ?gc 'game_controller') (Has ?gc 'white') (OnTopSide ?gc)) (exists ?d (exists ?g (exists ?s (and (Is ?d 'donut') (Has ?d 'pink') (Is ?g 'glasses') (Has ?g 'black') (Is ?s 'screwdriver') (RightOf ?d ?gc) (RightOf ?g ?d) (RightOf ?s ?g) (AlignedHorizontally ?gc ?d) (AlignedHorizontally ?d ?g) (AlignedHorizontally ?g ?s))))))))",
+    "cnf": "(forall ?gc (exists ?d (exists ?g (exists ?s (and (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (Is ?d 'donut')) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (Has ?d 'pink')) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (RightOf ?d ?gc)) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (Is ?g 'glasses')) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (RightOf ?g ?d)) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (Is ?s 'screwdriver')) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (Has ?g 'black')) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (AlignedHorizontally ?gc ?d)) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (RightOf ?s ?g)) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (AlignedHorizontally ?d ?g)) (or (not (Is ?gc 'game_controller')) (not (Has ?gc 'white')) (not (OnTopSide ?gc)) (AlignedHorizontally ?g ?s)))))))",
+    "k": 4,
+    "object_classes": [
+        "glasses",
+        "screwdriver",
+        "donut",
+        "game_controller"
+    ]
+}

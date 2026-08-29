@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features an elephant wearing every pair of glasses. The elephant holds a basket containing a bowl with a sandwich inside. To the right of the elephant stands a wooden bench with a jacket and a shirt lying on it. Further to the right of the bench is a bed with a toy car resting on top.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?e (and (Is ?e 'elephant') (forall ?g (implies (Is ?g 'glasses') (On ?g ?e))) (exists ?ba (exists ?bo (exists ?sa (exists ?bn (exists ?j (exists ?sh (exists ?bd (exists ?tc (and (Is ?ba 'basket') (Holding ?e ?ba) (Is ?bo 'bowl') (In ?bo ?ba) (Is ?sa 'sandwich') (In ?sa ?bo) (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (LeftOf ?e ?bn) (Is ?j 'jacket') (On ?j ?bn) (Is ?sh 'shirt') (On ?sh ?bn) (Is ?bd 'bed') (RightOf ?bd ?bn) (Is ?tc 'toy car') (On ?tc ?bd)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?e (forall ?g (exists ?ba (exists ?bo (exists ?sa (exists ?bn (exists ?j (exists ?sh (exists ?bd (exists ?tc (and (Is ?e 'elephant') (or (not (Is ?g 'glasses')) (On ?g ?e)) (Holding ?e ?ba) (LeftOf ?e ?bn) (Is ?ba 'basket') (In ?bo ?ba) (HasMaterial ?bn 'wooden') (On ?j ?bn) (Is ?bo 'bowl') (In ?sa ?bo) (Is ?bn 'bench') (On ?sh ?bn) (Is ?j 'jacket') (Is ?sa 'sandwich') (RightOf ?bd ?bn) (Is ?sh 'shirt') (Is ?bd 'bed') (On ?tc ?bd) (Is ?tc 'toy car')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "bowl",
+        "glasses",
+        "toy car",
+        "sandwich",
+        "bed",
+        "basket",
+        "shirt",
+        "elephant"
+    ]
+}

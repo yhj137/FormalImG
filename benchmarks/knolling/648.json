@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement is defined by the following rule: for every backpack found in the scene, it is positioned on the bottom left side. Directly above the backpack is a shoe, and placed above the shoe is a stapler, forming a vertical column. Additionally, a mouse is present and is aligned horizontally with the stapler.",
+    "dsl": "(forall ?backpack (implies (Is ?backpack 'backpack') (exists ?shoe (exists ?stapler (exists ?mouse (and (Is ?shoe 'shoe') (Is ?stapler 'stapler') (Is ?mouse 'mouse') (OnLeftSide ?backpack) (OnBottomSide ?backpack) (Above ?shoe ?backpack) (Above ?stapler ?shoe) (AlignedHorizontally ?stapler ?mouse)))))))",
+    "cnf": "(forall ?backpack (exists ?shoe (exists ?stapler (exists ?mouse (and (or (not (Is ?backpack 'backpack')) (Is ?shoe 'shoe')) (or (not (Is ?backpack 'backpack')) (Above ?shoe ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?stapler 'stapler')) (or (not (Is ?backpack 'backpack')) (Above ?stapler ?shoe)) (or (not (Is ?backpack 'backpack')) (OnBottomSide ?backpack)) (or (not (Is ?backpack 'backpack')) (Is ?mouse 'mouse')) (or (not (Is ?backpack 'backpack')) (AlignedHorizontally ?stapler ?mouse)) (or (not (Is ?backpack 'backpack')) (OnLeftSide ?backpack)))))))",
+    "k": 4,
+    "object_classes": [
+        "stapler",
+        "backpack",
+        "shoe",
+        "mouse"
+    ]
+}

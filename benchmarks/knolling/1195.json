@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The image features a pan positioned on the top side. There is also a shoe, a bottle, a hammer, and a lemon aligned horizontally and arranged in that order from left to right. The pan is visibly larger than the shoe, and the lemon is smaller than the pan. Furthermore, for every wrench in the image, it is located to the left of the shoe and is smaller than the lemon.",
+    "dsl": "(exists ?pan (exists ?shoe (exists ?bottle (exists ?hammer (exists ?lemon (and (Is ?pan 'pan') (Is ?shoe 'shoe') (Is ?bottle 'bottle') (Is ?hammer 'hammer') (Is ?lemon 'lemon') (OnTopSide ?pan) (AlignedHorizontally ?shoe ?bottle) (AlignedHorizontally ?bottle ?hammer) (AlignedHorizontally ?hammer ?lemon) (LeftOf ?shoe ?bottle) (LeftOf ?bottle ?hammer) (LeftOf ?hammer ?lemon) (LargerThan ?pan ?shoe) (SmallerThan ?lemon ?pan) (forall ?w (implies (Is ?w 'wrench') (and (LeftOf ?w ?shoe) (SmallerThan ?w ?lemon))))))))))",
+    "cnf": "(exists ?pan (exists ?shoe (exists ?bottle (exists ?hammer (exists ?lemon (forall ?w (and (Is ?pan 'pan') (OnTopSide ?pan) (LargerThan ?pan ?shoe) (SmallerThan ?lemon ?pan) (LeftOf ?shoe ?bottle) (or (not (Is ?w 'wrench')) (LeftOf ?w ?shoe)) (LeftOf ?hammer ?lemon) (or (not (Is ?w 'wrench')) (SmallerThan ?w ?lemon)) (AlignedHorizontally ?shoe ?bottle) (AlignedHorizontally ?bottle ?hammer) (LeftOf ?bottle ?hammer) (AlignedHorizontally ?hammer ?lemon) (Is ?shoe 'shoe') (Is ?bottle 'bottle') (Is ?hammer 'hammer') (Is ?lemon 'lemon'))))))))",
+    "k": 6,
+    "object_classes": [
+        "wrench",
+        "lemon",
+        "hammer",
+        "pan",
+        "bottle",
+        "shoe"
+    ]
+}

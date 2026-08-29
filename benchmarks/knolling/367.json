@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill positioned on the top side. Furthermore, for every pair of scissors in the image, it is vertically aligned with the drill.",
+    "dsl": "(exists ?d (and (Is ?d 'drill') (OnTopSide ?d) (forall ?s (implies (Is ?s 'scissors') (AlignedVertically ?s ?d)))))",
+    "cnf": "(exists ?d (forall ?s (and (Is ?d 'drill') (OnTopSide ?d) (or (not (Is ?s 'scissors')) (AlignedVertically ?s ?d)))))",
+    "k": 2,
+    "object_classes": [
+        "scissors",
+        "drill"
+    ]
+}

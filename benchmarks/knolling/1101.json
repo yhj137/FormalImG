@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a gray laptop and a yellow drill; the laptop is visually larger than the drill. For every red screwdriver present in the scene, there is a hammer located above it, a glove that is smaller than the laptop, and a yellow lemon aligned horizontally with the glove. Additionally, the screwdriver is aligned horizontally with the drill.",
+    "dsl": "(exists ?laptop (exists ?drill (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?drill 'drill') (Has ?drill 'yellow') (LargerThan ?laptop ?drill) (forall ?screwdriver (implies (and (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'red')) (exists ?hammer (exists ?glove (exists ?lemon (and (Is ?hammer 'hammer') (Is ?glove 'glove') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Above ?hammer ?screwdriver) (AlignedHorizontally ?screwdriver ?drill) (SmallerThan ?glove ?laptop) (AlignedHorizontally ?glove ?lemon))))))))))",
+    "cnf": "(exists ?laptop (exists ?drill (forall ?screwdriver (exists ?hammer (exists ?glove (exists ?lemon (and (Is ?laptop 'laptop') (Has ?laptop 'gray') (LargerThan ?laptop ?drill) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (SmallerThan ?glove ?laptop)) (Has ?drill 'yellow') (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (AlignedHorizontally ?screwdriver ?drill)) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (AlignedHorizontally ?glove ?lemon)) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (Is ?glove 'glove')) (Is ?drill 'drill') (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (Above ?hammer ?screwdriver)) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (Has ?lemon 'yellow')) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (Is ?hammer 'hammer')) (or (not (Is ?screwdriver 'screwdriver')) (not (Has ?screwdriver 'red')) (Is ?lemon 'lemon')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "lemon",
+        "screwdriver",
+        "drill",
+        "hammer",
+        "glove"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a round plate. Every orange in the image is placed on this plate, along with a metal knife. To the left of the plate, a horse stands on a rug.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (and (Is ?p 'plate') (HasShape ?p 'round') (forall ?o (implies (Is ?o 'orange') (On ?o ?p))) (exists ?k (and (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?p) (exists ?h (and (Is ?h 'horse') (RightOf ?p ?h) (exists ?r (and (Is ?r 'rug') (On ?h ?r))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (forall ?o (exists ?k (exists ?h (exists ?r (and (Is ?p 'plate') (HasShape ?p 'round') (or (not (Is ?o 'orange')) (On ?o ?p)) (On ?k ?p) (RightOf ?p ?h) (HasMaterial ?k 'metal') (Is ?h 'horse') (On ?h ?r) (Is ?k 'knife') (Is ?r 'rug'))))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "horse",
+        "rug",
+        "orange",
+        "plate"
+    ]
+}

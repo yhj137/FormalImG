@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene showing a woman to the left of a man. The man holds an open umbrella containing an orange fish, while the woman holds a book with a clock and a metal spoon resting on it. To the right of the man, every toy car has a flower on top.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?u (exists ?f (exists ?b (exists ?c (exists ?s (and (Is ?w 'woman') (Is ?m 'man') (Is ?u 'umbrella') (Is ?f 'fish') (Is ?b 'book') (Is ?c 'clock') (Is ?s 'spoon') (LeftOf ?w ?m) (Holding ?m ?u) (HasState ?u 'open') (In ?f ?u) (HasColor ?f 'orange') (Holding ?w ?b) (On ?c ?b) (On ?s ?b) (HasMaterial ?s 'metal') (forall ?t (implies (Is ?t 'toy car') (and (RightOf ?t ?m) (exists ?fl (and (Is ?fl 'flower') (On ?fl ?t)))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?m (exists ?u (exists ?f (exists ?b (exists ?c (exists ?s (forall ?t (exists ?fl (and (Is ?w 'woman') (LeftOf ?w ?m) (Holding ?w ?b) (Is ?m 'man') (Holding ?m ?u) (Is ?b 'book') (On ?c ?b) (or (not (Is ?t 'toy car')) (RightOf ?t ?m)) (Is ?u 'umbrella') (HasState ?u 'open') (On ?s ?b) (Is ?c 'clock') (or (not (Is ?t 'toy car')) (Is ?fl 'flower')) (In ?f ?u) (Is ?s 'spoon') (HasMaterial ?s 'metal') (or (not (Is ?t 'toy car')) (On ?fl ?t)) (Is ?f 'fish') (HasColor ?f 'orange'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "fish",
+        "spoon",
+        "book",
+        "man",
+        "woman",
+        "toy car",
+        "flower",
+        "clock"
+    ]
+}

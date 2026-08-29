@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An open refrigerator contains all the sandwiches, a pizza, and a round bowl. To the right of the refrigerator is a person holding a ball. Next to the person is a chair, and there are glasses next to the chair. A mirror is located next to the refrigerator, with a rock situated next to the mirror.",
+    "dsl": "(exists ?ref (and (Is ?ref 'refrigerator') (HasState ?ref 'open') (forall ?sw (implies (Is ?sw 'sandwich') (In ?sw ?ref))) (exists ?piz (exists ?bowl (exists ?person (exists ?ball (exists ?chair (exists ?gl (exists ?mir (exists ?rock (and (Is ?piz 'pizza') (In ?piz ?ref) (Is ?bowl 'bowl') (HasShape ?bowl 'round') (In ?bowl ?ref) (Is ?person 'person') (RightOf ?person ?ref) (Is ?ball 'ball') (Holding ?person ?ball) (Is ?chair 'chair') (NextTo ?chair ?person) (Is ?gl 'glasses') (NextTo ?gl ?chair) (Is ?mir 'mirror') (NextTo ?mir ?ref) (Is ?rock 'rock') (NextTo ?rock ?mir))))))))))))",
+    "cnf": "(exists ?ref (forall ?sw (exists ?piz (exists ?bowl (exists ?person (exists ?ball (exists ?chair (exists ?gl (exists ?mir (exists ?rock (and (Is ?ref 'refrigerator') (HasState ?ref 'open') (or (not (Is ?sw 'sandwich')) (In ?sw ?ref)) (In ?piz ?ref) (In ?bowl ?ref) (Is ?piz 'pizza') (RightOf ?person ?ref) (HasShape ?bowl 'round') (NextTo ?mir ?ref) (Is ?person 'person') (Holding ?person ?ball) (Is ?bowl 'bowl') (Is ?mir 'mirror') (NextTo ?rock ?mir) (NextTo ?chair ?person) (Is ?ball 'ball') (Is ?rock 'rock') (Is ?chair 'chair') (NextTo ?gl ?chair) (Is ?gl 'glasses'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "person",
+        "ball",
+        "chair",
+        "glasses",
+        "pizza",
+        "rock",
+        "refrigerator",
+        "sandwich",
+        "mirror",
+        "bowl"
+    ]
+}

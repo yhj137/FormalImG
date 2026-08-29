@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is on a red boat. All glasses in the scene are inside the boat and next to the man.",
+    "dsl": "(exists ?b (exists ?m (and (Is ?b 'boat') (HasColor ?b 'red') (Is ?m 'man') (On ?m ?b) (forall ?g (implies (Is ?g 'glasses') (and (In ?g ?b) (NextTo ?g ?m)))))))",
+    "cnf": "(exists ?b (exists ?m (forall ?g (and (Is ?b 'boat') (HasColor ?b 'red') (On ?m ?b) (or (not (Is ?g 'glasses')) (In ?g ?b)) (Is ?m 'man') (or (not (Is ?g 'glasses')) (NextTo ?g ?m))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "glasses",
+        "boat"
+    ]
+}

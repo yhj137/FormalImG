@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is positioned on the top side of the frame. Directly below the camera are glasses. To the left of the glasses is a pizza, which is located on the left side of the image. A knife is placed below the pizza. Furthermore, for every apple present in the scene, the knife is located above it.",
+    "dsl": "(exists ?c (exists ?g (exists ?p (exists ?k (and (Is ?c 'camera') (OnTopSide ?c) (Is ?g 'glasses') (Below ?g ?c) (Is ?p 'pizza') (OnLeftSide ?p) (LeftOf ?p ?g) (Is ?k 'knife') (Below ?k ?p) (forall ?a (implies (Is ?a 'apple') (Above ?k ?a))))))))",
+    "cnf": "(exists ?c (exists ?g (exists ?p (exists ?k (forall ?a (and (Is ?c 'camera') (OnTopSide ?c) (Below ?g ?c) (Is ?g 'glasses') (LeftOf ?p ?g) (OnLeftSide ?p) (Below ?k ?p) (Is ?p 'pizza') (Is ?k 'knife') (or (not (Is ?a 'apple')) (Above ?k ?a))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "apple",
+        "pizza",
+        "camera",
+        "knife"
+    ]
+}

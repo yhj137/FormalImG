@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a pair of headphones positioned on the top side. To the left of the headphones is a tie, while a bowl is located to the right of the headphones. Continuing the arrangement to the right, there is a donut, which is smaller than the bowl, followed by a knife to the right of the donut. Additionally, the headphones are visually larger than the donut.",
+    "dsl": "(exists ?h (exists ?t (exists ?b (exists ?d (exists ?k (and (Is ?h 'headphones') (Is ?t 'tie') (Is ?b 'bowl') (Is ?d 'donut') (Is ?k 'knife') (OnTopSide ?h) (LeftOf ?t ?h) (RightOf ?b ?h) (RightOf ?d ?b) (RightOf ?k ?d) (SmallerThan ?d ?b) (LargerThan ?h ?d)))))))",
+    "cnf": "(exists ?h (exists ?t (exists ?b (exists ?d (exists ?k (and (Is ?h 'headphones') (OnTopSide ?h) (LeftOf ?t ?h) (RightOf ?b ?h) (Is ?t 'tie') (LargerThan ?h ?d) (Is ?b 'bowl') (RightOf ?d ?b) (SmallerThan ?d ?b) (Is ?d 'donut') (RightOf ?k ?d) (Is ?k 'knife')))))))",
+    "k": 5,
+    "object_classes": [
+        "tie",
+        "knife",
+        "bowl",
+        "headphones",
+        "donut"
+    ]
+}

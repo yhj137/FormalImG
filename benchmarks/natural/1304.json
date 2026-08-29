@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a lion to the left of a man. A square backpack rests on the lion, containing red shoes and every banana. The man wears a hat and holds a round teddy bear.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (exists ?l (exists ?bp (and (Is ?m 'man') (Is ?l 'lion') (Is ?bp 'backpack') (LeftOf ?l ?m) (On ?bp ?l) (HasShape ?bp 'square') (forall ?bn (implies (Is ?bn 'banana') (In ?bn ?bp))) (exists ?s (exists ?h (exists ?tb (and (Is ?s 'shoes') (Is ?h 'hat') (Is ?tb 'teddy bear') (In ?s ?bp) (HasColor ?s 'red') (On ?h ?m) (Holding ?m ?tb) (HasShape ?tb 'round'))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?l (exists ?bp (forall ?bn (exists ?s (exists ?h (exists ?tb (and (Is ?m 'man') (LeftOf ?l ?m) (On ?h ?m) (Is ?l 'lion') (On ?bp ?l) (Holding ?m ?tb) (Is ?h 'hat') (Is ?bp 'backpack') (HasShape ?bp 'square') (Is ?tb 'teddy bear') (HasShape ?tb 'round') (or (not (Is ?bn 'banana')) (In ?bn ?bp)) (In ?s ?bp) (Is ?s 'shoes') (HasColor ?s 'red'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "man",
+        "hat",
+        "backpack",
+        "banana",
+        "shoes",
+        "teddy bear",
+        "lion"
+    ]
+}

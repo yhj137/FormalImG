@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a keyboard located on the bottom side of the scene, which is visually larger than a book. The book and the keyboard are aligned horizontally. Additionally, for any pair of glasses present in the image, it is aligned horizontally with the book.",
+    "dsl": "(exists ?keyboard (exists ?book (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Is ?book 'book') (LargerThan ?keyboard ?book) (AlignedHorizontally ?keyboard ?book) (forall ?glasses (implies (Is ?glasses 'glasses') (AlignedHorizontally ?glasses ?book))))))",
+    "cnf": "(exists ?keyboard (exists ?book (forall ?glasses (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (LargerThan ?keyboard ?book) (AlignedHorizontally ?keyboard ?book) (Is ?book 'book') (or (not (Is ?glasses 'glasses')) (AlignedHorizontally ?glasses ?book))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "glasses",
+        "keyboard"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is on a fabric rug. Next to the rug is a bookshelf containing every hammer. A clock sits on the bookshelf. To the left of the person is a turned-on monitor, and to the right is a laptop with a pizza beside it.",
+    "dsl": "(exists ?r (exists ?p (exists ?b (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (Is ?p 'person') (On ?p ?r) (Is ?b 'bookshelf') (NextTo ?b ?r) (forall ?h (implies (Is ?h 'hammer') (In ?h ?b))) (exists ?m (exists ?l (exists ?pi (exists ?c (and (Is ?m 'monitor') (HasState ?m 'on') (LeftOf ?m ?p) (Is ?l 'laptop') (RightOf ?l ?p) (Is ?pi 'pizza') (NextTo ?pi ?l) (Is ?c 'clock') (On ?c ?b))))))))))",
+    "cnf": "(exists ?r (exists ?p (exists ?b (forall ?h (exists ?m (exists ?l (exists ?pi (exists ?c (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (On ?p ?r) (NextTo ?b ?r) (Is ?p 'person') (LeftOf ?m ?p) (Is ?b 'bookshelf') (or (not (Is ?h 'hammer')) (In ?h ?b)) (RightOf ?l ?p) (HasState ?m 'on') (On ?c ?b) (Is ?l 'laptop') (NextTo ?pi ?l) (Is ?m 'monitor') (Is ?c 'clock') (Is ?pi 'pizza'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "monitor",
+        "person",
+        "laptop",
+        "hammer",
+        "pizza",
+        "rug",
+        "clock",
+        "bookshelf"
+    ]
+}

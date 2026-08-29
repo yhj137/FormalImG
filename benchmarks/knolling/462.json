@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of glasses in the scene, there is a remote and a stapler arranged in a column with it. The glasses are positioned on the left side of the image. The remote and the stapler are aligned vertically with the glasses, and the remote is visually larger than the stapler.",
+    "dsl": "(forall ?glasses (implies (Is ?glasses 'glasses') (exists ?remote (exists ?stapler (and (Is ?remote 'remote') (Is ?stapler 'stapler') (OnLeftSide ?glasses) (AlignedVertically ?glasses ?remote) (AlignedVertically ?remote ?stapler) (LargerThan ?remote ?stapler))))))",
+    "cnf": "(forall ?glasses (exists ?remote (exists ?stapler (and (or (not (Is ?glasses 'glasses')) (Is ?remote 'remote')) (or (not (Is ?glasses 'glasses')) (Is ?stapler 'stapler')) (or (not (Is ?glasses 'glasses')) (AlignedVertically ?glasses ?remote)) (or (not (Is ?glasses 'glasses')) (OnLeftSide ?glasses)) (or (not (Is ?glasses 'glasses')) (AlignedVertically ?remote ?stapler)) (or (not (Is ?glasses 'glasses')) (LargerThan ?remote ?stapler))))))",
+    "k": 3,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "stapler"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding an open umbrella stands next to a refrigerator. To her right is a person holding headphones. An oval boat containing glasses sits to the right of the refrigerator, and all butterflies in the scene are located to the left of the woman.",
+    "dsl": "(exists ?w (exists ?r (and (Is ?w 'woman') (Is ?r 'refrigerator') (NextTo ?w ?r) (forall ?f (implies (Is ?f 'butterfly') (LeftOf ?f ?w))) (exists ?b (exists ?g (exists ?u (exists ?p (exists ?h (and (Is ?b 'boat') (HasShape ?b 'oval') (RightOf ?b ?r) (Is ?g 'glasses') (In ?g ?b) (Is ?u 'umbrella') (HasState ?u 'open') (Holding ?w ?u) (Is ?p 'person') (RightOf ?p ?w) (Is ?h 'headphones') (Holding ?p ?h))))))))))",
+    "cnf": "(exists ?w (exists ?r (forall ?f (exists ?b (exists ?g (exists ?u (exists ?p (exists ?h (and (Is ?w 'woman') (NextTo ?w ?r) (or (not (Is ?f 'butterfly')) (LeftOf ?f ?w)) (Is ?r 'refrigerator') (RightOf ?b ?r) (Holding ?w ?u) (HasShape ?b 'oval') (In ?g ?b) (RightOf ?p ?w) (HasState ?u 'open') (Is ?b 'boat') (Is ?g 'glasses') (Is ?p 'person') (Holding ?p ?h) (Is ?u 'umbrella') (Is ?h 'headphones'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "woman",
+        "umbrella",
+        "glasses",
+        "person",
+        "headphones",
+        "butterfly",
+        "refrigerator",
+        "boat"
+    ]
+}

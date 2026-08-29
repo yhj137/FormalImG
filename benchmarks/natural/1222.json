@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene represents an oil painting. To the left of a car stands a woman. Inside the car, there is a book, and a metal key rests on the book. To the right of the car is a bicycle. A plate sits on the bicycle, with a metal knife lying on the plate.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?bk (exists ?ky (exists ?bi (exists ?p (exists ?k (and (Is ?w 'woman') (Is ?c 'car') (LeftOf ?w ?c) (Is ?bk 'book') (In ?bk ?c) (Is ?ky 'key') (HasMaterial ?ky 'metal') (On ?ky ?bk) (Is ?bi 'bicycle') (RightOf ?bi ?c) (Is ?p 'plate') (On ?p ?bi) (Is ?k 'knife') (HasMaterial ?k 'metal') (On ?k ?p))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?bk (exists ?ky (exists ?bi (exists ?p (exists ?k (and (Is ?w 'woman') (LeftOf ?w ?c) (Is ?c 'car') (In ?bk ?c) (RightOf ?bi ?c) (Is ?bk 'book') (On ?ky ?bk) (Is ?bi 'bicycle') (On ?p ?bi) (HasMaterial ?ky 'metal') (Is ?p 'plate') (On ?k ?p) (Is ?ky 'key') (HasMaterial ?k 'metal') (Is ?k 'knife'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "knife",
+        "book",
+        "plate",
+        "woman",
+        "car",
+        "bicycle",
+        "key"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue backpack located on the top side. A red hat is placed below the backpack. To the left of the hat lies a black keyboard. Furthermore, every screwdriver in the image is positioned below the keyboard.",
+    "dsl": "(exists ?b (exists ?h (exists ?k (and (Is ?b 'backpack') (Has ?b 'blue') (OnTopSide ?b) (Is ?h 'hat') (Has ?h 'red') (Below ?h ?b) (Is ?k 'keyboard') (Has ?k 'black') (LeftOf ?k ?h) (forall ?s (implies (Is ?s 'screwdriver') (Below ?s ?k)))))))",
+    "cnf": "(exists ?b (exists ?h (exists ?k (forall ?s (and (Is ?b 'backpack') (Has ?b 'blue') (OnTopSide ?b) (Below ?h ?b) (Has ?h 'red') (LeftOf ?k ?h) (Is ?h 'hat') (Has ?k 'black') (or (not (Is ?s 'screwdriver')) (Below ?s ?k)) (Is ?k 'keyboard'))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "backpack",
+        "screwdriver",
+        "keyboard"
+    ]
+}

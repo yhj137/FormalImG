@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A red refrigerator stands with a black keyboard to its right, while every bowl rests on top of the refrigerator.",
+    "dsl": "(exists ?r (exists ?k (and (Is ?r 'refrigerator') (HasColor ?r 'red') (Is ?k 'keyboard') (HasColor ?k 'black') (RightOf ?k ?r) (forall ?b (implies (Is ?b 'bowl') (On ?b ?r))))))",
+    "cnf": "(exists ?r (exists ?k (forall ?b (and (Is ?r 'refrigerator') (HasColor ?r 'red') (RightOf ?k ?r) (or (not (Is ?b 'bowl')) (On ?b ?r)) (HasColor ?k 'black') (Is ?k 'keyboard')))))",
+    "k": 3,
+    "object_classes": [
+        "bowl",
+        "refrigerator",
+        "keyboard"
+    ]
+}

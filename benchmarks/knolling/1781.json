@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged collection of objects including a blue shirt, a yellow drill, black headphones, a gray wrench, a white plate, red pliers, scissors, and a watch. The blue shirt is placed on the top side of the image. The yellow drill is located on the right side. The shirt and the drill are aligned horizontally. Arranged in a vertical column beneath the shirt, the shirt is above the black headphones, and the headphones are above the white plate; these three are aligned vertically. In a second vertical column aligned with the drill, the drill is above the gray wrench, the wrench is above the red pliers, the pliers are above the scissors, and the scissors are above the watch; all these are aligned vertically. The headphones are horizontally aligned with the wrench, and the plate is horizontally aligned with the pliers. The shirt is visually larger than the watch. Furthermore, any fork in the image is gray, aligned vertically with the plate, and located below the plate.",
+    "dsl": "(exists ?shirt (exists ?drill (exists ?hp (exists ?wrench (exists ?plate (exists ?pliers (exists ?scissors (exists ?watch (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (Is ?drill 'drill') (Has ?drill 'yellow') (OnRightSide ?drill) (Is ?hp 'headphones') (Has ?hp 'black') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?plate 'plate') (Has ?plate 'white') (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?scissors 'scissors') (Is ?watch 'watch') (AlignedHorizontally ?shirt ?drill) (Above ?shirt ?hp) (AlignedVertically ?shirt ?hp) (Above ?hp ?plate) (AlignedVertically ?hp ?plate) (Above ?drill ?wrench) (AlignedVertically ?drill ?wrench) (Above ?wrench ?pliers) (AlignedVertically ?wrench ?pliers) (Above ?pliers ?scissors) (AlignedVertically ?pliers ?scissors) (Above ?scissors ?watch) (AlignedVertically ?scissors ?watch) (AlignedHorizontally ?hp ?wrench) (AlignedHorizontally ?plate ?pliers) (LargerThan ?shirt ?watch) (forall ?fork (implies (Is ?fork 'fork') (and (Has ?fork 'gray') (AlignedVertically ?fork ?plate) (Above ?plate ?fork)))))))))))))",
+    "cnf": "(exists ?shirt (exists ?drill (exists ?hp (exists ?wrench (exists ?plate (exists ?pliers (exists ?scissors (exists ?watch (forall ?fork (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (AlignedHorizontally ?shirt ?drill) (Above ?shirt ?hp) (OnRightSide ?drill) (Above ?drill ?wrench) (AlignedVertically ?shirt ?hp) (Has ?hp 'black') (Has ?drill 'yellow') (AlignedVertically ?drill ?wrench) (Has ?wrench 'gray') (LargerThan ?shirt ?watch) (Above ?hp ?plate) (Is ?hp 'headphones') (Is ?drill 'drill') (Above ?wrench ?pliers) (Is ?wrench 'wrench') (AlignedVertically ?scissors ?watch) (AlignedVertically ?hp ?plate) (Has ?plate 'white') (AlignedVertically ?wrench ?pliers) (Has ?pliers 'red') (Above ?scissors ?watch) (AlignedHorizontally ?hp ?wrench) (AlignedHorizontally ?plate ?pliers) (Is ?plate 'plate') (Above ?pliers ?scissors) (Is ?pliers 'pliers') (AlignedVertically ?pliers ?scissors) (Is ?watch 'watch') (or (not (Is ?fork 'fork')) (AlignedVertically ?fork ?plate)) (Is ?scissors 'scissors') (or (not (Is ?fork 'fork')) (Above ?plate ?fork)) (or (not (Is ?fork 'fork')) (Has ?fork 'gray'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "pliers",
+        "wrench",
+        "watch",
+        "drill",
+        "fork",
+        "scissors",
+        "headphones",
+        "shirt"
+    ]
+}

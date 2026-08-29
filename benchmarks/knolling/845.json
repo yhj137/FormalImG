@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black hat positioned on the bottom side of the scene, there is a specific arrangement of items: headphones, a tie, a hammer, and a set of keys. The headphones are located to the right of the hat, and the tie is to the right of the headphones; these three objects are aligned horizontally. A hammer is aligned vertically with the tie. To the right of the hammer are the keys, which are aligned horizontally with the hammer. Furthermore, the hammer is larger than the keys.",
+    "dsl": "(forall ?hat (implies (and (Is ?hat 'hat') (Has ?hat 'black') (OnBottomSide ?hat)) (exists ?headphones (exists ?tie (exists ?hammer (exists ?keys (and (Is ?headphones 'headphones') (Is ?tie 'tie') (Is ?hammer 'hammer') (Is ?keys 'keys') (RightOf ?headphones ?hat) (AlignedHorizontally ?hat ?headphones) (RightOf ?tie ?headphones) (AlignedHorizontally ?headphones ?tie) (AlignedVertically ?hammer ?tie) (RightOf ?keys ?hammer) (AlignedHorizontally ?hammer ?keys) (LargerThan ?hammer ?keys))))))))",
+    "cnf": "(forall ?hat (exists ?headphones (exists ?tie (exists ?hammer (exists ?keys (and (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (Is ?headphones 'headphones')) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (RightOf ?headphones ?hat)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (Is ?tie 'tie')) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (AlignedHorizontally ?hat ?headphones)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (Is ?keys 'keys')) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (Is ?hammer 'hammer')) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (RightOf ?tie ?headphones)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (RightOf ?keys ?hammer)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (AlignedVertically ?hammer ?tie)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (AlignedHorizontally ?headphones ?tie)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (AlignedHorizontally ?hammer ?keys)) (or (not (Is ?hat 'hat')) (not (Has ?hat 'black')) (not (OnBottomSide ?hat)) (LargerThan ?hammer ?keys))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "hammer",
+        "headphones",
+        "tie",
+        "hat"
+    ]
+}

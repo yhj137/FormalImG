@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a lion holding a peeled orange, situated to the left of a plate. The plate contains a fork, a spoon, and every apple. The plate is to the left of a keyboard, which is located to the left of a bicycle, which is in turn to the left of a plant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?pl (and (Is ?pl 'plate') (forall ?a (implies (Is ?a 'apple') (In ?a ?pl))) (exists ?l (exists ?o (exists ?f (exists ?s (exists ?k (exists ?b (exists ?p (and (Is ?l 'lion') (Is ?o 'orange') (Is ?f 'fork') (Is ?s 'spoon') (Is ?k 'keyboard') (Is ?b 'bicycle') (Is ?p 'plant') (Holding ?l ?o) (HasState ?o 'peeled') (LeftOf ?l ?pl) (In ?f ?pl) (In ?s ?pl) (LeftOf ?pl ?k) (LeftOf ?k ?b) (LeftOf ?b ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?pl (forall ?a (exists ?l (exists ?o (exists ?f (exists ?s (exists ?k (exists ?b (exists ?p (and (Is ?pl 'plate') (or (not (Is ?a 'apple')) (In ?a ?pl)) (LeftOf ?l ?pl) (In ?f ?pl) (Holding ?l ?o) (In ?s ?pl) (Is ?f 'fork') (Is ?l 'lion') (Is ?o 'orange') (HasState ?o 'peeled') (LeftOf ?pl ?k) (Is ?s 'spoon') (Is ?k 'keyboard') (LeftOf ?k ?b) (Is ?b 'bicycle') (LeftOf ?b ?p) (Is ?p 'plant'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "fork",
+        "plant",
+        "spoon",
+        "bicycle",
+        "apple",
+        "lion",
+        "orange",
+        "plate"
+    ]
+}

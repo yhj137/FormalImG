@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a monitor positioned on the left side. Arranged vertically beneath the monitor is a bottle, and below the bottle is a lemon. Below the lemon lies a pair of pliers, which is located on the bottom side of the image. Furthermore, for every carrot in the scene, it is positioned above the monitor.",
+    "dsl": "(exists ?monitor (exists ?bottle (exists ?lemon (exists ?pliers (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?bottle 'bottle') (Below ?bottle ?monitor) (Is ?lemon 'lemon') (Below ?lemon ?bottle) (Is ?pliers 'pliers') (Below ?pliers ?lemon) (OnBottomSide ?pliers) (forall ?carrot (implies (Is ?carrot 'carrot') (Above ?carrot ?monitor))))))))",
+    "cnf": "(exists ?monitor (exists ?bottle (exists ?lemon (exists ?pliers (forall ?carrot (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Below ?bottle ?monitor) (or (not (Is ?carrot 'carrot')) (Above ?carrot ?monitor)) (Is ?bottle 'bottle') (Below ?lemon ?bottle) (Is ?lemon 'lemon') (Below ?pliers ?lemon) (Is ?pliers 'pliers') (OnBottomSide ?pliers)))))))",
+    "k": 5,
+    "object_classes": [
+        "pliers",
+        "lemon",
+        "carrot",
+        "bottle",
+        "monitor"
+    ]
+}

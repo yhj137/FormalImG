@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of an open car containing a man wearing headphones and holding a book. Every ball in the scene is red and is inside the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?c (and (Is ?c 'car') (HasState ?c 'open') (forall ?b (implies (Is ?b 'ball') (and (HasColor ?b 'red') (In ?b ?c)))) (exists ?m (exists ?bk (exists ?h (and (Is ?m 'man') (In ?m ?c) (Is ?bk 'book') (Holding ?m ?bk) (Is ?h 'headphones') (On ?h ?m))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?c (forall ?b (exists ?m (exists ?bk (exists ?h (and (Is ?c 'car') (HasState ?c 'open') (or (not (Is ?b 'ball')) (In ?b ?c)) (In ?m ?c) (or (not (Is ?b 'ball')) (HasColor ?b 'red')) (Is ?m 'man') (Holding ?m ?bk) (On ?h ?m) (Is ?bk 'book') (Is ?h 'headphones'))))))))",
+    "k": 5,
+    "object_classes": [
+        "headphones",
+        "man",
+        "ball",
+        "book",
+        "car"
+    ]
+}

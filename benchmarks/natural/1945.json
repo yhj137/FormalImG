@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A wooden bench is situated in the center, and a rectangular table is located to the right of the bench. A woman holding a screwdriver sits on the bench, and a cat is also on the bench. To the left of the bench is a horse, while a brown dog is next to the bench. All monitors are placed on the table. A knife is on the table, and a refrigerator is positioned next to the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?bn (exists ?t (exists ?w (exists ?d (exists ?h (exists ?c (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (Is ?t 'table') (HasShape ?t 'rectangular') (RightOf ?t ?bn) (Is ?w 'woman') (On ?w ?bn) (Is ?d 'dog') (HasColor ?d 'brown') (NextTo ?d ?bn) (Is ?h 'horse') (LeftOf ?h ?bn) (Is ?c 'cat') (On ?c ?bn) (forall ?m (implies (Is ?m 'monitor') (On ?m ?t))) (exists ?r (exists ?k (exists ?sd (and (Is ?r 'refrigerator') (NextTo ?r ?t) (Is ?k 'knife') (On ?k ?t) (Is ?sd 'screwdriver') (Holding ?w ?sd)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?bn (exists ?t (exists ?w (exists ?d (exists ?h (exists ?c (forall ?m (exists ?r (exists ?k (exists ?sd (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (RightOf ?t ?bn) (On ?w ?bn) (HasShape ?t 'rectangular') (or (not (Is ?m 'monitor')) (On ?m ?t)) (NextTo ?d ?bn) (Is ?w 'woman') (Holding ?w ?sd) (Is ?t 'table') (NextTo ?r ?t) (LeftOf ?h ?bn) (HasColor ?d 'brown') (Is ?sd 'screwdriver') (On ?k ?t) (Is ?r 'refrigerator') (On ?c ?bn) (Is ?h 'horse') (Is ?d 'dog') (Is ?k 'knife') (Is ?c 'cat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "knife",
+        "bench",
+        "horse",
+        "woman",
+        "monitor",
+        "table",
+        "refrigerator",
+        "cat",
+        "screwdriver",
+        "dog"
+    ]
+}

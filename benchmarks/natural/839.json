@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene where every bed has a round pizza on it. A bicycle is next to each bed, and a plant is to the left of the bicycle. Additionally, a pair of glasses is inside each bed.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bed') (and (exists ?p (and (Is ?p 'pizza') (HasShape ?p 'round') (On ?p ?b))) (exists ?bi (and (Is ?bi 'bicycle') (NextTo ?bi ?b) (exists ?pl (and (Is ?pl 'plant') (LeftOf ?pl ?bi))))) (exists ?g (and (Is ?g 'glasses') (In ?g ?b)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?p (exists ?bi (exists ?pl (exists ?g (and (or (not (Is ?b 'bed')) (Is ?p 'pizza')) (or (not (Is ?b 'bed')) (HasShape ?p 'round')) (or (not (Is ?b 'bed')) (On ?p ?b)) (or (not (Is ?b 'bed')) (Is ?bi 'bicycle')) (or (not (Is ?b 'bed')) (NextTo ?bi ?b)) (or (not (Is ?b 'bed')) (Is ?pl 'plant')) (or (not (Is ?b 'bed')) (LeftOf ?pl ?bi)) (or (not (Is ?b 'bed')) (Is ?g 'glasses')) (or (not (Is ?b 'bed')) (In ?g ?b)))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "bed",
+        "bicycle",
+        "pizza",
+        "plant"
+    ]
+}

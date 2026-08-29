@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in a pixel art style. A child holding a sandwich stands next to a bed. To the left of the bed is a dirty mirror with a key resting on it, and to the right is a tree with an open bottle beside it. A basket sits on the bed next to a peeled banana, and every ball in the scene is also on the bed.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?child (exists ?bed (exists ?basket (exists ?mirror (exists ?key (exists ?tree (exists ?bottle (and (Is ?child 'child') (Is ?bed 'bed') (Is ?basket 'basket') (Is ?mirror 'mirror') (Is ?key 'key') (Is ?tree 'tree') (Is ?bottle 'bottle') (NextTo ?child ?bed) (On ?basket ?bed) (LeftOf ?mirror ?bed) (HasState ?mirror 'dirty') (On ?key ?mirror) (RightOf ?tree ?bed) (NextTo ?bottle ?tree) (HasState ?bottle 'open') (forall ?ball (implies (Is ?ball 'ball') (On ?ball ?bed))) (exists ?sandwich (exists ?banana (and (Is ?sandwich 'sandwich') (Is ?banana 'banana') (Holding ?child ?sandwich) (NextTo ?banana ?basket) (HasState ?banana 'peeled')))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?child (exists ?bed (exists ?basket (exists ?mirror (exists ?key (exists ?tree (exists ?bottle (forall ?ball (exists ?sandwich (exists ?banana (and (Is ?child 'child') (NextTo ?child ?bed) (Holding ?child ?sandwich) (Is ?bed 'bed') (On ?basket ?bed) (Is ?sandwich 'sandwich') (LeftOf ?mirror ?bed) (Is ?basket 'basket') (NextTo ?banana ?basket) (RightOf ?tree ?bed) (Is ?mirror 'mirror') (HasState ?mirror 'dirty') (Is ?banana 'banana') (HasState ?banana 'peeled') (or (not (Is ?ball 'ball')) (On ?ball ?bed)) (Is ?tree 'tree') (NextTo ?bottle ?tree) (On ?key ?mirror) (Is ?bottle 'bottle') (HasState ?bottle 'open') (Is ?key 'key')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "child",
+        "bottle",
+        "bed",
+        "tree",
+        "mirror",
+        "sandwich",
+        "ball",
+        "key",
+        "basket",
+        "banana"
+    ]
+}

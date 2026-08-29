@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a carrot and a spoon. The spoon is positioned directly below the carrot and lies on the bottom side of the composition. Additionally, for any keys in the image, they are placed to the right of the spoon and are visually smaller than the carrot.",
+    "dsl": "(exists ?carrot (exists ?spoon (and (Is ?carrot 'carrot') (Is ?spoon 'spoon') (Below ?spoon ?carrot) (OnBottomSide ?spoon) (forall ?keys (implies (Is ?keys 'keys') (and (RightOf ?keys ?spoon) (SmallerThan ?keys ?carrot)))))))",
+    "cnf": "(exists ?carrot (exists ?spoon (forall ?keys (and (Is ?carrot 'carrot') (Below ?spoon ?carrot) (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?carrot)) (Is ?spoon 'spoon') (OnBottomSide ?spoon) (or (not (Is ?keys 'keys')) (RightOf ?keys ?spoon))))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "carrot",
+        "spoon"
+    ]
+}

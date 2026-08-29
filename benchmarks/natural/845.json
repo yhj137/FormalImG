@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A lion sits on every tree, and a woman stands next to the tree holding a round, fluffy teddy bear inside a shirt.",
+    "dsl": "(forall ?t (implies (Is ?t 'tree') (exists ?l (exists ?w (exists ?tb (exists ?s (and (Is ?l 'lion') (Is ?w 'woman') (Is ?tb 'teddy bear') (Is ?s 'shirt') (On ?l ?t) (NextTo ?w ?t) (Holding ?w ?tb) (HasShape ?tb 'round') (HasMaterial ?tb 'fluffy') (In ?tb ?s))))))))",
+    "cnf": "(forall ?t (exists ?l (exists ?w (exists ?tb (exists ?s (and (or (not (Is ?t 'tree')) (Is ?l 'lion')) (or (not (Is ?t 'tree')) (On ?l ?t)) (or (not (Is ?t 'tree')) (Is ?w 'woman')) (or (not (Is ?t 'tree')) (Is ?s 'shirt')) (or (not (Is ?t 'tree')) (NextTo ?w ?t)) (or (not (Is ?t 'tree')) (Is ?tb 'teddy bear')) (or (not (Is ?t 'tree')) (In ?tb ?s)) (or (not (Is ?t 'tree')) (Holding ?w ?tb)) (or (not (Is ?t 'tree')) (HasMaterial ?tb 'fluffy')) (or (not (Is ?t 'tree')) (HasShape ?tb 'round'))))))))",
+    "k": 5,
+    "object_classes": [
+        "shirt",
+        "tree",
+        "woman",
+        "teddy bear",
+        "lion"
+    ]
+}

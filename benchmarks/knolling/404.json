@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a blue tie, a gray wrench, and a yellow screwdriver arranged vertically. The blue tie is placed above the gray wrench, which in turn is positioned above the yellow screwdriver. In terms of size, the gray wrench is visually larger than the yellow screwdriver, and the yellow screwdriver is smaller than the blue tie.",
+    "dsl": "(exists ?tie (exists ?wrench (exists ?screwdriver (and (Is ?tie 'tie') (Has ?tie 'blue') (Is ?wrench 'wrench') (Has ?wrench 'gray') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (Above ?tie ?wrench) (Above ?wrench ?screwdriver) (LargerThan ?wrench ?screwdriver) (SmallerThan ?screwdriver ?tie)))))",
+    "cnf": "(exists ?tie (exists ?wrench (exists ?screwdriver (and (Is ?tie 'tie') (Has ?tie 'blue') (Above ?tie ?wrench) (SmallerThan ?screwdriver ?tie) (Has ?wrench 'gray') (Above ?wrench ?screwdriver) (LargerThan ?wrench ?screwdriver) (Is ?wrench 'wrench') (Has ?screwdriver 'yellow') (Is ?screwdriver 'screwdriver')))))",
+    "k": 3,
+    "object_classes": [
+        "wrench",
+        "tie",
+        "screwdriver"
+    ]
+}

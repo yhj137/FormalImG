@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A suitcase is placed on the left side of the scene. A hammer is located below the suitcase, and a pizza is found below the hammer. There is also a sandwich on the bottom side, positioned so that the pizza is to the left of the sandwich. Finally, for every pair of scissors in the image, there is a glove located below the sandwich and to the left of the scissors.",
+    "dsl": "(exists ?suitcase (exists ?hammer (exists ?pizza (exists ?sandwich (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?hammer 'hammer') (Below ?hammer ?suitcase) (Is ?pizza 'pizza') (Below ?pizza ?hammer) (Is ?sandwich 'sandwich') (OnBottomSide ?sandwich) (LeftOf ?pizza ?sandwich) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?glove (and (Is ?glove 'glove') (Below ?glove ?sandwich) (LeftOf ?glove ?scissors))))))))))",
+    "cnf": "(exists ?suitcase (exists ?hammer (exists ?pizza (exists ?sandwich (forall ?scissors (exists ?glove (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Below ?hammer ?suitcase) (Is ?hammer 'hammer') (Below ?pizza ?hammer) (Is ?pizza 'pizza') (LeftOf ?pizza ?sandwich) (OnBottomSide ?sandwich) (or (not (Is ?scissors 'scissors')) (Below ?glove ?sandwich)) (Is ?sandwich 'sandwich') (or (not (Is ?scissors 'scissors')) (Is ?glove 'glove')) (or (not (Is ?scissors 'scissors')) (LeftOf ?glove ?scissors)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pizza",
+        "sandwich",
+        "hammer",
+        "scissors",
+        "suitcase",
+        "glove"
+    ]
+}

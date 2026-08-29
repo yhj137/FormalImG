@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a game controller and headphones, where the game controller is located to the right of the headphones, and the headphones are visually smaller than the game controller. For every wrench in the scene, there is a cluster of four specific items associated with it: a pair of pliers is positioned above the wrench, a calculator is to the right of the wrench, an apple is above the calculator, and a tie is aligned horizontally with the calculator. The tie is located on the right side of the image. Furthermore, the wrench is positioned above the game controller.",
+    "dsl": "(exists ?gc (exists ?h (and (Is ?gc 'game_controller') (Is ?h 'headphones') (RightOf ?gc ?h) (SmallerThan ?h ?gc) (forall ?w (implies (Is ?w 'wrench') (exists ?p (exists ?c (exists ?a (exists ?t (and (Is ?p 'pliers') (Is ?c 'calculator') (Is ?a 'apple') (Is ?t 'tie') (Above ?p ?w) (RightOf ?c ?w) (Above ?a ?c) (AlignedHorizontally ?t ?c) (OnRightSide ?t) (Above ?w ?gc)))))))))))",
+    "cnf": "(exists ?gc (exists ?h (forall ?w (exists ?p (exists ?c (exists ?a (exists ?t (and (Is ?gc 'game_controller') (RightOf ?gc ?h) (SmallerThan ?h ?gc) (Is ?h 'headphones') (or (not (Is ?w 'wrench')) (Above ?w ?gc)) (or (not (Is ?w 'wrench')) (OnRightSide ?t)) (or (not (Is ?w 'wrench')) (AlignedHorizontally ?t ?c)) (or (not (Is ?w 'wrench')) (Above ?a ?c)) (or (not (Is ?w 'wrench')) (Is ?t 'tie')) (or (not (Is ?w 'wrench')) (RightOf ?c ?w)) (or (not (Is ?w 'wrench')) (Is ?a 'apple')) (or (not (Is ?w 'wrench')) (Above ?p ?w)) (or (not (Is ?w 'wrench')) (Is ?c 'calculator')) (or (not (Is ?w 'wrench')) (Is ?p 'pliers'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "tie",
+        "pliers",
+        "apple",
+        "wrench",
+        "game_controller",
+        "calculator",
+        "headphones"
+    ]
+}

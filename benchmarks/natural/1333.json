@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a rock with a black keyboard next to it. A dirty plate and a pair of headphones that are turned on are placed next to the keyboard, with glasses lying beside the headphones. A hat and all toy cars are positioned to the right of the rock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?r (exists ?k (exists ?p (exists ?h (and (Is ?r 'rock') (Is ?k 'keyboard') (HasColor ?k 'black') (NextTo ?k ?r) (Is ?p 'plate') (HasState ?p 'dirty') (NextTo ?p ?k) (Is ?h 'headphones') (HasState ?h 'on') (NextTo ?h ?k) (forall ?tc (implies (Is ?tc 'toy car') (RightOf ?tc ?r))) (exists ?hat (and (Is ?hat 'hat') (RightOf ?hat ?r))) (exists ?g (and (Is ?g 'glasses') (NextTo ?g ?h)))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?r (exists ?k (exists ?p (exists ?h (forall ?tc (exists ?hat (exists ?g (and (Is ?r 'rock') (NextTo ?k ?r) (or (not (Is ?tc 'toy car')) (RightOf ?tc ?r)) (HasColor ?k 'black') (NextTo ?p ?k) (RightOf ?hat ?r) (Is ?k 'keyboard') (NextTo ?h ?k) (HasState ?p 'dirty') (Is ?hat 'hat') (HasState ?h 'on') (NextTo ?g ?h) (Is ?p 'plate') (Is ?h 'headphones') (Is ?g 'glasses'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "toy car",
+        "rock",
+        "headphones",
+        "hat",
+        "plate"
+    ]
+}

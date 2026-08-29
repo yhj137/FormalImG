@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman holding a brown mirror, positioned to the left of every rock.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'woman') (exists ?m (and (Is ?m 'mirror') (HasColor ?m 'brown') (Holding ?w ?m) (forall ?r (implies (Is ?r 'rock') (LeftOf ?w ?r))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?m (forall ?r (and (Is ?w 'woman') (Holding ?w ?m) (or (not (Is ?r 'rock')) (LeftOf ?w ?r)) (HasColor ?m 'brown') (Is ?m 'mirror'))))))",
+    "k": 3,
+    "object_classes": [
+        "mirror",
+        "rock",
+        "woman"
+    ]
+}

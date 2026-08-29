@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing a neatly arranged horizontal sequence of eight items. Starting on the left side is a backpack. To the right of the backpack is a sock, followed by a phone, and then a watch. Next in the line is a lemon, which is positioned to the left of a pair of pliers. Continuing the row, there is a wrench located on the bottom side of the image, and finally, a pizza is positioned on the right side. All objects are aligned horizontally. Additionally, the backpack is larger than the phone, and the watch is smaller than the pizza.",
+    "dsl": "(exists ?backpack (exists ?sock (exists ?phone (exists ?watch (exists ?lemon (exists ?pliers (exists ?wrench (exists ?pizza (and (Is ?backpack 'backpack') (Is ?sock 'sock') (Is ?phone 'phone') (Is ?watch 'watch') (Is ?lemon 'lemon') (Is ?pliers 'pliers') (Is ?wrench 'wrench') (Is ?pizza 'pizza') (OnLeftSide ?backpack) (RightOf ?sock ?backpack) (AlignedHorizontally ?backpack ?sock) (RightOf ?phone ?sock) (AlignedHorizontally ?sock ?phone) (RightOf ?watch ?phone) (AlignedHorizontally ?phone ?watch) (RightOf ?lemon ?watch) (AlignedHorizontally ?watch ?lemon) (LeftOf ?lemon ?pliers) (AlignedHorizontally ?lemon ?pliers) (RightOf ?wrench ?pliers) (AlignedHorizontally ?pliers ?wrench) (OnBottomSide ?wrench) (RightOf ?pizza ?wrench) (OnRightSide ?pizza) (AlignedHorizontally ?wrench ?pizza) (LargerThan ?backpack ?phone) (SmallerThan ?watch ?pizza))))))))))",
+    "cnf": "(exists ?backpack (exists ?sock (exists ?phone (exists ?watch (exists ?lemon (exists ?pliers (exists ?wrench (exists ?pizza (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (RightOf ?sock ?backpack) (AlignedHorizontally ?backpack ?sock) (Is ?sock 'sock') (LargerThan ?backpack ?phone) (RightOf ?phone ?sock) (AlignedHorizontally ?phone ?watch) (AlignedHorizontally ?sock ?phone) (Is ?phone 'phone') (RightOf ?watch ?phone) (RightOf ?lemon ?watch) (Is ?watch 'watch') (AlignedHorizontally ?watch ?lemon) (Is ?lemon 'lemon') (SmallerThan ?watch ?pizza) (LeftOf ?lemon ?pliers) (AlignedHorizontally ?wrench ?pizza) (AlignedHorizontally ?lemon ?pliers) (Is ?pliers 'pliers') (RightOf ?pizza ?wrench) (OnRightSide ?pizza) (RightOf ?wrench ?pliers) (OnBottomSide ?wrench) (Is ?pizza 'pizza') (AlignedHorizontally ?pliers ?wrench) (Is ?wrench 'wrench'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pliers",
+        "sock",
+        "wrench",
+        "lemon",
+        "phone",
+        "watch",
+        "pizza",
+        "backpack"
+    ]
+}

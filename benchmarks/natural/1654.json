@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a domestic scene features a basket on a bench containing every orange. The bench sits next to a bed with a rug nearby. A woman stands beside the bed holding a black pan with a sandwich inside, and a refrigerator is located to her right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'basket') (forall ?o (implies (Is ?o 'orange') (In ?o ?b))) (exists ?w (exists ?pan (exists ?s (exists ?r (exists ?rug (exists ?bed (exists ?bench (and (Is ?w 'woman') (Is ?pan 'pan') (Is ?s 'sandwich') (Is ?r 'refrigerator') (Is ?rug 'rug') (Is ?bed 'bed') (Is ?bench 'bench') (On ?b ?bench) (NextTo ?bench ?bed) (NextTo ?rug ?bed) (NextTo ?w ?bed) (Holding ?w ?pan) (HasColor ?pan 'black') (In ?s ?pan) (RightOf ?r ?w))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?o (exists ?w (exists ?pan (exists ?s (exists ?r (exists ?rug (exists ?bed (exists ?bench (and (Is ?b 'basket') (or (not (Is ?o 'orange')) (In ?o ?b)) (On ?b ?bench) (Is ?bench 'bench') (NextTo ?bench ?bed) (Is ?bed 'bed') (NextTo ?rug ?bed) (Is ?rug 'rug') (NextTo ?w ?bed) (Is ?w 'woman') (Holding ?w ?pan) (RightOf ?r ?w) (Is ?pan 'pan') (HasColor ?pan 'black') (Is ?r 'refrigerator') (In ?s ?pan) (Is ?s 'sandwich'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "bed",
+        "rug",
+        "woman",
+        "orange",
+        "pan",
+        "refrigerator",
+        "sandwich",
+        "basket"
+    ]
+}

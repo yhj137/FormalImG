@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop, a calculator, a game controller, and a cup. The calculator is positioned on the right side of the image, placed to the right of the laptop, and aligned horizontally with it. The game controller is aligned vertically with the laptop, while the cup, which is smaller than the laptop, is located to the right of the game controller. Additionally, for every ruler in the scene, there is a pen to its right and aligned horizontally with it. The ruler is aligned vertically with the calculator. A stapler is aligned vertically with the pen. Also, for each ruler, there is a tie located on the bottom side of the image, aligned vertically with the game controller, and a wrench, which is smaller than the laptop, is positioned to the right of and horizontally aligned with the tie.",
+    "dsl": "(exists ?laptop (exists ?calculator (exists ?game_controller (exists ?cup (and (Is ?laptop 'laptop') (Is ?calculator 'calculator') (Is ?game_controller 'game_controller') (Is ?cup 'cup') (OnRightSide ?calculator) (RightOf ?calculator ?laptop) (AlignedHorizontally ?calculator ?laptop) (AlignedVertically ?game_controller ?laptop) (SmallerThan ?cup ?laptop) (RightOf ?cup ?game_controller) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?pen (exists ?stapler (exists ?tie (exists ?wrench (and (Is ?pen 'pen') (Is ?stapler 'stapler') (Is ?tie 'tie') (Is ?wrench 'wrench') (AlignedVertically ?ruler ?calculator) (RightOf ?pen ?ruler) (AlignedHorizontally ?pen ?ruler) (AlignedVertically ?stapler ?pen) (OnBottomSide ?tie) (AlignedVertically ?tie ?game_controller) (RightOf ?wrench ?tie) (AlignedHorizontally ?wrench ?tie) (SmallerThan ?wrench ?laptop)))))))))))))",
+    "cnf": "(exists ?laptop (exists ?calculator (exists ?game_controller (exists ?cup (forall ?ruler (exists ?pen (exists ?stapler (exists ?tie (exists ?wrench (and (Is ?laptop 'laptop') (RightOf ?calculator ?laptop) (AlignedHorizontally ?calculator ?laptop) (OnRightSide ?calculator) (AlignedVertically ?game_controller ?laptop) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?ruler ?calculator)) (Is ?calculator 'calculator') (SmallerThan ?cup ?laptop) (Is ?game_controller 'game_controller') (RightOf ?cup ?game_controller) (or (not (Is ?ruler 'ruler')) (Is ?wrench 'wrench')) (or (not (Is ?ruler 'ruler')) (RightOf ?pen ?ruler)) (or (not (Is ?ruler 'ruler')) (SmallerThan ?wrench ?laptop)) (Is ?cup 'cup') (or (not (Is ?ruler 'ruler')) (AlignedVertically ?tie ?game_controller)) (or (not (Is ?ruler 'ruler')) (Is ?tie 'tie')) (or (not (Is ?ruler 'ruler')) (RightOf ?wrench ?tie)) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?pen ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?pen 'pen')) (or (not (Is ?ruler 'ruler')) (AlignedHorizontally ?wrench ?tie)) (or (not (Is ?ruler 'ruler')) (OnBottomSide ?tie)) (or (not (Is ?ruler 'ruler')) (Is ?stapler 'stapler')) (or (not (Is ?ruler 'ruler')) (AlignedVertically ?stapler ?pen))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "tie",
+        "stapler",
+        "pen",
+        "wrench",
+        "cup",
+        "game_controller",
+        "calculator"
+    ]
+}

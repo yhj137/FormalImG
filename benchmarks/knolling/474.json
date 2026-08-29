@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase, which appears on the left side of the image, there is a hat located below it, and a donut positioned to the left of the hat.",
+    "dsl": "(forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?hat (exists ?donut (and (Is ?hat 'hat') (Is ?donut 'donut') (OnLeftSide ?suitcase) (Below ?hat ?suitcase) (LeftOf ?donut ?hat))))))",
+    "cnf": "(forall ?suitcase (exists ?hat (exists ?donut (and (or (not (Is ?suitcase 'suitcase')) (Is ?hat 'hat')) (or (not (Is ?suitcase 'suitcase')) (Below ?hat ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?donut 'donut')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?donut ?hat)) (or (not (Is ?suitcase 'suitcase')) (OnLeftSide ?suitcase))))))",
+    "k": 3,
+    "object_classes": [
+        "hat",
+        "suitcase",
+        "donut"
+    ]
+}

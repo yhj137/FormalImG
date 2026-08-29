@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a game controller positioned on the left side of the image. There is also a pair of headphones, and the game controller is visually smaller than the headphones.",
+    "dsl": "(exists ?gc (exists ?hp (and (Is ?gc 'game_controller') (Is ?hp 'headphones') (OnLeftSide ?gc) (SmallerThan ?gc ?hp))))",
+    "cnf": "(exists ?gc (exists ?hp (and (Is ?gc 'game_controller') (OnLeftSide ?gc) (SmallerThan ?gc ?hp) (Is ?hp 'headphones'))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "game_controller"
+    ]
+}

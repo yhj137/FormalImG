@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A woman has a hat on her head and is holding a wooden spoon. All apples in the image are located to the left of the woman. To the right of the woman, there is a glass bottle with a flower inside it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'woman') (forall ?a (implies (Is ?a 'apple') (LeftOf ?a ?w))) (exists ?h (exists ?s (exists ?b (exists ?f (and (Is ?h 'hat') (Is ?s 'spoon') (Is ?b 'bottle') (Is ?f 'flower') (On ?h ?w) (Holding ?w ?s) (HasMaterial ?s 'wooden') (RightOf ?b ?w) (HasMaterial ?b 'glass') (In ?f ?b)))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?a (exists ?h (exists ?s (exists ?b (exists ?f (and (Is ?w 'woman') (or (not (Is ?a 'apple')) (LeftOf ?a ?w)) (On ?h ?w) (Holding ?w ?s) (Is ?h 'hat') (RightOf ?b ?w) (Is ?s 'spoon') (HasMaterial ?s 'wooden') (Is ?b 'bottle') (HasMaterial ?b 'glass') (In ?f ?b) (Is ?f 'flower')))))))))",
+    "k": 6,
+    "object_classes": [
+        "spoon",
+        "bottle",
+        "woman",
+        "flower",
+        "apple",
+        "hat"
+    ]
+}

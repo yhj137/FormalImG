@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue shirt located on the top side of the image. A backpack is vertically aligned with and larger than the shirt. A yellow hat is aligned horizontally with the shirt. A white plate is aligned vertically with the hat and horizontally with the backpack. A game controller is positioned to the right of the hat. On the right side of the image, there is a fork that is smaller than the plate and located to the right of the plate. Finally, for any ruler present, it aligns vertically with the game controller and has a black lighter to its left that is smaller than the ruler.",
+    "dsl": "(exists ?shirt (exists ?backpack (exists ?hat (exists ?plate (exists ?controller (exists ?fork (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (Is ?backpack 'backpack') (AlignedVertically ?backpack ?shirt) (LargerThan ?backpack ?shirt) (Is ?hat 'hat') (Has ?hat 'yellow') (AlignedHorizontally ?shirt ?hat) (Is ?plate 'plate') (Has ?plate 'white') (AlignedVertically ?hat ?plate) (AlignedHorizontally ?backpack ?plate) (Is ?controller 'game_controller') (RightOf ?controller ?hat) (Is ?fork 'fork') (OnRightSide ?fork) (RightOf ?fork ?plate) (SmallerThan ?fork ?plate) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?lighter (and (Is ?lighter 'lighter') (Has ?lighter 'black') (AlignedVertically ?controller ?ruler) (LeftOf ?lighter ?ruler) (SmallerThan ?lighter ?ruler))))))))))))",
+    "cnf": "(exists ?shirt (exists ?backpack (exists ?hat (exists ?plate (exists ?controller (exists ?fork (forall ?ruler (exists ?lighter (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (AlignedVertically ?backpack ?shirt) (LargerThan ?backpack ?shirt) (Is ?backpack 'backpack') (AlignedHorizontally ?shirt ?hat) (AlignedHorizontally ?backpack ?plate) (Has ?hat 'yellow') (AlignedVertically ?hat ?plate) (RightOf ?fork ?plate) (Is ?hat 'hat') (RightOf ?controller ?hat) (Has ?plate 'white') (SmallerThan ?fork ?plate) (OnRightSide ?fork) (Is ?controller 'game_controller') (or (not (Is ?ruler 'ruler')) (AlignedVertically ?controller ?ruler)) (Is ?plate 'plate') (Is ?fork 'fork') (or (not (Is ?ruler 'ruler')) (Has ?lighter 'black')) (or (not (Is ?ruler 'ruler')) (LeftOf ?lighter ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?lighter 'lighter')) (or (not (Is ?ruler 'ruler')) (SmallerThan ?lighter ?ruler)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "plate",
+        "game_controller",
+        "fork",
+        "hat",
+        "backpack",
+        "lighter",
+        "shirt"
+    ]
+}

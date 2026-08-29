@@ -1,0 +1,9 @@
+{
+    "prompt": "A blooming tree.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming')))",
+    "cnf": "(exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming')))",
+    "k": 1,
+    "object_classes": [
+        "tree"
+    ]
+}

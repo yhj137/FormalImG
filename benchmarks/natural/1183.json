@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a lion holding a basket, with a plastic cup to the left of the basket. A horse stands to the right of the lion, and a sofa is next to it. Every teddy bear in the scene is on the sofa.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?l (and (Is ?l 'lion') (exists ?b (and (Is ?b 'basket') (Holding ?l ?b) (exists ?c (and (Is ?c 'cup') (HasMaterial ?c 'plastic') (LeftOf ?c ?b))))) (exists ?h (and (Is ?h 'horse') (RightOf ?h ?l))) (exists ?s (and (Is ?s 'sofa') (NextTo ?s ?l) (forall ?t (implies (Is ?t 'teddy bear') (On ?t ?s))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?l (exists ?b (exists ?c (exists ?h (exists ?s (forall ?t (and (Is ?l 'lion') (Holding ?l ?b) (RightOf ?h ?l) (Is ?b 'basket') (LeftOf ?c ?b) (NextTo ?s ?l) (Is ?h 'horse') (HasMaterial ?c 'plastic') (Is ?s 'sofa') (or (not (Is ?t 'teddy bear')) (On ?t ?s)) (Is ?c 'cup')))))))))",
+    "k": 6,
+    "object_classes": [
+        "sofa",
+        "horse",
+        "teddy bear",
+        "cup",
+        "lion",
+        "basket"
+    ]
+}

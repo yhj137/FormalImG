@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Inside a house, a person is next to a pan containing a bitten sandwich. A cup is also next to the pan, while every banana in the scene is positioned to the right of the pan.",
+    "dsl": "(exists ?h (exists ?p (exists ?pan (exists ?s (and (Is ?h 'house') (Is ?p 'person') (In ?p ?h) (Is ?pan 'pan') (NextTo ?p ?pan) (Is ?s 'sandwich') (HasState ?s 'bitten') (In ?s ?pan) (forall ?b (implies (Is ?b 'banana') (RightOf ?b ?pan))) (exists ?c (and (Is ?c 'cup') (NextTo ?c ?pan))))))))",
+    "cnf": "(exists ?h (exists ?p (exists ?pan (exists ?s (forall ?b (exists ?c (and (Is ?h 'house') (In ?p ?h) (Is ?p 'person') (NextTo ?p ?pan) (Is ?pan 'pan') (In ?s ?pan) (or (not (Is ?b 'banana')) (RightOf ?b ?pan)) (HasState ?s 'bitten') (NextTo ?c ?pan) (Is ?s 'sandwich') (Is ?c 'cup'))))))))",
+    "k": 6,
+    "object_classes": [
+        "house",
+        "person",
+        "pan",
+        "sandwich",
+        "cup",
+        "banana"
+    ]
+}

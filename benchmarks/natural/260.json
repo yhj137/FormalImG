@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a plastic ball sitting on top of a wooden wardrobe.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (and (Is ?b 'ball') (HasMaterial ?b 'plastic') (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (On ?b ?w)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (and (Is ?b 'ball') (HasMaterial ?b 'plastic') (On ?b ?w) (HasMaterial ?w 'wooden') (Is ?w 'wardrobe')))))",
+    "k": 2,
+    "object_classes": [
+        "ball",
+        "wardrobe"
+    ]
+}

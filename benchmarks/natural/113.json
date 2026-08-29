@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon style image where every sandwich is bitten.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?x (implies (Is ?x 'sandwich') (HasState ?x 'bitten'))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?x (or (not (Is ?x 'sandwich')) (HasState ?x 'bitten'))))",
+    "k": 1,
+    "object_classes": [
+        "sandwich"
+    ]
+}

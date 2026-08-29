@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene displays a single pizza positioned on the top side of the image.",
+    "dsl": "(exists ?pizza (and (Is ?pizza 'pizza') (OnTopSide ?pizza)))",
+    "cnf": "(exists ?pizza (and (Is ?pizza 'pizza') (OnTopSide ?pizza)))",
+    "k": 1,
+    "object_classes": [
+        "pizza"
+    ]
+}

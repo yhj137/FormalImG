@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person is next to a metal bus. To the right of the bus is a horse. A pizza is on the bus, with a fish next to it. A sleeping lion is next to the horse.",
+    "dsl": "(exists ?b (exists ?per (exists ?h (exists ?p (exists ?f (exists ?l (and (Is ?b 'bus') (HasMaterial ?b 'metal') (Is ?per 'person') (NextTo ?per ?b) (Is ?h 'horse') (RightOf ?h ?b) (Is ?p 'pizza') (On ?p ?b) (Is ?f 'fish') (NextTo ?f ?p) (Is ?l 'lion') (HasState ?l 'sleeping') (NextTo ?l ?h))))))))",
+    "cnf": "(exists ?b (exists ?per (exists ?h (exists ?p (exists ?f (exists ?l (and (Is ?b 'bus') (HasMaterial ?b 'metal') (NextTo ?per ?b) (RightOf ?h ?b) (Is ?per 'person') (On ?p ?b) (Is ?h 'horse') (NextTo ?l ?h) (Is ?p 'pizza') (NextTo ?f ?p) (HasState ?l 'sleeping') (Is ?f 'fish') (Is ?l 'lion'))))))))",
+    "k": 6,
+    "object_classes": [
+        "fish",
+        "person",
+        "horse",
+        "pizza",
+        "lion",
+        "bus"
+    ]
+}

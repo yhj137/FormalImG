@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene features a black keyboard with a toy car on it. An open bottle sits to the left of the keyboard, while a red fruit is located to the right of the bottle. All shoes are positioned to the left of the bottle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?k (exists ?b (exists ?t (and (Is ?k 'keyboard') (HasColor ?k 'black') (Is ?b 'bottle') (HasState ?b 'open') (LeftOf ?b ?k) (Is ?t 'toy car') (On ?t ?k) (forall ?s (implies (Is ?s 'shoes') (LeftOf ?s ?b))) (exists ?f (and (Is ?f 'fruit') (HasColor ?f 'red') (RightOf ?f ?b))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?k (exists ?b (exists ?t (forall ?s (exists ?f (and (Is ?k 'keyboard') (HasColor ?k 'black') (LeftOf ?b ?k) (On ?t ?k) (HasState ?b 'open') (or (not (Is ?s 'shoes')) (LeftOf ?s ?b)) (Is ?t 'toy car') (Is ?b 'bottle') (RightOf ?f ?b) (HasColor ?f 'red') (Is ?f 'fruit'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "bottle",
+        "toy car",
+        "shoes",
+        "fruit"
+    ]
+}

@@ -1,0 +1,9 @@
+{
+    "prompt": "A cyberpunk style scene where every woman is purple.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?w (implies (Is ?w 'woman') (HasColor ?w 'purple'))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?w (or (not (Is ?w 'woman')) (HasColor ?w 'purple'))))",
+    "k": 1,
+    "object_classes": [
+        "woman"
+    ]
+}

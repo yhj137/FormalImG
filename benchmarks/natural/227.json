@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a metal cat, with an orange positioned to its right.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?o (and (Is ?c 'cat') (HasMaterial ?c 'metal') (Is ?o 'orange') (RightOf ?o ?c)))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?o (and (Is ?c 'cat') (HasMaterial ?c 'metal') (RightOf ?o ?c) (Is ?o 'orange')))))",
+    "k": 2,
+    "object_classes": [
+        "orange",
+        "cat"
+    ]
+}

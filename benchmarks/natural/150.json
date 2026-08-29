@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo-style image where every boat is wooden.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'boat') (HasMaterial ?b 'wooden'))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (or (not (Is ?b 'boat')) (HasMaterial ?b 'wooden'))))",
+    "k": 1,
+    "object_classes": [
+        "boat"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a black pan, a brown wallet, a pair of white headphones, and a red shoe. The brown wallet is placed to the left of the black pan, while the red shoe is positioned directly below the pan. To the left of the shoe are the white headphones. In terms of size, the pan appears larger than the wallet, and the shoe appears larger than the headphones.",
+    "dsl": "(exists ?pan (exists ?wallet (exists ?shoe (exists ?headphones (and (Is ?pan 'pan') (Has ?pan 'black') (Is ?wallet 'wallet') (Has ?wallet 'brown') (Is ?shoe 'shoe') (Has ?shoe 'red') (Is ?headphones 'headphones') (Has ?headphones 'white') (LeftOf ?wallet ?pan) (Below ?shoe ?pan) (LeftOf ?headphones ?shoe) (LargerThan ?pan ?wallet) (LargerThan ?shoe ?headphones))))))",
+    "cnf": "(exists ?pan (exists ?wallet (exists ?shoe (exists ?headphones (and (Is ?pan 'pan') (Has ?pan 'black') (LeftOf ?wallet ?pan) (Below ?shoe ?pan) (Has ?wallet 'brown') (LargerThan ?pan ?wallet) (Has ?shoe 'red') (LeftOf ?headphones ?shoe) (Is ?wallet 'wallet') (Is ?shoe 'shoe') (LargerThan ?shoe ?headphones) (Has ?headphones 'white') (Is ?headphones 'headphones'))))))",
+    "k": 4,
+    "object_classes": [
+        "pan",
+        "headphones",
+        "wallet",
+        "shoe"
+    ]
+}

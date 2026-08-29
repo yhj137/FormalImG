@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. A sleeping lion is located to the left of a monitor that is turned on. There is also a clock positioned next to the monitor.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?l (exists ?m (exists ?c (and (Is ?l 'lion') (Is ?m 'monitor') (Is ?c 'clock') (HasState ?l 'sleeping') (HasState ?m 'on') (LeftOf ?l ?m) (NextTo ?c ?m))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?l (exists ?m (exists ?c (and (Is ?l 'lion') (HasState ?l 'sleeping') (LeftOf ?l ?m) (HasState ?m 'on') (NextTo ?c ?m) (Is ?m 'monitor') (Is ?c 'clock'))))))",
+    "k": 3,
+    "object_classes": [
+        "clock",
+        "lion",
+        "monitor"
+    ]
+}

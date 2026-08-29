@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a drill located on the bottom side of the layout. For every keyboard in the scene, the keyboard is positioned above the drill.",
+    "dsl": "(exists ?d (and (Is ?d 'drill') (OnBottomSide ?d) (forall ?k (implies (Is ?k 'keyboard') (Above ?k ?d)))))",
+    "cnf": "(exists ?d (forall ?k (and (Is ?d 'drill') (OnBottomSide ?d) (or (not (Is ?k 'keyboard')) (Above ?k ?d)))))",
+    "k": 2,
+    "object_classes": [
+        "drill",
+        "keyboard"
+    ]
+}

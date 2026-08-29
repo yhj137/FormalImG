@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black monitor. For every pen present in the layout, there is a carrot positioned directly above it. Additionally, each pen is located to the left of the monitor, and the monitor is visually larger than the pen.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (Has ?monitor 'black') (forall ?pen (implies (Is ?pen 'pen') (exists ?carrot (and (Is ?carrot 'carrot') (Above ?carrot ?pen) (LeftOf ?pen ?monitor) (LargerThan ?monitor ?pen)))))))",
+    "cnf": "(exists ?monitor (forall ?pen (exists ?carrot (and (Is ?monitor 'monitor') (Has ?monitor 'black') (or (not (Is ?pen 'pen')) (LeftOf ?pen ?monitor)) (or (not (Is ?pen 'pen')) (LargerThan ?monitor ?pen)) (or (not (Is ?pen 'pen')) (Above ?carrot ?pen)) (or (not (Is ?pen 'pen')) (Is ?carrot 'carrot'))))))",
+    "k": 3,
+    "object_classes": [
+        "monitor",
+        "carrot",
+        "pen"
+    ]
+}

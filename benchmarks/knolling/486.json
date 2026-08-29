@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every tie in the arrangement, there is an apple positioned below it. Additionally, there is a donut located to the left of the apple, and this donut is situated on the left side of the image. The donut and the apple are aligned horizontally.",
+    "dsl": "(and (forall ?tie (implies (Is ?tie 'tie') (exists ?apple (exists ?donut (and (Is ?apple 'apple') (Is ?donut 'donut') (Below ?apple ?tie) (LeftOf ?donut ?apple) (AlignedHorizontally ?donut ?apple) (OnLeftSide ?donut)))))))",
+    "cnf": "(forall ?tie (exists ?apple (exists ?donut (and (or (not (Is ?tie 'tie')) (Is ?apple 'apple')) (or (not (Is ?tie 'tie')) (Is ?donut 'donut')) (or (not (Is ?tie 'tie')) (Below ?apple ?tie)) (or (not (Is ?tie 'tie')) (LeftOf ?donut ?apple)) (or (not (Is ?tie 'tie')) (AlignedHorizontally ?donut ?apple)) (or (not (Is ?tie 'tie')) (OnLeftSide ?donut))))))",
+    "k": 3,
+    "object_classes": [
+        "tie",
+        "donut",
+        "apple"
+    ]
+}

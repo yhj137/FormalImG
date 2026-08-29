@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a suitcase positioned on the top side of the frame. For every book in the image, it is aligned vertically with the suitcase, and the book is located above a sandwich.",
+    "dsl": "(exists ?s (and (Is ?s 'suitcase') (OnTopSide ?s) (forall ?b (implies (Is ?b 'book') (exists ?sand (and (Is ?sand 'sandwich') (Above ?b ?sand) (AlignedVertically ?s ?b)))))))",
+    "cnf": "(exists ?s (forall ?b (exists ?sand (and (Is ?s 'suitcase') (OnTopSide ?s) (or (not (Is ?b 'book')) (AlignedVertically ?s ?b)) (or (not (Is ?b 'book')) (Above ?b ?sand)) (or (not (Is ?b 'book')) (Is ?sand 'sandwich'))))))",
+    "k": 3,
+    "object_classes": [
+        "sandwich",
+        "book",
+        "suitcase"
+    ]
+}

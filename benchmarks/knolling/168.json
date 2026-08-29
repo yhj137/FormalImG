@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every bowl in the scene is positioned on the left side.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'bowl') (OnLeftSide ?x))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'bowl')) (OnLeftSide ?x)))",
+    "k": 1,
+    "object_classes": [
+        "bowl"
+    ]
+}

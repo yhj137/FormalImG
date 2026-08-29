@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a pen and a lemon. The two items are aligned horizontally, and the lemon is located on the right side of the image.",
+    "dsl": "(exists ?pen (exists ?lemon (and (Is ?pen 'pen') (Is ?lemon 'lemon') (AlignedHorizontally ?pen ?lemon) (OnRightSide ?lemon))))",
+    "cnf": "(exists ?pen (exists ?lemon (and (Is ?pen 'pen') (AlignedHorizontally ?pen ?lemon) (Is ?lemon 'lemon') (OnRightSide ?lemon))))",
+    "k": 2,
+    "object_classes": [
+        "lemon",
+        "pen"
+    ]
+}

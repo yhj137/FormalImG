@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style image. Every car contains a toy car and has a blue bicycle to its right. A child stands next to the bicycle holding a closed bottle, with dirty shoes nearby. Next to the shoes is a rock supporting a monitor with headphones on top.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?c (implies (Is ?c 'car') (exists ?tc (exists ?b (exists ?k (exists ?bt (exists ?s (exists ?r (exists ?m (exists ?h (and (Is ?tc 'toy car') (In ?tc ?c) (Is ?b 'bicycle') (HasColor ?b 'blue') (LeftOf ?c ?b) (Is ?k 'child') (HasState ?k 'standing') (NextTo ?k ?b) (Is ?bt 'bottle') (HasState ?bt 'closed') (Holding ?k ?bt) (Is ?s 'shoes') (HasState ?s 'dirty') (NextTo ?s ?k) (Is ?r 'rock') (NextTo ?r ?s) (Is ?m 'monitor') (On ?m ?r) (Is ?h 'headphones') (On ?h ?m)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?c (exists ?tc (exists ?b (exists ?k (exists ?bt (exists ?s (exists ?r (exists ?m (exists ?h (and (or (not (Is ?c 'car')) (Is ?tc 'toy car')) (or (not (Is ?c 'car')) (In ?tc ?c)) (or (not (Is ?c 'car')) (Is ?b 'bicycle')) (or (not (Is ?c 'car')) (HasColor ?b 'blue')) (or (not (Is ?c 'car')) (LeftOf ?c ?b)) (or (not (Is ?c 'car')) (Is ?k 'child')) (or (not (Is ?c 'car')) (NextTo ?k ?b)) (or (not (Is ?c 'car')) (HasState ?k 'standing')) (or (not (Is ?c 'car')) (Is ?bt 'bottle')) (or (not (Is ?c 'car')) (Holding ?k ?bt)) (or (not (Is ?c 'car')) (HasState ?bt 'closed')) (or (not (Is ?c 'car')) (Is ?s 'shoes')) (or (not (Is ?c 'car')) (NextTo ?s ?k)) (or (not (Is ?c 'car')) (HasState ?s 'dirty')) (or (not (Is ?c 'car')) (Is ?r 'rock')) (or (not (Is ?c 'car')) (NextTo ?r ?s)) (or (not (Is ?c 'car')) (Is ?m 'monitor')) (or (not (Is ?c 'car')) (On ?m ?r)) (or (not (Is ?c 'car')) (Is ?h 'headphones')) (or (not (Is ?c 'car')) (On ?h ?m)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bottle",
+        "shoes",
+        "rock",
+        "monitor",
+        "car",
+        "bicycle",
+        "child",
+        "headphones",
+        "toy car"
+    ]
+}

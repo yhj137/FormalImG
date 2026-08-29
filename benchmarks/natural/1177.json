@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person holding an empty plate is in a bed. A desk and an elephant are situated next to the bed, and every tree stands next to the elephant.",
+    "dsl": "(exists ?p (exists ?b (exists ?pl (exists ?d (exists ?e (and (Is ?p 'person') (Is ?b 'bed') (Is ?pl 'plate') (Is ?d 'desk') (Is ?e 'elephant') (In ?p ?b) (Holding ?p ?pl) (HasState ?pl 'empty') (NextTo ?b ?d) (NextTo ?b ?e) (forall ?t (implies (Is ?t 'tree') (NextTo ?t ?e)))))))))",
+    "cnf": "(exists ?p (exists ?b (exists ?pl (exists ?d (exists ?e (forall ?t (and (Is ?p 'person') (In ?p ?b) (Holding ?p ?pl) (Is ?b 'bed') (NextTo ?b ?d) (Is ?pl 'plate') (HasState ?pl 'empty') (NextTo ?b ?e) (Is ?d 'desk') (Is ?e 'elephant') (or (not (Is ?t 'tree')) (NextTo ?t ?e)))))))))",
+    "k": 6,
+    "object_classes": [
+        "person",
+        "desk",
+        "bed",
+        "tree",
+        "elephant",
+        "plate"
+    ]
+}

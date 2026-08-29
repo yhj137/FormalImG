@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue book and a white bowl, where the book is positioned to the left of the bowl. For every pair of scissors in the image, it is aligned vertically with the white bowl. Furthermore, associated with each pair of scissors is a screwdriver located to its left, and a pair of pliers aligned vertically with that screwdriver.",
+    "dsl": "(exists ?book (exists ?bowl (and (Is ?book 'book') (Has ?book 'blue') (Is ?bowl 'bowl') (Has ?bowl 'white') (LeftOf ?book ?bowl) (forall ?scissors (implies (Is ?scissors 'scissors') (exists ?screwdriver (exists ?pliers (and (Is ?screwdriver 'screwdriver') (Is ?pliers 'pliers') (AlignedVertically ?scissors ?bowl) (LeftOf ?screwdriver ?scissors) (AlignedVertically ?pliers ?screwdriver)))))))))",
+    "cnf": "(exists ?book (exists ?bowl (forall ?scissors (exists ?screwdriver (exists ?pliers (and (Is ?book 'book') (Has ?book 'blue') (LeftOf ?book ?bowl) (Has ?bowl 'white') (or (not (Is ?scissors 'scissors')) (AlignedVertically ?scissors ?bowl)) (Is ?bowl 'bowl') (or (not (Is ?scissors 'scissors')) (Is ?pliers 'pliers')) (or (not (Is ?scissors 'scissors')) (LeftOf ?screwdriver ?scissors)) (or (not (Is ?scissors 'scissors')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?scissors 'scissors')) (AlignedVertically ?pliers ?screwdriver))))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "pliers",
+        "screwdriver",
+        "scissors",
+        "bowl"
+    ]
+}

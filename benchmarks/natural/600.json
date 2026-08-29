@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a woman holding a pink backpack standing next to a metal desk with a cup on it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?d (exists ?b (exists ?c (and (Is ?w 'woman') (Is ?d 'desk') (HasMaterial ?d 'metal') (Is ?b 'backpack') (HasColor ?b 'pink') (Is ?c 'cup') (NextTo ?w ?d) (Holding ?w ?b) (On ?c ?d)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?d (exists ?b (exists ?c (and (Is ?w 'woman') (NextTo ?w ?d) (Holding ?w ?b) (HasMaterial ?d 'metal') (On ?c ?d) (HasColor ?b 'pink') (Is ?d 'desk') (Is ?c 'cup') (Is ?b 'backpack')))))))",
+    "k": 4,
+    "object_classes": [
+        "backpack",
+        "desk",
+        "cup",
+        "woman"
+    ]
+}

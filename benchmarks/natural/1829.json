@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. Every bench has a bed to its right. A sofa is positioned next to the bed. A leather jacket lies next to the sofa, with a shirt to its right. Next to the bench are shoes containing a toy car, with a round orange sitting beside them. A bird holding a fish is also located next to the bench.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?bench (implies (Is ?bench 'bench') (exists ?bed (exists ?sofa (exists ?jacket (exists ?shirt (exists ?shoes (exists ?car (exists ?orange (exists ?bird (exists ?fish (and (Is ?bed 'bed') (RightOf ?bed ?bench) (Is ?sofa 'sofa') (NextTo ?sofa ?bed) (Is ?jacket 'jacket') (HasMaterial ?jacket 'leather') (NextTo ?jacket ?sofa) (Is ?shirt 'shirt') (RightOf ?shirt ?jacket) (Is ?shoes 'shoes') (NextTo ?shoes ?bench) (Is ?car 'toy car') (In ?car ?shoes) (Is ?orange 'orange') (HasShape ?orange 'round') (NextTo ?orange ?shoes) (Is ?bird 'bird') (NextTo ?bird ?bench) (Is ?fish 'fish') (Holding ?bird ?fish))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?bench (exists ?bed (exists ?sofa (exists ?jacket (exists ?shirt (exists ?shoes (exists ?car (exists ?orange (exists ?bird (exists ?fish (and (or (not (Is ?bench 'bench')) (Is ?bed 'bed')) (or (not (Is ?bench 'bench')) (RightOf ?bed ?bench)) (or (not (Is ?bench 'bench')) (NextTo ?sofa ?bed)) (or (not (Is ?bench 'bench')) (Is ?sofa 'sofa')) (or (not (Is ?bench 'bench')) (Is ?jacket 'jacket')) (or (not (Is ?bench 'bench')) (NextTo ?jacket ?sofa)) (or (not (Is ?bench 'bench')) (HasMaterial ?jacket 'leather')) (or (not (Is ?bench 'bench')) (Is ?shirt 'shirt')) (or (not (Is ?bench 'bench')) (RightOf ?shirt ?jacket)) (or (not (Is ?bench 'bench')) (Is ?shoes 'shoes')) (or (not (Is ?bench 'bench')) (NextTo ?shoes ?bench)) (or (not (Is ?bench 'bench')) (Is ?car 'toy car')) (or (not (Is ?bench 'bench')) (In ?car ?shoes)) (or (not (Is ?bench 'bench')) (Is ?orange 'orange')) (or (not (Is ?bench 'bench')) (NextTo ?orange ?shoes)) (or (not (Is ?bench 'bench')) (HasShape ?orange 'round')) (or (not (Is ?bench 'bench')) (Is ?bird 'bird')) (or (not (Is ?bench 'bench')) (NextTo ?bird ?bench)) (or (not (Is ?bench 'bench')) (Is ?fish 'fish')) (or (not (Is ?bench 'bench')) (Holding ?bird ?fish))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "shoes",
+        "bench",
+        "bed",
+        "bird",
+        "shirt",
+        "fish",
+        "orange",
+        "sofa",
+        "jacket",
+        "toy car"
+    ]
+}

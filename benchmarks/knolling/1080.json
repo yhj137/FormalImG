@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a monitor positioned on the top side of the frame. For every mouse in the scene, it is located below the monitor and is smaller than the monitor. A cutting board is also placed below the monitor. Situated below the cutting board are a calculator and a phone, where the phone is visually smaller than the cutting board. Finally, a pair of scissors is located below the phone and is larger than the calculator.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (forall ?mouse (implies (Is ?mouse 'mouse') (and (Below ?mouse ?monitor) (SmallerThan ?mouse ?monitor)))) (exists ?cutting_board (and (Is ?cutting_board 'cutting_board') (Below ?cutting_board ?monitor) (exists ?calculator (and (Is ?calculator 'calculator') (Below ?calculator ?cutting_board) (exists ?phone (and (Is ?phone 'phone') (Below ?phone ?cutting_board) (SmallerThan ?phone ?cutting_board) (exists ?scissors (and (Is ?scissors 'scissors') (Below ?scissors ?phone) (LargerThan ?scissors ?calculator)))))))))))",
+    "cnf": "(exists ?monitor (forall ?mouse (exists ?cutting_board (exists ?calculator (exists ?phone (exists ?scissors (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (or (not (Is ?mouse 'mouse')) (Below ?mouse ?monitor)) (or (not (Is ?mouse 'mouse')) (SmallerThan ?mouse ?monitor)) (Below ?cutting_board ?monitor) (Is ?cutting_board 'cutting_board') (Below ?calculator ?cutting_board) (Below ?phone ?cutting_board) (Is ?calculator 'calculator') (LargerThan ?scissors ?calculator) (SmallerThan ?phone ?cutting_board) (Is ?phone 'phone') (Below ?scissors ?phone) (Is ?scissors 'scissors'))))))))",
+    "k": 6,
+    "object_classes": [
+        "phone",
+        "cutting_board",
+        "calculator",
+        "mouse",
+        "monitor",
+        "scissors"
+    ]
+}

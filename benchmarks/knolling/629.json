@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a hat, a camera, a knife, and a fork arranged in a row. The camera is to the right of the hat, the knife is to the right of the camera, and the fork is to the right of the knife. All four objects are aligned horizontally, with the fork specifically positioned on the right side of the image.",
+    "dsl": "(exists ?h (exists ?c (exists ?k (exists ?f (and (Is ?h 'hat') (Is ?c 'camera') (Is ?k 'knife') (Is ?f 'fork') (RightOf ?c ?h) (RightOf ?k ?c) (RightOf ?f ?k) (AlignedHorizontally ?h ?c) (AlignedHorizontally ?c ?k) (AlignedHorizontally ?k ?f) (OnRightSide ?f))))))",
+    "cnf": "(exists ?h (exists ?c (exists ?k (exists ?f (and (Is ?h 'hat') (RightOf ?c ?h) (AlignedHorizontally ?h ?c) (Is ?c 'camera') (RightOf ?k ?c) (AlignedHorizontally ?c ?k) (Is ?k 'knife') (RightOf ?f ?k) (AlignedHorizontally ?k ?f) (Is ?f 'fork') (OnRightSide ?f))))))",
+    "k": 4,
+    "object_classes": [
+        "knife",
+        "fork",
+        "hat",
+        "camera"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting style scene. A wooden wardrobe is located to the left of a table. A woman holding a ball is next to the wardrobe. On the table are a metal pan and a turned-off monitor. A fork and a piece of fruit are next to the pan. A chair is positioned next to the table, with a blue backpack resting on it.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?wd (exists ?t (exists ?w (exists ?b (exists ?p (exists ?m (exists ?fk (exists ?fr (exists ?c (exists ?bp (and (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (Is ?t 'table') (LeftOf ?wd ?t) (Is ?w 'woman') (NextTo ?w ?wd) (Is ?b 'ball') (Holding ?w ?b) (Is ?p 'pan') (HasMaterial ?p 'metal') (On ?p ?t) (Is ?m 'monitor') (HasState ?m 'off') (On ?m ?t) (Is ?fk 'fork') (NextTo ?fk ?p) (Is ?fr 'fruit') (NextTo ?fr ?p) (Is ?c 'chair') (NextTo ?c ?t) (Is ?bp 'backpack') (HasColor ?bp 'blue') (On ?bp ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?wd (exists ?t (exists ?w (exists ?b (exists ?p (exists ?m (exists ?fk (exists ?fr (exists ?c (exists ?bp (and (Is ?wd 'wardrobe') (HasMaterial ?wd 'wooden') (LeftOf ?wd ?t) (NextTo ?w ?wd) (Is ?t 'table') (On ?p ?t) (Is ?w 'woman') (Holding ?w ?b) (On ?m ?t) (HasMaterial ?p 'metal') (NextTo ?fk ?p) (Is ?b 'ball') (NextTo ?c ?t) (HasState ?m 'off') (Is ?p 'pan') (NextTo ?fr ?p) (Is ?fk 'fork') (Is ?c 'chair') (On ?bp ?c) (Is ?m 'monitor') (Is ?fr 'fruit') (HasColor ?bp 'blue') (Is ?bp 'backpack')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "fork",
+        "backpack",
+        "chair",
+        "woman",
+        "monitor",
+        "table",
+        "pan",
+        "ball",
+        "wardrobe"
+    ]
+}

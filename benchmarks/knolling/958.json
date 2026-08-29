@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a black camera, a gray calculator, and a yellow drill. The calculator is positioned to the right of the camera, and the drill is to the right of the calculator. The drill is visually larger than the calculator. Furthermore, for every blue pen in the scene, it is located to the right of the drill, and there is a white phone positioned to the right of that pen. The phone is smaller than the pen.",
+    "dsl": "(exists ?c (exists ?calc (exists ?d (and (Is ?c 'camera') (Has ?c 'black') (Is ?calc 'calculator') (Has ?calc 'gray') (Is ?d 'drill') (Has ?d 'yellow') (RightOf ?calc ?c) (RightOf ?d ?calc) (LargerThan ?d ?calc) (forall ?p (implies (and (Is ?p 'pen') (Has ?p 'blue')) (exists ?ph (and (Is ?ph 'phone') (Has ?ph 'white') (RightOf ?p ?d) (RightOf ?ph ?p) (SmallerThan ?ph ?p)))))))))",
+    "cnf": "(exists ?c (exists ?calc (exists ?d (forall ?p (exists ?ph (and (Is ?c 'camera') (Has ?c 'black') (RightOf ?calc ?c) (Has ?calc 'gray') (RightOf ?d ?calc) (Is ?calc 'calculator') (LargerThan ?d ?calc) (Has ?d 'yellow') (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (RightOf ?p ?d)) (Is ?d 'drill') (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Has ?ph 'white')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (RightOf ?ph ?p)) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (Is ?ph 'phone')) (or (not (Is ?p 'pen')) (not (Has ?p 'blue')) (SmallerThan ?ph ?p))))))))",
+    "k": 5,
+    "object_classes": [
+        "pen",
+        "phone",
+        "drill",
+        "calculator",
+        "camera"
+    ]
+}

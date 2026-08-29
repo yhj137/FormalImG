@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of scissors in the scene, there is a red shoe and a hammer. The scissors are positioned above the red shoe, and the shoe is aligned horizontally with the hammer. Furthermore, the shoe is visually larger than the scissors.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'scissors') (exists ?sh (exists ?h (and (Is ?sh 'shoe') (Has ?sh 'red') (Is ?h 'hammer') (Above ?s ?sh) (AlignedHorizontally ?sh ?h) (LargerThan ?sh ?s)))))))",
+    "cnf": "(forall ?s (exists ?sh (exists ?h (and (or (not (Is ?s 'scissors')) (Is ?sh 'shoe')) (or (not (Is ?s 'scissors')) (Has ?sh 'red')) (or (not (Is ?s 'scissors')) (Is ?h 'hammer')) (or (not (Is ?s 'scissors')) (Above ?s ?sh)) (or (not (Is ?s 'scissors')) (AlignedHorizontally ?sh ?h)) (or (not (Is ?s 'scissors')) (LargerThan ?sh ?s))))))",
+    "k": 3,
+    "object_classes": [
+        "scissors",
+        "hammer",
+        "shoe"
+    ]
+}

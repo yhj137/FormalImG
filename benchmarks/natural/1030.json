@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Next to every monitor is an open refrigerator. To the left of the refrigerator sits a plate, followed by a pizza, a glass bottle, and a toy car.",
+    "dsl": "(forall ?m (implies (Is ?m 'monitor') (exists ?r (exists ?p (exists ?piz (exists ?b (exists ?tc (and (Is ?r 'refrigerator') (HasState ?r 'open') (NextTo ?m ?r) (Is ?p 'plate') (LeftOf ?p ?r) (Is ?piz 'pizza') (NextTo ?piz ?p) (Is ?b 'bottle') (HasMaterial ?b 'glass') (NextTo ?b ?piz) (Is ?tc 'toy car') (NextTo ?tc ?b)))))))))",
+    "cnf": "(forall ?m (exists ?r (exists ?p (exists ?piz (exists ?b (exists ?tc (and (or (not (Is ?m 'monitor')) (Is ?r 'refrigerator')) (or (not (Is ?m 'monitor')) (HasState ?r 'open')) (or (not (Is ?m 'monitor')) (NextTo ?m ?r)) (or (not (Is ?m 'monitor')) (Is ?p 'plate')) (or (not (Is ?m 'monitor')) (LeftOf ?p ?r)) (or (not (Is ?m 'monitor')) (Is ?piz 'pizza')) (or (not (Is ?m 'monitor')) (NextTo ?piz ?p)) (or (not (Is ?m 'monitor')) (Is ?b 'bottle')) (or (not (Is ?m 'monitor')) (NextTo ?b ?piz)) (or (not (Is ?m 'monitor')) (HasMaterial ?b 'glass')) (or (not (Is ?m 'monitor')) (Is ?tc 'toy car')) (or (not (Is ?m 'monitor')) (NextTo ?tc ?b)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "monitor",
+        "toy car",
+        "pizza",
+        "refrigerator",
+        "plate"
+    ]
+}

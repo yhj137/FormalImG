@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of headphones in the scene, there is a pen that is smaller than the headphones and is located on the bottom side of the image.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'headphones') (exists ?p (and (Is ?p 'pen') (OnBottomSide ?p) (SmallerThan ?p ?h))))))",
+    "cnf": "(forall ?h (exists ?p (and (or (not (Is ?h 'headphones')) (Is ?p 'pen')) (or (not (Is ?h 'headphones')) (OnBottomSide ?p)) (or (not (Is ?h 'headphones')) (SmallerThan ?p ?h)))))",
+    "k": 2,
+    "object_classes": [
+        "headphones",
+        "pen"
+    ]
+}

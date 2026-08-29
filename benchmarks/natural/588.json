@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a man holding every shirt, with a black backpack positioned to his left.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (and (Is ?m 'man') (Is ?b 'backpack') (HasColor ?b 'black') (LeftOf ?b ?m) (forall ?s (implies (Is ?s 'shirt') (Holding ?m ?s)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?b (forall ?s (and (Is ?m 'man') (LeftOf ?b ?m) (or (not (Is ?s 'shirt')) (Holding ?m ?s)) (HasColor ?b 'black') (Is ?b 'backpack'))))))",
+    "k": 3,
+    "object_classes": [
+        "shirt",
+        "backpack",
+        "man"
+    ]
+}

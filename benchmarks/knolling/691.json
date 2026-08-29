@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the top side of the layout. For every glove in the image, there is a red stapler and a pair of black headphones arranged beneath it. Specifically, the glove is placed below the suitcase, the red stapler is located below the glove, and the stapler is positioned above the headphones. All four objects\u2014the suitcase, the glove, the stapler, and the headphones\u2014are aligned vertically.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (forall ?glove (implies (Is ?glove 'glove') (exists ?stapler (exists ?headphones (and (Is ?stapler 'stapler') (Has ?stapler 'red') (Is ?headphones 'headphones') (Has ?headphones 'black') (Below ?glove ?suitcase) (Below ?stapler ?glove) (Above ?stapler ?headphones) (AlignedVertically ?suitcase ?glove) (AlignedVertically ?glove ?stapler) (AlignedVertically ?stapler ?headphones))))))))",
+    "cnf": "(exists ?suitcase (forall ?glove (exists ?stapler (exists ?headphones (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (or (not (Is ?glove 'glove')) (Below ?glove ?suitcase)) (or (not (Is ?glove 'glove')) (AlignedVertically ?suitcase ?glove)) (or (not (Is ?glove 'glove')) (Has ?headphones 'black')) (or (not (Is ?glove 'glove')) (Below ?stapler ?glove)) (or (not (Is ?glove 'glove')) (Above ?stapler ?headphones)) (or (not (Is ?glove 'glove')) (AlignedVertically ?glove ?stapler)) (or (not (Is ?glove 'glove')) (Is ?headphones 'headphones')) (or (not (Is ?glove 'glove')) (Has ?stapler 'red')) (or (not (Is ?glove 'glove')) (AlignedVertically ?stapler ?headphones)) (or (not (Is ?glove 'glove')) (Is ?stapler 'stapler')))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "suitcase",
+        "glove",
+        "stapler"
+    ]
+}

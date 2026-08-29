@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every fork found on the top side of the scene, there is a remote positioned directly below it, and the two are vertically aligned. To the left of the remote sits a mouse, and to the left of the mouse lies a phone. The phone is placed above a pair of pliers. To the left of the pliers is a donut which is visually smaller than the pliers. The mouse is placed above a handbag which is visually larger than the phone. A tie is positioned to the left of the handbag.",
+    "dsl": "(and (forall ?fork (implies (and (Is ?fork 'fork') (OnTopSide ?fork)) (exists ?remote (exists ?mouse (exists ?phone (exists ?pliers (exists ?donut (exists ?handbag (exists ?tie (and (Is ?remote 'remote') (Is ?mouse 'mouse') (Is ?phone 'phone') (Is ?pliers 'pliers') (Is ?donut 'donut') (Is ?handbag 'handbag') (Is ?tie 'tie') (Above ?fork ?remote) (AlignedVertically ?fork ?remote) (LeftOf ?mouse ?remote) (LeftOf ?phone ?mouse) (Above ?phone ?pliers) (LeftOf ?donut ?pliers) (SmallerThan ?donut ?pliers) (Above ?mouse ?handbag) (LargerThan ?handbag ?phone) (LeftOf ?tie ?handbag))))))))))))",
+    "cnf": "(forall ?fork (exists ?remote (exists ?mouse (exists ?phone (exists ?pliers (exists ?donut (exists ?handbag (exists ?tie (and (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?remote 'remote')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?mouse 'mouse')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Above ?fork ?remote)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?phone 'phone')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (LeftOf ?mouse ?remote)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?tie 'tie')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (AlignedVertically ?fork ?remote)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?pliers 'pliers')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (LeftOf ?phone ?mouse)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?handbag 'handbag')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (LeftOf ?tie ?handbag)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Is ?donut 'donut')) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Above ?phone ?pliers)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (Above ?mouse ?handbag)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (LargerThan ?handbag ?phone)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (LeftOf ?donut ?pliers)) (or (not (Is ?fork 'fork')) (not (OnTopSide ?fork)) (SmallerThan ?donut ?pliers)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "tie",
+        "pliers",
+        "phone",
+        "fork",
+        "handbag",
+        "mouse",
+        "donut"
+    ]
+}

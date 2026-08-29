@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image where every book has a pair of metal glasses resting on it, and a plastic fish is located to the right of each book.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'book') (exists ?g (exists ?f (and (Is ?g 'glasses') (HasMaterial ?g 'metal') (On ?g ?b) (Is ?f 'fish') (HasMaterial ?f 'plastic') (RightOf ?f ?b)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?g (exists ?f (and (or (not (Is ?b 'book')) (Is ?g 'glasses')) (or (not (Is ?b 'book')) (HasMaterial ?g 'metal')) (or (not (Is ?b 'book')) (On ?g ?b)) (or (not (Is ?b 'book')) (Is ?f 'fish')) (or (not (Is ?b 'book')) (HasMaterial ?f 'plastic')) (or (not (Is ?b 'book')) (RightOf ?f ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "fish",
+        "book",
+        "glasses"
+    ]
+}

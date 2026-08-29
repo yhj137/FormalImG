@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman stands next to a red rug. All mirrors are positioned to the right of the woman, and a basket is placed next to each mirror.",
+    "dsl": "(exists ?w (exists ?r (and (Is ?w 'woman') (HasState ?w 'standing') (Is ?r 'rug') (HasColor ?r 'red') (NextTo ?w ?r) (forall ?m (implies (Is ?m 'mirror') (and (RightOf ?m ?w) (exists ?b (and (Is ?b 'basket') (NextTo ?b ?m)))))))))",
+    "cnf": "(exists ?w (exists ?r (forall ?m (exists ?b (and (Is ?w 'woman') (HasState ?w 'standing') (NextTo ?w ?r) (or (not (Is ?m 'mirror')) (RightOf ?m ?w)) (HasColor ?r 'red') (or (not (Is ?m 'mirror')) (Is ?b 'basket')) (Is ?r 'rug') (or (not (Is ?m 'mirror')) (NextTo ?b ?m)))))))",
+    "k": 4,
+    "object_classes": [
+        "rug",
+        "basket",
+        "mirror",
+        "woman"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. A phone is located on the left side of the scene. For every lighter present, it is positioned below the phone, and there is a stapler positioned below the lighter. The phone, lighter, and stapler form a vertically aligned arrangement.",
+    "dsl": "(exists ?phone (and (Is ?phone 'phone') (OnLeftSide ?phone) (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?stapler (and (Is ?stapler 'stapler') (Below ?lighter ?phone) (Below ?stapler ?lighter) (AlignedVertically ?phone ?lighter) (AlignedVertically ?lighter ?stapler)))))))",
+    "cnf": "(exists ?phone (forall ?lighter (exists ?stapler (and (Is ?phone 'phone') (OnLeftSide ?phone) (or (not (Is ?lighter 'lighter')) (Below ?lighter ?phone)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?phone ?lighter)) (or (not (Is ?lighter 'lighter')) (Is ?stapler 'stapler')) (or (not (Is ?lighter 'lighter')) (Below ?stapler ?lighter)) (or (not (Is ?lighter 'lighter')) (AlignedVertically ?lighter ?stapler))))))",
+    "k": 3,
+    "object_classes": [
+        "phone",
+        "stapler",
+        "lighter"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of glasses found in the scene, there is a red stapler positioned below it, and a ruler located to the right of that stapler. Furthermore, the stapler is larger than the glasses.",
+    "dsl": "(and (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?stapler (exists ?ruler (and (Is ?stapler 'stapler') (Is ?ruler 'ruler') (Has ?stapler 'red') (Below ?stapler ?glasses) (RightOf ?ruler ?stapler) (LargerThan ?stapler ?glasses)))))))",
+    "cnf": "(forall ?glasses (exists ?stapler (exists ?ruler (and (or (not (Is ?glasses 'glasses')) (Is ?stapler 'stapler')) (or (not (Is ?glasses 'glasses')) (Has ?stapler 'red')) (or (not (Is ?glasses 'glasses')) (Is ?ruler 'ruler')) (or (not (Is ?glasses 'glasses')) (Below ?stapler ?glasses)) (or (not (Is ?glasses 'glasses')) (RightOf ?ruler ?stapler)) (or (not (Is ?glasses 'glasses')) (LargerThan ?stapler ?glasses))))))",
+    "k": 3,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "stapler"
+    ]
+}

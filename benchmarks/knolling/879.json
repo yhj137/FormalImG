@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the top side of the layout. For every hat in the scene, there is a cutting board, a spoon, and a sock associated with it. The cutting board is aligned vertically with the backpack. The spoon is smaller than the cutting board. The hat is aligned vertically with the spoon, and the sock is smaller than the hat.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (forall ?hat (implies (Is ?hat 'hat') (exists ?board (exists ?spoon (exists ?sock (and (Is ?board 'cutting_board') (Is ?spoon 'spoon') (Is ?sock 'sock') (AlignedVertically ?board ?backpack) (SmallerThan ?spoon ?board) (AlignedVertically ?hat ?spoon) (SmallerThan ?sock ?hat)))))))))",
+    "cnf": "(exists ?backpack (forall ?hat (exists ?board (exists ?spoon (exists ?sock (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (or (not (Is ?hat 'hat')) (AlignedVertically ?board ?backpack)) (or (not (Is ?hat 'hat')) (Is ?sock 'sock')) (or (not (Is ?hat 'hat')) (SmallerThan ?spoon ?board)) (or (not (Is ?hat 'hat')) (Is ?board 'cutting_board')) (or (not (Is ?hat 'hat')) (Is ?spoon 'spoon')) (or (not (Is ?hat 'hat')) (SmallerThan ?sock ?hat)) (or (not (Is ?hat 'hat')) (AlignedVertically ?hat ?spoon))))))))",
+    "k": 5,
+    "object_classes": [
+        "spoon",
+        "hat",
+        "backpack",
+        "cutting_board",
+        "sock"
+    ]
+}

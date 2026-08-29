@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A rectangular refrigerator stands to the right of a wooden bookshelf. A bed is located next to the bookshelf. A backpack containing a blue jacket rests on the bookshelf. Next to the refrigerator stands a child holding a triangular sandwich and a fork. A bench is positioned to the right of the refrigerator. All shoes in the scene are placed next to the bed.",
+    "dsl": "(exists ?r (exists ?bs (exists ?bed (exists ?bp (exists ?j (exists ?c (exists ?s (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (RightOf ?r ?bs) (Is ?bed 'bed') (NextTo ?bed ?bs) (Is ?bp 'backpack') (On ?bp ?bs) (Is ?j 'jacket') (HasColor ?j 'blue') (In ?j ?bp) (Is ?c 'child') (NextTo ?c ?r) (Is ?s 'sandwich') (HasShape ?s 'triangular') (Holding ?c ?s) (forall ?sh (implies (Is ?sh 'shoes') (NextTo ?sh ?bed))) (exists ?f (exists ?bn (and (Is ?f 'fork') (Holding ?c ?f) (Is ?bn 'bench') (RightOf ?bn ?r))))))))))))",
+    "cnf": "(exists ?r (exists ?bs (exists ?bed (exists ?bp (exists ?j (exists ?c (exists ?s (forall ?sh (exists ?f (exists ?bn (and (Is ?r 'refrigerator') (HasShape ?r 'rectangular') (RightOf ?r ?bs) (NextTo ?c ?r) (HasMaterial ?bs 'wooden') (NextTo ?bed ?bs) (RightOf ?bn ?r) (Is ?c 'child') (Holding ?c ?s) (Is ?bs 'bookshelf') (On ?bp ?bs) (Is ?bed 'bed') (or (not (Is ?sh 'shoes')) (NextTo ?sh ?bed)) (Is ?bn 'bench') (Holding ?c ?f) (HasShape ?s 'triangular') (Is ?bp 'backpack') (In ?j ?bp) (Is ?f 'fork') (Is ?s 'sandwich') (HasColor ?j 'blue') (Is ?j 'jacket'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "fork",
+        "sandwich",
+        "backpack",
+        "shoes",
+        "refrigerator",
+        "bed",
+        "bookshelf",
+        "child"
+    ]
+}

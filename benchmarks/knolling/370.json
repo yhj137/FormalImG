@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sock located on the top side of the image. Every knife in the composition is positioned below this sock.",
+    "dsl": "(exists ?s (and (Is ?s 'sock') (OnTopSide ?s) (forall ?k (implies (Is ?k 'knife') (Below ?k ?s)))))",
+    "cnf": "(exists ?s (forall ?k (and (Is ?s 'sock') (OnTopSide ?s) (or (not (Is ?k 'knife')) (Below ?k ?s)))))",
+    "k": 2,
+    "object_classes": [
+        "knife",
+        "sock"
+    ]
+}

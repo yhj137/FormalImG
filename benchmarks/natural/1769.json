@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a brown boat containing a woman and a bookshelf. A red backpack is next to the woman, and a child is beside her. A round basket containing a knife sits on the bookshelf. Every toy car is located to the left of the child, with a pair of glasses next to each one.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?bt (exists ?w (exists ?bs (exists ?bp (exists ?c (exists ?bk (exists ?k (and (Is ?bt 'boat') (HasColor ?bt 'brown') (Is ?w 'woman') (In ?w ?bt) (Is ?bs 'bookshelf') (In ?bs ?bt) (Is ?bp 'backpack') (HasColor ?bp 'red') (NextTo ?bp ?w) (Is ?c 'child') (NextTo ?c ?w) (Is ?bk 'basket') (HasShape ?bk 'round') (On ?bk ?bs) (Is ?k 'knife') (In ?k ?bk) (forall ?tc (implies (Is ?tc 'toy car') (exists ?g (and (Is ?g 'glasses') (LeftOf ?tc ?c) (NextTo ?g ?tc))))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?bt (exists ?w (exists ?bs (exists ?bp (exists ?c (exists ?bk (exists ?k (forall ?tc (exists ?g (and (Is ?bt 'boat') (HasColor ?bt 'brown') (In ?w ?bt) (In ?bs ?bt) (Is ?w 'woman') (NextTo ?bp ?w) (Is ?bs 'bookshelf') (On ?bk ?bs) (NextTo ?c ?w) (HasColor ?bp 'red') (HasShape ?bk 'round') (In ?k ?bk) (Is ?c 'child') (or (not (Is ?tc 'toy car')) (LeftOf ?tc ?c)) (Is ?bp 'backpack') (Is ?bk 'basket') (Is ?k 'knife') (or (not (Is ?tc 'toy car')) (Is ?g 'glasses')) (or (not (Is ?tc 'toy car')) (NextTo ?g ?tc)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "knife",
+        "child",
+        "backpack",
+        "glasses",
+        "woman",
+        "basket",
+        "toy car",
+        "boat",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A person sits on a wooden bench holding a toy car. To the right of the bench is a red bus with a plant inside. Next to the bench stands a table with a laptop and a round fruit on it. Every apple is located next to the round fruit.",
+    "dsl": "(exists ?p (exists ?b (exists ?bus (exists ?pl (exists ?tc (exists ?t (exists ?l (exists ?f (and (Is ?p 'person') (Is ?b 'bench') (HasMaterial ?b 'wooden') (On ?p ?b) (Is ?bus 'bus') (HasColor ?bus 'red') (RightOf ?bus ?b) (Is ?pl 'plant') (In ?pl ?bus) (Is ?tc 'toy car') (Holding ?p ?tc) (Is ?t 'table') (NextTo ?t ?b) (Is ?l 'laptop') (On ?l ?t) (Is ?f 'fruit') (HasShape ?f 'round') (On ?f ?t) (forall ?a (implies (Is ?a 'apple') (NextTo ?a ?f))))))))))))",
+    "cnf": "(exists ?p (exists ?b (exists ?bus (exists ?pl (exists ?tc (exists ?t (exists ?l (exists ?f (forall ?a (and (Is ?p 'person') (On ?p ?b) (Holding ?p ?tc) (HasMaterial ?b 'wooden') (RightOf ?bus ?b) (Is ?tc 'toy car') (Is ?b 'bench') (NextTo ?t ?b) (HasColor ?bus 'red') (In ?pl ?bus) (Is ?t 'table') (On ?l ?t) (Is ?bus 'bus') (Is ?pl 'plant') (On ?f ?t) (Is ?l 'laptop') (HasShape ?f 'round') (or (not (Is ?a 'apple')) (NextTo ?a ?f)) (Is ?f 'fruit')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "bench",
+        "person",
+        "laptop",
+        "plant",
+        "table",
+        "toy car",
+        "apple",
+        "bus"
+    ]
+}

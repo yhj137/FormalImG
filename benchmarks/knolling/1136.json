@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is placed on the left side of the image, with a shoe located below it. A cutting board is positioned to the right of the backpack. The arrangement dictates that for every donut, there is a mouse to its left and a pan below it. Additionally, the pan is located below the cutting board on the right side of the image, and the cutting board is visually larger than the pan.",
+    "dsl": "(exists ?backpack (exists ?shoe (exists ?cb (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?shoe 'shoe') (Below ?shoe ?backpack) (Is ?cb 'cutting_board') (LeftOf ?backpack ?cb) (forall ?donut (implies (Is ?donut 'donut') (exists ?mouse (exists ?pan (and (Is ?mouse 'mouse') (Is ?pan 'pan') (LeftOf ?mouse ?donut) (Above ?donut ?pan) (Below ?pan ?cb) (LargerThan ?cb ?pan) (OnRightSide ?pan))))))))))",
+    "cnf": "(exists ?backpack (exists ?shoe (exists ?cb (forall ?donut (exists ?mouse (exists ?pan (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Below ?shoe ?backpack) (LeftOf ?backpack ?cb) (Is ?shoe 'shoe') (Is ?cb 'cutting_board') (or (not (Is ?donut 'donut')) (Below ?pan ?cb)) (or (not (Is ?donut 'donut')) (LargerThan ?cb ?pan)) (or (not (Is ?donut 'donut')) (Above ?donut ?pan)) (or (not (Is ?donut 'donut')) (OnRightSide ?pan)) (or (not (Is ?donut 'donut')) (LeftOf ?mouse ?donut)) (or (not (Is ?donut 'donut')) (Is ?pan 'pan')) (or (not (Is ?donut 'donut')) (Is ?mouse 'mouse')))))))))",
+    "k": 6,
+    "object_classes": [
+        "cutting_board",
+        "pan",
+        "backpack",
+        "mouse",
+        "shoe",
+        "donut"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the scene, there is a keyboard to its right, a plate to the right of the keyboard, and a bowl to the right of the plate; all four of these objects are located on the top side of the image. A hammer is aligned vertically with the suitcase. This hammer is located to the left of a stapler, which is aligned vertically with the keyboard. To the right of the stapler is a remote, aligned vertically with the plate. To the right of the remote is a cup, aligned vertically with the bowl. Finally, a donut is placed to the right of the cup.",
+    "dsl": "(forall ?suitcase (implies (Is ?suitcase 'suitcase') (exists ?keyboard (exists ?plate (exists ?bowl (exists ?hammer (exists ?stapler (exists ?remote (exists ?cup (exists ?donut (and (Is ?keyboard 'keyboard') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?hammer 'hammer') (Is ?stapler 'stapler') (Is ?remote 'remote') (Is ?cup 'cup') (Is ?donut 'donut') (OnTopSide ?suitcase) (OnTopSide ?keyboard) (OnTopSide ?plate) (OnTopSide ?bowl) (RightOf ?keyboard ?suitcase) (RightOf ?plate ?keyboard) (RightOf ?bowl ?plate) (AlignedVertically ?hammer ?suitcase) (LeftOf ?hammer ?stapler) (AlignedVertically ?stapler ?keyboard) (RightOf ?remote ?stapler) (AlignedVertically ?remote ?plate) (RightOf ?cup ?remote) (AlignedVertically ?cup ?bowl) (RightOf ?donut ?cup))))))))))))",
+    "cnf": "(forall ?suitcase (exists ?keyboard (exists ?plate (exists ?bowl (exists ?hammer (exists ?stapler (exists ?remote (exists ?cup (exists ?donut (and (or (not (Is ?suitcase 'suitcase')) (Is ?keyboard 'keyboard')) (or (not (Is ?suitcase 'suitcase')) (Is ?plate 'plate')) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?keyboard)) (or (not (Is ?suitcase 'suitcase')) (Is ?bowl 'bowl')) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?plate)) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?keyboard ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (Is ?hammer 'hammer')) (or (not (Is ?suitcase 'suitcase')) (OnTopSide ?bowl)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?plate ?keyboard)) (or (not (Is ?suitcase 'suitcase')) (Is ?donut 'donut')) (or (not (Is ?suitcase 'suitcase')) (Is ?stapler 'stapler')) (or (not (Is ?suitcase 'suitcase')) (AlignedVertically ?hammer ?suitcase)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?bowl ?plate)) (or (not (Is ?suitcase 'suitcase')) (AlignedVertically ?stapler ?keyboard)) (or (not (Is ?suitcase 'suitcase')) (Is ?cup 'cup')) (or (not (Is ?suitcase 'suitcase')) (RightOf ?donut ?cup)) (or (not (Is ?suitcase 'suitcase')) (Is ?remote 'remote')) (or (not (Is ?suitcase 'suitcase')) (LeftOf ?hammer ?stapler)) (or (not (Is ?suitcase 'suitcase')) (AlignedVertically ?remote ?plate)) (or (not (Is ?suitcase 'suitcase')) (AlignedVertically ?cup ?bowl)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?remote ?stapler)) (or (not (Is ?suitcase 'suitcase')) (RightOf ?cup ?remote))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "remote",
+        "stapler",
+        "keyboard",
+        "cup",
+        "hammer",
+        "bowl",
+        "suitcase",
+        "donut"
+    ]
+}

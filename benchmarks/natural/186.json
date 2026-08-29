@@ -1,0 +1,9 @@
+{
+    "prompt": "All monitors in this scene have a rectangular shape.",
+    "dsl": "(forall ?m (implies (Is ?m 'monitor') (HasShape ?m 'rectangular')))",
+    "cnf": "(forall ?m (or (not (Is ?m 'monitor')) (HasShape ?m 'rectangular')))",
+    "k": 1,
+    "object_classes": [
+        "monitor"
+    ]
+}

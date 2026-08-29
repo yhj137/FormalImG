@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene depicts a man holding a plastic umbrella. To the right of the man is a leather backpack containing a pizza and all the keys in the scene. A keyboard is located to the right of the backpack.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?u (exists ?b (exists ?p (exists ?k (and (Is ?m 'man') (Is ?u 'umbrella') (HasMaterial ?u 'plastic') (Holding ?m ?u) (Is ?b 'backpack') (HasMaterial ?b 'leather') (RightOf ?b ?m) (Is ?p 'pizza') (In ?p ?b) (Is ?k 'keyboard') (RightOf ?k ?b) (forall ?ky (implies (Is ?ky 'key') (In ?ky ?b))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?u (exists ?b (exists ?p (exists ?k (forall ?ky (and (Is ?m 'man') (Holding ?m ?u) (RightOf ?b ?m) (HasMaterial ?u 'plastic') (HasMaterial ?b 'leather') (In ?p ?b) (Is ?u 'umbrella') (Is ?b 'backpack') (RightOf ?k ?b) (Is ?p 'pizza') (or (not (Is ?ky 'key')) (In ?ky ?b)) (Is ?k 'keyboard')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "backpack",
+        "man",
+        "pizza",
+        "keyboard",
+        "key"
+    ]
+}

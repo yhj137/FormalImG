@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In this cartoon style scene, every bench is wooden and has a chair next to it, with a butterfly to the left of the chair.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'bench') (exists ?c (exists ?bf (and (Is ?c 'chair') (Is ?bf 'butterfly') (HasMaterial ?b 'wooden') (NextTo ?c ?b) (LeftOf ?bf ?c)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (exists ?c (exists ?bf (and (or (not (Is ?b 'bench')) (Is ?c 'chair')) (or (not (Is ?b 'bench')) (Is ?bf 'butterfly')) (or (not (Is ?b 'bench')) (NextTo ?c ?b)) (or (not (Is ?b 'bench')) (HasMaterial ?b 'wooden')) (or (not (Is ?b 'bench')) (LeftOf ?bf ?c)))))))",
+    "k": 3,
+    "object_classes": [
+        "chair",
+        "butterfly",
+        "bench"
+    ]
+}

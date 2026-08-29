@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every game controller present, it is located on the right side of the image. To the left of each game controller, there is a suitcase. Additionally, an apple is positioned above the suitcase, and the apple and the suitcase are aligned vertically.",
+    "dsl": "(and (forall ?g (implies (Is ?g 'game_controller') (exists ?s (exists ?a (and (Is ?s 'suitcase') (Is ?a 'apple') (OnRightSide ?g) (LeftOf ?s ?g) (Above ?a ?s) (AlignedVertically ?a ?s)))))))",
+    "cnf": "(forall ?g (exists ?s (exists ?a (and (or (not (Is ?g 'game_controller')) (Is ?s 'suitcase')) (or (not (Is ?g 'game_controller')) (Is ?a 'apple')) (or (not (Is ?g 'game_controller')) (LeftOf ?s ?g)) (or (not (Is ?g 'game_controller')) (OnRightSide ?g)) (or (not (Is ?g 'game_controller')) (Above ?a ?s)) (or (not (Is ?g 'game_controller')) (AlignedVertically ?a ?s))))))",
+    "k": 3,
+    "object_classes": [
+        "suitcase",
+        "apple",
+        "game_controller"
+    ]
+}

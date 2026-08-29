@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a man holding a cylindrical screwdriver. Every dog in the scene is next to and to the right of the man.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (exists ?s (and (Is ?m 'man') (Is ?s 'screwdriver') (HasShape ?s 'cylindrical') (Holding ?m ?s) (forall ?d (implies (Is ?d 'dog') (and (NextTo ?d ?m) (RightOf ?d ?m))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (exists ?s (forall ?d (and (Is ?m 'man') (Holding ?m ?s) (or (not (Is ?d 'dog')) (NextTo ?d ?m)) (HasShape ?s 'cylindrical') (or (not (Is ?d 'dog')) (RightOf ?d ?m)) (Is ?s 'screwdriver'))))))",
+    "k": 3,
+    "object_classes": [
+        "man",
+        "dog",
+        "screwdriver"
+    ]
+}

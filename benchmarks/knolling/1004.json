@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image containing a laptop, a pair of jeans, a pizza, a shoe, a spoon, and a lemon. All six objects are aligned vertically with each other. There is a specific size hierarchy among the items: the laptop is larger than the jeans, the jeans are larger than the pizza, the pizza is larger than the shoe, the shoe is larger than the spoon, and the spoon is larger than the lemon. Additionally, the lemon is positioned on the bottom side of the scene.",
+    "dsl": "(exists ?laptop (exists ?jeans (exists ?pizza (exists ?shoe (exists ?spoon (exists ?lemon (and (Is ?laptop 'laptop') (Is ?jeans 'jeans') (Is ?pizza 'pizza') (Is ?shoe 'shoe') (Is ?spoon 'spoon') (Is ?lemon 'lemon') (AlignedVertically ?laptop ?jeans) (AlignedVertically ?jeans ?pizza) (AlignedVertically ?pizza ?shoe) (AlignedVertically ?shoe ?spoon) (AlignedVertically ?spoon ?lemon) (LargerThan ?laptop ?jeans) (LargerThan ?jeans ?pizza) (LargerThan ?pizza ?shoe) (LargerThan ?shoe ?spoon) (LargerThan ?spoon ?lemon) (OnBottomSide ?lemon))))))))",
+    "cnf": "(exists ?laptop (exists ?jeans (exists ?pizza (exists ?shoe (exists ?spoon (exists ?lemon (and (Is ?laptop 'laptop') (AlignedVertically ?laptop ?jeans) (LargerThan ?laptop ?jeans) (Is ?jeans 'jeans') (AlignedVertically ?jeans ?pizza) (LargerThan ?jeans ?pizza) (Is ?pizza 'pizza') (AlignedVertically ?pizza ?shoe) (LargerThan ?pizza ?shoe) (Is ?shoe 'shoe') (AlignedVertically ?shoe ?spoon) (LargerThan ?shoe ?spoon) (Is ?spoon 'spoon') (AlignedVertically ?spoon ?lemon) (LargerThan ?spoon ?lemon) (Is ?lemon 'lemon') (OnBottomSide ?lemon))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "lemon",
+        "pizza",
+        "jeans",
+        "spoon",
+        "shoe"
+    ]
+}

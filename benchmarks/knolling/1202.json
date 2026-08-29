@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring seven items arranged in two rows. In the bottom row, a brown suitcase acts as the central anchor. To the right of the suitcase are black headphones, and to the right of the headphones are gray scissors. To the left of the suitcase is a black watch. These four items are aligned horizontally, and the suitcase is visually larger than the watch. Directly above the suitcase is a white bowl. In the top row, to the left of the bowl is a red apple, and to the right of the bowl is a brown cutting board. The apple, bowl, and cutting board are also aligned horizontally, with the cutting board appearing larger than the apple.",
+    "dsl": "(exists ?watch (exists ?suitcase (exists ?headphones (exists ?scissors (exists ?apple (exists ?bowl (exists ?cutting_board (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?headphones 'headphones') (Has ?headphones 'black') (Is ?scissors 'scissors') (Has ?scissors 'gray') (Is ?apple 'apple') (Has ?apple 'red') (Is ?bowl 'bowl') (Has ?bowl 'white') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (RightOf ?suitcase ?watch) (RightOf ?headphones ?suitcase) (RightOf ?scissors ?headphones) (AlignedHorizontally ?watch ?suitcase) (AlignedHorizontally ?suitcase ?headphones) (AlignedHorizontally ?headphones ?scissors) (LargerThan ?suitcase ?watch) (Above ?bowl ?suitcase) (RightOf ?bowl ?apple) (RightOf ?cutting_board ?bowl) (AlignedHorizontally ?apple ?bowl) (AlignedHorizontally ?bowl ?cutting_board) (LargerThan ?cutting_board ?apple)))))))))",
+    "cnf": "(exists ?watch (exists ?suitcase (exists ?headphones (exists ?scissors (exists ?apple (exists ?bowl (exists ?cutting_board (and (Is ?watch 'watch') (Has ?watch 'black') (RightOf ?suitcase ?watch) (AlignedHorizontally ?watch ?suitcase) (Has ?suitcase 'brown') (RightOf ?headphones ?suitcase) (LargerThan ?suitcase ?watch) (AlignedHorizontally ?suitcase ?headphones) (Is ?suitcase 'suitcase') (Has ?headphones 'black') (RightOf ?scissors ?headphones) (Above ?bowl ?suitcase) (AlignedHorizontally ?headphones ?scissors) (Is ?headphones 'headphones') (Has ?scissors 'gray') (Has ?bowl 'white') (RightOf ?bowl ?apple) (Is ?scissors 'scissors') (Is ?bowl 'bowl') (Has ?apple 'red') (AlignedHorizontally ?apple ?bowl) (RightOf ?cutting_board ?bowl) (Is ?apple 'apple') (LargerThan ?cutting_board ?apple) (AlignedHorizontally ?bowl ?cutting_board) (Has ?cutting_board 'brown') (Is ?cutting_board 'cutting_board')))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "suitcase",
+        "watch",
+        "cutting_board",
+        "scissors",
+        "bowl",
+        "headphones"
+    ]
+}

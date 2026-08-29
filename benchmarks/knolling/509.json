@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase positioned on the top side. For every keyboard in the image, it is located to the right of the suitcase and aligned horizontally with it. Furthermore, there is a shoe associated with each keyboard, placed to the right of the keyboard and maintaining horizontal alignment.",
+    "dsl": "(exists ?suitcase (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (forall ?keyboard (implies (Is ?keyboard 'keyboard') (exists ?shoe (and (Is ?shoe 'shoe') (RightOf ?keyboard ?suitcase) (AlignedHorizontally ?keyboard ?suitcase) (RightOf ?shoe ?keyboard) (AlignedHorizontally ?shoe ?keyboard)))))))",
+    "cnf": "(exists ?suitcase (forall ?keyboard (exists ?shoe (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (or (not (Is ?keyboard 'keyboard')) (RightOf ?keyboard ?suitcase)) (or (not (Is ?keyboard 'keyboard')) (AlignedHorizontally ?keyboard ?suitcase)) (or (not (Is ?keyboard 'keyboard')) (Is ?shoe 'shoe')) (or (not (Is ?keyboard 'keyboard')) (RightOf ?shoe ?keyboard)) (or (not (Is ?keyboard 'keyboard')) (AlignedHorizontally ?shoe ?keyboard))))))",
+    "k": 3,
+    "object_classes": [
+        "suitcase",
+        "shoe",
+        "keyboard"
+    ]
+}

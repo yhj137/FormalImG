@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a bus containing a child and a cake. Plastic glasses are next to the child, and every toy car is to the left of the bus.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bus') (exists ?c (and (Is ?c 'child') (In ?c ?b) (exists ?g (and (Is ?g 'glasses') (HasMaterial ?g 'plastic') (NextTo ?g ?c) (forall ?t (implies (Is ?t 'toy car') (LeftOf ?t ?b))) (exists ?k (and (Is ?k 'cake') (In ?k ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?c (exists ?g (forall ?t (exists ?k (and (Is ?b 'bus') (In ?c ?b) (or (not (Is ?t 'toy car')) (LeftOf ?t ?b)) (Is ?c 'child') (NextTo ?g ?c) (In ?k ?b) (HasMaterial ?g 'plastic') (Is ?k 'cake') (Is ?g 'glasses'))))))))",
+    "k": 5,
+    "object_classes": [
+        "child",
+        "glasses",
+        "cake",
+        "toy car",
+        "bus"
+    ]
+}

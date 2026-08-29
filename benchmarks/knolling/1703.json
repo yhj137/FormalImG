@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is organized into two rows. The first row contains a cup, a ruler, a donut, and a stapler; the cup is positioned to the left of the ruler, the ruler to the left of the donut, and the donut to the left of the stapler, with all items aligned horizontally. For every fork present in the image, it is located vertically below the stapler. This fork begins a second horizontal row containing a pizza, a carrot, a mouse, and a phone: the fork is to the left of the pizza, the pizza is to the left of the carrot, the carrot is to the left of the mouse, and the mouse is to the left of the phone. The phone is explicitly positioned on the bottom side of the image. Additionally, the mouse is smaller than the pizza.",
+    "dsl": "(exists ?cup (exists ?ruler (exists ?donut (exists ?stapler (and (Is ?cup 'cup') (Is ?ruler 'ruler') (Is ?donut 'donut') (Is ?stapler 'stapler') (LeftOf ?cup ?ruler) (AlignedHorizontally ?cup ?ruler) (LeftOf ?ruler ?donut) (AlignedHorizontally ?ruler ?donut) (LeftOf ?donut ?stapler) (AlignedHorizontally ?donut ?stapler) (forall ?fork (implies (Is ?fork 'fork') (exists ?pizza (exists ?carrot (exists ?mouse (exists ?phone (and (Is ?pizza 'pizza') (Is ?carrot 'carrot') (Is ?mouse 'mouse') (Is ?phone 'phone') (Below ?fork ?stapler) (LeftOf ?fork ?pizza) (AlignedHorizontally ?fork ?pizza) (LeftOf ?pizza ?carrot) (AlignedHorizontally ?pizza ?carrot) (LeftOf ?carrot ?mouse) (AlignedHorizontally ?carrot ?mouse) (LeftOf ?mouse ?phone) (AlignedHorizontally ?mouse ?phone) (OnBottomSide ?phone) (SmallerThan ?mouse ?pizza)))))))))))))",
+    "cnf": "(exists ?cup (exists ?ruler (exists ?donut (exists ?stapler (forall ?fork (exists ?pizza (exists ?carrot (exists ?mouse (exists ?phone (and (Is ?cup 'cup') (LeftOf ?cup ?ruler) (AlignedHorizontally ?cup ?ruler) (Is ?ruler 'ruler') (LeftOf ?ruler ?donut) (AlignedHorizontally ?ruler ?donut) (Is ?donut 'donut') (LeftOf ?donut ?stapler) (AlignedHorizontally ?donut ?stapler) (Is ?stapler 'stapler') (or (not (Is ?fork 'fork')) (Below ?fork ?stapler)) (or (not (Is ?fork 'fork')) (Is ?phone 'phone')) (or (not (Is ?fork 'fork')) (LeftOf ?fork ?pizza)) (or (not (Is ?fork 'fork')) (Is ?mouse 'mouse')) (or (not (Is ?fork 'fork')) (LeftOf ?mouse ?phone)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?fork ?pizza)) (or (not (Is ?fork 'fork')) (Is ?pizza 'pizza')) (or (not (Is ?fork 'fork')) (Is ?carrot 'carrot')) (or (not (Is ?fork 'fork')) (LeftOf ?carrot ?mouse)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?carrot ?mouse)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?mouse ?phone)) (or (not (Is ?fork 'fork')) (LeftOf ?pizza ?carrot)) (or (not (Is ?fork 'fork')) (AlignedHorizontally ?pizza ?carrot)) (or (not (Is ?fork 'fork')) (OnBottomSide ?phone)) (or (not (Is ?fork 'fork')) (SmallerThan ?mouse ?pizza))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "stapler",
+        "carrot",
+        "phone",
+        "pizza",
+        "cup",
+        "fork",
+        "mouse",
+        "donut"
+    ]
+}

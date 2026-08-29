@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene inside a house features a standing woman. All glasses in the image are on her, and a leather jacket is next to her on the left.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (and (Is ?w 'woman') (HasState ?w 'standing') (forall ?g (implies (Is ?g 'glasses') (On ?g ?w))) (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (NextTo ?j ?w) (LeftOf ?j ?w) (exists ?h (and (Is ?h 'house') (In ?w ?h))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (forall ?g (exists ?j (exists ?h (and (Is ?w 'woman') (HasState ?w 'standing') (or (not (Is ?g 'glasses')) (On ?g ?w)) (NextTo ?j ?w) (LeftOf ?j ?w) (HasMaterial ?j 'leather') (In ?w ?h) (Is ?j 'jacket') (Is ?h 'house')))))))",
+    "k": 4,
+    "object_classes": [
+        "house",
+        "jacket",
+        "glasses",
+        "woman"
+    ]
+}

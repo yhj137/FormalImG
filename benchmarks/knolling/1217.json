@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, seven items are arranged in a precise vertical column. At the very top is a blue book. Below the book lies a black game controller, which is physically larger than the book is false, so the book is larger than the game controller. A sandwich is positioned directly below the game controller. Further down, there is a red screwdriver below the sandwich. A gray fork is placed below the screwdriver, followed by a gray spoon below the fork. At the bottom of the column sits a yellow lemon, which is smaller than the sandwich. All items\u2014the book, game controller, sandwich, screwdriver, fork, spoon, and lemon\u2014are aligned vertically.",
+    "dsl": "(exists ?book (exists ?gc (exists ?sw (exists ?sd (exists ?fork (exists ?spoon (exists ?lemon (and (Is ?book 'book') (Has ?book 'blue') (Is ?gc 'game_controller') (Has ?gc 'black') (Is ?sw 'sandwich') (Is ?sd 'screwdriver') (Has ?sd 'red') (Is ?fork 'fork') (Has ?fork 'gray') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Is ?lemon 'lemon') (Has ?lemon 'yellow') (OnLeftSide ?book) (Below ?gc ?book) (Below ?sw ?gc) (Below ?sd ?sw) (Below ?fork ?sd) (Below ?spoon ?fork) (Below ?lemon ?spoon) (AlignedVertically ?book ?gc) (AlignedVertically ?gc ?sw) (AlignedVertically ?sw ?sd) (AlignedVertically ?sd ?fork) (AlignedVertically ?fork ?spoon) (AlignedVertically ?spoon ?lemon) (LargerThan ?book ?gc) (SmallerThan ?lemon ?sw)))))))))",
+    "cnf": "(exists ?book (exists ?gc (exists ?sw (exists ?sd (exists ?fork (exists ?spoon (exists ?lemon (and (Is ?book 'book') (Has ?book 'blue') (OnLeftSide ?book) (Below ?gc ?book) (AlignedVertically ?book ?gc) (Has ?gc 'black') (Below ?sw ?gc) (LargerThan ?book ?gc) (AlignedVertically ?gc ?sw) (Is ?gc 'game_controller') (Is ?sw 'sandwich') (Below ?sd ?sw) (AlignedVertically ?sw ?sd) (Has ?sd 'red') (Below ?fork ?sd) (SmallerThan ?lemon ?sw) (AlignedVertically ?sd ?fork) (Is ?sd 'screwdriver') (Has ?fork 'gray') (Below ?spoon ?fork) (AlignedVertically ?spoon ?lemon) (AlignedVertically ?fork ?spoon) (Is ?fork 'fork') (Has ?spoon 'gray') (Below ?lemon ?spoon) (Is ?spoon 'spoon') (Has ?lemon 'yellow') (Is ?lemon 'lemon')))))))))",
+    "k": 7,
+    "object_classes": [
+        "book",
+        "lemon",
+        "screwdriver",
+        "game_controller",
+        "fork",
+        "spoon",
+        "sandwich"
+    ]
+}

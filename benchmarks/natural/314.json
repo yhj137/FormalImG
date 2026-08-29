@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every hat is inside a leather jacket.",
+    "dsl": "(forall ?h (implies (Is ?h 'hat') (exists ?j (and (Is ?j 'jacket') (HasMaterial ?j 'leather') (In ?h ?j)))))",
+    "cnf": "(forall ?h (exists ?j (and (or (not (Is ?h 'hat')) (Is ?j 'jacket')) (or (not (Is ?h 'hat')) (HasMaterial ?j 'leather')) (or (not (Is ?h 'hat')) (In ?h ?j)))))",
+    "k": 2,
+    "object_classes": [
+        "jacket",
+        "hat"
+    ]
+}

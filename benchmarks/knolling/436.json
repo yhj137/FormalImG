@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a shoe, a set of keys, and a tie. All three objects are positioned on the bottom side of the image and are aligned horizontally with each other. Additionally, the shoe is visually larger than the keys.",
+    "dsl": "(exists ?shoe (exists ?keys (exists ?tie (and (Is ?shoe 'shoe') (Is ?keys 'keys') (Is ?tie 'tie') (OnBottomSide ?shoe) (OnBottomSide ?keys) (OnBottomSide ?tie) (AlignedHorizontally ?shoe ?keys) (AlignedHorizontally ?keys ?tie) (LargerThan ?shoe ?keys)))))",
+    "cnf": "(exists ?shoe (exists ?keys (exists ?tie (and (Is ?shoe 'shoe') (OnBottomSide ?shoe) (AlignedHorizontally ?shoe ?keys) (LargerThan ?shoe ?keys) (OnBottomSide ?keys) (AlignedHorizontally ?keys ?tie) (Is ?keys 'keys') (OnBottomSide ?tie) (Is ?tie 'tie')))))",
+    "k": 3,
+    "object_classes": [
+        "keys",
+        "tie",
+        "shoe"
+    ]
+}

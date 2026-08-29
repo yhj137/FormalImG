@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting an open wardrobe containing every hat in the scene. A mirror is positioned to the right of the wardrobe. A child wearing a backpack stands next to the wardrobe, holding a basket with a fish inside. A sleeping dog rests beside the child.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'wardrobe') (HasState ?w 'open') (forall ?h (implies (Is ?h 'hat') (In ?h ?w))) (exists ?m (exists ?c (exists ?bp (exists ?d (exists ?b (exists ?f (and (Is ?m 'mirror') (Is ?c 'child') (Is ?bp 'backpack') (Is ?d 'dog') (Is ?b 'basket') (Is ?f 'fish') (RightOf ?m ?w) (NextTo ?c ?w) (On ?bp ?c) (NextTo ?d ?c) (HasState ?d 'sleeping') (Holding ?c ?b) (In ?f ?b)))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?h (exists ?m (exists ?c (exists ?bp (exists ?d (exists ?b (exists ?f (and (Is ?w 'wardrobe') (HasState ?w 'open') (or (not (Is ?h 'hat')) (In ?h ?w)) (RightOf ?m ?w) (NextTo ?c ?w) (Is ?m 'mirror') (Is ?c 'child') (On ?bp ?c) (NextTo ?d ?c) (Is ?bp 'backpack') (Holding ?c ?b) (Is ?d 'dog') (HasState ?d 'sleeping') (Is ?b 'basket') (In ?f ?b) (Is ?f 'fish')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fish",
+        "hat",
+        "backpack",
+        "wardrobe",
+        "basket",
+        "mirror",
+        "dog",
+        "child"
+    ]
+}

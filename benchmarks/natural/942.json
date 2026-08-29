@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of a tree is a sleeping lion, and next to the lion is a cake. Every pizza in the scene is placed next to the cake and has a key on top.",
+    "dsl": "(exists ?t (and (Is ?t 'tree') (exists ?l (and (Is ?l 'lion') (RightOf ?l ?t) (HasState ?l 'sleeping') (exists ?c (and (Is ?c 'cake') (NextTo ?c ?l) (forall ?p (implies (Is ?p 'pizza') (and (NextTo ?p ?c) (exists ?k (and (Is ?k 'key') (On ?k ?p))))))))))))",
+    "cnf": "(exists ?t (exists ?l (exists ?c (forall ?p (exists ?k (and (Is ?t 'tree') (RightOf ?l ?t) (Is ?l 'lion') (HasState ?l 'sleeping') (NextTo ?c ?l) (Is ?c 'cake') (or (not (Is ?p 'pizza')) (NextTo ?p ?c)) (or (not (Is ?p 'pizza')) (Is ?k 'key')) (or (not (Is ?p 'pizza')) (On ?k ?p))))))))",
+    "k": 5,
+    "object_classes": [
+        "tree",
+        "cake",
+        "pizza",
+        "lion",
+        "key"
+    ]
+}

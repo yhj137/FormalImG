@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child wearing headphones sits on a chair, holding a hammer. To the left of the chair is a bicycle with a round basket containing a shirt. To the right of the chair is a sleeping elephant. Every butterfly in the scene is positioned to the right of the elephant.",
+    "dsl": "(exists ?c (exists ?ch (exists ?bi (exists ?e (and (Is ?c 'child') (Is ?ch 'chair') (Is ?bi 'bicycle') (Is ?e 'elephant') (On ?c ?ch) (LeftOf ?bi ?ch) (RightOf ?e ?ch) (HasState ?e 'sleeping') (forall ?bf (implies (Is ?bf 'butterfly') (RightOf ?bf ?e))) (exists ?ba (exists ?s (exists ?hm (exists ?hp (and (Is ?ba 'basket') (HasShape ?ba 'round') (On ?ba ?bi) (Is ?s 'shirt') (In ?s ?ba) (Is ?hm 'hammer') (Holding ?c ?hm) (Is ?hp 'headphones') (On ?hp ?c)))))))))))",
+    "cnf": "(exists ?c (exists ?ch (exists ?bi (exists ?e (forall ?bf (exists ?ba (exists ?s (exists ?hm (exists ?hp (and (Is ?c 'child') (On ?c ?ch) (Holding ?c ?hm) (Is ?ch 'chair') (LeftOf ?bi ?ch) (On ?hp ?c) (Is ?hm 'hammer') (RightOf ?e ?ch) (Is ?bi 'bicycle') (On ?ba ?bi) (Is ?hp 'headphones') (Is ?e 'elephant') (HasState ?e 'sleeping') (HasShape ?ba 'round') (In ?s ?ba) (or (not (Is ?bf 'butterfly')) (RightOf ?bf ?e)) (Is ?ba 'basket') (Is ?s 'shirt')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "headphones",
+        "hammer",
+        "chair",
+        "butterfly",
+        "basket",
+        "shirt",
+        "elephant",
+        "bicycle",
+        "child"
+    ]
+}

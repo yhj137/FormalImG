@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical arrangement of objects. A black monitor is positioned on the top side of the image. Below it is a gray laptop, which is smaller than the monitor. A mouse is located below the laptop and is larger than the wallet situated underneath it. Continuing the column downwards, a white sock is placed below the wallet, and a carrot is positioned below the sock.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?mouse (exists ?wallet (exists ?sock (exists ?carrot (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?mouse 'mouse') (Is ?wallet 'wallet') (Is ?sock 'sock') (Has ?sock 'white') (Is ?carrot 'carrot') (Above ?monitor ?laptop) (Above ?laptop ?mouse) (Above ?mouse ?wallet) (Above ?wallet ?sock) (Above ?sock ?carrot) (SmallerThan ?laptop ?monitor) (LargerThan ?mouse ?wallet))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?mouse (exists ?wallet (exists ?sock (exists ?carrot (and (Is ?monitor 'monitor') (Has ?monitor 'black') (OnTopSide ?monitor) (Above ?monitor ?laptop) (SmallerThan ?laptop ?monitor) (Has ?laptop 'gray') (Above ?laptop ?mouse) (Is ?laptop 'laptop') (Is ?mouse 'mouse') (Above ?mouse ?wallet) (LargerThan ?mouse ?wallet) (Is ?wallet 'wallet') (Above ?wallet ?sock) (Has ?sock 'white') (Above ?sock ?carrot) (Is ?sock 'sock') (Is ?carrot 'carrot'))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "sock",
+        "carrot",
+        "wallet",
+        "mouse",
+        "monitor"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a wooden bed with a child on it. A person stands to the left of the bed, while a metal horse is positioned to the right. A laptop sits on the bed next to a keyboard. Additionally, a round plate with a fork inside is on the bed, with a cup placed next to it. All birds in the scene are located above the bed.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?child (exists ?person (exists ?laptop (exists ?keyboard (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?child 'child') (On ?child ?bed) (Is ?person 'person') (LeftOf ?person ?bed) (Is ?laptop 'laptop') (On ?laptop ?bed) (Is ?keyboard 'keyboard') (NextTo ?keyboard ?laptop) (forall ?bird (implies (Is ?bird 'bird') (Above ?bird ?bed))) (exists ?horse (exists ?plate (exists ?fork (exists ?cup (and (Is ?horse 'horse') (HasMaterial ?horse 'metal') (RightOf ?horse ?bed) (Is ?plate 'plate') (HasShape ?plate 'round') (On ?plate ?bed) (Is ?fork 'fork') (In ?fork ?plate) (Is ?cup 'cup') (NextTo ?cup ?plate)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?child (exists ?person (exists ?laptop (exists ?keyboard (forall ?bird (exists ?horse (exists ?plate (exists ?fork (exists ?cup (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (On ?child ?bed) (LeftOf ?person ?bed) (Is ?child 'child') (On ?laptop ?bed) (Is ?person 'person') (or (not (Is ?bird 'bird')) (Above ?bird ?bed)) (Is ?laptop 'laptop') (NextTo ?keyboard ?laptop) (RightOf ?horse ?bed) (Is ?keyboard 'keyboard') (On ?plate ?bed) (HasMaterial ?horse 'metal') (HasShape ?plate 'round') (In ?fork ?plate) (Is ?horse 'horse') (Is ?plate 'plate') (NextTo ?cup ?plate) (Is ?fork 'fork') (Is ?cup 'cup')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "keyboard",
+        "fork",
+        "person",
+        "laptop",
+        "bed",
+        "horse",
+        "cup",
+        "bird",
+        "child",
+        "plate"
+    ]
+}

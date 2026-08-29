@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where all the butterflies are flying inside an open glass bottle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bottle') (HasMaterial ?b 'glass') (HasState ?b 'open') (forall ?f (implies (Is ?f 'butterfly') (and (In ?f ?b) (HasState ?f 'flying')))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?f (and (Is ?b 'bottle') (HasMaterial ?b 'glass') (HasState ?b 'open') (or (not (Is ?f 'butterfly')) (In ?f ?b)) (or (not (Is ?f 'butterfly')) (HasState ?f 'flying'))))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "bottle"
+    ]
+}

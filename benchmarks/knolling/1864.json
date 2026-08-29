@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a cutting board and a pizza, where the cutting board is to the left of the pizza. For every spoon present, there is a fork to its left, a bowl above it, a lemon below the bowl (where the bowl is larger than the lemon), a mouse to the right of the bowl, and a black watch below the mouse. Additionally, for each spoon, there is a hat on the top side of the image aligned vertically with the cutting board, and a pair of scissors located below the pizza and aligned horizontally with the watch. The spoon is aligned vertically with the pizza.",
+    "dsl": "(exists ?cutting_board (exists ?pizza (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?fork (exists ?bowl (exists ?lemon (exists ?mouse (exists ?watch (exists ?hat (exists ?scissors (and (Is ?cutting_board 'cutting_board') (Is ?pizza 'pizza') (LeftOf ?cutting_board ?pizza) (Is ?fork 'fork') (LeftOf ?fork ?spoon) (Is ?bowl 'bowl') (Below ?spoon ?bowl) (Is ?lemon 'lemon') (LargerThan ?bowl ?lemon) (Below ?lemon ?bowl) (Is ?mouse 'mouse') (LeftOf ?bowl ?mouse) (Is ?watch 'watch') (Has ?watch 'black') (Below ?watch ?mouse) (Is ?hat 'hat') (OnTopSide ?hat) (AlignedVertically ?hat ?cutting_board) (Is ?scissors 'scissors') (Below ?scissors ?pizza) (AlignedHorizontally ?scissors ?watch) (AlignedVertically ?spoon ?pizza)))))))))))))",
+    "cnf": "(exists ?cutting_board (exists ?pizza (forall ?spoon (exists ?fork (exists ?bowl (exists ?lemon (exists ?mouse (exists ?watch (exists ?hat (exists ?scissors (and (or (not (Is ?spoon 'spoon')) (Is ?cutting_board 'cutting_board')) (or (not (Is ?spoon 'spoon')) (Is ?pizza 'pizza')) (or (not (Is ?spoon 'spoon')) (LeftOf ?cutting_board ?pizza)) (or (not (Is ?spoon 'spoon')) (Is ?fork 'fork')) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?hat ?cutting_board)) (or (not (Is ?spoon 'spoon')) (Below ?scissors ?pizza)) (or (not (Is ?spoon 'spoon')) (LeftOf ?fork ?spoon)) (or (not (Is ?spoon 'spoon')) (OnTopSide ?hat)) (or (not (Is ?spoon 'spoon')) (Is ?scissors 'scissors')) (or (not (Is ?spoon 'spoon')) (AlignedHorizontally ?scissors ?watch)) (or (not (Is ?spoon 'spoon')) (AlignedVertically ?spoon ?pizza)) (or (not (Is ?spoon 'spoon')) (Is ?bowl 'bowl')) (or (not (Is ?spoon 'spoon')) (Is ?hat 'hat')) (or (not (Is ?spoon 'spoon')) (Below ?watch ?mouse)) (or (not (Is ?spoon 'spoon')) (Below ?spoon ?bowl)) (or (not (Is ?spoon 'spoon')) (Has ?watch 'black')) (or (not (Is ?spoon 'spoon')) (LeftOf ?bowl ?mouse)) (or (not (Is ?spoon 'spoon')) (Is ?lemon 'lemon')) (or (not (Is ?spoon 'spoon')) (LargerThan ?bowl ?lemon)) (or (not (Is ?spoon 'spoon')) (Is ?watch 'watch')) (or (not (Is ?spoon 'spoon')) (Is ?mouse 'mouse')) (or (not (Is ?spoon 'spoon')) (Below ?lemon ?bowl)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "lemon",
+        "pizza",
+        "watch",
+        "cutting_board",
+        "fork",
+        "hat",
+        "mouse",
+        "spoon",
+        "bowl",
+        "scissors"
+    ]
+}

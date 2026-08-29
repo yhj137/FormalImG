@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image containing a screwdriver, a sock, and a bottle. The bottle is positioned on the right side of the layout. The sock is aligned horizontally with the bottle, while the screwdriver is aligned vertically with the sock. Furthermore, the screwdriver is visually smaller than the bottle.",
+    "dsl": "(exists ?screwdriver (exists ?sock (exists ?bottle (and (Is ?screwdriver 'screwdriver') (Is ?sock 'sock') (Is ?bottle 'bottle') (OnRightSide ?bottle) (AlignedHorizontally ?sock ?bottle) (AlignedVertically ?screwdriver ?sock) (SmallerThan ?screwdriver ?bottle)))))",
+    "cnf": "(exists ?screwdriver (exists ?sock (exists ?bottle (and (Is ?screwdriver 'screwdriver') (AlignedVertically ?screwdriver ?sock) (SmallerThan ?screwdriver ?bottle) (AlignedHorizontally ?sock ?bottle) (Is ?sock 'sock') (OnRightSide ?bottle) (Is ?bottle 'bottle')))))",
+    "k": 3,
+    "object_classes": [
+        "bottle",
+        "screwdriver",
+        "sock"
+    ]
+}

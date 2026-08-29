@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A plant with a butterfly resting on it is inside a house. A rock is positioned to the left of the house, while to the right sits a bench where every piece of fruit in the scene is placed. Further to the right of the bench, a brown teddy bear is holding a screwdriver.",
+    "dsl": "(exists ?h (and (Is ?h 'house') (exists ?p (and (Is ?p 'plant') (In ?p ?h) (exists ?b (and (Is ?b 'bench') (RightOf ?b ?h) (and (forall ?f (implies (Is ?f 'fruit') (On ?f ?b))) (exists ?tb (and (Is ?tb 'teddy bear') (HasColor ?tb 'brown') (RightOf ?tb ?b) (exists ?sd (and (Is ?sd 'screwdriver') (Holding ?tb ?sd) (exists ?bf (and (Is ?bf 'butterfly') (On ?bf ?p) (exists ?r (and (Is ?r 'rock') (LeftOf ?r ?h))))))))))))))))",
+    "cnf": "(exists ?h (exists ?p (exists ?b (forall ?f (exists ?tb (exists ?sd (exists ?bf (exists ?r (and (Is ?h 'house') (In ?p ?h) (RightOf ?b ?h) (Is ?p 'plant') (On ?bf ?p) (LeftOf ?r ?h) (Is ?b 'bench') (or (not (Is ?f 'fruit')) (On ?f ?b)) (Is ?bf 'butterfly') (Is ?r 'rock') (RightOf ?tb ?b) (HasColor ?tb 'brown') (Holding ?tb ?sd) (Is ?tb 'teddy bear') (Is ?sd 'screwdriver'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "bench",
+        "rock",
+        "plant",
+        "screwdriver",
+        "butterfly",
+        "teddy bear",
+        "house",
+        "fruit"
+    ]
+}

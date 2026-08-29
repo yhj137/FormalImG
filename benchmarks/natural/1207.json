@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A shirt is inside a wardrobe. To the right of the wardrobe is a table, on which sits a plate with a sliced cake. To the right of the table, a sitting lion holds a spoon.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?s (exists ?t (exists ?p (exists ?c (exists ?l (exists ?sp (and (Is ?w 'wardrobe') (Is ?s 'shirt') (Is ?t 'table') (Is ?p 'plate') (Is ?c 'cake') (Is ?l 'lion') (Is ?sp 'spoon') (In ?s ?w) (RightOf ?t ?w) (On ?p ?t) (On ?c ?p) (HasState ?c 'sliced') (RightOf ?l ?t) (HasState ?l 'sitting') (Holding ?l ?sp))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (exists ?s (exists ?t (exists ?p (exists ?c (exists ?l (exists ?sp (and (Is ?w 'wardrobe') (In ?s ?w) (RightOf ?t ?w) (Is ?s 'shirt') (Is ?t 'table') (On ?p ?t) (RightOf ?l ?t) (Is ?p 'plate') (On ?c ?p) (Is ?l 'lion') (HasState ?l 'sitting') (Is ?c 'cake') (HasState ?c 'sliced') (Holding ?l ?sp) (Is ?sp 'spoon'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "shirt",
+        "spoon",
+        "plate",
+        "cake",
+        "table",
+        "lion",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe positioned on the left side of the scene, there is a game controller located directly above it and a keyboard placed to its right. Additionally, a pair of glasses is arranged above the keyboard such that the game controller is to the left of the glasses, and a remote is positioned to the right of the keyboard.",
+    "dsl": "(and (forall ?shoe (implies (and (Is ?shoe 'shoe') (OnLeftSide ?shoe)) (exists ?gc (exists ?kb (exists ?gl (exists ?rem (and (Is ?gc 'game_controller') (Is ?kb 'keyboard') (Is ?gl 'glasses') (Is ?rem 'remote') (Above ?gc ?shoe) (RightOf ?kb ?shoe) (Above ?gl ?kb) (LeftOf ?gc ?gl) (RightOf ?rem ?kb)))))))))",
+    "cnf": "(forall ?shoe (exists ?gc (exists ?kb (exists ?gl (exists ?rem (and (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?gc 'game_controller')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?kb 'keyboard')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Above ?gc ?shoe)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?gl 'glasses')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?kb ?shoe)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Is ?rem 'remote')) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (LeftOf ?gc ?gl)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (Above ?gl ?kb)) (or (not (Is ?shoe 'shoe')) (not (OnLeftSide ?shoe)) (RightOf ?rem ?kb))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "keyboard",
+        "game_controller",
+        "shoe"
+    ]
+}

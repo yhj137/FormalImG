@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. Every wardrobe has a metal monitor next to it. Beside the monitor stands a glass lamp with a butterfly resting on it. A wooden bench is also positioned next to the wardrobe, with a blue bird sitting on it holding an orange. Inside the wardrobe, a phone lies next to a ball.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?w (implies (Is ?w 'wardrobe') (exists ?m (exists ?l (exists ?bu (exists ?be (exists ?bi (exists ?o (exists ?p (exists ?ba (and (Is ?m 'monitor') (HasMaterial ?m 'metal') (NextTo ?m ?w) (Is ?l 'lamp') (HasMaterial ?l 'glass') (NextTo ?l ?m) (Is ?bu 'butterfly') (On ?bu ?l) (Is ?be 'bench') (HasMaterial ?be 'wooden') (NextTo ?be ?w) (Is ?bi 'bird') (HasColor ?bi 'blue') (On ?bi ?be) (Is ?o 'orange') (Holding ?bi ?o) (Is ?p 'phone') (In ?p ?w) (Is ?ba 'ball') (NextTo ?ba ?p)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?w (exists ?m (exists ?l (exists ?bu (exists ?be (exists ?bi (exists ?o (exists ?p (exists ?ba (and (or (not (Is ?w 'wardrobe')) (Is ?m 'monitor')) (or (not (Is ?w 'wardrobe')) (HasMaterial ?m 'metal')) (or (not (Is ?w 'wardrobe')) (NextTo ?m ?w)) (or (not (Is ?w 'wardrobe')) (Is ?l 'lamp')) (or (not (Is ?w 'wardrobe')) (NextTo ?l ?m)) (or (not (Is ?w 'wardrobe')) (HasMaterial ?l 'glass')) (or (not (Is ?w 'wardrobe')) (Is ?bu 'butterfly')) (or (not (Is ?w 'wardrobe')) (On ?bu ?l)) (or (not (Is ?w 'wardrobe')) (Is ?be 'bench')) (or (not (Is ?w 'wardrobe')) (HasMaterial ?be 'wooden')) (or (not (Is ?w 'wardrobe')) (NextTo ?be ?w)) (or (not (Is ?w 'wardrobe')) (Is ?bi 'bird')) (or (not (Is ?w 'wardrobe')) (On ?bi ?be)) (or (not (Is ?w 'wardrobe')) (HasColor ?bi 'blue')) (or (not (Is ?w 'wardrobe')) (Is ?o 'orange')) (or (not (Is ?w 'wardrobe')) (Holding ?bi ?o)) (or (not (Is ?w 'wardrobe')) (Is ?p 'phone')) (or (not (Is ?w 'wardrobe')) (In ?p ?w)) (or (not (Is ?w 'wardrobe')) (Is ?ba 'ball')) (or (not (Is ?w 'wardrobe')) (NextTo ?ba ?p)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "monitor",
+        "wardrobe",
+        "phone",
+        "bench",
+        "bird",
+        "ball",
+        "butterfly",
+        "orange",
+        "lamp"
+    ]
+}

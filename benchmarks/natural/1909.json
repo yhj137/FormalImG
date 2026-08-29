@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman is sleeping on a bed, with a cat sitting on the bed to her right. A boat is positioned to the right of the bed, and all fish inside it are orange. A person is located to the right of the boat. Additionally, a monitor is on the bed, with a keyboard to its right. A green apple rests on the keyboard, and a broken toy car is also on the bed.",
+    "dsl": "(exists ?bed (exists ?woman (exists ?cat (exists ?boat (and (Is ?bed 'bed') (Is ?woman 'woman') (On ?woman ?bed) (HasState ?woman 'sleeping') (Is ?cat 'cat') (On ?cat ?bed) (HasState ?cat 'sitting') (RightOf ?cat ?woman) (Is ?boat 'boat') (RightOf ?boat ?bed) (forall ?fish (implies (and (Is ?fish 'fish') (In ?fish ?boat)) (HasColor ?fish 'orange'))) (exists ?person (exists ?monitor (exists ?keyboard (exists ?apple (exists ?toy_car (and (Is ?person 'person') (RightOf ?person ?boat) (Is ?monitor 'monitor') (On ?monitor ?bed) (Is ?keyboard 'keyboard') (RightOf ?keyboard ?monitor) (Is ?apple 'apple') (On ?apple ?keyboard) (HasColor ?apple 'green') (Is ?toy_car 'toy car') (On ?toy_car ?bed) (HasState ?toy_car 'broken'))))))))))))",
+    "cnf": "(exists ?bed (exists ?woman (exists ?cat (exists ?boat (forall ?fish (exists ?person (exists ?monitor (exists ?keyboard (exists ?apple (exists ?toy_car (and (Is ?bed 'bed') (On ?woman ?bed) (On ?cat ?bed) (Is ?woman 'woman') (HasState ?woman 'sleeping') (RightOf ?boat ?bed) (Is ?cat 'cat') (HasState ?cat 'sitting') (RightOf ?cat ?woman) (On ?monitor ?bed) (Is ?boat 'boat') (or (not (Is ?fish 'fish')) (not (In ?fish ?boat)) (HasColor ?fish 'orange')) (On ?toy_car ?bed) (Is ?monitor 'monitor') (RightOf ?keyboard ?monitor) (RightOf ?person ?boat) (Is ?toy_car 'toy car') (HasState ?toy_car 'broken') (Is ?keyboard 'keyboard') (On ?apple ?keyboard) (Is ?person 'person') (Is ?apple 'apple') (HasColor ?apple 'green'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fish",
+        "person",
+        "bed",
+        "apple",
+        "woman",
+        "monitor",
+        "toy car",
+        "boat",
+        "cat",
+        "keyboard"
+    ]
+}

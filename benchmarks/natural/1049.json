@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every cake has an open laptop to its right. To the left of the laptop sits a plastic keyboard with a shirt lying on it, and inside the shirt is a pair of headphones. A wet umbrella is located to the left of the keyboard.",
+    "dsl": "(forall ?c (implies (Is ?c 'cake') (exists ?l (exists ?k (exists ?s (exists ?h (exists ?u (and (Is ?l 'laptop') (HasState ?l 'open') (LeftOf ?c ?l) (Is ?k 'keyboard') (HasMaterial ?k 'plastic') (LeftOf ?k ?l) (Is ?s 'shirt') (On ?s ?k) (Is ?h 'headphones') (In ?h ?s) (Is ?u 'umbrella') (HasState ?u 'wet') (LeftOf ?u ?k)))))))))",
+    "cnf": "(forall ?c (exists ?l (exists ?k (exists ?s (exists ?h (exists ?u (and (or (not (Is ?c 'cake')) (Is ?l 'laptop')) (or (not (Is ?c 'cake')) (HasState ?l 'open')) (or (not (Is ?c 'cake')) (LeftOf ?c ?l)) (or (not (Is ?c 'cake')) (LeftOf ?k ?l)) (or (not (Is ?c 'cake')) (Is ?k 'keyboard')) (or (not (Is ?c 'cake')) (HasMaterial ?k 'plastic')) (or (not (Is ?c 'cake')) (Is ?s 'shirt')) (or (not (Is ?c 'cake')) (On ?s ?k)) (or (not (Is ?c 'cake')) (Is ?h 'headphones')) (or (not (Is ?c 'cake')) (LeftOf ?u ?k)) (or (not (Is ?c 'cake')) (In ?h ?s)) (or (not (Is ?c 'cake')) (HasState ?u 'wet')) (or (not (Is ?c 'cake')) (Is ?u 'umbrella')))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "umbrella",
+        "cake",
+        "shirt",
+        "keyboard",
+        "headphones"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a monitor. Directly below the monitor is a laptop, below the laptop is a pair of jeans, and below the jeans is a sock, forming a vertical arrangement. Furthermore, for every knife in the image, the laptop is visually larger than the knife.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?sock (and (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?jeans 'jeans') (Is ?sock 'sock') (OnLeftSide ?monitor) (Above ?monitor ?laptop) (Above ?laptop ?jeans) (Above ?jeans ?sock) (forall ?knife (implies (Is ?knife 'knife') (LargerThan ?laptop ?knife))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?jeans (exists ?sock (forall ?knife (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Above ?monitor ?laptop) (Is ?laptop 'laptop') (Above ?laptop ?jeans) (or (not (Is ?knife 'knife')) (LargerThan ?laptop ?knife)) (Is ?jeans 'jeans') (Above ?jeans ?sock) (Is ?sock 'sock')))))))",
+    "k": 5,
+    "object_classes": [
+        "knife",
+        "jeans",
+        "monitor",
+        "sock",
+        "laptop"
+    ]
+}

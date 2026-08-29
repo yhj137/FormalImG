@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a blue backpack, a white phone, a black hammer, and a red tie. The white phone is placed to the left of the blue backpack. The black hammer is located below the backpack and sits on the bottom side of the image. The red tie is positioned to the left of the hammer, also on the bottom side.",
+    "dsl": "(exists ?backpack (exists ?phone (exists ?hammer (exists ?tie (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?phone 'phone') (Has ?phone 'white') (Is ?hammer 'hammer') (Has ?hammer 'black') (Is ?tie 'tie') (Has ?tie 'red') (LeftOf ?phone ?backpack) (Below ?hammer ?backpack) (LeftOf ?tie ?hammer) (OnBottomSide ?hammer) (OnBottomSide ?tie))))))",
+    "cnf": "(exists ?backpack (exists ?phone (exists ?hammer (exists ?tie (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (LeftOf ?phone ?backpack) (Below ?hammer ?backpack) (Has ?phone 'white') (Has ?hammer 'black') (LeftOf ?tie ?hammer) (Is ?phone 'phone') (Is ?hammer 'hammer') (OnBottomSide ?hammer) (Has ?tie 'red') (OnBottomSide ?tie) (Is ?tie 'tie'))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "backpack",
+        "tie",
+        "phone"
+    ]
+}

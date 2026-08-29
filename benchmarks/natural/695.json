@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a man holding a dog, with a horse standing next to him. Every bookshelf in the scene is wooden and located beside the man.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?m (and (Is ?m 'man') (forall ?b (implies (Is ?b 'bookshelf') (and (HasMaterial ?b 'wooden') (NextTo ?b ?m)))) (exists ?d (and (Is ?d 'dog') (Holding ?m ?d))) (exists ?h (and (Is ?h 'horse') (NextTo ?h ?m))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?m (forall ?b (exists ?d (exists ?h (and (Is ?m 'man') (or (not (Is ?b 'bookshelf')) (NextTo ?b ?m)) (Holding ?m ?d) (or (not (Is ?b 'bookshelf')) (HasMaterial ?b 'wooden')) (NextTo ?h ?m) (Is ?d 'dog') (Is ?h 'horse')))))))",
+    "k": 4,
+    "object_classes": [
+        "horse",
+        "dog",
+        "bookshelf",
+        "man"
+    ]
+}

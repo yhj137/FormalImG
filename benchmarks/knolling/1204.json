@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A pair of jeans is positioned on the top-left side of the image. A hammer is located below the jeans, and a stapler is located below the hammer, with all three objects aligned vertically. A sandwich, which is smaller than the jeans, heads a second vertical arrangement. Positioned below the sandwich are scissors, followed by glasses, and finally a pen at the bottom. These four items are also aligned vertically, and the pen is smaller than the glasses.",
+    "dsl": "(exists ?jeans (exists ?hammer (exists ?stapler (exists ?sandwich (exists ?scissors (exists ?glasses (exists ?pen (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (OnLeftSide ?jeans) (Is ?hammer 'hammer') (Is ?stapler 'stapler') (Above ?jeans ?hammer) (AlignedVertically ?jeans ?hammer) (Above ?hammer ?stapler) (AlignedVertically ?hammer ?stapler) (Is ?sandwich 'sandwich') (SmallerThan ?sandwich ?jeans) (Is ?scissors 'scissors') (Above ?sandwich ?scissors) (AlignedVertically ?sandwich ?scissors) (Is ?glasses 'glasses') (Above ?scissors ?glasses) (AlignedVertically ?scissors ?glasses) (Is ?pen 'pen') (Above ?glasses ?pen) (AlignedVertically ?glasses ?pen) (SmallerThan ?pen ?glasses)))))))))",
+    "cnf": "(exists ?jeans (exists ?hammer (exists ?stapler (exists ?sandwich (exists ?scissors (exists ?glasses (exists ?pen (and (Is ?jeans 'jeans') (OnTopSide ?jeans) (OnLeftSide ?jeans) (Above ?jeans ?hammer) (AlignedVertically ?jeans ?hammer) (Is ?hammer 'hammer') (SmallerThan ?sandwich ?jeans) (Above ?hammer ?stapler) (Is ?sandwich 'sandwich') (Above ?sandwich ?scissors) (AlignedVertically ?hammer ?stapler) (Is ?stapler 'stapler') (AlignedVertically ?sandwich ?scissors) (Is ?scissors 'scissors') (Above ?scissors ?glasses) (AlignedVertically ?scissors ?glasses) (Is ?glasses 'glasses') (Above ?glasses ?pen) (AlignedVertically ?glasses ?pen) (Is ?pen 'pen') (SmallerThan ?pen ?glasses)))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "pen",
+        "hammer",
+        "jeans",
+        "scissors",
+        "sandwich"
+    ]
+}

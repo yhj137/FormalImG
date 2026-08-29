@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a vertical arrangement of items on the left side of the scene. At the top of the column is a hat, which is positioned above a pair of headphones. Below the headphones, for every sock present, there is a hammer located below the sock, a wallet below the hammer, and a lemon below the wallet, with all these items maintaining a strict vertical alignment.",
+    "dsl": "(exists ?hat (exists ?headphones (and (Is ?hat 'hat') (Is ?headphones 'headphones') (OnLeftSide ?hat) (Above ?hat ?headphones) (AlignedVertically ?hat ?headphones) (forall ?sock (implies (Is ?sock 'sock') (exists ?hammer (exists ?wallet (exists ?lemon (and (Is ?hammer 'hammer') (Is ?wallet 'wallet') (Is ?lemon 'lemon') (Below ?sock ?headphones) (AlignedVertically ?sock ?headphones) (Below ?hammer ?sock) (AlignedVertically ?hammer ?sock) (Below ?wallet ?hammer) (AlignedVertically ?wallet ?hammer) (Below ?lemon ?wallet) (AlignedVertically ?lemon ?wallet))))))))))",
+    "cnf": "(exists ?hat (exists ?headphones (forall ?sock (exists ?hammer (exists ?wallet (exists ?lemon (and (Is ?hat 'hat') (OnLeftSide ?hat) (Above ?hat ?headphones) (AlignedVertically ?hat ?headphones) (Is ?headphones 'headphones') (or (not (Is ?sock 'sock')) (Below ?sock ?headphones)) (or (not (Is ?sock 'sock')) (AlignedVertically ?sock ?headphones)) (or (not (Is ?sock 'sock')) (Is ?lemon 'lemon')) (or (not (Is ?sock 'sock')) (Below ?hammer ?sock)) (or (not (Is ?sock 'sock')) (Is ?wallet 'wallet')) (or (not (Is ?sock 'sock')) (Below ?lemon ?wallet)) (or (not (Is ?sock 'sock')) (AlignedVertically ?hammer ?sock)) (or (not (Is ?sock 'sock')) (Is ?hammer 'hammer')) (or (not (Is ?sock 'sock')) (Below ?wallet ?hammer)) (or (not (Is ?sock 'sock')) (AlignedVertically ?wallet ?hammer)) (or (not (Is ?sock 'sock')) (AlignedVertically ?lemon ?wallet)))))))))",
+    "k": 6,
+    "object_classes": [
+        "sock",
+        "lemon",
+        "hammer",
+        "hat",
+        "wallet",
+        "headphones"
+    ]
+}

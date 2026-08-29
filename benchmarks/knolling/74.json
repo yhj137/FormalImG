@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. A remote is placed on the right side of the scene.",
+    "dsl": "(exists ?remote (and (Is ?remote 'remote') (OnRightSide ?remote)))",
+    "cnf": "(exists ?remote (and (Is ?remote 'remote') (OnRightSide ?remote)))",
+    "k": 1,
+    "object_classes": [
+        "remote"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring an open book with every banana resting on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'book') (HasState ?b 'open') (forall ?n (implies (Is ?n 'banana') (On ?n ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?n (and (Is ?b 'book') (HasState ?b 'open') (or (not (Is ?n 'banana')) (On ?n ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "banana"
+    ]
+}

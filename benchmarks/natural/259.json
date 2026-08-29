@@ -1,0 +1,10 @@
+{
+    "prompt": "A pixel art image of a woman holding a metal lamp.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?w (exists ?l (and (Is ?w 'woman') (Is ?l 'lamp') (HasMaterial ?l 'metal') (Holding ?w ?l)))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?w (exists ?l (and (Is ?w 'woman') (Holding ?w ?l) (HasMaterial ?l 'metal') (Is ?l 'lamp')))))",
+    "k": 2,
+    "object_classes": [
+        "lamp",
+        "woman"
+    ]
+}

@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A cutting board is positioned on the bottom side of the image. Aligned vertically with the cutting board are a plate, a book, and a wallet. In terms of size, the cutting board is larger than the plate, the plate is larger than the book, and the book is larger than the wallet. Additionally, for every wrench in the image, it must be located on the top side and aligned vertically with the cutting board.",
+    "dsl": "(exists ?c (exists ?p (exists ?b (exists ?w (and (Is ?c 'cutting_board') (Is ?p 'plate') (Is ?b 'book') (Is ?w 'wallet') (OnBottomSide ?c) (LargerThan ?c ?p) (LargerThan ?p ?b) (LargerThan ?b ?w) (AlignedVertically ?c ?p) (AlignedVertically ?p ?b) (AlignedVertically ?b ?w) (forall ?wr (implies (Is ?wr 'wrench') (and (OnTopSide ?wr) (AlignedVertically ?wr ?c)))))))))",
+    "cnf": "(exists ?c (exists ?p (exists ?b (exists ?w (forall ?wr (and (Is ?c 'cutting_board') (OnBottomSide ?c) (LargerThan ?c ?p) (AlignedVertically ?c ?p) (Is ?p 'plate') (LargerThan ?p ?b) (or (not (Is ?wr 'wrench')) (AlignedVertically ?wr ?c)) (AlignedVertically ?p ?b) (Is ?b 'book') (LargerThan ?b ?w) (or (not (Is ?wr 'wrench')) (OnTopSide ?wr)) (AlignedVertically ?b ?w) (Is ?w 'wallet')))))))",
+    "k": 5,
+    "object_classes": [
+        "book",
+        "plate",
+        "wrench",
+        "cutting_board",
+        "wallet"
+    ]
+}

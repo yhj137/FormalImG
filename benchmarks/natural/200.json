@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A fish is positioned to the left of a metal car.",
+    "dsl": "(exists ?f (exists ?c (and (Is ?f 'fish') (Is ?c 'car') (HasMaterial ?c 'metal') (LeftOf ?f ?c))))",
+    "cnf": "(exists ?f (exists ?c (and (Is ?f 'fish') (LeftOf ?f ?c) (HasMaterial ?c 'metal') (Is ?c 'car'))))",
+    "k": 2,
+    "object_classes": [
+        "fish",
+        "car"
+    ]
+}

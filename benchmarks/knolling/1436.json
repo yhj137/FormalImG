@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every suitcase in the scene, it is positioned on the left side. To the right of the suitcase is a pan. Directly above the pan is a bottle, and directly below the pan is a plate; these three objects (bottle, pan, plate) are aligned vertically. An apple is placed to the right of the bottle. A pair of glasses is located to the right of the pan, and the glasses are smaller than the pan. A fork is positioned to the right of the plate. Finally, a watch is located below the fork and is situated on the right side of the image.",
+    "dsl": "(and (forall ?s (implies (Is ?s 'suitcase') (exists ?pan (exists ?bottle (exists ?plate (exists ?apple (exists ?glasses (exists ?fork (exists ?watch (and (Is ?pan 'pan') (Is ?bottle 'bottle') (Is ?plate 'plate') (Is ?apple 'apple') (Is ?glasses 'glasses') (Is ?fork 'fork') (Is ?watch 'watch') (OnLeftSide ?s) (RightOf ?pan ?s) (Above ?bottle ?pan) (Below ?plate ?pan) (AlignedVertically ?bottle ?pan) (AlignedVertically ?pan ?plate) (RightOf ?apple ?bottle) (RightOf ?glasses ?pan) (SmallerThan ?glasses ?pan) (RightOf ?fork ?plate) (Below ?watch ?fork) (OnRightSide ?watch))))))))))))",
+    "cnf": "(forall ?s (exists ?pan (exists ?bottle (exists ?plate (exists ?apple (exists ?glasses (exists ?fork (exists ?watch (and (or (not (Is ?s 'suitcase')) (Is ?pan 'pan')) (or (not (Is ?s 'suitcase')) (RightOf ?pan ?s)) (or (not (Is ?s 'suitcase')) (Is ?bottle 'bottle')) (or (not (Is ?s 'suitcase')) (Above ?bottle ?pan)) (or (not (Is ?s 'suitcase')) (OnLeftSide ?s)) (or (not (Is ?s 'suitcase')) (Is ?plate 'plate')) (or (not (Is ?s 'suitcase')) (Below ?plate ?pan)) (or (not (Is ?s 'suitcase')) (AlignedVertically ?bottle ?pan)) (or (not (Is ?s 'suitcase')) (Is ?watch 'watch')) (or (not (Is ?s 'suitcase')) (Is ?apple 'apple')) (or (not (Is ?s 'suitcase')) (AlignedVertically ?pan ?plate)) (or (not (Is ?s 'suitcase')) (RightOf ?apple ?bottle)) (or (not (Is ?s 'suitcase')) (Is ?fork 'fork')) (or (not (Is ?s 'suitcase')) (Below ?watch ?fork)) (or (not (Is ?s 'suitcase')) (Is ?glasses 'glasses')) (or (not (Is ?s 'suitcase')) (RightOf ?glasses ?pan)) (or (not (Is ?s 'suitcase')) (RightOf ?fork ?plate)) (or (not (Is ?s 'suitcase')) (OnRightSide ?watch)) (or (not (Is ?s 'suitcase')) (SmallerThan ?glasses ?pan)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "watch",
+        "plate",
+        "pan",
+        "apple",
+        "suitcase",
+        "fork",
+        "bottle",
+        "glasses"
+    ]
+}

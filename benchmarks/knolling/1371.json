@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a horizontal sequence of items located on the top side of the image. From left to right, the sequence contains a pair of blue jeans, a white game controller, a yellow drill, a pizza, and a red lighter. The pattern continues with a rule: for every lemon in the scene, it is positioned to the right of the lighter and is horizontally aligned with it, while a red apple is located to the right of the lemon, maintaining the horizontal alignment.",
+    "dsl": "(exists ?jeans (exists ?controller (exists ?drill (exists ?pizza (exists ?lighter (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Is ?controller 'game_controller') (Has ?controller 'white') (Is ?drill 'drill') (Has ?drill 'yellow') (Is ?pizza 'pizza') (Is ?lighter 'lighter') (Has ?lighter 'red') (RightOf ?controller ?jeans) (AlignedHorizontally ?jeans ?controller) (RightOf ?drill ?controller) (AlignedHorizontally ?controller ?drill) (RightOf ?pizza ?drill) (AlignedHorizontally ?drill ?pizza) (RightOf ?lighter ?pizza) (AlignedHorizontally ?pizza ?lighter) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?apple (and (Is ?apple 'apple') (Has ?apple 'red') (RightOf ?lemon ?lighter) (AlignedHorizontally ?lighter ?lemon) (RightOf ?apple ?lemon) (AlignedHorizontally ?lemon ?apple)))))))))))",
+    "cnf": "(exists ?jeans (exists ?controller (exists ?drill (exists ?pizza (exists ?lighter (forall ?lemon (exists ?apple (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (RightOf ?controller ?jeans) (AlignedHorizontally ?jeans ?controller) (Has ?controller 'white') (RightOf ?drill ?controller) (Is ?controller 'game_controller') (AlignedHorizontally ?controller ?drill) (Has ?drill 'yellow') (RightOf ?pizza ?drill) (Is ?drill 'drill') (AlignedHorizontally ?drill ?pizza) (Is ?pizza 'pizza') (RightOf ?lighter ?pizza) (AlignedHorizontally ?pizza ?lighter) (Has ?lighter 'red') (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?lighter)) (Is ?lighter 'lighter') (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?lighter ?lemon)) (or (not (Is ?lemon 'lemon')) (Has ?apple 'red')) (or (not (Is ?lemon 'lemon')) (RightOf ?apple ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?apple 'apple')) (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?lemon ?apple))))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "lemon",
+        "pizza",
+        "game_controller",
+        "drill",
+        "lighter",
+        "jeans"
+    ]
+}

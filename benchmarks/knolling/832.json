@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is arranged in two rows. On the top side, there is a hat and a pair of glasses; the hat is to the left of the glasses, and they are aligned horizontally. On the bottom side, there is a pizza, a bowl, and a remote, which are also aligned horizontally. The layout follows a left-to-right progression across the rows: the pizza is located to the right of the glasses, the bowl is to the right of the pizza, and the remote is to the right of the bowl.",
+    "dsl": "(exists ?hat (exists ?glasses (exists ?pizza (exists ?bowl (exists ?remote (and (Is ?hat 'hat') (Is ?glasses 'glasses') (Is ?pizza 'pizza') (Is ?bowl 'bowl') (Is ?remote 'remote') (OnTopSide ?hat) (OnTopSide ?glasses) (OnBottomSide ?pizza) (OnBottomSide ?bowl) (OnBottomSide ?remote) (LeftOf ?hat ?glasses) (AlignedHorizontally ?hat ?glasses) (RightOf ?pizza ?glasses) (RightOf ?bowl ?pizza) (RightOf ?remote ?bowl) (AlignedHorizontally ?pizza ?bowl) (AlignedHorizontally ?bowl ?remote)))))))",
+    "cnf": "(exists ?hat (exists ?glasses (exists ?pizza (exists ?bowl (exists ?remote (and (Is ?hat 'hat') (OnTopSide ?hat) (LeftOf ?hat ?glasses) (AlignedHorizontally ?hat ?glasses) (OnTopSide ?glasses) (RightOf ?pizza ?glasses) (Is ?glasses 'glasses') (OnBottomSide ?pizza) (RightOf ?bowl ?pizza) (Is ?pizza 'pizza') (AlignedHorizontally ?pizza ?bowl) (OnBottomSide ?bowl) (RightOf ?remote ?bowl) (AlignedHorizontally ?bowl ?remote) (Is ?bowl 'bowl') (OnBottomSide ?remote) (Is ?remote 'remote')))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "remote",
+        "pizza",
+        "hat",
+        "bowl"
+    ]
+}

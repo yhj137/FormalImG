@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the image, there is a shirt; a pan is to the right of the shirt, and a shoe is to the right of the pan. There is a bowl vertically aligned with the shirt, and the shirt is larger than the bowl. A cup is to the right of the bowl. Every donut in the image is on the bottom side, is vertically aligned with the bowl, and has a watch to its left that is smaller than the donut, a phone to its right, a knife to the right of the phone, and a screwdriver to the right of the knife.",
+    "dsl": "(exists ?shirt (exists ?pan (exists ?shoe (exists ?bowl (exists ?cup (and (Is ?shirt 'shirt') (Is ?pan 'pan') (Is ?shoe 'shoe') (Is ?bowl 'bowl') (Is ?cup 'cup') (OnTopSide ?shirt) (RightOf ?pan ?shirt) (RightOf ?shoe ?pan) (AlignedVertically ?bowl ?shirt) (LargerThan ?shirt ?bowl) (RightOf ?cup ?bowl) (forall ?donut (implies (Is ?donut 'donut') (exists ?watch (exists ?phone (exists ?knife (exists ?screwdriver (and (Is ?watch 'watch') (Is ?phone 'phone') (Is ?knife 'knife') (Is ?screwdriver 'screwdriver') (OnBottomSide ?donut) (AlignedVertically ?donut ?bowl) (LeftOf ?watch ?donut) (SmallerThan ?watch ?donut) (RightOf ?phone ?donut) (RightOf ?knife ?phone) (RightOf ?screwdriver ?knife))))))))))))))",
+    "cnf": "(exists ?shirt (exists ?pan (exists ?shoe (exists ?bowl (exists ?cup (forall ?donut (exists ?watch (exists ?phone (exists ?knife (exists ?screwdriver (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (RightOf ?pan ?shirt) (AlignedVertically ?bowl ?shirt) (Is ?pan 'pan') (RightOf ?shoe ?pan) (LargerThan ?shirt ?bowl) (Is ?bowl 'bowl') (Is ?shoe 'shoe') (RightOf ?cup ?bowl) (or (not (Is ?donut 'donut')) (AlignedVertically ?donut ?bowl)) (Is ?cup 'cup') (or (not (Is ?donut 'donut')) (OnBottomSide ?donut)) (or (not (Is ?donut 'donut')) (LeftOf ?watch ?donut)) (or (not (Is ?donut 'donut')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?donut 'donut')) (SmallerThan ?watch ?donut)) (or (not (Is ?donut 'donut')) (Is ?watch 'watch')) (or (not (Is ?donut 'donut')) (Is ?knife 'knife')) (or (not (Is ?donut 'donut')) (RightOf ?screwdriver ?knife)) (or (not (Is ?donut 'donut')) (RightOf ?phone ?donut)) (or (not (Is ?donut 'donut')) (Is ?phone 'phone')) (or (not (Is ?donut 'donut')) (RightOf ?knife ?phone)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "phone",
+        "watch",
+        "donut",
+        "cup",
+        "screwdriver",
+        "pan",
+        "knife",
+        "bowl",
+        "shoe",
+        "shirt"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of headphones found in the scene, they are black in color. Directly below the headphones is a gray knife, and directly below the knife is a red screwdriver. These three items\u2014the headphones, the knife, and the screwdriver\u2014are arranged in a column, aligned vertically.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'headphones') (exists ?k (exists ?s (and (Is ?k 'knife') (Is ?s 'screwdriver') (Has ?h 'black') (Has ?k 'gray') (Has ?s 'red') (Below ?k ?h) (Below ?s ?k) (AlignedVertically ?h ?k) (AlignedVertically ?k ?s)))))))",
+    "cnf": "(forall ?h (exists ?k (exists ?s (and (or (not (Is ?h 'headphones')) (Is ?k 'knife')) (or (not (Is ?h 'headphones')) (Has ?k 'gray')) (or (not (Is ?h 'headphones')) (Is ?s 'screwdriver')) (or (not (Is ?h 'headphones')) (Below ?k ?h)) (or (not (Is ?h 'headphones')) (Has ?h 'black')) (or (not (Is ?h 'headphones')) (Has ?s 'red')) (or (not (Is ?h 'headphones')) (Below ?s ?k)) (or (not (Is ?h 'headphones')) (AlignedVertically ?h ?k)) (or (not (Is ?h 'headphones')) (AlignedVertically ?k ?s))))))",
+    "k": 3,
+    "object_classes": [
+        "knife",
+        "headphones",
+        "screwdriver"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a desk with a lit lamp and a basket containing every apple. Next to the desk, a teddy bear holds a fruit, with a horse standing beside the bear.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?d (exists ?b (and (Is ?d 'desk') (Is ?b 'basket') (On ?b ?d) (forall ?a (implies (Is ?a 'apple') (In ?a ?b))) (exists ?l (exists ?tb (exists ?f (exists ?h (and (Is ?l 'lamp') (HasState ?l 'on') (On ?l ?d) (Is ?tb 'teddy bear') (NextTo ?tb ?d) (Is ?f 'fruit') (Holding ?tb ?f) (Is ?h 'horse') (NextTo ?h ?tb))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?d (exists ?b (forall ?a (exists ?l (exists ?tb (exists ?f (exists ?h (and (Is ?d 'desk') (On ?b ?d) (On ?l ?d) (Is ?b 'basket') (or (not (Is ?a 'apple')) (In ?a ?b)) (NextTo ?tb ?d) (HasState ?l 'on') (Is ?tb 'teddy bear') (Holding ?tb ?f) (Is ?l 'lamp') (NextTo ?h ?tb) (Is ?f 'fruit') (Is ?h 'horse'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "desk",
+        "lamp",
+        "teddy bear",
+        "basket",
+        "horse",
+        "apple",
+        "fruit"
+    ]
+}

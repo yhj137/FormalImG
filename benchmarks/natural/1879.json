@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo style scene. A boat rests on top of a wardrobe, and a bench stands to the right. All the apples are inside the boat. A bicycle is located next to the bench, with a hat resting on it. An open laptop sits on the bench; a key lies next to it, and a pair of glasses is to the left of the key. A round cake sits to the right of the laptop.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?bch (exists ?bt (and (Is ?w 'wardrobe') (Is ?bch 'bench') (Is ?bt 'boat') (On ?bt ?w) (RightOf ?bch ?w) (forall ?a (implies (Is ?a 'apple') (In ?a ?bt))) (exists ?bic (exists ?lap (exists ?k (exists ?g (exists ?h (exists ?c (and (Is ?bic 'bicycle') (Is ?lap 'laptop') (Is ?k 'key') (Is ?g 'glasses') (Is ?h 'hat') (Is ?c 'cake') (NextTo ?bic ?bch) (On ?h ?bic) (On ?lap ?bch) (HasState ?lap 'open') (NextTo ?k ?lap) (LeftOf ?g ?k) (HasShape ?c 'round') (RightOf ?c ?lap)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?bch (exists ?bt (forall ?a (exists ?bic (exists ?lap (exists ?k (exists ?g (exists ?h (exists ?c (and (Is ?w 'wardrobe') (On ?bt ?w) (RightOf ?bch ?w) (Is ?bt 'boat') (or (not (Is ?a 'apple')) (In ?a ?bt)) (Is ?bch 'bench') (NextTo ?bic ?bch) (On ?lap ?bch) (Is ?bic 'bicycle') (On ?h ?bic) (Is ?lap 'laptop') (HasState ?lap 'open') (Is ?h 'hat') (NextTo ?k ?lap) (RightOf ?c ?lap) (Is ?k 'key') (LeftOf ?g ?k) (HasShape ?c 'round') (Is ?g 'glasses') (Is ?c 'cake')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "laptop",
+        "glasses",
+        "cake",
+        "bicycle",
+        "key",
+        "boat",
+        "apple",
+        "hat",
+        "wardrobe"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a book positioned on the top side of the layout. For every calculator in the image, it is placed to the right of this book.",
+    "dsl": "(exists ?b (and (Is ?b 'book') (OnTopSide ?b) (forall ?c (implies (Is ?c 'calculator') (RightOf ?c ?b)))))",
+    "cnf": "(exists ?b (forall ?c (and (Is ?b 'book') (OnTopSide ?b) (or (not (Is ?c 'calculator')) (RightOf ?c ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "book",
+        "calculator"
+    ]
+}

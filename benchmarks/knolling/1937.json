@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase on the left side, which is larger than the phone located above it. To the right of the suitcase is a shirt, and below the shirt is a pair of jeans. A pizza is placed below the jeans, and a hammer is to the right of the pizza. For every carrot in the image, there is a specific arrangement: the carrot is located to the right of the jeans, a lemon is positioned below the carrot, a screwdriver is to the right of the lemon, and a stapler is above the screwdriver.",
+    "dsl": "(exists ?suitcase (exists ?phone (exists ?shirt (exists ?jeans (exists ?pizza (exists ?hammer (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Is ?phone 'phone') (Above ?phone ?suitcase) (LargerThan ?suitcase ?phone) (Is ?shirt 'shirt') (RightOf ?shirt ?suitcase) (Is ?jeans 'jeans') (Below ?jeans ?shirt) (Is ?pizza 'pizza') (Below ?pizza ?jeans) (Is ?hammer 'hammer') (RightOf ?hammer ?pizza) (forall ?carrot (implies (Is ?carrot 'carrot') (exists ?lemon (exists ?screwdriver (exists ?stapler (and (Is ?lemon 'lemon') (Is ?screwdriver 'screwdriver') (Is ?stapler 'stapler') (RightOf ?carrot ?jeans) (Below ?lemon ?carrot) (RightOf ?screwdriver ?lemon) (Above ?stapler ?screwdriver))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?phone (exists ?shirt (exists ?jeans (exists ?pizza (exists ?hammer (forall ?carrot (exists ?lemon (exists ?screwdriver (exists ?stapler (and (Is ?suitcase 'suitcase') (OnLeftSide ?suitcase) (Above ?phone ?suitcase) (LargerThan ?suitcase ?phone) (Is ?phone 'phone') (RightOf ?shirt ?suitcase) (Is ?shirt 'shirt') (Below ?jeans ?shirt) (Is ?jeans 'jeans') (Below ?pizza ?jeans) (or (not (Is ?carrot 'carrot')) (RightOf ?carrot ?jeans)) (Is ?pizza 'pizza') (RightOf ?hammer ?pizza) (or (not (Is ?carrot 'carrot')) (Is ?stapler 'stapler')) (or (not (Is ?carrot 'carrot')) (Below ?lemon ?carrot)) (Is ?hammer 'hammer') (or (not (Is ?carrot 'carrot')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?carrot 'carrot')) (Above ?stapler ?screwdriver)) (or (not (Is ?carrot 'carrot')) (RightOf ?screwdriver ?lemon)) (or (not (Is ?carrot 'carrot')) (Is ?lemon 'lemon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "stapler",
+        "lemon",
+        "carrot",
+        "phone",
+        "pizza",
+        "screwdriver",
+        "hammer",
+        "jeans",
+        "suitcase",
+        "shirt"
+    ]
+}

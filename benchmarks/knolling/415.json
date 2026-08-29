@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt, a lemon, and a pizza. The shirt is located on the right side of the image. A lemon is placed above the shirt, and the shirt is placed above the pizza; all three items are aligned vertically. Additionally, the pizza is larger than the lemon.",
+    "dsl": "(exists ?s (exists ?l (exists ?p (and (Is ?s 'shirt') (Is ?l 'lemon') (Is ?p 'pizza') (OnRightSide ?s) (Above ?l ?s) (Above ?s ?p) (AlignedVertically ?l ?s) (AlignedVertically ?s ?p) (LargerThan ?p ?l)))))",
+    "cnf": "(exists ?s (exists ?l (exists ?p (and (Is ?s 'shirt') (OnRightSide ?s) (Above ?l ?s) (Above ?s ?p) (Is ?l 'lemon') (AlignedVertically ?l ?s) (Is ?p 'pizza') (AlignedVertically ?s ?p) (LargerThan ?p ?l)))))",
+    "k": 3,
+    "object_classes": [
+        "lemon",
+        "pizza",
+        "shirt"
+    ]
+}

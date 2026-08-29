@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is standing next to a tree and is holding a round bowl. Inside the bowl, there is a metal screwdriver. A bus is located to the left of the tree. There is also a laptop next to the tree. A keyboard is placed next to the laptop, and a blue shirt lies next to the keyboard.",
+    "dsl": "(exists ?m (exists ?t (exists ?b (exists ?sd (exists ?bu (exists ?l (exists ?k (exists ?sh (and (Is ?m 'man') (Is ?t 'tree') (Is ?b 'bowl') (Is ?sd 'screwdriver') (Is ?bu 'bus') (Is ?l 'laptop') (Is ?k 'keyboard') (Is ?sh 'shirt') (NextTo ?m ?t) (Holding ?m ?b) (HasShape ?b 'round') (In ?sd ?b) (HasMaterial ?sd 'metal') (LeftOf ?bu ?t) (NextTo ?l ?t) (NextTo ?k ?l) (NextTo ?sh ?k) (HasColor ?sh 'blue'))))))))))",
+    "cnf": "(exists ?m (exists ?t (exists ?b (exists ?sd (exists ?bu (exists ?l (exists ?k (exists ?sh (and (Is ?m 'man') (NextTo ?m ?t) (Holding ?m ?b) (Is ?t 'tree') (LeftOf ?bu ?t) (Is ?b 'bowl') (HasShape ?b 'round') (NextTo ?l ?t) (Is ?bu 'bus') (In ?sd ?b) (Is ?l 'laptop') (NextTo ?k ?l) (Is ?sd 'screwdriver') (HasMaterial ?sd 'metal') (Is ?k 'keyboard') (NextTo ?sh ?k) (Is ?sh 'shirt') (HasColor ?sh 'blue'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keyboard",
+        "bowl",
+        "man",
+        "laptop",
+        "bus",
+        "screwdriver",
+        "shirt",
+        "tree"
+    ]
+}

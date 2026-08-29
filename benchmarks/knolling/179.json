@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a collection of drills. For every drill in the scene, it is yellow.",
+    "dsl": "(and (forall ?x (implies (Is ?x 'drill') (Has ?x 'yellow'))))",
+    "cnf": "(forall ?x (or (not (Is ?x 'drill')) (Has ?x 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "drill"
+    ]
+}

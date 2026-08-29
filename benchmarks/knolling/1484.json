@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout is anchored by a monitor located on the top side of the frame and a blue shirt positioned on the right side, aligned horizontally with the monitor. For every apple in the image, it is red, located directly below and vertically aligned with the monitor, and has a structured chain of associated items: a bottle is found on the right side, aligned horizontally with the apple; a black camera is positioned vertically below the apple; a pair of pliers is located on the right side, aligned horizontally with the camera; a set of keys is placed vertically below the camera; and a shoe is positioned on the right side, aligned horizontally with the keys.",
+    "dsl": "(exists ?monitor (exists ?shirt (forall ?apple (implies (Is ?apple 'apple') (exists ?bottle (exists ?camera (exists ?pliers (exists ?keys (exists ?shoe (and (Is ?monitor 'monitor') (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?monitor) (OnRightSide ?shirt) (AlignedHorizontally ?monitor ?shirt) (Above ?monitor ?apple) (AlignedVertically ?monitor ?apple) (Has ?apple 'red') (Is ?bottle 'bottle') (OnRightSide ?bottle) (AlignedHorizontally ?apple ?bottle) (Is ?camera 'camera') (Has ?camera 'black') (Above ?apple ?camera) (AlignedVertically ?apple ?camera) (Is ?pliers 'pliers') (OnRightSide ?pliers) (AlignedHorizontally ?camera ?pliers) (Is ?keys 'keys') (Above ?camera ?keys) (AlignedVertically ?camera ?keys) (Is ?shoe 'shoe') (OnRightSide ?shoe) (AlignedHorizontally ?keys ?shoe)))))))))))",
+    "cnf": "(exists ?monitor (exists ?shirt (forall ?apple (exists ?bottle (exists ?camera (exists ?pliers (exists ?keys (exists ?shoe (and (or (not (Is ?apple 'apple')) (Is ?monitor 'monitor')) (or (not (Is ?apple 'apple')) (Is ?shirt 'shirt')) (or (not (Is ?apple 'apple')) (OnTopSide ?monitor)) (or (not (Is ?apple 'apple')) (Has ?shirt 'blue')) (or (not (Is ?apple 'apple')) (OnRightSide ?shirt)) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?monitor ?shirt)) (or (not (Is ?apple 'apple')) (Above ?monitor ?apple)) (or (not (Is ?apple 'apple')) (AlignedVertically ?monitor ?apple)) (or (not (Is ?apple 'apple')) (Has ?apple 'red')) (or (not (Is ?apple 'apple')) (Is ?bottle 'bottle')) (or (not (Is ?apple 'apple')) (OnRightSide ?bottle)) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?apple ?bottle)) (or (not (Is ?apple 'apple')) (Is ?camera 'camera')) (or (not (Is ?apple 'apple')) (Has ?camera 'black')) (or (not (Is ?apple 'apple')) (Above ?apple ?camera)) (or (not (Is ?apple 'apple')) (AlignedVertically ?apple ?camera)) (or (not (Is ?apple 'apple')) (Is ?pliers 'pliers')) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?camera ?pliers)) (or (not (Is ?apple 'apple')) (OnRightSide ?pliers)) (or (not (Is ?apple 'apple')) (Is ?keys 'keys')) (or (not (Is ?apple 'apple')) (Above ?camera ?keys)) (or (not (Is ?apple 'apple')) (AlignedVertically ?camera ?keys)) (or (not (Is ?apple 'apple')) (Is ?shoe 'shoe')) (or (not (Is ?apple 'apple')) (AlignedHorizontally ?keys ?shoe)) (or (not (Is ?apple 'apple')) (OnRightSide ?shoe)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "shirt",
+        "pliers",
+        "apple",
+        "camera",
+        "monitor",
+        "bottle",
+        "shoe"
+    ]
+}

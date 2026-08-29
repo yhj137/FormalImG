@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo featuring a wooden wardrobe that contains a metal fork and every key. To the left of the wardrobe is a sofa, followed by a rectangular phone to its left. A bicycle is located to the left of the phone, with a tree standing to the left of the bicycle.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (exists ?f (and (Is ?f 'fork') (HasMaterial ?f 'metal') (In ?f ?w) (exists ?s (and (Is ?s 'sofa') (LeftOf ?s ?w) (exists ?p (and (Is ?p 'phone') (HasShape ?p 'rectangular') (LeftOf ?p ?s) (forall ?k (implies (Is ?k 'key') (In ?k ?w))) (exists ?b (and (Is ?b 'bicycle') (LeftOf ?b ?p) (exists ?t (and (Is ?t 'tree') (LeftOf ?t ?b))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?f (exists ?s (exists ?p (forall ?k (exists ?b (exists ?t (and (Is ?w 'wardrobe') (HasMaterial ?w 'wooden') (In ?f ?w) (LeftOf ?s ?w) (HasMaterial ?f 'metal') (or (not (Is ?k 'key')) (In ?k ?w)) (Is ?s 'sofa') (LeftOf ?p ?s) (Is ?f 'fork') (HasShape ?p 'rectangular') (LeftOf ?b ?p) (Is ?p 'phone') (Is ?b 'bicycle') (LeftOf ?t ?b) (Is ?t 'tree'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "fork",
+        "tree",
+        "bicycle",
+        "key",
+        "wardrobe"
+    ]
+}

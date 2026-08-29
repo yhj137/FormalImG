@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every plate positioned on the top side of the frame, there is a backpack located below it. This backpack is visually larger than the plate. Below the backpack lies a ruler, and further below that is a sock, which is positioned on the bottom side of the image.",
+    "dsl": "(forall ?p (implies (and (Is ?p 'plate') (OnTopSide ?p)) (exists ?b (exists ?r (exists ?s (and (Is ?b 'backpack') (Is ?r 'ruler') (Is ?s 'sock') (Below ?b ?p) (LargerThan ?b ?p) (Below ?r ?b) (Below ?s ?r) (OnBottomSide ?s)))))))",
+    "cnf": "(forall ?p (exists ?b (exists ?r (exists ?s (and (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?b 'backpack')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?r 'ruler')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Below ?b ?p)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Is ?s 'sock')) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Below ?r ?b)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (LargerThan ?b ?p)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (Below ?s ?r)) (or (not (Is ?p 'plate')) (not (OnTopSide ?p)) (OnBottomSide ?s)))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "backpack",
+        "plate",
+        "sock"
+    ]
+}

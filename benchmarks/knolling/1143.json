@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a handbag located on the bottom side. A drill is placed above the handbag and is larger than it. Above the drill is a monitor, which is larger than the drill. For every pen in the scene, there is a watch positioned above the pen and a pair of scissors positioned above the watch. Additionally, the pen is placed above the monitor.",
+    "dsl": "(exists ?handbag (exists ?drill (exists ?monitor (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Is ?drill 'drill') (Above ?drill ?handbag) (LargerThan ?drill ?handbag) (Is ?monitor 'monitor') (Above ?monitor ?drill) (LargerThan ?monitor ?drill) (forall ?pen (implies (Is ?pen 'pen') (exists ?watch (exists ?scissors (and (Is ?watch 'watch') (Is ?scissors 'scissors') (Above ?pen ?monitor) (Above ?watch ?pen) (Above ?scissors ?watch))))))))))",
+    "cnf": "(exists ?handbag (exists ?drill (exists ?monitor (forall ?pen (exists ?watch (exists ?scissors (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (Above ?drill ?handbag) (LargerThan ?drill ?handbag) (Is ?drill 'drill') (Above ?monitor ?drill) (LargerThan ?monitor ?drill) (Is ?monitor 'monitor') (or (not (Is ?pen 'pen')) (Above ?pen ?monitor)) (or (not (Is ?pen 'pen')) (Is ?scissors 'scissors')) (or (not (Is ?pen 'pen')) (Above ?watch ?pen)) (or (not (Is ?pen 'pen')) (Is ?watch 'watch')) (or (not (Is ?pen 'pen')) (Above ?scissors ?watch)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pen",
+        "watch",
+        "drill",
+        "handbag",
+        "monitor",
+        "scissors"
+    ]
+}

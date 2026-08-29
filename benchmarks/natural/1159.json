@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a woman sitting on a sofa and holding a pizza. To her left is a turned-on monitor. To her right, every orange is placed inside a basket.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?s (exists ?w (exists ?m (exists ?p (and (Is ?s 'sofa') (Is ?w 'woman') (HasState ?w 'sitting') (On ?w ?s) (Is ?m 'monitor') (HasState ?m 'on') (LeftOf ?m ?w) (Is ?p 'pizza') (Holding ?w ?p) (forall ?o (implies (Is ?o 'orange') (exists ?b (and (Is ?b 'basket') (In ?o ?b) (RightOf ?b ?w)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?s (exists ?w (exists ?m (exists ?p (forall ?o (exists ?b (and (Is ?s 'sofa') (On ?w ?s) (HasState ?w 'sitting') (LeftOf ?m ?w) (Is ?w 'woman') (Holding ?w ?p) (HasState ?m 'on') (or (not (Is ?o 'orange')) (RightOf ?b ?w)) (Is ?p 'pizza') (Is ?m 'monitor') (or (not (Is ?o 'orange')) (In ?o ?b)) (or (not (Is ?o 'orange')) (Is ?b 'basket'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "monitor",
+        "sofa",
+        "pizza",
+        "basket",
+        "woman",
+        "orange"
+    ]
+}

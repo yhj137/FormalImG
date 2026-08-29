@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image where every child holds a brown basket to their left containing a yellow banana.",
+    "dsl": "(and (IsStyle 'photo') (forall ?c (implies (Is ?c 'child') (exists ?b (exists ?a (and (Is ?b 'basket') (Is ?a 'banana') (HasColor ?b 'brown') (HasColor ?a 'yellow') (LeftOf ?b ?c) (Holding ?c ?b) (In ?a ?b)))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?c (exists ?b (exists ?a (and (or (not (Is ?c 'child')) (Is ?b 'basket')) (or (not (Is ?c 'child')) (HasColor ?b 'brown')) (or (not (Is ?c 'child')) (Is ?a 'banana')) (or (not (Is ?c 'child')) (LeftOf ?b ?c)) (or (not (Is ?c 'child')) (HasColor ?a 'yellow')) (or (not (Is ?c 'child')) (Holding ?c ?b)) (or (not (Is ?c 'child')) (In ?a ?b)))))))",
+    "k": 3,
+    "object_classes": [
+        "banana",
+        "child",
+        "basket"
+    ]
+}

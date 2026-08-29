@@ -1,0 +1,9 @@
+{
+    "prompt": "This is an oil painting style image featuring a flying bird.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bird') (HasState ?b 'flying'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bird') (HasState ?b 'flying'))))",
+    "k": 1,
+    "object_classes": [
+        "bird"
+    ]
+}

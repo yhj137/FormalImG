@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Ensure that for every drill in the scene, it is positioned on the bottom side of the image.",
+    "dsl": "(and (forall ?d (implies (Is ?d 'drill') (OnBottomSide ?d))))",
+    "cnf": "(forall ?d (or (not (Is ?d 'drill')) (OnBottomSide ?d)))",
+    "k": 1,
+    "object_classes": [
+        "drill"
+    ]
+}

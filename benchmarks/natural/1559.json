@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a desk. To the left of the desk stands a wardrobe next to a tree, while a green sofa sits to the right with a plant beside it. Resting on the desk are a round clock, an empty bottle, and every apple in the scene, all of which are red.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?w (exists ?t (exists ?s (exists ?p (exists ?c (and (Is ?d 'desk') (Is ?w 'wardrobe') (LeftOf ?w ?d) (Is ?t 'tree') (NextTo ?t ?w) (Is ?s 'sofa') (HasColor ?s 'green') (RightOf ?s ?d) (Is ?p 'plant') (NextTo ?p ?s) (Is ?c 'clock') (HasShape ?c 'round') (On ?c ?d) (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (On ?a ?d)))) (exists ?b (and (Is ?b 'bottle') (HasState ?b 'empty') (On ?b ?d)))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?w (exists ?t (exists ?s (exists ?p (exists ?c (forall ?a (exists ?b (and (Is ?d 'desk') (LeftOf ?w ?d) (RightOf ?s ?d) (Is ?w 'wardrobe') (NextTo ?t ?w) (On ?c ?d) (HasColor ?s 'green') (NextTo ?p ?s) (Is ?t 'tree') (or (not (Is ?a 'apple')) (On ?a ?d)) (HasShape ?c 'round') (Is ?s 'sofa') (Is ?p 'plant') (On ?b ?d) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (Is ?c 'clock') (HasState ?b 'empty') (Is ?b 'bottle')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sofa",
+        "bottle",
+        "tree",
+        "plant",
+        "desk",
+        "clock",
+        "apple",
+        "wardrobe"
+    ]
+}

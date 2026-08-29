@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a wooden table next to a wardrobe. On the table sits a metal pan containing a fish, alongside a hammer. To the left of the table, an elephant holds a yellow banana. A red shirt is inside the wardrobe. Every toy car in the scene is located below the table.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?t (exists ?w (exists ?p (exists ?f (exists ?e (and (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?w 'wardrobe') (NextTo ?w ?t) (Is ?p 'pan') (HasMaterial ?p 'metal') (On ?p ?t) (Is ?f 'fish') (In ?f ?p) (Is ?e 'elephant') (LeftOf ?e ?t) (forall ?c (implies (Is ?c 'toy car') (Below ?c ?t))) (exists ?b (and (Is ?b 'banana') (HasColor ?b 'yellow') (Holding ?e ?b))) (exists ?s (and (Is ?s 'shirt') (HasColor ?s 'red') (In ?s ?w))) (exists ?h (and (Is ?h 'hammer') (On ?h ?t))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?t (exists ?w (exists ?p (exists ?f (exists ?e (forall ?c (exists ?b (exists ?s (exists ?h (and (Is ?t 'table') (HasMaterial ?t 'wooden') (NextTo ?w ?t) (On ?p ?t) (Is ?w 'wardrobe') (In ?s ?w) (LeftOf ?e ?t) (HasMaterial ?p 'metal') (In ?f ?p) (HasColor ?s 'red') (or (not (Is ?c 'toy car')) (Below ?c ?t)) (Is ?e 'elephant') (Holding ?e ?b) (Is ?p 'pan') (Is ?f 'fish') (Is ?s 'shirt') (On ?h ?t) (HasColor ?b 'yellow') (Is ?h 'hammer') (Is ?b 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pan",
+        "toy car",
+        "fish",
+        "banana",
+        "hammer",
+        "wardrobe",
+        "shirt",
+        "table",
+        "elephant"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a person wearing a green shirt and black shoes, holding a pan that contains all the apples. A cylindrical bottle is to the left of the person, and a round plate with a bowl on it is to the right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?p (exists ?s (exists ?sh (exists ?pn (exists ?bt (and (Is ?p 'person') (Is ?s 'shirt') (Is ?sh 'shoes') (Is ?pn 'pan') (Is ?bt 'bottle') (HasColor ?s 'green') (HasColor ?sh 'black') (HasShape ?bt 'cylindrical') (On ?s ?p) (On ?sh ?p) (Holding ?p ?pn) (LeftOf ?bt ?p) (forall ?a (implies (Is ?a 'apple') (In ?a ?pn))) (exists ?pl (exists ?bw (and (Is ?pl 'plate') (Is ?bw 'bowl') (HasShape ?pl 'round') (RightOf ?pl ?p) (On ?bw ?pl)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?p (exists ?s (exists ?sh (exists ?pn (exists ?bt (forall ?a (exists ?pl (exists ?bw (and (Is ?p 'person') (On ?s ?p) (On ?sh ?p) (HasColor ?s 'green') (Holding ?p ?pn) (HasColor ?sh 'black') (Is ?s 'shirt') (LeftOf ?bt ?p) (Is ?pn 'pan') (or (not (Is ?a 'apple')) (In ?a ?pn)) (Is ?sh 'shoes') (RightOf ?pl ?p) (HasShape ?bt 'cylindrical') (HasShape ?pl 'round') (On ?bw ?pl) (Is ?bt 'bottle') (Is ?pl 'plate') (Is ?bw 'bowl')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "shirt",
+        "bowl",
+        "person",
+        "shoes",
+        "bottle",
+        "plate",
+        "pan",
+        "apple"
+    ]
+}

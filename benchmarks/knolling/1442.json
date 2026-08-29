@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every backpack in the scene, it is positioned on the right side. To the left of the backpack is a pan that is smaller than it. Further left of the pan is a hat, and to the left of the hat is a shoe. There is a pair of scissors located on the bottom side that aligns vertically with the backpack. A pen aligns vertically with the pan. A spoon aligns vertically with the hat, and the pen is placed to the right of the spoon. Finally, a lighter aligns vertically with the shoe, and the shoe is larger than the lighter.",
+    "dsl": "(forall ?bp (implies (Is ?bp 'backpack') (exists ?pa (exists ?h (exists ?sh (exists ?sc (exists ?pe (exists ?sp (exists ?li (and (Is ?pa 'pan') (Is ?h 'hat') (Is ?sh 'shoe') (Is ?sc 'scissors') (Is ?pe 'pen') (Is ?sp 'spoon') (Is ?li 'lighter') (OnRightSide ?bp) (LeftOf ?pa ?bp) (SmallerThan ?pa ?bp) (LeftOf ?h ?pa) (LeftOf ?sh ?h) (AlignedVertically ?sc ?bp) (OnBottomSide ?sc) (AlignedVertically ?pe ?pa) (AlignedVertically ?sp ?h) (RightOf ?pe ?sp) (AlignedVertically ?li ?sh) (LargerThan ?sh ?li)))))))))))",
+    "cnf": "(forall ?bp (exists ?pa (exists ?h (exists ?sh (exists ?sc (exists ?pe (exists ?sp (exists ?li (and (or (not (Is ?bp 'backpack')) (Is ?pa 'pan')) (or (not (Is ?bp 'backpack')) (LeftOf ?pa ?bp)) (or (not (Is ?bp 'backpack')) (Is ?h 'hat')) (or (not (Is ?bp 'backpack')) (SmallerThan ?pa ?bp)) (or (not (Is ?bp 'backpack')) (OnRightSide ?bp)) (or (not (Is ?bp 'backpack')) (Is ?sh 'shoe')) (or (not (Is ?bp 'backpack')) (LeftOf ?h ?pa)) (or (not (Is ?bp 'backpack')) (Is ?li 'lighter')) (or (not (Is ?bp 'backpack')) (Is ?sc 'scissors')) (or (not (Is ?bp 'backpack')) (LeftOf ?sh ?h)) (or (not (Is ?bp 'backpack')) (AlignedVertically ?pe ?pa)) (or (not (Is ?bp 'backpack')) (Is ?sp 'spoon')) (or (not (Is ?bp 'backpack')) (AlignedVertically ?li ?sh)) (or (not (Is ?bp 'backpack')) (Is ?pe 'pen')) (or (not (Is ?bp 'backpack')) (AlignedVertically ?sc ?bp)) (or (not (Is ?bp 'backpack')) (AlignedVertically ?sp ?h)) (or (not (Is ?bp 'backpack')) (OnBottomSide ?sc)) (or (not (Is ?bp 'backpack')) (RightOf ?pe ?sp)) (or (not (Is ?bp 'backpack')) (LargerThan ?sh ?li)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "pen",
+        "hat",
+        "pan",
+        "backpack",
+        "lighter",
+        "scissors",
+        "shoe",
+        "spoon"
+    ]
+}

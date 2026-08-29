@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene depicting a woman in a bed. All butterflies are positioned to the left of the woman. A horse is on the bed with a round clock to its left, and a lion with a plate on it is to the right of the bed.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (and (Is ?b 'bed') (Is ?w 'woman') (In ?w ?b) (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?w))) (exists ?h (exists ?c (exists ?l (exists ?p (and (Is ?h 'horse') (On ?h ?b) (Is ?c 'clock') (HasShape ?c 'round') (LeftOf ?c ?h) (Is ?l 'lion') (RightOf ?l ?b) (Is ?p 'plate') (On ?p ?l))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?w (forall ?bf (exists ?h (exists ?c (exists ?l (exists ?p (and (Is ?b 'bed') (In ?w ?b) (On ?h ?b) (Is ?w 'woman') (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?w)) (RightOf ?l ?b) (Is ?h 'horse') (LeftOf ?c ?h) (Is ?l 'lion') (On ?p ?l) (HasShape ?c 'round') (Is ?p 'plate') (Is ?c 'clock'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "butterfly",
+        "bed",
+        "horse",
+        "woman",
+        "clock",
+        "lion",
+        "plate"
+    ]
+}

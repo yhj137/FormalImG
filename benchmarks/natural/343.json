@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular wardrobe, with every cat in the scene positioned next to it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (forall ?c (implies (Is ?c 'cat') (NextTo ?c ?w))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (forall ?c (and (Is ?w 'wardrobe') (HasShape ?w 'rectangular') (or (not (Is ?c 'cat')) (NextTo ?c ?w))))))",
+    "k": 2,
+    "object_classes": [
+        "cat",
+        "wardrobe"
+    ]
+}

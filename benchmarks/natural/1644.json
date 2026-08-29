@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a red sofa with every piece of fruit in the scene placed on it. A teddy bear sits on the sofa holding an umbrella. To the left of the sofa is a plastic plant with a butterfly flying above it, and a sandwich is next to the sofa. A car is to the right of the sofa, and a horse is located to the right of the car.",
+    "dsl": "(and (IsStyle 'photo') (exists ?s (and (Is ?s 'sofa') (HasColor ?s 'red') (forall ?f (implies (Is ?f 'fruit') (On ?f ?s))) (exists ?t (exists ?u (exists ?p (exists ?b (exists ?sw (exists ?c (exists ?h (and (Is ?t 'teddy bear') (Is ?u 'umbrella') (Is ?p 'plant') (HasMaterial ?p 'plastic') (Is ?b 'butterfly') (Is ?sw 'sandwich') (Is ?c 'car') (Is ?h 'horse') (On ?t ?s) (Holding ?t ?u) (LeftOf ?p ?s) (Above ?b ?p) (NextTo ?sw ?s) (RightOf ?c ?s) (RightOf ?h ?c))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?s (forall ?f (exists ?t (exists ?u (exists ?p (exists ?b (exists ?sw (exists ?c (exists ?h (and (Is ?s 'sofa') (HasColor ?s 'red') (or (not (Is ?f 'fruit')) (On ?f ?s)) (On ?t ?s) (LeftOf ?p ?s) (Is ?t 'teddy bear') (Holding ?t ?u) (NextTo ?sw ?s) (HasMaterial ?p 'plastic') (Above ?b ?p) (Is ?u 'umbrella') (RightOf ?c ?s) (Is ?sw 'sandwich') (Is ?p 'plant') (Is ?b 'butterfly') (Is ?c 'car') (RightOf ?h ?c) (Is ?h 'horse'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "sofa",
+        "sandwich",
+        "plant",
+        "butterfly",
+        "teddy bear",
+        "horse",
+        "fruit",
+        "car"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition features a laptop located on the top left side. To the right of the laptop is a calculator, and to the right of the calculator is a mouse; these three items are aligned horizontally. Situated below the laptop is a stapler. To the right of the stapler is a bowl, followed by a hammer to the right of the bowl; the stapler and the bowl are aligned horizontally. Positioned on the bottom side is a knife, which is below the stapler; conversely, the stapler is above the knife. To the right of the knife is a hat. Furthermore, for every wrench in the image, it is placed below the hat, and there is a tie to the right of the wrench that is smaller than the wrench.",
+    "dsl": "(exists ?laptop (exists ?calculator (exists ?mouse (exists ?stapler (exists ?bowl (exists ?hammer (exists ?knife (exists ?hat (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (OnLeftSide ?laptop) (Is ?calculator 'calculator') (RightOf ?calculator ?laptop) (Is ?mouse 'mouse') (RightOf ?mouse ?calculator) (AlignedHorizontally ?laptop ?calculator) (AlignedHorizontally ?calculator ?mouse) (Is ?stapler 'stapler') (Below ?stapler ?laptop) (Is ?bowl 'bowl') (RightOf ?bowl ?stapler) (Is ?hammer 'hammer') (RightOf ?hammer ?bowl) (AlignedHorizontally ?stapler ?bowl) (Is ?knife 'knife') (OnBottomSide ?knife) (Below ?knife ?stapler) (Above ?stapler ?knife) (Is ?hat 'hat') (RightOf ?hat ?knife) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?tie (and (Is ?tie 'tie') (Below ?wrench ?hat) (RightOf ?tie ?wrench) (SmallerThan ?tie ?wrench))))))))))))))",
+    "cnf": "(exists ?laptop (exists ?calculator (exists ?mouse (exists ?stapler (exists ?bowl (exists ?hammer (exists ?knife (exists ?hat (forall ?wrench (exists ?tie (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (OnLeftSide ?laptop) (RightOf ?calculator ?laptop) (AlignedHorizontally ?laptop ?calculator) (Is ?calculator 'calculator') (RightOf ?mouse ?calculator) (Below ?stapler ?laptop) (AlignedHorizontally ?calculator ?mouse) (Is ?mouse 'mouse') (Is ?stapler 'stapler') (RightOf ?bowl ?stapler) (AlignedHorizontally ?stapler ?bowl) (Is ?bowl 'bowl') (RightOf ?hammer ?bowl) (Below ?knife ?stapler) (Is ?hammer 'hammer') (Above ?stapler ?knife) (OnBottomSide ?knife) (RightOf ?hat ?knife) (Is ?knife 'knife') (Is ?hat 'hat') (or (not (Is ?wrench 'wrench')) (Below ?wrench ?hat)) (or (not (Is ?wrench 'wrench')) (Is ?tie 'tie')) (or (not (Is ?wrench 'wrench')) (RightOf ?tie ?wrench)) (or (not (Is ?wrench 'wrench')) (SmallerThan ?tie ?wrench)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "hammer",
+        "mouse",
+        "bowl",
+        "calculator",
+        "knife",
+        "wrench",
+        "tie",
+        "stapler",
+        "hat",
+        "laptop"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a cutting board positioned on the right side of the image. Additionally, for every spoon present in the scene, it is aligned horizontally with that cutting board.",
+    "dsl": "(exists ?cb (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (forall ?s (implies (Is ?s 'spoon') (AlignedHorizontally ?s ?cb)))))",
+    "cnf": "(exists ?cb (forall ?s (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (or (not (Is ?s 'spoon')) (AlignedHorizontally ?s ?cb)))))",
+    "k": 2,
+    "object_classes": [
+        "spoon",
+        "cutting_board"
+    ]
+}

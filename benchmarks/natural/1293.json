@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a house and a woman standing next to it. All chairs are located to the left of the woman. A bed is positioned to the right of the woman, with a sitting man wearing red headphones and a cup placed on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (and (Is ?h 'house') (exists ?w (and (Is ?w 'woman') (NextTo ?w ?h) (forall ?c (implies (Is ?c 'chair') (LeftOf ?c ?w))) (exists ?b (and (Is ?b 'bed') (RightOf ?b ?w) (exists ?m (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?b) (exists ?hp (and (Is ?hp 'headphones') (HasColor ?hp 'red') (On ?hp ?m) (exists ?cp (and (Is ?cp 'cup') (On ?cp ?b))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?w (forall ?c (exists ?b (exists ?m (exists ?hp (exists ?cp (and (Is ?h 'house') (NextTo ?w ?h) (Is ?w 'woman') (or (not (Is ?c 'chair')) (LeftOf ?c ?w)) (RightOf ?b ?w) (Is ?b 'bed') (On ?m ?b) (On ?cp ?b) (HasState ?m 'sitting') (On ?hp ?m) (Is ?cp 'cup') (Is ?m 'man') (HasColor ?hp 'red') (Is ?hp 'headphones'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "headphones",
+        "man",
+        "chair",
+        "bed",
+        "cup",
+        "woman",
+        "house"
+    ]
+}

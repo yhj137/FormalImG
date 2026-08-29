@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hammer, a laptop, and a brown shoe. The laptop is below the hammer. The brown shoe is below the laptop and is on the bottom side of the image. To the left of the laptop is a black mouse, which is smaller than the laptop. To the left of the mouse is a white plate. Below the plate is a gray fork, which is smaller than the plate. For every sock to the left of the brown shoe, there is a carrot below it and a yellow lemon to the left of the carrot.",
+    "dsl": "(exists ?hammer (exists ?laptop (exists ?shoe (exists ?mouse (exists ?plate (exists ?fork (and (Is ?hammer 'hammer') (Is ?laptop 'laptop') (Is ?shoe 'shoe') (Is ?mouse 'mouse') (Is ?plate 'plate') (Is ?fork 'fork') (Below ?laptop ?hammer) (Below ?shoe ?laptop) (OnBottomSide ?shoe) (Has ?shoe 'brown') (LeftOf ?mouse ?laptop) (SmallerThan ?mouse ?laptop) (Has ?mouse 'black') (LeftOf ?plate ?mouse) (Has ?plate 'white') (Below ?fork ?plate) (SmallerThan ?fork ?plate) (Has ?fork 'gray') (forall ?sock (implies (and (Is ?sock 'sock') (LeftOf ?sock ?shoe)) (exists ?carrot (exists ?lemon (and (Is ?carrot 'carrot') (Is ?lemon 'lemon') (Below ?carrot ?sock) (LeftOf ?lemon ?carrot) (Has ?lemon 'yellow')))))))))))))",
+    "cnf": "(exists ?hammer (exists ?laptop (exists ?shoe (exists ?mouse (exists ?plate (exists ?fork (forall ?sock (exists ?carrot (exists ?lemon (and (Is ?hammer 'hammer') (Below ?laptop ?hammer) (Is ?laptop 'laptop') (Below ?shoe ?laptop) (LeftOf ?mouse ?laptop) (Is ?shoe 'shoe') (OnBottomSide ?shoe) (SmallerThan ?mouse ?laptop) (Is ?mouse 'mouse') (Has ?shoe 'brown') (Has ?mouse 'black') (or (not (Is ?sock 'sock')) (not (LeftOf ?sock ?shoe)) (Is ?carrot 'carrot')) (LeftOf ?plate ?mouse) (or (not (Is ?sock 'sock')) (not (LeftOf ?sock ?shoe)) (Is ?lemon 'lemon')) (or (not (Is ?sock 'sock')) (not (LeftOf ?sock ?shoe)) (Below ?carrot ?sock)) (Is ?plate 'plate') (Has ?plate 'white') (or (not (Is ?sock 'sock')) (not (LeftOf ?sock ?shoe)) (LeftOf ?lemon ?carrot)) (Below ?fork ?plate) (or (not (Is ?sock 'sock')) (not (LeftOf ?sock ?shoe)) (Has ?lemon 'yellow')) (SmallerThan ?fork ?plate) (Is ?fork 'fork') (Has ?fork 'gray')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "sock",
+        "lemon",
+        "carrot",
+        "hammer",
+        "fork",
+        "mouse",
+        "shoe"
+    ]
+}

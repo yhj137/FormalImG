@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a child holding a lit lamp next to a wooden desk. Every apple is inside the desk.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?c (exists ?l (exists ?d (and (Is ?c 'child') (Is ?l 'lamp') (HasState ?l 'on') (Holding ?c ?l) (Is ?d 'desk') (HasMaterial ?d 'wooden') (NextTo ?c ?d) (forall ?a (implies (Is ?a 'apple') (In ?a ?d))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?c (exists ?l (exists ?d (forall ?a (and (Is ?c 'child') (Holding ?c ?l) (NextTo ?c ?d) (HasState ?l 'on') (HasMaterial ?d 'wooden') (or (not (Is ?a 'apple')) (In ?a ?d)) (Is ?l 'lamp') (Is ?d 'desk')))))))",
+    "k": 4,
+    "object_classes": [
+        "desk",
+        "apple",
+        "lamp",
+        "child"
+    ]
+}

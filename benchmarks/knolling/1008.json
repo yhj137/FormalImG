@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a continuous horizontal row of objects arranged neatly. On the left side of the image, there is a laptop. Positioned to the right of the laptop is a screwdriver, and to the right of the screwdriver are scissors. Moving towards the right side of the image, a sandwich is located to the right of the scissors. To the right of the sandwich is a lemon, followed by a glove positioned to the right of the lemon. All six items\u2014laptop, screwdriver, scissors, sandwich, lemon, and glove\u2014are aligned horizontally.",
+    "dsl": "(exists ?laptop (exists ?screwdriver (exists ?scissors (exists ?sandwich (exists ?lemon (exists ?glove (and (Is ?laptop 'laptop') (Is ?screwdriver 'screwdriver') (Is ?scissors 'scissors') (Is ?sandwich 'sandwich') (Is ?lemon 'lemon') (Is ?glove 'glove') (OnLeftSide ?laptop) (RightOf ?screwdriver ?laptop) (RightOf ?scissors ?screwdriver) (RightOf ?sandwich ?scissors) (OnRightSide ?sandwich) (RightOf ?lemon ?sandwich) (RightOf ?glove ?lemon) (AlignedHorizontally ?laptop ?screwdriver) (AlignedHorizontally ?screwdriver ?scissors) (AlignedHorizontally ?scissors ?sandwich) (AlignedHorizontally ?sandwich ?lemon) (AlignedHorizontally ?lemon ?glove))))))))",
+    "cnf": "(exists ?laptop (exists ?screwdriver (exists ?scissors (exists ?sandwich (exists ?lemon (exists ?glove (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (RightOf ?screwdriver ?laptop) (AlignedHorizontally ?laptop ?screwdriver) (Is ?screwdriver 'screwdriver') (RightOf ?scissors ?screwdriver) (AlignedHorizontally ?screwdriver ?scissors) (Is ?scissors 'scissors') (RightOf ?sandwich ?scissors) (AlignedHorizontally ?scissors ?sandwich) (Is ?sandwich 'sandwich') (OnRightSide ?sandwich) (RightOf ?lemon ?sandwich) (AlignedHorizontally ?sandwich ?lemon) (Is ?lemon 'lemon') (RightOf ?glove ?lemon) (AlignedHorizontally ?lemon ?glove) (Is ?glove 'glove'))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "lemon",
+        "screwdriver",
+        "scissors",
+        "sandwich",
+        "glove"
+    ]
+}

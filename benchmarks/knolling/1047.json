@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. For every shoe positioned on the top side of the layout, there is a set of headphones located directly below it. To the left of the headphones are keys, while a donut is placed to the right of the headphones. Additionally, a lighter is situated below the keys, and a fork is arranged below the donut.",
+    "dsl": "(forall ?shoe (implies (and (Is ?shoe 'shoe') (OnTopSide ?shoe)) (exists ?headphones (exists ?keys (exists ?donut (exists ?lighter (exists ?fork (and (Is ?headphones 'headphones') (Is ?keys 'keys') (Is ?donut 'donut') (Is ?lighter 'lighter') (Is ?fork 'fork') (Below ?headphones ?shoe) (LeftOf ?keys ?headphones) (RightOf ?donut ?headphones) (Below ?lighter ?keys) (Below ?fork ?donut)))))))))",
+    "cnf": "(forall ?shoe (exists ?headphones (exists ?keys (exists ?donut (exists ?lighter (exists ?fork (and (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Is ?headphones 'headphones')) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Is ?keys 'keys')) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Below ?headphones ?shoe)) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Is ?donut 'donut')) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (LeftOf ?keys ?headphones)) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Is ?fork 'fork')) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Is ?lighter 'lighter')) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (RightOf ?donut ?headphones)) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Below ?lighter ?keys)) (or (not (Is ?shoe 'shoe')) (not (OnTopSide ?shoe)) (Below ?fork ?donut)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "fork",
+        "lighter",
+        "headphones",
+        "shoe",
+        "donut"
+    ]
+}

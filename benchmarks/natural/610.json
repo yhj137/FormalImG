@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style image of a horse sitting on a sofa holding a black phone, with a plate on the sofa to the left of the horse.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?s (exists ?p (exists ?pl (and (Is ?h 'horse') (Is ?s 'sofa') (Is ?p 'phone') (Is ?pl 'plate') (HasState ?h 'sitting') (On ?h ?s) (Holding ?h ?p) (HasColor ?p 'black') (On ?pl ?s) (LeftOf ?pl ?h)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?s (exists ?p (exists ?pl (and (Is ?h 'horse') (HasState ?h 'sitting') (On ?h ?s) (Holding ?h ?p) (Is ?s 'sofa') (On ?pl ?s) (LeftOf ?pl ?h) (Is ?p 'phone') (HasColor ?p 'black') (Is ?pl 'plate')))))))",
+    "k": 4,
+    "object_classes": [
+        "phone",
+        "sofa",
+        "horse",
+        "plate"
+    ]
+}

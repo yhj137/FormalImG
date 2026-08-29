@@ -1,0 +1,9 @@
+{
+    "prompt": "There is a yellow flower.",
+    "dsl": "(exists ?f (and (Is ?f 'flower') (HasColor ?f 'yellow')))",
+    "cnf": "(exists ?f (and (Is ?f 'flower') (HasColor ?f 'yellow')))",
+    "k": 1,
+    "object_classes": [
+        "flower"
+    ]
+}

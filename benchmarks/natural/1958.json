@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene centered on a table. To the left of the table stands a wardrobe with a hat on top, inside of which is a key. To the right of the table is a car with a dog next to it. On the table sits a sandwich with a fork beside it, along with a round clock. Every cup in the scene is positioned to the right of the clock.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?w (exists ?c (exists ?d (exists ?s (exists ?f (exists ?cl (and (Is ?t 'table') (Is ?w 'wardrobe') (Is ?c 'car') (Is ?d 'dog') (Is ?s 'sandwich') (Is ?f 'fork') (Is ?cl 'clock') (HasShape ?cl 'round') (LeftOf ?w ?t) (RightOf ?c ?t) (NextTo ?d ?c) (On ?s ?t) (NextTo ?f ?s) (On ?cl ?t) (forall ?cp (implies (Is ?cp 'cup') (RightOf ?cp ?cl))) (exists ?h (exists ?k (and (Is ?h 'hat') (Is ?k 'key') (On ?h ?w) (In ?k ?h)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?w (exists ?c (exists ?d (exists ?s (exists ?f (exists ?cl (forall ?cp (exists ?h (exists ?k (and (Is ?t 'table') (LeftOf ?w ?t) (RightOf ?c ?t) (Is ?w 'wardrobe') (On ?h ?w) (On ?s ?t) (Is ?c 'car') (NextTo ?d ?c) (Is ?h 'hat') (In ?k ?h) (On ?cl ?t) (Is ?s 'sandwich') (NextTo ?f ?s) (Is ?d 'dog') (Is ?k 'key') (HasShape ?cl 'round') (or (not (Is ?cp 'cup')) (RightOf ?cp ?cl)) (Is ?f 'fork') (Is ?cl 'clock')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "key",
+        "fork",
+        "sandwich",
+        "hat",
+        "wardrobe",
+        "cup",
+        "table",
+        "clock",
+        "dog",
+        "car"
+    ]
+}

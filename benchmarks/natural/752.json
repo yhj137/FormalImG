@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a bookshelf with a horse standing next to it. The horse is holding all the fruit, and a rectangular laptop sits beside the bookshelf.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (and (Is ?b 'bookshelf') (Is ?h 'horse') (NextTo ?h ?b) (forall ?f (implies (Is ?f 'fruit') (Holding ?h ?f))) (exists ?l (and (Is ?l 'laptop') (HasShape ?l 'rectangular') (NextTo ?l ?b)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?h (forall ?f (exists ?l (and (Is ?b 'bookshelf') (NextTo ?h ?b) (NextTo ?l ?b) (Is ?h 'horse') (or (not (Is ?f 'fruit')) (Holding ?h ?f)) (HasShape ?l 'rectangular') (Is ?l 'laptop')))))))",
+    "k": 4,
+    "object_classes": [
+        "fruit",
+        "bookshelf",
+        "horse",
+        "laptop"
+    ]
+}

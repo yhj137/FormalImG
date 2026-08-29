@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A woman sits on a brown bench holding a sandwich, with a pair of glasses also resting on the bench. A bowl is located to the left of the bench, containing all the oranges in the image.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?b (exists ?s (exists ?g (exists ?bo (and (Is ?w 'woman') (Is ?b 'bench') (HasColor ?b 'brown') (Is ?s 'sandwich') (Is ?g 'glasses') (Is ?bo 'bowl') (Holding ?w ?s) (On ?w ?b) (On ?g ?b) (RightOf ?b ?bo) (forall ?o (implies (Is ?o 'orange') (In ?o ?bo))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?b (exists ?s (exists ?g (exists ?bo (forall ?o (and (Is ?w 'woman') (Holding ?w ?s) (On ?w ?b) (Is ?s 'sandwich') (HasColor ?b 'brown') (On ?g ?b) (Is ?b 'bench') (RightOf ?b ?bo) (Is ?g 'glasses') (Is ?bo 'bowl') (or (not (Is ?o 'orange')) (In ?o ?bo))))))))))",
+    "k": 6,
+    "object_classes": [
+        "bench",
+        "glasses",
+        "woman",
+        "orange",
+        "sandwich",
+        "bowl"
+    ]
+}

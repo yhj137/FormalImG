@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a cutting board positioned on the right side and a glove located to the left of the cutting board. For every set of keys in the arrangement, there is a lemon to its left. The lemon and the keys are aligned horizontally, and the keys are placed above the glove.",
+    "dsl": "(exists ?cb (exists ?g (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (Is ?g 'glove') (LeftOf ?g ?cb) (forall ?k (implies (Is ?k 'keys') (exists ?l (and (Is ?l 'lemon') (LeftOf ?l ?k) (AlignedHorizontally ?l ?k) (Above ?k ?g))))))))",
+    "cnf": "(exists ?cb (exists ?g (forall ?k (exists ?l (and (Is ?cb 'cutting_board') (OnRightSide ?cb) (LeftOf ?g ?cb) (Is ?g 'glove') (or (not (Is ?k 'keys')) (Above ?k ?g)) (or (not (Is ?k 'keys')) (AlignedHorizontally ?l ?k)) (or (not (Is ?k 'keys')) (LeftOf ?l ?k)) (or (not (Is ?k 'keys')) (Is ?l 'lemon')))))))",
+    "k": 4,
+    "object_classes": [
+        "cutting_board",
+        "keys",
+        "glove",
+        "lemon"
+    ]
+}

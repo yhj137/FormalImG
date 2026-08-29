@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a woman on a bench holding a cup, with a laptop also on the bench. To the left of the bench stand a lamp and an open wardrobe containing every book. A rug lies beneath the bench with shoes on it.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?be (exists ?wd (and (Is ?w 'woman') (Is ?be 'bench') (Is ?wd 'wardrobe') (HasState ?wd 'open') (On ?w ?be) (LeftOf ?wd ?be) (forall ?bk (implies (Is ?bk 'book') (In ?bk ?wd))) (exists ?c (exists ?l (exists ?la (exists ?r (exists ?s (and (Is ?c 'cup') (Is ?l 'lamp') (Is ?la 'laptop') (Is ?r 'rug') (Is ?s 'shoes') (Holding ?w ?c) (LeftOf ?l ?be) (On ?la ?be) (Below ?r ?be) (On ?s ?r))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?be (exists ?wd (forall ?bk (exists ?c (exists ?l (exists ?la (exists ?r (exists ?s (and (Is ?w 'woman') (On ?w ?be) (Holding ?w ?c) (Is ?be 'bench') (LeftOf ?wd ?be) (Is ?c 'cup') (LeftOf ?l ?be) (HasState ?wd 'open') (or (not (Is ?bk 'book')) (In ?bk ?wd)) (On ?la ?be) (Is ?l 'lamp') (Is ?wd 'wardrobe') (Below ?r ?be) (Is ?la 'laptop') (Is ?r 'rug') (On ?s ?r) (Is ?s 'shoes'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bench",
+        "book",
+        "shoes",
+        "laptop",
+        "woman",
+        "rug",
+        "lamp",
+        "cup",
+        "wardrobe"
+    ]
+}

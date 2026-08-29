@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. To the right of a house stands a woman wearing a backpack that contains a plastic fork. To her right is a person wearing red shoes and holding a triangular sandwich. Every bird in the scene is perched on the house.",
+    "dsl": "(exists ?h (exists ?w (exists ?bp (exists ?f (exists ?p (exists ?sd (and (Is ?h 'house') (Is ?w 'woman') (RightOf ?w ?h) (Is ?bp 'backpack') (On ?bp ?w) (Is ?f 'fork') (HasMaterial ?f 'plastic') (In ?f ?bp) (Is ?p 'person') (RightOf ?p ?w) (Is ?sd 'sandwich') (HasShape ?sd 'triangular') (Holding ?p ?sd) (forall ?bi (implies (Is ?bi 'bird') (On ?bi ?h))) (exists ?sh (and (Is ?sh 'shoes') (HasColor ?sh 'red') (On ?sh ?p))))))))))",
+    "cnf": "(exists ?h (exists ?w (exists ?bp (exists ?f (exists ?p (exists ?sd (forall ?bi (exists ?sh (and (Is ?h 'house') (RightOf ?w ?h) (or (not (Is ?bi 'bird')) (On ?bi ?h)) (Is ?w 'woman') (On ?bp ?w) (RightOf ?p ?w) (Is ?bp 'backpack') (In ?f ?bp) (Is ?p 'person') (Holding ?p ?sd) (HasMaterial ?f 'plastic') (On ?sh ?p) (HasShape ?sd 'triangular') (Is ?f 'fork') (HasColor ?sh 'red') (Is ?sd 'sandwich') (Is ?sh 'shoes'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fork",
+        "person",
+        "sandwich",
+        "backpack",
+        "shoes",
+        "woman",
+        "house",
+        "bird"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In this cartoon-style scene, every butterfly has a woman to its right. The woman is inside a house, holding a metal key. Also in the house is a rectangular refrigerator containing an orange. To the left of the house stands a tree, with a car next to it and a plant beside the car.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?b (implies (Is ?b 'butterfly') (exists ?w (exists ?k (exists ?h (exists ?r (exists ?o (exists ?t (exists ?c (exists ?p (and (Is ?w 'woman') (Is ?k 'key') (Is ?h 'house') (Is ?r 'refrigerator') (Is ?o 'orange') (Is ?t 'tree') (Is ?c 'car') (Is ?p 'plant') (RightOf ?w ?b) (Holding ?w ?k) (HasMaterial ?k 'metal') (In ?w ?h) (In ?r ?h) (HasShape ?r 'rectangular') (In ?o ?r) (LeftOf ?t ?h) (NextTo ?c ?t) (NextTo ?p ?c)))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?b (exists ?w (exists ?k (exists ?h (exists ?r (exists ?o (exists ?t (exists ?c (exists ?p (and (or (not (Is ?b 'butterfly')) (Is ?w 'woman')) (or (not (Is ?b 'butterfly')) (RightOf ?w ?b)) (or (not (Is ?b 'butterfly')) (Is ?k 'key')) (or (not (Is ?b 'butterfly')) (Holding ?w ?k)) (or (not (Is ?b 'butterfly')) (Is ?p 'plant')) (or (not (Is ?b 'butterfly')) (Is ?h 'house')) (or (not (Is ?b 'butterfly')) (In ?w ?h)) (or (not (Is ?b 'butterfly')) (HasMaterial ?k 'metal')) (or (not (Is ?b 'butterfly')) (Is ?c 'car')) (or (not (Is ?b 'butterfly')) (NextTo ?p ?c)) (or (not (Is ?b 'butterfly')) (Is ?r 'refrigerator')) (or (not (Is ?b 'butterfly')) (In ?r ?h)) (or (not (Is ?b 'butterfly')) (Is ?t 'tree')) (or (not (Is ?b 'butterfly')) (NextTo ?c ?t)) (or (not (Is ?b 'butterfly')) (Is ?o 'orange')) (or (not (Is ?b 'butterfly')) (HasShape ?r 'rectangular')) (or (not (Is ?b 'butterfly')) (LeftOf ?t ?h)) (or (not (Is ?b 'butterfly')) (In ?o ?r)))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "woman",
+        "key",
+        "car",
+        "refrigerator",
+        "tree",
+        "house",
+        "butterfly",
+        "orange",
+        "plant"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a flying bird holding a book. Every ball is on the book and next to the bird.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bird (exists ?book (and (Is ?bird 'bird') (HasState ?bird 'flying') (Is ?book 'book') (Holding ?bird ?book) (forall ?ball (implies (Is ?ball 'ball') (and (On ?ball ?book) (NextTo ?ball ?bird))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bird (exists ?book (forall ?ball (and (Is ?bird 'bird') (HasState ?bird 'flying') (Holding ?bird ?book) (or (not (Is ?ball 'ball')) (NextTo ?ball ?bird)) (Is ?book 'book') (or (not (Is ?ball 'ball')) (On ?ball ?book)))))))",
+    "k": 3,
+    "object_classes": [
+        "book",
+        "bird",
+        "ball"
+    ]
+}

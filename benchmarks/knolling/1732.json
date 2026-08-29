@@ -1,0 +1,17 @@
+{
+    "prompt": "For every lighter in the image, there is a pan with a pizza to its left, a knife to its right, a glove above it, and a wrench below it. The lighter is positioned on the right side of the image and to the right of the glove. Additionally, there are headphones above the lighter, a wallet below the lighter, and a calculator below the wallet, with the calculator situated on the bottom side.",
+    "dsl": "(exists ?pan (exists ?pizza (exists ?knife (exists ?glove (exists ?wrench (forall ?lighter (implies (Is ?lighter 'lighter') (exists ?headphones (exists ?wallet (exists ?calculator (and (Is ?pan 'pan') (Is ?pizza 'pizza') (Is ?knife 'knife') (Is ?glove 'glove') (Is ?wrench 'wrench') (Is ?headphones 'headphones') (Is ?wallet 'wallet') (Is ?calculator 'calculator') (LeftOf ?pizza ?pan) (RightOf ?knife ?pan) (Above ?glove ?pan) (Below ?wrench ?pan) (OnRightSide ?lighter) (RightOf ?lighter ?glove) (Above ?headphones ?lighter) (Below ?wallet ?lighter) (Below ?calculator ?wallet) (OnBottomSide ?calculator))))))))))))",
+    "cnf": "(exists ?pan (exists ?pizza (exists ?knife (exists ?glove (exists ?wrench (forall ?lighter (exists ?headphones (exists ?wallet (exists ?calculator (and (or (not (Is ?lighter 'lighter')) (Is ?pan 'pan')) (or (not (Is ?lighter 'lighter')) (Is ?pizza 'pizza')) (or (not (Is ?lighter 'lighter')) (LeftOf ?pizza ?pan)) (or (not (Is ?lighter 'lighter')) (Is ?knife 'knife')) (or (not (Is ?lighter 'lighter')) (Is ?calculator 'calculator')) (or (not (Is ?lighter 'lighter')) (RightOf ?knife ?pan)) (or (not (Is ?lighter 'lighter')) (Is ?glove 'glove')) (or (not (Is ?lighter 'lighter')) (Is ?wallet 'wallet')) (or (not (Is ?lighter 'lighter')) (Below ?calculator ?wallet)) (or (not (Is ?lighter 'lighter')) (Above ?glove ?pan)) (or (not (Is ?lighter 'lighter')) (Is ?wrench 'wrench')) (or (not (Is ?lighter 'lighter')) (Is ?headphones 'headphones')) (or (not (Is ?lighter 'lighter')) (Below ?wallet ?lighter)) (or (not (Is ?lighter 'lighter')) (OnBottomSide ?calculator)) (or (not (Is ?lighter 'lighter')) (Below ?wrench ?pan)) (or (not (Is ?lighter 'lighter')) (RightOf ?lighter ?glove)) (or (not (Is ?lighter 'lighter')) (Above ?headphones ?lighter)) (or (not (Is ?lighter 'lighter')) (OnRightSide ?lighter))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "wrench",
+        "pizza",
+        "pan",
+        "lighter",
+        "calculator",
+        "wallet",
+        "knife",
+        "headphones",
+        "glove"
+    ]
+}

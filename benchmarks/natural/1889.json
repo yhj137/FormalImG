@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a wooden desk placed on a rug, with a bookshelf standing next to the desk. All toy cars in the scene are located on the rug to the right of the desk. A round mirror and a bowl containing a sliced pizza sit on the desk, with a metal knife lying next to the bowl. To the right of the desk stands a bench, where a sleeping dog is resting.",
+    "dsl": "(and (IsStyle 'photo') (exists ?d (exists ?r (exists ?bs (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Is ?r 'rug') (Is ?bs 'bookshelf') (On ?d ?r) (NextTo ?bs ?d) (forall ?tc (implies (Is ?tc 'toy car') (and (On ?tc ?r) (RightOf ?tc ?d)))) (exists ?m (exists ?k (exists ?b (exists ?p (exists ?bn (exists ?dg (and (Is ?m 'mirror') (HasShape ?m 'round') (On ?m ?d) (Is ?k 'knife') (HasMaterial ?k 'metal') (Is ?b 'bowl') (On ?b ?d) (NextTo ?k ?b) (Is ?p 'pizza') (HasState ?p 'sliced') (In ?p ?b) (Is ?bn 'bench') (RightOf ?bn ?d) (Is ?dg 'dog') (HasState ?dg 'sleeping') (On ?dg ?bn)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?d (exists ?r (exists ?bs (forall ?tc (exists ?m (exists ?k (exists ?b (exists ?p (exists ?bn (exists ?dg (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (On ?d ?r) (NextTo ?bs ?d) (Is ?r 'rug') (or (not (Is ?tc 'toy car')) (On ?tc ?r)) (or (not (Is ?tc 'toy car')) (RightOf ?tc ?d)) (Is ?bs 'bookshelf') (On ?m ?d) (On ?b ?d) (HasShape ?m 'round') (RightOf ?bn ?d) (Is ?b 'bowl') (NextTo ?k ?b) (Is ?m 'mirror') (Is ?bn 'bench') (On ?dg ?bn) (HasMaterial ?k 'metal') (In ?p ?b) (HasState ?dg 'sleeping') (Is ?k 'knife') (HasState ?p 'sliced') (Is ?dg 'dog') (Is ?p 'pizza')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "bowl",
+        "toy car",
+        "knife",
+        "desk",
+        "pizza",
+        "rug",
+        "mirror",
+        "dog",
+        "bookshelf"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image with a neat arrangement. A drill serves as a reference point; a hat is placed above the drill, and a game controller is located to the right of the drill. To the left of the drill is a pizza. Pliers are positioned above the pizza, while the pizza itself is positioned above a carrot, which is smaller than the pizza. A lighter is found on the right side of the image, specifically to the right of the game controller. Additionally, for every pair of headphones, there is a screwdriver to its right, and that screwdriver is located to the left of the pliers.",
+    "dsl": "(exists ?drill (exists ?hat (exists ?controller (exists ?pizza (exists ?pliers (exists ?carrot (exists ?lighter (and (Is ?drill 'drill') (Is ?hat 'hat') (Is ?controller 'game_controller') (Is ?pizza 'pizza') (Is ?pliers 'pliers') (Is ?carrot 'carrot') (Is ?lighter 'lighter') (Above ?hat ?drill) (RightOf ?controller ?drill) (LeftOf ?pizza ?drill) (Above ?pliers ?pizza) (Above ?pizza ?carrot) (SmallerThan ?carrot ?pizza) (OnRightSide ?lighter) (RightOf ?lighter ?controller) (forall ?headphones (implies (Is ?headphones 'headphones') (exists ?screwdriver (and (Is ?screwdriver 'screwdriver') (RightOf ?screwdriver ?headphones) (LeftOf ?screwdriver ?pliers)))))))))))))",
+    "cnf": "(exists ?drill (exists ?hat (exists ?controller (exists ?pizza (exists ?pliers (exists ?carrot (exists ?lighter (forall ?headphones (exists ?screwdriver (and (Is ?drill 'drill') (Above ?hat ?drill) (RightOf ?controller ?drill) (Is ?hat 'hat') (LeftOf ?pizza ?drill) (Is ?controller 'game_controller') (RightOf ?lighter ?controller) (Is ?pizza 'pizza') (Above ?pliers ?pizza) (OnRightSide ?lighter) (Above ?pizza ?carrot) (Is ?pliers 'pliers') (or (not (Is ?headphones 'headphones')) (LeftOf ?screwdriver ?pliers)) (Is ?lighter 'lighter') (SmallerThan ?carrot ?pizza) (Is ?carrot 'carrot') (or (not (Is ?headphones 'headphones')) (RightOf ?screwdriver ?headphones)) (or (not (Is ?headphones 'headphones')) (Is ?screwdriver 'screwdriver'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "carrot",
+        "pizza",
+        "screwdriver",
+        "game_controller",
+        "drill",
+        "hat",
+        "lighter",
+        "headphones"
+    ]
+}

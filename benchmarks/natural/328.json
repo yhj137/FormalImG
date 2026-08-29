@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo showing a red screwdriver on every orange.",
+    "dsl": "(and (IsStyle 'photo') (forall ?o (implies (Is ?o 'orange') (exists ?s (and (Is ?s 'screwdriver') (HasColor ?s 'red') (On ?s ?o))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?o (exists ?s (and (or (not (Is ?o 'orange')) (Is ?s 'screwdriver')) (or (not (Is ?o 'orange')) (HasColor ?s 'red')) (or (not (Is ?o 'orange')) (On ?s ?o))))))",
+    "k": 2,
+    "object_classes": [
+        "orange",
+        "screwdriver"
+    ]
+}

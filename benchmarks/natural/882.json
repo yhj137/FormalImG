@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a metal house. Every plant is located next to the house, and a rusty screwdriver sits on top of it. Inside the house, a lion lies next to a glass fish.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (and (Is ?h 'house') (HasMaterial ?h 'metal') (forall ?p (implies (Is ?p 'plant') (NextTo ?p ?h))) (exists ?s (and (Is ?s 'screwdriver') (HasState ?s 'rusty') (On ?s ?h))) (exists ?l (exists ?f (and (Is ?l 'lion') (HasState ?l 'lying') (In ?l ?h) (Is ?f 'fish') (HasMaterial ?f 'glass') (NextTo ?f ?l)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (forall ?p (exists ?s (exists ?l (exists ?f (and (Is ?h 'house') (HasMaterial ?h 'metal') (or (not (Is ?p 'plant')) (NextTo ?p ?h)) (On ?s ?h) (In ?l ?h) (HasState ?s 'rusty') (HasState ?l 'lying') (NextTo ?f ?l) (Is ?s 'screwdriver') (Is ?l 'lion') (HasMaterial ?f 'glass') (Is ?f 'fish'))))))))",
+    "k": 5,
+    "object_classes": [
+        "plant",
+        "fish",
+        "screwdriver",
+        "house",
+        "lion"
+    ]
+}

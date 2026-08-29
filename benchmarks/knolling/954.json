@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A handbag is positioned on the bottom side of the layout. To the right of the handbag is a wallet, while a bottle is placed above the handbag. Additionally, for every sock in the image, there is a camera located to its right, and that camera is also positioned above the wallet.",
+    "dsl": "(exists ?handbag (exists ?wallet (exists ?bottle (and (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?bottle 'bottle') (OnBottomSide ?handbag) (RightOf ?wallet ?handbag) (Above ?bottle ?handbag) (forall ?sock (implies (Is ?sock 'sock') (exists ?camera (and (Is ?camera 'camera') (RightOf ?camera ?sock) (Above ?camera ?wallet)))))))))",
+    "cnf": "(exists ?handbag (exists ?wallet (exists ?bottle (forall ?sock (exists ?camera (and (Is ?handbag 'handbag') (OnBottomSide ?handbag) (RightOf ?wallet ?handbag) (Above ?bottle ?handbag) (Is ?wallet 'wallet') (or (not (Is ?sock 'sock')) (Above ?camera ?wallet)) (Is ?bottle 'bottle') (or (not (Is ?sock 'sock')) (RightOf ?camera ?sock)) (or (not (Is ?sock 'sock')) (Is ?camera 'camera'))))))))",
+    "k": 5,
+    "object_classes": [
+        "sock",
+        "handbag",
+        "wallet",
+        "camera",
+        "bottle"
+    ]
+}

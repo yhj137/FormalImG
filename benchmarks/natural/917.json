@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. In a cyberpunk style scene, an open refrigerator has a broken keyboard sitting on it. A woman stands next to the refrigerator holding a cat, while all plants are positioned to the right of the refrigerator.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?r (and (Is ?r 'refrigerator') (HasState ?r 'open') (exists ?w (and (Is ?w 'woman') (NextTo ?w ?r) (forall ?p (implies (Is ?p 'plant') (RightOf ?p ?r))) (exists ?k (and (Is ?k 'keyboard') (HasState ?k 'broken') (On ?k ?r) (exists ?c (and (Is ?c 'cat') (Holding ?w ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?r (exists ?w (forall ?p (exists ?k (exists ?c (and (Is ?r 'refrigerator') (HasState ?r 'open') (NextTo ?w ?r) (or (not (Is ?p 'plant')) (RightOf ?p ?r)) (Is ?w 'woman') (Holding ?w ?c) (On ?k ?r) (Is ?c 'cat') (HasState ?k 'broken') (Is ?k 'keyboard'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keyboard",
+        "cat",
+        "plant",
+        "refrigerator",
+        "woman"
+    ]
+}

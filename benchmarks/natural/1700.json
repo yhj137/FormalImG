@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman wearing a jacket and glasses, holding a teddy bear. Next to the woman is a blue cup containing every fork in the scene. A sandwich is placed next to the cup. To the left of the woman is a lion, and a cat is situated next to the lion.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?j (exists ?gl (and (Is ?w 'woman') (Is ?c 'cup') (HasColor ?c 'blue') (NextTo ?c ?w) (Is ?j 'jacket') (On ?j ?w) (Is ?gl 'glasses') (On ?gl ?w) (forall ?f (implies (Is ?f 'fork') (In ?f ?c))) (exists ?tb (exists ?l (exists ?cat (exists ?s (and (Is ?tb 'teddy bear') (Holding ?w ?tb) (Is ?l 'lion') (LeftOf ?l ?w) (Is ?cat 'cat') (NextTo ?cat ?l) (Is ?s 'sandwich') (NextTo ?s ?c))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?c (exists ?j (exists ?gl (forall ?f (exists ?tb (exists ?l (exists ?cat (exists ?s (and (Is ?w 'woman') (NextTo ?c ?w) (On ?j ?w) (HasColor ?c 'blue') (or (not (Is ?f 'fork')) (In ?f ?c)) (On ?gl ?w) (Is ?j 'jacket') (Is ?c 'cup') (NextTo ?s ?c) (Holding ?w ?tb) (Is ?gl 'glasses') (Is ?s 'sandwich') (LeftOf ?l ?w) (Is ?tb 'teddy bear') (Is ?l 'lion') (NextTo ?cat ?l) (Is ?cat 'cat'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fork",
+        "glasses",
+        "woman",
+        "teddy bear",
+        "jacket",
+        "cup",
+        "sandwich",
+        "lion",
+        "cat"
+    ]
+}

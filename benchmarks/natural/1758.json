@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a brown horse holding a leather hat with a screwdriver inside. A standing lion is next to the horse. To the right of the horse is an open book with a cat sitting on it. All birds in the scene are positioned above the horse. Next to the lion is a cake with an orange on top.",
+    "dsl": "(and (IsStyle 'photo') (exists ?h (exists ?ht (exists ?sd (exists ?l (exists ?bk (exists ?c (and (Is ?h 'horse') (HasColor ?h 'brown') (Is ?ht 'hat') (HasMaterial ?ht 'leather') (Holding ?h ?ht) (Is ?sd 'screwdriver') (In ?sd ?ht) (Is ?l 'lion') (HasState ?l 'standing') (NextTo ?l ?h) (Is ?bk 'book') (HasState ?bk 'open') (RightOf ?bk ?h) (Is ?c 'cat') (HasState ?c 'sitting') (On ?c ?bk) (forall ?b (implies (Is ?b 'bird') (Above ?b ?h))) (exists ?ck (exists ?o (and (Is ?ck 'cake') (NextTo ?ck ?l) (Is ?o 'orange') (On ?o ?ck))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?h (exists ?ht (exists ?sd (exists ?l (exists ?bk (exists ?c (forall ?b (exists ?ck (exists ?o (and (Is ?h 'horse') (HasColor ?h 'brown') (Holding ?h ?ht) (NextTo ?l ?h) (HasMaterial ?ht 'leather') (In ?sd ?ht) (RightOf ?bk ?h) (HasState ?l 'standing') (NextTo ?ck ?l) (Is ?ht 'hat') (Is ?sd 'screwdriver') (or (not (Is ?b 'bird')) (Above ?b ?h)) (HasState ?bk 'open') (On ?c ?bk) (Is ?l 'lion') (Is ?ck 'cake') (On ?o ?ck) (Is ?bk 'book') (HasState ?c 'sitting') (Is ?o 'orange') (Is ?c 'cat'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "horse",
+        "book",
+        "cake",
+        "orange",
+        "bird",
+        "lion",
+        "cat",
+        "screwdriver",
+        "hat"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every child stands next to a table while holding a phone. An open bookshelf containing shoes is located next to the table. On the table, a cylindrical bottle sits beside black glasses, and a spoon lies next to a fork.",
+    "dsl": "(forall ?c (implies (Is ?c 'child') (exists ?p (exists ?t (exists ?b (exists ?sh (exists ?bt (exists ?g (exists ?s (exists ?f (and (Is ?p 'phone') (Holding ?c ?p) (HasState ?c 'standing') (Is ?t 'table') (NextTo ?c ?t) (Is ?b 'bookshelf') (NextTo ?t ?b) (HasState ?b 'open') (Is ?sh 'shoes') (In ?sh ?b) (Is ?bt 'bottle') (HasShape ?bt 'cylindrical') (On ?bt ?t) (Is ?g 'glasses') (HasColor ?g 'black') (On ?g ?t) (NextTo ?bt ?g) (Is ?s 'spoon') (On ?s ?t) (Is ?f 'fork') (On ?f ?t) (NextTo ?s ?f))))))))))))",
+    "cnf": "(forall ?c (exists ?p (exists ?t (exists ?b (exists ?sh (exists ?bt (exists ?g (exists ?s (exists ?f (and (or (not (Is ?c 'child')) (Is ?p 'phone')) (or (not (Is ?c 'child')) (Holding ?c ?p)) (or (not (Is ?c 'child')) (HasState ?c 'standing')) (or (not (Is ?c 'child')) (Is ?t 'table')) (or (not (Is ?c 'child')) (NextTo ?c ?t)) (or (not (Is ?c 'child')) (Is ?b 'bookshelf')) (or (not (Is ?c 'child')) (NextTo ?t ?b)) (or (not (Is ?c 'child')) (HasState ?b 'open')) (or (not (Is ?c 'child')) (On ?bt ?t)) (or (not (Is ?c 'child')) (Is ?sh 'shoes')) (or (not (Is ?c 'child')) (In ?sh ?b)) (or (not (Is ?c 'child')) (HasShape ?bt 'cylindrical')) (or (not (Is ?c 'child')) (Is ?g 'glasses')) (or (not (Is ?c 'child')) (On ?g ?t)) (or (not (Is ?c 'child')) (NextTo ?bt ?g)) (or (not (Is ?c 'child')) (Is ?bt 'bottle')) (or (not (Is ?c 'child')) (HasColor ?g 'black')) (or (not (Is ?c 'child')) (On ?s ?t)) (or (not (Is ?c 'child')) (Is ?s 'spoon')) (or (not (Is ?c 'child')) (Is ?f 'fork')) (or (not (Is ?c 'child')) (On ?f ?t)) (or (not (Is ?c 'child')) (NextTo ?s ?f))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "spoon",
+        "table",
+        "fork",
+        "bottle",
+        "bookshelf",
+        "glasses",
+        "shoes",
+        "phone",
+        "child"
+    ]
+}

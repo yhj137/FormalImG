@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo-style scene showing a man sitting on a wooden bench, holding a phone. He is wearing a blue shirt, headphones, and glasses. All butterflies are located to the left of the man, and a flower is positioned to his right. A sofa sits next to the bench on the right, with a jacket placed on it.",
+    "dsl": "(and (IsStyle 'photo') (exists ?m (and (Is ?m 'man') (HasState ?m 'sitting') (exists ?bn (and (Is ?bn 'bench') (HasMaterial ?bn 'wooden') (On ?m ?bn) (exists ?sh (and (Is ?sh 'shirt') (HasColor ?sh 'blue') (On ?sh ?m) (exists ?hp (and (Is ?hp 'headphones') (On ?hp ?m) (exists ?gl (and (Is ?gl 'glasses') (On ?gl ?m) (and (forall ?bf (implies (Is ?bf 'butterfly') (LeftOf ?bf ?m))) (exists ?fl (and (Is ?fl 'flower') (RightOf ?fl ?m))) (exists ?sf (and (Is ?sf 'sofa') (NextTo ?sf ?bn) (RightOf ?sf ?bn) (exists ?j (and (Is ?j 'jacket') (On ?j ?sf))))) (exists ?p (and (Is ?p 'phone') (Holding ?m ?p)))))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?m (exists ?bn (exists ?sh (exists ?hp (exists ?gl (forall ?bf (exists ?fl (exists ?sf (exists ?j (exists ?p (and (Is ?m 'man') (HasState ?m 'sitting') (On ?m ?bn) (On ?sh ?m) (HasMaterial ?bn 'wooden') (NextTo ?sf ?bn) (On ?hp ?m) (HasColor ?sh 'blue') (Is ?bn 'bench') (RightOf ?sf ?bn) (Is ?sf 'sofa') (On ?gl ?m) (Is ?hp 'headphones') (Is ?sh 'shirt') (On ?j ?sf) (or (not (Is ?bf 'butterfly')) (LeftOf ?bf ?m)) (Is ?gl 'glasses') (Is ?j 'jacket') (RightOf ?fl ?m) (Holding ?m ?p) (Is ?fl 'flower') (Is ?p 'phone')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "jacket",
+        "glasses",
+        "sofa",
+        "headphones",
+        "man",
+        "butterfly",
+        "phone",
+        "shirt",
+        "flower"
+    ]
+}

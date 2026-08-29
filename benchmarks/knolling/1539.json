@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a main vertical column consisting of a monitor, a backpack, and a pair of jeans; the monitor is above the backpack, and the backpack is above the jeans, with all three aligned vertically. A handbag is aligned horizontally with the monitor, and the monitor is larger than the handbag. A tie is aligned horizontally with the backpack, being visually smaller than the backpack. Furthermore, for every hammer in the scene, there is a screwdriver and a fork associated with it: the hammer is aligned horizontally with the jeans, the screwdriver is positioned below the hammer, and the fork is positioned below the screwdriver. These three tools are aligned vertically, with the fork being smaller than the hammer and located on the bottom side of the image.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?jeans (exists ?handbag (exists ?tie (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?jeans 'jeans') (Is ?handbag 'handbag') (Is ?tie 'tie') (Above ?monitor ?backpack) (Above ?backpack ?jeans) (AlignedVertically ?monitor ?backpack) (AlignedVertically ?backpack ?jeans) (AlignedHorizontally ?monitor ?handbag) (LargerThan ?monitor ?handbag) (AlignedHorizontally ?backpack ?tie) (SmallerThan ?tie ?backpack) (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?screwdriver (exists ?fork (and (Is ?screwdriver 'screwdriver') (Is ?fork 'fork') (AlignedHorizontally ?hammer ?jeans) (Above ?hammer ?screwdriver) (Above ?screwdriver ?fork) (AlignedVertically ?hammer ?screwdriver) (AlignedVertically ?screwdriver ?fork) (SmallerThan ?fork ?hammer) (OnBottomSide ?fork))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?jeans (exists ?handbag (exists ?tie (forall ?hammer (exists ?screwdriver (exists ?fork (and (Is ?monitor 'monitor') (Above ?monitor ?backpack) (AlignedVertically ?monitor ?backpack) (Is ?backpack 'backpack') (Above ?backpack ?jeans) (AlignedHorizontally ?monitor ?handbag) (AlignedVertically ?backpack ?jeans) (Is ?jeans 'jeans') (LargerThan ?monitor ?handbag) (Is ?handbag 'handbag') (AlignedHorizontally ?backpack ?tie) (or (not (Is ?hammer 'hammer')) (AlignedHorizontally ?hammer ?jeans)) (SmallerThan ?tie ?backpack) (Is ?tie 'tie') (or (not (Is ?hammer 'hammer')) (Is ?fork 'fork')) (or (not (Is ?hammer 'hammer')) (Above ?hammer ?screwdriver)) (or (not (Is ?hammer 'hammer')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?hammer 'hammer')) (Above ?screwdriver ?fork)) (or (not (Is ?hammer 'hammer')) (AlignedVertically ?hammer ?screwdriver)) (or (not (Is ?hammer 'hammer')) (AlignedVertically ?screwdriver ?fork)) (or (not (Is ?hammer 'hammer')) (SmallerThan ?fork ?hammer)) (or (not (Is ?hammer 'hammer')) (OnBottomSide ?fork)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "screwdriver",
+        "hammer",
+        "handbag",
+        "backpack",
+        "jeans",
+        "fork",
+        "monitor"
+    ]
+}

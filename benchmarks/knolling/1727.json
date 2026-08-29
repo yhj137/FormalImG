@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. A keyboard is positioned on the bottom side. To its right is a calculator, and the keyboard is larger than the calculator. Above the keyboard is a remote, and above the remote are keys. A wallet is located above the calculator. For every knife, it is smaller than the keyboard and has a donut to its right. A sandwich is above the donut, and pliers are to the right of the sandwich.",
+    "dsl": "(exists ?keyboard (exists ?calculator (exists ?remote (exists ?keys (exists ?wallet (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (Is ?calculator 'calculator') (RightOf ?calculator ?keyboard) (LargerThan ?keyboard ?calculator) (Is ?remote 'remote') (Above ?remote ?keyboard) (Is ?keys 'keys') (Above ?keys ?remote) (Is ?wallet 'wallet') (Above ?wallet ?calculator) (forall ?knife (implies (Is ?knife 'knife') (exists ?donut (exists ?sandwich (exists ?pliers (and (Is ?donut 'donut') (Is ?sandwich 'sandwich') (Is ?pliers 'pliers') (SmallerThan ?knife ?keyboard) (RightOf ?donut ?knife) (Above ?sandwich ?donut) (RightOf ?pliers ?sandwich)))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?calculator (exists ?remote (exists ?keys (exists ?wallet (forall ?knife (exists ?donut (exists ?sandwich (exists ?pliers (and (Is ?keyboard 'keyboard') (OnBottomSide ?keyboard) (RightOf ?calculator ?keyboard) (LargerThan ?keyboard ?calculator) (Is ?calculator 'calculator') (Above ?remote ?keyboard) (Above ?wallet ?calculator) (or (not (Is ?knife 'knife')) (SmallerThan ?knife ?keyboard)) (Is ?remote 'remote') (Above ?keys ?remote) (Is ?wallet 'wallet') (or (not (Is ?knife 'knife')) (Is ?pliers 'pliers')) (or (not (Is ?knife 'knife')) (RightOf ?donut ?knife)) (Is ?keys 'keys') (or (not (Is ?knife 'knife')) (Is ?sandwich 'sandwich')) (or (not (Is ?knife 'knife')) (RightOf ?pliers ?sandwich)) (or (not (Is ?knife 'knife')) (Above ?sandwich ?donut)) (or (not (Is ?knife 'knife')) (Is ?donut 'donut'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "calculator",
+        "knife",
+        "pliers",
+        "wallet",
+        "keyboard",
+        "sandwich",
+        "donut",
+        "remote"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene where every bench is positioned to the left of a black bookshelf containing a cat held by a person.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?b (implies (Is ?b 'bench') (exists ?bs (exists ?c (exists ?p (and (Is ?bs 'bookshelf') (HasColor ?bs 'black') (LeftOf ?b ?bs) (Is ?c 'cat') (In ?c ?bs) (Is ?p 'person') (Holding ?p ?c))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?b (exists ?bs (exists ?c (exists ?p (and (or (not (Is ?b 'bench')) (Is ?bs 'bookshelf')) (or (not (Is ?b 'bench')) (HasColor ?bs 'black')) (or (not (Is ?b 'bench')) (LeftOf ?b ?bs)) (or (not (Is ?b 'bench')) (In ?c ?bs)) (or (not (Is ?b 'bench')) (Is ?c 'cat')) (or (not (Is ?b 'bench')) (Is ?p 'person')) (or (not (Is ?b 'bench')) (Holding ?p ?c))))))))",
+    "k": 4,
+    "object_classes": [
+        "cat",
+        "bookshelf",
+        "bench",
+        "person"
+    ]
+}

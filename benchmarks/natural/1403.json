@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene featuring a red boat positioned to the right of a house. Inside the house sits a desk holding a turned-on monitor. To the left of the monitor is a cup containing a withered flower with a blue butterfly perched on it, while a cake sits to the right of the monitor.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (exists ?d (exists ?m (exists ?ck (exists ?c (exists ?f (exists ?bf (and (Is ?h 'house') (Is ?b 'boat') (Is ?d 'desk') (Is ?m 'monitor') (Is ?ck 'cake') (Is ?c 'cup') (Is ?f 'flower') (Is ?bf 'butterfly') (RightOf ?b ?h) (HasColor ?b 'red') (In ?d ?h) (On ?m ?d) (HasState ?m 'on') (On ?ck ?d) (RightOf ?ck ?m) (On ?c ?d) (LeftOf ?c ?m) (In ?f ?c) (HasState ?f 'withered') (On ?bf ?f) (HasColor ?bf 'blue')))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?h (exists ?b (exists ?d (exists ?m (exists ?ck (exists ?c (exists ?f (exists ?bf (and (Is ?h 'house') (RightOf ?b ?h) (In ?d ?h) (Is ?b 'boat') (HasColor ?b 'red') (Is ?d 'desk') (On ?m ?d) (On ?ck ?d) (Is ?m 'monitor') (HasState ?m 'on') (On ?c ?d) (Is ?ck 'cake') (RightOf ?ck ?m) (Is ?c 'cup') (LeftOf ?c ?m) (In ?f ?c) (Is ?f 'flower') (HasState ?f 'withered') (On ?bf ?f) (Is ?bf 'butterfly') (HasColor ?bf 'blue')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "house",
+        "cake",
+        "monitor",
+        "flower",
+        "desk",
+        "cup",
+        "butterfly",
+        "boat"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in pixel art style. A table stands in the center, with a refrigerator to its left and a tree to its right. On the table sit an open laptop and a teddy bear holding a red book. A rectangular backpack containing a sleeping cat is placed next to the table. Every butterfly in the scene is resting on the tree, and a round mirror is attached to the refrigerator.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?t (exists ?r (exists ?tr (exists ?l (exists ?bp (and (Is ?t 'table') (Is ?r 'refrigerator') (LeftOf ?r ?t) (Is ?tr 'tree') (RightOf ?tr ?t) (Is ?l 'laptop') (On ?l ?t) (HasState ?l 'open') (Is ?bp 'backpack') (NextTo ?bp ?t) (HasShape ?bp 'rectangular') (forall ?bf (implies (Is ?bf 'butterfly') (On ?bf ?tr))) (exists ?tb (exists ?bk (exists ?c (exists ?m (and (Is ?tb 'teddy bear') (On ?tb ?t) (Is ?bk 'book') (HasColor ?bk 'red') (Holding ?tb ?bk) (Is ?c 'cat') (In ?c ?bp) (HasState ?c 'sleeping') (Is ?m 'mirror') (On ?m ?r) (HasShape ?m 'round')))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?t (exists ?r (exists ?tr (exists ?l (exists ?bp (forall ?bf (exists ?tb (exists ?bk (exists ?c (exists ?m (and (Is ?t 'table') (LeftOf ?r ?t) (RightOf ?tr ?t) (Is ?r 'refrigerator') (On ?m ?r) (On ?l ?t) (Is ?tr 'tree') (or (not (Is ?bf 'butterfly')) (On ?bf ?tr)) (Is ?m 'mirror') (HasShape ?m 'round') (NextTo ?bp ?t) (Is ?l 'laptop') (HasState ?l 'open') (On ?tb ?t) (Is ?bp 'backpack') (HasShape ?bp 'rectangular') (Is ?tb 'teddy bear') (Holding ?tb ?bk) (In ?c ?bp) (HasColor ?bk 'red') (Is ?c 'cat') (HasState ?c 'sleeping') (Is ?bk 'book')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "cat",
+        "laptop",
+        "backpack",
+        "book",
+        "butterfly",
+        "teddy bear",
+        "refrigerator",
+        "tree",
+        "mirror",
+        "table"
+    ]
+}

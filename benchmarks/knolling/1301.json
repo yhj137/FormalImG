@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A blue backpack is positioned on the left side of the scene. Directly above the backpack is a red shoe, and a stapler is aligned horizontally with the backpack. For every pizza in the image, it is aligned horizontally with the stapler, and there is a white plate which is larger than the pizza. Additionally, a fork is placed above the plate, and a mouse is aligned horizontally with the fork.",
+    "dsl": "(exists ?backpack (exists ?shoe (exists ?stapler (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Is ?shoe 'shoe') (Has ?shoe 'red') (Above ?shoe ?backpack) (Is ?stapler 'stapler') (AlignedHorizontally ?backpack ?stapler) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?plate (exists ?fork (exists ?mouse (and (Is ?plate 'plate') (Has ?plate 'white') (Is ?fork 'fork') (Is ?mouse 'mouse') (AlignedHorizontally ?pizza ?stapler) (LargerThan ?plate ?pizza) (Above ?fork ?plate) (AlignedHorizontally ?fork ?mouse)))))))))))",
+    "cnf": "(exists ?backpack (exists ?shoe (exists ?stapler (forall ?pizza (exists ?plate (exists ?fork (exists ?mouse (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (OnLeftSide ?backpack) (Above ?shoe ?backpack) (AlignedHorizontally ?backpack ?stapler) (Has ?shoe 'red') (Is ?stapler 'stapler') (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?pizza ?stapler)) (Is ?shoe 'shoe') (or (not (Is ?pizza 'pizza')) (Is ?mouse 'mouse')) (or (not (Is ?pizza 'pizza')) (LargerThan ?plate ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?fork 'fork')) (or (not (Is ?pizza 'pizza')) (AlignedHorizontally ?fork ?mouse)) (or (not (Is ?pizza 'pizza')) (Above ?fork ?plate)) (or (not (Is ?pizza 'pizza')) (Has ?plate 'white')) (or (not (Is ?pizza 'pizza')) (Is ?plate 'plate'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "plate",
+        "stapler",
+        "pizza",
+        "fork",
+        "backpack",
+        "mouse",
+        "shoe"
+    ]
+}

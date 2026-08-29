@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a rectangular sofa next to a brown bookshelf. All oranges are peeled and inside the bookshelf. A person sits on the sofa holding a spoon and a knife, with a gray laptop next to them. A rug is next to the sofa, and a lion is next to the rug.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?s (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (Is ?s 'sofa') (HasShape ?s 'rectangular') (NextTo ?s ?b) (forall ?o (implies (Is ?o 'orange') (and (HasState ?o 'peeled') (In ?o ?b)))) (exists ?p (exists ?r (exists ?l (exists ?sp (exists ?k (exists ?lap (and (Is ?p 'person') (HasState ?p 'sitting') (On ?p ?s) (Is ?r 'rug') (NextTo ?r ?s) (Is ?l 'lion') (NextTo ?l ?r) (Is ?sp 'spoon') (Holding ?p ?sp) (Is ?k 'knife') (Holding ?p ?k) (Is ?lap 'laptop') (HasColor ?lap 'gray') (NextTo ?lap ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?s (forall ?o (exists ?p (exists ?r (exists ?l (exists ?sp (exists ?k (exists ?lap (and (Is ?b 'bookshelf') (HasColor ?b 'brown') (NextTo ?s ?b) (or (not (Is ?o 'orange')) (In ?o ?b)) (HasShape ?s 'rectangular') (On ?p ?s) (or (not (Is ?o 'orange')) (HasState ?o 'peeled')) (Is ?s 'sofa') (NextTo ?r ?s) (HasState ?p 'sitting') (Holding ?p ?sp) (Is ?r 'rug') (NextTo ?l ?r) (Is ?p 'person') (Holding ?p ?k) (Is ?sp 'spoon') (Is ?l 'lion') (NextTo ?lap ?p) (Is ?k 'knife') (HasColor ?lap 'gray') (Is ?lap 'laptop'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "person",
+        "sofa",
+        "knife",
+        "laptop",
+        "rug",
+        "lion",
+        "bookshelf",
+        "orange",
+        "spoon"
+    ]
+}

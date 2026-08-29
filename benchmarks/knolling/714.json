@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a laptop positioned on the left side of the scene. For every handbag present, there is a mouse located to its left and a fork located to the left of the mouse. Additionally, the handbag, mouse, and fork are all aligned horizontally with the laptop.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (forall ?handbag (implies (Is ?handbag 'handbag') (exists ?mouse (exists ?fork (and (Is ?mouse 'mouse') (Is ?fork 'fork') (LeftOf ?mouse ?handbag) (LeftOf ?fork ?mouse) (AlignedHorizontally ?handbag ?laptop) (AlignedHorizontally ?mouse ?handbag) (AlignedHorizontally ?fork ?mouse))))))))",
+    "cnf": "(exists ?laptop (forall ?handbag (exists ?mouse (exists ?fork (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?handbag ?laptop)) (or (not (Is ?handbag 'handbag')) (LeftOf ?fork ?mouse)) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?mouse ?handbag)) (or (not (Is ?handbag 'handbag')) (LeftOf ?mouse ?handbag)) (or (not (Is ?handbag 'handbag')) (Is ?fork 'fork')) (or (not (Is ?handbag 'handbag')) (AlignedHorizontally ?fork ?mouse)) (or (not (Is ?handbag 'handbag')) (Is ?mouse 'mouse')))))))",
+    "k": 4,
+    "object_classes": [
+        "laptop",
+        "handbag",
+        "fork",
+        "mouse"
+    ]
+}

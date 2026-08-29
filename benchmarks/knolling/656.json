@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of jeans in the scene, the jeans are positioned on the top side and the right side of the image. To the left of the jeans, there is a donut; to the left of the donut, there is a lighter; and to the left of the lighter, there are headphones. All four items\u2014the jeans, donut, lighter, and headphones\u2014are aligned horizontally. Additionally, the jeans are visually larger than the headphones.",
+    "dsl": "(and (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?donut (exists ?lighter (exists ?headphones (and (Is ?donut 'donut') (Is ?lighter 'lighter') (Is ?headphones 'headphones') (OnTopSide ?jeans) (OnRightSide ?jeans) (LeftOf ?donut ?jeans) (LeftOf ?lighter ?donut) (LeftOf ?headphones ?lighter) (AlignedHorizontally ?jeans ?donut) (AlignedHorizontally ?donut ?lighter) (AlignedHorizontally ?lighter ?headphones) (LargerThan ?jeans ?headphones))))))))",
+    "cnf": "(forall ?jeans (exists ?donut (exists ?lighter (exists ?headphones (and (or (not (Is ?jeans 'jeans')) (Is ?donut 'donut')) (or (not (Is ?jeans 'jeans')) (Is ?lighter 'lighter')) (or (not (Is ?jeans 'jeans')) (LeftOf ?donut ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?headphones 'headphones')) (or (not (Is ?jeans 'jeans')) (LeftOf ?lighter ?donut)) (or (not (Is ?jeans 'jeans')) (OnRightSide ?jeans)) (or (not (Is ?jeans 'jeans')) (OnTopSide ?jeans)) (or (not (Is ?jeans 'jeans')) (LeftOf ?headphones ?lighter)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?jeans ?donut)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?donut ?lighter)) (or (not (Is ?jeans 'jeans')) (AlignedHorizontally ?lighter ?headphones)) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?headphones)))))))",
+    "k": 4,
+    "object_classes": [
+        "headphones",
+        "lighter",
+        "jeans",
+        "donut"
+    ]
+}

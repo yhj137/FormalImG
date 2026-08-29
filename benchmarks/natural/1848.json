@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a wooden table with a rug beneath it. Every sandwich is placed on the table, which also supports a boat containing a screwdriver. To the right of the table is a sofa where a sitting elephant holds a pair of glasses, and a shirt lies on the sofa. A plant stands to the left of the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasMaterial ?t 'wooden') (forall ?s (implies (Is ?s 'sandwich') (On ?s ?t))) (exists ?r (and (Is ?r 'rug') (On ?t ?r) (exists ?so (and (Is ?so 'sofa') (RightOf ?so ?t) (exists ?e (and (Is ?e 'elephant') (On ?e ?so) (HasState ?e 'sitting') (exists ?g (and (Is ?g 'glasses') (Holding ?e ?g))) (exists ?sh (and (Is ?sh 'shirt') (On ?sh ?so))))))) (exists ?b (and (Is ?b 'boat') (On ?b ?t) (exists ?sd (and (Is ?sd 'screwdriver') (In ?sd ?b))))) (exists ?p (and (Is ?p 'plant') (LeftOf ?p ?t))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?s (exists ?r (exists ?so (exists ?e (exists ?g (exists ?sh (exists ?b (exists ?sd (exists ?p (and (Is ?t 'table') (HasMaterial ?t 'wooden') (or (not (Is ?s 'sandwich')) (On ?s ?t)) (On ?t ?r) (RightOf ?so ?t) (Is ?r 'rug') (On ?b ?t) (Is ?so 'sofa') (On ?e ?so) (LeftOf ?p ?t) (Is ?b 'boat') (In ?sd ?b) (On ?sh ?so) (Is ?e 'elephant') (HasState ?e 'sitting') (Is ?p 'plant') (Is ?sd 'screwdriver') (Is ?sh 'shirt') (Holding ?e ?g) (Is ?g 'glasses')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "shirt",
+        "sofa",
+        "glasses",
+        "rug",
+        "plant",
+        "table",
+        "sandwich",
+        "boat",
+        "screwdriver"
+    ]
+}

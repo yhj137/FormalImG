@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a monitor, a laptop, and a red apple. The monitor is positioned above the laptop, while the red apple is located to the right of the laptop. The layout enforces a specific arrangement for tools and dining items: for every wrench in the image, there is a pair of pliers to its right. Additionally, this wrench is positioned vertically below the red apple and above a white bowl. Finally, a spoon is located to the right of the white bowl and is positioned on the bottom side of the scene.",
+    "dsl": "(exists ?monitor (exists ?laptop (exists ?apple (and (Is ?monitor 'monitor') (Is ?laptop 'laptop') (Is ?apple 'apple') (Has ?apple 'red') (Above ?monitor ?laptop) (RightOf ?apple ?laptop) (forall ?wrench (implies (Is ?wrench 'wrench') (exists ?pliers (exists ?bowl (exists ?spoon (and (Is ?pliers 'pliers') (Is ?bowl 'bowl') (Is ?spoon 'spoon') (Has ?bowl 'white') (RightOf ?pliers ?wrench) (Above ?apple ?wrench) (Above ?wrench ?bowl) (RightOf ?spoon ?bowl) (OnBottomSide ?spoon)))))))))))",
+    "cnf": "(exists ?monitor (exists ?laptop (exists ?apple (forall ?wrench (exists ?pliers (exists ?bowl (exists ?spoon (and (Is ?monitor 'monitor') (Above ?monitor ?laptop) (Is ?laptop 'laptop') (RightOf ?apple ?laptop) (Has ?apple 'red') (or (not (Is ?wrench 'wrench')) (Above ?apple ?wrench)) (Is ?apple 'apple') (or (not (Is ?wrench 'wrench')) (RightOf ?pliers ?wrench)) (or (not (Is ?wrench 'wrench')) (Above ?wrench ?bowl)) (or (not (Is ?wrench 'wrench')) (Is ?pliers 'pliers')) (or (not (Is ?wrench 'wrench')) (Has ?bowl 'white')) (or (not (Is ?wrench 'wrench')) (RightOf ?spoon ?bowl)) (or (not (Is ?wrench 'wrench')) (Is ?bowl 'bowl')) (or (not (Is ?wrench 'wrench')) (Is ?spoon 'spoon')) (or (not (Is ?wrench 'wrench')) (OnBottomSide ?spoon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "pliers",
+        "apple",
+        "wrench",
+        "monitor",
+        "bowl",
+        "spoon"
+    ]
+}

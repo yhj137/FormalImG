@@ -1,0 +1,9 @@
+{
+    "prompt": "A pixel art style image where every apple is red.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?a (implies (Is ?a 'apple') (HasColor ?a 'red'))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?a (or (not (Is ?a 'apple')) (HasColor ?a 'red'))))",
+    "k": 1,
+    "object_classes": [
+        "apple"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. For every keyboard located on the left side of the image, there is a sequential arrangement of seven other items extending to its right. Specifically, the keyboard is positioned to the left of a drill, the drill is to the left of a plate, the plate is to the left of a stapler, the stapler is to the left of a remote, the remote is to the left of pliers, the pliers are to the left of a watch, and the watch is to the left of a spoon. The spoon is located on the right side of the image. Additionally, the keyboard is visually larger than the watch, and the spoon is smaller than the plate.",
+    "dsl": "(and (forall ?kb (implies (and (Is ?kb 'keyboard') (OnLeftSide ?kb)) (exists ?dr (exists ?pl (exists ?st (exists ?rem (exists ?pli (exists ?wa (exists ?sp (and (Is ?dr 'drill') (Is ?pl 'plate') (Is ?st 'stapler') (Is ?rem 'remote') (Is ?pli 'pliers') (Is ?wa 'watch') (Is ?sp 'spoon') (LeftOf ?kb ?dr) (LeftOf ?dr ?pl) (LeftOf ?pl ?st) (LeftOf ?st ?rem) (LeftOf ?rem ?pli) (LeftOf ?pli ?wa) (LeftOf ?wa ?sp) (OnRightSide ?sp) (LargerThan ?kb ?wa) (SmallerThan ?sp ?pl))))))))))))",
+    "cnf": "(forall ?kb (exists ?dr (exists ?pl (exists ?st (exists ?rem (exists ?pli (exists ?wa (exists ?sp (and (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?dr 'drill')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?pl 'plate')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?kb ?dr)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?st 'stapler')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?dr ?pl)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?sp 'spoon')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?rem 'remote')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?pl ?st)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?wa 'watch')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?wa ?sp)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (Is ?pli 'pliers')) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?st ?rem)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (SmallerThan ?sp ?pl)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?pli ?wa)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (OnRightSide ?sp)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LargerThan ?kb ?wa)) (or (not (Is ?kb 'keyboard')) (not (OnLeftSide ?kb)) (LeftOf ?rem ?pli)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "remote",
+        "stapler",
+        "pliers",
+        "keyboard",
+        "watch",
+        "drill",
+        "spoon"
+    ]
+}

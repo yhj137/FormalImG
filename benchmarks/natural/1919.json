@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicts an elephant holding a metal key. To the right of the elephant sits a backpack containing a book, a screwdriver, and a shirt. All buses in the scene are also positioned to the right of the elephant. A sliced pizza with an apple on top lies next to the elephant, while a fish floats above it.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?k (exists ?bp (exists ?bk (exists ?sd (and (Is ?e 'elephant') (Is ?k 'key') (HasMaterial ?k 'metal') (Holding ?e ?k) (Is ?bp 'backpack') (RightOf ?bp ?e) (Is ?bk 'book') (In ?bk ?bp) (Is ?sd 'screwdriver') (In ?sd ?bp) (forall ?bu (implies (Is ?bu 'bus') (RightOf ?bu ?e))) (exists ?sh (exists ?p (exists ?a (exists ?f (and (Is ?sh 'shirt') (In ?sh ?bp) (Is ?p 'pizza') (HasState ?p 'sliced') (NextTo ?p ?e) (Is ?a 'apple') (On ?a ?p) (Is ?f 'fish') (Above ?f ?e)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?e (exists ?k (exists ?bp (exists ?bk (exists ?sd (forall ?bu (exists ?sh (exists ?p (exists ?a (exists ?f (and (Is ?e 'elephant') (Holding ?e ?k) (RightOf ?bp ?e) (HasMaterial ?k 'metal') (or (not (Is ?bu 'bus')) (RightOf ?bu ?e)) (Is ?bp 'backpack') (In ?bk ?bp) (Is ?k 'key') (NextTo ?p ?e) (In ?sd ?bp) (Is ?bk 'book') (Above ?f ?e) (HasState ?p 'sliced') (On ?a ?p) (In ?sh ?bp) (Is ?sd 'screwdriver') (Is ?f 'fish') (Is ?p 'pizza') (Is ?a 'apple') (Is ?sh 'shirt')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "elephant",
+        "shirt",
+        "fish",
+        "book",
+        "backpack",
+        "pizza",
+        "apple",
+        "screwdriver",
+        "bus",
+        "key"
+    ]
+}

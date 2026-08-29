@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a flying purple car next to a house. Inside the house is a bed with a sitting cat holding a spoon. A fork is placed next to the spoon, and a ball is to the right of the cat.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (exists ?b (exists ?cat (exists ?s (exists ?f (exists ?ball (and (Is ?c 'car') (HasColor ?c 'purple') (HasState ?c 'flying') (Is ?h 'house') (NextTo ?c ?h) (Is ?b 'bed') (In ?b ?h) (Is ?cat 'cat') (HasState ?cat 'sitting') (On ?cat ?b) (Is ?s 'spoon') (Holding ?cat ?s) (Is ?f 'fork') (NextTo ?f ?s) (Is ?ball 'ball') (RightOf ?ball ?cat))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?h (exists ?b (exists ?cat (exists ?s (exists ?f (exists ?ball (and (Is ?c 'car') (HasColor ?c 'purple') (HasState ?c 'flying') (NextTo ?c ?h) (Is ?h 'house') (In ?b ?h) (Is ?b 'bed') (On ?cat ?b) (HasState ?cat 'sitting') (Holding ?cat ?s) (Is ?cat 'cat') (RightOf ?ball ?cat) (Is ?s 'spoon') (NextTo ?f ?s) (Is ?ball 'ball') (Is ?f 'fork'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "house",
+        "spoon",
+        "fork",
+        "bed",
+        "car",
+        "ball",
+        "cat"
+    ]
+}

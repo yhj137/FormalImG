@@ -1,0 +1,10 @@
+{
+    "prompt": "A photo style image where every bird is holding a round fruit.",
+    "dsl": "(and (IsStyle 'photo') (forall ?b (implies (Is ?b 'bird') (exists ?f (and (Is ?f 'fruit') (HasShape ?f 'round') (Holding ?b ?f))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?b (exists ?f (and (or (not (Is ?b 'bird')) (Is ?f 'fruit')) (or (not (Is ?b 'bird')) (HasShape ?f 'round')) (or (not (Is ?b 'bird')) (Holding ?b ?f))))))",
+    "k": 2,
+    "object_classes": [
+        "fruit",
+        "bird"
+    ]
+}

@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene featuring a pair of blue shoes with an orange inside, and a knife next to the shoes.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?s (exists ?o (exists ?k (and (Is ?s 'shoes') (HasColor ?s 'blue') (Is ?o 'orange') (In ?o ?s) (Is ?k 'knife') (NextTo ?k ?s))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?s (exists ?o (exists ?k (and (Is ?s 'shoes') (HasColor ?s 'blue') (In ?o ?s) (NextTo ?k ?s) (Is ?o 'orange') (Is ?k 'knife'))))))",
+    "k": 3,
+    "object_classes": [
+        "orange",
+        "shoes",
+        "knife"
+    ]
+}

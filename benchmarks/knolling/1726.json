@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a handbag, a monitor, a calculator, a keyboard, and a stapler. The handbag is positioned on the left side of the image. To the right of the handbag is the monitor, and to the right of the monitor is the calculator. The keyboard is located below the monitor and is aligned vertically with it. The stapler is placed to the right of the keyboard. Additionally, for every pair of scissors found below the handbag, there is a tie to its right, a watch above the tie, and a set of keys below the tie which are located on the bottom side.",
+    "dsl": "(exists ?hb (exists ?mon (exists ?calc (exists ?kb (exists ?stap (and (Is ?hb 'handbag') (OnLeftSide ?hb) (Is ?mon 'monitor') (RightOf ?mon ?hb) (Is ?calc 'calculator') (RightOf ?calc ?mon) (Is ?kb 'keyboard') (Below ?kb ?mon) (AlignedVertically ?mon ?kb) (Is ?stap 'stapler') (RightOf ?stap ?kb) (forall ?sci (implies (and (Is ?sci 'scissors') (Below ?sci ?hb)) (exists ?tie (exists ?watch (exists ?keys (and (Is ?tie 'tie') (RightOf ?tie ?sci) (Is ?watch 'watch') (Above ?watch ?tie) (Is ?keys 'keys') (Below ?keys ?tie) (OnBottomSide ?keys)))))))))))))",
+    "cnf": "(exists ?hb (exists ?mon (exists ?calc (exists ?kb (exists ?stap (forall ?sci (exists ?tie (exists ?watch (exists ?keys (and (Is ?hb 'handbag') (OnLeftSide ?hb) (RightOf ?mon ?hb) (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (Is ?tie 'tie')) (Is ?mon 'monitor') (RightOf ?calc ?mon) (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (RightOf ?tie ?sci)) (Below ?kb ?mon) (Is ?calc 'calculator') (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (Is ?watch 'watch')) (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (Above ?watch ?tie)) (AlignedVertically ?mon ?kb) (Is ?kb 'keyboard') (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (Is ?keys 'keys')) (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (Below ?keys ?tie)) (RightOf ?stap ?kb) (or (not (Is ?sci 'scissors')) (not (Below ?sci ?hb)) (OnBottomSide ?keys)) (Is ?stap 'stapler')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keys",
+        "tie",
+        "stapler",
+        "keyboard",
+        "watch",
+        "handbag",
+        "calculator",
+        "scissors",
+        "monitor"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a bookshelf next to a table. A rectangular monitor rests on the table, and a pair of glasses is inside the bookshelf. To the left of the table, an elephant holds a yellow banana. Every car is located to the left of the elephant. To the right of the table is a lion, with a screwdriver next to it.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?bs (exists ?t (exists ?m (exists ?g (exists ?e (and (Is ?bs 'bookshelf') (Is ?t 'table') (Is ?m 'monitor') (Is ?g 'glasses') (Is ?e 'elephant') (NextTo ?t ?bs) (On ?m ?t) (HasShape ?m 'rectangular') (In ?g ?bs) (LeftOf ?e ?t) (forall ?c (implies (Is ?c 'car') (LeftOf ?c ?e))) (exists ?b (exists ?l (exists ?s (and (Is ?b 'banana') (Is ?l 'lion') (Is ?s 'screwdriver') (HasColor ?b 'yellow') (Holding ?e ?b) (RightOf ?l ?t) (NextTo ?s ?l))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?bs (exists ?t (exists ?m (exists ?g (exists ?e (forall ?c (exists ?b (exists ?l (exists ?s (and (Is ?bs 'bookshelf') (NextTo ?t ?bs) (In ?g ?bs) (Is ?t 'table') (On ?m ?t) (Is ?g 'glasses') (LeftOf ?e ?t) (Is ?m 'monitor') (HasShape ?m 'rectangular') (RightOf ?l ?t) (Is ?e 'elephant') (or (not (Is ?c 'car')) (LeftOf ?c ?e)) (Is ?l 'lion') (NextTo ?s ?l) (Holding ?e ?b) (Is ?s 'screwdriver') (HasColor ?b 'yellow') (Is ?b 'banana'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "glasses",
+        "monitor",
+        "screwdriver",
+        "banana",
+        "table",
+        "lion",
+        "bookshelf",
+        "elephant",
+        "car"
+    ]
+}

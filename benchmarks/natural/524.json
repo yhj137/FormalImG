@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene featuring a bed with every teddy bear inside it. To the right of the bed is a cylindrical banana.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (and (Is ?b 'bed') (forall ?t (implies (Is ?t 'teddy bear') (In ?t ?b))) (exists ?a (and (Is ?a 'banana') (HasShape ?a 'cylindrical') (RightOf ?a ?b))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (forall ?t (exists ?a (and (Is ?b 'bed') (or (not (Is ?t 'teddy bear')) (In ?t ?b)) (RightOf ?a ?b) (HasShape ?a 'cylindrical') (Is ?a 'banana'))))))",
+    "k": 3,
+    "object_classes": [
+        "teddy bear",
+        "bed",
+        "banana"
+    ]
+}

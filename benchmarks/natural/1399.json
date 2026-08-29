@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene features a bookshelf containing a laptop, a blue cup, and an apple. All fruit in the scene is located inside this bookshelf. To the left of the bookshelf, a dog is holding a sandwich.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (exists ?d (exists ?s (exists ?l (exists ?c (exists ?a (and (Is ?b 'bookshelf') (Is ?d 'dog') (Is ?s 'sandwich') (Is ?l 'laptop') (Is ?c 'cup') (Is ?a 'apple') (HasColor ?c 'blue') (LeftOf ?d ?b) (Holding ?d ?s) (In ?l ?b) (In ?c ?b) (In ?a ?b) (forall ?f (implies (Is ?f 'fruit') (In ?f ?b)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?d (exists ?s (exists ?l (exists ?c (exists ?a (forall ?f (and (Is ?b 'bookshelf') (LeftOf ?d ?b) (In ?l ?b) (Is ?d 'dog') (Holding ?d ?s) (In ?c ?b) (Is ?l 'laptop') (Is ?s 'sandwich') (In ?a ?b) (HasColor ?c 'blue') (or (not (Is ?f 'fruit')) (In ?f ?b)) (Is ?a 'apple') (Is ?c 'cup'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "fruit",
+        "laptop",
+        "bookshelf",
+        "cup",
+        "sandwich",
+        "apple",
+        "dog"
+    ]
+}

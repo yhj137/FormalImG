@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a round apple on a woman.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?a (and (Is ?w 'woman') (Is ?a 'apple') (HasShape ?a 'round') (On ?a ?w)))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?a (and (Is ?w 'woman') (On ?a ?w) (HasShape ?a 'round') (Is ?a 'apple')))))",
+    "k": 2,
+    "object_classes": [
+        "apple",
+        "woman"
+    ]
+}

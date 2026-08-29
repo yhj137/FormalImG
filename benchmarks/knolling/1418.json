@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image with a vertical arrangement of eight objects. A gray spoon is at the top, positioned above a pink watch; the spoon is smaller than the watch. The watch is above a white calculator and is smaller than the calculator. The calculator is placed above a black remote. The remote is positioned above a black pan, and the pan is larger than the remote. The pan is above a red hat. The hat is above a gray laptop. The laptop is positioned above a blue backpack and is smaller than the backpack.",
+    "dsl": "(exists ?backpack (exists ?laptop (exists ?hat (exists ?pan (exists ?remote (exists ?calculator (exists ?watch (exists ?spoon (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?hat 'hat') (Has ?hat 'red') (Is ?pan 'pan') (Has ?pan 'black') (Is ?remote 'remote') (Has ?remote 'black') (Is ?calculator 'calculator') (Has ?calculator 'white') (Is ?watch 'watch') (Has ?watch 'pink') (Is ?spoon 'spoon') (Has ?spoon 'gray') (Above ?spoon ?watch) (Above ?watch ?calculator) (Above ?calculator ?remote) (Above ?remote ?pan) (Above ?pan ?hat) (Above ?hat ?laptop) (Above ?laptop ?backpack) (SmallerThan ?spoon ?watch) (SmallerThan ?watch ?calculator) (LargerThan ?pan ?remote) (SmallerThan ?laptop ?backpack))))))))))",
+    "cnf": "(exists ?backpack (exists ?laptop (exists ?hat (exists ?pan (exists ?remote (exists ?calculator (exists ?watch (exists ?spoon (and (Is ?backpack 'backpack') (Has ?backpack 'blue') (Above ?laptop ?backpack) (SmallerThan ?laptop ?backpack) (Above ?hat ?laptop) (Has ?laptop 'gray') (Above ?pan ?hat) (Is ?laptop 'laptop') (Has ?hat 'red') (Above ?remote ?pan) (LargerThan ?pan ?remote) (Is ?hat 'hat') (Has ?pan 'black') (Above ?calculator ?remote) (Is ?pan 'pan') (Has ?remote 'black') (Above ?watch ?calculator) (SmallerThan ?watch ?calculator) (Is ?remote 'remote') (Has ?calculator 'white') (Above ?spoon ?watch) (SmallerThan ?spoon ?watch) (Is ?calculator 'calculator') (Has ?watch 'pink') (Has ?spoon 'gray') (Is ?watch 'watch') (Is ?spoon 'spoon'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "laptop",
+        "remote",
+        "watch",
+        "pan",
+        "hat",
+        "backpack",
+        "calculator",
+        "spoon"
+    ]
+}

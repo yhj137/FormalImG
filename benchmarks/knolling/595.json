@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a sock positioned on the top side of the layout. There is also a donut that is vertically aligned with the sock. Furthermore, for every pizza in the scene, it is horizontally aligned with the donut.",
+    "dsl": "(exists ?s (exists ?d (and (Is ?s 'sock') (OnTopSide ?s) (Is ?d 'donut') (AlignedVertically ?s ?d) (forall ?p (implies (Is ?p 'pizza') (AlignedHorizontally ?p ?d))))))",
+    "cnf": "(exists ?s (exists ?d (forall ?p (and (Is ?s 'sock') (OnTopSide ?s) (AlignedVertically ?s ?d) (Is ?d 'donut') (or (not (Is ?p 'pizza')) (AlignedHorizontally ?p ?d))))))",
+    "k": 3,
+    "object_classes": [
+        "pizza",
+        "donut",
+        "sock"
+    ]
+}

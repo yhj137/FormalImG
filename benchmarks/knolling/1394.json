@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A brown suitcase is positioned on the top side of the image. To the left of the suitcase is a handbag, and to the left of the handbag is a bowl; these three items are aligned horizontally. The handbag is visually smaller than the suitcase. Arranged beneath this top row are three other items: gray scissors are located below the bowl, a glove is below the handbag, and a white sock is below the suitcase. Specifically, the bowl is above the scissors, the handbag is above the glove, and the suitcase is above the sock. Finally, for every spoon present in the scene, it is placed to the left of the bowl.",
+    "dsl": "(exists ?suitcase (exists ?handbag (exists ?bowl (exists ?scissors (exists ?glove (exists ?sock (and (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (Is ?bowl 'bowl') (Is ?scissors 'scissors') (Is ?glove 'glove') (Is ?sock 'sock') (OnTopSide ?suitcase) (Has ?suitcase 'brown') (Has ?scissors 'gray') (Has ?sock 'white') (LeftOf ?bowl ?handbag) (LeftOf ?handbag ?suitcase) (AlignedHorizontally ?bowl ?handbag) (AlignedHorizontally ?handbag ?suitcase) (SmallerThan ?handbag ?suitcase) (Above ?bowl ?scissors) (Above ?handbag ?glove) (Above ?suitcase ?sock) (forall ?spoon (implies (Is ?spoon 'spoon') (LeftOf ?spoon ?bowl))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (exists ?bowl (exists ?scissors (exists ?glove (exists ?sock (forall ?spoon (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (Has ?suitcase 'brown') (LeftOf ?handbag ?suitcase) (AlignedHorizontally ?handbag ?suitcase) (LeftOf ?bowl ?handbag) (AlignedHorizontally ?bowl ?handbag) (SmallerThan ?handbag ?suitcase) (Is ?handbag 'handbag') (Is ?bowl 'bowl') (Above ?bowl ?scissors) (Above ?suitcase ?sock) (Above ?handbag ?glove) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?bowl)) (Has ?scissors 'gray') (Has ?sock 'white') (Is ?glove 'glove') (Is ?scissors 'scissors') (Is ?sock 'sock')))))))))",
+    "k": 7,
+    "object_classes": [
+        "sock",
+        "handbag",
+        "spoon",
+        "bowl",
+        "suitcase",
+        "glove",
+        "scissors"
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the left side of the scene, there is a black hat. For every watch in the image, there is a blue tie placed below the hat, and the watch is aligned horizontally with the hat. Additionally, for each watch, there is a red pen aligned horizontally with it, and a lighter positioned below the watch. The lighter is smaller than a plate located below it. A bowl is positioned above the plate, the plate is larger than the bowl, and a pair of scissors is located on the bottom side below the plate.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (OnLeftSide ?hat) (Has ?hat 'black') (forall ?watch (implies (Is ?watch 'watch') (exists ?pen (exists ?lighter (exists ?plate (exists ?bowl (exists ?scissors (exists ?tie (and (Is ?pen 'pen') (Has ?pen 'red') (Is ?lighter 'lighter') (Is ?plate 'plate') (Is ?bowl 'bowl') (Is ?scissors 'scissors') (Is ?tie 'tie') (Has ?tie 'blue') (Below ?tie ?hat) (AlignedHorizontally ?hat ?watch) (AlignedHorizontally ?watch ?pen) (Above ?watch ?lighter) (SmallerThan ?lighter ?plate) (Below ?plate ?lighter) (Above ?bowl ?plate) (LargerThan ?plate ?bowl) (OnBottomSide ?scissors) (Below ?scissors ?plate))))))))))))",
+    "cnf": "(exists ?hat (forall ?watch (exists ?pen (exists ?lighter (exists ?plate (exists ?bowl (exists ?scissors (exists ?tie (and (Is ?hat 'hat') (OnLeftSide ?hat) (Has ?hat 'black') (or (not (Is ?watch 'watch')) (Below ?tie ?hat)) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?hat ?watch)) (or (not (Is ?watch 'watch')) (Has ?tie 'blue')) (or (not (Is ?watch 'watch')) (AlignedHorizontally ?watch ?pen)) (or (not (Is ?watch 'watch')) (Is ?tie 'tie')) (or (not (Is ?watch 'watch')) (Has ?pen 'red')) (or (not (Is ?watch 'watch')) (Above ?watch ?lighter)) (or (not (Is ?watch 'watch')) (Is ?scissors 'scissors')) (or (not (Is ?watch 'watch')) (Is ?pen 'pen')) (or (not (Is ?watch 'watch')) (Is ?lighter 'lighter')) (or (not (Is ?watch 'watch')) (SmallerThan ?lighter ?plate)) (or (not (Is ?watch 'watch')) (Is ?bowl 'bowl')) (or (not (Is ?watch 'watch')) (OnBottomSide ?scissors)) (or (not (Is ?watch 'watch')) (Is ?plate 'plate')) (or (not (Is ?watch 'watch')) (Below ?plate ?lighter)) (or (not (Is ?watch 'watch')) (Above ?bowl ?plate)) (or (not (Is ?watch 'watch')) (LargerThan ?plate ?bowl)) (or (not (Is ?watch 'watch')) (Below ?scissors ?plate)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "tie",
+        "plate",
+        "pen",
+        "watch",
+        "hat",
+        "lighter",
+        "scissors",
+        "bowl"
+    ]
+}

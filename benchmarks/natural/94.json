@@ -1,0 +1,9 @@
+{
+    "prompt": "A cartoon-style image of a dirty rug.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'rug') (HasState ?r 'dirty'))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?r (and (Is ?r 'rug') (HasState ?r 'dirty'))))",
+    "k": 1,
+    "object_classes": [
+        "rug"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene features a man wearing black glasses and holding an open laptop. A child is positioned to the left of the man, while every pizza in the scene is located to his right. Next to the child sits a basket containing a red apple.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?m (and (Is ?m 'man') (forall ?p (implies (Is ?p 'pizza') (RightOf ?p ?m))) (exists ?c (exists ?l (exists ?g (exists ?b (exists ?a (and (Is ?c 'child') (LeftOf ?c ?m) (Is ?l 'laptop') (HasState ?l 'open') (Holding ?m ?l) (Is ?g 'glasses') (HasColor ?g 'black') (On ?g ?m) (Is ?b 'basket') (NextTo ?b ?c) (Is ?a 'apple') (HasColor ?a 'red') (In ?a ?b))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?m (forall ?p (exists ?c (exists ?l (exists ?g (exists ?b (exists ?a (and (Is ?m 'man') (or (not (Is ?p 'pizza')) (RightOf ?p ?m)) (LeftOf ?c ?m) (Holding ?m ?l) (Is ?c 'child') (NextTo ?b ?c) (On ?g ?m) (HasState ?l 'open') (Is ?b 'basket') (In ?a ?b) (HasColor ?g 'black') (Is ?l 'laptop') (HasColor ?a 'red') (Is ?g 'glasses') (Is ?a 'apple'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "glasses",
+        "man",
+        "laptop",
+        "pizza",
+        "basket",
+        "apple",
+        "child"
+    ]
+}

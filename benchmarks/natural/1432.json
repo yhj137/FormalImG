@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every lion is to the left of an elephant holding a ball. Next to the elephant is a boat containing a wet fish. A broken keyboard is placed next to the boat, supporting a rusty pan with a bitten sandwich inside.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?l (implies (Is ?l 'lion') (exists ?e (exists ?ba (exists ?bo (exists ?f (exists ?s (exists ?p (exists ?k (and (Is ?e 'elephant') (Is ?ba 'ball') (Is ?bo 'boat') (Is ?f 'fish') (Is ?s 'sandwich') (Is ?p 'pan') (Is ?k 'keyboard') (LeftOf ?l ?e) (Holding ?e ?ba) (NextTo ?e ?bo) (In ?f ?bo) (HasState ?f 'wet') (In ?s ?p) (HasState ?s 'bitten') (HasState ?p 'rusty') (On ?p ?k) (HasState ?k 'broken') (NextTo ?k ?bo))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?l (exists ?e (exists ?ba (exists ?bo (exists ?f (exists ?s (exists ?p (exists ?k (and (or (not (Is ?l 'lion')) (Is ?e 'elephant')) (or (not (Is ?l 'lion')) (Is ?ba 'ball')) (or (not (Is ?l 'lion')) (LeftOf ?l ?e)) (or (not (Is ?l 'lion')) (Is ?bo 'boat')) (or (not (Is ?l 'lion')) (Holding ?e ?ba)) (or (not (Is ?l 'lion')) (Is ?k 'keyboard')) (or (not (Is ?l 'lion')) (Is ?f 'fish')) (or (not (Is ?l 'lion')) (NextTo ?e ?bo)) (or (not (Is ?l 'lion')) (Is ?p 'pan')) (or (not (Is ?l 'lion')) (On ?p ?k)) (or (not (Is ?l 'lion')) (Is ?s 'sandwich')) (or (not (Is ?l 'lion')) (In ?f ?bo)) (or (not (Is ?l 'lion')) (In ?s ?p)) (or (not (Is ?l 'lion')) (HasState ?p 'rusty')) (or (not (Is ?l 'lion')) (HasState ?k 'broken')) (or (not (Is ?l 'lion')) (HasState ?f 'wet')) (or (not (Is ?l 'lion')) (NextTo ?k ?bo)) (or (not (Is ?l 'lion')) (HasState ?s 'bitten'))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fish",
+        "lion",
+        "sandwich",
+        "boat",
+        "keyboard",
+        "ball",
+        "elephant",
+        "pan"
+    ]
+}

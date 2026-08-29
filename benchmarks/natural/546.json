@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene features a round table with all headphones placed on it, and a bird next to the table.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?t (and (Is ?t 'table') (HasShape ?t 'round') (forall ?h (implies (Is ?h 'headphones') (On ?h ?t))) (exists ?b (and (Is ?b 'bird') (NextTo ?b ?t))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?t (forall ?h (exists ?b (and (Is ?t 'table') (HasShape ?t 'round') (or (not (Is ?h 'headphones')) (On ?h ?t)) (NextTo ?b ?t) (Is ?b 'bird'))))))",
+    "k": 3,
+    "object_classes": [
+        "headphones",
+        "table",
+        "bird"
+    ]
+}

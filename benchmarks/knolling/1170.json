@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. There are headphones located on the right side of the scene. To the left of the headphones lies a hammer, and positioned below the hammer is a screwdriver. A stapler is found on the bottom side of the image, located to the right of the screwdriver. Additionally, for every lemon in the image, there is a pair of scissors to its right, and the lemon is smaller than the stapler.",
+    "dsl": "(exists ?headphones (exists ?hammer (exists ?screwdriver (exists ?stapler (and (Is ?headphones 'headphones') (Is ?hammer 'hammer') (Is ?screwdriver 'screwdriver') (Is ?stapler 'stapler') (OnRightSide ?headphones) (LeftOf ?hammer ?headphones) (Below ?screwdriver ?hammer) (OnBottomSide ?stapler) (RightOf ?stapler ?screwdriver) (forall ?lemon (implies (Is ?lemon 'lemon') (exists ?scissors (and (Is ?scissors 'scissors') (RightOf ?scissors ?lemon) (SmallerThan ?lemon ?stapler))))))))))",
+    "cnf": "(exists ?headphones (exists ?hammer (exists ?screwdriver (exists ?stapler (forall ?lemon (exists ?scissors (and (Is ?headphones 'headphones') (OnRightSide ?headphones) (LeftOf ?hammer ?headphones) (Is ?hammer 'hammer') (Below ?screwdriver ?hammer) (Is ?screwdriver 'screwdriver') (RightOf ?stapler ?screwdriver) (OnBottomSide ?stapler) (or (not (Is ?lemon 'lemon')) (SmallerThan ?lemon ?stapler)) (Is ?stapler 'stapler') (or (not (Is ?lemon 'lemon')) (RightOf ?scissors ?lemon)) (or (not (Is ?lemon 'lemon')) (Is ?scissors 'scissors')))))))))",
+    "k": 6,
+    "object_classes": [
+        "stapler",
+        "lemon",
+        "screwdriver",
+        "hammer",
+        "scissors",
+        "headphones"
+    ]
+}

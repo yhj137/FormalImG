@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A backpack is positioned on the bottom side of the layout and is visually larger than a remote. The remote is placed to the right of the backpack. Pliers are also present, aligned vertically with the remote. The arrangement follows a rule for staplers: every stapler in the scene is located to the right of the pliers, and there is a lighter aligned vertically with that stapler.",
+    "dsl": "(exists ?b (exists ?r (exists ?p (and (Is ?b 'backpack') (Is ?r 'remote') (Is ?p 'pliers') (OnBottomSide ?b) (LargerThan ?b ?r) (RightOf ?r ?b) (AlignedVertically ?p ?r) (forall ?s (implies (Is ?s 'stapler') (exists ?l (and (Is ?l 'lighter') (RightOf ?s ?p) (AlignedVertically ?l ?s)))))))))",
+    "cnf": "(exists ?b (exists ?r (exists ?p (forall ?s (exists ?l (and (Is ?b 'backpack') (OnBottomSide ?b) (LargerThan ?b ?r) (RightOf ?r ?b) (Is ?r 'remote') (AlignedVertically ?p ?r) (Is ?p 'pliers') (or (not (Is ?s 'stapler')) (RightOf ?s ?p)) (or (not (Is ?s 'stapler')) (Is ?l 'lighter')) (or (not (Is ?s 'stapler')) (AlignedVertically ?l ?s))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "stapler",
+        "backpack",
+        "lighter"
+    ]
+}

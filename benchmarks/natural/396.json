@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene featuring a fabric rug. All forks are made of metal and positioned to the right of the rug.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?r (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (forall ?f (implies (Is ?f 'fork') (and (HasMaterial ?f 'metal') (RightOf ?f ?r)))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?r (forall ?f (and (Is ?r 'rug') (HasMaterial ?r 'fabric') (or (not (Is ?f 'fork')) (RightOf ?f ?r)) (or (not (Is ?f 'fork')) (HasMaterial ?f 'metal'))))))",
+    "k": 2,
+    "object_classes": [
+        "fork",
+        "rug"
+    ]
+}

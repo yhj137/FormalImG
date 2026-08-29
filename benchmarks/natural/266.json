@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style image of a blue bird perched on a woman.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'bird') (HasColor ?b 'blue') (On ?b ?w)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?b (and (Is ?w 'woman') (On ?b ?w) (HasColor ?b 'blue') (Is ?b 'bird')))))",
+    "k": 2,
+    "object_classes": [
+        "bird",
+        "woman"
+    ]
+}

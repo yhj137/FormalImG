@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in an oil painting style. An open wardrobe stands with a bottle on top of it. Next to the wardrobe is a pan containing a fork. A peeled orange lies to the left of the pan. Additionally, all toy cars in the scene are located inside the wardrobe.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?p (and (Is ?w 'wardrobe') (HasState ?w 'open') (Is ?b 'bottle') (On ?b ?w) (Is ?p 'pan') (NextTo ?p ?w) (forall ?tc (implies (Is ?tc 'toy car') (In ?tc ?w))) (exists ?o (and (Is ?o 'orange') (HasState ?o 'peeled') (LeftOf ?o ?p))) (exists ?f (and (Is ?f 'fork') (In ?f ?p))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?b (exists ?p (forall ?tc (exists ?o (exists ?f (and (Is ?w 'wardrobe') (HasState ?w 'open') (On ?b ?w) (NextTo ?p ?w) (Is ?b 'bottle') (or (not (Is ?tc 'toy car')) (In ?tc ?w)) (Is ?p 'pan') (LeftOf ?o ?p) (In ?f ?p) (HasState ?o 'peeled') (Is ?f 'fork') (Is ?o 'orange')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fork",
+        "bottle",
+        "orange",
+        "toy car",
+        "pan",
+        "wardrobe"
+    ]
+}

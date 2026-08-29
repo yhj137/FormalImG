@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a standing elephant next to a rock. Every fish in the scene is lying on the rock. The elephant holds an open umbrella, and a jacket containing an orange is on the elephant.",
+    "dsl": "(and (IsStyle 'photo') (exists ?e (exists ?r (and (Is ?e 'elephant') (HasState ?e 'standing') (Is ?r 'rock') (NextTo ?e ?r) (forall ?f (implies (Is ?f 'fish') (and (On ?f ?r) (HasState ?f 'lying')))) (exists ?u (exists ?j (exists ?o (and (Is ?u 'umbrella') (HasState ?u 'open') (Is ?j 'jacket') (Is ?o 'orange') (Holding ?e ?u) (On ?j ?e) (In ?o ?j)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?e (exists ?r (forall ?f (exists ?u (exists ?j (exists ?o (and (Is ?e 'elephant') (HasState ?e 'standing') (NextTo ?e ?r) (Holding ?e ?u) (Is ?r 'rock') (or (not (Is ?f 'fish')) (On ?f ?r)) (On ?j ?e) (HasState ?u 'open') (or (not (Is ?f 'fish')) (HasState ?f 'lying')) (Is ?j 'jacket') (In ?o ?j) (Is ?u 'umbrella') (Is ?o 'orange')))))))))",
+    "k": 6,
+    "object_classes": [
+        "jacket",
+        "umbrella",
+        "rock",
+        "fish",
+        "elephant",
+        "orange"
+    ]
+}

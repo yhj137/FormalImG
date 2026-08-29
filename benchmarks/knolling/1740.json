@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a blue shirt positioned on the top left side, with a drill located directly below it and a red hat to the right of the shirt. To the right of the drill is a laptop. A donut is placed above the laptop, while a pizza is positioned below the laptop. The arrangement includes a constraint for pens: for every pen, which is located to the right of the laptop, there is a phone to its right and a watch below the phone. The watch is smaller than the phone.",
+    "dsl": "(exists ?shirt (exists ?drill (exists ?hat (exists ?laptop (exists ?donut (exists ?pizza (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Is ?drill 'drill') (Above ?shirt ?drill) (Is ?hat 'hat') (Has ?hat 'red') (RightOf ?hat ?shirt) (Is ?laptop 'laptop') (LeftOf ?drill ?laptop) (Is ?donut 'donut') (Above ?donut ?laptop) (Is ?pizza 'pizza') (Above ?laptop ?pizza) (forall ?pen (implies (Is ?pen 'pen') (exists ?phone (exists ?watch (and (Is ?phone 'phone') (Is ?watch 'watch') (RightOf ?pen ?laptop) (RightOf ?phone ?pen) (Above ?phone ?watch) (SmallerThan ?watch ?phone)))))))))))))",
+    "cnf": "(exists ?shirt (exists ?drill (exists ?hat (exists ?laptop (exists ?donut (exists ?pizza (forall ?pen (exists ?phone (exists ?watch (and (Is ?shirt 'shirt') (Has ?shirt 'blue') (OnTopSide ?shirt) (OnLeftSide ?shirt) (Above ?shirt ?drill) (RightOf ?hat ?shirt) (Is ?drill 'drill') (LeftOf ?drill ?laptop) (Has ?hat 'red') (Is ?laptop 'laptop') (Above ?donut ?laptop) (Is ?hat 'hat') (Above ?laptop ?pizza) (Is ?donut 'donut') (or (not (Is ?pen 'pen')) (RightOf ?pen ?laptop)) (Is ?pizza 'pizza') (or (not (Is ?pen 'pen')) (Is ?watch 'watch')) (or (not (Is ?pen 'pen')) (RightOf ?phone ?pen)) (or (not (Is ?pen 'pen')) (Is ?phone 'phone')) (or (not (Is ?pen 'pen')) (Above ?phone ?watch)) (or (not (Is ?pen 'pen')) (SmallerThan ?watch ?phone))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "laptop",
+        "pen",
+        "phone",
+        "pizza",
+        "watch",
+        "drill",
+        "hat",
+        "shirt",
+        "donut"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black keyboard. For every hammer in the image, there is a horizontal row of items extending to its left. Specifically, the hammer is located to the left of the keyboard and is aligned horizontally with it. To the left of the hammer is a carrot, to the left of the carrot is a shoe, to the left of the shoe is a calculator, and to the left of the calculator is a sandwich. All these objects are aligned horizontally with each other, and the shoe is larger than the calculator.",
+    "dsl": "(exists ?k (and (Is ?k 'keyboard') (Has ?k 'black') (forall ?h (implies (Is ?h 'hammer') (exists ?c (exists ?s (exists ?cal (exists ?sand (and (Is ?c 'carrot') (Is ?s 'shoe') (Is ?cal 'calculator') (Is ?sand 'sandwich') (LeftOf ?h ?k) (AlignedHorizontally ?h ?k) (LeftOf ?c ?h) (AlignedHorizontally ?c ?h) (LeftOf ?s ?c) (AlignedHorizontally ?s ?c) (LeftOf ?cal ?s) (AlignedHorizontally ?cal ?s) (LeftOf ?sand ?cal) (AlignedHorizontally ?sand ?cal) (LargerThan ?s ?cal))))))))))",
+    "cnf": "(exists ?k (forall ?h (exists ?c (exists ?s (exists ?cal (exists ?sand (and (Is ?k 'keyboard') (Has ?k 'black') (or (not (Is ?h 'hammer')) (LeftOf ?h ?k)) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?h ?k)) (or (not (Is ?h 'hammer')) (Is ?sand 'sandwich')) (or (not (Is ?h 'hammer')) (LeftOf ?c ?h)) (or (not (Is ?h 'hammer')) (Is ?cal 'calculator')) (or (not (Is ?h 'hammer')) (LeftOf ?sand ?cal)) (or (not (Is ?h 'hammer')) (Is ?c 'carrot')) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?c ?h)) (or (not (Is ?h 'hammer')) (Is ?s 'shoe')) (or (not (Is ?h 'hammer')) (LeftOf ?cal ?s)) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?cal ?s)) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?sand ?cal)) (or (not (Is ?h 'hammer')) (LeftOf ?s ?c)) (or (not (Is ?h 'hammer')) (AlignedHorizontally ?s ?c)) (or (not (Is ?h 'hammer')) (LargerThan ?s ?cal)))))))))",
+    "k": 6,
+    "object_classes": [
+        "keyboard",
+        "carrot",
+        "hammer",
+        "calculator",
+        "sandwich",
+        "shoe"
+    ]
+}

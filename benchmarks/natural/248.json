@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular bed with a round pizza to its right.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (exists ?p (and (Is ?b 'bed') (HasShape ?b 'rectangular') (Is ?p 'pizza') (HasShape ?p 'round') (RightOf ?p ?b)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (exists ?p (and (Is ?b 'bed') (HasShape ?b 'rectangular') (RightOf ?p ?b) (HasShape ?p 'round') (Is ?p 'pizza')))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "bed"
+    ]
+}

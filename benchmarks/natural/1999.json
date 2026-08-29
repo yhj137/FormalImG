@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A child is sitting on a bench while holding a round ball. A basket containing an apple is also on the bench, and a knife lies next to the basket. To the left of the bench, there is a desk with a broken mirror on it. A car is positioned next to the desk. Additionally, all flowers in the scene are located next to the car.",
+    "dsl": "(exists ?c (exists ?bn (exists ?bl (exists ?bs (exists ?a (exists ?k (exists ?d (exists ?m (exists ?cr (and (Is ?c 'child') (HasState ?c 'sitting') (Is ?bn 'bench') (Is ?bl 'ball') (HasShape ?bl 'round') (Is ?bs 'basket') (Is ?a 'apple') (Is ?k 'knife') (Is ?d 'desk') (Is ?m 'mirror') (HasState ?m 'broken') (Is ?cr 'car') (On ?c ?bn) (Holding ?c ?bl) (On ?bs ?bn) (In ?a ?bs) (NextTo ?k ?bs) (LeftOf ?d ?bn) (On ?m ?d) (NextTo ?cr ?d) (forall ?f (implies (Is ?f 'flower') (NextTo ?f ?cr)))))))))))))",
+    "cnf": "(exists ?c (exists ?bn (exists ?bl (exists ?bs (exists ?a (exists ?k (exists ?d (exists ?m (exists ?cr (forall ?f (and (Is ?c 'child') (HasState ?c 'sitting') (On ?c ?bn) (Holding ?c ?bl) (Is ?bn 'bench') (On ?bs ?bn) (HasShape ?bl 'round') (LeftOf ?d ?bn) (Is ?bs 'basket') (In ?a ?bs) (Is ?bl 'ball') (Is ?d 'desk') (On ?m ?d) (NextTo ?k ?bs) (Is ?a 'apple') (NextTo ?cr ?d) (HasState ?m 'broken') (Is ?k 'knife') (Is ?cr 'car') (or (not (Is ?f 'flower')) (NextTo ?f ?cr)) (Is ?m 'mirror'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "knife",
+        "child",
+        "bench",
+        "flower",
+        "desk",
+        "car",
+        "mirror",
+        "ball",
+        "basket",
+        "apple"
+    ]
+}

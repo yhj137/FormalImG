@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene features a metal wardrobe containing a teddy bear and a knife. All the butterflies are blue and are located to the left of the wardrobe.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?w (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (forall ?b (implies (Is ?b 'butterfly') (and (HasColor ?b 'blue') (LeftOf ?b ?w)))) (exists ?t (exists ?k (and (Is ?t 'teddy bear') (Is ?k 'knife') (In ?t ?w) (In ?k ?w)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?w (forall ?b (exists ?t (exists ?k (and (Is ?w 'wardrobe') (HasMaterial ?w 'metal') (or (not (Is ?b 'butterfly')) (LeftOf ?b ?w)) (In ?t ?w) (or (not (Is ?b 'butterfly')) (HasColor ?b 'blue')) (In ?k ?w) (Is ?t 'teddy bear') (Is ?k 'knife')))))))",
+    "k": 4,
+    "object_classes": [
+        "butterfly",
+        "teddy bear",
+        "knife",
+        "wardrobe"
+    ]
+}

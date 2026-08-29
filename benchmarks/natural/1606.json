@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A tree is located to the left of a sofa. There is also a pair of shoes positioned to the left of the sofa. A person and a cat are on the sofa. To the right of the sofa, there is a bed. On the bed, there is a round ball, along with a knife and a fork.",
+    "dsl": "(exists ?t (exists ?s (exists ?sh (exists ?p (exists ?c (exists ?bd (exists ?b (exists ?k (exists ?f (and (Is ?t 'tree') (Is ?s 'sofa') (Is ?sh 'shoes') (Is ?p 'person') (Is ?c 'cat') (Is ?bd 'bed') (Is ?b 'ball') (Is ?k 'knife') (Is ?f 'fork') (LeftOf ?t ?s) (LeftOf ?sh ?s) (On ?p ?s) (On ?c ?s) (RightOf ?bd ?s) (On ?b ?bd) (HasShape ?b 'round') (On ?k ?bd) (On ?f ?bd)))))))))))",
+    "cnf": "(exists ?t (exists ?s (exists ?sh (exists ?p (exists ?c (exists ?bd (exists ?b (exists ?k (exists ?f (and (Is ?t 'tree') (LeftOf ?t ?s) (Is ?s 'sofa') (LeftOf ?sh ?s) (On ?p ?s) (Is ?sh 'shoes') (On ?c ?s) (Is ?p 'person') (RightOf ?bd ?s) (Is ?c 'cat') (Is ?bd 'bed') (On ?b ?bd) (On ?k ?bd) (Is ?b 'ball') (HasShape ?b 'round') (On ?f ?bd) (Is ?k 'knife') (Is ?f 'fork')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "knife",
+        "person",
+        "fork",
+        "shoes",
+        "bed",
+        "tree",
+        "ball",
+        "cat"
+    ]
+}

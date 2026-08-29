@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene of a sliced pizza, with a piece of fruit to its right.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?p (exists ?f (and (Is ?p 'pizza') (Is ?f 'fruit') (HasState ?p 'sliced') (RightOf ?f ?p)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?p (exists ?f (and (Is ?p 'pizza') (HasState ?p 'sliced') (RightOf ?f ?p) (Is ?f 'fruit')))))",
+    "k": 2,
+    "object_classes": [
+        "pizza",
+        "fruit"
+    ]
+}

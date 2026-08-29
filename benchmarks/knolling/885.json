@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is positioned on the top side of the scene. For every game controller located below the laptop and on the left side of the image, there is a sequence of items arranged to its right: a sandwich, a calculator, and a bottle. Specifically, the sandwich is to the right of the game controller, the calculator is to the right of the sandwich, and the bottle is to the right of the calculator. These four items are aligned horizontally, and the sandwich is smaller than the laptop.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (forall ?gc (implies (and (Is ?gc 'game_controller') (Below ?gc ?laptop) (OnLeftSide ?gc)) (exists ?sandwich (exists ?calculator (exists ?bottle (and (Is ?sandwich 'sandwich') (Is ?calculator 'calculator') (Is ?bottle 'bottle') (RightOf ?sandwich ?gc) (RightOf ?calculator ?sandwich) (RightOf ?bottle ?calculator) (AlignedHorizontally ?gc ?sandwich) (AlignedHorizontally ?sandwich ?calculator) (AlignedHorizontally ?calculator ?bottle) (SmallerThan ?sandwich ?laptop)))))))))",
+    "cnf": "(exists ?laptop (forall ?gc (exists ?sandwich (exists ?calculator (exists ?bottle (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (Is ?sandwich 'sandwich')) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (Is ?calculator 'calculator')) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (RightOf ?sandwich ?gc)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (Is ?bottle 'bottle')) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (RightOf ?calculator ?sandwich)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (RightOf ?bottle ?calculator)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (AlignedHorizontally ?gc ?sandwich)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (AlignedHorizontally ?sandwich ?calculator)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (AlignedHorizontally ?calculator ?bottle)) (or (not (Is ?gc 'game_controller')) (not (Below ?gc ?laptop)) (not (OnLeftSide ?gc)) (SmallerThan ?sandwich ?laptop))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "game_controller",
+        "calculator",
+        "bottle",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a shoe positioned on the right side of the frame, with a wrench placed directly above it. To the left of the shoe sits a lighter, and the shoe is physically larger than the lighter. A pair of pliers is arranged to the left of the wrench. A set of keys is located on the top side of the image and is positioned to the right of the pliers. Furthermore, for every tie present in the scene, it is placed to the left of the pliers.",
+    "dsl": "(exists ?shoe (exists ?wrench (exists ?lighter (exists ?pliers (exists ?keys (and (Is ?shoe 'shoe') (Is ?wrench 'wrench') (Is ?lighter 'lighter') (Is ?pliers 'pliers') (Is ?keys 'keys') (OnRightSide ?shoe) (Above ?wrench ?shoe) (LeftOf ?lighter ?shoe) (LargerThan ?shoe ?lighter) (LeftOf ?pliers ?wrench) (OnTopSide ?keys) (RightOf ?keys ?pliers) (forall ?tie (implies (Is ?tie 'tie') (LeftOf ?tie ?pliers)))))))))",
+    "cnf": "(exists ?shoe (exists ?wrench (exists ?lighter (exists ?pliers (exists ?keys (forall ?tie (and (Is ?shoe 'shoe') (OnRightSide ?shoe) (Above ?wrench ?shoe) (LeftOf ?lighter ?shoe) (Is ?wrench 'wrench') (LeftOf ?pliers ?wrench) (LargerThan ?shoe ?lighter) (Is ?lighter 'lighter') (Is ?pliers 'pliers') (RightOf ?keys ?pliers) (or (not (Is ?tie 'tie')) (LeftOf ?tie ?pliers)) (OnTopSide ?keys) (Is ?keys 'keys'))))))))",
+    "k": 6,
+    "object_classes": [
+        "keys",
+        "tie",
+        "pliers",
+        "wrench",
+        "lighter",
+        "shoe"
+    ]
+}

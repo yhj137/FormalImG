@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt positioned on the top side. For every shoe in the image, there is a lighter located to its left; each shoe is also positioned on the bottom side and aligned vertically with the shirt. Additionally, there are pliers located to the left of the shirt, and keys located to the left of the pliers.",
+    "dsl": "(exists ?shirt (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?lighter (and (Is ?lighter 'lighter') (LeftOf ?lighter ?shoe) (OnBottomSide ?shoe) (AlignedVertically ?shoe ?shirt))))) (exists ?pliers (exists ?keys (and (Is ?pliers 'pliers') (Is ?keys 'keys') (LeftOf ?pliers ?shirt) (LeftOf ?keys ?pliers))))))",
+    "cnf": "(exists ?shirt (forall ?shoe (exists ?lighter (exists ?pliers (exists ?keys (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (or (not (Is ?shoe 'shoe')) (AlignedVertically ?shoe ?shirt)) (LeftOf ?pliers ?shirt) (or (not (Is ?shoe 'shoe')) (OnBottomSide ?shoe)) (Is ?pliers 'pliers') (LeftOf ?keys ?pliers) (or (not (Is ?shoe 'shoe')) (LeftOf ?lighter ?shoe)) (Is ?keys 'keys') (or (not (Is ?shoe 'shoe')) (Is ?lighter 'lighter'))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "pliers",
+        "lighter",
+        "shoe",
+        "shirt"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement begins on the left side of the scene with a yellow lemon. To the right of the lemon is a pair of headphones, followed by a ruler, then a lighter, and finally a carrot. These first five items form a chain aligned horizontally. Additionally, for every shoe present in the image, it is positioned to the right of the carrot, and there is a tie located to the right of the shoe, with all items maintaining the same horizontal alignment.",
+    "dsl": "(exists ?lemon (exists ?headphones (exists ?ruler (exists ?lighter (exists ?carrot (and (Is ?lemon 'lemon') (Has ?lemon 'yellow') (OnLeftSide ?lemon) (Is ?headphones 'headphones') (Is ?ruler 'ruler') (Is ?lighter 'lighter') (Is ?carrot 'carrot') (RightOf ?headphones ?lemon) (AlignedHorizontally ?headphones ?lemon) (RightOf ?ruler ?headphones) (AlignedHorizontally ?ruler ?headphones) (RightOf ?lighter ?ruler) (AlignedHorizontally ?lighter ?ruler) (RightOf ?carrot ?lighter) (AlignedHorizontally ?carrot ?lighter) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?tie (and (Is ?tie 'tie') (RightOf ?shoe ?carrot) (AlignedHorizontally ?shoe ?carrot) (RightOf ?tie ?shoe) (AlignedHorizontally ?tie ?shoe)))))))))))",
+    "cnf": "(exists ?lemon (exists ?headphones (exists ?ruler (exists ?lighter (exists ?carrot (forall ?shoe (exists ?tie (and (Is ?lemon 'lemon') (Has ?lemon 'yellow') (OnLeftSide ?lemon) (RightOf ?headphones ?lemon) (AlignedHorizontally ?headphones ?lemon) (Is ?headphones 'headphones') (RightOf ?ruler ?headphones) (AlignedHorizontally ?ruler ?headphones) (Is ?ruler 'ruler') (RightOf ?lighter ?ruler) (AlignedHorizontally ?lighter ?ruler) (Is ?lighter 'lighter') (RightOf ?carrot ?lighter) (AlignedHorizontally ?carrot ?lighter) (Is ?carrot 'carrot') (or (not (Is ?shoe 'shoe')) (RightOf ?shoe ?carrot)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?shoe ?carrot)) (or (not (Is ?shoe 'shoe')) (Is ?tie 'tie')) (or (not (Is ?shoe 'shoe')) (RightOf ?tie ?shoe)) (or (not (Is ?shoe 'shoe')) (AlignedHorizontally ?tie ?shoe))))))))))",
+    "k": 7,
+    "object_classes": [
+        "ruler",
+        "tie",
+        "lemon",
+        "carrot",
+        "lighter",
+        "headphones",
+        "shoe"
+    ]
+}

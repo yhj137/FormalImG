@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene. A man wearing a hat and shirt holds a rusty hammer. A sitting dog is next to the man. Beside the man is a person holding a round flower, and all butterflies in the image are above this person. A cup with a spoon on it is next to the person.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?m (and (Is ?m 'man') (exists ?h (and (Is ?h 'hat') (On ?h ?m))) (exists ?sh (and (Is ?sh 'shirt') (On ?sh ?m))) (exists ?hm (and (Is ?hm 'hammer') (HasState ?hm 'rusty') (Holding ?m ?hm))) (exists ?d (and (Is ?d 'dog') (HasState ?d 'sitting') (NextTo ?d ?m))) (exists ?p (and (Is ?p 'person') (NextTo ?p ?m) (forall ?b (implies (Is ?b 'butterfly') (Above ?b ?p))) (exists ?f (and (Is ?f 'flower') (HasShape ?f 'round') (Holding ?p ?f))) (exists ?c (and (Is ?c 'cup') (NextTo ?c ?p) (exists ?sp (and (Is ?sp 'spoon') (On ?sp ?c))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?m (exists ?h (exists ?sh (exists ?hm (exists ?d (exists ?p (forall ?b (exists ?f (exists ?c (exists ?sp (and (Is ?m 'man') (On ?h ?m) (On ?sh ?m) (Is ?h 'hat') (Holding ?m ?hm) (Is ?sh 'shirt') (NextTo ?d ?m) (HasState ?hm 'rusty') (NextTo ?p ?m) (HasState ?d 'sitting') (Is ?hm 'hammer') (Is ?p 'person') (or (not (Is ?b 'butterfly')) (Above ?b ?p)) (Is ?d 'dog') (Holding ?p ?f) (NextTo ?c ?p) (HasShape ?f 'round') (Is ?c 'cup') (On ?sp ?c) (Is ?f 'flower') (Is ?sp 'spoon')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "person",
+        "man",
+        "hat",
+        "hammer",
+        "butterfly",
+        "shirt",
+        "cup",
+        "dog",
+        "flower",
+        "spoon"
+    ]
+}

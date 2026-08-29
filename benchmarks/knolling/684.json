@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A camera is placed on the top side and left side of the arrangement. For every drill in the scene, it is aligned vertically with the camera. A sandwich is located to the right of the drill, and a fork is located to the right of the sandwich.",
+    "dsl": "(exists ?camera (and (Is ?camera 'camera') (OnTopSide ?camera) (OnLeftSide ?camera) (forall ?drill (implies (Is ?drill 'drill') (exists ?sandwich (exists ?fork (and (Is ?sandwich 'sandwich') (Is ?fork 'fork') (AlignedVertically ?drill ?camera) (RightOf ?sandwich ?drill) (RightOf ?fork ?sandwich))))))))",
+    "cnf": "(exists ?camera (forall ?drill (exists ?sandwich (exists ?fork (and (Is ?camera 'camera') (OnTopSide ?camera) (OnLeftSide ?camera) (or (not (Is ?drill 'drill')) (AlignedVertically ?drill ?camera)) (or (not (Is ?drill 'drill')) (Is ?fork 'fork')) (or (not (Is ?drill 'drill')) (RightOf ?sandwich ?drill)) (or (not (Is ?drill 'drill')) (Is ?sandwich 'sandwich')) (or (not (Is ?drill 'drill')) (RightOf ?fork ?sandwich)))))))",
+    "k": 4,
+    "object_classes": [
+        "drill",
+        "sandwich",
+        "fork",
+        "camera"
+    ]
+}

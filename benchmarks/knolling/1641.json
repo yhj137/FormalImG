@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement. A monitor is positioned on the left side of the scene. For every pizza found in the image, it is located to the right of the monitor. Associated with the pizza is a collection of items: a pair of blue jeans is to the right of the pizza, a black camera is above the jeans, and a white glove is above the camera. The jeans are also positioned above a calculator and are visually larger than it. Furthermore, scissors are located to the right of the glove. Below the scissors is a carrot, and below the carrot is a fork; these three items (scissors, carrot, fork) are aligned vertically. The fork is positioned on the bottom side of the image and is smaller than the jeans.",
+    "dsl": "(exists ?monitor (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (forall ?pizza (implies (Is ?pizza 'pizza') (exists ?jeans (exists ?camera (exists ?glove (exists ?calculator (exists ?scissors (exists ?carrot (exists ?fork (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (Is ?camera 'camera') (Has ?camera 'black') (Is ?glove 'glove') (Has ?glove 'white') (Is ?calculator 'calculator') (Is ?scissors 'scissors') (Is ?carrot 'carrot') (Is ?fork 'fork') (RightOf ?pizza ?monitor) (RightOf ?jeans ?pizza) (Above ?camera ?jeans) (Above ?glove ?camera) (Above ?jeans ?calculator) (LargerThan ?jeans ?calculator) (RightOf ?scissors ?glove) (Above ?scissors ?carrot) (Above ?carrot ?fork) (AlignedVertically ?scissors ?carrot) (AlignedVertically ?carrot ?fork) (OnBottomSide ?fork) (SmallerThan ?fork ?jeans)))))))))))))",
+    "cnf": "(exists ?monitor (forall ?pizza (exists ?jeans (exists ?camera (exists ?glove (exists ?calculator (exists ?scissors (exists ?carrot (exists ?fork (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (or (not (Is ?pizza 'pizza')) (RightOf ?pizza ?monitor)) (or (not (Is ?pizza 'pizza')) (Is ?fork 'fork')) (or (not (Is ?pizza 'pizza')) (RightOf ?jeans ?pizza)) (or (not (Is ?pizza 'pizza')) (Is ?carrot 'carrot')) (or (not (Is ?pizza 'pizza')) (Above ?carrot ?fork)) (or (not (Is ?pizza 'pizza')) (Above ?camera ?jeans)) (or (not (Is ?pizza 'pizza')) (Has ?jeans 'blue')) (or (not (Is ?pizza 'pizza')) (Is ?scissors 'scissors')) (or (not (Is ?pizza 'pizza')) (Above ?scissors ?carrot)) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?scissors ?carrot)) (or (not (Is ?pizza 'pizza')) (AlignedVertically ?carrot ?fork)) (or (not (Is ?pizza 'pizza')) (Above ?glove ?camera)) (or (not (Is ?pizza 'pizza')) (Above ?jeans ?calculator)) (or (not (Is ?pizza 'pizza')) (Has ?camera 'black')) (or (not (Is ?pizza 'pizza')) (Is ?jeans 'jeans')) (or (not (Is ?pizza 'pizza')) (Is ?camera 'camera')) (or (not (Is ?pizza 'pizza')) (Is ?calculator 'calculator')) (or (not (Is ?pizza 'pizza')) (RightOf ?scissors ?glove)) (or (not (Is ?pizza 'pizza')) (OnBottomSide ?fork)) (or (not (Is ?pizza 'pizza')) (Has ?glove 'white')) (or (not (Is ?pizza 'pizza')) (LargerThan ?jeans ?calculator)) (or (not (Is ?pizza 'pizza')) (Is ?glove 'glove')) (or (not (Is ?pizza 'pizza')) (SmallerThan ?fork ?jeans))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "carrot",
+        "pizza",
+        "fork",
+        "calculator",
+        "jeans",
+        "camera",
+        "monitor",
+        "glove",
+        "scissors"
+    ]
+}

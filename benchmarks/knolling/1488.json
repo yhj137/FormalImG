@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a suitcase and a handbag located on the top side; the handbag is positioned to the right of the suitcase, and they are aligned horizontally. For every set of keys present, there is a wallet to its right that is visually larger than the keys, a shirt located below the suitcase and aligned vertically with it, headphones to the right of the shirt, and a cup on the bottom side with a lemon to its right that is smaller than the cup.",
+    "dsl": "(exists ?suitcase (exists ?handbag (and (Is ?suitcase 'suitcase') (Is ?handbag 'handbag') (OnTopSide ?suitcase) (OnTopSide ?handbag) (RightOf ?handbag ?suitcase) (AlignedHorizontally ?suitcase ?handbag) (forall ?keys (implies (Is ?keys 'keys') (exists ?wallet (exists ?shirt (exists ?headphones (exists ?cup (exists ?lemon (and (Is ?wallet 'wallet') (Is ?shirt 'shirt') (Is ?headphones 'headphones') (Is ?cup 'cup') (Is ?lemon 'lemon') (SmallerThan ?keys ?wallet) (RightOf ?wallet ?keys) (Above ?suitcase ?shirt) (AlignedVertically ?suitcase ?shirt) (RightOf ?headphones ?shirt) (OnBottomSide ?cup) (RightOf ?lemon ?cup) (SmallerThan ?lemon ?cup))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?handbag (forall ?keys (exists ?wallet (exists ?shirt (exists ?headphones (exists ?cup (exists ?lemon (and (Is ?suitcase 'suitcase') (OnTopSide ?suitcase) (RightOf ?handbag ?suitcase) (AlignedHorizontally ?suitcase ?handbag) (OnTopSide ?handbag) (or (not (Is ?keys 'keys')) (Above ?suitcase ?shirt)) (Is ?handbag 'handbag') (or (not (Is ?keys 'keys')) (AlignedVertically ?suitcase ?shirt)) (or (not (Is ?keys 'keys')) (RightOf ?wallet ?keys)) (or (not (Is ?keys 'keys')) (Is ?shirt 'shirt')) (or (not (Is ?keys 'keys')) (RightOf ?headphones ?shirt)) (or (not (Is ?keys 'keys')) (SmallerThan ?keys ?wallet)) (or (not (Is ?keys 'keys')) (Is ?wallet 'wallet')) (or (not (Is ?keys 'keys')) (Is ?headphones 'headphones')) (or (not (Is ?keys 'keys')) (OnBottomSide ?cup)) (or (not (Is ?keys 'keys')) (Is ?lemon 'lemon')) (or (not (Is ?keys 'keys')) (Is ?cup 'cup')) (or (not (Is ?keys 'keys')) (RightOf ?lemon ?cup)) (or (not (Is ?keys 'keys')) (SmallerThan ?lemon ?cup)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "keys",
+        "lemon",
+        "cup",
+        "handbag",
+        "wallet",
+        "headphones",
+        "suitcase",
+        "shirt"
+    ]
+}

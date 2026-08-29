@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every tree has a lion to its right holding a teddy bear. A cake sits next to the lion, and to the right of the cake is a leather backpack with a lamp beside it.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?t (implies (Is ?t 'tree') (exists ?li (exists ?tb (exists ?c (exists ?bp (exists ?lp (and (Is ?li 'lion') (Is ?tb 'teddy bear') (Is ?c 'cake') (Is ?bp 'backpack') (Is ?lp 'lamp') (RightOf ?li ?t) (Holding ?li ?tb) (NextTo ?c ?li) (RightOf ?bp ?c) (HasMaterial ?bp 'leather') (NextTo ?lp ?bp))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?t (exists ?li (exists ?tb (exists ?c (exists ?bp (exists ?lp (and (or (not (Is ?t 'tree')) (Is ?li 'lion')) (or (not (Is ?t 'tree')) (RightOf ?li ?t)) (or (not (Is ?t 'tree')) (Is ?tb 'teddy bear')) (or (not (Is ?t 'tree')) (Holding ?li ?tb)) (or (not (Is ?t 'tree')) (Is ?lp 'lamp')) (or (not (Is ?t 'tree')) (Is ?c 'cake')) (or (not (Is ?t 'tree')) (NextTo ?c ?li)) (or (not (Is ?t 'tree')) (Is ?bp 'backpack')) (or (not (Is ?t 'tree')) (NextTo ?lp ?bp)) (or (not (Is ?t 'tree')) (RightOf ?bp ?c)) (or (not (Is ?t 'tree')) (HasMaterial ?bp 'leather'))))))))))",
+    "k": 6,
+    "object_classes": [
+        "teddy bear",
+        "lion",
+        "tree",
+        "cake",
+        "lamp",
+        "backpack"
+    ]
+}

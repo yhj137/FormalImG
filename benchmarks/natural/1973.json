@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cyberpunk scene features a person wearing a hat seated on a sofa, holding a metal knife. Shoes and a pan with a pizza inside are placed next to the sofa. A banana is to the left of the pan, next to a round ball. All butterflies are blue and positioned to the left of the banana.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?h (exists ?k (exists ?sh (exists ?pn (exists ?pz (exists ?b (and (Is ?p 'person') (Is ?s 'sofa') (Is ?h 'hat') (Is ?k 'knife') (Is ?sh 'shoes') (Is ?pn 'pan') (Is ?pz 'pizza') (Is ?b 'banana') (On ?p ?s) (On ?h ?p) (Holding ?p ?k) (HasMaterial ?k 'metal') (NextTo ?sh ?s) (NextTo ?pn ?s) (In ?pz ?pn) (LeftOf ?b ?pn) (forall ?bt (implies (Is ?bt 'butterfly') (and (HasColor ?bt 'blue') (LeftOf ?bt ?b)))) (exists ?bl (and (Is ?bl 'ball') (HasShape ?bl 'round') (NextTo ?bl ?b)))))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?h (exists ?k (exists ?sh (exists ?pn (exists ?pz (exists ?b (forall ?bt (exists ?bl (and (Is ?p 'person') (On ?p ?s) (On ?h ?p) (Is ?s 'sofa') (NextTo ?sh ?s) (Holding ?p ?k) (Is ?h 'hat') (NextTo ?pn ?s) (Is ?sh 'shoes') (Is ?k 'knife') (HasMaterial ?k 'metal') (Is ?pn 'pan') (In ?pz ?pn) (LeftOf ?b ?pn) (Is ?pz 'pizza') (Is ?b 'banana') (or (not (Is ?bt 'butterfly')) (LeftOf ?bt ?b)) (NextTo ?bl ?b) (or (not (Is ?bt 'butterfly')) (HasColor ?bt 'blue')) (HasShape ?bl 'round') (Is ?bl 'ball')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "pan",
+        "sofa",
+        "person",
+        "knife",
+        "hat",
+        "ball",
+        "banana",
+        "shoes",
+        "pizza",
+        "butterfly"
+    ]
+}

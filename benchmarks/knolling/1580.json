@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat vertical column of items. A bottle is positioned on the top side of the scene. Directly below the bottle, there is a sequence containing a drill, pliers, a spoon, keys, a lemon, and a donut, all strictly aligned vertically with one another. The drill is visually larger than the spoon. Additionally, the layout follows a rule that for any remote present, it is positioned below the donut and maintains the vertical alignment.",
+    "dsl": "(exists ?bottle (exists ?drill (exists ?pliers (exists ?spoon (exists ?keys (exists ?lemon (exists ?donut (and (Is ?bottle 'bottle') (OnTopSide ?bottle) (Is ?drill 'drill') (Is ?pliers 'pliers') (Is ?spoon 'spoon') (Is ?keys 'keys') (Is ?lemon 'lemon') (Is ?donut 'donut') (Above ?bottle ?drill) (AlignedVertically ?bottle ?drill) (Above ?drill ?pliers) (AlignedVertically ?drill ?pliers) (Above ?pliers ?spoon) (AlignedVertically ?pliers ?spoon) (Above ?spoon ?keys) (AlignedVertically ?spoon ?keys) (Above ?keys ?lemon) (AlignedVertically ?keys ?lemon) (Above ?lemon ?donut) (AlignedVertically ?lemon ?donut) (LargerThan ?drill ?spoon) (forall ?remote (implies (Is ?remote 'remote') (and (Above ?donut ?remote) (AlignedVertically ?donut ?remote))))))))))))",
+    "cnf": "(exists ?bottle (exists ?drill (exists ?pliers (exists ?spoon (exists ?keys (exists ?lemon (exists ?donut (forall ?remote (and (Is ?bottle 'bottle') (OnTopSide ?bottle) (Above ?bottle ?drill) (AlignedVertically ?bottle ?drill) (Is ?drill 'drill') (Above ?drill ?pliers) (AlignedVertically ?drill ?pliers) (Is ?pliers 'pliers') (LargerThan ?drill ?spoon) (Above ?pliers ?spoon) (AlignedVertically ?spoon ?keys) (AlignedVertically ?pliers ?spoon) (Is ?spoon 'spoon') (Above ?spoon ?keys) (Above ?keys ?lemon) (Is ?keys 'keys') (AlignedVertically ?keys ?lemon) (Is ?lemon 'lemon') (Above ?lemon ?donut) (AlignedVertically ?lemon ?donut) (Is ?donut 'donut') (or (not (Is ?remote 'remote')) (Above ?donut ?remote)) (or (not (Is ?remote 'remote')) (AlignedVertically ?donut ?remote)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "spoon",
+        "keys",
+        "pliers",
+        "drill",
+        "lemon",
+        "bottle",
+        "donut",
+        "remote"
+    ]
+}

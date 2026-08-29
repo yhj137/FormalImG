@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. A bowl is positioned above a cutting board, and they are aligned vertically. A monitor is placed to the right of the cutting board. Every watch in the image is located on the right side and positioned to the right of the monitor. For each watch, there are pliers located below it and a shoe located below the pliers, with the watch, pliers, and shoe aligned vertically. Additionally, for each watch, a mouse is positioned below the monitor and to the left of the pliers.",
+    "dsl": "(exists ?board (exists ?bowl (exists ?monitor (forall ?watch (implies (Is ?watch 'watch') (exists ?pliers (exists ?shoe (exists ?mouse (and (Is ?board 'cutting_board') (Is ?bowl 'bowl') (Is ?monitor 'monitor') (Is ?pliers 'pliers') (Is ?shoe 'shoe') (Is ?mouse 'mouse') (Above ?bowl ?board) (AlignedVertically ?bowl ?board) (LeftOf ?board ?monitor) (OnRightSide ?watch) (LeftOf ?monitor ?watch) (Below ?pliers ?watch) (AlignedVertically ?watch ?pliers) (Below ?shoe ?pliers) (AlignedVertically ?pliers ?shoe) (Below ?mouse ?monitor) (LeftOf ?mouse ?pliers))))))))))",
+    "cnf": "(exists ?board (exists ?bowl (exists ?monitor (forall ?watch (exists ?pliers (exists ?shoe (exists ?mouse (and (or (not (Is ?watch 'watch')) (Is ?board 'cutting_board')) (or (not (Is ?watch 'watch')) (Above ?bowl ?board)) (or (not (Is ?watch 'watch')) (Is ?bowl 'bowl')) (or (not (Is ?watch 'watch')) (AlignedVertically ?bowl ?board)) (or (not (Is ?watch 'watch')) (Is ?mouse 'mouse')) (or (not (Is ?watch 'watch')) (Is ?monitor 'monitor')) (or (not (Is ?watch 'watch')) (LeftOf ?board ?monitor)) (or (not (Is ?watch 'watch')) (Is ?shoe 'shoe')) (or (not (Is ?watch 'watch')) (Below ?mouse ?monitor)) (or (not (Is ?watch 'watch')) (Is ?pliers 'pliers')) (or (not (Is ?watch 'watch')) (OnRightSide ?watch)) (or (not (Is ?watch 'watch')) (LeftOf ?monitor ?watch)) (or (not (Is ?watch 'watch')) (Below ?shoe ?pliers)) (or (not (Is ?watch 'watch')) (AlignedVertically ?pliers ?shoe)) (or (not (Is ?watch 'watch')) (LeftOf ?mouse ?pliers)) (or (not (Is ?watch 'watch')) (Below ?pliers ?watch)) (or (not (Is ?watch 'watch')) (AlignedVertically ?watch ?pliers))))))))))",
+    "k": 7,
+    "object_classes": [
+        "pliers",
+        "watch",
+        "cutting_board",
+        "mouse",
+        "monitor",
+        "bowl",
+        "shoe"
+    ]
+}

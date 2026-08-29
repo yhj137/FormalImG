@@ -1,0 +1,11 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a pair of jeans, a camera, and pliers. The jeans are visually larger than the camera. The camera is located to the right of the jeans and is positioned on the right side of the image, while the pliers are arranged vertically below the camera.",
+    "dsl": "(exists ?jeans (exists ?camera (exists ?pliers (and (Is ?jeans 'jeans') (Is ?camera 'camera') (Is ?pliers 'pliers') (LargerThan ?jeans ?camera) (RightOf ?camera ?jeans) (OnRightSide ?camera) (Below ?pliers ?camera)))))",
+    "cnf": "(exists ?jeans (exists ?camera (exists ?pliers (and (Is ?jeans 'jeans') (LargerThan ?jeans ?camera) (RightOf ?camera ?jeans) (Is ?camera 'camera') (OnRightSide ?camera) (Below ?pliers ?camera) (Is ?pliers 'pliers')))))",
+    "k": 3,
+    "object_classes": [
+        "pliers",
+        "jeans",
+        "camera"
+    ]
+}

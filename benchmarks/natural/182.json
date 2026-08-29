@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting style image where every laptop is made of metal.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?x (implies (Is ?x 'laptop') (HasMaterial ?x 'metal'))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?x (or (not (Is ?x 'laptop')) (HasMaterial ?x 'metal'))))",
+    "k": 1,
+    "object_classes": [
+        "laptop"
+    ]
+}

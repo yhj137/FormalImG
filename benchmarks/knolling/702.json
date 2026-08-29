@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A laptop is placed on the left side of the scene. For every hammer present, there is a sandwich and a ruler associated with it: the sandwich is located to the left of the hammer and is larger than it, while the ruler is positioned on the bottom side. Additionally, the laptop is to the left of the sandwich and is larger than the ruler.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (forall ?hammer (implies (Is ?hammer 'hammer') (exists ?sandwich (exists ?ruler (and (Is ?sandwich 'sandwich') (Is ?ruler 'ruler') (OnBottomSide ?ruler) (LeftOf ?sandwich ?hammer) (LargerThan ?sandwich ?hammer) (LeftOf ?laptop ?sandwich) (LargerThan ?laptop ?ruler))))))))",
+    "cnf": "(exists ?laptop (forall ?hammer (exists ?sandwich (exists ?ruler (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (or (not (Is ?hammer 'hammer')) (LeftOf ?laptop ?sandwich)) (or (not (Is ?hammer 'hammer')) (LargerThan ?laptop ?ruler)) (or (not (Is ?hammer 'hammer')) (LargerThan ?sandwich ?hammer)) (or (not (Is ?hammer 'hammer')) (OnBottomSide ?ruler)) (or (not (Is ?hammer 'hammer')) (LeftOf ?sandwich ?hammer)) (or (not (Is ?hammer 'hammer')) (Is ?ruler 'ruler')) (or (not (Is ?hammer 'hammer')) (Is ?sandwich 'sandwich')))))))",
+    "k": 4,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "hammer",
+        "sandwich"
+    ]
+}

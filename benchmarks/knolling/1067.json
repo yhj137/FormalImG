@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a laptop positioned on the top side. For every mouse present in the image, it is located directly below the laptop and aligned vertically with it. Arranged relative to the mouse are a stapler found below the mouse (aligned vertically) and a ruler found below the stapler (also aligned vertically). Additionally, a lighter is aligned horizontally with the stapler, while a set of keys is located on the left side of the image and aligned horizontally with the ruler.",
+    "dsl": "(exists ?laptop (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (forall ?mouse (implies (Is ?mouse 'mouse') (exists ?stapler (exists ?ruler (exists ?lighter (exists ?keys (and (Is ?stapler 'stapler') (Is ?ruler 'ruler') (Is ?lighter 'lighter') (Is ?keys 'keys') (Below ?mouse ?laptop) (AlignedVertically ?mouse ?laptop) (Below ?stapler ?mouse) (AlignedVertically ?stapler ?mouse) (Below ?ruler ?stapler) (AlignedVertically ?ruler ?stapler) (AlignedHorizontally ?lighter ?stapler) (AlignedHorizontally ?keys ?ruler) (OnLeftSide ?keys))))))))))",
+    "cnf": "(exists ?laptop (forall ?mouse (exists ?stapler (exists ?ruler (exists ?lighter (exists ?keys (and (Is ?laptop 'laptop') (OnTopSide ?laptop) (or (not (Is ?mouse 'mouse')) (Below ?mouse ?laptop)) (or (not (Is ?mouse 'mouse')) (AlignedVertically ?mouse ?laptop)) (or (not (Is ?mouse 'mouse')) (Is ?keys 'keys')) (or (not (Is ?mouse 'mouse')) (Below ?stapler ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?lighter 'lighter')) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?keys ?ruler)) (or (not (Is ?mouse 'mouse')) (Is ?stapler 'stapler')) (or (not (Is ?mouse 'mouse')) (AlignedVertically ?stapler ?mouse)) (or (not (Is ?mouse 'mouse')) (Is ?ruler 'ruler')) (or (not (Is ?mouse 'mouse')) (AlignedHorizontally ?lighter ?stapler)) (or (not (Is ?mouse 'mouse')) (OnLeftSide ?keys)) (or (not (Is ?mouse 'mouse')) (AlignedVertically ?ruler ?stapler)) (or (not (Is ?mouse 'mouse')) (Below ?ruler ?stapler)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "laptop",
+        "keys",
+        "stapler",
+        "lighter",
+        "mouse"
+    ]
+}

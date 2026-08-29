@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holding a bitten apple stands next to a table with a bowl on it. A lamp sits to the right of the bowl. Every flower in the scene rests on a bookshelf positioned next to the table.",
+    "dsl": "(exists ?w (exists ?a (exists ?t (exists ?b (exists ?l (and (Is ?w 'woman') (Is ?a 'apple') (Is ?t 'table') (Is ?b 'bowl') (Is ?l 'lamp') (Holding ?w ?a) (HasState ?a 'bitten') (NextTo ?w ?t) (On ?b ?t) (RightOf ?l ?b) (forall ?f (implies (Is ?f 'flower') (exists ?bs (and (Is ?bs 'bookshelf') (On ?f ?bs) (NextTo ?bs ?t)))))))))))",
+    "cnf": "(exists ?w (exists ?a (exists ?t (exists ?b (exists ?l (forall ?f (exists ?bs (and (Is ?w 'woman') (Holding ?w ?a) (NextTo ?w ?t) (Is ?a 'apple') (HasState ?a 'bitten') (Is ?t 'table') (On ?b ?t) (or (not (Is ?f 'flower')) (NextTo ?bs ?t)) (Is ?b 'bowl') (RightOf ?l ?b) (or (not (Is ?f 'flower')) (On ?f ?bs)) (Is ?l 'lamp') (or (not (Is ?f 'flower')) (Is ?bs 'bookshelf'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "woman",
+        "bowl",
+        "lamp",
+        "bookshelf",
+        "table",
+        "apple",
+        "flower"
+    ]
+}

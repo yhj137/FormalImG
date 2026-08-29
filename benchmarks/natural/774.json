@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a woman to the right of a wooden table. A plate rests on the table, containing every spoon.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (exists ?t (exists ?p (and (Is ?w 'woman') (Is ?t 'table') (HasMaterial ?t 'wooden') (Is ?p 'plate') (RightOf ?w ?t) (On ?p ?t) (forall ?s (implies (Is ?s 'spoon') (In ?s ?p))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (exists ?t (exists ?p (forall ?s (and (Is ?w 'woman') (RightOf ?w ?t) (HasMaterial ?t 'wooden') (On ?p ?t) (Is ?t 'table') (Is ?p 'plate') (or (not (Is ?s 'spoon')) (In ?s ?p))))))))",
+    "k": 4,
+    "object_classes": [
+        "spoon",
+        "table",
+        "plate",
+        "woman"
+    ]
+}

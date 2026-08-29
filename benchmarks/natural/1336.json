@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a rectangular rug with a dog on it. To the left of the dog is a round basket containing a banana, and a hammer lies to the left of the basket. A phone sits on the rug to the right of the dog, and all keys are positioned to the right of the phone.",
+    "dsl": "(and (IsStyle 'photo') (exists ?r (exists ?d (exists ?b (exists ?p (and (Is ?r 'rug') (HasShape ?r 'rectangular') (Is ?d 'dog') (On ?d ?r) (Is ?b 'basket') (HasShape ?b 'round') (LeftOf ?b ?d) (Is ?p 'phone') (On ?p ?r) (RightOf ?p ?d) (forall ?k (implies (Is ?k 'key') (RightOf ?k ?p))) (exists ?ba (and (Is ?ba 'banana') (In ?ba ?b))) (exists ?h (and (Is ?h 'hammer') (LeftOf ?h ?b)))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?r (exists ?d (exists ?b (exists ?p (forall ?k (exists ?ba (exists ?h (and (Is ?r 'rug') (HasShape ?r 'rectangular') (On ?d ?r) (On ?p ?r) (Is ?d 'dog') (LeftOf ?b ?d) (Is ?p 'phone') (RightOf ?p ?d) (HasShape ?b 'round') (In ?ba ?b) (or (not (Is ?k 'key')) (RightOf ?k ?p)) (Is ?b 'basket') (LeftOf ?h ?b) (Is ?ba 'banana') (Is ?h 'hammer'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "phone",
+        "rug",
+        "hammer",
+        "basket",
+        "banana",
+        "dog",
+        "key"
+    ]
+}

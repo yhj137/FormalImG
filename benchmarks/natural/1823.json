@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is rendered in pixel art style. For every butterfly, there is a wooden desk below it. A rug is positioned below the desk. Next to the rug are shoes. A sleeping cat is on the rug to the left of a backpack. Inside the backpack is a shirt. On the desk, there is a plate with a cake on it. A bowl is also on the desk, to the right of the plate.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?bu (implies (Is ?bu 'butterfly') (exists ?d (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (Above ?bu ?d) (exists ?r (and (Is ?r 'rug') (Below ?r ?d) (exists ?s (and (Is ?s 'shoes') (NextTo ?s ?r) (exists ?c (and (Is ?c 'cat') (HasState ?c 'sleeping') (On ?c ?r) (exists ?bp (and (Is ?bp 'backpack') (On ?bp ?r) (LeftOf ?c ?bp) (exists ?sh (and (Is ?sh 'shirt') (In ?sh ?bp) (exists ?p (and (Is ?p 'plate') (On ?p ?d) (exists ?ck (and (Is ?ck 'cake') (On ?ck ?p) (exists ?bl (and (Is ?bl 'bowl') (On ?bl ?d) (RightOf ?bl ?p))))))))))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?bu (exists ?d (exists ?r (exists ?s (exists ?c (exists ?bp (exists ?sh (exists ?p (exists ?ck (exists ?bl (and (or (not (Is ?bu 'butterfly')) (Is ?d 'desk')) (or (not (Is ?bu 'butterfly')) (HasMaterial ?d 'wooden')) (or (not (Is ?bu 'butterfly')) (Above ?bu ?d)) (or (not (Is ?bu 'butterfly')) (Is ?r 'rug')) (or (not (Is ?bu 'butterfly')) (Below ?r ?d)) (or (not (Is ?bu 'butterfly')) (Is ?s 'shoes')) (or (not (Is ?bu 'butterfly')) (On ?p ?d)) (or (not (Is ?bu 'butterfly')) (NextTo ?s ?r)) (or (not (Is ?bu 'butterfly')) (Is ?p 'plate')) (or (not (Is ?bu 'butterfly')) (Is ?ck 'cake')) (or (not (Is ?bu 'butterfly')) (On ?bl ?d)) (or (not (Is ?bu 'butterfly')) (On ?ck ?p)) (or (not (Is ?bu 'butterfly')) (Is ?c 'cat')) (or (not (Is ?bu 'butterfly')) (On ?c ?r)) (or (not (Is ?bu 'butterfly')) (In ?sh ?bp)) (or (not (Is ?bu 'butterfly')) (Is ?bl 'bowl')) (or (not (Is ?bu 'butterfly')) (RightOf ?bl ?p)) (or (not (Is ?bu 'butterfly')) (HasState ?c 'sleeping')) (or (not (Is ?bu 'butterfly')) (Is ?bp 'backpack')) (or (not (Is ?bu 'butterfly')) (On ?bp ?r)) (or (not (Is ?bu 'butterfly')) (LeftOf ?c ?bp)) (or (not (Is ?bu 'butterfly')) (Is ?sh 'shirt'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "backpack",
+        "bowl",
+        "shoes",
+        "desk",
+        "cake",
+        "shirt",
+        "plate",
+        "butterfly",
+        "cat",
+        "rug"
+    ]
+}

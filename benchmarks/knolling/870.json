@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a hammer. For every lemon found in the arrangement, it is yellow and appears smaller than the hammer. A screwdriver is placed directly below the lemon. To the left of the screwdriver sits a black remote, and a calculator is arranged below the remote. Additionally, the hammer is visually larger than the screwdriver.",
+    "dsl": "(exists ?h (and (Is ?h 'hammer') (forall ?l (implies (Is ?l 'lemon') (exists ?s (exists ?r (exists ?c (and (Is ?s 'screwdriver') (Is ?r 'remote') (Is ?c 'calculator') (Has ?l 'yellow') (Has ?r 'black') (SmallerThan ?l ?h) (Below ?s ?l) (LeftOf ?r ?s) (Below ?c ?r) (LargerThan ?h ?s)))))))))",
+    "cnf": "(exists ?h (forall ?l (exists ?s (exists ?r (exists ?c (and (Is ?h 'hammer') (or (not (Is ?l 'lemon')) (SmallerThan ?l ?h)) (or (not (Is ?l 'lemon')) (LargerThan ?h ?s)) (or (not (Is ?l 'lemon')) (Has ?r 'black')) (or (not (Is ?l 'lemon')) (Below ?s ?l)) (or (not (Is ?l 'lemon')) (LeftOf ?r ?s)) (or (not (Is ?l 'lemon')) (Below ?c ?r)) (or (not (Is ?l 'lemon')) (Has ?l 'yellow')) (or (not (Is ?l 'lemon')) (Is ?r 'remote')) (or (not (Is ?l 'lemon')) (Is ?s 'screwdriver')) (or (not (Is ?l 'lemon')) (Is ?c 'calculator'))))))))",
+    "k": 5,
+    "object_classes": [
+        "remote",
+        "lemon",
+        "screwdriver",
+        "hammer",
+        "calculator"
+    ]
+}

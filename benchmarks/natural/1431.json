@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene where every rock is round and supports a backpack and a laptop. To the right of each rock stands a horse wearing a shirt and holding an umbrella, while a ceramic plate with a banana sits to the left.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?r (implies (Is ?r 'rock') (exists ?bp (exists ?l (exists ?h (exists ?s (exists ?u (exists ?p (exists ?ba (and (HasShape ?r 'round') (Is ?bp 'backpack') (Is ?l 'laptop') (Is ?h 'horse') (Is ?s 'shirt') (Is ?u 'umbrella') (Is ?p 'plate') (HasMaterial ?p 'ceramic') (Is ?ba 'banana') (On ?bp ?r) (On ?l ?r) (RightOf ?h ?r) (On ?s ?h) (Holding ?h ?u) (LeftOf ?p ?r) (On ?ba ?p))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?r (exists ?bp (exists ?l (exists ?h (exists ?s (exists ?u (exists ?p (exists ?ba (and (or (not (Is ?r 'rock')) (HasShape ?r 'round')) (or (not (Is ?r 'rock')) (Is ?bp 'backpack')) (or (not (Is ?r 'rock')) (Is ?l 'laptop')) (or (not (Is ?r 'rock')) (On ?bp ?r)) (or (not (Is ?r 'rock')) (Is ?h 'horse')) (or (not (Is ?r 'rock')) (On ?l ?r)) (or (not (Is ?r 'rock')) (Is ?ba 'banana')) (or (not (Is ?r 'rock')) (Is ?s 'shirt')) (or (not (Is ?r 'rock')) (RightOf ?h ?r)) (or (not (Is ?r 'rock')) (HasMaterial ?p 'ceramic')) (or (not (Is ?r 'rock')) (On ?ba ?p)) (or (not (Is ?r 'rock')) (Is ?u 'umbrella')) (or (not (Is ?r 'rock')) (On ?s ?h)) (or (not (Is ?r 'rock')) (Is ?p 'plate')) (or (not (Is ?r 'rock')) (LeftOf ?p ?r)) (or (not (Is ?r 'rock')) (Holding ?h ?u))))))))))))",
+    "k": 8,
+    "object_classes": [
+        "umbrella",
+        "rock",
+        "laptop",
+        "backpack",
+        "banana",
+        "horse",
+        "shirt",
+        "plate"
+    ]
+}

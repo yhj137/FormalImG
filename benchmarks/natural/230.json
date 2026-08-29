@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A plastic toy car is inside a wooden basket.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (and (Is ?c 'toy car') (HasMaterial ?c 'plastic') (Is ?b 'basket') (HasMaterial ?b 'wooden') (In ?c ?b)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?b (and (Is ?c 'toy car') (HasMaterial ?c 'plastic') (In ?c ?b) (HasMaterial ?b 'wooden') (Is ?b 'basket')))))",
+    "k": 2,
+    "object_classes": [
+        "toy car",
+        "basket"
+    ]
+}

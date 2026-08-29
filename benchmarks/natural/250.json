@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon style scene of a butterfly inside a pair of rectangular shoes.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (and (Is ?b 'butterfly') (Is ?s 'shoes') (HasShape ?s 'rectangular') (In ?b ?s)))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?b (exists ?s (and (Is ?b 'butterfly') (In ?b ?s) (HasShape ?s 'rectangular') (Is ?s 'shoes')))))",
+    "k": 2,
+    "object_classes": [
+        "butterfly",
+        "shoes"
+    ]
+}

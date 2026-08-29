@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a woman sitting on a chair, wearing glasses. She is holding a pan with a fish inside. All the apples in the scene are red and located next to the woman.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?w (and (Is ?w 'woman') (HasState ?w 'sitting') (forall ?a (implies (Is ?a 'apple') (and (HasColor ?a 'red') (NextTo ?a ?w)))) (exists ?c (and (Is ?c 'chair') (On ?w ?c))) (exists ?p (and (Is ?p 'pan') (Holding ?w ?p) (exists ?f (and (Is ?f 'fish') (In ?f ?p))))) (exists ?g (and (Is ?g 'glasses') (On ?g ?w))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?w (forall ?a (exists ?c (exists ?p (exists ?f (exists ?g (and (Is ?w 'woman') (HasState ?w 'sitting') (or (not (Is ?a 'apple')) (NextTo ?a ?w)) (On ?w ?c) (or (not (Is ?a 'apple')) (HasColor ?a 'red')) (Holding ?w ?p) (Is ?c 'chair') (On ?g ?w) (Is ?p 'pan') (In ?f ?p) (Is ?g 'glasses') (Is ?f 'fish')))))))))",
+    "k": 6,
+    "object_classes": [
+        "fish",
+        "chair",
+        "glasses",
+        "woman",
+        "pan",
+        "apple"
+    ]
+}

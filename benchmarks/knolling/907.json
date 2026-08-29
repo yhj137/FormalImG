@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt positioned on the left side, with a laptop placed above it; the shirt is visually larger than the laptop. For every donut in the image, there is a plate located below the donut, and a wrench located below that plate. Additionally, the plate is positioned below the shirt.",
+    "dsl": "(exists ?shirt (exists ?laptop (and (Is ?shirt 'shirt') (Is ?laptop 'laptop') (OnLeftSide ?shirt) (Above ?laptop ?shirt) (LargerThan ?shirt ?laptop) (forall ?donut (implies (Is ?donut 'donut') (exists ?plate (exists ?wrench (and (Is ?plate 'plate') (Is ?wrench 'wrench') (Above ?donut ?plate) (Below ?wrench ?plate) (Below ?plate ?shirt)))))))))",
+    "cnf": "(exists ?shirt (exists ?laptop (forall ?donut (exists ?plate (exists ?wrench (and (Is ?shirt 'shirt') (OnLeftSide ?shirt) (Above ?laptop ?shirt) (LargerThan ?shirt ?laptop) (Is ?laptop 'laptop') (or (not (Is ?donut 'donut')) (Below ?plate ?shirt)) (or (not (Is ?donut 'donut')) (Below ?wrench ?plate)) (or (not (Is ?donut 'donut')) (Above ?donut ?plate)) (or (not (Is ?donut 'donut')) (Is ?wrench 'wrench')) (or (not (Is ?donut 'donut')) (Is ?plate 'plate'))))))))",
+    "k": 5,
+    "object_classes": [
+        "laptop",
+        "plate",
+        "wrench",
+        "shirt",
+        "donut"
+    ]
+}

@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image with a drill on the left side. For every glove in the image, it is placed below and vertically aligned with the drill, and there is a book on the right side that is larger than the drill, with an apple vertically aligned below it.",
+    "dsl": "(exists ?d (and (Is ?d 'drill') (OnLeftSide ?d) (forall ?g (implies (Is ?g 'glove') (and (Below ?g ?d) (AlignedVertically ?g ?d) (exists ?b (and (Is ?b 'book') (OnRightSide ?b) (LargerThan ?b ?d) (exists ?a (and (Is ?a 'apple') (Below ?a ?b) (AlignedVertically ?a ?b))))))))))",
+    "cnf": "(exists ?d (forall ?g (exists ?b (exists ?a (and (Is ?d 'drill') (OnLeftSide ?d) (or (not (Is ?g 'glove')) (Below ?g ?d)) (or (not (Is ?g 'glove')) (AlignedVertically ?g ?d)) (or (not (Is ?g 'glove')) (LargerThan ?b ?d)) (or (not (Is ?g 'glove')) (Is ?b 'book')) (or (not (Is ?g 'glove')) (OnRightSide ?b)) (or (not (Is ?g 'glove')) (Is ?a 'apple')) (or (not (Is ?g 'glove')) (Below ?a ?b)) (or (not (Is ?g 'glove')) (AlignedVertically ?a ?b)))))))",
+    "k": 4,
+    "object_classes": [
+        "book",
+        "drill",
+        "glove",
+        "apple"
+    ]
+}

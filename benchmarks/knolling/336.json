@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a stapler positioned on the bottom side of the layout. For every sandwich in the image, it is placed vertically above the stapler.",
+    "dsl": "(exists ?stapler (and (Is ?stapler 'stapler') (OnBottomSide ?stapler) (forall ?sandwich (implies (Is ?sandwich 'sandwich') (Above ?sandwich ?stapler)))))",
+    "cnf": "(exists ?stapler (forall ?sandwich (and (Is ?stapler 'stapler') (OnBottomSide ?stapler) (or (not (Is ?sandwich 'sandwich')) (Above ?sandwich ?stapler)))))",
+    "k": 2,
+    "object_classes": [
+        "sandwich",
+        "stapler"
+    ]
+}

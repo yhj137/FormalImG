@@ -1,0 +1,18 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat arrangement of items. A suitcase is located on the bottom side of the image. A backpack is positioned directly above the suitcase. To the left of the backpack is a pan, and to the right of the backpack is a drill. Located above the pan is a bottle, and located above the drill is a wrench. For every glove in the arrangement, it is placed above the backpack, with a lighter to its left, a mouse to its right, and a fork positioned above it.",
+    "dsl": "(exists ?suitcase (exists ?backpack (exists ?pan (exists ?drill (exists ?bottle (exists ?wrench (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Is ?backpack 'backpack') (Above ?backpack ?suitcase) (Is ?pan 'pan') (LeftOf ?pan ?backpack) (Is ?drill 'drill') (RightOf ?drill ?backpack) (Is ?bottle 'bottle') (Above ?bottle ?pan) (Is ?wrench 'wrench') (Above ?wrench ?drill) (forall ?glove (implies (Is ?glove 'glove') (exists ?lighter (exists ?mouse (exists ?fork (and (Is ?lighter 'lighter') (Is ?mouse 'mouse') (Is ?fork 'fork') (Above ?glove ?backpack) (LeftOf ?lighter ?glove) (RightOf ?mouse ?glove) (Above ?fork ?glove))))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?backpack (exists ?pan (exists ?drill (exists ?bottle (exists ?wrench (forall ?glove (exists ?lighter (exists ?mouse (exists ?fork (and (Is ?suitcase 'suitcase') (OnBottomSide ?suitcase) (Above ?backpack ?suitcase) (Is ?backpack 'backpack') (LeftOf ?pan ?backpack) (RightOf ?drill ?backpack) (Is ?pan 'pan') (Above ?bottle ?pan) (or (not (Is ?glove 'glove')) (Above ?glove ?backpack)) (Is ?drill 'drill') (Above ?wrench ?drill) (Is ?bottle 'bottle') (or (not (Is ?glove 'glove')) (Is ?fork 'fork')) (or (not (Is ?glove 'glove')) (LeftOf ?lighter ?glove)) (Is ?wrench 'wrench') (or (not (Is ?glove 'glove')) (Is ?mouse 'mouse')) (or (not (Is ?glove 'glove')) (Above ?fork ?glove)) (or (not (Is ?glove 'glove')) (RightOf ?mouse ?glove)) (or (not (Is ?glove 'glove')) (Is ?lighter 'lighter')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "wrench",
+        "drill",
+        "pan",
+        "backpack",
+        "fork",
+        "lighter",
+        "mouse",
+        "bottle",
+        "suitcase",
+        "glove"
+    ]
+}

@@ -1,0 +1,18 @@
+{
+    "prompt": "For every pen in the image, the scene contains a monitor, a book, and a calculator aligned horizontally. Below the monitor, there is a shirt aligned vertically with it. A drill is aligned horizontally with the shirt and vertically with the book. The pen is positioned below the shirt and aligned vertically with it. Additionally, for each pen, there exist a hammer, a shoe, a knife, and scissors: the hammer is aligned horizontally with the drill and vertically with the calculator (positioned below it); the knife is aligned horizontally with the pen and vertically with the drill; the scissors are aligned horizontally with the knife and vertically with the hammer; and the shoe is located below the pen, aligned vertically with it, and positioned on the bottom side of the image.",
+    "dsl": "(exists ?monitor (exists ?book (exists ?calculator (exists ?shirt (exists ?drill (forall ?pen (implies (Is ?pen 'pen') (exists ?hammer (exists ?shoe (exists ?knife (exists ?scissors (and (Is ?monitor 'monitor') (Is ?book 'book') (Is ?calculator 'calculator') (Is ?shirt 'shirt') (Is ?drill 'drill') (Is ?hammer 'hammer') (Is ?shoe 'shoe') (Is ?knife 'knife') (Is ?scissors 'scissors') (AlignedHorizontally ?monitor ?book) (AlignedHorizontally ?book ?calculator) (Below ?shirt ?monitor) (AlignedVertically ?shirt ?monitor) (AlignedHorizontally ?shirt ?drill) (AlignedVertically ?drill ?book) (Below ?pen ?shirt) (AlignedVertically ?pen ?shirt) (Below ?hammer ?calculator) (AlignedVertically ?hammer ?calculator) (AlignedHorizontally ?hammer ?drill) (AlignedHorizontally ?pen ?knife) (AlignedVertically ?knife ?drill) (AlignedHorizontally ?knife ?scissors) (AlignedVertically ?scissors ?hammer) (Below ?shoe ?pen) (AlignedVertically ?shoe ?pen) (OnBottomSide ?shoe)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?book (exists ?calculator (exists ?shirt (exists ?drill (forall ?pen (exists ?hammer (exists ?shoe (exists ?knife (exists ?scissors (and (or (not (Is ?pen 'pen')) (Is ?monitor 'monitor')) (or (not (Is ?pen 'pen')) (Is ?book 'book')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?monitor ?book)) (or (not (Is ?pen 'pen')) (Is ?calculator 'calculator')) (or (not (Is ?pen 'pen')) (Is ?scissors 'scissors')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?book ?calculator)) (or (not (Is ?pen 'pen')) (Below ?shirt ?monitor)) (or (not (Is ?pen 'pen')) (Is ?shirt 'shirt')) (or (not (Is ?pen 'pen')) (Is ?knife 'knife')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?knife ?scissors)) (or (not (Is ?pen 'pen')) (AlignedVertically ?drill ?book)) (or (not (Is ?pen 'pen')) (Below ?hammer ?calculator)) (or (not (Is ?pen 'pen')) (AlignedVertically ?shirt ?monitor)) (or (not (Is ?pen 'pen')) (Is ?drill 'drill')) (or (not (Is ?pen 'pen')) (Is ?shoe 'shoe')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?knife)) (or (not (Is ?pen 'pen')) (AlignedVertically ?knife ?drill)) (or (not (Is ?pen 'pen')) (AlignedVertically ?scissors ?hammer)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?shirt ?drill)) (or (not (Is ?pen 'pen')) (Below ?pen ?shirt)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?hammer ?drill)) (or (not (Is ?pen 'pen')) (AlignedVertically ?pen ?shirt)) (or (not (Is ?pen 'pen')) (AlignedVertically ?hammer ?calculator)) (or (not (Is ?pen 'pen')) (Is ?hammer 'hammer')) (or (not (Is ?pen 'pen')) (Below ?shoe ?pen)) (or (not (Is ?pen 'pen')) (AlignedVertically ?shoe ?pen)) (or (not (Is ?pen 'pen')) (OnBottomSide ?shoe)))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "book",
+        "pen",
+        "drill",
+        "hammer",
+        "calculator",
+        "knife",
+        "shirt",
+        "monitor",
+        "shoe",
+        "scissors"
+    ]
+}

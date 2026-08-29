@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every lion wears a blue hat, holds a triangular sandwich, and stands next to a wooden bookshelf. The bookshelf supports a green plant, a round ball, an orange, a black phone, a metal spoon, and a red shirt.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?l (implies (Is ?l 'lion') (exists ?bs (exists ?sa (exists ?h (exists ?p (exists ?b (exists ?o (exists ?ph (exists ?sp (exists ?sh (and (Is ?bs 'bookshelf') (HasMaterial ?bs 'wooden') (NextTo ?bs ?l) (Is ?sa 'sandwich') (HasShape ?sa 'triangular') (Holding ?l ?sa) (Is ?h 'hat') (HasColor ?h 'blue') (On ?h ?l) (Is ?p 'plant') (HasColor ?p 'green') (On ?p ?bs) (Is ?b 'ball') (HasShape ?b 'round') (On ?b ?bs) (Is ?o 'orange') (On ?o ?bs) (Is ?ph 'phone') (HasColor ?ph 'black') (On ?ph ?bs) (Is ?sp 'spoon') (HasMaterial ?sp 'metal') (On ?sp ?bs) (Is ?sh 'shirt') (HasColor ?sh 'red') (On ?sh ?bs))))))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?l (exists ?bs (exists ?sa (exists ?h (exists ?p (exists ?b (exists ?o (exists ?ph (exists ?sp (exists ?sh (and (or (not (Is ?l 'lion')) (Is ?bs 'bookshelf')) (or (not (Is ?l 'lion')) (HasMaterial ?bs 'wooden')) (or (not (Is ?l 'lion')) (NextTo ?bs ?l)) (or (not (Is ?l 'lion')) (On ?p ?bs)) (or (not (Is ?l 'lion')) (Is ?sa 'sandwich')) (or (not (Is ?l 'lion')) (On ?b ?bs)) (or (not (Is ?l 'lion')) (HasColor ?p 'green')) (or (not (Is ?l 'lion')) (Is ?b 'ball')) (or (not (Is ?l 'lion')) (HasShape ?sa 'triangular')) (or (not (Is ?l 'lion')) (On ?o ?bs)) (or (not (Is ?l 'lion')) (HasShape ?b 'round')) (or (not (Is ?l 'lion')) (Is ?o 'orange')) (or (not (Is ?l 'lion')) (Is ?p 'plant')) (or (not (Is ?l 'lion')) (Holding ?l ?sa)) (or (not (Is ?l 'lion')) (On ?ph ?bs)) (or (not (Is ?l 'lion')) (Is ?ph 'phone')) (or (not (Is ?l 'lion')) (On ?h ?l)) (or (not (Is ?l 'lion')) (Is ?h 'hat')) (or (not (Is ?l 'lion')) (On ?sp ?bs)) (or (not (Is ?l 'lion')) (HasColor ?ph 'black')) (or (not (Is ?l 'lion')) (Is ?sp 'spoon')) (or (not (Is ?l 'lion')) (HasColor ?h 'blue')) (or (not (Is ?l 'lion')) (On ?sh ?bs)) (or (not (Is ?l 'lion')) (HasMaterial ?sp 'metal')) (or (not (Is ?l 'lion')) (Is ?sh 'shirt')) (or (not (Is ?l 'lion')) (HasColor ?sh 'red'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "sandwich",
+        "plant",
+        "ball",
+        "hat",
+        "phone",
+        "shirt",
+        "lion",
+        "bookshelf",
+        "orange",
+        "spoon"
+    ]
+}

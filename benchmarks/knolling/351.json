@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a book located on the bottom side of the image. For every ruler present in the scene, it is aligned vertically with that book.",
+    "dsl": "(exists ?b (and (Is ?b 'book') (OnBottomSide ?b) (forall ?r (implies (Is ?r 'ruler') (AlignedVertically ?r ?b)))))",
+    "cnf": "(exists ?b (forall ?r (and (Is ?b 'book') (OnBottomSide ?b) (or (not (Is ?r 'ruler')) (AlignedVertically ?r ?b)))))",
+    "k": 2,
+    "object_classes": [
+        "ruler",
+        "book"
+    ]
+}

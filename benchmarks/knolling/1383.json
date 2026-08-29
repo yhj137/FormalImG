@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat horizontal arrangement of items. On the left side, there is a black monitor. To the right of the monitor is a keyboard, followed by a suitcase to the right of the keyboard. Next in the line to the right of the suitcase is a calculator, followed by a white cup to the right of the calculator. A red apple is positioned to the right of the cup. All these six specific items are aligned horizontally. Additionally, for any lemon appearing in the scene, it must be yellow and located to the right of the red apple, continuing the horizontal alignment.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?suitcase (exists ?calculator (exists ?cup (exists ?apple (and (Is ?monitor 'monitor') (Has ?monitor 'black') (Is ?keyboard 'keyboard') (Is ?suitcase 'suitcase') (Is ?calculator 'calculator') (Is ?cup 'cup') (Has ?cup 'white') (Is ?apple 'apple') (Has ?apple 'red') (RightOf ?keyboard ?monitor) (AlignedHorizontally ?monitor ?keyboard) (RightOf ?suitcase ?keyboard) (AlignedHorizontally ?keyboard ?suitcase) (RightOf ?calculator ?suitcase) (AlignedHorizontally ?suitcase ?calculator) (RightOf ?cup ?calculator) (AlignedHorizontally ?calculator ?cup) (RightOf ?apple ?cup) (AlignedHorizontally ?cup ?apple) (forall ?lemon (implies (Is ?lemon 'lemon') (and (Has ?lemon 'yellow') (RightOf ?lemon ?apple) (AlignedHorizontally ?apple ?lemon)))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?suitcase (exists ?calculator (exists ?cup (exists ?apple (forall ?lemon (and (Is ?monitor 'monitor') (Has ?monitor 'black') (RightOf ?keyboard ?monitor) (AlignedHorizontally ?monitor ?keyboard) (Is ?keyboard 'keyboard') (RightOf ?suitcase ?keyboard) (AlignedHorizontally ?keyboard ?suitcase) (Is ?suitcase 'suitcase') (RightOf ?calculator ?suitcase) (AlignedHorizontally ?suitcase ?calculator) (Is ?calculator 'calculator') (RightOf ?cup ?calculator) (AlignedHorizontally ?calculator ?cup) (Has ?cup 'white') (RightOf ?apple ?cup) (Is ?cup 'cup') (AlignedHorizontally ?cup ?apple) (Has ?apple 'red') (or (not (Is ?lemon 'lemon')) (RightOf ?lemon ?apple)) (Is ?apple 'apple') (or (not (Is ?lemon 'lemon')) (AlignedHorizontally ?apple ?lemon)) (or (not (Is ?lemon 'lemon')) (Has ?lemon 'yellow'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "apple",
+        "keyboard",
+        "lemon",
+        "cup",
+        "calculator",
+        "monitor",
+        "suitcase"
+    ]
+}

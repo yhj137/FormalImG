@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image featuring two rows of items. On the top side of the image, there is a pan, a pizza, and a hat arranged from left to right and aligned horizontally. On the bottom side, a phone is aligned vertically with the pan. To the right of the phone is a bottle, which is aligned vertically with the pizza. To the right of the bottle is a ruler, which is aligned vertically with the hat. A pair of scissors is located to the right of the ruler, maintaining horizontal alignment with the bottom row items. The pan is visually larger than the phone, and the pizza is larger than the bottle. Finally, for every carrot present in the scene, it is aligned vertically with the scissors.",
+    "dsl": "(exists ?pan (exists ?pizza (exists ?hat (exists ?phone (exists ?bottle (exists ?ruler (exists ?scissors (and (Is ?pan 'pan') (OnTopSide ?pan) (Is ?pizza 'pizza') (RightOf ?pizza ?pan) (AlignedHorizontally ?pan ?pizza) (Is ?hat 'hat') (RightOf ?hat ?pizza) (AlignedHorizontally ?pizza ?hat) (Is ?phone 'phone') (OnBottomSide ?phone) (AlignedVertically ?pan ?phone) (LargerThan ?pan ?phone) (Is ?bottle 'bottle') (RightOf ?bottle ?phone) (AlignedHorizontally ?phone ?bottle) (AlignedVertically ?pizza ?bottle) (LargerThan ?pizza ?bottle) (Is ?ruler 'ruler') (RightOf ?ruler ?bottle) (AlignedHorizontally ?bottle ?ruler) (AlignedVertically ?hat ?ruler) (Is ?scissors 'scissors') (RightOf ?scissors ?ruler) (AlignedHorizontally ?ruler ?scissors) (forall ?carrot (implies (Is ?carrot 'carrot') (AlignedVertically ?scissors ?carrot)))))))))))",
+    "cnf": "(exists ?pan (exists ?pizza (exists ?hat (exists ?phone (exists ?bottle (exists ?ruler (exists ?scissors (forall ?carrot (and (Is ?pan 'pan') (OnTopSide ?pan) (RightOf ?pizza ?pan) (AlignedHorizontally ?pan ?pizza) (Is ?pizza 'pizza') (AlignedVertically ?pan ?phone) (RightOf ?hat ?pizza) (LargerThan ?pan ?phone) (OnBottomSide ?phone) (AlignedHorizontally ?pizza ?hat) (Is ?hat 'hat') (RightOf ?bottle ?phone) (Is ?phone 'phone') (AlignedVertically ?pizza ?bottle) (AlignedVertically ?hat ?ruler) (AlignedHorizontally ?phone ?bottle) (Is ?bottle 'bottle') (LargerThan ?pizza ?bottle) (AlignedHorizontally ?bottle ?ruler) (RightOf ?scissors ?ruler) (RightOf ?ruler ?bottle) (AlignedHorizontally ?ruler ?scissors) (Is ?scissors 'scissors') (Is ?ruler 'ruler') (or (not (Is ?carrot 'carrot')) (AlignedVertically ?scissors ?carrot)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "carrot",
+        "phone",
+        "pizza",
+        "hat",
+        "pan",
+        "bottle",
+        "scissors"
+    ]
+}

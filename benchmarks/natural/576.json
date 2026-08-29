@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene featuring a jacket next to a rectangular backpack. All bananas are inside the backpack.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?j (exists ?b (and (Is ?j 'jacket') (Is ?b 'backpack') (HasShape ?b 'rectangular') (NextTo ?j ?b) (forall ?ban (implies (Is ?ban 'banana') (In ?ban ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?j (exists ?b (forall ?ban (and (Is ?j 'jacket') (NextTo ?j ?b) (HasShape ?b 'rectangular') (or (not (Is ?ban 'banana')) (In ?ban ?b)) (Is ?b 'backpack'))))))",
+    "k": 3,
+    "object_classes": [
+        "jacket",
+        "backpack",
+        "banana"
+    ]
+}

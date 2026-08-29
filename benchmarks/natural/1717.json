@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman holds a blue umbrella. Next to her on the right stands a bicycle with a basket containing headphones, a knife, a hammer, and a red fish. All butterflies in the scene are located to the left of the woman.",
+    "dsl": "(exists ?w (exists ?bi (exists ?ba (exists ?u (and (Is ?w 'woman') (Is ?bi 'bicycle') (Is ?ba 'basket') (Is ?u 'umbrella') (Holding ?w ?u) (HasColor ?u 'blue') (RightOf ?bi ?w) (NextTo ?bi ?w) (On ?ba ?bi) (forall ?bu (implies (Is ?bu 'butterfly') (LeftOf ?bu ?w))) (exists ?h (exists ?k (exists ?hm (exists ?f (and (Is ?h 'headphones') (Is ?k 'knife') (Is ?hm 'hammer') (Is ?f 'fish') (In ?h ?ba) (In ?k ?ba) (In ?hm ?ba) (In ?f ?ba) (HasColor ?f 'red')))))))))))",
+    "cnf": "(exists ?w (exists ?bi (exists ?ba (exists ?u (forall ?bu (exists ?h (exists ?k (exists ?hm (exists ?f (and (Is ?w 'woman') (Holding ?w ?u) (RightOf ?bi ?w) (Is ?u 'umbrella') (HasColor ?u 'blue') (NextTo ?bi ?w) (Is ?bi 'bicycle') (or (not (Is ?bu 'butterfly')) (LeftOf ?bu ?w)) (On ?ba ?bi) (Is ?ba 'basket') (In ?h ?ba) (In ?k ?ba) (Is ?h 'headphones') (In ?hm ?ba) (Is ?k 'knife') (In ?f ?ba) (Is ?hm 'hammer') (Is ?f 'fish') (HasColor ?f 'red')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "umbrella",
+        "headphones",
+        "knife",
+        "fish",
+        "hammer",
+        "butterfly",
+        "basket",
+        "woman",
+        "bicycle"
+    ]
+}

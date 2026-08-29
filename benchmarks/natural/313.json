@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every bottle sits on a red rug.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?b (implies (Is ?b 'bottle') (exists ?r (and (Is ?r 'rug') (HasColor ?r 'red') (On ?b ?r))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?b (exists ?r (and (or (not (Is ?b 'bottle')) (Is ?r 'rug')) (or (not (Is ?b 'bottle')) (HasColor ?r 'red')) (or (not (Is ?b 'bottle')) (On ?b ?r))))))",
+    "k": 2,
+    "object_classes": [
+        "bottle",
+        "rug"
+    ]
+}

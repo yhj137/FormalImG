@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. For every game controller in the scene, it is located on the right side of the image. There is a phone positioned to the left of the game controller. Additionally, a sandwich is placed above the phone, and a calculator is located below the phone.",
+    "dsl": "(and (forall ?gc (implies (Is ?gc 'game_controller') (exists ?ph (exists ?sw (exists ?calc (and (Is ?ph 'phone') (Is ?sw 'sandwich') (Is ?calc 'calculator') (OnRightSide ?gc) (LeftOf ?ph ?gc) (Above ?sw ?ph) (Below ?calc ?ph))))))))",
+    "cnf": "(forall ?gc (exists ?ph (exists ?sw (exists ?calc (and (or (not (Is ?gc 'game_controller')) (Is ?ph 'phone')) (or (not (Is ?gc 'game_controller')) (Is ?sw 'sandwich')) (or (not (Is ?gc 'game_controller')) (LeftOf ?ph ?gc)) (or (not (Is ?gc 'game_controller')) (Is ?calc 'calculator')) (or (not (Is ?gc 'game_controller')) (Above ?sw ?ph)) (or (not (Is ?gc 'game_controller')) (OnRightSide ?gc)) (or (not (Is ?gc 'game_controller')) (Below ?calc ?ph)))))))",
+    "k": 4,
+    "object_classes": [
+        "sandwich",
+        "phone",
+        "calculator",
+        "game_controller"
+    ]
+}

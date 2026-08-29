@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement features a vertical column containing a black camera, a gray laptop, and a black mouse; the camera is above the laptop, and the mouse is below the laptop, with all three aligned vertically. To the left of the laptop lies a brown cutting board. Every sock in the image is white, is positioned to the left of the cutting board, and forms a vertical column with red pliers located above it and a blue tie located below it, all aligned vertically.",
+    "dsl": "(exists ?camera (exists ?laptop (exists ?mouse (exists ?cutting_board (and (Is ?camera 'camera') (Has ?camera 'black') (Is ?laptop 'laptop') (Has ?laptop 'gray') (Is ?mouse 'mouse') (Has ?mouse 'black') (Is ?cutting_board 'cutting_board') (Has ?cutting_board 'brown') (Above ?camera ?laptop) (Below ?mouse ?laptop) (AlignedVertically ?camera ?laptop) (AlignedVertically ?mouse ?laptop) (LeftOf ?cutting_board ?laptop) (forall ?sock (implies (Is ?sock 'sock') (exists ?pliers (exists ?tie (and (Is ?pliers 'pliers') (Has ?pliers 'red') (Is ?tie 'tie') (Has ?tie 'blue') (Has ?sock 'white') (LeftOf ?sock ?cutting_board) (Above ?pliers ?sock) (Below ?tie ?sock) (AlignedVertically ?pliers ?sock) (AlignedVertically ?tie ?sock)))))))))))",
+    "cnf": "(exists ?camera (exists ?laptop (exists ?mouse (exists ?cutting_board (forall ?sock (exists ?pliers (exists ?tie (and (Is ?camera 'camera') (Has ?camera 'black') (Above ?camera ?laptop) (AlignedVertically ?camera ?laptop) (Has ?laptop 'gray') (Below ?mouse ?laptop) (AlignedVertically ?mouse ?laptop) (Is ?laptop 'laptop') (Has ?mouse 'black') (LeftOf ?cutting_board ?laptop) (Is ?mouse 'mouse') (Has ?cutting_board 'brown') (or (not (Is ?sock 'sock')) (LeftOf ?sock ?cutting_board)) (Is ?cutting_board 'cutting_board') (or (not (Is ?sock 'sock')) (Has ?sock 'white')) (or (not (Is ?sock 'sock')) (Above ?pliers ?sock)) (or (not (Is ?sock 'sock')) (Has ?tie 'blue')) (or (not (Is ?sock 'sock')) (Below ?tie ?sock)) (or (not (Is ?sock 'sock')) (Has ?pliers 'red')) (or (not (Is ?sock 'sock')) (AlignedVertically ?pliers ?sock)) (or (not (Is ?sock 'sock')) (Is ?tie 'tie')) (or (not (Is ?sock 'sock')) (AlignedVertically ?tie ?sock)) (or (not (Is ?sock 'sock')) (Is ?pliers 'pliers'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "tie",
+        "pliers",
+        "sock",
+        "camera",
+        "cutting_board",
+        "mouse"
+    ]
+}

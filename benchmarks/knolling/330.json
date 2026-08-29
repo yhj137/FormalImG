@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. For every pair of black glasses present in the scene, there exists a white game controller that is visually larger than the glasses.",
+    "dsl": "(and (forall ?g (implies (and (Is ?g 'glasses') (Has ?g 'black')) (exists ?c (and (Is ?c 'game_controller') (Has ?c 'white') (LargerThan ?c ?g))))))",
+    "cnf": "(forall ?g (exists ?c (and (or (not (Is ?g 'glasses')) (not (Has ?g 'black')) (Is ?c 'game_controller')) (or (not (Is ?g 'glasses')) (not (Has ?g 'black')) (Has ?c 'white')) (or (not (Is ?g 'glasses')) (not (Has ?g 'black')) (LargerThan ?c ?g)))))",
+    "k": 2,
+    "object_classes": [
+        "glasses",
+        "game_controller"
+    ]
+}

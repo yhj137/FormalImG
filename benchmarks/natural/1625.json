@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. Every lion is positioned to the left of a woman holding a basket, with a red ball next to her. To the right of the woman is a blue car with a cake on it. Next to the cake sits a bowl with a spoon resting on top, and a clock is placed to the right of the car.",
+    "dsl": "(forall ?l (implies (Is ?l 'lion') (exists ?w (exists ?b (exists ?bl (exists ?c (exists ?ck (exists ?bo (exists ?s (exists ?cl (and (Is ?w 'woman') (LeftOf ?l ?w) (Is ?b 'basket') (Holding ?w ?b) (Is ?bl 'ball') (HasColor ?bl 'red') (NextTo ?bl ?w) (Is ?c 'car') (HasColor ?c 'blue') (RightOf ?c ?w) (Is ?ck 'cake') (On ?ck ?c) (Is ?bo 'bowl') (NextTo ?bo ?ck) (Is ?s 'spoon') (On ?s ?bo) (Is ?cl 'clock') (RightOf ?cl ?c))))))))))))",
+    "cnf": "(forall ?l (exists ?w (exists ?b (exists ?bl (exists ?c (exists ?ck (exists ?bo (exists ?s (exists ?cl (and (or (not (Is ?l 'lion')) (Is ?w 'woman')) (or (not (Is ?l 'lion')) (LeftOf ?l ?w)) (or (not (Is ?l 'lion')) (Is ?b 'basket')) (or (not (Is ?l 'lion')) (Holding ?w ?b)) (or (not (Is ?l 'lion')) (Is ?bl 'ball')) (or (not (Is ?l 'lion')) (NextTo ?bl ?w)) (or (not (Is ?l 'lion')) (HasColor ?bl 'red')) (or (not (Is ?l 'lion')) (Is ?c 'car')) (or (not (Is ?l 'lion')) (RightOf ?c ?w)) (or (not (Is ?l 'lion')) (HasColor ?c 'blue')) (or (not (Is ?l 'lion')) (Is ?ck 'cake')) (or (not (Is ?l 'lion')) (On ?ck ?c)) (or (not (Is ?l 'lion')) (Is ?bo 'bowl')) (or (not (Is ?l 'lion')) (RightOf ?cl ?c)) (or (not (Is ?l 'lion')) (NextTo ?bo ?ck)) (or (not (Is ?l 'lion')) (Is ?cl 'clock')) (or (not (Is ?l 'lion')) (Is ?s 'spoon')) (or (not (Is ?l 'lion')) (On ?s ?bo))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "bowl",
+        "spoon",
+        "lion",
+        "woman",
+        "cake",
+        "car",
+        "clock",
+        "ball",
+        "basket"
+    ]
+}

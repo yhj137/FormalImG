@@ -1,0 +1,14 @@
+{
+    "prompt": "For every laptop, it is positioned on the left side, and there is a game controller to its right, and a wallet to the right of the game controller. A lighter is located on the bottom side and aligned vertically with the laptop. The lighter is to the left of a spoon, which is aligned vertically with the game controller. The spoon is to the left of a pen, and the pen is aligned vertically with the wallet.",
+    "dsl": "(forall ?l (implies (Is ?l 'laptop') (exists ?g (exists ?w (exists ?li (exists ?s (exists ?p (and (Is ?g 'game_controller') (Is ?w 'wallet') (Is ?li 'lighter') (Is ?s 'spoon') (Is ?p 'pen') (OnLeftSide ?l) (RightOf ?g ?l) (RightOf ?w ?g) (OnBottomSide ?li) (AlignedVertically ?l ?li) (AlignedVertically ?g ?s) (AlignedVertically ?w ?p) (LeftOf ?li ?s) (LeftOf ?s ?p)))))))))",
+    "cnf": "(forall ?l (exists ?g (exists ?w (exists ?li (exists ?s (exists ?p (and (or (not (Is ?l 'laptop')) (Is ?g 'game_controller')) (or (not (Is ?l 'laptop')) (RightOf ?g ?l)) (or (not (Is ?l 'laptop')) (Is ?w 'wallet')) (or (not (Is ?l 'laptop')) (RightOf ?w ?g)) (or (not (Is ?l 'laptop')) (OnLeftSide ?l)) (or (not (Is ?l 'laptop')) (Is ?li 'lighter')) (or (not (Is ?l 'laptop')) (AlignedVertically ?g ?s)) (or (not (Is ?l 'laptop')) (OnBottomSide ?li)) (or (not (Is ?l 'laptop')) (AlignedVertically ?w ?p)) (or (not (Is ?l 'laptop')) (Is ?p 'pen')) (or (not (Is ?l 'laptop')) (Is ?s 'spoon')) (or (not (Is ?l 'laptop')) (AlignedVertically ?l ?li)) (or (not (Is ?l 'laptop')) (LeftOf ?li ?s)) (or (not (Is ?l 'laptop')) (LeftOf ?s ?p)))))))))",
+    "k": 6,
+    "object_classes": [
+        "laptop",
+        "pen",
+        "game_controller",
+        "lighter",
+        "wallet",
+        "spoon"
+    ]
+}

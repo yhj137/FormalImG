@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a sandwich and an apple positioned on the top side of the image, where the sandwich is to the left of the apple. Arranged in neat vertical columns, a knife is placed directly below the sandwich, while a watch is directly below the apple; the watch is smaller than the apple and aligned vertically with it. Further down, a cup is positioned below the knife, and a set of keys is below the watch, maintaining vertical alignment within their respective columns. The cup is located to the left of the keys. Finally, a mouse is placed below the keys, aligned vertically with the column on the right.",
+    "dsl": "(exists ?sandwich (exists ?apple (exists ?knife (exists ?watch (exists ?cup (exists ?keys (exists ?mouse (and (Is ?sandwich 'sandwich') (OnTopSide ?sandwich) (Is ?apple 'apple') (OnTopSide ?apple) (LeftOf ?sandwich ?apple) (Is ?knife 'knife') (Below ?knife ?sandwich) (AlignedVertically ?sandwich ?knife) (Is ?watch 'watch') (Below ?watch ?apple) (AlignedVertically ?apple ?watch) (SmallerThan ?watch ?apple) (Is ?cup 'cup') (Is ?keys 'keys') (Below ?cup ?knife) (AlignedVertically ?knife ?cup) (Below ?keys ?watch) (AlignedVertically ?watch ?keys) (LeftOf ?cup ?keys) (Is ?mouse 'mouse') (Below ?mouse ?keys) (AlignedVertically ?keys ?mouse)))))))))",
+    "cnf": "(exists ?sandwich (exists ?apple (exists ?knife (exists ?watch (exists ?cup (exists ?keys (exists ?mouse (and (Is ?sandwich 'sandwich') (OnTopSide ?sandwich) (LeftOf ?sandwich ?apple) (Below ?knife ?sandwich) (OnTopSide ?apple) (Below ?watch ?apple) (AlignedVertically ?sandwich ?knife) (Is ?knife 'knife') (Is ?apple 'apple') (AlignedVertically ?apple ?watch) (Is ?watch 'watch') (Below ?cup ?knife) (SmallerThan ?watch ?apple) (AlignedVertically ?knife ?cup) (Is ?cup 'cup') (Below ?keys ?watch) (LeftOf ?cup ?keys) (AlignedVertically ?watch ?keys) (Is ?keys 'keys') (Below ?mouse ?keys) (AlignedVertically ?keys ?mouse) (Is ?mouse 'mouse')))))))))",
+    "k": 7,
+    "object_classes": [
+        "keys",
+        "apple",
+        "watch",
+        "cup",
+        "mouse",
+        "knife",
+        "sandwich"
+    ]
+}

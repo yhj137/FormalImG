@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene featuring a plastic basket containing every banana.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'basket') (HasMaterial ?b 'plastic') (forall ?f (implies (Is ?f 'banana') (In ?f ?b))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (forall ?f (and (Is ?b 'basket') (HasMaterial ?b 'plastic') (or (not (Is ?f 'banana')) (In ?f ?b))))))",
+    "k": 2,
+    "object_classes": [
+        "banana",
+        "basket"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. All cars are positioned to the left of a house. To the right of the house sits a wooden desk with a monitor, a laptop, and a cat on it. Glasses lie to the left of the laptop, and a pan with a metal spoon on it sits to the right of the monitor.",
+    "dsl": "(exists ?h (and (Is ?h 'house') (forall ?c (implies (Is ?c 'car') (LeftOf ?c ?h))) (exists ?d (exists ?l (exists ?m (exists ?g (exists ?p (exists ?s (exists ?k (and (Is ?d 'desk') (HasMaterial ?d 'wooden') (RightOf ?d ?h) (Is ?l 'laptop') (On ?l ?d) (Is ?m 'monitor') (On ?m ?d) (Is ?g 'glasses') (LeftOf ?g ?l) (Is ?p 'pan') (RightOf ?p ?m) (Is ?s 'spoon') (HasMaterial ?s 'metal') (On ?s ?p) (Is ?k 'cat') (On ?k ?d)))))))))))",
+    "cnf": "(exists ?h (forall ?c (exists ?d (exists ?l (exists ?m (exists ?g (exists ?p (exists ?s (exists ?k (and (Is ?h 'house') (or (not (Is ?c 'car')) (LeftOf ?c ?h)) (RightOf ?d ?h) (HasMaterial ?d 'wooden') (On ?l ?d) (Is ?d 'desk') (On ?m ?d) (Is ?l 'laptop') (LeftOf ?g ?l) (On ?k ?d) (Is ?m 'monitor') (RightOf ?p ?m) (Is ?g 'glasses') (Is ?k 'cat') (Is ?p 'pan') (On ?s ?p) (HasMaterial ?s 'metal') (Is ?s 'spoon')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "spoon",
+        "laptop",
+        "glasses",
+        "monitor",
+        "desk",
+        "car",
+        "pan",
+        "cat"
+    ]
+}

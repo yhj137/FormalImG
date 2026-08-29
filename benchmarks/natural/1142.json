@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant is holding a basket containing every banana. To the right of the elephant is a table with a sliced pizza on it, and a chair stands to the right of the table.",
+    "dsl": "(exists ?e (exists ?t (exists ?bk (and (Is ?e 'elephant') (Is ?t 'table') (RightOf ?t ?e) (Is ?bk 'basket') (Holding ?e ?bk) (forall ?b (implies (Is ?b 'banana') (In ?b ?bk))) (exists ?p (and (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?t) (exists ?c (and (Is ?c 'chair') (RightOf ?c ?t)))))))))",
+    "cnf": "(exists ?e (exists ?t (exists ?bk (forall ?b (exists ?p (exists ?c (and (Is ?e 'elephant') (RightOf ?t ?e) (Holding ?e ?bk) (Is ?t 'table') (On ?p ?t) (Is ?bk 'basket') (or (not (Is ?b 'banana')) (In ?b ?bk)) (RightOf ?c ?t) (HasState ?p 'sliced') (Is ?c 'chair') (Is ?p 'pizza'))))))))",
+    "k": 6,
+    "object_classes": [
+        "elephant",
+        "chair",
+        "pizza",
+        "table",
+        "basket",
+        "banana"
+    ]
+}

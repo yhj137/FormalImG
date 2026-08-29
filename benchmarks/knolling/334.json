@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a phone situated on the left side of the composition. For every cup present in the image, it is placed vertically below that phone.",
+    "dsl": "(exists ?p (and (Is ?p 'phone') (OnLeftSide ?p) (forall ?c (implies (Is ?c 'cup') (Below ?c ?p)))))",
+    "cnf": "(exists ?p (forall ?c (and (Is ?p 'phone') (OnLeftSide ?p) (or (not (Is ?c 'cup')) (Below ?c ?p)))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "cup"
+    ]
+}

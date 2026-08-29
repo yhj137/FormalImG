@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. A hammer is placed on the top-left side of the scene. A pair of scissors is located below the hammer, and these scissors are also positioned above a fork. Additionally, a watch is placed below the fork, and the watch is visually smaller than the hammer.",
+    "dsl": "(exists ?hammer (exists ?scissors (exists ?fork (exists ?watch (and (Is ?hammer 'hammer') (Is ?scissors 'scissors') (Is ?fork 'fork') (Is ?watch 'watch') (OnTopSide ?hammer) (OnLeftSide ?hammer) (Below ?scissors ?hammer) (Above ?scissors ?fork) (Below ?watch ?fork) (SmallerThan ?watch ?hammer))))))",
+    "cnf": "(exists ?hammer (exists ?scissors (exists ?fork (exists ?watch (and (Is ?hammer 'hammer') (OnTopSide ?hammer) (OnLeftSide ?hammer) (Below ?scissors ?hammer) (SmallerThan ?watch ?hammer) (Is ?scissors 'scissors') (Above ?scissors ?fork) (Below ?watch ?fork) (Is ?fork 'fork') (Is ?watch 'watch'))))))",
+    "k": 4,
+    "object_classes": [
+        "scissors",
+        "hammer",
+        "fork",
+        "watch"
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack on the left side, which is larger than the book located to its right. A wallet is positioned above the book. For every pair of glasses in the image, they are located to the right of the wallet, and there is a remote to the right of the glasses, with a wrench placed above the remote.",
+    "dsl": "(exists ?backpack (exists ?book (exists ?wallet (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (Is ?book 'book') (RightOf ?book ?backpack) (LargerThan ?backpack ?book) (Is ?wallet 'wallet') (Above ?wallet ?book) (forall ?glasses (implies (Is ?glasses 'glasses') (exists ?remote (exists ?wrench (and (Is ?remote 'remote') (Is ?wrench 'wrench') (RightOf ?glasses ?wallet) (RightOf ?remote ?glasses) (Above ?wrench ?remote))))))))))",
+    "cnf": "(exists ?backpack (exists ?book (exists ?wallet (forall ?glasses (exists ?remote (exists ?wrench (and (Is ?backpack 'backpack') (OnLeftSide ?backpack) (RightOf ?book ?backpack) (LargerThan ?backpack ?book) (Is ?book 'book') (Above ?wallet ?book) (Is ?wallet 'wallet') (or (not (Is ?glasses 'glasses')) (RightOf ?glasses ?wallet)) (or (not (Is ?glasses 'glasses')) (Is ?wrench 'wrench')) (or (not (Is ?glasses 'glasses')) (RightOf ?remote ?glasses)) (or (not (Is ?glasses 'glasses')) (Is ?remote 'remote')) (or (not (Is ?glasses 'glasses')) (Above ?wrench ?remote)))))))))",
+    "k": 6,
+    "object_classes": [
+        "book",
+        "glasses",
+        "remote",
+        "wrench",
+        "backpack",
+        "wallet"
+    ]
+}

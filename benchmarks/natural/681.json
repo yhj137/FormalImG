@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting scene featuring a bench. All rocks are positioned to the left of the bench. To the right of the bench, a woman is holding a pair of headphones that are turned on.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (and (Is ?b 'bench') (forall ?r (implies (Is ?r 'rock') (LeftOf ?r ?b))) (exists ?w (exists ?h (and (Is ?w 'woman') (Is ?h 'headphones') (HasState ?h 'on') (RightOf ?w ?b) (Holding ?w ?h)))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (forall ?r (exists ?w (exists ?h (and (Is ?b 'bench') (or (not (Is ?r 'rock')) (LeftOf ?r ?b)) (RightOf ?w ?b) (Is ?w 'woman') (Holding ?w ?h) (HasState ?h 'on') (Is ?h 'headphones')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "headphones",
+        "rock",
+        "woman"
+    ]
+}

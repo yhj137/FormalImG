@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a desk with a bookshelf next to it. Every screwdriver is rusty and lies on the desk. A keyboard rests on the desk, with glasses to its left and a round clock to its right. A plant sits on the bookshelf, where a bird is also perched, holding a flower.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?d (exists ?b (and (Is ?d 'desk') (Is ?b 'bookshelf') (NextTo ?b ?d) (forall ?s (implies (Is ?s 'screwdriver') (and (HasState ?s 'rusty') (On ?s ?d)))) (exists ?k (exists ?g (exists ?c (exists ?p (exists ?bird (exists ?f (and (Is ?k 'keyboard') (On ?k ?d) (Is ?g 'glasses') (LeftOf ?g ?k) (Is ?c 'clock') (HasShape ?c 'round') (RightOf ?c ?k) (Is ?p 'plant') (On ?p ?b) (Is ?bird 'bird') (On ?bird ?b) (Is ?f 'flower') (Holding ?bird ?f))))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?d (exists ?b (forall ?s (exists ?k (exists ?g (exists ?c (exists ?p (exists ?bird (exists ?f (and (Is ?d 'desk') (NextTo ?b ?d) (or (not (Is ?s 'screwdriver')) (On ?s ?d)) (Is ?b 'bookshelf') (On ?p ?b) (On ?k ?d) (or (not (Is ?s 'screwdriver')) (HasState ?s 'rusty')) (On ?bird ?b) (Is ?p 'plant') (Is ?k 'keyboard') (LeftOf ?g ?k) (Is ?bird 'bird') (Holding ?bird ?f) (RightOf ?c ?k) (Is ?g 'glasses') (Is ?f 'flower') (HasShape ?c 'round') (Is ?c 'clock'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "keyboard",
+        "glasses",
+        "plant",
+        "desk",
+        "screwdriver",
+        "flower",
+        "clock",
+        "bird",
+        "bookshelf"
+    ]
+}

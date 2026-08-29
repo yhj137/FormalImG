@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image containing eight items arranged in a structured layout across three columns. A handbag is placed on the top left side of the image. Directly below the handbag is a watch, and below the watch is a calculator; these three items are aligned vertically. To the right of the handbag is a pair of jeans. Below the jeans is a sock, and below the sock is a bowl; this middle group is also vertically aligned. On the right side of the image, a screwdriver is positioned such that the jeans are to its left. Directly below the screwdriver is a fork, which is vertically aligned with the screwdriver and also located on the right side.",
+    "dsl": "(exists ?handbag (exists ?jeans (exists ?screwdriver (exists ?watch (exists ?sock (exists ?fork (exists ?calculator (exists ?bowl (and (Is ?handbag 'handbag') (Is ?jeans 'jeans') (Is ?screwdriver 'screwdriver') (Is ?watch 'watch') (Is ?sock 'sock') (Is ?fork 'fork') (Is ?calculator 'calculator') (Is ?bowl 'bowl') (OnTopSide ?handbag) (OnLeftSide ?handbag) (Below ?watch ?handbag) (AlignedVertically ?handbag ?watch) (Below ?calculator ?watch) (AlignedVertically ?watch ?calculator) (RightOf ?jeans ?handbag) (Below ?sock ?jeans) (AlignedVertically ?jeans ?sock) (Below ?bowl ?sock) (AlignedVertically ?sock ?bowl) (LeftOf ?jeans ?screwdriver) (OnRightSide ?screwdriver) (Below ?fork ?screwdriver) (AlignedVertically ?screwdriver ?fork) (OnRightSide ?fork))))))))))",
+    "cnf": "(exists ?handbag (exists ?jeans (exists ?screwdriver (exists ?watch (exists ?sock (exists ?fork (exists ?calculator (exists ?bowl (and (Is ?handbag 'handbag') (OnTopSide ?handbag) (OnLeftSide ?handbag) (Below ?watch ?handbag) (AlignedVertically ?handbag ?watch) (Is ?watch 'watch') (RightOf ?jeans ?handbag) (Below ?calculator ?watch) (Is ?jeans 'jeans') (Below ?sock ?jeans) (AlignedVertically ?watch ?calculator) (Is ?calculator 'calculator') (AlignedVertically ?jeans ?sock) (Is ?sock 'sock') (LeftOf ?jeans ?screwdriver) (Below ?bowl ?sock) (Is ?screwdriver 'screwdriver') (OnRightSide ?screwdriver) (AlignedVertically ?sock ?bowl) (Is ?bowl 'bowl') (Below ?fork ?screwdriver) (AlignedVertically ?screwdriver ?fork) (Is ?fork 'fork') (OnRightSide ?fork))))))))))",
+    "k": 8,
+    "object_classes": [
+        "sock",
+        "watch",
+        "screwdriver",
+        "fork",
+        "handbag",
+        "calculator",
+        "jeans",
+        "bowl"
+    ]
+}

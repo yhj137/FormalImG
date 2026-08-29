@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a photo of a bookshelf standing next to a bench. Every apple in the scene is green and located inside the bookshelf. A cake also sits on the bookshelf. To the left of the bench is a red car, with a round ball next to it. A sandwich and a pan containing a hammer are on the bench. A chair is positioned to the right of the bench.",
+    "dsl": "(and (IsStyle 'photo') (exists ?bn (exists ?bs (and (Is ?bn 'bench') (Is ?bs 'bookshelf') (NextTo ?bs ?bn) (forall ?a (implies (Is ?a 'apple') (and (In ?a ?bs) (HasColor ?a 'green')))) (exists ?ck (exists ?c (exists ?p (exists ?h (exists ?bl (exists ?s (exists ?ch (and (Is ?ck 'cake') (On ?ck ?bs) (Is ?c 'car') (HasColor ?c 'red') (LeftOf ?c ?bn) (Is ?p 'pan') (On ?p ?bn) (Is ?h 'hammer') (In ?h ?p) (Is ?bl 'ball') (HasShape ?bl 'round') (NextTo ?bl ?c) (Is ?s 'sandwich') (On ?s ?bn) (Is ?ch 'chair') (RightOf ?ch ?bn)))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?bn (exists ?bs (forall ?a (exists ?ck (exists ?c (exists ?p (exists ?h (exists ?bl (exists ?s (exists ?ch (and (Is ?bn 'bench') (NextTo ?bs ?bn) (LeftOf ?c ?bn) (Is ?bs 'bookshelf') (or (not (Is ?a 'apple')) (In ?a ?bs)) (On ?p ?bn) (HasColor ?c 'red') (NextTo ?bl ?c) (On ?ck ?bs) (or (not (Is ?a 'apple')) (HasColor ?a 'green')) (On ?s ?bn) (Is ?p 'pan') (In ?h ?p) (Is ?c 'car') (HasShape ?bl 'round') (Is ?ck 'cake') (RightOf ?ch ?bn) (Is ?s 'sandwich') (Is ?h 'hammer') (Is ?bl 'ball') (Is ?ch 'chair')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "bench",
+        "pan",
+        "sandwich",
+        "ball",
+        "cake",
+        "hammer",
+        "chair",
+        "apple",
+        "bookshelf",
+        "car"
+    ]
+}

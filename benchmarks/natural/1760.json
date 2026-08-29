@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a table with a chair to its right, where a bird rests. On the table sit a round cake, a keyboard with glasses on it, and a pan containing a fork and every apple.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?b (exists ?p (exists ?ck (exists ?k (exists ?g (and (Is ?t 'table') (Is ?c 'chair') (RightOf ?c ?t) (Is ?b 'bird') (On ?b ?c) (Is ?p 'pan') (On ?p ?t) (Is ?ck 'cake') (HasShape ?ck 'round') (On ?ck ?t) (Is ?k 'keyboard') (On ?k ?t) (Is ?g 'glasses') (On ?g ?k) (forall ?a (implies (Is ?a 'apple') (In ?a ?p))) (exists ?f (and (Is ?f 'fork') (In ?f ?p))))))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?c (exists ?b (exists ?p (exists ?ck (exists ?k (exists ?g (forall ?a (exists ?f (and (Is ?t 'table') (RightOf ?c ?t) (On ?p ?t) (Is ?c 'chair') (On ?b ?c) (On ?ck ?t) (Is ?p 'pan') (or (not (Is ?a 'apple')) (In ?a ?p)) (Is ?b 'bird') (On ?k ?t) (HasShape ?ck 'round') (In ?f ?p) (Is ?k 'keyboard') (On ?g ?k) (Is ?ck 'cake') (Is ?f 'fork') (Is ?g 'glasses'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fork",
+        "chair",
+        "glasses",
+        "cake",
+        "table",
+        "bird",
+        "pan",
+        "apple",
+        "keyboard"
+    ]
+}

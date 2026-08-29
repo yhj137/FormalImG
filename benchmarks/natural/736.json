@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cartoon-style scene where a woman is positioned to the left of a metal laptop. All birds are located to the right of the laptop, and a brown teddy bear is to the left of the woman.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?w (exists ?l (and (Is ?w 'woman') (Is ?l 'laptop') (HasMaterial ?l 'metal') (LeftOf ?w ?l) (forall ?b (implies (Is ?b 'bird') (RightOf ?b ?l))) (exists ?t (and (Is ?t 'teddy bear') (HasColor ?t 'brown') (LeftOf ?t ?w)))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?w (exists ?l (forall ?b (exists ?t (and (Is ?w 'woman') (LeftOf ?w ?l) (LeftOf ?t ?w) (HasMaterial ?l 'metal') (or (not (Is ?b 'bird')) (RightOf ?b ?l)) (HasColor ?t 'brown') (Is ?l 'laptop') (Is ?t 'teddy bear')))))))",
+    "k": 4,
+    "object_classes": [
+        "teddy bear",
+        "laptop",
+        "bird",
+        "woman"
+    ]
+}

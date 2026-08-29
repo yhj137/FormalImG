@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a black watch, a camera, and a remote arranged in a sequence. The camera is placed to the right of the watch, and the remote is to the right of the camera. The remote is visually larger than the watch. Additionally, for every pair of jeans present in the image, the jeans are blue, and there is a corresponding wallet and a spoon. The jeans are positioned to the right of the remote. The wallet is located to the right of the jeans, and the spoon is to the right of the wallet. The jeans are larger than the wallet.",
+    "dsl": "(exists ?watch (exists ?camera (exists ?remote (and (Is ?watch 'watch') (Has ?watch 'black') (Is ?camera 'camera') (Is ?remote 'remote') (RightOf ?camera ?watch) (RightOf ?remote ?camera) (LargerThan ?remote ?watch) (forall ?jeans (implies (Is ?jeans 'jeans') (exists ?wallet (exists ?spoon (and (Is ?wallet 'wallet') (Is ?spoon 'spoon') (Has ?jeans 'blue') (RightOf ?jeans ?remote) (RightOf ?wallet ?jeans) (RightOf ?spoon ?wallet) (LargerThan ?jeans ?wallet))))))))))",
+    "cnf": "(exists ?watch (exists ?camera (exists ?remote (forall ?jeans (exists ?wallet (exists ?spoon (and (Is ?watch 'watch') (Has ?watch 'black') (RightOf ?camera ?watch) (LargerThan ?remote ?watch) (Is ?camera 'camera') (RightOf ?remote ?camera) (or (not (Is ?jeans 'jeans')) (RightOf ?jeans ?remote)) (Is ?remote 'remote') (or (not (Is ?jeans 'jeans')) (Has ?jeans 'blue')) (or (not (Is ?jeans 'jeans')) (RightOf ?wallet ?jeans)) (or (not (Is ?jeans 'jeans')) (Is ?spoon 'spoon')) (or (not (Is ?jeans 'jeans')) (RightOf ?spoon ?wallet)) (or (not (Is ?jeans 'jeans')) (Is ?wallet 'wallet')) (or (not (Is ?jeans 'jeans')) (LargerThan ?jeans ?wallet)))))))))",
+    "k": 6,
+    "object_classes": [
+        "remote",
+        "watch",
+        "jeans",
+        "wallet",
+        "camera",
+        "spoon"
+    ]
+}

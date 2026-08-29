@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting depicting a broken car with a lamp standing next to it. A flower is placed beside the lamp, while every book and a fruit rest on top of the car.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'car') (HasState ?c 'broken') (exists ?l (and (Is ?l 'lamp') (NextTo ?l ?c) (forall ?b (implies (Is ?b 'book') (On ?b ?c))) (exists ?f (and (Is ?f 'flower') (NextTo ?f ?l) (exists ?fr (and (Is ?fr 'fruit') (On ?fr ?c))))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (exists ?l (forall ?b (exists ?f (exists ?fr (and (Is ?c 'car') (HasState ?c 'broken') (NextTo ?l ?c) (or (not (Is ?b 'book')) (On ?b ?c)) (Is ?l 'lamp') (NextTo ?f ?l) (On ?fr ?c) (Is ?f 'flower') (Is ?fr 'fruit'))))))))",
+    "k": 5,
+    "object_classes": [
+        "fruit",
+        "book",
+        "flower",
+        "lamp",
+        "car"
+    ]
+}

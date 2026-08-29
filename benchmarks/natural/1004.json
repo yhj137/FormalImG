@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is presented in a photo style. A woman is sitting on a chair and holding an umbrella. Next to the chair is a wardrobe with a pair of shoes inside. An oval mirror is located on the wardrobe.",
+    "dsl": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?u (exists ?wd (exists ?s (exists ?m (and (Is ?w 'woman') (Is ?c 'chair') (Is ?u 'umbrella') (Is ?wd 'wardrobe') (Is ?s 'shoes') (Is ?m 'mirror') (On ?w ?c) (Holding ?w ?u) (NextTo ?c ?wd) (In ?s ?wd) (On ?m ?wd) (HasShape ?m 'oval')))))))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?w (exists ?c (exists ?u (exists ?wd (exists ?s (exists ?m (and (Is ?w 'woman') (On ?w ?c) (Holding ?w ?u) (Is ?c 'chair') (NextTo ?c ?wd) (Is ?u 'umbrella') (Is ?wd 'wardrobe') (In ?s ?wd) (On ?m ?wd) (Is ?s 'shoes') (Is ?m 'mirror') (HasShape ?m 'oval')))))))))",
+    "k": 6,
+    "object_classes": [
+        "umbrella",
+        "shoes",
+        "chair",
+        "wardrobe",
+        "woman",
+        "mirror"
+    ]
+}

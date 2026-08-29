@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene where every phone has a dirty spoon to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (forall ?p (implies (Is ?p 'phone') (exists ?s (and (Is ?s 'spoon') (HasState ?s 'dirty') (RightOf ?s ?p))))))",
+    "cnf": "(and (IsStyle 'pixel art') (forall ?p (exists ?s (and (or (not (Is ?p 'phone')) (Is ?s 'spoon')) (or (not (Is ?p 'phone')) (HasState ?s 'dirty')) (or (not (Is ?p 'phone')) (RightOf ?s ?p))))))",
+    "k": 2,
+    "object_classes": [
+        "phone",
+        "spoon"
+    ]
+}

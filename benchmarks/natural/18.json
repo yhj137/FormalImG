@@ -1,0 +1,9 @@
+{
+    "prompt": "A photo of a brown bench.",
+    "dsl": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bench') (HasColor ?b 'brown'))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?b (and (Is ?b 'bench') (HasColor ?b 'brown'))))",
+    "k": 1,
+    "object_classes": [
+        "bench"
+    ]
+}

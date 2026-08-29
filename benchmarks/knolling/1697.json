@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a monitor positioned on the left side. To the right of the monitor lies a remote, and a wallet is placed below the remote. The arrangement follows a strict rule for the remaining items: for every shoe in the image, it is positioned to the right of the wallet, and creates a cluster with five other objects. Specifically, a stapler is located to the right of the shoe. Above the stapler is a book, and to the right of the book is a lemon. Below the stapler is a knife, and to the right of the knife is a carrot.",
+    "dsl": "(exists ?monitor (exists ?remote (exists ?wallet (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (Is ?remote 'remote') (RightOf ?remote ?monitor) (Is ?wallet 'wallet') (Below ?wallet ?remote) (forall ?shoe (implies (Is ?shoe 'shoe') (exists ?stapler (exists ?book (exists ?lemon (exists ?knife (exists ?carrot (and (Is ?stapler 'stapler') (Is ?book 'book') (Is ?lemon 'lemon') (Is ?knife 'knife') (Is ?carrot 'carrot') (RightOf ?shoe ?wallet) (RightOf ?stapler ?shoe) (Above ?book ?stapler) (RightOf ?lemon ?book) (Below ?knife ?stapler) (RightOf ?carrot ?knife)))))))))))))",
+    "cnf": "(exists ?monitor (exists ?remote (exists ?wallet (forall ?shoe (exists ?stapler (exists ?book (exists ?lemon (exists ?knife (exists ?carrot (and (Is ?monitor 'monitor') (OnLeftSide ?monitor) (RightOf ?remote ?monitor) (Is ?remote 'remote') (Below ?wallet ?remote) (Is ?wallet 'wallet') (or (not (Is ?shoe 'shoe')) (RightOf ?shoe ?wallet)) (or (not (Is ?shoe 'shoe')) (Is ?carrot 'carrot')) (or (not (Is ?shoe 'shoe')) (RightOf ?stapler ?shoe)) (or (not (Is ?shoe 'shoe')) (Is ?knife 'knife')) (or (not (Is ?shoe 'shoe')) (RightOf ?carrot ?knife)) (or (not (Is ?shoe 'shoe')) (Above ?book ?stapler)) (or (not (Is ?shoe 'shoe')) (Is ?stapler 'stapler')) (or (not (Is ?shoe 'shoe')) (Is ?lemon 'lemon')) (or (not (Is ?shoe 'shoe')) (Below ?knife ?stapler)) (or (not (Is ?shoe 'shoe')) (RightOf ?lemon ?book)) (or (not (Is ?shoe 'shoe')) (Is ?book 'book'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "book",
+        "remote",
+        "stapler",
+        "lemon",
+        "carrot",
+        "wallet",
+        "knife",
+        "monitor",
+        "shoe"
+    ]
+}

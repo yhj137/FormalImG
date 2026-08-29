@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring an oval mirror next to a green sofa. All flowers are positioned to the left of the mirror. A backpack sits to the left of the sofa with a key on top. A child on the sofa holds a pan containing an apple, with a fruit next to the apple.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?b (exists ?k (exists ?c (exists ?p (exists ?a (exists ?fr (and (Is ?m 'mirror') (HasShape ?m 'oval') (Is ?s 'sofa') (HasColor ?s 'green') (NextTo ?s ?m) (forall ?f (implies (Is ?f 'flower') (LeftOf ?f ?m))) (Is ?b 'backpack') (LeftOf ?b ?s) (Is ?k 'key') (On ?k ?b) (Is ?c 'child') (On ?c ?s) (Is ?p 'pan') (Holding ?c ?p) (Is ?a 'apple') (On ?a ?p) (Is ?fr 'fruit') (NextTo ?fr ?a)))))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?s (exists ?b (exists ?k (exists ?c (exists ?p (exists ?a (exists ?fr (forall ?f (and (Is ?m 'mirror') (HasShape ?m 'oval') (NextTo ?s ?m) (or (not (Is ?f 'flower')) (LeftOf ?f ?m)) (HasColor ?s 'green') (LeftOf ?b ?s) (Is ?s 'sofa') (On ?c ?s) (Is ?b 'backpack') (On ?k ?b) (Is ?c 'child') (Holding ?c ?p) (Is ?k 'key') (Is ?p 'pan') (On ?a ?p) (Is ?a 'apple') (NextTo ?fr ?a) (Is ?fr 'fruit'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "fruit",
+        "sofa",
+        "child",
+        "backpack",
+        "flower",
+        "mirror",
+        "pan",
+        "apple",
+        "key"
+    ]
+}

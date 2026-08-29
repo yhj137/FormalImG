@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A monitor is located on the top side of the image. Directly below the monitor is a keyboard that is smaller than the monitor. Situated below the keyboard is a shirt, which is visually larger than the keyboard. The scene obeys a specific layout rule for rulers: any ruler in the image is positioned below the shirt and is smaller than the shirt. Following this ruler, there is a vertical chain of items: a donut lies below the ruler, a screwdriver is positioned below the donut (with the donut being larger than the screwdriver), a pair of scissors is located below the screwdriver, and a glove is placed below the scissors, being smaller than the scissors.",
+    "dsl": "(exists ?monitor (exists ?keyboard (exists ?shirt (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Is ?keyboard 'keyboard') (Below ?keyboard ?monitor) (SmallerThan ?keyboard ?monitor) (Is ?shirt 'shirt') (Below ?shirt ?keyboard) (LargerThan ?shirt ?keyboard) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?donut (exists ?screwdriver (exists ?scissors (exists ?glove (and (Is ?donut 'donut') (Is ?screwdriver 'screwdriver') (Is ?scissors 'scissors') (Is ?glove 'glove') (Below ?ruler ?shirt) (SmallerThan ?ruler ?shirt) (Below ?donut ?ruler) (Below ?screwdriver ?donut) (LargerThan ?donut ?screwdriver) (Below ?scissors ?screwdriver) (Below ?glove ?scissors) (SmallerThan ?glove ?scissors))))))))))))",
+    "cnf": "(exists ?monitor (exists ?keyboard (exists ?shirt (forall ?ruler (exists ?donut (exists ?screwdriver (exists ?scissors (exists ?glove (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (Below ?keyboard ?monitor) (SmallerThan ?keyboard ?monitor) (Is ?keyboard 'keyboard') (Below ?shirt ?keyboard) (LargerThan ?shirt ?keyboard) (Is ?shirt 'shirt') (or (not (Is ?ruler 'ruler')) (Below ?ruler ?shirt)) (or (not (Is ?ruler 'ruler')) (SmallerThan ?ruler ?shirt)) (or (not (Is ?ruler 'ruler')) (Is ?glove 'glove')) (or (not (Is ?ruler 'ruler')) (Below ?donut ?ruler)) (or (not (Is ?ruler 'ruler')) (Is ?scissors 'scissors')) (or (not (Is ?ruler 'ruler')) (Below ?glove ?scissors)) (or (not (Is ?ruler 'ruler')) (Below ?screwdriver ?donut)) (or (not (Is ?ruler 'ruler')) (Is ?donut 'donut')) (or (not (Is ?ruler 'ruler')) (Is ?screwdriver 'screwdriver')) (or (not (Is ?ruler 'ruler')) (Below ?scissors ?screwdriver)) (or (not (Is ?ruler 'ruler')) (SmallerThan ?glove ?scissors)) (or (not (Is ?ruler 'ruler')) (LargerThan ?donut ?screwdriver)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "keyboard",
+        "scissors",
+        "donut",
+        "screwdriver",
+        "monitor",
+        "glove",
+        "shirt"
+    ]
+}

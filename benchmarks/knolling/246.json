@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a monitor and a sandwich. The monitor is located on the bottom side of the layout, and the sandwich is positioned to the right of the monitor.",
+    "dsl": "(exists ?monitor (exists ?sandwich (and (Is ?monitor 'monitor') (Is ?sandwich 'sandwich') (OnBottomSide ?monitor) (RightOf ?sandwich ?monitor))))",
+    "cnf": "(exists ?monitor (exists ?sandwich (and (Is ?monitor 'monitor') (OnBottomSide ?monitor) (RightOf ?sandwich ?monitor) (Is ?sandwich 'sandwich'))))",
+    "k": 2,
+    "object_classes": [
+        "monitor",
+        "sandwich"
+    ]
+}

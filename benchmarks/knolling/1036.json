@@ -1,0 +1,14 @@
+{
+    "prompt": "For every handbag, it is red and positioned on the top side. It is vertically aligned with a black stapler, which is vertically aligned with a white phone, which is vertically aligned with a yellow ruler, which is vertically aligned with a gray remote, which is vertically aligned with a sandwich. The handbag is larger than the sandwich.",
+    "dsl": "(forall ?handbag (implies (Is ?handbag 'handbag') (exists ?stapler (exists ?phone (exists ?ruler (exists ?remote (exists ?sandwich (and (Is ?stapler 'stapler') (Has ?stapler 'black') (Is ?phone 'phone') (Has ?phone 'white') (Is ?ruler 'ruler') (Has ?ruler 'yellow') (Is ?remote 'remote') (Has ?remote 'gray') (Is ?sandwich 'sandwich') (Has ?handbag 'red') (OnTopSide ?handbag) (AlignedVertically ?handbag ?stapler) (AlignedVertically ?stapler ?phone) (AlignedVertically ?phone ?ruler) (AlignedVertically ?ruler ?remote) (AlignedVertically ?remote ?sandwich) (LargerThan ?handbag ?sandwich)))))))))",
+    "cnf": "(forall ?handbag (exists ?stapler (exists ?phone (exists ?ruler (exists ?remote (exists ?sandwich (and (or (not (Is ?handbag 'handbag')) (Is ?stapler 'stapler')) (or (not (Is ?handbag 'handbag')) (Has ?stapler 'black')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?handbag ?stapler)) (or (not (Is ?handbag 'handbag')) (Is ?phone 'phone')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?stapler ?phone)) (or (not (Is ?handbag 'handbag')) (OnTopSide ?handbag)) (or (not (Is ?handbag 'handbag')) (Has ?phone 'white')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?phone ?ruler)) (or (not (Is ?handbag 'handbag')) (Has ?handbag 'red')) (or (not (Is ?handbag 'handbag')) (Is ?ruler 'ruler')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?ruler ?remote)) (or (not (Is ?handbag 'handbag')) (Has ?ruler 'yellow')) (or (not (Is ?handbag 'handbag')) (Is ?sandwich 'sandwich')) (or (not (Is ?handbag 'handbag')) (AlignedVertically ?remote ?sandwich)) (or (not (Is ?handbag 'handbag')) (Has ?remote 'gray')) (or (not (Is ?handbag 'handbag')) (Is ?remote 'remote')) (or (not (Is ?handbag 'handbag')) (LargerThan ?handbag ?sandwich)))))))))",
+    "k": 6,
+    "object_classes": [
+        "ruler",
+        "remote",
+        "stapler",
+        "phone",
+        "handbag",
+        "sandwich"
+    ]
+}

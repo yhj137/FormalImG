@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf inside a house contains a turned-on phone, a cylindrical bottle, and an orange. Every apple is positioned next to the orange.",
+    "dsl": "(exists ?h (exists ?bs (exists ?p (exists ?b (exists ?o (and (Is ?h 'house') (Is ?bs 'bookshelf') (Is ?p 'phone') (Is ?b 'bottle') (Is ?o 'orange') (In ?bs ?h) (In ?p ?bs) (HasState ?p 'on') (In ?b ?bs) (HasShape ?b 'cylindrical') (In ?o ?bs) (forall ?a (implies (Is ?a 'apple') (NextTo ?a ?o)))))))))",
+    "cnf": "(exists ?h (exists ?bs (exists ?p (exists ?b (exists ?o (forall ?a (and (Is ?h 'house') (In ?bs ?h) (Is ?bs 'bookshelf') (In ?p ?bs) (In ?b ?bs) (Is ?p 'phone') (HasState ?p 'on') (In ?o ?bs) (Is ?b 'bottle') (HasShape ?b 'cylindrical') (Is ?o 'orange') (or (not (Is ?a 'apple')) (NextTo ?a ?o)))))))))",
+    "k": 6,
+    "object_classes": [
+        "bottle",
+        "apple",
+        "phone",
+        "bookshelf",
+        "house",
+        "orange"
+    ]
+}

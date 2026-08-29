@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art scene features a horse on a wooden bed holding a banana. The horse is positioned to the right of every bus, and a cup is next to the bed.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?h (and (Is ?h 'horse') (forall ?b (implies (Is ?b 'bus') (RightOf ?h ?b))) (exists ?bed (exists ?ban (exists ?c (and (Is ?bed 'bed') (HasMaterial ?bed 'wooden') (Is ?ban 'banana') (Is ?c 'cup') (On ?h ?bed) (Holding ?h ?ban) (NextTo ?c ?bed))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?h (forall ?b (exists ?bed (exists ?ban (exists ?c (and (Is ?h 'horse') (or (not (Is ?b 'bus')) (RightOf ?h ?b)) (On ?h ?bed) (Holding ?h ?ban) (HasMaterial ?bed 'wooden') (NextTo ?c ?bed) (Is ?ban 'banana') (Is ?bed 'bed') (Is ?c 'cup'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bus",
+        "banana",
+        "bed",
+        "horse",
+        "cup"
+    ]
+}

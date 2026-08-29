@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a blue bottle on the left side. To the right of the bottle, there are glasses that are smaller than the bottle. Further to the right of the glasses is a stapler, which is larger than the glasses. The arrangement satisfies a condition: for every donut in the scene, there exists a fork to its right, such that the fork is aligned vertically with the stapler.",
+    "dsl": "(exists ?bottle (exists ?glasses (exists ?stapler (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnLeftSide ?bottle) (Is ?glasses 'glasses') (Is ?stapler 'stapler') (RightOf ?glasses ?bottle) (SmallerThan ?glasses ?bottle) (RightOf ?stapler ?glasses) (LargerThan ?stapler ?glasses) (forall ?donut (implies (Is ?donut 'donut') (exists ?fork (and (Is ?fork 'fork') (RightOf ?fork ?donut) (AlignedVertically ?fork ?stapler)))))))))",
+    "cnf": "(exists ?bottle (exists ?glasses (exists ?stapler (forall ?donut (exists ?fork (and (Is ?bottle 'bottle') (Has ?bottle 'blue') (OnLeftSide ?bottle) (RightOf ?glasses ?bottle) (SmallerThan ?glasses ?bottle) (Is ?glasses 'glasses') (RightOf ?stapler ?glasses) (LargerThan ?stapler ?glasses) (Is ?stapler 'stapler') (or (not (Is ?donut 'donut')) (AlignedVertically ?fork ?stapler)) (or (not (Is ?donut 'donut')) (RightOf ?fork ?donut)) (or (not (Is ?donut 'donut')) (Is ?fork 'fork'))))))))",
+    "k": 5,
+    "object_classes": [
+        "glasses",
+        "stapler",
+        "fork",
+        "bottle",
+        "donut"
+    ]
+}

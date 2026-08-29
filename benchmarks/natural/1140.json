@@ -1,0 +1,14 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A red boat is positioned next to a tree. Every fish in the image is swimming inside the boat. The tree is located to the left of a desk. On the desk sits a bitten sandwich, and a black phone is placed to the right of the sandwich.",
+    "dsl": "(exists ?b (exists ?t (exists ?d (and (Is ?b 'boat') (HasColor ?b 'red') (Is ?t 'tree') (Is ?d 'desk') (NextTo ?b ?t) (LeftOf ?t ?d) (forall ?f (implies (Is ?f 'fish') (and (In ?f ?b) (HasState ?f 'swimming')))) (exists ?s (exists ?p (and (Is ?s 'sandwich') (Is ?p 'phone') (On ?s ?d) (HasState ?s 'bitten') (RightOf ?p ?s) (HasColor ?p 'black'))))))))",
+    "cnf": "(exists ?b (exists ?t (exists ?d (forall ?f (exists ?s (exists ?p (and (Is ?b 'boat') (HasColor ?b 'red') (NextTo ?b ?t) (or (not (Is ?f 'fish')) (In ?f ?b)) (Is ?t 'tree') (LeftOf ?t ?d) (or (not (Is ?f 'fish')) (HasState ?f 'swimming')) (Is ?d 'desk') (On ?s ?d) (Is ?s 'sandwich') (HasState ?s 'bitten') (RightOf ?p ?s) (Is ?p 'phone') (HasColor ?p 'black'))))))))",
+    "k": 6,
+    "object_classes": [
+        "sandwich",
+        "desk",
+        "fish",
+        "phone",
+        "tree",
+        "boat"
+    ]
+}

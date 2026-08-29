@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly arranged horizontal row of items. Starting from the left, there is a black keyboard, followed by a blue bottle to its right, then a sandwich, and a black watch to the right of the sandwich. These four items are aligned horizontally, and the watch is smaller than the keyboard. Additionally, for every pen present in the scene, it is positioned to the right of the watch and aligned horizontally with it. Associated with each pen, there is a calculator to its right and a red hat to the right of the calculator, all maintaining the horizontal alignment, with the calculator being smaller than the hat.",
+    "dsl": "(exists ?keyboard (exists ?bottle (exists ?sandwich (exists ?watch (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (Is ?bottle 'bottle') (Has ?bottle 'blue') (Is ?sandwich 'sandwich') (Is ?watch 'watch') (Has ?watch 'black') (RightOf ?bottle ?keyboard) (RightOf ?sandwich ?bottle) (RightOf ?watch ?sandwich) (AlignedHorizontally ?keyboard ?bottle) (AlignedHorizontally ?bottle ?sandwich) (AlignedHorizontally ?sandwich ?watch) (SmallerThan ?watch ?keyboard) (forall ?pen (implies (Is ?pen 'pen') (exists ?calculator (exists ?hat (and (Is ?calculator 'calculator') (Is ?hat 'hat') (Has ?hat 'red') (RightOf ?pen ?watch) (RightOf ?calculator ?pen) (RightOf ?hat ?calculator) (AlignedHorizontally ?watch ?pen) (AlignedHorizontally ?pen ?calculator) (AlignedHorizontally ?calculator ?hat) (SmallerThan ?calculator ?hat)))))))))))",
+    "cnf": "(exists ?keyboard (exists ?bottle (exists ?sandwich (exists ?watch (forall ?pen (exists ?calculator (exists ?hat (and (Is ?keyboard 'keyboard') (Has ?keyboard 'black') (RightOf ?bottle ?keyboard) (AlignedHorizontally ?keyboard ?bottle) (Has ?bottle 'blue') (RightOf ?sandwich ?bottle) (SmallerThan ?watch ?keyboard) (AlignedHorizontally ?bottle ?sandwich) (Is ?bottle 'bottle') (Is ?sandwich 'sandwich') (RightOf ?watch ?sandwich) (AlignedHorizontally ?sandwich ?watch) (or (not (Is ?pen 'pen')) (RightOf ?pen ?watch)) (Has ?watch 'black') (or (not (Is ?pen 'pen')) (AlignedHorizontally ?watch ?pen)) (or (not (Is ?pen 'pen')) (Has ?hat 'red')) (or (not (Is ?pen 'pen')) (RightOf ?calculator ?pen)) (Is ?watch 'watch') (or (not (Is ?pen 'pen')) (RightOf ?hat ?calculator)) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?pen ?calculator)) (or (not (Is ?pen 'pen')) (Is ?hat 'hat')) (or (not (Is ?pen 'pen')) (Is ?calculator 'calculator')) (or (not (Is ?pen 'pen')) (AlignedHorizontally ?calculator ?hat)) (or (not (Is ?pen 'pen')) (SmallerThan ?calculator ?hat))))))))))",
+    "k": 7,
+    "object_classes": [
+        "watch",
+        "bottle",
+        "calculator",
+        "keyboard",
+        "pen",
+        "hat",
+        "sandwich"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neat, vertically aligned column of nine items. At the top side of the scene, there is a pair of blue jeans. Directly below the jeans is a pizza, which is visually smaller than the jeans. A hammer is positioned below the pizza, and a wrench is below the hammer. The arrangement follows a specific rule: for any fork present in the scene, it is located directly below the wrench. Continuing the chain below the fork is a game controller, followed by a white glove below the controller. A remote is positioned below the glove. Finally, a pair of scissors is at the very bottom, meaning the remote is above the scissors. The scissors are on the bottom side of the image and are smaller than the game controller. All items are aligned vertically along the center.",
+    "dsl": "(exists ?jeans (exists ?pizza (exists ?hammer (exists ?wrench (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Is ?pizza 'pizza') (Below ?pizza ?jeans) (AlignedVertically ?pizza ?jeans) (LargerThan ?jeans ?pizza) (Is ?hammer 'hammer') (Below ?hammer ?pizza) (AlignedVertically ?hammer ?pizza) (Is ?wrench 'wrench') (Below ?wrench ?hammer) (AlignedVertically ?wrench ?hammer) (forall ?fork (implies (Is ?fork 'fork') (exists ?controller (exists ?glove (exists ?remote (exists ?scissors (and (Is ?controller 'game_controller') (Is ?glove 'glove') (Has ?glove 'white') (Is ?remote 'remote') (Is ?scissors 'scissors') (Below ?fork ?wrench) (AlignedVertically ?fork ?wrench) (Below ?controller ?fork) (AlignedVertically ?controller ?fork) (Below ?glove ?controller) (AlignedVertically ?glove ?controller) (Below ?remote ?glove) (AlignedVertically ?remote ?glove) (Above ?remote ?scissors) (AlignedVertically ?scissors ?remote) (OnBottomSide ?scissors) (SmallerThan ?scissors ?controller)))))))))))))",
+    "cnf": "(exists ?jeans (exists ?pizza (exists ?hammer (exists ?wrench (forall ?fork (exists ?controller (exists ?glove (exists ?remote (exists ?scissors (and (Is ?jeans 'jeans') (Has ?jeans 'blue') (OnTopSide ?jeans) (Below ?pizza ?jeans) (AlignedVertically ?pizza ?jeans) (Is ?pizza 'pizza') (LargerThan ?jeans ?pizza) (Below ?hammer ?pizza) (AlignedVertically ?hammer ?pizza) (Is ?hammer 'hammer') (Below ?wrench ?hammer) (AlignedVertically ?wrench ?hammer) (Is ?wrench 'wrench') (or (not (Is ?fork 'fork')) (Below ?fork ?wrench)) (or (not (Is ?fork 'fork')) (AlignedVertically ?fork ?wrench)) (or (not (Is ?fork 'fork')) (Is ?scissors 'scissors')) (or (not (Is ?fork 'fork')) (Below ?controller ?fork)) (or (not (Is ?fork 'fork')) (Is ?remote 'remote')) (or (not (Is ?fork 'fork')) (Above ?remote ?scissors)) (or (not (Is ?fork 'fork')) (AlignedVertically ?controller ?fork)) (or (not (Is ?fork 'fork')) (Is ?controller 'game_controller')) (or (not (Is ?fork 'fork')) (Has ?glove 'white')) (or (not (Is ?fork 'fork')) (Below ?remote ?glove)) (or (not (Is ?fork 'fork')) (AlignedVertically ?remote ?glove)) (or (not (Is ?fork 'fork')) (AlignedVertically ?scissors ?remote)) (or (not (Is ?fork 'fork')) (Below ?glove ?controller)) (or (not (Is ?fork 'fork')) (Is ?glove 'glove')) (or (not (Is ?fork 'fork')) (AlignedVertically ?glove ?controller)) (or (not (Is ?fork 'fork')) (OnBottomSide ?scissors)) (or (not (Is ?fork 'fork')) (SmallerThan ?scissors ?controller))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "remote",
+        "wrench",
+        "pizza",
+        "game_controller",
+        "hammer",
+        "fork",
+        "jeans",
+        "scissors",
+        "glove"
+    ]
+}

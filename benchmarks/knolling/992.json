@@ -1,0 +1,13 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a shirt placed on the top side. Directly below the shirt is a cutting board; these two are aligned vertically. To the left of the cutting board is a donut, which is visually smaller than the cutting board. A set of keys is located to the left of the shirt, and the keys are aligned vertically with the donut. Furthermore, for every fork in the image, it is positioned below the donut.",
+    "dsl": "(exists ?shirt (exists ?board (exists ?donut (exists ?keys (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Is ?board 'cutting_board') (Below ?board ?shirt) (AlignedVertically ?shirt ?board) (Is ?donut 'donut') (LeftOf ?donut ?board) (SmallerThan ?donut ?board) (Is ?keys 'keys') (LeftOf ?keys ?shirt) (AlignedVertically ?keys ?donut) (forall ?fork (implies (Is ?fork 'fork') (Below ?fork ?donut))))))))",
+    "cnf": "(exists ?shirt (exists ?board (exists ?donut (exists ?keys (forall ?fork (and (Is ?shirt 'shirt') (OnTopSide ?shirt) (Below ?board ?shirt) (AlignedVertically ?shirt ?board) (Is ?board 'cutting_board') (LeftOf ?keys ?shirt) (LeftOf ?donut ?board) (Is ?keys 'keys') (AlignedVertically ?keys ?donut) (SmallerThan ?donut ?board) (Is ?donut 'donut') (or (not (Is ?fork 'fork')) (Below ?fork ?donut))))))))",
+    "k": 5,
+    "object_classes": [
+        "keys",
+        "cutting_board",
+        "fork",
+        "shirt",
+        "donut"
+    ]
+}

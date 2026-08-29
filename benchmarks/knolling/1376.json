@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a laptop on the left side. To the right of the laptop is a monitor, and to the right of the monitor is a phone. An apple is positioned to the right of the phone, followed by a pen to the right of the apple. A spoon is included such that the pen is to the left of the spoon. Finally, for every screwdriver present in the composition, it is located to the right of the spoon.",
+    "dsl": "(exists ?laptop (exists ?monitor (exists ?phone (exists ?apple (exists ?pen (exists ?spoon (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (Is ?monitor 'monitor') (RightOf ?monitor ?laptop) (Is ?phone 'phone') (RightOf ?phone ?monitor) (Is ?apple 'apple') (RightOf ?apple ?phone) (Is ?pen 'pen') (RightOf ?pen ?apple) (Is ?spoon 'spoon') (LeftOf ?pen ?spoon) (forall ?sd (implies (Is ?sd 'screwdriver') (RightOf ?sd ?spoon))))))))))",
+    "cnf": "(exists ?laptop (exists ?monitor (exists ?phone (exists ?apple (exists ?pen (exists ?spoon (forall ?sd (and (Is ?laptop 'laptop') (OnLeftSide ?laptop) (RightOf ?monitor ?laptop) (Is ?monitor 'monitor') (RightOf ?phone ?monitor) (Is ?phone 'phone') (RightOf ?apple ?phone) (Is ?apple 'apple') (RightOf ?pen ?apple) (Is ?pen 'pen') (LeftOf ?pen ?spoon) (Is ?spoon 'spoon') (or (not (Is ?sd 'screwdriver')) (RightOf ?sd ?spoon))))))))))",
+    "k": 7,
+    "object_classes": [
+        "laptop",
+        "apple",
+        "pen",
+        "phone",
+        "screwdriver",
+        "monitor",
+        "spoon"
+    ]
+}

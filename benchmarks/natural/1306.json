@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene featuring a person on a purple sofa holding a turned-on phone. A table is next to the sofa, and an open desk containing a mirror stands beside the table. Every bench is to the left of the table.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?t (and (Is ?p 'person') (Is ?s 'sofa') (Is ?t 'table') (HasColor ?s 'purple') (On ?p ?s) (NextTo ?s ?t) (forall ?b (implies (Is ?b 'bench') (LeftOf ?b ?t))) (exists ?d (exists ?m (exists ?ph (and (Is ?d 'desk') (Is ?m 'mirror') (Is ?ph 'phone') (HasState ?d 'open') (HasState ?ph 'on') (NextTo ?d ?t) (In ?m ?d) (Holding ?p ?ph))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?p (exists ?s (exists ?t (forall ?b (exists ?d (exists ?m (exists ?ph (and (Is ?p 'person') (On ?p ?s) (Holding ?p ?ph) (HasColor ?s 'purple') (NextTo ?s ?t) (HasState ?ph 'on') (Is ?s 'sofa') (Is ?t 'table') (or (not (Is ?b 'bench')) (LeftOf ?b ?t)) (Is ?ph 'phone') (NextTo ?d ?t) (HasState ?d 'open') (In ?m ?d) (Is ?d 'desk') (Is ?m 'mirror'))))))))))",
+    "k": 7,
+    "object_classes": [
+        "bench",
+        "sofa",
+        "person",
+        "desk",
+        "phone",
+        "table",
+        "mirror"
+    ]
+}

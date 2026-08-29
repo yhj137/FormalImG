@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A pixel art style scene featuring a monitor with a pair of glasses next to it and a blue backpack to its right.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?m (exists ?g (exists ?b (and (Is ?m 'monitor') (Is ?g 'glasses') (Is ?b 'backpack') (NextTo ?g ?m) (HasColor ?b 'blue') (RightOf ?b ?m))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?m (exists ?g (exists ?b (and (Is ?m 'monitor') (NextTo ?g ?m) (RightOf ?b ?m) (Is ?g 'glasses') (HasColor ?b 'blue') (Is ?b 'backpack'))))))",
+    "k": 3,
+    "object_classes": [
+        "backpack",
+        "glasses",
+        "monitor"
+    ]
+}

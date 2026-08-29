@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A red suitcase is located on the top side of the scene. Directly below the suitcase is a white book, and the suitcase is larger than the book. To the left of the book is a blue plate. Positioned below the plate is a black hammer. To the left of the hammer is a yellow ruler, and to the left of the ruler is a green lighter. A brown shoe is located on the bottom side of the image, below the hammer. Furthermore, for every sock present in the image, it is red and positioned to the left of the shoe.",
+    "dsl": "(exists ?suitcase (exists ?book (exists ?plate (exists ?hammer (exists ?ruler (exists ?lighter (exists ?shoe (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (OnTopSide ?suitcase) (Is ?book 'book') (Has ?book 'white') (Below ?book ?suitcase) (LargerThan ?suitcase ?book) (Is ?plate 'plate') (Has ?plate 'blue') (LeftOf ?plate ?book) (Is ?hammer 'hammer') (Has ?hammer 'black') (Below ?hammer ?plate) (Is ?ruler 'ruler') (Has ?ruler 'yellow') (LeftOf ?ruler ?hammer) (Is ?lighter 'lighter') (Has ?lighter 'green') (LeftOf ?lighter ?ruler) (Is ?shoe 'shoe') (Has ?shoe 'brown') (OnBottomSide ?shoe) (Below ?shoe ?hammer) (forall ?sock (implies (Is ?sock 'sock') (and (Has ?sock 'red') (LeftOf ?sock ?shoe))))))))))))",
+    "cnf": "(exists ?suitcase (exists ?book (exists ?plate (exists ?hammer (exists ?ruler (exists ?lighter (exists ?shoe (forall ?sock (and (Is ?suitcase 'suitcase') (Has ?suitcase 'red') (OnTopSide ?suitcase) (Below ?book ?suitcase) (LargerThan ?suitcase ?book) (Has ?book 'white') (LeftOf ?plate ?book) (Is ?book 'book') (Has ?plate 'blue') (Below ?hammer ?plate) (Is ?plate 'plate') (Has ?hammer 'black') (LeftOf ?ruler ?hammer) (Is ?hammer 'hammer') (Below ?shoe ?hammer) (Has ?ruler 'yellow') (LeftOf ?lighter ?ruler) (OnBottomSide ?shoe) (or (not (Is ?sock 'sock')) (LeftOf ?sock ?shoe)) (Is ?ruler 'ruler') (Has ?lighter 'green') (Has ?shoe 'brown') (or (not (Is ?sock 'sock')) (Has ?sock 'red')) (Is ?lighter 'lighter') (Is ?shoe 'shoe'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "book",
+        "plate",
+        "sock",
+        "hammer",
+        "lighter",
+        "suitcase",
+        "shoe"
+    ]
+}

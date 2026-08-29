@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a pixel art style scene. A plant is positioned next to a bench. All bicycles in the image are located to the right of the bench. Additionally, there is a sliced pizza on the bench, and a red ball is located to the right of the plant.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'bench') (exists ?p (and (Is ?p 'plant') (NextTo ?p ?b) (forall ?bi (implies (Is ?bi 'bicycle') (RightOf ?bi ?b))) (exists ?pi (and (Is ?pi 'pizza') (On ?pi ?b) (HasState ?pi 'sliced'))) (exists ?ba (and (Is ?ba 'ball') (HasColor ?ba 'red') (RightOf ?ba ?p))))))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (exists ?p (forall ?bi (exists ?pi (exists ?ba (and (Is ?b 'bench') (NextTo ?p ?b) (or (not (Is ?bi 'bicycle')) (RightOf ?bi ?b)) (Is ?p 'plant') (RightOf ?ba ?p) (On ?pi ?b) (HasColor ?ba 'red') (Is ?pi 'pizza') (HasState ?pi 'sliced') (Is ?ba 'ball'))))))))",
+    "k": 5,
+    "object_classes": [
+        "bench",
+        "plant",
+        "pizza",
+        "bicycle",
+        "ball"
+    ]
+}

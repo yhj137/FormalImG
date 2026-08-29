@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene includes a brown suitcase, a black camera, a black watch, a cutting board, and a pizza. Visually, the camera is to the left of the suitcase, while the watch is located above the camera. The cutting board is positioned below the suitcase, and the pizza is found to the left of the cutting board. Furthermore, for every pen in the image, it is placed to the left of the watch.",
+    "dsl": "(exists ?s (exists ?c (exists ?w (exists ?cb (exists ?p (and (Is ?s 'suitcase') (Has ?s 'brown') (Is ?c 'camera') (Has ?c 'black') (Is ?w 'watch') (Has ?w 'black') (Is ?cb 'cutting_board') (Is ?p 'pizza') (LeftOf ?c ?s) (Above ?w ?c) (Below ?cb ?s) (LeftOf ?p ?cb) (forall ?pen (implies (Is ?pen 'pen') (LeftOf ?pen ?w)))))))))",
+    "cnf": "(exists ?s (exists ?c (exists ?w (exists ?cb (exists ?p (forall ?pen (and (Is ?s 'suitcase') (Has ?s 'brown') (LeftOf ?c ?s) (Below ?cb ?s) (Has ?c 'black') (Above ?w ?c) (Is ?cb 'cutting_board') (LeftOf ?p ?cb) (Is ?c 'camera') (Has ?w 'black') (or (not (Is ?pen 'pen')) (LeftOf ?pen ?w)) (Is ?p 'pizza') (Is ?w 'watch'))))))))",
+    "k": 6,
+    "object_classes": [
+        "watch",
+        "pizza",
+        "pen",
+        "camera",
+        "suitcase",
+        "cutting_board"
+    ]
+}

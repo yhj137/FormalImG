@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The layout features a monitor, a backpack, and a bowl positioned on the top side of the scene. The monitor is larger than the backpack, and the bowl is smaller than the backpack. For every hat in the image, it is located below the monitor, and there is a remote below the hat, a glove below the backpack, and a pair of pliers below the bowl with a lemon below the pliers. The remote is smaller than the hat, and the remote, glove, and lemon are all situated on the bottom side of the image.",
+    "dsl": "(exists ?monitor (exists ?backpack (exists ?bowl (and (Is ?monitor 'monitor') (Is ?backpack 'backpack') (Is ?bowl 'bowl') (OnTopSide ?monitor) (OnTopSide ?backpack) (OnTopSide ?bowl) (LargerThan ?monitor ?backpack) (SmallerThan ?bowl ?backpack) (forall ?hat (implies (Is ?hat 'hat') (exists ?remote (exists ?glove (exists ?pliers (exists ?lemon (and (Is ?remote 'remote') (Is ?glove 'glove') (Is ?pliers 'pliers') (Is ?lemon 'lemon') (Below ?hat ?monitor) (Below ?remote ?hat) (Below ?glove ?backpack) (Below ?pliers ?bowl) (Below ?lemon ?pliers) (SmallerThan ?remote ?hat) (OnBottomSide ?remote) (OnBottomSide ?glove) (OnBottomSide ?lemon))))))))))))",
+    "cnf": "(exists ?monitor (exists ?backpack (exists ?bowl (forall ?hat (exists ?remote (exists ?glove (exists ?pliers (exists ?lemon (and (Is ?monitor 'monitor') (OnTopSide ?monitor) (LargerThan ?monitor ?backpack) (or (not (Is ?hat 'hat')) (Below ?hat ?monitor)) (OnTopSide ?backpack) (SmallerThan ?bowl ?backpack) (or (not (Is ?hat 'hat')) (Is ?lemon 'lemon')) (or (not (Is ?hat 'hat')) (Below ?remote ?hat)) (Is ?backpack 'backpack') (or (not (Is ?hat 'hat')) (Below ?glove ?backpack)) (OnTopSide ?bowl) (or (not (Is ?hat 'hat')) (Below ?pliers ?bowl)) (or (not (Is ?hat 'hat')) (Is ?pliers 'pliers')) (or (not (Is ?hat 'hat')) (Below ?lemon ?pliers)) (or (not (Is ?hat 'hat')) (Is ?remote 'remote')) (or (not (Is ?hat 'hat')) (SmallerThan ?remote ?hat)) (or (not (Is ?hat 'hat')) (Is ?glove 'glove')) (or (not (Is ?hat 'hat')) (OnBottomSide ?glove)) (Is ?bowl 'bowl') (or (not (Is ?hat 'hat')) (OnBottomSide ?lemon)) (or (not (Is ?hat 'hat')) (OnBottomSide ?remote)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "remote",
+        "pliers",
+        "lemon",
+        "hat",
+        "backpack",
+        "monitor",
+        "bowl",
+        "glove"
+    ]
+}

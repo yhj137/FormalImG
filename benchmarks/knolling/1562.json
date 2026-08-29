@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The arrangement includes a green bottle, a pizza, and black glasses positioned on the top side. The pizza is located to the right of the bottle, and the glasses are to the right of the pizza. A phone is placed below the pizza. To the left of the phone is a ruler, and to the right of the phone is a wrench; both the ruler and the wrench are located on the bottom side. Furthermore, for every spoon in the scene, there is a yellow lemon situated above it, and the spoon is positioned to the left of the ruler.",
+    "dsl": "(exists ?bottle (exists ?pizza (exists ?glasses (exists ?phone (exists ?ruler (exists ?wrench (and (Is ?bottle 'bottle') (Has ?bottle 'green') (OnTopSide ?bottle) (Is ?pizza 'pizza') (OnTopSide ?pizza) (RightOf ?pizza ?bottle) (Is ?glasses 'glasses') (Has ?glasses 'black') (OnTopSide ?glasses) (RightOf ?glasses ?pizza) (Is ?phone 'phone') (Above ?pizza ?phone) (Is ?ruler 'ruler') (OnBottomSide ?ruler) (LeftOf ?ruler ?phone) (Is ?wrench 'wrench') (OnBottomSide ?wrench) (RightOf ?wrench ?phone) (forall ?spoon (implies (Is ?spoon 'spoon') (exists ?lemon (and (Is ?lemon 'lemon') (Has ?lemon 'yellow') (Above ?lemon ?spoon) (LeftOf ?spoon ?ruler))))))))))))",
+    "cnf": "(exists ?bottle (exists ?pizza (exists ?glasses (exists ?phone (exists ?ruler (exists ?wrench (forall ?spoon (exists ?lemon (and (Is ?bottle 'bottle') (Has ?bottle 'green') (OnTopSide ?bottle) (RightOf ?pizza ?bottle) (OnTopSide ?pizza) (RightOf ?glasses ?pizza) (Is ?pizza 'pizza') (Above ?pizza ?phone) (OnTopSide ?glasses) (Is ?phone 'phone') (LeftOf ?ruler ?phone) (Has ?glasses 'black') (RightOf ?wrench ?phone) (OnBottomSide ?ruler) (or (not (Is ?spoon 'spoon')) (LeftOf ?spoon ?ruler)) (Is ?glasses 'glasses') (OnBottomSide ?wrench) (Is ?ruler 'ruler') (or (not (Is ?spoon 'spoon')) (Above ?lemon ?spoon)) (Is ?wrench 'wrench') (or (not (Is ?spoon 'spoon')) (Has ?lemon 'yellow')) (or (not (Is ?spoon 'spoon')) (Is ?lemon 'lemon')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "wrench",
+        "lemon",
+        "phone",
+        "pizza",
+        "bottle",
+        "spoon"
+    ]
+}

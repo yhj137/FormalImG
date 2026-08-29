@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A man is on a sofa next to a child holding a cylindrical cup. The man holds a white plate containing all the bananas. An oval mirror is positioned above the sofa. A tree is located to the right of the sofa, and a yellow lion is to the left of the tree.",
+    "dsl": "(exists ?m (exists ?s (exists ?c (exists ?p (and (Is ?m 'man') (Is ?s 'sofa') (On ?m ?s) (Is ?c 'child') (NextTo ?c ?m) (Is ?p 'plate') (HasColor ?p 'white') (Holding ?m ?p) (forall ?b (implies (Is ?b 'banana') (In ?b ?p))) (exists ?k (exists ?mr (exists ?t (exists ?l (and (Is ?k 'cup') (HasShape ?k 'cylindrical') (Holding ?c ?k) (Is ?mr 'mirror') (HasShape ?mr 'oval') (Above ?mr ?s) (Is ?t 'tree') (RightOf ?t ?s) (Is ?l 'lion') (HasColor ?l 'yellow') (LeftOf ?l ?t)))))))))))",
+    "cnf": "(exists ?m (exists ?s (exists ?c (exists ?p (forall ?b (exists ?k (exists ?mr (exists ?t (exists ?l (and (Is ?m 'man') (On ?m ?s) (NextTo ?c ?m) (Is ?s 'sofa') (Above ?mr ?s) (Holding ?m ?p) (Is ?c 'child') (Holding ?c ?k) (RightOf ?t ?s) (HasShape ?mr 'oval') (HasColor ?p 'white') (or (not (Is ?b 'banana')) (In ?b ?p)) (HasShape ?k 'cylindrical') (Is ?t 'tree') (LeftOf ?l ?t) (Is ?mr 'mirror') (Is ?p 'plate') (Is ?k 'cup') (HasColor ?l 'yellow') (Is ?l 'lion')))))))))))",
+    "k": 9,
+    "object_classes": [
+        "sofa",
+        "man",
+        "banana",
+        "cup",
+        "tree",
+        "mirror",
+        "lion",
+        "child",
+        "plate"
+    ]
+}

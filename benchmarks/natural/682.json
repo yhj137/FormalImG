@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene features a blooming tree in the center. Every fruit in the scene is on this tree. A woman stands to the left of the tree, holding a bottle.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?t (and (Is ?t 'tree') (HasState ?t 'blooming') (forall ?f (implies (Is ?f 'fruit') (On ?f ?t))) (exists ?w (exists ?b (and (Is ?w 'woman') (Is ?b 'bottle') (LeftOf ?w ?t) (Holding ?w ?b)))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?t (forall ?f (exists ?w (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (or (not (Is ?f 'fruit')) (On ?f ?t)) (LeftOf ?w ?t) (Is ?w 'woman') (Holding ?w ?b) (Is ?b 'bottle')))))))",
+    "k": 4,
+    "object_classes": [
+        "fruit",
+        "bottle",
+        "tree",
+        "woman"
+    ]
+}

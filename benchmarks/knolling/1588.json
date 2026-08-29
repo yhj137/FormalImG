@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. On the top side of the image, there is a row containing a backpack, a keyboard, and a cup, all aligned horizontally. The backpack is to the left of the keyboard, and the keyboard is to the left of the cup. Beneath these items, the backpack is positioned above a glove, the keyboard is above a watch, and the cup is above a pair of glasses. Additionally, a screwdriver is located to the left of the glove, and it is aligned horizontally with the glove, watch, and glasses. The backpack is visually larger than the watch. Finally, for every pen in the scene, it is positioned above the screwdriver.",
+    "dsl": "(exists ?backpack (exists ?keyboard (exists ?cup (exists ?glove (exists ?watch (exists ?glasses (exists ?screwdriver (and (Is ?backpack 'backpack') (Is ?keyboard 'keyboard') (Is ?cup 'cup') (Is ?glove 'glove') (Is ?watch 'watch') (Is ?glasses 'glasses') (Is ?screwdriver 'screwdriver') (OnTopSide ?backpack) (LeftOf ?backpack ?keyboard) (LeftOf ?keyboard ?cup) (AlignedHorizontally ?backpack ?keyboard) (AlignedHorizontally ?keyboard ?cup) (Above ?backpack ?glove) (Above ?keyboard ?watch) (Above ?cup ?glasses) (LeftOf ?screwdriver ?glove) (AlignedHorizontally ?screwdriver ?glove) (AlignedHorizontally ?glove ?watch) (AlignedHorizontally ?watch ?glasses) (LargerThan ?backpack ?watch) (forall ?pen (implies (Is ?pen 'pen') (Above ?pen ?screwdriver)))))))))))",
+    "cnf": "(exists ?backpack (exists ?keyboard (exists ?cup (exists ?glove (exists ?watch (exists ?glasses (exists ?screwdriver (forall ?pen (and (Is ?backpack 'backpack') (OnTopSide ?backpack) (LeftOf ?backpack ?keyboard) (AlignedHorizontally ?backpack ?keyboard) (Is ?keyboard 'keyboard') (LeftOf ?keyboard ?cup) (Above ?backpack ?glove) (AlignedHorizontally ?keyboard ?cup) (Is ?cup 'cup') (LargerThan ?backpack ?watch) (Is ?glove 'glove') (LeftOf ?screwdriver ?glove) (Above ?keyboard ?watch) (Above ?cup ?glasses) (AlignedHorizontally ?watch ?glasses) (AlignedHorizontally ?screwdriver ?glove) (Is ?screwdriver 'screwdriver') (Is ?watch 'watch') (AlignedHorizontally ?glove ?watch) (Is ?glasses 'glasses') (or (not (Is ?pen 'pen')) (Above ?pen ?screwdriver)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "glasses",
+        "keyboard",
+        "pen",
+        "watch",
+        "screwdriver",
+        "cup",
+        "backpack",
+        "glove"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a neatly organized grid of items. The scene includes a donut, a handbag, a wallet, a plate, a watch, a phone, and a calculator. On the left, the donut is positioned to the left of the handbag. The handbag is placed directly above the wallet; they are aligned vertically, and the handbag is visually larger than the wallet. To the right of the handbag is a plate, which sits vertically aligned above a watch. The plate is also larger than the donut. Further to the right, a phone is arranged above a calculator with vertical alignment, and the calculator is situated on the bottom side of the image. Finally, for every tie in the scene, it is located on the right side of the image, positioned to the right of the phone, and has a pair of scissors aligned vertically below it.",
+    "dsl": "(exists ?donut (exists ?handbag (exists ?wallet (exists ?plate (exists ?watch (exists ?phone (exists ?calculator (and (Is ?donut 'donut') (Is ?handbag 'handbag') (Is ?wallet 'wallet') (Is ?plate 'plate') (Is ?watch 'watch') (Is ?phone 'phone') (Is ?calculator 'calculator') (LeftOf ?donut ?handbag) (Above ?handbag ?wallet) (AlignedVertically ?handbag ?wallet) (LargerThan ?handbag ?wallet) (RightOf ?plate ?handbag) (Above ?plate ?watch) (AlignedVertically ?plate ?watch) (LargerThan ?plate ?donut) (RightOf ?phone ?plate) (Above ?phone ?calculator) (AlignedVertically ?phone ?calculator) (OnBottomSide ?calculator) (forall ?tie (implies (Is ?tie 'tie') (exists ?scissors (and (Is ?scissors 'scissors') (OnRightSide ?tie) (RightOf ?tie ?phone) (Above ?tie ?scissors) (AlignedVertically ?tie ?scissors)))))))))))))",
+    "cnf": "(exists ?donut (exists ?handbag (exists ?wallet (exists ?plate (exists ?watch (exists ?phone (exists ?calculator (forall ?tie (exists ?scissors (and (Is ?donut 'donut') (LeftOf ?donut ?handbag) (LargerThan ?plate ?donut) (Is ?handbag 'handbag') (Above ?handbag ?wallet) (AlignedVertically ?plate ?watch) (RightOf ?phone ?plate) (AlignedVertically ?handbag ?wallet) (Is ?wallet 'wallet') (Above ?plate ?watch) (Is ?phone 'phone') (Above ?phone ?calculator) (LargerThan ?handbag ?wallet) (RightOf ?plate ?handbag) (Is ?watch 'watch') (AlignedVertically ?phone ?calculator) (Is ?calculator 'calculator') (Is ?plate 'plate') (or (not (Is ?tie 'tie')) (RightOf ?tie ?phone)) (OnBottomSide ?calculator) (or (not (Is ?tie 'tie')) (OnRightSide ?tie)) (or (not (Is ?tie 'tie')) (Above ?tie ?scissors)) (or (not (Is ?tie 'tie')) (Is ?scissors 'scissors')) (or (not (Is ?tie 'tie')) (AlignedVertically ?tie ?scissors))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "plate",
+        "tie",
+        "phone",
+        "watch",
+        "handbag",
+        "calculator",
+        "wallet",
+        "scissors",
+        "donut"
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image containing a brown suitcase and a yellow screwdriver. These two items are arranged so that they are aligned vertically.",
+    "dsl": "(exists ?suitcase (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (Is ?screwdriver 'screwdriver') (Has ?screwdriver 'yellow') (AlignedVertically ?suitcase ?screwdriver))))",
+    "cnf": "(exists ?suitcase (exists ?screwdriver (and (Is ?suitcase 'suitcase') (Has ?suitcase 'brown') (AlignedVertically ?suitcase ?screwdriver) (Has ?screwdriver 'yellow') (Is ?screwdriver 'screwdriver'))))",
+    "k": 2,
+    "object_classes": [
+        "suitcase",
+        "screwdriver"
+    ]
+}

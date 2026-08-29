@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting of a bench next to a chair. A blooming plant is next to the bench, and every butterfly is inside the plant.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (and (Is ?b 'bench') (Is ?c 'chair') (NextTo ?b ?c) (Is ?p 'plant') (HasState ?p 'blooming') (NextTo ?p ?b) (forall ?bf (implies (Is ?bf 'butterfly') (In ?bf ?p))))))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?b (exists ?c (exists ?p (forall ?bf (and (Is ?b 'bench') (NextTo ?b ?c) (NextTo ?p ?b) (Is ?c 'chair') (HasState ?p 'blooming') (or (not (Is ?bf 'butterfly')) (In ?bf ?p)) (Is ?p 'plant')))))))",
+    "k": 4,
+    "object_classes": [
+        "bench",
+        "chair",
+        "butterfly",
+        "plant"
+    ]
+}

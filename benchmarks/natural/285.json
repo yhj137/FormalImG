@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An oil painting where every man is on a wooden chair.",
+    "dsl": "(and (IsStyle 'oil painting') (forall ?m (implies (Is ?m 'man') (exists ?c (and (Is ?c 'chair') (HasMaterial ?c 'wooden') (On ?m ?c))))))",
+    "cnf": "(and (IsStyle 'oil painting') (forall ?m (exists ?c (and (or (not (Is ?m 'man')) (Is ?c 'chair')) (or (not (Is ?m 'man')) (HasMaterial ?c 'wooden')) (or (not (Is ?m 'man')) (On ?m ?c))))))",
+    "k": 2,
+    "object_classes": [
+        "chair",
+        "man"
+    ]
+}

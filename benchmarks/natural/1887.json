@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A woman stands next to a car, holding a jacket with glasses inside. All butterflies are to the left of the car. To the right of the woman is a desk with a sliced pizza and a spoon next to it. A rock is positioned to the right of the desk, with a bird next to it.",
+    "dsl": "(exists ?c (exists ?w (exists ?j (and (Is ?c 'car') (Is ?w 'woman') (Is ?j 'jacket') (NextTo ?w ?c) (Holding ?w ?j) (forall ?bu (implies (Is ?bu 'butterfly') (LeftOf ?bu ?c))) (exists ?g (exists ?d (exists ?p (exists ?s (exists ?r (exists ?bi (and (Is ?g 'glasses') (In ?g ?j) (Is ?d 'desk') (RightOf ?d ?w) (Is ?p 'pizza') (HasState ?p 'sliced') (On ?p ?d) (Is ?s 'spoon') (On ?s ?d) (NextTo ?s ?p) (Is ?r 'rock') (RightOf ?r ?d) (Is ?bi 'bird') (NextTo ?bi ?r))))))))))))",
+    "cnf": "(exists ?c (exists ?w (exists ?j (forall ?bu (exists ?g (exists ?d (exists ?p (exists ?s (exists ?r (exists ?bi (and (Is ?c 'car') (NextTo ?w ?c) (or (not (Is ?bu 'butterfly')) (LeftOf ?bu ?c)) (Is ?w 'woman') (Holding ?w ?j) (RightOf ?d ?w) (Is ?j 'jacket') (In ?g ?j) (Is ?d 'desk') (On ?p ?d) (Is ?g 'glasses') (On ?s ?d) (HasState ?p 'sliced') (NextTo ?s ?p) (RightOf ?r ?d) (Is ?s 'spoon') (Is ?p 'pizza') (Is ?r 'rock') (NextTo ?bi ?r) (Is ?bi 'bird'))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "spoon",
+        "glasses",
+        "woman",
+        "pizza",
+        "jacket",
+        "rock",
+        "bird",
+        "desk",
+        "car",
+        "butterfly"
+    ]
+}

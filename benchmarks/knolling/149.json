@@ -1,0 +1,9 @@
+{
+    "prompt": "Generate a Knolling-style image. Every lighter in the image is blue.",
+    "dsl": "(and (forall ?lighter (implies (Is ?lighter 'lighter') (Has ?lighter 'blue'))))",
+    "cnf": "(forall ?lighter (or (not (Is ?lighter 'lighter')) (Has ?lighter 'blue')))",
+    "k": 1,
+    "object_classes": [
+        "lighter"
+    ]
+}

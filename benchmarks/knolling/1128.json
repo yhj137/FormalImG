@@ -1,0 +1,14 @@
+{
+    "prompt": "Generate a Knolling-style image. The composition is anchored by a suitcase positioned on the left side of the scene. To the right of the suitcase is a pizza, which is visually smaller than the suitcase, and further to the right is a game controller; these three items are aligned horizontally. Additionally, for every screwdriver present in the image, it is red, located above the suitcase, and followed by a drill to its right and a blue bottle to the right of the drill, forming a second row of objects aligned horizontally.",
+    "dsl": "(exists ?suit (exists ?pizza (exists ?gc (and (Is ?suit 'suitcase') (OnLeftSide ?suit) (Is ?pizza 'pizza') (Is ?gc 'game_controller') (RightOf ?pizza ?suit) (SmallerThan ?pizza ?suit) (AlignedHorizontally ?suit ?pizza) (RightOf ?gc ?pizza) (AlignedHorizontally ?pizza ?gc) (forall ?scr (implies (Is ?scr 'screwdriver') (exists ?drill (exists ?bot (and (Is ?drill 'drill') (Is ?bot 'bottle') (Has ?scr 'red') (Has ?bot 'blue') (Above ?scr ?suit) (RightOf ?drill ?scr) (AlignedHorizontally ?scr ?drill) (RightOf ?bot ?drill) (AlignedHorizontally ?drill ?bot))))))))))",
+    "cnf": "(exists ?suit (exists ?pizza (exists ?gc (forall ?scr (exists ?drill (exists ?bot (and (Is ?suit 'suitcase') (OnLeftSide ?suit) (RightOf ?pizza ?suit) (SmallerThan ?pizza ?suit) (Is ?pizza 'pizza') (AlignedHorizontally ?suit ?pizza) (or (not (Is ?scr 'screwdriver')) (Above ?scr ?suit)) (RightOf ?gc ?pizza) (or (not (Is ?scr 'screwdriver')) (Has ?bot 'blue')) (or (not (Is ?scr 'screwdriver')) (RightOf ?drill ?scr)) (AlignedHorizontally ?pizza ?gc) (Is ?gc 'game_controller') (or (not (Is ?scr 'screwdriver')) (Has ?scr 'red')) (or (not (Is ?scr 'screwdriver')) (Is ?bot 'bottle')) (or (not (Is ?scr 'screwdriver')) (RightOf ?bot ?drill)) (or (not (Is ?scr 'screwdriver')) (Is ?drill 'drill')) (or (not (Is ?scr 'screwdriver')) (AlignedHorizontally ?scr ?drill)) (or (not (Is ?scr 'screwdriver')) (AlignedHorizontally ?drill ?bot)))))))))",
+    "k": 6,
+    "object_classes": [
+        "pizza",
+        "screwdriver",
+        "game_controller",
+        "drill",
+        "bottle",
+        "suitcase"
+    ]
+}

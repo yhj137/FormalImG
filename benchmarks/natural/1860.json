@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cyberpunk style scene where a blue bed serves as the central element. To the left of the bed is a red ball, with all shoes in the scene positioned next to it. A bookshelf stands to the right of the bed, with a black backpack resting beside it. A fish sits on the bookshelf, and a green fruit is located to the right of the fish. Headphones lie on the bed next to glasses, which are placed beside a white phone.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?bed (and (Is ?bed 'bed') (HasColor ?bed 'blue') (exists ?ball (and (Is ?ball 'ball') (HasColor ?ball 'red') (LeftOf ?ball ?bed) (forall ?shoe (implies (Is ?shoe 'shoes') (NextTo ?shoe ?ball))))) (exists ?shelf (and (Is ?shelf 'bookshelf') (RightOf ?shelf ?bed) (exists ?pack (and (Is ?pack 'backpack') (HasColor ?pack 'black') (NextTo ?pack ?shelf))) (exists ?fish (and (Is ?fish 'fish') (On ?fish ?shelf) (exists ?fruit (and (Is ?fruit 'fruit') (HasColor ?fruit 'green') (RightOf ?fruit ?fish))))))) (exists ?head (and (Is ?head 'headphones') (On ?head ?bed) (exists ?glass (and (Is ?glass 'glasses') (NextTo ?glass ?head) (exists ?phone (and (Is ?phone 'phone') (HasColor ?phone 'white') (NextTo ?phone ?glass))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?bed (exists ?ball (forall ?shoe (exists ?shelf (exists ?pack (exists ?fish (exists ?fruit (exists ?head (exists ?glass (exists ?phone (and (Is ?bed 'bed') (HasColor ?bed 'blue') (LeftOf ?ball ?bed) (RightOf ?shelf ?bed) (HasColor ?ball 'red') (or (not (Is ?shoe 'shoes')) (NextTo ?shoe ?ball)) (On ?head ?bed) (Is ?shelf 'bookshelf') (NextTo ?pack ?shelf) (Is ?ball 'ball') (Is ?head 'headphones') (NextTo ?glass ?head) (On ?fish ?shelf) (HasColor ?pack 'black') (Is ?glass 'glasses') (NextTo ?phone ?glass) (Is ?fish 'fish') (RightOf ?fruit ?fish) (Is ?pack 'backpack') (HasColor ?phone 'white') (HasColor ?fruit 'green') (Is ?phone 'phone') (Is ?fruit 'fruit')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "headphones",
+        "fruit",
+        "phone",
+        "fish",
+        "shoes",
+        "bed",
+        "glasses",
+        "backpack",
+        "ball",
+        "bookshelf"
+    ]
+}

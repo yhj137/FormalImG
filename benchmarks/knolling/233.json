@@ -1,0 +1,10 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a blue tie and a black remote. The black remote is placed to the right of the blue tie.",
+    "dsl": "(exists ?t (exists ?r (and (Is ?t 'tie') (Has ?t 'blue') (Is ?r 'remote') (Has ?r 'black') (RightOf ?r ?t))))",
+    "cnf": "(exists ?t (exists ?r (and (Is ?t 'tie') (Has ?t 'blue') (RightOf ?r ?t) (Has ?r 'black') (Is ?r 'remote'))))",
+    "k": 2,
+    "object_classes": [
+        "tie",
+        "remote"
+    ]
+}

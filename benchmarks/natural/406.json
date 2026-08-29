@@ -1,0 +1,11 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A child is holding a red flower. A toy car is located to the right of the child.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?t (and (Is ?c 'child') (Is ?f 'flower') (Is ?t 'toy car') (HasColor ?f 'red') (Holding ?c ?f) (RightOf ?t ?c))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?c (exists ?f (exists ?t (and (Is ?c 'child') (Holding ?c ?f) (RightOf ?t ?c) (HasColor ?f 'red') (Is ?t 'toy car') (Is ?f 'flower'))))))",
+    "k": 3,
+    "object_classes": [
+        "flower",
+        "toy car",
+        "child"
+    ]
+}

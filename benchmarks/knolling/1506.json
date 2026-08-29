@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. A white keyboard is positioned on the left side of the scene. To the left of the keyboard is a plate, and a pizza is placed below the plate. The arrangement follows a rule: for every ruler present, there is a glove to its left, and this glove is also located to the right of the keyboard. Additionally, a phone is arranged below the glove. Finally, a wrench is placed to the right of the ruler on the right side of the scene, with a donut located above the wrench.",
+    "dsl": "(exists ?keyboard (exists ?plate (exists ?pizza (and (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (OnLeftSide ?keyboard) (Is ?plate 'plate') (LeftOf ?plate ?keyboard) (Is ?pizza 'pizza') (Below ?pizza ?plate) (forall ?ruler (implies (Is ?ruler 'ruler') (exists ?glove (exists ?phone (exists ?wrench (exists ?donut (and (Is ?glove 'glove') (LeftOf ?glove ?ruler) (RightOf ?glove ?keyboard) (Is ?phone 'phone') (Below ?phone ?glove) (Is ?wrench 'wrench') (RightOf ?wrench ?ruler) (OnRightSide ?wrench) (Is ?donut 'donut') (Above ?donut ?wrench))))))))))))",
+    "cnf": "(exists ?keyboard (exists ?plate (exists ?pizza (forall ?ruler (exists ?glove (exists ?phone (exists ?wrench (exists ?donut (and (Is ?keyboard 'keyboard') (Has ?keyboard 'white') (OnLeftSide ?keyboard) (LeftOf ?plate ?keyboard) (or (not (Is ?ruler 'ruler')) (RightOf ?glove ?keyboard)) (Is ?plate 'plate') (Below ?pizza ?plate) (or (not (Is ?ruler 'ruler')) (LeftOf ?glove ?ruler)) (or (not (Is ?ruler 'ruler')) (Below ?phone ?glove)) (or (not (Is ?ruler 'ruler')) (Is ?phone 'phone')) (Is ?pizza 'pizza') (or (not (Is ?ruler 'ruler')) (Is ?glove 'glove')) (or (not (Is ?ruler 'ruler')) (Is ?wrench 'wrench')) (or (not (Is ?ruler 'ruler')) (RightOf ?wrench ?ruler)) (or (not (Is ?ruler 'ruler')) (OnRightSide ?wrench)) (or (not (Is ?ruler 'ruler')) (Is ?donut 'donut')) (or (not (Is ?ruler 'ruler')) (Above ?donut ?wrench)))))))))))",
+    "k": 8,
+    "object_classes": [
+        "plate",
+        "pizza",
+        "wrench",
+        "keyboard",
+        "ruler",
+        "glove",
+        "phone",
+        "donut"
+    ]
+}

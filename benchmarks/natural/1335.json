@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bookshelf is located to the left of a tree. Next to the tree, a child is holding a yellow banana. All chairs in the scene are positioned to the right of the bookshelf. Additionally, a person holding a laptop is located to the right of the tree.",
+    "dsl": "(exists ?bs (exists ?t (exists ?c (exists ?b (and (Is ?bs 'bookshelf') (Is ?t 'tree') (LeftOf ?bs ?t) (Is ?c 'child') (NextTo ?c ?t) (Is ?b 'banana') (HasColor ?b 'yellow') (Holding ?c ?b) (forall ?ch (implies (Is ?ch 'chair') (RightOf ?ch ?bs))) (exists ?p (exists ?l (and (Is ?p 'person') (RightOf ?p ?t) (Is ?l 'laptop') (Holding ?p ?l)))))))))",
+    "cnf": "(exists ?bs (exists ?t (exists ?c (exists ?b (forall ?ch (exists ?p (exists ?l (and (Is ?bs 'bookshelf') (LeftOf ?bs ?t) (or (not (Is ?ch 'chair')) (RightOf ?ch ?bs)) (Is ?t 'tree') (NextTo ?c ?t) (RightOf ?p ?t) (Is ?c 'child') (Holding ?c ?b) (Is ?p 'person') (Holding ?p ?l) (HasColor ?b 'yellow') (Is ?l 'laptop') (Is ?b 'banana')))))))))",
+    "k": 7,
+    "object_classes": [
+        "child",
+        "person",
+        "chair",
+        "tree",
+        "laptop",
+        "bookshelf",
+        "banana"
+    ]
+}

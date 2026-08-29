@@ -1,0 +1,12 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo style scene where every rock has a green plant on top, a hammer to its left, and a ball to its right.",
+    "dsl": "(and (IsStyle 'photo') (forall ?r (implies (Is ?r 'rock') (exists ?p (exists ?h (exists ?b (and (Is ?p 'plant') (HasColor ?p 'green') (Is ?h 'hammer') (Is ?b 'ball') (On ?p ?r) (LeftOf ?h ?r) (RightOf ?b ?r))))))))",
+    "cnf": "(and (IsStyle 'photo') (forall ?r (exists ?p (exists ?h (exists ?b (and (or (not (Is ?r 'rock')) (Is ?p 'plant')) (or (not (Is ?r 'rock')) (HasColor ?p 'green')) (or (not (Is ?r 'rock')) (Is ?h 'hammer')) (or (not (Is ?r 'rock')) (On ?p ?r)) (or (not (Is ?r 'rock')) (Is ?b 'ball')) (or (not (Is ?r 'rock')) (LeftOf ?h ?r)) (or (not (Is ?r 'rock')) (RightOf ?b ?r))))))))",
+    "k": 4,
+    "object_classes": [
+        "hammer",
+        "ball",
+        "rock",
+        "plant"
+    ]
+}

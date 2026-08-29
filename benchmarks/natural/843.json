@@ -1,0 +1,13 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk style scene where every tree has a bus next to it. To the right of the bus sits a stone rock, with a metal basket placed beside it. A plant is located to the left of the tree.",
+    "dsl": "(and (IsStyle 'cyberpunk') (forall ?t (implies (Is ?t 'tree') (exists ?b (exists ?r (exists ?p (exists ?k (and (Is ?b 'bus') (Is ?r 'rock') (HasMaterial ?r 'stone') (Is ?p 'plant') (Is ?k 'basket') (HasMaterial ?k 'metal') (NextTo ?b ?t) (RightOf ?r ?b) (LeftOf ?p ?t) (NextTo ?k ?r)))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (forall ?t (exists ?b (exists ?r (exists ?p (exists ?k (and (or (not (Is ?t 'tree')) (Is ?b 'bus')) (or (not (Is ?t 'tree')) (NextTo ?b ?t)) (or (not (Is ?t 'tree')) (Is ?r 'rock')) (or (not (Is ?t 'tree')) (RightOf ?r ?b)) (or (not (Is ?t 'tree')) (HasMaterial ?k 'metal')) (or (not (Is ?t 'tree')) (HasMaterial ?r 'stone')) (or (not (Is ?t 'tree')) (LeftOf ?p ?t)) (or (not (Is ?t 'tree')) (NextTo ?k ?r)) (or (not (Is ?t 'tree')) (Is ?k 'basket')) (or (not (Is ?t 'tree')) (Is ?p 'plant')))))))))",
+    "k": 5,
+    "object_classes": [
+        "rock",
+        "plant",
+        "bus",
+        "basket",
+        "tree"
+    ]
+}

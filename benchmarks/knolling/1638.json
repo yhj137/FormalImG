@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. For every hammer in the scene, there is a stapler located on the left side of the image to the left of the hammer, and a tie located on the right side of the image to the right of the hammer. A bottle is positioned directly below the hammer, and they are aligned vertically. Below the bottle is a plate. An apple, which is smaller than the plate, is placed to the left of the plate, while a pizza is placed to the right of the plate. Furthermore, a watch is located below the tie, and a glove is positioned in the bottom section of the image, below the watch.",
+    "dsl": "(and (forall ?h (implies (Is ?h 'hammer') (exists ?s (exists ?t (exists ?b (exists ?pl (exists ?a (exists ?pi (exists ?w (exists ?g (and (Is ?s 'stapler') (Is ?t 'tie') (Is ?b 'bottle') (Is ?pl 'plate') (Is ?a 'apple') (Is ?pi 'pizza') (Is ?w 'watch') (Is ?g 'glove') (OnLeftSide ?s) (LeftOf ?s ?h) (OnRightSide ?t) (RightOf ?t ?h) (AlignedVertically ?h ?b) (Below ?b ?h) (Below ?pl ?b) (LeftOf ?a ?pl) (SmallerThan ?a ?pl) (RightOf ?pi ?pl) (Below ?w ?t) (Below ?g ?w) (OnBottomSide ?g)))))))))))))",
+    "cnf": "(forall ?h (exists ?s (exists ?t (exists ?b (exists ?pl (exists ?a (exists ?pi (exists ?w (exists ?g (and (or (not (Is ?h 'hammer')) (Is ?s 'stapler')) (or (not (Is ?h 'hammer')) (OnLeftSide ?s)) (or (not (Is ?h 'hammer')) (Is ?t 'tie')) (or (not (Is ?h 'hammer')) (LeftOf ?s ?h)) (or (not (Is ?h 'hammer')) (Is ?g 'glove')) (or (not (Is ?h 'hammer')) (Is ?b 'bottle')) (or (not (Is ?h 'hammer')) (OnRightSide ?t)) (or (not (Is ?h 'hammer')) (Is ?w 'watch')) (or (not (Is ?h 'hammer')) (Below ?g ?w)) (or (not (Is ?h 'hammer')) (Is ?pl 'plate')) (or (not (Is ?h 'hammer')) (AlignedVertically ?h ?b)) (or (not (Is ?h 'hammer')) (RightOf ?t ?h)) (or (not (Is ?h 'hammer')) (Is ?pi 'pizza')) (or (not (Is ?h 'hammer')) (Below ?w ?t)) (or (not (Is ?h 'hammer')) (OnBottomSide ?g)) (or (not (Is ?h 'hammer')) (Is ?a 'apple')) (or (not (Is ?h 'hammer')) (Below ?pl ?b)) (or (not (Is ?h 'hammer')) (Below ?b ?h)) (or (not (Is ?h 'hammer')) (RightOf ?pi ?pl)) (or (not (Is ?h 'hammer')) (LeftOf ?a ?pl)) (or (not (Is ?h 'hammer')) (SmallerThan ?a ?pl))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "tie",
+        "plate",
+        "stapler",
+        "apple",
+        "watch",
+        "pizza",
+        "hammer",
+        "bottle",
+        "glove"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image featuring a collection of seven items: a screwdriver, a mouse, a phone, a remote, a cup, a plate, and a cutting board. All items are positioned on the bottom side of the image and are aligned horizontally in a row. There is a sequential size relationship among the objects: the screwdriver is smaller than the mouse, the mouse is smaller than the phone, the phone is smaller than the remote, the remote is smaller than the cup, the cup is smaller than the plate, and the plate is smaller than the cutting board.",
+    "dsl": "(exists ?screwdriver (exists ?mouse (exists ?phone (exists ?remote (exists ?cup (exists ?plate (exists ?cutting_board (and (Is ?screwdriver 'screwdriver') (Is ?mouse 'mouse') (Is ?phone 'phone') (Is ?remote 'remote') (Is ?cup 'cup') (Is ?plate 'plate') (Is ?cutting_board 'cutting_board') (OnBottomSide ?screwdriver) (OnBottomSide ?mouse) (OnBottomSide ?phone) (OnBottomSide ?remote) (OnBottomSide ?cup) (OnBottomSide ?plate) (OnBottomSide ?cutting_board) (AlignedHorizontally ?screwdriver ?mouse) (AlignedHorizontally ?mouse ?phone) (AlignedHorizontally ?phone ?remote) (AlignedHorizontally ?remote ?cup) (AlignedHorizontally ?cup ?plate) (AlignedHorizontally ?plate ?cutting_board) (SmallerThan ?screwdriver ?mouse) (SmallerThan ?mouse ?phone) (SmallerThan ?phone ?remote) (SmallerThan ?remote ?cup) (SmallerThan ?cup ?plate) (SmallerThan ?plate ?cutting_board)))))))))",
+    "cnf": "(exists ?screwdriver (exists ?mouse (exists ?phone (exists ?remote (exists ?cup (exists ?plate (exists ?cutting_board (and (Is ?screwdriver 'screwdriver') (OnBottomSide ?screwdriver) (AlignedHorizontally ?screwdriver ?mouse) (SmallerThan ?screwdriver ?mouse) (OnBottomSide ?mouse) (AlignedHorizontally ?mouse ?phone) (SmallerThan ?mouse ?phone) (Is ?mouse 'mouse') (OnBottomSide ?phone) (AlignedHorizontally ?phone ?remote) (SmallerThan ?phone ?remote) (Is ?phone 'phone') (OnBottomSide ?remote) (AlignedHorizontally ?remote ?cup) (SmallerThan ?remote ?cup) (Is ?remote 'remote') (OnBottomSide ?cup) (AlignedHorizontally ?cup ?plate) (SmallerThan ?cup ?plate) (Is ?cup 'cup') (OnBottomSide ?plate) (AlignedHorizontally ?plate ?cutting_board) (SmallerThan ?plate ?cutting_board) (Is ?plate 'plate') (OnBottomSide ?cutting_board) (Is ?cutting_board 'cutting_board')))))))))",
+    "k": 7,
+    "object_classes": [
+        "remote",
+        "plate",
+        "phone",
+        "cup",
+        "screwdriver",
+        "cutting_board",
+        "mouse"
+    ]
+}

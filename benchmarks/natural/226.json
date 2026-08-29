@@ -1,0 +1,10 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A photo of a blooming tree positioned to the left of a backpack.",
+    "dsl": "(and (IsStyle 'photo') (exists ?t (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (Is ?b 'backpack') (LeftOf ?t ?b)))))",
+    "cnf": "(and (IsStyle 'photo') (exists ?t (exists ?b (and (Is ?t 'tree') (HasState ?t 'blooming') (LeftOf ?t ?b) (Is ?b 'backpack')))))",
+    "k": 2,
+    "object_classes": [
+        "backpack",
+        "tree"
+    ]
+}

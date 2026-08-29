@@ -1,0 +1,9 @@
+{
+    "prompt": "An oil painting depicting a child made of stone.",
+    "dsl": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'child') (HasMaterial ?c 'stone'))))",
+    "cnf": "(and (IsStyle 'oil painting') (exists ?c (and (Is ?c 'child') (HasMaterial ?c 'stone'))))",
+    "k": 1,
+    "object_classes": [
+        "child"
+    ]
+}

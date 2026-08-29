@@ -1,0 +1,15 @@
+{
+    "prompt": "Generate a Knolling-style image. For every black monitor in the scene, there is a red book located below it. Below the book is a ruler, and below the ruler is a calculator. Continuing the vertical column, a mouse is positioned below the calculator, and a white plate is below the mouse. Finally, a donut is located below the plate and is positioned on the bottom side of the image. All these objects\u2014monitor, book, ruler, calculator, mouse, plate, and donut\u2014are aligned vertically, and the mouse is visually smaller than the plate.",
+    "dsl": "(forall ?m (implies (and (Is ?m 'monitor') (Has ?m 'black')) (exists ?b (exists ?r (exists ?c (exists ?mo (exists ?p (exists ?d (and (Is ?b 'book') (Has ?b 'red') (Is ?r 'ruler') (Is ?c 'calculator') (Is ?mo 'mouse') (Is ?p 'plate') (Has ?p 'white') (Is ?d 'donut') (Below ?b ?m) (Below ?r ?b) (Below ?c ?r) (Below ?mo ?c) (Below ?p ?mo) (Below ?d ?p) (AlignedVertically ?m ?b) (AlignedVertically ?b ?r) (AlignedVertically ?r ?c) (AlignedVertically ?c ?mo) (AlignedVertically ?mo ?p) (AlignedVertically ?p ?d) (OnBottomSide ?d) (SmallerThan ?mo ?p))))))))))",
+    "cnf": "(forall ?m (exists ?b (exists ?r (exists ?c (exists ?mo (exists ?p (exists ?d (and (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?b 'book')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Has ?b 'red')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?b ?m)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?r 'ruler')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?r ?b)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?d 'donut')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?c 'calculator')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?m ?b)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?c ?r)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Has ?p 'white')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?d ?p)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?mo 'mouse')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?b ?r)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?mo ?c)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Is ?p 'plate')) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (Below ?p ?mo)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?mo ?p)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?p ?d)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?r ?c)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (AlignedVertically ?c ?mo)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (SmallerThan ?mo ?p)) (or (not (Is ?m 'monitor')) (not (Has ?m 'black')) (OnBottomSide ?d))))))))))",
+    "k": 7,
+    "object_classes": [
+        "mouse",
+        "plate",
+        "calculator",
+        "ruler",
+        "monitor",
+        "book",
+        "donut"
+    ]
+}

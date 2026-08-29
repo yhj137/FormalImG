@@ -1,0 +1,12 @@
+{
+    "prompt": "Generate a Knolling-style image. There is a hat positioned on the bottom side of the scene. For every pair of pliers present, there is a pen located to its right, and a carrot located to the right of the pen. These three items\u2014the pliers, the pen, and the carrot\u2014are aligned horizontally. Additionally, the pen is visually smaller than the hat.",
+    "dsl": "(exists ?hat (and (Is ?hat 'hat') (OnBottomSide ?hat) (forall ?pliers (implies (Is ?pliers 'pliers') (exists ?pen (exists ?carrot (and (Is ?pen 'pen') (Is ?carrot 'carrot') (RightOf ?pen ?pliers) (RightOf ?carrot ?pen) (AlignedHorizontally ?pliers ?pen) (AlignedHorizontally ?pen ?carrot) (SmallerThan ?pen ?hat))))))))",
+    "cnf": "(exists ?hat (forall ?pliers (exists ?pen (exists ?carrot (and (Is ?hat 'hat') (OnBottomSide ?hat) (or (not (Is ?pliers 'pliers')) (SmallerThan ?pen ?hat)) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?pen ?carrot)) (or (not (Is ?pliers 'pliers')) (AlignedHorizontally ?pliers ?pen)) (or (not (Is ?pliers 'pliers')) (RightOf ?carrot ?pen)) (or (not (Is ?pliers 'pliers')) (RightOf ?pen ?pliers)) (or (not (Is ?pliers 'pliers')) (Is ?carrot 'carrot')) (or (not (Is ?pliers 'pliers')) (Is ?pen 'pen')))))))",
+    "k": 4,
+    "object_classes": [
+        "hat",
+        "pliers",
+        "carrot",
+        "pen"
+    ]
+}

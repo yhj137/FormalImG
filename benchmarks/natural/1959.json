@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This is a cartoon style scene. A wooden bookshelf with a metal screwdriver resting on it stands to the left of a sofa. A basket containing a fruit and a fork sits on the sofa. To the right of the sofa, a horse wearing a hat stands next to a bicycle. Every butterfly in the scene is positioned above the bicycle.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?sofa (exists ?bookshelf (exists ?screwdriver (exists ?basket (exists ?fruit (exists ?horse (exists ?bicycle (and (Is ?sofa 'sofa') (Is ?bookshelf 'bookshelf') (HasMaterial ?bookshelf 'wooden') (LeftOf ?bookshelf ?sofa) (Is ?screwdriver 'screwdriver') (HasMaterial ?screwdriver 'metal') (On ?screwdriver ?bookshelf) (Is ?basket 'basket') (On ?basket ?sofa) (Is ?fruit 'fruit') (In ?fruit ?basket) (Is ?horse 'horse') (RightOf ?horse ?sofa) (Is ?bicycle 'bicycle') (NextTo ?bicycle ?horse) (forall ?butterfly (implies (Is ?butterfly 'butterfly') (Above ?butterfly ?bicycle))) (exists ?hat (and (Is ?hat 'hat') (On ?hat ?horse))) (exists ?fork (and (Is ?fork 'fork') (In ?fork ?basket))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?sofa (exists ?bookshelf (exists ?screwdriver (exists ?basket (exists ?fruit (exists ?horse (exists ?bicycle (forall ?butterfly (exists ?hat (exists ?fork (and (Is ?sofa 'sofa') (LeftOf ?bookshelf ?sofa) (On ?basket ?sofa) (HasMaterial ?bookshelf 'wooden') (On ?screwdriver ?bookshelf) (RightOf ?horse ?sofa) (Is ?basket 'basket') (In ?fruit ?basket) (Is ?bookshelf 'bookshelf') (HasMaterial ?screwdriver 'metal') (Is ?horse 'horse') (NextTo ?bicycle ?horse) (In ?fork ?basket) (Is ?fruit 'fruit') (Is ?screwdriver 'screwdriver') (On ?hat ?horse) (Is ?bicycle 'bicycle') (or (not (Is ?butterfly 'butterfly')) (Above ?butterfly ?bicycle)) (Is ?fork 'fork') (Is ?hat 'hat')))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "fruit",
+        "sofa",
+        "fork",
+        "horse",
+        "bicycle",
+        "butterfly",
+        "basket",
+        "screwdriver",
+        "bookshelf",
+        "hat"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene is anchored by a game controller positioned on the top side. For every remote control present, it is located below the game controller, and there exists a pair of glasses below the remote, a sandwich below the glasses on the bottom side, and a vertical column on the right side consisting of a donut on the top side, a carrot below the donut, a spoon below the carrot, a fork below the spoon, and a ruler below the fork. The sandwich is larger than the donut.",
+    "dsl": "(exists ?controller (and (Is ?controller 'game_controller') (OnTopSide ?controller) (forall ?remote (implies (Is ?remote 'remote') (exists ?glasses (exists ?sandwich (exists ?donut (exists ?carrot (exists ?spoon (exists ?fork (exists ?ruler (and (Is ?glasses 'glasses') (Is ?sandwich 'sandwich') (Is ?donut 'donut') (Is ?carrot 'carrot') (Is ?spoon 'spoon') (Is ?fork 'fork') (Is ?ruler 'ruler') (Above ?controller ?remote) (Below ?glasses ?remote) (Below ?sandwich ?glasses) (OnBottomSide ?sandwich) (OnRightSide ?donut) (OnTopSide ?donut) (Below ?carrot ?donut) (Below ?spoon ?carrot) (Below ?fork ?spoon) (Below ?ruler ?fork) (LargerThan ?sandwich ?donut)))))))))))))",
+    "cnf": "(exists ?controller (forall ?remote (exists ?glasses (exists ?sandwich (exists ?donut (exists ?carrot (exists ?spoon (exists ?fork (exists ?ruler (and (Is ?controller 'game_controller') (OnTopSide ?controller) (or (not (Is ?remote 'remote')) (Above ?controller ?remote)) (or (not (Is ?remote 'remote')) (Is ?ruler 'ruler')) (or (not (Is ?remote 'remote')) (Below ?glasses ?remote)) (or (not (Is ?remote 'remote')) (Is ?fork 'fork')) (or (not (Is ?remote 'remote')) (Below ?ruler ?fork)) (or (not (Is ?remote 'remote')) (Is ?glasses 'glasses')) (or (not (Is ?remote 'remote')) (Below ?sandwich ?glasses)) (or (not (Is ?remote 'remote')) (Is ?spoon 'spoon')) (or (not (Is ?remote 'remote')) (Below ?fork ?spoon)) (or (not (Is ?remote 'remote')) (LargerThan ?sandwich ?donut)) (or (not (Is ?remote 'remote')) (Is ?sandwich 'sandwich')) (or (not (Is ?remote 'remote')) (OnBottomSide ?sandwich)) (or (not (Is ?remote 'remote')) (Is ?carrot 'carrot')) (or (not (Is ?remote 'remote')) (Below ?spoon ?carrot)) (or (not (Is ?remote 'remote')) (Below ?carrot ?donut)) (or (not (Is ?remote 'remote')) (Is ?donut 'donut')) (or (not (Is ?remote 'remote')) (OnRightSide ?donut)) (or (not (Is ?remote 'remote')) (OnTopSide ?donut))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "ruler",
+        "glasses",
+        "remote",
+        "carrot",
+        "game_controller",
+        "fork",
+        "spoon",
+        "sandwich",
+        "donut"
+    ]
+}

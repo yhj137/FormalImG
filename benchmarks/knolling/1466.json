@@ -1,0 +1,16 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a backpack positioned on the bottom side of the layout. For every glove found in the image, there is a structured horizontal row of items extending to its right: a pair of jeans is located to the right of the glove, a wallet is to the right of the jeans, a bottle is to the right of the wallet, a bowl is to the right of the bottle, a spoon is to the right of the bowl, and an apple is to the right of the spoon. The glove and the jeans are aligned horizontally. Spatially, the backpack aligns vertically with the glove. In terms of size, the backpack is larger than the wallet, and the apple is smaller than the bowl.",
+    "dsl": "(exists ?backpack (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (forall ?glove (implies (Is ?glove 'glove') (exists ?jeans (exists ?wallet (exists ?bottle (exists ?bowl (exists ?spoon (exists ?apple (and (Is ?jeans 'jeans') (Is ?wallet 'wallet') (Is ?bottle 'bottle') (Is ?bowl 'bowl') (Is ?spoon 'spoon') (Is ?apple 'apple') (RightOf ?jeans ?glove) (RightOf ?wallet ?jeans) (RightOf ?bottle ?wallet) (RightOf ?bowl ?bottle) (RightOf ?spoon ?bowl) (RightOf ?apple ?spoon) (AlignedHorizontally ?glove ?jeans) (AlignedVertically ?backpack ?glove) (LargerThan ?backpack ?wallet) (SmallerThan ?apple ?bowl))))))))))))",
+    "cnf": "(exists ?backpack (forall ?glove (exists ?jeans (exists ?wallet (exists ?bottle (exists ?bowl (exists ?spoon (exists ?apple (and (Is ?backpack 'backpack') (OnBottomSide ?backpack) (or (not (Is ?glove 'glove')) (AlignedVertically ?backpack ?glove)) (or (not (Is ?glove 'glove')) (LargerThan ?backpack ?wallet)) (or (not (Is ?glove 'glove')) (AlignedHorizontally ?glove ?jeans)) (or (not (Is ?glove 'glove')) (SmallerThan ?apple ?bowl)) (or (not (Is ?glove 'glove')) (RightOf ?bottle ?wallet)) (or (not (Is ?glove 'glove')) (RightOf ?wallet ?jeans)) (or (not (Is ?glove 'glove')) (RightOf ?apple ?spoon)) (or (not (Is ?glove 'glove')) (RightOf ?spoon ?bowl)) (or (not (Is ?glove 'glove')) (RightOf ?bowl ?bottle)) (or (not (Is ?glove 'glove')) (Is ?bottle 'bottle')) (or (not (Is ?glove 'glove')) (RightOf ?jeans ?glove)) (or (not (Is ?glove 'glove')) (Is ?wallet 'wallet')) (or (not (Is ?glove 'glove')) (Is ?apple 'apple')) (or (not (Is ?glove 'glove')) (Is ?spoon 'spoon')) (or (not (Is ?glove 'glove')) (Is ?bowl 'bowl')) (or (not (Is ?glove 'glove')) (Is ?jeans 'jeans')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "apple",
+        "backpack",
+        "wallet",
+        "jeans",
+        "bottle",
+        "bowl",
+        "glove",
+        "spoon"
+    ]
+}

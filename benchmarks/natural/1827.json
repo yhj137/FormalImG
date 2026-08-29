@@ -1,0 +1,18 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. This cartoon-style scene features a wardrobe inside every house. A chair stands next to the wardrobe, occupied by a teddy bear with headphones. To the right of the chair, a cat holds a round orange, with a phone nearby. A hammer rests on the wardrobe, positioned next to a knife.",
+    "dsl": "(and (IsStyle 'cartoon') (forall ?h (implies (Is ?h 'house') (exists ?w (exists ?c (exists ?tb (exists ?hp (exists ?cat (exists ?o (exists ?p (exists ?hm (exists ?k (and (Is ?w 'wardrobe') (Is ?c 'chair') (Is ?tb 'teddy bear') (Is ?hp 'headphones') (Is ?cat 'cat') (Is ?o 'orange') (Is ?p 'phone') (Is ?hm 'hammer') (Is ?k 'knife') (In ?w ?h) (NextTo ?c ?w) (On ?tb ?c) (On ?hp ?tb) (RightOf ?cat ?c) (Holding ?cat ?o) (HasShape ?o 'round') (NextTo ?p ?cat) (On ?hm ?w) (NextTo ?k ?hm))))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (forall ?h (exists ?w (exists ?c (exists ?tb (exists ?hp (exists ?cat (exists ?o (exists ?p (exists ?hm (exists ?k (and (or (not (Is ?h 'house')) (Is ?w 'wardrobe')) (or (not (Is ?h 'house')) (In ?w ?h)) (or (not (Is ?h 'house')) (Is ?c 'chair')) (or (not (Is ?h 'house')) (NextTo ?c ?w)) (or (not (Is ?h 'house')) (Is ?k 'knife')) (or (not (Is ?h 'house')) (Is ?tb 'teddy bear')) (or (not (Is ?h 'house')) (On ?hm ?w)) (or (not (Is ?h 'house')) (On ?tb ?c)) (or (not (Is ?h 'house')) (Is ?hm 'hammer')) (or (not (Is ?h 'house')) (NextTo ?k ?hm)) (or (not (Is ?h 'house')) (Is ?hp 'headphones')) (or (not (Is ?h 'house')) (NextTo ?p ?cat)) (or (not (Is ?h 'house')) (On ?hp ?tb)) (or (not (Is ?h 'house')) (RightOf ?cat ?c)) (or (not (Is ?h 'house')) (Is ?p 'phone')) (or (not (Is ?h 'house')) (Is ?cat 'cat')) (or (not (Is ?h 'house')) (HasShape ?o 'round')) (or (not (Is ?h 'house')) (Holding ?cat ?o)) (or (not (Is ?h 'house')) (Is ?o 'orange'))))))))))))))",
+    "k": 10,
+    "object_classes": [
+        "cat",
+        "headphones",
+        "knife",
+        "hammer",
+        "chair",
+        "teddy bear",
+        "phone",
+        "wardrobe",
+        "house",
+        "orange"
+    ]
+}

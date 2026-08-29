@@ -1,0 +1,17 @@
+{
+    "prompt": "Generate a Knolling-style image. The scene features a drill located on the left side of the image. Directly below the drill and vertically aligned with it is a camera, which is smaller than the drill. To the right of the camera are black headphones (the camera is to their left). To the right of the headphones is a calculator (the headphones are to its left). Below the calculator and vertically aligned with it is a shoe, which is larger than the calculator. For every red apple in the scene, there is a specific arrangement: a knife is positioned to the left of the apple, and the calculator is to the left of the knife. Additionally, pliers are located above the knife and aligned vertically with it, while a pen is located above the apple, aligned vertically with it, and is smaller than the knife.",
+    "dsl": "(exists ?drill (exists ?camera (exists ?headphones (exists ?calculator (exists ?shoe (and (Is ?drill 'drill') (OnLeftSide ?drill) (Is ?camera 'camera') (SmallerThan ?camera ?drill) (Above ?drill ?camera) (AlignedVertically ?drill ?camera) (Is ?headphones 'headphones') (Has ?headphones 'black') (LeftOf ?camera ?headphones) (Is ?calculator 'calculator') (LeftOf ?headphones ?calculator) (Is ?shoe 'shoe') (LargerThan ?shoe ?calculator) (Above ?calculator ?shoe) (AlignedVertically ?calculator ?shoe) (forall ?apple (implies (and (Is ?apple 'apple') (Has ?apple 'red')) (exists ?knife (exists ?pliers (exists ?pen (and (Is ?knife 'knife') (LeftOf ?knife ?apple) (LeftOf ?calculator ?knife) (Is ?pliers 'pliers') (Above ?pliers ?knife) (AlignedVertically ?pliers ?knife) (Is ?pen 'pen') (SmallerThan ?pen ?knife) (Above ?pen ?apple) (AlignedVertically ?pen ?apple)))))))))))))",
+    "cnf": "(exists ?drill (exists ?camera (exists ?headphones (exists ?calculator (exists ?shoe (forall ?apple (exists ?knife (exists ?pliers (exists ?pen (and (Is ?drill 'drill') (OnLeftSide ?drill) (SmallerThan ?camera ?drill) (Above ?drill ?camera) (Is ?camera 'camera') (AlignedVertically ?drill ?camera) (LeftOf ?camera ?headphones) (Has ?headphones 'black') (LeftOf ?headphones ?calculator) (Is ?headphones 'headphones') (Is ?calculator 'calculator') (LargerThan ?shoe ?calculator) (Above ?calculator ?shoe) (Is ?shoe 'shoe') (AlignedVertically ?calculator ?shoe) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (LeftOf ?calculator ?knife)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (LeftOf ?knife ?apple)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Above ?pliers ?knife)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?pliers 'pliers')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?knife 'knife')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (AlignedVertically ?pliers ?knife)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (SmallerThan ?pen ?knife)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Is ?pen 'pen')) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (Above ?pen ?apple)) (or (not (Is ?apple 'apple')) (not (Has ?apple 'red')) (AlignedVertically ?pen ?apple))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "pliers",
+        "apple",
+        "pen",
+        "drill",
+        "calculator",
+        "camera",
+        "knife",
+        "headphones",
+        "shoe"
+    ]
+}

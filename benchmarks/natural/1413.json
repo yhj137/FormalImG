@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A cyberpunk scene depicting a metal bench to the left of a car, with a plant next to the bench. To the right of the plant is a cat beside a backpack. A monitor sits to the left of the backpack, next to a plastic bowl containing a fruit.",
+    "dsl": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?p (exists ?cat (exists ?bp (exists ?m (exists ?bowl (exists ?f (and (Is ?c 'car') (Is ?b 'bench') (HasMaterial ?b 'metal') (Is ?p 'plant') (Is ?cat 'cat') (Is ?bp 'backpack') (Is ?m 'monitor') (Is ?bowl 'bowl') (HasMaterial ?bowl 'plastic') (Is ?f 'fruit') (LeftOf ?b ?c) (NextTo ?p ?b) (RightOf ?cat ?p) (NextTo ?bp ?cat) (LeftOf ?m ?bp) (NextTo ?bowl ?m) (In ?f ?bowl)))))))))))",
+    "cnf": "(and (IsStyle 'cyberpunk') (exists ?c (exists ?b (exists ?p (exists ?cat (exists ?bp (exists ?m (exists ?bowl (exists ?f (and (Is ?c 'car') (LeftOf ?b ?c) (HasMaterial ?b 'metal') (NextTo ?p ?b) (Is ?b 'bench') (Is ?p 'plant') (RightOf ?cat ?p) (Is ?cat 'cat') (NextTo ?bp ?cat) (Is ?bp 'backpack') (LeftOf ?m ?bp) (Is ?m 'monitor') (NextTo ?bowl ?m) (HasMaterial ?bowl 'plastic') (In ?f ?bowl) (Is ?bowl 'bowl') (Is ?f 'fruit')))))))))))",
+    "k": 8,
+    "object_classes": [
+        "fruit",
+        "bench",
+        "backpack",
+        "plant",
+        "monitor",
+        "car",
+        "bowl",
+        "cat"
+    ]
+}

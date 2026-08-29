@@ -1,0 +1,17 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. The scene is depicted in a cartoon style. There is a red house. To the right of the house is a rusty car, with a smiling person wearing glasses on top. To the right of the car, a dog is holding a round ball. To the right of the dog is a bowl with an orange inside, and a fork is next to the bowl.",
+    "dsl": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?p (exists ?g (exists ?d (exists ?b (exists ?bo (exists ?o (exists ?f (and (Is ?h 'house') (HasColor ?h 'red') (Is ?c 'car') (HasState ?c 'rusty') (RightOf ?c ?h) (Is ?p 'person') (HasState ?p 'smiling') (On ?p ?c) (Is ?g 'glasses') (On ?g ?p) (Is ?d 'dog') (RightOf ?d ?c) (Is ?b 'ball') (HasShape ?b 'round') (Holding ?d ?b) (Is ?bo 'bowl') (RightOf ?bo ?d) (Is ?o 'orange') (In ?o ?bo) (Is ?f 'fork') (NextTo ?f ?bo))))))))))))",
+    "cnf": "(and (IsStyle 'cartoon') (exists ?h (exists ?c (exists ?p (exists ?g (exists ?d (exists ?b (exists ?bo (exists ?o (exists ?f (and (Is ?h 'house') (HasColor ?h 'red') (RightOf ?c ?h) (HasState ?c 'rusty') (On ?p ?c) (Is ?c 'car') (RightOf ?d ?c) (HasState ?p 'smiling') (On ?g ?p) (Is ?d 'dog') (Holding ?d ?b) (Is ?p 'person') (Is ?g 'glasses') (RightOf ?bo ?d) (HasShape ?b 'round') (Is ?bo 'bowl') (In ?o ?bo) (Is ?b 'ball') (NextTo ?f ?bo) (Is ?o 'orange') (Is ?f 'fork'))))))))))))",
+    "k": 9,
+    "object_classes": [
+        "house",
+        "person",
+        "fork",
+        "glasses",
+        "orange",
+        "car",
+        "ball",
+        "bowl",
+        "dog"
+    ]
+}

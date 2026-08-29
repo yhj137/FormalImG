@@ -1,0 +1,16 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. An elephant holding a round ball stands to the left of a wooden bench. All fruit in the scene, including a yellow banana, are on the bench, alongside a cat, a laptop, and a lamp.",
+    "dsl": "(exists ?ben (exists ?e (and (Is ?ben 'bench') (HasMaterial ?ben 'wooden') (Is ?e 'elephant') (LeftOf ?e ?ben) (forall ?f (implies (Is ?f 'fruit') (On ?f ?ben))) (exists ?bal (exists ?c (exists ?lap (exists ?lmp (exists ?ban (and (Is ?bal 'ball') (HasShape ?bal 'round') (Holding ?e ?bal) (Is ?c 'cat') (On ?c ?ben) (Is ?lap 'laptop') (On ?lap ?ben) (Is ?lmp 'lamp') (On ?lmp ?ben) (Is ?ban 'banana') (HasColor ?ban 'yellow') (On ?ban ?ben))))))))))",
+    "cnf": "(exists ?ben (exists ?e (forall ?f (exists ?bal (exists ?c (exists ?lap (exists ?lmp (exists ?ban (and (Is ?ben 'bench') (HasMaterial ?ben 'wooden') (LeftOf ?e ?ben) (or (not (Is ?f 'fruit')) (On ?f ?ben)) (Is ?e 'elephant') (Holding ?e ?bal) (On ?c ?ben) (HasShape ?bal 'round') (On ?lap ?ben) (Is ?c 'cat') (Is ?bal 'ball') (On ?lmp ?ben) (Is ?lap 'laptop') (On ?ban ?ben) (Is ?lmp 'lamp') (HasColor ?ban 'yellow') (Is ?ban 'banana'))))))))))",
+    "k": 8,
+    "object_classes": [
+        "elephant",
+        "fruit",
+        "bench",
+        "laptop",
+        "lamp",
+        "ball",
+        "cat",
+        "banana"
+    ]
+}

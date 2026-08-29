@@ -1,0 +1,9 @@
+{
+    "prompt": "A round red ball in pixel art style.",
+    "dsl": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'ball') (HasColor ?b 'red') (HasShape ?b 'round'))))",
+    "cnf": "(and (IsStyle 'pixel art') (exists ?b (and (Is ?b 'ball') (HasColor ?b 'red') (HasShape ?b 'round'))))",
+    "k": 1,
+    "object_classes": [
+        "ball"
+    ]
+}

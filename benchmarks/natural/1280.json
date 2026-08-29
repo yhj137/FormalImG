@@ -1,0 +1,15 @@
+{
+    "prompt": "In this image, all directions are relative to the frame. A bus is to the left of an elephant, and every orange is on the bus. Next to the elephant is a chair holding a keyboard, a rusty hammer, and a bowl, with the bowl to the right of the keyboard.",
+    "dsl": "(exists ?b (exists ?e (and (Is ?b 'bus') (Is ?e 'elephant') (LeftOf ?b ?e) (forall ?o (implies (Is ?o 'orange') (On ?o ?b))) (exists ?c (exists ?k (exists ?bo (exists ?h (and (Is ?c 'chair') (NextTo ?c ?e) (Is ?k 'keyboard') (On ?k ?c) (Is ?bo 'bowl') (On ?bo ?c) (RightOf ?bo ?k) (Is ?h 'hammer') (On ?h ?c) (HasState ?h 'rusty')))))))))",
+    "cnf": "(exists ?b (exists ?e (forall ?o (exists ?c (exists ?k (exists ?bo (exists ?h (and (Is ?b 'bus') (LeftOf ?b ?e) (or (not (Is ?o 'orange')) (On ?o ?b)) (Is ?e 'elephant') (NextTo ?c ?e) (Is ?c 'chair') (On ?k ?c) (On ?bo ?c) (Is ?k 'keyboard') (RightOf ?bo ?k) (On ?h ?c) (Is ?bo 'bowl') (Is ?h 'hammer') (HasState ?h 'rusty')))))))))",
+    "k": 7,
+    "object_classes": [
+        "keyboard",
+        "bowl",
+        "bus",
+        "hammer",
+        "chair",
+        "elephant",
+        "orange"
+    ]
+}
